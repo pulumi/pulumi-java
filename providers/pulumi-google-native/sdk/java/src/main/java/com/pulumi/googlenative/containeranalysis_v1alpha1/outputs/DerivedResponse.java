@@ -13,25 +13,25 @@ import java.util.Objects;
 
 @CustomType
 public final class DerivedResponse {
-    /**
-     * This contains the base image URL for the derived image occurrence.
-     * 
-     */
+        /**
+         * @return This contains the base image URL for the derived image occurrence.
+         * 
+         */
     private final String baseResourceUrl;
-    /**
-     * The number of layers by which this image differs from the associated image basis.
-     * 
-     */
+        /**
+         * @return The number of layers by which this image differs from the associated image basis.
+         * 
+         */
     private final Integer distance;
-    /**
-     * The fingerprint of the derived image.
-     * 
-     */
+        /**
+         * @return The fingerprint of the derived image.
+         * 
+         */
     private final FingerprintResponse fingerprint;
-    /**
-     * This contains layer-specific metadata, if populated it has length &#34;distance&#34; and is ordered with [distance] being the layer immediately following the base image and [1] being the final layer.
-     * 
-     */
+        /**
+         * @return This contains layer-specific metadata, if populated it has length &#34;distance&#34; and is ordered with [distance] being the layer immediately following the base image and [1] being the final layer.
+         * 
+         */
     private final List<LayerResponse> layerInfo;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class DerivedResponse {
     }
 
     /**
-     * This contains the base image URL for the derived image occurrence.
+     * @return This contains the base image URL for the derived image occurrence.
      * 
-    */
+     */
     public String baseResourceUrl() {
         return this.baseResourceUrl;
     }
     /**
-     * The number of layers by which this image differs from the associated image basis.
+     * @return The number of layers by which this image differs from the associated image basis.
      * 
-    */
+     */
     public Integer distance() {
         return this.distance;
     }
     /**
-     * The fingerprint of the derived image.
+     * @return The fingerprint of the derived image.
      * 
-    */
+     */
     public FingerprintResponse fingerprint() {
         return this.fingerprint;
     }
     /**
-     * This contains layer-specific metadata, if populated it has length &#34;distance&#34; and is ordered with [distance] being the layer immediately following the base image and [1] being the final layer.
+     * @return This contains layer-specific metadata, if populated it has length &#34;distance&#34; and is ordered with [distance] being the layer immediately following the base image and [1] being the final layer.
      * 
-    */
+     */
     public List<LayerResponse> layerInfo() {
         return this.layerInfo;
     }

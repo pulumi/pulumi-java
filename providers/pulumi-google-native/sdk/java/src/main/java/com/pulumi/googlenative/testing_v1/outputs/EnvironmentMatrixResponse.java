@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class EnvironmentMatrixResponse {
-    /**
-     * A list of Android devices; the test will be run only on the specified devices.
-     * 
-     */
+        /**
+         * @return A list of Android devices; the test will be run only on the specified devices.
+         * 
+         */
     private final AndroidDeviceListResponse androidDeviceList;
-    /**
-     * A matrix of Android devices.
-     * 
-     */
+        /**
+         * @return A matrix of Android devices.
+         * 
+         */
     private final AndroidMatrixResponse androidMatrix;
-    /**
-     * A list of iOS devices.
-     * 
-     */
+        /**
+         * @return A list of iOS devices.
+         * 
+         */
     private final IosDeviceListResponse iosDeviceList;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class EnvironmentMatrixResponse {
     }
 
     /**
-     * A list of Android devices; the test will be run only on the specified devices.
+     * @return A list of Android devices; the test will be run only on the specified devices.
      * 
-    */
+     */
     public AndroidDeviceListResponse androidDeviceList() {
         return this.androidDeviceList;
     }
     /**
-     * A matrix of Android devices.
+     * @return A matrix of Android devices.
      * 
-    */
+     */
     public AndroidMatrixResponse androidMatrix() {
         return this.androidMatrix;
     }
     /**
-     * A list of iOS devices.
+     * @return A list of iOS devices.
      * 
-    */
+     */
     public IosDeviceListResponse iosDeviceList() {
         return this.iosDeviceList;
     }

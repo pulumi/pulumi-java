@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class OidcResponse {
-    /**
-     * Acceptable values for the `aud` field (audience) in the OIDC token. Token exchange requests are rejected if the token audience does not match one of the configured values. Each audience may be at most 256 characters. A maximum of 10 audiences may be configured. If this list is empty, the OIDC token audience must be equal to the full canonical resource name of the WorkloadIdentityPoolProvider, with or without the HTTPS prefix. For example: ```//iam.googleapis.com/projects//locations//workloadIdentityPools//providers/ https://iam.googleapis.com/projects//locations//workloadIdentityPools//providers/```
-     * 
-     */
+        /**
+         * @return Acceptable values for the `aud` field (audience) in the OIDC token. Token exchange requests are rejected if the token audience does not match one of the configured values. Each audience may be at most 256 characters. A maximum of 10 audiences may be configured. If this list is empty, the OIDC token audience must be equal to the full canonical resource name of the WorkloadIdentityPoolProvider, with or without the HTTPS prefix. For example: ```//iam.googleapis.com/projects//locations//workloadIdentityPools//providers/ https://iam.googleapis.com/projects//locations//workloadIdentityPools//providers/```
+         * 
+         */
     private final List<String> allowedAudiences;
-    /**
-     * The OIDC issuer URL. Must be an HTTPS endpoint.
-     * 
-     */
+        /**
+         * @return The OIDC issuer URL. Must be an HTTPS endpoint.
+         * 
+         */
     private final String issuerUri;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class OidcResponse {
     }
 
     /**
-     * Acceptable values for the `aud` field (audience) in the OIDC token. Token exchange requests are rejected if the token audience does not match one of the configured values. Each audience may be at most 256 characters. A maximum of 10 audiences may be configured. If this list is empty, the OIDC token audience must be equal to the full canonical resource name of the WorkloadIdentityPoolProvider, with or without the HTTPS prefix. For example: ```//iam.googleapis.com/projects//locations//workloadIdentityPools//providers/ https://iam.googleapis.com/projects//locations//workloadIdentityPools//providers/```
+     * @return Acceptable values for the `aud` field (audience) in the OIDC token. Token exchange requests are rejected if the token audience does not match one of the configured values. Each audience may be at most 256 characters. A maximum of 10 audiences may be configured. If this list is empty, the OIDC token audience must be equal to the full canonical resource name of the WorkloadIdentityPoolProvider, with or without the HTTPS prefix. For example: ```//iam.googleapis.com/projects//locations//workloadIdentityPools//providers/ https://iam.googleapis.com/projects//locations//workloadIdentityPools//providers/```
      * 
-    */
+     */
     public List<String> allowedAudiences() {
         return this.allowedAudiences;
     }
     /**
-     * The OIDC issuer URL. Must be an HTTPS endpoint.
+     * @return The OIDC issuer URL. Must be an HTTPS endpoint.
      * 
-    */
+     */
     public String issuerUri() {
         return this.issuerUri;
     }

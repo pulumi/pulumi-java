@@ -34,6 +34,10 @@ public final class AttestationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pgpSignedAttestation")
     private @Nullable Output<PgpSignedAttestationArgs> pgpSignedAttestation;
 
+    /**
+     * @return A PGP signed attestation.
+     * 
+     */
     public Optional<Output<PgpSignedAttestationArgs>> pgpSignedAttestation() {
         return Optional.ofNullable(this.pgpSignedAttestation);
     }
@@ -72,11 +76,23 @@ public final class AttestationArgs extends com.pulumi.resources.ResourceArgs {
             return genericSignedAttestation(Output.of(genericSignedAttestation));
         }
 
+        /**
+         * @param pgpSignedAttestation A PGP signed attestation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pgpSignedAttestation(@Nullable Output<PgpSignedAttestationArgs> pgpSignedAttestation) {
             $.pgpSignedAttestation = pgpSignedAttestation;
             return this;
         }
 
+        /**
+         * @param pgpSignedAttestation A PGP signed attestation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pgpSignedAttestation(PgpSignedAttestationArgs pgpSignedAttestation) {
             return pgpSignedAttestation(Output.of(pgpSignedAttestation));
         }

@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class WorkloadIdentityConfigResponse {
-    /**
-     * IAM Identity Namespace to attach all Kubernetes Service Accounts to.
-     * 
-     */
+        /**
+         * @return IAM Identity Namespace to attach all Kubernetes Service Accounts to.
+         * 
+         */
     private final String identityNamespace;
-    /**
-     * identity provider is the third party identity provider.
-     * 
-     */
+        /**
+         * @return identity provider is the third party identity provider.
+         * 
+         */
     private final String identityProvider;
-    /**
-     * The workload pool to attach all Kubernetes service accounts to.
-     * 
-     */
+        /**
+         * @return The workload pool to attach all Kubernetes service accounts to.
+         * 
+         */
     private final String workloadPool;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class WorkloadIdentityConfigResponse {
     }
 
     /**
-     * IAM Identity Namespace to attach all Kubernetes Service Accounts to.
+     * @return IAM Identity Namespace to attach all Kubernetes Service Accounts to.
      * 
-    */
+     */
     public String identityNamespace() {
         return this.identityNamespace;
     }
     /**
-     * identity provider is the third party identity provider.
+     * @return identity provider is the third party identity provider.
      * 
-    */
+     */
     public String identityProvider() {
         return this.identityProvider;
     }
     /**
-     * The workload pool to attach all Kubernetes service accounts to.
+     * @return The workload pool to attach all Kubernetes service accounts to.
      * 
-    */
+     */
     public String workloadPool() {
         return this.workloadPool;
     }

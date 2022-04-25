@@ -12,25 +12,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GetTemplateResult {
-    /**
-     * The template metadata describing the template name, available parameters, etc.
-     * 
-     */
+        /**
+         * @return The template metadata describing the template name, available parameters, etc.
+         * 
+         */
     private final TemplateMetadataResponse metadata;
-    /**
-     * Describes the runtime metadata with SDKInfo and available parameters.
-     * 
-     */
+        /**
+         * @return Describes the runtime metadata with SDKInfo and available parameters.
+         * 
+         */
     private final RuntimeMetadataResponse runtimeMetadata;
-    /**
-     * The status of the get template request. Any problems with the request will be indicated in the error_details.
-     * 
-     */
+        /**
+         * @return The status of the get template request. Any problems with the request will be indicated in the error_details.
+         * 
+         */
     private final StatusResponse status;
-    /**
-     * Template Type.
-     * 
-     */
+        /**
+         * @return Template Type.
+         * 
+         */
     private final String templateType;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class GetTemplateResult {
     }
 
     /**
-     * The template metadata describing the template name, available parameters, etc.
+     * @return The template metadata describing the template name, available parameters, etc.
      * 
-    */
+     */
     public TemplateMetadataResponse metadata() {
         return this.metadata;
     }
     /**
-     * Describes the runtime metadata with SDKInfo and available parameters.
+     * @return Describes the runtime metadata with SDKInfo and available parameters.
      * 
-    */
+     */
     public RuntimeMetadataResponse runtimeMetadata() {
         return this.runtimeMetadata;
     }
     /**
-     * The status of the get template request. Any problems with the request will be indicated in the error_details.
+     * @return The status of the get template request. Any problems with the request will be indicated in the error_details.
      * 
-    */
+     */
     public StatusResponse status() {
         return this.status;
     }
     /**
-     * Template Type.
+     * @return Template Type.
      * 
-    */
+     */
     public String templateType() {
         return this.templateType;
     }

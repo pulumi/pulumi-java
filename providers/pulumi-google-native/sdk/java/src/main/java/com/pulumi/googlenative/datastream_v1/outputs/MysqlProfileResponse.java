@@ -11,30 +11,30 @@ import java.util.Objects;
 
 @CustomType
 public final class MysqlProfileResponse {
-    /**
-     * Hostname for the MySQL connection.
-     * 
-     */
+        /**
+         * @return Hostname for the MySQL connection.
+         * 
+         */
     private final String hostname;
-    /**
-     * Input only. Password for the MySQL connection.
-     * 
-     */
+        /**
+         * @return Input only. Password for the MySQL connection.
+         * 
+         */
     private final String password;
-    /**
-     * Port for the MySQL connection, default value is 3306.
-     * 
-     */
+        /**
+         * @return Port for the MySQL connection, default value is 3306.
+         * 
+         */
     private final Integer port;
-    /**
-     * SSL configuration for the MySQL connection.
-     * 
-     */
+        /**
+         * @return SSL configuration for the MySQL connection.
+         * 
+         */
     private final MysqlSslConfigResponse sslConfig;
-    /**
-     * Username for the MySQL connection.
-     * 
-     */
+        /**
+         * @return Username for the MySQL connection.
+         * 
+         */
     private final String username;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class MysqlProfileResponse {
     }
 
     /**
-     * Hostname for the MySQL connection.
+     * @return Hostname for the MySQL connection.
      * 
-    */
+     */
     public String hostname() {
         return this.hostname;
     }
     /**
-     * Input only. Password for the MySQL connection.
+     * @return Input only. Password for the MySQL connection.
      * 
-    */
+     */
     public String password() {
         return this.password;
     }
     /**
-     * Port for the MySQL connection, default value is 3306.
+     * @return Port for the MySQL connection, default value is 3306.
      * 
-    */
+     */
     public Integer port() {
         return this.port;
     }
     /**
-     * SSL configuration for the MySQL connection.
+     * @return SSL configuration for the MySQL connection.
      * 
-    */
+     */
     public MysqlSslConfigResponse sslConfig() {
         return this.sslConfig;
     }
     /**
-     * Username for the MySQL connection.
+     * @return Username for the MySQL connection.
      * 
-    */
+     */
     public String username() {
         return this.username;
     }

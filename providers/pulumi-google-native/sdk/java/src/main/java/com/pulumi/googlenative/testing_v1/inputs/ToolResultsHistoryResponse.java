@@ -23,6 +23,10 @@ public final class ToolResultsHistoryResponse extends com.pulumi.resources.Invok
     @Import(name="historyId", required=true)
     private String historyId;
 
+    /**
+     * @return A tool results history ID.
+     * 
+     */
     public String historyId() {
         return this.historyId;
     }
@@ -34,6 +38,10 @@ public final class ToolResultsHistoryResponse extends com.pulumi.resources.Invok
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return The cloud project that owns the tool results history.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -63,11 +71,23 @@ public final class ToolResultsHistoryResponse extends com.pulumi.resources.Invok
             $ = new ToolResultsHistoryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param historyId A tool results history ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder historyId(String historyId) {
             $.historyId = historyId;
             return this;
         }
 
+        /**
+         * @param project The cloud project that owns the tool results history.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;

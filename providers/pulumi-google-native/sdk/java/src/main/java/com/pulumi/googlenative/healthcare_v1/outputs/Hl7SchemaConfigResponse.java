@@ -12,15 +12,15 @@ import java.util.Objects;
 
 @CustomType
 public final class Hl7SchemaConfigResponse {
-    /**
-     * Map from each HL7v2 message type and trigger event pair, such as ADT_A04, to its schema configuration root group.
-     * 
-     */
+        /**
+         * @return Map from each HL7v2 message type and trigger event pair, such as ADT_A04, to its schema configuration root group.
+         * 
+         */
     private final Map<String,String> messageSchemaConfigs;
-    /**
-     * Each VersionSource is tested and only if they all match is the schema used for the message.
-     * 
-     */
+        /**
+         * @return Each VersionSource is tested and only if they all match is the schema used for the message.
+         * 
+         */
     private final List<VersionSourceResponse> version;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class Hl7SchemaConfigResponse {
     }
 
     /**
-     * Map from each HL7v2 message type and trigger event pair, such as ADT_A04, to its schema configuration root group.
+     * @return Map from each HL7v2 message type and trigger event pair, such as ADT_A04, to its schema configuration root group.
      * 
-    */
+     */
     public Map<String,String> messageSchemaConfigs() {
         return this.messageSchemaConfigs;
     }
     /**
-     * Each VersionSource is tested and only if they all match is the schema used for the message.
+     * @return Each VersionSource is tested and only if they all match is the schema used for the message.
      * 
-    */
+     */
     public List<VersionSourceResponse> version() {
         return this.version;
     }

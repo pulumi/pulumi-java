@@ -23,6 +23,10 @@ public final class BucketBillingResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="requesterPays", required=true)
     private Boolean requesterPays;
 
+    /**
+     * @return When set to true, Requester Pays is enabled for this bucket.
+     * 
+     */
     public Boolean requesterPays() {
         return this.requesterPays;
     }
@@ -51,6 +55,12 @@ public final class BucketBillingResponse extends com.pulumi.resources.InvokeArgs
             $ = new BucketBillingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param requesterPays When set to true, Requester Pays is enabled for this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requesterPays(Boolean requesterPays) {
             $.requesterPays = requesterPays;
             return this;

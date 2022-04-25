@@ -26,6 +26,10 @@ public final class CycleStepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return The time the cycle step has ended.
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -37,6 +41,10 @@ public final class CycleStepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="initializingReplication", required=true)
     private InitializingReplicationStepResponse initializingReplication;
 
+    /**
+     * @return Initializing replication step.
+     * 
+     */
     public InitializingReplicationStepResponse initializingReplication() {
         return this.initializingReplication;
     }
@@ -48,6 +56,10 @@ public final class CycleStepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="postProcessing", required=true)
     private PostProcessingStepResponse postProcessing;
 
+    /**
+     * @return Post processing step.
+     * 
+     */
     public PostProcessingStepResponse postProcessing() {
         return this.postProcessing;
     }
@@ -59,6 +71,10 @@ public final class CycleStepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="replicating", required=true)
     private ReplicatingStepResponse replicating;
 
+    /**
+     * @return Replicating step.
+     * 
+     */
     public ReplicatingStepResponse replicating() {
         return this.replicating;
     }
@@ -70,6 +86,10 @@ public final class CycleStepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return The time the cycle step has started.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -102,26 +122,56 @@ public final class CycleStepResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CycleStepResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endTime The time the cycle step has ended.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param initializingReplication Initializing replication step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initializingReplication(InitializingReplicationStepResponse initializingReplication) {
             $.initializingReplication = initializingReplication;
             return this;
         }
 
+        /**
+         * @param postProcessing Post processing step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postProcessing(PostProcessingStepResponse postProcessing) {
             $.postProcessing = postProcessing;
             return this;
         }
 
+        /**
+         * @param replicating Replicating step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicating(ReplicatingStepResponse replicating) {
             $.replicating = replicating;
             return this;
         }
 
+        /**
+         * @param startTime The time the cycle step has started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;

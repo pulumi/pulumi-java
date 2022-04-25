@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class ReplicaConfigurationResponse {
-    /**
-     * Specifies if the replica is the failover target. If the field is set to `true`, the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.
-     * 
-     */
+        /**
+         * @return Specifies if the replica is the failover target. If the field is set to `true`, the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.
+         * 
+         */
     private final Boolean failoverTarget;
-    /**
-     * This is always `sql#replicaConfiguration`.
-     * 
-     */
+        /**
+         * @return This is always `sql#replicaConfiguration`.
+         * 
+         */
     private final String kind;
-    /**
-     * MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named `master.info` in the data directory.
-     * 
-     */
+        /**
+         * @return MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named `master.info` in the data directory.
+         * 
+         */
     private final MySqlReplicaConfigurationResponse mysqlReplicaConfiguration;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class ReplicaConfigurationResponse {
     }
 
     /**
-     * Specifies if the replica is the failover target. If the field is set to `true`, the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.
+     * @return Specifies if the replica is the failover target. If the field is set to `true`, the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.
      * 
-    */
+     */
     public Boolean failoverTarget() {
         return this.failoverTarget;
     }
     /**
-     * This is always `sql#replicaConfiguration`.
+     * @return This is always `sql#replicaConfiguration`.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named `master.info` in the data directory.
+     * @return MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named `master.info` in the data directory.
      * 
-    */
+     */
     public MySqlReplicaConfigurationResponse mysqlReplicaConfiguration() {
         return this.mysqlReplicaConfiguration;
     }

@@ -23,80 +23,80 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowV2IntentMessageResponse {
-    /**
-     * The basic card response for Actions on Google.
-     * 
-     */
+        /**
+         * @return The basic card response for Actions on Google.
+         * 
+         */
     private final GoogleCloudDialogflowV2IntentMessageBasicCardResponse basicCard;
-    /**
-     * Browse carousel card for Actions on Google.
-     * 
-     */
+        /**
+         * @return Browse carousel card for Actions on Google.
+         * 
+         */
     private final GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse browseCarouselCard;
-    /**
-     * The card response.
-     * 
-     */
+        /**
+         * @return The card response.
+         * 
+         */
     private final GoogleCloudDialogflowV2IntentMessageCardResponse card;
-    /**
-     * The carousel card response for Actions on Google.
-     * 
-     */
+        /**
+         * @return The carousel card response for Actions on Google.
+         * 
+         */
     private final GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse carouselSelect;
-    /**
-     * The image response.
-     * 
-     */
+        /**
+         * @return The image response.
+         * 
+         */
     private final GoogleCloudDialogflowV2IntentMessageImageResponse image;
-    /**
-     * The link out suggestion chip for Actions on Google.
-     * 
-     */
+        /**
+         * @return The link out suggestion chip for Actions on Google.
+         * 
+         */
     private final GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse linkOutSuggestion;
-    /**
-     * The list card response for Actions on Google.
-     * 
-     */
+        /**
+         * @return The list card response for Actions on Google.
+         * 
+         */
     private final GoogleCloudDialogflowV2IntentMessageListSelectResponse listSelect;
-    /**
-     * The media content card for Actions on Google.
-     * 
-     */
+        /**
+         * @return The media content card for Actions on Google.
+         * 
+         */
     private final GoogleCloudDialogflowV2IntentMessageMediaContentResponse mediaContent;
-    /**
-     * A custom platform-specific response.
-     * 
-     */
+        /**
+         * @return A custom platform-specific response.
+         * 
+         */
     private final Map<String,String> payload;
-    /**
-     * Optional. The platform that this message is intended for.
-     * 
-     */
+        /**
+         * @return Optional. The platform that this message is intended for.
+         * 
+         */
     private final String platform;
-    /**
-     * The quick replies response.
-     * 
-     */
+        /**
+         * @return The quick replies response.
+         * 
+         */
     private final GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse quickReplies;
-    /**
-     * The voice and text-only responses for Actions on Google.
-     * 
-     */
+        /**
+         * @return The voice and text-only responses for Actions on Google.
+         * 
+         */
     private final GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse simpleResponses;
-    /**
-     * The suggestion chips for Actions on Google.
-     * 
-     */
+        /**
+         * @return The suggestion chips for Actions on Google.
+         * 
+         */
     private final GoogleCloudDialogflowV2IntentMessageSuggestionsResponse suggestions;
-    /**
-     * Table card for Actions on Google.
-     * 
-     */
+        /**
+         * @return Table card for Actions on Google.
+         * 
+         */
     private final GoogleCloudDialogflowV2IntentMessageTableCardResponse tableCard;
-    /**
-     * The text response.
-     * 
-     */
+        /**
+         * @return The text response.
+         * 
+         */
     private final GoogleCloudDialogflowV2IntentMessageTextResponse text;
 
     @CustomType.Constructor
@@ -134,107 +134,107 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse {
     }
 
     /**
-     * The basic card response for Actions on Google.
+     * @return The basic card response for Actions on Google.
      * 
-    */
+     */
     public GoogleCloudDialogflowV2IntentMessageBasicCardResponse basicCard() {
         return this.basicCard;
     }
     /**
-     * Browse carousel card for Actions on Google.
+     * @return Browse carousel card for Actions on Google.
      * 
-    */
+     */
     public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse browseCarouselCard() {
         return this.browseCarouselCard;
     }
     /**
-     * The card response.
+     * @return The card response.
      * 
-    */
+     */
     public GoogleCloudDialogflowV2IntentMessageCardResponse card() {
         return this.card;
     }
     /**
-     * The carousel card response for Actions on Google.
+     * @return The carousel card response for Actions on Google.
      * 
-    */
+     */
     public GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse carouselSelect() {
         return this.carouselSelect;
     }
     /**
-     * The image response.
+     * @return The image response.
      * 
-    */
+     */
     public GoogleCloudDialogflowV2IntentMessageImageResponse image() {
         return this.image;
     }
     /**
-     * The link out suggestion chip for Actions on Google.
+     * @return The link out suggestion chip for Actions on Google.
      * 
-    */
+     */
     public GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse linkOutSuggestion() {
         return this.linkOutSuggestion;
     }
     /**
-     * The list card response for Actions on Google.
+     * @return The list card response for Actions on Google.
      * 
-    */
+     */
     public GoogleCloudDialogflowV2IntentMessageListSelectResponse listSelect() {
         return this.listSelect;
     }
     /**
-     * The media content card for Actions on Google.
+     * @return The media content card for Actions on Google.
      * 
-    */
+     */
     public GoogleCloudDialogflowV2IntentMessageMediaContentResponse mediaContent() {
         return this.mediaContent;
     }
     /**
-     * A custom platform-specific response.
+     * @return A custom platform-specific response.
      * 
-    */
+     */
     public Map<String,String> payload() {
         return this.payload;
     }
     /**
-     * Optional. The platform that this message is intended for.
+     * @return Optional. The platform that this message is intended for.
      * 
-    */
+     */
     public String platform() {
         return this.platform;
     }
     /**
-     * The quick replies response.
+     * @return The quick replies response.
      * 
-    */
+     */
     public GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse quickReplies() {
         return this.quickReplies;
     }
     /**
-     * The voice and text-only responses for Actions on Google.
+     * @return The voice and text-only responses for Actions on Google.
      * 
-    */
+     */
     public GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse simpleResponses() {
         return this.simpleResponses;
     }
     /**
-     * The suggestion chips for Actions on Google.
+     * @return The suggestion chips for Actions on Google.
      * 
-    */
+     */
     public GoogleCloudDialogflowV2IntentMessageSuggestionsResponse suggestions() {
         return this.suggestions;
     }
     /**
-     * Table card for Actions on Google.
+     * @return Table card for Actions on Google.
      * 
-    */
+     */
     public GoogleCloudDialogflowV2IntentMessageTableCardResponse tableCard() {
         return this.tableCard;
     }
     /**
-     * The text response.
+     * @return The text response.
      * 
-    */
+     */
     public GoogleCloudDialogflowV2IntentMessageTextResponse text() {
         return this.text;
     }

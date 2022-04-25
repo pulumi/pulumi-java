@@ -19,6 +19,10 @@ public final class AvroOptionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="useAvroLogicalTypes", required=true)
     private Boolean useAvroLogicalTypes;
 
+    /**
+     * @return [Optional] If sourceFormat is set to &#34;AVRO&#34;, indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).
+     * 
+     */
     public Boolean useAvroLogicalTypes() {
         return this.useAvroLogicalTypes;
     }
@@ -47,6 +51,12 @@ public final class AvroOptionsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AvroOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param useAvroLogicalTypes [Optional] If sourceFormat is set to &#34;AVRO&#34;, indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).
+         * 
+         * @return builder
+         * 
+         */
         public Builder useAvroLogicalTypes(Boolean useAvroLogicalTypes) {
             $.useAvroLogicalTypes = useAvroLogicalTypes;
             return this;

@@ -24,6 +24,10 @@ public final class GooglePrivacyDlpV2TableOptionsResponse extends com.pulumi.res
     @Import(name="identifyingFields", required=true)
     private List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields;
 
+    /**
+     * @return The columns that are the primary keys for table objects included in ContentItem. A copy of this cell&#39;s value will stored alongside alongside each finding so that the finding can be traced to the specific row it came from. No more than 3 may be provided.
+     * 
+     */
     public List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields() {
         return this.identifyingFields;
     }
@@ -52,11 +56,23 @@ public final class GooglePrivacyDlpV2TableOptionsResponse extends com.pulumi.res
             $ = new GooglePrivacyDlpV2TableOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identifyingFields The columns that are the primary keys for table objects included in ContentItem. A copy of this cell&#39;s value will stored alongside alongside each finding so that the finding can be traced to the specific row it came from. No more than 3 may be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identifyingFields(List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields) {
             $.identifyingFields = identifyingFields;
             return this;
         }
 
+        /**
+         * @param identifyingFields The columns that are the primary keys for table objects included in ContentItem. A copy of this cell&#39;s value will stored alongside alongside each finding so that the finding can be traced to the specific row it came from. No more than 3 may be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identifyingFields(GooglePrivacyDlpV2FieldIdResponse... identifyingFields) {
             return identifyingFields(List.of(identifyingFields));
         }

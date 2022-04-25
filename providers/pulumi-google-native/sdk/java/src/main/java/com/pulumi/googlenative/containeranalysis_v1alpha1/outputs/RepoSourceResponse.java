@@ -9,30 +9,30 @@ import java.util.Objects;
 
 @CustomType
 public final class RepoSourceResponse {
-    /**
-     * Name of the branch to build.
-     * 
-     */
+        /**
+         * @return Name of the branch to build.
+         * 
+         */
     private final String branchName;
-    /**
-     * Explicit commit SHA to build.
-     * 
-     */
+        /**
+         * @return Explicit commit SHA to build.
+         * 
+         */
     private final String commitSha;
-    /**
-     * ID of the project that owns the repo.
-     * 
-     */
+        /**
+         * @return ID of the project that owns the repo.
+         * 
+         */
     private final String project;
-    /**
-     * Name of the repo.
-     * 
-     */
+        /**
+         * @return Name of the repo.
+         * 
+         */
     private final String repoName;
-    /**
-     * Name of the tag to build.
-     * 
-     */
+        /**
+         * @return Name of the tag to build.
+         * 
+         */
     private final String tagName;
 
     @CustomType.Constructor
@@ -50,37 +50,37 @@ public final class RepoSourceResponse {
     }
 
     /**
-     * Name of the branch to build.
+     * @return Name of the branch to build.
      * 
-    */
+     */
     public String branchName() {
         return this.branchName;
     }
     /**
-     * Explicit commit SHA to build.
+     * @return Explicit commit SHA to build.
      * 
-    */
+     */
     public String commitSha() {
         return this.commitSha;
     }
     /**
-     * ID of the project that owns the repo.
+     * @return ID of the project that owns the repo.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }
     /**
-     * Name of the repo.
+     * @return Name of the repo.
      * 
-    */
+     */
     public String repoName() {
         return this.repoName;
     }
     /**
-     * Name of the tag to build.
+     * @return Name of the tag to build.
      * 
-    */
+     */
     public String tagName() {
         return this.tagName;
     }

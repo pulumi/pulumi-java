@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse {
-    /**
-     * The ID of the project.
-     * 
-     */
+        /**
+         * @return The ID of the project.
+         * 
+         */
     private final String project;
-    /**
-     * The name of the repo. Leave empty for the default repo.
-     * 
-     */
+        /**
+         * @return The name of the repo. Leave empty for the default repo.
+         * 
+         */
     private final String repoName;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse 
     }
 
     /**
-     * The ID of the project.
+     * @return The ID of the project.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }
     /**
-     * The name of the repo. Leave empty for the default repo.
+     * @return The name of the repo. Leave empty for the default repo.
      * 
-    */
+     */
     public String repoName() {
         return this.repoName;
     }

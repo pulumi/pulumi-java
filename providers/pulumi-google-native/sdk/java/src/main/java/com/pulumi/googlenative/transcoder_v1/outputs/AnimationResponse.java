@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class AnimationResponse {
-    /**
-     * End previous animation.
-     * 
-     */
+        /**
+         * @return End previous animation.
+         * 
+         */
     private final AnimationEndResponse animationEnd;
-    /**
-     * Display overlay object with fade animation.
-     * 
-     */
+        /**
+         * @return Display overlay object with fade animation.
+         * 
+         */
     private final AnimationFadeResponse animationFade;
-    /**
-     * Display static overlay object.
-     * 
-     */
+        /**
+         * @return Display static overlay object.
+         * 
+         */
     private final AnimationStaticResponse animationStatic;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class AnimationResponse {
     }
 
     /**
-     * End previous animation.
+     * @return End previous animation.
      * 
-    */
+     */
     public AnimationEndResponse animationEnd() {
         return this.animationEnd;
     }
     /**
-     * Display overlay object with fade animation.
+     * @return Display overlay object with fade animation.
      * 
-    */
+     */
     public AnimationFadeResponse animationFade() {
         return this.animationFade;
     }
     /**
-     * Display static overlay object.
+     * @return Display static overlay object.
      * 
-    */
+     */
     public AnimationStaticResponse animationStatic() {
         return this.animationStatic;
     }

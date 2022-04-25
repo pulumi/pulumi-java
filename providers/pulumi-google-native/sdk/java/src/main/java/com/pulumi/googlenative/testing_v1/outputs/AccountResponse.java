@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class AccountResponse {
-    /**
-     * An automatic google login account.
-     * 
-     */
+        /**
+         * @return An automatic google login account.
+         * 
+         */
     private final GoogleAutoResponse googleAuto;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class AccountResponse {
     }
 
     /**
-     * An automatic google login account.
+     * @return An automatic google login account.
      * 
-    */
+     */
     public GoogleAutoResponse googleAuto() {
         return this.googleAuto;
     }

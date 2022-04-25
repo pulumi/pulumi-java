@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class DSSEHintResponse {
-    /**
-     * The human readable name of this attestation authority, for example &#34;cloudbuild-prod&#34;.
-     * 
-     */
+        /**
+         * @return The human readable name of this attestation authority, for example &#34;cloudbuild-prod&#34;.
+         * 
+         */
     private final String humanReadableName;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class DSSEHintResponse {
     }
 
     /**
-     * The human readable name of this attestation authority, for example &#34;cloudbuild-prod&#34;.
+     * @return The human readable name of this attestation authority, for example &#34;cloudbuild-prod&#34;.
      * 
-    */
+     */
     public String humanReadableName() {
         return this.humanReadableName;
     }

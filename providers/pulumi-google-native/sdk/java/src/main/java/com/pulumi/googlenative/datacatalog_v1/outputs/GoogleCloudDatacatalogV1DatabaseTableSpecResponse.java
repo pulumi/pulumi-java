@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDatacatalogV1DatabaseTableSpecResponse {
-    /**
-     * Type of this table.
-     * 
-     */
+        /**
+         * @return Type of this table.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecResponse {
     }
 
     /**
-     * Type of this table.
+     * @return Type of this table.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

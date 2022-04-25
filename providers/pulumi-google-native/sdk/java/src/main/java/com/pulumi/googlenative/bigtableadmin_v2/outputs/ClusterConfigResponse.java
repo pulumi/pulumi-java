@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ClusterConfigResponse {
-    /**
-     * Autoscaling configuration for this cluster.
-     * 
-     */
+        /**
+         * @return Autoscaling configuration for this cluster.
+         * 
+         */
     private final ClusterAutoscalingConfigResponse clusterAutoscalingConfig;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ClusterConfigResponse {
     }
 
     /**
-     * Autoscaling configuration for this cluster.
+     * @return Autoscaling configuration for this cluster.
      * 
-    */
+     */
     public ClusterAutoscalingConfigResponse clusterAutoscalingConfig() {
         return this.clusterAutoscalingConfig;
     }

@@ -24,6 +24,10 @@ public final class KubernetesMetadataResponse extends com.pulumi.resources.Invok
     @Import(name="kubernetesApiServerVersion", required=true)
     private String kubernetesApiServerVersion;
 
+    /**
+     * @return Kubernetes API server version string as reported by &#39;/version&#39;.
+     * 
+     */
     public String kubernetesApiServerVersion() {
         return this.kubernetesApiServerVersion;
     }
@@ -35,6 +39,10 @@ public final class KubernetesMetadataResponse extends com.pulumi.resources.Invok
     @Import(name="memoryMb", required=true)
     private Integer memoryMb;
 
+    /**
+     * @return The total memory capacity as reported by the sum of all Kubernetes nodes resources, defined in MB.
+     * 
+     */
     public Integer memoryMb() {
         return this.memoryMb;
     }
@@ -46,6 +54,10 @@ public final class KubernetesMetadataResponse extends com.pulumi.resources.Invok
     @Import(name="nodeCount", required=true)
     private Integer nodeCount;
 
+    /**
+     * @return Node count as reported by Kubernetes nodes resources.
+     * 
+     */
     public Integer nodeCount() {
         return this.nodeCount;
     }
@@ -57,6 +69,10 @@ public final class KubernetesMetadataResponse extends com.pulumi.resources.Invok
     @Import(name="nodeProviderId", required=true)
     private String nodeProviderId;
 
+    /**
+     * @return Node providerID as reported by the first node in the list of nodes on the Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-GCP), the node_count will be zero and the node_provider_id will be empty.
+     * 
+     */
     public String nodeProviderId() {
         return this.nodeProviderId;
     }
@@ -68,6 +84,10 @@ public final class KubernetesMetadataResponse extends com.pulumi.resources.Invok
     @Import(name="updateTime", required=true)
     private String updateTime;
 
+    /**
+     * @return The time at which these details were last updated. This update_time is different from the Membership-level update_time since EndpointDetails are updated internally for API consumers.
+     * 
+     */
     public String updateTime() {
         return this.updateTime;
     }
@@ -79,6 +99,10 @@ public final class KubernetesMetadataResponse extends com.pulumi.resources.Invok
     @Import(name="vcpuCount", required=true)
     private Integer vcpuCount;
 
+    /**
+     * @return vCPU count as reported by Kubernetes nodes resources.
+     * 
+     */
     public Integer vcpuCount() {
         return this.vcpuCount;
     }
@@ -112,31 +136,67 @@ public final class KubernetesMetadataResponse extends com.pulumi.resources.Invok
             $ = new KubernetesMetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kubernetesApiServerVersion Kubernetes API server version string as reported by &#39;/version&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubernetesApiServerVersion(String kubernetesApiServerVersion) {
             $.kubernetesApiServerVersion = kubernetesApiServerVersion;
             return this;
         }
 
+        /**
+         * @param memoryMb The total memory capacity as reported by the sum of all Kubernetes nodes resources, defined in MB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryMb(Integer memoryMb) {
             $.memoryMb = memoryMb;
             return this;
         }
 
+        /**
+         * @param nodeCount Node count as reported by Kubernetes nodes resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeCount(Integer nodeCount) {
             $.nodeCount = nodeCount;
             return this;
         }
 
+        /**
+         * @param nodeProviderId Node providerID as reported by the first node in the list of nodes on the Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-GCP), the node_count will be zero and the node_provider_id will be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeProviderId(String nodeProviderId) {
             $.nodeProviderId = nodeProviderId;
             return this;
         }
 
+        /**
+         * @param updateTime The time at which these details were last updated. This update_time is different from the Membership-level update_time since EndpointDetails are updated internally for API consumers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             $.updateTime = updateTime;
             return this;
         }
 
+        /**
+         * @param vcpuCount vCPU count as reported by Kubernetes nodes resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vcpuCount(Integer vcpuCount) {
             $.vcpuCount = vcpuCount;
             return this;

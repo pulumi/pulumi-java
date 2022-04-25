@@ -12,40 +12,40 @@ import java.util.Objects;
 
 @CustomType
 public final class ParameterMetadataResponse {
-    /**
-     * Optional. Additional metadata for describing this parameter.
-     * 
-     */
+        /**
+         * @return Optional. Additional metadata for describing this parameter.
+         * 
+         */
     private final Map<String,String> customMetadata;
-    /**
-     * The help text to display for the parameter.
-     * 
-     */
+        /**
+         * @return The help text to display for the parameter.
+         * 
+         */
     private final String helpText;
-    /**
-     * Optional. Whether the parameter is optional. Defaults to false.
-     * 
-     */
+        /**
+         * @return Optional. Whether the parameter is optional. Defaults to false.
+         * 
+         */
     private final Boolean isOptional;
-    /**
-     * The label to display for the parameter.
-     * 
-     */
+        /**
+         * @return The label to display for the parameter.
+         * 
+         */
     private final String label;
-    /**
-     * The name of the parameter.
-     * 
-     */
+        /**
+         * @return The name of the parameter.
+         * 
+         */
     private final String name;
-    /**
-     * Optional. The type of the parameter. Used for selecting input picker.
-     * 
-     */
+        /**
+         * @return Optional. The type of the parameter. Used for selecting input picker.
+         * 
+         */
     private final String paramType;
-    /**
-     * Optional. Regexes that the parameter must match.
-     * 
-     */
+        /**
+         * @return Optional. Regexes that the parameter must match.
+         * 
+         */
     private final List<String> regexes;
 
     @CustomType.Constructor
@@ -67,51 +67,51 @@ public final class ParameterMetadataResponse {
     }
 
     /**
-     * Optional. Additional metadata for describing this parameter.
+     * @return Optional. Additional metadata for describing this parameter.
      * 
-    */
+     */
     public Map<String,String> customMetadata() {
         return this.customMetadata;
     }
     /**
-     * The help text to display for the parameter.
+     * @return The help text to display for the parameter.
      * 
-    */
+     */
     public String helpText() {
         return this.helpText;
     }
     /**
-     * Optional. Whether the parameter is optional. Defaults to false.
+     * @return Optional. Whether the parameter is optional. Defaults to false.
      * 
-    */
+     */
     public Boolean isOptional() {
         return this.isOptional;
     }
     /**
-     * The label to display for the parameter.
+     * @return The label to display for the parameter.
      * 
-    */
+     */
     public String label() {
         return this.label;
     }
     /**
-     * The name of the parameter.
+     * @return The name of the parameter.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Optional. The type of the parameter. Used for selecting input picker.
+     * @return Optional. The type of the parameter. Used for selecting input picker.
      * 
-    */
+     */
     public String paramType() {
         return this.paramType;
     }
     /**
-     * Optional. Regexes that the parameter must match.
+     * @return Optional. Regexes that the parameter must match.
      * 
-    */
+     */
     public List<String> regexes() {
         return this.regexes;
     }

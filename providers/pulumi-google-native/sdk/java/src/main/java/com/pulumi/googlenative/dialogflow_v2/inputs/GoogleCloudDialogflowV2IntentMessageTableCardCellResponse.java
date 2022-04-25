@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardCellResponse ext
     @Import(name="text", required=true)
     private String text;
 
+    /**
+     * @return Text in this cell.
+     * 
+     */
     public String text() {
         return this.text;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardCellResponse ext
             $ = new GoogleCloudDialogflowV2IntentMessageTableCardCellResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param text Text in this cell.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String text) {
             $.text = text;
             return this;

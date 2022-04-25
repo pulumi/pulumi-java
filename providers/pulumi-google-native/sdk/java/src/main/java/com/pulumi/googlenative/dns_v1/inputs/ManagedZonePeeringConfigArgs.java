@@ -30,6 +30,10 @@ public final class ManagedZonePeeringConfigArgs extends com.pulumi.resources.Res
     @Import(name="targetNetwork")
     private @Nullable Output<ManagedZonePeeringConfigTargetNetworkArgs> targetNetwork;
 
+    /**
+     * @return The network with which to peer.
+     * 
+     */
     public Optional<Output<ManagedZonePeeringConfigTargetNetworkArgs>> targetNetwork() {
         return Optional.ofNullable(this.targetNetwork);
     }
@@ -68,11 +72,23 @@ public final class ManagedZonePeeringConfigArgs extends com.pulumi.resources.Res
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param targetNetwork The network with which to peer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNetwork(@Nullable Output<ManagedZonePeeringConfigTargetNetworkArgs> targetNetwork) {
             $.targetNetwork = targetNetwork;
             return this;
         }
 
+        /**
+         * @param targetNetwork The network with which to peer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNetwork(ManagedZonePeeringConfigTargetNetworkArgs targetNetwork) {
             return targetNetwork(Output.of(targetNetwork));
         }

@@ -16,45 +16,45 @@ import java.util.Objects;
 
 @CustomType
 public final class WidgetResponse {
-    /**
-     * A chart of alert policy data.
-     * 
-     */
+        /**
+         * @return A chart of alert policy data.
+         * 
+         */
     private final AlertChartResponse alertChart;
-    /**
-     * A blank space.
-     * 
-     */
+        /**
+         * @return A blank space.
+         * 
+         */
     private final EmptyResponse blank;
-    /**
-     * A widget that shows a stream of logs.
-     * 
-     */
+        /**
+         * @return A widget that shows a stream of logs.
+         * 
+         */
     private final LogsPanelResponse logsPanel;
-    /**
-     * A scorecard summarizing time series data.
-     * 
-     */
+        /**
+         * @return A scorecard summarizing time series data.
+         * 
+         */
     private final ScorecardResponse scorecard;
-    /**
-     * A raw string or markdown displaying textual content.
-     * 
-     */
+        /**
+         * @return A raw string or markdown displaying textual content.
+         * 
+         */
     private final TextResponse text;
-    /**
-     * A widget that displays time series data in a tabular format.
-     * 
-     */
+        /**
+         * @return A widget that displays time series data in a tabular format.
+         * 
+         */
     private final TimeSeriesTableResponse timeSeriesTable;
-    /**
-     * Optional. The title of the widget.
-     * 
-     */
+        /**
+         * @return Optional. The title of the widget.
+         * 
+         */
     private final String title;
-    /**
-     * A chart of time series data.
-     * 
-     */
+        /**
+         * @return A chart of time series data.
+         * 
+         */
     private final XyChartResponse xyChart;
 
     @CustomType.Constructor
@@ -78,58 +78,58 @@ public final class WidgetResponse {
     }
 
     /**
-     * A chart of alert policy data.
+     * @return A chart of alert policy data.
      * 
-    */
+     */
     public AlertChartResponse alertChart() {
         return this.alertChart;
     }
     /**
-     * A blank space.
+     * @return A blank space.
      * 
-    */
+     */
     public EmptyResponse blank() {
         return this.blank;
     }
     /**
-     * A widget that shows a stream of logs.
+     * @return A widget that shows a stream of logs.
      * 
-    */
+     */
     public LogsPanelResponse logsPanel() {
         return this.logsPanel;
     }
     /**
-     * A scorecard summarizing time series data.
+     * @return A scorecard summarizing time series data.
      * 
-    */
+     */
     public ScorecardResponse scorecard() {
         return this.scorecard;
     }
     /**
-     * A raw string or markdown displaying textual content.
+     * @return A raw string or markdown displaying textual content.
      * 
-    */
+     */
     public TextResponse text() {
         return this.text;
     }
     /**
-     * A widget that displays time series data in a tabular format.
+     * @return A widget that displays time series data in a tabular format.
      * 
-    */
+     */
     public TimeSeriesTableResponse timeSeriesTable() {
         return this.timeSeriesTable;
     }
     /**
-     * Optional. The title of the widget.
+     * @return Optional. The title of the widget.
      * 
-    */
+     */
     public String title() {
         return this.title;
     }
     /**
-     * A chart of time series data.
+     * @return A chart of time series data.
      * 
-    */
+     */
     public XyChartResponse xyChart() {
         return this.xyChart;
     }

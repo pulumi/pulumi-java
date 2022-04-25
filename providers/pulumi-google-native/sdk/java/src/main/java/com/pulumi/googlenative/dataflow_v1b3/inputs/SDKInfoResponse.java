@@ -23,6 +23,10 @@ public final class SDKInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="language", required=true)
     private String language;
 
+    /**
+     * @return The SDK Language.
+     * 
+     */
     public String language() {
         return this.language;
     }
@@ -34,6 +38,10 @@ public final class SDKInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return Optional. The SDK version.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -63,11 +71,23 @@ public final class SDKInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SDKInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param language The SDK Language.
+         * 
+         * @return builder
+         * 
+         */
         public Builder language(String language) {
             $.language = language;
             return this;
         }
 
+        /**
+         * @param version Optional. The SDK version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

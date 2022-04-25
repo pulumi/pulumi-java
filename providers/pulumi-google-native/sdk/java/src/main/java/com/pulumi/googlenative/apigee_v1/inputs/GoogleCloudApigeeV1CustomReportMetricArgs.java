@@ -26,6 +26,10 @@ public final class GoogleCloudApigeeV1CustomReportMetricArgs extends com.pulumi.
     @Import(name="function")
     private @Nullable Output<String> function;
 
+    /**
+     * @return aggregate function
+     * 
+     */
     public Optional<Output<String>> function() {
         return Optional.ofNullable(this.function);
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudApigeeV1CustomReportMetricArgs extends com.pulumi.
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return name of the metric
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -66,20 +74,44 @@ public final class GoogleCloudApigeeV1CustomReportMetricArgs extends com.pulumi.
             $ = new GoogleCloudApigeeV1CustomReportMetricArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param function aggregate function
+         * 
+         * @return builder
+         * 
+         */
         public Builder function(@Nullable Output<String> function) {
             $.function = function;
             return this;
         }
 
+        /**
+         * @param function aggregate function
+         * 
+         * @return builder
+         * 
+         */
         public Builder function(String function) {
             return function(Output.of(function));
         }
 
+        /**
+         * @param name name of the metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name name of the metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

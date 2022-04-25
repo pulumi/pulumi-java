@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class CertificateConfigResponse {
-    /**
-     * Optional. The public key that corresponds to this config. This is, for example, used when issuing Certificates, but not when creating a self-signed CertificateAuthority or CertificateAuthority CSR.
-     * 
-     */
+        /**
+         * @return Optional. The public key that corresponds to this config. This is, for example, used when issuing Certificates, but not when creating a self-signed CertificateAuthority or CertificateAuthority CSR.
+         * 
+         */
     private final PublicKeyResponse publicKey;
-    /**
-     * Describes how some of the technical fields in a certificate should be populated.
-     * 
-     */
+        /**
+         * @return Describes how some of the technical fields in a certificate should be populated.
+         * 
+         */
     private final ReusableConfigWrapperResponse reusableConfig;
-    /**
-     * Specifies some of the values in a certificate that are related to the subject.
-     * 
-     */
+        /**
+         * @return Specifies some of the values in a certificate that are related to the subject.
+         * 
+         */
     private final SubjectConfigResponse subjectConfig;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class CertificateConfigResponse {
     }
 
     /**
-     * Optional. The public key that corresponds to this config. This is, for example, used when issuing Certificates, but not when creating a self-signed CertificateAuthority or CertificateAuthority CSR.
+     * @return Optional. The public key that corresponds to this config. This is, for example, used when issuing Certificates, but not when creating a self-signed CertificateAuthority or CertificateAuthority CSR.
      * 
-    */
+     */
     public PublicKeyResponse publicKey() {
         return this.publicKey;
     }
     /**
-     * Describes how some of the technical fields in a certificate should be populated.
+     * @return Describes how some of the technical fields in a certificate should be populated.
      * 
-    */
+     */
     public ReusableConfigWrapperResponse reusableConfig() {
         return this.reusableConfig;
     }
     /**
-     * Specifies some of the values in a certificate that are related to the subject.
+     * @return Specifies some of the values in a certificate that are related to the subject.
      * 
-    */
+     */
     public SubjectConfigResponse subjectConfig() {
         return this.subjectConfig;
     }

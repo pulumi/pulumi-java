@@ -31,6 +31,10 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
     @Import(name="guestAccelerators")
     private @Nullable Output<List<AcceleratorConfigArgs>> guestAccelerators;
 
+    /**
+     * @return Specifies accelerator type and count.
+     * 
+     */
     public Optional<Output<List<AcceleratorConfigArgs>>> guestAccelerators() {
         return Optional.ofNullable(this.guestAccelerators);
     }
@@ -42,6 +46,10 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
     @Import(name="localSsds")
     private @Nullable Output<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> localSsds;
 
+    /**
+     * @return Specifies amount of local ssd to reserve with each instance. The type of disk is local-ssd.
+     * 
+     */
     public Optional<Output<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>>> localSsds() {
         return Optional.ofNullable(this.localSsds);
     }
@@ -53,6 +61,10 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
     @Import(name="locationHint")
     private @Nullable Output<String> locationHint;
 
+    /**
+     * @return An opaque location hint used to place the allocation close to other resources. This field is for use by internal tools that use the public API.
+     * 
+     */
     public Optional<Output<String>> locationHint() {
         return Optional.ofNullable(this.locationHint);
     }
@@ -64,6 +76,10 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
     @Import(name="machineType")
     private @Nullable Output<String> machineType;
 
+    /**
+     * @return Specifies type of machine (name only) which has fixed number of vCPUs and fixed amount of memory. This also includes specifying custom machine type following custom-NUMBER_OF_CPUS-AMOUNT_OF_MEMORY pattern.
+     * 
+     */
     public Optional<Output<String>> machineType() {
         return Optional.ofNullable(this.machineType);
     }
@@ -75,6 +91,10 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
     @Import(name="maintenanceFreezeDurationHours")
     private @Nullable Output<Integer> maintenanceFreezeDurationHours;
 
+    /**
+     * @return Specifies the number of hours after reservation creation where instances using the reservation won&#39;t be scheduled for maintenance.
+     * 
+     */
     public Optional<Output<Integer>> maintenanceFreezeDurationHours() {
         return Optional.ofNullable(this.maintenanceFreezeDurationHours);
     }
@@ -86,6 +106,10 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
     @Import(name="maintenanceInterval")
     private @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesMaintenanceInterval> maintenanceInterval;
 
+    /**
+     * @return For more information about maintenance intervals, see Setting maintenance intervals.
+     * 
+     */
     public Optional<Output<AllocationSpecificSKUAllocationReservedInstancePropertiesMaintenanceInterval>> maintenanceInterval() {
         return Optional.ofNullable(this.maintenanceInterval);
     }
@@ -97,6 +121,10 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
     @Import(name="minCpuPlatform")
     private @Nullable Output<String> minCpuPlatform;
 
+    /**
+     * @return Minimum cpu platform the reservation.
+     * 
+     */
     public Optional<Output<String>> minCpuPlatform() {
         return Optional.ofNullable(this.minCpuPlatform);
     }
@@ -131,73 +159,169 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
             $ = new AllocationSpecificSKUAllocationReservedInstancePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param guestAccelerators Specifies accelerator type and count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestAccelerators(@Nullable Output<List<AcceleratorConfigArgs>> guestAccelerators) {
             $.guestAccelerators = guestAccelerators;
             return this;
         }
 
+        /**
+         * @param guestAccelerators Specifies accelerator type and count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestAccelerators(List<AcceleratorConfigArgs> guestAccelerators) {
             return guestAccelerators(Output.of(guestAccelerators));
         }
 
+        /**
+         * @param guestAccelerators Specifies accelerator type and count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestAccelerators(AcceleratorConfigArgs... guestAccelerators) {
             return guestAccelerators(List.of(guestAccelerators));
         }
 
+        /**
+         * @param localSsds Specifies amount of local ssd to reserve with each instance. The type of disk is local-ssd.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localSsds(@Nullable Output<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> localSsds) {
             $.localSsds = localSsds;
             return this;
         }
 
+        /**
+         * @param localSsds Specifies amount of local ssd to reserve with each instance. The type of disk is local-ssd.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localSsds(List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs> localSsds) {
             return localSsds(Output.of(localSsds));
         }
 
+        /**
+         * @param localSsds Specifies amount of local ssd to reserve with each instance. The type of disk is local-ssd.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localSsds(AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs... localSsds) {
             return localSsds(List.of(localSsds));
         }
 
+        /**
+         * @param locationHint An opaque location hint used to place the allocation close to other resources. This field is for use by internal tools that use the public API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationHint(@Nullable Output<String> locationHint) {
             $.locationHint = locationHint;
             return this;
         }
 
+        /**
+         * @param locationHint An opaque location hint used to place the allocation close to other resources. This field is for use by internal tools that use the public API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationHint(String locationHint) {
             return locationHint(Output.of(locationHint));
         }
 
+        /**
+         * @param machineType Specifies type of machine (name only) which has fixed number of vCPUs and fixed amount of memory. This also includes specifying custom machine type following custom-NUMBER_OF_CPUS-AMOUNT_OF_MEMORY pattern.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(@Nullable Output<String> machineType) {
             $.machineType = machineType;
             return this;
         }
 
+        /**
+         * @param machineType Specifies type of machine (name only) which has fixed number of vCPUs and fixed amount of memory. This also includes specifying custom machine type following custom-NUMBER_OF_CPUS-AMOUNT_OF_MEMORY pattern.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(String machineType) {
             return machineType(Output.of(machineType));
         }
 
+        /**
+         * @param maintenanceFreezeDurationHours Specifies the number of hours after reservation creation where instances using the reservation won&#39;t be scheduled for maintenance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceFreezeDurationHours(@Nullable Output<Integer> maintenanceFreezeDurationHours) {
             $.maintenanceFreezeDurationHours = maintenanceFreezeDurationHours;
             return this;
         }
 
+        /**
+         * @param maintenanceFreezeDurationHours Specifies the number of hours after reservation creation where instances using the reservation won&#39;t be scheduled for maintenance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceFreezeDurationHours(Integer maintenanceFreezeDurationHours) {
             return maintenanceFreezeDurationHours(Output.of(maintenanceFreezeDurationHours));
         }
 
+        /**
+         * @param maintenanceInterval For more information about maintenance intervals, see Setting maintenance intervals.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceInterval(@Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesMaintenanceInterval> maintenanceInterval) {
             $.maintenanceInterval = maintenanceInterval;
             return this;
         }
 
+        /**
+         * @param maintenanceInterval For more information about maintenance intervals, see Setting maintenance intervals.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceInterval(AllocationSpecificSKUAllocationReservedInstancePropertiesMaintenanceInterval maintenanceInterval) {
             return maintenanceInterval(Output.of(maintenanceInterval));
         }
 
+        /**
+         * @param minCpuPlatform Minimum cpu platform the reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             $.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
+        /**
+         * @param minCpuPlatform Minimum cpu platform the reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCpuPlatform(String minCpuPlatform) {
             return minCpuPlatform(Output.of(minCpuPlatform));
         }

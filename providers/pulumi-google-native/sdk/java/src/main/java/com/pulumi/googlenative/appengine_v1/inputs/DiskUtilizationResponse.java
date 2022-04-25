@@ -23,6 +23,10 @@ public final class DiskUtilizationResponse extends com.pulumi.resources.InvokeAr
     @Import(name="targetReadBytesPerSecond", required=true)
     private Integer targetReadBytesPerSecond;
 
+    /**
+     * @return Target bytes read per second.
+     * 
+     */
     public Integer targetReadBytesPerSecond() {
         return this.targetReadBytesPerSecond;
     }
@@ -34,6 +38,10 @@ public final class DiskUtilizationResponse extends com.pulumi.resources.InvokeAr
     @Import(name="targetReadOpsPerSecond", required=true)
     private Integer targetReadOpsPerSecond;
 
+    /**
+     * @return Target ops read per seconds.
+     * 
+     */
     public Integer targetReadOpsPerSecond() {
         return this.targetReadOpsPerSecond;
     }
@@ -45,6 +53,10 @@ public final class DiskUtilizationResponse extends com.pulumi.resources.InvokeAr
     @Import(name="targetWriteBytesPerSecond", required=true)
     private Integer targetWriteBytesPerSecond;
 
+    /**
+     * @return Target bytes written per second.
+     * 
+     */
     public Integer targetWriteBytesPerSecond() {
         return this.targetWriteBytesPerSecond;
     }
@@ -56,6 +68,10 @@ public final class DiskUtilizationResponse extends com.pulumi.resources.InvokeAr
     @Import(name="targetWriteOpsPerSecond", required=true)
     private Integer targetWriteOpsPerSecond;
 
+    /**
+     * @return Target ops written per second.
+     * 
+     */
     public Integer targetWriteOpsPerSecond() {
         return this.targetWriteOpsPerSecond;
     }
@@ -87,21 +103,45 @@ public final class DiskUtilizationResponse extends com.pulumi.resources.InvokeAr
             $ = new DiskUtilizationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param targetReadBytesPerSecond Target bytes read per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetReadBytesPerSecond(Integer targetReadBytesPerSecond) {
             $.targetReadBytesPerSecond = targetReadBytesPerSecond;
             return this;
         }
 
+        /**
+         * @param targetReadOpsPerSecond Target ops read per seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetReadOpsPerSecond(Integer targetReadOpsPerSecond) {
             $.targetReadOpsPerSecond = targetReadOpsPerSecond;
             return this;
         }
 
+        /**
+         * @param targetWriteBytesPerSecond Target bytes written per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetWriteBytesPerSecond(Integer targetWriteBytesPerSecond) {
             $.targetWriteBytesPerSecond = targetWriteBytesPerSecond;
             return this;
         }
 
+        /**
+         * @param targetWriteOpsPerSecond Target ops written per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetWriteOpsPerSecond(Integer targetWriteOpsPerSecond) {
             $.targetWriteOpsPerSecond = targetWriteOpsPerSecond;
             return this;

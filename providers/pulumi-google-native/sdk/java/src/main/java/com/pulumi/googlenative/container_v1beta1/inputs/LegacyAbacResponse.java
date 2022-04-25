@@ -23,6 +23,10 @@ public final class LegacyAbacResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whether the ABAC authorizer is enabled for this cluster. When enabled, identities in the system, including service accounts, nodes, and controllers, will have statically granted permissions beyond those provided by the RBAC configuration or IAM.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -51,6 +55,12 @@ public final class LegacyAbacResponse extends com.pulumi.resources.InvokeArgs {
             $ = new LegacyAbacResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether the ABAC authorizer is enabled for this cluster. When enabled, identities in the system, including service accounts, nodes, and controllers, will have statically granted permissions beyond those provided by the RBAC configuration or IAM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

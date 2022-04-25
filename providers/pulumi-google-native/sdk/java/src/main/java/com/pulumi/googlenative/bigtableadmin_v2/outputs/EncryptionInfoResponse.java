@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class EncryptionInfoResponse {
-    /**
-     * The status of encrypt/decrypt calls on underlying data for this resource. Regardless of status, the existing data is always encrypted at rest.
-     * 
-     */
+        /**
+         * @return The status of encrypt/decrypt calls on underlying data for this resource. Regardless of status, the existing data is always encrypted at rest.
+         * 
+         */
     private final StatusResponse encryptionStatus;
-    /**
-     * The type of encryption used to protect this resource.
-     * 
-     */
+        /**
+         * @return The type of encryption used to protect this resource.
+         * 
+         */
     private final String encryptionType;
-    /**
-     * The version of the Cloud KMS key specified in the parent cluster that is in use for the data underlying this table.
-     * 
-     */
+        /**
+         * @return The version of the Cloud KMS key specified in the parent cluster that is in use for the data underlying this table.
+         * 
+         */
     private final String kmsKeyVersion;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class EncryptionInfoResponse {
     }
 
     /**
-     * The status of encrypt/decrypt calls on underlying data for this resource. Regardless of status, the existing data is always encrypted at rest.
+     * @return The status of encrypt/decrypt calls on underlying data for this resource. Regardless of status, the existing data is always encrypted at rest.
      * 
-    */
+     */
     public StatusResponse encryptionStatus() {
         return this.encryptionStatus;
     }
     /**
-     * The type of encryption used to protect this resource.
+     * @return The type of encryption used to protect this resource.
      * 
-    */
+     */
     public String encryptionType() {
         return this.encryptionType;
     }
     /**
-     * The version of the Cloud KMS key specified in the parent cluster that is in use for the data underlying this table.
+     * @return The version of the Cloud KMS key specified in the parent cluster that is in use for the data underlying this table.
      * 
-    */
+     */
     public String kmsKeyVersion() {
         return this.kmsKeyVersion;
     }

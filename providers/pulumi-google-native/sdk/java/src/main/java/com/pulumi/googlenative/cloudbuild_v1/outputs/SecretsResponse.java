@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class SecretsResponse {
-    /**
-     * Secrets encrypted with KMS key and the associated secret environment variable.
-     * 
-     */
+        /**
+         * @return Secrets encrypted with KMS key and the associated secret environment variable.
+         * 
+         */
     private final List<InlineSecretResponse> inline;
-    /**
-     * Secrets in Secret Manager and associated secret environment variable.
-     * 
-     */
+        /**
+         * @return Secrets in Secret Manager and associated secret environment variable.
+         * 
+         */
     private final List<SecretManagerSecretResponse> secretManager;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class SecretsResponse {
     }
 
     /**
-     * Secrets encrypted with KMS key and the associated secret environment variable.
+     * @return Secrets encrypted with KMS key and the associated secret environment variable.
      * 
-    */
+     */
     public List<InlineSecretResponse> inline() {
         return this.inline;
     }
     /**
-     * Secrets in Secret Manager and associated secret environment variable.
+     * @return Secrets in Secret Manager and associated secret environment variable.
      * 
-    */
+     */
     public List<SecretManagerSecretResponse> secretManager() {
         return this.secretManager;
     }

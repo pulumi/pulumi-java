@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GooglePrivacyDlpV2RecordSuppressionResponse {
-    /**
-     * A condition that when it evaluates to true will result in the record being evaluated to be suppressed from the transformed content.
-     * 
-     */
+        /**
+         * @return A condition that when it evaluates to true will result in the record being evaluated to be suppressed from the transformed content.
+         * 
+         */
     private final GooglePrivacyDlpV2RecordConditionResponse condition;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GooglePrivacyDlpV2RecordSuppressionResponse {
     }
 
     /**
-     * A condition that when it evaluates to true will result in the record being evaluated to be suppressed from the transformed content.
+     * @return A condition that when it evaluates to true will result in the record being evaluated to be suppressed from the transformed content.
      * 
-    */
+     */
     public GooglePrivacyDlpV2RecordConditionResponse condition() {
         return this.condition;
     }

@@ -23,6 +23,10 @@ public final class EnvgroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostnames", required=true)
     private Output<List<String>> hostnames;
 
+    /**
+     * @return Host names for this environment group.
+     * 
+     */
     public Output<List<String>> hostnames() {
         return this.hostnames;
     }
@@ -34,6 +38,10 @@ public final class EnvgroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return ID of the environment group.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -71,24 +79,54 @@ public final class EnvgroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EnvgroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostnames Host names for this environment group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostnames(Output<List<String>> hostnames) {
             $.hostnames = hostnames;
             return this;
         }
 
+        /**
+         * @param hostnames Host names for this environment group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostnames(List<String> hostnames) {
             return hostnames(Output.of(hostnames));
         }
 
+        /**
+         * @param hostnames Host names for this environment group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostnames(String... hostnames) {
             return hostnames(List.of(hostnames));
         }
 
+        /**
+         * @param name ID of the environment group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name ID of the environment group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

@@ -26,6 +26,10 @@ public final class GooglePrivacyDlpV2CloudStoragePathArgs extends com.pulumi.res
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -54,11 +58,23 @@ public final class GooglePrivacyDlpV2CloudStoragePathArgs extends com.pulumi.res
             $ = new GooglePrivacyDlpV2CloudStoragePathArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param path A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }

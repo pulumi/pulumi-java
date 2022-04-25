@@ -23,6 +23,10 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecResponse extends com.pu
     @Import(name="nextJobTime", required=true)
     private String nextJobTime;
 
+    /**
+     * @return When the next Scheduler job is going to run.
+     * 
+     */
     public String nextJobTime() {
         return this.nextJobTime;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecResponse extends com.pu
     @Import(name="schedule", required=true)
     private String schedule;
 
+    /**
+     * @return Unix-cron format of the schedule. This information is retrieved from the linked Cloud Scheduler.
+     * 
+     */
     public String schedule() {
         return this.schedule;
     }
@@ -45,6 +53,10 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecResponse extends com.pu
     @Import(name="timeZone", required=true)
     private String timeZone;
 
+    /**
+     * @return Timezone ID. This matches the timezone IDs used by the Cloud Scheduler API. If empty, UTC time is assumed.
+     * 
+     */
     public String timeZone() {
         return this.timeZone;
     }
@@ -75,16 +87,34 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecResponse extends com.pu
             $ = new GoogleCloudDatapipelinesV1ScheduleSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nextJobTime When the next Scheduler job is going to run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextJobTime(String nextJobTime) {
             $.nextJobTime = nextJobTime;
             return this;
         }
 
+        /**
+         * @param schedule Unix-cron format of the schedule. This information is retrieved from the linked Cloud Scheduler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(String schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param timeZone Timezone ID. This matches the timezone IDs used by the Cloud Scheduler API. If empty, UTC time is assumed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(String timeZone) {
             $.timeZone = timeZone;
             return this;

@@ -26,6 +26,10 @@ public final class MaintenanceWindowResponse extends com.pulumi.resources.Invoke
     @Import(name="dailyMaintenanceWindow", required=true)
     private DailyMaintenanceWindowResponse dailyMaintenanceWindow;
 
+    /**
+     * @return DailyMaintenanceWindow specifies a daily maintenance operation window.
+     * 
+     */
     public DailyMaintenanceWindowResponse dailyMaintenanceWindow() {
         return this.dailyMaintenanceWindow;
     }
@@ -37,6 +41,10 @@ public final class MaintenanceWindowResponse extends com.pulumi.resources.Invoke
     @Import(name="maintenanceExclusions", required=true)
     private Map<String,String> maintenanceExclusions;
 
+    /**
+     * @return Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows.
+     * 
+     */
     public Map<String,String> maintenanceExclusions() {
         return this.maintenanceExclusions;
     }
@@ -48,6 +56,10 @@ public final class MaintenanceWindowResponse extends com.pulumi.resources.Invoke
     @Import(name="recurringWindow", required=true)
     private RecurringTimeWindowResponse recurringWindow;
 
+    /**
+     * @return RecurringWindow specifies some number of recurring time periods for maintenance to occur. The time windows may be overlapping. If no maintenance windows are set, maintenance can occur at any time.
+     * 
+     */
     public RecurringTimeWindowResponse recurringWindow() {
         return this.recurringWindow;
     }
@@ -78,16 +90,34 @@ public final class MaintenanceWindowResponse extends com.pulumi.resources.Invoke
             $ = new MaintenanceWindowResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dailyMaintenanceWindow DailyMaintenanceWindow specifies a daily maintenance operation window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dailyMaintenanceWindow(DailyMaintenanceWindowResponse dailyMaintenanceWindow) {
             $.dailyMaintenanceWindow = dailyMaintenanceWindow;
             return this;
         }
 
+        /**
+         * @param maintenanceExclusions Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceExclusions(Map<String,String> maintenanceExclusions) {
             $.maintenanceExclusions = maintenanceExclusions;
             return this;
         }
 
+        /**
+         * @param recurringWindow RecurringWindow specifies some number of recurring time periods for maintenance to occur. The time windows may be overlapping. If no maintenance windows are set, maintenance can occur at any time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurringWindow(RecurringTimeWindowResponse recurringWindow) {
             $.recurringWindow = recurringWindow;
             return this;

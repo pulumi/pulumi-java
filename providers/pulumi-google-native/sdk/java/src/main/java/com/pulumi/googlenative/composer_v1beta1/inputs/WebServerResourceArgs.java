@@ -26,6 +26,10 @@ public final class WebServerResourceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="cpu")
     private @Nullable Output<Double> cpu;
 
+    /**
+     * @return Optional. CPU request and limit for Airflow web server.
+     * 
+     */
     public Optional<Output<Double>> cpu() {
         return Optional.ofNullable(this.cpu);
     }
@@ -37,6 +41,10 @@ public final class WebServerResourceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="memoryGb")
     private @Nullable Output<Double> memoryGb;
 
+    /**
+     * @return Optional. Memory (GB) request and limit for Airflow web server.
+     * 
+     */
     public Optional<Output<Double>> memoryGb() {
         return Optional.ofNullable(this.memoryGb);
     }
@@ -48,6 +56,10 @@ public final class WebServerResourceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="storageGb")
     private @Nullable Output<Double> storageGb;
 
+    /**
+     * @return Optional. Storage (GB) request and limit for Airflow web server.
+     * 
+     */
     public Optional<Output<Double>> storageGb() {
         return Optional.ofNullable(this.storageGb);
     }
@@ -78,29 +90,65 @@ public final class WebServerResourceArgs extends com.pulumi.resources.ResourceAr
             $ = new WebServerResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpu Optional. CPU request and limit for Airflow web server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(@Nullable Output<Double> cpu) {
             $.cpu = cpu;
             return this;
         }
 
+        /**
+         * @param cpu Optional. CPU request and limit for Airflow web server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(Double cpu) {
             return cpu(Output.of(cpu));
         }
 
+        /**
+         * @param memoryGb Optional. Memory (GB) request and limit for Airflow web server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryGb(@Nullable Output<Double> memoryGb) {
             $.memoryGb = memoryGb;
             return this;
         }
 
+        /**
+         * @param memoryGb Optional. Memory (GB) request and limit for Airflow web server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryGb(Double memoryGb) {
             return memoryGb(Output.of(memoryGb));
         }
 
+        /**
+         * @param storageGb Optional. Storage (GB) request and limit for Airflow web server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageGb(@Nullable Output<Double> storageGb) {
             $.storageGb = storageGb;
             return this;
         }
 
+        /**
+         * @param storageGb Optional. Storage (GB) request and limit for Airflow web server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageGb(Double storageGb) {
             return storageGb(Output.of(storageGb));
         }

@@ -11,40 +11,40 @@ import java.util.Objects;
 
 @CustomType
 public final class GetServicePerimeterResult {
-    /**
-     * Description of the `ServicePerimeter` and its use. Does not affect behavior.
-     * 
-     */
+        /**
+         * @return Description of the `ServicePerimeter` and its use. Does not affect behavior.
+         * 
+         */
     private final String description;
-    /**
-     * Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and &#39;_&#39;. Format: `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`
-     * 
-     */
+        /**
+         * @return Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and &#39;_&#39;. Format: `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`
+         * 
+         */
     private final String name;
-    /**
-     * Perimeter type indicator. A single project is allowed to be a member of single regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a perimeter bridge without being included in regular perimeter. For perimeter bridges, the restricted service list as well as access level lists must be empty.
-     * 
-     */
+        /**
+         * @return Perimeter type indicator. A single project is allowed to be a member of single regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a perimeter bridge without being included in regular perimeter. For perimeter bridges, the restricted service list as well as access level lists must be empty.
+         * 
+         */
     private final String perimeterType;
-    /**
-     * Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and test ServicePerimeter configuration without enforcing actual access restrictions. Only allowed to be set when the &#34;use_explicit_dry_run_spec&#34; flag is set.
-     * 
-     */
+        /**
+         * @return Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and test ServicePerimeter configuration without enforcing actual access restrictions. Only allowed to be set when the &#34;use_explicit_dry_run_spec&#34; flag is set.
+         * 
+         */
     private final ServicePerimeterConfigResponse spec;
-    /**
-     * Current ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine perimeter content and boundaries.
-     * 
-     */
+        /**
+         * @return Current ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine perimeter content and boundaries.
+         * 
+         */
     private final ServicePerimeterConfigResponse status;
-    /**
-     * Human readable title. Must be unique within the Policy.
-     * 
-     */
+        /**
+         * @return Human readable title. Must be unique within the Policy.
+         * 
+         */
     private final String title;
-    /**
-     * Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists for all Service Perimeters, and that spec is identical to the status for those Service Perimeters. When this flag is set, it inhibits the generation of the implicit spec, thereby allowing the user to explicitly provide a configuration (&#34;spec&#34;) to use in a dry-run version of the Service Perimeter. This allows the user to test changes to the enforced config (&#34;status&#34;) without actually enforcing them. This testing is done through analyzing the differences between currently enforced and suggested restrictions. use_explicit_dry_run_spec must bet set to True if any of the fields in the spec are set to non-default values.
-     * 
-     */
+        /**
+         * @return Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists for all Service Perimeters, and that spec is identical to the status for those Service Perimeters. When this flag is set, it inhibits the generation of the implicit spec, thereby allowing the user to explicitly provide a configuration (&#34;spec&#34;) to use in a dry-run version of the Service Perimeter. This allows the user to test changes to the enforced config (&#34;status&#34;) without actually enforcing them. This testing is done through analyzing the differences between currently enforced and suggested restrictions. use_explicit_dry_run_spec must bet set to True if any of the fields in the spec are set to non-default values.
+         * 
+         */
     private final Boolean useExplicitDryRunSpec;
 
     @CustomType.Constructor
@@ -66,51 +66,51 @@ public final class GetServicePerimeterResult {
     }
 
     /**
-     * Description of the `ServicePerimeter` and its use. Does not affect behavior.
+     * @return Description of the `ServicePerimeter` and its use. Does not affect behavior.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and &#39;_&#39;. Format: `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`
+     * @return Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and &#39;_&#39;. Format: `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Perimeter type indicator. A single project is allowed to be a member of single regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a perimeter bridge without being included in regular perimeter. For perimeter bridges, the restricted service list as well as access level lists must be empty.
+     * @return Perimeter type indicator. A single project is allowed to be a member of single regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a perimeter bridge without being included in regular perimeter. For perimeter bridges, the restricted service list as well as access level lists must be empty.
      * 
-    */
+     */
     public String perimeterType() {
         return this.perimeterType;
     }
     /**
-     * Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and test ServicePerimeter configuration without enforcing actual access restrictions. Only allowed to be set when the &#34;use_explicit_dry_run_spec&#34; flag is set.
+     * @return Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and test ServicePerimeter configuration without enforcing actual access restrictions. Only allowed to be set when the &#34;use_explicit_dry_run_spec&#34; flag is set.
      * 
-    */
+     */
     public ServicePerimeterConfigResponse spec() {
         return this.spec;
     }
     /**
-     * Current ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine perimeter content and boundaries.
+     * @return Current ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine perimeter content and boundaries.
      * 
-    */
+     */
     public ServicePerimeterConfigResponse status() {
         return this.status;
     }
     /**
-     * Human readable title. Must be unique within the Policy.
+     * @return Human readable title. Must be unique within the Policy.
      * 
-    */
+     */
     public String title() {
         return this.title;
     }
     /**
-     * Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists for all Service Perimeters, and that spec is identical to the status for those Service Perimeters. When this flag is set, it inhibits the generation of the implicit spec, thereby allowing the user to explicitly provide a configuration (&#34;spec&#34;) to use in a dry-run version of the Service Perimeter. This allows the user to test changes to the enforced config (&#34;status&#34;) without actually enforcing them. This testing is done through analyzing the differences between currently enforced and suggested restrictions. use_explicit_dry_run_spec must bet set to True if any of the fields in the spec are set to non-default values.
+     * @return Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists for all Service Perimeters, and that spec is identical to the status for those Service Perimeters. When this flag is set, it inhibits the generation of the implicit spec, thereby allowing the user to explicitly provide a configuration (&#34;spec&#34;) to use in a dry-run version of the Service Perimeter. This allows the user to test changes to the enforced config (&#34;status&#34;) without actually enforcing them. This testing is done through analyzing the differences between currently enforced and suggested restrictions. use_explicit_dry_run_spec must bet set to True if any of the fields in the spec are set to non-default values.
      * 
-    */
+     */
     public Boolean useExplicitDryRunSpec() {
         return this.useExplicitDryRunSpec;
     }

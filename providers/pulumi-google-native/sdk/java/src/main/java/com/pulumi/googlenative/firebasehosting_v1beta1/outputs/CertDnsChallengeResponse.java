@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class CertDnsChallengeResponse {
-    /**
-     * The domain name upon which the DNS challenge must be satisfied.
-     * 
-     */
+        /**
+         * @return The domain name upon which the DNS challenge must be satisfied.
+         * 
+         */
     private final String domainName;
-    /**
-     * The value that must be present as a TXT record on the domain name to satisfy the challenge.
-     * 
-     */
+        /**
+         * @return The value that must be present as a TXT record on the domain name to satisfy the challenge.
+         * 
+         */
     private final String token;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class CertDnsChallengeResponse {
     }
 
     /**
-     * The domain name upon which the DNS challenge must be satisfied.
+     * @return The domain name upon which the DNS challenge must be satisfied.
      * 
-    */
+     */
     public String domainName() {
         return this.domainName;
     }
     /**
-     * The value that must be present as a TXT record on the domain name to satisfy the challenge.
+     * @return The value that must be present as a TXT record on the domain name to satisfy the challenge.
      * 
-    */
+     */
     public String token() {
         return this.token;
     }

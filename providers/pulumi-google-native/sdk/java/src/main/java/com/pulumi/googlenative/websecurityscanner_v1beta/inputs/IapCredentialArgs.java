@@ -26,6 +26,10 @@ public final class IapCredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iapTestServiceAccountInfo")
     private @Nullable Output<IapTestServiceAccountInfoArgs> iapTestServiceAccountInfo;
 
+    /**
+     * @return Authentication configuration when Web-Security-Scanner service account is added in Identity-Aware-Proxy (IAP) access policies.
+     * 
+     */
     public Optional<Output<IapTestServiceAccountInfoArgs>> iapTestServiceAccountInfo() {
         return Optional.ofNullable(this.iapTestServiceAccountInfo);
     }
@@ -54,11 +58,23 @@ public final class IapCredentialArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IapCredentialArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param iapTestServiceAccountInfo Authentication configuration when Web-Security-Scanner service account is added in Identity-Aware-Proxy (IAP) access policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iapTestServiceAccountInfo(@Nullable Output<IapTestServiceAccountInfoArgs> iapTestServiceAccountInfo) {
             $.iapTestServiceAccountInfo = iapTestServiceAccountInfo;
             return this;
         }
 
+        /**
+         * @param iapTestServiceAccountInfo Authentication configuration when Web-Security-Scanner service account is added in Identity-Aware-Proxy (IAP) access policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iapTestServiceAccountInfo(IapTestServiceAccountInfoArgs iapTestServiceAccountInfo) {
             return iapTestServiceAccountInfo(Output.of(iapTestServiceAccountInfo));
         }

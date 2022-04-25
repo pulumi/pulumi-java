@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class OperationErrorResponse {
-    /**
-     * The array of errors encountered while processing this operation.
-     * 
-     */
+        /**
+         * @return The array of errors encountered while processing this operation.
+         * 
+         */
     private final List<OperationErrorErrorsItemResponse> errors;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class OperationErrorResponse {
     }
 
     /**
-     * The array of errors encountered while processing this operation.
+     * @return The array of errors encountered while processing this operation.
      * 
-    */
+     */
     public List<OperationErrorErrorsItemResponse> errors() {
         return this.errors;
     }

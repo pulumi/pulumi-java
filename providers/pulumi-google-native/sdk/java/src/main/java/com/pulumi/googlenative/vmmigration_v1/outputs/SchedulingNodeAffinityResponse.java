@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class SchedulingNodeAffinityResponse {
-    /**
-     * The label key of Node resource to reference.
-     * 
-     */
+        /**
+         * @return The label key of Node resource to reference.
+         * 
+         */
     private final String key;
-    /**
-     * The operator to use for the node resources specified in the `values` parameter.
-     * 
-     */
+        /**
+         * @return The operator to use for the node resources specified in the `values` parameter.
+         * 
+         */
     private final String operator;
-    /**
-     * Corresponds to the label values of Node resource.
-     * 
-     */
+        /**
+         * @return Corresponds to the label values of Node resource.
+         * 
+         */
     private final List<String> values;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class SchedulingNodeAffinityResponse {
     }
 
     /**
-     * The label key of Node resource to reference.
+     * @return The label key of Node resource to reference.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * The operator to use for the node resources specified in the `values` parameter.
+     * @return The operator to use for the node resources specified in the `values` parameter.
      * 
-    */
+     */
     public String operator() {
         return this.operator;
     }
     /**
-     * Corresponds to the label values of Node resource.
+     * @return Corresponds to the label values of Node resource.
      * 
-    */
+     */
     public List<String> values() {
         return this.values;
     }

@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRb
     @Import(name="phoneNumber", required=true)
     private String phoneNumber;
 
+    /**
+     * @return The phone number to fill in the default dialer app. This field should be in [E.164](https://en.wikipedia.org/wiki/E.164) format. An example of a correctly formatted phone number: +15556767888.
+     * 
+     */
     public String phoneNumber() {
         return this.phoneNumber;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRb
             $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param phoneNumber The phone number to fill in the default dialer app. This field should be in [E.164](https://en.wikipedia.org/wiki/E.164) format. An example of a correctly formatted phone number: +15556767888.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneNumber(String phoneNumber) {
             $.phoneNumber = phoneNumber;
             return this;

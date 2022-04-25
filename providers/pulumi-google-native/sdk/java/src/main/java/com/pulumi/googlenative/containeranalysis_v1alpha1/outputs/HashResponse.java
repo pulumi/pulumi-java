@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class HashResponse {
-    /**
-     * The type of hash that was performed.
-     * 
-     */
+        /**
+         * @return The type of hash that was performed.
+         * 
+         */
     private final String type;
-    /**
-     * The hash value.
-     * 
-     */
+        /**
+         * @return The hash value.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class HashResponse {
     }
 
     /**
-     * The type of hash that was performed.
+     * @return The type of hash that was performed.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The hash value.
+     * @return The hash value.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

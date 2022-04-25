@@ -12,20 +12,20 @@ import java.util.Objects;
 
 @CustomType
 public final class MaintenanceWindowResponse {
-    /**
-     * DailyMaintenanceWindow specifies a daily maintenance operation window.
-     * 
-     */
+        /**
+         * @return DailyMaintenanceWindow specifies a daily maintenance operation window.
+         * 
+         */
     private final DailyMaintenanceWindowResponse dailyMaintenanceWindow;
-    /**
-     * Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows.
-     * 
-     */
+        /**
+         * @return Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows.
+         * 
+         */
     private final Map<String,String> maintenanceExclusions;
-    /**
-     * RecurringWindow specifies some number of recurring time periods for maintenance to occur. The time windows may be overlapping. If no maintenance windows are set, maintenance can occur at any time.
-     * 
-     */
+        /**
+         * @return RecurringWindow specifies some number of recurring time periods for maintenance to occur. The time windows may be overlapping. If no maintenance windows are set, maintenance can occur at any time.
+         * 
+         */
     private final RecurringTimeWindowResponse recurringWindow;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class MaintenanceWindowResponse {
     }
 
     /**
-     * DailyMaintenanceWindow specifies a daily maintenance operation window.
+     * @return DailyMaintenanceWindow specifies a daily maintenance operation window.
      * 
-    */
+     */
     public DailyMaintenanceWindowResponse dailyMaintenanceWindow() {
         return this.dailyMaintenanceWindow;
     }
     /**
-     * Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows.
+     * @return Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows.
      * 
-    */
+     */
     public Map<String,String> maintenanceExclusions() {
         return this.maintenanceExclusions;
     }
     /**
-     * RecurringWindow specifies some number of recurring time periods for maintenance to occur. The time windows may be overlapping. If no maintenance windows are set, maintenance can occur at any time.
+     * @return RecurringWindow specifies some number of recurring time periods for maintenance to occur. The time windows may be overlapping. If no maintenance windows are set, maintenance can occur at any time.
      * 
-    */
+     */
     public RecurringTimeWindowResponse recurringWindow() {
         return this.recurringWindow;
     }

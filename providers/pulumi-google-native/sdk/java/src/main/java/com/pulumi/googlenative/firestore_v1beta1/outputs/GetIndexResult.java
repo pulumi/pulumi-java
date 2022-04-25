@@ -11,25 +11,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GetIndexResult {
-    /**
-     * The collection ID to which this index applies. Required.
-     * 
-     */
+        /**
+         * @return The collection ID to which this index applies. Required.
+         * 
+         */
     private final String collectionId;
-    /**
-     * The fields to index.
-     * 
-     */
+        /**
+         * @return The fields to index.
+         * 
+         */
     private final List<GoogleFirestoreAdminV1beta1IndexFieldResponse> fields;
-    /**
-     * The resource name of the index. Output only.
-     * 
-     */
+        /**
+         * @return The resource name of the index. Output only.
+         * 
+         */
     private final String name;
-    /**
-     * The state of the index. Output only.
-     * 
-     */
+        /**
+         * @return The state of the index. Output only.
+         * 
+         */
     private final String state;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class GetIndexResult {
     }
 
     /**
-     * The collection ID to which this index applies. Required.
+     * @return The collection ID to which this index applies. Required.
      * 
-    */
+     */
     public String collectionId() {
         return this.collectionId;
     }
     /**
-     * The fields to index.
+     * @return The fields to index.
      * 
-    */
+     */
     public List<GoogleFirestoreAdminV1beta1IndexFieldResponse> fields() {
         return this.fields;
     }
     /**
-     * The resource name of the index. Output only.
+     * @return The resource name of the index. Output only.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The state of the index. Output only.
+     * @return The state of the index. Output only.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

@@ -26,6 +26,10 @@ public final class ComponentTransformArgs extends com.pulumi.resources.ResourceA
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Dataflow service generated name for this source.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class ComponentTransformArgs extends com.pulumi.resources.ResourceA
     @Import(name="originalTransform")
     private @Nullable Output<String> originalTransform;
 
+    /**
+     * @return User name for the original user transform with which this transform is most closely associated.
+     * 
+     */
     public Optional<Output<String>> originalTransform() {
         return Optional.ofNullable(this.originalTransform);
     }
@@ -48,6 +56,10 @@ public final class ComponentTransformArgs extends com.pulumi.resources.ResourceA
     @Import(name="userName")
     private @Nullable Output<String> userName;
 
+    /**
+     * @return Human-readable name for this transform; may be user or system generated.
+     * 
+     */
     public Optional<Output<String>> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -78,29 +90,65 @@ public final class ComponentTransformArgs extends com.pulumi.resources.ResourceA
             $ = new ComponentTransformArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Dataflow service generated name for this source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Dataflow service generated name for this source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param originalTransform User name for the original user transform with which this transform is most closely associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originalTransform(@Nullable Output<String> originalTransform) {
             $.originalTransform = originalTransform;
             return this;
         }
 
+        /**
+         * @param originalTransform User name for the original user transform with which this transform is most closely associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originalTransform(String originalTransform) {
             return originalTransform(Output.of(originalTransform));
         }
 
+        /**
+         * @param userName Human-readable name for this transform; may be user or system generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable Output<String> userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userName Human-readable name for this transform; may be user or system generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             return userName(Output.of(userName));
         }

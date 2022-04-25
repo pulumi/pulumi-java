@@ -23,6 +23,10 @@ public final class CloudRunRewriteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="region", required=true)
     private String region;
 
+    /**
+     * @return Optional. User-provided region where the Cloud Run service is hosted. Defaults to `us-central1` if not supplied.
+     * 
+     */
     public String region() {
         return this.region;
     }
@@ -34,6 +38,10 @@ public final class CloudRunRewriteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="serviceId", required=true)
     private String serviceId;
 
+    /**
+     * @return User-defined ID of the Cloud Run service.
+     * 
+     */
     public String serviceId() {
         return this.serviceId;
     }
@@ -63,11 +71,23 @@ public final class CloudRunRewriteResponse extends com.pulumi.resources.InvokeAr
             $ = new CloudRunRewriteResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param region Optional. User-provided region where the Cloud Run service is hosted. Defaults to `us-central1` if not supplied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param serviceId User-defined ID of the Cloud Run service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceId(String serviceId) {
             $.serviceId = serviceId;
             return this;

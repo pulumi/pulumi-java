@@ -26,6 +26,10 @@ public final class ManagementSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="transferLockState")
     private @Nullable Output<ManagementSettingsTransferLockState> transferLockState;
 
+    /**
+     * @return Controls whether the domain can be transferred to another registrar.
+     * 
+     */
     public Optional<Output<ManagementSettingsTransferLockState>> transferLockState() {
         return Optional.ofNullable(this.transferLockState);
     }
@@ -54,11 +58,23 @@ public final class ManagementSettingsArgs extends com.pulumi.resources.ResourceA
             $ = new ManagementSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param transferLockState Controls whether the domain can be transferred to another registrar.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferLockState(@Nullable Output<ManagementSettingsTransferLockState> transferLockState) {
             $.transferLockState = transferLockState;
             return this;
         }
 
+        /**
+         * @param transferLockState Controls whether the domain can be transferred to another registrar.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferLockState(ManagementSettingsTransferLockState transferLockState) {
             return transferLockState(Output.of(transferLockState));
         }

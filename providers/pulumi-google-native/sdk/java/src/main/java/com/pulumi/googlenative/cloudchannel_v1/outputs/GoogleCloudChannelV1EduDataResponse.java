@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudChannelV1EduDataResponse {
-    /**
-     * Size of the institute.
-     * 
-     */
+        /**
+         * @return Size of the institute.
+         * 
+         */
     private final String instituteSize;
-    /**
-     * Designated institute type of customer.
-     * 
-     */
+        /**
+         * @return Designated institute type of customer.
+         * 
+         */
     private final String instituteType;
-    /**
-     * Web address for the edu customer&#39;s institution.
-     * 
-     */
+        /**
+         * @return Web address for the edu customer&#39;s institution.
+         * 
+         */
     private final String website;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class GoogleCloudChannelV1EduDataResponse {
     }
 
     /**
-     * Size of the institute.
+     * @return Size of the institute.
      * 
-    */
+     */
     public String instituteSize() {
         return this.instituteSize;
     }
     /**
-     * Designated institute type of customer.
+     * @return Designated institute type of customer.
      * 
-    */
+     */
     public String instituteType() {
         return this.instituteType;
     }
     /**
-     * Web address for the edu customer&#39;s institution.
+     * @return Web address for the edu customer&#39;s institution.
      * 
-    */
+     */
     public String website() {
         return this.website;
     }

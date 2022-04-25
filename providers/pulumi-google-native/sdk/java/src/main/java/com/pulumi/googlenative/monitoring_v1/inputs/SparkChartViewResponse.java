@@ -23,6 +23,10 @@ public final class SparkChartViewResponse extends com.pulumi.resources.InvokeArg
     @Import(name="minAlignmentPeriod", required=true)
     private String minAlignmentPeriod;
 
+    /**
+     * @return The lower bound on data point frequency in the chart implemented by specifying the minimum alignment period to use in a time series query. For example, if the data is published once every 10 minutes it would not make sense to fetch and align data at one minute intervals. This field is optional and exists only as a hint.
+     * 
+     */
     public String minAlignmentPeriod() {
         return this.minAlignmentPeriod;
     }
@@ -34,6 +38,10 @@ public final class SparkChartViewResponse extends com.pulumi.resources.InvokeArg
     @Import(name="sparkChartType", required=true)
     private String sparkChartType;
 
+    /**
+     * @return The type of sparkchart to show in this chartView.
+     * 
+     */
     public String sparkChartType() {
         return this.sparkChartType;
     }
@@ -63,11 +71,23 @@ public final class SparkChartViewResponse extends com.pulumi.resources.InvokeArg
             $ = new SparkChartViewResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param minAlignmentPeriod The lower bound on data point frequency in the chart implemented by specifying the minimum alignment period to use in a time series query. For example, if the data is published once every 10 minutes it would not make sense to fetch and align data at one minute intervals. This field is optional and exists only as a hint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minAlignmentPeriod(String minAlignmentPeriod) {
             $.minAlignmentPeriod = minAlignmentPeriod;
             return this;
         }
 
+        /**
+         * @param sparkChartType The type of sparkchart to show in this chartView.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sparkChartType(String sparkChartType) {
             $.sparkChartType = sparkChartType;
             return this;

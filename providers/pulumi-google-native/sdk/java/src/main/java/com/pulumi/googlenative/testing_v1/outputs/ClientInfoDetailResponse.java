@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ClientInfoDetailResponse {
-    /**
-     * The key of detailed client information.
-     * 
-     */
+        /**
+         * @return The key of detailed client information.
+         * 
+         */
     private final String key;
-    /**
-     * The value of detailed client information.
-     * 
-     */
+        /**
+         * @return The value of detailed client information.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ClientInfoDetailResponse {
     }
 
     /**
-     * The key of detailed client information.
+     * @return The key of detailed client information.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * The value of detailed client information.
+     * @return The value of detailed client information.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

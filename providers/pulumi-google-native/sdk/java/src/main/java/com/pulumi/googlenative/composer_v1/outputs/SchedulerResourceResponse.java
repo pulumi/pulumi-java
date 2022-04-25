@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class SchedulerResourceResponse {
-    /**
-     * Optional. The number of schedulers.
-     * 
-     */
+        /**
+         * @return Optional. The number of schedulers.
+         * 
+         */
     private final Integer count;
-    /**
-     * Optional. CPU request and limit for a single Airflow scheduler replica.
-     * 
-     */
+        /**
+         * @return Optional. CPU request and limit for a single Airflow scheduler replica.
+         * 
+         */
     private final Double cpu;
-    /**
-     * Optional. Memory (GB) request and limit for a single Airflow scheduler replica.
-     * 
-     */
+        /**
+         * @return Optional. Memory (GB) request and limit for a single Airflow scheduler replica.
+         * 
+         */
     private final Double memoryGb;
-    /**
-     * Optional. Storage (GB) request and limit for a single Airflow scheduler replica.
-     * 
-     */
+        /**
+         * @return Optional. Storage (GB) request and limit for a single Airflow scheduler replica.
+         * 
+         */
     private final Double storageGb;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class SchedulerResourceResponse {
     }
 
     /**
-     * Optional. The number of schedulers.
+     * @return Optional. The number of schedulers.
      * 
-    */
+     */
     public Integer count() {
         return this.count;
     }
     /**
-     * Optional. CPU request and limit for a single Airflow scheduler replica.
+     * @return Optional. CPU request and limit for a single Airflow scheduler replica.
      * 
-    */
+     */
     public Double cpu() {
         return this.cpu;
     }
     /**
-     * Optional. Memory (GB) request and limit for a single Airflow scheduler replica.
+     * @return Optional. Memory (GB) request and limit for a single Airflow scheduler replica.
      * 
-    */
+     */
     public Double memoryGb() {
         return this.memoryGb;
     }
     /**
-     * Optional. Storage (GB) request and limit for a single Airflow scheduler replica.
+     * @return Optional. Storage (GB) request and limit for a single Airflow scheduler replica.
      * 
-    */
+     */
     public Double storageGb() {
         return this.storageGb;
     }

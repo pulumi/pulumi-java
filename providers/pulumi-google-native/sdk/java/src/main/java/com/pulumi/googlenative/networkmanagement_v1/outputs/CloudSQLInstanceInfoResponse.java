@@ -9,35 +9,35 @@ import java.util.Objects;
 
 @CustomType
 public final class CloudSQLInstanceInfoResponse {
-    /**
-     * Name of a Cloud SQL instance.
-     * 
-     */
+        /**
+         * @return Name of a Cloud SQL instance.
+         * 
+         */
     private final String displayName;
-    /**
-     * External IP address of a Cloud SQL instance.
-     * 
-     */
+        /**
+         * @return External IP address of a Cloud SQL instance.
+         * 
+         */
     private final String externalIp;
-    /**
-     * Internal IP address of a Cloud SQL instance.
-     * 
-     */
+        /**
+         * @return Internal IP address of a Cloud SQL instance.
+         * 
+         */
     private final String internalIp;
-    /**
-     * URI of a Cloud SQL instance network or empty string if the instance does not have one.
-     * 
-     */
+        /**
+         * @return URI of a Cloud SQL instance network or empty string if the instance does not have one.
+         * 
+         */
     private final String networkUri;
-    /**
-     * Region in which the Cloud SQL instance is running.
-     * 
-     */
+        /**
+         * @return Region in which the Cloud SQL instance is running.
+         * 
+         */
     private final String region;
-    /**
-     * URI of a Cloud SQL instance.
-     * 
-     */
+        /**
+         * @return URI of a Cloud SQL instance.
+         * 
+         */
     private final String uri;
 
     @CustomType.Constructor
@@ -57,44 +57,44 @@ public final class CloudSQLInstanceInfoResponse {
     }
 
     /**
-     * Name of a Cloud SQL instance.
+     * @return Name of a Cloud SQL instance.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * External IP address of a Cloud SQL instance.
+     * @return External IP address of a Cloud SQL instance.
      * 
-    */
+     */
     public String externalIp() {
         return this.externalIp;
     }
     /**
-     * Internal IP address of a Cloud SQL instance.
+     * @return Internal IP address of a Cloud SQL instance.
      * 
-    */
+     */
     public String internalIp() {
         return this.internalIp;
     }
     /**
-     * URI of a Cloud SQL instance network or empty string if the instance does not have one.
+     * @return URI of a Cloud SQL instance network or empty string if the instance does not have one.
      * 
-    */
+     */
     public String networkUri() {
         return this.networkUri;
     }
     /**
-     * Region in which the Cloud SQL instance is running.
+     * @return Region in which the Cloud SQL instance is running.
      * 
-    */
+     */
     public String region() {
         return this.region;
     }
     /**
-     * URI of a Cloud SQL instance.
+     * @return URI of a Cloud SQL instance.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

@@ -17,110 +17,110 @@ import java.util.Objects;
 
 @CustomType
 public final class WorkerPoolResponse {
-    /**
-     * Settings for autoscaling of this WorkerPool.
-     * 
-     */
+        /**
+         * @return Settings for autoscaling of this WorkerPool.
+         * 
+         */
     private final AutoscalingSettingsResponse autoscalingSettings;
-    /**
-     * Data disks that are used by a VM in this workflow.
-     * 
-     */
+        /**
+         * @return Data disks that are used by a VM in this workflow.
+         * 
+         */
     private final List<DiskResponse> dataDisks;
-    /**
-     * The default package set to install. This allows the service to select a default set of packages which are useful to worker harnesses written in a particular language.
-     * 
-     */
+        /**
+         * @return The default package set to install. This allows the service to select a default set of packages which are useful to worker harnesses written in a particular language.
+         * 
+         */
     private final String defaultPackageSet;
-    /**
-     * Size of root disk for VMs, in GB. If zero or unspecified, the service will attempt to choose a reasonable default.
-     * 
-     */
+        /**
+         * @return Size of root disk for VMs, in GB. If zero or unspecified, the service will attempt to choose a reasonable default.
+         * 
+         */
     private final Integer diskSizeGb;
-    /**
-     * Fully qualified source image for disks.
-     * 
-     */
+        /**
+         * @return Fully qualified source image for disks.
+         * 
+         */
     private final String diskSourceImage;
-    /**
-     * Type of root disk for VMs. If empty or unspecified, the service will attempt to choose a reasonable default.
-     * 
-     */
+        /**
+         * @return Type of root disk for VMs. If empty or unspecified, the service will attempt to choose a reasonable default.
+         * 
+         */
     private final String diskType;
-    /**
-     * Configuration for VM IPs.
-     * 
-     */
+        /**
+         * @return Configuration for VM IPs.
+         * 
+         */
     private final String ipConfiguration;
-    /**
-     * The kind of the worker pool; currently only `harness` and `shuffle` are supported.
-     * 
-     */
+        /**
+         * @return The kind of the worker pool; currently only `harness` and `shuffle` are supported.
+         * 
+         */
     private final String kind;
-    /**
-     * Machine type (e.g. &#34;n1-standard-1&#34;). If empty or unspecified, the service will attempt to choose a reasonable default.
-     * 
-     */
+        /**
+         * @return Machine type (e.g. &#34;n1-standard-1&#34;). If empty or unspecified, the service will attempt to choose a reasonable default.
+         * 
+         */
     private final String machineType;
-    /**
-     * Metadata to set on the Google Compute Engine VMs.
-     * 
-     */
+        /**
+         * @return Metadata to set on the Google Compute Engine VMs.
+         * 
+         */
     private final Map<String,String> metadata;
-    /**
-     * Network to which VMs will be assigned. If empty or unspecified, the service will use the network &#34;default&#34;.
-     * 
-     */
+        /**
+         * @return Network to which VMs will be assigned. If empty or unspecified, the service will use the network &#34;default&#34;.
+         * 
+         */
     private final String network;
-    /**
-     * The number of threads per worker harness. If empty or unspecified, the service will choose a number of threads (according to the number of cores on the selected machine type for batch, or 1 by convention for streaming).
-     * 
-     */
+        /**
+         * @return The number of threads per worker harness. If empty or unspecified, the service will choose a number of threads (according to the number of cores on the selected machine type for batch, or 1 by convention for streaming).
+         * 
+         */
     private final Integer numThreadsPerWorker;
-    /**
-     * Number of Google Compute Engine workers in this pool needed to execute the job. If zero or unspecified, the service will attempt to choose a reasonable default.
-     * 
-     */
+        /**
+         * @return Number of Google Compute Engine workers in this pool needed to execute the job. If zero or unspecified, the service will attempt to choose a reasonable default.
+         * 
+         */
     private final Integer numWorkers;
-    /**
-     * The action to take on host maintenance, as defined by the Google Compute Engine API.
-     * 
-     */
+        /**
+         * @return The action to take on host maintenance, as defined by the Google Compute Engine API.
+         * 
+         */
     private final String onHostMaintenance;
-    /**
-     * Packages to be installed on workers.
-     * 
-     */
+        /**
+         * @return Packages to be installed on workers.
+         * 
+         */
     private final List<PackageResponse> packages;
-    /**
-     * Extra arguments for this worker pool.
-     * 
-     */
+        /**
+         * @return Extra arguments for this worker pool.
+         * 
+         */
     private final Map<String,String> poolArgs;
-    /**
-     * Set of SDK harness containers needed to execute this pipeline. This will only be set in the Fn API path. For non-cross-language pipelines this should have only one entry. Cross-language pipelines will have two or more entries.
-     * 
-     */
+        /**
+         * @return Set of SDK harness containers needed to execute this pipeline. This will only be set in the Fn API path. For non-cross-language pipelines this should have only one entry. Cross-language pipelines will have two or more entries.
+         * 
+         */
     private final List<SdkHarnessContainerImageResponse> sdkHarnessContainerImages;
-    /**
-     * Subnetwork to which VMs will be assigned, if desired. Expected to be of the form &#34;regions/REGION/subnetworks/SUBNETWORK&#34;.
-     * 
-     */
+        /**
+         * @return Subnetwork to which VMs will be assigned, if desired. Expected to be of the form &#34;regions/REGION/subnetworks/SUBNETWORK&#34;.
+         * 
+         */
     private final String subnetwork;
-    /**
-     * Settings passed through to Google Compute Engine workers when using the standard Dataflow task runner. Users should ignore this field.
-     * 
-     */
+        /**
+         * @return Settings passed through to Google Compute Engine workers when using the standard Dataflow task runner. Users should ignore this field.
+         * 
+         */
     private final TaskRunnerSettingsResponse taskrunnerSettings;
-    /**
-     * Sets the policy for determining when to turndown worker pool. Allowed values are: `TEARDOWN_ALWAYS`, `TEARDOWN_ON_SUCCESS`, and `TEARDOWN_NEVER`. `TEARDOWN_ALWAYS` means workers are always torn down regardless of whether the job succeeds. `TEARDOWN_ON_SUCCESS` means workers are torn down if the job succeeds. `TEARDOWN_NEVER` means the workers are never torn down. If the workers are not torn down by the service, they will continue to run and use Google Compute Engine VM resources in the user&#39;s project until they are explicitly terminated by the user. Because of this, Google recommends using the `TEARDOWN_ALWAYS` policy except for small, manually supervised test jobs. If unknown or unspecified, the service will attempt to choose a reasonable default.
-     * 
-     */
+        /**
+         * @return Sets the policy for determining when to turndown worker pool. Allowed values are: `TEARDOWN_ALWAYS`, `TEARDOWN_ON_SUCCESS`, and `TEARDOWN_NEVER`. `TEARDOWN_ALWAYS` means workers are always torn down regardless of whether the job succeeds. `TEARDOWN_ON_SUCCESS` means workers are torn down if the job succeeds. `TEARDOWN_NEVER` means the workers are never torn down. If the workers are not torn down by the service, they will continue to run and use Google Compute Engine VM resources in the user&#39;s project until they are explicitly terminated by the user. Because of this, Google recommends using the `TEARDOWN_ALWAYS` policy except for small, manually supervised test jobs. If unknown or unspecified, the service will attempt to choose a reasonable default.
+         * 
+         */
     private final String teardownPolicy;
-    /**
-     * Zone to run the worker pools in. If empty or unspecified, the service will attempt to choose a reasonable default.
-     * 
-     */
+        /**
+         * @return Zone to run the worker pools in. If empty or unspecified, the service will attempt to choose a reasonable default.
+         * 
+         */
     private final String zone;
 
     @CustomType.Constructor
@@ -170,149 +170,149 @@ public final class WorkerPoolResponse {
     }
 
     /**
-     * Settings for autoscaling of this WorkerPool.
+     * @return Settings for autoscaling of this WorkerPool.
      * 
-    */
+     */
     public AutoscalingSettingsResponse autoscalingSettings() {
         return this.autoscalingSettings;
     }
     /**
-     * Data disks that are used by a VM in this workflow.
+     * @return Data disks that are used by a VM in this workflow.
      * 
-    */
+     */
     public List<DiskResponse> dataDisks() {
         return this.dataDisks;
     }
     /**
-     * The default package set to install. This allows the service to select a default set of packages which are useful to worker harnesses written in a particular language.
+     * @return The default package set to install. This allows the service to select a default set of packages which are useful to worker harnesses written in a particular language.
      * 
-    */
+     */
     public String defaultPackageSet() {
         return this.defaultPackageSet;
     }
     /**
-     * Size of root disk for VMs, in GB. If zero or unspecified, the service will attempt to choose a reasonable default.
+     * @return Size of root disk for VMs, in GB. If zero or unspecified, the service will attempt to choose a reasonable default.
      * 
-    */
+     */
     public Integer diskSizeGb() {
         return this.diskSizeGb;
     }
     /**
-     * Fully qualified source image for disks.
+     * @return Fully qualified source image for disks.
      * 
-    */
+     */
     public String diskSourceImage() {
         return this.diskSourceImage;
     }
     /**
-     * Type of root disk for VMs. If empty or unspecified, the service will attempt to choose a reasonable default.
+     * @return Type of root disk for VMs. If empty or unspecified, the service will attempt to choose a reasonable default.
      * 
-    */
+     */
     public String diskType() {
         return this.diskType;
     }
     /**
-     * Configuration for VM IPs.
+     * @return Configuration for VM IPs.
      * 
-    */
+     */
     public String ipConfiguration() {
         return this.ipConfiguration;
     }
     /**
-     * The kind of the worker pool; currently only `harness` and `shuffle` are supported.
+     * @return The kind of the worker pool; currently only `harness` and `shuffle` are supported.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Machine type (e.g. &#34;n1-standard-1&#34;). If empty or unspecified, the service will attempt to choose a reasonable default.
+     * @return Machine type (e.g. &#34;n1-standard-1&#34;). If empty or unspecified, the service will attempt to choose a reasonable default.
      * 
-    */
+     */
     public String machineType() {
         return this.machineType;
     }
     /**
-     * Metadata to set on the Google Compute Engine VMs.
+     * @return Metadata to set on the Google Compute Engine VMs.
      * 
-    */
+     */
     public Map<String,String> metadata() {
         return this.metadata;
     }
     /**
-     * Network to which VMs will be assigned. If empty or unspecified, the service will use the network &#34;default&#34;.
+     * @return Network to which VMs will be assigned. If empty or unspecified, the service will use the network &#34;default&#34;.
      * 
-    */
+     */
     public String network() {
         return this.network;
     }
     /**
-     * The number of threads per worker harness. If empty or unspecified, the service will choose a number of threads (according to the number of cores on the selected machine type for batch, or 1 by convention for streaming).
+     * @return The number of threads per worker harness. If empty or unspecified, the service will choose a number of threads (according to the number of cores on the selected machine type for batch, or 1 by convention for streaming).
      * 
-    */
+     */
     public Integer numThreadsPerWorker() {
         return this.numThreadsPerWorker;
     }
     /**
-     * Number of Google Compute Engine workers in this pool needed to execute the job. If zero or unspecified, the service will attempt to choose a reasonable default.
+     * @return Number of Google Compute Engine workers in this pool needed to execute the job. If zero or unspecified, the service will attempt to choose a reasonable default.
      * 
-    */
+     */
     public Integer numWorkers() {
         return this.numWorkers;
     }
     /**
-     * The action to take on host maintenance, as defined by the Google Compute Engine API.
+     * @return The action to take on host maintenance, as defined by the Google Compute Engine API.
      * 
-    */
+     */
     public String onHostMaintenance() {
         return this.onHostMaintenance;
     }
     /**
-     * Packages to be installed on workers.
+     * @return Packages to be installed on workers.
      * 
-    */
+     */
     public List<PackageResponse> packages() {
         return this.packages;
     }
     /**
-     * Extra arguments for this worker pool.
+     * @return Extra arguments for this worker pool.
      * 
-    */
+     */
     public Map<String,String> poolArgs() {
         return this.poolArgs;
     }
     /**
-     * Set of SDK harness containers needed to execute this pipeline. This will only be set in the Fn API path. For non-cross-language pipelines this should have only one entry. Cross-language pipelines will have two or more entries.
+     * @return Set of SDK harness containers needed to execute this pipeline. This will only be set in the Fn API path. For non-cross-language pipelines this should have only one entry. Cross-language pipelines will have two or more entries.
      * 
-    */
+     */
     public List<SdkHarnessContainerImageResponse> sdkHarnessContainerImages() {
         return this.sdkHarnessContainerImages;
     }
     /**
-     * Subnetwork to which VMs will be assigned, if desired. Expected to be of the form &#34;regions/REGION/subnetworks/SUBNETWORK&#34;.
+     * @return Subnetwork to which VMs will be assigned, if desired. Expected to be of the form &#34;regions/REGION/subnetworks/SUBNETWORK&#34;.
      * 
-    */
+     */
     public String subnetwork() {
         return this.subnetwork;
     }
     /**
-     * Settings passed through to Google Compute Engine workers when using the standard Dataflow task runner. Users should ignore this field.
+     * @return Settings passed through to Google Compute Engine workers when using the standard Dataflow task runner. Users should ignore this field.
      * 
-    */
+     */
     public TaskRunnerSettingsResponse taskrunnerSettings() {
         return this.taskrunnerSettings;
     }
     /**
-     * Sets the policy for determining when to turndown worker pool. Allowed values are: `TEARDOWN_ALWAYS`, `TEARDOWN_ON_SUCCESS`, and `TEARDOWN_NEVER`. `TEARDOWN_ALWAYS` means workers are always torn down regardless of whether the job succeeds. `TEARDOWN_ON_SUCCESS` means workers are torn down if the job succeeds. `TEARDOWN_NEVER` means the workers are never torn down. If the workers are not torn down by the service, they will continue to run and use Google Compute Engine VM resources in the user&#39;s project until they are explicitly terminated by the user. Because of this, Google recommends using the `TEARDOWN_ALWAYS` policy except for small, manually supervised test jobs. If unknown or unspecified, the service will attempt to choose a reasonable default.
+     * @return Sets the policy for determining when to turndown worker pool. Allowed values are: `TEARDOWN_ALWAYS`, `TEARDOWN_ON_SUCCESS`, and `TEARDOWN_NEVER`. `TEARDOWN_ALWAYS` means workers are always torn down regardless of whether the job succeeds. `TEARDOWN_ON_SUCCESS` means workers are torn down if the job succeeds. `TEARDOWN_NEVER` means the workers are never torn down. If the workers are not torn down by the service, they will continue to run and use Google Compute Engine VM resources in the user&#39;s project until they are explicitly terminated by the user. Because of this, Google recommends using the `TEARDOWN_ALWAYS` policy except for small, manually supervised test jobs. If unknown or unspecified, the service will attempt to choose a reasonable default.
      * 
-    */
+     */
     public String teardownPolicy() {
         return this.teardownPolicy;
     }
     /**
-     * Zone to run the worker pools in. If empty or unspecified, the service will attempt to choose a reasonable default.
+     * @return Zone to run the worker pools in. If empty or unspecified, the service will attempt to choose a reasonable default.
      * 
-    */
+     */
     public String zone() {
         return this.zone;
     }

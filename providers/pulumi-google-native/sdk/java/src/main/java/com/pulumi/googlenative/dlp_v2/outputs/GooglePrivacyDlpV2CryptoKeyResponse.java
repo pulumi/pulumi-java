@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GooglePrivacyDlpV2CryptoKeyResponse {
-    /**
-     * Key wrapped using Cloud KMS
-     * 
-     */
+        /**
+         * @return Key wrapped using Cloud KMS
+         * 
+         */
     private final GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse kmsWrapped;
-    /**
-     * Transient crypto key
-     * 
-     */
+        /**
+         * @return Transient crypto key
+         * 
+         */
     private final GooglePrivacyDlpV2TransientCryptoKeyResponse transient_;
-    /**
-     * Unwrapped crypto key
-     * 
-     */
+        /**
+         * @return Unwrapped crypto key
+         * 
+         */
     private final GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse {
     }
 
     /**
-     * Key wrapped using Cloud KMS
+     * @return Key wrapped using Cloud KMS
      * 
-    */
+     */
     public GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse kmsWrapped() {
         return this.kmsWrapped;
     }
     /**
-     * Transient crypto key
+     * @return Transient crypto key
      * 
-    */
+     */
     public GooglePrivacyDlpV2TransientCryptoKeyResponse transient_() {
         return this.transient_;
     }
     /**
-     * Unwrapped crypto key
+     * @return Unwrapped crypto key
      * 
-    */
+     */
     public GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped() {
         return this.unwrapped;
     }

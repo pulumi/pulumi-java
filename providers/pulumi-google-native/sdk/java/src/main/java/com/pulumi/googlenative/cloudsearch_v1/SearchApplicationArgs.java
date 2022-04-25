@@ -30,6 +30,10 @@ public final class SearchApplicationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="dataSourceRestrictions")
     private @Nullable Output<List<DataSourceRestrictionArgs>> dataSourceRestrictions;
 
+    /**
+     * @return Retrictions applied to the configurations. The maximum number of elements is 10.
+     * 
+     */
     public Optional<Output<List<DataSourceRestrictionArgs>>> dataSourceRestrictions() {
         return Optional.ofNullable(this.dataSourceRestrictions);
     }
@@ -41,6 +45,10 @@ public final class SearchApplicationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="defaultFacetOptions")
     private @Nullable Output<List<FacetOptionsArgs>> defaultFacetOptions;
 
+    /**
+     * @return The default fields for returning facet results. The sources specified here also have been included in data_source_restrictions above.
+     * 
+     */
     public Optional<Output<List<FacetOptionsArgs>>> defaultFacetOptions() {
         return Optional.ofNullable(this.defaultFacetOptions);
     }
@@ -52,6 +60,10 @@ public final class SearchApplicationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="defaultSortOptions")
     private @Nullable Output<SortOptionsArgs> defaultSortOptions;
 
+    /**
+     * @return The default options for sorting the search results
+     * 
+     */
     public Optional<Output<SortOptionsArgs>> defaultSortOptions() {
         return Optional.ofNullable(this.defaultSortOptions);
     }
@@ -63,6 +75,10 @@ public final class SearchApplicationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Display name of the Search Application. The maximum length is 300 characters.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -74,6 +90,10 @@ public final class SearchApplicationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="enableAuditLog")
     private @Nullable Output<Boolean> enableAuditLog;
 
+    /**
+     * @return Indicates whether audit logging is on/off for requests made for the search application in query APIs.
+     * 
+     */
     public Optional<Output<Boolean>> enableAuditLog() {
         return Optional.ofNullable(this.enableAuditLog);
     }
@@ -85,6 +105,10 @@ public final class SearchApplicationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the Search Application. Format: searchapplications/{application_id}.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -96,6 +120,10 @@ public final class SearchApplicationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="queryInterpretationConfig")
     private @Nullable Output<QueryInterpretationConfigArgs> queryInterpretationConfig;
 
+    /**
+     * @return The default options for query interpretation
+     * 
+     */
     public Optional<Output<QueryInterpretationConfigArgs>> queryInterpretationConfig() {
         return Optional.ofNullable(this.queryInterpretationConfig);
     }
@@ -107,6 +135,10 @@ public final class SearchApplicationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="returnResultThumbnailUrls")
     private @Nullable Output<Boolean> returnResultThumbnailUrls;
 
+    /**
+     * @return With each result we should return the URI for its thumbnail (when applicable)
+     * 
+     */
     public Optional<Output<Boolean>> returnResultThumbnailUrls() {
         return Optional.ofNullable(this.returnResultThumbnailUrls);
     }
@@ -118,6 +150,10 @@ public final class SearchApplicationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="scoringConfig")
     private @Nullable Output<ScoringConfigArgs> scoringConfig;
 
+    /**
+     * @return Configuration for ranking results.
+     * 
+     */
     public Optional<Output<ScoringConfigArgs>> scoringConfig() {
         return Optional.ofNullable(this.scoringConfig);
     }
@@ -129,6 +165,10 @@ public final class SearchApplicationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sourceConfig")
     private @Nullable Output<List<SourceConfigArgs>> sourceConfig;
 
+    /**
+     * @return Configuration for a sources specified in data_source_restrictions.
+     * 
+     */
     public Optional<Output<List<SourceConfigArgs>>> sourceConfig() {
         return Optional.ofNullable(this.sourceConfig);
     }
@@ -166,104 +206,242 @@ public final class SearchApplicationArgs extends com.pulumi.resources.ResourceAr
             $ = new SearchApplicationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataSourceRestrictions Retrictions applied to the configurations. The maximum number of elements is 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSourceRestrictions(@Nullable Output<List<DataSourceRestrictionArgs>> dataSourceRestrictions) {
             $.dataSourceRestrictions = dataSourceRestrictions;
             return this;
         }
 
+        /**
+         * @param dataSourceRestrictions Retrictions applied to the configurations. The maximum number of elements is 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSourceRestrictions(List<DataSourceRestrictionArgs> dataSourceRestrictions) {
             return dataSourceRestrictions(Output.of(dataSourceRestrictions));
         }
 
+        /**
+         * @param dataSourceRestrictions Retrictions applied to the configurations. The maximum number of elements is 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSourceRestrictions(DataSourceRestrictionArgs... dataSourceRestrictions) {
             return dataSourceRestrictions(List.of(dataSourceRestrictions));
         }
 
+        /**
+         * @param defaultFacetOptions The default fields for returning facet results. The sources specified here also have been included in data_source_restrictions above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultFacetOptions(@Nullable Output<List<FacetOptionsArgs>> defaultFacetOptions) {
             $.defaultFacetOptions = defaultFacetOptions;
             return this;
         }
 
+        /**
+         * @param defaultFacetOptions The default fields for returning facet results. The sources specified here also have been included in data_source_restrictions above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultFacetOptions(List<FacetOptionsArgs> defaultFacetOptions) {
             return defaultFacetOptions(Output.of(defaultFacetOptions));
         }
 
+        /**
+         * @param defaultFacetOptions The default fields for returning facet results. The sources specified here also have been included in data_source_restrictions above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultFacetOptions(FacetOptionsArgs... defaultFacetOptions) {
             return defaultFacetOptions(List.of(defaultFacetOptions));
         }
 
+        /**
+         * @param defaultSortOptions The default options for sorting the search results
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultSortOptions(@Nullable Output<SortOptionsArgs> defaultSortOptions) {
             $.defaultSortOptions = defaultSortOptions;
             return this;
         }
 
+        /**
+         * @param defaultSortOptions The default options for sorting the search results
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultSortOptions(SortOptionsArgs defaultSortOptions) {
             return defaultSortOptions(Output.of(defaultSortOptions));
         }
 
+        /**
+         * @param displayName Display name of the Search Application. The maximum length is 300 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display name of the Search Application. The maximum length is 300 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param enableAuditLog Indicates whether audit logging is on/off for requests made for the search application in query APIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAuditLog(@Nullable Output<Boolean> enableAuditLog) {
             $.enableAuditLog = enableAuditLog;
             return this;
         }
 
+        /**
+         * @param enableAuditLog Indicates whether audit logging is on/off for requests made for the search application in query APIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAuditLog(Boolean enableAuditLog) {
             return enableAuditLog(Output.of(enableAuditLog));
         }
 
+        /**
+         * @param name Name of the Search Application. Format: searchapplications/{application_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the Search Application. Format: searchapplications/{application_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param queryInterpretationConfig The default options for query interpretation
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryInterpretationConfig(@Nullable Output<QueryInterpretationConfigArgs> queryInterpretationConfig) {
             $.queryInterpretationConfig = queryInterpretationConfig;
             return this;
         }
 
+        /**
+         * @param queryInterpretationConfig The default options for query interpretation
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryInterpretationConfig(QueryInterpretationConfigArgs queryInterpretationConfig) {
             return queryInterpretationConfig(Output.of(queryInterpretationConfig));
         }
 
+        /**
+         * @param returnResultThumbnailUrls With each result we should return the URI for its thumbnail (when applicable)
+         * 
+         * @return builder
+         * 
+         */
         public Builder returnResultThumbnailUrls(@Nullable Output<Boolean> returnResultThumbnailUrls) {
             $.returnResultThumbnailUrls = returnResultThumbnailUrls;
             return this;
         }
 
+        /**
+         * @param returnResultThumbnailUrls With each result we should return the URI for its thumbnail (when applicable)
+         * 
+         * @return builder
+         * 
+         */
         public Builder returnResultThumbnailUrls(Boolean returnResultThumbnailUrls) {
             return returnResultThumbnailUrls(Output.of(returnResultThumbnailUrls));
         }
 
+        /**
+         * @param scoringConfig Configuration for ranking results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scoringConfig(@Nullable Output<ScoringConfigArgs> scoringConfig) {
             $.scoringConfig = scoringConfig;
             return this;
         }
 
+        /**
+         * @param scoringConfig Configuration for ranking results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scoringConfig(ScoringConfigArgs scoringConfig) {
             return scoringConfig(Output.of(scoringConfig));
         }
 
+        /**
+         * @param sourceConfig Configuration for a sources specified in data_source_restrictions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConfig(@Nullable Output<List<SourceConfigArgs>> sourceConfig) {
             $.sourceConfig = sourceConfig;
             return this;
         }
 
+        /**
+         * @param sourceConfig Configuration for a sources specified in data_source_restrictions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConfig(List<SourceConfigArgs> sourceConfig) {
             return sourceConfig(Output.of(sourceConfig));
         }
 
+        /**
+         * @param sourceConfig Configuration for a sources specified in data_source_restrictions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConfig(SourceConfigArgs... sourceConfig) {
             return sourceConfig(List.of(sourceConfig));
         }

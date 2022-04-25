@@ -13,55 +13,55 @@ import java.util.Objects;
 
 @CustomType
 public final class FieldResponse {
-    /**
-     * The field cardinality.
-     * 
-     */
+        /**
+         * @return The field cardinality.
+         * 
+         */
     private final String cardinality;
-    /**
-     * The string value of the default value of this field. Proto2 syntax only.
-     * 
-     */
+        /**
+         * @return The string value of the default value of this field. Proto2 syntax only.
+         * 
+         */
     private final String defaultValue;
-    /**
-     * The field JSON name.
-     * 
-     */
+        /**
+         * @return The field JSON name.
+         * 
+         */
     private final String jsonName;
-    /**
-     * The field type.
-     * 
-     */
+        /**
+         * @return The field type.
+         * 
+         */
     private final String kind;
-    /**
-     * The field name.
-     * 
-     */
+        /**
+         * @return The field name.
+         * 
+         */
     private final String name;
-    /**
-     * The field number.
-     * 
-     */
+        /**
+         * @return The field number.
+         * 
+         */
     private final Integer number;
-    /**
-     * The index of the field type in `Type.oneofs`, for message or enumeration types. The first type has index 1; zero means the type is not in the list.
-     * 
-     */
+        /**
+         * @return The index of the field type in `Type.oneofs`, for message or enumeration types. The first type has index 1; zero means the type is not in the list.
+         * 
+         */
     private final Integer oneofIndex;
-    /**
-     * The protocol buffer options.
-     * 
-     */
+        /**
+         * @return The protocol buffer options.
+         * 
+         */
     private final List<OptionResponse> options;
-    /**
-     * Whether to use alternative packed wire representation.
-     * 
-     */
+        /**
+         * @return Whether to use alternative packed wire representation.
+         * 
+         */
     private final Boolean packed;
-    /**
-     * The field type URL, without the scheme, for message or enumeration types. Example: `&#34;type.googleapis.com/google.protobuf.Timestamp&#34;`.
-     * 
-     */
+        /**
+         * @return The field type URL, without the scheme, for message or enumeration types. Example: `&#34;type.googleapis.com/google.protobuf.Timestamp&#34;`.
+         * 
+         */
     private final String typeUrl;
 
     @CustomType.Constructor
@@ -89,72 +89,72 @@ public final class FieldResponse {
     }
 
     /**
-     * The field cardinality.
+     * @return The field cardinality.
      * 
-    */
+     */
     public String cardinality() {
         return this.cardinality;
     }
     /**
-     * The string value of the default value of this field. Proto2 syntax only.
+     * @return The string value of the default value of this field. Proto2 syntax only.
      * 
-    */
+     */
     public String defaultValue() {
         return this.defaultValue;
     }
     /**
-     * The field JSON name.
+     * @return The field JSON name.
      * 
-    */
+     */
     public String jsonName() {
         return this.jsonName;
     }
     /**
-     * The field type.
+     * @return The field type.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The field name.
+     * @return The field name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The field number.
+     * @return The field number.
      * 
-    */
+     */
     public Integer number() {
         return this.number;
     }
     /**
-     * The index of the field type in `Type.oneofs`, for message or enumeration types. The first type has index 1; zero means the type is not in the list.
+     * @return The index of the field type in `Type.oneofs`, for message or enumeration types. The first type has index 1; zero means the type is not in the list.
      * 
-    */
+     */
     public Integer oneofIndex() {
         return this.oneofIndex;
     }
     /**
-     * The protocol buffer options.
+     * @return The protocol buffer options.
      * 
-    */
+     */
     public List<OptionResponse> options() {
         return this.options;
     }
     /**
-     * Whether to use alternative packed wire representation.
+     * @return Whether to use alternative packed wire representation.
      * 
-    */
+     */
     public Boolean packed() {
         return this.packed;
     }
     /**
-     * The field type URL, without the scheme, for message or enumeration types. Example: `&#34;type.googleapis.com/google.protobuf.Timestamp&#34;`.
+     * @return The field type URL, without the scheme, for message or enumeration types. Example: `&#34;type.googleapis.com/google.protobuf.Timestamp&#34;`.
      * 
-    */
+     */
     public String typeUrl() {
         return this.typeUrl;
     }

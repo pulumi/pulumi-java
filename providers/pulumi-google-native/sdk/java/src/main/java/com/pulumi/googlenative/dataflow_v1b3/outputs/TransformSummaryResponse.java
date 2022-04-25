@@ -11,30 +11,30 @@ import java.util.Objects;
 
 @CustomType
 public final class TransformSummaryResponse {
-    /**
-     * Transform-specific display data.
-     * 
-     */
+        /**
+         * @return Transform-specific display data.
+         * 
+         */
     private final List<DisplayDataResponse> displayData;
-    /**
-     * User names for all collection inputs to this transform.
-     * 
-     */
+        /**
+         * @return User names for all collection inputs to this transform.
+         * 
+         */
     private final List<String> inputCollectionName;
-    /**
-     * Type of transform.
-     * 
-     */
+        /**
+         * @return Type of transform.
+         * 
+         */
     private final String kind;
-    /**
-     * User provided name for this transform instance.
-     * 
-     */
+        /**
+         * @return User provided name for this transform instance.
+         * 
+         */
     private final String name;
-    /**
-     * User names for all collection outputs to this transform.
-     * 
-     */
+        /**
+         * @return User names for all collection outputs to this transform.
+         * 
+         */
     private final List<String> outputCollectionName;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class TransformSummaryResponse {
     }
 
     /**
-     * Transform-specific display data.
+     * @return Transform-specific display data.
      * 
-    */
+     */
     public List<DisplayDataResponse> displayData() {
         return this.displayData;
     }
     /**
-     * User names for all collection inputs to this transform.
+     * @return User names for all collection inputs to this transform.
      * 
-    */
+     */
     public List<String> inputCollectionName() {
         return this.inputCollectionName;
     }
     /**
-     * Type of transform.
+     * @return Type of transform.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * User provided name for this transform instance.
+     * @return User provided name for this transform instance.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * User names for all collection outputs to this transform.
+     * @return User names for all collection outputs to this transform.
      * 
-    */
+     */
     public List<String> outputCollectionName() {
         return this.outputCollectionName;
     }

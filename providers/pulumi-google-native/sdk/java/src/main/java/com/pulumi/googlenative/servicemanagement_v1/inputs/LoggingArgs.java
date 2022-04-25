@@ -27,6 +27,10 @@ public final class LoggingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="consumerDestinations")
     private @Nullable Output<List<LoggingDestinationArgs>> consumerDestinations;
 
+    /**
+     * @return Logging configurations for sending logs to the consumer project. There can be multiple consumer destinations, each one must have a different monitored resource type. A log can be used in at most one consumer destination.
+     * 
+     */
     public Optional<Output<List<LoggingDestinationArgs>>> consumerDestinations() {
         return Optional.ofNullable(this.consumerDestinations);
     }
@@ -38,6 +42,10 @@ public final class LoggingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="producerDestinations")
     private @Nullable Output<List<LoggingDestinationArgs>> producerDestinations;
 
+    /**
+     * @return Logging configurations for sending logs to the producer project. There can be multiple producer destinations, each one must have a different monitored resource type. A log can be used in at most one producer destination.
+     * 
+     */
     public Optional<Output<List<LoggingDestinationArgs>>> producerDestinations() {
         return Optional.ofNullable(this.producerDestinations);
     }
@@ -67,28 +75,64 @@ public final class LoggingArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LoggingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param consumerDestinations Logging configurations for sending logs to the consumer project. There can be multiple consumer destinations, each one must have a different monitored resource type. A log can be used in at most one consumer destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerDestinations(@Nullable Output<List<LoggingDestinationArgs>> consumerDestinations) {
             $.consumerDestinations = consumerDestinations;
             return this;
         }
 
+        /**
+         * @param consumerDestinations Logging configurations for sending logs to the consumer project. There can be multiple consumer destinations, each one must have a different monitored resource type. A log can be used in at most one consumer destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerDestinations(List<LoggingDestinationArgs> consumerDestinations) {
             return consumerDestinations(Output.of(consumerDestinations));
         }
 
+        /**
+         * @param consumerDestinations Logging configurations for sending logs to the consumer project. There can be multiple consumer destinations, each one must have a different monitored resource type. A log can be used in at most one consumer destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerDestinations(LoggingDestinationArgs... consumerDestinations) {
             return consumerDestinations(List.of(consumerDestinations));
         }
 
+        /**
+         * @param producerDestinations Logging configurations for sending logs to the producer project. There can be multiple producer destinations, each one must have a different monitored resource type. A log can be used in at most one producer destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder producerDestinations(@Nullable Output<List<LoggingDestinationArgs>> producerDestinations) {
             $.producerDestinations = producerDestinations;
             return this;
         }
 
+        /**
+         * @param producerDestinations Logging configurations for sending logs to the producer project. There can be multiple producer destinations, each one must have a different monitored resource type. A log can be used in at most one producer destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder producerDestinations(List<LoggingDestinationArgs> producerDestinations) {
             return producerDestinations(Output.of(producerDestinations));
         }
 
+        /**
+         * @param producerDestinations Logging configurations for sending logs to the producer project. There can be multiple producer destinations, each one must have a different monitored resource type. A log can be used in at most one producer destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder producerDestinations(LoggingDestinationArgs... producerDestinations) {
             return producerDestinations(List.of(producerDestinations));
         }

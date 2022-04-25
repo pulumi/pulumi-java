@@ -25,6 +25,10 @@ public final class LogDescriptorResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return A human-readable description of this log. This information appears in the documentation and can contain details.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -36,6 +40,10 @@ public final class LogDescriptorResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return The human-readable name for this log. This information appears on the user interface and should be concise.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -47,6 +55,10 @@ public final class LogDescriptorResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="labels", required=true)
     private List<LabelDescriptorResponse> labels;
 
+    /**
+     * @return The set of labels that are available to describe a specific log entry. Runtime requests that contain labels not specified here are considered invalid.
+     * 
+     */
     public List<LabelDescriptorResponse> labels() {
         return this.labels;
     }
@@ -58,6 +70,10 @@ public final class LogDescriptorResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the log. It must be less than 512 characters long and can include the following characters: upper- and lower-case alphanumeric characters [A-Za-z0-9], and punctuation characters including slash, underscore, hyphen, period [/_-.].
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -89,25 +105,55 @@ public final class LogDescriptorResponse extends com.pulumi.resources.InvokeArgs
             $ = new LogDescriptorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A human-readable description of this log. This information appears in the documentation and can contain details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName The human-readable name for this log. This information appears on the user interface and should be concise.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param labels The set of labels that are available to describe a specific log entry. Runtime requests that contain labels not specified here are considered invalid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(List<LabelDescriptorResponse> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels The set of labels that are available to describe a specific log entry. Runtime requests that contain labels not specified here are considered invalid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(LabelDescriptorResponse... labels) {
             return labels(List.of(labels));
         }
 
+        /**
+         * @param name The name of the log. It must be less than 512 characters long and can include the following characters: upper- and lower-case alphanumeric characters [A-Za-z0-9], and punctuation characters including slash, underscore, hyphen, period [/_-.].
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

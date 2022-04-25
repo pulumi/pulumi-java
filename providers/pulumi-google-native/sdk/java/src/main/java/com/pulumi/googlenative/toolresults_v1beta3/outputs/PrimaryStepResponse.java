@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class PrimaryStepResponse {
-    /**
-     * Step Id and outcome of each individual step.
-     * 
-     */
+        /**
+         * @return Step Id and outcome of each individual step.
+         * 
+         */
     private final List<IndividualOutcomeResponse> individualOutcome;
-    /**
-     * Rollup test status of multiple steps that were run with the same configuration as a group.
-     * 
-     */
+        /**
+         * @return Rollup test status of multiple steps that were run with the same configuration as a group.
+         * 
+         */
     private final String rollUp;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class PrimaryStepResponse {
     }
 
     /**
-     * Step Id and outcome of each individual step.
+     * @return Step Id and outcome of each individual step.
      * 
-    */
+     */
     public List<IndividualOutcomeResponse> individualOutcome() {
         return this.individualOutcome;
     }
     /**
-     * Rollup test status of multiple steps that were run with the same configuration as a group.
+     * @return Rollup test status of multiple steps that were run with the same configuration as a group.
      * 
-    */
+     */
     public String rollUp() {
         return this.rollUp;
     }

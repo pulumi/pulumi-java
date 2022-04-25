@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class PubsubTargetResponse {
-    /**
-     * Attributes for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.
-     * 
-     */
+        /**
+         * @return Attributes for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.
+         * 
+         */
     private final Map<String,String> attributes;
-    /**
-     * The message payload for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.
-     * 
-     */
+        /**
+         * @return The message payload for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.
+         * 
+         */
     private final String data;
-    /**
-     * The name of the Cloud Pub/Sub topic to which messages will be published when a job is delivered. The topic name must be in the same format as required by PubSub&#39;s [PublishRequest.name](https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#publishrequest), for example `projects/PROJECT_ID/topics/TOPIC_ID`. The topic must be in the same project as the Cloud Scheduler job.
-     * 
-     */
+        /**
+         * @return The name of the Cloud Pub/Sub topic to which messages will be published when a job is delivered. The topic name must be in the same format as required by PubSub&#39;s [PublishRequest.name](https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#publishrequest), for example `projects/PROJECT_ID/topics/TOPIC_ID`. The topic must be in the same project as the Cloud Scheduler job.
+         * 
+         */
     private final String topicName;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class PubsubTargetResponse {
     }
 
     /**
-     * Attributes for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.
+     * @return Attributes for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.
      * 
-    */
+     */
     public Map<String,String> attributes() {
         return this.attributes;
     }
     /**
-     * The message payload for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.
+     * @return The message payload for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.
      * 
-    */
+     */
     public String data() {
         return this.data;
     }
     /**
-     * The name of the Cloud Pub/Sub topic to which messages will be published when a job is delivered. The topic name must be in the same format as required by PubSub&#39;s [PublishRequest.name](https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#publishrequest), for example `projects/PROJECT_ID/topics/TOPIC_ID`. The topic must be in the same project as the Cloud Scheduler job.
+     * @return The name of the Cloud Pub/Sub topic to which messages will be published when a job is delivered. The topic name must be in the same format as required by PubSub&#39;s [PublishRequest.name](https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#publishrequest), for example `projects/PROJECT_ID/topics/TOPIC_ID`. The topic must be in the same project as the Cloud Scheduler job.
      * 
-    */
+     */
     public String topicName() {
         return this.topicName;
     }

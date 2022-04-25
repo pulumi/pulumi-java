@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class BinaryAuthorizationResponse {
-    /**
-     * Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Binary Authorization.
-     * 
-     */
+        /**
+         * @return Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Binary Authorization.
+         * 
+         */
     private final Boolean enabled;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class BinaryAuthorizationResponse {
     }
 
     /**
-     * Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Binary Authorization.
+     * @return Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Binary Authorization.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }

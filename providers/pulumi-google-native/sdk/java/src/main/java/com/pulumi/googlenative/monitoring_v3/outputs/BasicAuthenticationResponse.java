@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class BasicAuthenticationResponse {
-    /**
-     * The password to use when authenticating with the HTTP server.
-     * 
-     */
+        /**
+         * @return The password to use when authenticating with the HTTP server.
+         * 
+         */
     private final String password;
-    /**
-     * The username to use when authenticating with the HTTP server.
-     * 
-     */
+        /**
+         * @return The username to use when authenticating with the HTTP server.
+         * 
+         */
     private final String username;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class BasicAuthenticationResponse {
     }
 
     /**
-     * The password to use when authenticating with the HTTP server.
+     * @return The password to use when authenticating with the HTTP server.
      * 
-    */
+     */
     public String password() {
         return this.password;
     }
     /**
-     * The username to use when authenticating with the HTTP server.
+     * @return The username to use when authenticating with the HTTP server.
      * 
-    */
+     */
     public String username() {
         return this.username;
     }

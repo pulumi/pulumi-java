@@ -23,6 +23,10 @@ public final class OSPolicyInventoryFilterResponse extends com.pulumi.resources.
     @Import(name="osShortName", required=true)
     private String osShortName;
 
+    /**
+     * @return The OS short name
+     * 
+     */
     public String osShortName() {
         return this.osShortName;
     }
@@ -34,6 +38,10 @@ public final class OSPolicyInventoryFilterResponse extends com.pulumi.resources.
     @Import(name="osVersion", required=true)
     private String osVersion;
 
+    /**
+     * @return The OS version Prefix matches are supported if asterisk(*) is provided as the last character. For example, to match all versions with a major version of `7`, specify the following value for this field `7.*` An empty string matches all OS versions.
+     * 
+     */
     public String osVersion() {
         return this.osVersion;
     }
@@ -63,11 +71,23 @@ public final class OSPolicyInventoryFilterResponse extends com.pulumi.resources.
             $ = new OSPolicyInventoryFilterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param osShortName The OS short name
+         * 
+         * @return builder
+         * 
+         */
         public Builder osShortName(String osShortName) {
             $.osShortName = osShortName;
             return this;
         }
 
+        /**
+         * @param osVersion The OS version Prefix matches are supported if asterisk(*) is provided as the last character. For example, to match all versions with a major version of `7`, specify the following value for this field `7.*` An empty string matches all OS versions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osVersion(String osVersion) {
             $.osVersion = osVersion;
             return this;

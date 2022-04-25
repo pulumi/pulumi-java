@@ -12,45 +12,45 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudApigeeV1CredentialResponse {
-    /**
-     * List of API products this credential can be used for.
-     * 
-     */
+        /**
+         * @return List of API products this credential can be used for.
+         * 
+         */
     private final List<GoogleCloudApigeeV1ApiProductRefResponse> apiProducts;
-    /**
-     * List of attributes associated with this credential.
-     * 
-     */
+        /**
+         * @return List of attributes associated with this credential.
+         * 
+         */
     private final List<GoogleCloudApigeeV1AttributeResponse> attributes;
-    /**
-     * Consumer key.
-     * 
-     */
+        /**
+         * @return Consumer key.
+         * 
+         */
     private final String consumerKey;
-    /**
-     * Secret key.
-     * 
-     */
+        /**
+         * @return Secret key.
+         * 
+         */
     private final String consumerSecret;
-    /**
-     * Time the credential will expire in milliseconds since epoch.
-     * 
-     */
+        /**
+         * @return Time the credential will expire in milliseconds since epoch.
+         * 
+         */
     private final String expiresAt;
-    /**
-     * Time the credential was issued in milliseconds since epoch.
-     * 
-     */
+        /**
+         * @return Time the credential was issued in milliseconds since epoch.
+         * 
+         */
     private final String issuedAt;
-    /**
-     * List of scopes to apply to the app. Specified scopes must already exist on the API product that you associate with the app.
-     * 
-     */
+        /**
+         * @return List of scopes to apply to the app. Specified scopes must already exist on the API product that you associate with the app.
+         * 
+         */
     private final List<String> scopes;
-    /**
-     * Status of the credential. Valid values include `approved` or `revoked`.
-     * 
-     */
+        /**
+         * @return Status of the credential. Valid values include `approved` or `revoked`.
+         * 
+         */
     private final String status;
 
     @CustomType.Constructor
@@ -74,58 +74,58 @@ public final class GoogleCloudApigeeV1CredentialResponse {
     }
 
     /**
-     * List of API products this credential can be used for.
+     * @return List of API products this credential can be used for.
      * 
-    */
+     */
     public List<GoogleCloudApigeeV1ApiProductRefResponse> apiProducts() {
         return this.apiProducts;
     }
     /**
-     * List of attributes associated with this credential.
+     * @return List of attributes associated with this credential.
      * 
-    */
+     */
     public List<GoogleCloudApigeeV1AttributeResponse> attributes() {
         return this.attributes;
     }
     /**
-     * Consumer key.
+     * @return Consumer key.
      * 
-    */
+     */
     public String consumerKey() {
         return this.consumerKey;
     }
     /**
-     * Secret key.
+     * @return Secret key.
      * 
-    */
+     */
     public String consumerSecret() {
         return this.consumerSecret;
     }
     /**
-     * Time the credential will expire in milliseconds since epoch.
+     * @return Time the credential will expire in milliseconds since epoch.
      * 
-    */
+     */
     public String expiresAt() {
         return this.expiresAt;
     }
     /**
-     * Time the credential was issued in milliseconds since epoch.
+     * @return Time the credential was issued in milliseconds since epoch.
      * 
-    */
+     */
     public String issuedAt() {
         return this.issuedAt;
     }
     /**
-     * List of scopes to apply to the app. Specified scopes must already exist on the API product that you associate with the app.
+     * @return List of scopes to apply to the app. Specified scopes must already exist on the API product that you associate with the app.
      * 
-    */
+     */
     public List<String> scopes() {
         return this.scopes;
     }
     /**
-     * Status of the credential. Valid values include `approved` or `revoked`.
+     * @return Status of the credential. Valid values include `approved` or `revoked`.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

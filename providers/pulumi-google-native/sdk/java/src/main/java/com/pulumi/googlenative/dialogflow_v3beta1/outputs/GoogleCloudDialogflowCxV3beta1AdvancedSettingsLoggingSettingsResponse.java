@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse {
-    /**
-     * If true, DF Interaction logging is currently enabled.
-     * 
-     */
+        /**
+         * @return If true, DF Interaction logging is currently enabled.
+         * 
+         */
     private final Boolean enableInteractionLogging;
-    /**
-     * If true, StackDriver logging is currently enabled.
-     * 
-     */
+        /**
+         * @return If true, StackDriver logging is currently enabled.
+         * 
+         */
     private final Boolean enableStackdriverLogging;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings
     }
 
     /**
-     * If true, DF Interaction logging is currently enabled.
+     * @return If true, DF Interaction logging is currently enabled.
      * 
-    */
+     */
     public Boolean enableInteractionLogging() {
         return this.enableInteractionLogging;
     }
     /**
-     * If true, StackDriver logging is currently enabled.
+     * @return If true, StackDriver logging is currently enabled.
      * 
-    */
+     */
     public Boolean enableStackdriverLogging() {
         return this.enableStackdriverLogging;
     }

@@ -24,6 +24,10 @@ public final class AlertStrategyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="autoClose", required=true)
     private String autoClose;
 
+    /**
+     * @return If an alert policy that was active has no data for this long, any open incidents will close
+     * 
+     */
     public String autoClose() {
         return this.autoClose;
     }
@@ -35,6 +39,10 @@ public final class AlertStrategyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="notificationRateLimit", required=true)
     private NotificationRateLimitResponse notificationRateLimit;
 
+    /**
+     * @return Required for alert policies with a LogMatch condition.This limit is not implemented for alert policies that are not log-based.
+     * 
+     */
     public NotificationRateLimitResponse notificationRateLimit() {
         return this.notificationRateLimit;
     }
@@ -64,11 +72,23 @@ public final class AlertStrategyResponse extends com.pulumi.resources.InvokeArgs
             $ = new AlertStrategyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoClose If an alert policy that was active has no data for this long, any open incidents will close
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoClose(String autoClose) {
             $.autoClose = autoClose;
             return this;
         }
 
+        /**
+         * @param notificationRateLimit Required for alert policies with a LogMatch condition.This limit is not implemented for alert policies that are not log-based.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationRateLimit(NotificationRateLimitResponse notificationRateLimit) {
             $.notificationRateLimit = notificationRateLimit;
             return this;

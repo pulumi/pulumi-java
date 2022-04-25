@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class AppliedLicenseResponse {
-    /**
-     * The OS license returned from the adaptation module&#39;s report.
-     * 
-     */
+        /**
+         * @return The OS license returned from the adaptation module&#39;s report.
+         * 
+         */
     private final String osLicense;
-    /**
-     * The license type that was used in OS adaptation.
-     * 
-     */
+        /**
+         * @return The license type that was used in OS adaptation.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class AppliedLicenseResponse {
     }
 
     /**
-     * The OS license returned from the adaptation module&#39;s report.
+     * @return The OS license returned from the adaptation module&#39;s report.
      * 
-    */
+     */
     public String osLicense() {
         return this.osLicense;
     }
     /**
-     * The license type that was used in OS adaptation.
+     * @return The license type that was used in OS adaptation.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

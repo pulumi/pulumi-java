@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class InconclusiveDetailResponse {
-    /**
-     * If the end user aborted the test execution before a pass or fail could be determined. For example, the user pressed ctrl-c which sent a kill signal to the test runner while the test was running.
-     * 
-     */
+        /**
+         * @return If the end user aborted the test execution before a pass or fail could be determined. For example, the user pressed ctrl-c which sent a kill signal to the test runner while the test was running.
+         * 
+         */
     private final Boolean abortedByUser;
-    /**
-     * If results are being provided to the user in certain cases of infrastructure failures
-     * 
-     */
+        /**
+         * @return If results are being provided to the user in certain cases of infrastructure failures
+         * 
+         */
     private final Boolean hasErrorLogs;
-    /**
-     * If the test runner could not determine success or failure because the test depends on a component other than the system under test which failed. For example, a mobile test requires provisioning a device where the test executes, and that provisioning can fail.
-     * 
-     */
+        /**
+         * @return If the test runner could not determine success or failure because the test depends on a component other than the system under test which failed. For example, a mobile test requires provisioning a device where the test executes, and that provisioning can fail.
+         * 
+         */
     private final Boolean infrastructureFailure;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class InconclusiveDetailResponse {
     }
 
     /**
-     * If the end user aborted the test execution before a pass or fail could be determined. For example, the user pressed ctrl-c which sent a kill signal to the test runner while the test was running.
+     * @return If the end user aborted the test execution before a pass or fail could be determined. For example, the user pressed ctrl-c which sent a kill signal to the test runner while the test was running.
      * 
-    */
+     */
     public Boolean abortedByUser() {
         return this.abortedByUser;
     }
     /**
-     * If results are being provided to the user in certain cases of infrastructure failures
+     * @return If results are being provided to the user in certain cases of infrastructure failures
      * 
-    */
+     */
     public Boolean hasErrorLogs() {
         return this.hasErrorLogs;
     }
     /**
-     * If the test runner could not determine success or failure because the test depends on a component other than the system under test which failed. For example, a mobile test requires provisioning a device where the test executes, and that provisioning can fail.
+     * @return If the test runner could not determine success or failure because the test depends on a component other than the system under test which failed. For example, a mobile test requires provisioning a device where the test executes, and that provisioning can fail.
      * 
-    */
+     */
     public Boolean infrastructureFailure() {
         return this.infrastructureFailure;
     }

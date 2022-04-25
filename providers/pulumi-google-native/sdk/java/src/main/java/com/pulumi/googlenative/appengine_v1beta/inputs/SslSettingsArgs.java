@@ -27,6 +27,10 @@ public final class SslSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateId")
     private @Nullable Output<String> certificateId;
 
+    /**
+     * @return ID of the AuthorizedCertificate resource configuring SSL for the application. Clearing this field will remove SSL support.By default, a managed certificate is automatically created for every domain mapping. To omit SSL support or to configure SSL manually, specify SslManagementType.MANUAL on a CREATE or UPDATE request. You must be authorized to administer the AuthorizedCertificate resource to manually map it to a DomainMapping resource. Example: 12345.
+     * 
+     */
     public Optional<Output<String>> certificateId() {
         return Optional.ofNullable(this.certificateId);
     }
@@ -38,6 +42,10 @@ public final class SslSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sslManagementType")
     private @Nullable Output<SslSettingsSslManagementType> sslManagementType;
 
+    /**
+     * @return SSL management type for this domain. If AUTOMATIC, a managed certificate is automatically provisioned. If MANUAL, certificate_id must be manually specified in order to configure SSL for this domain.
+     * 
+     */
     public Optional<Output<SslSettingsSslManagementType>> sslManagementType() {
         return Optional.ofNullable(this.sslManagementType);
     }
@@ -67,20 +75,44 @@ public final class SslSettingsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SslSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateId ID of the AuthorizedCertificate resource configuring SSL for the application. Clearing this field will remove SSL support.By default, a managed certificate is automatically created for every domain mapping. To omit SSL support or to configure SSL manually, specify SslManagementType.MANUAL on a CREATE or UPDATE request. You must be authorized to administer the AuthorizedCertificate resource to manually map it to a DomainMapping resource. Example: 12345.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateId(@Nullable Output<String> certificateId) {
             $.certificateId = certificateId;
             return this;
         }
 
+        /**
+         * @param certificateId ID of the AuthorizedCertificate resource configuring SSL for the application. Clearing this field will remove SSL support.By default, a managed certificate is automatically created for every domain mapping. To omit SSL support or to configure SSL manually, specify SslManagementType.MANUAL on a CREATE or UPDATE request. You must be authorized to administer the AuthorizedCertificate resource to manually map it to a DomainMapping resource. Example: 12345.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateId(String certificateId) {
             return certificateId(Output.of(certificateId));
         }
 
+        /**
+         * @param sslManagementType SSL management type for this domain. If AUTOMATIC, a managed certificate is automatically provisioned. If MANUAL, certificate_id must be manually specified in order to configure SSL for this domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslManagementType(@Nullable Output<SslSettingsSslManagementType> sslManagementType) {
             $.sslManagementType = sslManagementType;
             return this;
         }
 
+        /**
+         * @param sslManagementType SSL management type for this domain. If AUTOMATIC, a managed certificate is automatically provisioned. If MANUAL, certificate_id must be manually specified in order to configure SSL for this domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslManagementType(SslSettingsSslManagementType sslManagementType) {
             return sslManagementType(Output.of(sslManagementType));
         }

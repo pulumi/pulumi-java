@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudRetailV2alphaRuleIgnoreActionResponse {
-    /**
-     * Terms to ignore in the search query.
-     * 
-     */
+        /**
+         * @return Terms to ignore in the search query.
+         * 
+         */
     private final List<String> ignoreTerms;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class GoogleCloudRetailV2alphaRuleIgnoreActionResponse {
     }
 
     /**
-     * Terms to ignore in the search query.
+     * @return Terms to ignore in the search query.
      * 
-    */
+     */
     public List<String> ignoreTerms() {
         return this.ignoreTerms;
     }

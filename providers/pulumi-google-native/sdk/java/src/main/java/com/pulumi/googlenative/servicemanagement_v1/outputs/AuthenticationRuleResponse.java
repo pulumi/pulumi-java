@@ -13,25 +13,25 @@ import java.util.Objects;
 
 @CustomType
 public final class AuthenticationRuleResponse {
-    /**
-     * If true, the service accepts API keys without any other credential. This flag only applies to HTTP and gRPC requests.
-     * 
-     */
+        /**
+         * @return If true, the service accepts API keys without any other credential. This flag only applies to HTTP and gRPC requests.
+         * 
+         */
     private final Boolean allowWithoutCredential;
-    /**
-     * The requirements for OAuth credentials.
-     * 
-     */
+        /**
+         * @return The requirements for OAuth credentials.
+         * 
+         */
     private final OAuthRequirementsResponse oauth;
-    /**
-     * Requirements for additional authentication providers.
-     * 
-     */
+        /**
+         * @return Requirements for additional authentication providers.
+         * 
+         */
     private final List<AuthRequirementResponse> requirements;
-    /**
-     * Selects the methods to which this rule applies. Refer to selector for syntax details.
-     * 
-     */
+        /**
+         * @return Selects the methods to which this rule applies. Refer to selector for syntax details.
+         * 
+         */
     private final String selector;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class AuthenticationRuleResponse {
     }
 
     /**
-     * If true, the service accepts API keys without any other credential. This flag only applies to HTTP and gRPC requests.
+     * @return If true, the service accepts API keys without any other credential. This flag only applies to HTTP and gRPC requests.
      * 
-    */
+     */
     public Boolean allowWithoutCredential() {
         return this.allowWithoutCredential;
     }
     /**
-     * The requirements for OAuth credentials.
+     * @return The requirements for OAuth credentials.
      * 
-    */
+     */
     public OAuthRequirementsResponse oauth() {
         return this.oauth;
     }
     /**
-     * Requirements for additional authentication providers.
+     * @return Requirements for additional authentication providers.
      * 
-    */
+     */
     public List<AuthRequirementResponse> requirements() {
         return this.requirements;
     }
     /**
-     * Selects the methods to which this rule applies. Refer to selector for syntax details.
+     * @return Selects the methods to which this rule applies. Refer to selector for syntax details.
      * 
-    */
+     */
     public String selector() {
         return this.selector;
     }

@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class SubjectConfigResponse {
-    /**
-     * Optional. The &#34;common name&#34; of the distinguished name.
-     * 
-     */
+        /**
+         * @return Optional. The &#34;common name&#34; of the distinguished name.
+         * 
+         */
     private final String commonName;
-    /**
-     * Contains distinguished name fields such as the location and organization.
-     * 
-     */
+        /**
+         * @return Contains distinguished name fields such as the location and organization.
+         * 
+         */
     private final SubjectResponse subject;
-    /**
-     * Optional. The subject alternative name fields.
-     * 
-     */
+        /**
+         * @return Optional. The subject alternative name fields.
+         * 
+         */
     private final SubjectAltNamesResponse subjectAltName;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class SubjectConfigResponse {
     }
 
     /**
-     * Optional. The &#34;common name&#34; of the distinguished name.
+     * @return Optional. The &#34;common name&#34; of the distinguished name.
      * 
-    */
+     */
     public String commonName() {
         return this.commonName;
     }
     /**
-     * Contains distinguished name fields such as the location and organization.
+     * @return Contains distinguished name fields such as the location and organization.
      * 
-    */
+     */
     public SubjectResponse subject() {
         return this.subject;
     }
     /**
-     * Optional. The subject alternative name fields.
+     * @return Optional. The subject alternative name fields.
      * 
-    */
+     */
     public SubjectAltNamesResponse subjectAltName() {
         return this.subjectAltName;
     }

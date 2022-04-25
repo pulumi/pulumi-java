@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudMlV1_Trial_ParameterResponse {
-    /**
-     * Must be set if ParameterType is DOUBLE or DISCRETE.
-     * 
-     */
+        /**
+         * @return Must be set if ParameterType is DOUBLE or DISCRETE.
+         * 
+         */
     private final Double floatValue;
-    /**
-     * Must be set if ParameterType is INTEGER
-     * 
-     */
+        /**
+         * @return Must be set if ParameterType is INTEGER
+         * 
+         */
     private final String intValue;
-    /**
-     * The name of the parameter.
-     * 
-     */
+        /**
+         * @return The name of the parameter.
+         * 
+         */
     private final String parameter;
-    /**
-     * Must be set if ParameterTypeis CATEGORICAL
-     * 
-     */
+        /**
+         * @return Must be set if ParameterTypeis CATEGORICAL
+         * 
+         */
     private final String stringValue;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse {
     }
 
     /**
-     * Must be set if ParameterType is DOUBLE or DISCRETE.
+     * @return Must be set if ParameterType is DOUBLE or DISCRETE.
      * 
-    */
+     */
     public Double floatValue() {
         return this.floatValue;
     }
     /**
-     * Must be set if ParameterType is INTEGER
+     * @return Must be set if ParameterType is INTEGER
      * 
-    */
+     */
     public String intValue() {
         return this.intValue;
     }
     /**
-     * The name of the parameter.
+     * @return The name of the parameter.
      * 
-    */
+     */
     public String parameter() {
         return this.parameter;
     }
     /**
-     * Must be set if ParameterTypeis CATEGORICAL
+     * @return Must be set if ParameterTypeis CATEGORICAL
      * 
-    */
+     */
     public String stringValue() {
         return this.stringValue;
     }

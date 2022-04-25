@@ -27,6 +27,10 @@ public final class AndroidTestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="androidAppInfo", required=true)
     private AndroidAppInfoResponse androidAppInfo;
 
+    /**
+     * @return Information about the application under test.
+     * 
+     */
     public AndroidAppInfoResponse androidAppInfo() {
         return this.androidAppInfo;
     }
@@ -38,6 +42,10 @@ public final class AndroidTestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="androidInstrumentationTest", required=true)
     private AndroidInstrumentationTestResponse androidInstrumentationTest;
 
+    /**
+     * @return An Android instrumentation test.
+     * 
+     */
     public AndroidInstrumentationTestResponse androidInstrumentationTest() {
         return this.androidInstrumentationTest;
     }
@@ -49,6 +57,10 @@ public final class AndroidTestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="androidRoboTest", required=true)
     private AndroidRoboTestResponse androidRoboTest;
 
+    /**
+     * @return An Android robo test.
+     * 
+     */
     public AndroidRoboTestResponse androidRoboTest() {
         return this.androidRoboTest;
     }
@@ -60,6 +72,10 @@ public final class AndroidTestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="androidTestLoop", required=true)
     private AndroidTestLoopResponse androidTestLoop;
 
+    /**
+     * @return An Android test loop.
+     * 
+     */
     public AndroidTestLoopResponse androidTestLoop() {
         return this.androidTestLoop;
     }
@@ -71,6 +87,10 @@ public final class AndroidTestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="testTimeout", required=true)
     private DurationResponse testTimeout;
 
+    /**
+     * @return Max time a test is allowed to run before it is automatically cancelled.
+     * 
+     */
     public DurationResponse testTimeout() {
         return this.testTimeout;
     }
@@ -103,26 +123,56 @@ public final class AndroidTestResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AndroidTestResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param androidAppInfo Information about the application under test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidAppInfo(AndroidAppInfoResponse androidAppInfo) {
             $.androidAppInfo = androidAppInfo;
             return this;
         }
 
+        /**
+         * @param androidInstrumentationTest An Android instrumentation test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidInstrumentationTest(AndroidInstrumentationTestResponse androidInstrumentationTest) {
             $.androidInstrumentationTest = androidInstrumentationTest;
             return this;
         }
 
+        /**
+         * @param androidRoboTest An Android robo test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidRoboTest(AndroidRoboTestResponse androidRoboTest) {
             $.androidRoboTest = androidRoboTest;
             return this;
         }
 
+        /**
+         * @param androidTestLoop An Android test loop.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidTestLoop(AndroidTestLoopResponse androidTestLoop) {
             $.androidTestLoop = androidTestLoop;
             return this;
         }
 
+        /**
+         * @param testTimeout Max time a test is allowed to run before it is automatically cancelled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTimeout(DurationResponse testTimeout) {
             $.testTimeout = testTimeout;
             return this;

@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class AuthenticationResponse {
-    /**
-     * Authentication using a custom account.
-     * 
-     */
+        /**
+         * @return Authentication using a custom account.
+         * 
+         */
     private final CustomAccountResponse customAccount;
-    /**
-     * Authentication using a Google account.
-     * 
-     */
+        /**
+         * @return Authentication using a Google account.
+         * 
+         */
     private final GoogleAccountResponse googleAccount;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class AuthenticationResponse {
     }
 
     /**
-     * Authentication using a custom account.
+     * @return Authentication using a custom account.
      * 
-    */
+     */
     public CustomAccountResponse customAccount() {
         return this.customAccount;
     }
     /**
-     * Authentication using a Google account.
+     * @return Authentication using a Google account.
      * 
-    */
+     */
     public GoogleAccountResponse googleAccount() {
         return this.googleAccount;
     }

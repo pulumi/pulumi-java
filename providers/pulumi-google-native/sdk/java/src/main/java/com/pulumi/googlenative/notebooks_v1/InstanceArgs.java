@@ -35,6 +35,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="acceleratorConfig")
     private @Nullable Output<AcceleratorConfigArgs> acceleratorConfig;
 
+    /**
+     * @return The hardware accelerator used on this instance. If you use accelerators, make sure that your configuration has [enough vCPUs and memory to support the `machine_type` you have selected](/compute/docs/gpus/#gpus-list).
+     * 
+     */
     public Optional<Output<AcceleratorConfigArgs>> acceleratorConfig() {
         return Optional.ofNullable(this.acceleratorConfig);
     }
@@ -46,6 +50,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bootDiskSizeGb")
     private @Nullable Output<String> bootDiskSizeGb;
 
+    /**
+     * @return Input only. The size of the boot disk in GB attached to this instance, up to a maximum of 64000 GB (64 TB). The minimum recommended value is 100 GB. If not specified, this defaults to 100.
+     * 
+     */
     public Optional<Output<String>> bootDiskSizeGb() {
         return Optional.ofNullable(this.bootDiskSizeGb);
     }
@@ -57,6 +65,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bootDiskType")
     private @Nullable Output<InstanceBootDiskType> bootDiskType;
 
+    /**
+     * @return Input only. The type of the boot disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).
+     * 
+     */
     public Optional<Output<InstanceBootDiskType>> bootDiskType() {
         return Optional.ofNullable(this.bootDiskType);
     }
@@ -68,6 +80,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containerImage")
     private @Nullable Output<ContainerImageArgs> containerImage;
 
+    /**
+     * @return Use a container image to start the notebook instance.
+     * 
+     */
     public Optional<Output<ContainerImageArgs>> containerImage() {
         return Optional.ofNullable(this.containerImage);
     }
@@ -79,6 +95,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customGpuDriverPath")
     private @Nullable Output<String> customGpuDriverPath;
 
+    /**
+     * @return Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we&#39;ll automatically choose from official GPU drivers.
+     * 
+     */
     public Optional<Output<String>> customGpuDriverPath() {
         return Optional.ofNullable(this.customGpuDriverPath);
     }
@@ -90,6 +110,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataDiskSizeGb")
     private @Nullable Output<String> dataDiskSizeGb;
 
+    /**
+     * @return Input only. The size of the data disk in GB attached to this instance, up to a maximum of 64000 GB (64 TB). You can choose the size of the data disk based on how big your notebooks and data are. If not specified, this defaults to 100.
+     * 
+     */
     public Optional<Output<String>> dataDiskSizeGb() {
         return Optional.ofNullable(this.dataDiskSizeGb);
     }
@@ -101,6 +125,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataDiskType")
     private @Nullable Output<InstanceDataDiskType> dataDiskType;
 
+    /**
+     * @return Input only. The type of the data disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).
+     * 
+     */
     public Optional<Output<InstanceDataDiskType>> dataDiskType() {
         return Optional.ofNullable(this.dataDiskType);
     }
@@ -112,6 +140,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskEncryption")
     private @Nullable Output<InstanceDiskEncryption> diskEncryption;
 
+    /**
+     * @return Input only. Disk encryption method used on the boot and data disks, defaults to GMEK.
+     * 
+     */
     public Optional<Output<InstanceDiskEncryption>> diskEncryption() {
         return Optional.ofNullable(this.diskEncryption);
     }
@@ -123,6 +155,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="installGpuDriver")
     private @Nullable Output<Boolean> installGpuDriver;
 
+    /**
+     * @return Whether the end user authorizes Google Cloud to install GPU driver on this instance. If this field is empty or set to false, the GPU driver won&#39;t be installed. Only applicable to instances with GPUs.
+     * 
+     */
     public Optional<Output<Boolean>> installGpuDriver() {
         return Optional.ofNullable(this.installGpuDriver);
     }
@@ -141,6 +177,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceOwners")
     private @Nullable Output<List<String>> instanceOwners;
 
+    /**
+     * @return Input only. The owner of this instance after creation. Format: `alias@example.com` Currently supports one owner only. If not specified, all of the service account users of your VM instance&#39;s service account can use the instance.
+     * 
+     */
     public Optional<Output<List<String>>> instanceOwners() {
         return Optional.ofNullable(this.instanceOwners);
     }
@@ -152,6 +192,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKey")
     private @Nullable Output<String> kmsKey;
 
+    /**
+     * @return Input only. The KMS key used to encrypt the disks, only applicable if disk_encryption is CMEK. Format: `projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}` Learn more about [using your own encryption keys](/kms/docs/quickstart).
+     * 
+     */
     public Optional<Output<String>> kmsKey() {
         return Optional.ofNullable(this.kmsKey);
     }
@@ -163,6 +207,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels to apply to this instance. These can be later modified by the setLabels method.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -181,6 +229,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="machineType", required=true)
     private Output<String> machineType;
 
+    /**
+     * @return The [Compute Engine machine type](/compute/docs/machine-types) of this instance.
+     * 
+     */
     public Output<String> machineType() {
         return this.machineType;
     }
@@ -192,6 +244,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
     private @Nullable Output<Map<String,String>> metadata;
 
+    /**
+     * @return Custom metadata to apply to this instance.
+     * 
+     */
     public Optional<Output<Map<String,String>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -203,6 +259,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="network")
     private @Nullable Output<String> network;
 
+    /**
+     * @return The name of the VPC that this instance is in. Format: `projects/{project_id}/global/networks/{network_id}`
+     * 
+     */
     public Optional<Output<String>> network() {
         return Optional.ofNullable(this.network);
     }
@@ -214,6 +274,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nicType")
     private @Nullable Output<InstanceNicType> nicType;
 
+    /**
+     * @return Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.
+     * 
+     */
     public Optional<Output<InstanceNicType>> nicType() {
         return Optional.ofNullable(this.nicType);
     }
@@ -225,6 +289,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="noProxyAccess")
     private @Nullable Output<Boolean> noProxyAccess;
 
+    /**
+     * @return If true, the notebook instance will not register with the proxy.
+     * 
+     */
     public Optional<Output<Boolean>> noProxyAccess() {
         return Optional.ofNullable(this.noProxyAccess);
     }
@@ -236,6 +304,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="noPublicIp")
     private @Nullable Output<Boolean> noPublicIp;
 
+    /**
+     * @return If true, no public IP will be assigned to this instance.
+     * 
+     */
     public Optional<Output<Boolean>> noPublicIp() {
         return Optional.ofNullable(this.noPublicIp);
     }
@@ -247,6 +319,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="noRemoveDataDisk")
     private @Nullable Output<Boolean> noRemoveDataDisk;
 
+    /**
+     * @return Input only. If true, the data disk will not be auto deleted when deleting the instance.
+     * 
+     */
     public Optional<Output<Boolean>> noRemoveDataDisk() {
         return Optional.ofNullable(this.noRemoveDataDisk);
     }
@@ -258,6 +334,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="postStartupScript")
     private @Nullable Output<String> postStartupScript;
 
+    /**
+     * @return Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path (`gs://path-to-file/file-name`).
+     * 
+     */
     public Optional<Output<String>> postStartupScript() {
         return Optional.ofNullable(this.postStartupScript);
     }
@@ -276,6 +356,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reservationAffinity")
     private @Nullable Output<ReservationAffinityArgs> reservationAffinity;
 
+    /**
+     * @return Optional. The optional reservation affinity. Setting this field will apply the specified [Zonal Compute Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) to this notebook instance.
+     * 
+     */
     public Optional<Output<ReservationAffinityArgs>> reservationAffinity() {
         return Optional.ofNullable(this.reservationAffinity);
     }
@@ -287,6 +371,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
     private @Nullable Output<String> serviceAccount;
 
+    /**
+     * @return The service account on this instance, giving access to other Google Cloud services. You can use any service account within the same project, but you must have the service account user permission to use the instance. If not specified, the [Compute Engine default service account](https://cloud.google.com/compute/docs/access/service-accounts#default_service_account) is used.
+     * 
+     */
     public Optional<Output<String>> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
@@ -298,6 +386,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountScopes")
     private @Nullable Output<List<String>> serviceAccountScopes;
 
+    /**
+     * @return Optional. The URIs of service account scopes to be included in Compute Engine instances. If not specified, the following [scopes](https://cloud.google.com/compute/docs/access/service-accounts#accesscopesiam) are defined: - https://www.googleapis.com/auth/cloud-platform - https://www.googleapis.com/auth/userinfo.email If not using default scopes, you need at least: https://www.googleapis.com/auth/compute
+     * 
+     */
     public Optional<Output<List<String>>> serviceAccountScopes() {
         return Optional.ofNullable(this.serviceAccountScopes);
     }
@@ -309,6 +401,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shieldedInstanceConfig")
     private @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
+    /**
+     * @return Optional. Shielded VM configuration. [Images using supported Shielded VM features](https://cloud.google.com/compute/docs/instances/modifying-shielded-vm).
+     * 
+     */
     public Optional<Output<ShieldedInstanceConfigArgs>> shieldedInstanceConfig() {
         return Optional.ofNullable(this.shieldedInstanceConfig);
     }
@@ -320,6 +416,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnet")
     private @Nullable Output<String> subnet;
 
+    /**
+     * @return The name of the subnet that this instance is in. Format: `projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}`
+     * 
+     */
     public Optional<Output<String>> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -331,6 +431,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<String>> tags;
 
+    /**
+     * @return Optional. The Compute Engine tags to add to runtime (see [Tagging instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+     * 
+     */
     public Optional<Output<List<String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -342,6 +446,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="upgradeHistory")
     private @Nullable Output<List<UpgradeHistoryEntryArgs>> upgradeHistory;
 
+    /**
+     * @return The upgrade history of this instance.
+     * 
+     */
     public Optional<Output<List<UpgradeHistoryEntryArgs>>> upgradeHistory() {
         return Optional.ofNullable(this.upgradeHistory);
     }
@@ -353,6 +461,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vmImage")
     private @Nullable Output<VmImageArgs> vmImage;
 
+    /**
+     * @return Use a Compute Engine VM image to start the notebook instance.
+     * 
+     */
     public Optional<Output<VmImageArgs>> vmImage() {
         return Optional.ofNullable(this.vmImage);
     }
@@ -411,83 +523,191 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceleratorConfig The hardware accelerator used on this instance. If you use accelerators, make sure that your configuration has [enough vCPUs and memory to support the `machine_type` you have selected](/compute/docs/gpus/#gpus-list).
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorConfig(@Nullable Output<AcceleratorConfigArgs> acceleratorConfig) {
             $.acceleratorConfig = acceleratorConfig;
             return this;
         }
 
+        /**
+         * @param acceleratorConfig The hardware accelerator used on this instance. If you use accelerators, make sure that your configuration has [enough vCPUs and memory to support the `machine_type` you have selected](/compute/docs/gpus/#gpus-list).
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorConfig(AcceleratorConfigArgs acceleratorConfig) {
             return acceleratorConfig(Output.of(acceleratorConfig));
         }
 
+        /**
+         * @param bootDiskSizeGb Input only. The size of the boot disk in GB attached to this instance, up to a maximum of 64000 GB (64 TB). The minimum recommended value is 100 GB. If not specified, this defaults to 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootDiskSizeGb(@Nullable Output<String> bootDiskSizeGb) {
             $.bootDiskSizeGb = bootDiskSizeGb;
             return this;
         }
 
+        /**
+         * @param bootDiskSizeGb Input only. The size of the boot disk in GB attached to this instance, up to a maximum of 64000 GB (64 TB). The minimum recommended value is 100 GB. If not specified, this defaults to 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootDiskSizeGb(String bootDiskSizeGb) {
             return bootDiskSizeGb(Output.of(bootDiskSizeGb));
         }
 
+        /**
+         * @param bootDiskType Input only. The type of the boot disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootDiskType(@Nullable Output<InstanceBootDiskType> bootDiskType) {
             $.bootDiskType = bootDiskType;
             return this;
         }
 
+        /**
+         * @param bootDiskType Input only. The type of the boot disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootDiskType(InstanceBootDiskType bootDiskType) {
             return bootDiskType(Output.of(bootDiskType));
         }
 
+        /**
+         * @param containerImage Use a container image to start the notebook instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerImage(@Nullable Output<ContainerImageArgs> containerImage) {
             $.containerImage = containerImage;
             return this;
         }
 
+        /**
+         * @param containerImage Use a container image to start the notebook instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerImage(ContainerImageArgs containerImage) {
             return containerImage(Output.of(containerImage));
         }
 
+        /**
+         * @param customGpuDriverPath Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we&#39;ll automatically choose from official GPU drivers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customGpuDriverPath(@Nullable Output<String> customGpuDriverPath) {
             $.customGpuDriverPath = customGpuDriverPath;
             return this;
         }
 
+        /**
+         * @param customGpuDriverPath Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we&#39;ll automatically choose from official GPU drivers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customGpuDriverPath(String customGpuDriverPath) {
             return customGpuDriverPath(Output.of(customGpuDriverPath));
         }
 
+        /**
+         * @param dataDiskSizeGb Input only. The size of the data disk in GB attached to this instance, up to a maximum of 64000 GB (64 TB). You can choose the size of the data disk based on how big your notebooks and data are. If not specified, this defaults to 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDiskSizeGb(@Nullable Output<String> dataDiskSizeGb) {
             $.dataDiskSizeGb = dataDiskSizeGb;
             return this;
         }
 
+        /**
+         * @param dataDiskSizeGb Input only. The size of the data disk in GB attached to this instance, up to a maximum of 64000 GB (64 TB). You can choose the size of the data disk based on how big your notebooks and data are. If not specified, this defaults to 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDiskSizeGb(String dataDiskSizeGb) {
             return dataDiskSizeGb(Output.of(dataDiskSizeGb));
         }
 
+        /**
+         * @param dataDiskType Input only. The type of the data disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDiskType(@Nullable Output<InstanceDataDiskType> dataDiskType) {
             $.dataDiskType = dataDiskType;
             return this;
         }
 
+        /**
+         * @param dataDiskType Input only. The type of the data disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDiskType(InstanceDataDiskType dataDiskType) {
             return dataDiskType(Output.of(dataDiskType));
         }
 
+        /**
+         * @param diskEncryption Input only. Disk encryption method used on the boot and data disks, defaults to GMEK.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryption(@Nullable Output<InstanceDiskEncryption> diskEncryption) {
             $.diskEncryption = diskEncryption;
             return this;
         }
 
+        /**
+         * @param diskEncryption Input only. Disk encryption method used on the boot and data disks, defaults to GMEK.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryption(InstanceDiskEncryption diskEncryption) {
             return diskEncryption(Output.of(diskEncryption));
         }
 
+        /**
+         * @param installGpuDriver Whether the end user authorizes Google Cloud to install GPU driver on this instance. If this field is empty or set to false, the GPU driver won&#39;t be installed. Only applicable to instances with GPUs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder installGpuDriver(@Nullable Output<Boolean> installGpuDriver) {
             $.installGpuDriver = installGpuDriver;
             return this;
         }
 
+        /**
+         * @param installGpuDriver Whether the end user authorizes Google Cloud to install GPU driver on this instance. If this field is empty or set to false, the GPU driver won&#39;t be installed. Only applicable to instances with GPUs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder installGpuDriver(Boolean installGpuDriver) {
             return installGpuDriver(Output.of(installGpuDriver));
         }
@@ -501,33 +721,75 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             return instanceId(Output.of(instanceId));
         }
 
+        /**
+         * @param instanceOwners Input only. The owner of this instance after creation. Format: `alias@example.com` Currently supports one owner only. If not specified, all of the service account users of your VM instance&#39;s service account can use the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceOwners(@Nullable Output<List<String>> instanceOwners) {
             $.instanceOwners = instanceOwners;
             return this;
         }
 
+        /**
+         * @param instanceOwners Input only. The owner of this instance after creation. Format: `alias@example.com` Currently supports one owner only. If not specified, all of the service account users of your VM instance&#39;s service account can use the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceOwners(List<String> instanceOwners) {
             return instanceOwners(Output.of(instanceOwners));
         }
 
+        /**
+         * @param instanceOwners Input only. The owner of this instance after creation. Format: `alias@example.com` Currently supports one owner only. If not specified, all of the service account users of your VM instance&#39;s service account can use the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceOwners(String... instanceOwners) {
             return instanceOwners(List.of(instanceOwners));
         }
 
+        /**
+         * @param kmsKey Input only. The KMS key used to encrypt the disks, only applicable if disk_encryption is CMEK. Format: `projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}` Learn more about [using your own encryption keys](/kms/docs/quickstart).
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKey(@Nullable Output<String> kmsKey) {
             $.kmsKey = kmsKey;
             return this;
         }
 
+        /**
+         * @param kmsKey Input only. The KMS key used to encrypt the disks, only applicable if disk_encryption is CMEK. Format: `projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}` Learn more about [using your own encryption keys](/kms/docs/quickstart).
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKey(String kmsKey) {
             return kmsKey(Output.of(kmsKey));
         }
 
+        /**
+         * @param labels Labels to apply to this instance. These can be later modified by the setLabels method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels to apply to this instance. These can be later modified by the setLabels method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -541,74 +803,170 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param machineType The [Compute Engine machine type](/compute/docs/machine-types) of this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(Output<String> machineType) {
             $.machineType = machineType;
             return this;
         }
 
+        /**
+         * @param machineType The [Compute Engine machine type](/compute/docs/machine-types) of this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(String machineType) {
             return machineType(Output.of(machineType));
         }
 
+        /**
+         * @param metadata Custom metadata to apply to this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata Custom metadata to apply to this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param network The name of the VPC that this instance is in. Format: `projects/{project_id}/global/networks/{network_id}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(@Nullable Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network The name of the VPC that this instance is in. Format: `projects/{project_id}/global/networks/{network_id}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }
 
+        /**
+         * @param nicType Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nicType(@Nullable Output<InstanceNicType> nicType) {
             $.nicType = nicType;
             return this;
         }
 
+        /**
+         * @param nicType Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nicType(InstanceNicType nicType) {
             return nicType(Output.of(nicType));
         }
 
+        /**
+         * @param noProxyAccess If true, the notebook instance will not register with the proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noProxyAccess(@Nullable Output<Boolean> noProxyAccess) {
             $.noProxyAccess = noProxyAccess;
             return this;
         }
 
+        /**
+         * @param noProxyAccess If true, the notebook instance will not register with the proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noProxyAccess(Boolean noProxyAccess) {
             return noProxyAccess(Output.of(noProxyAccess));
         }
 
+        /**
+         * @param noPublicIp If true, no public IP will be assigned to this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noPublicIp(@Nullable Output<Boolean> noPublicIp) {
             $.noPublicIp = noPublicIp;
             return this;
         }
 
+        /**
+         * @param noPublicIp If true, no public IP will be assigned to this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noPublicIp(Boolean noPublicIp) {
             return noPublicIp(Output.of(noPublicIp));
         }
 
+        /**
+         * @param noRemoveDataDisk Input only. If true, the data disk will not be auto deleted when deleting the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noRemoveDataDisk(@Nullable Output<Boolean> noRemoveDataDisk) {
             $.noRemoveDataDisk = noRemoveDataDisk;
             return this;
         }
 
+        /**
+         * @param noRemoveDataDisk Input only. If true, the data disk will not be auto deleted when deleting the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noRemoveDataDisk(Boolean noRemoveDataDisk) {
             return noRemoveDataDisk(Output.of(noRemoveDataDisk));
         }
 
+        /**
+         * @param postStartupScript Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path (`gs://path-to-file/file-name`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder postStartupScript(@Nullable Output<String> postStartupScript) {
             $.postStartupScript = postStartupScript;
             return this;
         }
 
+        /**
+         * @param postStartupScript Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path (`gs://path-to-file/file-name`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder postStartupScript(String postStartupScript) {
             return postStartupScript(Output.of(postStartupScript));
         }
@@ -622,86 +980,200 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param reservationAffinity Optional. The optional reservation affinity. Setting this field will apply the specified [Zonal Compute Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) to this notebook instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationAffinity(@Nullable Output<ReservationAffinityArgs> reservationAffinity) {
             $.reservationAffinity = reservationAffinity;
             return this;
         }
 
+        /**
+         * @param reservationAffinity Optional. The optional reservation affinity. Setting this field will apply the specified [Zonal Compute Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) to this notebook instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationAffinity(ReservationAffinityArgs reservationAffinity) {
             return reservationAffinity(Output.of(reservationAffinity));
         }
 
+        /**
+         * @param serviceAccount The service account on this instance, giving access to other Google Cloud services. You can use any service account within the same project, but you must have the service account user permission to use the instance. If not specified, the [Compute Engine default service account](https://cloud.google.com/compute/docs/access/service-accounts#default_service_account) is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param serviceAccount The service account on this instance, giving access to other Google Cloud services. You can use any service account within the same project, but you must have the service account user permission to use the instance. If not specified, the [Compute Engine default service account](https://cloud.google.com/compute/docs/access/service-accounts#default_service_account) is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(String serviceAccount) {
             return serviceAccount(Output.of(serviceAccount));
         }
 
+        /**
+         * @param serviceAccountScopes Optional. The URIs of service account scopes to be included in Compute Engine instances. If not specified, the following [scopes](https://cloud.google.com/compute/docs/access/service-accounts#accesscopesiam) are defined: - https://www.googleapis.com/auth/cloud-platform - https://www.googleapis.com/auth/userinfo.email If not using default scopes, you need at least: https://www.googleapis.com/auth/compute
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountScopes(@Nullable Output<List<String>> serviceAccountScopes) {
             $.serviceAccountScopes = serviceAccountScopes;
             return this;
         }
 
+        /**
+         * @param serviceAccountScopes Optional. The URIs of service account scopes to be included in Compute Engine instances. If not specified, the following [scopes](https://cloud.google.com/compute/docs/access/service-accounts#accesscopesiam) are defined: - https://www.googleapis.com/auth/cloud-platform - https://www.googleapis.com/auth/userinfo.email If not using default scopes, you need at least: https://www.googleapis.com/auth/compute
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountScopes(List<String> serviceAccountScopes) {
             return serviceAccountScopes(Output.of(serviceAccountScopes));
         }
 
+        /**
+         * @param serviceAccountScopes Optional. The URIs of service account scopes to be included in Compute Engine instances. If not specified, the following [scopes](https://cloud.google.com/compute/docs/access/service-accounts#accesscopesiam) are defined: - https://www.googleapis.com/auth/cloud-platform - https://www.googleapis.com/auth/userinfo.email If not using default scopes, you need at least: https://www.googleapis.com/auth/compute
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountScopes(String... serviceAccountScopes) {
             return serviceAccountScopes(List.of(serviceAccountScopes));
         }
 
+        /**
+         * @param shieldedInstanceConfig Optional. Shielded VM configuration. [Images using supported Shielded VM features](https://cloud.google.com/compute/docs/instances/modifying-shielded-vm).
+         * 
+         * @return builder
+         * 
+         */
         public Builder shieldedInstanceConfig(@Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig) {
             $.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
+        /**
+         * @param shieldedInstanceConfig Optional. Shielded VM configuration. [Images using supported Shielded VM features](https://cloud.google.com/compute/docs/instances/modifying-shielded-vm).
+         * 
+         * @return builder
+         * 
+         */
         public Builder shieldedInstanceConfig(ShieldedInstanceConfigArgs shieldedInstanceConfig) {
             return shieldedInstanceConfig(Output.of(shieldedInstanceConfig));
         }
 
+        /**
+         * @param subnet The name of the subnet that this instance is in. Format: `projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable Output<String> subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param subnet The name of the subnet that this instance is in. Format: `projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(String subnet) {
             return subnet(Output.of(subnet));
         }
 
+        /**
+         * @param tags Optional. The Compute Engine tags to add to runtime (see [Tagging instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Optional. The Compute Engine tags to add to runtime (see [Tagging instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Optional. The Compute Engine tags to add to runtime (see [Tagging instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param upgradeHistory The upgrade history of this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeHistory(@Nullable Output<List<UpgradeHistoryEntryArgs>> upgradeHistory) {
             $.upgradeHistory = upgradeHistory;
             return this;
         }
 
+        /**
+         * @param upgradeHistory The upgrade history of this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeHistory(List<UpgradeHistoryEntryArgs> upgradeHistory) {
             return upgradeHistory(Output.of(upgradeHistory));
         }
 
+        /**
+         * @param upgradeHistory The upgrade history of this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeHistory(UpgradeHistoryEntryArgs... upgradeHistory) {
             return upgradeHistory(List.of(upgradeHistory));
         }
 
+        /**
+         * @param vmImage Use a Compute Engine VM image to start the notebook instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmImage(@Nullable Output<VmImageArgs> vmImage) {
             $.vmImage = vmImage;
             return this;
         }
 
+        /**
+         * @param vmImage Use a Compute Engine VM image to start the notebook instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmImage(VmImageArgs vmImage) {
             return vmImage(Output.of(vmImage));
         }

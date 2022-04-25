@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class AttributeResponse {
-    /**
-     * Indicates the name of an attribute defined in the consent store.
-     * 
-     */
+        /**
+         * @return Indicates the name of an attribute defined in the consent store.
+         * 
+         */
     private final String attributeDefinitionId;
-    /**
-     * The value of the attribute. Must be an acceptable value as defined in the consent store. For example, if the consent store defines &#34;data type&#34; with acceptable values &#34;questionnaire&#34; and &#34;step-count&#34;, when the attribute name is data type, this field must contain one of those values.
-     * 
-     */
+        /**
+         * @return The value of the attribute. Must be an acceptable value as defined in the consent store. For example, if the consent store defines &#34;data type&#34; with acceptable values &#34;questionnaire&#34; and &#34;step-count&#34;, when the attribute name is data type, this field must contain one of those values.
+         * 
+         */
     private final List<String> values;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class AttributeResponse {
     }
 
     /**
-     * Indicates the name of an attribute defined in the consent store.
+     * @return Indicates the name of an attribute defined in the consent store.
      * 
-    */
+     */
     public String attributeDefinitionId() {
         return this.attributeDefinitionId;
     }
     /**
-     * The value of the attribute. Must be an acceptable value as defined in the consent store. For example, if the consent store defines &#34;data type&#34; with acceptable values &#34;questionnaire&#34; and &#34;step-count&#34;, when the attribute name is data type, this field must contain one of those values.
+     * @return The value of the attribute. Must be an acceptable value as defined in the consent store. For example, if the consent store defines &#34;data type&#34; with acceptable values &#34;questionnaire&#34; and &#34;step-count&#34;, when the attribute name is data type, this field must contain one of those values.
      * 
-    */
+     */
     public List<String> values() {
         return this.values;
     }

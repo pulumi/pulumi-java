@@ -23,6 +23,10 @@ public final class HintResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="humanReadableName", required=true)
     private String humanReadableName;
 
+    /**
+     * @return The human readable name of this attestation authority, for example &#34;qa&#34;.
+     * 
+     */
     public String humanReadableName() {
         return this.humanReadableName;
     }
@@ -51,6 +55,12 @@ public final class HintResponse extends com.pulumi.resources.InvokeArgs {
             $ = new HintResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param humanReadableName The human readable name of this attestation authority, for example &#34;qa&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder humanReadableName(String humanReadableName) {
             $.humanReadableName = humanReadableName;
             return this;

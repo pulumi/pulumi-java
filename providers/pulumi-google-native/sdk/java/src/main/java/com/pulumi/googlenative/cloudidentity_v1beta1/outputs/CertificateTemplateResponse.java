@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class CertificateTemplateResponse {
-    /**
-     * The Major version of the template. Example: 100.
-     * 
-     */
+        /**
+         * @return The Major version of the template. Example: 100.
+         * 
+         */
     private final Integer majorVersion;
-    /**
-     * The minor version of the template. Example: 12.
-     * 
-     */
+        /**
+         * @return The minor version of the template. Example: 12.
+         * 
+         */
     private final Integer minorVersion;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class CertificateTemplateResponse {
     }
 
     /**
-     * The Major version of the template. Example: 100.
+     * @return The Major version of the template. Example: 100.
      * 
-    */
+     */
     public Integer majorVersion() {
         return this.majorVersion;
     }
     /**
-     * The minor version of the template. Example: 12.
+     * @return The minor version of the template. Example: 12.
      * 
-    */
+     */
     public Integer minorVersion() {
         return this.minorVersion;
     }

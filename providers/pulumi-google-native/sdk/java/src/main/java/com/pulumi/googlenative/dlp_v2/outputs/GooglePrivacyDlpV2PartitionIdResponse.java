@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GooglePrivacyDlpV2PartitionIdResponse {
-    /**
-     * If not empty, the ID of the namespace to which the entities belong.
-     * 
-     */
+        /**
+         * @return If not empty, the ID of the namespace to which the entities belong.
+         * 
+         */
     private final String namespaceId;
-    /**
-     * The ID of the project to which the entities belong.
-     * 
-     */
+        /**
+         * @return The ID of the project to which the entities belong.
+         * 
+         */
     private final String project;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GooglePrivacyDlpV2PartitionIdResponse {
     }
 
     /**
-     * If not empty, the ID of the namespace to which the entities belong.
+     * @return If not empty, the ID of the namespace to which the entities belong.
      * 
-    */
+     */
     public String namespaceId() {
         return this.namespaceId;
     }
     /**
-     * The ID of the project to which the entities belong.
+     * @return The ID of the project to which the entities belong.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }

@@ -11,55 +11,55 @@ import java.util.Objects;
 
 @CustomType
 public final class HttpRuleResponse {
-    /**
-     * Additional HTTP bindings for the selector. Nested bindings must not contain an `additional_bindings` field themselves (that is, the nesting may only be one level deep).
-     * 
-     */
+        /**
+         * @return Additional HTTP bindings for the selector. Nested bindings must not contain an `additional_bindings` field themselves (that is, the nesting may only be one level deep).
+         * 
+         */
     private final List<HttpRuleResponse> additionalBindings;
-    /**
-     * The name of the request field whose value is mapped to the HTTP request body, or `*` for mapping all request fields not captured by the path pattern to the HTTP body, or omitted for not having any HTTP request body. NOTE: the referred field must be present at the top-level of the request message type.
-     * 
-     */
+        /**
+         * @return The name of the request field whose value is mapped to the HTTP request body, or `*` for mapping all request fields not captured by the path pattern to the HTTP body, or omitted for not having any HTTP request body. NOTE: the referred field must be present at the top-level of the request message type.
+         * 
+         */
     private final String body;
-    /**
-     * The custom pattern is used for specifying an HTTP method that is not included in the `pattern` field, such as HEAD, or &#34;*&#34; to leave the HTTP method unspecified for this rule. The wild-card rule is useful for services that provide content to Web (HTML) clients.
-     * 
-     */
+        /**
+         * @return The custom pattern is used for specifying an HTTP method that is not included in the `pattern` field, such as HEAD, or &#34;*&#34; to leave the HTTP method unspecified for this rule. The wild-card rule is useful for services that provide content to Web (HTML) clients.
+         * 
+         */
     private final CustomHttpPatternResponse custom;
-    /**
-     * Maps to HTTP DELETE. Used for deleting a resource.
-     * 
-     */
+        /**
+         * @return Maps to HTTP DELETE. Used for deleting a resource.
+         * 
+         */
     private final String delete;
-    /**
-     * Maps to HTTP GET. Used for listing and getting information about resources.
-     * 
-     */
+        /**
+         * @return Maps to HTTP GET. Used for listing and getting information about resources.
+         * 
+         */
     private final String get;
-    /**
-     * Maps to HTTP PATCH. Used for updating a resource.
-     * 
-     */
+        /**
+         * @return Maps to HTTP PATCH. Used for updating a resource.
+         * 
+         */
     private final String patch;
-    /**
-     * Maps to HTTP POST. Used for creating a resource or performing an action.
-     * 
-     */
+        /**
+         * @return Maps to HTTP POST. Used for creating a resource or performing an action.
+         * 
+         */
     private final String post;
-    /**
-     * Maps to HTTP PUT. Used for replacing a resource.
-     * 
-     */
+        /**
+         * @return Maps to HTTP PUT. Used for replacing a resource.
+         * 
+         */
     private final String put;
-    /**
-     * Optional. The name of the response field whose value is mapped to the HTTP response body. When omitted, the entire response message will be used as the HTTP response body. NOTE: The referred field must be present at the top-level of the response message type.
-     * 
-     */
+        /**
+         * @return Optional. The name of the response field whose value is mapped to the HTTP response body. When omitted, the entire response message will be used as the HTTP response body. NOTE: The referred field must be present at the top-level of the response message type.
+         * 
+         */
     private final String responseBody;
-    /**
-     * Selects a method to which this rule applies. Refer to selector for syntax details.
-     * 
-     */
+        /**
+         * @return Selects a method to which this rule applies. Refer to selector for syntax details.
+         * 
+         */
     private final String selector;
 
     @CustomType.Constructor
@@ -87,72 +87,72 @@ public final class HttpRuleResponse {
     }
 
     /**
-     * Additional HTTP bindings for the selector. Nested bindings must not contain an `additional_bindings` field themselves (that is, the nesting may only be one level deep).
+     * @return Additional HTTP bindings for the selector. Nested bindings must not contain an `additional_bindings` field themselves (that is, the nesting may only be one level deep).
      * 
-    */
+     */
     public List<HttpRuleResponse> additionalBindings() {
         return this.additionalBindings;
     }
     /**
-     * The name of the request field whose value is mapped to the HTTP request body, or `*` for mapping all request fields not captured by the path pattern to the HTTP body, or omitted for not having any HTTP request body. NOTE: the referred field must be present at the top-level of the request message type.
+     * @return The name of the request field whose value is mapped to the HTTP request body, or `*` for mapping all request fields not captured by the path pattern to the HTTP body, or omitted for not having any HTTP request body. NOTE: the referred field must be present at the top-level of the request message type.
      * 
-    */
+     */
     public String body() {
         return this.body;
     }
     /**
-     * The custom pattern is used for specifying an HTTP method that is not included in the `pattern` field, such as HEAD, or &#34;*&#34; to leave the HTTP method unspecified for this rule. The wild-card rule is useful for services that provide content to Web (HTML) clients.
+     * @return The custom pattern is used for specifying an HTTP method that is not included in the `pattern` field, such as HEAD, or &#34;*&#34; to leave the HTTP method unspecified for this rule. The wild-card rule is useful for services that provide content to Web (HTML) clients.
      * 
-    */
+     */
     public CustomHttpPatternResponse custom() {
         return this.custom;
     }
     /**
-     * Maps to HTTP DELETE. Used for deleting a resource.
+     * @return Maps to HTTP DELETE. Used for deleting a resource.
      * 
-    */
+     */
     public String delete() {
         return this.delete;
     }
     /**
-     * Maps to HTTP GET. Used for listing and getting information about resources.
+     * @return Maps to HTTP GET. Used for listing and getting information about resources.
      * 
-    */
+     */
     public String get() {
         return this.get;
     }
     /**
-     * Maps to HTTP PATCH. Used for updating a resource.
+     * @return Maps to HTTP PATCH. Used for updating a resource.
      * 
-    */
+     */
     public String patch() {
         return this.patch;
     }
     /**
-     * Maps to HTTP POST. Used for creating a resource or performing an action.
+     * @return Maps to HTTP POST. Used for creating a resource or performing an action.
      * 
-    */
+     */
     public String post() {
         return this.post;
     }
     /**
-     * Maps to HTTP PUT. Used for replacing a resource.
+     * @return Maps to HTTP PUT. Used for replacing a resource.
      * 
-    */
+     */
     public String put() {
         return this.put;
     }
     /**
-     * Optional. The name of the response field whose value is mapped to the HTTP response body. When omitted, the entire response message will be used as the HTTP response body. NOTE: The referred field must be present at the top-level of the response message type.
+     * @return Optional. The name of the response field whose value is mapped to the HTTP response body. When omitted, the entire response message will be used as the HTTP response body. NOTE: The referred field must be present at the top-level of the response message type.
      * 
-    */
+     */
     public String responseBody() {
         return this.responseBody;
     }
     /**
-     * Selects a method to which this rule applies. Refer to selector for syntax details.
+     * @return Selects a method to which this rule applies. Refer to selector for syntax details.
      * 
-    */
+     */
     public String selector() {
         return this.selector;
     }

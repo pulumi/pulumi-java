@@ -13,45 +13,45 @@ import java.util.Objects;
 
 @CustomType
 public final class ProbingDetailsResponse {
-    /**
-     * The reason probing was aborted.
-     * 
-     */
+        /**
+         * @return The reason probing was aborted.
+         * 
+         */
     private final String abortCause;
-    /**
-     * The source and destination endpoints derived from the test input and used for active probing.
-     * 
-     */
+        /**
+         * @return The source and destination endpoints derived from the test input and used for active probing.
+         * 
+         */
     private final EndpointInfoResponse endpointInfo;
-    /**
-     * Details about an internal failure or the cancellation of active probing.
-     * 
-     */
+        /**
+         * @return Details about an internal failure or the cancellation of active probing.
+         * 
+         */
     private final StatusResponse error;
-    /**
-     * Latency as measured by active probing in one direction: from the source to the destination endpoint.
-     * 
-     */
+        /**
+         * @return Latency as measured by active probing in one direction: from the source to the destination endpoint.
+         * 
+         */
     private final LatencyDistributionResponse probingLatency;
-    /**
-     * The overall result of active probing.
-     * 
-     */
+        /**
+         * @return The overall result of active probing.
+         * 
+         */
     private final String result;
-    /**
-     * Number of probes sent.
-     * 
-     */
+        /**
+         * @return Number of probes sent.
+         * 
+         */
     private final Integer sentProbeCount;
-    /**
-     * Number of probes that reached the destination.
-     * 
-     */
+        /**
+         * @return Number of probes that reached the destination.
+         * 
+         */
     private final Integer successfulProbeCount;
-    /**
-     * The time that reachability was assessed through active probing.
-     * 
-     */
+        /**
+         * @return The time that reachability was assessed through active probing.
+         * 
+         */
     private final String verifyTime;
 
     @CustomType.Constructor
@@ -75,58 +75,58 @@ public final class ProbingDetailsResponse {
     }
 
     /**
-     * The reason probing was aborted.
+     * @return The reason probing was aborted.
      * 
-    */
+     */
     public String abortCause() {
         return this.abortCause;
     }
     /**
-     * The source and destination endpoints derived from the test input and used for active probing.
+     * @return The source and destination endpoints derived from the test input and used for active probing.
      * 
-    */
+     */
     public EndpointInfoResponse endpointInfo() {
         return this.endpointInfo;
     }
     /**
-     * Details about an internal failure or the cancellation of active probing.
+     * @return Details about an internal failure or the cancellation of active probing.
      * 
-    */
+     */
     public StatusResponse error() {
         return this.error;
     }
     /**
-     * Latency as measured by active probing in one direction: from the source to the destination endpoint.
+     * @return Latency as measured by active probing in one direction: from the source to the destination endpoint.
      * 
-    */
+     */
     public LatencyDistributionResponse probingLatency() {
         return this.probingLatency;
     }
     /**
-     * The overall result of active probing.
+     * @return The overall result of active probing.
      * 
-    */
+     */
     public String result() {
         return this.result;
     }
     /**
-     * Number of probes sent.
+     * @return Number of probes sent.
      * 
-    */
+     */
     public Integer sentProbeCount() {
         return this.sentProbeCount;
     }
     /**
-     * Number of probes that reached the destination.
+     * @return Number of probes that reached the destination.
      * 
-    */
+     */
     public Integer successfulProbeCount() {
         return this.successfulProbeCount;
     }
     /**
-     * The time that reachability was assessed through active probing.
+     * @return The time that reachability was assessed through active probing.
      * 
-    */
+     */
     public String verifyTime() {
         return this.verifyTime;
     }

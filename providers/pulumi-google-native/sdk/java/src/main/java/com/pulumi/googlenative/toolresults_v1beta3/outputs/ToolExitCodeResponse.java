@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ToolExitCodeResponse {
-    /**
-     * Tool execution exit code. A value of 0 means that the execution was successful. - In response: always set - In create/update request: always set
-     * 
-     */
+        /**
+         * @return Tool execution exit code. A value of 0 means that the execution was successful. - In response: always set - In create/update request: always set
+         * 
+         */
     private final Integer number;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ToolExitCodeResponse {
     }
 
     /**
-     * Tool execution exit code. A value of 0 means that the execution was successful. - In response: always set - In create/update request: always set
+     * @return Tool execution exit code. A value of 0 means that the execution was successful. - In response: always set - In create/update request: always set
      * 
-    */
+     */
     public Integer number() {
         return this.number;
     }

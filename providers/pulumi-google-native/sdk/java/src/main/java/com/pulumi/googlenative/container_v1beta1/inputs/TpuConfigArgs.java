@@ -27,6 +27,10 @@ public final class TpuConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Whether Cloud TPU integration is enabled or not.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -38,6 +42,10 @@ public final class TpuConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipv4CidrBlock")
     private @Nullable Output<String> ipv4CidrBlock;
 
+    /**
+     * @return IPv4 CIDR block reserved for Cloud TPU in the VPC.
+     * 
+     */
     public Optional<Output<String>> ipv4CidrBlock() {
         return Optional.ofNullable(this.ipv4CidrBlock);
     }
@@ -49,6 +57,10 @@ public final class TpuConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="useServiceNetworking")
     private @Nullable Output<Boolean> useServiceNetworking;
 
+    /**
+     * @return Whether to use service networking for Cloud TPU or not.
+     * 
+     */
     public Optional<Output<Boolean>> useServiceNetworking() {
         return Optional.ofNullable(this.useServiceNetworking);
     }
@@ -79,29 +91,65 @@ public final class TpuConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TpuConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether Cloud TPU integration is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether Cloud TPU integration is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param ipv4CidrBlock IPv4 CIDR block reserved for Cloud TPU in the VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4CidrBlock(@Nullable Output<String> ipv4CidrBlock) {
             $.ipv4CidrBlock = ipv4CidrBlock;
             return this;
         }
 
+        /**
+         * @param ipv4CidrBlock IPv4 CIDR block reserved for Cloud TPU in the VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4CidrBlock(String ipv4CidrBlock) {
             return ipv4CidrBlock(Output.of(ipv4CidrBlock));
         }
 
+        /**
+         * @param useServiceNetworking Whether to use service networking for Cloud TPU or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useServiceNetworking(@Nullable Output<Boolean> useServiceNetworking) {
             $.useServiceNetworking = useServiceNetworking;
             return this;
         }
 
+        /**
+         * @param useServiceNetworking Whether to use service networking for Cloud TPU or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useServiceNetworking(Boolean useServiceNetworking) {
             return useServiceNetworking(Output.of(useServiceNetworking));
         }

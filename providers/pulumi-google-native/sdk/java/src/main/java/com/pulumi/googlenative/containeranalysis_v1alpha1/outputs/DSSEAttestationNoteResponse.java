@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class DSSEAttestationNoteResponse {
-    /**
-     * DSSEHint hints at the purpose of the attestation authority.
-     * 
-     */
+        /**
+         * @return DSSEHint hints at the purpose of the attestation authority.
+         * 
+         */
     private final DSSEHintResponse hint;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class DSSEAttestationNoteResponse {
     }
 
     /**
-     * DSSEHint hints at the purpose of the attestation authority.
+     * @return DSSEHint hints at the purpose of the attestation authority.
      * 
-    */
+     */
     public DSSEHintResponse hint() {
         return this.hint;
     }

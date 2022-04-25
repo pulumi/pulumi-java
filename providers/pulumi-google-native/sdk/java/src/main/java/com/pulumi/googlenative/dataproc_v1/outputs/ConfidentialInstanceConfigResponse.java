@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ConfidentialInstanceConfigResponse {
-    /**
-     * Optional. Defines whether the instance should have confidential compute enabled.
-     * 
-     */
+        /**
+         * @return Optional. Defines whether the instance should have confidential compute enabled.
+         * 
+         */
     private final Boolean enableConfidentialCompute;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ConfidentialInstanceConfigResponse {
     }
 
     /**
-     * Optional. Defines whether the instance should have confidential compute enabled.
+     * @return Optional. Defines whether the instance should have confidential compute enabled.
      * 
-    */
+     */
     public Boolean enableConfidentialCompute() {
         return this.enableConfidentialCompute;
     }

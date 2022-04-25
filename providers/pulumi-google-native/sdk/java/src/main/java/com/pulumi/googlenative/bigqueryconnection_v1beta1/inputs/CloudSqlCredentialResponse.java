@@ -23,6 +23,10 @@ public final class CloudSqlCredentialResponse extends com.pulumi.resources.Invok
     @Import(name="password", required=true)
     private String password;
 
+    /**
+     * @return The password for the credential.
+     * 
+     */
     public String password() {
         return this.password;
     }
@@ -34,6 +38,10 @@ public final class CloudSqlCredentialResponse extends com.pulumi.resources.Invok
     @Import(name="username", required=true)
     private String username;
 
+    /**
+     * @return The username for the credential.
+     * 
+     */
     public String username() {
         return this.username;
     }
@@ -63,11 +71,23 @@ public final class CloudSqlCredentialResponse extends com.pulumi.resources.Invok
             $ = new CloudSqlCredentialResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password The password for the credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param username The username for the credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             $.username = username;
             return this;

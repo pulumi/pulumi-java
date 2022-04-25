@@ -12,25 +12,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudApigeeV1AddonsConfigResponse {
-    /**
-     * Configuration for the Advanced API Ops add-on.
-     * 
-     */
+        /**
+         * @return Configuration for the Advanced API Ops add-on.
+         * 
+         */
     private final GoogleCloudApigeeV1AdvancedApiOpsConfigResponse advancedApiOpsConfig;
-    /**
-     * Configuration for the Connectors Platform add-on.
-     * 
-     */
+        /**
+         * @return Configuration for the Connectors Platform add-on.
+         * 
+         */
     private final GoogleCloudApigeeV1ConnectorsPlatformConfigResponse connectorsPlatformConfig;
-    /**
-     * Configuration for the Integration add-on.
-     * 
-     */
+        /**
+         * @return Configuration for the Integration add-on.
+         * 
+         */
     private final GoogleCloudApigeeV1IntegrationConfigResponse integrationConfig;
-    /**
-     * Configuration for the Monetization add-on.
-     * 
-     */
+        /**
+         * @return Configuration for the Monetization add-on.
+         * 
+         */
     private final GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse {
     }
 
     /**
-     * Configuration for the Advanced API Ops add-on.
+     * @return Configuration for the Advanced API Ops add-on.
      * 
-    */
+     */
     public GoogleCloudApigeeV1AdvancedApiOpsConfigResponse advancedApiOpsConfig() {
         return this.advancedApiOpsConfig;
     }
     /**
-     * Configuration for the Connectors Platform add-on.
+     * @return Configuration for the Connectors Platform add-on.
      * 
-    */
+     */
     public GoogleCloudApigeeV1ConnectorsPlatformConfigResponse connectorsPlatformConfig() {
         return this.connectorsPlatformConfig;
     }
     /**
-     * Configuration for the Integration add-on.
+     * @return Configuration for the Integration add-on.
      * 
-    */
+     */
     public GoogleCloudApigeeV1IntegrationConfigResponse integrationConfig() {
         return this.integrationConfig;
     }
     /**
-     * Configuration for the Monetization add-on.
+     * @return Configuration for the Monetization add-on.
      * 
-    */
+     */
     public GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig() {
         return this.monetizationConfig;
     }

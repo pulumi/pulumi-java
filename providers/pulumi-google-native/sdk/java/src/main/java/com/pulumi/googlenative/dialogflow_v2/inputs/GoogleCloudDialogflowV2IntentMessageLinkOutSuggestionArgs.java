@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionArgs ext
     @Import(name="destinationName", required=true)
     private Output<String> destinationName;
 
+    /**
+     * @return The name of the app or site this chip is linking to.
+     * 
+     */
     public Output<String> destinationName() {
         return this.destinationName;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionArgs ext
     @Import(name="uri", required=true)
     private Output<String> uri;
 
+    /**
+     * @return The URI of the app or site to open when the user taps the suggestion chip.
+     * 
+     */
     public Output<String> uri() {
         return this.uri;
     }
@@ -64,20 +72,44 @@ public final class GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionArgs ext
             $ = new GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationName The name of the app or site this chip is linking to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationName(Output<String> destinationName) {
             $.destinationName = destinationName;
             return this;
         }
 
+        /**
+         * @param destinationName The name of the app or site this chip is linking to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationName(String destinationName) {
             return destinationName(Output.of(destinationName));
         }
 
+        /**
+         * @param uri The URI of the app or site to open when the user taps the suggestion chip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri The URI of the app or site to open when the user taps the suggestion chip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

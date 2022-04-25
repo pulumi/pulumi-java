@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class SecurityPolicyAssociationResponse {
-    /**
-     * The resource that the security policy is attached to.
-     * 
-     */
+        /**
+         * @return The resource that the security policy is attached to.
+         * 
+         */
     private final String attachmentId;
-    /**
-     * The display name of the security policy of the association.
-     * 
-     */
+        /**
+         * @return The display name of the security policy of the association.
+         * 
+         */
     private final String displayName;
-    /**
-     * The name for an association.
-     * 
-     */
+        /**
+         * @return The name for an association.
+         * 
+         */
     private final String name;
-    /**
-     * The security policy ID of the association.
-     * 
-     */
+        /**
+         * @return The security policy ID of the association.
+         * 
+         */
     private final String securityPolicyId;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class SecurityPolicyAssociationResponse {
     }
 
     /**
-     * The resource that the security policy is attached to.
+     * @return The resource that the security policy is attached to.
      * 
-    */
+     */
     public String attachmentId() {
         return this.attachmentId;
     }
     /**
-     * The display name of the security policy of the association.
+     * @return The display name of the security policy of the association.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The name for an association.
+     * @return The name for an association.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The security policy ID of the association.
+     * @return The security policy ID of the association.
      * 
-    */
+     */
     public String securityPolicyId() {
         return this.securityPolicyId;
     }

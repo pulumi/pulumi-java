@@ -30,6 +30,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="acl")
     private @Nullable Output<List<ObjectAccessControlArgs>> acl;
 
+    /**
+     * @return Access controls on the object.
+     * 
+     */
     public Optional<Output<List<ObjectAccessControlArgs>>> acl() {
         return Optional.ofNullable(this.acl);
     }
@@ -41,6 +45,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bucket", required=true)
     private Output<String> bucket;
 
+    /**
+     * @return The name of the bucket containing this object.
+     * 
+     */
     public Output<String> bucket() {
         return this.bucket;
     }
@@ -52,6 +60,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cacheControl")
     private @Nullable Output<String> cacheControl;
 
+    /**
+     * @return Cache-Control directive for the object data. If omitted, and the object is accessible to all anonymous users, the default will be public, max-age=3600.
+     * 
+     */
     public Optional<Output<String>> cacheControl() {
         return Optional.ofNullable(this.cacheControl);
     }
@@ -63,6 +75,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="componentCount")
     private @Nullable Output<Integer> componentCount;
 
+    /**
+     * @return Number of underlying components that make up this object. Components are accumulated by compose operations.
+     * 
+     */
     public Optional<Output<Integer>> componentCount() {
         return Optional.ofNullable(this.componentCount);
     }
@@ -74,6 +90,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentDisposition")
     private @Nullable Output<String> contentDisposition;
 
+    /**
+     * @return Content-Disposition of the object data.
+     * 
+     */
     public Optional<Output<String>> contentDisposition() {
         return Optional.ofNullable(this.contentDisposition);
     }
@@ -85,6 +105,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentEncoding")
     private @Nullable Output<String> contentEncoding;
 
+    /**
+     * @return Content-Encoding of the object data.
+     * 
+     */
     public Optional<Output<String>> contentEncoding() {
         return Optional.ofNullable(this.contentEncoding);
     }
@@ -96,6 +120,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentLanguage")
     private @Nullable Output<String> contentLanguage;
 
+    /**
+     * @return Content-Language of the object data.
+     * 
+     */
     public Optional<Output<String>> contentLanguage() {
         return Optional.ofNullable(this.contentLanguage);
     }
@@ -107,6 +135,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentType")
     private @Nullable Output<String> contentType;
 
+    /**
+     * @return Content-Type of the object data. If an object is stored without a Content-Type, it is served as application/octet-stream.
+     * 
+     */
     public Optional<Output<String>> contentType() {
         return Optional.ofNullable(this.contentType);
     }
@@ -118,6 +150,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="crc32c")
     private @Nullable Output<String> crc32c;
 
+    /**
+     * @return CRC32c checksum, as described in RFC 4960, Appendix B; encoded using base64 in big-endian byte order. For more information about using the CRC32c checksum, see Hashes and ETags: Best Practices.
+     * 
+     */
     public Optional<Output<String>> crc32c() {
         return Optional.ofNullable(this.crc32c);
     }
@@ -129,6 +165,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customTime")
     private @Nullable Output<String> customTime;
 
+    /**
+     * @return A timestamp in RFC 3339 format specified by the user for an object.
+     * 
+     */
     public Optional<Output<String>> customTime() {
         return Optional.ofNullable(this.customTime);
     }
@@ -140,6 +180,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customerEncryption")
     private @Nullable Output<BucketObjectCustomerEncryptionArgs> customerEncryption;
 
+    /**
+     * @return Metadata of customer-supplied encryption key, if the object is encrypted by such a key.
+     * 
+     */
     public Optional<Output<BucketObjectCustomerEncryptionArgs>> customerEncryption() {
         return Optional.ofNullable(this.customerEncryption);
     }
@@ -151,6 +195,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return HTTP 1.1 Entity tag for the object.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -162,6 +210,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventBasedHold")
     private @Nullable Output<Boolean> eventBasedHold;
 
+    /**
+     * @return Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is signified by the hold&#39;s release (i.e. this value is set to false). After being released (set to false), such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is the loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false.
+     * 
+     */
     public Optional<Output<Boolean>> eventBasedHold() {
         return Optional.ofNullable(this.eventBasedHold);
     }
@@ -173,6 +225,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="generation")
     private @Nullable Output<String> generation;
 
+    /**
+     * @return The content generation of this object. Used for object versioning.
+     * 
+     */
     public Optional<Output<String>> generation() {
         return Optional.ofNullable(this.generation);
     }
@@ -184,6 +240,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return The ID of the object, including the bucket name, object name, and generation number.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -223,6 +283,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return The kind of item this is. For objects, this is always storage#object.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -234,6 +298,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyName")
     private @Nullable Output<String> kmsKeyName;
 
+    /**
+     * @return Not currently supported. Specifying the parameter causes the request to fail with status code 400 - Bad Request.
+     * 
+     */
     public Optional<Output<String>> kmsKeyName() {
         return Optional.ofNullable(this.kmsKeyName);
     }
@@ -245,6 +313,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="md5Hash")
     private @Nullable Output<String> md5Hash;
 
+    /**
+     * @return MD5 hash of the data; encoded using base64. For more information about using the MD5 hash, see Hashes and ETags: Best Practices.
+     * 
+     */
     public Optional<Output<String>> md5Hash() {
         return Optional.ofNullable(this.md5Hash);
     }
@@ -256,6 +328,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mediaLink")
     private @Nullable Output<String> mediaLink;
 
+    /**
+     * @return Media download link.
+     * 
+     */
     public Optional<Output<String>> mediaLink() {
         return Optional.ofNullable(this.mediaLink);
     }
@@ -267,6 +343,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
     private @Nullable Output<Map<String,String>> metadata;
 
+    /**
+     * @return User-provided metadata, in key/value pairs.
+     * 
+     */
     public Optional<Output<Map<String,String>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -278,6 +358,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metageneration")
     private @Nullable Output<String> metageneration;
 
+    /**
+     * @return The version of the metadata for this object at this generation. Used for preconditions and for detecting changes in metadata. A metageneration number is only meaningful in the context of a particular generation of a particular object.
+     * 
+     */
     public Optional<Output<String>> metageneration() {
         return Optional.ofNullable(this.metageneration);
     }
@@ -289,6 +373,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the object. Required if not specified by URL parameter.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -300,6 +388,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="owner")
     private @Nullable Output<BucketObjectOwnerArgs> owner;
 
+    /**
+     * @return The owner of the object. This will always be the uploader of the object.
+     * 
+     */
     public Optional<Output<BucketObjectOwnerArgs>> owner() {
         return Optional.ofNullable(this.owner);
     }
@@ -332,6 +424,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retentionExpirationTime")
     private @Nullable Output<String> retentionExpirationTime;
 
+    /**
+     * @return A server-determined value that specifies the earliest time that the object&#39;s retention period expires. This value is in RFC 3339 format. Note 1: This field is not provided for objects with an active event-based hold, since retention expiration is unknown until the hold is removed. Note 2: This value can be provided even when temporary hold is set (so that the user can reason about policy without having to first unset the temporary hold).
+     * 
+     */
     public Optional<Output<String>> retentionExpirationTime() {
         return Optional.ofNullable(this.retentionExpirationTime);
     }
@@ -343,6 +439,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
     private @Nullable Output<String> selfLink;
 
+    /**
+     * @return The link to this object.
+     * 
+     */
     public Optional<Output<String>> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -354,6 +454,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="size")
     private @Nullable Output<String> size;
 
+    /**
+     * @return Content-Length of the data in bytes.
+     * 
+     */
     public Optional<Output<String>> size() {
         return Optional.ofNullable(this.size);
     }
@@ -372,6 +476,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageClass")
     private @Nullable Output<String> storageClass;
 
+    /**
+     * @return Storage class of the object.
+     * 
+     */
     public Optional<Output<String>> storageClass() {
         return Optional.ofNullable(this.storageClass);
     }
@@ -383,6 +491,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="temporaryHold")
     private @Nullable Output<Boolean> temporaryHold;
 
+    /**
+     * @return Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and overwrites. A common use case of this flag is regulatory investigations where objects need to be retained while the investigation is ongoing. Note that unlike event-based hold, temporary hold does not impact retention expiration time of an object.
+     * 
+     */
     public Optional<Output<Boolean>> temporaryHold() {
         return Optional.ofNullable(this.temporaryHold);
     }
@@ -394,6 +506,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeCreated")
     private @Nullable Output<String> timeCreated;
 
+    /**
+     * @return The creation time of the object in RFC 3339 format.
+     * 
+     */
     public Optional<Output<String>> timeCreated() {
         return Optional.ofNullable(this.timeCreated);
     }
@@ -405,6 +521,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeDeleted")
     private @Nullable Output<String> timeDeleted;
 
+    /**
+     * @return The deletion time of the object in RFC 3339 format. Will be returned if and only if this version of the object has been deleted.
+     * 
+     */
     public Optional<Output<String>> timeDeleted() {
         return Optional.ofNullable(this.timeDeleted);
     }
@@ -416,6 +536,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeStorageClassUpdated")
     private @Nullable Output<String> timeStorageClassUpdated;
 
+    /**
+     * @return The time at which the object&#39;s storage class was last changed. When the object is initially created, it will be set to timeCreated.
+     * 
+     */
     public Optional<Output<String>> timeStorageClassUpdated() {
         return Optional.ofNullable(this.timeStorageClassUpdated);
     }
@@ -427,6 +551,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="updated")
     private @Nullable Output<String> updated;
 
+    /**
+     * @return The modification time of the object metadata in RFC 3339 format.
+     * 
+     */
     public Optional<Output<String>> updated() {
         return Optional.ofNullable(this.updated);
     }
@@ -502,141 +630,327 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BucketObjectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acl Access controls on the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acl(@Nullable Output<List<ObjectAccessControlArgs>> acl) {
             $.acl = acl;
             return this;
         }
 
+        /**
+         * @param acl Access controls on the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acl(List<ObjectAccessControlArgs> acl) {
             return acl(Output.of(acl));
         }
 
+        /**
+         * @param acl Access controls on the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acl(ObjectAccessControlArgs... acl) {
             return acl(List.of(acl));
         }
 
+        /**
+         * @param bucket The name of the bucket containing this object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket The name of the bucket containing this object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param cacheControl Cache-Control directive for the object data. If omitted, and the object is accessible to all anonymous users, the default will be public, max-age=3600.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheControl(@Nullable Output<String> cacheControl) {
             $.cacheControl = cacheControl;
             return this;
         }
 
+        /**
+         * @param cacheControl Cache-Control directive for the object data. If omitted, and the object is accessible to all anonymous users, the default will be public, max-age=3600.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheControl(String cacheControl) {
             return cacheControl(Output.of(cacheControl));
         }
 
+        /**
+         * @param componentCount Number of underlying components that make up this object. Components are accumulated by compose operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentCount(@Nullable Output<Integer> componentCount) {
             $.componentCount = componentCount;
             return this;
         }
 
+        /**
+         * @param componentCount Number of underlying components that make up this object. Components are accumulated by compose operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentCount(Integer componentCount) {
             return componentCount(Output.of(componentCount));
         }
 
+        /**
+         * @param contentDisposition Content-Disposition of the object data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentDisposition(@Nullable Output<String> contentDisposition) {
             $.contentDisposition = contentDisposition;
             return this;
         }
 
+        /**
+         * @param contentDisposition Content-Disposition of the object data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentDisposition(String contentDisposition) {
             return contentDisposition(Output.of(contentDisposition));
         }
 
+        /**
+         * @param contentEncoding Content-Encoding of the object data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentEncoding(@Nullable Output<String> contentEncoding) {
             $.contentEncoding = contentEncoding;
             return this;
         }
 
+        /**
+         * @param contentEncoding Content-Encoding of the object data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentEncoding(String contentEncoding) {
             return contentEncoding(Output.of(contentEncoding));
         }
 
+        /**
+         * @param contentLanguage Content-Language of the object data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentLanguage(@Nullable Output<String> contentLanguage) {
             $.contentLanguage = contentLanguage;
             return this;
         }
 
+        /**
+         * @param contentLanguage Content-Language of the object data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentLanguage(String contentLanguage) {
             return contentLanguage(Output.of(contentLanguage));
         }
 
+        /**
+         * @param contentType Content-Type of the object data. If an object is stored without a Content-Type, it is served as application/octet-stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(@Nullable Output<String> contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param contentType Content-Type of the object data. If an object is stored without a Content-Type, it is served as application/octet-stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(String contentType) {
             return contentType(Output.of(contentType));
         }
 
+        /**
+         * @param crc32c CRC32c checksum, as described in RFC 4960, Appendix B; encoded using base64 in big-endian byte order. For more information about using the CRC32c checksum, see Hashes and ETags: Best Practices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crc32c(@Nullable Output<String> crc32c) {
             $.crc32c = crc32c;
             return this;
         }
 
+        /**
+         * @param crc32c CRC32c checksum, as described in RFC 4960, Appendix B; encoded using base64 in big-endian byte order. For more information about using the CRC32c checksum, see Hashes and ETags: Best Practices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crc32c(String crc32c) {
             return crc32c(Output.of(crc32c));
         }
 
+        /**
+         * @param customTime A timestamp in RFC 3339 format specified by the user for an object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customTime(@Nullable Output<String> customTime) {
             $.customTime = customTime;
             return this;
         }
 
+        /**
+         * @param customTime A timestamp in RFC 3339 format specified by the user for an object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customTime(String customTime) {
             return customTime(Output.of(customTime));
         }
 
+        /**
+         * @param customerEncryption Metadata of customer-supplied encryption key, if the object is encrypted by such a key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerEncryption(@Nullable Output<BucketObjectCustomerEncryptionArgs> customerEncryption) {
             $.customerEncryption = customerEncryption;
             return this;
         }
 
+        /**
+         * @param customerEncryption Metadata of customer-supplied encryption key, if the object is encrypted by such a key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerEncryption(BucketObjectCustomerEncryptionArgs customerEncryption) {
             return customerEncryption(Output.of(customerEncryption));
         }
 
+        /**
+         * @param etag HTTP 1.1 Entity tag for the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag HTTP 1.1 Entity tag for the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param eventBasedHold Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is signified by the hold&#39;s release (i.e. this value is set to false). After being released (set to false), such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is the loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventBasedHold(@Nullable Output<Boolean> eventBasedHold) {
             $.eventBasedHold = eventBasedHold;
             return this;
         }
 
+        /**
+         * @param eventBasedHold Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is signified by the hold&#39;s release (i.e. this value is set to false). After being released (set to false), such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is the loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventBasedHold(Boolean eventBasedHold) {
             return eventBasedHold(Output.of(eventBasedHold));
         }
 
+        /**
+         * @param generation The content generation of this object. Used for object versioning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder generation(@Nullable Output<String> generation) {
             $.generation = generation;
             return this;
         }
 
+        /**
+         * @param generation The content generation of this object. Used for object versioning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder generation(String generation) {
             return generation(Output.of(generation));
         }
 
+        /**
+         * @param id The ID of the object, including the bucket name, object name, and generation number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The ID of the object, including the bucket name, object name, and generation number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
@@ -677,74 +991,170 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
             return ifMetagenerationNotMatch(Output.of(ifMetagenerationNotMatch));
         }
 
+        /**
+         * @param kind The kind of item this is. For objects, this is always storage#object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of item this is. For objects, this is always storage#object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kmsKeyName Not currently supported. Specifying the parameter causes the request to fail with status code 400 - Bad Request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;
         }
 
+        /**
+         * @param kmsKeyName Not currently supported. Specifying the parameter causes the request to fail with status code 400 - Bad Request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             return kmsKeyName(Output.of(kmsKeyName));
         }
 
+        /**
+         * @param md5Hash MD5 hash of the data; encoded using base64. For more information about using the MD5 hash, see Hashes and ETags: Best Practices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder md5Hash(@Nullable Output<String> md5Hash) {
             $.md5Hash = md5Hash;
             return this;
         }
 
+        /**
+         * @param md5Hash MD5 hash of the data; encoded using base64. For more information about using the MD5 hash, see Hashes and ETags: Best Practices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder md5Hash(String md5Hash) {
             return md5Hash(Output.of(md5Hash));
         }
 
+        /**
+         * @param mediaLink Media download link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaLink(@Nullable Output<String> mediaLink) {
             $.mediaLink = mediaLink;
             return this;
         }
 
+        /**
+         * @param mediaLink Media download link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaLink(String mediaLink) {
             return mediaLink(Output.of(mediaLink));
         }
 
+        /**
+         * @param metadata User-provided metadata, in key/value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata User-provided metadata, in key/value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param metageneration The version of the metadata for this object at this generation. Used for preconditions and for detecting changes in metadata. A metageneration number is only meaningful in the context of a particular generation of a particular object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metageneration(@Nullable Output<String> metageneration) {
             $.metageneration = metageneration;
             return this;
         }
 
+        /**
+         * @param metageneration The version of the metadata for this object at this generation. Used for preconditions and for detecting changes in metadata. A metageneration number is only meaningful in the context of a particular generation of a particular object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metageneration(String metageneration) {
             return metageneration(Output.of(metageneration));
         }
 
+        /**
+         * @param name The name of the object. Required if not specified by URL parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the object. Required if not specified by URL parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param owner The owner of the object. This will always be the uploader of the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(@Nullable Output<BucketObjectOwnerArgs> owner) {
             $.owner = owner;
             return this;
         }
 
+        /**
+         * @param owner The owner of the object. This will always be the uploader of the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(BucketObjectOwnerArgs owner) {
             return owner(Output.of(owner));
         }
@@ -776,29 +1186,65 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
             return provisionalUserProject(Output.of(provisionalUserProject));
         }
 
+        /**
+         * @param retentionExpirationTime A server-determined value that specifies the earliest time that the object&#39;s retention period expires. This value is in RFC 3339 format. Note 1: This field is not provided for objects with an active event-based hold, since retention expiration is unknown until the hold is removed. Note 2: This value can be provided even when temporary hold is set (so that the user can reason about policy without having to first unset the temporary hold).
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionExpirationTime(@Nullable Output<String> retentionExpirationTime) {
             $.retentionExpirationTime = retentionExpirationTime;
             return this;
         }
 
+        /**
+         * @param retentionExpirationTime A server-determined value that specifies the earliest time that the object&#39;s retention period expires. This value is in RFC 3339 format. Note 1: This field is not provided for objects with an active event-based hold, since retention expiration is unknown until the hold is removed. Note 2: This value can be provided even when temporary hold is set (so that the user can reason about policy without having to first unset the temporary hold).
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionExpirationTime(String retentionExpirationTime) {
             return retentionExpirationTime(Output.of(retentionExpirationTime));
         }
 
+        /**
+         * @param selfLink The link to this object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(@Nullable Output<String> selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param selfLink The link to this object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
         }
 
+        /**
+         * @param size Content-Length of the data in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(@Nullable Output<String> size) {
             $.size = size;
             return this;
         }
 
+        /**
+         * @param size Content-Length of the data in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(String size) {
             return size(Output.of(size));
         }
@@ -812,56 +1258,128 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
             return source(Output.of(source));
         }
 
+        /**
+         * @param storageClass Storage class of the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClass(@Nullable Output<String> storageClass) {
             $.storageClass = storageClass;
             return this;
         }
 
+        /**
+         * @param storageClass Storage class of the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClass(String storageClass) {
             return storageClass(Output.of(storageClass));
         }
 
+        /**
+         * @param temporaryHold Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and overwrites. A common use case of this flag is regulatory investigations where objects need to be retained while the investigation is ongoing. Note that unlike event-based hold, temporary hold does not impact retention expiration time of an object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder temporaryHold(@Nullable Output<Boolean> temporaryHold) {
             $.temporaryHold = temporaryHold;
             return this;
         }
 
+        /**
+         * @param temporaryHold Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and overwrites. A common use case of this flag is regulatory investigations where objects need to be retained while the investigation is ongoing. Note that unlike event-based hold, temporary hold does not impact retention expiration time of an object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder temporaryHold(Boolean temporaryHold) {
             return temporaryHold(Output.of(temporaryHold));
         }
 
+        /**
+         * @param timeCreated The creation time of the object in RFC 3339 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeCreated(@Nullable Output<String> timeCreated) {
             $.timeCreated = timeCreated;
             return this;
         }
 
+        /**
+         * @param timeCreated The creation time of the object in RFC 3339 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeCreated(String timeCreated) {
             return timeCreated(Output.of(timeCreated));
         }
 
+        /**
+         * @param timeDeleted The deletion time of the object in RFC 3339 format. Will be returned if and only if this version of the object has been deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeDeleted(@Nullable Output<String> timeDeleted) {
             $.timeDeleted = timeDeleted;
             return this;
         }
 
+        /**
+         * @param timeDeleted The deletion time of the object in RFC 3339 format. Will be returned if and only if this version of the object has been deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeDeleted(String timeDeleted) {
             return timeDeleted(Output.of(timeDeleted));
         }
 
+        /**
+         * @param timeStorageClassUpdated The time at which the object&#39;s storage class was last changed. When the object is initially created, it will be set to timeCreated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeStorageClassUpdated(@Nullable Output<String> timeStorageClassUpdated) {
             $.timeStorageClassUpdated = timeStorageClassUpdated;
             return this;
         }
 
+        /**
+         * @param timeStorageClassUpdated The time at which the object&#39;s storage class was last changed. When the object is initially created, it will be set to timeCreated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeStorageClassUpdated(String timeStorageClassUpdated) {
             return timeStorageClassUpdated(Output.of(timeStorageClassUpdated));
         }
 
+        /**
+         * @param updated The modification time of the object metadata in RFC 3339 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updated(@Nullable Output<String> updated) {
             $.updated = updated;
             return this;
         }
 
+        /**
+         * @param updated The modification time of the object metadata in RFC 3339 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updated(String updated) {
             return updated(Output.of(updated));
         }

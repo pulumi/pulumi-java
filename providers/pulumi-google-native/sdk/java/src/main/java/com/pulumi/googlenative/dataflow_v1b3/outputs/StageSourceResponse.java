@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class StageSourceResponse {
-    /**
-     * Dataflow service generated name for this source.
-     * 
-     */
+        /**
+         * @return Dataflow service generated name for this source.
+         * 
+         */
     private final String name;
-    /**
-     * User name for the original user transform or collection with which this source is most closely associated.
-     * 
-     */
+        /**
+         * @return User name for the original user transform or collection with which this source is most closely associated.
+         * 
+         */
     private final String originalTransformOrCollection;
-    /**
-     * Size of the source, if measurable.
-     * 
-     */
+        /**
+         * @return Size of the source, if measurable.
+         * 
+         */
     private final String sizeBytes;
-    /**
-     * Human-readable name for this source; may be user or system generated.
-     * 
-     */
+        /**
+         * @return Human-readable name for this source; may be user or system generated.
+         * 
+         */
     private final String userName;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class StageSourceResponse {
     }
 
     /**
-     * Dataflow service generated name for this source.
+     * @return Dataflow service generated name for this source.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * User name for the original user transform or collection with which this source is most closely associated.
+     * @return User name for the original user transform or collection with which this source is most closely associated.
      * 
-    */
+     */
     public String originalTransformOrCollection() {
         return this.originalTransformOrCollection;
     }
     /**
-     * Size of the source, if measurable.
+     * @return Size of the source, if measurable.
      * 
-    */
+     */
     public String sizeBytes() {
         return this.sizeBytes;
     }
     /**
-     * Human-readable name for this source; may be user or system generated.
+     * @return Human-readable name for this source; may be user or system generated.
      * 
-    */
+     */
     public String userName() {
         return this.userName;
     }

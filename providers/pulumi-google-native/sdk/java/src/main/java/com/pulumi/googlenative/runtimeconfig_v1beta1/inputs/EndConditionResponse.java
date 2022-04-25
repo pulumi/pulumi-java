@@ -23,6 +23,10 @@ public final class EndConditionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="cardinality", required=true)
     private CardinalityResponse cardinality;
 
+    /**
+     * @return The cardinality of the `EndCondition`.
+     * 
+     */
     public CardinalityResponse cardinality() {
         return this.cardinality;
     }
@@ -51,6 +55,12 @@ public final class EndConditionResponse extends com.pulumi.resources.InvokeArgs 
             $ = new EndConditionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cardinality The cardinality of the `EndCondition`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cardinality(CardinalityResponse cardinality) {
             $.cardinality = cardinality;
             return this;

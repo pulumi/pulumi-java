@@ -24,6 +24,10 @@ public final class CommonFeatureSpecResponse extends com.pulumi.resources.Invoke
     @Import(name="appdevexperience", required=true)
     private AppDevExperienceFeatureSpecResponse appdevexperience;
 
+    /**
+     * @return Appdevexperience specific spec.
+     * 
+     */
     public AppDevExperienceFeatureSpecResponse appdevexperience() {
         return this.appdevexperience;
     }
@@ -35,6 +39,10 @@ public final class CommonFeatureSpecResponse extends com.pulumi.resources.Invoke
     @Import(name="multiclusteringress", required=true)
     private MultiClusterIngressFeatureSpecResponse multiclusteringress;
 
+    /**
+     * @return Multicluster Ingress-specific spec.
+     * 
+     */
     public MultiClusterIngressFeatureSpecResponse multiclusteringress() {
         return this.multiclusteringress;
     }
@@ -64,11 +72,23 @@ public final class CommonFeatureSpecResponse extends com.pulumi.resources.Invoke
             $ = new CommonFeatureSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appdevexperience Appdevexperience specific spec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appdevexperience(AppDevExperienceFeatureSpecResponse appdevexperience) {
             $.appdevexperience = appdevexperience;
             return this;
         }
 
+        /**
+         * @param multiclusteringress Multicluster Ingress-specific spec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiclusteringress(MultiClusterIngressFeatureSpecResponse multiclusteringress) {
             $.multiclusteringress = multiclusteringress;
             return this;

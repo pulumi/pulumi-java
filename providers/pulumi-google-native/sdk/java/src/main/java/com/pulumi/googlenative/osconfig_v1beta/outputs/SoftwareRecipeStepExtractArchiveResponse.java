@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class SoftwareRecipeStepExtractArchiveResponse {
-    /**
-     * The id of the relevant artifact in the recipe.
-     * 
-     */
+        /**
+         * @return The id of the relevant artifact in the recipe.
+         * 
+         */
     private final String artifactId;
-    /**
-     * Directory to extract archive to. Defaults to `/` on Linux or `C:\` on Windows.
-     * 
-     */
+        /**
+         * @return Directory to extract archive to. Defaults to `/` on Linux or `C:\` on Windows.
+         * 
+         */
     private final String destination;
-    /**
-     * The type of the archive to extract.
-     * 
-     */
+        /**
+         * @return The type of the archive to extract.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class SoftwareRecipeStepExtractArchiveResponse {
     }
 
     /**
-     * The id of the relevant artifact in the recipe.
+     * @return The id of the relevant artifact in the recipe.
      * 
-    */
+     */
     public String artifactId() {
         return this.artifactId;
     }
     /**
-     * Directory to extract archive to. Defaults to `/` on Linux or `C:\` on Windows.
+     * @return Directory to extract archive to. Defaults to `/` on Linux or `C:\` on Windows.
      * 
-    */
+     */
     public String destination() {
         return this.destination;
     }
     /**
-     * The type of the archive to extract.
+     * @return The type of the archive to extract.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

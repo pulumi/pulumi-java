@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSourceResult {
-    /**
-     * The description of the source (max of 1024 characters). Example: &#34;Web Security Scanner is a web security scanner for common vulnerabilities in App Engine applications. It can automatically scan and detect four common vulnerabilities, including cross-site-scripting (XSS), Flash injection, mixed content (HTTP in HTTPS), and outdated/insecure libraries.&#34;
-     * 
-     */
+        /**
+         * @return The description of the source (max of 1024 characters). Example: &#34;Web Security Scanner is a web security scanner for common vulnerabilities in App Engine applications. It can automatically scan and detect four common vulnerabilities, including cross-site-scripting (XSS), Flash injection, mixed content (HTTP in HTTPS), and outdated/insecure libraries.&#34;
+         * 
+         */
     private final String description;
-    /**
-     * The source&#39;s display name. A source&#39;s display name must be unique amongst its siblings, for example, two sources with the same parent can&#39;t share the same display name. The display name must have a length between 1 and 64 characters (inclusive).
-     * 
-     */
+        /**
+         * @return The source&#39;s display name. A source&#39;s display name must be unique amongst its siblings, for example, two sources with the same parent can&#39;t share the same display name. The display name must have a length between 1 and 64 characters (inclusive).
+         * 
+         */
     private final String displayName;
-    /**
-     * The relative resource name of this source. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: &#34;organizations/{organization_id}/sources/{source_id}&#34;
-     * 
-     */
+        /**
+         * @return The relative resource name of this source. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: &#34;organizations/{organization_id}/sources/{source_id}&#34;
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class GetSourceResult {
     }
 
     /**
-     * The description of the source (max of 1024 characters). Example: &#34;Web Security Scanner is a web security scanner for common vulnerabilities in App Engine applications. It can automatically scan and detect four common vulnerabilities, including cross-site-scripting (XSS), Flash injection, mixed content (HTTP in HTTPS), and outdated/insecure libraries.&#34;
+     * @return The description of the source (max of 1024 characters). Example: &#34;Web Security Scanner is a web security scanner for common vulnerabilities in App Engine applications. It can automatically scan and detect four common vulnerabilities, including cross-site-scripting (XSS), Flash injection, mixed content (HTTP in HTTPS), and outdated/insecure libraries.&#34;
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The source&#39;s display name. A source&#39;s display name must be unique amongst its siblings, for example, two sources with the same parent can&#39;t share the same display name. The display name must have a length between 1 and 64 characters (inclusive).
+     * @return The source&#39;s display name. A source&#39;s display name must be unique amongst its siblings, for example, two sources with the same parent can&#39;t share the same display name. The display name must have a length between 1 and 64 characters (inclusive).
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The relative resource name of this source. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: &#34;organizations/{organization_id}/sources/{source_id}&#34;
+     * @return The relative resource name of this source. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: &#34;organizations/{organization_id}/sources/{source_id}&#34;
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

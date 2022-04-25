@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class DynamicGroupMetadataResponse {
-    /**
-     * Memberships will be the union of all queries. Only one entry with USER resource is currently supported. Customers can create up to 100 dynamic groups.
-     * 
-     */
+        /**
+         * @return Memberships will be the union of all queries. Only one entry with USER resource is currently supported. Customers can create up to 100 dynamic groups.
+         * 
+         */
     private final List<DynamicGroupQueryResponse> queries;
-    /**
-     * Status of the dynamic group.
-     * 
-     */
+        /**
+         * @return Status of the dynamic group.
+         * 
+         */
     private final DynamicGroupStatusResponse status;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class DynamicGroupMetadataResponse {
     }
 
     /**
-     * Memberships will be the union of all queries. Only one entry with USER resource is currently supported. Customers can create up to 100 dynamic groups.
+     * @return Memberships will be the union of all queries. Only one entry with USER resource is currently supported. Customers can create up to 100 dynamic groups.
      * 
-    */
+     */
     public List<DynamicGroupQueryResponse> queries() {
         return this.queries;
     }
     /**
-     * Status of the dynamic group.
+     * @return Status of the dynamic group.
      * 
-    */
+     */
     public DynamicGroupStatusResponse status() {
         return this.status;
     }

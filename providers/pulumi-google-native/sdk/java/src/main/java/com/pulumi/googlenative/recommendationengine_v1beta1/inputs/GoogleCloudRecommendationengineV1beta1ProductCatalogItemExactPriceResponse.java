@@ -23,6 +23,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
     @Import(name="displayPrice", required=true)
     private Double displayPrice;
 
+    /**
+     * @return Optional. Display price of the product.
+     * 
+     */
     public Double displayPrice() {
         return this.displayPrice;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
     @Import(name="originalPrice", required=true)
     private Double originalPrice;
 
+    /**
+     * @return Optional. Price of the product without any discount. If zero, by default set to be the &#39;displayPrice&#39;.
+     * 
+     */
     public Double originalPrice() {
         return this.originalPrice;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
             $ = new GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayPrice Optional. Display price of the product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayPrice(Double displayPrice) {
             $.displayPrice = displayPrice;
             return this;
         }
 
+        /**
+         * @param originalPrice Optional. Price of the product without any discount. If zero, by default set to be the &#39;displayPrice&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originalPrice(Double originalPrice) {
             $.originalPrice = originalPrice;
             return this;

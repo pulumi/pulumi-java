@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversa
     @Import(name="recentSentencesCount", required=true)
     private Integer recentSentencesCount;
 
+    /**
+     * @return Number of recent non-small-talk sentences to use as context for article and FAQ suggestion
+     * 
+     */
     public Integer recentSentencesCount() {
         return this.recentSentencesCount;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversa
             $ = new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param recentSentencesCount Number of recent non-small-talk sentences to use as context for article and FAQ suggestion
+         * 
+         * @return builder
+         * 
+         */
         public Builder recentSentencesCount(Integer recentSentencesCount) {
             $.recentSentencesCount = recentSentencesCount;
             return this;

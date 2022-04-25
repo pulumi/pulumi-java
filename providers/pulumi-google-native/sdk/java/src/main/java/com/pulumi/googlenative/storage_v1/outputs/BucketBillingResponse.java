@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class BucketBillingResponse {
-    /**
-     * When set to true, Requester Pays is enabled for this bucket.
-     * 
-     */
+        /**
+         * @return When set to true, Requester Pays is enabled for this bucket.
+         * 
+         */
     private final Boolean requesterPays;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class BucketBillingResponse {
     }
 
     /**
-     * When set to true, Requester Pays is enabled for this bucket.
+     * @return When set to true, Requester Pays is enabled for this bucket.
      * 
-    */
+     */
     public Boolean requesterPays() {
         return this.requesterPays;
     }

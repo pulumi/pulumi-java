@@ -23,6 +23,10 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse extends com.pulumi
     @Import(name="resource", required=true)
     private String resource;
 
+    /**
+     * @return Full name of a resource as defined by the service. For example: `//bigquery.googleapis.com/projects/{PROJECT_ID}/locations/{LOCATION}/datasets/{DATASET_ID}/tables/{TABLE_ID}`
+     * 
+     */
     public String resource() {
         return this.resource;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse extends com.pulumi
     @Import(name="service", required=true)
     private String service;
 
+    /**
+     * @return Service that physically stores the data.
+     * 
+     */
     public String service() {
         return this.service;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse extends com.pulumi
             $ = new GoogleCloudDatacatalogV1DataSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resource Full name of a resource as defined by the service. For example: `//bigquery.googleapis.com/projects/{PROJECT_ID}/locations/{LOCATION}/datasets/{DATASET_ID}/tables/{TABLE_ID}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(String resource) {
             $.resource = resource;
             return this;
         }
 
+        /**
+         * @param service Service that physically stores the data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             $.service = service;
             return this;

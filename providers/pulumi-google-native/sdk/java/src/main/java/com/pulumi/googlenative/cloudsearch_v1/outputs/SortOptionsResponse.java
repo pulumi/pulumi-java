@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class SortOptionsResponse {
-    /**
-     * Name of the operator corresponding to the field to sort on. The corresponding property must be marked as sortable.
-     * 
-     */
+        /**
+         * @return Name of the operator corresponding to the field to sort on. The corresponding property must be marked as sortable.
+         * 
+         */
     private final String operatorName;
-    /**
-     * Ascending is the default sort order
-     * 
-     */
+        /**
+         * @return Ascending is the default sort order
+         * 
+         */
     private final String sortOrder;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class SortOptionsResponse {
     }
 
     /**
-     * Name of the operator corresponding to the field to sort on. The corresponding property must be marked as sortable.
+     * @return Name of the operator corresponding to the field to sort on. The corresponding property must be marked as sortable.
      * 
-    */
+     */
     public String operatorName() {
         return this.operatorName;
     }
     /**
-     * Ascending is the default sort order
+     * @return Ascending is the default sort order
      * 
-    */
+     */
     public String sortOrder() {
         return this.sortOrder;
     }

@@ -11,25 +11,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemResponse {
-    /**
-     * Optional. The body text of the card.
-     * 
-     */
+        /**
+         * @return Optional. The body text of the card.
+         * 
+         */
     private final String description;
-    /**
-     * Optional. The image to display.
-     * 
-     */
+        /**
+         * @return Optional. The image to display.
+         * 
+         */
     private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse image;
-    /**
-     * Additional info about the option item.
-     * 
-     */
+        /**
+         * @return Additional info about the option item.
+         * 
+         */
     private final GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse info;
-    /**
-     * Title of the carousel item.
-     * 
-     */
+        /**
+         * @return Title of the carousel item.
+         * 
+         */
     private final String title;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemRe
     }
 
     /**
-     * Optional. The body text of the card.
+     * @return Optional. The body text of the card.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Optional. The image to display.
+     * @return Optional. The image to display.
      * 
-    */
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageImageResponse image() {
         return this.image;
     }
     /**
-     * Additional info about the option item.
+     * @return Additional info about the option item.
      * 
-    */
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse info() {
         return this.info;
     }
     /**
-     * Title of the carousel item.
+     * @return Title of the carousel item.
      * 
-    */
+     */
     public String title() {
         return this.title;
     }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class AwsAccessKeyResponse {
-    /**
-     * AWS access key ID.
-     * 
-     */
+        /**
+         * @return AWS access key ID.
+         * 
+         */
     private final String accessKeyId;
-    /**
-     * AWS secret access key. This field is not returned in RPC responses.
-     * 
-     */
+        /**
+         * @return AWS secret access key. This field is not returned in RPC responses.
+         * 
+         */
     private final String secretAccessKey;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class AwsAccessKeyResponse {
     }
 
     /**
-     * AWS access key ID.
+     * @return AWS access key ID.
      * 
-    */
+     */
     public String accessKeyId() {
         return this.accessKeyId;
     }
     /**
-     * AWS secret access key. This field is not returned in RPC responses.
+     * @return AWS secret access key. This field is not returned in RPC responses.
      * 
-    */
+     */
     public String secretAccessKey() {
         return this.secretAccessKey;
     }

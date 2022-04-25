@@ -10,40 +10,40 @@ import java.util.Objects;
 
 @CustomType
 public final class GetRealmResult {
-    /**
-     * The creation time.
-     * 
-     */
+        /**
+         * @return The creation time.
+         * 
+         */
     private final String createTime;
-    /**
-     * Human readable description of the realm.
-     * 
-     */
+        /**
+         * @return Human readable description of the realm.
+         * 
+         */
     private final String description;
-    /**
-     * ETag of the resource.
-     * 
-     */
+        /**
+         * @return ETag of the resource.
+         * 
+         */
     private final String etag;
-    /**
-     * The labels associated with this realm. Each label is a key-value pair.
-     * 
-     */
+        /**
+         * @return The labels associated with this realm. Each label is a key-value pair.
+         * 
+         */
     private final Map<String,String> labels;
-    /**
-     * The resource name of the realm, in the following form: `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-project/locations/{location}/realms/my-realm`.
-     * 
-     */
+        /**
+         * @return The resource name of the realm, in the following form: `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-project/locations/{location}/realms/my-realm`.
+         * 
+         */
     private final String name;
-    /**
-     * Time zone where all policies targeting this realm are evaluated. The value of this field must be from the IANA time zone database: https://www.iana.org/time-zones.
-     * 
-     */
+        /**
+         * @return Time zone where all policies targeting this realm are evaluated. The value of this field must be from the IANA time zone database: https://www.iana.org/time-zones.
+         * 
+         */
     private final String timeZone;
-    /**
-     * The last-modified time.
-     * 
-     */
+        /**
+         * @return The last-modified time.
+         * 
+         */
     private final String updateTime;
 
     @CustomType.Constructor
@@ -65,51 +65,51 @@ public final class GetRealmResult {
     }
 
     /**
-     * The creation time.
+     * @return The creation time.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Human readable description of the realm.
+     * @return Human readable description of the realm.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * ETag of the resource.
+     * @return ETag of the resource.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The labels associated with this realm. Each label is a key-value pair.
+     * @return The labels associated with this realm. Each label is a key-value pair.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The resource name of the realm, in the following form: `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-project/locations/{location}/realms/my-realm`.
+     * @return The resource name of the realm, in the following form: `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-project/locations/{location}/realms/my-realm`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Time zone where all policies targeting this realm are evaluated. The value of this field must be from the IANA time zone database: https://www.iana.org/time-zones.
+     * @return Time zone where all policies targeting this realm are evaluated. The value of this field must be from the IANA time zone database: https://www.iana.org/time-zones.
      * 
-    */
+     */
     public String timeZone() {
         return this.timeZone;
     }
     /**
-     * The last-modified time.
+     * @return The last-modified time.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

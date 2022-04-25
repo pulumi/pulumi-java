@@ -31,6 +31,10 @@ public final class GooglePrivacyDlpV2ActionArgs extends com.pulumi.resources.Res
     @Import(name="jobNotificationEmails")
     private @Nullable Output<GooglePrivacyDlpV2JobNotificationEmailsArgs> jobNotificationEmails;
 
+    /**
+     * @return Enable email notification for project owners and editors on job&#39;s completion/failure.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2JobNotificationEmailsArgs>> jobNotificationEmails() {
         return Optional.ofNullable(this.jobNotificationEmails);
     }
@@ -42,6 +46,10 @@ public final class GooglePrivacyDlpV2ActionArgs extends com.pulumi.resources.Res
     @Import(name="pubSub")
     private @Nullable Output<GooglePrivacyDlpV2PublishToPubSubArgs> pubSub;
 
+    /**
+     * @return Publish a notification to a pubsub topic.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2PublishToPubSubArgs>> pubSub() {
         return Optional.ofNullable(this.pubSub);
     }
@@ -53,6 +61,10 @@ public final class GooglePrivacyDlpV2ActionArgs extends com.pulumi.resources.Res
     @Import(name="publishFindingsToCloudDataCatalog")
     private @Nullable Output<GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs> publishFindingsToCloudDataCatalog;
 
+    /**
+     * @return Publish findings to Cloud Datahub.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs>> publishFindingsToCloudDataCatalog() {
         return Optional.ofNullable(this.publishFindingsToCloudDataCatalog);
     }
@@ -64,6 +76,10 @@ public final class GooglePrivacyDlpV2ActionArgs extends com.pulumi.resources.Res
     @Import(name="publishSummaryToCscc")
     private @Nullable Output<GooglePrivacyDlpV2PublishSummaryToCsccArgs> publishSummaryToCscc;
 
+    /**
+     * @return Publish summary to Cloud Security Command Center (Alpha).
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2PublishSummaryToCsccArgs>> publishSummaryToCscc() {
         return Optional.ofNullable(this.publishSummaryToCscc);
     }
@@ -75,6 +91,10 @@ public final class GooglePrivacyDlpV2ActionArgs extends com.pulumi.resources.Res
     @Import(name="publishToStackdriver")
     private @Nullable Output<GooglePrivacyDlpV2PublishToStackdriverArgs> publishToStackdriver;
 
+    /**
+     * @return Enable Stackdriver metric dlp.googleapis.com/finding_count.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2PublishToStackdriverArgs>> publishToStackdriver() {
         return Optional.ofNullable(this.publishToStackdriver);
     }
@@ -86,6 +106,10 @@ public final class GooglePrivacyDlpV2ActionArgs extends com.pulumi.resources.Res
     @Import(name="saveFindings")
     private @Nullable Output<GooglePrivacyDlpV2SaveFindingsArgs> saveFindings;
 
+    /**
+     * @return Save resulting findings in a provided location.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2SaveFindingsArgs>> saveFindings() {
         return Optional.ofNullable(this.saveFindings);
     }
@@ -119,56 +143,128 @@ public final class GooglePrivacyDlpV2ActionArgs extends com.pulumi.resources.Res
             $ = new GooglePrivacyDlpV2ActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jobNotificationEmails Enable email notification for project owners and editors on job&#39;s completion/failure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobNotificationEmails(@Nullable Output<GooglePrivacyDlpV2JobNotificationEmailsArgs> jobNotificationEmails) {
             $.jobNotificationEmails = jobNotificationEmails;
             return this;
         }
 
+        /**
+         * @param jobNotificationEmails Enable email notification for project owners and editors on job&#39;s completion/failure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobNotificationEmails(GooglePrivacyDlpV2JobNotificationEmailsArgs jobNotificationEmails) {
             return jobNotificationEmails(Output.of(jobNotificationEmails));
         }
 
+        /**
+         * @param pubSub Publish a notification to a pubsub topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubSub(@Nullable Output<GooglePrivacyDlpV2PublishToPubSubArgs> pubSub) {
             $.pubSub = pubSub;
             return this;
         }
 
+        /**
+         * @param pubSub Publish a notification to a pubsub topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubSub(GooglePrivacyDlpV2PublishToPubSubArgs pubSub) {
             return pubSub(Output.of(pubSub));
         }
 
+        /**
+         * @param publishFindingsToCloudDataCatalog Publish findings to Cloud Datahub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishFindingsToCloudDataCatalog(@Nullable Output<GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs> publishFindingsToCloudDataCatalog) {
             $.publishFindingsToCloudDataCatalog = publishFindingsToCloudDataCatalog;
             return this;
         }
 
+        /**
+         * @param publishFindingsToCloudDataCatalog Publish findings to Cloud Datahub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishFindingsToCloudDataCatalog(GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs publishFindingsToCloudDataCatalog) {
             return publishFindingsToCloudDataCatalog(Output.of(publishFindingsToCloudDataCatalog));
         }
 
+        /**
+         * @param publishSummaryToCscc Publish summary to Cloud Security Command Center (Alpha).
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishSummaryToCscc(@Nullable Output<GooglePrivacyDlpV2PublishSummaryToCsccArgs> publishSummaryToCscc) {
             $.publishSummaryToCscc = publishSummaryToCscc;
             return this;
         }
 
+        /**
+         * @param publishSummaryToCscc Publish summary to Cloud Security Command Center (Alpha).
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishSummaryToCscc(GooglePrivacyDlpV2PublishSummaryToCsccArgs publishSummaryToCscc) {
             return publishSummaryToCscc(Output.of(publishSummaryToCscc));
         }
 
+        /**
+         * @param publishToStackdriver Enable Stackdriver metric dlp.googleapis.com/finding_count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishToStackdriver(@Nullable Output<GooglePrivacyDlpV2PublishToStackdriverArgs> publishToStackdriver) {
             $.publishToStackdriver = publishToStackdriver;
             return this;
         }
 
+        /**
+         * @param publishToStackdriver Enable Stackdriver metric dlp.googleapis.com/finding_count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishToStackdriver(GooglePrivacyDlpV2PublishToStackdriverArgs publishToStackdriver) {
             return publishToStackdriver(Output.of(publishToStackdriver));
         }
 
+        /**
+         * @param saveFindings Save resulting findings in a provided location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saveFindings(@Nullable Output<GooglePrivacyDlpV2SaveFindingsArgs> saveFindings) {
             $.saveFindings = saveFindings;
             return this;
         }
 
+        /**
+         * @param saveFindings Save resulting findings in a provided location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saveFindings(GooglePrivacyDlpV2SaveFindingsArgs saveFindings) {
             return saveFindings(Output.of(saveFindings));
         }

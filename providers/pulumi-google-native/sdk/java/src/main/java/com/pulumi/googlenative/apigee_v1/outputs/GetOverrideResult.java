@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GetOverrideResult {
-    /**
-     * ID of the API proxy that will have its trace configuration overridden.
-     * 
-     */
+        /**
+         * @return ID of the API proxy that will have its trace configuration overridden.
+         * 
+         */
     private final String apiProxy;
-    /**
-     * ID of the trace configuration override specified as a system-generated UUID.
-     * 
-     */
+        /**
+         * @return ID of the trace configuration override specified as a system-generated UUID.
+         * 
+         */
     private final String name;
-    /**
-     * Trace configuration to override.
-     * 
-     */
+        /**
+         * @return Trace configuration to override.
+         * 
+         */
     private final GoogleCloudApigeeV1TraceSamplingConfigResponse samplingConfig;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class GetOverrideResult {
     }
 
     /**
-     * ID of the API proxy that will have its trace configuration overridden.
+     * @return ID of the API proxy that will have its trace configuration overridden.
      * 
-    */
+     */
     public String apiProxy() {
         return this.apiProxy;
     }
     /**
-     * ID of the trace configuration override specified as a system-generated UUID.
+     * @return ID of the trace configuration override specified as a system-generated UUID.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Trace configuration to override.
+     * @return Trace configuration to override.
      * 
-    */
+     */
     public GoogleCloudApigeeV1TraceSamplingConfigResponse samplingConfig() {
         return this.samplingConfig;
     }

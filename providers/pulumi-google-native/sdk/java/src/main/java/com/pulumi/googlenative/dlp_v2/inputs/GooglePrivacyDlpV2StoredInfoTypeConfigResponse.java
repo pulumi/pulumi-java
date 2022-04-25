@@ -26,6 +26,10 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends com.pu
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Description of the StoredInfoType (max 256 characters).
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -37,6 +41,10 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends com.pu
     @Import(name="dictionary", required=true)
     private GooglePrivacyDlpV2DictionaryResponse dictionary;
 
+    /**
+     * @return Store dictionary-based CustomInfoType.
+     * 
+     */
     public GooglePrivacyDlpV2DictionaryResponse dictionary() {
         return this.dictionary;
     }
@@ -48,6 +56,10 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends com.pu
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return Display name of the StoredInfoType (max 256 characters).
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -59,6 +71,10 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends com.pu
     @Import(name="largeCustomDictionary", required=true)
     private GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary;
 
+    /**
+     * @return StoredInfoType where findings are defined by a dictionary of phrases.
+     * 
+     */
     public GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary() {
         return this.largeCustomDictionary;
     }
@@ -70,6 +86,10 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends com.pu
     @Import(name="regex", required=true)
     private GooglePrivacyDlpV2RegexResponse regex;
 
+    /**
+     * @return Store regular expression-based StoredInfoType.
+     * 
+     */
     public GooglePrivacyDlpV2RegexResponse regex() {
         return this.regex;
     }
@@ -102,26 +122,56 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends com.pu
             $ = new GooglePrivacyDlpV2StoredInfoTypeConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of the StoredInfoType (max 256 characters).
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param dictionary Store dictionary-based CustomInfoType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dictionary(GooglePrivacyDlpV2DictionaryResponse dictionary) {
             $.dictionary = dictionary;
             return this;
         }
 
+        /**
+         * @param displayName Display name of the StoredInfoType (max 256 characters).
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param largeCustomDictionary StoredInfoType where findings are defined by a dictionary of phrases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder largeCustomDictionary(GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary) {
             $.largeCustomDictionary = largeCustomDictionary;
             return this;
         }
 
+        /**
+         * @param regex Store regular expression-based StoredInfoType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(GooglePrivacyDlpV2RegexResponse regex) {
             $.regex = regex;
             return this;

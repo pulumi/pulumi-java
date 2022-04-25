@@ -23,6 +23,10 @@ public final class TimeZoneResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return Optional. IANA Time Zone Database version number, e.g. &#34;2019a&#34;.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -51,6 +55,12 @@ public final class TimeZoneResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TimeZoneResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param version Optional. IANA Time Zone Database version number, e.g. &#34;2019a&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

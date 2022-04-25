@@ -24,6 +24,10 @@ public final class GoogleCloudRecommendationengineV1beta1ImageResponse extends c
     @Import(name="height", required=true)
     private Integer height;
 
+    /**
+     * @return Optional. Height of the image in number of pixels.
+     * 
+     */
     public Integer height() {
         return this.height;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudRecommendationengineV1beta1ImageResponse extends c
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return URL of the image with a length limit of 5 KiB.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudRecommendationengineV1beta1ImageResponse extends c
     @Import(name="width", required=true)
     private Integer width;
 
+    /**
+     * @return Optional. Width of the image in number of pixels.
+     * 
+     */
     public Integer width() {
         return this.width;
     }
@@ -76,16 +88,34 @@ public final class GoogleCloudRecommendationengineV1beta1ImageResponse extends c
             $ = new GoogleCloudRecommendationengineV1beta1ImageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param height Optional. Height of the image in number of pixels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder height(Integer height) {
             $.height = height;
             return this;
         }
 
+        /**
+         * @param uri URL of the image with a length limit of 5 KiB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param width Optional. Width of the image in number of pixels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder width(Integer width) {
             $.width = width;
             return this;

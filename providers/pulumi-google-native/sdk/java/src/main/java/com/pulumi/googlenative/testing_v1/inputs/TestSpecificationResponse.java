@@ -31,6 +31,10 @@ public final class TestSpecificationResponse extends com.pulumi.resources.Invoke
     @Import(name="androidInstrumentationTest", required=true)
     private AndroidInstrumentationTestResponse androidInstrumentationTest;
 
+    /**
+     * @return An Android instrumentation test.
+     * 
+     */
     public AndroidInstrumentationTestResponse androidInstrumentationTest() {
         return this.androidInstrumentationTest;
     }
@@ -42,6 +46,10 @@ public final class TestSpecificationResponse extends com.pulumi.resources.Invoke
     @Import(name="androidRoboTest", required=true)
     private AndroidRoboTestResponse androidRoboTest;
 
+    /**
+     * @return An Android robo test.
+     * 
+     */
     public AndroidRoboTestResponse androidRoboTest() {
         return this.androidRoboTest;
     }
@@ -53,6 +61,10 @@ public final class TestSpecificationResponse extends com.pulumi.resources.Invoke
     @Import(name="androidTestLoop", required=true)
     private AndroidTestLoopResponse androidTestLoop;
 
+    /**
+     * @return An Android Application with a Test Loop.
+     * 
+     */
     public AndroidTestLoopResponse androidTestLoop() {
         return this.androidTestLoop;
     }
@@ -64,6 +76,10 @@ public final class TestSpecificationResponse extends com.pulumi.resources.Invoke
     @Import(name="disablePerformanceMetrics", required=true)
     private Boolean disablePerformanceMetrics;
 
+    /**
+     * @return Disables performance metrics recording. May reduce test latency.
+     * 
+     */
     public Boolean disablePerformanceMetrics() {
         return this.disablePerformanceMetrics;
     }
@@ -75,6 +91,10 @@ public final class TestSpecificationResponse extends com.pulumi.resources.Invoke
     @Import(name="disableVideoRecording", required=true)
     private Boolean disableVideoRecording;
 
+    /**
+     * @return Disables video recording. May reduce test latency.
+     * 
+     */
     public Boolean disableVideoRecording() {
         return this.disableVideoRecording;
     }
@@ -86,6 +106,10 @@ public final class TestSpecificationResponse extends com.pulumi.resources.Invoke
     @Import(name="iosTestLoop", required=true)
     private IosTestLoopResponse iosTestLoop;
 
+    /**
+     * @return An iOS application with a test loop.
+     * 
+     */
     public IosTestLoopResponse iosTestLoop() {
         return this.iosTestLoop;
     }
@@ -97,6 +121,10 @@ public final class TestSpecificationResponse extends com.pulumi.resources.Invoke
     @Import(name="iosTestSetup", required=true)
     private IosTestSetupResponse iosTestSetup;
 
+    /**
+     * @return Test setup requirements for iOS.
+     * 
+     */
     public IosTestSetupResponse iosTestSetup() {
         return this.iosTestSetup;
     }
@@ -108,6 +136,10 @@ public final class TestSpecificationResponse extends com.pulumi.resources.Invoke
     @Import(name="iosXcTest", required=true)
     private IosXcTestResponse iosXcTest;
 
+    /**
+     * @return An iOS XCTest, via an .xctestrun file.
+     * 
+     */
     public IosXcTestResponse iosXcTest() {
         return this.iosXcTest;
     }
@@ -119,6 +151,10 @@ public final class TestSpecificationResponse extends com.pulumi.resources.Invoke
     @Import(name="testSetup", required=true)
     private TestSetupResponse testSetup;
 
+    /**
+     * @return Test setup requirements for Android e.g. files to install, bootstrap scripts.
+     * 
+     */
     public TestSetupResponse testSetup() {
         return this.testSetup;
     }
@@ -130,6 +166,10 @@ public final class TestSpecificationResponse extends com.pulumi.resources.Invoke
     @Import(name="testTimeout", required=true)
     private String testTimeout;
 
+    /**
+     * @return Max time a test execution is allowed to run before it is automatically cancelled. The default value is 5 min.
+     * 
+     */
     public String testTimeout() {
         return this.testTimeout;
     }
@@ -167,51 +207,111 @@ public final class TestSpecificationResponse extends com.pulumi.resources.Invoke
             $ = new TestSpecificationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param androidInstrumentationTest An Android instrumentation test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidInstrumentationTest(AndroidInstrumentationTestResponse androidInstrumentationTest) {
             $.androidInstrumentationTest = androidInstrumentationTest;
             return this;
         }
 
+        /**
+         * @param androidRoboTest An Android robo test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidRoboTest(AndroidRoboTestResponse androidRoboTest) {
             $.androidRoboTest = androidRoboTest;
             return this;
         }
 
+        /**
+         * @param androidTestLoop An Android Application with a Test Loop.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidTestLoop(AndroidTestLoopResponse androidTestLoop) {
             $.androidTestLoop = androidTestLoop;
             return this;
         }
 
+        /**
+         * @param disablePerformanceMetrics Disables performance metrics recording. May reduce test latency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disablePerformanceMetrics(Boolean disablePerformanceMetrics) {
             $.disablePerformanceMetrics = disablePerformanceMetrics;
             return this;
         }
 
+        /**
+         * @param disableVideoRecording Disables video recording. May reduce test latency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableVideoRecording(Boolean disableVideoRecording) {
             $.disableVideoRecording = disableVideoRecording;
             return this;
         }
 
+        /**
+         * @param iosTestLoop An iOS application with a test loop.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosTestLoop(IosTestLoopResponse iosTestLoop) {
             $.iosTestLoop = iosTestLoop;
             return this;
         }
 
+        /**
+         * @param iosTestSetup Test setup requirements for iOS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosTestSetup(IosTestSetupResponse iosTestSetup) {
             $.iosTestSetup = iosTestSetup;
             return this;
         }
 
+        /**
+         * @param iosXcTest An iOS XCTest, via an .xctestrun file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosXcTest(IosXcTestResponse iosXcTest) {
             $.iosXcTest = iosXcTest;
             return this;
         }
 
+        /**
+         * @param testSetup Test setup requirements for Android e.g. files to install, bootstrap scripts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testSetup(TestSetupResponse testSetup) {
             $.testSetup = testSetup;
             return this;
         }
 
+        /**
+         * @param testTimeout Max time a test execution is allowed to run before it is automatically cancelled. The default value is 5 min.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTimeout(String testTimeout) {
             $.testTimeout = testTimeout;
             return this;

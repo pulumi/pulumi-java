@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse {
-    /**
-     * The configuration used for this job.
-     * 
-     */
+        /**
+         * @return The configuration used for this job.
+         * 
+         */
     private final GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions;
-    /**
-     * A summary of the outcome of this inspection job.
-     * 
-     */
+        /**
+         * @return A summary of the outcome of this inspection job.
+         * 
+         */
     private final GooglePrivacyDlpV2ResultResponse result;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse {
     }
 
     /**
-     * The configuration used for this job.
+     * @return The configuration used for this job.
      * 
-    */
+     */
     public GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions() {
         return this.requestedOptions;
     }
     /**
-     * A summary of the outcome of this inspection job.
+     * @return A summary of the outcome of this inspection job.
      * 
-    */
+     */
     public GooglePrivacyDlpV2ResultResponse result() {
         return this.result;
     }

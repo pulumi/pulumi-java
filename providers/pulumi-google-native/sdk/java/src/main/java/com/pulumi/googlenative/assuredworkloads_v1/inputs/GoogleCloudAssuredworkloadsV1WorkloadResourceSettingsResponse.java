@@ -23,6 +23,10 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return User-assigned resource display name. If not empty it will be used to create a resource with the specified name.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse
     @Import(name="resourceId", required=true)
     private String resourceId;
 
+    /**
+     * @return Resource identifier. For a project this represents project_id. If the project is already taken, the workload creation will fail.
+     * 
+     */
     public String resourceId() {
         return this.resourceId;
     }
@@ -45,6 +53,10 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse
     @Import(name="resourceType", required=true)
     private String resourceType;
 
+    /**
+     * @return Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT)
+     * 
+     */
     public String resourceType() {
         return this.resourceType;
     }
@@ -75,16 +87,34 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse
             $ = new GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName User-assigned resource display name. If not empty it will be used to create a resource with the specified name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param resourceId Resource identifier. For a project this represents project_id. If the project is already taken, the workload creation will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceType Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT)
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             $.resourceType = resourceType;
             return this;

@@ -24,6 +24,10 @@ public final class UserManagedResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="replicas", required=true)
     private List<ReplicaResponse> replicas;
 
+    /**
+     * @return The list of Replicas for this Secret. Cannot be empty.
+     * 
+     */
     public List<ReplicaResponse> replicas() {
         return this.replicas;
     }
@@ -52,11 +56,23 @@ public final class UserManagedResponse extends com.pulumi.resources.InvokeArgs {
             $ = new UserManagedResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param replicas The list of Replicas for this Secret. Cannot be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicas(List<ReplicaResponse> replicas) {
             $.replicas = replicas;
             return this;
         }
 
+        /**
+         * @param replicas The list of Replicas for this Secret. Cannot be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicas(ReplicaResponse... replicas) {
             return replicas(List.of(replicas));
         }

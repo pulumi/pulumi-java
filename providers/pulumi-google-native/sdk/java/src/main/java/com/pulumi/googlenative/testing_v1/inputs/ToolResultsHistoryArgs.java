@@ -24,6 +24,10 @@ public final class ToolResultsHistoryArgs extends com.pulumi.resources.ResourceA
     @Import(name="historyId", required=true)
     private Output<String> historyId;
 
+    /**
+     * @return A tool results history ID.
+     * 
+     */
     public Output<String> historyId() {
         return this.historyId;
     }
@@ -35,6 +39,10 @@ public final class ToolResultsHistoryArgs extends com.pulumi.resources.ResourceA
     @Import(name="project", required=true)
     private Output<String> project;
 
+    /**
+     * @return The cloud project that owns the tool results history.
+     * 
+     */
     public Output<String> project() {
         return this.project;
     }
@@ -64,20 +72,44 @@ public final class ToolResultsHistoryArgs extends com.pulumi.resources.ResourceA
             $ = new ToolResultsHistoryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param historyId A tool results history ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder historyId(Output<String> historyId) {
             $.historyId = historyId;
             return this;
         }
 
+        /**
+         * @param historyId A tool results history ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder historyId(String historyId) {
             return historyId(Output.of(historyId));
         }
 
+        /**
+         * @param project The cloud project that owns the tool results history.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The cloud project that owns the tool results history.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

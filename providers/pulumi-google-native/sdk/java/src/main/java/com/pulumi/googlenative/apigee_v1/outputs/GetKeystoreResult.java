@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetKeystoreResult {
-    /**
-     * Aliases in this keystore.
-     * 
-     */
+        /**
+         * @return Aliases in this keystore.
+         * 
+         */
     private final List<String> aliases;
-    /**
-     * Resource ID for this keystore. Values must match the regular expression `[\w[:space:]-.]{1,255}`.
-     * 
-     */
+        /**
+         * @return Resource ID for this keystore. Values must match the regular expression `[\w[:space:]-.]{1,255}`.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GetKeystoreResult {
     }
 
     /**
-     * Aliases in this keystore.
+     * @return Aliases in this keystore.
      * 
-    */
+     */
     public List<String> aliases() {
         return this.aliases;
     }
     /**
-     * Resource ID for this keystore. Values must match the regular expression `[\w[:space:]-.]{1,255}`.
+     * @return Resource ID for this keystore. Values must match the regular expression `[\w[:space:]-.]{1,255}`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

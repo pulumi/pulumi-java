@@ -11,10 +11,10 @@ import java.util.Objects;
 @CustomType
 public final class AttestationResponse {
     private final GenericSignedAttestationResponse genericSignedAttestation;
-    /**
-     * A PGP signed attestation.
-     * 
-     */
+        /**
+         * @return A PGP signed attestation.
+         * 
+         */
     private final PgpSignedAttestationResponse pgpSignedAttestation;
 
     @CustomType.Constructor
@@ -29,9 +29,9 @@ public final class AttestationResponse {
         return this.genericSignedAttestation;
     }
     /**
-     * A PGP signed attestation.
+     * @return A PGP signed attestation.
      * 
-    */
+     */
     public PgpSignedAttestationResponse pgpSignedAttestation() {
         return this.pgpSignedAttestation;
     }

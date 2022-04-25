@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowV2IntentFollowupIntentInfoResponse exten
     @Import(name="followupIntentName", required=true)
     private String followupIntentName;
 
+    /**
+     * @return The unique identifier of the followup intent. Format: `projects//agent/intents/`.
+     * 
+     */
     public String followupIntentName() {
         return this.followupIntentName;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudDialogflowV2IntentFollowupIntentInfoResponse exten
     @Import(name="parentFollowupIntentName", required=true)
     private String parentFollowupIntentName;
 
+    /**
+     * @return The unique identifier of the followup intent&#39;s parent. Format: `projects//agent/intents/`.
+     * 
+     */
     public String parentFollowupIntentName() {
         return this.parentFollowupIntentName;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudDialogflowV2IntentFollowupIntentInfoResponse exten
             $ = new GoogleCloudDialogflowV2IntentFollowupIntentInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param followupIntentName The unique identifier of the followup intent. Format: `projects//agent/intents/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder followupIntentName(String followupIntentName) {
             $.followupIntentName = followupIntentName;
             return this;
         }
 
+        /**
+         * @param parentFollowupIntentName The unique identifier of the followup intent&#39;s parent. Format: `projects//agent/intents/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentFollowupIntentName(String parentFollowupIntentName) {
             $.parentFollowupIntentName = parentFollowupIntentName;
             return this;

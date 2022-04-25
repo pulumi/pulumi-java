@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GooglePrivacyDlpV2KAnonymityResultResponse {
-    /**
-     * Histogram of k-anonymity equivalence classes.
-     * 
-     */
+        /**
+         * @return Histogram of k-anonymity equivalence classes.
+         * 
+         */
     private final List<GooglePrivacyDlpV2KAnonymityHistogramBucketResponse> equivalenceClassHistogramBuckets;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class GooglePrivacyDlpV2KAnonymityResultResponse {
     }
 
     /**
-     * Histogram of k-anonymity equivalence classes.
+     * @return Histogram of k-anonymity equivalence classes.
      * 
-    */
+     */
     public List<GooglePrivacyDlpV2KAnonymityHistogramBucketResponse> equivalenceClassHistogramBuckets() {
         return this.equivalenceClassHistogramBuckets;
     }

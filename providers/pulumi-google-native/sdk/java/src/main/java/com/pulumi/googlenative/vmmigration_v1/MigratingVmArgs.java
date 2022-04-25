@@ -25,6 +25,10 @@ public final class MigratingVmArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="computeEngineTargetDefaults")
     private @Nullable Output<ComputeEngineTargetDefaultsArgs> computeEngineTargetDefaults;
 
+    /**
+     * @return Details of the target VM in Compute Engine.
+     * 
+     */
     public Optional<Output<ComputeEngineTargetDefaultsArgs>> computeEngineTargetDefaults() {
         return Optional.ofNullable(this.computeEngineTargetDefaults);
     }
@@ -36,6 +40,10 @@ public final class MigratingVmArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description attached to the migrating VM by the user.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class MigratingVmArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The display name attached to the MigratingVm by the user.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -58,6 +70,10 @@ public final class MigratingVmArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return The labels of the migrating VM.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -83,6 +99,10 @@ public final class MigratingVmArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policy")
     private @Nullable Output<SchedulePolicyArgs> policy;
 
+    /**
+     * @return The replication schedule policy.
+     * 
+     */
     public Optional<Output<SchedulePolicyArgs>> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -115,6 +135,10 @@ public final class MigratingVmArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceVmId")
     private @Nullable Output<String> sourceVmId;
 
+    /**
+     * @return The unique ID of the VM in the source. The VM&#39;s name in vSphere can be changed, so this is not the VM&#39;s name but rather its moRef id. This id is of the form vm-.
+     * 
+     */
     public Optional<Output<String>> sourceVmId() {
         return Optional.ofNullable(this.sourceVmId);
     }
@@ -153,38 +177,86 @@ public final class MigratingVmArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MigratingVmArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param computeEngineTargetDefaults Details of the target VM in Compute Engine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeEngineTargetDefaults(@Nullable Output<ComputeEngineTargetDefaultsArgs> computeEngineTargetDefaults) {
             $.computeEngineTargetDefaults = computeEngineTargetDefaults;
             return this;
         }
 
+        /**
+         * @param computeEngineTargetDefaults Details of the target VM in Compute Engine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeEngineTargetDefaults(ComputeEngineTargetDefaultsArgs computeEngineTargetDefaults) {
             return computeEngineTargetDefaults(Output.of(computeEngineTargetDefaults));
         }
 
+        /**
+         * @param description The description attached to the migrating VM by the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description attached to the migrating VM by the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName The display name attached to the MigratingVm by the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name attached to the MigratingVm by the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param labels The labels of the migrating VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels The labels of the migrating VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -207,11 +279,23 @@ public final class MigratingVmArgs extends com.pulumi.resources.ResourceArgs {
             return migratingVmId(Output.of(migratingVmId));
         }
 
+        /**
+         * @param policy The replication schedule policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable Output<SchedulePolicyArgs> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy The replication schedule policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(SchedulePolicyArgs policy) {
             return policy(Output.of(policy));
         }
@@ -243,11 +327,23 @@ public final class MigratingVmArgs extends com.pulumi.resources.ResourceArgs {
             return sourceId(Output.of(sourceId));
         }
 
+        /**
+         * @param sourceVmId The unique ID of the VM in the source. The VM&#39;s name in vSphere can be changed, so this is not the VM&#39;s name but rather its moRef id. This id is of the form vm-.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceVmId(@Nullable Output<String> sourceVmId) {
             $.sourceVmId = sourceVmId;
             return this;
         }
 
+        /**
+         * @param sourceVmId The unique ID of the VM in the source. The VM&#39;s name in vSphere can be changed, so this is not the VM&#39;s name but rather its moRef id. This id is of the form vm-.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceVmId(String sourceVmId) {
             return sourceVmId(Output.of(sourceVmId));
         }

@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResponse {
-    /**
-     * The name of the participant provided by Dialogflow. Format: projects/{project}/locations/{location}/conversations/{conversation}/participants/{participant}
-     * 
-     */
+        /**
+         * @return The name of the participant provided by Dialogflow. Format: projects/{project}/locations/{location}/conversations/{conversation}/participants/{participant}
+         * 
+         */
     private final String dialogflowParticipantName;
-    /**
-     * Obfuscated user ID from Dialogflow.
-     * 
-     */
+        /**
+         * @return Obfuscated user ID from Dialogflow.
+         * 
+         */
     private final String obfuscatedExternalUserId;
-    /**
-     * The role of the participant.
-     * 
-     */
+        /**
+         * @return The role of the participant.
+         * 
+         */
     private final String role;
-    /**
-     * A user-specified ID representing the participant.
-     * 
-     */
+        /**
+         * @return A user-specified ID representing the participant.
+         * 
+         */
     private final String userId;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
     }
 
     /**
-     * The name of the participant provided by Dialogflow. Format: projects/{project}/locations/{location}/conversations/{conversation}/participants/{participant}
+     * @return The name of the participant provided by Dialogflow. Format: projects/{project}/locations/{location}/conversations/{conversation}/participants/{participant}
      * 
-    */
+     */
     public String dialogflowParticipantName() {
         return this.dialogflowParticipantName;
     }
     /**
-     * Obfuscated user ID from Dialogflow.
+     * @return Obfuscated user ID from Dialogflow.
      * 
-    */
+     */
     public String obfuscatedExternalUserId() {
         return this.obfuscatedExternalUserId;
     }
     /**
-     * The role of the participant.
+     * @return The role of the participant.
      * 
-    */
+     */
     public String role() {
         return this.role;
     }
     /**
-     * A user-specified ID representing the participant.
+     * @return A user-specified ID representing the participant.
      * 
-    */
+     */
     public String userId() {
         return this.userId;
     }

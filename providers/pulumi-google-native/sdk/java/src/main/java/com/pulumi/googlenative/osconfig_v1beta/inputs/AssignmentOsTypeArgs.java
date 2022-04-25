@@ -26,6 +26,10 @@ public final class AssignmentOsTypeArgs extends com.pulumi.resources.ResourceArg
     @Import(name="osArchitecture")
     private @Nullable Output<String> osArchitecture;
 
+    /**
+     * @return Targets VM instances with OS Inventory enabled and having the following OS architecture.
+     * 
+     */
     public Optional<Output<String>> osArchitecture() {
         return Optional.ofNullable(this.osArchitecture);
     }
@@ -37,6 +41,10 @@ public final class AssignmentOsTypeArgs extends com.pulumi.resources.ResourceArg
     @Import(name="osShortName")
     private @Nullable Output<String> osShortName;
 
+    /**
+     * @return Targets VM instances with OS Inventory enabled and having the following OS short name, for example &#34;debian&#34; or &#34;windows&#34;.
+     * 
+     */
     public Optional<Output<String>> osShortName() {
         return Optional.ofNullable(this.osShortName);
     }
@@ -48,6 +56,10 @@ public final class AssignmentOsTypeArgs extends com.pulumi.resources.ResourceArg
     @Import(name="osVersion")
     private @Nullable Output<String> osVersion;
 
+    /**
+     * @return Targets VM instances with OS Inventory enabled and having the following following OS version.
+     * 
+     */
     public Optional<Output<String>> osVersion() {
         return Optional.ofNullable(this.osVersion);
     }
@@ -78,29 +90,65 @@ public final class AssignmentOsTypeArgs extends com.pulumi.resources.ResourceArg
             $ = new AssignmentOsTypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param osArchitecture Targets VM instances with OS Inventory enabled and having the following OS architecture.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osArchitecture(@Nullable Output<String> osArchitecture) {
             $.osArchitecture = osArchitecture;
             return this;
         }
 
+        /**
+         * @param osArchitecture Targets VM instances with OS Inventory enabled and having the following OS architecture.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osArchitecture(String osArchitecture) {
             return osArchitecture(Output.of(osArchitecture));
         }
 
+        /**
+         * @param osShortName Targets VM instances with OS Inventory enabled and having the following OS short name, for example &#34;debian&#34; or &#34;windows&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osShortName(@Nullable Output<String> osShortName) {
             $.osShortName = osShortName;
             return this;
         }
 
+        /**
+         * @param osShortName Targets VM instances with OS Inventory enabled and having the following OS short name, for example &#34;debian&#34; or &#34;windows&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osShortName(String osShortName) {
             return osShortName(Output.of(osShortName));
         }
 
+        /**
+         * @param osVersion Targets VM instances with OS Inventory enabled and having the following following OS version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osVersion(@Nullable Output<String> osVersion) {
             $.osVersion = osVersion;
             return this;
         }
 
+        /**
+         * @param osVersion Targets VM instances with OS Inventory enabled and having the following following OS version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osVersion(String osVersion) {
             return osVersion(Output.of(osVersion));
         }

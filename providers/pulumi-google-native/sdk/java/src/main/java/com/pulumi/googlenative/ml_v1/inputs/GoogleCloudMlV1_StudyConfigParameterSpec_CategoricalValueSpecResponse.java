@@ -20,6 +20,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpec
     @Import(name="values", required=true)
     private List<String> values;
 
+    /**
+     * @return Must be specified if type is `CATEGORICAL`. The list of possible categories.
+     * 
+     */
     public List<String> values() {
         return this.values;
     }
@@ -48,11 +52,23 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpec
             $ = new GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param values Must be specified if type is `CATEGORICAL`. The list of possible categories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values Must be specified if type is `CATEGORICAL`. The list of possible categories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

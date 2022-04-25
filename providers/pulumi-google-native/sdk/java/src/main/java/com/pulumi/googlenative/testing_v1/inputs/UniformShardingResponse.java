@@ -23,6 +23,10 @@ public final class UniformShardingResponse extends com.pulumi.resources.InvokeAr
     @Import(name="numShards", required=true)
     private Integer numShards;
 
+    /**
+     * @return Total number of shards. When any physical devices are selected, the number must be &gt;= 1 and &lt;= 50. When no physical devices are selected, the number must be &gt;= 1 and &lt;= 500.
+     * 
+     */
     public Integer numShards() {
         return this.numShards;
     }
@@ -51,6 +55,12 @@ public final class UniformShardingResponse extends com.pulumi.resources.InvokeAr
             $ = new UniformShardingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param numShards Total number of shards. When any physical devices are selected, the number must be &gt;= 1 and &lt;= 50. When no physical devices are selected, the number must be &gt;= 1 and &lt;= 500.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numShards(Integer numShards) {
             $.numShards = numShards;
             return this;

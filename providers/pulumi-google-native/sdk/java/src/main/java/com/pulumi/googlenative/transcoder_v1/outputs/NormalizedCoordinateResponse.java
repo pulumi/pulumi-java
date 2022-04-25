@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class NormalizedCoordinateResponse {
-    /**
-     * Normalized x coordinate.
-     * 
-     */
+        /**
+         * @return Normalized x coordinate.
+         * 
+         */
     private final Double x;
-    /**
-     * Normalized y coordinate.
-     * 
-     */
+        /**
+         * @return Normalized y coordinate.
+         * 
+         */
     private final Double y;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class NormalizedCoordinateResponse {
     }
 
     /**
-     * Normalized x coordinate.
+     * @return Normalized x coordinate.
      * 
-    */
+     */
     public Double x() {
         return this.x;
     }
     /**
-     * Normalized y coordinate.
+     * @return Normalized y coordinate.
      * 
-    */
+     */
     public Double y() {
         return this.y;
     }

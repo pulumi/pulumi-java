@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class InstanceReferenceResponse {
-    /**
-     * The unique identifier of the Compute Engine instance.
-     * 
-     */
+        /**
+         * @return The unique identifier of the Compute Engine instance.
+         * 
+         */
     private final String instanceId;
-    /**
-     * The user-friendly name of the Compute Engine instance.
-     * 
-     */
+        /**
+         * @return The user-friendly name of the Compute Engine instance.
+         * 
+         */
     private final String instanceName;
-    /**
-     * The public ECIES key used for sharing data with this instance.
-     * 
-     */
+        /**
+         * @return The public ECIES key used for sharing data with this instance.
+         * 
+         */
     private final String publicEciesKey;
-    /**
-     * The public RSA key used for sharing data with this instance.
-     * 
-     */
+        /**
+         * @return The public RSA key used for sharing data with this instance.
+         * 
+         */
     private final String publicKey;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class InstanceReferenceResponse {
     }
 
     /**
-     * The unique identifier of the Compute Engine instance.
+     * @return The unique identifier of the Compute Engine instance.
      * 
-    */
+     */
     public String instanceId() {
         return this.instanceId;
     }
     /**
-     * The user-friendly name of the Compute Engine instance.
+     * @return The user-friendly name of the Compute Engine instance.
      * 
-    */
+     */
     public String instanceName() {
         return this.instanceName;
     }
     /**
-     * The public ECIES key used for sharing data with this instance.
+     * @return The public ECIES key used for sharing data with this instance.
      * 
-    */
+     */
     public String publicEciesKey() {
         return this.publicEciesKey;
     }
     /**
-     * The public RSA key used for sharing data with this instance.
+     * @return The public RSA key used for sharing data with this instance.
      * 
-    */
+     */
     public String publicKey() {
         return this.publicKey;
     }

@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class JobStatistics4Response {
-    /**
-     * Number of files per destination URI or URI pattern specified in the extract configuration. These values will be in the same order as the URIs specified in the &#39;destinationUris&#39; field.
-     * 
-     */
+        /**
+         * @return Number of files per destination URI or URI pattern specified in the extract configuration. These values will be in the same order as the URIs specified in the &#39;destinationUris&#39; field.
+         * 
+         */
     private final List<String> destinationUriFileCounts;
-    /**
-     * Number of user bytes extracted into the result. This is the byte count as computed by BigQuery for billing purposes.
-     * 
-     */
+        /**
+         * @return Number of user bytes extracted into the result. This is the byte count as computed by BigQuery for billing purposes.
+         * 
+         */
     private final String inputBytes;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class JobStatistics4Response {
     }
 
     /**
-     * Number of files per destination URI or URI pattern specified in the extract configuration. These values will be in the same order as the URIs specified in the &#39;destinationUris&#39; field.
+     * @return Number of files per destination URI or URI pattern specified in the extract configuration. These values will be in the same order as the URIs specified in the &#39;destinationUris&#39; field.
      * 
-    */
+     */
     public List<String> destinationUriFileCounts() {
         return this.destinationUriFileCounts;
     }
     /**
-     * Number of user bytes extracted into the result. This is the byte count as computed by BigQuery for billing purposes.
+     * @return Number of user bytes extracted into the result. This is the byte count as computed by BigQuery for billing purposes.
      * 
-    */
+     */
     public String inputBytes() {
         return this.inputBytes;
     }

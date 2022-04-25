@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ConfidentialNodesResponse {
-    /**
-     * Whether Confidential Nodes feature is enabled for all nodes in this cluster.
-     * 
-     */
+        /**
+         * @return Whether Confidential Nodes feature is enabled for all nodes in this cluster.
+         * 
+         */
     private final Boolean enabled;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ConfidentialNodesResponse {
     }
 
     /**
-     * Whether Confidential Nodes feature is enabled for all nodes in this cluster.
+     * @return Whether Confidential Nodes feature is enabled for all nodes in this cluster.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }

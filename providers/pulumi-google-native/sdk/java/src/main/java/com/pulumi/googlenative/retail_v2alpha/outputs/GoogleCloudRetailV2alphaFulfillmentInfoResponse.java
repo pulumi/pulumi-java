@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudRetailV2alphaFulfillmentInfoResponse {
-    /**
-     * The IDs for this type, such as the store IDs for FulfillmentInfo.type.pickup-in-store or the region IDs for FulfillmentInfo.type.same-day-delivery. A maximum of 3000 values are allowed. Each value must be a string with a length limit of 30 characters, matching the pattern `[a-zA-Z0-9_-]+`, such as &#34;store1&#34; or &#34;REGION-2&#34;. Otherwise, an INVALID_ARGUMENT error is returned.
-     * 
-     */
+        /**
+         * @return The IDs for this type, such as the store IDs for FulfillmentInfo.type.pickup-in-store or the region IDs for FulfillmentInfo.type.same-day-delivery. A maximum of 3000 values are allowed. Each value must be a string with a length limit of 30 characters, matching the pattern `[a-zA-Z0-9_-]+`, such as &#34;store1&#34; or &#34;REGION-2&#34;. Otherwise, an INVALID_ARGUMENT error is returned.
+         * 
+         */
     private final List<String> placeIds;
-    /**
-     * The fulfillment type, including commonly used types (such as pickup in store and same day delivery), and custom types. Customers have to map custom types to their display names before rendering UI. Supported values: * &#34;pickup-in-store&#34; * &#34;ship-to-store&#34; * &#34;same-day-delivery&#34; * &#34;next-day-delivery&#34; * &#34;custom-type-1&#34; * &#34;custom-type-2&#34; * &#34;custom-type-3&#34; * &#34;custom-type-4&#34; * &#34;custom-type-5&#34; If this field is set to an invalid value other than these, an INVALID_ARGUMENT error is returned.
-     * 
-     */
+        /**
+         * @return The fulfillment type, including commonly used types (such as pickup in store and same day delivery), and custom types. Customers have to map custom types to their display names before rendering UI. Supported values: * &#34;pickup-in-store&#34; * &#34;ship-to-store&#34; * &#34;same-day-delivery&#34; * &#34;next-day-delivery&#34; * &#34;custom-type-1&#34; * &#34;custom-type-2&#34; * &#34;custom-type-3&#34; * &#34;custom-type-4&#34; * &#34;custom-type-5&#34; If this field is set to an invalid value other than these, an INVALID_ARGUMENT error is returned.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GoogleCloudRetailV2alphaFulfillmentInfoResponse {
     }
 
     /**
-     * The IDs for this type, such as the store IDs for FulfillmentInfo.type.pickup-in-store or the region IDs for FulfillmentInfo.type.same-day-delivery. A maximum of 3000 values are allowed. Each value must be a string with a length limit of 30 characters, matching the pattern `[a-zA-Z0-9_-]+`, such as &#34;store1&#34; or &#34;REGION-2&#34;. Otherwise, an INVALID_ARGUMENT error is returned.
+     * @return The IDs for this type, such as the store IDs for FulfillmentInfo.type.pickup-in-store or the region IDs for FulfillmentInfo.type.same-day-delivery. A maximum of 3000 values are allowed. Each value must be a string with a length limit of 30 characters, matching the pattern `[a-zA-Z0-9_-]+`, such as &#34;store1&#34; or &#34;REGION-2&#34;. Otherwise, an INVALID_ARGUMENT error is returned.
      * 
-    */
+     */
     public List<String> placeIds() {
         return this.placeIds;
     }
     /**
-     * The fulfillment type, including commonly used types (such as pickup in store and same day delivery), and custom types. Customers have to map custom types to their display names before rendering UI. Supported values: * &#34;pickup-in-store&#34; * &#34;ship-to-store&#34; * &#34;same-day-delivery&#34; * &#34;next-day-delivery&#34; * &#34;custom-type-1&#34; * &#34;custom-type-2&#34; * &#34;custom-type-3&#34; * &#34;custom-type-4&#34; * &#34;custom-type-5&#34; If this field is set to an invalid value other than these, an INVALID_ARGUMENT error is returned.
+     * @return The fulfillment type, including commonly used types (such as pickup in store and same day delivery), and custom types. Customers have to map custom types to their display names before rendering UI. Supported values: * &#34;pickup-in-store&#34; * &#34;ship-to-store&#34; * &#34;same-day-delivery&#34; * &#34;next-day-delivery&#34; * &#34;custom-type-1&#34; * &#34;custom-type-2&#34; * &#34;custom-type-3&#34; * &#34;custom-type-4&#34; * &#34;custom-type-5&#34; If this field is set to an invalid value other than these, an INVALID_ARGUMENT error is returned.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

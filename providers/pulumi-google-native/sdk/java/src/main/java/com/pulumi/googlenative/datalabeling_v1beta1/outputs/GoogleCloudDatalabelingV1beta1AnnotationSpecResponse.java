@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDatalabelingV1beta1AnnotationSpecResponse {
-    /**
-     * Optional. User-provided description of the annotation specification. The description can be up to 10,000 characters long.
-     * 
-     */
+        /**
+         * @return Optional. User-provided description of the annotation specification. The description can be up to 10,000 characters long.
+         * 
+         */
     private final String description;
-    /**
-     * The display name of the AnnotationSpec. Maximum of 64 characters.
-     * 
-     */
+        /**
+         * @return The display name of the AnnotationSpec. Maximum of 64 characters.
+         * 
+         */
     private final String displayName;
-    /**
-     * This is the integer index of the AnnotationSpec. The index for the whole AnnotationSpecSet is sequential starting from 0. For example, an AnnotationSpecSet with classes `dog` and `cat`, might contain one AnnotationSpec with `{ display_name: &#34;dog&#34;, index: 0 }` and one AnnotationSpec with `{ display_name: &#34;cat&#34;, index: 1 }`. This is especially useful for model training as it encodes the string labels into numeric values.
-     * 
-     */
+        /**
+         * @return This is the integer index of the AnnotationSpec. The index for the whole AnnotationSpecSet is sequential starting from 0. For example, an AnnotationSpecSet with classes `dog` and `cat`, might contain one AnnotationSpec with `{ display_name: &#34;dog&#34;, index: 0 }` and one AnnotationSpec with `{ display_name: &#34;cat&#34;, index: 1 }`. This is especially useful for model training as it encodes the string labels into numeric values.
+         * 
+         */
     private final Integer index;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecResponse {
     }
 
     /**
-     * Optional. User-provided description of the annotation specification. The description can be up to 10,000 characters long.
+     * @return Optional. User-provided description of the annotation specification. The description can be up to 10,000 characters long.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The display name of the AnnotationSpec. Maximum of 64 characters.
+     * @return The display name of the AnnotationSpec. Maximum of 64 characters.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * This is the integer index of the AnnotationSpec. The index for the whole AnnotationSpecSet is sequential starting from 0. For example, an AnnotationSpecSet with classes `dog` and `cat`, might contain one AnnotationSpec with `{ display_name: &#34;dog&#34;, index: 0 }` and one AnnotationSpec with `{ display_name: &#34;cat&#34;, index: 1 }`. This is especially useful for model training as it encodes the string labels into numeric values.
+     * @return This is the integer index of the AnnotationSpec. The index for the whole AnnotationSpecSet is sequential starting from 0. For example, an AnnotationSpecSet with classes `dog` and `cat`, might contain one AnnotationSpec with `{ display_name: &#34;dog&#34;, index: 0 }` and one AnnotationSpec with `{ display_name: &#34;cat&#34;, index: 1 }`. This is especially useful for model training as it encodes the string labels into numeric values.
      * 
-    */
+     */
     public Integer index() {
         return this.index;
     }

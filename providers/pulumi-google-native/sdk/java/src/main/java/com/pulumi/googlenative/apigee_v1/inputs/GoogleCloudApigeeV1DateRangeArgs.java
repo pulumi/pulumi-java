@@ -24,6 +24,10 @@ public final class GoogleCloudApigeeV1DateRangeArgs extends com.pulumi.resources
     @Import(name="end", required=true)
     private Output<String> end;
 
+    /**
+     * @return End date (exclusive) of the data to export in the format `yyyy-mm-dd`. The date range ends at 00:00:00 UTC on the end date- which will not be in the output.
+     * 
+     */
     public Output<String> end() {
         return this.end;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudApigeeV1DateRangeArgs extends com.pulumi.resources
     @Import(name="start", required=true)
     private Output<String> start;
 
+    /**
+     * @return Start date of the data to export in the format `yyyy-mm-dd`. The date range begins at 00:00:00 UTC on the start date.
+     * 
+     */
     public Output<String> start() {
         return this.start;
     }
@@ -64,20 +72,44 @@ public final class GoogleCloudApigeeV1DateRangeArgs extends com.pulumi.resources
             $ = new GoogleCloudApigeeV1DateRangeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param end End date (exclusive) of the data to export in the format `yyyy-mm-dd`. The date range ends at 00:00:00 UTC on the end date- which will not be in the output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder end(Output<String> end) {
             $.end = end;
             return this;
         }
 
+        /**
+         * @param end End date (exclusive) of the data to export in the format `yyyy-mm-dd`. The date range ends at 00:00:00 UTC on the end date- which will not be in the output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder end(String end) {
             return end(Output.of(end));
         }
 
+        /**
+         * @param start Start date of the data to export in the format `yyyy-mm-dd`. The date range begins at 00:00:00 UTC on the start date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(Output<String> start) {
             $.start = start;
             return this;
         }
 
+        /**
+         * @param start Start date of the data to export in the format `yyyy-mm-dd`. The date range begins at 00:00:00 UTC on the start date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(String start) {
             return start(Output.of(start));
         }

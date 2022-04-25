@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class SchedulingConfigResponse {
-    /**
-     * Defines whether the node is preemptible.
-     * 
-     */
+        /**
+         * @return Defines whether the node is preemptible.
+         * 
+         */
     private final Boolean preemptible;
-    /**
-     * Whether the node is created under a reservation.
-     * 
-     */
+        /**
+         * @return Whether the node is created under a reservation.
+         * 
+         */
     private final Boolean reserved;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class SchedulingConfigResponse {
     }
 
     /**
-     * Defines whether the node is preemptible.
+     * @return Defines whether the node is preemptible.
      * 
-    */
+     */
     public Boolean preemptible() {
         return this.preemptible;
     }
     /**
-     * Whether the node is created under a reservation.
+     * @return Whether the node is created under a reservation.
      * 
-    */
+     */
     public Boolean reserved() {
         return this.reserved;
     }

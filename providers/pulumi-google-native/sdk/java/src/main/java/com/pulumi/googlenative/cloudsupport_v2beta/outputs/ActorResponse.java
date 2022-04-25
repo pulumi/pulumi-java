@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class ActorResponse {
-    /**
-     * The name to display for the actor. If not provided, it is inferred from credentials supplied during case creation. When an email is provided, a display name must also be provided. This will be obfuscated if the user is a Google Support agent.
-     * 
-     */
+        /**
+         * @return The name to display for the actor. If not provided, it is inferred from credentials supplied during case creation. When an email is provided, a display name must also be provided. This will be obfuscated if the user is a Google Support agent.
+         * 
+         */
     private final String displayName;
-    /**
-     * The email address of the actor. If not provided, it is inferred from credentials supplied during case creation. If the authenticated principal does not have an email address, one must be provided. When a name is provided, an email must also be provided. This will be obfuscated if the user is a Google Support agent.
-     * 
-     */
+        /**
+         * @return The email address of the actor. If not provided, it is inferred from credentials supplied during case creation. If the authenticated principal does not have an email address, one must be provided. When a name is provided, an email must also be provided. This will be obfuscated if the user is a Google Support agent.
+         * 
+         */
     private final String email;
-    /**
-     * Whether the actor is a Google support actor.
-     * 
-     */
+        /**
+         * @return Whether the actor is a Google support actor.
+         * 
+         */
     private final Boolean googleSupport;
-    /**
-     * An ID representing the user that was authenticated when the corresponding action was taken. This will be an email address, if one is available, or some other unique ID. See https://cloud.google.com/docs/authentication for more information on types of authentication.
-     * 
-     */
+        /**
+         * @return An ID representing the user that was authenticated when the corresponding action was taken. This will be an email address, if one is available, or some other unique ID. See https://cloud.google.com/docs/authentication for more information on types of authentication.
+         * 
+         */
     private final String principalId;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class ActorResponse {
     }
 
     /**
-     * The name to display for the actor. If not provided, it is inferred from credentials supplied during case creation. When an email is provided, a display name must also be provided. This will be obfuscated if the user is a Google Support agent.
+     * @return The name to display for the actor. If not provided, it is inferred from credentials supplied during case creation. When an email is provided, a display name must also be provided. This will be obfuscated if the user is a Google Support agent.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The email address of the actor. If not provided, it is inferred from credentials supplied during case creation. If the authenticated principal does not have an email address, one must be provided. When a name is provided, an email must also be provided. This will be obfuscated if the user is a Google Support agent.
+     * @return The email address of the actor. If not provided, it is inferred from credentials supplied during case creation. If the authenticated principal does not have an email address, one must be provided. When a name is provided, an email must also be provided. This will be obfuscated if the user is a Google Support agent.
      * 
-    */
+     */
     public String email() {
         return this.email;
     }
     /**
-     * Whether the actor is a Google support actor.
+     * @return Whether the actor is a Google support actor.
      * 
-    */
+     */
     public Boolean googleSupport() {
         return this.googleSupport;
     }
     /**
-     * An ID representing the user that was authenticated when the corresponding action was taken. This will be an email address, if one is available, or some other unique ID. See https://cloud.google.com/docs/authentication for more information on types of authentication.
+     * @return An ID representing the user that was authenticated when the corresponding action was taken. This will be an email address, if one is available, or some other unique ID. See https://cloud.google.com/docs/authentication for more information on types of authentication.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }

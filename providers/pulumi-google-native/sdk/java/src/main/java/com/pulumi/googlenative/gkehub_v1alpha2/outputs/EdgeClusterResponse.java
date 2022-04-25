@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class EdgeClusterResponse {
-    /**
-     * Immutable. Self-link of the GCP resource for the Edge Cluster. For example: //edgecontainer.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
-     * 
-     */
+        /**
+         * @return Immutable. Self-link of the GCP resource for the Edge Cluster. For example: //edgecontainer.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
+         * 
+         */
     private final String resourceLink;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class EdgeClusterResponse {
     }
 
     /**
-     * Immutable. Self-link of the GCP resource for the Edge Cluster. For example: //edgecontainer.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
+     * @return Immutable. Self-link of the GCP resource for the Edge Cluster. For example: //edgecontainer.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
      * 
-    */
+     */
     public String resourceLink() {
         return this.resourceLink;
     }

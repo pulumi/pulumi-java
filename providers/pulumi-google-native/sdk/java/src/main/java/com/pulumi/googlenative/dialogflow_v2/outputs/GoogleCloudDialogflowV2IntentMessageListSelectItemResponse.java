@@ -11,25 +11,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowV2IntentMessageListSelectItemResponse {
-    /**
-     * Optional. The main text describing the item.
-     * 
-     */
+        /**
+         * @return Optional. The main text describing the item.
+         * 
+         */
     private final String description;
-    /**
-     * Optional. The image to display.
-     * 
-     */
+        /**
+         * @return Optional. The image to display.
+         * 
+         */
     private final GoogleCloudDialogflowV2IntentMessageImageResponse image;
-    /**
-     * Additional information about this option.
-     * 
-     */
+        /**
+         * @return Additional information about this option.
+         * 
+         */
     private final GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse info;
-    /**
-     * The title of the list item.
-     * 
-     */
+        /**
+         * @return The title of the list item.
+         * 
+         */
     private final String title;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItemResponse {
     }
 
     /**
-     * Optional. The main text describing the item.
+     * @return Optional. The main text describing the item.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Optional. The image to display.
+     * @return Optional. The image to display.
      * 
-    */
+     */
     public GoogleCloudDialogflowV2IntentMessageImageResponse image() {
         return this.image;
     }
     /**
-     * Additional information about this option.
+     * @return Additional information about this option.
      * 
-    */
+     */
     public GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse info() {
         return this.info;
     }
     /**
-     * The title of the list item.
+     * @return The title of the list item.
      * 
-    */
+     */
     public String title() {
         return this.title;
     }

@@ -11,25 +11,25 @@ import java.util.Objects;
 
 @CustomType
 public final class HTTPGetActionResponse {
-    /**
-     * (Optional) Host name to connect to, defaults to the pod IP. You probably want to set &#34;Host&#34; in httpHeaders instead.
-     * 
-     */
+        /**
+         * @return (Optional) Host name to connect to, defaults to the pod IP. You probably want to set &#34;Host&#34; in httpHeaders instead.
+         * 
+         */
     private final String host;
-    /**
-     * (Optional) Custom headers to set in the request. HTTP allows repeated headers.
-     * 
-     */
+        /**
+         * @return (Optional) Custom headers to set in the request. HTTP allows repeated headers.
+         * 
+         */
     private final List<HTTPHeaderResponse> httpHeaders;
-    /**
-     * (Optional) Path to access on the HTTP server.
-     * 
-     */
+        /**
+         * @return (Optional) Path to access on the HTTP server.
+         * 
+         */
     private final String path;
-    /**
-     * (Optional) Scheme to use for connecting to the host. Defaults to HTTP.
-     * 
-     */
+        /**
+         * @return (Optional) Scheme to use for connecting to the host. Defaults to HTTP.
+         * 
+         */
     private final String scheme;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class HTTPGetActionResponse {
     }
 
     /**
-     * (Optional) Host name to connect to, defaults to the pod IP. You probably want to set &#34;Host&#34; in httpHeaders instead.
+     * @return (Optional) Host name to connect to, defaults to the pod IP. You probably want to set &#34;Host&#34; in httpHeaders instead.
      * 
-    */
+     */
     public String host() {
         return this.host;
     }
     /**
-     * (Optional) Custom headers to set in the request. HTTP allows repeated headers.
+     * @return (Optional) Custom headers to set in the request. HTTP allows repeated headers.
      * 
-    */
+     */
     public List<HTTPHeaderResponse> httpHeaders() {
         return this.httpHeaders;
     }
     /**
-     * (Optional) Path to access on the HTTP server.
+     * @return (Optional) Path to access on the HTTP server.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }
     /**
-     * (Optional) Scheme to use for connecting to the host. Defaults to HTTP.
+     * @return (Optional) Scheme to use for connecting to the host. Defaults to HTTP.
      * 
-    */
+     */
     public String scheme() {
         return this.scheme;
     }

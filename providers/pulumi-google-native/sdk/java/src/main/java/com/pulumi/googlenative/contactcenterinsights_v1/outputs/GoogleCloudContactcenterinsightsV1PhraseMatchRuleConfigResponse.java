@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse {
-    /**
-     * The configuration for the exact match rule.
-     * 
-     */
+        /**
+         * @return The configuration for the exact match rule.
+         * 
+         */
     private final GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse exactMatchConfig;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigRespon
     }
 
     /**
-     * The configuration for the exact match rule.
+     * @return The configuration for the exact match rule.
      * 
-    */
+     */
     public GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse exactMatchConfig() {
         return this.exactMatchConfig;
     }

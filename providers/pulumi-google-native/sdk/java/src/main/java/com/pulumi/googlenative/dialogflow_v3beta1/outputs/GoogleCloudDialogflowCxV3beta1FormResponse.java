@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowCxV3beta1FormResponse {
-    /**
-     * Parameters to collect from the user.
-     * 
-     */
+        /**
+         * @return Parameters to collect from the user.
+         * 
+         */
     private final List<GoogleCloudDialogflowCxV3beta1FormParameterResponse> parameters;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class GoogleCloudDialogflowCxV3beta1FormResponse {
     }
 
     /**
-     * Parameters to collect from the user.
+     * @return Parameters to collect from the user.
      * 
-    */
+     */
     public List<GoogleCloudDialogflowCxV3beta1FormParameterResponse> parameters() {
         return this.parameters;
     }

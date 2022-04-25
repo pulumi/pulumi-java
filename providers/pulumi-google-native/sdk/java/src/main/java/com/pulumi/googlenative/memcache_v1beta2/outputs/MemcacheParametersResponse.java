@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class MemcacheParametersResponse {
-    /**
-     * User defined set of parameters to use in the memcached process.
-     * 
-     */
+        /**
+         * @return User defined set of parameters to use in the memcached process.
+         * 
+         */
     private final Map<String,String> params;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class MemcacheParametersResponse {
     }
 
     /**
-     * User defined set of parameters to use in the memcached process.
+     * @return User defined set of parameters to use in the memcached process.
      * 
-    */
+     */
     public Map<String,String> params() {
         return this.params;
     }

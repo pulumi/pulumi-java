@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse {
-    /**
-     * The HTTP or HTTPS scheme URI.
-     * 
-     */
+        /**
+         * @return The HTTP or HTTPS scheme URI.
+         * 
+         */
     private final String uri;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriAct
     }
 
     /**
-     * The HTTP or HTTPS scheme URI.
+     * @return The HTTP or HTTPS scheme URI.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

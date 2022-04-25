@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class WorkloadMetadataConfigResponse {
-    /**
-     * Mode is the configuration for how to expose metadata to workloads running on the node pool.
-     * 
-     */
+        /**
+         * @return Mode is the configuration for how to expose metadata to workloads running on the node pool.
+         * 
+         */
     private final String mode;
-    /**
-     * NodeMetadata is the configuration for how to expose metadata to the workloads running on the node.
-     * 
-     */
+        /**
+         * @return NodeMetadata is the configuration for how to expose metadata to the workloads running on the node.
+         * 
+         */
     private final String nodeMetadata;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class WorkloadMetadataConfigResponse {
     }
 
     /**
-     * Mode is the configuration for how to expose metadata to workloads running on the node pool.
+     * @return Mode is the configuration for how to expose metadata to workloads running on the node pool.
      * 
-    */
+     */
     public String mode() {
         return this.mode;
     }
     /**
-     * NodeMetadata is the configuration for how to expose metadata to the workloads running on the node.
+     * @return NodeMetadata is the configuration for how to expose metadata to the workloads running on the node.
      * 
-    */
+     */
     public String nodeMetadata() {
         return this.nodeMetadata;
     }

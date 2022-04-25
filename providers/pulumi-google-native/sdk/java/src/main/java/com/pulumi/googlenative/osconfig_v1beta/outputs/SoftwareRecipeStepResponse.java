@@ -15,40 +15,40 @@ import java.util.Objects;
 
 @CustomType
 public final class SoftwareRecipeStepResponse {
-    /**
-     * Extracts an archive into the specified directory.
-     * 
-     */
+        /**
+         * @return Extracts an archive into the specified directory.
+         * 
+         */
     private final SoftwareRecipeStepExtractArchiveResponse archiveExtraction;
-    /**
-     * Installs a deb file via dpkg.
-     * 
-     */
+        /**
+         * @return Installs a deb file via dpkg.
+         * 
+         */
     private final SoftwareRecipeStepInstallDpkgResponse dpkgInstallation;
-    /**
-     * Copies a file onto the instance.
-     * 
-     */
+        /**
+         * @return Copies a file onto the instance.
+         * 
+         */
     private final SoftwareRecipeStepCopyFileResponse fileCopy;
-    /**
-     * Executes an artifact or local file.
-     * 
-     */
+        /**
+         * @return Executes an artifact or local file.
+         * 
+         */
     private final SoftwareRecipeStepExecFileResponse fileExec;
-    /**
-     * Installs an MSI file.
-     * 
-     */
+        /**
+         * @return Installs an MSI file.
+         * 
+         */
     private final SoftwareRecipeStepInstallMsiResponse msiInstallation;
-    /**
-     * Installs an rpm file via the rpm utility.
-     * 
-     */
+        /**
+         * @return Installs an rpm file via the rpm utility.
+         * 
+         */
     private final SoftwareRecipeStepInstallRpmResponse rpmInstallation;
-    /**
-     * Runs commands in a shell.
-     * 
-     */
+        /**
+         * @return Runs commands in a shell.
+         * 
+         */
     private final SoftwareRecipeStepRunScriptResponse scriptRun;
 
     @CustomType.Constructor
@@ -70,51 +70,51 @@ public final class SoftwareRecipeStepResponse {
     }
 
     /**
-     * Extracts an archive into the specified directory.
+     * @return Extracts an archive into the specified directory.
      * 
-    */
+     */
     public SoftwareRecipeStepExtractArchiveResponse archiveExtraction() {
         return this.archiveExtraction;
     }
     /**
-     * Installs a deb file via dpkg.
+     * @return Installs a deb file via dpkg.
      * 
-    */
+     */
     public SoftwareRecipeStepInstallDpkgResponse dpkgInstallation() {
         return this.dpkgInstallation;
     }
     /**
-     * Copies a file onto the instance.
+     * @return Copies a file onto the instance.
      * 
-    */
+     */
     public SoftwareRecipeStepCopyFileResponse fileCopy() {
         return this.fileCopy;
     }
     /**
-     * Executes an artifact or local file.
+     * @return Executes an artifact or local file.
      * 
-    */
+     */
     public SoftwareRecipeStepExecFileResponse fileExec() {
         return this.fileExec;
     }
     /**
-     * Installs an MSI file.
+     * @return Installs an MSI file.
      * 
-    */
+     */
     public SoftwareRecipeStepInstallMsiResponse msiInstallation() {
         return this.msiInstallation;
     }
     /**
-     * Installs an rpm file via the rpm utility.
+     * @return Installs an rpm file via the rpm utility.
      * 
-    */
+     */
     public SoftwareRecipeStepInstallRpmResponse rpmInstallation() {
         return this.rpmInstallation;
     }
     /**
-     * Runs commands in a shell.
+     * @return Runs commands in a shell.
      * 
-    */
+     */
     public SoftwareRecipeStepRunScriptResponse scriptRun() {
         return this.scriptRun;
     }

@@ -26,6 +26,10 @@ public final class CorsPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowCredentials", required=true)
     private Boolean allowCredentials;
 
+    /**
+     * @return In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This field translates to the Access-Control-Allow-Credentials header. Default is false.
+     * 
+     */
     public Boolean allowCredentials() {
         return this.allowCredentials;
     }
@@ -37,6 +41,10 @@ public final class CorsPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowHeaders", required=true)
     private List<String> allowHeaders;
 
+    /**
+     * @return Specifies the content for the Access-Control-Allow-Headers header.
+     * 
+     */
     public List<String> allowHeaders() {
         return this.allowHeaders;
     }
@@ -48,6 +56,10 @@ public final class CorsPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowMethods", required=true)
     private List<String> allowMethods;
 
+    /**
+     * @return Specifies the content for the Access-Control-Allow-Methods header.
+     * 
+     */
     public List<String> allowMethods() {
         return this.allowMethods;
     }
@@ -59,6 +71,10 @@ public final class CorsPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowOriginRegexes", required=true)
     private List<String> allowOriginRegexes;
 
+    /**
+     * @return Specifies a regular expression that matches allowed origins. For more information about the regular expression syntax, see Syntax. An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+     * 
+     */
     public List<String> allowOriginRegexes() {
         return this.allowOriginRegexes;
     }
@@ -70,6 +86,10 @@ public final class CorsPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowOrigins", required=true)
     private List<String> allowOrigins;
 
+    /**
+     * @return Specifies the list of origins that is allowed to do CORS requests. An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+     * 
+     */
     public List<String> allowOrigins() {
         return this.allowOrigins;
     }
@@ -81,6 +101,10 @@ public final class CorsPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="disabled", required=true)
     private Boolean disabled;
 
+    /**
+     * @return If true, the setting specifies the CORS policy is disabled. The default value of false, which indicates that the CORS policy is in effect.
+     * 
+     */
     public Boolean disabled() {
         return this.disabled;
     }
@@ -92,6 +116,10 @@ public final class CorsPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="exposeHeaders", required=true)
     private List<String> exposeHeaders;
 
+    /**
+     * @return Specifies the content for the Access-Control-Expose-Headers header.
+     * 
+     */
     public List<String> exposeHeaders() {
         return this.exposeHeaders;
     }
@@ -103,6 +131,10 @@ public final class CorsPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxAge", required=true)
     private Integer maxAge;
 
+    /**
+     * @return Specifies how long results of a preflight request can be cached in seconds. This field translates to the Access-Control-Max-Age header.
+     * 
+     */
     public Integer maxAge() {
         return this.maxAge;
     }
@@ -138,61 +170,139 @@ public final class CorsPolicyResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CorsPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowCredentials In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This field translates to the Access-Control-Allow-Credentials header. Default is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowCredentials(Boolean allowCredentials) {
             $.allowCredentials = allowCredentials;
             return this;
         }
 
+        /**
+         * @param allowHeaders Specifies the content for the Access-Control-Allow-Headers header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowHeaders(List<String> allowHeaders) {
             $.allowHeaders = allowHeaders;
             return this;
         }
 
+        /**
+         * @param allowHeaders Specifies the content for the Access-Control-Allow-Headers header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowHeaders(String... allowHeaders) {
             return allowHeaders(List.of(allowHeaders));
         }
 
+        /**
+         * @param allowMethods Specifies the content for the Access-Control-Allow-Methods header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowMethods(List<String> allowMethods) {
             $.allowMethods = allowMethods;
             return this;
         }
 
+        /**
+         * @param allowMethods Specifies the content for the Access-Control-Allow-Methods header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowMethods(String... allowMethods) {
             return allowMethods(List.of(allowMethods));
         }
 
+        /**
+         * @param allowOriginRegexes Specifies a regular expression that matches allowed origins. For more information about the regular expression syntax, see Syntax. An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowOriginRegexes(List<String> allowOriginRegexes) {
             $.allowOriginRegexes = allowOriginRegexes;
             return this;
         }
 
+        /**
+         * @param allowOriginRegexes Specifies a regular expression that matches allowed origins. For more information about the regular expression syntax, see Syntax. An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowOriginRegexes(String... allowOriginRegexes) {
             return allowOriginRegexes(List.of(allowOriginRegexes));
         }
 
+        /**
+         * @param allowOrigins Specifies the list of origins that is allowed to do CORS requests. An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowOrigins(List<String> allowOrigins) {
             $.allowOrigins = allowOrigins;
             return this;
         }
 
+        /**
+         * @param allowOrigins Specifies the list of origins that is allowed to do CORS requests. An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowOrigins(String... allowOrigins) {
             return allowOrigins(List.of(allowOrigins));
         }
 
+        /**
+         * @param disabled If true, the setting specifies the CORS policy is disabled. The default value of false, which indicates that the CORS policy is in effect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Boolean disabled) {
             $.disabled = disabled;
             return this;
         }
 
+        /**
+         * @param exposeHeaders Specifies the content for the Access-Control-Expose-Headers header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exposeHeaders(List<String> exposeHeaders) {
             $.exposeHeaders = exposeHeaders;
             return this;
         }
 
+        /**
+         * @param exposeHeaders Specifies the content for the Access-Control-Expose-Headers header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exposeHeaders(String... exposeHeaders) {
             return exposeHeaders(List.of(exposeHeaders));
         }
 
+        /**
+         * @param maxAge Specifies how long results of a preflight request can be cached in seconds. This field translates to the Access-Control-Max-Age header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAge(Integer maxAge) {
             $.maxAge = maxAge;
             return this;

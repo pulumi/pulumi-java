@@ -9,30 +9,30 @@ import java.util.Objects;
 
 @CustomType
 public final class CustomerEncryptionKeyResponse {
-    /**
-     * The name of the encryption key that is stored in Google Cloud KMS. For example: &#34;kmsKeyName&#34;: &#34;projects/kms_project_id/locations/region/keyRings/ key_region/cryptoKeys/key
-     * 
-     */
+        /**
+         * @return The name of the encryption key that is stored in Google Cloud KMS. For example: &#34;kmsKeyName&#34;: &#34;projects/kms_project_id/locations/region/keyRings/ key_region/cryptoKeys/key
+         * 
+         */
     private final String kmsKeyName;
-    /**
-     * The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used. For example: &#34;kmsKeyServiceAccount&#34;: &#34;name@project_id.iam.gserviceaccount.com/
-     * 
-     */
+        /**
+         * @return The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used. For example: &#34;kmsKeyServiceAccount&#34;: &#34;name@project_id.iam.gserviceaccount.com/
+         * 
+         */
     private final String kmsKeyServiceAccount;
-    /**
-     * Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For example: &#34;rawKey&#34;: &#34;SGVsbG8gZnJvbSBHb29nbGUgQ2xvdWQgUGxhdGZvcm0=&#34;
-     * 
-     */
+        /**
+         * @return Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For example: &#34;rawKey&#34;: &#34;SGVsbG8gZnJvbSBHb29nbGUgQ2xvdWQgUGxhdGZvcm0=&#34;
+         * 
+         */
     private final String rawKey;
-    /**
-     * Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For example: &#34;rsaEncryptedKey&#34;: &#34;ieCx/NcW06PcT7Ep1X6LUTc/hLvUDYyzSZPPVCVPTVEohpeHASqC8uw5TzyO9U+Fka9JFH z0mBibXUInrC/jEk014kCK/NPjYgEMOyssZ4ZINPKxlUh2zn1bV+MCaTICrdmuSBTWlUUiFoD D6PYznLwh8ZNdaheCeZ8ewEXgFQ8V+sDroLaN3Xs3MDTXQEMMoNUXMCZEIpg9Vtp9x2oe==&#34; The key must meet the following requirements before you can provide it to Compute Engine: 1. The key is wrapped using a RSA public key certificate provided by Google. 2. After being wrapped, the key must be encoded in RFC 4648 base64 encoding. Gets the RSA public key certificate provided by Google at: https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem
-     * 
-     */
+        /**
+         * @return Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For example: &#34;rsaEncryptedKey&#34;: &#34;ieCx/NcW06PcT7Ep1X6LUTc/hLvUDYyzSZPPVCVPTVEohpeHASqC8uw5TzyO9U+Fka9JFH z0mBibXUInrC/jEk014kCK/NPjYgEMOyssZ4ZINPKxlUh2zn1bV+MCaTICrdmuSBTWlUUiFoD D6PYznLwh8ZNdaheCeZ8ewEXgFQ8V+sDroLaN3Xs3MDTXQEMMoNUXMCZEIpg9Vtp9x2oe==&#34; The key must meet the following requirements before you can provide it to Compute Engine: 1. The key is wrapped using a RSA public key certificate provided by Google. 2. After being wrapped, the key must be encoded in RFC 4648 base64 encoding. Gets the RSA public key certificate provided by Google at: https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem
+         * 
+         */
     private final String rsaEncryptedKey;
-    /**
-     * [Output only] The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key that protects this resource.
-     * 
-     */
+        /**
+         * @return [Output only] The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key that protects this resource.
+         * 
+         */
     private final String sha256;
 
     @CustomType.Constructor
@@ -50,37 +50,37 @@ public final class CustomerEncryptionKeyResponse {
     }
 
     /**
-     * The name of the encryption key that is stored in Google Cloud KMS. For example: &#34;kmsKeyName&#34;: &#34;projects/kms_project_id/locations/region/keyRings/ key_region/cryptoKeys/key
+     * @return The name of the encryption key that is stored in Google Cloud KMS. For example: &#34;kmsKeyName&#34;: &#34;projects/kms_project_id/locations/region/keyRings/ key_region/cryptoKeys/key
      * 
-    */
+     */
     public String kmsKeyName() {
         return this.kmsKeyName;
     }
     /**
-     * The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used. For example: &#34;kmsKeyServiceAccount&#34;: &#34;name@project_id.iam.gserviceaccount.com/
+     * @return The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used. For example: &#34;kmsKeyServiceAccount&#34;: &#34;name@project_id.iam.gserviceaccount.com/
      * 
-    */
+     */
     public String kmsKeyServiceAccount() {
         return this.kmsKeyServiceAccount;
     }
     /**
-     * Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For example: &#34;rawKey&#34;: &#34;SGVsbG8gZnJvbSBHb29nbGUgQ2xvdWQgUGxhdGZvcm0=&#34;
+     * @return Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For example: &#34;rawKey&#34;: &#34;SGVsbG8gZnJvbSBHb29nbGUgQ2xvdWQgUGxhdGZvcm0=&#34;
      * 
-    */
+     */
     public String rawKey() {
         return this.rawKey;
     }
     /**
-     * Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For example: &#34;rsaEncryptedKey&#34;: &#34;ieCx/NcW06PcT7Ep1X6LUTc/hLvUDYyzSZPPVCVPTVEohpeHASqC8uw5TzyO9U+Fka9JFH z0mBibXUInrC/jEk014kCK/NPjYgEMOyssZ4ZINPKxlUh2zn1bV+MCaTICrdmuSBTWlUUiFoD D6PYznLwh8ZNdaheCeZ8ewEXgFQ8V+sDroLaN3Xs3MDTXQEMMoNUXMCZEIpg9Vtp9x2oe==&#34; The key must meet the following requirements before you can provide it to Compute Engine: 1. The key is wrapped using a RSA public key certificate provided by Google. 2. After being wrapped, the key must be encoded in RFC 4648 base64 encoding. Gets the RSA public key certificate provided by Google at: https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem
+     * @return Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For example: &#34;rsaEncryptedKey&#34;: &#34;ieCx/NcW06PcT7Ep1X6LUTc/hLvUDYyzSZPPVCVPTVEohpeHASqC8uw5TzyO9U+Fka9JFH z0mBibXUInrC/jEk014kCK/NPjYgEMOyssZ4ZINPKxlUh2zn1bV+MCaTICrdmuSBTWlUUiFoD D6PYznLwh8ZNdaheCeZ8ewEXgFQ8V+sDroLaN3Xs3MDTXQEMMoNUXMCZEIpg9Vtp9x2oe==&#34; The key must meet the following requirements before you can provide it to Compute Engine: 1. The key is wrapped using a RSA public key certificate provided by Google. 2. After being wrapped, the key must be encoded in RFC 4648 base64 encoding. Gets the RSA public key certificate provided by Google at: https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem
      * 
-    */
+     */
     public String rsaEncryptedKey() {
         return this.rsaEncryptedKey;
     }
     /**
-     * [Output only] The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key that protects this resource.
+     * @return [Output only] The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key that protects this resource.
      * 
-    */
+     */
     public String sha256() {
         return this.sha256;
     }

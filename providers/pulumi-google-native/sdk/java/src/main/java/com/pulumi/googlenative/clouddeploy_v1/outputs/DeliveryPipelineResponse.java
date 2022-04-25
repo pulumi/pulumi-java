@@ -12,55 +12,55 @@ import java.util.Objects;
 
 @CustomType
 public final class DeliveryPipelineResponse {
-    /**
-     * User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
-     * 
-     */
+        /**
+         * @return User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+         * 
+         */
     private final Map<String,String> annotations;
-    /**
-     * Information around the state of the Delivery Pipeline.
-     * 
-     */
+        /**
+         * @return Information around the state of the Delivery Pipeline.
+         * 
+         */
     private final PipelineConditionResponse condition;
-    /**
-     * Time at which the pipeline was created.
-     * 
-     */
+        /**
+         * @return Time at which the pipeline was created.
+         * 
+         */
     private final String createTime;
-    /**
-     * Description of the `DeliveryPipeline`. Max length is 255 characters.
-     * 
-     */
+        /**
+         * @return Description of the `DeliveryPipeline`. Max length is 255 characters.
+         * 
+         */
     private final String description;
-    /**
-     * This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
-     * 
-     */
+        /**
+         * @return This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
+         * 
+         */
     private final String etag;
-    /**
-     * Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be &lt;= 128 bytes.
-     * 
-     */
+        /**
+         * @return Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be &lt;= 128 bytes.
+         * 
+         */
     private final Map<String,String> labels;
-    /**
-     * Optional. Name of the `DeliveryPipeline`. Format is projects/{project}/ locations/{location}/deliveryPipelines/a-z{0,62}.
-     * 
-     */
+        /**
+         * @return Optional. Name of the `DeliveryPipeline`. Format is projects/{project}/ locations/{location}/deliveryPipelines/a-z{0,62}.
+         * 
+         */
     private final String name;
-    /**
-     * SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`.
-     * 
-     */
+        /**
+         * @return SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`.
+         * 
+         */
     private final SerialPipelineResponse serialPipeline;
-    /**
-     * Unique identifier of the `DeliveryPipeline`.
-     * 
-     */
+        /**
+         * @return Unique identifier of the `DeliveryPipeline`.
+         * 
+         */
     private final String uid;
-    /**
-     * Most recent time at which the pipeline was updated.
-     * 
-     */
+        /**
+         * @return Most recent time at which the pipeline was updated.
+         * 
+         */
     private final String updateTime;
 
     @CustomType.Constructor
@@ -88,72 +88,72 @@ public final class DeliveryPipelineResponse {
     }
 
     /**
-     * User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+     * @return User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
      * 
-    */
+     */
     public Map<String,String> annotations() {
         return this.annotations;
     }
     /**
-     * Information around the state of the Delivery Pipeline.
+     * @return Information around the state of the Delivery Pipeline.
      * 
-    */
+     */
     public PipelineConditionResponse condition() {
         return this.condition;
     }
     /**
-     * Time at which the pipeline was created.
+     * @return Time at which the pipeline was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Description of the `DeliveryPipeline`. Max length is 255 characters.
+     * @return Description of the `DeliveryPipeline`. Max length is 255 characters.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
+     * @return This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be &lt;= 128 bytes.
+     * @return Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be &lt;= 128 bytes.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * Optional. Name of the `DeliveryPipeline`. Format is projects/{project}/ locations/{location}/deliveryPipelines/a-z{0,62}.
+     * @return Optional. Name of the `DeliveryPipeline`. Format is projects/{project}/ locations/{location}/deliveryPipelines/a-z{0,62}.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`.
+     * @return SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`.
      * 
-    */
+     */
     public SerialPipelineResponse serialPipeline() {
         return this.serialPipeline;
     }
     /**
-     * Unique identifier of the `DeliveryPipeline`.
+     * @return Unique identifier of the `DeliveryPipeline`.
      * 
-    */
+     */
     public String uid() {
         return this.uid;
     }
     /**
-     * Most recent time at which the pipeline was updated.
+     * @return Most recent time at which the pipeline was updated.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

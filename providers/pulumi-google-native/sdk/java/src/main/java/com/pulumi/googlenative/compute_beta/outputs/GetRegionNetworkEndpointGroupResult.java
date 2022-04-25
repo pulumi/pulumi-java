@@ -15,95 +15,95 @@ import java.util.Objects;
 
 @CustomType
 public final class GetRegionNetworkEndpointGroupResult {
-    /**
-     * Metadata defined as annotations on the network endpoint group.
-     * 
-     */
+        /**
+         * @return Metadata defined as annotations on the network endpoint group.
+         * 
+         */
     private final Map<String,String> annotations;
-    /**
-     * Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine or cloudFunction may be set.
-     * 
-     */
+        /**
+         * @return Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine or cloudFunction may be set.
+         * 
+         */
     private final NetworkEndpointGroupAppEngineResponse appEngine;
-    /**
-     * Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine or cloudFunction may be set.
-     * 
-     */
+        /**
+         * @return Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine or cloudFunction may be set.
+         * 
+         */
     private final NetworkEndpointGroupCloudFunctionResponse cloudFunction;
-    /**
-     * Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine or cloudFunction may be set.
-     * 
-     */
+        /**
+         * @return Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine or cloudFunction may be set.
+         * 
+         */
     private final NetworkEndpointGroupCloudRunResponse cloudRun;
-    /**
-     * Creation timestamp in RFC3339 text format.
-     * 
-     */
+        /**
+         * @return Creation timestamp in RFC3339 text format.
+         * 
+         */
     private final String creationTimestamp;
-    /**
-     * The default port used if the port number is not specified in the network endpoint.
-     * 
-     */
+        /**
+         * @return The default port used if the port number is not specified in the network endpoint.
+         * 
+         */
     private final Integer defaultPort;
-    /**
-     * An optional description of this resource. Provide this property when you create the resource.
-     * 
-     */
+        /**
+         * @return An optional description of this resource. Provide this property when you create the resource.
+         * 
+         */
     private final String description;
-    /**
-     * Type of the resource. Always compute#networkEndpointGroup for network endpoint group.
-     * 
-     */
+        /**
+         * @return Type of the resource. Always compute#networkEndpointGroup for network endpoint group.
+         * 
+         */
     private final String kind;
-    /**
-     * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
-     */
+        /**
+         * @return Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         */
     private final String name;
-    /**
-     * The URL of the network to which all network endpoints in the NEG belong. Uses &#34;default&#34; project network if unspecified.
-     * 
-     */
+        /**
+         * @return The URL of the network to which all network endpoints in the NEG belong. Uses &#34;default&#34; project network if unspecified.
+         * 
+         */
     private final String network;
-    /**
-     * Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.
-     * 
-     */
+        /**
+         * @return Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.
+         * 
+         */
     private final String networkEndpointType;
-    /**
-     * The target service url used to set up private service connection to a Google API. An example value is: &#34;asia-northeast3-cloudkms.googleapis.com&#34;
-     * 
-     */
+        /**
+         * @return The target service url used to set up private service connection to a Google API. An example value is: &#34;asia-northeast3-cloudkms.googleapis.com&#34;
+         * 
+         */
     private final String pscTargetService;
-    /**
-     * The URL of the region where the network endpoint group is located.
-     * 
-     */
+        /**
+         * @return The URL of the region where the network endpoint group is located.
+         * 
+         */
     private final String region;
-    /**
-     * Server-defined URL for the resource.
-     * 
-     */
+        /**
+         * @return Server-defined URL for the resource.
+         * 
+         */
     private final String selfLink;
-    /**
-     * Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine, cloudFunction or serverlessDeployment may be set.
-     * 
-     */
+        /**
+         * @return Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine, cloudFunction or serverlessDeployment may be set.
+         * 
+         */
     private final NetworkEndpointGroupServerlessDeploymentResponse serverlessDeployment;
-    /**
-     * [Output only] Number of network endpoints in the network endpoint group.
-     * 
-     */
+        /**
+         * @return [Output only] Number of network endpoints in the network endpoint group.
+         * 
+         */
     private final Integer size;
-    /**
-     * Optional URL of the subnetwork to which all network endpoints in the NEG belong.
-     * 
-     */
+        /**
+         * @return Optional URL of the subnetwork to which all network endpoints in the NEG belong.
+         * 
+         */
     private final String subnetwork;
-    /**
-     * The URL of the zone where the network endpoint group is located.
-     * 
-     */
+        /**
+         * @return The URL of the zone where the network endpoint group is located.
+         * 
+         */
     private final String zone;
 
     @CustomType.Constructor
@@ -147,128 +147,128 @@ public final class GetRegionNetworkEndpointGroupResult {
     }
 
     /**
-     * Metadata defined as annotations on the network endpoint group.
+     * @return Metadata defined as annotations on the network endpoint group.
      * 
-    */
+     */
     public Map<String,String> annotations() {
         return this.annotations;
     }
     /**
-     * Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine or cloudFunction may be set.
+     * @return Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine or cloudFunction may be set.
      * 
-    */
+     */
     public NetworkEndpointGroupAppEngineResponse appEngine() {
         return this.appEngine;
     }
     /**
-     * Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine or cloudFunction may be set.
+     * @return Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine or cloudFunction may be set.
      * 
-    */
+     */
     public NetworkEndpointGroupCloudFunctionResponse cloudFunction() {
         return this.cloudFunction;
     }
     /**
-     * Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine or cloudFunction may be set.
+     * @return Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine or cloudFunction may be set.
      * 
-    */
+     */
     public NetworkEndpointGroupCloudRunResponse cloudRun() {
         return this.cloudRun;
     }
     /**
-     * Creation timestamp in RFC3339 text format.
+     * @return Creation timestamp in RFC3339 text format.
      * 
-    */
+     */
     public String creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
-     * The default port used if the port number is not specified in the network endpoint.
+     * @return The default port used if the port number is not specified in the network endpoint.
      * 
-    */
+     */
     public Integer defaultPort() {
         return this.defaultPort;
     }
     /**
-     * An optional description of this resource. Provide this property when you create the resource.
+     * @return An optional description of this resource. Provide this property when you create the resource.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Type of the resource. Always compute#networkEndpointGroup for network endpoint group.
+     * @return Type of the resource. Always compute#networkEndpointGroup for network endpoint group.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * @return Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The URL of the network to which all network endpoints in the NEG belong. Uses &#34;default&#34; project network if unspecified.
+     * @return The URL of the network to which all network endpoints in the NEG belong. Uses &#34;default&#34; project network if unspecified.
      * 
-    */
+     */
     public String network() {
         return this.network;
     }
     /**
-     * Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.
+     * @return Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.
      * 
-    */
+     */
     public String networkEndpointType() {
         return this.networkEndpointType;
     }
     /**
-     * The target service url used to set up private service connection to a Google API. An example value is: &#34;asia-northeast3-cloudkms.googleapis.com&#34;
+     * @return The target service url used to set up private service connection to a Google API. An example value is: &#34;asia-northeast3-cloudkms.googleapis.com&#34;
      * 
-    */
+     */
     public String pscTargetService() {
         return this.pscTargetService;
     }
     /**
-     * The URL of the region where the network endpoint group is located.
+     * @return The URL of the region where the network endpoint group is located.
      * 
-    */
+     */
     public String region() {
         return this.region;
     }
     /**
-     * Server-defined URL for the resource.
+     * @return Server-defined URL for the resource.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }
     /**
-     * Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine, cloudFunction or serverlessDeployment may be set.
+     * @return Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine, cloudFunction or serverlessDeployment may be set.
      * 
-    */
+     */
     public NetworkEndpointGroupServerlessDeploymentResponse serverlessDeployment() {
         return this.serverlessDeployment;
     }
     /**
-     * [Output only] Number of network endpoints in the network endpoint group.
+     * @return [Output only] Number of network endpoints in the network endpoint group.
      * 
-    */
+     */
     public Integer size() {
         return this.size;
     }
     /**
-     * Optional URL of the subnetwork to which all network endpoints in the NEG belong.
+     * @return Optional URL of the subnetwork to which all network endpoints in the NEG belong.
      * 
-    */
+     */
     public String subnetwork() {
         return this.subnetwork;
     }
     /**
-     * The URL of the zone where the network endpoint group is located.
+     * @return The URL of the zone where the network endpoint group is located.
      * 
-    */
+     */
     public String zone() {
         return this.zone;
     }

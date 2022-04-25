@@ -26,6 +26,10 @@ public final class ApiEndpointHandlerArgs extends com.pulumi.resources.ResourceA
     @Import(name="scriptPath")
     private @Nullable Output<String> scriptPath;
 
+    /**
+     * @return Path to the script from the application root directory.
+     * 
+     */
     public Optional<Output<String>> scriptPath() {
         return Optional.ofNullable(this.scriptPath);
     }
@@ -54,11 +58,23 @@ public final class ApiEndpointHandlerArgs extends com.pulumi.resources.ResourceA
             $ = new ApiEndpointHandlerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scriptPath Path to the script from the application root directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptPath(@Nullable Output<String> scriptPath) {
             $.scriptPath = scriptPath;
             return this;
         }
 
+        /**
+         * @param scriptPath Path to the script from the application root directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptPath(String scriptPath) {
             return scriptPath(Output.of(scriptPath));
         }

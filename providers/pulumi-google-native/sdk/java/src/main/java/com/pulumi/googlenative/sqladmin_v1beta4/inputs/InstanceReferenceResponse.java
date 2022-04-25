@@ -23,6 +23,10 @@ public final class InstanceReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the Cloud SQL instance being referenced. This does not include the project ID.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class InstanceReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return The project ID of the Cloud SQL instance being referenced. The default is the same project ID as the instance references it.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -45,6 +53,10 @@ public final class InstanceReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="region", required=true)
     private String region;
 
+    /**
+     * @return The region of the Cloud SQL instance being referenced.
+     * 
+     */
     public String region() {
         return this.region;
     }
@@ -75,16 +87,34 @@ public final class InstanceReferenceResponse extends com.pulumi.resources.Invoke
             $ = new InstanceReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the Cloud SQL instance being referenced. This does not include the project ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param project The project ID of the Cloud SQL instance being referenced. The default is the same project ID as the instance references it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param region The region of the Cloud SQL instance being referenced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             $.region = region;
             return this;

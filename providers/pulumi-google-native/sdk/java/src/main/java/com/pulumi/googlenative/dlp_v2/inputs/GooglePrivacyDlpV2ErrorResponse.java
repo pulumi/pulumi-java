@@ -25,6 +25,10 @@ public final class GooglePrivacyDlpV2ErrorResponse extends com.pulumi.resources.
     @Import(name="details", required=true)
     private GoogleRpcStatusResponse details;
 
+    /**
+     * @return Detailed error codes and messages.
+     * 
+     */
     public GoogleRpcStatusResponse details() {
         return this.details;
     }
@@ -36,6 +40,10 @@ public final class GooglePrivacyDlpV2ErrorResponse extends com.pulumi.resources.
     @Import(name="timestamps", required=true)
     private List<String> timestamps;
 
+    /**
+     * @return The times the error occurred.
+     * 
+     */
     public List<String> timestamps() {
         return this.timestamps;
     }
@@ -65,16 +73,34 @@ public final class GooglePrivacyDlpV2ErrorResponse extends com.pulumi.resources.
             $ = new GooglePrivacyDlpV2ErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param details Detailed error codes and messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(GoogleRpcStatusResponse details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param timestamps The times the error occurred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timestamps(List<String> timestamps) {
             $.timestamps = timestamps;
             return this;
         }
 
+        /**
+         * @param timestamps The times the error occurred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timestamps(String... timestamps) {
             return timestamps(List.of(timestamps));
         }

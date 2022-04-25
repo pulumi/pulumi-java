@@ -11,35 +11,35 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSourceResult {
-    /**
-     * The create time timestamp.
-     * 
-     */
+        /**
+         * @return The create time timestamp.
+         * 
+         */
     private final String createTime;
-    /**
-     * User-provided description of the source.
-     * 
-     */
+        /**
+         * @return User-provided description of the source.
+         * 
+         */
     private final String description;
-    /**
-     * The labels of the source.
-     * 
-     */
+        /**
+         * @return The labels of the source.
+         * 
+         */
     private final Map<String,String> labels;
-    /**
-     * The Source name.
-     * 
-     */
+        /**
+         * @return The Source name.
+         * 
+         */
     private final String name;
-    /**
-     * The update time timestamp.
-     * 
-     */
+        /**
+         * @return The update time timestamp.
+         * 
+         */
     private final String updateTime;
-    /**
-     * Vmware type source details.
-     * 
-     */
+        /**
+         * @return Vmware type source details.
+         * 
+         */
     private final VmwareSourceDetailsResponse vmware;
 
     @CustomType.Constructor
@@ -59,44 +59,44 @@ public final class GetSourceResult {
     }
 
     /**
-     * The create time timestamp.
+     * @return The create time timestamp.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * User-provided description of the source.
+     * @return User-provided description of the source.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The labels of the source.
+     * @return The labels of the source.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The Source name.
+     * @return The Source name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The update time timestamp.
+     * @return The update time timestamp.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }
     /**
-     * Vmware type source details.
+     * @return Vmware type source details.
      * 
-    */
+     */
     public VmwareSourceDetailsResponse vmware() {
         return this.vmware;
     }

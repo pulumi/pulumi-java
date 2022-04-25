@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class AutoscalingSettingsResponse {
-    /**
-     * The algorithm to use for autoscaling.
-     * 
-     */
+        /**
+         * @return The algorithm to use for autoscaling.
+         * 
+         */
     private final String algorithm;
-    /**
-     * The maximum number of workers to cap scaling at.
-     * 
-     */
+        /**
+         * @return The maximum number of workers to cap scaling at.
+         * 
+         */
     private final Integer maxNumWorkers;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class AutoscalingSettingsResponse {
     }
 
     /**
-     * The algorithm to use for autoscaling.
+     * @return The algorithm to use for autoscaling.
      * 
-    */
+     */
     public String algorithm() {
         return this.algorithm;
     }
     /**
-     * The maximum number of workers to cap scaling at.
+     * @return The maximum number of workers to cap scaling at.
      * 
-    */
+     */
     public Integer maxNumWorkers() {
         return this.maxNumWorkers;
     }

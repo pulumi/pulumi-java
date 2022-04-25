@@ -26,6 +26,10 @@ public final class GaugeViewArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lowerBound")
     private @Nullable Output<Double> lowerBound;
 
+    /**
+     * @return The lower bound for this gauge chart. The value of the chart should always be greater than or equal to this.
+     * 
+     */
     public Optional<Output<Double>> lowerBound() {
         return Optional.ofNullable(this.lowerBound);
     }
@@ -37,6 +41,10 @@ public final class GaugeViewArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="upperBound")
     private @Nullable Output<Double> upperBound;
 
+    /**
+     * @return The upper bound for this gauge chart. The value of the chart should always be less than or equal to this.
+     * 
+     */
     public Optional<Output<Double>> upperBound() {
         return Optional.ofNullable(this.upperBound);
     }
@@ -66,20 +74,44 @@ public final class GaugeViewArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GaugeViewArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lowerBound The lower bound for this gauge chart. The value of the chart should always be greater than or equal to this.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lowerBound(@Nullable Output<Double> lowerBound) {
             $.lowerBound = lowerBound;
             return this;
         }
 
+        /**
+         * @param lowerBound The lower bound for this gauge chart. The value of the chart should always be greater than or equal to this.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lowerBound(Double lowerBound) {
             return lowerBound(Output.of(lowerBound));
         }
 
+        /**
+         * @param upperBound The upper bound for this gauge chart. The value of the chart should always be less than or equal to this.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upperBound(@Nullable Output<Double> upperBound) {
             $.upperBound = upperBound;
             return this;
         }
 
+        /**
+         * @param upperBound The upper bound for this gauge chart. The value of the chart should always be less than or equal to this.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upperBound(Double upperBound) {
             return upperBound(Output.of(upperBound));
         }

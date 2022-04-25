@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class LockConfigResponse {
-    /**
-     * Indicates whether or not the connection is locked.
-     * 
-     */
+        /**
+         * @return Indicates whether or not the connection is locked.
+         * 
+         */
     private final Boolean locked;
-    /**
-     * Describes why a connection is locked.
-     * 
-     */
+        /**
+         * @return Describes why a connection is locked.
+         * 
+         */
     private final String reason;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class LockConfigResponse {
     }
 
     /**
-     * Indicates whether or not the connection is locked.
+     * @return Indicates whether or not the connection is locked.
      * 
-    */
+     */
     public Boolean locked() {
         return this.locked;
     }
     /**
-     * Describes why a connection is locked.
+     * @return Describes why a connection is locked.
      * 
-    */
+     */
     public String reason() {
         return this.reason;
     }

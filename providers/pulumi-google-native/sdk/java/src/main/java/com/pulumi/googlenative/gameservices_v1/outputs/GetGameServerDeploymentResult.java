@@ -10,35 +10,35 @@ import java.util.Objects;
 
 @CustomType
 public final class GetGameServerDeploymentResult {
-    /**
-     * The creation time.
-     * 
-     */
+        /**
+         * @return The creation time.
+         * 
+         */
     private final String createTime;
-    /**
-     * Human readable description of the game server delpoyment.
-     * 
-     */
+        /**
+         * @return Human readable description of the game server delpoyment.
+         * 
+         */
     private final String description;
-    /**
-     * ETag of the resource.
-     * 
-     */
+        /**
+         * @return ETag of the resource.
+         * 
+         */
     private final String etag;
-    /**
-     * The labels associated with this game server deployment. Each label is a key-value pair.
-     * 
-     */
+        /**
+         * @return The labels associated with this game server deployment. Each label is a key-value pair.
+         * 
+         */
     private final Map<String,String> labels;
-    /**
-     * The resource name of the game server deployment, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
-     * 
-     */
+        /**
+         * @return The resource name of the game server deployment, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
+         * 
+         */
     private final String name;
-    /**
-     * The last-modified time.
-     * 
-     */
+        /**
+         * @return The last-modified time.
+         * 
+         */
     private final String updateTime;
 
     @CustomType.Constructor
@@ -58,44 +58,44 @@ public final class GetGameServerDeploymentResult {
     }
 
     /**
-     * The creation time.
+     * @return The creation time.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Human readable description of the game server delpoyment.
+     * @return Human readable description of the game server delpoyment.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * ETag of the resource.
+     * @return ETag of the resource.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The labels associated with this game server deployment. Each label is a key-value pair.
+     * @return The labels associated with this game server deployment. Each label is a key-value pair.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The resource name of the game server deployment, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
+     * @return The resource name of the game server deployment, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The last-modified time.
+     * @return The last-modified time.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

@@ -11,10 +11,10 @@ import java.util.Objects;
 @CustomType
 public final class ManagedZonePeeringConfigResponse {
     private final String kind;
-    /**
-     * The network with which to peer.
-     * 
-     */
+        /**
+         * @return The network with which to peer.
+         * 
+         */
     private final ManagedZonePeeringConfigTargetNetworkResponse targetNetwork;
 
     @CustomType.Constructor
@@ -29,9 +29,9 @@ public final class ManagedZonePeeringConfigResponse {
         return this.kind;
     }
     /**
-     * The network with which to peer.
+     * @return The network with which to peer.
      * 
-    */
+     */
     public ManagedZonePeeringConfigTargetNetworkResponse targetNetwork() {
         return this.targetNetwork;
     }

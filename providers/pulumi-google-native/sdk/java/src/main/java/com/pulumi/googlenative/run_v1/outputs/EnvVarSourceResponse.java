@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class EnvVarSourceResponse {
-    /**
-     * (Optional) Not supported by Cloud Run Selects a key of a ConfigMap.
-     * 
-     */
+        /**
+         * @return (Optional) Not supported by Cloud Run Selects a key of a ConfigMap.
+         * 
+         */
     private final ConfigMapKeySelectorResponse configMapKeyRef;
-    /**
-     * (Optional) Selects a key (version) of a secret in Secret Manager.
-     * 
-     */
+        /**
+         * @return (Optional) Selects a key (version) of a secret in Secret Manager.
+         * 
+         */
     private final SecretKeySelectorResponse secretKeyRef;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class EnvVarSourceResponse {
     }
 
     /**
-     * (Optional) Not supported by Cloud Run Selects a key of a ConfigMap.
+     * @return (Optional) Not supported by Cloud Run Selects a key of a ConfigMap.
      * 
-    */
+     */
     public ConfigMapKeySelectorResponse configMapKeyRef() {
         return this.configMapKeyRef;
     }
     /**
-     * (Optional) Selects a key (version) of a secret in Secret Manager.
+     * @return (Optional) Selects a key (version) of a secret in Secret Manager.
      * 
-    */
+     */
     public SecretKeySelectorResponse secretKeyRef() {
         return this.secretKeyRef;
     }

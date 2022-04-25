@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GetTopicResult {
-    /**
-     * Name of the topic.
-     * 
-     */
+        /**
+         * @return Name of the topic.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GetTopicResult {
     }
 
     /**
-     * Name of the topic.
+     * @return Name of the topic.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

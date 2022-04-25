@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class DiagnosticResponse {
-    /**
-     * JsonPath expression on the resource that if non empty, indicates that this field needs to be extracted as a diagnostic.
-     * 
-     */
+        /**
+         * @return JsonPath expression on the resource that if non empty, indicates that this field needs to be extracted as a diagnostic.
+         * 
+         */
     private final String field;
-    /**
-     * Level to record this diagnostic.
-     * 
-     */
+        /**
+         * @return Level to record this diagnostic.
+         * 
+         */
     private final String level;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class DiagnosticResponse {
     }
 
     /**
-     * JsonPath expression on the resource that if non empty, indicates that this field needs to be extracted as a diagnostic.
+     * @return JsonPath expression on the resource that if non empty, indicates that this field needs to be extracted as a diagnostic.
      * 
-    */
+     */
     public String field() {
         return this.field;
     }
     /**
-     * Level to record this diagnostic.
+     * @return Level to record this diagnostic.
      * 
-    */
+     */
     public String level() {
         return this.level;
     }

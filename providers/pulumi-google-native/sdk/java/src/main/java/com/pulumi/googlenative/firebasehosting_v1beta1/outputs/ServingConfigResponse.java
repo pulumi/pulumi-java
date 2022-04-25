@@ -15,40 +15,40 @@ import java.util.Objects;
 
 @CustomType
 public final class ServingConfigResponse {
-    /**
-     * How to handle well known App Association files.
-     * 
-     */
+        /**
+         * @return How to handle well known App Association files.
+         * 
+         */
     private final String appAssociation;
-    /**
-     * Defines whether to drop the file extension from uploaded files.
-     * 
-     */
+        /**
+         * @return Defines whether to drop the file extension from uploaded files.
+         * 
+         */
     private final Boolean cleanUrls;
-    /**
-     * An array of objects, where each object specifies a URL pattern that, if matched to the request URL path, triggers Hosting to apply the specified custom response headers.
-     * 
-     */
+        /**
+         * @return An array of objects, where each object specifies a URL pattern that, if matched to the request URL path, triggers Hosting to apply the specified custom response headers.
+         * 
+         */
     private final List<HeaderResponse> headers;
-    /**
-     * Optional. Defines i18n rewrite behavior.
-     * 
-     */
+        /**
+         * @return Optional. Defines i18n rewrite behavior.
+         * 
+         */
     private final I18nConfigResponse i18n;
-    /**
-     * An array of objects (called redirect rules), where each rule specifies a URL pattern that, if matched to the request URL path, triggers Hosting to respond with a redirect to the specified destination path.
-     * 
-     */
+        /**
+         * @return An array of objects (called redirect rules), where each rule specifies a URL pattern that, if matched to the request URL path, triggers Hosting to respond with a redirect to the specified destination path.
+         * 
+         */
     private final List<RedirectResponse> redirects;
-    /**
-     * An array of objects (called rewrite rules), where each rule specifies a URL pattern that, if matched to the request URL path, triggers Hosting to respond as if the service were given the specified destination URL.
-     * 
-     */
+        /**
+         * @return An array of objects (called rewrite rules), where each rule specifies a URL pattern that, if matched to the request URL path, triggers Hosting to respond as if the service were given the specified destination URL.
+         * 
+         */
     private final List<RewriteResponse> rewrites;
-    /**
-     * Defines how to handle a trailing slash in the URL path.
-     * 
-     */
+        /**
+         * @return Defines how to handle a trailing slash in the URL path.
+         * 
+         */
     private final String trailingSlashBehavior;
 
     @CustomType.Constructor
@@ -70,51 +70,51 @@ public final class ServingConfigResponse {
     }
 
     /**
-     * How to handle well known App Association files.
+     * @return How to handle well known App Association files.
      * 
-    */
+     */
     public String appAssociation() {
         return this.appAssociation;
     }
     /**
-     * Defines whether to drop the file extension from uploaded files.
+     * @return Defines whether to drop the file extension from uploaded files.
      * 
-    */
+     */
     public Boolean cleanUrls() {
         return this.cleanUrls;
     }
     /**
-     * An array of objects, where each object specifies a URL pattern that, if matched to the request URL path, triggers Hosting to apply the specified custom response headers.
+     * @return An array of objects, where each object specifies a URL pattern that, if matched to the request URL path, triggers Hosting to apply the specified custom response headers.
      * 
-    */
+     */
     public List<HeaderResponse> headers() {
         return this.headers;
     }
     /**
-     * Optional. Defines i18n rewrite behavior.
+     * @return Optional. Defines i18n rewrite behavior.
      * 
-    */
+     */
     public I18nConfigResponse i18n() {
         return this.i18n;
     }
     /**
-     * An array of objects (called redirect rules), where each rule specifies a URL pattern that, if matched to the request URL path, triggers Hosting to respond with a redirect to the specified destination path.
+     * @return An array of objects (called redirect rules), where each rule specifies a URL pattern that, if matched to the request URL path, triggers Hosting to respond with a redirect to the specified destination path.
      * 
-    */
+     */
     public List<RedirectResponse> redirects() {
         return this.redirects;
     }
     /**
-     * An array of objects (called rewrite rules), where each rule specifies a URL pattern that, if matched to the request URL path, triggers Hosting to respond as if the service were given the specified destination URL.
+     * @return An array of objects (called rewrite rules), where each rule specifies a URL pattern that, if matched to the request URL path, triggers Hosting to respond as if the service were given the specified destination URL.
      * 
-    */
+     */
     public List<RewriteResponse> rewrites() {
         return this.rewrites;
     }
     /**
-     * Defines how to handle a trailing slash in the URL path.
+     * @return Defines how to handle a trailing slash in the URL path.
      * 
-    */
+     */
     public String trailingSlashBehavior() {
         return this.trailingSlashBehavior;
     }

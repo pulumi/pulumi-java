@@ -15,45 +15,45 @@ import java.util.Objects;
 
 @CustomType
 public final class JobConfigurationResponse {
-    /**
-     * [Pick one] Copies a table.
-     * 
-     */
+        /**
+         * @return [Pick one] Copies a table.
+         * 
+         */
     private final JobConfigurationTableCopyResponse copy;
-    /**
-     * [Optional] If set, don&#39;t actually run this job. A valid query will return a mostly empty response with some processing statistics, while an invalid query will return the same error it would if it wasn&#39;t a dry run. Behavior of non-query jobs is undefined.
-     * 
-     */
+        /**
+         * @return [Optional] If set, don&#39;t actually run this job. A valid query will return a mostly empty response with some processing statistics, while an invalid query will return the same error it would if it wasn&#39;t a dry run. Behavior of non-query jobs is undefined.
+         * 
+         */
     private final Boolean dryRun;
-    /**
-     * [Pick one] Configures an extract job.
-     * 
-     */
+        /**
+         * @return [Pick one] Configures an extract job.
+         * 
+         */
     private final JobConfigurationExtractResponse extract;
-    /**
-     * [Optional] Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
-     * 
-     */
+        /**
+         * @return [Optional] Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
+         * 
+         */
     private final String jobTimeoutMs;
-    /**
-     * The type of the job. Can be QUERY, LOAD, EXTRACT, COPY or UNKNOWN.
-     * 
-     */
+        /**
+         * @return The type of the job. Can be QUERY, LOAD, EXTRACT, COPY or UNKNOWN.
+         * 
+         */
     private final String jobType;
-    /**
-     * The labels associated with this job. You can use these to organize and group your jobs. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International characters are allowed. Label values are optional. Label keys must start with a letter and each label in the list must have a different key.
-     * 
-     */
+        /**
+         * @return The labels associated with this job. You can use these to organize and group your jobs. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International characters are allowed. Label values are optional. Label keys must start with a letter and each label in the list must have a different key.
+         * 
+         */
     private final Map<String,String> labels;
-    /**
-     * [Pick one] Configures a load job.
-     * 
-     */
+        /**
+         * @return [Pick one] Configures a load job.
+         * 
+         */
     private final JobConfigurationLoadResponse load;
-    /**
-     * [Pick one] Configures a query job.
-     * 
-     */
+        /**
+         * @return [Pick one] Configures a query job.
+         * 
+         */
     private final JobConfigurationQueryResponse query;
 
     @CustomType.Constructor
@@ -77,58 +77,58 @@ public final class JobConfigurationResponse {
     }
 
     /**
-     * [Pick one] Copies a table.
+     * @return [Pick one] Copies a table.
      * 
-    */
+     */
     public JobConfigurationTableCopyResponse copy() {
         return this.copy;
     }
     /**
-     * [Optional] If set, don&#39;t actually run this job. A valid query will return a mostly empty response with some processing statistics, while an invalid query will return the same error it would if it wasn&#39;t a dry run. Behavior of non-query jobs is undefined.
+     * @return [Optional] If set, don&#39;t actually run this job. A valid query will return a mostly empty response with some processing statistics, while an invalid query will return the same error it would if it wasn&#39;t a dry run. Behavior of non-query jobs is undefined.
      * 
-    */
+     */
     public Boolean dryRun() {
         return this.dryRun;
     }
     /**
-     * [Pick one] Configures an extract job.
+     * @return [Pick one] Configures an extract job.
      * 
-    */
+     */
     public JobConfigurationExtractResponse extract() {
         return this.extract;
     }
     /**
-     * [Optional] Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
+     * @return [Optional] Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
      * 
-    */
+     */
     public String jobTimeoutMs() {
         return this.jobTimeoutMs;
     }
     /**
-     * The type of the job. Can be QUERY, LOAD, EXTRACT, COPY or UNKNOWN.
+     * @return The type of the job. Can be QUERY, LOAD, EXTRACT, COPY or UNKNOWN.
      * 
-    */
+     */
     public String jobType() {
         return this.jobType;
     }
     /**
-     * The labels associated with this job. You can use these to organize and group your jobs. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International characters are allowed. Label values are optional. Label keys must start with a letter and each label in the list must have a different key.
+     * @return The labels associated with this job. You can use these to organize and group your jobs. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International characters are allowed. Label values are optional. Label keys must start with a letter and each label in the list must have a different key.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * [Pick one] Configures a load job.
+     * @return [Pick one] Configures a load job.
      * 
-    */
+     */
     public JobConfigurationLoadResponse load() {
         return this.load;
     }
     /**
-     * [Pick one] Configures a query job.
+     * @return [Pick one] Configures a query job.
      * 
-    */
+     */
     public JobConfigurationQueryResponse query() {
         return this.query;
     }

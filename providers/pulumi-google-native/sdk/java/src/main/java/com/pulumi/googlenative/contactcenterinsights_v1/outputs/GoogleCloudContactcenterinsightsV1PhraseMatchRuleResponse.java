@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse {
-    /**
-     * Provides additional information about the rule that specifies how to apply the rule.
-     * 
-     */
+        /**
+         * @return Provides additional information about the rule that specifies how to apply the rule.
+         * 
+         */
     private final GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse config;
-    /**
-     * Specifies whether the phrase must be missing from the transcript segment or present in the transcript segment.
-     * 
-     */
+        /**
+         * @return Specifies whether the phrase must be missing from the transcript segment or present in the transcript segment.
+         * 
+         */
     private final Boolean negated;
-    /**
-     * The phrase to be matched.
-     * 
-     */
+        /**
+         * @return The phrase to be matched.
+         * 
+         */
     private final String query;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse {
     }
 
     /**
-     * Provides additional information about the rule that specifies how to apply the rule.
+     * @return Provides additional information about the rule that specifies how to apply the rule.
      * 
-    */
+     */
     public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse config() {
         return this.config;
     }
     /**
-     * Specifies whether the phrase must be missing from the transcript segment or present in the transcript segment.
+     * @return Specifies whether the phrase must be missing from the transcript segment or present in the transcript segment.
      * 
-    */
+     */
     public Boolean negated() {
         return this.negated;
     }
     /**
-     * The phrase to be matched.
+     * @return The phrase to be matched.
      * 
-    */
+     */
     public String query() {
         return this.query;
     }

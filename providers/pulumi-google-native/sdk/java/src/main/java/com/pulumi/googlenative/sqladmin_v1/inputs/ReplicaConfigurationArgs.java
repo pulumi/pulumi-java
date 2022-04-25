@@ -28,6 +28,10 @@ public final class ReplicaConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="failoverTarget")
     private @Nullable Output<Boolean> failoverTarget;
 
+    /**
+     * @return Specifies if the replica is the failover target. If the field is set to `true`, the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.
+     * 
+     */
     public Optional<Output<Boolean>> failoverTarget() {
         return Optional.ofNullable(this.failoverTarget);
     }
@@ -39,6 +43,10 @@ public final class ReplicaConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return This is always `sql#replicaConfiguration`.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -50,6 +58,10 @@ public final class ReplicaConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="mysqlReplicaConfiguration")
     private @Nullable Output<MySqlReplicaConfigurationArgs> mysqlReplicaConfiguration;
 
+    /**
+     * @return MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named `master.info` in the data directory.
+     * 
+     */
     public Optional<Output<MySqlReplicaConfigurationArgs>> mysqlReplicaConfiguration() {
         return Optional.ofNullable(this.mysqlReplicaConfiguration);
     }
@@ -80,29 +92,65 @@ public final class ReplicaConfigurationArgs extends com.pulumi.resources.Resourc
             $ = new ReplicaConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param failoverTarget Specifies if the replica is the failover target. If the field is set to `true`, the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverTarget(@Nullable Output<Boolean> failoverTarget) {
             $.failoverTarget = failoverTarget;
             return this;
         }
 
+        /**
+         * @param failoverTarget Specifies if the replica is the failover target. If the field is set to `true`, the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverTarget(Boolean failoverTarget) {
             return failoverTarget(Output.of(failoverTarget));
         }
 
+        /**
+         * @param kind This is always `sql#replicaConfiguration`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind This is always `sql#replicaConfiguration`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param mysqlReplicaConfiguration MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named `master.info` in the data directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysqlReplicaConfiguration(@Nullable Output<MySqlReplicaConfigurationArgs> mysqlReplicaConfiguration) {
             $.mysqlReplicaConfiguration = mysqlReplicaConfiguration;
             return this;
         }
 
+        /**
+         * @param mysqlReplicaConfiguration MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named `master.info` in the data directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysqlReplicaConfiguration(MySqlReplicaConfigurationArgs mysqlReplicaConfiguration) {
             return mysqlReplicaConfiguration(Output.of(mysqlReplicaConfiguration));
         }

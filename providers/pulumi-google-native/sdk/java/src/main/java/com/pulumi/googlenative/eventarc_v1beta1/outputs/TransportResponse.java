@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class TransportResponse {
-    /**
-     * The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
-     * 
-     */
+        /**
+         * @return The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
+         * 
+         */
     private final PubsubResponse pubsub;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class TransportResponse {
     }
 
     /**
-     * The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
+     * @return The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
      * 
-    */
+     */
     public PubsubResponse pubsub() {
         return this.pubsub;
     }

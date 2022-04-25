@@ -27,6 +27,10 @@ public final class NodePoolAutoscalingArgs extends com.pulumi.resources.Resource
     @Import(name="autoprovisioned")
     private @Nullable Output<Boolean> autoprovisioned;
 
+    /**
+     * @return Can this node pool be deleted automatically.
+     * 
+     */
     public Optional<Output<Boolean>> autoprovisioned() {
         return Optional.ofNullable(this.autoprovisioned);
     }
@@ -38,6 +42,10 @@ public final class NodePoolAutoscalingArgs extends com.pulumi.resources.Resource
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Is autoscaling enabled for this node pool.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -49,6 +57,10 @@ public final class NodePoolAutoscalingArgs extends com.pulumi.resources.Resource
     @Import(name="maxNodeCount")
     private @Nullable Output<Integer> maxNodeCount;
 
+    /**
+     * @return Maximum number of nodes for one location in the NodePool. Must be &gt;= min_node_count. There has to be enough quota to scale up the cluster.
+     * 
+     */
     public Optional<Output<Integer>> maxNodeCount() {
         return Optional.ofNullable(this.maxNodeCount);
     }
@@ -60,6 +72,10 @@ public final class NodePoolAutoscalingArgs extends com.pulumi.resources.Resource
     @Import(name="minNodeCount")
     private @Nullable Output<Integer> minNodeCount;
 
+    /**
+     * @return Minimum number of nodes for one location in the NodePool. Must be &gt;= 1 and &lt;= max_node_count.
+     * 
+     */
     public Optional<Output<Integer>> minNodeCount() {
         return Optional.ofNullable(this.minNodeCount);
     }
@@ -91,38 +107,86 @@ public final class NodePoolAutoscalingArgs extends com.pulumi.resources.Resource
             $ = new NodePoolAutoscalingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoprovisioned Can this node pool be deleted automatically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoprovisioned(@Nullable Output<Boolean> autoprovisioned) {
             $.autoprovisioned = autoprovisioned;
             return this;
         }
 
+        /**
+         * @param autoprovisioned Can this node pool be deleted automatically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoprovisioned(Boolean autoprovisioned) {
             return autoprovisioned(Output.of(autoprovisioned));
         }
 
+        /**
+         * @param enabled Is autoscaling enabled for this node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Is autoscaling enabled for this node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param maxNodeCount Maximum number of nodes for one location in the NodePool. Must be &gt;= min_node_count. There has to be enough quota to scale up the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxNodeCount(@Nullable Output<Integer> maxNodeCount) {
             $.maxNodeCount = maxNodeCount;
             return this;
         }
 
+        /**
+         * @param maxNodeCount Maximum number of nodes for one location in the NodePool. Must be &gt;= min_node_count. There has to be enough quota to scale up the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxNodeCount(Integer maxNodeCount) {
             return maxNodeCount(Output.of(maxNodeCount));
         }
 
+        /**
+         * @param minNodeCount Minimum number of nodes for one location in the NodePool. Must be &gt;= 1 and &lt;= max_node_count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNodeCount(@Nullable Output<Integer> minNodeCount) {
             $.minNodeCount = minNodeCount;
             return this;
         }
 
+        /**
+         * @param minNodeCount Minimum number of nodes for one location in the NodePool. Must be &gt;= 1 and &lt;= max_node_count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNodeCount(Integer minNodeCount) {
             return minNodeCount(Output.of(minNodeCount));
         }

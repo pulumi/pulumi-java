@@ -9,35 +9,35 @@ import java.util.Objects;
 
 @CustomType
 public final class X509CertificateDetailsResponse {
-    /**
-     * The time the certificate becomes invalid.
-     * 
-     */
+        /**
+         * @return The time the certificate becomes invalid.
+         * 
+         */
     private final String expiryTime;
-    /**
-     * The entity that signed the certificate.
-     * 
-     */
+        /**
+         * @return The entity that signed the certificate.
+         * 
+         */
     private final String issuer;
-    /**
-     * The type of public key in the certificate.
-     * 
-     */
+        /**
+         * @return The type of public key in the certificate.
+         * 
+         */
     private final String publicKeyType;
-    /**
-     * The algorithm used to sign the certificate.
-     * 
-     */
+        /**
+         * @return The algorithm used to sign the certificate.
+         * 
+         */
     private final String signatureAlgorithm;
-    /**
-     * The time the certificate becomes valid.
-     * 
-     */
+        /**
+         * @return The time the certificate becomes valid.
+         * 
+         */
     private final String startTime;
-    /**
-     * The entity the certificate and public key belong to.
-     * 
-     */
+        /**
+         * @return The entity the certificate and public key belong to.
+         * 
+         */
     private final String subject;
 
     @CustomType.Constructor
@@ -57,44 +57,44 @@ public final class X509CertificateDetailsResponse {
     }
 
     /**
-     * The time the certificate becomes invalid.
+     * @return The time the certificate becomes invalid.
      * 
-    */
+     */
     public String expiryTime() {
         return this.expiryTime;
     }
     /**
-     * The entity that signed the certificate.
+     * @return The entity that signed the certificate.
      * 
-    */
+     */
     public String issuer() {
         return this.issuer;
     }
     /**
-     * The type of public key in the certificate.
+     * @return The type of public key in the certificate.
      * 
-    */
+     */
     public String publicKeyType() {
         return this.publicKeyType;
     }
     /**
-     * The algorithm used to sign the certificate.
+     * @return The algorithm used to sign the certificate.
      * 
-    */
+     */
     public String signatureAlgorithm() {
         return this.signatureAlgorithm;
     }
     /**
-     * The time the certificate becomes valid.
+     * @return The time the certificate becomes valid.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * The entity the certificate and public key belong to.
+     * @return The entity the certificate and public key belong to.
      * 
-    */
+     */
     public String subject() {
         return this.subject;
     }

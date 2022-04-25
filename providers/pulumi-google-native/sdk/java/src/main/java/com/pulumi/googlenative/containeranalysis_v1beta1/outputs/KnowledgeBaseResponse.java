@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class KnowledgeBaseResponse {
-    /**
-     * The KB name (generally of the form KB[0-9]+ i.e. KB123456).
-     * 
-     */
+        /**
+         * @return The KB name (generally of the form KB[0-9]+ i.e. KB123456).
+         * 
+         */
     private final String name;
-    /**
-     * A link to the KB in the Windows update catalog - https://www.catalog.update.microsoft.com/
-     * 
-     */
+        /**
+         * @return A link to the KB in the Windows update catalog - https://www.catalog.update.microsoft.com/
+         * 
+         */
     private final String url;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class KnowledgeBaseResponse {
     }
 
     /**
-     * The KB name (generally of the form KB[0-9]+ i.e. KB123456).
+     * @return The KB name (generally of the form KB[0-9]+ i.e. KB123456).
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A link to the KB in the Windows update catalog - https://www.catalog.update.microsoft.com/
+     * @return A link to the KB in the Windows update catalog - https://www.catalog.update.microsoft.com/
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

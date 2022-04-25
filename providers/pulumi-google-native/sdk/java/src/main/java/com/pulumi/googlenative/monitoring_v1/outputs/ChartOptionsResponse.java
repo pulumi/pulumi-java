@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ChartOptionsResponse {
-    /**
-     * The chart mode.
-     * 
-     */
+        /**
+         * @return The chart mode.
+         * 
+         */
     private final String mode;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ChartOptionsResponse {
     }
 
     /**
-     * The chart mode.
+     * @return The chart mode.
      * 
-    */
+     */
     public String mode() {
         return this.mode;
     }

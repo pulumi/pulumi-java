@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class StateHistoryResponse {
-    /**
-     * The state of the batch at this point in history.
-     * 
-     */
+        /**
+         * @return The state of the batch at this point in history.
+         * 
+         */
     private final String state;
-    /**
-     * Details about the state at this point in history.
-     * 
-     */
+        /**
+         * @return Details about the state at this point in history.
+         * 
+         */
     private final String stateMessage;
-    /**
-     * The time when the batch entered the historical state.
-     * 
-     */
+        /**
+         * @return The time when the batch entered the historical state.
+         * 
+         */
     private final String stateStartTime;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class StateHistoryResponse {
     }
 
     /**
-     * The state of the batch at this point in history.
+     * @return The state of the batch at this point in history.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Details about the state at this point in history.
+     * @return Details about the state at this point in history.
      * 
-    */
+     */
     public String stateMessage() {
         return this.stateMessage;
     }
     /**
-     * The time when the batch entered the historical state.
+     * @return The time when the batch entered the historical state.
      * 
-    */
+     */
     public String stateStartTime() {
         return this.stateStartTime;
     }

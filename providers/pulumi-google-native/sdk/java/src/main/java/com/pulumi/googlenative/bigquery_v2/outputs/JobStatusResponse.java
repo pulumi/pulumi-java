@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class JobStatusResponse {
-    /**
-     * Final error result of the job. If present, indicates that the job has completed and was unsuccessful.
-     * 
-     */
+        /**
+         * @return Final error result of the job. If present, indicates that the job has completed and was unsuccessful.
+         * 
+         */
     private final ErrorProtoResponse errorResult;
-    /**
-     * The first errors encountered during the running of the job. The final message includes the number of errors that caused the process to stop. Errors here do not necessarily mean that the job has completed or was unsuccessful.
-     * 
-     */
+        /**
+         * @return The first errors encountered during the running of the job. The final message includes the number of errors that caused the process to stop. Errors here do not necessarily mean that the job has completed or was unsuccessful.
+         * 
+         */
     private final List<ErrorProtoResponse> errors;
-    /**
-     * Running state of the job.
-     * 
-     */
+        /**
+         * @return Running state of the job.
+         * 
+         */
     private final String state;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class JobStatusResponse {
     }
 
     /**
-     * Final error result of the job. If present, indicates that the job has completed and was unsuccessful.
+     * @return Final error result of the job. If present, indicates that the job has completed and was unsuccessful.
      * 
-    */
+     */
     public ErrorProtoResponse errorResult() {
         return this.errorResult;
     }
     /**
-     * The first errors encountered during the running of the job. The final message includes the number of errors that caused the process to stop. Errors here do not necessarily mean that the job has completed or was unsuccessful.
+     * @return The first errors encountered during the running of the job. The final message includes the number of errors that caused the process to stop. Errors here do not necessarily mean that the job has completed or was unsuccessful.
      * 
-    */
+     */
     public List<ErrorProtoResponse> errors() {
         return this.errors;
     }
     /**
-     * Running state of the job.
+     * @return Running state of the job.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

@@ -28,6 +28,10 @@ public final class IosTestLoopArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appIpa", required=true)
     private Output<FileReferenceArgs> appIpa;
 
+    /**
+     * @return The .ipa of the application to test.
+     * 
+     */
     public Output<FileReferenceArgs> appIpa() {
         return this.appIpa;
     }
@@ -39,6 +43,10 @@ public final class IosTestLoopArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scenarios")
     private @Nullable Output<List<Integer>> scenarios;
 
+    /**
+     * @return The list of scenarios that should be run during the test. Defaults to the single scenario 0 if unspecified.
+     * 
+     */
     public Optional<Output<List<Integer>>> scenarios() {
         return Optional.ofNullable(this.scenarios);
     }
@@ -68,24 +76,54 @@ public final class IosTestLoopArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IosTestLoopArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appIpa The .ipa of the application to test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appIpa(Output<FileReferenceArgs> appIpa) {
             $.appIpa = appIpa;
             return this;
         }
 
+        /**
+         * @param appIpa The .ipa of the application to test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appIpa(FileReferenceArgs appIpa) {
             return appIpa(Output.of(appIpa));
         }
 
+        /**
+         * @param scenarios The list of scenarios that should be run during the test. Defaults to the single scenario 0 if unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scenarios(@Nullable Output<List<Integer>> scenarios) {
             $.scenarios = scenarios;
             return this;
         }
 
+        /**
+         * @param scenarios The list of scenarios that should be run during the test. Defaults to the single scenario 0 if unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scenarios(List<Integer> scenarios) {
             return scenarios(Output.of(scenarios));
         }
 
+        /**
+         * @param scenarios The list of scenarios that should be run during the test. Defaults to the single scenario 0 if unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scenarios(Integer... scenarios) {
             return scenarios(List.of(scenarios));
         }

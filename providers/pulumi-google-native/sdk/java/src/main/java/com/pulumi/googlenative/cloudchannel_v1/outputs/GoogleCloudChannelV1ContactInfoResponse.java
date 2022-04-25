@@ -9,35 +9,35 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudChannelV1ContactInfoResponse {
-    /**
-     * The customer account contact&#39;s display name, formatted as a combination of the customer&#39;s first and last name.
-     * 
-     */
+        /**
+         * @return The customer account contact&#39;s display name, formatted as a combination of the customer&#39;s first and last name.
+         * 
+         */
     private final String displayName;
-    /**
-     * The customer account&#39;s contact email. Required for entitlements that create admin.google.com accounts, and serves as the customer&#39;s username for those accounts. Use this email to invite Team customers.
-     * 
-     */
+        /**
+         * @return The customer account&#39;s contact email. Required for entitlements that create admin.google.com accounts, and serves as the customer&#39;s username for those accounts. Use this email to invite Team customers.
+         * 
+         */
     private final String email;
-    /**
-     * The customer account contact&#39;s first name. Optional for Team customers.
-     * 
-     */
+        /**
+         * @return The customer account contact&#39;s first name. Optional for Team customers.
+         * 
+         */
     private final String firstName;
-    /**
-     * The customer account contact&#39;s last name. Optional for Team customers.
-     * 
-     */
+        /**
+         * @return The customer account contact&#39;s last name. Optional for Team customers.
+         * 
+         */
     private final String lastName;
-    /**
-     * The customer account&#39;s contact phone number.
-     * 
-     */
+        /**
+         * @return The customer account&#39;s contact phone number.
+         * 
+         */
     private final String phone;
-    /**
-     * Optional. The customer account contact&#39;s job title.
-     * 
-     */
+        /**
+         * @return Optional. The customer account contact&#39;s job title.
+         * 
+         */
     private final String title;
 
     @CustomType.Constructor
@@ -57,44 +57,44 @@ public final class GoogleCloudChannelV1ContactInfoResponse {
     }
 
     /**
-     * The customer account contact&#39;s display name, formatted as a combination of the customer&#39;s first and last name.
+     * @return The customer account contact&#39;s display name, formatted as a combination of the customer&#39;s first and last name.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The customer account&#39;s contact email. Required for entitlements that create admin.google.com accounts, and serves as the customer&#39;s username for those accounts. Use this email to invite Team customers.
+     * @return The customer account&#39;s contact email. Required for entitlements that create admin.google.com accounts, and serves as the customer&#39;s username for those accounts. Use this email to invite Team customers.
      * 
-    */
+     */
     public String email() {
         return this.email;
     }
     /**
-     * The customer account contact&#39;s first name. Optional for Team customers.
+     * @return The customer account contact&#39;s first name. Optional for Team customers.
      * 
-    */
+     */
     public String firstName() {
         return this.firstName;
     }
     /**
-     * The customer account contact&#39;s last name. Optional for Team customers.
+     * @return The customer account contact&#39;s last name. Optional for Team customers.
      * 
-    */
+     */
     public String lastName() {
         return this.lastName;
     }
     /**
-     * The customer account&#39;s contact phone number.
+     * @return The customer account&#39;s contact phone number.
      * 
-    */
+     */
     public String phone() {
         return this.phone;
     }
     /**
-     * Optional. The customer account contact&#39;s job title.
+     * @return Optional. The customer account contact&#39;s job title.
      * 
-    */
+     */
     public String title() {
         return this.title;
     }

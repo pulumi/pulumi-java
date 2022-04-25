@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class ReverseSshConnectivityResponse {
-    /**
-     * The name of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
-     * 
-     */
+        /**
+         * @return The name of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
+         * 
+         */
     private final String vm;
-    /**
-     * The IP of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
-     * 
-     */
+        /**
+         * @return The IP of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
+         * 
+         */
     private final String vmIp;
-    /**
-     * The forwarding port of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
-     * 
-     */
+        /**
+         * @return The forwarding port of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
+         * 
+         */
     private final Integer vmPort;
-    /**
-     * The name of the VPC to peer with the Cloud SQL private network.
-     * 
-     */
+        /**
+         * @return The name of the VPC to peer with the Cloud SQL private network.
+         * 
+         */
     private final String vpc;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class ReverseSshConnectivityResponse {
     }
 
     /**
-     * The name of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
+     * @return The name of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
      * 
-    */
+     */
     public String vm() {
         return this.vm;
     }
     /**
-     * The IP of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
+     * @return The IP of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
      * 
-    */
+     */
     public String vmIp() {
         return this.vmIp;
     }
     /**
-     * The forwarding port of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
+     * @return The forwarding port of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
      * 
-    */
+     */
     public Integer vmPort() {
         return this.vmPort;
     }
     /**
-     * The name of the VPC to peer with the Cloud SQL private network.
+     * @return The name of the VPC to peer with the Cloud SQL private network.
      * 
-    */
+     */
     public String vpc() {
         return this.vpc;
     }

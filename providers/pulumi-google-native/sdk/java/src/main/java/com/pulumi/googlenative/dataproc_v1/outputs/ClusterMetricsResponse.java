@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ClusterMetricsResponse {
-    /**
-     * The HDFS metrics.
-     * 
-     */
+        /**
+         * @return The HDFS metrics.
+         * 
+         */
     private final Map<String,String> hdfsMetrics;
-    /**
-     * The YARN metrics.
-     * 
-     */
+        /**
+         * @return The YARN metrics.
+         * 
+         */
     private final Map<String,String> yarnMetrics;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class ClusterMetricsResponse {
     }
 
     /**
-     * The HDFS metrics.
+     * @return The HDFS metrics.
      * 
-    */
+     */
     public Map<String,String> hdfsMetrics() {
         return this.hdfsMetrics;
     }
     /**
-     * The YARN metrics.
+     * @return The YARN metrics.
      * 
-    */
+     */
     public Map<String,String> yarnMetrics() {
         return this.yarnMetrics;
     }

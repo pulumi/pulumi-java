@@ -26,6 +26,10 @@ public final class CaseClassificationArgs extends com.pulumi.resources.ResourceA
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The display name of the classification.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -37,6 +41,10 @@ public final class CaseClassificationArgs extends com.pulumi.resources.ResourceA
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return The unique ID for a classification. Must be specified for case creation.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -66,20 +74,44 @@ public final class CaseClassificationArgs extends com.pulumi.resources.ResourceA
             $ = new CaseClassificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The display name of the classification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the classification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param id The unique ID for a classification. Must be specified for case creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The unique ID for a classification. Must be specified for case creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

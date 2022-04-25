@@ -9,30 +9,30 @@ import java.util.Objects;
 
 @CustomType
 public final class TlsCertificateResponse {
-    /**
-     * PEM representation.
-     * 
-     */
+        /**
+         * @return PEM representation.
+         * 
+         */
     private final String cert;
-    /**
-     * The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2020-05-18T00:00:00.094Z`.
-     * 
-     */
+        /**
+         * @return The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2020-05-18T00:00:00.094Z`.
+         * 
+         */
     private final String createTime;
-    /**
-     * The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2020-05-18T00:00:00.094Z`.
-     * 
-     */
+        /**
+         * @return The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2020-05-18T00:00:00.094Z`.
+         * 
+         */
     private final String expireTime;
-    /**
-     * Serial number, as extracted from the certificate.
-     * 
-     */
+        /**
+         * @return Serial number, as extracted from the certificate.
+         * 
+         */
     private final String serialNumber;
-    /**
-     * Sha1 Fingerprint of the certificate.
-     * 
-     */
+        /**
+         * @return Sha1 Fingerprint of the certificate.
+         * 
+         */
     private final String sha1Fingerprint;
 
     @CustomType.Constructor
@@ -50,37 +50,37 @@ public final class TlsCertificateResponse {
     }
 
     /**
-     * PEM representation.
+     * @return PEM representation.
      * 
-    */
+     */
     public String cert() {
         return this.cert;
     }
     /**
-     * The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2020-05-18T00:00:00.094Z`.
+     * @return The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2020-05-18T00:00:00.094Z`.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2020-05-18T00:00:00.094Z`.
+     * @return The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2020-05-18T00:00:00.094Z`.
      * 
-    */
+     */
     public String expireTime() {
         return this.expireTime;
     }
     /**
-     * Serial number, as extracted from the certificate.
+     * @return Serial number, as extracted from the certificate.
      * 
-    */
+     */
     public String serialNumber() {
         return this.serialNumber;
     }
     /**
-     * Sha1 Fingerprint of the certificate.
+     * @return Sha1 Fingerprint of the certificate.
      * 
-    */
+     */
     public String sha1Fingerprint() {
         return this.sha1Fingerprint;
     }

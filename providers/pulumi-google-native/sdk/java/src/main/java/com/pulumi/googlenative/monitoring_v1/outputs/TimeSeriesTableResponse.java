@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class TimeSeriesTableResponse {
-    /**
-     * The data displayed in this table.
-     * 
-     */
+        /**
+         * @return The data displayed in this table.
+         * 
+         */
     private final List<TableDataSetResponse> dataSets;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class TimeSeriesTableResponse {
     }
 
     /**
-     * The data displayed in this table.
+     * @return The data displayed in this table.
      * 
-    */
+     */
     public List<TableDataSetResponse> dataSets() {
         return this.dataSets;
     }

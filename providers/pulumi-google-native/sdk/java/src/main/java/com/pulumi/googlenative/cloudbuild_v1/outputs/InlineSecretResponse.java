@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class InlineSecretResponse {
-    /**
-     * Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build&#39;s secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build&#39;s secrets.
-     * 
-     */
+        /**
+         * @return Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build&#39;s secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build&#39;s secrets.
+         * 
+         */
     private final Map<String,String> envMap;
-    /**
-     * Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format: projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*
-     * 
-     */
+        /**
+         * @return Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format: projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*
+         * 
+         */
     private final String kmsKeyName;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class InlineSecretResponse {
     }
 
     /**
-     * Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build&#39;s secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build&#39;s secrets.
+     * @return Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build&#39;s secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build&#39;s secrets.
      * 
-    */
+     */
     public Map<String,String> envMap() {
         return this.envMap;
     }
     /**
-     * Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format: projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*
+     * @return Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format: projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*
      * 
-    */
+     */
     public String kmsKeyName() {
         return this.kmsKeyName;
     }

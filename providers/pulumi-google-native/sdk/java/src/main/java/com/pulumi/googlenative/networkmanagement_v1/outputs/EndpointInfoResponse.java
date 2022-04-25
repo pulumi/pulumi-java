@@ -10,40 +10,40 @@ import java.util.Objects;
 
 @CustomType
 public final class EndpointInfoResponse {
-    /**
-     * Destination IP address.
-     * 
-     */
+        /**
+         * @return Destination IP address.
+         * 
+         */
     private final String destinationIp;
-    /**
-     * URI of the network where this packet is sent to.
-     * 
-     */
+        /**
+         * @return URI of the network where this packet is sent to.
+         * 
+         */
     private final String destinationNetworkUri;
-    /**
-     * Destination port. Only valid when protocol is TCP or UDP.
-     * 
-     */
+        /**
+         * @return Destination port. Only valid when protocol is TCP or UDP.
+         * 
+         */
     private final Integer destinationPort;
-    /**
-     * IP protocol in string format, for example: &#34;TCP&#34;, &#34;UDP&#34;, &#34;ICMP&#34;.
-     * 
-     */
+        /**
+         * @return IP protocol in string format, for example: &#34;TCP&#34;, &#34;UDP&#34;, &#34;ICMP&#34;.
+         * 
+         */
     private final String protocol;
-    /**
-     * Source IP address.
-     * 
-     */
+        /**
+         * @return Source IP address.
+         * 
+         */
     private final String sourceIp;
-    /**
-     * URI of the network where this packet originates from.
-     * 
-     */
+        /**
+         * @return URI of the network where this packet originates from.
+         * 
+         */
     private final String sourceNetworkUri;
-    /**
-     * Source port. Only valid when protocol is TCP or UDP.
-     * 
-     */
+        /**
+         * @return Source port. Only valid when protocol is TCP or UDP.
+         * 
+         */
     private final Integer sourcePort;
 
     @CustomType.Constructor
@@ -65,51 +65,51 @@ public final class EndpointInfoResponse {
     }
 
     /**
-     * Destination IP address.
+     * @return Destination IP address.
      * 
-    */
+     */
     public String destinationIp() {
         return this.destinationIp;
     }
     /**
-     * URI of the network where this packet is sent to.
+     * @return URI of the network where this packet is sent to.
      * 
-    */
+     */
     public String destinationNetworkUri() {
         return this.destinationNetworkUri;
     }
     /**
-     * Destination port. Only valid when protocol is TCP or UDP.
+     * @return Destination port. Only valid when protocol is TCP or UDP.
      * 
-    */
+     */
     public Integer destinationPort() {
         return this.destinationPort;
     }
     /**
-     * IP protocol in string format, for example: &#34;TCP&#34;, &#34;UDP&#34;, &#34;ICMP&#34;.
+     * @return IP protocol in string format, for example: &#34;TCP&#34;, &#34;UDP&#34;, &#34;ICMP&#34;.
      * 
-    */
+     */
     public String protocol() {
         return this.protocol;
     }
     /**
-     * Source IP address.
+     * @return Source IP address.
      * 
-    */
+     */
     public String sourceIp() {
         return this.sourceIp;
     }
     /**
-     * URI of the network where this packet originates from.
+     * @return URI of the network where this packet originates from.
      * 
-    */
+     */
     public String sourceNetworkUri() {
         return this.sourceNetworkUri;
     }
     /**
-     * Source port. Only valid when protocol is TCP or UDP.
+     * @return Source port. Only valid when protocol is TCP or UDP.
      * 
-    */
+     */
     public Integer sourcePort() {
         return this.sourcePort;
     }

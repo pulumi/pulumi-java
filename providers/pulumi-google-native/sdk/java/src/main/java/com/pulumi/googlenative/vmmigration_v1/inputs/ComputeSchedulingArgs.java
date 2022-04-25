@@ -30,6 +30,10 @@ public final class ComputeSchedulingArgs extends com.pulumi.resources.ResourceAr
     @Import(name="minNodeCpus")
     private @Nullable Output<Integer> minNodeCpus;
 
+    /**
+     * @return The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node. Ignored if no node_affinites are configured.
+     * 
+     */
     public Optional<Output<Integer>> minNodeCpus() {
         return Optional.ofNullable(this.minNodeCpus);
     }
@@ -41,6 +45,10 @@ public final class ComputeSchedulingArgs extends com.pulumi.resources.ResourceAr
     @Import(name="nodeAffinities")
     private @Nullable Output<List<SchedulingNodeAffinityArgs>> nodeAffinities;
 
+    /**
+     * @return A set of node affinity and anti-affinity configurations for sole tenant nodes.
+     * 
+     */
     public Optional<Output<List<SchedulingNodeAffinityArgs>>> nodeAffinities() {
         return Optional.ofNullable(this.nodeAffinities);
     }
@@ -52,6 +60,10 @@ public final class ComputeSchedulingArgs extends com.pulumi.resources.ResourceAr
     @Import(name="onHostMaintenance")
     private @Nullable Output<ComputeSchedulingOnHostMaintenance> onHostMaintenance;
 
+    /**
+     * @return How the instance should behave when the host machine undergoes maintenance that may temporarily impact instance performance.
+     * 
+     */
     public Optional<Output<ComputeSchedulingOnHostMaintenance>> onHostMaintenance() {
         return Optional.ofNullable(this.onHostMaintenance);
     }
@@ -63,6 +75,10 @@ public final class ComputeSchedulingArgs extends com.pulumi.resources.ResourceAr
     @Import(name="restartType")
     private @Nullable Output<ComputeSchedulingRestartType> restartType;
 
+    /**
+     * @return Whether the Instance should be automatically restarted whenever it is terminated by Compute Engine (not terminated by user). This configuration is identical to `automaticRestart` field in Compute Engine create instance under scheduling. It was changed to an enum (instead of a boolean) to match the default value in Compute Engine which is automatic restart.
+     * 
+     */
     public Optional<Output<ComputeSchedulingRestartType>> restartType() {
         return Optional.ofNullable(this.restartType);
     }
@@ -94,42 +110,96 @@ public final class ComputeSchedulingArgs extends com.pulumi.resources.ResourceAr
             $ = new ComputeSchedulingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param minNodeCpus The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node. Ignored if no node_affinites are configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNodeCpus(@Nullable Output<Integer> minNodeCpus) {
             $.minNodeCpus = minNodeCpus;
             return this;
         }
 
+        /**
+         * @param minNodeCpus The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node. Ignored if no node_affinites are configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNodeCpus(Integer minNodeCpus) {
             return minNodeCpus(Output.of(minNodeCpus));
         }
 
+        /**
+         * @param nodeAffinities A set of node affinity and anti-affinity configurations for sole tenant nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeAffinities(@Nullable Output<List<SchedulingNodeAffinityArgs>> nodeAffinities) {
             $.nodeAffinities = nodeAffinities;
             return this;
         }
 
+        /**
+         * @param nodeAffinities A set of node affinity and anti-affinity configurations for sole tenant nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeAffinities(List<SchedulingNodeAffinityArgs> nodeAffinities) {
             return nodeAffinities(Output.of(nodeAffinities));
         }
 
+        /**
+         * @param nodeAffinities A set of node affinity and anti-affinity configurations for sole tenant nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeAffinities(SchedulingNodeAffinityArgs... nodeAffinities) {
             return nodeAffinities(List.of(nodeAffinities));
         }
 
+        /**
+         * @param onHostMaintenance How the instance should behave when the host machine undergoes maintenance that may temporarily impact instance performance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onHostMaintenance(@Nullable Output<ComputeSchedulingOnHostMaintenance> onHostMaintenance) {
             $.onHostMaintenance = onHostMaintenance;
             return this;
         }
 
+        /**
+         * @param onHostMaintenance How the instance should behave when the host machine undergoes maintenance that may temporarily impact instance performance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onHostMaintenance(ComputeSchedulingOnHostMaintenance onHostMaintenance) {
             return onHostMaintenance(Output.of(onHostMaintenance));
         }
 
+        /**
+         * @param restartType Whether the Instance should be automatically restarted whenever it is terminated by Compute Engine (not terminated by user). This configuration is identical to `automaticRestart` field in Compute Engine create instance under scheduling. It was changed to an enum (instead of a boolean) to match the default value in Compute Engine which is automatic restart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restartType(@Nullable Output<ComputeSchedulingRestartType> restartType) {
             $.restartType = restartType;
             return this;
         }
 
+        /**
+         * @param restartType Whether the Instance should be automatically restarted whenever it is terminated by Compute Engine (not terminated by user). This configuration is identical to `automaticRestart` field in Compute Engine create instance under scheduling. It was changed to an enum (instead of a boolean) to match the default value in Compute Engine which is automatic restart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restartType(ComputeSchedulingRestartType restartType) {
             return restartType(Output.of(restartType));
         }

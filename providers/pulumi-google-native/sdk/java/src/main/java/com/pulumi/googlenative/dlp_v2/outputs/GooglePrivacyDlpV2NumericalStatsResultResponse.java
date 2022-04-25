@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GooglePrivacyDlpV2NumericalStatsResultResponse {
-    /**
-     * Maximum value appearing in the column.
-     * 
-     */
+        /**
+         * @return Maximum value appearing in the column.
+         * 
+         */
     private final GooglePrivacyDlpV2ValueResponse maxValue;
-    /**
-     * Minimum value appearing in the column.
-     * 
-     */
+        /**
+         * @return Minimum value appearing in the column.
+         * 
+         */
     private final GooglePrivacyDlpV2ValueResponse minValue;
-    /**
-     * List of 99 values that partition the set of field values into 100 equal sized buckets.
-     * 
-     */
+        /**
+         * @return List of 99 values that partition the set of field values into 100 equal sized buckets.
+         * 
+         */
     private final List<GooglePrivacyDlpV2ValueResponse> quantileValues;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse {
     }
 
     /**
-     * Maximum value appearing in the column.
+     * @return Maximum value appearing in the column.
      * 
-    */
+     */
     public GooglePrivacyDlpV2ValueResponse maxValue() {
         return this.maxValue;
     }
     /**
-     * Minimum value appearing in the column.
+     * @return Minimum value appearing in the column.
      * 
-    */
+     */
     public GooglePrivacyDlpV2ValueResponse minValue() {
         return this.minValue;
     }
     /**
-     * List of 99 values that partition the set of field values into 100 equal sized buckets.
+     * @return List of 99 values that partition the set of field values into 100 equal sized buckets.
      * 
-    */
+     */
     public List<GooglePrivacyDlpV2ValueResponse> quantileValues() {
         return this.quantileValues;
     }

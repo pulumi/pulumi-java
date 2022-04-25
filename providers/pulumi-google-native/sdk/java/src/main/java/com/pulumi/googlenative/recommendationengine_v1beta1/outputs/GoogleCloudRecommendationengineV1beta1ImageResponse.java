@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudRecommendationengineV1beta1ImageResponse {
-    /**
-     * Optional. Height of the image in number of pixels.
-     * 
-     */
+        /**
+         * @return Optional. Height of the image in number of pixels.
+         * 
+         */
     private final Integer height;
-    /**
-     * URL of the image with a length limit of 5 KiB.
-     * 
-     */
+        /**
+         * @return URL of the image with a length limit of 5 KiB.
+         * 
+         */
     private final String uri;
-    /**
-     * Optional. Width of the image in number of pixels.
-     * 
-     */
+        /**
+         * @return Optional. Width of the image in number of pixels.
+         * 
+         */
     private final Integer width;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class GoogleCloudRecommendationengineV1beta1ImageResponse {
     }
 
     /**
-     * Optional. Height of the image in number of pixels.
+     * @return Optional. Height of the image in number of pixels.
      * 
-    */
+     */
     public Integer height() {
         return this.height;
     }
     /**
-     * URL of the image with a length limit of 5 KiB.
+     * @return URL of the image with a length limit of 5 KiB.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }
     /**
-     * Optional. Width of the image in number of pixels.
+     * @return Optional. Width of the image in number of pixels.
      * 
-    */
+     */
     public Integer width() {
         return this.width;
     }

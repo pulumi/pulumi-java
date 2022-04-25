@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class AttestationAuthorityHintResponse {
-    /**
-     * The human readable name of this Attestation Authority, for example &#34;qa&#34;.
-     * 
-     */
+        /**
+         * @return The human readable name of this Attestation Authority, for example &#34;qa&#34;.
+         * 
+         */
     private final String humanReadableName;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class AttestationAuthorityHintResponse {
     }
 
     /**
-     * The human readable name of this Attestation Authority, for example &#34;qa&#34;.
+     * @return The human readable name of this Attestation Authority, for example &#34;qa&#34;.
      * 
-    */
+     */
     public String humanReadableName() {
         return this.humanReadableName;
     }

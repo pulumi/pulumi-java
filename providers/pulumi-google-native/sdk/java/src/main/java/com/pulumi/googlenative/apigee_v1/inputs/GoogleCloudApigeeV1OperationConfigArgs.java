@@ -30,6 +30,10 @@ public final class GoogleCloudApigeeV1OperationConfigArgs extends com.pulumi.res
     @Import(name="apiSource", required=true)
     private Output<String> apiSource;
 
+    /**
+     * @return Name of the API proxy or remote service with which the resources, methods, and quota are associated.
+     * 
+     */
     public Output<String> apiSource() {
         return this.apiSource;
     }
@@ -41,6 +45,10 @@ public final class GoogleCloudApigeeV1OperationConfigArgs extends com.pulumi.res
     @Import(name="attributes")
     private @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
 
+    /**
+     * @return Custom attributes associated with the operation.
+     * 
+     */
     public Optional<Output<List<GoogleCloudApigeeV1AttributeArgs>>> attributes() {
         return Optional.ofNullable(this.attributes);
     }
@@ -52,6 +60,10 @@ public final class GoogleCloudApigeeV1OperationConfigArgs extends com.pulumi.res
     @Import(name="operations")
     private @Nullable Output<List<GoogleCloudApigeeV1OperationArgs>> operations;
 
+    /**
+     * @return List of resource/method pairs for the API proxy or remote service to which quota will applied. **Note**: Currently, you can specify only a single resource/method pair. The call will fail if more than one resource/method pair is provided.
+     * 
+     */
     public Optional<Output<List<GoogleCloudApigeeV1OperationArgs>>> operations() {
         return Optional.ofNullable(this.operations);
     }
@@ -63,6 +75,10 @@ public final class GoogleCloudApigeeV1OperationConfigArgs extends com.pulumi.res
     @Import(name="quota")
     private @Nullable Output<GoogleCloudApigeeV1QuotaArgs> quota;
 
+    /**
+     * @return Quota parameters to be enforced for the resources, methods, and API source combination. If none are specified, quota enforcement will not be done.
+     * 
+     */
     public Optional<Output<GoogleCloudApigeeV1QuotaArgs>> quota() {
         return Optional.ofNullable(this.quota);
     }
@@ -94,46 +110,106 @@ public final class GoogleCloudApigeeV1OperationConfigArgs extends com.pulumi.res
             $ = new GoogleCloudApigeeV1OperationConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiSource Name of the API proxy or remote service with which the resources, methods, and quota are associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiSource(Output<String> apiSource) {
             $.apiSource = apiSource;
             return this;
         }
 
+        /**
+         * @param apiSource Name of the API proxy or remote service with which the resources, methods, and quota are associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiSource(String apiSource) {
             return apiSource(Output.of(apiSource));
         }
 
+        /**
+         * @param attributes Custom attributes associated with the operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(@Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param attributes Custom attributes associated with the operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(List<GoogleCloudApigeeV1AttributeArgs> attributes) {
             return attributes(Output.of(attributes));
         }
 
+        /**
+         * @param attributes Custom attributes associated with the operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(GoogleCloudApigeeV1AttributeArgs... attributes) {
             return attributes(List.of(attributes));
         }
 
+        /**
+         * @param operations List of resource/method pairs for the API proxy or remote service to which quota will applied. **Note**: Currently, you can specify only a single resource/method pair. The call will fail if more than one resource/method pair is provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operations(@Nullable Output<List<GoogleCloudApigeeV1OperationArgs>> operations) {
             $.operations = operations;
             return this;
         }
 
+        /**
+         * @param operations List of resource/method pairs for the API proxy or remote service to which quota will applied. **Note**: Currently, you can specify only a single resource/method pair. The call will fail if more than one resource/method pair is provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operations(List<GoogleCloudApigeeV1OperationArgs> operations) {
             return operations(Output.of(operations));
         }
 
+        /**
+         * @param operations List of resource/method pairs for the API proxy or remote service to which quota will applied. **Note**: Currently, you can specify only a single resource/method pair. The call will fail if more than one resource/method pair is provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operations(GoogleCloudApigeeV1OperationArgs... operations) {
             return operations(List.of(operations));
         }
 
+        /**
+         * @param quota Quota parameters to be enforced for the resources, methods, and API source combination. If none are specified, quota enforcement will not be done.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quota(@Nullable Output<GoogleCloudApigeeV1QuotaArgs> quota) {
             $.quota = quota;
             return this;
         }
 
+        /**
+         * @param quota Quota parameters to be enforced for the resources, methods, and API source combination. If none are specified, quota enforcement will not be done.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quota(GoogleCloudApigeeV1QuotaArgs quota) {
             return quota(Output.of(quota));
         }

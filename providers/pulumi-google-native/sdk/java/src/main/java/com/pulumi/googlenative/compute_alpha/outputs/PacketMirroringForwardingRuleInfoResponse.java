@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class PacketMirroringForwardingRuleInfoResponse {
-    /**
-     * Unique identifier for the forwarding rule; defined by the server.
-     * 
-     */
+        /**
+         * @return Unique identifier for the forwarding rule; defined by the server.
+         * 
+         */
     private final String canonicalUrl;
-    /**
-     * Resource URL to the forwarding rule representing the ILB configured as destination of the mirrored traffic.
-     * 
-     */
+        /**
+         * @return Resource URL to the forwarding rule representing the ILB configured as destination of the mirrored traffic.
+         * 
+         */
     private final String url;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class PacketMirroringForwardingRuleInfoResponse {
     }
 
     /**
-     * Unique identifier for the forwarding rule; defined by the server.
+     * @return Unique identifier for the forwarding rule; defined by the server.
      * 
-    */
+     */
     public String canonicalUrl() {
         return this.canonicalUrl;
     }
     /**
-     * Resource URL to the forwarding rule representing the ILB configured as destination of the mirrored traffic.
+     * @return Resource URL to the forwarding rule representing the ILB configured as destination of the mirrored traffic.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

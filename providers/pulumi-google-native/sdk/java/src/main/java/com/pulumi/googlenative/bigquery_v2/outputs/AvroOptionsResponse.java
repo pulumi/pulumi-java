@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class AvroOptionsResponse {
-    /**
-     * [Optional] If sourceFormat is set to &#34;AVRO&#34;, indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).
-     * 
-     */
+        /**
+         * @return [Optional] If sourceFormat is set to &#34;AVRO&#34;, indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).
+         * 
+         */
     private final Boolean useAvroLogicalTypes;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class AvroOptionsResponse {
     }
 
     /**
-     * [Optional] If sourceFormat is set to &#34;AVRO&#34;, indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).
+     * @return [Optional] If sourceFormat is set to &#34;AVRO&#34;, indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).
      * 
-    */
+     */
     public Boolean useAvroLogicalTypes() {
         return this.useAvroLogicalTypes;
     }

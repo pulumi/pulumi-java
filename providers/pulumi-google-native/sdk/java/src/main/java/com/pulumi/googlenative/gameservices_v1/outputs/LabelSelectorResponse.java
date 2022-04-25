@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class LabelSelectorResponse {
-    /**
-     * Resource labels for this selector.
-     * 
-     */
+        /**
+         * @return Resource labels for this selector.
+         * 
+         */
     private final Map<String,String> labels;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class LabelSelectorResponse {
     }
 
     /**
-     * Resource labels for this selector.
+     * @return Resource labels for this selector.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }

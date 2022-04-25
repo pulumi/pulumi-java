@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhraseResponse extends c
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The unique identifier of this training phrase.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhraseResponse extends c
     @Import(name="parts", required=true)
     private List<GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse> parts;
 
+    /**
+     * @return The ordered list of training phrase parts. The parts are concatenated in order to form the training phrase. Note: The API does not automatically annotate training phrases like the Dialogflow Console does. Note: Do not forget to include whitespace at part boundaries, so the training phrase is well formatted when the parts are concatenated. If the training phrase does not need to be annotated with parameters, you just need a single part with only the Part.text field set. If you want to annotate the training phrase, you must create multiple parts, where the fields of each part are populated in one of two ways: - `Part.text` is set to a part of the phrase that has no parameters. - `Part.text` is set to a part of the phrase that you want to annotate, and the `entity_type`, `alias`, and `user_defined` fields are all set.
+     * 
+     */
     public List<GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse> parts() {
         return this.parts;
     }
@@ -48,6 +56,10 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhraseResponse extends c
     @Import(name="timesAddedCount", required=true)
     private Integer timesAddedCount;
 
+    /**
+     * @return Optional. Indicates how many times this example was added to the intent. Each time a developer adds an existing sample by editing an intent or training, this counter is increased.
+     * 
+     */
     public Integer timesAddedCount() {
         return this.timesAddedCount;
     }
@@ -59,6 +71,10 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhraseResponse extends c
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the training phrase.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -90,25 +106,55 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhraseResponse extends c
             $ = new GoogleCloudDialogflowV2IntentTrainingPhraseResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The unique identifier of this training phrase.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param parts The ordered list of training phrase parts. The parts are concatenated in order to form the training phrase. Note: The API does not automatically annotate training phrases like the Dialogflow Console does. Note: Do not forget to include whitespace at part boundaries, so the training phrase is well formatted when the parts are concatenated. If the training phrase does not need to be annotated with parameters, you just need a single part with only the Part.text field set. If you want to annotate the training phrase, you must create multiple parts, where the fields of each part are populated in one of two ways: - `Part.text` is set to a part of the phrase that has no parameters. - `Part.text` is set to a part of the phrase that you want to annotate, and the `entity_type`, `alias`, and `user_defined` fields are all set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parts(List<GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse> parts) {
             $.parts = parts;
             return this;
         }
 
+        /**
+         * @param parts The ordered list of training phrase parts. The parts are concatenated in order to form the training phrase. Note: The API does not automatically annotate training phrases like the Dialogflow Console does. Note: Do not forget to include whitespace at part boundaries, so the training phrase is well formatted when the parts are concatenated. If the training phrase does not need to be annotated with parameters, you just need a single part with only the Part.text field set. If you want to annotate the training phrase, you must create multiple parts, where the fields of each part are populated in one of two ways: - `Part.text` is set to a part of the phrase that has no parameters. - `Part.text` is set to a part of the phrase that you want to annotate, and the `entity_type`, `alias`, and `user_defined` fields are all set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parts(GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse... parts) {
             return parts(List.of(parts));
         }
 
+        /**
+         * @param timesAddedCount Optional. Indicates how many times this example was added to the intent. Each time a developer adds an existing sample by editing an intent or training, this counter is increased.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timesAddedCount(Integer timesAddedCount) {
             $.timesAddedCount = timesAddedCount;
             return this;
         }
 
+        /**
+         * @param type The type of the training phrase.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

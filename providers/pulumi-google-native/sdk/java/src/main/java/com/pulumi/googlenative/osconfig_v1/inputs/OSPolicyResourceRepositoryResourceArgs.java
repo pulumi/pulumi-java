@@ -29,6 +29,10 @@ public final class OSPolicyResourceRepositoryResourceArgs extends com.pulumi.res
     @Import(name="apt")
     private @Nullable Output<OSPolicyResourceRepositoryResourceAptRepositoryArgs> apt;
 
+    /**
+     * @return An Apt Repository.
+     * 
+     */
     public Optional<Output<OSPolicyResourceRepositoryResourceAptRepositoryArgs>> apt() {
         return Optional.ofNullable(this.apt);
     }
@@ -40,6 +44,10 @@ public final class OSPolicyResourceRepositoryResourceArgs extends com.pulumi.res
     @Import(name="goo")
     private @Nullable Output<OSPolicyResourceRepositoryResourceGooRepositoryArgs> goo;
 
+    /**
+     * @return A Goo Repository.
+     * 
+     */
     public Optional<Output<OSPolicyResourceRepositoryResourceGooRepositoryArgs>> goo() {
         return Optional.ofNullable(this.goo);
     }
@@ -51,6 +59,10 @@ public final class OSPolicyResourceRepositoryResourceArgs extends com.pulumi.res
     @Import(name="yum")
     private @Nullable Output<OSPolicyResourceRepositoryResourceYumRepositoryArgs> yum;
 
+    /**
+     * @return A Yum Repository.
+     * 
+     */
     public Optional<Output<OSPolicyResourceRepositoryResourceYumRepositoryArgs>> yum() {
         return Optional.ofNullable(this.yum);
     }
@@ -62,6 +74,10 @@ public final class OSPolicyResourceRepositoryResourceArgs extends com.pulumi.res
     @Import(name="zypper")
     private @Nullable Output<OSPolicyResourceRepositoryResourceZypperRepositoryArgs> zypper;
 
+    /**
+     * @return A Zypper Repository.
+     * 
+     */
     public Optional<Output<OSPolicyResourceRepositoryResourceZypperRepositoryArgs>> zypper() {
         return Optional.ofNullable(this.zypper);
     }
@@ -93,38 +109,86 @@ public final class OSPolicyResourceRepositoryResourceArgs extends com.pulumi.res
             $ = new OSPolicyResourceRepositoryResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apt An Apt Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apt(@Nullable Output<OSPolicyResourceRepositoryResourceAptRepositoryArgs> apt) {
             $.apt = apt;
             return this;
         }
 
+        /**
+         * @param apt An Apt Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apt(OSPolicyResourceRepositoryResourceAptRepositoryArgs apt) {
             return apt(Output.of(apt));
         }
 
+        /**
+         * @param goo A Goo Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goo(@Nullable Output<OSPolicyResourceRepositoryResourceGooRepositoryArgs> goo) {
             $.goo = goo;
             return this;
         }
 
+        /**
+         * @param goo A Goo Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goo(OSPolicyResourceRepositoryResourceGooRepositoryArgs goo) {
             return goo(Output.of(goo));
         }
 
+        /**
+         * @param yum A Yum Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yum(@Nullable Output<OSPolicyResourceRepositoryResourceYumRepositoryArgs> yum) {
             $.yum = yum;
             return this;
         }
 
+        /**
+         * @param yum A Yum Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yum(OSPolicyResourceRepositoryResourceYumRepositoryArgs yum) {
             return yum(Output.of(yum));
         }
 
+        /**
+         * @param zypper A Zypper Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zypper(@Nullable Output<OSPolicyResourceRepositoryResourceZypperRepositoryArgs> zypper) {
             $.zypper = zypper;
             return this;
         }
 
+        /**
+         * @param zypper A Zypper Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zypper(OSPolicyResourceRepositoryResourceZypperRepositoryArgs zypper) {
             return zypper(Output.of(zypper));
         }

@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class SecurityPolicyAdaptiveProtectionConfigResponse {
-    /**
-     * If set to true, enables Cloud Armor Machine Learning.
-     * 
-     */
+        /**
+         * @return If set to true, enables Cloud Armor Machine Learning.
+         * 
+         */
     private final SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse layer7DdosDefenseConfig;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class SecurityPolicyAdaptiveProtectionConfigResponse {
     }
 
     /**
-     * If set to true, enables Cloud Armor Machine Learning.
+     * @return If set to true, enables Cloud Armor Machine Learning.
      * 
-    */
+     */
     public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse layer7DdosDefenseConfig() {
         return this.layer7DdosDefenseConfig;
     }

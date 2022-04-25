@@ -29,6 +29,10 @@ public final class PipelineDescriptionArgs extends com.pulumi.resources.Resource
     @Import(name="displayData")
     private @Nullable Output<List<DisplayDataArgs>> displayData;
 
+    /**
+     * @return Pipeline level display data.
+     * 
+     */
     public Optional<Output<List<DisplayDataArgs>>> displayData() {
         return Optional.ofNullable(this.displayData);
     }
@@ -40,6 +44,10 @@ public final class PipelineDescriptionArgs extends com.pulumi.resources.Resource
     @Import(name="executionPipelineStage")
     private @Nullable Output<List<ExecutionStageSummaryArgs>> executionPipelineStage;
 
+    /**
+     * @return Description of each stage of execution of the pipeline.
+     * 
+     */
     public Optional<Output<List<ExecutionStageSummaryArgs>>> executionPipelineStage() {
         return Optional.ofNullable(this.executionPipelineStage);
     }
@@ -51,6 +59,10 @@ public final class PipelineDescriptionArgs extends com.pulumi.resources.Resource
     @Import(name="originalPipelineTransform")
     private @Nullable Output<List<TransformSummaryArgs>> originalPipelineTransform;
 
+    /**
+     * @return Description of each transform in the pipeline and collections between them.
+     * 
+     */
     public Optional<Output<List<TransformSummaryArgs>>> originalPipelineTransform() {
         return Optional.ofNullable(this.originalPipelineTransform);
     }
@@ -81,41 +93,95 @@ public final class PipelineDescriptionArgs extends com.pulumi.resources.Resource
             $ = new PipelineDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayData Pipeline level display data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayData(@Nullable Output<List<DisplayDataArgs>> displayData) {
             $.displayData = displayData;
             return this;
         }
 
+        /**
+         * @param displayData Pipeline level display data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayData(List<DisplayDataArgs> displayData) {
             return displayData(Output.of(displayData));
         }
 
+        /**
+         * @param displayData Pipeline level display data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayData(DisplayDataArgs... displayData) {
             return displayData(List.of(displayData));
         }
 
+        /**
+         * @param executionPipelineStage Description of each stage of execution of the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionPipelineStage(@Nullable Output<List<ExecutionStageSummaryArgs>> executionPipelineStage) {
             $.executionPipelineStage = executionPipelineStage;
             return this;
         }
 
+        /**
+         * @param executionPipelineStage Description of each stage of execution of the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionPipelineStage(List<ExecutionStageSummaryArgs> executionPipelineStage) {
             return executionPipelineStage(Output.of(executionPipelineStage));
         }
 
+        /**
+         * @param executionPipelineStage Description of each stage of execution of the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionPipelineStage(ExecutionStageSummaryArgs... executionPipelineStage) {
             return executionPipelineStage(List.of(executionPipelineStage));
         }
 
+        /**
+         * @param originalPipelineTransform Description of each transform in the pipeline and collections between them.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originalPipelineTransform(@Nullable Output<List<TransformSummaryArgs>> originalPipelineTransform) {
             $.originalPipelineTransform = originalPipelineTransform;
             return this;
         }
 
+        /**
+         * @param originalPipelineTransform Description of each transform in the pipeline and collections between them.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originalPipelineTransform(List<TransformSummaryArgs> originalPipelineTransform) {
             return originalPipelineTransform(Output.of(originalPipelineTransform));
         }
 
+        /**
+         * @param originalPipelineTransform Description of each transform in the pipeline and collections between them.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originalPipelineTransform(TransformSummaryArgs... originalPipelineTransform) {
             return originalPipelineTransform(List.of(originalPipelineTransform));
         }

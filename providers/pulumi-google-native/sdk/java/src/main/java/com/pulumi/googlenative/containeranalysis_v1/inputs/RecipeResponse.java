@@ -25,6 +25,10 @@ public final class RecipeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="arguments", required=true)
     private List<Map<String,String>> arguments;
 
+    /**
+     * @return Collection of all external inputs that influenced the build on top of recipe.definedInMaterial and recipe.entryPoint. For example, if the recipe type were &#34;make&#34;, then this might be the flags passed to make aside from the target, which is captured in recipe.entryPoint. Since the arguments field can greatly vary in structure, depending on the builder and recipe type, this is of form &#34;Any&#34;.
+     * 
+     */
     public List<Map<String,String>> arguments() {
         return this.arguments;
     }
@@ -36,6 +40,10 @@ public final class RecipeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="definedInMaterial", required=true)
     private String definedInMaterial;
 
+    /**
+     * @return Index in materials containing the recipe steps that are not implied by recipe.type. For example, if the recipe type were &#34;make&#34;, then this would point to the source containing the Makefile, not the make program itself. Set to -1 if the recipe doesn&#39;t come from a material, as zero is default unset value for int64.
+     * 
+     */
     public String definedInMaterial() {
         return this.definedInMaterial;
     }
@@ -47,6 +55,10 @@ public final class RecipeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="entryPoint", required=true)
     private String entryPoint;
 
+    /**
+     * @return String identifying the entry point into the build. This is often a path to a configuration file and/or a target label within that file. The syntax and meaning are defined by recipe.type. For example, if the recipe type were &#34;make&#34;, then this would reference the directory in which to run make as well as which target to use.
+     * 
+     */
     public String entryPoint() {
         return this.entryPoint;
     }
@@ -58,6 +70,10 @@ public final class RecipeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="environment", required=true)
     private List<Map<String,String>> environment;
 
+    /**
+     * @return Any other builder-controlled inputs necessary for correctly evaluating the recipe. Usually only needed for reproducing the build but not evaluated as part of policy. Since the environment field can greatly vary in structure, depending on the builder and recipe type, this is of form &#34;Any&#34;.
+     * 
+     */
     public List<Map<String,String>> environment() {
         return this.environment;
     }
@@ -69,6 +85,10 @@ public final class RecipeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return URI indicating what type of recipe was performed. It determines the meaning of recipe.entryPoint, recipe.arguments, recipe.environment, and materials.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -101,34 +121,76 @@ public final class RecipeResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RecipeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arguments Collection of all external inputs that influenced the build on top of recipe.definedInMaterial and recipe.entryPoint. For example, if the recipe type were &#34;make&#34;, then this might be the flags passed to make aside from the target, which is captured in recipe.entryPoint. Since the arguments field can greatly vary in structure, depending on the builder and recipe type, this is of form &#34;Any&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(List<Map<String,String>> arguments) {
             $.arguments = arguments;
             return this;
         }
 
+        /**
+         * @param arguments Collection of all external inputs that influenced the build on top of recipe.definedInMaterial and recipe.entryPoint. For example, if the recipe type were &#34;make&#34;, then this might be the flags passed to make aside from the target, which is captured in recipe.entryPoint. Since the arguments field can greatly vary in structure, depending on the builder and recipe type, this is of form &#34;Any&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(Map<String,String>... arguments) {
             return arguments(List.of(arguments));
         }
 
+        /**
+         * @param definedInMaterial Index in materials containing the recipe steps that are not implied by recipe.type. For example, if the recipe type were &#34;make&#34;, then this would point to the source containing the Makefile, not the make program itself. Set to -1 if the recipe doesn&#39;t come from a material, as zero is default unset value for int64.
+         * 
+         * @return builder
+         * 
+         */
         public Builder definedInMaterial(String definedInMaterial) {
             $.definedInMaterial = definedInMaterial;
             return this;
         }
 
+        /**
+         * @param entryPoint String identifying the entry point into the build. This is often a path to a configuration file and/or a target label within that file. The syntax and meaning are defined by recipe.type. For example, if the recipe type were &#34;make&#34;, then this would reference the directory in which to run make as well as which target to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entryPoint(String entryPoint) {
             $.entryPoint = entryPoint;
             return this;
         }
 
+        /**
+         * @param environment Any other builder-controlled inputs necessary for correctly evaluating the recipe. Usually only needed for reproducing the build but not evaluated as part of policy. Since the environment field can greatly vary in structure, depending on the builder and recipe type, this is of form &#34;Any&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(List<Map<String,String>> environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param environment Any other builder-controlled inputs necessary for correctly evaluating the recipe. Usually only needed for reproducing the build but not evaluated as part of policy. Since the environment field can greatly vary in structure, depending on the builder and recipe type, this is of form &#34;Any&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(Map<String,String>... environment) {
             return environment(List.of(environment));
         }
 
+        /**
+         * @param type URI indicating what type of recipe was performed. It determines the meaning of recipe.entryPoint, recipe.arguments, recipe.environment, and materials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

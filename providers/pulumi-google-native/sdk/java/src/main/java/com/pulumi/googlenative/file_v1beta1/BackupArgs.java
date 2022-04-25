@@ -30,6 +30,10 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the backup with 2048 characters or less. Requests with longer descriptions will be rejected.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -41,6 +45,10 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Resource labels to represent user provided metadata.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -66,6 +74,10 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceFileShare")
     private @Nullable Output<String> sourceFileShare;
 
+    /**
+     * @return Name of the file share in the source Cloud Filestore instance that the backup is created from.
+     * 
+     */
     public Optional<Output<String>> sourceFileShare() {
         return Optional.ofNullable(this.sourceFileShare);
     }
@@ -77,6 +89,10 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceInstance")
     private @Nullable Output<String> sourceInstance;
 
+    /**
+     * @return The resource name of the source Cloud Filestore instance, in the format `projects/{project_id}/locations/{location_id}/instances/{instance_id}`, used to create this backup.
+     * 
+     */
     public Optional<Output<String>> sourceInstance() {
         return Optional.ofNullable(this.sourceInstance);
     }
@@ -120,20 +136,44 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
             return backupId(Output.of(backupId));
         }
 
+        /**
+         * @param description A description of the backup with 2048 characters or less. Requests with longer descriptions will be rejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the backup with 2048 characters or less. Requests with longer descriptions will be rejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param labels Resource labels to represent user provided metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Resource labels to represent user provided metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -156,20 +196,44 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param sourceFileShare Name of the file share in the source Cloud Filestore instance that the backup is created from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceFileShare(@Nullable Output<String> sourceFileShare) {
             $.sourceFileShare = sourceFileShare;
             return this;
         }
 
+        /**
+         * @param sourceFileShare Name of the file share in the source Cloud Filestore instance that the backup is created from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceFileShare(String sourceFileShare) {
             return sourceFileShare(Output.of(sourceFileShare));
         }
 
+        /**
+         * @param sourceInstance The resource name of the source Cloud Filestore instance, in the format `projects/{project_id}/locations/{location_id}/instances/{instance_id}`, used to create this backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceInstance(@Nullable Output<String> sourceInstance) {
             $.sourceInstance = sourceInstance;
             return this;
         }
 
+        /**
+         * @param sourceInstance The resource name of the source Cloud Filestore instance, in the format `projects/{project_id}/locations/{location_id}/instances/{instance_id}`, used to create this backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceInstance(String sourceInstance) {
             return sourceInstance(Output.of(sourceInstance));
         }

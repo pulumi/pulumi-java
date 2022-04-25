@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse {
-    /**
-     * List of media objects.
-     * 
-     */
+        /**
+         * @return List of media objects.
+         * 
+         */
     private final List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects;
-    /**
-     * Optional. What type of media is the content (ie &#34;audio&#34;).
-     * 
-     */
+        /**
+         * @return Optional. What type of media is the content (ie &#34;audio&#34;).
+         * 
+         */
     private final String mediaType;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     }
 
     /**
-     * List of media objects.
+     * @return List of media objects.
      * 
-    */
+     */
     public List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects() {
         return this.mediaObjects;
     }
     /**
-     * Optional. What type of media is the content (ie &#34;audio&#34;).
+     * @return Optional. What type of media is the content (ie &#34;audio&#34;).
      * 
-    */
+     */
     public String mediaType() {
         return this.mediaType;
     }

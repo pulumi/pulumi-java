@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ConfigFileResponse {
-    /**
-     * The contents of the file.
-     * 
-     */
+        /**
+         * @return The contents of the file.
+         * 
+         */
     private final String content;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ConfigFileResponse {
     }
 
     /**
-     * The contents of the file.
+     * @return The contents of the file.
      * 
-    */
+     */
     public String content() {
         return this.content;
     }

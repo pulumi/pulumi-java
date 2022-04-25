@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class BucketOwnerResponse {
-    /**
-     * The entity, in the form project-owner-projectId.
-     * 
-     */
+        /**
+         * @return The entity, in the form project-owner-projectId.
+         * 
+         */
     private final String entity;
-    /**
-     * The ID for the entity.
-     * 
-     */
+        /**
+         * @return The ID for the entity.
+         * 
+         */
     private final String entityId;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class BucketOwnerResponse {
     }
 
     /**
-     * The entity, in the form project-owner-projectId.
+     * @return The entity, in the form project-owner-projectId.
      * 
-    */
+     */
     public String entity() {
         return this.entity;
     }
     /**
-     * The ID for the entity.
+     * @return The ID for the entity.
      * 
-    */
+     */
     public String entityId() {
         return this.entityId;
     }

@@ -23,6 +23,10 @@ public final class LicenseResourceCommitmentResponse extends com.pulumi.resource
     @Import(name="amount", required=true)
     private String amount;
 
+    /**
+     * @return The number of licenses purchased.
+     * 
+     */
     public String amount() {
         return this.amount;
     }
@@ -34,6 +38,10 @@ public final class LicenseResourceCommitmentResponse extends com.pulumi.resource
     @Import(name="coresPerLicense", required=true)
     private String coresPerLicense;
 
+    /**
+     * @return Specifies the core range of the instance for which this license applies.
+     * 
+     */
     public String coresPerLicense() {
         return this.coresPerLicense;
     }
@@ -45,6 +53,10 @@ public final class LicenseResourceCommitmentResponse extends com.pulumi.resource
     @Import(name="license", required=true)
     private String license;
 
+    /**
+     * @return Any applicable license URI.
+     * 
+     */
     public String license() {
         return this.license;
     }
@@ -75,16 +87,34 @@ public final class LicenseResourceCommitmentResponse extends com.pulumi.resource
             $ = new LicenseResourceCommitmentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param amount The number of licenses purchased.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amount(String amount) {
             $.amount = amount;
             return this;
         }
 
+        /**
+         * @param coresPerLicense Specifies the core range of the instance for which this license applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder coresPerLicense(String coresPerLicense) {
             $.coresPerLicense = coresPerLicense;
             return this;
         }
 
+        /**
+         * @param license Any applicable license URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder license(String license) {
             $.license = license;
             return this;

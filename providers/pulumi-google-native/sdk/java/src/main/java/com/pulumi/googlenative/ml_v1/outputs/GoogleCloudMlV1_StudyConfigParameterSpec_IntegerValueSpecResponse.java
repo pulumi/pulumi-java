@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse {
-    /**
-     * Must be specified if type is `INTEGER`. Maximum value of the parameter.
-     * 
-     */
+        /**
+         * @return Must be specified if type is `INTEGER`. Maximum value of the parameter.
+         * 
+         */
     private final String maxValue;
-    /**
-     * Must be specified if type is `INTEGER`. Minimum value of the parameter.
-     * 
-     */
+        /**
+         * @return Must be specified if type is `INTEGER`. Minimum value of the parameter.
+         * 
+         */
     private final String minValue;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResp
     }
 
     /**
-     * Must be specified if type is `INTEGER`. Maximum value of the parameter.
+     * @return Must be specified if type is `INTEGER`. Maximum value of the parameter.
      * 
-    */
+     */
     public String maxValue() {
         return this.maxValue;
     }
     /**
-     * Must be specified if type is `INTEGER`. Minimum value of the parameter.
+     * @return Must be specified if type is `INTEGER`. Minimum value of the parameter.
      * 
-    */
+     */
     public String minValue() {
         return this.minValue;
     }

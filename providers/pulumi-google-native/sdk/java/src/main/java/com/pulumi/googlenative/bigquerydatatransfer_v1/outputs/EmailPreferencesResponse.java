@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class EmailPreferencesResponse {
-    /**
-     * If true, email notifications will be sent on transfer run failures.
-     * 
-     */
+        /**
+         * @return If true, email notifications will be sent on transfer run failures.
+         * 
+         */
     private final Boolean enableFailureEmail;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class EmailPreferencesResponse {
     }
 
     /**
-     * If true, email notifications will be sent on transfer run failures.
+     * @return If true, email notifications will be sent on transfer run failures.
      * 
-    */
+     */
     public Boolean enableFailureEmail() {
         return this.enableFailureEmail;
     }

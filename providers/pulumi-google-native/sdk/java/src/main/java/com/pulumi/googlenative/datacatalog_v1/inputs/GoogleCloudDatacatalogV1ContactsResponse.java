@@ -24,6 +24,10 @@ public final class GoogleCloudDatacatalogV1ContactsResponse extends com.pulumi.r
     @Import(name="people", required=true)
     private List<GoogleCloudDatacatalogV1ContactsPersonResponse> people;
 
+    /**
+     * @return The list of contact people for the entry.
+     * 
+     */
     public List<GoogleCloudDatacatalogV1ContactsPersonResponse> people() {
         return this.people;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudDatacatalogV1ContactsResponse extends com.pulumi.r
             $ = new GoogleCloudDatacatalogV1ContactsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param people The list of contact people for the entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder people(List<GoogleCloudDatacatalogV1ContactsPersonResponse> people) {
             $.people = people;
             return this;
         }
 
+        /**
+         * @param people The list of contact people for the entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder people(GoogleCloudDatacatalogV1ContactsPersonResponse... people) {
             return people(List.of(people));
         }

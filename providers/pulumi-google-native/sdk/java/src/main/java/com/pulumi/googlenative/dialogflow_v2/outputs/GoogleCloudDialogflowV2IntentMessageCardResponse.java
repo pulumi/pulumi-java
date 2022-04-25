@@ -11,25 +11,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowV2IntentMessageCardResponse {
-    /**
-     * Optional. The collection of card buttons.
-     * 
-     */
+        /**
+         * @return Optional. The collection of card buttons.
+         * 
+         */
     private final List<GoogleCloudDialogflowV2IntentMessageCardButtonResponse> buttons;
-    /**
-     * Optional. The public URI to an image file for the card.
-     * 
-     */
+        /**
+         * @return Optional. The public URI to an image file for the card.
+         * 
+         */
     private final String imageUri;
-    /**
-     * Optional. The subtitle of the card.
-     * 
-     */
+        /**
+         * @return Optional. The subtitle of the card.
+         * 
+         */
     private final String subtitle;
-    /**
-     * Optional. The title of the card.
-     * 
-     */
+        /**
+         * @return Optional. The title of the card.
+         * 
+         */
     private final String title;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class GoogleCloudDialogflowV2IntentMessageCardResponse {
     }
 
     /**
-     * Optional. The collection of card buttons.
+     * @return Optional. The collection of card buttons.
      * 
-    */
+     */
     public List<GoogleCloudDialogflowV2IntentMessageCardButtonResponse> buttons() {
         return this.buttons;
     }
     /**
-     * Optional. The public URI to an image file for the card.
+     * @return Optional. The public URI to an image file for the card.
      * 
-    */
+     */
     public String imageUri() {
         return this.imageUri;
     }
     /**
-     * Optional. The subtitle of the card.
+     * @return Optional. The subtitle of the card.
      * 
-    */
+     */
     public String subtitle() {
         return this.subtitle;
     }
     /**
-     * Optional. The title of the card.
+     * @return Optional. The title of the card.
      * 
-    */
+     */
     public String title() {
         return this.title;
     }

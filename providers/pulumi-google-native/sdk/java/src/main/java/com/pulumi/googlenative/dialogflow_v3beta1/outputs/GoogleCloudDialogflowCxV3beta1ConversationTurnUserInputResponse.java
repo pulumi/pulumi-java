@@ -12,25 +12,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse {
-    /**
-     * Whether sentiment analysis is enabled.
-     * 
-     */
+        /**
+         * @return Whether sentiment analysis is enabled.
+         * 
+         */
     private final Boolean enableSentimentAnalysis;
-    /**
-     * Parameters that need to be injected into the conversation during intent detection.
-     * 
-     */
+        /**
+         * @return Parameters that need to be injected into the conversation during intent detection.
+         * 
+         */
     private final Map<String,String> injectedParameters;
-    /**
-     * Supports text input, event input, dtmf input in the test case.
-     * 
-     */
+        /**
+         * @return Supports text input, event input, dtmf input in the test case.
+         * 
+         */
     private final GoogleCloudDialogflowCxV3beta1QueryInputResponse input;
-    /**
-     * If webhooks should be allowed to trigger in response to the user utterance. Often if parameters are injected, webhooks should not be enabled.
-     * 
-     */
+        /**
+         * @return If webhooks should be allowed to trigger in response to the user utterance. Often if parameters are injected, webhooks should not be enabled.
+         * 
+         */
     private final Boolean isWebhookEnabled;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputRespon
     }
 
     /**
-     * Whether sentiment analysis is enabled.
+     * @return Whether sentiment analysis is enabled.
      * 
-    */
+     */
     public Boolean enableSentimentAnalysis() {
         return this.enableSentimentAnalysis;
     }
     /**
-     * Parameters that need to be injected into the conversation during intent detection.
+     * @return Parameters that need to be injected into the conversation during intent detection.
      * 
-    */
+     */
     public Map<String,String> injectedParameters() {
         return this.injectedParameters;
     }
     /**
-     * Supports text input, event input, dtmf input in the test case.
+     * @return Supports text input, event input, dtmf input in the test case.
      * 
-    */
+     */
     public GoogleCloudDialogflowCxV3beta1QueryInputResponse input() {
         return this.input;
     }
     /**
-     * If webhooks should be allowed to trigger in response to the user utterance. Often if parameters are injected, webhooks should not be enabled.
+     * @return If webhooks should be allowed to trigger in response to the user utterance. Often if parameters are injected, webhooks should not be enabled.
      * 
-    */
+     */
     public Boolean isWebhookEnabled() {
         return this.isWebhookEnabled;
     }

@@ -24,6 +24,10 @@ public final class ErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="details", required=true)
     private Map<String,String> details;
 
+    /**
+     * @return Additional information about the error.
+     * 
+     */
     public Map<String,String> details() {
         return this.details;
     }
@@ -35,6 +39,10 @@ public final class ErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="errorTime", required=true)
     private String errorTime;
 
+    /**
+     * @return The time when the error occurred.
+     * 
+     */
     public String errorTime() {
         return this.errorTime;
     }
@@ -46,6 +54,10 @@ public final class ErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="errorUuid", required=true)
     private String errorUuid;
 
+    /**
+     * @return A unique identifier for this specific error, allowing it to be traced throughout the system in logs and API responses.
+     * 
+     */
     public String errorUuid() {
         return this.errorUuid;
     }
@@ -57,6 +69,10 @@ public final class ErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return A message containing more information about the error that occurred.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -68,6 +84,10 @@ public final class ErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="reason", required=true)
     private String reason;
 
+    /**
+     * @return A title that explains the reason for the error.
+     * 
+     */
     public String reason() {
         return this.reason;
     }
@@ -100,26 +120,56 @@ public final class ErrorResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param details Additional information about the error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(Map<String,String> details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param errorTime The time when the error occurred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorTime(String errorTime) {
             $.errorTime = errorTime;
             return this;
         }
 
+        /**
+         * @param errorUuid A unique identifier for this specific error, allowing it to be traced throughout the system in logs and API responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorUuid(String errorUuid) {
             $.errorUuid = errorUuid;
             return this;
         }
 
+        /**
+         * @param message A message containing more information about the error that occurred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param reason A title that explains the reason for the error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(String reason) {
             $.reason = reason;
             return this;

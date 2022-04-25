@@ -12,25 +12,25 @@ import java.util.Objects;
 
 @CustomType
 public final class ViewDefinitionResponse {
-    /**
-     * [Required] A query that BigQuery executes when the view is referenced.
-     * 
-     */
+        /**
+         * @return [Required] A query that BigQuery executes when the view is referenced.
+         * 
+         */
     private final String query;
-    /**
-     * True if the column names are explicitly specified. For example by using the &#39;CREATE VIEW v(c1, c2) AS ...&#39; syntax. Can only be set using BigQuery&#39;s standard SQL: https://cloud.google.com/bigquery/sql-reference/
-     * 
-     */
+        /**
+         * @return True if the column names are explicitly specified. For example by using the &#39;CREATE VIEW v(c1, c2) AS ...&#39; syntax. Can only be set using BigQuery&#39;s standard SQL: https://cloud.google.com/bigquery/sql-reference/
+         * 
+         */
     private final Boolean useExplicitColumnNames;
-    /**
-     * Specifies whether to use BigQuery&#39;s legacy SQL for this view. The default value is true. If set to false, the view will use BigQuery&#39;s standard SQL: https://cloud.google.com/bigquery/sql-reference/ Queries and views that reference this view must use the same flag value.
-     * 
-     */
+        /**
+         * @return Specifies whether to use BigQuery&#39;s legacy SQL for this view. The default value is true. If set to false, the view will use BigQuery&#39;s standard SQL: https://cloud.google.com/bigquery/sql-reference/ Queries and views that reference this view must use the same flag value.
+         * 
+         */
     private final Boolean useLegacySql;
-    /**
-     * Describes user-defined function resources used in the query.
-     * 
-     */
+        /**
+         * @return Describes user-defined function resources used in the query.
+         * 
+         */
     private final List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class ViewDefinitionResponse {
     }
 
     /**
-     * [Required] A query that BigQuery executes when the view is referenced.
+     * @return [Required] A query that BigQuery executes when the view is referenced.
      * 
-    */
+     */
     public String query() {
         return this.query;
     }
     /**
-     * True if the column names are explicitly specified. For example by using the &#39;CREATE VIEW v(c1, c2) AS ...&#39; syntax. Can only be set using BigQuery&#39;s standard SQL: https://cloud.google.com/bigquery/sql-reference/
+     * @return True if the column names are explicitly specified. For example by using the &#39;CREATE VIEW v(c1, c2) AS ...&#39; syntax. Can only be set using BigQuery&#39;s standard SQL: https://cloud.google.com/bigquery/sql-reference/
      * 
-    */
+     */
     public Boolean useExplicitColumnNames() {
         return this.useExplicitColumnNames;
     }
     /**
-     * Specifies whether to use BigQuery&#39;s legacy SQL for this view. The default value is true. If set to false, the view will use BigQuery&#39;s standard SQL: https://cloud.google.com/bigquery/sql-reference/ Queries and views that reference this view must use the same flag value.
+     * @return Specifies whether to use BigQuery&#39;s legacy SQL for this view. The default value is true. If set to false, the view will use BigQuery&#39;s standard SQL: https://cloud.google.com/bigquery/sql-reference/ Queries and views that reference this view must use the same flag value.
      * 
-    */
+     */
     public Boolean useLegacySql() {
         return this.useLegacySql;
     }
     /**
-     * Describes user-defined function resources used in the query.
+     * @return Describes user-defined function resources used in the query.
      * 
-    */
+     */
     public List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources() {
         return this.userDefinedFunctionResources;
     }

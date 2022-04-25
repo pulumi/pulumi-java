@@ -11,30 +11,30 @@ import java.util.Objects;
 
 @CustomType
 public final class LoadBalancerInfoResponse {
-    /**
-     * Type of load balancer&#39;s backend configuration.
-     * 
-     */
+        /**
+         * @return Type of load balancer&#39;s backend configuration.
+         * 
+         */
     private final String backendType;
-    /**
-     * Backend configuration URI.
-     * 
-     */
+        /**
+         * @return Backend configuration URI.
+         * 
+         */
     private final String backendUri;
-    /**
-     * Information for the loadbalancer backends.
-     * 
-     */
+        /**
+         * @return Information for the loadbalancer backends.
+         * 
+         */
     private final List<LoadBalancerBackendResponse> backends;
-    /**
-     * URI of the health check for the load balancer.
-     * 
-     */
+        /**
+         * @return URI of the health check for the load balancer.
+         * 
+         */
     private final String healthCheckUri;
-    /**
-     * Type of the load balancer.
-     * 
-     */
+        /**
+         * @return Type of the load balancer.
+         * 
+         */
     private final String loadBalancerType;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class LoadBalancerInfoResponse {
     }
 
     /**
-     * Type of load balancer&#39;s backend configuration.
+     * @return Type of load balancer&#39;s backend configuration.
      * 
-    */
+     */
     public String backendType() {
         return this.backendType;
     }
     /**
-     * Backend configuration URI.
+     * @return Backend configuration URI.
      * 
-    */
+     */
     public String backendUri() {
         return this.backendUri;
     }
     /**
-     * Information for the loadbalancer backends.
+     * @return Information for the loadbalancer backends.
      * 
-    */
+     */
     public List<LoadBalancerBackendResponse> backends() {
         return this.backends;
     }
     /**
-     * URI of the health check for the load balancer.
+     * @return URI of the health check for the load balancer.
      * 
-    */
+     */
     public String healthCheckUri() {
         return this.healthCheckUri;
     }
     /**
-     * Type of the load balancer.
+     * @return Type of the load balancer.
      * 
-    */
+     */
     public String loadBalancerType() {
         return this.loadBalancerType;
     }

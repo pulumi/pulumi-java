@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse {
-    /**
-     * The list of simple responses.
-     * 
-     */
+        /**
+         * @return The list of simple responses.
+         * 
+         */
     private final List<GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse> simpleResponses;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse {
     }
 
     /**
-     * The list of simple responses.
+     * @return The list of simple responses.
      * 
-    */
+     */
     public List<GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse> simpleResponses() {
         return this.simpleResponses;
     }

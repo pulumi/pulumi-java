@@ -27,6 +27,10 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs ex
     @Import(name="genericWebService")
     private @Nullable Output<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> genericWebService;
 
+    /**
+     * @return Generic Service configuration of this webhook.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs>> genericWebService() {
         return Optional.ofNullable(this.genericWebService);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs ex
     @Import(name="service", required=true)
     private Output<String> service;
 
+    /**
+     * @return The name of [Service Directory](https://cloud.google.com/service-directory) service. Format: `projects//locations//namespaces//services/`. `Location ID` of the service directory must be the same as the location of the agent.
+     * 
+     */
     public Output<String> service() {
         return this.service;
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs ex
             $ = new GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param genericWebService Generic Service configuration of this webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder genericWebService(@Nullable Output<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> genericWebService) {
             $.genericWebService = genericWebService;
             return this;
         }
 
+        /**
+         * @param genericWebService Generic Service configuration of this webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder genericWebService(GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs genericWebService) {
             return genericWebService(Output.of(genericWebService));
         }
 
+        /**
+         * @param service The name of [Service Directory](https://cloud.google.com/service-directory) service. Format: `projects//locations//namespaces//services/`. `Location ID` of the service directory must be the same as the location of the agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service The name of [Service Directory](https://cloud.google.com/service-directory) service. Format: `projects//locations//namespaces//services/`. `Location ID` of the service directory must be the same as the location of the agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }

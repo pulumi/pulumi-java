@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class PositionResponse {
-    /**
-     * The source code column position (of the line) the current instruction was generated from.
-     * 
-     */
+        /**
+         * @return The source code column position (of the line) the current instruction was generated from.
+         * 
+         */
     private final String column;
-    /**
-     * The number of bytes of source code making up this stack trace element.
-     * 
-     */
+        /**
+         * @return The number of bytes of source code making up this stack trace element.
+         * 
+         */
     private final String length;
-    /**
-     * The source code line number the current instruction was generated from.
-     * 
-     */
+        /**
+         * @return The source code line number the current instruction was generated from.
+         * 
+         */
     private final String line;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class PositionResponse {
     }
 
     /**
-     * The source code column position (of the line) the current instruction was generated from.
+     * @return The source code column position (of the line) the current instruction was generated from.
      * 
-    */
+     */
     public String column() {
         return this.column;
     }
     /**
-     * The number of bytes of source code making up this stack trace element.
+     * @return The number of bytes of source code making up this stack trace element.
      * 
-    */
+     */
     public String length() {
         return this.length;
     }
     /**
-     * The source code line number the current instruction was generated from.
+     * @return The source code line number the current instruction was generated from.
      * 
-    */
+     */
     public String line() {
         return this.line;
     }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleFirestoreAdminV1beta1IndexFieldResponse {
-    /**
-     * The path of the field. Must match the field path specification described by google.firestore.v1beta1.Document.fields. Special field path `__name__` may be used by itself or at the end of a path. `__type__` may be used only at the end of path.
-     * 
-     */
+        /**
+         * @return The path of the field. Must match the field path specification described by google.firestore.v1beta1.Document.fields. Special field path `__name__` may be used by itself or at the end of a path. `__type__` may be used only at the end of path.
+         * 
+         */
     private final String fieldPath;
-    /**
-     * The field&#39;s mode.
-     * 
-     */
+        /**
+         * @return The field&#39;s mode.
+         * 
+         */
     private final String mode;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldResponse {
     }
 
     /**
-     * The path of the field. Must match the field path specification described by google.firestore.v1beta1.Document.fields. Special field path `__name__` may be used by itself or at the end of a path. `__type__` may be used only at the end of path.
+     * @return The path of the field. Must match the field path specification described by google.firestore.v1beta1.Document.fields. Special field path `__name__` may be used by itself or at the end of a path. `__type__` may be used only at the end of path.
      * 
-    */
+     */
     public String fieldPath() {
         return this.fieldPath;
     }
     /**
-     * The field&#39;s mode.
+     * @return The field&#39;s mode.
      * 
-    */
+     */
     public String mode() {
         return this.mode;
     }

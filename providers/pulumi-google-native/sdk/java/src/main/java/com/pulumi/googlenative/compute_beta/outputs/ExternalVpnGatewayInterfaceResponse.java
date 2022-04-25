@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ExternalVpnGatewayInterfaceResponse {
-    /**
-     * IP address of the interface in the external VPN gateway. Only IPv4 is supported. This IP address can be either from your on-premise gateway or another Cloud provider&#39;s VPN gateway, it cannot be an IP address from Google Compute Engine.
-     * 
-     */
+        /**
+         * @return IP address of the interface in the external VPN gateway. Only IPv4 is supported. This IP address can be either from your on-premise gateway or another Cloud provider&#39;s VPN gateway, it cannot be an IP address from Google Compute Engine.
+         * 
+         */
     private final String ipAddress;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ExternalVpnGatewayInterfaceResponse {
     }
 
     /**
-     * IP address of the interface in the external VPN gateway. Only IPv4 is supported. This IP address can be either from your on-premise gateway or another Cloud provider&#39;s VPN gateway, it cannot be an IP address from Google Compute Engine.
+     * @return IP address of the interface in the external VPN gateway. Only IPv4 is supported. This IP address can be either from your on-premise gateway or another Cloud provider&#39;s VPN gateway, it cannot be an IP address from Google Compute Engine.
      * 
-    */
+     */
     public String ipAddress() {
         return this.ipAddress;
     }

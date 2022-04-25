@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class VpcAccessibleServicesResponse {
-    /**
-     * The list of APIs usable within the Service Perimeter. Must be empty unless &#39;enable_restriction&#39; is True. You can specify a list of individual services, as well as include the &#39;RESTRICTED-SERVICES&#39; value, which automatically includes all of the services protected by the perimeter.
-     * 
-     */
+        /**
+         * @return The list of APIs usable within the Service Perimeter. Must be empty unless &#39;enable_restriction&#39; is True. You can specify a list of individual services, as well as include the &#39;RESTRICTED-SERVICES&#39; value, which automatically includes all of the services protected by the perimeter.
+         * 
+         */
     private final List<String> allowedServices;
-    /**
-     * Whether to restrict API calls within the Service Perimeter to the list of APIs specified in &#39;allowed_services&#39;.
-     * 
-     */
+        /**
+         * @return Whether to restrict API calls within the Service Perimeter to the list of APIs specified in &#39;allowed_services&#39;.
+         * 
+         */
     private final Boolean enableRestriction;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class VpcAccessibleServicesResponse {
     }
 
     /**
-     * The list of APIs usable within the Service Perimeter. Must be empty unless &#39;enable_restriction&#39; is True. You can specify a list of individual services, as well as include the &#39;RESTRICTED-SERVICES&#39; value, which automatically includes all of the services protected by the perimeter.
+     * @return The list of APIs usable within the Service Perimeter. Must be empty unless &#39;enable_restriction&#39; is True. You can specify a list of individual services, as well as include the &#39;RESTRICTED-SERVICES&#39; value, which automatically includes all of the services protected by the perimeter.
      * 
-    */
+     */
     public List<String> allowedServices() {
         return this.allowedServices;
     }
     /**
-     * Whether to restrict API calls within the Service Perimeter to the list of APIs specified in &#39;allowed_services&#39;.
+     * @return Whether to restrict API calls within the Service Perimeter to the list of APIs specified in &#39;allowed_services&#39;.
      * 
-    */
+     */
     public Boolean enableRestriction() {
         return this.enableRestriction;
     }

@@ -12,30 +12,30 @@ import java.util.Objects;
 
 @CustomType
 public final class CycleStepResponse {
-    /**
-     * The time the cycle step has ended.
-     * 
-     */
+        /**
+         * @return The time the cycle step has ended.
+         * 
+         */
     private final String endTime;
-    /**
-     * Initializing replication step.
-     * 
-     */
+        /**
+         * @return Initializing replication step.
+         * 
+         */
     private final InitializingReplicationStepResponse initializingReplication;
-    /**
-     * Post processing step.
-     * 
-     */
+        /**
+         * @return Post processing step.
+         * 
+         */
     private final PostProcessingStepResponse postProcessing;
-    /**
-     * Replicating step.
-     * 
-     */
+        /**
+         * @return Replicating step.
+         * 
+         */
     private final ReplicatingStepResponse replicating;
-    /**
-     * The time the cycle step has started.
-     * 
-     */
+        /**
+         * @return The time the cycle step has started.
+         * 
+         */
     private final String startTime;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class CycleStepResponse {
     }
 
     /**
-     * The time the cycle step has ended.
+     * @return The time the cycle step has ended.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * Initializing replication step.
+     * @return Initializing replication step.
      * 
-    */
+     */
     public InitializingReplicationStepResponse initializingReplication() {
         return this.initializingReplication;
     }
     /**
-     * Post processing step.
+     * @return Post processing step.
      * 
-    */
+     */
     public PostProcessingStepResponse postProcessing() {
         return this.postProcessing;
     }
     /**
-     * Replicating step.
+     * @return Replicating step.
      * 
-    */
+     */
     public ReplicatingStepResponse replicating() {
         return this.replicating;
     }
     /**
-     * The time the cycle step has started.
+     * @return The time the cycle step has started.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }

@@ -27,6 +27,10 @@ public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventType")
     private @Nullable Output<List<FilterEventTypeItem>> eventType;
 
+    /**
+     * @return Event types to allowlist.
+     * 
+     */
     public Optional<Output<List<FilterEventTypeItem>>> eventType() {
         return Optional.ofNullable(this.eventType);
     }
@@ -55,15 +59,33 @@ public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventType Event types to allowlist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventType(@Nullable Output<List<FilterEventTypeItem>> eventType) {
             $.eventType = eventType;
             return this;
         }
 
+        /**
+         * @param eventType Event types to allowlist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventType(List<FilterEventTypeItem> eventType) {
             return eventType(Output.of(eventType));
         }
 
+        /**
+         * @param eventType Event types to allowlist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventType(FilterEventTypeItem... eventType) {
             return eventType(List.of(eventType));
         }

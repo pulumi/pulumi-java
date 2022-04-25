@@ -26,6 +26,10 @@ public final class CompositeTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional textual description of the resource; provided by the client when the resource is created.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -44,6 +48,10 @@ public final class CompositeTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<List<CompositeTypeLabelEntryArgs>> labels;
 
+    /**
+     * @return Map of labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
+     * 
+     */
     public Optional<Output<List<CompositeTypeLabelEntryArgs>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -55,6 +63,10 @@ public final class CompositeTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the composite type, must follow the expression: `[a-z]([-a-z0-9_.]{0,61}[a-z0-9])?`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -80,6 +92,10 @@ public final class CompositeTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="templateContents")
     private @Nullable Output<TemplateContentsArgs> templateContents;
 
+    /**
+     * @return Files for the template type.
+     * 
+     */
     public Optional<Output<TemplateContentsArgs>> templateContents() {
         return Optional.ofNullable(this.templateContents);
     }
@@ -114,11 +130,23 @@ public final class CompositeTypeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CompositeTypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description An optional textual description of the resource; provided by the client when the resource is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional textual description of the resource; provided by the client when the resource is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
@@ -132,24 +160,54 @@ public final class CompositeTypeArgs extends com.pulumi.resources.ResourceArgs {
             return id(Output.of(id));
         }
 
+        /**
+         * @param labels Map of labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<List<CompositeTypeLabelEntryArgs>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Map of labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(List<CompositeTypeLabelEntryArgs> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param labels Map of labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(CompositeTypeLabelEntryArgs... labels) {
             return labels(List.of(labels));
         }
 
+        /**
+         * @param name Name of the composite type, must follow the expression: `[a-z]([-a-z0-9_.]{0,61}[a-z0-9])?`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the composite type, must follow the expression: `[a-z]([-a-z0-9_.]{0,61}[a-z0-9])?`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -172,11 +230,23 @@ public final class CompositeTypeArgs extends com.pulumi.resources.ResourceArgs {
             return status(Output.of(status));
         }
 
+        /**
+         * @param templateContents Files for the template type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateContents(@Nullable Output<TemplateContentsArgs> templateContents) {
             $.templateContents = templateContents;
             return this;
         }
 
+        /**
+         * @param templateContents Files for the template type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateContents(TemplateContentsArgs templateContents) {
             return templateContents(Output.of(templateContents));
         }

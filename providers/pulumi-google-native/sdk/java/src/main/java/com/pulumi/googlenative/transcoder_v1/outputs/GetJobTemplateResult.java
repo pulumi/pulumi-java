@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetJobTemplateResult {
-    /**
-     * The configuration for this template.
-     * 
-     */
+        /**
+         * @return The configuration for this template.
+         * 
+         */
     private final JobConfigResponse config;
-    /**
-     * The resource name of the job template. Format: `projects/{project_number}/locations/{location}/jobTemplates/{job_template}`
-     * 
-     */
+        /**
+         * @return The resource name of the job template. Format: `projects/{project_number}/locations/{location}/jobTemplates/{job_template}`
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GetJobTemplateResult {
     }
 
     /**
-     * The configuration for this template.
+     * @return The configuration for this template.
      * 
-    */
+     */
     public JobConfigResponse config() {
         return this.config;
     }
     /**
-     * The resource name of the job template. Format: `projects/{project_number}/locations/{location}/jobTemplates/{job_template}`
+     * @return The resource name of the job template. Format: `projects/{project_number}/locations/{location}/jobTemplates/{job_template}`
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

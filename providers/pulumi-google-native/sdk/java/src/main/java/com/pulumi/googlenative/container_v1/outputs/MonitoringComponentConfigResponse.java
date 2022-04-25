@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class MonitoringComponentConfigResponse {
-    /**
-     * Select components to collect metrics. An empty set would disable all monitoring.
-     * 
-     */
+        /**
+         * @return Select components to collect metrics. An empty set would disable all monitoring.
+         * 
+         */
     private final List<String> enableComponents;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class MonitoringComponentConfigResponse {
     }
 
     /**
-     * Select components to collect metrics. An empty set would disable all monitoring.
+     * @return Select components to collect metrics. An empty set would disable all monitoring.
      * 
-    */
+     */
     public List<String> enableComponents() {
         return this.enableComponents;
     }

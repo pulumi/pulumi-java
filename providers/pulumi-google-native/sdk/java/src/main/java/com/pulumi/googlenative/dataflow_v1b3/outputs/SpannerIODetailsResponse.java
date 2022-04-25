@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class SpannerIODetailsResponse {
-    /**
-     * DatabaseId accessed in the connection.
-     * 
-     */
+        /**
+         * @return DatabaseId accessed in the connection.
+         * 
+         */
     private final String databaseId;
-    /**
-     * InstanceId accessed in the connection.
-     * 
-     */
+        /**
+         * @return InstanceId accessed in the connection.
+         * 
+         */
     private final String instanceId;
-    /**
-     * ProjectId accessed in the connection.
-     * 
-     */
+        /**
+         * @return ProjectId accessed in the connection.
+         * 
+         */
     private final String project;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class SpannerIODetailsResponse {
     }
 
     /**
-     * DatabaseId accessed in the connection.
+     * @return DatabaseId accessed in the connection.
      * 
-    */
+     */
     public String databaseId() {
         return this.databaseId;
     }
     /**
-     * InstanceId accessed in the connection.
+     * @return InstanceId accessed in the connection.
      * 
-    */
+     */
     public String instanceId() {
         return this.instanceId;
     }
     /**
-     * ProjectId accessed in the connection.
+     * @return ProjectId accessed in the connection.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }

@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class BucketIamConfigurationUniformBucketLevelAccessResponse {
-    /**
-     * If set, access is controlled only by bucket-level or above IAM policies.
-     * 
-     */
+        /**
+         * @return If set, access is controlled only by bucket-level or above IAM policies.
+         * 
+         */
     private final Boolean enabled;
-    /**
-     * The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.
-     * 
-     */
+        /**
+         * @return The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.
+         * 
+         */
     private final String lockedTime;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class BucketIamConfigurationUniformBucketLevelAccessResponse {
     }
 
     /**
-     * If set, access is controlled only by bucket-level or above IAM policies.
+     * @return If set, access is controlled only by bucket-level or above IAM policies.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.
+     * @return The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.
      * 
-    */
+     */
     public String lockedTime() {
         return this.lockedTime;
     }

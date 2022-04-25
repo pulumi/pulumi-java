@@ -28,6 +28,10 @@ public final class ColumnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="weight")
     private @Nullable Output<String> weight;
 
+    /**
+     * @return The relative weight of this column. The column weight is used to adjust the width of columns on the screen (relative to peers). Greater the weight, greater the width of the column on the screen. If omitted, a value of 1 is used while rendering.
+     * 
+     */
     public Optional<Output<String>> weight() {
         return Optional.ofNullable(this.weight);
     }
@@ -39,6 +43,10 @@ public final class ColumnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="widgets")
     private @Nullable Output<List<WidgetArgs>> widgets;
 
+    /**
+     * @return The display widgets arranged vertically in this column.
+     * 
+     */
     public Optional<Output<List<WidgetArgs>>> widgets() {
         return Optional.ofNullable(this.widgets);
     }
@@ -68,24 +76,54 @@ public final class ColumnArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ColumnArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param weight The relative weight of this column. The column weight is used to adjust the width of columns on the screen (relative to peers). Greater the weight, greater the width of the column on the screen. If omitted, a value of 1 is used while rendering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(@Nullable Output<String> weight) {
             $.weight = weight;
             return this;
         }
 
+        /**
+         * @param weight The relative weight of this column. The column weight is used to adjust the width of columns on the screen (relative to peers). Greater the weight, greater the width of the column on the screen. If omitted, a value of 1 is used while rendering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(String weight) {
             return weight(Output.of(weight));
         }
 
+        /**
+         * @param widgets The display widgets arranged vertically in this column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder widgets(@Nullable Output<List<WidgetArgs>> widgets) {
             $.widgets = widgets;
             return this;
         }
 
+        /**
+         * @param widgets The display widgets arranged vertically in this column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder widgets(List<WidgetArgs> widgets) {
             return widgets(Output.of(widgets));
         }
 
+        /**
+         * @param widgets The display widgets arranged vertically in this column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder widgets(WidgetArgs... widgets) {
             return widgets(List.of(widgets));
         }

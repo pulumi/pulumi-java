@@ -19,6 +19,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecRespo
     @Import(name="maxValue", required=true)
     private Double maxValue;
 
+    /**
+     * @return Must be specified if type is `DOUBLE`. Maximum value of the parameter.
+     * 
+     */
     public Double maxValue() {
         return this.maxValue;
     }
@@ -30,6 +34,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecRespo
     @Import(name="minValue", required=true)
     private Double minValue;
 
+    /**
+     * @return Must be specified if type is `DOUBLE`. Minimum value of the parameter.
+     * 
+     */
     public Double minValue() {
         return this.minValue;
     }
@@ -59,11 +67,23 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecRespo
             $ = new GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxValue Must be specified if type is `DOUBLE`. Maximum value of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxValue(Double maxValue) {
             $.maxValue = maxValue;
             return this;
         }
 
+        /**
+         * @param minValue Must be specified if type is `DOUBLE`. Minimum value of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minValue(Double minValue) {
             $.minValue = minValue;
             return this;

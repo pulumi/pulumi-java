@@ -11,40 +11,40 @@ import java.util.Objects;
 
 @CustomType
 public final class GetRouteResult {
-    /**
-     * The create time of the resource.
-     * 
-     */
+        /**
+         * @return The create time of the resource.
+         * 
+         */
     private final String createTime;
-    /**
-     * Destination address for connection
-     * 
-     */
+        /**
+         * @return Destination address for connection
+         * 
+         */
     private final String destinationAddress;
-    /**
-     * Destination port for connection
-     * 
-     */
+        /**
+         * @return Destination port for connection
+         * 
+         */
     private final Integer destinationPort;
-    /**
-     * Display name.
-     * 
-     */
+        /**
+         * @return Display name.
+         * 
+         */
     private final String displayName;
-    /**
-     * Labels.
-     * 
-     */
+        /**
+         * @return Labels.
+         * 
+         */
     private final Map<String,String> labels;
-    /**
-     * The resource&#39;s name.
-     * 
-     */
+        /**
+         * @return The resource&#39;s name.
+         * 
+         */
     private final String name;
-    /**
-     * The update time of the resource.
-     * 
-     */
+        /**
+         * @return The update time of the resource.
+         * 
+         */
     private final String updateTime;
 
     @CustomType.Constructor
@@ -66,51 +66,51 @@ public final class GetRouteResult {
     }
 
     /**
-     * The create time of the resource.
+     * @return The create time of the resource.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Destination address for connection
+     * @return Destination address for connection
      * 
-    */
+     */
     public String destinationAddress() {
         return this.destinationAddress;
     }
     /**
-     * Destination port for connection
+     * @return Destination port for connection
      * 
-    */
+     */
     public Integer destinationPort() {
         return this.destinationPort;
     }
     /**
-     * Display name.
+     * @return Display name.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Labels.
+     * @return Labels.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The resource&#39;s name.
+     * @return The resource&#39;s name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The update time of the resource.
+     * @return The update time of the resource.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

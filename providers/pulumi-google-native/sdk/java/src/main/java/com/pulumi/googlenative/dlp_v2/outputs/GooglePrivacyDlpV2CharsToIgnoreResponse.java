@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GooglePrivacyDlpV2CharsToIgnoreResponse {
-    /**
-     * Characters to not transform when masking.
-     * 
-     */
+        /**
+         * @return Characters to not transform when masking.
+         * 
+         */
     private final String charactersToSkip;
-    /**
-     * Common characters to not transform when masking. Useful to avoid removing punctuation.
-     * 
-     */
+        /**
+         * @return Common characters to not transform when masking. Useful to avoid removing punctuation.
+         * 
+         */
     private final String commonCharactersToIgnore;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GooglePrivacyDlpV2CharsToIgnoreResponse {
     }
 
     /**
-     * Characters to not transform when masking.
+     * @return Characters to not transform when masking.
      * 
-    */
+     */
     public String charactersToSkip() {
         return this.charactersToSkip;
     }
     /**
-     * Common characters to not transform when masking. Useful to avoid removing punctuation.
+     * @return Common characters to not transform when masking. Useful to avoid removing punctuation.
      * 
-    */
+     */
     public String commonCharactersToIgnore() {
         return this.commonCharactersToIgnore;
     }

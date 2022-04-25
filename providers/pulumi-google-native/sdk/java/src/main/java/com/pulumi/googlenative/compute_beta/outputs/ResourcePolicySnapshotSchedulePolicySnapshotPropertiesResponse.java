@@ -12,25 +12,25 @@ import java.util.Objects;
 
 @CustomType
 public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse {
-    /**
-     * Chain name that the snapshot is created in.
-     * 
-     */
+        /**
+         * @return Chain name that the snapshot is created in.
+         * 
+         */
     private final String chainName;
-    /**
-     * Indication to perform a &#39;guest aware&#39; snapshot.
-     * 
-     */
+        /**
+         * @return Indication to perform a &#39;guest aware&#39; snapshot.
+         * 
+         */
     private final Boolean guestFlush;
-    /**
-     * Labels to apply to scheduled snapshots. These can be later modified by the setLabels method. Label values may be empty.
-     * 
-     */
+        /**
+         * @return Labels to apply to scheduled snapshots. These can be later modified by the setLabels method. Label values may be empty.
+         * 
+         */
     private final Map<String,String> labels;
-    /**
-     * Cloud Storage bucket storage location of the auto snapshot (regional or multi-regional).
-     * 
-     */
+        /**
+         * @return Cloud Storage bucket storage location of the auto snapshot (regional or multi-regional).
+         * 
+         */
     private final List<String> storageLocations;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
     }
 
     /**
-     * Chain name that the snapshot is created in.
+     * @return Chain name that the snapshot is created in.
      * 
-    */
+     */
     public String chainName() {
         return this.chainName;
     }
     /**
-     * Indication to perform a &#39;guest aware&#39; snapshot.
+     * @return Indication to perform a &#39;guest aware&#39; snapshot.
      * 
-    */
+     */
     public Boolean guestFlush() {
         return this.guestFlush;
     }
     /**
-     * Labels to apply to scheduled snapshots. These can be later modified by the setLabels method. Label values may be empty.
+     * @return Labels to apply to scheduled snapshots. These can be later modified by the setLabels method. Label values may be empty.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * Cloud Storage bucket storage location of the auto snapshot (regional or multi-regional).
+     * @return Cloud Storage bucket storage location of the auto snapshot (regional or multi-regional).
      * 
-    */
+     */
     public List<String> storageLocations() {
         return this.storageLocations;
     }

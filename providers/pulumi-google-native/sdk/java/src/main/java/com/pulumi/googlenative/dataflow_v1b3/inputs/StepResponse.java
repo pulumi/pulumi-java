@@ -24,6 +24,10 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return The kind of step in the Cloud Dataflow job.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -35,6 +39,10 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name that identifies the step. This must be unique for each step with respect to all other steps in the Cloud Dataflow job.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -46,6 +54,10 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="properties", required=true)
     private Map<String,String> properties;
 
+    /**
+     * @return Named properties associated with the step. Each kind of predefined step has its own required set of properties. Must be provided on Create. Only retrieved with JOB_VIEW_ALL.
+     * 
+     */
     public Map<String,String> properties() {
         return this.properties;
     }
@@ -76,16 +88,34 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
             $ = new StepResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kind The kind of step in the Cloud Dataflow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param name The name that identifies the step. This must be unique for each step with respect to all other steps in the Cloud Dataflow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param properties Named properties associated with the step. Each kind of predefined step has its own required set of properties. Must be provided on Create. Only retrieved with JOB_VIEW_ALL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             $.properties = properties;
             return this;

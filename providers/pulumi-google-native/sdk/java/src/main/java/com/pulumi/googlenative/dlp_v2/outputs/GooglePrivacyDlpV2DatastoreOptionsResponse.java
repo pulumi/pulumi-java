@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GooglePrivacyDlpV2DatastoreOptionsResponse {
-    /**
-     * The kind to process.
-     * 
-     */
+        /**
+         * @return The kind to process.
+         * 
+         */
     private final GooglePrivacyDlpV2KindExpressionResponse kind;
-    /**
-     * A partition ID identifies a grouping of entities. The grouping is always by project and namespace, however the namespace ID may be empty.
-     * 
-     */
+        /**
+         * @return A partition ID identifies a grouping of entities. The grouping is always by project and namespace, however the namespace ID may be empty.
+         * 
+         */
     private final GooglePrivacyDlpV2PartitionIdResponse partitionId;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GooglePrivacyDlpV2DatastoreOptionsResponse {
     }
 
     /**
-     * The kind to process.
+     * @return The kind to process.
      * 
-    */
+     */
     public GooglePrivacyDlpV2KindExpressionResponse kind() {
         return this.kind;
     }
     /**
-     * A partition ID identifies a grouping of entities. The grouping is always by project and namespace, however the namespace ID may be empty.
+     * @return A partition ID identifies a grouping of entities. The grouping is always by project and namespace, however the namespace ID may be empty.
      * 
-    */
+     */
     public GooglePrivacyDlpV2PartitionIdResponse partitionId() {
         return this.partitionId;
     }

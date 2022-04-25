@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class CounterOptionsResponse {
-    /**
-     * Custom fields.
-     * 
-     */
+        /**
+         * @return Custom fields.
+         * 
+         */
     private final List<CustomFieldResponse> customFields;
-    /**
-     * The field value to attribute.
-     * 
-     */
+        /**
+         * @return The field value to attribute.
+         * 
+         */
     private final String field;
-    /**
-     * The metric to update.
-     * 
-     */
+        /**
+         * @return The metric to update.
+         * 
+         */
     private final String metric;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class CounterOptionsResponse {
     }
 
     /**
-     * Custom fields.
+     * @return Custom fields.
      * 
-    */
+     */
     public List<CustomFieldResponse> customFields() {
         return this.customFields;
     }
     /**
-     * The field value to attribute.
+     * @return The field value to attribute.
      * 
-    */
+     */
     public String field() {
         return this.field;
     }
     /**
-     * The metric to update.
+     * @return The metric to update.
      * 
-    */
+     */
     public String metric() {
         return this.metric;
     }

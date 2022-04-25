@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class BuildApprovalResponse {
-    /**
-     * Configuration for manual approval of this build.
-     * 
-     */
+        /**
+         * @return Configuration for manual approval of this build.
+         * 
+         */
     private final ApprovalConfigResponse config;
-    /**
-     * Result of manual approval for this Build.
-     * 
-     */
+        /**
+         * @return Result of manual approval for this Build.
+         * 
+         */
     private final ApprovalResultResponse result;
-    /**
-     * The state of this build&#39;s approval.
-     * 
-     */
+        /**
+         * @return The state of this build&#39;s approval.
+         * 
+         */
     private final String state;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class BuildApprovalResponse {
     }
 
     /**
-     * Configuration for manual approval of this build.
+     * @return Configuration for manual approval of this build.
      * 
-    */
+     */
     public ApprovalConfigResponse config() {
         return this.config;
     }
     /**
-     * Result of manual approval for this Build.
+     * @return Result of manual approval for this Build.
      * 
-    */
+     */
     public ApprovalResultResponse result() {
         return this.result;
     }
     /**
-     * The state of this build&#39;s approval.
+     * @return The state of this build&#39;s approval.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

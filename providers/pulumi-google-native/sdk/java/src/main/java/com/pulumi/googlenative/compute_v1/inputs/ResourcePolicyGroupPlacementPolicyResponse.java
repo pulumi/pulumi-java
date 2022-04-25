@@ -24,6 +24,10 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends com.pulumi
     @Import(name="availabilityDomainCount", required=true)
     private Integer availabilityDomainCount;
 
+    /**
+     * @return The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
+     * 
+     */
     public Integer availabilityDomainCount() {
         return this.availabilityDomainCount;
     }
@@ -35,6 +39,10 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends com.pulumi
     @Import(name="collocation", required=true)
     private String collocation;
 
+    /**
+     * @return Specifies network collocation
+     * 
+     */
     public String collocation() {
         return this.collocation;
     }
@@ -46,6 +54,10 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends com.pulumi
     @Import(name="vmCount", required=true)
     private Integer vmCount;
 
+    /**
+     * @return Number of vms in this placement group
+     * 
+     */
     public Integer vmCount() {
         return this.vmCount;
     }
@@ -76,16 +88,34 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends com.pulumi
             $ = new ResourcePolicyGroupPlacementPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availabilityDomainCount The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityDomainCount(Integer availabilityDomainCount) {
             $.availabilityDomainCount = availabilityDomainCount;
             return this;
         }
 
+        /**
+         * @param collocation Specifies network collocation
+         * 
+         * @return builder
+         * 
+         */
         public Builder collocation(String collocation) {
             $.collocation = collocation;
             return this;
         }
 
+        /**
+         * @param vmCount Number of vms in this placement group
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmCount(Integer vmCount) {
             $.vmCount = vmCount;
             return this;

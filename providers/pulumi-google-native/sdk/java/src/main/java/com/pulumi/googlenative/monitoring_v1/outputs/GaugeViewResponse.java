@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GaugeViewResponse {
-    /**
-     * The lower bound for this gauge chart. The value of the chart should always be greater than or equal to this.
-     * 
-     */
+        /**
+         * @return The lower bound for this gauge chart. The value of the chart should always be greater than or equal to this.
+         * 
+         */
     private final Double lowerBound;
-    /**
-     * The upper bound for this gauge chart. The value of the chart should always be less than or equal to this.
-     * 
-     */
+        /**
+         * @return The upper bound for this gauge chart. The value of the chart should always be less than or equal to this.
+         * 
+         */
     private final Double upperBound;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GaugeViewResponse {
     }
 
     /**
-     * The lower bound for this gauge chart. The value of the chart should always be greater than or equal to this.
+     * @return The lower bound for this gauge chart. The value of the chart should always be greater than or equal to this.
      * 
-    */
+     */
     public Double lowerBound() {
         return this.lowerBound;
     }
     /**
-     * The upper bound for this gauge chart. The value of the chart should always be less than or equal to this.
+     * @return The upper bound for this gauge chart. The value of the chart should always be less than or equal to this.
      * 
-    */
+     */
     public Double upperBound() {
         return this.upperBound;
     }

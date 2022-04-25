@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GSuitePrincipalResponse {
-    /**
-     * This principal represents all users of the G Suite domain of the customer.
-     * 
-     */
+        /**
+         * @return This principal represents all users of the G Suite domain of the customer.
+         * 
+         */
     private final Boolean gsuiteDomain;
-    /**
-     * This principal references a G Suite group account
-     * 
-     */
+        /**
+         * @return This principal references a G Suite group account
+         * 
+         */
     private final String gsuiteGroupEmail;
-    /**
-     * This principal references a G Suite user account
-     * 
-     */
+        /**
+         * @return This principal references a G Suite user account
+         * 
+         */
     private final String gsuiteUserEmail;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class GSuitePrincipalResponse {
     }
 
     /**
-     * This principal represents all users of the G Suite domain of the customer.
+     * @return This principal represents all users of the G Suite domain of the customer.
      * 
-    */
+     */
     public Boolean gsuiteDomain() {
         return this.gsuiteDomain;
     }
     /**
-     * This principal references a G Suite group account
+     * @return This principal references a G Suite group account
      * 
-    */
+     */
     public String gsuiteGroupEmail() {
         return this.gsuiteGroupEmail;
     }
     /**
-     * This principal references a G Suite user account
+     * @return This principal references a G Suite user account
      * 
-    */
+     */
     public String gsuiteUserEmail() {
         return this.gsuiteUserEmail;
     }

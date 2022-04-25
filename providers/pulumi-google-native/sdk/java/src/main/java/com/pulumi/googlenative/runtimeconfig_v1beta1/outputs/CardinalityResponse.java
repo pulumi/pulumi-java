@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class CardinalityResponse {
-    /**
-     * The number variables under the `path` that must exist to meet this condition. Defaults to 1 if not specified.
-     * 
-     */
+        /**
+         * @return The number variables under the `path` that must exist to meet this condition. Defaults to 1 if not specified.
+         * 
+         */
     private final Integer number;
-    /**
-     * The root of the variable subtree to monitor. For example, `/foo`.
-     * 
-     */
+        /**
+         * @return The root of the variable subtree to monitor. For example, `/foo`.
+         * 
+         */
     private final String path;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class CardinalityResponse {
     }
 
     /**
-     * The number variables under the `path` that must exist to meet this condition. Defaults to 1 if not specified.
+     * @return The number variables under the `path` that must exist to meet this condition. Defaults to 1 if not specified.
      * 
-    */
+     */
     public Integer number() {
         return this.number;
     }
     /**
-     * The root of the variable subtree to monitor. For example, `/foo`.
+     * @return The root of the variable subtree to monitor. For example, `/foo`.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }

@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ParameterValidationResponse {
-    /**
-     * Validation based on regular expressions.
-     * 
-     */
+        /**
+         * @return Validation based on regular expressions.
+         * 
+         */
     private final RegexValidationResponse regex;
-    /**
-     * Validation based on a list of allowed values.
-     * 
-     */
+        /**
+         * @return Validation based on a list of allowed values.
+         * 
+         */
     private final ValueValidationResponse values;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class ParameterValidationResponse {
     }
 
     /**
-     * Validation based on regular expressions.
+     * @return Validation based on regular expressions.
      * 
-    */
+     */
     public RegexValidationResponse regex() {
         return this.regex;
     }
     /**
-     * Validation based on a list of allowed values.
+     * @return Validation based on a list of allowed values.
      * 
-    */
+     */
     public ValueValidationResponse values() {
         return this.values;
     }

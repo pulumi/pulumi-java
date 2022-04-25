@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class QuotaResponse {
-    /**
-     * List of `QuotaLimit` definitions for the service.
-     * 
-     */
+        /**
+         * @return List of `QuotaLimit` definitions for the service.
+         * 
+         */
     private final List<QuotaLimitResponse> limits;
-    /**
-     * List of `MetricRule` definitions, each one mapping a selected method to one or more metrics.
-     * 
-     */
+        /**
+         * @return List of `MetricRule` definitions, each one mapping a selected method to one or more metrics.
+         * 
+         */
     private final List<MetricRuleResponse> metricRules;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class QuotaResponse {
     }
 
     /**
-     * List of `QuotaLimit` definitions for the service.
+     * @return List of `QuotaLimit` definitions for the service.
      * 
-    */
+     */
     public List<QuotaLimitResponse> limits() {
         return this.limits;
     }
     /**
-     * List of `MetricRule` definitions, each one mapping a selected method to one or more metrics.
+     * @return List of `MetricRule` definitions, each one mapping a selected method to one or more metrics.
      * 
-    */
+     */
     public List<MetricRuleResponse> metricRules() {
         return this.metricRules;
     }

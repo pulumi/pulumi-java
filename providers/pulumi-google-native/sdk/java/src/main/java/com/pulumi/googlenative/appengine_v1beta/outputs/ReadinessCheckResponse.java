@@ -10,40 +10,40 @@ import java.util.Objects;
 
 @CustomType
 public final class ReadinessCheckResponse {
-    /**
-     * A maximum time limit on application initialization, measured from moment the application successfully replies to a healthcheck until it is ready to serve traffic.
-     * 
-     */
+        /**
+         * @return A maximum time limit on application initialization, measured from moment the application successfully replies to a healthcheck until it is ready to serve traffic.
+         * 
+         */
     private final String appStartTimeout;
-    /**
-     * Interval between health checks.
-     * 
-     */
+        /**
+         * @return Interval between health checks.
+         * 
+         */
     private final String checkInterval;
-    /**
-     * Number of consecutive failed checks required before removing traffic.
-     * 
-     */
+        /**
+         * @return Number of consecutive failed checks required before removing traffic.
+         * 
+         */
     private final Integer failureThreshold;
-    /**
-     * Host header to send when performing a HTTP Readiness check. Example: &#34;myapp.appspot.com&#34;
-     * 
-     */
+        /**
+         * @return Host header to send when performing a HTTP Readiness check. Example: &#34;myapp.appspot.com&#34;
+         * 
+         */
     private final String host;
-    /**
-     * The request path.
-     * 
-     */
+        /**
+         * @return The request path.
+         * 
+         */
     private final String path;
-    /**
-     * Number of consecutive successful checks required before receiving traffic.
-     * 
-     */
+        /**
+         * @return Number of consecutive successful checks required before receiving traffic.
+         * 
+         */
     private final Integer successThreshold;
-    /**
-     * Time before the check is considered failed.
-     * 
-     */
+        /**
+         * @return Time before the check is considered failed.
+         * 
+         */
     private final String timeout;
 
     @CustomType.Constructor
@@ -65,51 +65,51 @@ public final class ReadinessCheckResponse {
     }
 
     /**
-     * A maximum time limit on application initialization, measured from moment the application successfully replies to a healthcheck until it is ready to serve traffic.
+     * @return A maximum time limit on application initialization, measured from moment the application successfully replies to a healthcheck until it is ready to serve traffic.
      * 
-    */
+     */
     public String appStartTimeout() {
         return this.appStartTimeout;
     }
     /**
-     * Interval between health checks.
+     * @return Interval between health checks.
      * 
-    */
+     */
     public String checkInterval() {
         return this.checkInterval;
     }
     /**
-     * Number of consecutive failed checks required before removing traffic.
+     * @return Number of consecutive failed checks required before removing traffic.
      * 
-    */
+     */
     public Integer failureThreshold() {
         return this.failureThreshold;
     }
     /**
-     * Host header to send when performing a HTTP Readiness check. Example: &#34;myapp.appspot.com&#34;
+     * @return Host header to send when performing a HTTP Readiness check. Example: &#34;myapp.appspot.com&#34;
      * 
-    */
+     */
     public String host() {
         return this.host;
     }
     /**
-     * The request path.
+     * @return The request path.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }
     /**
-     * Number of consecutive successful checks required before receiving traffic.
+     * @return Number of consecutive successful checks required before receiving traffic.
      * 
-    */
+     */
     public Integer successThreshold() {
         return this.successThreshold;
     }
     /**
-     * Time before the check is considered failed.
+     * @return Time before the check is considered failed.
      * 
-    */
+     */
     public String timeout() {
         return this.timeout;
     }

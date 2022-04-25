@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class FleetConfigResponse {
-    /**
-     * Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.
-     * 
-     */
+        /**
+         * @return Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.
+         * 
+         */
     private final String fleetSpec;
-    /**
-     * The name of the FleetConfig.
-     * 
-     */
+        /**
+         * @return The name of the FleetConfig.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class FleetConfigResponse {
     }
 
     /**
-     * Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.
+     * @return Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.
      * 
-    */
+     */
     public String fleetSpec() {
         return this.fleetSpec;
     }
     /**
-     * The name of the FleetConfig.
+     * @return The name of the FleetConfig.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class LoggingDestinationResponse {
-    /**
-     * Names of the logs to be sent to this destination. Each name must be defined in the Service.logs section. If the log name is not a domain scoped name, it will be automatically prefixed with the service name followed by &#34;/&#34;.
-     * 
-     */
+        /**
+         * @return Names of the logs to be sent to this destination. Each name must be defined in the Service.logs section. If the log name is not a domain scoped name, it will be automatically prefixed with the service name followed by &#34;/&#34;.
+         * 
+         */
     private final List<String> logs;
-    /**
-     * The monitored resource type. The type must be defined in the Service.monitored_resources section.
-     * 
-     */
+        /**
+         * @return The monitored resource type. The type must be defined in the Service.monitored_resources section.
+         * 
+         */
     private final String monitoredResource;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class LoggingDestinationResponse {
     }
 
     /**
-     * Names of the logs to be sent to this destination. Each name must be defined in the Service.logs section. If the log name is not a domain scoped name, it will be automatically prefixed with the service name followed by &#34;/&#34;.
+     * @return Names of the logs to be sent to this destination. Each name must be defined in the Service.logs section. If the log name is not a domain scoped name, it will be automatically prefixed with the service name followed by &#34;/&#34;.
      * 
-    */
+     */
     public List<String> logs() {
         return this.logs;
     }
     /**
-     * The monitored resource type. The type must be defined in the Service.monitored_resources section.
+     * @return The monitored resource type. The type must be defined in the Service.monitored_resources section.
      * 
-    */
+     */
     public String monitoredResource() {
         return this.monitoredResource;
     }

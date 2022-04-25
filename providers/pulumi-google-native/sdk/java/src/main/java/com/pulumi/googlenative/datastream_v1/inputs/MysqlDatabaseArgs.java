@@ -28,6 +28,10 @@ public final class MysqlDatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="database")
     private @Nullable Output<String> database;
 
+    /**
+     * @return Database name.
+     * 
+     */
     public Optional<Output<String>> database() {
         return Optional.ofNullable(this.database);
     }
@@ -39,6 +43,10 @@ public final class MysqlDatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mysqlTables")
     private @Nullable Output<List<MysqlTableArgs>> mysqlTables;
 
+    /**
+     * @return Tables in the database.
+     * 
+     */
     public Optional<Output<List<MysqlTableArgs>>> mysqlTables() {
         return Optional.ofNullable(this.mysqlTables);
     }
@@ -68,24 +76,54 @@ public final class MysqlDatabaseArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MysqlDatabaseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param database Database name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(@Nullable Output<String> database) {
             $.database = database;
             return this;
         }
 
+        /**
+         * @param database Database name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(String database) {
             return database(Output.of(database));
         }
 
+        /**
+         * @param mysqlTables Tables in the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysqlTables(@Nullable Output<List<MysqlTableArgs>> mysqlTables) {
             $.mysqlTables = mysqlTables;
             return this;
         }
 
+        /**
+         * @param mysqlTables Tables in the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysqlTables(List<MysqlTableArgs> mysqlTables) {
             return mysqlTables(Output.of(mysqlTables));
         }
 
+        /**
+         * @param mysqlTables Tables in the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysqlTables(MysqlTableArgs... mysqlTables) {
             return mysqlTables(List.of(mysqlTables));
         }

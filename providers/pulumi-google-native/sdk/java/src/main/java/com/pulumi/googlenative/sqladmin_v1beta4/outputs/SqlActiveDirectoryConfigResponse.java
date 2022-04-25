@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class SqlActiveDirectoryConfigResponse {
-    /**
-     * The name of the domain (e.g., mydomain.com).
-     * 
-     */
+        /**
+         * @return The name of the domain (e.g., mydomain.com).
+         * 
+         */
     private final String domain;
-    /**
-     * This is always sql#activeDirectoryConfig.
-     * 
-     */
+        /**
+         * @return This is always sql#activeDirectoryConfig.
+         * 
+         */
     private final String kind;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class SqlActiveDirectoryConfigResponse {
     }
 
     /**
-     * The name of the domain (e.g., mydomain.com).
+     * @return The name of the domain (e.g., mydomain.com).
      * 
-    */
+     */
     public String domain() {
         return this.domain;
     }
     /**
-     * This is always sql#activeDirectoryConfig.
+     * @return This is always sql#activeDirectoryConfig.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }

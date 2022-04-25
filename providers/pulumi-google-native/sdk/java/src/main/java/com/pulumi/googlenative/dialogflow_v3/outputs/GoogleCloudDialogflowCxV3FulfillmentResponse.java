@@ -14,35 +14,35 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowCxV3FulfillmentResponse {
-    /**
-     * Conditional cases for this fulfillment.
-     * 
-     */
+        /**
+         * @return Conditional cases for this fulfillment.
+         * 
+         */
     private final List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse> conditionalCases;
-    /**
-     * The list of rich message responses to present to the user.
-     * 
-     */
+        /**
+         * @return The list of rich message responses to present to the user.
+         * 
+         */
     private final List<GoogleCloudDialogflowCxV3ResponseMessageResponse> messages;
-    /**
-     * Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.
-     * 
-     */
+        /**
+         * @return Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.
+         * 
+         */
     private final Boolean returnPartialResponses;
-    /**
-     * Set parameter values before executing the webhook.
-     * 
-     */
+        /**
+         * @return Set parameter values before executing the webhook.
+         * 
+         */
     private final List<GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse> setParameterActions;
-    /**
-     * The tag used by the webhook to identify which fulfillment is being called. This field is required if `webhook` is specified.
-     * 
-     */
+        /**
+         * @return The tag used by the webhook to identify which fulfillment is being called. This field is required if `webhook` is specified.
+         * 
+         */
     private final String tag;
-    /**
-     * The webhook to call. Format: `projects//locations//agents//webhooks/`.
-     * 
-     */
+        /**
+         * @return The webhook to call. Format: `projects//locations//agents//webhooks/`.
+         * 
+         */
     private final String webhook;
 
     @CustomType.Constructor
@@ -62,44 +62,44 @@ public final class GoogleCloudDialogflowCxV3FulfillmentResponse {
     }
 
     /**
-     * Conditional cases for this fulfillment.
+     * @return Conditional cases for this fulfillment.
      * 
-    */
+     */
     public List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse> conditionalCases() {
         return this.conditionalCases;
     }
     /**
-     * The list of rich message responses to present to the user.
+     * @return The list of rich message responses to present to the user.
      * 
-    */
+     */
     public List<GoogleCloudDialogflowCxV3ResponseMessageResponse> messages() {
         return this.messages;
     }
     /**
-     * Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.
+     * @return Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.
      * 
-    */
+     */
     public Boolean returnPartialResponses() {
         return this.returnPartialResponses;
     }
     /**
-     * Set parameter values before executing the webhook.
+     * @return Set parameter values before executing the webhook.
      * 
-    */
+     */
     public List<GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse> setParameterActions() {
         return this.setParameterActions;
     }
     /**
-     * The tag used by the webhook to identify which fulfillment is being called. This field is required if `webhook` is specified.
+     * @return The tag used by the webhook to identify which fulfillment is being called. This field is required if `webhook` is specified.
      * 
-    */
+     */
     public String tag() {
         return this.tag;
     }
     /**
-     * The webhook to call. Format: `projects//locations//agents//webhooks/`.
+     * @return The webhook to call. Format: `projects//locations//agents//webhooks/`.
      * 
-    */
+     */
     public String webhook() {
         return this.webhook;
     }

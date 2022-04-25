@@ -13,30 +13,30 @@ import java.util.Objects;
 
 @CustomType
 public final class IosTestResponse {
-    /**
-     * Information about the application under test.
-     * 
-     */
+        /**
+         * @return Information about the application under test.
+         * 
+         */
     private final IosAppInfoResponse iosAppInfo;
-    /**
-     * An iOS Robo test.
-     * 
-     */
+        /**
+         * @return An iOS Robo test.
+         * 
+         */
     private final IosRoboTestResponse iosRoboTest;
-    /**
-     * An iOS test loop.
-     * 
-     */
+        /**
+         * @return An iOS test loop.
+         * 
+         */
     private final IosTestLoopResponse iosTestLoop;
-    /**
-     * An iOS XCTest.
-     * 
-     */
+        /**
+         * @return An iOS XCTest.
+         * 
+         */
     private final IosXcTestResponse iosXcTest;
-    /**
-     * Max time a test is allowed to run before it is automatically cancelled.
-     * 
-     */
+        /**
+         * @return Max time a test is allowed to run before it is automatically cancelled.
+         * 
+         */
     private final DurationResponse testTimeout;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class IosTestResponse {
     }
 
     /**
-     * Information about the application under test.
+     * @return Information about the application under test.
      * 
-    */
+     */
     public IosAppInfoResponse iosAppInfo() {
         return this.iosAppInfo;
     }
     /**
-     * An iOS Robo test.
+     * @return An iOS Robo test.
      * 
-    */
+     */
     public IosRoboTestResponse iosRoboTest() {
         return this.iosRoboTest;
     }
     /**
-     * An iOS test loop.
+     * @return An iOS test loop.
      * 
-    */
+     */
     public IosTestLoopResponse iosTestLoop() {
         return this.iosTestLoop;
     }
     /**
-     * An iOS XCTest.
+     * @return An iOS XCTest.
      * 
-    */
+     */
     public IosXcTestResponse iosXcTest() {
         return this.iosXcTest;
     }
     /**
-     * Max time a test is allowed to run before it is automatically cancelled.
+     * @return Max time a test is allowed to run before it is automatically cancelled.
      * 
-    */
+     */
     public DurationResponse testTimeout() {
         return this.testTimeout;
     }

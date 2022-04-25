@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GridLayoutResponse {
-    /**
-     * The number of columns into which the view&#39;s width is divided. If omitted or set to zero, a system default will be used while rendering.
-     * 
-     */
+        /**
+         * @return The number of columns into which the view&#39;s width is divided. If omitted or set to zero, a system default will be used while rendering.
+         * 
+         */
     private final String columns;
-    /**
-     * The informational elements that are arranged into the columns row-first.
-     * 
-     */
+        /**
+         * @return The informational elements that are arranged into the columns row-first.
+         * 
+         */
     private final List<WidgetResponse> widgets;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class GridLayoutResponse {
     }
 
     /**
-     * The number of columns into which the view&#39;s width is divided. If omitted or set to zero, a system default will be used while rendering.
+     * @return The number of columns into which the view&#39;s width is divided. If omitted or set to zero, a system default will be used while rendering.
      * 
-    */
+     */
     public String columns() {
         return this.columns;
     }
     /**
-     * The informational elements that are arranged into the columns row-first.
+     * @return The informational elements that are arranged into the columns row-first.
      * 
-    */
+     */
     public List<WidgetResponse> widgets() {
         return this.widgets;
     }

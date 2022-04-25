@@ -28,6 +28,10 @@ public final class DatabaseDumpArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseType")
     private @Nullable Output<DatabaseDumpDatabaseType> databaseType;
 
+    /**
+     * @return The type of the database.
+     * 
+     */
     public Optional<Output<DatabaseDumpDatabaseType>> databaseType() {
         return Optional.ofNullable(this.databaseType);
     }
@@ -39,6 +43,10 @@ public final class DatabaseDumpArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gcsUri")
     private @Nullable Output<String> gcsUri;
 
+    /**
+     * @return A Cloud Storage object or folder URI that specifies the source from which to import metadata. It must begin with gs://.
+     * 
+     */
     public Optional<Output<String>> gcsUri() {
         return Optional.ofNullable(this.gcsUri);
     }
@@ -50,6 +58,10 @@ public final class DatabaseDumpArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceDatabase")
     private @Nullable Output<String> sourceDatabase;
 
+    /**
+     * @return The name of the source database.
+     * 
+     */
     public Optional<Output<String>> sourceDatabase() {
         return Optional.ofNullable(this.sourceDatabase);
     }
@@ -61,6 +73,10 @@ public final class DatabaseDumpArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<DatabaseDumpType> type;
 
+    /**
+     * @return Optional. The type of the database dump. If unspecified, defaults to MYSQL.
+     * 
+     */
     public Optional<Output<DatabaseDumpType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -92,38 +108,86 @@ public final class DatabaseDumpArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DatabaseDumpArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseType The type of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseType(@Nullable Output<DatabaseDumpDatabaseType> databaseType) {
             $.databaseType = databaseType;
             return this;
         }
 
+        /**
+         * @param databaseType The type of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseType(DatabaseDumpDatabaseType databaseType) {
             return databaseType(Output.of(databaseType));
         }
 
+        /**
+         * @param gcsUri A Cloud Storage object or folder URI that specifies the source from which to import metadata. It must begin with gs://.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsUri(@Nullable Output<String> gcsUri) {
             $.gcsUri = gcsUri;
             return this;
         }
 
+        /**
+         * @param gcsUri A Cloud Storage object or folder URI that specifies the source from which to import metadata. It must begin with gs://.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsUri(String gcsUri) {
             return gcsUri(Output.of(gcsUri));
         }
 
+        /**
+         * @param sourceDatabase The name of the source database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDatabase(@Nullable Output<String> sourceDatabase) {
             $.sourceDatabase = sourceDatabase;
             return this;
         }
 
+        /**
+         * @param sourceDatabase The name of the source database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDatabase(String sourceDatabase) {
             return sourceDatabase(Output.of(sourceDatabase));
         }
 
+        /**
+         * @param type Optional. The type of the database dump. If unspecified, defaults to MYSQL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<DatabaseDumpType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Optional. The type of the database dump. If unspecified, defaults to MYSQL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(DatabaseDumpType type) {
             return type(Output.of(type));
         }

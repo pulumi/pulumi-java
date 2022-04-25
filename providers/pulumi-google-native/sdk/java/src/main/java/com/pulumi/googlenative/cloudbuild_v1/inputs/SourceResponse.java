@@ -25,6 +25,10 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="repoSource", required=true)
     private RepoSourceResponse repoSource;
 
+    /**
+     * @return If provided, get the source from this location in a Cloud Source Repository.
+     * 
+     */
     public RepoSourceResponse repoSource() {
         return this.repoSource;
     }
@@ -36,6 +40,10 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="storageSource", required=true)
     private StorageSourceResponse storageSource;
 
+    /**
+     * @return If provided, get the source from this location in Google Cloud Storage.
+     * 
+     */
     public StorageSourceResponse storageSource() {
         return this.storageSource;
     }
@@ -47,6 +55,10 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="storageSourceManifest", required=true)
     private StorageSourceManifestResponse storageSourceManifest;
 
+    /**
+     * @return If provided, get the source from this manifest in Google Cloud Storage. This feature is in Preview; see description [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-fetcher).
+     * 
+     */
     public StorageSourceManifestResponse storageSourceManifest() {
         return this.storageSourceManifest;
     }
@@ -77,16 +89,34 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param repoSource If provided, get the source from this location in a Cloud Source Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoSource(RepoSourceResponse repoSource) {
             $.repoSource = repoSource;
             return this;
         }
 
+        /**
+         * @param storageSource If provided, get the source from this location in Google Cloud Storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageSource(StorageSourceResponse storageSource) {
             $.storageSource = storageSource;
             return this;
         }
 
+        /**
+         * @param storageSourceManifest If provided, get the source from this manifest in Google Cloud Storage. This feature is in Preview; see description [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-fetcher).
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageSourceManifest(StorageSourceManifestResponse storageSourceManifest) {
             $.storageSourceManifest = storageSourceManifest;
             return this;

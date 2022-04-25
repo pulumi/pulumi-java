@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class AclEntryResponse {
-    /**
-     * The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
-     * 
-     */
+        /**
+         * @return The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
+         * 
+         */
     private final String expirationTime;
-    /**
-     * This is always `sql#aclEntry`.
-     * 
-     */
+        /**
+         * @return This is always `sql#aclEntry`.
+         * 
+         */
     private final String kind;
-    /**
-     * Optional. A label to identify this entry.
-     * 
-     */
+        /**
+         * @return Optional. A label to identify this entry.
+         * 
+         */
     private final String name;
-    /**
-     * The allowlisted value for the access control list.
-     * 
-     */
+        /**
+         * @return The allowlisted value for the access control list.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class AclEntryResponse {
     }
 
     /**
-     * The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
+     * @return The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
-    */
+     */
     public String expirationTime() {
         return this.expirationTime;
     }
     /**
-     * This is always `sql#aclEntry`.
+     * @return This is always `sql#aclEntry`.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Optional. A label to identify this entry.
+     * @return Optional. A label to identify this entry.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The allowlisted value for the access control list.
+     * @return The allowlisted value for the access control list.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

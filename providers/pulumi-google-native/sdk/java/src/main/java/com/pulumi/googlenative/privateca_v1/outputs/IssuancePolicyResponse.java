@@ -15,35 +15,35 @@ import java.util.Objects;
 
 @CustomType
 public final class IssuancePolicyResponse {
-    /**
-     * Optional. If specified, then only methods allowed in the IssuanceModes may be used to issue Certificates.
-     * 
-     */
+        /**
+         * @return Optional. If specified, then only methods allowed in the IssuanceModes may be used to issue Certificates.
+         * 
+         */
     private final IssuanceModesResponse allowedIssuanceModes;
-    /**
-     * Optional. If any AllowedKeyType is specified, then the certificate request&#39;s public key must match one of the key types listed here. Otherwise, any key may be used.
-     * 
-     */
+        /**
+         * @return Optional. If any AllowedKeyType is specified, then the certificate request&#39;s public key must match one of the key types listed here. Otherwise, any key may be used.
+         * 
+         */
     private final List<AllowedKeyTypeResponse> allowedKeyTypes;
-    /**
-     * Optional. A set of X.509 values that will be applied to all certificates issued through this CaPool. If a certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If a certificate request uses a CertificateTemplate that defines conflicting predefined_values for the same properties, the certificate issuance request will fail.
-     * 
-     */
+        /**
+         * @return Optional. A set of X.509 values that will be applied to all certificates issued through this CaPool. If a certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If a certificate request uses a CertificateTemplate that defines conflicting predefined_values for the same properties, the certificate issuance request will fail.
+         * 
+         */
     private final X509ParametersResponse baselineValues;
-    /**
-     * Optional. Describes constraints on identities that may appear in Certificates issued through this CaPool. If this is omitted, then this CaPool will not add restrictions on a certificate&#39;s identity.
-     * 
-     */
+        /**
+         * @return Optional. Describes constraints on identities that may appear in Certificates issued through this CaPool. If this is omitted, then this CaPool will not add restrictions on a certificate&#39;s identity.
+         * 
+         */
     private final CertificateIdentityConstraintsResponse identityConstraints;
-    /**
-     * Optional. The maximum lifetime allowed for issued Certificates. Note that if the issuing CertificateAuthority expires before a Certificate&#39;s requested maximum_lifetime, the effective lifetime will be explicitly truncated to match it.
-     * 
-     */
+        /**
+         * @return Optional. The maximum lifetime allowed for issued Certificates. Note that if the issuing CertificateAuthority expires before a Certificate&#39;s requested maximum_lifetime, the effective lifetime will be explicitly truncated to match it.
+         * 
+         */
     private final String maximumLifetime;
-    /**
-     * Optional. Describes the set of X.509 extensions that may appear in a Certificate issued through this CaPool. If a certificate request sets extensions that don&#39;t appear in the passthrough_extensions, those extensions will be dropped. If a certificate request uses a CertificateTemplate with predefined_values that don&#39;t appear here, the certificate issuance request will fail. If this is omitted, then this CaPool will not add restrictions on a certificate&#39;s X.509 extensions. These constraints do not apply to X.509 extensions set in this CaPool&#39;s baseline_values.
-     * 
-     */
+        /**
+         * @return Optional. Describes the set of X.509 extensions that may appear in a Certificate issued through this CaPool. If a certificate request sets extensions that don&#39;t appear in the passthrough_extensions, those extensions will be dropped. If a certificate request uses a CertificateTemplate with predefined_values that don&#39;t appear here, the certificate issuance request will fail. If this is omitted, then this CaPool will not add restrictions on a certificate&#39;s X.509 extensions. These constraints do not apply to X.509 extensions set in this CaPool&#39;s baseline_values.
+         * 
+         */
     private final CertificateExtensionConstraintsResponse passthroughExtensions;
 
     @CustomType.Constructor
@@ -63,44 +63,44 @@ public final class IssuancePolicyResponse {
     }
 
     /**
-     * Optional. If specified, then only methods allowed in the IssuanceModes may be used to issue Certificates.
+     * @return Optional. If specified, then only methods allowed in the IssuanceModes may be used to issue Certificates.
      * 
-    */
+     */
     public IssuanceModesResponse allowedIssuanceModes() {
         return this.allowedIssuanceModes;
     }
     /**
-     * Optional. If any AllowedKeyType is specified, then the certificate request&#39;s public key must match one of the key types listed here. Otherwise, any key may be used.
+     * @return Optional. If any AllowedKeyType is specified, then the certificate request&#39;s public key must match one of the key types listed here. Otherwise, any key may be used.
      * 
-    */
+     */
     public List<AllowedKeyTypeResponse> allowedKeyTypes() {
         return this.allowedKeyTypes;
     }
     /**
-     * Optional. A set of X.509 values that will be applied to all certificates issued through this CaPool. If a certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If a certificate request uses a CertificateTemplate that defines conflicting predefined_values for the same properties, the certificate issuance request will fail.
+     * @return Optional. A set of X.509 values that will be applied to all certificates issued through this CaPool. If a certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If a certificate request uses a CertificateTemplate that defines conflicting predefined_values for the same properties, the certificate issuance request will fail.
      * 
-    */
+     */
     public X509ParametersResponse baselineValues() {
         return this.baselineValues;
     }
     /**
-     * Optional. Describes constraints on identities that may appear in Certificates issued through this CaPool. If this is omitted, then this CaPool will not add restrictions on a certificate&#39;s identity.
+     * @return Optional. Describes constraints on identities that may appear in Certificates issued through this CaPool. If this is omitted, then this CaPool will not add restrictions on a certificate&#39;s identity.
      * 
-    */
+     */
     public CertificateIdentityConstraintsResponse identityConstraints() {
         return this.identityConstraints;
     }
     /**
-     * Optional. The maximum lifetime allowed for issued Certificates. Note that if the issuing CertificateAuthority expires before a Certificate&#39;s requested maximum_lifetime, the effective lifetime will be explicitly truncated to match it.
+     * @return Optional. The maximum lifetime allowed for issued Certificates. Note that if the issuing CertificateAuthority expires before a Certificate&#39;s requested maximum_lifetime, the effective lifetime will be explicitly truncated to match it.
      * 
-    */
+     */
     public String maximumLifetime() {
         return this.maximumLifetime;
     }
     /**
-     * Optional. Describes the set of X.509 extensions that may appear in a Certificate issued through this CaPool. If a certificate request sets extensions that don&#39;t appear in the passthrough_extensions, those extensions will be dropped. If a certificate request uses a CertificateTemplate with predefined_values that don&#39;t appear here, the certificate issuance request will fail. If this is omitted, then this CaPool will not add restrictions on a certificate&#39;s X.509 extensions. These constraints do not apply to X.509 extensions set in this CaPool&#39;s baseline_values.
+     * @return Optional. Describes the set of X.509 extensions that may appear in a Certificate issued through this CaPool. If a certificate request sets extensions that don&#39;t appear in the passthrough_extensions, those extensions will be dropped. If a certificate request uses a CertificateTemplate with predefined_values that don&#39;t appear here, the certificate issuance request will fail. If this is omitted, then this CaPool will not add restrictions on a certificate&#39;s X.509 extensions. These constraints do not apply to X.509 extensions set in this CaPool&#39;s baseline_values.
      * 
-    */
+     */
     public CertificateExtensionConstraintsResponse passthroughExtensions() {
         return this.passthroughExtensions;
     }

@@ -10,35 +10,35 @@ import java.util.Objects;
 
 @CustomType
 public final class WorkerSettingsResponse {
-    /**
-     * The base URL for accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, &#34;Relative Uniform Resource Locators&#34;. If not specified, the default value is &#34;http://www.googleapis.com/&#34;
-     * 
-     */
+        /**
+         * @return The base URL for accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, &#34;Relative Uniform Resource Locators&#34;. If not specified, the default value is &#34;http://www.googleapis.com/&#34;
+         * 
+         */
     private final String baseUrl;
-    /**
-     * Whether to send work progress updates to the service.
-     * 
-     */
+        /**
+         * @return Whether to send work progress updates to the service.
+         * 
+         */
     private final Boolean reportingEnabled;
-    /**
-     * The Cloud Dataflow service path relative to the root URL, for example, &#34;dataflow/v1b3/projects&#34;.
-     * 
-     */
+        /**
+         * @return The Cloud Dataflow service path relative to the root URL, for example, &#34;dataflow/v1b3/projects&#34;.
+         * 
+         */
     private final String servicePath;
-    /**
-     * The Shuffle service path relative to the root URL, for example, &#34;shuffle/v1beta1&#34;.
-     * 
-     */
+        /**
+         * @return The Shuffle service path relative to the root URL, for example, &#34;shuffle/v1beta1&#34;.
+         * 
+         */
     private final String shuffleServicePath;
-    /**
-     * The prefix of the resources the system should use for temporary storage. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
-     * 
-     */
+        /**
+         * @return The prefix of the resources the system should use for temporary storage. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
+         * 
+         */
     private final String tempStoragePrefix;
-    /**
-     * The ID of the worker running this pipeline.
-     * 
-     */
+        /**
+         * @return The ID of the worker running this pipeline.
+         * 
+         */
     private final String workerId;
 
     @CustomType.Constructor
@@ -58,44 +58,44 @@ public final class WorkerSettingsResponse {
     }
 
     /**
-     * The base URL for accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, &#34;Relative Uniform Resource Locators&#34;. If not specified, the default value is &#34;http://www.googleapis.com/&#34;
+     * @return The base URL for accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, &#34;Relative Uniform Resource Locators&#34;. If not specified, the default value is &#34;http://www.googleapis.com/&#34;
      * 
-    */
+     */
     public String baseUrl() {
         return this.baseUrl;
     }
     /**
-     * Whether to send work progress updates to the service.
+     * @return Whether to send work progress updates to the service.
      * 
-    */
+     */
     public Boolean reportingEnabled() {
         return this.reportingEnabled;
     }
     /**
-     * The Cloud Dataflow service path relative to the root URL, for example, &#34;dataflow/v1b3/projects&#34;.
+     * @return The Cloud Dataflow service path relative to the root URL, for example, &#34;dataflow/v1b3/projects&#34;.
      * 
-    */
+     */
     public String servicePath() {
         return this.servicePath;
     }
     /**
-     * The Shuffle service path relative to the root URL, for example, &#34;shuffle/v1beta1&#34;.
+     * @return The Shuffle service path relative to the root URL, for example, &#34;shuffle/v1beta1&#34;.
      * 
-    */
+     */
     public String shuffleServicePath() {
         return this.shuffleServicePath;
     }
     /**
-     * The prefix of the resources the system should use for temporary storage. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
+     * @return The prefix of the resources the system should use for temporary storage. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
      * 
-    */
+     */
     public String tempStoragePrefix() {
         return this.tempStoragePrefix;
     }
     /**
-     * The ID of the worker running this pipeline.
+     * @return The ID of the worker running this pipeline.
      * 
-    */
+     */
     public String workerId() {
         return this.workerId;
     }

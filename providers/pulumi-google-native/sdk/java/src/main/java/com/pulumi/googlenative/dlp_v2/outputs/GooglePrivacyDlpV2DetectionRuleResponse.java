@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GooglePrivacyDlpV2DetectionRuleResponse {
-    /**
-     * Hotword-based detection rule.
-     * 
-     */
+        /**
+         * @return Hotword-based detection rule.
+         * 
+         */
     private final GooglePrivacyDlpV2HotwordRuleResponse hotwordRule;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GooglePrivacyDlpV2DetectionRuleResponse {
     }
 
     /**
-     * Hotword-based detection rule.
+     * @return Hotword-based detection rule.
      * 
-    */
+     */
     public GooglePrivacyDlpV2HotwordRuleResponse hotwordRule() {
         return this.hotwordRule;
     }

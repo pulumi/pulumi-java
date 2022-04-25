@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class IdentityConfigResponse {
-    /**
-     * Map of user to service account.
-     * 
-     */
+        /**
+         * @return Map of user to service account.
+         * 
+         */
     private final Map<String,String> userServiceAccountMapping;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class IdentityConfigResponse {
     }
 
     /**
-     * Map of user to service account.
+     * @return Map of user to service account.
      * 
-    */
+     */
     public Map<String,String> userServiceAccountMapping() {
         return this.userServiceAccountMapping;
     }

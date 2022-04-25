@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetKeyRingResult {
-    /**
-     * The time at which this KeyRing was created.
-     * 
-     */
+        /**
+         * @return The time at which this KeyRing was created.
+         * 
+         */
     private final String createTime;
-    /**
-     * The resource name for the KeyRing in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*`.
-     * 
-     */
+        /**
+         * @return The resource name for the KeyRing in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*`.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GetKeyRingResult {
     }
 
     /**
-     * The time at which this KeyRing was created.
+     * @return The time at which this KeyRing was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The resource name for the KeyRing in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*`.
+     * @return The resource name for the KeyRing in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

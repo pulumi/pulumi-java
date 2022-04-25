@@ -23,6 +23,10 @@ public final class HttpFilterConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="config", required=true)
     private String config;
 
+    /**
+     * @return The configuration needed to enable the networkservices.HttpFilter resource. The configuration must be YAML formatted and only contain fields defined in the protobuf identified in configTypeUrl
+     * 
+     */
     public String config() {
         return this.config;
     }
@@ -34,6 +38,10 @@ public final class HttpFilterConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="configTypeUrl", required=true)
     private String configTypeUrl;
 
+    /**
+     * @return The fully qualified versioned proto3 type url of the protobuf that the filter expects for its contextual settings, for example: type.googleapis.com/google.protobuf.Struct
+     * 
+     */
     public String configTypeUrl() {
         return this.configTypeUrl;
     }
@@ -45,6 +53,10 @@ public final class HttpFilterConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="filterName", required=true)
     private String filterName;
 
+    /**
+     * @return Name of the networkservices.HttpFilter resource this configuration belongs to. This name must be known to the xDS client. Example: envoy.wasm
+     * 
+     */
     public String filterName() {
         return this.filterName;
     }
@@ -75,16 +87,34 @@ public final class HttpFilterConfigResponse extends com.pulumi.resources.InvokeA
             $ = new HttpFilterConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param config The configuration needed to enable the networkservices.HttpFilter resource. The configuration must be YAML formatted and only contain fields defined in the protobuf identified in configTypeUrl
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(String config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param configTypeUrl The fully qualified versioned proto3 type url of the protobuf that the filter expects for its contextual settings, for example: type.googleapis.com/google.protobuf.Struct
+         * 
+         * @return builder
+         * 
+         */
         public Builder configTypeUrl(String configTypeUrl) {
             $.configTypeUrl = configTypeUrl;
             return this;
         }
 
+        /**
+         * @param filterName Name of the networkservices.HttpFilter resource this configuration belongs to. This name must be known to the xDS client. Example: envoy.wasm
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterName(String filterName) {
             $.filterName = filterName;
             return this;

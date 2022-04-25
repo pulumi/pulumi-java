@@ -13,45 +13,45 @@ import java.util.Objects;
 
 @CustomType
 public final class RuntimeSoftwareConfigResponse {
-    /**
-     * Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we&#39;ll automatically choose from official GPU drivers.
-     * 
-     */
+        /**
+         * @return Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we&#39;ll automatically choose from official GPU drivers.
+         * 
+         */
     private final String customGpuDriverPath;
-    /**
-     * Verifies core internal services are running. Default: True
-     * 
-     */
+        /**
+         * @return Verifies core internal services are running. Default: True
+         * 
+         */
     private final Boolean enableHealthMonitoring;
-    /**
-     * Runtime will automatically shutdown after idle_shutdown_time. Default: True
-     * 
-     */
+        /**
+         * @return Runtime will automatically shutdown after idle_shutdown_time. Default: True
+         * 
+         */
     private final Boolean idleShutdown;
-    /**
-     * Time in minutes to wait before shutting down runtime. Default: 180 minutes
-     * 
-     */
+        /**
+         * @return Time in minutes to wait before shutting down runtime. Default: 180 minutes
+         * 
+         */
     private final Integer idleShutdownTimeout;
-    /**
-     * Install Nvidia Driver automatically.
-     * 
-     */
+        /**
+         * @return Install Nvidia Driver automatically.
+         * 
+         */
     private final Boolean installGpuDriver;
-    /**
-     * Optional. Use a list of container images to use as Kernels in the notebook instance.
-     * 
-     */
+        /**
+         * @return Optional. Use a list of container images to use as Kernels in the notebook instance.
+         * 
+         */
     private final List<ContainerImageResponse> kernels;
-    /**
-     * Cron expression in UTC timezone, used to schedule instance auto upgrade. Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).
-     * 
-     */
+        /**
+         * @return Cron expression in UTC timezone, used to schedule instance auto upgrade. Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).
+         * 
+         */
     private final String notebookUpgradeSchedule;
-    /**
-     * Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path (`gs://path-to-file/file-name`).
-     * 
-     */
+        /**
+         * @return Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path (`gs://path-to-file/file-name`).
+         * 
+         */
     private final String postStartupScript;
 
     @CustomType.Constructor
@@ -75,58 +75,58 @@ public final class RuntimeSoftwareConfigResponse {
     }
 
     /**
-     * Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we&#39;ll automatically choose from official GPU drivers.
+     * @return Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we&#39;ll automatically choose from official GPU drivers.
      * 
-    */
+     */
     public String customGpuDriverPath() {
         return this.customGpuDriverPath;
     }
     /**
-     * Verifies core internal services are running. Default: True
+     * @return Verifies core internal services are running. Default: True
      * 
-    */
+     */
     public Boolean enableHealthMonitoring() {
         return this.enableHealthMonitoring;
     }
     /**
-     * Runtime will automatically shutdown after idle_shutdown_time. Default: True
+     * @return Runtime will automatically shutdown after idle_shutdown_time. Default: True
      * 
-    */
+     */
     public Boolean idleShutdown() {
         return this.idleShutdown;
     }
     /**
-     * Time in minutes to wait before shutting down runtime. Default: 180 minutes
+     * @return Time in minutes to wait before shutting down runtime. Default: 180 minutes
      * 
-    */
+     */
     public Integer idleShutdownTimeout() {
         return this.idleShutdownTimeout;
     }
     /**
-     * Install Nvidia Driver automatically.
+     * @return Install Nvidia Driver automatically.
      * 
-    */
+     */
     public Boolean installGpuDriver() {
         return this.installGpuDriver;
     }
     /**
-     * Optional. Use a list of container images to use as Kernels in the notebook instance.
+     * @return Optional. Use a list of container images to use as Kernels in the notebook instance.
      * 
-    */
+     */
     public List<ContainerImageResponse> kernels() {
         return this.kernels;
     }
     /**
-     * Cron expression in UTC timezone, used to schedule instance auto upgrade. Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).
+     * @return Cron expression in UTC timezone, used to schedule instance auto upgrade. Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).
      * 
-    */
+     */
     public String notebookUpgradeSchedule() {
         return this.notebookUpgradeSchedule;
     }
     /**
-     * Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path (`gs://path-to-file/file-name`).
+     * @return Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path (`gs://path-to-file/file-name`).
      * 
-    */
+     */
     public String postStartupScript() {
         return this.postStartupScript;
     }

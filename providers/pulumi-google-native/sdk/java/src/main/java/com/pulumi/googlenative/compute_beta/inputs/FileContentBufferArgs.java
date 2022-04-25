@@ -23,6 +23,10 @@ public final class FileContentBufferArgs extends com.pulumi.resources.ResourceAr
     @Import(name="content")
     private @Nullable Output<String> content;
 
+    /**
+     * @return The raw content in the secure keys file.
+     * 
+     */
     public Optional<Output<String>> content() {
         return Optional.ofNullable(this.content);
     }
@@ -34,6 +38,10 @@ public final class FileContentBufferArgs extends com.pulumi.resources.ResourceAr
     @Import(name="fileType")
     private @Nullable Output<FileContentBufferFileType> fileType;
 
+    /**
+     * @return The file type of source file.
+     * 
+     */
     public Optional<Output<FileContentBufferFileType>> fileType() {
         return Optional.ofNullable(this.fileType);
     }
@@ -63,20 +71,44 @@ public final class FileContentBufferArgs extends com.pulumi.resources.ResourceAr
             $ = new FileContentBufferArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The raw content in the secure keys file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content The raw content in the secure keys file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param fileType The file type of source file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileType(@Nullable Output<FileContentBufferFileType> fileType) {
             $.fileType = fileType;
             return this;
         }
 
+        /**
+         * @param fileType The file type of source file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileType(FileContentBufferFileType fileType) {
             return fileType(Output.of(fileType));
         }

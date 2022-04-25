@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class HttpLoadBalancingResponse {
-    /**
-     * Whether the HTTP Load Balancing controller is enabled in the cluster. When enabled, it runs a small pod in the cluster that manages the load balancers.
-     * 
-     */
+        /**
+         * @return Whether the HTTP Load Balancing controller is enabled in the cluster. When enabled, it runs a small pod in the cluster that manages the load balancers.
+         * 
+         */
     private final Boolean disabled;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class HttpLoadBalancingResponse {
     }
 
     /**
-     * Whether the HTTP Load Balancing controller is enabled in the cluster. When enabled, it runs a small pod in the cluster that manages the load balancers.
+     * @return Whether the HTTP Load Balancing controller is enabled in the cluster. When enabled, it runs a small pod in the cluster that manages the load balancers.
      * 
-    */
+     */
     public Boolean disabled() {
         return this.disabled;
     }

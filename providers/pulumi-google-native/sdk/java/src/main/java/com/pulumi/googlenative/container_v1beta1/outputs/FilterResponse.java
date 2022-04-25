@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class FilterResponse {
-    /**
-     * Event types to allowlist.
-     * 
-     */
+        /**
+         * @return Event types to allowlist.
+         * 
+         */
     private final List<String> eventType;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class FilterResponse {
     }
 
     /**
-     * Event types to allowlist.
+     * @return Event types to allowlist.
      * 
-    */
+     */
     public List<String> eventType() {
         return this.eventType;
     }

@@ -11,25 +11,25 @@ import java.util.Objects;
 
 @CustomType
 public final class VersionResponse {
-    /**
-     * Represents a list of available feature names for a given version.
-     * 
-     */
+        /**
+         * @return Represents a list of available feature names for a given version.
+         * 
+         */
     private final List<String> availableFeatures;
-    /**
-     * Whether this is currently the default version for Cloud Data Fusion
-     * 
-     */
+        /**
+         * @return Whether this is currently the default version for Cloud Data Fusion
+         * 
+         */
     private final Boolean defaultVersion;
-    /**
-     * Type represents the release availability of the version
-     * 
-     */
+        /**
+         * @return Type represents the release availability of the version
+         * 
+         */
     private final String type;
-    /**
-     * The version number of the Data Fusion instance, such as &#39;6.0.1.0&#39;.
-     * 
-     */
+        /**
+         * @return The version number of the Data Fusion instance, such as &#39;6.0.1.0&#39;.
+         * 
+         */
     private final String versionNumber;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class VersionResponse {
     }
 
     /**
-     * Represents a list of available feature names for a given version.
+     * @return Represents a list of available feature names for a given version.
      * 
-    */
+     */
     public List<String> availableFeatures() {
         return this.availableFeatures;
     }
     /**
-     * Whether this is currently the default version for Cloud Data Fusion
+     * @return Whether this is currently the default version for Cloud Data Fusion
      * 
-    */
+     */
     public Boolean defaultVersion() {
         return this.defaultVersion;
     }
     /**
-     * Type represents the release availability of the version
+     * @return Type represents the release availability of the version
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The version number of the Data Fusion instance, such as &#39;6.0.1.0&#39;.
+     * @return The version number of the Data Fusion instance, such as &#39;6.0.1.0&#39;.
      * 
-    */
+     */
     public String versionNumber() {
         return this.versionNumber;
     }

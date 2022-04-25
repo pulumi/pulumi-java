@@ -13,30 +13,30 @@ import java.util.Objects;
 
 @CustomType
 public final class InstanceGroupManagerStatusResponse {
-    /**
-     * A status of consistency of Instances&#39; config applied to instances with Instances&#39; config defined in managed instance group.
-     * 
-     */
+        /**
+         * @return A status of consistency of Instances&#39; config applied to instances with Instances&#39; config defined in managed instance group.
+         * 
+         */
     private final InstanceGroupManagerStatusAllInstancesConfigResponse allInstancesConfig;
-    /**
-     * The URL of the Autoscaler that targets this instance group manager.
-     * 
-     */
+        /**
+         * @return The URL of the Autoscaler that targets this instance group manager.
+         * 
+         */
     private final String autoscaler;
-    /**
-     * A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.
-     * 
-     */
+        /**
+         * @return A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.
+         * 
+         */
     private final Boolean isStable;
-    /**
-     * Stateful status of the given Instance Group Manager.
-     * 
-     */
+        /**
+         * @return Stateful status of the given Instance Group Manager.
+         * 
+         */
     private final InstanceGroupManagerStatusStatefulResponse stateful;
-    /**
-     * A status of consistency of Instances&#39; versions with their target version specified by version field on Instance Group Manager.
-     * 
-     */
+        /**
+         * @return A status of consistency of Instances&#39; versions with their target version specified by version field on Instance Group Manager.
+         * 
+         */
     private final InstanceGroupManagerStatusVersionTargetResponse versionTarget;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class InstanceGroupManagerStatusResponse {
     }
 
     /**
-     * A status of consistency of Instances&#39; config applied to instances with Instances&#39; config defined in managed instance group.
+     * @return A status of consistency of Instances&#39; config applied to instances with Instances&#39; config defined in managed instance group.
      * 
-    */
+     */
     public InstanceGroupManagerStatusAllInstancesConfigResponse allInstancesConfig() {
         return this.allInstancesConfig;
     }
     /**
-     * The URL of the Autoscaler that targets this instance group manager.
+     * @return The URL of the Autoscaler that targets this instance group manager.
      * 
-    */
+     */
     public String autoscaler() {
         return this.autoscaler;
     }
     /**
-     * A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.
+     * @return A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.
      * 
-    */
+     */
     public Boolean isStable() {
         return this.isStable;
     }
     /**
-     * Stateful status of the given Instance Group Manager.
+     * @return Stateful status of the given Instance Group Manager.
      * 
-    */
+     */
     public InstanceGroupManagerStatusStatefulResponse stateful() {
         return this.stateful;
     }
     /**
-     * A status of consistency of Instances&#39; versions with their target version specified by version field on Instance Group Manager.
+     * @return A status of consistency of Instances&#39; versions with their target version specified by version field on Instance Group Manager.
      * 
-    */
+     */
     public InstanceGroupManagerStatusVersionTargetResponse versionTarget() {
         return this.versionTarget;
     }

@@ -11,45 +11,45 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudChannelV1CloudIdentityInfoResponse {
-    /**
-     * URI of Customer&#39;s Admin console dashboard.
-     * 
-     */
+        /**
+         * @return URI of Customer&#39;s Admin console dashboard.
+         * 
+         */
     private final String adminConsoleUri;
-    /**
-     * The alternate email.
-     * 
-     */
+        /**
+         * @return The alternate email.
+         * 
+         */
     private final String alternateEmail;
-    /**
-     * CustomerType indicates verification type needed for using services.
-     * 
-     */
+        /**
+         * @return CustomerType indicates verification type needed for using services.
+         * 
+         */
     private final String customerType;
-    /**
-     * Edu information about the customer.
-     * 
-     */
+        /**
+         * @return Edu information about the customer.
+         * 
+         */
     private final GoogleCloudChannelV1EduDataResponse eduData;
-    /**
-     * Whether the domain is verified. This field is not returned for a Customer&#39;s cloud_identity_info resource. Partners can use the domains.get() method of the Workspace SDK&#39;s Directory API, or listen to the PRIMARY_DOMAIN_VERIFIED Pub/Sub event in to track domain verification of their resolve Workspace customers.
-     * 
-     */
+        /**
+         * @return Whether the domain is verified. This field is not returned for a Customer&#39;s cloud_identity_info resource. Partners can use the domains.get() method of the Workspace SDK&#39;s Directory API, or listen to the PRIMARY_DOMAIN_VERIFIED Pub/Sub event in to track domain verification of their resolve Workspace customers.
+         * 
+         */
     private final Boolean isDomainVerified;
-    /**
-     * Language code.
-     * 
-     */
+        /**
+         * @return Language code.
+         * 
+         */
     private final String languageCode;
-    /**
-     * Phone number associated with the Cloud Identity.
-     * 
-     */
+        /**
+         * @return Phone number associated with the Cloud Identity.
+         * 
+         */
     private final String phoneNumber;
-    /**
-     * The primary domain name.
-     * 
-     */
+        /**
+         * @return The primary domain name.
+         * 
+         */
     private final String primaryDomain;
 
     @CustomType.Constructor
@@ -73,58 +73,58 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse {
     }
 
     /**
-     * URI of Customer&#39;s Admin console dashboard.
+     * @return URI of Customer&#39;s Admin console dashboard.
      * 
-    */
+     */
     public String adminConsoleUri() {
         return this.adminConsoleUri;
     }
     /**
-     * The alternate email.
+     * @return The alternate email.
      * 
-    */
+     */
     public String alternateEmail() {
         return this.alternateEmail;
     }
     /**
-     * CustomerType indicates verification type needed for using services.
+     * @return CustomerType indicates verification type needed for using services.
      * 
-    */
+     */
     public String customerType() {
         return this.customerType;
     }
     /**
-     * Edu information about the customer.
+     * @return Edu information about the customer.
      * 
-    */
+     */
     public GoogleCloudChannelV1EduDataResponse eduData() {
         return this.eduData;
     }
     /**
-     * Whether the domain is verified. This field is not returned for a Customer&#39;s cloud_identity_info resource. Partners can use the domains.get() method of the Workspace SDK&#39;s Directory API, or listen to the PRIMARY_DOMAIN_VERIFIED Pub/Sub event in to track domain verification of their resolve Workspace customers.
+     * @return Whether the domain is verified. This field is not returned for a Customer&#39;s cloud_identity_info resource. Partners can use the domains.get() method of the Workspace SDK&#39;s Directory API, or listen to the PRIMARY_DOMAIN_VERIFIED Pub/Sub event in to track domain verification of their resolve Workspace customers.
      * 
-    */
+     */
     public Boolean isDomainVerified() {
         return this.isDomainVerified;
     }
     /**
-     * Language code.
+     * @return Language code.
      * 
-    */
+     */
     public String languageCode() {
         return this.languageCode;
     }
     /**
-     * Phone number associated with the Cloud Identity.
+     * @return Phone number associated with the Cloud Identity.
      * 
-    */
+     */
     public String phoneNumber() {
         return this.phoneNumber;
     }
     /**
-     * The primary domain name.
+     * @return The primary domain name.
      * 
-    */
+     */
     public String primaryDomain() {
         return this.primaryDomain;
     }

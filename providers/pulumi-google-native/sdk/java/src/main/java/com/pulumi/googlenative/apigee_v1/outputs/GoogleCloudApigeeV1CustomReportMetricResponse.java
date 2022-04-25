@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudApigeeV1CustomReportMetricResponse {
-    /**
-     * aggregate function
-     * 
-     */
+        /**
+         * @return aggregate function
+         * 
+         */
     private final String function;
-    /**
-     * name of the metric
-     * 
-     */
+        /**
+         * @return name of the metric
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GoogleCloudApigeeV1CustomReportMetricResponse {
     }
 
     /**
-     * aggregate function
+     * @return aggregate function
      * 
-    */
+     */
     public String function() {
         return this.function;
     }
     /**
-     * name of the metric
+     * @return name of the metric
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

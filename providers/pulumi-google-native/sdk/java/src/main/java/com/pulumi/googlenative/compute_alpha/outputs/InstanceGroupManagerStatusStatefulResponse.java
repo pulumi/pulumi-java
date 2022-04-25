@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class InstanceGroupManagerStatusStatefulResponse {
-    /**
-     * A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.
-     * 
-     */
+        /**
+         * @return A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.
+         * 
+         */
     private final Boolean hasStatefulConfig;
-    /**
-     * Status of per-instance configs on the instance.
-     * 
-     */
+        /**
+         * @return Status of per-instance configs on the instance.
+         * 
+         */
     private final InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse perInstanceConfigs;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class InstanceGroupManagerStatusStatefulResponse {
     }
 
     /**
-     * A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.
+     * @return A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.
      * 
-    */
+     */
     public Boolean hasStatefulConfig() {
         return this.hasStatefulConfig;
     }
     /**
-     * Status of per-instance configs on the instance.
+     * @return Status of per-instance configs on the instance.
      * 
-    */
+     */
     public InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse perInstanceConfigs() {
         return this.perInstanceConfigs;
     }

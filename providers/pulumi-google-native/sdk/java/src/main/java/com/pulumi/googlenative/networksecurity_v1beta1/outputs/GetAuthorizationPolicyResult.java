@@ -12,40 +12,40 @@ import java.util.Objects;
 
 @CustomType
 public final class GetAuthorizationPolicyResult {
-    /**
-     * The action to take when a rule match is found. Possible values are &#34;ALLOW&#34; or &#34;DENY&#34;.
-     * 
-     */
+        /**
+         * @return The action to take when a rule match is found. Possible values are &#34;ALLOW&#34; or &#34;DENY&#34;.
+         * 
+         */
     private final String action;
-    /**
-     * The timestamp when the resource was created.
-     * 
-     */
+        /**
+         * @return The timestamp when the resource was created.
+         * 
+         */
     private final String createTime;
-    /**
-     * Optional. Free-text description of the resource.
-     * 
-     */
+        /**
+         * @return Optional. Free-text description of the resource.
+         * 
+         */
     private final String description;
-    /**
-     * Optional. Set of label tags associated with the AuthorizationPolicy resource.
-     * 
-     */
+        /**
+         * @return Optional. Set of label tags associated with the AuthorizationPolicy resource.
+         * 
+         */
     private final Map<String,String> labels;
-    /**
-     * Name of the AuthorizationPolicy resource. It matches pattern `projects/{project}/locations/{location}/authorizationPolicies/`.
-     * 
-     */
+        /**
+         * @return Name of the AuthorizationPolicy resource. It matches pattern `projects/{project}/locations/{location}/authorizationPolicies/`.
+         * 
+         */
     private final String name;
-    /**
-     * Optional. List of rules to match. Note that at least one of the rules must match in order for the action specified in the &#39;action&#39; field to be taken. A rule is a match if there is a matching source and destination. If left blank, the action specified in the `action` field will be applied on every request.
-     * 
-     */
+        /**
+         * @return Optional. List of rules to match. Note that at least one of the rules must match in order for the action specified in the &#39;action&#39; field to be taken. A rule is a match if there is a matching source and destination. If left blank, the action specified in the `action` field will be applied on every request.
+         * 
+         */
     private final List<RuleResponse> rules;
-    /**
-     * The timestamp when the resource was updated.
-     * 
-     */
+        /**
+         * @return The timestamp when the resource was updated.
+         * 
+         */
     private final String updateTime;
 
     @CustomType.Constructor
@@ -67,51 +67,51 @@ public final class GetAuthorizationPolicyResult {
     }
 
     /**
-     * The action to take when a rule match is found. Possible values are &#34;ALLOW&#34; or &#34;DENY&#34;.
+     * @return The action to take when a rule match is found. Possible values are &#34;ALLOW&#34; or &#34;DENY&#34;.
      * 
-    */
+     */
     public String action() {
         return this.action;
     }
     /**
-     * The timestamp when the resource was created.
+     * @return The timestamp when the resource was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Optional. Free-text description of the resource.
+     * @return Optional. Free-text description of the resource.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Optional. Set of label tags associated with the AuthorizationPolicy resource.
+     * @return Optional. Set of label tags associated with the AuthorizationPolicy resource.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * Name of the AuthorizationPolicy resource. It matches pattern `projects/{project}/locations/{location}/authorizationPolicies/`.
+     * @return Name of the AuthorizationPolicy resource. It matches pattern `projects/{project}/locations/{location}/authorizationPolicies/`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Optional. List of rules to match. Note that at least one of the rules must match in order for the action specified in the &#39;action&#39; field to be taken. A rule is a match if there is a matching source and destination. If left blank, the action specified in the `action` field will be applied on every request.
+     * @return Optional. List of rules to match. Note that at least one of the rules must match in order for the action specified in the &#39;action&#39; field to be taken. A rule is a match if there is a matching source and destination. If left blank, the action specified in the `action` field will be applied on every request.
      * 
-    */
+     */
     public List<RuleResponse> rules() {
         return this.rules;
     }
     /**
-     * The timestamp when the resource was updated.
+     * @return The timestamp when the resource was updated.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

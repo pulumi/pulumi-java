@@ -24,6 +24,10 @@ public final class GoogleCloudRunOpV2EnvVarResponse extends com.pulumi.resources
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the environment variable. Must be a C_IDENTIFIER, and mnay not exceed 32768 characters.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudRunOpV2EnvVarResponse extends com.pulumi.resources
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any route environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to &#34;&#34;, and the maximum length is 32768 bytes.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudRunOpV2EnvVarResponse extends com.pulumi.resources
     @Import(name="valueSource", required=true)
     private GoogleCloudRunOpV2EnvVarSourceResponse valueSource;
 
+    /**
+     * @return Source for the environment variable&#39;s value.
+     * 
+     */
     public GoogleCloudRunOpV2EnvVarSourceResponse valueSource() {
         return this.valueSource;
     }
@@ -76,16 +88,34 @@ public final class GoogleCloudRunOpV2EnvVarResponse extends com.pulumi.resources
             $ = new GoogleCloudRunOpV2EnvVarResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the environment variable. Must be a C_IDENTIFIER, and mnay not exceed 32768 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any route environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to &#34;&#34;, and the maximum length is 32768 bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param valueSource Source for the environment variable&#39;s value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueSource(GoogleCloudRunOpV2EnvVarSourceResponse valueSource) {
             $.valueSource = valueSource;
             return this;

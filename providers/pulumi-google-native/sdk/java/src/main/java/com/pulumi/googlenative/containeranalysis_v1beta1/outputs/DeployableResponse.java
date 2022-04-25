@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class DeployableResponse {
-    /**
-     * Resource URI for the artifact being deployed.
-     * 
-     */
+        /**
+         * @return Resource URI for the artifact being deployed.
+         * 
+         */
     private final List<String> resourceUri;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class DeployableResponse {
     }
 
     /**
-     * Resource URI for the artifact being deployed.
+     * @return Resource URI for the artifact being deployed.
      * 
-    */
+     */
     public List<String> resourceUri() {
         return this.resourceUri;
     }

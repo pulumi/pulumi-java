@@ -23,6 +23,10 @@ public final class NotificationRateLimitResponse extends com.pulumi.resources.In
     @Import(name="period", required=true)
     private String period;
 
+    /**
+     * @return Not more than one notification per period.
+     * 
+     */
     public String period() {
         return this.period;
     }
@@ -51,6 +55,12 @@ public final class NotificationRateLimitResponse extends com.pulumi.resources.In
             $ = new NotificationRateLimitResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param period Not more than one notification per period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder period(String period) {
             $.period = period;
             return this;

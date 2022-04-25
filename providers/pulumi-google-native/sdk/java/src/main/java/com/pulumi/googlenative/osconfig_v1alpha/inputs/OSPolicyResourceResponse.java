@@ -26,6 +26,10 @@ public final class OSPolicyResourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="exec", required=true)
     private OSPolicyResourceExecResourceResponse exec;
 
+    /**
+     * @return Exec resource
+     * 
+     */
     public OSPolicyResourceExecResourceResponse exec() {
         return this.exec;
     }
@@ -37,6 +41,10 @@ public final class OSPolicyResourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="file", required=true)
     private OSPolicyResourceFileResourceResponse file;
 
+    /**
+     * @return File resource
+     * 
+     */
     public OSPolicyResourceFileResourceResponse file() {
         return this.file;
     }
@@ -48,6 +56,10 @@ public final class OSPolicyResourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="pkg", required=true)
     private OSPolicyResourcePackageResourceResponse pkg;
 
+    /**
+     * @return Package resource
+     * 
+     */
     public OSPolicyResourcePackageResourceResponse pkg() {
         return this.pkg;
     }
@@ -59,6 +71,10 @@ public final class OSPolicyResourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="repository", required=true)
     private OSPolicyResourceRepositoryResourceResponse repository;
 
+    /**
+     * @return Package repository resource
+     * 
+     */
     public OSPolicyResourceRepositoryResourceResponse repository() {
         return this.repository;
     }
@@ -90,21 +106,45 @@ public final class OSPolicyResourceResponse extends com.pulumi.resources.InvokeA
             $ = new OSPolicyResourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exec Exec resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder exec(OSPolicyResourceExecResourceResponse exec) {
             $.exec = exec;
             return this;
         }
 
+        /**
+         * @param file File resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(OSPolicyResourceFileResourceResponse file) {
             $.file = file;
             return this;
         }
 
+        /**
+         * @param pkg Package resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder pkg(OSPolicyResourcePackageResourceResponse pkg) {
             $.pkg = pkg;
             return this;
         }
 
+        /**
+         * @param repository Package repository resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder repository(OSPolicyResourceRepositoryResourceResponse repository) {
             $.repository = repository;
             return this;

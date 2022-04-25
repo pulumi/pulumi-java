@@ -20,6 +20,10 @@ public final class QueryParameterTypeStructTypesItemResponse extends com.pulumi.
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return [Optional] Human-oriented description of the field.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -31,6 +35,10 @@ public final class QueryParameterTypeStructTypesItemResponse extends com.pulumi.
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return [Optional] The name of this field.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -42,6 +50,10 @@ public final class QueryParameterTypeStructTypesItemResponse extends com.pulumi.
     @Import(name="type", required=true)
     private QueryParameterTypeResponse type;
 
+    /**
+     * @return [Required] The type of this field.
+     * 
+     */
     public QueryParameterTypeResponse type() {
         return this.type;
     }
@@ -72,16 +84,34 @@ public final class QueryParameterTypeStructTypesItemResponse extends com.pulumi.
             $ = new QueryParameterTypeStructTypesItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description [Optional] Human-oriented description of the field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param name [Optional] The name of this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type [Required] The type of this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(QueryParameterTypeResponse type) {
             $.type = type;
             return this;

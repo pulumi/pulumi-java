@@ -26,6 +26,10 @@ public final class FailurePolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retry")
     private @Nullable Output<RetryArgs> retry;
 
+    /**
+     * @return If specified, then the function will be retried in case of a failure.
+     * 
+     */
     public Optional<Output<RetryArgs>> retry() {
         return Optional.ofNullable(this.retry);
     }
@@ -54,11 +58,23 @@ public final class FailurePolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FailurePolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param retry If specified, then the function will be retried in case of a failure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retry(@Nullable Output<RetryArgs> retry) {
             $.retry = retry;
             return this;
         }
 
+        /**
+         * @param retry If specified, then the function will be retried in case of a failure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retry(RetryArgs retry) {
             return retry(Output.of(retry));
         }

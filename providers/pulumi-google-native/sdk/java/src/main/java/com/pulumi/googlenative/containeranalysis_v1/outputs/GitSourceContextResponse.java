@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GitSourceContextResponse {
-    /**
-     * Git commit hash.
-     * 
-     */
+        /**
+         * @return Git commit hash.
+         * 
+         */
     private final String revisionId;
-    /**
-     * Git repository URL.
-     * 
-     */
+        /**
+         * @return Git repository URL.
+         * 
+         */
     private final String url;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GitSourceContextResponse {
     }
 
     /**
-     * Git commit hash.
+     * @return Git commit hash.
      * 
-    */
+     */
     public String revisionId() {
         return this.revisionId;
     }
     /**
-     * Git repository URL.
+     * @return Git repository URL.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

@@ -12,35 +12,35 @@ import java.util.Objects;
 
 @CustomType
 public final class GetUserDataMappingResult {
-    /**
-     * Indicates the time when this mapping was archived.
-     * 
-     */
+        /**
+         * @return Indicates the time when this mapping was archived.
+         * 
+         */
     private final String archiveTime;
-    /**
-     * Indicates whether this mapping is archived.
-     * 
-     */
+        /**
+         * @return Indicates whether this mapping is archived.
+         * 
+         */
     private final Boolean archived;
-    /**
-     * A unique identifier for the mapped resource.
-     * 
-     */
+        /**
+         * @return A unique identifier for the mapped resource.
+         * 
+         */
     private final String dataId;
-    /**
-     * Resource name of the User data mapping, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/userDataMappings/{user_data_mapping_id}`.
-     * 
-     */
+        /**
+         * @return Resource name of the User data mapping, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/userDataMappings/{user_data_mapping_id}`.
+         * 
+         */
     private final String name;
-    /**
-     * Attributes of the resource. Only explicitly set attributes are displayed here. Attribute definitions with defaults set implicitly apply to these User data mappings. Attributes listed here must be single valued, that is, exactly one value is specified for the field &#34;values&#34; in each Attribute.
-     * 
-     */
+        /**
+         * @return Attributes of the resource. Only explicitly set attributes are displayed here. Attribute definitions with defaults set implicitly apply to these User data mappings. Attributes listed here must be single valued, that is, exactly one value is specified for the field &#34;values&#34; in each Attribute.
+         * 
+         */
     private final List<AttributeResponse> resourceAttributes;
-    /**
-     * User&#39;s UUID provided by the client.
-     * 
-     */
+        /**
+         * @return User&#39;s UUID provided by the client.
+         * 
+         */
     private final String userId;
 
     @CustomType.Constructor
@@ -60,44 +60,44 @@ public final class GetUserDataMappingResult {
     }
 
     /**
-     * Indicates the time when this mapping was archived.
+     * @return Indicates the time when this mapping was archived.
      * 
-    */
+     */
     public String archiveTime() {
         return this.archiveTime;
     }
     /**
-     * Indicates whether this mapping is archived.
+     * @return Indicates whether this mapping is archived.
      * 
-    */
+     */
     public Boolean archived() {
         return this.archived;
     }
     /**
-     * A unique identifier for the mapped resource.
+     * @return A unique identifier for the mapped resource.
      * 
-    */
+     */
     public String dataId() {
         return this.dataId;
     }
     /**
-     * Resource name of the User data mapping, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/userDataMappings/{user_data_mapping_id}`.
+     * @return Resource name of the User data mapping, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/userDataMappings/{user_data_mapping_id}`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Attributes of the resource. Only explicitly set attributes are displayed here. Attribute definitions with defaults set implicitly apply to these User data mappings. Attributes listed here must be single valued, that is, exactly one value is specified for the field &#34;values&#34; in each Attribute.
+     * @return Attributes of the resource. Only explicitly set attributes are displayed here. Attribute definitions with defaults set implicitly apply to these User data mappings. Attributes listed here must be single valued, that is, exactly one value is specified for the field &#34;values&#34; in each Attribute.
      * 
-    */
+     */
     public List<AttributeResponse> resourceAttributes() {
         return this.resourceAttributes;
     }
     /**
-     * User&#39;s UUID provided by the client.
+     * @return User&#39;s UUID provided by the client.
      * 
-    */
+     */
     public String userId() {
         return this.userId;
     }

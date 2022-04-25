@@ -24,6 +24,10 @@ public final class DlpJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inspectJob")
     private @Nullable Output<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob;
 
+    /**
+     * @return An inspection job scans a storage repository for InfoTypes.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2InspectJobConfigArgs>> inspectJob() {
         return Optional.ofNullable(this.inspectJob);
     }
@@ -35,6 +39,10 @@ public final class DlpJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobId")
     private @Nullable Output<String> jobId;
 
+    /**
+     * @return The job id can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be empty to allow the system to generate one.
+     * 
+     */
     public Optional<Output<String>> jobId() {
         return Optional.ofNullable(this.jobId);
     }
@@ -60,6 +68,10 @@ public final class DlpJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="riskJob")
     private @Nullable Output<GooglePrivacyDlpV2RiskAnalysisJobConfigArgs> riskJob;
 
+    /**
+     * @return A risk analysis job calculates re-identification risk metrics for a BigQuery table.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2RiskAnalysisJobConfigArgs>> riskJob() {
         return Optional.ofNullable(this.riskJob);
     }
@@ -92,20 +104,44 @@ public final class DlpJobArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DlpJobArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inspectJob An inspection job scans a storage repository for InfoTypes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inspectJob(@Nullable Output<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob) {
             $.inspectJob = inspectJob;
             return this;
         }
 
+        /**
+         * @param inspectJob An inspection job scans a storage repository for InfoTypes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inspectJob(GooglePrivacyDlpV2InspectJobConfigArgs inspectJob) {
             return inspectJob(Output.of(inspectJob));
         }
 
+        /**
+         * @param jobId The job id can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be empty to allow the system to generate one.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobId(@Nullable Output<String> jobId) {
             $.jobId = jobId;
             return this;
         }
 
+        /**
+         * @param jobId The job id can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be empty to allow the system to generate one.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobId(String jobId) {
             return jobId(Output.of(jobId));
         }
@@ -128,11 +164,23 @@ public final class DlpJobArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param riskJob A risk analysis job calculates re-identification risk metrics for a BigQuery table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder riskJob(@Nullable Output<GooglePrivacyDlpV2RiskAnalysisJobConfigArgs> riskJob) {
             $.riskJob = riskJob;
             return this;
         }
 
+        /**
+         * @param riskJob A risk analysis job calculates re-identification risk metrics for a BigQuery table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder riskJob(GooglePrivacyDlpV2RiskAnalysisJobConfigArgs riskJob) {
             return riskJob(Output.of(riskJob));
         }

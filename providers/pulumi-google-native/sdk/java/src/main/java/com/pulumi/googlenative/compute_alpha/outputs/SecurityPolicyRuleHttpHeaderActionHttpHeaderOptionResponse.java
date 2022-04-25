@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse {
-    /**
-     * The name of the header to set.
-     * 
-     */
+        /**
+         * @return The name of the header to set.
+         * 
+         */
     private final String headerName;
-    /**
-     * The value to set the named header to.
-     * 
-     */
+        /**
+         * @return The value to set the named header to.
+         * 
+         */
     private final String headerValue;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse {
     }
 
     /**
-     * The name of the header to set.
+     * @return The name of the header to set.
      * 
-    */
+     */
     public String headerName() {
         return this.headerName;
     }
     /**
-     * The value to set the named header to.
+     * @return The value to set the named header to.
      * 
-    */
+     */
     public String headerValue() {
         return this.headerValue;
     }

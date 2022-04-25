@@ -26,6 +26,10 @@ public final class GooglePrivacyDlpV2RecordConditionArgs extends com.pulumi.reso
     @Import(name="expressions")
     private @Nullable Output<GooglePrivacyDlpV2ExpressionsArgs> expressions;
 
+    /**
+     * @return An expression.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2ExpressionsArgs>> expressions() {
         return Optional.ofNullable(this.expressions);
     }
@@ -54,11 +58,23 @@ public final class GooglePrivacyDlpV2RecordConditionArgs extends com.pulumi.reso
             $ = new GooglePrivacyDlpV2RecordConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expressions An expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expressions(@Nullable Output<GooglePrivacyDlpV2ExpressionsArgs> expressions) {
             $.expressions = expressions;
             return this;
         }
 
+        /**
+         * @param expressions An expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expressions(GooglePrivacyDlpV2ExpressionsArgs expressions) {
             return expressions(Output.of(expressions));
         }

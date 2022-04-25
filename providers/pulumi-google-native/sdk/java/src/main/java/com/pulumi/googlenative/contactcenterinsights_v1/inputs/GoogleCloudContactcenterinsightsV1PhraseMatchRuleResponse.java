@@ -25,6 +25,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse ext
     @Import(name="config", required=true)
     private GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse config;
 
+    /**
+     * @return Provides additional information about the rule that specifies how to apply the rule.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse config() {
         return this.config;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse ext
     @Import(name="negated", required=true)
     private Boolean negated;
 
+    /**
+     * @return Specifies whether the phrase must be missing from the transcript segment or present in the transcript segment.
+     * 
+     */
     public Boolean negated() {
         return this.negated;
     }
@@ -47,6 +55,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse ext
     @Import(name="query", required=true)
     private String query;
 
+    /**
+     * @return The phrase to be matched.
+     * 
+     */
     public String query() {
         return this.query;
     }
@@ -77,16 +89,34 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse ext
             $ = new GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param config Provides additional information about the rule that specifies how to apply the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param negated Specifies whether the phrase must be missing from the transcript segment or present in the transcript segment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder negated(Boolean negated) {
             $.negated = negated;
             return this;
         }
 
+        /**
+         * @param query The phrase to be matched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(String query) {
             $.query = query;
             return this;

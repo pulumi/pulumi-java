@@ -23,6 +23,10 @@ public final class PosixGroupResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="gid", required=true)
     private String gid;
 
+    /**
+     * @return GID of the POSIX group.
+     * 
+     */
     public String gid() {
         return this.gid;
     }
@@ -34,6 +38,10 @@ public final class PosixGroupResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the POSIX group.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -45,6 +53,10 @@ public final class PosixGroupResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="systemId", required=true)
     private String systemId;
 
+    /**
+     * @return System identifier for which group name and gid apply to. If not specified it will default to empty value.
+     * 
+     */
     public String systemId() {
         return this.systemId;
     }
@@ -75,16 +87,34 @@ public final class PosixGroupResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PosixGroupResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gid GID of the POSIX group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gid(String gid) {
             $.gid = gid;
             return this;
         }
 
+        /**
+         * @param name Name of the POSIX group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param systemId System identifier for which group name and gid apply to. If not specified it will default to empty value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemId(String systemId) {
             $.systemId = systemId;
             return this;

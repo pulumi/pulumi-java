@@ -14,45 +14,45 @@ import java.util.Objects;
 
 @CustomType
 public final class GetClusterResult {
-    /**
-     * The cluster name. Cluster names within a project must be unique. Names of deleted clusters can be reused.
-     * 
-     */
+        /**
+         * @return The cluster name. Cluster names within a project must be unique. Names of deleted clusters can be reused.
+         * 
+         */
     private final String clusterName;
-    /**
-     * A cluster UUID (Unique Universal Identifier). Dataproc generates this value when it creates the cluster.
-     * 
-     */
+        /**
+         * @return A cluster UUID (Unique Universal Identifier). Dataproc generates this value when it creates the cluster.
+         * 
+         */
     private final String clusterUuid;
-    /**
-     * Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may set default values, and values may change when clusters are updated.
-     * 
-     */
+        /**
+         * @return Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may set default values, and values may change when clusters are updated.
+         * 
+         */
     private final ClusterConfigResponse config;
-    /**
-     * Optional. The labels to associate with this cluster. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a cluster.
-     * 
-     */
+        /**
+         * @return Optional. The labels to associate with this cluster. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a cluster.
+         * 
+         */
     private final Map<String,String> labels;
-    /**
-     * Contains cluster daemon metrics such as HDFS and YARN stats.Beta Feature: This report is available for testing purposes only. It may be changed before final release.
-     * 
-     */
+        /**
+         * @return Contains cluster daemon metrics such as HDFS and YARN stats.Beta Feature: This report is available for testing purposes only. It may be changed before final release.
+         * 
+         */
     private final ClusterMetricsResponse metrics;
-    /**
-     * The Google Cloud Platform project ID that the cluster belongs to.
-     * 
-     */
+        /**
+         * @return The Google Cloud Platform project ID that the cluster belongs to.
+         * 
+         */
     private final String project;
-    /**
-     * Cluster status.
-     * 
-     */
+        /**
+         * @return Cluster status.
+         * 
+         */
     private final ClusterStatusResponse status;
-    /**
-     * The previous cluster status.
-     * 
-     */
+        /**
+         * @return The previous cluster status.
+         * 
+         */
     private final List<ClusterStatusResponse> statusHistory;
 
     @CustomType.Constructor
@@ -76,58 +76,58 @@ public final class GetClusterResult {
     }
 
     /**
-     * The cluster name. Cluster names within a project must be unique. Names of deleted clusters can be reused.
+     * @return The cluster name. Cluster names within a project must be unique. Names of deleted clusters can be reused.
      * 
-    */
+     */
     public String clusterName() {
         return this.clusterName;
     }
     /**
-     * A cluster UUID (Unique Universal Identifier). Dataproc generates this value when it creates the cluster.
+     * @return A cluster UUID (Unique Universal Identifier). Dataproc generates this value when it creates the cluster.
      * 
-    */
+     */
     public String clusterUuid() {
         return this.clusterUuid;
     }
     /**
-     * Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may set default values, and values may change when clusters are updated.
+     * @return Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may set default values, and values may change when clusters are updated.
      * 
-    */
+     */
     public ClusterConfigResponse config() {
         return this.config;
     }
     /**
-     * Optional. The labels to associate with this cluster. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a cluster.
+     * @return Optional. The labels to associate with this cluster. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a cluster.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * Contains cluster daemon metrics such as HDFS and YARN stats.Beta Feature: This report is available for testing purposes only. It may be changed before final release.
+     * @return Contains cluster daemon metrics such as HDFS and YARN stats.Beta Feature: This report is available for testing purposes only. It may be changed before final release.
      * 
-    */
+     */
     public ClusterMetricsResponse metrics() {
         return this.metrics;
     }
     /**
-     * The Google Cloud Platform project ID that the cluster belongs to.
+     * @return The Google Cloud Platform project ID that the cluster belongs to.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }
     /**
-     * Cluster status.
+     * @return Cluster status.
      * 
-    */
+     */
     public ClusterStatusResponse status() {
         return this.status;
     }
     /**
-     * The previous cluster status.
+     * @return The previous cluster status.
      * 
-    */
+     */
     public List<ClusterStatusResponse> statusHistory() {
         return this.statusHistory;
     }

@@ -25,6 +25,10 @@ public final class PackageOccurrenceResponse extends com.pulumi.resources.Invoke
     @Import(name="location", required=true)
     private List<LocationResponse> location;
 
+    /**
+     * @return All of the places within the filesystem versions of this package have been found.
+     * 
+     */
     public List<LocationResponse> location() {
         return this.location;
     }
@@ -36,6 +40,10 @@ public final class PackageOccurrenceResponse extends com.pulumi.resources.Invoke
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the installed package.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -65,15 +73,33 @@ public final class PackageOccurrenceResponse extends com.pulumi.resources.Invoke
             $ = new PackageOccurrenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location All of the places within the filesystem versions of this package have been found.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(List<LocationResponse> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location All of the places within the filesystem versions of this package have been found.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(LocationResponse... location) {
             return location(List.of(location));
         }
 
+        /**
+         * @param name The name of the installed package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

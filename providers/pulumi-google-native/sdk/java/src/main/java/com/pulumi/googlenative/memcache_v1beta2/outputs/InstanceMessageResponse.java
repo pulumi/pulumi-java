@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class InstanceMessageResponse {
-    /**
-     * A code that correspond to one type of user-facing message.
-     * 
-     */
+        /**
+         * @return A code that correspond to one type of user-facing message.
+         * 
+         */
     private final String code;
-    /**
-     * Message on memcached instance which will be exposed to users.
-     * 
-     */
+        /**
+         * @return Message on memcached instance which will be exposed to users.
+         * 
+         */
     private final String message;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class InstanceMessageResponse {
     }
 
     /**
-     * A code that correspond to one type of user-facing message.
+     * @return A code that correspond to one type of user-facing message.
      * 
-    */
+     */
     public String code() {
         return this.code;
     }
     /**
-     * Message on memcached instance which will be exposed to users.
+     * @return Message on memcached instance which will be exposed to users.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }

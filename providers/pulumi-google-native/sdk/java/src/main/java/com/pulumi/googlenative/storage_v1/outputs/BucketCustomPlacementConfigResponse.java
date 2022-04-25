@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class BucketCustomPlacementConfigResponse {
-    /**
-     * The list of regional locations in which data is placed.
-     * 
-     */
+        /**
+         * @return The list of regional locations in which data is placed.
+         * 
+         */
     private final List<String> dataLocations;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class BucketCustomPlacementConfigResponse {
     }
 
     /**
-     * The list of regional locations in which data is placed.
+     * @return The list of regional locations in which data is placed.
      * 
-    */
+     */
     public List<String> dataLocations() {
         return this.dataLocations;
     }

@@ -24,6 +24,10 @@ public final class BitbucketServerRepositoryIdResponse extends com.pulumi.resour
     @Import(name="projectKey", required=true)
     private String projectKey;
 
+    /**
+     * @return Identifier for the project storing the repository.
+     * 
+     */
     public String projectKey() {
         return this.projectKey;
     }
@@ -35,6 +39,10 @@ public final class BitbucketServerRepositoryIdResponse extends com.pulumi.resour
     @Import(name="repoSlug", required=true)
     private String repoSlug;
 
+    /**
+     * @return Identifier for the repository.
+     * 
+     */
     public String repoSlug() {
         return this.repoSlug;
     }
@@ -46,6 +54,10 @@ public final class BitbucketServerRepositoryIdResponse extends com.pulumi.resour
     @Import(name="webhookId", required=true)
     private Integer webhookId;
 
+    /**
+     * @return The ID of the webhook that was created for receiving events from this repo. We only create and manage a single webhook for each repo.
+     * 
+     */
     public Integer webhookId() {
         return this.webhookId;
     }
@@ -76,16 +88,34 @@ public final class BitbucketServerRepositoryIdResponse extends com.pulumi.resour
             $ = new BitbucketServerRepositoryIdResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param projectKey Identifier for the project storing the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectKey(String projectKey) {
             $.projectKey = projectKey;
             return this;
         }
 
+        /**
+         * @param repoSlug Identifier for the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoSlug(String repoSlug) {
             $.repoSlug = repoSlug;
             return this;
         }
 
+        /**
+         * @param webhookId The ID of the webhook that was created for receiving events from this repo. We only create and manage a single webhook for each repo.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhookId(Integer webhookId) {
             $.webhookId = webhookId;
             return this;

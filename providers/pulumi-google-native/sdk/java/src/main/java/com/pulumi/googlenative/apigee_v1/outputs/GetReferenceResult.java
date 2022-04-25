@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GetReferenceResult {
-    /**
-     * Optional. A human-readable description of this reference.
-     * 
-     */
+        /**
+         * @return Optional. A human-readable description of this reference.
+         * 
+         */
     private final String description;
-    /**
-     * The resource id of this reference. Values must match the regular expression [\w\s\-.]+.
-     * 
-     */
+        /**
+         * @return The resource id of this reference. Values must match the regular expression [\w\s\-.]+.
+         * 
+         */
     private final String name;
-    /**
-     * The id of the resource to which this reference refers. Must be the id of a resource that exists in the parent environment and is of the given resource_type.
-     * 
-     */
+        /**
+         * @return The id of the resource to which this reference refers. Must be the id of a resource that exists in the parent environment and is of the given resource_type.
+         * 
+         */
     private final String refers;
-    /**
-     * The type of resource referred to by this reference. Valid values are &#39;KeyStore&#39; or &#39;TrustStore&#39;.
-     * 
-     */
+        /**
+         * @return The type of resource referred to by this reference. Valid values are &#39;KeyStore&#39; or &#39;TrustStore&#39;.
+         * 
+         */
     private final String resourceType;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class GetReferenceResult {
     }
 
     /**
-     * Optional. A human-readable description of this reference.
+     * @return Optional. A human-readable description of this reference.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The resource id of this reference. Values must match the regular expression [\w\s\-.]+.
+     * @return The resource id of this reference. Values must match the regular expression [\w\s\-.]+.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The id of the resource to which this reference refers. Must be the id of a resource that exists in the parent environment and is of the given resource_type.
+     * @return The id of the resource to which this reference refers. Must be the id of a resource that exists in the parent environment and is of the given resource_type.
      * 
-    */
+     */
     public String refers() {
         return this.refers;
     }
     /**
-     * The type of resource referred to by this reference. Valid values are &#39;KeyStore&#39; or &#39;TrustStore&#39;.
+     * @return The type of resource referred to by this reference. Valid values are &#39;KeyStore&#39; or &#39;TrustStore&#39;.
      * 
-    */
+     */
     public String resourceType() {
         return this.resourceType;
     }

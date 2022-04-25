@@ -43,6 +43,10 @@ public final class DatacenterConnectorArgs extends com.pulumi.resources.Resource
     @Import(name="registrationId")
     private @Nullable Output<String> registrationId;
 
+    /**
+     * @return Immutable. A unique key for this connector. This key is internal to the OVA connector and is supplied with its creation during the registration process and can not be modified.
+     * 
+     */
     public Optional<Output<String>> registrationId() {
         return Optional.ofNullable(this.registrationId);
     }
@@ -61,6 +65,10 @@ public final class DatacenterConnectorArgs extends com.pulumi.resources.Resource
     @Import(name="serviceAccount")
     private @Nullable Output<String> serviceAccount;
 
+    /**
+     * @return The service account to use in the connector when communicating with the cloud.
+     * 
+     */
     public Optional<Output<String>> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
@@ -79,6 +87,10 @@ public final class DatacenterConnectorArgs extends com.pulumi.resources.Resource
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return The version running in the DatacenterConnector. This is supplied by the OVA connector during the registration process and can not be modified.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -141,11 +153,23 @@ public final class DatacenterConnectorArgs extends com.pulumi.resources.Resource
             return project(Output.of(project));
         }
 
+        /**
+         * @param registrationId Immutable. A unique key for this connector. This key is internal to the OVA connector and is supplied with its creation during the registration process and can not be modified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationId(@Nullable Output<String> registrationId) {
             $.registrationId = registrationId;
             return this;
         }
 
+        /**
+         * @param registrationId Immutable. A unique key for this connector. This key is internal to the OVA connector and is supplied with its creation during the registration process and can not be modified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationId(String registrationId) {
             return registrationId(Output.of(registrationId));
         }
@@ -159,11 +183,23 @@ public final class DatacenterConnectorArgs extends com.pulumi.resources.Resource
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param serviceAccount The service account to use in the connector when communicating with the cloud.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param serviceAccount The service account to use in the connector when communicating with the cloud.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(String serviceAccount) {
             return serviceAccount(Output.of(serviceAccount));
         }
@@ -177,11 +213,23 @@ public final class DatacenterConnectorArgs extends com.pulumi.resources.Resource
             return sourceId(Output.of(sourceId));
         }
 
+        /**
+         * @param version The version running in the DatacenterConnector. This is supplied by the OVA connector during the registration process and can not be modified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The version running in the DatacenterConnector. This is supplied by the OVA connector during the registration process and can not be modified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

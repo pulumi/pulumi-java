@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class UserPasswordResponse {
-    /**
-     * Secret version reference containing the password.
-     * 
-     */
+        /**
+         * @return Secret version reference containing the password.
+         * 
+         */
     private final SecretResponse password;
-    /**
-     * Username.
-     * 
-     */
+        /**
+         * @return Username.
+         * 
+         */
     private final String username;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class UserPasswordResponse {
     }
 
     /**
-     * Secret version reference containing the password.
+     * @return Secret version reference containing the password.
      * 
-    */
+     */
     public SecretResponse password() {
         return this.password;
     }
     /**
-     * Username.
+     * @return Username.
      * 
-    */
+     */
     public String username() {
         return this.username;
     }

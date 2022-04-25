@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class PacketMirroringMirroredResourceInfoInstanceInfoResponse {
-    /**
-     * Unique identifier for the instance; defined by the server.
-     * 
-     */
+        /**
+         * @return Unique identifier for the instance; defined by the server.
+         * 
+         */
     private final String canonicalUrl;
-    /**
-     * Resource URL to the virtual machine instance which is being mirrored.
-     * 
-     */
+        /**
+         * @return Resource URL to the virtual machine instance which is being mirrored.
+         * 
+         */
     private final String url;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class PacketMirroringMirroredResourceInfoInstanceInfoResponse {
     }
 
     /**
-     * Unique identifier for the instance; defined by the server.
+     * @return Unique identifier for the instance; defined by the server.
      * 
-    */
+     */
     public String canonicalUrl() {
         return this.canonicalUrl;
     }
     /**
-     * Resource URL to the virtual machine instance which is being mirrored.
+     * @return Resource URL to the virtual machine instance which is being mirrored.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

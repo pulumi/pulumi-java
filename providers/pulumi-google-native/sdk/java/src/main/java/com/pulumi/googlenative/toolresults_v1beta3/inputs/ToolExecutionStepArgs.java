@@ -26,6 +26,10 @@ public final class ToolExecutionStepArgs extends com.pulumi.resources.ResourceAr
     @Import(name="toolExecution")
     private @Nullable Output<ToolExecutionArgs> toolExecution;
 
+    /**
+     * @return A Tool execution. - In response: present if set by create/update request - In create/update request: optional
+     * 
+     */
     public Optional<Output<ToolExecutionArgs>> toolExecution() {
         return Optional.ofNullable(this.toolExecution);
     }
@@ -54,11 +58,23 @@ public final class ToolExecutionStepArgs extends com.pulumi.resources.ResourceAr
             $ = new ToolExecutionStepArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param toolExecution A Tool execution. - In response: present if set by create/update request - In create/update request: optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder toolExecution(@Nullable Output<ToolExecutionArgs> toolExecution) {
             $.toolExecution = toolExecution;
             return this;
         }
 
+        /**
+         * @param toolExecution A Tool execution. - In response: present if set by create/update request - In create/update request: optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder toolExecution(ToolExecutionArgs toolExecution) {
             return toolExecution(Output.of(toolExecution));
         }

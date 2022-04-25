@@ -11,25 +11,25 @@ import java.util.Objects;
 
 @CustomType
 public final class HttpHeaderActionResponse {
-    /**
-     * Headers to add to a matching request before forwarding the request to the backendService.
-     * 
-     */
+        /**
+         * @return Headers to add to a matching request before forwarding the request to the backendService.
+         * 
+         */
     private final List<HttpHeaderOptionResponse> requestHeadersToAdd;
-    /**
-     * A list of header names for headers that need to be removed from the request before forwarding the request to the backendService.
-     * 
-     */
+        /**
+         * @return A list of header names for headers that need to be removed from the request before forwarding the request to the backendService.
+         * 
+         */
     private final List<String> requestHeadersToRemove;
-    /**
-     * Headers to add the response before sending the response back to the client.
-     * 
-     */
+        /**
+         * @return Headers to add the response before sending the response back to the client.
+         * 
+         */
     private final List<HttpHeaderOptionResponse> responseHeadersToAdd;
-    /**
-     * A list of header names for headers that need to be removed from the response before sending the response back to the client.
-     * 
-     */
+        /**
+         * @return A list of header names for headers that need to be removed from the response before sending the response back to the client.
+         * 
+         */
     private final List<String> responseHeadersToRemove;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class HttpHeaderActionResponse {
     }
 
     /**
-     * Headers to add to a matching request before forwarding the request to the backendService.
+     * @return Headers to add to a matching request before forwarding the request to the backendService.
      * 
-    */
+     */
     public List<HttpHeaderOptionResponse> requestHeadersToAdd() {
         return this.requestHeadersToAdd;
     }
     /**
-     * A list of header names for headers that need to be removed from the request before forwarding the request to the backendService.
+     * @return A list of header names for headers that need to be removed from the request before forwarding the request to the backendService.
      * 
-    */
+     */
     public List<String> requestHeadersToRemove() {
         return this.requestHeadersToRemove;
     }
     /**
-     * Headers to add the response before sending the response back to the client.
+     * @return Headers to add the response before sending the response back to the client.
      * 
-    */
+     */
     public List<HttpHeaderOptionResponse> responseHeadersToAdd() {
         return this.responseHeadersToAdd;
     }
     /**
-     * A list of header names for headers that need to be removed from the response before sending the response back to the client.
+     * @return A list of header names for headers that need to be removed from the response before sending the response back to the client.
      * 
-    */
+     */
     public List<String> responseHeadersToRemove() {
         return this.responseHeadersToRemove;
     }

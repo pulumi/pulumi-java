@@ -27,6 +27,10 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs ex
     @Import(name="database")
     private @Nullable Output<String> database;
 
+    /**
+     * @return Database name.
+     * 
+     */
     public Optional<Output<String>> database() {
         return Optional.ofNullable(this.database);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs ex
     @Import(name="instanceId")
     private @Nullable Output<String> instanceId;
 
+    /**
+     * @return Cloud SQL instance ID in the format of `project:location:instance`.
+     * 
+     */
     public Optional<Output<String>> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
@@ -49,6 +57,10 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs ex
     @Import(name="type")
     private @Nullable Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType> type;
 
+    /**
+     * @return Type of the Cloud SQL database.
+     * 
+     */
     public Optional<Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -79,29 +91,65 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs ex
             $ = new GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param database Database name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(@Nullable Output<String> database) {
             $.database = database;
             return this;
         }
 
+        /**
+         * @param database Database name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(String database) {
             return database(Output.of(database));
         }
 
+        /**
+         * @param instanceId Cloud SQL instance ID in the format of `project:location:instance`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(@Nullable Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceId Cloud SQL instance ID in the format of `project:location:instance`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }
 
+        /**
+         * @param type Type of the Cloud SQL database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of the Cloud SQL database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType type) {
             return type(Output.of(type));
         }

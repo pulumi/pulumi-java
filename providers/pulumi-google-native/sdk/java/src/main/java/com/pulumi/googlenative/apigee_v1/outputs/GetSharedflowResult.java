@@ -11,25 +11,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSharedflowResult {
-    /**
-     * The id of the most recently created revision for this shared flow.
-     * 
-     */
+        /**
+         * @return The id of the most recently created revision for this shared flow.
+         * 
+         */
     private final String latestRevisionId;
-    /**
-     * Metadata describing the shared flow.
-     * 
-     */
+        /**
+         * @return Metadata describing the shared flow.
+         * 
+         */
     private final GoogleCloudApigeeV1EntityMetadataResponse metaData;
-    /**
-     * The ID of the shared flow.
-     * 
-     */
+        /**
+         * @return The ID of the shared flow.
+         * 
+         */
     private final String name;
-    /**
-     * A list of revisions of this shared flow.
-     * 
-     */
+        /**
+         * @return A list of revisions of this shared flow.
+         * 
+         */
     private final List<String> revision;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class GetSharedflowResult {
     }
 
     /**
-     * The id of the most recently created revision for this shared flow.
+     * @return The id of the most recently created revision for this shared flow.
      * 
-    */
+     */
     public String latestRevisionId() {
         return this.latestRevisionId;
     }
     /**
-     * Metadata describing the shared flow.
+     * @return Metadata describing the shared flow.
      * 
-    */
+     */
     public GoogleCloudApigeeV1EntityMetadataResponse metaData() {
         return this.metaData;
     }
     /**
-     * The ID of the shared flow.
+     * @return The ID of the shared flow.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A list of revisions of this shared flow.
+     * @return A list of revisions of this shared flow.
      * 
-    */
+     */
     public List<String> revision() {
         return this.revision;
     }

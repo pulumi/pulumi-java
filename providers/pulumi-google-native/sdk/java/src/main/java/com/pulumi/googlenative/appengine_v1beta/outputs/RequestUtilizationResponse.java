@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class RequestUtilizationResponse {
-    /**
-     * Target number of concurrent requests.
-     * 
-     */
+        /**
+         * @return Target number of concurrent requests.
+         * 
+         */
     private final Integer targetConcurrentRequests;
-    /**
-     * Target requests per second.
-     * 
-     */
+        /**
+         * @return Target requests per second.
+         * 
+         */
     private final Integer targetRequestCountPerSecond;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class RequestUtilizationResponse {
     }
 
     /**
-     * Target number of concurrent requests.
+     * @return Target number of concurrent requests.
      * 
-    */
+     */
     public Integer targetConcurrentRequests() {
         return this.targetConcurrentRequests;
     }
     /**
-     * Target requests per second.
+     * @return Target requests per second.
      * 
-    */
+     */
     public Integer targetRequestCountPerSecond() {
         return this.targetRequestCountPerSecond;
     }

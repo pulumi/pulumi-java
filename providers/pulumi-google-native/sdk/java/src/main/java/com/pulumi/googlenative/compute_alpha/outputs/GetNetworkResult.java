@@ -14,86 +14,86 @@ import java.util.Objects;
 
 @CustomType
 public final class GetNetworkResult {
-    /**
-     * Must be set to create a VPC network. If not set, a legacy network is created. When set to true, the VPC network is created in auto mode. When set to false, the VPC network is created in custom mode. An auto mode VPC network starts with one subnet per region. Each subnet has a predetermined range as described in Auto mode VPC network IP ranges. For custom mode VPC networks, you can add subnets using the subnetworks insert method.
-     * 
-     */
+        /**
+         * @return Must be set to create a VPC network. If not set, a legacy network is created. When set to true, the VPC network is created in auto mode. When set to false, the VPC network is created in custom mode. An auto mode VPC network starts with one subnet per region. Each subnet has a predetermined range as described in Auto mode VPC network IP ranges. For custom mode VPC networks, you can add subnets using the subnetworks insert method.
+         * 
+         */
     private final Boolean autoCreateSubnetworks;
-    /**
-     * Creation timestamp in RFC3339 text format.
-     * 
-     */
+        /**
+         * @return Creation timestamp in RFC3339 text format.
+         * 
+         */
     private final String creationTimestamp;
-    /**
-     * An optional description of this resource. Provide this field when you create the resource.
-     * 
-     */
+        /**
+         * @return An optional description of this resource. Provide this field when you create the resource.
+         * 
+         */
     private final String description;
-    /**
-     * Enable ULA internal ipv6 on this network. Enabling this feature will assign a /48 from google defined ULA prefix fd20::/20. .
-     * 
-     */
+        /**
+         * @return Enable ULA internal ipv6 on this network. Enabling this feature will assign a /48 from google defined ULA prefix fd20::/20. .
+         * 
+         */
     private final Boolean enableUlaInternalIpv6;
-    /**
-     * URL of the firewall policy the network is associated with.
-     * 
-     */
+        /**
+         * @return URL of the firewall policy the network is associated with.
+         * 
+         */
     private final String firewallPolicy;
-    /**
-     * The gateway address for default routing out of the network, selected by GCP.
-     * 
-     */
+        /**
+         * @return The gateway address for default routing out of the network, selected by GCP.
+         * 
+         */
     private final String gatewayIPv4;
-    /**
-     * When enabling ula internal ipv6, caller optionally can specify the /48 range they want from the google defined ULA prefix fd20::/20. The input must be a valid /48 ULA IPv6 address and must be within the fd20::/20. Operation will fail if the speficied /48 is already in used by another resource. If the field is not speficied, then a /48 range will be randomly allocated from fd20::/20 and returned via this field. .
-     * 
-     */
+        /**
+         * @return When enabling ula internal ipv6, caller optionally can specify the /48 range they want from the google defined ULA prefix fd20::/20. The input must be a valid /48 ULA IPv6 address and must be within the fd20::/20. Operation will fail if the speficied /48 is already in used by another resource. If the field is not speficied, then a /48 range will be randomly allocated from fd20::/20 and returned via this field. .
+         * 
+         */
     private final String internalIpv6Range;
-    /**
-     * Type of the resource. Always compute#network for networks.
-     * 
-     */
+        /**
+         * @return Type of the resource. Always compute#network for networks.
+         * 
+         */
     private final String kind;
-    /**
-     * Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum value is 1500 bytes. If unspecified, defaults to 1460.
-     * 
-     */
+        /**
+         * @return Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum value is 1500 bytes. If unspecified, defaults to 1460.
+         * 
+         */
     private final Integer mtu;
-    /**
-     * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
-     * 
-     */
+        /**
+         * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
+         * 
+         */
     private final String name;
     private final String networkFirewallPolicyEnforcementOrder;
-    /**
-     * A list of network peerings for the resource.
-     * 
-     */
+        /**
+         * @return A list of network peerings for the resource.
+         * 
+         */
     private final List<NetworkPeeringResponse> peerings;
-    /**
-     * URL of the region where the regional network resides. This field is not applicable to global network. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
-     * 
-     */
+        /**
+         * @return URL of the region where the regional network resides. This field is not applicable to global network. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
+         * 
+         */
     private final String region;
-    /**
-     * The network-level routing configuration for this network. Used by Cloud Router to determine what type of network-wide routing behavior to enforce.
-     * 
-     */
+        /**
+         * @return The network-level routing configuration for this network. Used by Cloud Router to determine what type of network-wide routing behavior to enforce.
+         * 
+         */
     private final NetworkRoutingConfigResponse routingConfig;
-    /**
-     * Server-defined URL for the resource.
-     * 
-     */
+        /**
+         * @return Server-defined URL for the resource.
+         * 
+         */
     private final String selfLink;
-    /**
-     * Server-defined URL for this resource with the resource id.
-     * 
-     */
+        /**
+         * @return Server-defined URL for this resource with the resource id.
+         * 
+         */
     private final String selfLinkWithId;
-    /**
-     * Server-defined fully-qualified URLs for all subnetworks in this VPC network.
-     * 
-     */
+        /**
+         * @return Server-defined fully-qualified URLs for all subnetworks in this VPC network.
+         * 
+         */
     private final List<String> subnetworks;
 
     @CustomType.Constructor
@@ -135,72 +135,72 @@ public final class GetNetworkResult {
     }
 
     /**
-     * Must be set to create a VPC network. If not set, a legacy network is created. When set to true, the VPC network is created in auto mode. When set to false, the VPC network is created in custom mode. An auto mode VPC network starts with one subnet per region. Each subnet has a predetermined range as described in Auto mode VPC network IP ranges. For custom mode VPC networks, you can add subnets using the subnetworks insert method.
+     * @return Must be set to create a VPC network. If not set, a legacy network is created. When set to true, the VPC network is created in auto mode. When set to false, the VPC network is created in custom mode. An auto mode VPC network starts with one subnet per region. Each subnet has a predetermined range as described in Auto mode VPC network IP ranges. For custom mode VPC networks, you can add subnets using the subnetworks insert method.
      * 
-    */
+     */
     public Boolean autoCreateSubnetworks() {
         return this.autoCreateSubnetworks;
     }
     /**
-     * Creation timestamp in RFC3339 text format.
+     * @return Creation timestamp in RFC3339 text format.
      * 
-    */
+     */
     public String creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
-     * An optional description of this resource. Provide this field when you create the resource.
+     * @return An optional description of this resource. Provide this field when you create the resource.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Enable ULA internal ipv6 on this network. Enabling this feature will assign a /48 from google defined ULA prefix fd20::/20. .
+     * @return Enable ULA internal ipv6 on this network. Enabling this feature will assign a /48 from google defined ULA prefix fd20::/20. .
      * 
-    */
+     */
     public Boolean enableUlaInternalIpv6() {
         return this.enableUlaInternalIpv6;
     }
     /**
-     * URL of the firewall policy the network is associated with.
+     * @return URL of the firewall policy the network is associated with.
      * 
-    */
+     */
     public String firewallPolicy() {
         return this.firewallPolicy;
     }
     /**
-     * The gateway address for default routing out of the network, selected by GCP.
+     * @return The gateway address for default routing out of the network, selected by GCP.
      * 
-    */
+     */
     public String gatewayIPv4() {
         return this.gatewayIPv4;
     }
     /**
-     * When enabling ula internal ipv6, caller optionally can specify the /48 range they want from the google defined ULA prefix fd20::/20. The input must be a valid /48 ULA IPv6 address and must be within the fd20::/20. Operation will fail if the speficied /48 is already in used by another resource. If the field is not speficied, then a /48 range will be randomly allocated from fd20::/20 and returned via this field. .
+     * @return When enabling ula internal ipv6, caller optionally can specify the /48 range they want from the google defined ULA prefix fd20::/20. The input must be a valid /48 ULA IPv6 address and must be within the fd20::/20. Operation will fail if the speficied /48 is already in used by another resource. If the field is not speficied, then a /48 range will be randomly allocated from fd20::/20 and returned via this field. .
      * 
-    */
+     */
     public String internalIpv6Range() {
         return this.internalIpv6Range;
     }
     /**
-     * Type of the resource. Always compute#network for networks.
+     * @return Type of the resource. Always compute#network for networks.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum value is 1500 bytes. If unspecified, defaults to 1460.
+     * @return Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum value is 1500 bytes. If unspecified, defaults to 1460.
      * 
-    */
+     */
     public Integer mtu() {
         return this.mtu;
     }
     /**
-     * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
+     * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
@@ -208,44 +208,44 @@ public final class GetNetworkResult {
         return this.networkFirewallPolicyEnforcementOrder;
     }
     /**
-     * A list of network peerings for the resource.
+     * @return A list of network peerings for the resource.
      * 
-    */
+     */
     public List<NetworkPeeringResponse> peerings() {
         return this.peerings;
     }
     /**
-     * URL of the region where the regional network resides. This field is not applicable to global network. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
+     * @return URL of the region where the regional network resides. This field is not applicable to global network. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
      * 
-    */
+     */
     public String region() {
         return this.region;
     }
     /**
-     * The network-level routing configuration for this network. Used by Cloud Router to determine what type of network-wide routing behavior to enforce.
+     * @return The network-level routing configuration for this network. Used by Cloud Router to determine what type of network-wide routing behavior to enforce.
      * 
-    */
+     */
     public NetworkRoutingConfigResponse routingConfig() {
         return this.routingConfig;
     }
     /**
-     * Server-defined URL for the resource.
+     * @return Server-defined URL for the resource.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }
     /**
-     * Server-defined URL for this resource with the resource id.
+     * @return Server-defined URL for this resource with the resource id.
      * 
-    */
+     */
     public String selfLinkWithId() {
         return this.selfLinkWithId;
     }
     /**
-     * Server-defined fully-qualified URLs for all subnetworks in this VPC network.
+     * @return Server-defined fully-qualified URLs for all subnetworks in this VPC network.
      * 
-    */
+     */
     public List<String> subnetworks() {
         return this.subnetworks;
     }

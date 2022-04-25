@@ -22,6 +22,10 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedSt
     @Import(name="useElapsedTime")
     private @Nullable Output<Boolean> useElapsedTime;
 
+    /**
+     * @return If true, measurement.elapsed_time is used as the x-axis of each Trials Decay Curve. Otherwise, Measurement.steps will be used as the x-axis.
+     * 
+     */
     public Optional<Output<Boolean>> useElapsedTime() {
         return Optional.ofNullable(this.useElapsedTime);
     }
@@ -50,11 +54,23 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedSt
             $ = new GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param useElapsedTime If true, measurement.elapsed_time is used as the x-axis of each Trials Decay Curve. Otherwise, Measurement.steps will be used as the x-axis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useElapsedTime(@Nullable Output<Boolean> useElapsedTime) {
             $.useElapsedTime = useElapsedTime;
             return this;
         }
 
+        /**
+         * @param useElapsedTime If true, measurement.elapsed_time is used as the x-axis of each Trials Decay Curve. Otherwise, Measurement.steps will be used as the x-axis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useElapsedTime(Boolean useElapsedTime) {
             return useElapsedTime(Output.of(useElapsedTime));
         }

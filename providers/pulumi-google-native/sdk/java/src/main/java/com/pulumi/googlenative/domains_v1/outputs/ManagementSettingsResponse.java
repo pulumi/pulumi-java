@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ManagementSettingsResponse {
-    /**
-     * The renewal method for this `Registration`.
-     * 
-     */
+        /**
+         * @return The renewal method for this `Registration`.
+         * 
+         */
     private final String renewalMethod;
-    /**
-     * Controls whether the domain can be transferred to another registrar.
-     * 
-     */
+        /**
+         * @return Controls whether the domain can be transferred to another registrar.
+         * 
+         */
     private final String transferLockState;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ManagementSettingsResponse {
     }
 
     /**
-     * The renewal method for this `Registration`.
+     * @return The renewal method for this `Registration`.
      * 
-    */
+     */
     public String renewalMethod() {
         return this.renewalMethod;
     }
     /**
-     * Controls whether the domain can be transferred to another registrar.
+     * @return Controls whether the domain can be transferred to another registrar.
      * 
-    */
+     */
     public String transferLockState() {
         return this.transferLockState;
     }

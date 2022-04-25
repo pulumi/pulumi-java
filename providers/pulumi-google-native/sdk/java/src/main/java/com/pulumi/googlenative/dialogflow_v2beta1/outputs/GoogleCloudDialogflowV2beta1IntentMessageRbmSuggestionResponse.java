@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse {
-    /**
-     * Predefined client side actions that user can choose
-     * 
-     */
+        /**
+         * @return Predefined client side actions that user can choose
+         * 
+         */
     private final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse action;
-    /**
-     * Predefined replies for user to select instead of typing
-     * 
-     */
+        /**
+         * @return Predefined replies for user to select instead of typing
+         * 
+         */
     private final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse reply;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionRespons
     }
 
     /**
-     * Predefined client side actions that user can choose
+     * @return Predefined client side actions that user can choose
      * 
-    */
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse action() {
         return this.action;
     }
     /**
-     * Predefined replies for user to select instead of typing
+     * @return Predefined replies for user to select instead of typing
      * 
-    */
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse reply() {
         return this.reply;
     }

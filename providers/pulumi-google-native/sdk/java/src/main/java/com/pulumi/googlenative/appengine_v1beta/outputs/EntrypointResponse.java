@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class EntrypointResponse {
-    /**
-     * The format should be a shell command that can be fed to bash -c.
-     * 
-     */
+        /**
+         * @return The format should be a shell command that can be fed to bash -c.
+         * 
+         */
     private final String shell;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class EntrypointResponse {
     }
 
     /**
-     * The format should be a shell command that can be fed to bash -c.
+     * @return The format should be a shell command that can be fed to bash -c.
      * 
-    */
+     */
     public String shell() {
         return this.shell;
     }

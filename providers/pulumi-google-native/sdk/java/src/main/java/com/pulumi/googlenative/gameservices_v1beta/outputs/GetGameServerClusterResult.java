@@ -12,45 +12,45 @@ import java.util.Objects;
 
 @CustomType
 public final class GetGameServerClusterResult {
-    /**
-     * The state of the Kubernetes cluster, this will be available if &#39;view&#39; is set to `FULL` in the relevant List/Get/Preview request.
-     * 
-     */
+        /**
+         * @return The state of the Kubernetes cluster, this will be available if &#39;view&#39; is set to `FULL` in the relevant List/Get/Preview request.
+         * 
+         */
     private final KubernetesClusterStateResponse clusterState;
-    /**
-     * The game server cluster connection information. This information is used to manage game server clusters.
-     * 
-     */
+        /**
+         * @return The game server cluster connection information. This information is used to manage game server clusters.
+         * 
+         */
     private final GameServerClusterConnectionInfoResponse connectionInfo;
-    /**
-     * The creation time.
-     * 
-     */
+        /**
+         * @return The creation time.
+         * 
+         */
     private final String createTime;
-    /**
-     * Human readable description of the cluster.
-     * 
-     */
+        /**
+         * @return Human readable description of the cluster.
+         * 
+         */
     private final String description;
-    /**
-     * ETag of the resource.
-     * 
-     */
+        /**
+         * @return ETag of the resource.
+         * 
+         */
     private final String etag;
-    /**
-     * The labels associated with this game server cluster. Each label is a key-value pair.
-     * 
-     */
+        /**
+         * @return The labels associated with this game server cluster. Each label is a key-value pair.
+         * 
+         */
     private final Map<String,String> labels;
-    /**
-     * The resource name of the game server cluster, in the following form: `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
-     * 
-     */
+        /**
+         * @return The resource name of the game server cluster, in the following form: `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
+         * 
+         */
     private final String name;
-    /**
-     * The last-modified time.
-     * 
-     */
+        /**
+         * @return The last-modified time.
+         * 
+         */
     private final String updateTime;
 
     @CustomType.Constructor
@@ -74,58 +74,58 @@ public final class GetGameServerClusterResult {
     }
 
     /**
-     * The state of the Kubernetes cluster, this will be available if &#39;view&#39; is set to `FULL` in the relevant List/Get/Preview request.
+     * @return The state of the Kubernetes cluster, this will be available if &#39;view&#39; is set to `FULL` in the relevant List/Get/Preview request.
      * 
-    */
+     */
     public KubernetesClusterStateResponse clusterState() {
         return this.clusterState;
     }
     /**
-     * The game server cluster connection information. This information is used to manage game server clusters.
+     * @return The game server cluster connection information. This information is used to manage game server clusters.
      * 
-    */
+     */
     public GameServerClusterConnectionInfoResponse connectionInfo() {
         return this.connectionInfo;
     }
     /**
-     * The creation time.
+     * @return The creation time.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Human readable description of the cluster.
+     * @return Human readable description of the cluster.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * ETag of the resource.
+     * @return ETag of the resource.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The labels associated with this game server cluster. Each label is a key-value pair.
+     * @return The labels associated with this game server cluster. Each label is a key-value pair.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The resource name of the game server cluster, in the following form: `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
+     * @return The resource name of the game server cluster, in the following form: `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The last-modified time.
+     * @return The last-modified time.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

@@ -25,6 +25,10 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="epoch", required=true)
     private Integer epoch;
 
+    /**
+     * @return Used to correct mistakes in the version numbering scheme.
+     * 
+     */
     public Integer epoch() {
         return this.epoch;
     }
@@ -36,6 +40,10 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="inclusive", required=true)
     private Boolean inclusive;
 
+    /**
+     * @return Whether this version is specifying part of an inclusive range. Grafeas does not have the capability to specify version ranges; instead we have fields that specify start version and end versions. At times this is insufficient - we also need to specify whether the version is included in the range or is excluded from the range. This boolean is expected to be set to true when the version is included in a range.
+     * 
+     */
     public Boolean inclusive() {
         return this.inclusive;
     }
@@ -47,6 +55,10 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return Distinguishes between sentinel MIN/MAX versions and normal versions.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -58,6 +70,10 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Required only when version kind is NORMAL. The main part of the version name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -69,6 +85,10 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="revision", required=true)
     private String revision;
 
+    /**
+     * @return The iteration of the package build from the above version.
+     * 
+     */
     public String revision() {
         return this.revision;
     }
@@ -101,26 +121,56 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
             $ = new VersionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param epoch Used to correct mistakes in the version numbering scheme.
+         * 
+         * @return builder
+         * 
+         */
         public Builder epoch(Integer epoch) {
             $.epoch = epoch;
             return this;
         }
 
+        /**
+         * @param inclusive Whether this version is specifying part of an inclusive range. Grafeas does not have the capability to specify version ranges; instead we have fields that specify start version and end versions. At times this is insufficient - we also need to specify whether the version is included in the range or is excluded from the range. This boolean is expected to be set to true when the version is included in a range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inclusive(Boolean inclusive) {
             $.inclusive = inclusive;
             return this;
         }
 
+        /**
+         * @param kind Distinguishes between sentinel MIN/MAX versions and normal versions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param name Required only when version kind is NORMAL. The main part of the version name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param revision The iteration of the package build from the above version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(String revision) {
             $.revision = revision;
             return this;

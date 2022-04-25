@@ -11,40 +11,40 @@ import java.util.Objects;
 
 @CustomType
 public final class GetEnvironmentResult {
-    /**
-     * Use a container image to start the notebook instance.
-     * 
-     */
+        /**
+         * @return Use a container image to start the notebook instance.
+         * 
+         */
     private final ContainerImageResponse containerImage;
-    /**
-     * The time at which this environment was created.
-     * 
-     */
+        /**
+         * @return The time at which this environment was created.
+         * 
+         */
     private final String createTime;
-    /**
-     * A brief description of this environment.
-     * 
-     */
+        /**
+         * @return A brief description of this environment.
+         * 
+         */
     private final String description;
-    /**
-     * Display name of this environment for the UI.
-     * 
-     */
+        /**
+         * @return Display name of this environment for the UI.
+         * 
+         */
     private final String displayName;
-    /**
-     * Name of this environment. Format: `projects/{project_id}/locations/{location}/environments/{environment_id}`
-     * 
-     */
+        /**
+         * @return Name of this environment. Format: `projects/{project_id}/locations/{location}/environments/{environment_id}`
+         * 
+         */
     private final String name;
-    /**
-     * Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path. Example: `&#34;gs://path-to-file/file-name&#34;`
-     * 
-     */
+        /**
+         * @return Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path. Example: `&#34;gs://path-to-file/file-name&#34;`
+         * 
+         */
     private final String postStartupScript;
-    /**
-     * Use a Compute Engine VM image to start the notebook instance.
-     * 
-     */
+        /**
+         * @return Use a Compute Engine VM image to start the notebook instance.
+         * 
+         */
     private final VmImageResponse vmImage;
 
     @CustomType.Constructor
@@ -66,51 +66,51 @@ public final class GetEnvironmentResult {
     }
 
     /**
-     * Use a container image to start the notebook instance.
+     * @return Use a container image to start the notebook instance.
      * 
-    */
+     */
     public ContainerImageResponse containerImage() {
         return this.containerImage;
     }
     /**
-     * The time at which this environment was created.
+     * @return The time at which this environment was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * A brief description of this environment.
+     * @return A brief description of this environment.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Display name of this environment for the UI.
+     * @return Display name of this environment for the UI.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Name of this environment. Format: `projects/{project_id}/locations/{location}/environments/{environment_id}`
+     * @return Name of this environment. Format: `projects/{project_id}/locations/{location}/environments/{environment_id}`
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path. Example: `&#34;gs://path-to-file/file-name&#34;`
+     * @return Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path. Example: `&#34;gs://path-to-file/file-name&#34;`
      * 
-    */
+     */
     public String postStartupScript() {
         return this.postStartupScript;
     }
     /**
-     * Use a Compute Engine VM image to start the notebook instance.
+     * @return Use a Compute Engine VM image to start the notebook instance.
      * 
-    */
+     */
     public VmImageResponse vmImage() {
         return this.vmImage;
     }

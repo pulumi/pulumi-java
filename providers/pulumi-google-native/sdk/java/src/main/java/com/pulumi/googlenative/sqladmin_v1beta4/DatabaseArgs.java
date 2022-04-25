@@ -23,6 +23,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="charset")
     private @Nullable Output<String> charset;
 
+    /**
+     * @return The Cloud SQL charset value.
+     * 
+     */
     public Optional<Output<String>> charset() {
         return Optional.ofNullable(this.charset);
     }
@@ -34,6 +38,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="collation")
     private @Nullable Output<String> collation;
 
+    /**
+     * @return The Cloud SQL collation value.
+     * 
+     */
     public Optional<Output<String>> collation() {
         return Optional.ofNullable(this.collation);
     }
@@ -45,6 +53,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instance", required=true)
     private Output<String> instance;
 
+    /**
+     * @return The name of the Cloud SQL instance. This does not include the project ID.
+     * 
+     */
     public Output<String> instance() {
         return this.instance;
     }
@@ -56,6 +68,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return This is always `sql#database`.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -67,6 +83,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -78,6 +98,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The project ID of the project containing the Cloud SQL database. The Google apps domain is prefixed if applicable.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -89,6 +113,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
     private @Nullable Output<String> selfLink;
 
+    /**
+     * @return The URI of this resource.
+     * 
+     */
     public Optional<Output<String>> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -131,65 +159,149 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DatabaseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param charset The Cloud SQL charset value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder charset(@Nullable Output<String> charset) {
             $.charset = charset;
             return this;
         }
 
+        /**
+         * @param charset The Cloud SQL charset value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder charset(String charset) {
             return charset(Output.of(charset));
         }
 
+        /**
+         * @param collation The Cloud SQL collation value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collation(@Nullable Output<String> collation) {
             $.collation = collation;
             return this;
         }
 
+        /**
+         * @param collation The Cloud SQL collation value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collation(String collation) {
             return collation(Output.of(collation));
         }
 
+        /**
+         * @param instance The name of the Cloud SQL instance. This does not include the project ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(Output<String> instance) {
             $.instance = instance;
             return this;
         }
 
+        /**
+         * @param instance The name of the Cloud SQL instance. This does not include the project ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(String instance) {
             return instance(Output.of(instance));
         }
 
+        /**
+         * @param kind This is always `sql#database`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind This is always `sql#database`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param name The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The project ID of the project containing the Cloud SQL database. The Google apps domain is prefixed if applicable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The project ID of the project containing the Cloud SQL database. The Google apps domain is prefixed if applicable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param selfLink The URI of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(@Nullable Output<String> selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param selfLink The URI of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
         }

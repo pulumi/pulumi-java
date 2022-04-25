@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse {
-    /**
-     * Knowledge documents to query from. Format: `projects//locations//knowledgeBases//documents/`. Currently, only one document is supported.
-     * 
-     */
+        /**
+         * @return Knowledge documents to query from. Format: `projects//locations//knowledgeBases//documents/`. Currently, only one document is supported.
+         * 
+         */
     private final List<String> documents;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     }
 
     /**
-     * Knowledge documents to query from. Format: `projects//locations//knowledgeBases//documents/`. Currently, only one document is supported.
+     * @return Knowledge documents to query from. Format: `projects//locations//knowledgeBases//documents/`. Currently, only one document is supported.
      * 
-    */
+     */
     public List<String> documents() {
         return this.documents;
     }

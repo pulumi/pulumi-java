@@ -13,70 +13,70 @@ import java.util.Objects;
 
 @CustomType
 public final class GetDomainResult {
-    /**
-     * Optional. The name of delegated administrator account used to perform Active Directory operations. If not specified, `setupadmin` will be used.
-     * 
-     */
+        /**
+         * @return Optional. The name of delegated administrator account used to perform Active Directory operations. If not specified, `setupadmin` will be used.
+         * 
+         */
     private final String admin;
-    /**
-     * Optional. Configuration for audit logs. True if audit logs are enabled, else false. Default is audit logs disabled.
-     * 
-     */
+        /**
+         * @return Optional. Configuration for audit logs. True if audit logs are enabled, else false. Default is audit logs disabled.
+         * 
+         */
     private final Boolean auditLogsEnabled;
-    /**
-     * Optional. The full names of the Google Compute Engine [networks](/compute/docs/networks-and-firewalls#networks) the domain instance is connected to. Networks can be added using UpdateDomain. The domain is only available on networks listed in `authorized_networks`. If CIDR subnets overlap between networks, domain creation will fail.
-     * 
-     */
+        /**
+         * @return Optional. The full names of the Google Compute Engine [networks](/compute/docs/networks-and-firewalls#networks) the domain instance is connected to. Networks can be added using UpdateDomain. The domain is only available on networks listed in `authorized_networks`. If CIDR subnets overlap between networks, domain creation will fail.
+         * 
+         */
     private final List<String> authorizedNetworks;
-    /**
-     * The time the instance was created.
-     * 
-     */
+        /**
+         * @return The time the instance was created.
+         * 
+         */
     private final String createTime;
-    /**
-     * The fully-qualified domain name of the exposed domain used by clients to connect to the service. Similar to what would be chosen for an Active Directory set up on an internal network.
-     * 
-     */
+        /**
+         * @return The fully-qualified domain name of the exposed domain used by clients to connect to the service. Similar to what would be chosen for an Active Directory set up on an internal network.
+         * 
+         */
     private final String fqdn;
-    /**
-     * Optional. Resource labels that can contain user-provided metadata.
-     * 
-     */
+        /**
+         * @return Optional. Resource labels that can contain user-provided metadata.
+         * 
+         */
     private final Map<String,String> labels;
-    /**
-     * Locations where domain needs to be provisioned. regions e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
-     * 
-     */
+        /**
+         * @return Locations where domain needs to be provisioned. regions e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
+         * 
+         */
     private final List<String> locations;
-    /**
-     * The unique name of the domain using the form: `projects/{project_id}/locations/global/domains/{domain_name}`.
-     * 
-     */
+        /**
+         * @return The unique name of the domain using the form: `projects/{project_id}/locations/global/domains/{domain_name}`.
+         * 
+         */
     private final String name;
-    /**
-     * The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger. Ranges must be unique and non-overlapping with existing subnets in [Domain].[authorized_networks].
-     * 
-     */
+        /**
+         * @return The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger. Ranges must be unique and non-overlapping with existing subnets in [Domain].[authorized_networks].
+         * 
+         */
     private final String reservedIpRange;
-    /**
-     * The current state of this domain.
-     * 
-     */
+        /**
+         * @return The current state of this domain.
+         * 
+         */
     private final String state;
-    /**
-     * Additional information about the current status of this domain, if available.
-     * 
-     */
+        /**
+         * @return Additional information about the current status of this domain, if available.
+         * 
+         */
     private final String statusMessage;
-    /**
-     * The current trusts associated with the domain.
-     * 
-     */
+        /**
+         * @return The current trusts associated with the domain.
+         * 
+         */
     private final List<TrustResponse> trusts;
-    /**
-     * The last update time.
-     * 
-     */
+        /**
+         * @return The last update time.
+         * 
+         */
     private final String updateTime;
 
     @CustomType.Constructor
@@ -110,93 +110,93 @@ public final class GetDomainResult {
     }
 
     /**
-     * Optional. The name of delegated administrator account used to perform Active Directory operations. If not specified, `setupadmin` will be used.
+     * @return Optional. The name of delegated administrator account used to perform Active Directory operations. If not specified, `setupadmin` will be used.
      * 
-    */
+     */
     public String admin() {
         return this.admin;
     }
     /**
-     * Optional. Configuration for audit logs. True if audit logs are enabled, else false. Default is audit logs disabled.
+     * @return Optional. Configuration for audit logs. True if audit logs are enabled, else false. Default is audit logs disabled.
      * 
-    */
+     */
     public Boolean auditLogsEnabled() {
         return this.auditLogsEnabled;
     }
     /**
-     * Optional. The full names of the Google Compute Engine [networks](/compute/docs/networks-and-firewalls#networks) the domain instance is connected to. Networks can be added using UpdateDomain. The domain is only available on networks listed in `authorized_networks`. If CIDR subnets overlap between networks, domain creation will fail.
+     * @return Optional. The full names of the Google Compute Engine [networks](/compute/docs/networks-and-firewalls#networks) the domain instance is connected to. Networks can be added using UpdateDomain. The domain is only available on networks listed in `authorized_networks`. If CIDR subnets overlap between networks, domain creation will fail.
      * 
-    */
+     */
     public List<String> authorizedNetworks() {
         return this.authorizedNetworks;
     }
     /**
-     * The time the instance was created.
+     * @return The time the instance was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The fully-qualified domain name of the exposed domain used by clients to connect to the service. Similar to what would be chosen for an Active Directory set up on an internal network.
+     * @return The fully-qualified domain name of the exposed domain used by clients to connect to the service. Similar to what would be chosen for an Active Directory set up on an internal network.
      * 
-    */
+     */
     public String fqdn() {
         return this.fqdn;
     }
     /**
-     * Optional. Resource labels that can contain user-provided metadata.
+     * @return Optional. Resource labels that can contain user-provided metadata.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * Locations where domain needs to be provisioned. regions e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
+     * @return Locations where domain needs to be provisioned. regions e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
      * 
-    */
+     */
     public List<String> locations() {
         return this.locations;
     }
     /**
-     * The unique name of the domain using the form: `projects/{project_id}/locations/global/domains/{domain_name}`.
+     * @return The unique name of the domain using the form: `projects/{project_id}/locations/global/domains/{domain_name}`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger. Ranges must be unique and non-overlapping with existing subnets in [Domain].[authorized_networks].
+     * @return The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger. Ranges must be unique and non-overlapping with existing subnets in [Domain].[authorized_networks].
      * 
-    */
+     */
     public String reservedIpRange() {
         return this.reservedIpRange;
     }
     /**
-     * The current state of this domain.
+     * @return The current state of this domain.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Additional information about the current status of this domain, if available.
+     * @return Additional information about the current status of this domain, if available.
      * 
-    */
+     */
     public String statusMessage() {
         return this.statusMessage;
     }
     /**
-     * The current trusts associated with the domain.
+     * @return The current trusts associated with the domain.
      * 
-    */
+     */
     public List<TrustResponse> trusts() {
         return this.trusts;
     }
     /**
-     * The last update time.
+     * @return The last update time.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

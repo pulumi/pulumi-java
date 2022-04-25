@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class ResourcePolicyGroupPlacementPolicyResponse {
-    /**
-     * The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
-     * 
-     */
+        /**
+         * @return The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
+         * 
+         */
     private final Integer availabilityDomainCount;
-    /**
-     * Specifies network collocation
-     * 
-     */
+        /**
+         * @return Specifies network collocation
+         * 
+         */
     private final String collocation;
-    /**
-     * Number of vms in this placement group
-     * 
-     */
+        /**
+         * @return Number of vms in this placement group
+         * 
+         */
     private final Integer vmCount;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class ResourcePolicyGroupPlacementPolicyResponse {
     }
 
     /**
-     * The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
+     * @return The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
      * 
-    */
+     */
     public Integer availabilityDomainCount() {
         return this.availabilityDomainCount;
     }
     /**
-     * Specifies network collocation
+     * @return Specifies network collocation
      * 
-    */
+     */
     public String collocation() {
         return this.collocation;
     }
     /**
-     * Number of vms in this placement group
+     * @return Number of vms in this placement group
      * 
-    */
+     */
     public Integer vmCount() {
         return this.vmCount;
     }

@@ -23,6 +23,10 @@ public final class InstanceReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="instanceId", required=true)
     private String instanceId;
 
+    /**
+     * @return The unique identifier of the Compute Engine instance.
+     * 
+     */
     public String instanceId() {
         return this.instanceId;
     }
@@ -34,6 +38,10 @@ public final class InstanceReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="instanceName", required=true)
     private String instanceName;
 
+    /**
+     * @return The user-friendly name of the Compute Engine instance.
+     * 
+     */
     public String instanceName() {
         return this.instanceName;
     }
@@ -45,6 +53,10 @@ public final class InstanceReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="publicEciesKey", required=true)
     private String publicEciesKey;
 
+    /**
+     * @return The public ECIES key used for sharing data with this instance.
+     * 
+     */
     public String publicEciesKey() {
         return this.publicEciesKey;
     }
@@ -56,6 +68,10 @@ public final class InstanceReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="publicKey", required=true)
     private String publicKey;
 
+    /**
+     * @return The public RSA key used for sharing data with this instance.
+     * 
+     */
     public String publicKey() {
         return this.publicKey;
     }
@@ -87,21 +103,45 @@ public final class InstanceReferenceResponse extends com.pulumi.resources.Invoke
             $ = new InstanceReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceId The unique identifier of the Compute Engine instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceName The user-friendly name of the Compute Engine instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceName(String instanceName) {
             $.instanceName = instanceName;
             return this;
         }
 
+        /**
+         * @param publicEciesKey The public ECIES key used for sharing data with this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicEciesKey(String publicEciesKey) {
             $.publicEciesKey = publicEciesKey;
             return this;
         }
 
+        /**
+         * @param publicKey The public RSA key used for sharing data with this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKey(String publicKey) {
             $.publicKey = publicKey;
             return this;

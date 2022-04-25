@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse {
-    /**
-     * The estimated probability that a given individual sharing these quasi-identifier values is in the dataset. This value, typically called δ, is the ratio between the number of records in the dataset with these quasi-identifier values, and the total number of individuals (inside *and* outside the dataset) with these quasi-identifier values. For example, if there are 15 individuals in the dataset who share the same quasi-identifier values, and an estimated 100 people in the entire population with these values, then δ is 0.15.
-     * 
-     */
+        /**
+         * @return The estimated probability that a given individual sharing these quasi-identifier values is in the dataset. This value, typically called δ, is the ratio between the number of records in the dataset with these quasi-identifier values, and the total number of individuals (inside *and* outside the dataset) with these quasi-identifier values. For example, if there are 15 individuals in the dataset who share the same quasi-identifier values, and an estimated 100 people in the entire population with these values, then δ is 0.15.
+         * 
+         */
     private final Double estimatedProbability;
-    /**
-     * The quasi-identifier values.
-     * 
-     */
+        /**
+         * @return The quasi-identifier values.
+         * 
+         */
     private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesRespons
     }
 
     /**
-     * The estimated probability that a given individual sharing these quasi-identifier values is in the dataset. This value, typically called δ, is the ratio between the number of records in the dataset with these quasi-identifier values, and the total number of individuals (inside *and* outside the dataset) with these quasi-identifier values. For example, if there are 15 individuals in the dataset who share the same quasi-identifier values, and an estimated 100 people in the entire population with these values, then δ is 0.15.
+     * @return The estimated probability that a given individual sharing these quasi-identifier values is in the dataset. This value, typically called δ, is the ratio between the number of records in the dataset with these quasi-identifier values, and the total number of individuals (inside *and* outside the dataset) with these quasi-identifier values. For example, if there are 15 individuals in the dataset who share the same quasi-identifier values, and an estimated 100 people in the entire population with these values, then δ is 0.15.
      * 
-    */
+     */
     public Double estimatedProbability() {
         return this.estimatedProbability;
     }
     /**
-     * The quasi-identifier values.
+     * @return The quasi-identifier values.
      * 
-    */
+     */
     public List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues() {
         return this.quasiIdsValues;
     }

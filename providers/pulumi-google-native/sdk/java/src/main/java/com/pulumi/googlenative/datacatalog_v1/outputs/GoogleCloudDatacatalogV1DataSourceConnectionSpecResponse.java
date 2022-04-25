@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse {
-    /**
-     * Fields specific to BigQuery connections.
-     * 
-     */
+        /**
+         * @return Fields specific to BigQuery connections.
+         * 
+         */
     private final GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse bigqueryConnectionSpec;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse {
     }
 
     /**
-     * Fields specific to BigQuery connections.
+     * @return Fields specific to BigQuery connections.
      * 
-    */
+     */
     public GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse bigqueryConnectionSpec() {
         return this.bigqueryConnectionSpec;
     }

@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class ContactResponse {
-    /**
-     * Email address of the contact.
-     * 
-     */
+        /**
+         * @return Email address of the contact.
+         * 
+         */
     private final String email;
-    /**
-     * Fax number of the contact in international format. For example, `&#34;+1-800-555-0123&#34;`.
-     * 
-     */
+        /**
+         * @return Fax number of the contact in international format. For example, `&#34;+1-800-555-0123&#34;`.
+         * 
+         */
     private final String faxNumber;
-    /**
-     * Phone number of the contact in international format. For example, `&#34;+1-800-555-0123&#34;`.
-     * 
-     */
+        /**
+         * @return Phone number of the contact in international format. For example, `&#34;+1-800-555-0123&#34;`.
+         * 
+         */
     private final String phoneNumber;
-    /**
-     * Postal address of the contact.
-     * 
-     */
+        /**
+         * @return Postal address of the contact.
+         * 
+         */
     private final PostalAddressResponse postalAddress;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class ContactResponse {
     }
 
     /**
-     * Email address of the contact.
+     * @return Email address of the contact.
      * 
-    */
+     */
     public String email() {
         return this.email;
     }
     /**
-     * Fax number of the contact in international format. For example, `&#34;+1-800-555-0123&#34;`.
+     * @return Fax number of the contact in international format. For example, `&#34;+1-800-555-0123&#34;`.
      * 
-    */
+     */
     public String faxNumber() {
         return this.faxNumber;
     }
     /**
-     * Phone number of the contact in international format. For example, `&#34;+1-800-555-0123&#34;`.
+     * @return Phone number of the contact in international format. For example, `&#34;+1-800-555-0123&#34;`.
      * 
-    */
+     */
     public String phoneNumber() {
         return this.phoneNumber;
     }
     /**
-     * Postal address of the contact.
+     * @return Postal address of the contact.
      * 
-    */
+     */
     public PostalAddressResponse postalAddress() {
         return this.postalAddress;
     }

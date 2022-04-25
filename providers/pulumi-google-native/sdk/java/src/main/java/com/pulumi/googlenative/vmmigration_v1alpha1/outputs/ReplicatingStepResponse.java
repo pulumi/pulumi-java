@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class ReplicatingStepResponse {
-    /**
-     * The source disks replication rate for the last 30 minutes in bytes per second.
-     * 
-     */
+        /**
+         * @return The source disks replication rate for the last 30 minutes in bytes per second.
+         * 
+         */
     private final String lastThirtyMinutesAverageBytesPerSecond;
-    /**
-     * The source disks replication rate for the last 2 minutes in bytes per second.
-     * 
-     */
+        /**
+         * @return The source disks replication rate for the last 2 minutes in bytes per second.
+         * 
+         */
     private final String lastTwoMinutesAverageBytesPerSecond;
-    /**
-     * Replicated bytes in the step.
-     * 
-     */
+        /**
+         * @return Replicated bytes in the step.
+         * 
+         */
     private final String replicatedBytes;
-    /**
-     * Total bytes to be handled in the step.
-     * 
-     */
+        /**
+         * @return Total bytes to be handled in the step.
+         * 
+         */
     private final String totalBytes;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class ReplicatingStepResponse {
     }
 
     /**
-     * The source disks replication rate for the last 30 minutes in bytes per second.
+     * @return The source disks replication rate for the last 30 minutes in bytes per second.
      * 
-    */
+     */
     public String lastThirtyMinutesAverageBytesPerSecond() {
         return this.lastThirtyMinutesAverageBytesPerSecond;
     }
     /**
-     * The source disks replication rate for the last 2 minutes in bytes per second.
+     * @return The source disks replication rate for the last 2 minutes in bytes per second.
      * 
-    */
+     */
     public String lastTwoMinutesAverageBytesPerSecond() {
         return this.lastTwoMinutesAverageBytesPerSecond;
     }
     /**
-     * Replicated bytes in the step.
+     * @return Replicated bytes in the step.
      * 
-    */
+     */
     public String replicatedBytes() {
         return this.replicatedBytes;
     }
     /**
-     * Total bytes to be handled in the step.
+     * @return Total bytes to be handled in the step.
      * 
-    */
+     */
     public String totalBytes() {
         return this.totalBytes;
     }

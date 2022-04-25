@@ -26,6 +26,10 @@ public final class ApprovalConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="approvalRequired")
     private @Nullable Output<Boolean> approvalRequired;
 
+    /**
+     * @return Whether or not approval is needed. If this is set on a build, it will become pending when created, and will need to be explicitly approved to start.
+     * 
+     */
     public Optional<Output<Boolean>> approvalRequired() {
         return Optional.ofNullable(this.approvalRequired);
     }
@@ -54,11 +58,23 @@ public final class ApprovalConfigArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ApprovalConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param approvalRequired Whether or not approval is needed. If this is set on a build, it will become pending when created, and will need to be explicitly approved to start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder approvalRequired(@Nullable Output<Boolean> approvalRequired) {
             $.approvalRequired = approvalRequired;
             return this;
         }
 
+        /**
+         * @param approvalRequired Whether or not approval is needed. If this is set on a build, it will become pending when created, and will need to be explicitly approved to start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder approvalRequired(Boolean approvalRequired) {
             return approvalRequired(Output.of(approvalRequired));
         }

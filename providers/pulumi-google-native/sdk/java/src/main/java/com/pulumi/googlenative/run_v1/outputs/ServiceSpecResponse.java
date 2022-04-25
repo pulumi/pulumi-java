@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ServiceSpecResponse {
-    /**
-     * Template holds the latest specification for the Revision to be stamped out.
-     * 
-     */
+        /**
+         * @return Template holds the latest specification for the Revision to be stamped out.
+         * 
+         */
     private final RevisionTemplateResponse template;
-    /**
-     * Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations.
-     * 
-     */
+        /**
+         * @return Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations.
+         * 
+         */
     private final List<TrafficTargetResponse> traffic;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ServiceSpecResponse {
     }
 
     /**
-     * Template holds the latest specification for the Revision to be stamped out.
+     * @return Template holds the latest specification for the Revision to be stamped out.
      * 
-    */
+     */
     public RevisionTemplateResponse template() {
         return this.template;
     }
     /**
-     * Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations.
+     * @return Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations.
      * 
-    */
+     */
     public List<TrafficTargetResponse> traffic() {
         return this.traffic;
     }

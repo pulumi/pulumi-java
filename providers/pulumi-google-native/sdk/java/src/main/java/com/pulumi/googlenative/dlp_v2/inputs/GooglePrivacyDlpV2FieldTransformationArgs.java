@@ -30,6 +30,10 @@ public final class GooglePrivacyDlpV2FieldTransformationArgs extends com.pulumi.
     @Import(name="condition")
     private @Nullable Output<GooglePrivacyDlpV2RecordConditionArgs> condition;
 
+    /**
+     * @return Only apply the transformation if the condition evaluates to true for the given `RecordCondition`. The conditions are allowed to reference fields that are not used in the actual transformation. Example Use Cases: - Apply a different bucket transformation to an age column if the zip code column for the same record is within a specific range. - Redact a field if the date of birth field is greater than 85.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2RecordConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
@@ -41,6 +45,10 @@ public final class GooglePrivacyDlpV2FieldTransformationArgs extends com.pulumi.
     @Import(name="fields", required=true)
     private Output<List<GooglePrivacyDlpV2FieldIdArgs>> fields;
 
+    /**
+     * @return Input field(s) to apply the transformation to. When you have columns that reference their position within a list, omit the index from the FieldId. FieldId name matching ignores the index. For example, instead of &#34;contact.nums[0].type&#34;, use &#34;contact.nums.type&#34;.
+     * 
+     */
     public Output<List<GooglePrivacyDlpV2FieldIdArgs>> fields() {
         return this.fields;
     }
@@ -52,6 +60,10 @@ public final class GooglePrivacyDlpV2FieldTransformationArgs extends com.pulumi.
     @Import(name="infoTypeTransformations")
     private @Nullable Output<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations;
 
+    /**
+     * @return Treat the contents of the field as free text, and selectively transform content that matches an `InfoType`.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2InfoTypeTransformationsArgs>> infoTypeTransformations() {
         return Optional.ofNullable(this.infoTypeTransformations);
     }
@@ -63,6 +75,10 @@ public final class GooglePrivacyDlpV2FieldTransformationArgs extends com.pulumi.
     @Import(name="primitiveTransformation")
     private @Nullable Output<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation;
 
+    /**
+     * @return Apply the transformation to the entire field.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2PrimitiveTransformationArgs>> primitiveTransformation() {
         return Optional.ofNullable(this.primitiveTransformation);
     }
@@ -94,42 +110,96 @@ public final class GooglePrivacyDlpV2FieldTransformationArgs extends com.pulumi.
             $ = new GooglePrivacyDlpV2FieldTransformationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param condition Only apply the transformation if the condition evaluates to true for the given `RecordCondition`. The conditions are allowed to reference fields that are not used in the actual transformation. Example Use Cases: - Apply a different bucket transformation to an age column if the zip code column for the same record is within a specific range. - Redact a field if the date of birth field is greater than 85.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(@Nullable Output<GooglePrivacyDlpV2RecordConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param condition Only apply the transformation if the condition evaluates to true for the given `RecordCondition`. The conditions are allowed to reference fields that are not used in the actual transformation. Example Use Cases: - Apply a different bucket transformation to an age column if the zip code column for the same record is within a specific range. - Redact a field if the date of birth field is greater than 85.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(GooglePrivacyDlpV2RecordConditionArgs condition) {
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param fields Input field(s) to apply the transformation to. When you have columns that reference their position within a list, omit the index from the FieldId. FieldId name matching ignores the index. For example, instead of &#34;contact.nums[0].type&#34;, use &#34;contact.nums.type&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(Output<List<GooglePrivacyDlpV2FieldIdArgs>> fields) {
             $.fields = fields;
             return this;
         }
 
+        /**
+         * @param fields Input field(s) to apply the transformation to. When you have columns that reference their position within a list, omit the index from the FieldId. FieldId name matching ignores the index. For example, instead of &#34;contact.nums[0].type&#34;, use &#34;contact.nums.type&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(List<GooglePrivacyDlpV2FieldIdArgs> fields) {
             return fields(Output.of(fields));
         }
 
+        /**
+         * @param fields Input field(s) to apply the transformation to. When you have columns that reference their position within a list, omit the index from the FieldId. FieldId name matching ignores the index. For example, instead of &#34;contact.nums[0].type&#34;, use &#34;contact.nums.type&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(GooglePrivacyDlpV2FieldIdArgs... fields) {
             return fields(List.of(fields));
         }
 
+        /**
+         * @param infoTypeTransformations Treat the contents of the field as free text, and selectively transform content that matches an `InfoType`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypeTransformations(@Nullable Output<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations) {
             $.infoTypeTransformations = infoTypeTransformations;
             return this;
         }
 
+        /**
+         * @param infoTypeTransformations Treat the contents of the field as free text, and selectively transform content that matches an `InfoType`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypeTransformations(GooglePrivacyDlpV2InfoTypeTransformationsArgs infoTypeTransformations) {
             return infoTypeTransformations(Output.of(infoTypeTransformations));
         }
 
+        /**
+         * @param primitiveTransformation Apply the transformation to the entire field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primitiveTransformation(@Nullable Output<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation) {
             $.primitiveTransformation = primitiveTransformation;
             return this;
         }
 
+        /**
+         * @param primitiveTransformation Apply the transformation to the entire field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primitiveTransformation(GooglePrivacyDlpV2PrimitiveTransformationArgs primitiveTransformation) {
             return primitiveTransformation(Output.of(primitiveTransformation));
         }

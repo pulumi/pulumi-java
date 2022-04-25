@@ -27,6 +27,10 @@ public final class AnnotationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="annotationSource")
     private @Nullable Output<AnnotationSourceArgs> annotationSource;
 
+    /**
+     * @return Details of the source.
+     * 
+     */
     public Optional<Output<AnnotationSourceArgs>> annotationSource() {
         return Optional.ofNullable(this.annotationSource);
     }
@@ -45,6 +49,10 @@ public final class AnnotationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customData")
     private @Nullable Output<Map<String,String>> customData;
 
+    /**
+     * @return Additional information for this annotation record, such as annotator and verifier information or study campaign.
+     * 
+     */
     public Optional<Output<Map<String,String>>> customData() {
         return Optional.ofNullable(this.customData);
     }
@@ -63,6 +71,10 @@ public final class AnnotationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageAnnotation")
     private @Nullable Output<ImageAnnotationArgs> imageAnnotation;
 
+    /**
+     * @return Annotations for images. For example, bounding polygons.
+     * 
+     */
     public Optional<Output<ImageAnnotationArgs>> imageAnnotation() {
         return Optional.ofNullable(this.imageAnnotation);
     }
@@ -81,6 +93,10 @@ public final class AnnotationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name of the Annotation, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_id}`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -99,6 +115,10 @@ public final class AnnotationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceAnnotation")
     private @Nullable Output<ResourceAnnotationArgs> resourceAnnotation;
 
+    /**
+     * @return Annotations for resource. For example, classification tags.
+     * 
+     */
     public Optional<Output<ResourceAnnotationArgs>> resourceAnnotation() {
         return Optional.ofNullable(this.resourceAnnotation);
     }
@@ -110,6 +130,10 @@ public final class AnnotationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="textAnnotation")
     private @Nullable Output<SensitiveTextAnnotationArgs> textAnnotation;
 
+    /**
+     * @return Annotations for sensitive texts. For example, a range that describes the location of sensitive text.
+     * 
+     */
     public Optional<Output<SensitiveTextAnnotationArgs>> textAnnotation() {
         return Optional.ofNullable(this.textAnnotation);
     }
@@ -147,11 +171,23 @@ public final class AnnotationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AnnotationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotationSource Details of the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotationSource(@Nullable Output<AnnotationSourceArgs> annotationSource) {
             $.annotationSource = annotationSource;
             return this;
         }
 
+        /**
+         * @param annotationSource Details of the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotationSource(AnnotationSourceArgs annotationSource) {
             return annotationSource(Output.of(annotationSource));
         }
@@ -165,11 +201,23 @@ public final class AnnotationArgs extends com.pulumi.resources.ResourceArgs {
             return annotationStoreId(Output.of(annotationStoreId));
         }
 
+        /**
+         * @param customData Additional information for this annotation record, such as annotator and verifier information or study campaign.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customData(@Nullable Output<Map<String,String>> customData) {
             $.customData = customData;
             return this;
         }
 
+        /**
+         * @param customData Additional information for this annotation record, such as annotator and verifier information or study campaign.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customData(Map<String,String> customData) {
             return customData(Output.of(customData));
         }
@@ -183,11 +231,23 @@ public final class AnnotationArgs extends com.pulumi.resources.ResourceArgs {
             return datasetId(Output.of(datasetId));
         }
 
+        /**
+         * @param imageAnnotation Annotations for images. For example, bounding polygons.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageAnnotation(@Nullable Output<ImageAnnotationArgs> imageAnnotation) {
             $.imageAnnotation = imageAnnotation;
             return this;
         }
 
+        /**
+         * @param imageAnnotation Annotations for images. For example, bounding polygons.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageAnnotation(ImageAnnotationArgs imageAnnotation) {
             return imageAnnotation(Output.of(imageAnnotation));
         }
@@ -201,11 +261,23 @@ public final class AnnotationArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Resource name of the Annotation, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name of the Annotation, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -219,20 +291,44 @@ public final class AnnotationArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param resourceAnnotation Annotations for resource. For example, classification tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAnnotation(@Nullable Output<ResourceAnnotationArgs> resourceAnnotation) {
             $.resourceAnnotation = resourceAnnotation;
             return this;
         }
 
+        /**
+         * @param resourceAnnotation Annotations for resource. For example, classification tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAnnotation(ResourceAnnotationArgs resourceAnnotation) {
             return resourceAnnotation(Output.of(resourceAnnotation));
         }
 
+        /**
+         * @param textAnnotation Annotations for sensitive texts. For example, a range that describes the location of sensitive text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textAnnotation(@Nullable Output<SensitiveTextAnnotationArgs> textAnnotation) {
             $.textAnnotation = textAnnotation;
             return this;
         }
 
+        /**
+         * @param textAnnotation Annotations for sensitive texts. For example, a range that describes the location of sensitive text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textAnnotation(SensitiveTextAnnotationArgs textAnnotation) {
             return textAnnotation(Output.of(textAnnotation));
         }

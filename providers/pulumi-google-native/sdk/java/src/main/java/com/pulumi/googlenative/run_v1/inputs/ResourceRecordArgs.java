@@ -27,6 +27,10 @@ public final class ResourceRecordArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Relative name of the object affected by this record. Only applicable for `CNAME` records. Example: &#39;www&#39;.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -38,6 +42,10 @@ public final class ResourceRecordArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="rrdata")
     private @Nullable Output<String> rrdata;
 
+    /**
+     * @return Data for this record. Values vary by record type, as defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1).
+     * 
+     */
     public Optional<Output<String>> rrdata() {
         return Optional.ofNullable(this.rrdata);
     }
@@ -49,6 +57,10 @@ public final class ResourceRecordArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="type")
     private @Nullable Output<ResourceRecordType> type;
 
+    /**
+     * @return Resource record type. Example: `AAAA`.
+     * 
+     */
     public Optional<Output<ResourceRecordType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -79,29 +91,65 @@ public final class ResourceRecordArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ResourceRecordArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Relative name of the object affected by this record. Only applicable for `CNAME` records. Example: &#39;www&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Relative name of the object affected by this record. Only applicable for `CNAME` records. Example: &#39;www&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param rrdata Data for this record. Values vary by record type, as defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rrdata(@Nullable Output<String> rrdata) {
             $.rrdata = rrdata;
             return this;
         }
 
+        /**
+         * @param rrdata Data for this record. Values vary by record type, as defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rrdata(String rrdata) {
             return rrdata(Output.of(rrdata));
         }
 
+        /**
+         * @param type Resource record type. Example: `AAAA`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<ResourceRecordType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Resource record type. Example: `AAAA`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ResourceRecordType type) {
             return type(Output.of(type));
         }

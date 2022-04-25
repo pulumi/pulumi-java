@@ -11,25 +11,25 @@ import java.util.Objects;
 
 @CustomType
 public final class SoftwareRecipeStepExecFileResponse {
-    /**
-     * Defaults to [0]. A list of possible return values that the program can return to indicate a success.
-     * 
-     */
+        /**
+         * @return Defaults to [0]. A list of possible return values that the program can return to indicate a success.
+         * 
+         */
     private final List<Integer> allowedExitCodes;
-    /**
-     * Arguments to be passed to the provided executable.
-     * 
-     */
+        /**
+         * @return Arguments to be passed to the provided executable.
+         * 
+         */
     private final List<String> args;
-    /**
-     * The id of the relevant artifact in the recipe.
-     * 
-     */
+        /**
+         * @return The id of the relevant artifact in the recipe.
+         * 
+         */
     private final String artifactId;
-    /**
-     * The absolute path of the file on the local filesystem.
-     * 
-     */
+        /**
+         * @return The absolute path of the file on the local filesystem.
+         * 
+         */
     private final String localPath;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class SoftwareRecipeStepExecFileResponse {
     }
 
     /**
-     * Defaults to [0]. A list of possible return values that the program can return to indicate a success.
+     * @return Defaults to [0]. A list of possible return values that the program can return to indicate a success.
      * 
-    */
+     */
     public List<Integer> allowedExitCodes() {
         return this.allowedExitCodes;
     }
     /**
-     * Arguments to be passed to the provided executable.
+     * @return Arguments to be passed to the provided executable.
      * 
-    */
+     */
     public List<String> args() {
         return this.args;
     }
     /**
-     * The id of the relevant artifact in the recipe.
+     * @return The id of the relevant artifact in the recipe.
      * 
-    */
+     */
     public String artifactId() {
         return this.artifactId;
     }
     /**
-     * The absolute path of the file on the local filesystem.
+     * @return The absolute path of the file on the local filesystem.
      * 
-    */
+     */
     public String localPath() {
         return this.localPath;
     }

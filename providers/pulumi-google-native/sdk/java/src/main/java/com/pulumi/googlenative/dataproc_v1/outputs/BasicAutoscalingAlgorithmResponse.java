@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class BasicAutoscalingAlgorithmResponse {
-    /**
-     * Optional. Duration between scaling events. A scaling period starts after the update operation from the previous event has completed.Bounds: 2m, 1d. Default: 2m.
-     * 
-     */
+        /**
+         * @return Optional. Duration between scaling events. A scaling period starts after the update operation from the previous event has completed.Bounds: 2m, 1d. Default: 2m.
+         * 
+         */
     private final String cooldownPeriod;
-    /**
-     * Optional. Spark Standalone autoscaling configuration
-     * 
-     */
+        /**
+         * @return Optional. Spark Standalone autoscaling configuration
+         * 
+         */
     private final SparkStandaloneAutoscalingConfigResponse sparkStandaloneConfig;
-    /**
-     * Optional. YARN autoscaling configuration.
-     * 
-     */
+        /**
+         * @return Optional. YARN autoscaling configuration.
+         * 
+         */
     private final BasicYarnAutoscalingConfigResponse yarnConfig;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class BasicAutoscalingAlgorithmResponse {
     }
 
     /**
-     * Optional. Duration between scaling events. A scaling period starts after the update operation from the previous event has completed.Bounds: 2m, 1d. Default: 2m.
+     * @return Optional. Duration between scaling events. A scaling period starts after the update operation from the previous event has completed.Bounds: 2m, 1d. Default: 2m.
      * 
-    */
+     */
     public String cooldownPeriod() {
         return this.cooldownPeriod;
     }
     /**
-     * Optional. Spark Standalone autoscaling configuration
+     * @return Optional. Spark Standalone autoscaling configuration
      * 
-    */
+     */
     public SparkStandaloneAutoscalingConfigResponse sparkStandaloneConfig() {
         return this.sparkStandaloneConfig;
     }
     /**
-     * Optional. YARN autoscaling configuration.
+     * @return Optional. YARN autoscaling configuration.
      * 
-    */
+     */
     public BasicYarnAutoscalingConfigResponse yarnConfig() {
         return this.yarnConfig;
     }

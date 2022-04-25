@@ -26,130 +26,130 @@ import java.util.Objects;
 
 @CustomType
 public final class InstancePropertiesResponse {
-    /**
-     * Controls for advanced machine-related behavior features. Note that for MachineImage, this is not supported yet.
-     * 
-     */
+        /**
+         * @return Controls for advanced machine-related behavior features. Note that for MachineImage, this is not supported yet.
+         * 
+         */
     private final AdvancedMachineFeaturesResponse advancedMachineFeatures;
-    /**
-     * Enables instances created based on these properties to send packets with source IP addresses other than their own and receive packets with destination IP addresses other than their own. If these instances will be used as an IP gateway or it will be set as the next-hop in a Route resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation for more information.
-     * 
-     */
+        /**
+         * @return Enables instances created based on these properties to send packets with source IP addresses other than their own and receive packets with destination IP addresses other than their own. If these instances will be used as an IP gateway or it will be set as the next-hop in a Route resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation for more information.
+         * 
+         */
     private final Boolean canIpForward;
-    /**
-     * Specifies the Confidential Instance options. Note that for MachineImage, this is not supported yet.
-     * 
-     */
+        /**
+         * @return Specifies the Confidential Instance options. Note that for MachineImage, this is not supported yet.
+         * 
+         */
     private final ConfidentialInstanceConfigResponse confidentialInstanceConfig;
-    /**
-     * An optional text description for the instances that are created from these properties.
-     * 
-     */
+        /**
+         * @return An optional text description for the instances that are created from these properties.
+         * 
+         */
     private final String description;
-    /**
-     * An array of disks that are associated with the instances that are created from these properties.
-     * 
-     */
+        /**
+         * @return An array of disks that are associated with the instances that are created from these properties.
+         * 
+         */
     private final List<AttachedDiskResponse> disks;
-    /**
-     * Display Device properties to enable support for remote display products like: Teradici, VNC and TeamViewer Note that for MachineImage, this is not supported yet.
-     * 
-     */
+        /**
+         * @return Display Device properties to enable support for remote display products like: Teradici, VNC and TeamViewer Note that for MachineImage, this is not supported yet.
+         * 
+         */
     private final DisplayDeviceResponse displayDevice;
-    /**
-     * A list of guest accelerator cards&#39; type and count to use for instances created from these properties.
-     * 
-     */
+        /**
+         * @return A list of guest accelerator cards&#39; type and count to use for instances created from these properties.
+         * 
+         */
     private final List<AcceleratorConfigResponse> guestAccelerators;
-    /**
-     * KeyRevocationActionType of the instance.
-     * 
-     */
+        /**
+         * @return KeyRevocationActionType of the instance.
+         * 
+         */
     private final String keyRevocationActionType;
-    /**
-     * Labels to apply to instances that are created from these properties.
-     * 
-     */
+        /**
+         * @return Labels to apply to instances that are created from these properties.
+         * 
+         */
     private final Map<String,String> labels;
-    /**
-     * The machine type to use for instances that are created from these properties.
-     * 
-     */
+        /**
+         * @return The machine type to use for instances that are created from these properties.
+         * 
+         */
     private final String machineType;
-    /**
-     * The metadata key/value pairs to assign to instances that are created from these properties. These pairs can consist of custom metadata or predefined keys. See Project and instance metadata for more information.
-     * 
-     */
+        /**
+         * @return The metadata key/value pairs to assign to instances that are created from these properties. These pairs can consist of custom metadata or predefined keys. See Project and instance metadata for more information.
+         * 
+         */
     private final MetadataResponse metadata;
-    /**
-     * Minimum cpu/platform to be used by instances. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: &#34;Intel Haswell&#34; or minCpuPlatform: &#34;Intel Sandy Bridge&#34;. For more information, read Specifying a Minimum CPU Platform.
-     * 
-     */
+        /**
+         * @return Minimum cpu/platform to be used by instances. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: &#34;Intel Haswell&#34; or minCpuPlatform: &#34;Intel Sandy Bridge&#34;. For more information, read Specifying a Minimum CPU Platform.
+         * 
+         */
     private final String minCpuPlatform;
-    /**
-     * An array of network access configurations for this interface.
-     * 
-     */
+        /**
+         * @return An array of network access configurations for this interface.
+         * 
+         */
     private final List<NetworkInterfaceResponse> networkInterfaces;
-    /**
-     * Note that for MachineImage, this is not supported yet.
-     * 
-     */
+        /**
+         * @return Note that for MachineImage, this is not supported yet.
+         * 
+         */
     private final NetworkPerformanceConfigResponse networkPerformanceConfig;
-    /**
-     * PostKeyRevocationActionType of the instance.
-     * 
-     */
+        /**
+         * @return PostKeyRevocationActionType of the instance.
+         * 
+         */
     private final String postKeyRevocationActionType;
-    /**
-     * The private IPv6 google access type for VMs. If not specified, use INHERIT_FROM_SUBNETWORK as default. Note that for MachineImage, this is not supported yet.
-     * 
-     */
+        /**
+         * @return The private IPv6 google access type for VMs. If not specified, use INHERIT_FROM_SUBNETWORK as default. Note that for MachineImage, this is not supported yet.
+         * 
+         */
     private final String privateIpv6GoogleAccess;
-    /**
-     * Specifies the reservations that instances can consume from. Note that for MachineImage, this is not supported yet.
-     * 
-     */
+        /**
+         * @return Specifies the reservations that instances can consume from. Note that for MachineImage, this is not supported yet.
+         * 
+         */
     private final ReservationAffinityResponse reservationAffinity;
-    /**
-     * Resource manager tags to be bound to the instance. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT &amp; PATCH) when empty.
-     * 
-     */
+        /**
+         * @return Resource manager tags to be bound to the instance. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT &amp; PATCH) when empty.
+         * 
+         */
     private final Map<String,String> resourceManagerTags;
-    /**
-     * Resource policies (names, not URLs) applied to instances created from these properties. Note that for MachineImage, this is not supported yet.
-     * 
-     */
+        /**
+         * @return Resource policies (names, not URLs) applied to instances created from these properties. Note that for MachineImage, this is not supported yet.
+         * 
+         */
     private final List<String> resourcePolicies;
-    /**
-     * Specifies the scheduling options for the instances that are created from these properties.
-     * 
-     */
+        /**
+         * @return Specifies the scheduling options for the instances that are created from these properties.
+         * 
+         */
     private final SchedulingResponse scheduling;
-    /**
-     * [Input Only] Secure tags to apply to this instance. Maximum number of secure tags allowed is 50. Note that for MachineImage, this is not supported yet.
-     * 
-     */
+        /**
+         * @return [Input Only] Secure tags to apply to this instance. Maximum number of secure tags allowed is 50. Note that for MachineImage, this is not supported yet.
+         * 
+         */
     private final List<String> secureTags;
-    /**
-     * A list of service accounts with specified scopes. Access tokens for these service accounts are available to the instances that are created from these properties. Use metadata queries to obtain the access tokens for these instances.
-     * 
-     */
+        /**
+         * @return A list of service accounts with specified scopes. Access tokens for these service accounts are available to the instances that are created from these properties. Use metadata queries to obtain the access tokens for these instances.
+         * 
+         */
     private final List<ServiceAccountResponse> serviceAccounts;
-    /**
-     * Note that for MachineImage, this is not supported yet.
-     * 
-     */
+        /**
+         * @return Note that for MachineImage, this is not supported yet.
+         * 
+         */
     private final ShieldedInstanceConfigResponse shieldedInstanceConfig;
-    /**
-     * Specifies the Shielded VM options for the instances that are created from these properties.
-     * 
-     */
+        /**
+         * @return Specifies the Shielded VM options for the instances that are created from these properties.
+         * 
+         */
     private final ShieldedVmConfigResponse shieldedVmConfig;
-    /**
-     * A list of tags to apply to the instances that are created from these properties. The tags identify valid sources or targets for network firewalls. The setTags method can modify this list of tags. Each tag within the list must comply with RFC1035.
-     * 
-     */
+        /**
+         * @return A list of tags to apply to the instances that are created from these properties. The tags identify valid sources or targets for network firewalls. The setTags method can modify this list of tags. Each tag within the list must comply with RFC1035.
+         * 
+         */
     private final TagsResponse tags;
 
     @CustomType.Constructor
@@ -207,177 +207,177 @@ public final class InstancePropertiesResponse {
     }
 
     /**
-     * Controls for advanced machine-related behavior features. Note that for MachineImage, this is not supported yet.
+     * @return Controls for advanced machine-related behavior features. Note that for MachineImage, this is not supported yet.
      * 
-    */
+     */
     public AdvancedMachineFeaturesResponse advancedMachineFeatures() {
         return this.advancedMachineFeatures;
     }
     /**
-     * Enables instances created based on these properties to send packets with source IP addresses other than their own and receive packets with destination IP addresses other than their own. If these instances will be used as an IP gateway or it will be set as the next-hop in a Route resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation for more information.
+     * @return Enables instances created based on these properties to send packets with source IP addresses other than their own and receive packets with destination IP addresses other than their own. If these instances will be used as an IP gateway or it will be set as the next-hop in a Route resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation for more information.
      * 
-    */
+     */
     public Boolean canIpForward() {
         return this.canIpForward;
     }
     /**
-     * Specifies the Confidential Instance options. Note that for MachineImage, this is not supported yet.
+     * @return Specifies the Confidential Instance options. Note that for MachineImage, this is not supported yet.
      * 
-    */
+     */
     public ConfidentialInstanceConfigResponse confidentialInstanceConfig() {
         return this.confidentialInstanceConfig;
     }
     /**
-     * An optional text description for the instances that are created from these properties.
+     * @return An optional text description for the instances that are created from these properties.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * An array of disks that are associated with the instances that are created from these properties.
+     * @return An array of disks that are associated with the instances that are created from these properties.
      * 
-    */
+     */
     public List<AttachedDiskResponse> disks() {
         return this.disks;
     }
     /**
-     * Display Device properties to enable support for remote display products like: Teradici, VNC and TeamViewer Note that for MachineImage, this is not supported yet.
+     * @return Display Device properties to enable support for remote display products like: Teradici, VNC and TeamViewer Note that for MachineImage, this is not supported yet.
      * 
-    */
+     */
     public DisplayDeviceResponse displayDevice() {
         return this.displayDevice;
     }
     /**
-     * A list of guest accelerator cards&#39; type and count to use for instances created from these properties.
+     * @return A list of guest accelerator cards&#39; type and count to use for instances created from these properties.
      * 
-    */
+     */
     public List<AcceleratorConfigResponse> guestAccelerators() {
         return this.guestAccelerators;
     }
     /**
-     * KeyRevocationActionType of the instance.
+     * @return KeyRevocationActionType of the instance.
      * 
-    */
+     */
     public String keyRevocationActionType() {
         return this.keyRevocationActionType;
     }
     /**
-     * Labels to apply to instances that are created from these properties.
+     * @return Labels to apply to instances that are created from these properties.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The machine type to use for instances that are created from these properties.
+     * @return The machine type to use for instances that are created from these properties.
      * 
-    */
+     */
     public String machineType() {
         return this.machineType;
     }
     /**
-     * The metadata key/value pairs to assign to instances that are created from these properties. These pairs can consist of custom metadata or predefined keys. See Project and instance metadata for more information.
+     * @return The metadata key/value pairs to assign to instances that are created from these properties. These pairs can consist of custom metadata or predefined keys. See Project and instance metadata for more information.
      * 
-    */
+     */
     public MetadataResponse metadata() {
         return this.metadata;
     }
     /**
-     * Minimum cpu/platform to be used by instances. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: &#34;Intel Haswell&#34; or minCpuPlatform: &#34;Intel Sandy Bridge&#34;. For more information, read Specifying a Minimum CPU Platform.
+     * @return Minimum cpu/platform to be used by instances. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: &#34;Intel Haswell&#34; or minCpuPlatform: &#34;Intel Sandy Bridge&#34;. For more information, read Specifying a Minimum CPU Platform.
      * 
-    */
+     */
     public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
     /**
-     * An array of network access configurations for this interface.
+     * @return An array of network access configurations for this interface.
      * 
-    */
+     */
     public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces;
     }
     /**
-     * Note that for MachineImage, this is not supported yet.
+     * @return Note that for MachineImage, this is not supported yet.
      * 
-    */
+     */
     public NetworkPerformanceConfigResponse networkPerformanceConfig() {
         return this.networkPerformanceConfig;
     }
     /**
-     * PostKeyRevocationActionType of the instance.
+     * @return PostKeyRevocationActionType of the instance.
      * 
-    */
+     */
     public String postKeyRevocationActionType() {
         return this.postKeyRevocationActionType;
     }
     /**
-     * The private IPv6 google access type for VMs. If not specified, use INHERIT_FROM_SUBNETWORK as default. Note that for MachineImage, this is not supported yet.
+     * @return The private IPv6 google access type for VMs. If not specified, use INHERIT_FROM_SUBNETWORK as default. Note that for MachineImage, this is not supported yet.
      * 
-    */
+     */
     public String privateIpv6GoogleAccess() {
         return this.privateIpv6GoogleAccess;
     }
     /**
-     * Specifies the reservations that instances can consume from. Note that for MachineImage, this is not supported yet.
+     * @return Specifies the reservations that instances can consume from. Note that for MachineImage, this is not supported yet.
      * 
-    */
+     */
     public ReservationAffinityResponse reservationAffinity() {
         return this.reservationAffinity;
     }
     /**
-     * Resource manager tags to be bound to the instance. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT &amp; PATCH) when empty.
+     * @return Resource manager tags to be bound to the instance. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT &amp; PATCH) when empty.
      * 
-    */
+     */
     public Map<String,String> resourceManagerTags() {
         return this.resourceManagerTags;
     }
     /**
-     * Resource policies (names, not URLs) applied to instances created from these properties. Note that for MachineImage, this is not supported yet.
+     * @return Resource policies (names, not URLs) applied to instances created from these properties. Note that for MachineImage, this is not supported yet.
      * 
-    */
+     */
     public List<String> resourcePolicies() {
         return this.resourcePolicies;
     }
     /**
-     * Specifies the scheduling options for the instances that are created from these properties.
+     * @return Specifies the scheduling options for the instances that are created from these properties.
      * 
-    */
+     */
     public SchedulingResponse scheduling() {
         return this.scheduling;
     }
     /**
-     * [Input Only] Secure tags to apply to this instance. Maximum number of secure tags allowed is 50. Note that for MachineImage, this is not supported yet.
+     * @return [Input Only] Secure tags to apply to this instance. Maximum number of secure tags allowed is 50. Note that for MachineImage, this is not supported yet.
      * 
-    */
+     */
     public List<String> secureTags() {
         return this.secureTags;
     }
     /**
-     * A list of service accounts with specified scopes. Access tokens for these service accounts are available to the instances that are created from these properties. Use metadata queries to obtain the access tokens for these instances.
+     * @return A list of service accounts with specified scopes. Access tokens for these service accounts are available to the instances that are created from these properties. Use metadata queries to obtain the access tokens for these instances.
      * 
-    */
+     */
     public List<ServiceAccountResponse> serviceAccounts() {
         return this.serviceAccounts;
     }
     /**
-     * Note that for MachineImage, this is not supported yet.
+     * @return Note that for MachineImage, this is not supported yet.
      * 
-    */
+     */
     public ShieldedInstanceConfigResponse shieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
     }
     /**
-     * Specifies the Shielded VM options for the instances that are created from these properties.
+     * @return Specifies the Shielded VM options for the instances that are created from these properties.
      * 
-    */
+     */
     public ShieldedVmConfigResponse shieldedVmConfig() {
         return this.shieldedVmConfig;
     }
     /**
-     * A list of tags to apply to the instances that are created from these properties. The tags identify valid sources or targets for network firewalls. The setTags method can modify this list of tags. Each tag within the list must comply with RFC1035.
+     * @return A list of tags to apply to the instances that are created from these properties. The tags identify valid sources or targets for network firewalls. The setTags method can modify this list of tags. Each tag within the list must comply with RFC1035.
      * 
-    */
+     */
     public TagsResponse tags() {
         return this.tags;
     }

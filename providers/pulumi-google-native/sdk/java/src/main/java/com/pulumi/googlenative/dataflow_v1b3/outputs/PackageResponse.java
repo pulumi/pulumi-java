@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class PackageResponse {
-    /**
-     * The resource to read the package from. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket} bucket.storage.googleapis.com/
-     * 
-     */
+        /**
+         * @return The resource to read the package from. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket} bucket.storage.googleapis.com/
+         * 
+         */
     private final String location;
-    /**
-     * The name of the package.
-     * 
-     */
+        /**
+         * @return The name of the package.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class PackageResponse {
     }
 
     /**
-     * The resource to read the package from. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket} bucket.storage.googleapis.com/
+     * @return The resource to read the package from. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket} bucket.storage.googleapis.com/
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the package.
+     * @return The name of the package.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

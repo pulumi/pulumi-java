@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ShardingOptionResponse {
-    /**
-     * Shards test cases into the specified groups of packages, classes, and/or methods.
-     * 
-     */
+        /**
+         * @return Shards test cases into the specified groups of packages, classes, and/or methods.
+         * 
+         */
     private final ManualShardingResponse manualSharding;
-    /**
-     * Uniformly shards test cases given a total number of shards.
-     * 
-     */
+        /**
+         * @return Uniformly shards test cases given a total number of shards.
+         * 
+         */
     private final UniformShardingResponse uniformSharding;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class ShardingOptionResponse {
     }
 
     /**
-     * Shards test cases into the specified groups of packages, classes, and/or methods.
+     * @return Shards test cases into the specified groups of packages, classes, and/or methods.
      * 
-    */
+     */
     public ManualShardingResponse manualSharding() {
         return this.manualSharding;
     }
     /**
-     * Uniformly shards test cases given a total number of shards.
+     * @return Uniformly shards test cases given a total number of shards.
      * 
-    */
+     */
     public UniformShardingResponse uniformSharding() {
         return this.uniformSharding;
     }

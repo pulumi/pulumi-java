@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class ResourcePolicySnapshotSchedulePolicyResponse {
-    /**
-     * Retention policy applied to snapshots created by this resource policy.
-     * 
-     */
+        /**
+         * @return Retention policy applied to snapshots created by this resource policy.
+         * 
+         */
     private final ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse retentionPolicy;
-    /**
-     * A Vm Maintenance Policy specifies what kind of infrastructure maintenance we are allowed to perform on this VM and when. Schedule that is applied to disks covered by this policy.
-     * 
-     */
+        /**
+         * @return A Vm Maintenance Policy specifies what kind of infrastructure maintenance we are allowed to perform on this VM and when. Schedule that is applied to disks covered by this policy.
+         * 
+         */
     private final ResourcePolicySnapshotSchedulePolicyScheduleResponse schedule;
-    /**
-     * Properties with which snapshots are created such as labels, encryption keys.
-     * 
-     */
+        /**
+         * @return Properties with which snapshots are created such as labels, encryption keys.
+         * 
+         */
     private final ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse snapshotProperties;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class ResourcePolicySnapshotSchedulePolicyResponse {
     }
 
     /**
-     * Retention policy applied to snapshots created by this resource policy.
+     * @return Retention policy applied to snapshots created by this resource policy.
      * 
-    */
+     */
     public ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse retentionPolicy() {
         return this.retentionPolicy;
     }
     /**
-     * A Vm Maintenance Policy specifies what kind of infrastructure maintenance we are allowed to perform on this VM and when. Schedule that is applied to disks covered by this policy.
+     * @return A Vm Maintenance Policy specifies what kind of infrastructure maintenance we are allowed to perform on this VM and when. Schedule that is applied to disks covered by this policy.
      * 
-    */
+     */
     public ResourcePolicySnapshotSchedulePolicyScheduleResponse schedule() {
         return this.schedule;
     }
     /**
-     * Properties with which snapshots are created such as labels, encryption keys.
+     * @return Properties with which snapshots are created such as labels, encryption keys.
      * 
-    */
+     */
     public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse snapshotProperties() {
         return this.snapshotProperties;
     }

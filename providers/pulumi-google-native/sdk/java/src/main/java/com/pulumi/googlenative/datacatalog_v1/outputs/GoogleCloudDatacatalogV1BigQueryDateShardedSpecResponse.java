@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse {
-    /**
-     * The Data Catalog resource name of the dataset entry the current table belongs to. For example: `projects/{PROJECT_ID}/locations/{LOCATION}/entrygroups/{ENTRY_GROUP_ID}/entries/{ENTRY_ID}`.
-     * 
-     */
+        /**
+         * @return The Data Catalog resource name of the dataset entry the current table belongs to. For example: `projects/{PROJECT_ID}/locations/{LOCATION}/entrygroups/{ENTRY_GROUP_ID}/entries/{ENTRY_ID}`.
+         * 
+         */
     private final String dataset;
-    /**
-     * BigQuery resource name of the latest shard.
-     * 
-     */
+        /**
+         * @return BigQuery resource name of the latest shard.
+         * 
+         */
     private final String latestShardResource;
-    /**
-     * Total number of shards.
-     * 
-     */
+        /**
+         * @return Total number of shards.
+         * 
+         */
     private final String shardCount;
-    /**
-     * The table name prefix of the shards. The name of any given shard is `[table_prefix]YYYYMMDD`. For example, for the `MyTable20180101` shard, the `table_prefix` is `MyTable`.
-     * 
-     */
+        /**
+         * @return The table name prefix of the shards. The name of any given shard is `[table_prefix]YYYYMMDD`. For example, for the `MyTable20180101` shard, the `table_prefix` is `MyTable`.
+         * 
+         */
     private final String tablePrefix;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse {
     }
 
     /**
-     * The Data Catalog resource name of the dataset entry the current table belongs to. For example: `projects/{PROJECT_ID}/locations/{LOCATION}/entrygroups/{ENTRY_GROUP_ID}/entries/{ENTRY_ID}`.
+     * @return The Data Catalog resource name of the dataset entry the current table belongs to. For example: `projects/{PROJECT_ID}/locations/{LOCATION}/entrygroups/{ENTRY_GROUP_ID}/entries/{ENTRY_ID}`.
      * 
-    */
+     */
     public String dataset() {
         return this.dataset;
     }
     /**
-     * BigQuery resource name of the latest shard.
+     * @return BigQuery resource name of the latest shard.
      * 
-    */
+     */
     public String latestShardResource() {
         return this.latestShardResource;
     }
     /**
-     * Total number of shards.
+     * @return Total number of shards.
      * 
-    */
+     */
     public String shardCount() {
         return this.shardCount;
     }
     /**
-     * The table name prefix of the shards. The name of any given shard is `[table_prefix]YYYYMMDD`. For example, for the `MyTable20180101` shard, the `table_prefix` is `MyTable`.
+     * @return The table name prefix of the shards. The name of any given shard is `[table_prefix]YYYYMMDD`. For example, for the `MyTable20180101` shard, the `table_prefix` is `MyTable`.
      * 
-    */
+     */
     public String tablePrefix() {
         return this.tablePrefix;
     }

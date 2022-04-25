@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class RelationshipOccurrenceResponse {
-    /**
-     * A place for the SPDX file creator to record any general comments about the relationship
-     * 
-     */
+        /**
+         * @return A place for the SPDX file creator to record any general comments about the relationship
+         * 
+         */
     private final String comment;
-    /**
-     * Also referred to as SPDXRef-A The source SPDX element (file, package, etc)
-     * 
-     */
+        /**
+         * @return Also referred to as SPDXRef-A The source SPDX element (file, package, etc)
+         * 
+         */
     private final String source;
-    /**
-     * Also referred to as SPDXRef-B The target SPDC element (file, package, etc) In cases where there are &#34;known unknowns&#34;, the use of the keyword NOASSERTION can be used The keywords NONE can be used to indicate that an SPDX element (package/file/snippet) has no other elements connected by some relationship to it
-     * 
-     */
+        /**
+         * @return Also referred to as SPDXRef-B The target SPDC element (file, package, etc) In cases where there are &#34;known unknowns&#34;, the use of the keyword NOASSERTION can be used The keywords NONE can be used to indicate that an SPDX element (package/file/snippet) has no other elements connected by some relationship to it
+         * 
+         */
     private final String target;
-    /**
-     * The type of relationship between the source and target SPDX elements
-     * 
-     */
+        /**
+         * @return The type of relationship between the source and target SPDX elements
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class RelationshipOccurrenceResponse {
     }
 
     /**
-     * A place for the SPDX file creator to record any general comments about the relationship
+     * @return A place for the SPDX file creator to record any general comments about the relationship
      * 
-    */
+     */
     public String comment() {
         return this.comment;
     }
     /**
-     * Also referred to as SPDXRef-A The source SPDX element (file, package, etc)
+     * @return Also referred to as SPDXRef-A The source SPDX element (file, package, etc)
      * 
-    */
+     */
     public String source() {
         return this.source;
     }
     /**
-     * Also referred to as SPDXRef-B The target SPDC element (file, package, etc) In cases where there are &#34;known unknowns&#34;, the use of the keyword NOASSERTION can be used The keywords NONE can be used to indicate that an SPDX element (package/file/snippet) has no other elements connected by some relationship to it
+     * @return Also referred to as SPDXRef-B The target SPDC element (file, package, etc) In cases where there are &#34;known unknowns&#34;, the use of the keyword NOASSERTION can be used The keywords NONE can be used to indicate that an SPDX element (package/file/snippet) has no other elements connected by some relationship to it
      * 
-    */
+     */
     public String target() {
         return this.target;
     }
     /**
-     * The type of relationship between the source and target SPDX elements
+     * @return The type of relationship between the source and target SPDX elements
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

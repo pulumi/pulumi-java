@@ -14,30 +14,30 @@ import java.util.Objects;
 
 @CustomType
 public final class AuthConfigResponse {
-    /**
-     * List containing additional auth configs.
-     * 
-     */
+        /**
+         * @return List containing additional auth configs.
+         * 
+         */
     private final List<ConfigVariableResponse> additionalVariables;
-    /**
-     * The type of authentication configured.
-     * 
-     */
+        /**
+         * @return The type of authentication configured.
+         * 
+         */
     private final String authType;
-    /**
-     * Oauth2ClientCredentials.
-     * 
-     */
+        /**
+         * @return Oauth2ClientCredentials.
+         * 
+         */
     private final Oauth2ClientCredentialsResponse oauth2ClientCredentials;
-    /**
-     * Oauth2JwtBearer.
-     * 
-     */
+        /**
+         * @return Oauth2JwtBearer.
+         * 
+         */
     private final Oauth2JwtBearerResponse oauth2JwtBearer;
-    /**
-     * UserPassword.
-     * 
-     */
+        /**
+         * @return UserPassword.
+         * 
+         */
     private final UserPasswordResponse userPassword;
 
     @CustomType.Constructor
@@ -55,37 +55,37 @@ public final class AuthConfigResponse {
     }
 
     /**
-     * List containing additional auth configs.
+     * @return List containing additional auth configs.
      * 
-    */
+     */
     public List<ConfigVariableResponse> additionalVariables() {
         return this.additionalVariables;
     }
     /**
-     * The type of authentication configured.
+     * @return The type of authentication configured.
      * 
-    */
+     */
     public String authType() {
         return this.authType;
     }
     /**
-     * Oauth2ClientCredentials.
+     * @return Oauth2ClientCredentials.
      * 
-    */
+     */
     public Oauth2ClientCredentialsResponse oauth2ClientCredentials() {
         return this.oauth2ClientCredentials;
     }
     /**
-     * Oauth2JwtBearer.
+     * @return Oauth2JwtBearer.
      * 
-    */
+     */
     public Oauth2JwtBearerResponse oauth2JwtBearer() {
         return this.oauth2JwtBearer;
     }
     /**
-     * UserPassword.
+     * @return UserPassword.
      * 
-    */
+     */
     public UserPasswordResponse userPassword() {
         return this.userPassword;
     }

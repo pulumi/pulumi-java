@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleAccountResponse {
-    /**
-     * Input only. The password of the Google account. The credential is stored encrypted and not returned in any response nor included in audit logs.
-     * 
-     */
+        /**
+         * @return Input only. The password of the Google account. The credential is stored encrypted and not returned in any response nor included in audit logs.
+         * 
+         */
     private final String password;
-    /**
-     * The user name of the Google account.
-     * 
-     */
+        /**
+         * @return The user name of the Google account.
+         * 
+         */
     private final String username;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GoogleAccountResponse {
     }
 
     /**
-     * Input only. The password of the Google account. The credential is stored encrypted and not returned in any response nor included in audit logs.
+     * @return Input only. The password of the Google account. The credential is stored encrypted and not returned in any response nor included in audit logs.
      * 
-    */
+     */
     public String password() {
         return this.password;
     }
     /**
-     * The user name of the Google account.
+     * @return The user name of the Google account.
      * 
-    */
+     */
     public String username() {
         return this.username;
     }

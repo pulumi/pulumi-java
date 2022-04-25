@@ -25,6 +25,10 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse extends com.pulumi.
     @Import(name="context", required=true)
     private GooglePrivacyDlpV2FieldIdResponse context;
 
+    /**
+     * @return Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context.
+     * 
+     */
     public GooglePrivacyDlpV2FieldIdResponse context() {
         return this.context;
     }
@@ -36,6 +40,10 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse extends com.pulumi.
     @Import(name="cryptoKey", required=true)
     private GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
 
+    /**
+     * @return Causes the shift to be computed based on this key and the context. This results in the same shift for the same context and crypto_key. If set, must also set context. Can only be applied to table items.
+     * 
+     */
     public GooglePrivacyDlpV2CryptoKeyResponse cryptoKey() {
         return this.cryptoKey;
     }
@@ -47,6 +55,10 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse extends com.pulumi.
     @Import(name="lowerBoundDays", required=true)
     private Integer lowerBoundDays;
 
+    /**
+     * @return For example, -5 means shift date to at most 5 days back in the past.
+     * 
+     */
     public Integer lowerBoundDays() {
         return this.lowerBoundDays;
     }
@@ -58,6 +70,10 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse extends com.pulumi.
     @Import(name="upperBoundDays", required=true)
     private Integer upperBoundDays;
 
+    /**
+     * @return Range of shift in days. Actual shift will be selected at random within this range (inclusive ends). Negative means shift to earlier in time. Must not be more than 365250 days (1000 years) each direction. For example, 3 means shift date to at most 3 days into the future.
+     * 
+     */
     public Integer upperBoundDays() {
         return this.upperBoundDays;
     }
@@ -89,21 +105,45 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse extends com.pulumi.
             $ = new GooglePrivacyDlpV2DateShiftConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param context Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context.
+         * 
+         * @return builder
+         * 
+         */
         public Builder context(GooglePrivacyDlpV2FieldIdResponse context) {
             $.context = context;
             return this;
         }
 
+        /**
+         * @param cryptoKey Causes the shift to be computed based on this key and the context. This results in the same shift for the same context and crypto_key. If set, must also set context. Can only be applied to table items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoKey(GooglePrivacyDlpV2CryptoKeyResponse cryptoKey) {
             $.cryptoKey = cryptoKey;
             return this;
         }
 
+        /**
+         * @param lowerBoundDays For example, -5 means shift date to at most 5 days back in the past.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lowerBoundDays(Integer lowerBoundDays) {
             $.lowerBoundDays = lowerBoundDays;
             return this;
         }
 
+        /**
+         * @param upperBoundDays Range of shift in days. Actual shift will be selected at random within this range (inclusive ends). Negative means shift to earlier in time. Must not be more than 365250 days (1000 years) each direction. For example, 3 means shift date to at most 3 days into the future.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upperBoundDays(Integer upperBoundDays) {
             $.upperBoundDays = upperBoundDays;
             return this;

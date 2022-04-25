@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse {
-    /**
-     * Optional. The collection of quick replies.
-     * 
-     */
+        /**
+         * @return Optional. The collection of quick replies.
+         * 
+         */
     private final List<String> quickReplies;
-    /**
-     * Optional. The title of the collection of quick replies.
-     * 
-     */
+        /**
+         * @return Optional. The title of the collection of quick replies.
+         * 
+         */
     private final String title;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse
     }
 
     /**
-     * Optional. The collection of quick replies.
+     * @return Optional. The collection of quick replies.
      * 
-    */
+     */
     public List<String> quickReplies() {
         return this.quickReplies;
     }
     /**
-     * Optional. The title of the collection of quick replies.
+     * @return Optional. The title of the collection of quick replies.
      * 
-    */
+     */
     public String title() {
         return this.title;
     }

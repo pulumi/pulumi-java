@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDatacatalogV1SystemTimestampsResponse {
-    /**
-     * Creation timestamp of the resource within the given system.
-     * 
-     */
+        /**
+         * @return Creation timestamp of the resource within the given system.
+         * 
+         */
     private final String createTime;
-    /**
-     * Expiration timestamp of the resource within the given system. Currently only applicable to BigQuery resources.
-     * 
-     */
+        /**
+         * @return Expiration timestamp of the resource within the given system. Currently only applicable to BigQuery resources.
+         * 
+         */
     private final String expireTime;
-    /**
-     * Timestamp of the last modification of the resource or its metadata within a given system. Note: Depending on the source system, not every modification updates this timestamp. For example, BigQuery timestamps every metadata modification but not data or permission changes.
-     * 
-     */
+        /**
+         * @return Timestamp of the last modification of the resource or its metadata within a given system. Note: Depending on the source system, not every modification updates this timestamp. For example, BigQuery timestamps every metadata modification but not data or permission changes.
+         * 
+         */
     private final String updateTime;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsResponse {
     }
 
     /**
-     * Creation timestamp of the resource within the given system.
+     * @return Creation timestamp of the resource within the given system.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Expiration timestamp of the resource within the given system. Currently only applicable to BigQuery resources.
+     * @return Expiration timestamp of the resource within the given system. Currently only applicable to BigQuery resources.
      * 
-    */
+     */
     public String expireTime() {
         return this.expireTime;
     }
     /**
-     * Timestamp of the last modification of the resource or its metadata within a given system. Note: Depending on the source system, not every modification updates this timestamp. For example, BigQuery timestamps every metadata modification but not data or permission changes.
+     * @return Timestamp of the last modification of the resource or its metadata within a given system. Note: Depending on the source system, not every modification updates this timestamp. For example, BigQuery timestamps every metadata modification but not data or permission changes.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

@@ -21,80 +21,80 @@ import java.util.Objects;
 
 @CustomType
 public final class ClusterConfigResponse {
-    /**
-     * Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.
-     * 
-     */
+        /**
+         * @return Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.
+         * 
+         */
     private final AutoscalingConfigResponse autoscalingConfig;
-    /**
-     * Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster&#39;s staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see Dataproc staging bucket (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.
-     * 
-     */
+        /**
+         * @return Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster&#39;s staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see Dataproc staging bucket (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.
+         * 
+         */
     private final String configBucket;
-    /**
-     * Optional. Encryption settings for the cluster.
-     * 
-     */
+        /**
+         * @return Optional. Encryption settings for the cluster.
+         * 
+         */
     private final EncryptionConfigResponse encryptionConfig;
-    /**
-     * Optional. Port/endpoint configuration for this cluster
-     * 
-     */
+        /**
+         * @return Optional. Port/endpoint configuration for this cluster
+         * 
+         */
     private final EndpointConfigResponse endpointConfig;
-    /**
-     * Optional. The shared Compute Engine config settings for all instances in a cluster.
-     * 
-     */
+        /**
+         * @return Optional. The shared Compute Engine config settings for all instances in a cluster.
+         * 
+         */
     private final GceClusterConfigResponse gceClusterConfig;
-    /**
-     * Optional. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as gce_cluster_config, master_config, worker_config, secondary_worker_config, and autoscaling_config.
-     * 
-     */
+        /**
+         * @return Optional. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as gce_cluster_config, master_config, worker_config, secondary_worker_config, and autoscaling_config.
+         * 
+         */
     private final GkeClusterConfigResponse gkeClusterConfig;
-    /**
-     * Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node&#39;s role metadata to run an executable on a master or worker node, as shown below using curl (you can also use wget): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1beta2/instance/attributes/dataproc-role) if [[ &#34;${ROLE}&#34; == &#39;Master&#39; ]]; then ... master specific actions ... else ... worker specific actions ... fi
-     * 
-     */
+        /**
+         * @return Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node&#39;s role metadata to run an executable on a master or worker node, as shown below using curl (you can also use wget): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1beta2/instance/attributes/dataproc-role) if [[ &#34;${ROLE}&#34; == &#39;Master&#39; ]]; then ... master specific actions ... else ... worker specific actions ... fi
+         * 
+         */
     private final List<NodeInitializationActionResponse> initializationActions;
-    /**
-     * Optional. The config setting for auto delete cluster schedule.
-     * 
-     */
+        /**
+         * @return Optional. The config setting for auto delete cluster schedule.
+         * 
+         */
     private final LifecycleConfigResponse lifecycleConfig;
-    /**
-     * Optional. The Compute Engine config settings for the master instance in a cluster.
-     * 
-     */
+        /**
+         * @return Optional. The Compute Engine config settings for the master instance in a cluster.
+         * 
+         */
     private final InstanceGroupConfigResponse masterConfig;
-    /**
-     * Optional. Metastore configuration.
-     * 
-     */
+        /**
+         * @return Optional. Metastore configuration.
+         * 
+         */
     private final MetastoreConfigResponse metastoreConfig;
-    /**
-     * Optional. The Compute Engine config settings for additional worker instances in a cluster.
-     * 
-     */
+        /**
+         * @return Optional. The Compute Engine config settings for additional worker instances in a cluster.
+         * 
+         */
     private final InstanceGroupConfigResponse secondaryWorkerConfig;
-    /**
-     * Optional. Security related configuration.
-     * 
-     */
+        /**
+         * @return Optional. Security related configuration.
+         * 
+         */
     private final SecurityConfigResponse securityConfig;
-    /**
-     * Optional. The config settings for software inside the cluster.
-     * 
-     */
+        /**
+         * @return Optional. The config settings for software inside the cluster.
+         * 
+         */
     private final SoftwareConfigResponse softwareConfig;
-    /**
-     * Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster&#39;s temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket. This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.
-     * 
-     */
+        /**
+         * @return Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster&#39;s temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket. This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.
+         * 
+         */
     private final String tempBucket;
-    /**
-     * Optional. The Compute Engine config settings for worker instances in a cluster.
-     * 
-     */
+        /**
+         * @return Optional. The Compute Engine config settings for worker instances in a cluster.
+         * 
+         */
     private final InstanceGroupConfigResponse workerConfig;
 
     @CustomType.Constructor
@@ -132,107 +132,107 @@ public final class ClusterConfigResponse {
     }
 
     /**
-     * Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.
+     * @return Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.
      * 
-    */
+     */
     public AutoscalingConfigResponse autoscalingConfig() {
         return this.autoscalingConfig;
     }
     /**
-     * Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster&#39;s staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see Dataproc staging bucket (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.
+     * @return Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster&#39;s staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see Dataproc staging bucket (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.
      * 
-    */
+     */
     public String configBucket() {
         return this.configBucket;
     }
     /**
-     * Optional. Encryption settings for the cluster.
+     * @return Optional. Encryption settings for the cluster.
      * 
-    */
+     */
     public EncryptionConfigResponse encryptionConfig() {
         return this.encryptionConfig;
     }
     /**
-     * Optional. Port/endpoint configuration for this cluster
+     * @return Optional. Port/endpoint configuration for this cluster
      * 
-    */
+     */
     public EndpointConfigResponse endpointConfig() {
         return this.endpointConfig;
     }
     /**
-     * Optional. The shared Compute Engine config settings for all instances in a cluster.
+     * @return Optional. The shared Compute Engine config settings for all instances in a cluster.
      * 
-    */
+     */
     public GceClusterConfigResponse gceClusterConfig() {
         return this.gceClusterConfig;
     }
     /**
-     * Optional. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as gce_cluster_config, master_config, worker_config, secondary_worker_config, and autoscaling_config.
+     * @return Optional. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as gce_cluster_config, master_config, worker_config, secondary_worker_config, and autoscaling_config.
      * 
-    */
+     */
     public GkeClusterConfigResponse gkeClusterConfig() {
         return this.gkeClusterConfig;
     }
     /**
-     * Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node&#39;s role metadata to run an executable on a master or worker node, as shown below using curl (you can also use wget): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1beta2/instance/attributes/dataproc-role) if [[ &#34;${ROLE}&#34; == &#39;Master&#39; ]]; then ... master specific actions ... else ... worker specific actions ... fi
+     * @return Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node&#39;s role metadata to run an executable on a master or worker node, as shown below using curl (you can also use wget): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1beta2/instance/attributes/dataproc-role) if [[ &#34;${ROLE}&#34; == &#39;Master&#39; ]]; then ... master specific actions ... else ... worker specific actions ... fi
      * 
-    */
+     */
     public List<NodeInitializationActionResponse> initializationActions() {
         return this.initializationActions;
     }
     /**
-     * Optional. The config setting for auto delete cluster schedule.
+     * @return Optional. The config setting for auto delete cluster schedule.
      * 
-    */
+     */
     public LifecycleConfigResponse lifecycleConfig() {
         return this.lifecycleConfig;
     }
     /**
-     * Optional. The Compute Engine config settings for the master instance in a cluster.
+     * @return Optional. The Compute Engine config settings for the master instance in a cluster.
      * 
-    */
+     */
     public InstanceGroupConfigResponse masterConfig() {
         return this.masterConfig;
     }
     /**
-     * Optional. Metastore configuration.
+     * @return Optional. Metastore configuration.
      * 
-    */
+     */
     public MetastoreConfigResponse metastoreConfig() {
         return this.metastoreConfig;
     }
     /**
-     * Optional. The Compute Engine config settings for additional worker instances in a cluster.
+     * @return Optional. The Compute Engine config settings for additional worker instances in a cluster.
      * 
-    */
+     */
     public InstanceGroupConfigResponse secondaryWorkerConfig() {
         return this.secondaryWorkerConfig;
     }
     /**
-     * Optional. Security related configuration.
+     * @return Optional. Security related configuration.
      * 
-    */
+     */
     public SecurityConfigResponse securityConfig() {
         return this.securityConfig;
     }
     /**
-     * Optional. The config settings for software inside the cluster.
+     * @return Optional. The config settings for software inside the cluster.
      * 
-    */
+     */
     public SoftwareConfigResponse softwareConfig() {
         return this.softwareConfig;
     }
     /**
-     * Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster&#39;s temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket. This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.
+     * @return Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster&#39;s temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket. This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.
      * 
-    */
+     */
     public String tempBucket() {
         return this.tempBucket;
     }
     /**
-     * Optional. The Compute Engine config settings for worker instances in a cluster.
+     * @return Optional. The Compute Engine config settings for worker instances in a cluster.
      * 
-    */
+     */
     public InstanceGroupConfigResponse workerConfig() {
         return this.workerConfig;
     }

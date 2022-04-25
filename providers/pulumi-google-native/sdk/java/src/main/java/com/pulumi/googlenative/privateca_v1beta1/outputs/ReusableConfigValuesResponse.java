@@ -14,30 +14,30 @@ import java.util.Objects;
 
 @CustomType
 public final class ReusableConfigValuesResponse {
-    /**
-     * Optional. Describes custom X.509 extensions.
-     * 
-     */
+        /**
+         * @return Optional. Describes custom X.509 extensions.
+         * 
+         */
     private final List<X509ExtensionResponse> additionalExtensions;
-    /**
-     * Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the &#34;Authority Information Access&#34; extension in the certificate.
-     * 
-     */
+        /**
+         * @return Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the &#34;Authority Information Access&#34; extension in the certificate.
+         * 
+         */
     private final List<String> aiaOcspServers;
-    /**
-     * Optional. Describes options in this ReusableConfigValues that are relevant in a CA certificate.
-     * 
-     */
+        /**
+         * @return Optional. Describes options in this ReusableConfigValues that are relevant in a CA certificate.
+         * 
+         */
     private final CaOptionsResponse caOptions;
-    /**
-     * Optional. Indicates the intended use for keys that correspond to a certificate.
-     * 
-     */
+        /**
+         * @return Optional. Indicates the intended use for keys that correspond to a certificate.
+         * 
+         */
     private final KeyUsageResponse keyUsage;
-    /**
-     * Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
-     * 
-     */
+        /**
+         * @return Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+         * 
+         */
     private final List<ObjectIdResponse> policyIds;
 
     @CustomType.Constructor
@@ -55,37 +55,37 @@ public final class ReusableConfigValuesResponse {
     }
 
     /**
-     * Optional. Describes custom X.509 extensions.
+     * @return Optional. Describes custom X.509 extensions.
      * 
-    */
+     */
     public List<X509ExtensionResponse> additionalExtensions() {
         return this.additionalExtensions;
     }
     /**
-     * Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the &#34;Authority Information Access&#34; extension in the certificate.
+     * @return Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the &#34;Authority Information Access&#34; extension in the certificate.
      * 
-    */
+     */
     public List<String> aiaOcspServers() {
         return this.aiaOcspServers;
     }
     /**
-     * Optional. Describes options in this ReusableConfigValues that are relevant in a CA certificate.
+     * @return Optional. Describes options in this ReusableConfigValues that are relevant in a CA certificate.
      * 
-    */
+     */
     public CaOptionsResponse caOptions() {
         return this.caOptions;
     }
     /**
-     * Optional. Indicates the intended use for keys that correspond to a certificate.
+     * @return Optional. Indicates the intended use for keys that correspond to a certificate.
      * 
-    */
+     */
     public KeyUsageResponse keyUsage() {
         return this.keyUsage;
     }
     /**
-     * Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+     * @return Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
      * 
-    */
+     */
     public List<ObjectIdResponse> policyIds() {
         return this.policyIds;
     }

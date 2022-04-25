@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class RevocationDetailsResponse {
-    /**
-     * Indicates why a Certificate was revoked.
-     * 
-     */
+        /**
+         * @return Indicates why a Certificate was revoked.
+         * 
+         */
     private final String revocationState;
-    /**
-     * The time at which this Certificate was revoked.
-     * 
-     */
+        /**
+         * @return The time at which this Certificate was revoked.
+         * 
+         */
     private final String revocationTime;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class RevocationDetailsResponse {
     }
 
     /**
-     * Indicates why a Certificate was revoked.
+     * @return Indicates why a Certificate was revoked.
      * 
-    */
+     */
     public String revocationState() {
         return this.revocationState;
     }
     /**
-     * The time at which this Certificate was revoked.
+     * @return The time at which this Certificate was revoked.
      * 
-    */
+     */
     public String revocationTime() {
         return this.revocationTime;
     }

@@ -14,55 +14,55 @@ import java.util.Objects;
 
 @CustomType
 public final class GetMessageResult {
-    /**
-     * The datetime when the message was created. Set by the server.
-     * 
-     */
+        /**
+         * @return The datetime when the message was created. Set by the server.
+         * 
+         */
     private final String createTime;
-    /**
-     * Raw message bytes.
-     * 
-     */
+        /**
+         * @return Raw message bytes.
+         * 
+         */
     private final String data;
-    /**
-     * User-supplied key-value pairs used to organize HL7v2 stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
-     * 
-     */
+        /**
+         * @return User-supplied key-value pairs used to organize HL7v2 stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
+         * 
+         */
     private final Map<String,String> labels;
-    /**
-     * The message type for this message. MSH-9.1.
-     * 
-     */
+        /**
+         * @return The message type for this message. MSH-9.1.
+         * 
+         */
     private final String messageType;
-    /**
-     * Resource name of the Message, of the form `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the server.
-     * 
-     */
+        /**
+         * @return Resource name of the Message, of the form `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the server.
+         * 
+         */
     private final String name;
-    /**
-     * The parsed version of the raw message data.
-     * 
-     */
+        /**
+         * @return The parsed version of the raw message data.
+         * 
+         */
     private final ParsedDataResponse parsedData;
-    /**
-     * All patient IDs listed in the PID-2, PID-3, and PID-4 segments of this message.
-     * 
-     */
+        /**
+         * @return All patient IDs listed in the PID-2, PID-3, and PID-4 segments of this message.
+         * 
+         */
     private final List<PatientIdResponse> patientIds;
-    /**
-     * The parsed version of the raw message data schematized according to this store&#39;s schemas and type definitions.
-     * 
-     */
+        /**
+         * @return The parsed version of the raw message data schematized according to this store&#39;s schemas and type definitions.
+         * 
+         */
     private final SchematizedDataResponse schematizedData;
-    /**
-     * The hospital that this message came from. MSH-4.
-     * 
-     */
+        /**
+         * @return The hospital that this message came from. MSH-4.
+         * 
+         */
     private final String sendFacility;
-    /**
-     * The datetime the sending application sent this message. MSH-7.
-     * 
-     */
+        /**
+         * @return The datetime the sending application sent this message. MSH-7.
+         * 
+         */
     private final String sendTime;
 
     @CustomType.Constructor
@@ -90,72 +90,72 @@ public final class GetMessageResult {
     }
 
     /**
-     * The datetime when the message was created. Set by the server.
+     * @return The datetime when the message was created. Set by the server.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Raw message bytes.
+     * @return Raw message bytes.
      * 
-    */
+     */
     public String data() {
         return this.data;
     }
     /**
-     * User-supplied key-value pairs used to organize HL7v2 stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
+     * @return User-supplied key-value pairs used to organize HL7v2 stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The message type for this message. MSH-9.1.
+     * @return The message type for this message. MSH-9.1.
      * 
-    */
+     */
     public String messageType() {
         return this.messageType;
     }
     /**
-     * Resource name of the Message, of the form `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the server.
+     * @return Resource name of the Message, of the form `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the server.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The parsed version of the raw message data.
+     * @return The parsed version of the raw message data.
      * 
-    */
+     */
     public ParsedDataResponse parsedData() {
         return this.parsedData;
     }
     /**
-     * All patient IDs listed in the PID-2, PID-3, and PID-4 segments of this message.
+     * @return All patient IDs listed in the PID-2, PID-3, and PID-4 segments of this message.
      * 
-    */
+     */
     public List<PatientIdResponse> patientIds() {
         return this.patientIds;
     }
     /**
-     * The parsed version of the raw message data schematized according to this store&#39;s schemas and type definitions.
+     * @return The parsed version of the raw message data schematized according to this store&#39;s schemas and type definitions.
      * 
-    */
+     */
     public SchematizedDataResponse schematizedData() {
         return this.schematizedData;
     }
     /**
-     * The hospital that this message came from. MSH-4.
+     * @return The hospital that this message came from. MSH-4.
      * 
-    */
+     */
     public String sendFacility() {
         return this.sendFacility;
     }
     /**
-     * The datetime the sending application sent this message. MSH-7.
+     * @return The datetime the sending application sent this message. MSH-7.
      * 
-    */
+     */
     public String sendTime() {
         return this.sendTime;
     }

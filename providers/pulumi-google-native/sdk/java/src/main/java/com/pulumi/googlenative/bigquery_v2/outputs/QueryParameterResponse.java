@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class QueryParameterResponse {
-    /**
-     * [Optional] If unset, this is a positional parameter. Otherwise, should be unique within a query.
-     * 
-     */
+        /**
+         * @return [Optional] If unset, this is a positional parameter. Otherwise, should be unique within a query.
+         * 
+         */
     private final String name;
-    /**
-     * [Required] The type of this parameter.
-     * 
-     */
+        /**
+         * @return [Required] The type of this parameter.
+         * 
+         */
     private final QueryParameterTypeResponse parameterType;
-    /**
-     * [Required] The value of this parameter.
-     * 
-     */
+        /**
+         * @return [Required] The value of this parameter.
+         * 
+         */
     private final QueryParameterValueResponse parameterValue;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class QueryParameterResponse {
     }
 
     /**
-     * [Optional] If unset, this is a positional parameter. Otherwise, should be unique within a query.
+     * @return [Optional] If unset, this is a positional parameter. Otherwise, should be unique within a query.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * [Required] The type of this parameter.
+     * @return [Required] The type of this parameter.
      * 
-    */
+     */
     public QueryParameterTypeResponse parameterType() {
         return this.parameterType;
     }
     /**
-     * [Required] The value of this parameter.
+     * @return [Required] The value of this parameter.
      * 
-    */
+     */
     public QueryParameterValueResponse parameterValue() {
         return this.parameterValue;
     }

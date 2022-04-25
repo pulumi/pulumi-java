@@ -23,6 +23,10 @@ public final class MembershipStateResponse extends com.pulumi.resources.InvokeAr
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return The current state of the Membership resource.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -51,6 +55,12 @@ public final class MembershipStateResponse extends com.pulumi.resources.InvokeAr
             $ = new MembershipStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code The current state of the Membership resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;

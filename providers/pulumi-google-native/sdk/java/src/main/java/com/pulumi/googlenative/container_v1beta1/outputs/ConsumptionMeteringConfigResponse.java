@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ConsumptionMeteringConfigResponse {
-    /**
-     * Whether to enable consumption metering for this cluster. If enabled, a second BigQuery table will be created to hold resource consumption records.
-     * 
-     */
+        /**
+         * @return Whether to enable consumption metering for this cluster. If enabled, a second BigQuery table will be created to hold resource consumption records.
+         * 
+         */
     private final Boolean enabled;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ConsumptionMeteringConfigResponse {
     }
 
     /**
-     * Whether to enable consumption metering for this cluster. If enabled, a second BigQuery table will be created to hold resource consumption records.
+     * @return Whether to enable consumption metering for this cluster. If enabled, a second BigQuery table will be created to hold resource consumption records.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }

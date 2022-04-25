@@ -19,6 +19,10 @@ public final class ConfigFileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="content", required=true)
     private String content;
 
+    /**
+     * @return The contents of the file.
+     * 
+     */
     public String content() {
         return this.content;
     }
@@ -47,6 +51,12 @@ public final class ConfigFileResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ConfigFileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The contents of the file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             $.content = content;
             return this;

@@ -23,6 +23,10 @@ public final class ServiceExternalIPsConfigResponse extends com.pulumi.resources
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whether Services with ExternalIPs field are allowed or not.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -51,6 +55,12 @@ public final class ServiceExternalIPsConfigResponse extends com.pulumi.resources
             $ = new ServiceExternalIPsConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether Services with ExternalIPs field are allowed or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

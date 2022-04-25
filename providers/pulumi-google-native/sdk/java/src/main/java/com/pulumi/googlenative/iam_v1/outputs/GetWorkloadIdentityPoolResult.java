@@ -10,30 +10,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GetWorkloadIdentityPoolResult {
-    /**
-     * A description of the pool. Cannot exceed 256 characters.
-     * 
-     */
+        /**
+         * @return A description of the pool. Cannot exceed 256 characters.
+         * 
+         */
     private final String description;
-    /**
-     * Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use existing tokens to access resources. If the pool is re-enabled, existing tokens grant access again.
-     * 
-     */
+        /**
+         * @return Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use existing tokens to access resources. If the pool is re-enabled, existing tokens grant access again.
+         * 
+         */
     private final Boolean disabled;
-    /**
-     * A display name for the pool. Cannot exceed 32 characters.
-     * 
-     */
+        /**
+         * @return A display name for the pool. Cannot exceed 32 characters.
+         * 
+         */
     private final String displayName;
-    /**
-     * The resource name of the pool.
-     * 
-     */
+        /**
+         * @return The resource name of the pool.
+         * 
+         */
     private final String name;
-    /**
-     * The state of the pool.
-     * 
-     */
+        /**
+         * @return The state of the pool.
+         * 
+         */
     private final String state;
 
     @CustomType.Constructor
@@ -51,37 +51,37 @@ public final class GetWorkloadIdentityPoolResult {
     }
 
     /**
-     * A description of the pool. Cannot exceed 256 characters.
+     * @return A description of the pool. Cannot exceed 256 characters.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use existing tokens to access resources. If the pool is re-enabled, existing tokens grant access again.
+     * @return Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use existing tokens to access resources. If the pool is re-enabled, existing tokens grant access again.
      * 
-    */
+     */
     public Boolean disabled() {
         return this.disabled;
     }
     /**
-     * A display name for the pool. Cannot exceed 32 characters.
+     * @return A display name for the pool. Cannot exceed 32 characters.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The resource name of the pool.
+     * @return The resource name of the pool.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The state of the pool.
+     * @return The state of the pool.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

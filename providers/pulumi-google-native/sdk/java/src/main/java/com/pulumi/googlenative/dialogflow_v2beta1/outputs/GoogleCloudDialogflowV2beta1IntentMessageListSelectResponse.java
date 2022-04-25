@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse {
-    /**
-     * List items.
-     * 
-     */
+        /**
+         * @return List items.
+         * 
+         */
     private final List<GoogleCloudDialogflowV2beta1IntentMessageListSelectItemResponse> items;
-    /**
-     * Optional. Subtitle of the list.
-     * 
-     */
+        /**
+         * @return Optional. Subtitle of the list.
+         * 
+         */
     private final String subtitle;
-    /**
-     * Optional. The overall title of the list.
-     * 
-     */
+        /**
+         * @return Optional. The overall title of the list.
+         * 
+         */
     private final String title;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse {
     }
 
     /**
-     * List items.
+     * @return List items.
      * 
-    */
+     */
     public List<GoogleCloudDialogflowV2beta1IntentMessageListSelectItemResponse> items() {
         return this.items;
     }
     /**
-     * Optional. Subtitle of the list.
+     * @return Optional. Subtitle of the list.
      * 
-    */
+     */
     public String subtitle() {
         return this.subtitle;
     }
     /**
-     * Optional. The overall title of the list.
+     * @return Optional. The overall title of the list.
      * 
-    */
+     */
     public String title() {
         return this.title;
     }

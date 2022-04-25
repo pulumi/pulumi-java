@@ -28,6 +28,10 @@ public final class GoogleCloudRunOpV2ContainerResponse extends com.pulumi.resour
     @Import(name="args", required=true)
     private List<String> args;
 
+    /**
+     * @return Arguments to the entrypoint. The docker image&#39;s CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container&#39;s environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+     * 
+     */
     public List<String> args() {
         return this.args;
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudRunOpV2ContainerResponse extends com.pulumi.resour
     @Import(name="command", required=true)
     private List<String> command;
 
+    /**
+     * @return Entrypoint array. Not executed within a shell. The docker image&#39;s ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container&#39;s environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+     * 
+     */
     public List<String> command() {
         return this.command;
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudRunOpV2ContainerResponse extends com.pulumi.resour
     @Import(name="env", required=true)
     private List<GoogleCloudRunOpV2EnvVarResponse> env;
 
+    /**
+     * @return List of environment variables to set in the container.
+     * 
+     */
     public List<GoogleCloudRunOpV2EnvVarResponse> env() {
         return this.env;
     }
@@ -61,6 +73,10 @@ public final class GoogleCloudRunOpV2ContainerResponse extends com.pulumi.resour
     @Import(name="image", required=true)
     private String image;
 
+    /**
+     * @return URL of the Container image in Google Container Registry or Docker More info: https://kubernetes.io/docs/concepts/containers/images
+     * 
+     */
     public String image() {
         return this.image;
     }
@@ -72,6 +88,10 @@ public final class GoogleCloudRunOpV2ContainerResponse extends com.pulumi.resour
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the container specified as a DNS_LABEL.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -83,6 +103,10 @@ public final class GoogleCloudRunOpV2ContainerResponse extends com.pulumi.resour
     @Import(name="ports", required=true)
     private List<GoogleCloudRunOpV2ContainerPortResponse> ports;
 
+    /**
+     * @return List of ports to expose from the container. Only a single port can be specified. The specified ports must be listening on all interfaces (0.0.0.0) within the container to be accessible. If omitted, a port number will be chosen and passed to the container through the PORT environment variable for the container to listen on.
+     * 
+     */
     public List<GoogleCloudRunOpV2ContainerPortResponse> ports() {
         return this.ports;
     }
@@ -94,6 +118,10 @@ public final class GoogleCloudRunOpV2ContainerResponse extends com.pulumi.resour
     @Import(name="resources", required=true)
     private GoogleCloudRunOpV2ResourceRequirementsResponse resources;
 
+    /**
+     * @return Compute Resource requirements by this container. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
+     * 
+     */
     public GoogleCloudRunOpV2ResourceRequirementsResponse resources() {
         return this.resources;
     }
@@ -105,6 +133,10 @@ public final class GoogleCloudRunOpV2ContainerResponse extends com.pulumi.resour
     @Import(name="volumeMounts", required=true)
     private List<GoogleCloudRunOpV2VolumeMountResponse> volumeMounts;
 
+    /**
+     * @return Volume to mount into the container&#39;s filesystem.
+     * 
+     */
     public List<GoogleCloudRunOpV2VolumeMountResponse> volumeMounts() {
         return this.volumeMounts;
     }
@@ -140,62 +172,140 @@ public final class GoogleCloudRunOpV2ContainerResponse extends com.pulumi.resour
             $ = new GoogleCloudRunOpV2ContainerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param args Arguments to the entrypoint. The docker image&#39;s CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container&#39;s environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(List<String> args) {
             $.args = args;
             return this;
         }
 
+        /**
+         * @param args Arguments to the entrypoint. The docker image&#39;s CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container&#39;s environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(String... args) {
             return args(List.of(args));
         }
 
+        /**
+         * @param command Entrypoint array. Not executed within a shell. The docker image&#39;s ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container&#39;s environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(List<String> command) {
             $.command = command;
             return this;
         }
 
+        /**
+         * @param command Entrypoint array. Not executed within a shell. The docker image&#39;s ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container&#39;s environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(String... command) {
             return command(List.of(command));
         }
 
+        /**
+         * @param env List of environment variables to set in the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(List<GoogleCloudRunOpV2EnvVarResponse> env) {
             $.env = env;
             return this;
         }
 
+        /**
+         * @param env List of environment variables to set in the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(GoogleCloudRunOpV2EnvVarResponse... env) {
             return env(List.of(env));
         }
 
+        /**
+         * @param image URL of the Container image in Google Container Registry or Docker More info: https://kubernetes.io/docs/concepts/containers/images
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(String image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param name Name of the container specified as a DNS_LABEL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param ports List of ports to expose from the container. Only a single port can be specified. The specified ports must be listening on all interfaces (0.0.0.0) within the container to be accessible. If omitted, a port number will be chosen and passed to the container through the PORT environment variable for the container to listen on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(List<GoogleCloudRunOpV2ContainerPortResponse> ports) {
             $.ports = ports;
             return this;
         }
 
+        /**
+         * @param ports List of ports to expose from the container. Only a single port can be specified. The specified ports must be listening on all interfaces (0.0.0.0) within the container to be accessible. If omitted, a port number will be chosen and passed to the container through the PORT environment variable for the container to listen on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(GoogleCloudRunOpV2ContainerPortResponse... ports) {
             return ports(List.of(ports));
         }
 
+        /**
+         * @param resources Compute Resource requirements by this container. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(GoogleCloudRunOpV2ResourceRequirementsResponse resources) {
             $.resources = resources;
             return this;
         }
 
+        /**
+         * @param volumeMounts Volume to mount into the container&#39;s filesystem.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeMounts(List<GoogleCloudRunOpV2VolumeMountResponse> volumeMounts) {
             $.volumeMounts = volumeMounts;
             return this;
         }
 
+        /**
+         * @param volumeMounts Volume to mount into the container&#39;s filesystem.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeMounts(GoogleCloudRunOpV2VolumeMountResponse... volumeMounts) {
             return volumeMounts(List.of(volumeMounts));
         }

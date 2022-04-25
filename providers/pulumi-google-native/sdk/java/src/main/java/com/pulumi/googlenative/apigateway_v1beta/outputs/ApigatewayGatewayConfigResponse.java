@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ApigatewayGatewayConfigResponse {
-    /**
-     * Backend settings that are applied to all backends of the Gateway.
-     * 
-     */
+        /**
+         * @return Backend settings that are applied to all backends of the Gateway.
+         * 
+         */
     private final ApigatewayBackendConfigResponse backendConfig;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ApigatewayGatewayConfigResponse {
     }
 
     /**
-     * Backend settings that are applied to all backends of the Gateway.
+     * @return Backend settings that are applied to all backends of the Gateway.
      * 
-    */
+     */
     public ApigatewayBackendConfigResponse backendConfig() {
         return this.backendConfig;
     }

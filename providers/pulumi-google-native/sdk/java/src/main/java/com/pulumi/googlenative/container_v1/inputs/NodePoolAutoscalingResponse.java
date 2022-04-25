@@ -24,6 +24,10 @@ public final class NodePoolAutoscalingResponse extends com.pulumi.resources.Invo
     @Import(name="autoprovisioned", required=true)
     private Boolean autoprovisioned;
 
+    /**
+     * @return Can this node pool be deleted automatically.
+     * 
+     */
     public Boolean autoprovisioned() {
         return this.autoprovisioned;
     }
@@ -35,6 +39,10 @@ public final class NodePoolAutoscalingResponse extends com.pulumi.resources.Invo
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Is autoscaling enabled for this node pool.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -46,6 +54,10 @@ public final class NodePoolAutoscalingResponse extends com.pulumi.resources.Invo
     @Import(name="maxNodeCount", required=true)
     private Integer maxNodeCount;
 
+    /**
+     * @return Maximum number of nodes for one location in the NodePool. Must be &gt;= min_node_count. There has to be enough quota to scale up the cluster.
+     * 
+     */
     public Integer maxNodeCount() {
         return this.maxNodeCount;
     }
@@ -57,6 +69,10 @@ public final class NodePoolAutoscalingResponse extends com.pulumi.resources.Invo
     @Import(name="minNodeCount", required=true)
     private Integer minNodeCount;
 
+    /**
+     * @return Minimum number of nodes for one location in the NodePool. Must be &gt;= 1 and &lt;= max_node_count.
+     * 
+     */
     public Integer minNodeCount() {
         return this.minNodeCount;
     }
@@ -88,21 +104,45 @@ public final class NodePoolAutoscalingResponse extends com.pulumi.resources.Invo
             $ = new NodePoolAutoscalingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoprovisioned Can this node pool be deleted automatically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoprovisioned(Boolean autoprovisioned) {
             $.autoprovisioned = autoprovisioned;
             return this;
         }
 
+        /**
+         * @param enabled Is autoscaling enabled for this node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param maxNodeCount Maximum number of nodes for one location in the NodePool. Must be &gt;= min_node_count. There has to be enough quota to scale up the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxNodeCount(Integer maxNodeCount) {
             $.maxNodeCount = maxNodeCount;
             return this;
         }
 
+        /**
+         * @param minNodeCount Minimum number of nodes for one location in the NodePool. Must be &gt;= 1 and &lt;= max_node_count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNodeCount(Integer minNodeCount) {
             $.minNodeCount = minNodeCount;
             return this;

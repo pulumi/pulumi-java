@@ -26,6 +26,10 @@ public final class SqlActiveDirectoryConfigArgs extends com.pulumi.resources.Res
     @Import(name="domain")
     private @Nullable Output<String> domain;
 
+    /**
+     * @return The name of the domain (e.g., mydomain.com).
+     * 
+     */
     public Optional<Output<String>> domain() {
         return Optional.ofNullable(this.domain);
     }
@@ -37,6 +41,10 @@ public final class SqlActiveDirectoryConfigArgs extends com.pulumi.resources.Res
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return This is always sql#activeDirectoryConfig.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -66,20 +74,44 @@ public final class SqlActiveDirectoryConfigArgs extends com.pulumi.resources.Res
             $ = new SqlActiveDirectoryConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domain The name of the domain (e.g., mydomain.com).
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(@Nullable Output<String> domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param domain The name of the domain (e.g., mydomain.com).
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(String domain) {
             return domain(Output.of(domain));
         }
 
+        /**
+         * @param kind This is always sql#activeDirectoryConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind This is always sql#activeDirectoryConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }

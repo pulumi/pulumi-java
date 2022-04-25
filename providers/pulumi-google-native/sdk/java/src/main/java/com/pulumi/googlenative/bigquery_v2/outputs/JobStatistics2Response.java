@@ -25,145 +25,145 @@ import java.util.Objects;
 
 @CustomType
 public final class JobStatistics2Response {
-    /**
-     * BI Engine specific Statistics. [Output-only] BI Engine specific Statistics.
-     * 
-     */
+        /**
+         * @return BI Engine specific Statistics. [Output-only] BI Engine specific Statistics.
+         * 
+         */
     private final BiEngineStatisticsResponse biEngineStatistics;
-    /**
-     * Billing tier for the job.
-     * 
-     */
+        /**
+         * @return Billing tier for the job.
+         * 
+         */
     private final Integer billingTier;
-    /**
-     * Whether the query result was fetched from the query cache.
-     * 
-     */
+        /**
+         * @return Whether the query result was fetched from the query cache.
+         * 
+         */
     private final Boolean cacheHit;
-    /**
-     * [Preview] The number of row access policies affected by a DDL statement. Present only for DROP ALL ROW ACCESS POLICIES queries.
-     * 
-     */
+        /**
+         * @return [Preview] The number of row access policies affected by a DDL statement. Present only for DROP ALL ROW ACCESS POLICIES queries.
+         * 
+         */
     private final String ddlAffectedRowAccessPolicyCount;
-    /**
-     * The DDL destination table. Present only for ALTER TABLE RENAME TO queries. Note that ddl_target_table is used just for its type information.
-     * 
-     */
+        /**
+         * @return The DDL destination table. Present only for ALTER TABLE RENAME TO queries. Note that ddl_target_table is used just for its type information.
+         * 
+         */
     private final TableReferenceResponse ddlDestinationTable;
-    /**
-     * The DDL operation performed, possibly dependent on the pre-existence of the DDL target. Possible values (new values might be added in the future): &#34;CREATE&#34;: The query created the DDL target. &#34;SKIP&#34;: No-op. Example cases: the query is CREATE TABLE IF NOT EXISTS while the table already exists, or the query is DROP TABLE IF EXISTS while the table does not exist. &#34;REPLACE&#34;: The query replaced the DDL target. Example case: the query is CREATE OR REPLACE TABLE, and the table already exists. &#34;DROP&#34;: The query deleted the DDL target.
-     * 
-     */
+        /**
+         * @return The DDL operation performed, possibly dependent on the pre-existence of the DDL target. Possible values (new values might be added in the future): &#34;CREATE&#34;: The query created the DDL target. &#34;SKIP&#34;: No-op. Example cases: the query is CREATE TABLE IF NOT EXISTS while the table already exists, or the query is DROP TABLE IF EXISTS while the table does not exist. &#34;REPLACE&#34;: The query replaced the DDL target. Example case: the query is CREATE OR REPLACE TABLE, and the table already exists. &#34;DROP&#34;: The query deleted the DDL target.
+         * 
+         */
     private final String ddlOperationPerformed;
-    /**
-     * The DDL target dataset. Present only for CREATE/ALTER/DROP SCHEMA queries.
-     * 
-     */
+        /**
+         * @return The DDL target dataset. Present only for CREATE/ALTER/DROP SCHEMA queries.
+         * 
+         */
     private final DatasetReferenceResponse ddlTargetDataset;
-    /**
-     * The DDL target routine. Present only for CREATE/DROP FUNCTION/PROCEDURE queries.
-     * 
-     */
+        /**
+         * @return The DDL target routine. Present only for CREATE/DROP FUNCTION/PROCEDURE queries.
+         * 
+         */
     private final RoutineReferenceResponse ddlTargetRoutine;
-    /**
-     * [Preview] The DDL target row access policy. Present only for CREATE/DROP ROW ACCESS POLICY queries.
-     * 
-     */
+        /**
+         * @return [Preview] The DDL target row access policy. Present only for CREATE/DROP ROW ACCESS POLICY queries.
+         * 
+         */
     private final RowAccessPolicyReferenceResponse ddlTargetRowAccessPolicy;
-    /**
-     * The DDL target table. Present only for CREATE/DROP TABLE/VIEW and DROP ALL ROW ACCESS POLICIES queries.
-     * 
-     */
+        /**
+         * @return The DDL target table. Present only for CREATE/DROP TABLE/VIEW and DROP ALL ROW ACCESS POLICIES queries.
+         * 
+         */
     private final TableReferenceResponse ddlTargetTable;
-    /**
-     * Detailed statistics for DML statements Present only for DML statements INSERT, UPDATE, DELETE or TRUNCATE.
-     * 
-     */
+        /**
+         * @return Detailed statistics for DML statements Present only for DML statements INSERT, UPDATE, DELETE or TRUNCATE.
+         * 
+         */
     private final DmlStatisticsResponse dmlStats;
-    /**
-     * The original estimate of bytes processed for the job.
-     * 
-     */
+        /**
+         * @return The original estimate of bytes processed for the job.
+         * 
+         */
     private final String estimatedBytesProcessed;
-    /**
-     * Statistics of a BigQuery ML training job.
-     * 
-     */
+        /**
+         * @return Statistics of a BigQuery ML training job.
+         * 
+         */
     private final MlStatisticsResponse mlStatistics;
-    /**
-     * [Output-only, Beta] Information about create model query job progress.
-     * 
-     */
+        /**
+         * @return [Output-only, Beta] Information about create model query job progress.
+         * 
+         */
     private final BigQueryModelTrainingResponse modelTraining;
-    /**
-     * The number of rows affected by a DML statement. Present only for DML statements INSERT, UPDATE or DELETE.
-     * 
-     */
+        /**
+         * @return The number of rows affected by a DML statement. Present only for DML statements INSERT, UPDATE or DELETE.
+         * 
+         */
     private final String numDmlAffectedRows;
-    /**
-     * Describes execution plan for the query.
-     * 
-     */
+        /**
+         * @return Describes execution plan for the query.
+         * 
+         */
     private final List<ExplainQueryStageResponse> queryPlan;
-    /**
-     * Referenced routines (persistent user-defined functions and stored procedures) for the job.
-     * 
-     */
+        /**
+         * @return Referenced routines (persistent user-defined functions and stored procedures) for the job.
+         * 
+         */
     private final List<RoutineReferenceResponse> referencedRoutines;
-    /**
-     * Referenced tables for the job. Queries that reference more than 50 tables will not have a complete list.
-     * 
-     */
+        /**
+         * @return Referenced tables for the job. Queries that reference more than 50 tables will not have a complete list.
+         * 
+         */
     private final List<TableReferenceResponse> referencedTables;
-    /**
-     * Job resource usage breakdown by reservation.
-     * 
-     */
+        /**
+         * @return Job resource usage breakdown by reservation.
+         * 
+         */
     private final List<JobStatistics2ReservationUsageItemResponse> reservationUsage;
-    /**
-     * The schema of the results. Present only for successful dry run of non-legacy SQL queries.
-     * 
-     */
+        /**
+         * @return The schema of the results. Present only for successful dry run of non-legacy SQL queries.
+         * 
+         */
     private final TableSchemaResponse schema;
-    /**
-     * The type of query statement, if valid. Possible values (new values might be added in the future): &#34;SELECT&#34;: SELECT query. &#34;INSERT&#34;: INSERT query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. &#34;UPDATE&#34;: UPDATE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. &#34;DELETE&#34;: DELETE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. &#34;MERGE&#34;: MERGE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. &#34;ALTER_TABLE&#34;: ALTER TABLE query. &#34;ALTER_VIEW&#34;: ALTER VIEW query. &#34;ASSERT&#34;: ASSERT condition AS &#39;description&#39;. &#34;CREATE_FUNCTION&#34;: CREATE FUNCTION query. &#34;CREATE_MODEL&#34;: CREATE [OR REPLACE] MODEL ... AS SELECT ... . &#34;CREATE_PROCEDURE&#34;: CREATE PROCEDURE query. &#34;CREATE_TABLE&#34;: CREATE [OR REPLACE] TABLE without AS SELECT. &#34;CREATE_TABLE_AS_SELECT&#34;: CREATE [OR REPLACE] TABLE ... AS SELECT ... . &#34;CREATE_VIEW&#34;: CREATE [OR REPLACE] VIEW ... AS SELECT ... . &#34;DROP_FUNCTION&#34; : DROP FUNCTION query. &#34;DROP_PROCEDURE&#34;: DROP PROCEDURE query. &#34;DROP_TABLE&#34;: DROP TABLE query. &#34;DROP_VIEW&#34;: DROP VIEW query.
-     * 
-     */
+        /**
+         * @return The type of query statement, if valid. Possible values (new values might be added in the future): &#34;SELECT&#34;: SELECT query. &#34;INSERT&#34;: INSERT query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. &#34;UPDATE&#34;: UPDATE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. &#34;DELETE&#34;: DELETE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. &#34;MERGE&#34;: MERGE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. &#34;ALTER_TABLE&#34;: ALTER TABLE query. &#34;ALTER_VIEW&#34;: ALTER VIEW query. &#34;ASSERT&#34;: ASSERT condition AS &#39;description&#39;. &#34;CREATE_FUNCTION&#34;: CREATE FUNCTION query. &#34;CREATE_MODEL&#34;: CREATE [OR REPLACE] MODEL ... AS SELECT ... . &#34;CREATE_PROCEDURE&#34;: CREATE PROCEDURE query. &#34;CREATE_TABLE&#34;: CREATE [OR REPLACE] TABLE without AS SELECT. &#34;CREATE_TABLE_AS_SELECT&#34;: CREATE [OR REPLACE] TABLE ... AS SELECT ... . &#34;CREATE_VIEW&#34;: CREATE [OR REPLACE] VIEW ... AS SELECT ... . &#34;DROP_FUNCTION&#34; : DROP FUNCTION query. &#34;DROP_PROCEDURE&#34;: DROP PROCEDURE query. &#34;DROP_TABLE&#34;: DROP TABLE query. &#34;DROP_VIEW&#34;: DROP VIEW query.
+         * 
+         */
     private final String statementType;
-    /**
-     * [Beta] Describes a timeline of job execution.
-     * 
-     */
+        /**
+         * @return [Beta] Describes a timeline of job execution.
+         * 
+         */
     private final List<QueryTimelineSampleResponse> timeline;
-    /**
-     * Total bytes billed for the job.
-     * 
-     */
+        /**
+         * @return Total bytes billed for the job.
+         * 
+         */
     private final String totalBytesBilled;
-    /**
-     * Total bytes processed for the job.
-     * 
-     */
+        /**
+         * @return Total bytes processed for the job.
+         * 
+         */
     private final String totalBytesProcessed;
-    /**
-     * For dry-run jobs, totalBytesProcessed is an estimate and this field specifies the accuracy of the estimate. Possible values can be: UNKNOWN: accuracy of the estimate is unknown. PRECISE: estimate is precise. LOWER_BOUND: estimate is lower bound of what the query would cost. UPPER_BOUND: estimate is upper bound of what the query would cost.
-     * 
-     */
+        /**
+         * @return For dry-run jobs, totalBytesProcessed is an estimate and this field specifies the accuracy of the estimate. Possible values can be: UNKNOWN: accuracy of the estimate is unknown. PRECISE: estimate is precise. LOWER_BOUND: estimate is lower bound of what the query would cost. UPPER_BOUND: estimate is upper bound of what the query would cost.
+         * 
+         */
     private final String totalBytesProcessedAccuracy;
-    /**
-     * Total number of partitions processed from all partitioned tables referenced in the job.
-     * 
-     */
+        /**
+         * @return Total number of partitions processed from all partitioned tables referenced in the job.
+         * 
+         */
     private final String totalPartitionsProcessed;
-    /**
-     * Slot-milliseconds for the job.
-     * 
-     */
+        /**
+         * @return Slot-milliseconds for the job.
+         * 
+         */
     private final String totalSlotMs;
-    /**
-     * Standard SQL only: list of undeclared query parameters detected during a dry run validation.
-     * 
-     */
+        /**
+         * @return Standard SQL only: list of undeclared query parameters detected during a dry run validation.
+         * 
+         */
     private final List<QueryParameterResponse> undeclaredQueryParameters;
 
     @CustomType.Constructor
@@ -227,198 +227,198 @@ public final class JobStatistics2Response {
     }
 
     /**
-     * BI Engine specific Statistics. [Output-only] BI Engine specific Statistics.
+     * @return BI Engine specific Statistics. [Output-only] BI Engine specific Statistics.
      * 
-    */
+     */
     public BiEngineStatisticsResponse biEngineStatistics() {
         return this.biEngineStatistics;
     }
     /**
-     * Billing tier for the job.
+     * @return Billing tier for the job.
      * 
-    */
+     */
     public Integer billingTier() {
         return this.billingTier;
     }
     /**
-     * Whether the query result was fetched from the query cache.
+     * @return Whether the query result was fetched from the query cache.
      * 
-    */
+     */
     public Boolean cacheHit() {
         return this.cacheHit;
     }
     /**
-     * [Preview] The number of row access policies affected by a DDL statement. Present only for DROP ALL ROW ACCESS POLICIES queries.
+     * @return [Preview] The number of row access policies affected by a DDL statement. Present only for DROP ALL ROW ACCESS POLICIES queries.
      * 
-    */
+     */
     public String ddlAffectedRowAccessPolicyCount() {
         return this.ddlAffectedRowAccessPolicyCount;
     }
     /**
-     * The DDL destination table. Present only for ALTER TABLE RENAME TO queries. Note that ddl_target_table is used just for its type information.
+     * @return The DDL destination table. Present only for ALTER TABLE RENAME TO queries. Note that ddl_target_table is used just for its type information.
      * 
-    */
+     */
     public TableReferenceResponse ddlDestinationTable() {
         return this.ddlDestinationTable;
     }
     /**
-     * The DDL operation performed, possibly dependent on the pre-existence of the DDL target. Possible values (new values might be added in the future): &#34;CREATE&#34;: The query created the DDL target. &#34;SKIP&#34;: No-op. Example cases: the query is CREATE TABLE IF NOT EXISTS while the table already exists, or the query is DROP TABLE IF EXISTS while the table does not exist. &#34;REPLACE&#34;: The query replaced the DDL target. Example case: the query is CREATE OR REPLACE TABLE, and the table already exists. &#34;DROP&#34;: The query deleted the DDL target.
+     * @return The DDL operation performed, possibly dependent on the pre-existence of the DDL target. Possible values (new values might be added in the future): &#34;CREATE&#34;: The query created the DDL target. &#34;SKIP&#34;: No-op. Example cases: the query is CREATE TABLE IF NOT EXISTS while the table already exists, or the query is DROP TABLE IF EXISTS while the table does not exist. &#34;REPLACE&#34;: The query replaced the DDL target. Example case: the query is CREATE OR REPLACE TABLE, and the table already exists. &#34;DROP&#34;: The query deleted the DDL target.
      * 
-    */
+     */
     public String ddlOperationPerformed() {
         return this.ddlOperationPerformed;
     }
     /**
-     * The DDL target dataset. Present only for CREATE/ALTER/DROP SCHEMA queries.
+     * @return The DDL target dataset. Present only for CREATE/ALTER/DROP SCHEMA queries.
      * 
-    */
+     */
     public DatasetReferenceResponse ddlTargetDataset() {
         return this.ddlTargetDataset;
     }
     /**
-     * The DDL target routine. Present only for CREATE/DROP FUNCTION/PROCEDURE queries.
+     * @return The DDL target routine. Present only for CREATE/DROP FUNCTION/PROCEDURE queries.
      * 
-    */
+     */
     public RoutineReferenceResponse ddlTargetRoutine() {
         return this.ddlTargetRoutine;
     }
     /**
-     * [Preview] The DDL target row access policy. Present only for CREATE/DROP ROW ACCESS POLICY queries.
+     * @return [Preview] The DDL target row access policy. Present only for CREATE/DROP ROW ACCESS POLICY queries.
      * 
-    */
+     */
     public RowAccessPolicyReferenceResponse ddlTargetRowAccessPolicy() {
         return this.ddlTargetRowAccessPolicy;
     }
     /**
-     * The DDL target table. Present only for CREATE/DROP TABLE/VIEW and DROP ALL ROW ACCESS POLICIES queries.
+     * @return The DDL target table. Present only for CREATE/DROP TABLE/VIEW and DROP ALL ROW ACCESS POLICIES queries.
      * 
-    */
+     */
     public TableReferenceResponse ddlTargetTable() {
         return this.ddlTargetTable;
     }
     /**
-     * Detailed statistics for DML statements Present only for DML statements INSERT, UPDATE, DELETE or TRUNCATE.
+     * @return Detailed statistics for DML statements Present only for DML statements INSERT, UPDATE, DELETE or TRUNCATE.
      * 
-    */
+     */
     public DmlStatisticsResponse dmlStats() {
         return this.dmlStats;
     }
     /**
-     * The original estimate of bytes processed for the job.
+     * @return The original estimate of bytes processed for the job.
      * 
-    */
+     */
     public String estimatedBytesProcessed() {
         return this.estimatedBytesProcessed;
     }
     /**
-     * Statistics of a BigQuery ML training job.
+     * @return Statistics of a BigQuery ML training job.
      * 
-    */
+     */
     public MlStatisticsResponse mlStatistics() {
         return this.mlStatistics;
     }
     /**
-     * [Output-only, Beta] Information about create model query job progress.
+     * @return [Output-only, Beta] Information about create model query job progress.
      * 
-    */
+     */
     public BigQueryModelTrainingResponse modelTraining() {
         return this.modelTraining;
     }
     /**
-     * The number of rows affected by a DML statement. Present only for DML statements INSERT, UPDATE or DELETE.
+     * @return The number of rows affected by a DML statement. Present only for DML statements INSERT, UPDATE or DELETE.
      * 
-    */
+     */
     public String numDmlAffectedRows() {
         return this.numDmlAffectedRows;
     }
     /**
-     * Describes execution plan for the query.
+     * @return Describes execution plan for the query.
      * 
-    */
+     */
     public List<ExplainQueryStageResponse> queryPlan() {
         return this.queryPlan;
     }
     /**
-     * Referenced routines (persistent user-defined functions and stored procedures) for the job.
+     * @return Referenced routines (persistent user-defined functions and stored procedures) for the job.
      * 
-    */
+     */
     public List<RoutineReferenceResponse> referencedRoutines() {
         return this.referencedRoutines;
     }
     /**
-     * Referenced tables for the job. Queries that reference more than 50 tables will not have a complete list.
+     * @return Referenced tables for the job. Queries that reference more than 50 tables will not have a complete list.
      * 
-    */
+     */
     public List<TableReferenceResponse> referencedTables() {
         return this.referencedTables;
     }
     /**
-     * Job resource usage breakdown by reservation.
+     * @return Job resource usage breakdown by reservation.
      * 
-    */
+     */
     public List<JobStatistics2ReservationUsageItemResponse> reservationUsage() {
         return this.reservationUsage;
     }
     /**
-     * The schema of the results. Present only for successful dry run of non-legacy SQL queries.
+     * @return The schema of the results. Present only for successful dry run of non-legacy SQL queries.
      * 
-    */
+     */
     public TableSchemaResponse schema() {
         return this.schema;
     }
     /**
-     * The type of query statement, if valid. Possible values (new values might be added in the future): &#34;SELECT&#34;: SELECT query. &#34;INSERT&#34;: INSERT query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. &#34;UPDATE&#34;: UPDATE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. &#34;DELETE&#34;: DELETE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. &#34;MERGE&#34;: MERGE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. &#34;ALTER_TABLE&#34;: ALTER TABLE query. &#34;ALTER_VIEW&#34;: ALTER VIEW query. &#34;ASSERT&#34;: ASSERT condition AS &#39;description&#39;. &#34;CREATE_FUNCTION&#34;: CREATE FUNCTION query. &#34;CREATE_MODEL&#34;: CREATE [OR REPLACE] MODEL ... AS SELECT ... . &#34;CREATE_PROCEDURE&#34;: CREATE PROCEDURE query. &#34;CREATE_TABLE&#34;: CREATE [OR REPLACE] TABLE without AS SELECT. &#34;CREATE_TABLE_AS_SELECT&#34;: CREATE [OR REPLACE] TABLE ... AS SELECT ... . &#34;CREATE_VIEW&#34;: CREATE [OR REPLACE] VIEW ... AS SELECT ... . &#34;DROP_FUNCTION&#34; : DROP FUNCTION query. &#34;DROP_PROCEDURE&#34;: DROP PROCEDURE query. &#34;DROP_TABLE&#34;: DROP TABLE query. &#34;DROP_VIEW&#34;: DROP VIEW query.
+     * @return The type of query statement, if valid. Possible values (new values might be added in the future): &#34;SELECT&#34;: SELECT query. &#34;INSERT&#34;: INSERT query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. &#34;UPDATE&#34;: UPDATE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. &#34;DELETE&#34;: DELETE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. &#34;MERGE&#34;: MERGE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. &#34;ALTER_TABLE&#34;: ALTER TABLE query. &#34;ALTER_VIEW&#34;: ALTER VIEW query. &#34;ASSERT&#34;: ASSERT condition AS &#39;description&#39;. &#34;CREATE_FUNCTION&#34;: CREATE FUNCTION query. &#34;CREATE_MODEL&#34;: CREATE [OR REPLACE] MODEL ... AS SELECT ... . &#34;CREATE_PROCEDURE&#34;: CREATE PROCEDURE query. &#34;CREATE_TABLE&#34;: CREATE [OR REPLACE] TABLE without AS SELECT. &#34;CREATE_TABLE_AS_SELECT&#34;: CREATE [OR REPLACE] TABLE ... AS SELECT ... . &#34;CREATE_VIEW&#34;: CREATE [OR REPLACE] VIEW ... AS SELECT ... . &#34;DROP_FUNCTION&#34; : DROP FUNCTION query. &#34;DROP_PROCEDURE&#34;: DROP PROCEDURE query. &#34;DROP_TABLE&#34;: DROP TABLE query. &#34;DROP_VIEW&#34;: DROP VIEW query.
      * 
-    */
+     */
     public String statementType() {
         return this.statementType;
     }
     /**
-     * [Beta] Describes a timeline of job execution.
+     * @return [Beta] Describes a timeline of job execution.
      * 
-    */
+     */
     public List<QueryTimelineSampleResponse> timeline() {
         return this.timeline;
     }
     /**
-     * Total bytes billed for the job.
+     * @return Total bytes billed for the job.
      * 
-    */
+     */
     public String totalBytesBilled() {
         return this.totalBytesBilled;
     }
     /**
-     * Total bytes processed for the job.
+     * @return Total bytes processed for the job.
      * 
-    */
+     */
     public String totalBytesProcessed() {
         return this.totalBytesProcessed;
     }
     /**
-     * For dry-run jobs, totalBytesProcessed is an estimate and this field specifies the accuracy of the estimate. Possible values can be: UNKNOWN: accuracy of the estimate is unknown. PRECISE: estimate is precise. LOWER_BOUND: estimate is lower bound of what the query would cost. UPPER_BOUND: estimate is upper bound of what the query would cost.
+     * @return For dry-run jobs, totalBytesProcessed is an estimate and this field specifies the accuracy of the estimate. Possible values can be: UNKNOWN: accuracy of the estimate is unknown. PRECISE: estimate is precise. LOWER_BOUND: estimate is lower bound of what the query would cost. UPPER_BOUND: estimate is upper bound of what the query would cost.
      * 
-    */
+     */
     public String totalBytesProcessedAccuracy() {
         return this.totalBytesProcessedAccuracy;
     }
     /**
-     * Total number of partitions processed from all partitioned tables referenced in the job.
+     * @return Total number of partitions processed from all partitioned tables referenced in the job.
      * 
-    */
+     */
     public String totalPartitionsProcessed() {
         return this.totalPartitionsProcessed;
     }
     /**
-     * Slot-milliseconds for the job.
+     * @return Slot-milliseconds for the job.
      * 
-    */
+     */
     public String totalSlotMs() {
         return this.totalSlotMs;
     }
     /**
-     * Standard SQL only: list of undeclared query parameters detected during a dry run validation.
+     * @return Standard SQL only: list of undeclared query parameters detected during a dry run validation.
      * 
-    */
+     */
     public List<QueryParameterResponse> undeclaredQueryParameters() {
         return this.undeclaredQueryParameters;
     }

@@ -17,50 +17,50 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudRetailV2alphaRuleResponse {
-    /**
-     * A boost action.
-     * 
-     */
+        /**
+         * @return A boost action.
+         * 
+         */
     private final GoogleCloudRetailV2alphaRuleBoostActionResponse boostAction;
-    /**
-     * The condition that triggers the rule. If the condition is empty, the rule will always apply.
-     * 
-     */
+        /**
+         * @return The condition that triggers the rule. If the condition is empty, the rule will always apply.
+         * 
+         */
     private final GoogleCloudRetailV2alphaConditionResponse condition;
-    /**
-     * Prevents term from being associated with other terms.
-     * 
-     */
+        /**
+         * @return Prevents term from being associated with other terms.
+         * 
+         */
     private final GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse doNotAssociateAction;
-    /**
-     * Filters results.
-     * 
-     */
+        /**
+         * @return Filters results.
+         * 
+         */
     private final GoogleCloudRetailV2alphaRuleFilterActionResponse filterAction;
-    /**
-     * Ignores specific terms from query during search.
-     * 
-     */
+        /**
+         * @return Ignores specific terms from query during search.
+         * 
+         */
     private final GoogleCloudRetailV2alphaRuleIgnoreActionResponse ignoreAction;
-    /**
-     * Treats specific term as a synonym with a group of terms. Group of terms will not be treated as synonyms with the specific term.
-     * 
-     */
+        /**
+         * @return Treats specific term as a synonym with a group of terms. Group of terms will not be treated as synonyms with the specific term.
+         * 
+         */
     private final GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse onewaySynonymsAction;
-    /**
-     * Redirects a shopper to a specific page.
-     * 
-     */
+        /**
+         * @return Redirects a shopper to a specific page.
+         * 
+         */
     private final GoogleCloudRetailV2alphaRuleRedirectActionResponse redirectAction;
-    /**
-     * Replaces specific terms in the query.
-     * 
-     */
+        /**
+         * @return Replaces specific terms in the query.
+         * 
+         */
     private final GoogleCloudRetailV2alphaRuleReplacementActionResponse replacementAction;
-    /**
-     * Treats a set of terms as synonyms of one another.
-     * 
-     */
+        /**
+         * @return Treats a set of terms as synonyms of one another.
+         * 
+         */
     private final GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse twowaySynonymsAction;
 
     @CustomType.Constructor
@@ -86,65 +86,65 @@ public final class GoogleCloudRetailV2alphaRuleResponse {
     }
 
     /**
-     * A boost action.
+     * @return A boost action.
      * 
-    */
+     */
     public GoogleCloudRetailV2alphaRuleBoostActionResponse boostAction() {
         return this.boostAction;
     }
     /**
-     * The condition that triggers the rule. If the condition is empty, the rule will always apply.
+     * @return The condition that triggers the rule. If the condition is empty, the rule will always apply.
      * 
-    */
+     */
     public GoogleCloudRetailV2alphaConditionResponse condition() {
         return this.condition;
     }
     /**
-     * Prevents term from being associated with other terms.
+     * @return Prevents term from being associated with other terms.
      * 
-    */
+     */
     public GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse doNotAssociateAction() {
         return this.doNotAssociateAction;
     }
     /**
-     * Filters results.
+     * @return Filters results.
      * 
-    */
+     */
     public GoogleCloudRetailV2alphaRuleFilterActionResponse filterAction() {
         return this.filterAction;
     }
     /**
-     * Ignores specific terms from query during search.
+     * @return Ignores specific terms from query during search.
      * 
-    */
+     */
     public GoogleCloudRetailV2alphaRuleIgnoreActionResponse ignoreAction() {
         return this.ignoreAction;
     }
     /**
-     * Treats specific term as a synonym with a group of terms. Group of terms will not be treated as synonyms with the specific term.
+     * @return Treats specific term as a synonym with a group of terms. Group of terms will not be treated as synonyms with the specific term.
      * 
-    */
+     */
     public GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse onewaySynonymsAction() {
         return this.onewaySynonymsAction;
     }
     /**
-     * Redirects a shopper to a specific page.
+     * @return Redirects a shopper to a specific page.
      * 
-    */
+     */
     public GoogleCloudRetailV2alphaRuleRedirectActionResponse redirectAction() {
         return this.redirectAction;
     }
     /**
-     * Replaces specific terms in the query.
+     * @return Replaces specific terms in the query.
      * 
-    */
+     */
     public GoogleCloudRetailV2alphaRuleReplacementActionResponse replacementAction() {
         return this.replacementAction;
     }
     /**
-     * Treats a set of terms as synonyms of one another.
+     * @return Treats a set of terms as synonyms of one another.
      * 
-    */
+     */
     public GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse twowaySynonymsAction() {
         return this.twowaySynonymsAction;
     }

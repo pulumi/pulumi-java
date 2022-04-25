@@ -10,50 +10,50 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse {
-    /**
-     * Which container image sources are allowed. Currently only RBE-supported registry (gcr.io) is allowed. One can allow all repositories under a project or one specific repository only. E.g. container_image_sources { policy: RESTRICTED allowed_values: [ &#34;gcr.io/project-foo&#34;, &#34;gcr.io/project-bar/repo-baz&#34;, ] } will allow any repositories under &#34;gcr.io/project-foo&#34; plus the repository &#34;gcr.io/project-bar/repo-baz&#34;. Default (UNSPECIFIED) is equivalent to any source is allowed.
-     * 
-     */
+        /**
+         * @return Which container image sources are allowed. Currently only RBE-supported registry (gcr.io) is allowed. One can allow all repositories under a project or one specific repository only. E.g. container_image_sources { policy: RESTRICTED allowed_values: [ &#34;gcr.io/project-foo&#34;, &#34;gcr.io/project-bar/repo-baz&#34;, ] } will allow any repositories under &#34;gcr.io/project-foo&#34; plus the repository &#34;gcr.io/project-bar/repo-baz&#34;. Default (UNSPECIFIED) is equivalent to any source is allowed.
+         * 
+         */
     private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse containerImageSources;
-    /**
-     * Whether dockerAddCapabilities can be used or what capabilities are allowed.
-     * 
-     */
+        /**
+         * @return Whether dockerAddCapabilities can be used or what capabilities are allowed.
+         * 
+         */
     private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerAddCapabilities;
-    /**
-     * Whether dockerChrootPath can be used.
-     * 
-     */
+        /**
+         * @return Whether dockerChrootPath can be used.
+         * 
+         */
     private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerChrootPath;
-    /**
-     * Whether dockerNetwork can be used or what network modes are allowed. E.g. one may allow `off` value only via `allowed_values`.
-     * 
-     */
+        /**
+         * @return Whether dockerNetwork can be used or what network modes are allowed. E.g. one may allow `off` value only via `allowed_values`.
+         * 
+         */
     private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerNetwork;
-    /**
-     * Whether dockerPrivileged can be used.
-     * 
-     */
+        /**
+         * @return Whether dockerPrivileged can be used.
+         * 
+         */
     private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerPrivileged;
-    /**
-     * Whether dockerRunAsRoot can be used.
-     * 
-     */
+        /**
+         * @return Whether dockerRunAsRoot can be used.
+         * 
+         */
     private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRunAsRoot;
-    /**
-     * Whether dockerRuntime is allowed to be set or what runtimes are allowed. Note linux_isolation takes precedence, and if set, docker_runtime values may be rejected if they are incompatible with the selected isolation.
-     * 
-     */
+        /**
+         * @return Whether dockerRuntime is allowed to be set or what runtimes are allowed. Note linux_isolation takes precedence, and if set, docker_runtime values may be rejected if they are incompatible with the selected isolation.
+         * 
+         */
     private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRuntime;
-    /**
-     * Whether dockerSiblingContainers can be used.
-     * 
-     */
+        /**
+         * @return Whether dockerSiblingContainers can be used.
+         * 
+         */
     private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerSiblingContainers;
-    /**
-     * linux_isolation allows overriding the docker runtime used for containers started on Linux.
-     * 
-     */
+        /**
+         * @return linux_isolation allows overriding the docker runtime used for containers started on Linux.
+         * 
+         */
     private final String linuxIsolation;
 
     @CustomType.Constructor
@@ -79,65 +79,65 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
     }
 
     /**
-     * Which container image sources are allowed. Currently only RBE-supported registry (gcr.io) is allowed. One can allow all repositories under a project or one specific repository only. E.g. container_image_sources { policy: RESTRICTED allowed_values: [ &#34;gcr.io/project-foo&#34;, &#34;gcr.io/project-bar/repo-baz&#34;, ] } will allow any repositories under &#34;gcr.io/project-foo&#34; plus the repository &#34;gcr.io/project-bar/repo-baz&#34;. Default (UNSPECIFIED) is equivalent to any source is allowed.
+     * @return Which container image sources are allowed. Currently only RBE-supported registry (gcr.io) is allowed. One can allow all repositories under a project or one specific repository only. E.g. container_image_sources { policy: RESTRICTED allowed_values: [ &#34;gcr.io/project-foo&#34;, &#34;gcr.io/project-bar/repo-baz&#34;, ] } will allow any repositories under &#34;gcr.io/project-foo&#34; plus the repository &#34;gcr.io/project-bar/repo-baz&#34;. Default (UNSPECIFIED) is equivalent to any source is allowed.
      * 
-    */
+     */
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse containerImageSources() {
         return this.containerImageSources;
     }
     /**
-     * Whether dockerAddCapabilities can be used or what capabilities are allowed.
+     * @return Whether dockerAddCapabilities can be used or what capabilities are allowed.
      * 
-    */
+     */
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerAddCapabilities() {
         return this.dockerAddCapabilities;
     }
     /**
-     * Whether dockerChrootPath can be used.
+     * @return Whether dockerChrootPath can be used.
      * 
-    */
+     */
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerChrootPath() {
         return this.dockerChrootPath;
     }
     /**
-     * Whether dockerNetwork can be used or what network modes are allowed. E.g. one may allow `off` value only via `allowed_values`.
+     * @return Whether dockerNetwork can be used or what network modes are allowed. E.g. one may allow `off` value only via `allowed_values`.
      * 
-    */
+     */
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerNetwork() {
         return this.dockerNetwork;
     }
     /**
-     * Whether dockerPrivileged can be used.
+     * @return Whether dockerPrivileged can be used.
      * 
-    */
+     */
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerPrivileged() {
         return this.dockerPrivileged;
     }
     /**
-     * Whether dockerRunAsRoot can be used.
+     * @return Whether dockerRunAsRoot can be used.
      * 
-    */
+     */
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRunAsRoot() {
         return this.dockerRunAsRoot;
     }
     /**
-     * Whether dockerRuntime is allowed to be set or what runtimes are allowed. Note linux_isolation takes precedence, and if set, docker_runtime values may be rejected if they are incompatible with the selected isolation.
+     * @return Whether dockerRuntime is allowed to be set or what runtimes are allowed. Note linux_isolation takes precedence, and if set, docker_runtime values may be rejected if they are incompatible with the selected isolation.
      * 
-    */
+     */
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRuntime() {
         return this.dockerRuntime;
     }
     /**
-     * Whether dockerSiblingContainers can be used.
+     * @return Whether dockerSiblingContainers can be used.
      * 
-    */
+     */
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerSiblingContainers() {
         return this.dockerSiblingContainers;
     }
     /**
-     * linux_isolation allows overriding the docker runtime used for containers started on Linux.
+     * @return linux_isolation allows overriding the docker runtime used for containers started on Linux.
      * 
-    */
+     */
     public String linuxIsolation() {
         return this.linuxIsolation;
     }

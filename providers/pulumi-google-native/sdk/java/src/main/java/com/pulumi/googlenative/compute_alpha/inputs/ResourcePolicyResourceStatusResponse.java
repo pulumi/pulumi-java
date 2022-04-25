@@ -23,6 +23,10 @@ public final class ResourcePolicyResourceStatusResponse extends com.pulumi.resou
     @Import(name="instanceSchedulePolicy", required=true)
     private ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse instanceSchedulePolicy;
 
+    /**
+     * @return Specifies a set of output values reffering to the instance_schedule_policy system status. This field should have the same name as corresponding policy field.
+     * 
+     */
     public ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse instanceSchedulePolicy() {
         return this.instanceSchedulePolicy;
     }
@@ -51,6 +55,12 @@ public final class ResourcePolicyResourceStatusResponse extends com.pulumi.resou
             $ = new ResourcePolicyResourceStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceSchedulePolicy Specifies a set of output values reffering to the instance_schedule_policy system status. This field should have the same name as corresponding policy field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceSchedulePolicy(ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse instanceSchedulePolicy) {
             $.instanceSchedulePolicy = instanceSchedulePolicy;
             return this;

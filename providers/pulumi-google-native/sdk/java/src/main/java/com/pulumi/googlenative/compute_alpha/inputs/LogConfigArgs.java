@@ -28,6 +28,10 @@ public final class LogConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudAudit")
     private @Nullable Output<LogConfigCloudAuditOptionsArgs> cloudAudit;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public Optional<Output<LogConfigCloudAuditOptionsArgs>> cloudAudit() {
         return Optional.ofNullable(this.cloudAudit);
     }
@@ -39,6 +43,10 @@ public final class LogConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="counter")
     private @Nullable Output<LogConfigCounterOptionsArgs> counter;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public Optional<Output<LogConfigCounterOptionsArgs>> counter() {
         return Optional.ofNullable(this.counter);
     }
@@ -50,6 +58,10 @@ public final class LogConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataAccess")
     private @Nullable Output<LogConfigDataAccessOptionsArgs> dataAccess;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public Optional<Output<LogConfigDataAccessOptionsArgs>> dataAccess() {
         return Optional.ofNullable(this.dataAccess);
     }
@@ -80,29 +92,65 @@ public final class LogConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LogConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudAudit This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudAudit(@Nullable Output<LogConfigCloudAuditOptionsArgs> cloudAudit) {
             $.cloudAudit = cloudAudit;
             return this;
         }
 
+        /**
+         * @param cloudAudit This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudAudit(LogConfigCloudAuditOptionsArgs cloudAudit) {
             return cloudAudit(Output.of(cloudAudit));
         }
 
+        /**
+         * @param counter This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder counter(@Nullable Output<LogConfigCounterOptionsArgs> counter) {
             $.counter = counter;
             return this;
         }
 
+        /**
+         * @param counter This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder counter(LogConfigCounterOptionsArgs counter) {
             return counter(Output.of(counter));
         }
 
+        /**
+         * @param dataAccess This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataAccess(@Nullable Output<LogConfigDataAccessOptionsArgs> dataAccess) {
             $.dataAccess = dataAccess;
             return this;
         }
 
+        /**
+         * @param dataAccess This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataAccess(LogConfigDataAccessOptionsArgs dataAccess) {
             return dataAccess(Output.of(dataAccess));
         }

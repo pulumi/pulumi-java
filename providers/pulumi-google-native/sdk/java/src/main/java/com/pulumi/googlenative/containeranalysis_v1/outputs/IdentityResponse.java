@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class IdentityResponse {
-    /**
-     * The revision number of the update.
-     * 
-     */
+        /**
+         * @return The revision number of the update.
+         * 
+         */
     private final Integer revision;
-    /**
-     * The revision independent identifier of the update.
-     * 
-     */
+        /**
+         * @return The revision independent identifier of the update.
+         * 
+         */
     private final String updateId;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class IdentityResponse {
     }
 
     /**
-     * The revision number of the update.
+     * @return The revision number of the update.
      * 
-    */
+     */
     public Integer revision() {
         return this.revision;
     }
     /**
-     * The revision independent identifier of the update.
+     * @return The revision independent identifier of the update.
      * 
-    */
+     */
     public String updateId() {
         return this.updateId;
     }

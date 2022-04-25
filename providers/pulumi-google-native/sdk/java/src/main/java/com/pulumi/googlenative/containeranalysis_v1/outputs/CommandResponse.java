@@ -10,30 +10,30 @@ import java.util.Objects;
 
 @CustomType
 public final class CommandResponse {
-    /**
-     * Command-line arguments used when executing this command.
-     * 
-     */
+        /**
+         * @return Command-line arguments used when executing this command.
+         * 
+         */
     private final List<String> args;
-    /**
-     * Working directory (relative to project source root) used when running this command.
-     * 
-     */
+        /**
+         * @return Working directory (relative to project source root) used when running this command.
+         * 
+         */
     private final String dir;
-    /**
-     * Environment variables set before running this command.
-     * 
-     */
+        /**
+         * @return Environment variables set before running this command.
+         * 
+         */
     private final List<String> env;
-    /**
-     * Name of the command, as presented on the command line, or if the command is packaged as a Docker container, as presented to `docker pull`.
-     * 
-     */
+        /**
+         * @return Name of the command, as presented on the command line, or if the command is packaged as a Docker container, as presented to `docker pull`.
+         * 
+         */
     private final String name;
-    /**
-     * The ID(s) of the command(s) that this command depends on.
-     * 
-     */
+        /**
+         * @return The ID(s) of the command(s) that this command depends on.
+         * 
+         */
     private final List<String> waitFor;
 
     @CustomType.Constructor
@@ -51,37 +51,37 @@ public final class CommandResponse {
     }
 
     /**
-     * Command-line arguments used when executing this command.
+     * @return Command-line arguments used when executing this command.
      * 
-    */
+     */
     public List<String> args() {
         return this.args;
     }
     /**
-     * Working directory (relative to project source root) used when running this command.
+     * @return Working directory (relative to project source root) used when running this command.
      * 
-    */
+     */
     public String dir() {
         return this.dir;
     }
     /**
-     * Environment variables set before running this command.
+     * @return Environment variables set before running this command.
      * 
-    */
+     */
     public List<String> env() {
         return this.env;
     }
     /**
-     * Name of the command, as presented on the command line, or if the command is packaged as a Docker container, as presented to `docker pull`.
+     * @return Name of the command, as presented on the command line, or if the command is packaged as a Docker container, as presented to `docker pull`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The ID(s) of the command(s) that this command depends on.
+     * @return The ID(s) of the command(s) that this command depends on.
      * 
-    */
+     */
     public List<String> waitFor() {
         return this.waitFor;
     }

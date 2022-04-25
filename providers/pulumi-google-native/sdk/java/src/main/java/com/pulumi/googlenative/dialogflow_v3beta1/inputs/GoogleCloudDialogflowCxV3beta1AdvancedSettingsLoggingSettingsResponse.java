@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings
     @Import(name="enableInteractionLogging", required=true)
     private Boolean enableInteractionLogging;
 
+    /**
+     * @return If true, DF Interaction logging is currently enabled.
+     * 
+     */
     public Boolean enableInteractionLogging() {
         return this.enableInteractionLogging;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings
     @Import(name="enableStackdriverLogging", required=true)
     private Boolean enableStackdriverLogging;
 
+    /**
+     * @return If true, StackDriver logging is currently enabled.
+     * 
+     */
     public Boolean enableStackdriverLogging() {
         return this.enableStackdriverLogging;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings
             $ = new GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableInteractionLogging If true, DF Interaction logging is currently enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableInteractionLogging(Boolean enableInteractionLogging) {
             $.enableInteractionLogging = enableInteractionLogging;
             return this;
         }
 
+        /**
+         * @param enableStackdriverLogging If true, StackDriver logging is currently enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableStackdriverLogging(Boolean enableStackdriverLogging) {
             $.enableStackdriverLogging = enableStackdriverLogging;
             return this;

@@ -22,115 +22,115 @@ import java.util.Objects;
 
 @CustomType
 public final class GetEntryResult {
-    /**
-     * Specification for a group of BigQuery tables with the `[prefix]YYYYMMDD` name pattern. For more information, see [Introduction to partitioned tables] (https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding).
-     * 
-     */
+        /**
+         * @return Specification for a group of BigQuery tables with the `[prefix]YYYYMMDD` name pattern. For more information, see [Introduction to partitioned tables] (https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding).
+         * 
+         */
     private final GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse bigqueryDateShardedSpec;
-    /**
-     * Specification that applies to a BigQuery table. Valid only for entries with the `TABLE` type.
-     * 
-     */
+        /**
+         * @return Specification that applies to a BigQuery table. Valid only for entries with the `TABLE` type.
+         * 
+         */
     private final GoogleCloudDatacatalogV1BigQueryTableSpecResponse bigqueryTableSpec;
-    /**
-     * Business Context of the entry.
-     * 
-     */
+        /**
+         * @return Business Context of the entry.
+         * 
+         */
     private final GoogleCloudDatacatalogV1BusinessContextResponse businessContext;
-    /**
-     * Physical location of the entry.
-     * 
-     */
+        /**
+         * @return Physical location of the entry.
+         * 
+         */
     private final GoogleCloudDatacatalogV1DataSourceResponse dataSource;
-    /**
-     * Specification that applies to a data source connection. Valid only for entries with the `DATA_SOURCE_CONNECTION` type.
-     * 
-     */
+        /**
+         * @return Specification that applies to a data source connection. Valid only for entries with the `DATA_SOURCE_CONNECTION` type.
+         * 
+         */
     private final GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse dataSourceConnectionSpec;
-    /**
-     * Specification that applies to a table resource. Valid only for entries with the `TABLE` type.
-     * 
-     */
+        /**
+         * @return Specification that applies to a table resource. Valid only for entries with the `TABLE` type.
+         * 
+         */
     private final GoogleCloudDatacatalogV1DatabaseTableSpecResponse databaseTableSpec;
-    /**
-     * Entry description that can consist of several sentences or paragraphs that describe entry contents. The description must not contain Unicode non-characters as well as C0 and C1 control codes except tabs (HT), new lines (LF), carriage returns (CR), and page breaks (FF). The maximum size is 2000 bytes when encoded in UTF-8. Default value is an empty string.
-     * 
-     */
+        /**
+         * @return Entry description that can consist of several sentences or paragraphs that describe entry contents. The description must not contain Unicode non-characters as well as C0 and C1 control codes except tabs (HT), new lines (LF), carriage returns (CR), and page breaks (FF). The maximum size is 2000 bytes when encoded in UTF-8. Default value is an empty string.
+         * 
+         */
     private final String description;
-    /**
-     * Display name of an entry. The name must contain only Unicode letters, numbers (0-9), underscores (_), dashes (-), spaces ( ), and can&#39;t start or end with spaces. The maximum size is 200 bytes when encoded in UTF-8. Default value is an empty string.
-     * 
-     */
+        /**
+         * @return Display name of an entry. The name must contain only Unicode letters, numbers (0-9), underscores (_), dashes (-), spaces ( ), and can&#39;t start or end with spaces. The maximum size is 200 bytes when encoded in UTF-8. Default value is an empty string.
+         * 
+         */
     private final String displayName;
-    /**
-     * Fully qualified name (FQN) of the resource. Set automatically for entries representing resources from synced systems. Settable only during creation and read-only afterwards. Can be used for search and lookup of the entries. FQNs take two forms: * For non-regionalized resources: `{SYSTEM}:{PROJECT}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` * For regionalized resources: `{SYSTEM}:{PROJECT}.{LOCATION_ID}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` Example for a DPMS table: `dataproc_metastore:{PROJECT_ID}.{LOCATION_ID}.{INSTANCE_ID}.{DATABASE_ID}.{TABLE_ID}`
-     * 
-     */
+        /**
+         * @return Fully qualified name (FQN) of the resource. Set automatically for entries representing resources from synced systems. Settable only during creation and read-only afterwards. Can be used for search and lookup of the entries. FQNs take two forms: * For non-regionalized resources: `{SYSTEM}:{PROJECT}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` * For regionalized resources: `{SYSTEM}:{PROJECT}.{LOCATION_ID}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` Example for a DPMS table: `dataproc_metastore:{PROJECT_ID}.{LOCATION_ID}.{INSTANCE_ID}.{DATABASE_ID}.{TABLE_ID}`
+         * 
+         */
     private final String fullyQualifiedName;
-    /**
-     * Specification that applies to a Cloud Storage fileset. Valid only for entries with the `FILESET` type.
-     * 
-     */
+        /**
+         * @return Specification that applies to a Cloud Storage fileset. Valid only for entries with the `FILESET` type.
+         * 
+         */
     private final GoogleCloudDatacatalogV1GcsFilesetSpecResponse gcsFilesetSpec;
-    /**
-     * Indicates the entry&#39;s source system that Data Catalog integrates with, such as BigQuery, Pub/Sub, or Dataproc Metastore.
-     * 
-     */
+        /**
+         * @return Indicates the entry&#39;s source system that Data Catalog integrates with, such as BigQuery, Pub/Sub, or Dataproc Metastore.
+         * 
+         */
     private final String integratedSystem;
-    /**
-     * Cloud labels attached to the entry. In Data Catalog, you can create and modify labels attached only to custom entries. Synced entries have unmodifiable labels that come from the source system.
-     * 
-     */
+        /**
+         * @return Cloud labels attached to the entry. In Data Catalog, you can create and modify labels attached only to custom entries. Synced entries have unmodifiable labels that come from the source system.
+         * 
+         */
     private final Map<String,String> labels;
-    /**
-     * The resource this metadata entry refers to. For Google Cloud Platform resources, `linked_resource` is the [Full Resource Name] (https://cloud.google.com/apis/design/resource_names#full_resource_name). For example, the `linked_resource` for a table resource from BigQuery is: `//bigquery.googleapis.com/projects/{PROJECT_ID}/datasets/{DATASET_ID}/tables/{TABLE_ID}` Output only when the entry is one of the types in the `EntryType` enum. For entries with a `user_specified_type`, this field is optional and defaults to an empty string. The resource string must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), periods (.), colons (:), slashes (/), dashes (-), and hashes (#). The maximum size is 200 bytes when encoded in UTF-8.
-     * 
-     */
+        /**
+         * @return The resource this metadata entry refers to. For Google Cloud Platform resources, `linked_resource` is the [Full Resource Name] (https://cloud.google.com/apis/design/resource_names#full_resource_name). For example, the `linked_resource` for a table resource from BigQuery is: `//bigquery.googleapis.com/projects/{PROJECT_ID}/datasets/{DATASET_ID}/tables/{TABLE_ID}` Output only when the entry is one of the types in the `EntryType` enum. For entries with a `user_specified_type`, this field is optional and defaults to an empty string. The resource string must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), periods (.), colons (:), slashes (/), dashes (-), and hashes (#). The maximum size is 200 bytes when encoded in UTF-8.
+         * 
+         */
     private final String linkedResource;
-    /**
-     * The resource name of an entry in URL format. Note: The entry itself and its child resources might not be stored in the location specified in its name.
-     * 
-     */
+        /**
+         * @return The resource name of an entry in URL format. Note: The entry itself and its child resources might not be stored in the location specified in its name.
+         * 
+         */
     private final String name;
-    /**
-     * Additional information related to the entry. Private to the current user.
-     * 
-     */
+        /**
+         * @return Additional information related to the entry. Private to the current user.
+         * 
+         */
     private final GoogleCloudDatacatalogV1PersonalDetailsResponse personalDetails;
-    /**
-     * Specification that applies to a user-defined function or procedure. Valid only for entries with the `ROUTINE` type.
-     * 
-     */
+        /**
+         * @return Specification that applies to a user-defined function or procedure. Valid only for entries with the `ROUTINE` type.
+         * 
+         */
     private final GoogleCloudDatacatalogV1RoutineSpecResponse routineSpec;
-    /**
-     * Schema of the entry. An entry might not have any schema attached to it.
-     * 
-     */
+        /**
+         * @return Schema of the entry. An entry might not have any schema attached to it.
+         * 
+         */
     private final GoogleCloudDatacatalogV1SchemaResponse schema;
-    /**
-     * Timestamps from the underlying resource, not from the Data Catalog entry. Output only when the entry has a type listed in the `EntryType` enum. For entries with `user_specified_type`, this field is optional and defaults to an empty timestamp.
-     * 
-     */
+        /**
+         * @return Timestamps from the underlying resource, not from the Data Catalog entry. Output only when the entry has a type listed in the `EntryType` enum. For entries with `user_specified_type`, this field is optional and defaults to an empty timestamp.
+         * 
+         */
     private final GoogleCloudDatacatalogV1SystemTimestampsResponse sourceSystemTimestamps;
-    /**
-     * The type of the entry. Only used for entries with types listed in the `EntryType` enum. Currently, only `FILESET` enum value is allowed. All other entries created in Data Catalog must use the `user_specified_type`.
-     * 
-     */
+        /**
+         * @return The type of the entry. Only used for entries with types listed in the `EntryType` enum. Currently, only `FILESET` enum value is allowed. All other entries created in Data Catalog must use the `user_specified_type`.
+         * 
+         */
     private final String type;
-    /**
-     * Resource usage statistics.
-     * 
-     */
+        /**
+         * @return Resource usage statistics.
+         * 
+         */
     private final GoogleCloudDatacatalogV1UsageSignalResponse usageSignal;
-    /**
-     * Indicates the entry&#39;s source system that Data Catalog doesn&#39;t automatically integrate with. The `user_specified_system` string has the following limitations: * Is case insensitive. * Must begin with a letter or underscore. * Can only contain letters, numbers, and underscores. * Must be at least 1 character and at most 64 characters long.
-     * 
-     */
+        /**
+         * @return Indicates the entry&#39;s source system that Data Catalog doesn&#39;t automatically integrate with. The `user_specified_system` string has the following limitations: * Is case insensitive. * Must begin with a letter or underscore. * Can only contain letters, numbers, and underscores. * Must be at least 1 character and at most 64 characters long.
+         * 
+         */
     private final String userSpecifiedSystem;
-    /**
-     * Custom entry type that doesn&#39;t match any of the values allowed for input and listed in the `EntryType` enum. When creating an entry, first check the type values in the enum. If there are no appropriate types for the new entry, provide a custom value, for example, `my_special_type`. The `user_specified_type` string has the following limitations: * Is case insensitive. * Must begin with a letter or underscore. * Can only contain letters, numbers, and underscores. * Must be at least 1 character and at most 64 characters long.
-     * 
-     */
+        /**
+         * @return Custom entry type that doesn&#39;t match any of the values allowed for input and listed in the `EntryType` enum. When creating an entry, first check the type values in the enum. If there are no appropriate types for the new entry, provide a custom value, for example, `my_special_type`. The `user_specified_type` string has the following limitations: * Is case insensitive. * Must begin with a letter or underscore. * Can only contain letters, numbers, and underscores. * Must be at least 1 character and at most 64 characters long.
+         * 
+         */
     private final String userSpecifiedType;
 
     @CustomType.Constructor
@@ -182,156 +182,156 @@ public final class GetEntryResult {
     }
 
     /**
-     * Specification for a group of BigQuery tables with the `[prefix]YYYYMMDD` name pattern. For more information, see [Introduction to partitioned tables] (https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding).
+     * @return Specification for a group of BigQuery tables with the `[prefix]YYYYMMDD` name pattern. For more information, see [Introduction to partitioned tables] (https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding).
      * 
-    */
+     */
     public GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse bigqueryDateShardedSpec() {
         return this.bigqueryDateShardedSpec;
     }
     /**
-     * Specification that applies to a BigQuery table. Valid only for entries with the `TABLE` type.
+     * @return Specification that applies to a BigQuery table. Valid only for entries with the `TABLE` type.
      * 
-    */
+     */
     public GoogleCloudDatacatalogV1BigQueryTableSpecResponse bigqueryTableSpec() {
         return this.bigqueryTableSpec;
     }
     /**
-     * Business Context of the entry.
+     * @return Business Context of the entry.
      * 
-    */
+     */
     public GoogleCloudDatacatalogV1BusinessContextResponse businessContext() {
         return this.businessContext;
     }
     /**
-     * Physical location of the entry.
+     * @return Physical location of the entry.
      * 
-    */
+     */
     public GoogleCloudDatacatalogV1DataSourceResponse dataSource() {
         return this.dataSource;
     }
     /**
-     * Specification that applies to a data source connection. Valid only for entries with the `DATA_SOURCE_CONNECTION` type.
+     * @return Specification that applies to a data source connection. Valid only for entries with the `DATA_SOURCE_CONNECTION` type.
      * 
-    */
+     */
     public GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse dataSourceConnectionSpec() {
         return this.dataSourceConnectionSpec;
     }
     /**
-     * Specification that applies to a table resource. Valid only for entries with the `TABLE` type.
+     * @return Specification that applies to a table resource. Valid only for entries with the `TABLE` type.
      * 
-    */
+     */
     public GoogleCloudDatacatalogV1DatabaseTableSpecResponse databaseTableSpec() {
         return this.databaseTableSpec;
     }
     /**
-     * Entry description that can consist of several sentences or paragraphs that describe entry contents. The description must not contain Unicode non-characters as well as C0 and C1 control codes except tabs (HT), new lines (LF), carriage returns (CR), and page breaks (FF). The maximum size is 2000 bytes when encoded in UTF-8. Default value is an empty string.
+     * @return Entry description that can consist of several sentences or paragraphs that describe entry contents. The description must not contain Unicode non-characters as well as C0 and C1 control codes except tabs (HT), new lines (LF), carriage returns (CR), and page breaks (FF). The maximum size is 2000 bytes when encoded in UTF-8. Default value is an empty string.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Display name of an entry. The name must contain only Unicode letters, numbers (0-9), underscores (_), dashes (-), spaces ( ), and can&#39;t start or end with spaces. The maximum size is 200 bytes when encoded in UTF-8. Default value is an empty string.
+     * @return Display name of an entry. The name must contain only Unicode letters, numbers (0-9), underscores (_), dashes (-), spaces ( ), and can&#39;t start or end with spaces. The maximum size is 200 bytes when encoded in UTF-8. Default value is an empty string.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Fully qualified name (FQN) of the resource. Set automatically for entries representing resources from synced systems. Settable only during creation and read-only afterwards. Can be used for search and lookup of the entries. FQNs take two forms: * For non-regionalized resources: `{SYSTEM}:{PROJECT}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` * For regionalized resources: `{SYSTEM}:{PROJECT}.{LOCATION_ID}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` Example for a DPMS table: `dataproc_metastore:{PROJECT_ID}.{LOCATION_ID}.{INSTANCE_ID}.{DATABASE_ID}.{TABLE_ID}`
+     * @return Fully qualified name (FQN) of the resource. Set automatically for entries representing resources from synced systems. Settable only during creation and read-only afterwards. Can be used for search and lookup of the entries. FQNs take two forms: * For non-regionalized resources: `{SYSTEM}:{PROJECT}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` * For regionalized resources: `{SYSTEM}:{PROJECT}.{LOCATION_ID}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` Example for a DPMS table: `dataproc_metastore:{PROJECT_ID}.{LOCATION_ID}.{INSTANCE_ID}.{DATABASE_ID}.{TABLE_ID}`
      * 
-    */
+     */
     public String fullyQualifiedName() {
         return this.fullyQualifiedName;
     }
     /**
-     * Specification that applies to a Cloud Storage fileset. Valid only for entries with the `FILESET` type.
+     * @return Specification that applies to a Cloud Storage fileset. Valid only for entries with the `FILESET` type.
      * 
-    */
+     */
     public GoogleCloudDatacatalogV1GcsFilesetSpecResponse gcsFilesetSpec() {
         return this.gcsFilesetSpec;
     }
     /**
-     * Indicates the entry&#39;s source system that Data Catalog integrates with, such as BigQuery, Pub/Sub, or Dataproc Metastore.
+     * @return Indicates the entry&#39;s source system that Data Catalog integrates with, such as BigQuery, Pub/Sub, or Dataproc Metastore.
      * 
-    */
+     */
     public String integratedSystem() {
         return this.integratedSystem;
     }
     /**
-     * Cloud labels attached to the entry. In Data Catalog, you can create and modify labels attached only to custom entries. Synced entries have unmodifiable labels that come from the source system.
+     * @return Cloud labels attached to the entry. In Data Catalog, you can create and modify labels attached only to custom entries. Synced entries have unmodifiable labels that come from the source system.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The resource this metadata entry refers to. For Google Cloud Platform resources, `linked_resource` is the [Full Resource Name] (https://cloud.google.com/apis/design/resource_names#full_resource_name). For example, the `linked_resource` for a table resource from BigQuery is: `//bigquery.googleapis.com/projects/{PROJECT_ID}/datasets/{DATASET_ID}/tables/{TABLE_ID}` Output only when the entry is one of the types in the `EntryType` enum. For entries with a `user_specified_type`, this field is optional and defaults to an empty string. The resource string must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), periods (.), colons (:), slashes (/), dashes (-), and hashes (#). The maximum size is 200 bytes when encoded in UTF-8.
+     * @return The resource this metadata entry refers to. For Google Cloud Platform resources, `linked_resource` is the [Full Resource Name] (https://cloud.google.com/apis/design/resource_names#full_resource_name). For example, the `linked_resource` for a table resource from BigQuery is: `//bigquery.googleapis.com/projects/{PROJECT_ID}/datasets/{DATASET_ID}/tables/{TABLE_ID}` Output only when the entry is one of the types in the `EntryType` enum. For entries with a `user_specified_type`, this field is optional and defaults to an empty string. The resource string must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), periods (.), colons (:), slashes (/), dashes (-), and hashes (#). The maximum size is 200 bytes when encoded in UTF-8.
      * 
-    */
+     */
     public String linkedResource() {
         return this.linkedResource;
     }
     /**
-     * The resource name of an entry in URL format. Note: The entry itself and its child resources might not be stored in the location specified in its name.
+     * @return The resource name of an entry in URL format. Note: The entry itself and its child resources might not be stored in the location specified in its name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Additional information related to the entry. Private to the current user.
+     * @return Additional information related to the entry. Private to the current user.
      * 
-    */
+     */
     public GoogleCloudDatacatalogV1PersonalDetailsResponse personalDetails() {
         return this.personalDetails;
     }
     /**
-     * Specification that applies to a user-defined function or procedure. Valid only for entries with the `ROUTINE` type.
+     * @return Specification that applies to a user-defined function or procedure. Valid only for entries with the `ROUTINE` type.
      * 
-    */
+     */
     public GoogleCloudDatacatalogV1RoutineSpecResponse routineSpec() {
         return this.routineSpec;
     }
     /**
-     * Schema of the entry. An entry might not have any schema attached to it.
+     * @return Schema of the entry. An entry might not have any schema attached to it.
      * 
-    */
+     */
     public GoogleCloudDatacatalogV1SchemaResponse schema() {
         return this.schema;
     }
     /**
-     * Timestamps from the underlying resource, not from the Data Catalog entry. Output only when the entry has a type listed in the `EntryType` enum. For entries with `user_specified_type`, this field is optional and defaults to an empty timestamp.
+     * @return Timestamps from the underlying resource, not from the Data Catalog entry. Output only when the entry has a type listed in the `EntryType` enum. For entries with `user_specified_type`, this field is optional and defaults to an empty timestamp.
      * 
-    */
+     */
     public GoogleCloudDatacatalogV1SystemTimestampsResponse sourceSystemTimestamps() {
         return this.sourceSystemTimestamps;
     }
     /**
-     * The type of the entry. Only used for entries with types listed in the `EntryType` enum. Currently, only `FILESET` enum value is allowed. All other entries created in Data Catalog must use the `user_specified_type`.
+     * @return The type of the entry. Only used for entries with types listed in the `EntryType` enum. Currently, only `FILESET` enum value is allowed. All other entries created in Data Catalog must use the `user_specified_type`.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Resource usage statistics.
+     * @return Resource usage statistics.
      * 
-    */
+     */
     public GoogleCloudDatacatalogV1UsageSignalResponse usageSignal() {
         return this.usageSignal;
     }
     /**
-     * Indicates the entry&#39;s source system that Data Catalog doesn&#39;t automatically integrate with. The `user_specified_system` string has the following limitations: * Is case insensitive. * Must begin with a letter or underscore. * Can only contain letters, numbers, and underscores. * Must be at least 1 character and at most 64 characters long.
+     * @return Indicates the entry&#39;s source system that Data Catalog doesn&#39;t automatically integrate with. The `user_specified_system` string has the following limitations: * Is case insensitive. * Must begin with a letter or underscore. * Can only contain letters, numbers, and underscores. * Must be at least 1 character and at most 64 characters long.
      * 
-    */
+     */
     public String userSpecifiedSystem() {
         return this.userSpecifiedSystem;
     }
     /**
-     * Custom entry type that doesn&#39;t match any of the values allowed for input and listed in the `EntryType` enum. When creating an entry, first check the type values in the enum. If there are no appropriate types for the new entry, provide a custom value, for example, `my_special_type`. The `user_specified_type` string has the following limitations: * Is case insensitive. * Must begin with a letter or underscore. * Can only contain letters, numbers, and underscores. * Must be at least 1 character and at most 64 characters long.
+     * @return Custom entry type that doesn&#39;t match any of the values allowed for input and listed in the `EntryType` enum. When creating an entry, first check the type values in the enum. If there are no appropriate types for the new entry, provide a custom value, for example, `my_special_type`. The `user_specified_type` string has the following limitations: * Is case insensitive. * Must begin with a letter or underscore. * Can only contain letters, numbers, and underscores. * Must be at least 1 character and at most 64 characters long.
      * 
-    */
+     */
     public String userSpecifiedType() {
         return this.userSpecifiedType;
     }

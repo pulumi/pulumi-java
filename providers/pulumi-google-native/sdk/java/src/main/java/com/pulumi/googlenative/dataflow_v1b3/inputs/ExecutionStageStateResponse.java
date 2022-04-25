@@ -23,6 +23,10 @@ public final class ExecutionStageStateResponse extends com.pulumi.resources.Invo
     @Import(name="currentStateTime", required=true)
     private String currentStateTime;
 
+    /**
+     * @return The time at which the stage transitioned to this state.
+     * 
+     */
     public String currentStateTime() {
         return this.currentStateTime;
     }
@@ -34,6 +38,10 @@ public final class ExecutionStageStateResponse extends com.pulumi.resources.Invo
     @Import(name="executionStageName", required=true)
     private String executionStageName;
 
+    /**
+     * @return The name of the execution stage.
+     * 
+     */
     public String executionStageName() {
         return this.executionStageName;
     }
@@ -45,6 +53,10 @@ public final class ExecutionStageStateResponse extends com.pulumi.resources.Invo
     @Import(name="executionStageState", required=true)
     private String executionStageState;
 
+    /**
+     * @return Executions stage states allow the same set of values as JobState.
+     * 
+     */
     public String executionStageState() {
         return this.executionStageState;
     }
@@ -75,16 +87,34 @@ public final class ExecutionStageStateResponse extends com.pulumi.resources.Invo
             $ = new ExecutionStageStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param currentStateTime The time at which the stage transitioned to this state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentStateTime(String currentStateTime) {
             $.currentStateTime = currentStateTime;
             return this;
         }
 
+        /**
+         * @param executionStageName The name of the execution stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionStageName(String executionStageName) {
             $.executionStageName = executionStageName;
             return this;
         }
 
+        /**
+         * @param executionStageState Executions stage states allow the same set of values as JobState.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionStageState(String executionStageState) {
             $.executionStageState = executionStageState;
             return this;

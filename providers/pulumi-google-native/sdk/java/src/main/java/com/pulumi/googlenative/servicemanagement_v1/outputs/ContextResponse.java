@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ContextResponse {
-    /**
-     * A list of RPC context rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
-     * 
-     */
+        /**
+         * @return A list of RPC context rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         */
     private final List<ContextRuleResponse> rules;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class ContextResponse {
     }
 
     /**
-     * A list of RPC context rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+     * @return A list of RPC context rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
      * 
-    */
+     */
     public List<ContextRuleResponse> rules() {
         return this.rules;
     }

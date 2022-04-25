@@ -11,30 +11,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse {
-    /**
-     * Total number of equivalence classes in this bucket.
-     * 
-     */
+        /**
+         * @return Total number of equivalence classes in this bucket.
+         * 
+         */
     private final String bucketSize;
-    /**
-     * Total number of distinct equivalence classes in this bucket.
-     * 
-     */
+        /**
+         * @return Total number of distinct equivalence classes in this bucket.
+         * 
+         */
     private final String bucketValueCount;
-    /**
-     * Sample of equivalence classes in this bucket. The total number of classes returned per bucket is capped at 20.
-     * 
-     */
+        /**
+         * @return Sample of equivalence classes in this bucket. The total number of classes returned per bucket is capped at 20.
+         * 
+         */
     private final List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> bucketValues;
-    /**
-     * Lower bound on the size of the equivalence classes in this bucket.
-     * 
-     */
+        /**
+         * @return Lower bound on the size of the equivalence classes in this bucket.
+         * 
+         */
     private final String equivalenceClassSizeLowerBound;
-    /**
-     * Upper bound on the size of the equivalence classes in this bucket.
-     * 
-     */
+        /**
+         * @return Upper bound on the size of the equivalence classes in this bucket.
+         * 
+         */
     private final String equivalenceClassSizeUpperBound;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse {
     }
 
     /**
-     * Total number of equivalence classes in this bucket.
+     * @return Total number of equivalence classes in this bucket.
      * 
-    */
+     */
     public String bucketSize() {
         return this.bucketSize;
     }
     /**
-     * Total number of distinct equivalence classes in this bucket.
+     * @return Total number of distinct equivalence classes in this bucket.
      * 
-    */
+     */
     public String bucketValueCount() {
         return this.bucketValueCount;
     }
     /**
-     * Sample of equivalence classes in this bucket. The total number of classes returned per bucket is capped at 20.
+     * @return Sample of equivalence classes in this bucket. The total number of classes returned per bucket is capped at 20.
      * 
-    */
+     */
     public List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> bucketValues() {
         return this.bucketValues;
     }
     /**
-     * Lower bound on the size of the equivalence classes in this bucket.
+     * @return Lower bound on the size of the equivalence classes in this bucket.
      * 
-    */
+     */
     public String equivalenceClassSizeLowerBound() {
         return this.equivalenceClassSizeLowerBound;
     }
     /**
-     * Upper bound on the size of the equivalence classes in this bucket.
+     * @return Upper bound on the size of the equivalence classes in this bucket.
      * 
-    */
+     */
     public String equivalenceClassSizeUpperBound() {
         return this.equivalenceClassSizeUpperBound;
     }

@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowCxV3TextInputArgs extends com.pulumi.res
     @Import(name="text", required=true)
     private Output<String> text;
 
+    /**
+     * @return The UTF-8 encoded natural language text to be processed. Text length must not exceed 256 characters.
+     * 
+     */
     public Output<String> text() {
         return this.text;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudDialogflowCxV3TextInputArgs extends com.pulumi.res
             $ = new GoogleCloudDialogflowCxV3TextInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param text The UTF-8 encoded natural language text to be processed. Text length must not exceed 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(Output<String> text) {
             $.text = text;
             return this;
         }
 
+        /**
+         * @param text The UTF-8 encoded natural language text to be processed. Text length must not exceed 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String text) {
             return text(Output.of(text));
         }

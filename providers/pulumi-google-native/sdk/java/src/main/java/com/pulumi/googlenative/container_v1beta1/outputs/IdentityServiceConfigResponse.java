@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class IdentityServiceConfigResponse {
-    /**
-     * Whether to enable the Identity Service component
-     * 
-     */
+        /**
+         * @return Whether to enable the Identity Service component
+         * 
+         */
     private final Boolean enabled;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class IdentityServiceConfigResponse {
     }
 
     /**
-     * Whether to enable the Identity Service component
+     * @return Whether to enable the Identity Service component
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }

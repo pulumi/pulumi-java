@@ -11,30 +11,30 @@ import java.util.Objects;
 
 @CustomType
 public final class TemplateContentsResponse {
-    /**
-     * Import files referenced by the main template.
-     * 
-     */
+        /**
+         * @return Import files referenced by the main template.
+         * 
+         */
     private final List<ImportFileResponse> imports;
-    /**
-     * Which interpreter (python or jinja) should be used during expansion.
-     * 
-     */
+        /**
+         * @return Which interpreter (python or jinja) should be used during expansion.
+         * 
+         */
     private final String interpreter;
-    /**
-     * The filename of the mainTemplate
-     * 
-     */
+        /**
+         * @return The filename of the mainTemplate
+         * 
+         */
     private final String mainTemplate;
-    /**
-     * The contents of the template schema.
-     * 
-     */
+        /**
+         * @return The contents of the template schema.
+         * 
+         */
     private final String schema;
-    /**
-     * The contents of the main template file.
-     * 
-     */
+        /**
+         * @return The contents of the main template file.
+         * 
+         */
     private final String template;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class TemplateContentsResponse {
     }
 
     /**
-     * Import files referenced by the main template.
+     * @return Import files referenced by the main template.
      * 
-    */
+     */
     public List<ImportFileResponse> imports() {
         return this.imports;
     }
     /**
-     * Which interpreter (python or jinja) should be used during expansion.
+     * @return Which interpreter (python or jinja) should be used during expansion.
      * 
-    */
+     */
     public String interpreter() {
         return this.interpreter;
     }
     /**
-     * The filename of the mainTemplate
+     * @return The filename of the mainTemplate
      * 
-    */
+     */
     public String mainTemplate() {
         return this.mainTemplate;
     }
     /**
-     * The contents of the template schema.
+     * @return The contents of the template schema.
      * 
-    */
+     */
     public String schema() {
         return this.schema;
     }
     /**
-     * The contents of the main template file.
+     * @return The contents of the main template file.
      * 
-    */
+     */
     public String template() {
         return this.template;
     }

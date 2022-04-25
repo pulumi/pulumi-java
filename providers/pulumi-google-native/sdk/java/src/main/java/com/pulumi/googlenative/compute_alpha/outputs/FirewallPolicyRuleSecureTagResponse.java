@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class FirewallPolicyRuleSecureTagResponse {
-    /**
-     * Name of the secure tag, created with TagManager&#39;s TagValue API.
-     * 
-     */
+        /**
+         * @return Name of the secure tag, created with TagManager&#39;s TagValue API.
+         * 
+         */
     private final String name;
-    /**
-     * State of the secure tag, either `EFFECTIVE` or `INEFFECTIVE`. A secure tag is `INEFFECTIVE` when it is deleted or its network is deleted.
-     * 
-     */
+        /**
+         * @return State of the secure tag, either `EFFECTIVE` or `INEFFECTIVE`. A secure tag is `INEFFECTIVE` when it is deleted or its network is deleted.
+         * 
+         */
     private final String state;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class FirewallPolicyRuleSecureTagResponse {
     }
 
     /**
-     * Name of the secure tag, created with TagManager&#39;s TagValue API.
+     * @return Name of the secure tag, created with TagManager&#39;s TagValue API.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * State of the secure tag, either `EFFECTIVE` or `INEFFECTIVE`. A secure tag is `INEFFECTIVE` when it is deleted or its network is deleted.
+     * @return State of the secure tag, either `EFFECTIVE` or `INEFFECTIVE`. A secure tag is `INEFFECTIVE` when it is deleted or its network is deleted.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

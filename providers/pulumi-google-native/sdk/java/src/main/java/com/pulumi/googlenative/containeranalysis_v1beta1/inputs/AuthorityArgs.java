@@ -26,6 +26,10 @@ public final class AuthorityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hint")
     private @Nullable Output<HintArgs> hint;
 
+    /**
+     * @return Hint hints at the purpose of the attestation authority.
+     * 
+     */
     public Optional<Output<HintArgs>> hint() {
         return Optional.ofNullable(this.hint);
     }
@@ -54,11 +58,23 @@ public final class AuthorityArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AuthorityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hint Hint hints at the purpose of the attestation authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hint(@Nullable Output<HintArgs> hint) {
             $.hint = hint;
             return this;
         }
 
+        /**
+         * @param hint Hint hints at the purpose of the attestation authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hint(HintArgs hint) {
             return hint(Output.of(hint));
         }

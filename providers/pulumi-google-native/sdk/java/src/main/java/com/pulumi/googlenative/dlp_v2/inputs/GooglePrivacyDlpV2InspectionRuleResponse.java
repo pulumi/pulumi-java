@@ -24,6 +24,10 @@ public final class GooglePrivacyDlpV2InspectionRuleResponse extends com.pulumi.r
     @Import(name="exclusionRule", required=true)
     private GooglePrivacyDlpV2ExclusionRuleResponse exclusionRule;
 
+    /**
+     * @return Exclusion rule.
+     * 
+     */
     public GooglePrivacyDlpV2ExclusionRuleResponse exclusionRule() {
         return this.exclusionRule;
     }
@@ -35,6 +39,10 @@ public final class GooglePrivacyDlpV2InspectionRuleResponse extends com.pulumi.r
     @Import(name="hotwordRule", required=true)
     private GooglePrivacyDlpV2HotwordRuleResponse hotwordRule;
 
+    /**
+     * @return Hotword-based detection rule.
+     * 
+     */
     public GooglePrivacyDlpV2HotwordRuleResponse hotwordRule() {
         return this.hotwordRule;
     }
@@ -64,11 +72,23 @@ public final class GooglePrivacyDlpV2InspectionRuleResponse extends com.pulumi.r
             $ = new GooglePrivacyDlpV2InspectionRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exclusionRule Exclusion rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusionRule(GooglePrivacyDlpV2ExclusionRuleResponse exclusionRule) {
             $.exclusionRule = exclusionRule;
             return this;
         }
 
+        /**
+         * @param hotwordRule Hotword-based detection rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hotwordRule(GooglePrivacyDlpV2HotwordRuleResponse hotwordRule) {
             $.hotwordRule = hotwordRule;
             return this;

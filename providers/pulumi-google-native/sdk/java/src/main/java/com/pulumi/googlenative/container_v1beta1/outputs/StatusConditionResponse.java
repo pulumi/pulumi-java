@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class StatusConditionResponse {
-    /**
-     * Canonical code of the condition.
-     * 
-     */
+        /**
+         * @return Canonical code of the condition.
+         * 
+         */
     private final String canonicalCode;
-    /**
-     * Human-friendly representation of the condition
-     * 
-     */
+        /**
+         * @return Human-friendly representation of the condition
+         * 
+         */
     private final String message;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class StatusConditionResponse {
     }
 
     /**
-     * Canonical code of the condition.
+     * @return Canonical code of the condition.
      * 
-    */
+     */
     public String canonicalCode() {
         return this.canonicalCode;
     }
     /**
-     * Human-friendly representation of the condition
+     * @return Human-friendly representation of the condition
      * 
-    */
+     */
     public String message() {
         return this.message;
     }

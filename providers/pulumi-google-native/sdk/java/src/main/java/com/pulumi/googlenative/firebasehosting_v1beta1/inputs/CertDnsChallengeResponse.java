@@ -23,6 +23,10 @@ public final class CertDnsChallengeResponse extends com.pulumi.resources.InvokeA
     @Import(name="domainName", required=true)
     private String domainName;
 
+    /**
+     * @return The domain name upon which the DNS challenge must be satisfied.
+     * 
+     */
     public String domainName() {
         return this.domainName;
     }
@@ -34,6 +38,10 @@ public final class CertDnsChallengeResponse extends com.pulumi.resources.InvokeA
     @Import(name="token", required=true)
     private String token;
 
+    /**
+     * @return The value that must be present as a TXT record on the domain name to satisfy the challenge.
+     * 
+     */
     public String token() {
         return this.token;
     }
@@ -63,11 +71,23 @@ public final class CertDnsChallengeResponse extends com.pulumi.resources.InvokeA
             $ = new CertDnsChallengeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainName The domain name upon which the DNS challenge must be satisfied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param token The value that must be present as a TXT record on the domain name to satisfy the challenge.
+         * 
+         * @return builder
+         * 
+         */
         public Builder token(String token) {
             $.token = token;
             return this;

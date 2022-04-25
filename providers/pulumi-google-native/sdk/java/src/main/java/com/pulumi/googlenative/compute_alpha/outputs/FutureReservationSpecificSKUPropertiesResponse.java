@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class FutureReservationSpecificSKUPropertiesResponse {
-    /**
-     * Properties of the SKU instances being reserved.
-     * 
-     */
+        /**
+         * @return Properties of the SKU instances being reserved.
+         * 
+         */
     private final AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties;
-    /**
-     * Total number of instances for which capacity assurance is requested at a future time period.
-     * 
-     */
+        /**
+         * @return Total number of instances for which capacity assurance is requested at a future time period.
+         * 
+         */
     private final String totalCount;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class FutureReservationSpecificSKUPropertiesResponse {
     }
 
     /**
-     * Properties of the SKU instances being reserved.
+     * @return Properties of the SKU instances being reserved.
      * 
-    */
+     */
     public AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties() {
         return this.instanceProperties;
     }
     /**
-     * Total number of instances for which capacity assurance is requested at a future time period.
+     * @return Total number of instances for which capacity assurance is requested at a future time period.
      * 
-    */
+     */
     public String totalCount() {
         return this.totalCount;
     }

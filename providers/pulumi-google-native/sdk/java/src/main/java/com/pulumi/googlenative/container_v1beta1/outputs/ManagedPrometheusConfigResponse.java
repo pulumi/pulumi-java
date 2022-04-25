@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ManagedPrometheusConfigResponse {
-    /**
-     * Enable Managed Collection.
-     * 
-     */
+        /**
+         * @return Enable Managed Collection.
+         * 
+         */
     private final Boolean enabled;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ManagedPrometheusConfigResponse {
     }
 
     /**
-     * Enable Managed Collection.
+     * @return Enable Managed Collection.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }

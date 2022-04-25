@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class JobDerivedInfoResponse {
-    /**
-     * Job categories derived from Job.title and Job.description.
-     * 
-     */
+        /**
+         * @return Job categories derived from Job.title and Job.description.
+         * 
+         */
     private final List<String> jobCategories;
-    /**
-     * Structured locations of the job, resolved from Job.addresses. locations are exactly matched to Job.addresses in the same order.
-     * 
-     */
+        /**
+         * @return Structured locations of the job, resolved from Job.addresses. locations are exactly matched to Job.addresses in the same order.
+         * 
+         */
     private final List<LocationResponse> locations;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class JobDerivedInfoResponse {
     }
 
     /**
-     * Job categories derived from Job.title and Job.description.
+     * @return Job categories derived from Job.title and Job.description.
      * 
-    */
+     */
     public List<String> jobCategories() {
         return this.jobCategories;
     }
     /**
-     * Structured locations of the job, resolved from Job.addresses. locations are exactly matched to Job.addresses in the same order.
+     * @return Structured locations of the job, resolved from Job.addresses. locations are exactly matched to Job.addresses in the same order.
      * 
-    */
+     */
     public List<LocationResponse> locations() {
         return this.locations;
     }

@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse {
-    /**
-     * Specification for the BigQuery connection to a Cloud SQL instance.
-     * 
-     */
+        /**
+         * @return Specification for the BigQuery connection to a Cloud SQL instance.
+         * 
+         */
     private final GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql;
-    /**
-     * The type of the BigQuery connection.
-     * 
-     */
+        /**
+         * @return The type of the BigQuery connection.
+         * 
+         */
     private final String connectionType;
-    /**
-     * True if there are credentials attached to the BigQuery connection; false otherwise.
-     * 
-     */
+        /**
+         * @return True if there are credentials attached to the BigQuery connection; false otherwise.
+         * 
+         */
     private final Boolean hasCredential;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse {
     }
 
     /**
-     * Specification for the BigQuery connection to a Cloud SQL instance.
+     * @return Specification for the BigQuery connection to a Cloud SQL instance.
      * 
-    */
+     */
     public GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql() {
         return this.cloudSql;
     }
     /**
-     * The type of the BigQuery connection.
+     * @return The type of the BigQuery connection.
      * 
-    */
+     */
     public String connectionType() {
         return this.connectionType;
     }
     /**
-     * True if there are credentials attached to the BigQuery connection; false otherwise.
+     * @return True if there are credentials attached to the BigQuery connection; false otherwise.
      * 
-    */
+     */
     public Boolean hasCredential() {
         return this.hasCredential;
     }

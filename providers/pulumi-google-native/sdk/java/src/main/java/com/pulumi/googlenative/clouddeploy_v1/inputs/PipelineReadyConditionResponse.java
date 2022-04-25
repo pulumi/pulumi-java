@@ -24,6 +24,10 @@ public final class PipelineReadyConditionResponse extends com.pulumi.resources.I
     @Import(name="status", required=true)
     private Boolean status;
 
+    /**
+     * @return True if the Pipeline is in a valid state. Otherwise at least one condition in `PipelineCondition` is in an invalid state. Iterate over those conditions and see which condition(s) has status = false to find out what is wrong with the Pipeline.
+     * 
+     */
     public Boolean status() {
         return this.status;
     }
@@ -35,6 +39,10 @@ public final class PipelineReadyConditionResponse extends com.pulumi.resources.I
     @Import(name="updateTime", required=true)
     private String updateTime;
 
+    /**
+     * @return Last time the condition was updated.
+     * 
+     */
     public String updateTime() {
         return this.updateTime;
     }
@@ -64,11 +72,23 @@ public final class PipelineReadyConditionResponse extends com.pulumi.resources.I
             $ = new PipelineReadyConditionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param status True if the Pipeline is in a valid state. Otherwise at least one condition in `PipelineCondition` is in an invalid state. Iterate over those conditions and see which condition(s) has status = false to find out what is wrong with the Pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Boolean status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param updateTime Last time the condition was updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             $.updateTime = updateTime;
             return this;

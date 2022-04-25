@@ -29,6 +29,10 @@ public final class DnsSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customDns")
     private @Nullable Output<CustomDnsArgs> customDns;
 
+    /**
+     * @return An arbitrary DNS provider identified by its name servers.
+     * 
+     */
     public Optional<Output<CustomDnsArgs>> customDns() {
         return Optional.ofNullable(this.customDns);
     }
@@ -40,6 +44,10 @@ public final class DnsSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="glueRecords")
     private @Nullable Output<List<GlueRecordArgs>> glueRecords;
 
+    /**
+     * @return The list of glue records for this `Registration`. Commonly empty.
+     * 
+     */
     public Optional<Output<List<GlueRecordArgs>>> glueRecords() {
         return Optional.ofNullable(this.glueRecords);
     }
@@ -51,6 +59,10 @@ public final class DnsSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="googleDomainsDns")
     private @Nullable Output<GoogleDomainsDnsArgs> googleDomainsDns;
 
+    /**
+     * @return The free DNS zone provided by [Google Domains](https://domains.google/).
+     * 
+     */
     public Optional<Output<GoogleDomainsDnsArgs>> googleDomainsDns() {
         return Optional.ofNullable(this.googleDomainsDns);
     }
@@ -81,33 +93,75 @@ public final class DnsSettingsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DnsSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customDns An arbitrary DNS provider identified by its name servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customDns(@Nullable Output<CustomDnsArgs> customDns) {
             $.customDns = customDns;
             return this;
         }
 
+        /**
+         * @param customDns An arbitrary DNS provider identified by its name servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customDns(CustomDnsArgs customDns) {
             return customDns(Output.of(customDns));
         }
 
+        /**
+         * @param glueRecords The list of glue records for this `Registration`. Commonly empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder glueRecords(@Nullable Output<List<GlueRecordArgs>> glueRecords) {
             $.glueRecords = glueRecords;
             return this;
         }
 
+        /**
+         * @param glueRecords The list of glue records for this `Registration`. Commonly empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder glueRecords(List<GlueRecordArgs> glueRecords) {
             return glueRecords(Output.of(glueRecords));
         }
 
+        /**
+         * @param glueRecords The list of glue records for this `Registration`. Commonly empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder glueRecords(GlueRecordArgs... glueRecords) {
             return glueRecords(List.of(glueRecords));
         }
 
+        /**
+         * @param googleDomainsDns The free DNS zone provided by [Google Domains](https://domains.google/).
+         * 
+         * @return builder
+         * 
+         */
         public Builder googleDomainsDns(@Nullable Output<GoogleDomainsDnsArgs> googleDomainsDns) {
             $.googleDomainsDns = googleDomainsDns;
             return this;
         }
 
+        /**
+         * @param googleDomainsDns The free DNS zone provided by [Google Domains](https://domains.google/).
+         * 
+         * @return builder
+         * 
+         */
         public Builder googleDomainsDns(GoogleDomainsDnsArgs googleDomainsDns) {
             return googleDomainsDns(Output.of(googleDomainsDns));
         }

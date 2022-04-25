@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class ErrorProtoResponse {
-    /**
-     * Debugging information. This property is internal to Google and should not be used.
-     * 
-     */
+        /**
+         * @return Debugging information. This property is internal to Google and should not be used.
+         * 
+         */
     private final String debugInfo;
-    /**
-     * Specifies where the error occurred, if present.
-     * 
-     */
+        /**
+         * @return Specifies where the error occurred, if present.
+         * 
+         */
     private final String location;
-    /**
-     * A human-readable description of the error.
-     * 
-     */
+        /**
+         * @return A human-readable description of the error.
+         * 
+         */
     private final String message;
-    /**
-     * A short error code that summarizes the error.
-     * 
-     */
+        /**
+         * @return A short error code that summarizes the error.
+         * 
+         */
     private final String reason;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class ErrorProtoResponse {
     }
 
     /**
-     * Debugging information. This property is internal to Google and should not be used.
+     * @return Debugging information. This property is internal to Google and should not be used.
      * 
-    */
+     */
     public String debugInfo() {
         return this.debugInfo;
     }
     /**
-     * Specifies where the error occurred, if present.
+     * @return Specifies where the error occurred, if present.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * A human-readable description of the error.
+     * @return A human-readable description of the error.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * A short error code that summarizes the error.
+     * @return A short error code that summarizes the error.
      * 
-    */
+     */
     public String reason() {
         return this.reason;
     }

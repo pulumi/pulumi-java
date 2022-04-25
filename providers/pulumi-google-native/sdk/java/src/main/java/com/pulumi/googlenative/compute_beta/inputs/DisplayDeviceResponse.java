@@ -23,6 +23,10 @@ public final class DisplayDeviceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="enableDisplay", required=true)
     private Boolean enableDisplay;
 
+    /**
+     * @return Defines whether the instance has Display enabled.
+     * 
+     */
     public Boolean enableDisplay() {
         return this.enableDisplay;
     }
@@ -51,6 +55,12 @@ public final class DisplayDeviceResponse extends com.pulumi.resources.InvokeArgs
             $ = new DisplayDeviceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableDisplay Defines whether the instance has Display enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDisplay(Boolean enableDisplay) {
             $.enableDisplay = enableDisplay;
             return this;

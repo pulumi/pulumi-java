@@ -25,6 +25,10 @@ public final class GridLayoutResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="columns", required=true)
     private String columns;
 
+    /**
+     * @return The number of columns into which the view&#39;s width is divided. If omitted or set to zero, a system default will be used while rendering.
+     * 
+     */
     public String columns() {
         return this.columns;
     }
@@ -36,6 +40,10 @@ public final class GridLayoutResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="widgets", required=true)
     private List<WidgetResponse> widgets;
 
+    /**
+     * @return The informational elements that are arranged into the columns row-first.
+     * 
+     */
     public List<WidgetResponse> widgets() {
         return this.widgets;
     }
@@ -65,16 +73,34 @@ public final class GridLayoutResponse extends com.pulumi.resources.InvokeArgs {
             $ = new GridLayoutResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columns The number of columns into which the view&#39;s width is divided. If omitted or set to zero, a system default will be used while rendering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(String columns) {
             $.columns = columns;
             return this;
         }
 
+        /**
+         * @param widgets The informational elements that are arranged into the columns row-first.
+         * 
+         * @return builder
+         * 
+         */
         public Builder widgets(List<WidgetResponse> widgets) {
             $.widgets = widgets;
             return this;
         }
 
+        /**
+         * @param widgets The informational elements that are arranged into the columns row-first.
+         * 
+         * @return builder
+         * 
+         */
         public Builder widgets(WidgetResponse... widgets) {
             return widgets(List.of(widgets));
         }

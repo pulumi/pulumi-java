@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class CloudSqlConnectionProfileResponse {
-    /**
-     * The Cloud SQL instance ID that this connection profile is associated with.
-     * 
-     */
+        /**
+         * @return The Cloud SQL instance ID that this connection profile is associated with.
+         * 
+         */
     private final String cloudSqlId;
-    /**
-     * The Cloud SQL database instance&#39;s private IP.
-     * 
-     */
+        /**
+         * @return The Cloud SQL database instance&#39;s private IP.
+         * 
+         */
     private final String privateIp;
-    /**
-     * The Cloud SQL database instance&#39;s public IP.
-     * 
-     */
+        /**
+         * @return The Cloud SQL database instance&#39;s public IP.
+         * 
+         */
     private final String publicIp;
-    /**
-     * Immutable. Metadata used to create the destination Cloud SQL database.
-     * 
-     */
+        /**
+         * @return Immutable. Metadata used to create the destination Cloud SQL database.
+         * 
+         */
     private final CloudSqlSettingsResponse settings;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class CloudSqlConnectionProfileResponse {
     }
 
     /**
-     * The Cloud SQL instance ID that this connection profile is associated with.
+     * @return The Cloud SQL instance ID that this connection profile is associated with.
      * 
-    */
+     */
     public String cloudSqlId() {
         return this.cloudSqlId;
     }
     /**
-     * The Cloud SQL database instance&#39;s private IP.
+     * @return The Cloud SQL database instance&#39;s private IP.
      * 
-    */
+     */
     public String privateIp() {
         return this.privateIp;
     }
     /**
-     * The Cloud SQL database instance&#39;s public IP.
+     * @return The Cloud SQL database instance&#39;s public IP.
      * 
-    */
+     */
     public String publicIp() {
         return this.publicIp;
     }
     /**
-     * Immutable. Metadata used to create the destination Cloud SQL database.
+     * @return Immutable. Metadata used to create the destination Cloud SQL database.
      * 
-    */
+     */
     public CloudSqlSettingsResponse settings() {
         return this.settings;
     }

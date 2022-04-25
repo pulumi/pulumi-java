@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudApigeeV1EntityMetadataResponse {
-    /**
-     * Time at which the API proxy was created, in milliseconds since epoch.
-     * 
-     */
+        /**
+         * @return Time at which the API proxy was created, in milliseconds since epoch.
+         * 
+         */
     private final String createdAt;
-    /**
-     * Time at which the API proxy was most recently modified, in milliseconds since epoch.
-     * 
-     */
+        /**
+         * @return Time at which the API proxy was most recently modified, in milliseconds since epoch.
+         * 
+         */
     private final String lastModifiedAt;
-    /**
-     * The type of entity described
-     * 
-     */
+        /**
+         * @return The type of entity described
+         * 
+         */
     private final String subType;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class GoogleCloudApigeeV1EntityMetadataResponse {
     }
 
     /**
-     * Time at which the API proxy was created, in milliseconds since epoch.
+     * @return Time at which the API proxy was created, in milliseconds since epoch.
      * 
-    */
+     */
     public String createdAt() {
         return this.createdAt;
     }
     /**
-     * Time at which the API proxy was most recently modified, in milliseconds since epoch.
+     * @return Time at which the API proxy was most recently modified, in milliseconds since epoch.
      * 
-    */
+     */
     public String lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
-     * The type of entity described
+     * @return The type of entity described
      * 
-    */
+     */
     public String subType() {
         return this.subType;
     }

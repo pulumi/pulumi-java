@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class TestDetailsResponse {
-    /**
-     * If the TestState is ERROR, then this string will contain human-readable details about the error.
-     * 
-     */
+        /**
+         * @return If the TestState is ERROR, then this string will contain human-readable details about the error.
+         * 
+         */
     private final String errorMessage;
-    /**
-     * Human-readable, detailed descriptions of the test&#39;s progress. For example: &#34;Provisioning a device&#34;, &#34;Starting Test&#34;. During the course of execution new data may be appended to the end of progress_messages.
-     * 
-     */
+        /**
+         * @return Human-readable, detailed descriptions of the test&#39;s progress. For example: &#34;Provisioning a device&#34;, &#34;Starting Test&#34;. During the course of execution new data may be appended to the end of progress_messages.
+         * 
+         */
     private final List<String> progressMessages;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class TestDetailsResponse {
     }
 
     /**
-     * If the TestState is ERROR, then this string will contain human-readable details about the error.
+     * @return If the TestState is ERROR, then this string will contain human-readable details about the error.
      * 
-    */
+     */
     public String errorMessage() {
         return this.errorMessage;
     }
     /**
-     * Human-readable, detailed descriptions of the test&#39;s progress. For example: &#34;Provisioning a device&#34;, &#34;Starting Test&#34;. During the course of execution new data may be appended to the end of progress_messages.
+     * @return Human-readable, detailed descriptions of the test&#39;s progress. For example: &#34;Provisioning a device&#34;, &#34;Starting Test&#34;. During the course of execution new data may be appended to the end of progress_messages.
      * 
-    */
+     */
     public List<String> progressMessages() {
         return this.progressMessages;
     }

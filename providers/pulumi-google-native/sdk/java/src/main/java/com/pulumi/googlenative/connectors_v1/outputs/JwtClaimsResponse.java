@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class JwtClaimsResponse {
-    /**
-     * Value for the &#34;aud&#34; claim.
-     * 
-     */
+        /**
+         * @return Value for the &#34;aud&#34; claim.
+         * 
+         */
     private final String audience;
-    /**
-     * Value for the &#34;iss&#34; claim.
-     * 
-     */
+        /**
+         * @return Value for the &#34;iss&#34; claim.
+         * 
+         */
     private final String issuer;
-    /**
-     * Value for the &#34;sub&#34; claim.
-     * 
-     */
+        /**
+         * @return Value for the &#34;sub&#34; claim.
+         * 
+         */
     private final String subject;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class JwtClaimsResponse {
     }
 
     /**
-     * Value for the &#34;aud&#34; claim.
+     * @return Value for the &#34;aud&#34; claim.
      * 
-    */
+     */
     public String audience() {
         return this.audience;
     }
     /**
-     * Value for the &#34;iss&#34; claim.
+     * @return Value for the &#34;iss&#34; claim.
      * 
-    */
+     */
     public String issuer() {
         return this.issuer;
     }
     /**
-     * Value for the &#34;sub&#34; claim.
+     * @return Value for the &#34;sub&#34; claim.
      * 
-    */
+     */
     public String subject() {
         return this.subject;
     }

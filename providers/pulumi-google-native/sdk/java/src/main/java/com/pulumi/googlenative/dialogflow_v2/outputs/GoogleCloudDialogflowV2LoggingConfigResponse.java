@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowV2LoggingConfigResponse {
-    /**
-     * Whether to log conversation events like CONVERSATION_STARTED to Stackdriver in the conversation project as JSON format ConversationEvent protos.
-     * 
-     */
+        /**
+         * @return Whether to log conversation events like CONVERSATION_STARTED to Stackdriver in the conversation project as JSON format ConversationEvent protos.
+         * 
+         */
     private final Boolean enableStackdriverLogging;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GoogleCloudDialogflowV2LoggingConfigResponse {
     }
 
     /**
-     * Whether to log conversation events like CONVERSATION_STARTED to Stackdriver in the conversation project as JSON format ConversationEvent protos.
+     * @return Whether to log conversation events like CONVERSATION_STARTED to Stackdriver in the conversation project as JSON format ConversationEvent protos.
      * 
-    */
+     */
     public Boolean enableStackdriverLogging() {
         return this.enableStackdriverLogging;
     }

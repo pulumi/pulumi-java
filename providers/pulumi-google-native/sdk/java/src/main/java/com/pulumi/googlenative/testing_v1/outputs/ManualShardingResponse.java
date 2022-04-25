@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ManualShardingResponse {
-    /**
-     * Group of packages, classes, and/or test methods to be run for each shard. When any physical devices are selected, the number of test_targets_for_shard must be &gt;= 1 and &lt;= 50. When no physical devices are selected, the number must be &gt;= 1 and &lt;= 500.
-     * 
-     */
+        /**
+         * @return Group of packages, classes, and/or test methods to be run for each shard. When any physical devices are selected, the number of test_targets_for_shard must be &gt;= 1 and &lt;= 50. When no physical devices are selected, the number must be &gt;= 1 and &lt;= 500.
+         * 
+         */
     private final List<TestTargetsForShardResponse> testTargetsForShard;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class ManualShardingResponse {
     }
 
     /**
-     * Group of packages, classes, and/or test methods to be run for each shard. When any physical devices are selected, the number of test_targets_for_shard must be &gt;= 1 and &lt;= 50. When no physical devices are selected, the number must be &gt;= 1 and &lt;= 500.
+     * @return Group of packages, classes, and/or test methods to be run for each shard. When any physical devices are selected, the number of test_targets_for_shard must be &gt;= 1 and &lt;= 50. When no physical devices are selected, the number must be &gt;= 1 and &lt;= 500.
      * 
-    */
+     */
     public List<TestTargetsForShardResponse> testTargetsForShard() {
         return this.testTargetsForShard;
     }

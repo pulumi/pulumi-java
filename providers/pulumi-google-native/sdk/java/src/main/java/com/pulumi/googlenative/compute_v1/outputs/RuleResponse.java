@@ -12,40 +12,40 @@ import java.util.Objects;
 
 @CustomType
 public final class RuleResponse {
-    /**
-     * This is deprecated and has no effect. Do not use.
-     * 
-     */
+        /**
+         * @return This is deprecated and has no effect. Do not use.
+         * 
+         */
     private final String action;
-    /**
-     * This is deprecated and has no effect. Do not use.
-     * 
-     */
+        /**
+         * @return This is deprecated and has no effect. Do not use.
+         * 
+         */
     private final List<ConditionResponse> conditions;
-    /**
-     * This is deprecated and has no effect. Do not use.
-     * 
-     */
+        /**
+         * @return This is deprecated and has no effect. Do not use.
+         * 
+         */
     private final String description;
-    /**
-     * This is deprecated and has no effect. Do not use.
-     * 
-     */
+        /**
+         * @return This is deprecated and has no effect. Do not use.
+         * 
+         */
     private final List<String> ins;
-    /**
-     * This is deprecated and has no effect. Do not use.
-     * 
-     */
+        /**
+         * @return This is deprecated and has no effect. Do not use.
+         * 
+         */
     private final List<LogConfigResponse> logConfigs;
-    /**
-     * This is deprecated and has no effect. Do not use.
-     * 
-     */
+        /**
+         * @return This is deprecated and has no effect. Do not use.
+         * 
+         */
     private final List<String> notIns;
-    /**
-     * This is deprecated and has no effect. Do not use.
-     * 
-     */
+        /**
+         * @return This is deprecated and has no effect. Do not use.
+         * 
+         */
     private final List<String> permissions;
 
     @CustomType.Constructor
@@ -67,51 +67,51 @@ public final class RuleResponse {
     }
 
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
-    */
+     */
     public String action() {
         return this.action;
     }
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
-    */
+     */
     public List<ConditionResponse> conditions() {
         return this.conditions;
     }
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
-    */
+     */
     public List<String> ins() {
         return this.ins;
     }
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
-    */
+     */
     public List<LogConfigResponse> logConfigs() {
         return this.logConfigs;
     }
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
-    */
+     */
     public List<String> notIns() {
         return this.notIns;
     }
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
-    */
+     */
     public List<String> permissions() {
         return this.permissions;
     }

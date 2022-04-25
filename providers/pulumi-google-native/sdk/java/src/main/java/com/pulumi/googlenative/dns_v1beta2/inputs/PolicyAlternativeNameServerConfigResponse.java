@@ -28,6 +28,10 @@ public final class PolicyAlternativeNameServerConfigResponse extends com.pulumi.
     @Import(name="targetNameServers", required=true)
     private List<PolicyAlternativeNameServerConfigTargetNameServerResponse> targetNameServers;
 
+    /**
+     * @return Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.
+     * 
+     */
     public List<PolicyAlternativeNameServerConfigTargetNameServerResponse> targetNameServers() {
         return this.targetNameServers;
     }
@@ -62,11 +66,23 @@ public final class PolicyAlternativeNameServerConfigResponse extends com.pulumi.
             return this;
         }
 
+        /**
+         * @param targetNameServers Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNameServers(List<PolicyAlternativeNameServerConfigTargetNameServerResponse> targetNameServers) {
             $.targetNameServers = targetNameServers;
             return this;
         }
 
+        /**
+         * @param targetNameServers Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNameServers(PolicyAlternativeNameServerConfigTargetNameServerResponse... targetNameServers) {
             return targetNameServers(List.of(targetNameServers));
         }

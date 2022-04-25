@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class AppBundleResponse {
-    /**
-     * .aab file representing the app bundle under test.
-     * 
-     */
+        /**
+         * @return .aab file representing the app bundle under test.
+         * 
+         */
     private final FileReferenceResponse bundleLocation;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class AppBundleResponse {
     }
 
     /**
-     * .aab file representing the app bundle under test.
+     * @return .aab file representing the app bundle under test.
      * 
-    */
+     */
     public FileReferenceResponse bundleLocation() {
         return this.bundleLocation;
     }

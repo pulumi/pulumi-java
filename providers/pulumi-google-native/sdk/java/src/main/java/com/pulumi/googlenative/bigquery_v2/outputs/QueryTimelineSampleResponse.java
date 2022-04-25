@@ -9,30 +9,30 @@ import java.util.Objects;
 
 @CustomType
 public final class QueryTimelineSampleResponse {
-    /**
-     * Total number of units currently being processed by workers. This does not correspond directly to slot usage. This is the largest value observed since the last sample.
-     * 
-     */
+        /**
+         * @return Total number of units currently being processed by workers. This does not correspond directly to slot usage. This is the largest value observed since the last sample.
+         * 
+         */
     private final String activeUnits;
-    /**
-     * Total parallel units of work completed by this query.
-     * 
-     */
+        /**
+         * @return Total parallel units of work completed by this query.
+         * 
+         */
     private final String completedUnits;
-    /**
-     * Milliseconds elapsed since the start of query execution.
-     * 
-     */
+        /**
+         * @return Milliseconds elapsed since the start of query execution.
+         * 
+         */
     private final String elapsedMs;
-    /**
-     * Total parallel units of work remaining for the active stages.
-     * 
-     */
+        /**
+         * @return Total parallel units of work remaining for the active stages.
+         * 
+         */
     private final String pendingUnits;
-    /**
-     * Cumulative slot-ms consumed by the query.
-     * 
-     */
+        /**
+         * @return Cumulative slot-ms consumed by the query.
+         * 
+         */
     private final String totalSlotMs;
 
     @CustomType.Constructor
@@ -50,37 +50,37 @@ public final class QueryTimelineSampleResponse {
     }
 
     /**
-     * Total number of units currently being processed by workers. This does not correspond directly to slot usage. This is the largest value observed since the last sample.
+     * @return Total number of units currently being processed by workers. This does not correspond directly to slot usage. This is the largest value observed since the last sample.
      * 
-    */
+     */
     public String activeUnits() {
         return this.activeUnits;
     }
     /**
-     * Total parallel units of work completed by this query.
+     * @return Total parallel units of work completed by this query.
      * 
-    */
+     */
     public String completedUnits() {
         return this.completedUnits;
     }
     /**
-     * Milliseconds elapsed since the start of query execution.
+     * @return Milliseconds elapsed since the start of query execution.
      * 
-    */
+     */
     public String elapsedMs() {
         return this.elapsedMs;
     }
     /**
-     * Total parallel units of work remaining for the active stages.
+     * @return Total parallel units of work remaining for the active stages.
      * 
-    */
+     */
     public String pendingUnits() {
         return this.pendingUnits;
     }
     /**
-     * Cumulative slot-ms consumed by the query.
+     * @return Cumulative slot-ms consumed by the query.
      * 
-    */
+     */
     public String totalSlotMs() {
         return this.totalSlotMs;
     }

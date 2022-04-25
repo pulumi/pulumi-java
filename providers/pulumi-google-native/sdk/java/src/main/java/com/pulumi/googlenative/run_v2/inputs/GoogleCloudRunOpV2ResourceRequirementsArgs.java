@@ -28,6 +28,10 @@ public final class GoogleCloudRunOpV2ResourceRequirementsArgs extends com.pulumi
     @Import(name="cpuIdle")
     private @Nullable Output<Boolean> cpuIdle;
 
+    /**
+     * @return Determines whether CPU should be throttled or not outside of requests.
+     * 
+     */
     public Optional<Output<Boolean>> cpuIdle() {
         return Optional.ofNullable(this.cpuIdle);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudRunOpV2ResourceRequirementsArgs extends com.pulumi
     @Import(name="limits")
     private @Nullable Output<Map<String,String>> limits;
 
+    /**
+     * @return Only memory and CPU are supported. Note: The only supported values for CPU are &#39;1&#39;, &#39;2&#39;, and &#39;4&#39;. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of the &#39;quantity&#39; k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+     * 
+     */
     public Optional<Output<Map<String,String>>> limits() {
         return Optional.ofNullable(this.limits);
     }
@@ -68,20 +76,44 @@ public final class GoogleCloudRunOpV2ResourceRequirementsArgs extends com.pulumi
             $ = new GoogleCloudRunOpV2ResourceRequirementsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpuIdle Determines whether CPU should be throttled or not outside of requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuIdle(@Nullable Output<Boolean> cpuIdle) {
             $.cpuIdle = cpuIdle;
             return this;
         }
 
+        /**
+         * @param cpuIdle Determines whether CPU should be throttled or not outside of requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuIdle(Boolean cpuIdle) {
             return cpuIdle(Output.of(cpuIdle));
         }
 
+        /**
+         * @param limits Only memory and CPU are supported. Note: The only supported values for CPU are &#39;1&#39;, &#39;2&#39;, and &#39;4&#39;. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of the &#39;quantity&#39; k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+         * 
+         * @return builder
+         * 
+         */
         public Builder limits(@Nullable Output<Map<String,String>> limits) {
             $.limits = limits;
             return this;
         }
 
+        /**
+         * @param limits Only memory and CPU are supported. Note: The only supported values for CPU are &#39;1&#39;, &#39;2&#39;, and &#39;4&#39;. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of the &#39;quantity&#39; k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+         * 
+         * @return builder
+         * 
+         */
         public Builder limits(Map<String,String> limits) {
             return limits(Output.of(limits));
         }

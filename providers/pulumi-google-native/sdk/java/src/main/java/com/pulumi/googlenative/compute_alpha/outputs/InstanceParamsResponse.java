@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class InstanceParamsResponse {
-    /**
-     * Resource manager tags to be bound to the instance. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT &amp; PATCH) when empty.
-     * 
-     */
+        /**
+         * @return Resource manager tags to be bound to the instance. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT &amp; PATCH) when empty.
+         * 
+         */
     private final Map<String,String> resourceManagerTags;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class InstanceParamsResponse {
     }
 
     /**
-     * Resource manager tags to be bound to the instance. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT &amp; PATCH) when empty.
+     * @return Resource manager tags to be bound to the instance. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT &amp; PATCH) when empty.
      * 
-    */
+     */
     public Map<String,String> resourceManagerTags() {
         return this.resourceManagerTags;
     }

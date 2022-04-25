@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDatalabelingV1beta1GcsSourceResponse {
-    /**
-     * The input URI of source file. This must be a Cloud Storage path (`gs://...`).
-     * 
-     */
+        /**
+         * @return The input URI of source file. This must be a Cloud Storage path (`gs://...`).
+         * 
+         */
     private final String inputUri;
-    /**
-     * The format of the source file. Only &#34;text/csv&#34; is supported.
-     * 
-     */
+        /**
+         * @return The format of the source file. Only &#34;text/csv&#34; is supported.
+         * 
+         */
     private final String mimeType;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceResponse {
     }
 
     /**
-     * The input URI of source file. This must be a Cloud Storage path (`gs://...`).
+     * @return The input URI of source file. This must be a Cloud Storage path (`gs://...`).
      * 
-    */
+     */
     public String inputUri() {
         return this.inputUri;
     }
     /**
-     * The format of the source file. Only &#34;text/csv&#34; is supported.
+     * @return The format of the source file. Only &#34;text/csv&#34; is supported.
      * 
-    */
+     */
     public String mimeType() {
         return this.mimeType;
     }

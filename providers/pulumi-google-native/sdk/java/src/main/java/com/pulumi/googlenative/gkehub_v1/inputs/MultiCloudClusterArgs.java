@@ -26,6 +26,10 @@ public final class MultiCloudClusterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceLink")
     private @Nullable Output<String> resourceLink;
 
+    /**
+     * @return Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For example: //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-cluster
+     * 
+     */
     public Optional<Output<String>> resourceLink() {
         return Optional.ofNullable(this.resourceLink);
     }
@@ -54,11 +58,23 @@ public final class MultiCloudClusterArgs extends com.pulumi.resources.ResourceAr
             $ = new MultiCloudClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceLink Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For example: //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLink(@Nullable Output<String> resourceLink) {
             $.resourceLink = resourceLink;
             return this;
         }
 
+        /**
+         * @param resourceLink Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For example: //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLink(String resourceLink) {
             return resourceLink(Output.of(resourceLink));
         }

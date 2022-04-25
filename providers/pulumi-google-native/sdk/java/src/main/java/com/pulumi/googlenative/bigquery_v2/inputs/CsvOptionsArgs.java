@@ -23,6 +23,10 @@ public final class CsvOptionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowJaggedRows")
     private @Nullable Output<Boolean> allowJaggedRows;
 
+    /**
+     * @return [Optional] Indicates if BigQuery should accept rows that are missing trailing optional columns. If true, BigQuery treats missing trailing columns as null values. If false, records with missing trailing columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false.
+     * 
+     */
     public Optional<Output<Boolean>> allowJaggedRows() {
         return Optional.ofNullable(this.allowJaggedRows);
     }
@@ -34,6 +38,10 @@ public final class CsvOptionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowQuotedNewlines")
     private @Nullable Output<Boolean> allowQuotedNewlines;
 
+    /**
+     * @return [Optional] Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file. The default value is false.
+     * 
+     */
     public Optional<Output<Boolean>> allowQuotedNewlines() {
         return Optional.ofNullable(this.allowQuotedNewlines);
     }
@@ -45,6 +53,10 @@ public final class CsvOptionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encoding")
     private @Nullable Output<String> encoding;
 
+    /**
+     * @return [Optional] The character encoding of the data. The supported values are UTF-8 or ISO-8859-1. The default value is UTF-8. BigQuery decodes the data after the raw, binary data has been split using the values of the quote and fieldDelimiter properties.
+     * 
+     */
     public Optional<Output<String>> encoding() {
         return Optional.ofNullable(this.encoding);
     }
@@ -56,6 +68,10 @@ public final class CsvOptionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fieldDelimiter")
     private @Nullable Output<String> fieldDelimiter;
 
+    /**
+     * @return [Optional] The separator for fields in a CSV file. BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the data in its raw, binary state. BigQuery also supports the escape sequence &#34;\t&#34; to specify a tab separator. The default value is a comma (&#39;,&#39;).
+     * 
+     */
     public Optional<Output<String>> fieldDelimiter() {
         return Optional.ofNullable(this.fieldDelimiter);
     }
@@ -67,6 +83,10 @@ public final class CsvOptionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nullMarker")
     private @Nullable Output<String> nullMarker;
 
+    /**
+     * @return [Optional] An custom string that will represent a NULL value in CSV import data.
+     * 
+     */
     public Optional<Output<String>> nullMarker() {
         return Optional.ofNullable(this.nullMarker);
     }
@@ -78,6 +98,10 @@ public final class CsvOptionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="quote")
     private @Nullable Output<String> quote;
 
+    /**
+     * @return [Optional] The value that is used to quote data sections in a CSV file. BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the data in its raw, binary state. The default value is a double-quote (&#39;&#34;&#39;). If your data does not contain quoted sections, set the property value to an empty string. If your data contains quoted newline characters, you must also set the allowQuotedNewlines property to true.
+     * 
+     */
     public Optional<Output<String>> quote() {
         return Optional.ofNullable(this.quote);
     }
@@ -89,6 +113,10 @@ public final class CsvOptionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="skipLeadingRows")
     private @Nullable Output<String> skipLeadingRows;
 
+    /**
+     * @return [Optional] The number of rows at the top of a CSV file that BigQuery will skip when reading the data. The default value is 0. This property is useful if you have header rows in the file that should be skipped. When autodetect is on, the behavior is the following: * skipLeadingRows unspecified - Autodetect tries to detect headers in the first row. If they are not detected, the row is read as data. Otherwise data is read starting from the second row. * skipLeadingRows is 0 - Instructs autodetect that there are no headers and data should be read starting from the first row. * skipLeadingRows = N &gt; 0 - Autodetect skips N-1 rows and tries to detect headers in row N. If headers are not detected, row N is just skipped. Otherwise row N is used to extract column names for the detected schema.
+     * 
+     */
     public Optional<Output<String>> skipLeadingRows() {
         return Optional.ofNullable(this.skipLeadingRows);
     }
@@ -123,65 +151,149 @@ public final class CsvOptionsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CsvOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowJaggedRows [Optional] Indicates if BigQuery should accept rows that are missing trailing optional columns. If true, BigQuery treats missing trailing columns as null values. If false, records with missing trailing columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowJaggedRows(@Nullable Output<Boolean> allowJaggedRows) {
             $.allowJaggedRows = allowJaggedRows;
             return this;
         }
 
+        /**
+         * @param allowJaggedRows [Optional] Indicates if BigQuery should accept rows that are missing trailing optional columns. If true, BigQuery treats missing trailing columns as null values. If false, records with missing trailing columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowJaggedRows(Boolean allowJaggedRows) {
             return allowJaggedRows(Output.of(allowJaggedRows));
         }
 
+        /**
+         * @param allowQuotedNewlines [Optional] Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowQuotedNewlines(@Nullable Output<Boolean> allowQuotedNewlines) {
             $.allowQuotedNewlines = allowQuotedNewlines;
             return this;
         }
 
+        /**
+         * @param allowQuotedNewlines [Optional] Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowQuotedNewlines(Boolean allowQuotedNewlines) {
             return allowQuotedNewlines(Output.of(allowQuotedNewlines));
         }
 
+        /**
+         * @param encoding [Optional] The character encoding of the data. The supported values are UTF-8 or ISO-8859-1. The default value is UTF-8. BigQuery decodes the data after the raw, binary data has been split using the values of the quote and fieldDelimiter properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encoding(@Nullable Output<String> encoding) {
             $.encoding = encoding;
             return this;
         }
 
+        /**
+         * @param encoding [Optional] The character encoding of the data. The supported values are UTF-8 or ISO-8859-1. The default value is UTF-8. BigQuery decodes the data after the raw, binary data has been split using the values of the quote and fieldDelimiter properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encoding(String encoding) {
             return encoding(Output.of(encoding));
         }
 
+        /**
+         * @param fieldDelimiter [Optional] The separator for fields in a CSV file. BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the data in its raw, binary state. BigQuery also supports the escape sequence &#34;\t&#34; to specify a tab separator. The default value is a comma (&#39;,&#39;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldDelimiter(@Nullable Output<String> fieldDelimiter) {
             $.fieldDelimiter = fieldDelimiter;
             return this;
         }
 
+        /**
+         * @param fieldDelimiter [Optional] The separator for fields in a CSV file. BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the data in its raw, binary state. BigQuery also supports the escape sequence &#34;\t&#34; to specify a tab separator. The default value is a comma (&#39;,&#39;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldDelimiter(String fieldDelimiter) {
             return fieldDelimiter(Output.of(fieldDelimiter));
         }
 
+        /**
+         * @param nullMarker [Optional] An custom string that will represent a NULL value in CSV import data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nullMarker(@Nullable Output<String> nullMarker) {
             $.nullMarker = nullMarker;
             return this;
         }
 
+        /**
+         * @param nullMarker [Optional] An custom string that will represent a NULL value in CSV import data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nullMarker(String nullMarker) {
             return nullMarker(Output.of(nullMarker));
         }
 
+        /**
+         * @param quote [Optional] The value that is used to quote data sections in a CSV file. BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the data in its raw, binary state. The default value is a double-quote (&#39;&#34;&#39;). If your data does not contain quoted sections, set the property value to an empty string. If your data contains quoted newline characters, you must also set the allowQuotedNewlines property to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quote(@Nullable Output<String> quote) {
             $.quote = quote;
             return this;
         }
 
+        /**
+         * @param quote [Optional] The value that is used to quote data sections in a CSV file. BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the data in its raw, binary state. The default value is a double-quote (&#39;&#34;&#39;). If your data does not contain quoted sections, set the property value to an empty string. If your data contains quoted newline characters, you must also set the allowQuotedNewlines property to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quote(String quote) {
             return quote(Output.of(quote));
         }
 
+        /**
+         * @param skipLeadingRows [Optional] The number of rows at the top of a CSV file that BigQuery will skip when reading the data. The default value is 0. This property is useful if you have header rows in the file that should be skipped. When autodetect is on, the behavior is the following: * skipLeadingRows unspecified - Autodetect tries to detect headers in the first row. If they are not detected, the row is read as data. Otherwise data is read starting from the second row. * skipLeadingRows is 0 - Instructs autodetect that there are no headers and data should be read starting from the first row. * skipLeadingRows = N &gt; 0 - Autodetect skips N-1 rows and tries to detect headers in row N. If headers are not detected, row N is just skipped. Otherwise row N is used to extract column names for the detected schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipLeadingRows(@Nullable Output<String> skipLeadingRows) {
             $.skipLeadingRows = skipLeadingRows;
             return this;
         }
 
+        /**
+         * @param skipLeadingRows [Optional] The number of rows at the top of a CSV file that BigQuery will skip when reading the data. The default value is 0. This property is useful if you have header rows in the file that should be skipped. When autodetect is on, the behavior is the following: * skipLeadingRows unspecified - Autodetect tries to detect headers in the first row. If they are not detected, the row is read as data. Otherwise data is read starting from the second row. * skipLeadingRows is 0 - Instructs autodetect that there are no headers and data should be read starting from the first row. * skipLeadingRows = N &gt; 0 - Autodetect skips N-1 rows and tries to detect headers in row N. If headers are not detected, row N is just skipped. Otherwise row N is used to extract column names for the detected schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipLeadingRows(String skipLeadingRows) {
             return skipLeadingRows(Output.of(skipLeadingRows));
         }

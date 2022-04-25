@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GooglePrivacyDlpV2InfoTypeTransformationsResponse {
-    /**
-     * Transformation for each infoType. Cannot specify more than one for a given infoType.
-     * 
-     */
+        /**
+         * @return Transformation for each infoType. Cannot specify more than one for a given infoType.
+         * 
+         */
     private final List<GooglePrivacyDlpV2InfoTypeTransformationResponse> transformations;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationsResponse {
     }
 
     /**
-     * Transformation for each infoType. Cannot specify more than one for a given infoType.
+     * @return Transformation for each infoType. Cannot specify more than one for a given infoType.
      * 
-    */
+     */
     public List<GooglePrivacyDlpV2InfoTypeTransformationResponse> transformations() {
         return this.transformations;
     }

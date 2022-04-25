@@ -23,6 +23,10 @@ public final class ForwardInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceUri", required=true)
     private String resourceUri;
 
+    /**
+     * @return URI of the resource that the packet is forwarded to.
+     * 
+     */
     public String resourceUri() {
         return this.resourceUri;
     }
@@ -34,6 +38,10 @@ public final class ForwardInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="target", required=true)
     private String target;
 
+    /**
+     * @return Target type where this packet is forwarded to.
+     * 
+     */
     public String target() {
         return this.target;
     }
@@ -63,11 +71,23 @@ public final class ForwardInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ForwardInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceUri URI of the resource that the packet is forwarded to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(String resourceUri) {
             $.resourceUri = resourceUri;
             return this;
         }
 
+        /**
+         * @param target Target type where this packet is forwarded to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(String target) {
             $.target = target;
             return this;

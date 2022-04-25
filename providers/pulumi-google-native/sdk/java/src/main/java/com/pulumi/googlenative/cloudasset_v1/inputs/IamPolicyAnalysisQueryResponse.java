@@ -28,6 +28,10 @@ public final class IamPolicyAnalysisQueryResponse extends com.pulumi.resources.I
     @Import(name="accessSelector", required=true)
     private AccessSelectorResponse accessSelector;
 
+    /**
+     * @return Optional. Specifies roles or permissions for analysis. This is optional.
+     * 
+     */
     public AccessSelectorResponse accessSelector() {
         return this.accessSelector;
     }
@@ -39,6 +43,10 @@ public final class IamPolicyAnalysisQueryResponse extends com.pulumi.resources.I
     @Import(name="conditionContext", required=true)
     private ConditionContextResponse conditionContext;
 
+    /**
+     * @return Optional. The hypothetical context for IAM conditions evaluation.
+     * 
+     */
     public ConditionContextResponse conditionContext() {
         return this.conditionContext;
     }
@@ -50,6 +58,10 @@ public final class IamPolicyAnalysisQueryResponse extends com.pulumi.resources.I
     @Import(name="identitySelector", required=true)
     private IdentitySelectorResponse identitySelector;
 
+    /**
+     * @return Optional. Specifies an identity for analysis.
+     * 
+     */
     public IdentitySelectorResponse identitySelector() {
         return this.identitySelector;
     }
@@ -61,6 +73,10 @@ public final class IamPolicyAnalysisQueryResponse extends com.pulumi.resources.I
     @Import(name="options", required=true)
     private OptionsResponse options;
 
+    /**
+     * @return Optional. The query options.
+     * 
+     */
     public OptionsResponse options() {
         return this.options;
     }
@@ -72,6 +88,10 @@ public final class IamPolicyAnalysisQueryResponse extends com.pulumi.resources.I
     @Import(name="resourceSelector", required=true)
     private ResourceSelectorResponse resourceSelector;
 
+    /**
+     * @return Optional. Specifies a resource for analysis.
+     * 
+     */
     public ResourceSelectorResponse resourceSelector() {
         return this.resourceSelector;
     }
@@ -83,6 +103,10 @@ public final class IamPolicyAnalysisQueryResponse extends com.pulumi.resources.I
     @Import(name="scope", required=true)
     private String scope;
 
+    /**
+     * @return The relative name of the root asset. Only resources and IAM policies within the scope will be analyzed. This can only be an organization number (such as &#34;organizations/123&#34;), a folder number (such as &#34;folders/123&#34;), a project ID (such as &#34;projects/my-project-id&#34;), or a project number (such as &#34;projects/12345&#34;). To know how to get organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id). To know how to get folder or project id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).
+     * 
+     */
     public String scope() {
         return this.scope;
     }
@@ -116,31 +140,67 @@ public final class IamPolicyAnalysisQueryResponse extends com.pulumi.resources.I
             $ = new IamPolicyAnalysisQueryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessSelector Optional. Specifies roles or permissions for analysis. This is optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessSelector(AccessSelectorResponse accessSelector) {
             $.accessSelector = accessSelector;
             return this;
         }
 
+        /**
+         * @param conditionContext Optional. The hypothetical context for IAM conditions evaluation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditionContext(ConditionContextResponse conditionContext) {
             $.conditionContext = conditionContext;
             return this;
         }
 
+        /**
+         * @param identitySelector Optional. Specifies an identity for analysis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identitySelector(IdentitySelectorResponse identitySelector) {
             $.identitySelector = identitySelector;
             return this;
         }
 
+        /**
+         * @param options Optional. The query options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(OptionsResponse options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param resourceSelector Optional. Specifies a resource for analysis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSelector(ResourceSelectorResponse resourceSelector) {
             $.resourceSelector = resourceSelector;
             return this;
         }
 
+        /**
+         * @param scope The relative name of the root asset. Only resources and IAM policies within the scope will be analyzed. This can only be an organization number (such as &#34;organizations/123&#34;), a folder number (such as &#34;folders/123&#34;), a project ID (such as &#34;projects/my-project-id&#34;), or a project number (such as &#34;projects/12345&#34;). To know how to get organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id). To know how to get folder or project id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             $.scope = scope;
             return this;

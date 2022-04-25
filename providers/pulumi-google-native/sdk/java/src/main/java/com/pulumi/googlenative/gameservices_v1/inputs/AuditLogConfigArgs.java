@@ -29,6 +29,10 @@ public final class AuditLogConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="exemptedMembers")
     private @Nullable Output<List<String>> exemptedMembers;
 
+    /**
+     * @return Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.
+     * 
+     */
     public Optional<Output<List<String>>> exemptedMembers() {
         return Optional.ofNullable(this.exemptedMembers);
     }
@@ -47,6 +51,10 @@ public final class AuditLogConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="logType")
     private @Nullable Output<AuditLogConfigLogType> logType;
 
+    /**
+     * @return The log type that this config enables.
+     * 
+     */
     public Optional<Output<AuditLogConfigLogType>> logType() {
         return Optional.ofNullable(this.logType);
     }
@@ -77,15 +85,33 @@ public final class AuditLogConfigArgs extends com.pulumi.resources.ResourceArgs 
             $ = new AuditLogConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exemptedMembers Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exemptedMembers(@Nullable Output<List<String>> exemptedMembers) {
             $.exemptedMembers = exemptedMembers;
             return this;
         }
 
+        /**
+         * @param exemptedMembers Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exemptedMembers(List<String> exemptedMembers) {
             return exemptedMembers(Output.of(exemptedMembers));
         }
 
+        /**
+         * @param exemptedMembers Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exemptedMembers(String... exemptedMembers) {
             return exemptedMembers(List.of(exemptedMembers));
         }
@@ -99,11 +125,23 @@ public final class AuditLogConfigArgs extends com.pulumi.resources.ResourceArgs 
             return ignoreChildExemptions(Output.of(ignoreChildExemptions));
         }
 
+        /**
+         * @param logType The log type that this config enables.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logType(@Nullable Output<AuditLogConfigLogType> logType) {
             $.logType = logType;
             return this;
         }
 
+        /**
+         * @param logType The log type that this config enables.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logType(AuditLogConfigLogType logType) {
             return logType(Output.of(logType));
         }

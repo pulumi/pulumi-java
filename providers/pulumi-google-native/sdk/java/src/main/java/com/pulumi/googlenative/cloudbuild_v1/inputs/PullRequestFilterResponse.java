@@ -24,6 +24,10 @@ public final class PullRequestFilterResponse extends com.pulumi.resources.Invoke
     @Import(name="branch", required=true)
     private String branch;
 
+    /**
+     * @return Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
+     * 
+     */
     public String branch() {
         return this.branch;
     }
@@ -35,6 +39,10 @@ public final class PullRequestFilterResponse extends com.pulumi.resources.Invoke
     @Import(name="commentControl", required=true)
     private String commentControl;
 
+    /**
+     * @return Configure builds to run whether a repository owner or collaborator need to comment `/gcbrun`.
+     * 
+     */
     public String commentControl() {
         return this.commentControl;
     }
@@ -46,6 +54,10 @@ public final class PullRequestFilterResponse extends com.pulumi.resources.Invoke
     @Import(name="invertRegex", required=true)
     private Boolean invertRegex;
 
+    /**
+     * @return If true, branches that do NOT match the git_ref will trigger a build.
+     * 
+     */
     public Boolean invertRegex() {
         return this.invertRegex;
     }
@@ -76,16 +88,34 @@ public final class PullRequestFilterResponse extends com.pulumi.resources.Invoke
             $ = new PullRequestFilterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param branch Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
+         * 
+         * @return builder
+         * 
+         */
         public Builder branch(String branch) {
             $.branch = branch;
             return this;
         }
 
+        /**
+         * @param commentControl Configure builds to run whether a repository owner or collaborator need to comment `/gcbrun`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commentControl(String commentControl) {
             $.commentControl = commentControl;
             return this;
         }
 
+        /**
+         * @param invertRegex If true, branches that do NOT match the git_ref will trigger a build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invertRegex(Boolean invertRegex) {
             $.invertRegex = invertRegex;
             return this;

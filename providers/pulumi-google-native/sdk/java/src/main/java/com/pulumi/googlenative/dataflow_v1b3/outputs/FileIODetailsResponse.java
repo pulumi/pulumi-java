@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class FileIODetailsResponse {
-    /**
-     * File Pattern used to access files by the connector.
-     * 
-     */
+        /**
+         * @return File Pattern used to access files by the connector.
+         * 
+         */
     private final String filePattern;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class FileIODetailsResponse {
     }
 
     /**
-     * File Pattern used to access files by the connector.
+     * @return File Pattern used to access files by the connector.
      * 
-    */
+     */
     public String filePattern() {
         return this.filePattern;
     }

@@ -23,6 +23,10 @@ public final class TlsCertificateResponse extends com.pulumi.resources.InvokeArg
     @Import(name="cert", required=true)
     private String cert;
 
+    /**
+     * @return PEM representation.
+     * 
+     */
     public String cert() {
         return this.cert;
     }
@@ -34,6 +38,10 @@ public final class TlsCertificateResponse extends com.pulumi.resources.InvokeArg
     @Import(name="createTime", required=true)
     private String createTime;
 
+    /**
+     * @return The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2020-05-18T00:00:00.094Z`.
+     * 
+     */
     public String createTime() {
         return this.createTime;
     }
@@ -45,6 +53,10 @@ public final class TlsCertificateResponse extends com.pulumi.resources.InvokeArg
     @Import(name="expireTime", required=true)
     private String expireTime;
 
+    /**
+     * @return The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2020-05-18T00:00:00.094Z`.
+     * 
+     */
     public String expireTime() {
         return this.expireTime;
     }
@@ -56,6 +68,10 @@ public final class TlsCertificateResponse extends com.pulumi.resources.InvokeArg
     @Import(name="serialNumber", required=true)
     private String serialNumber;
 
+    /**
+     * @return Serial number, as extracted from the certificate.
+     * 
+     */
     public String serialNumber() {
         return this.serialNumber;
     }
@@ -67,6 +83,10 @@ public final class TlsCertificateResponse extends com.pulumi.resources.InvokeArg
     @Import(name="sha1Fingerprint", required=true)
     private String sha1Fingerprint;
 
+    /**
+     * @return Sha1 Fingerprint of the certificate.
+     * 
+     */
     public String sha1Fingerprint() {
         return this.sha1Fingerprint;
     }
@@ -99,26 +119,56 @@ public final class TlsCertificateResponse extends com.pulumi.resources.InvokeArg
             $ = new TlsCertificateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cert PEM representation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cert(String cert) {
             $.cert = cert;
             return this;
         }
 
+        /**
+         * @param createTime The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2020-05-18T00:00:00.094Z`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param expireTime The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2020-05-18T00:00:00.094Z`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expireTime(String expireTime) {
             $.expireTime = expireTime;
             return this;
         }
 
+        /**
+         * @param serialNumber Serial number, as extracted from the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serialNumber(String serialNumber) {
             $.serialNumber = serialNumber;
             return this;
         }
 
+        /**
+         * @param sha1Fingerprint Sha1 Fingerprint of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sha1Fingerprint(String sha1Fingerprint) {
             $.sha1Fingerprint = sha1Fingerprint;
             return this;

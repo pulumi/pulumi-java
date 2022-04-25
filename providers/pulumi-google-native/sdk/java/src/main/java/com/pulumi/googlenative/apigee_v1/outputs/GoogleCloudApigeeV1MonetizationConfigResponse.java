@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudApigeeV1MonetizationConfigResponse {
-    /**
-     * Flag that specifies whether the Monetization add-on is enabled.
-     * 
-     */
+        /**
+         * @return Flag that specifies whether the Monetization add-on is enabled.
+         * 
+         */
     private final Boolean enabled;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GoogleCloudApigeeV1MonetizationConfigResponse {
     }
 
     /**
-     * Flag that specifies whether the Monetization add-on is enabled.
+     * @return Flag that specifies whether the Monetization add-on is enabled.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }

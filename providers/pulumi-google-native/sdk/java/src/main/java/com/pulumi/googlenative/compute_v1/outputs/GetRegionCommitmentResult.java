@@ -14,90 +14,90 @@ import java.util.Objects;
 
 @CustomType
 public final class GetRegionCommitmentResult {
-    /**
-     * Specifies whether to enable automatic renewal for the commitment. The default value is false if not specified. The field can be updated until the day of the commitment expiration at 12:00am PST. If the field is set to true, the commitment will be automatically renewed for either one or three years according to the terms of the existing commitment.
-     * 
-     */
+        /**
+         * @return Specifies whether to enable automatic renewal for the commitment. The default value is false if not specified. The field can be updated until the day of the commitment expiration at 12:00am PST. If the field is set to true, the commitment will be automatically renewed for either one or three years according to the terms of the existing commitment.
+         * 
+         */
     private final Boolean autoRenew;
-    /**
-     * The category of the commitment. Category MACHINE specifies commitments composed of machine resources such as VCPU or MEMORY, listed in resources. Category LICENSE specifies commitments composed of software licenses, listed in licenseResources. Note that only MACHINE commitments should have a Type specified.
-     * 
-     */
+        /**
+         * @return The category of the commitment. Category MACHINE specifies commitments composed of machine resources such as VCPU or MEMORY, listed in resources. Category LICENSE specifies commitments composed of software licenses, listed in licenseResources. Note that only MACHINE commitments should have a Type specified.
+         * 
+         */
     private final String category;
-    /**
-     * Creation timestamp in RFC3339 text format.
-     * 
-     */
+        /**
+         * @return Creation timestamp in RFC3339 text format.
+         * 
+         */
     private final String creationTimestamp;
-    /**
-     * An optional description of this resource. Provide this property when you create the resource.
-     * 
-     */
+        /**
+         * @return An optional description of this resource. Provide this property when you create the resource.
+         * 
+         */
     private final String description;
-    /**
-     * Commitment end time in RFC3339 text format.
-     * 
-     */
+        /**
+         * @return Commitment end time in RFC3339 text format.
+         * 
+         */
     private final String endTimestamp;
-    /**
-     * Type of the resource. Always compute#commitment for commitments.
-     * 
-     */
+        /**
+         * @return Type of the resource. Always compute#commitment for commitments.
+         * 
+         */
     private final String kind;
-    /**
-     * The license specification required as part of a license commitment.
-     * 
-     */
+        /**
+         * @return The license specification required as part of a license commitment.
+         * 
+         */
     private final LicenseResourceCommitmentResponse licenseResource;
-    /**
-     * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
-     */
+        /**
+         * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         */
     private final String name;
-    /**
-     * The plan for this commitment, which determines duration and discount rate. The currently supported plans are TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3 years).
-     * 
-     */
+        /**
+         * @return The plan for this commitment, which determines duration and discount rate. The currently supported plans are TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3 years).
+         * 
+         */
     private final String plan;
-    /**
-     * URL of the region where this commitment may be used.
-     * 
-     */
+        /**
+         * @return URL of the region where this commitment may be used.
+         * 
+         */
     private final String region;
-    /**
-     * List of reservations in this commitment.
-     * 
-     */
+        /**
+         * @return List of reservations in this commitment.
+         * 
+         */
     private final List<ReservationResponse> reservations;
-    /**
-     * A list of commitment amounts for particular resources. Note that VCPU and MEMORY resource commitments must occur together.
-     * 
-     */
+        /**
+         * @return A list of commitment amounts for particular resources. Note that VCPU and MEMORY resource commitments must occur together.
+         * 
+         */
     private final List<ResourceCommitmentResponse> resources;
-    /**
-     * Server-defined URL for the resource.
-     * 
-     */
+        /**
+         * @return Server-defined URL for the resource.
+         * 
+         */
     private final String selfLink;
-    /**
-     * Commitment start time in RFC3339 text format.
-     * 
-     */
+        /**
+         * @return Commitment start time in RFC3339 text format.
+         * 
+         */
     private final String startTimestamp;
-    /**
-     * Status of the commitment with regards to eventual expiration (each commitment has an end date defined). One of the following values: NOT_YET_ACTIVE, ACTIVE, EXPIRED.
-     * 
-     */
+        /**
+         * @return Status of the commitment with regards to eventual expiration (each commitment has an end date defined). One of the following values: NOT_YET_ACTIVE, ACTIVE, EXPIRED.
+         * 
+         */
     private final String status;
-    /**
-     * An optional, human-readable explanation of the status.
-     * 
-     */
+        /**
+         * @return An optional, human-readable explanation of the status.
+         * 
+         */
     private final String statusMessage;
-    /**
-     * The type of commitment, which affects the discount rate and the eligible resources. Type MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines. Type ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to accelerator optimized machines.
-     * 
-     */
+        /**
+         * @return The type of commitment, which affects the discount rate and the eligible resources. Type MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines. Type ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to accelerator optimized machines.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -139,121 +139,121 @@ public final class GetRegionCommitmentResult {
     }
 
     /**
-     * Specifies whether to enable automatic renewal for the commitment. The default value is false if not specified. The field can be updated until the day of the commitment expiration at 12:00am PST. If the field is set to true, the commitment will be automatically renewed for either one or three years according to the terms of the existing commitment.
+     * @return Specifies whether to enable automatic renewal for the commitment. The default value is false if not specified. The field can be updated until the day of the commitment expiration at 12:00am PST. If the field is set to true, the commitment will be automatically renewed for either one or three years according to the terms of the existing commitment.
      * 
-    */
+     */
     public Boolean autoRenew() {
         return this.autoRenew;
     }
     /**
-     * The category of the commitment. Category MACHINE specifies commitments composed of machine resources such as VCPU or MEMORY, listed in resources. Category LICENSE specifies commitments composed of software licenses, listed in licenseResources. Note that only MACHINE commitments should have a Type specified.
+     * @return The category of the commitment. Category MACHINE specifies commitments composed of machine resources such as VCPU or MEMORY, listed in resources. Category LICENSE specifies commitments composed of software licenses, listed in licenseResources. Note that only MACHINE commitments should have a Type specified.
      * 
-    */
+     */
     public String category() {
         return this.category;
     }
     /**
-     * Creation timestamp in RFC3339 text format.
+     * @return Creation timestamp in RFC3339 text format.
      * 
-    */
+     */
     public String creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
-     * An optional description of this resource. Provide this property when you create the resource.
+     * @return An optional description of this resource. Provide this property when you create the resource.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Commitment end time in RFC3339 text format.
+     * @return Commitment end time in RFC3339 text format.
      * 
-    */
+     */
     public String endTimestamp() {
         return this.endTimestamp;
     }
     /**
-     * Type of the resource. Always compute#commitment for commitments.
+     * @return Type of the resource. Always compute#commitment for commitments.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The license specification required as part of a license commitment.
+     * @return The license specification required as part of a license commitment.
      * 
-    */
+     */
     public LicenseResourceCommitmentResponse licenseResource() {
         return this.licenseResource;
     }
     /**
-     * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The plan for this commitment, which determines duration and discount rate. The currently supported plans are TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3 years).
+     * @return The plan for this commitment, which determines duration and discount rate. The currently supported plans are TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3 years).
      * 
-    */
+     */
     public String plan() {
         return this.plan;
     }
     /**
-     * URL of the region where this commitment may be used.
+     * @return URL of the region where this commitment may be used.
      * 
-    */
+     */
     public String region() {
         return this.region;
     }
     /**
-     * List of reservations in this commitment.
+     * @return List of reservations in this commitment.
      * 
-    */
+     */
     public List<ReservationResponse> reservations() {
         return this.reservations;
     }
     /**
-     * A list of commitment amounts for particular resources. Note that VCPU and MEMORY resource commitments must occur together.
+     * @return A list of commitment amounts for particular resources. Note that VCPU and MEMORY resource commitments must occur together.
      * 
-    */
+     */
     public List<ResourceCommitmentResponse> resources() {
         return this.resources;
     }
     /**
-     * Server-defined URL for the resource.
+     * @return Server-defined URL for the resource.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }
     /**
-     * Commitment start time in RFC3339 text format.
+     * @return Commitment start time in RFC3339 text format.
      * 
-    */
+     */
     public String startTimestamp() {
         return this.startTimestamp;
     }
     /**
-     * Status of the commitment with regards to eventual expiration (each commitment has an end date defined). One of the following values: NOT_YET_ACTIVE, ACTIVE, EXPIRED.
+     * @return Status of the commitment with regards to eventual expiration (each commitment has an end date defined). One of the following values: NOT_YET_ACTIVE, ACTIVE, EXPIRED.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * An optional, human-readable explanation of the status.
+     * @return An optional, human-readable explanation of the status.
      * 
-    */
+     */
     public String statusMessage() {
         return this.statusMessage;
     }
     /**
-     * The type of commitment, which affects the discount rate and the eligible resources. Type MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines. Type ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to accelerator optimized machines.
+     * @return The type of commitment, which affects the discount rate and the eligible resources. Type MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines. Type ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to accelerator optimized machines.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

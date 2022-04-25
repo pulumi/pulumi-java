@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ComplianceVersionResponse {
-    /**
-     * The CPE URI (https://cpe.mitre.org/specification/) this benchmark is applicable to.
-     * 
-     */
+        /**
+         * @return The CPE URI (https://cpe.mitre.org/specification/) this benchmark is applicable to.
+         * 
+         */
     private final String cpeUri;
-    /**
-     * The version of the benchmark. This is set to the version of the OS-specific CIS document the benchmark is defined in.
-     * 
-     */
+        /**
+         * @return The version of the benchmark. This is set to the version of the OS-specific CIS document the benchmark is defined in.
+         * 
+         */
     private final String version;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ComplianceVersionResponse {
     }
 
     /**
-     * The CPE URI (https://cpe.mitre.org/specification/) this benchmark is applicable to.
+     * @return The CPE URI (https://cpe.mitre.org/specification/) this benchmark is applicable to.
      * 
-    */
+     */
     public String cpeUri() {
         return this.cpeUri;
     }
     /**
-     * The version of the benchmark. This is set to the version of the OS-specific CIS document the benchmark is defined in.
+     * @return The version of the benchmark. This is set to the version of the OS-specific CIS document the benchmark is defined in.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

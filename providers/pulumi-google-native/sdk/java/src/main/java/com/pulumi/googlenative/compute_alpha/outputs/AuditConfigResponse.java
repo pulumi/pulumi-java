@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class AuditConfigResponse {
-    /**
-     * The configuration for logging of each type of permission.
-     * 
-     */
+        /**
+         * @return The configuration for logging of each type of permission.
+         * 
+         */
     private final List<AuditLogConfigResponse> auditLogConfigs;
-    /**
-     * This is deprecated and has no effect. Do not use.
-     * 
-     */
+        /**
+         * @return This is deprecated and has no effect. Do not use.
+         * 
+         */
     private final List<String> exemptedMembers;
-    /**
-     * Specifies a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
-     * 
-     */
+        /**
+         * @return Specifies a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
+         * 
+         */
     private final String service;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class AuditConfigResponse {
     }
 
     /**
-     * The configuration for logging of each type of permission.
+     * @return The configuration for logging of each type of permission.
      * 
-    */
+     */
     public List<AuditLogConfigResponse> auditLogConfigs() {
         return this.auditLogConfigs;
     }
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
-    */
+     */
     public List<String> exemptedMembers() {
         return this.exemptedMembers;
     }
     /**
-     * Specifies a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
+     * @return Specifies a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
      * 
-    */
+     */
     public String service() {
         return this.service;
     }

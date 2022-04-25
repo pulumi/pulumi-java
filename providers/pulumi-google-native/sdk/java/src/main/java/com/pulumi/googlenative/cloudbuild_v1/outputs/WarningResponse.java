@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class WarningResponse {
-    /**
-     * The priority for this warning.
-     * 
-     */
+        /**
+         * @return The priority for this warning.
+         * 
+         */
     private final String priority;
-    /**
-     * Explanation of the warning generated.
-     * 
-     */
+        /**
+         * @return Explanation of the warning generated.
+         * 
+         */
     private final String text;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class WarningResponse {
     }
 
     /**
-     * The priority for this warning.
+     * @return The priority for this warning.
      * 
-    */
+     */
     public String priority() {
         return this.priority;
     }
     /**
-     * Explanation of the warning generated.
+     * @return Explanation of the warning generated.
      * 
-    */
+     */
     public String text() {
         return this.text;
     }

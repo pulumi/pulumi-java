@@ -26,6 +26,10 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="alsologtostderr", required=true)
     private Boolean alsologtostderr;
 
+    /**
+     * @return Whether to also send taskrunner log info to stderr.
+     * 
+     */
     public Boolean alsologtostderr() {
         return this.alsologtostderr;
     }
@@ -37,6 +41,10 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="baseTaskDir", required=true)
     private String baseTaskDir;
 
+    /**
+     * @return The location on the worker for task-specific subdirectories.
+     * 
+     */
     public String baseTaskDir() {
         return this.baseTaskDir;
     }
@@ -48,6 +56,10 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="baseUrl", required=true)
     private String baseUrl;
 
+    /**
+     * @return The base URL for the taskrunner to use when accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, &#34;Relative Uniform Resource Locators&#34;. If not specified, the default value is &#34;http://www.googleapis.com/&#34;
+     * 
+     */
     public String baseUrl() {
         return this.baseUrl;
     }
@@ -59,6 +71,10 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="commandlinesFileName", required=true)
     private String commandlinesFileName;
 
+    /**
+     * @return The file to store preprocessing commands in.
+     * 
+     */
     public String commandlinesFileName() {
         return this.commandlinesFileName;
     }
@@ -70,6 +86,10 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="continueOnException", required=true)
     private Boolean continueOnException;
 
+    /**
+     * @return Whether to continue taskrunner if an exception is hit.
+     * 
+     */
     public Boolean continueOnException() {
         return this.continueOnException;
     }
@@ -81,6 +101,10 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="dataflowApiVersion", required=true)
     private String dataflowApiVersion;
 
+    /**
+     * @return The API version of endpoint, e.g. &#34;v1b3&#34;
+     * 
+     */
     public String dataflowApiVersion() {
         return this.dataflowApiVersion;
     }
@@ -92,6 +116,10 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="harnessCommand", required=true)
     private String harnessCommand;
 
+    /**
+     * @return The command to launch the worker harness.
+     * 
+     */
     public String harnessCommand() {
         return this.harnessCommand;
     }
@@ -103,6 +131,10 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="languageHint", required=true)
     private String languageHint;
 
+    /**
+     * @return The suggested backend language.
+     * 
+     */
     public String languageHint() {
         return this.languageHint;
     }
@@ -114,6 +146,10 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="logDir", required=true)
     private String logDir;
 
+    /**
+     * @return The directory on the VM to store logs.
+     * 
+     */
     public String logDir() {
         return this.logDir;
     }
@@ -125,6 +161,10 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="logToSerialconsole", required=true)
     private Boolean logToSerialconsole;
 
+    /**
+     * @return Whether to send taskrunner log info to Google Compute Engine VM serial console.
+     * 
+     */
     public Boolean logToSerialconsole() {
         return this.logToSerialconsole;
     }
@@ -136,6 +176,10 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="logUploadLocation", required=true)
     private String logUploadLocation;
 
+    /**
+     * @return Indicates where to put logs. If this is not specified, the logs will not be uploaded. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
+     * 
+     */
     public String logUploadLocation() {
         return this.logUploadLocation;
     }
@@ -147,6 +191,10 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="oauthScopes", required=true)
     private List<String> oauthScopes;
 
+    /**
+     * @return The OAuth2 scopes to be requested by the taskrunner in order to access the Cloud Dataflow API.
+     * 
+     */
     public List<String> oauthScopes() {
         return this.oauthScopes;
     }
@@ -158,6 +206,10 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="parallelWorkerSettings", required=true)
     private WorkerSettingsResponse parallelWorkerSettings;
 
+    /**
+     * @return The settings to pass to the parallel worker harness.
+     * 
+     */
     public WorkerSettingsResponse parallelWorkerSettings() {
         return this.parallelWorkerSettings;
     }
@@ -169,6 +221,10 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="streamingWorkerMainClass", required=true)
     private String streamingWorkerMainClass;
 
+    /**
+     * @return The streaming worker main class name.
+     * 
+     */
     public String streamingWorkerMainClass() {
         return this.streamingWorkerMainClass;
     }
@@ -180,6 +236,10 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="taskGroup", required=true)
     private String taskGroup;
 
+    /**
+     * @return The UNIX group ID on the worker VM to use for tasks launched by taskrunner; e.g. &#34;wheel&#34;.
+     * 
+     */
     public String taskGroup() {
         return this.taskGroup;
     }
@@ -191,6 +251,10 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="taskUser", required=true)
     private String taskUser;
 
+    /**
+     * @return The UNIX user ID on the worker VM to use for tasks launched by taskrunner; e.g. &#34;root&#34;.
+     * 
+     */
     public String taskUser() {
         return this.taskUser;
     }
@@ -202,6 +266,10 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="tempStoragePrefix", required=true)
     private String tempStoragePrefix;
 
+    /**
+     * @return The prefix of the resources the taskrunner should use for temporary storage. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
+     * 
+     */
     public String tempStoragePrefix() {
         return this.tempStoragePrefix;
     }
@@ -213,6 +281,10 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="vmId", required=true)
     private String vmId;
 
+    /**
+     * @return The ID string of the VM.
+     * 
+     */
     public String vmId() {
         return this.vmId;
     }
@@ -224,6 +296,10 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="workflowFileName", required=true)
     private String workflowFileName;
 
+    /**
+     * @return The file to store the workflow in.
+     * 
+     */
     public String workflowFileName() {
         return this.workflowFileName;
     }
@@ -270,100 +346,220 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
             $ = new TaskRunnerSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alsologtostderr Whether to also send taskrunner log info to stderr.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alsologtostderr(Boolean alsologtostderr) {
             $.alsologtostderr = alsologtostderr;
             return this;
         }
 
+        /**
+         * @param baseTaskDir The location on the worker for task-specific subdirectories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseTaskDir(String baseTaskDir) {
             $.baseTaskDir = baseTaskDir;
             return this;
         }
 
+        /**
+         * @param baseUrl The base URL for the taskrunner to use when accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, &#34;Relative Uniform Resource Locators&#34;. If not specified, the default value is &#34;http://www.googleapis.com/&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseUrl(String baseUrl) {
             $.baseUrl = baseUrl;
             return this;
         }
 
+        /**
+         * @param commandlinesFileName The file to store preprocessing commands in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commandlinesFileName(String commandlinesFileName) {
             $.commandlinesFileName = commandlinesFileName;
             return this;
         }
 
+        /**
+         * @param continueOnException Whether to continue taskrunner if an exception is hit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder continueOnException(Boolean continueOnException) {
             $.continueOnException = continueOnException;
             return this;
         }
 
+        /**
+         * @param dataflowApiVersion The API version of endpoint, e.g. &#34;v1b3&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataflowApiVersion(String dataflowApiVersion) {
             $.dataflowApiVersion = dataflowApiVersion;
             return this;
         }
 
+        /**
+         * @param harnessCommand The command to launch the worker harness.
+         * 
+         * @return builder
+         * 
+         */
         public Builder harnessCommand(String harnessCommand) {
             $.harnessCommand = harnessCommand;
             return this;
         }
 
+        /**
+         * @param languageHint The suggested backend language.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageHint(String languageHint) {
             $.languageHint = languageHint;
             return this;
         }
 
+        /**
+         * @param logDir The directory on the VM to store logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logDir(String logDir) {
             $.logDir = logDir;
             return this;
         }
 
+        /**
+         * @param logToSerialconsole Whether to send taskrunner log info to Google Compute Engine VM serial console.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logToSerialconsole(Boolean logToSerialconsole) {
             $.logToSerialconsole = logToSerialconsole;
             return this;
         }
 
+        /**
+         * @param logUploadLocation Indicates where to put logs. If this is not specified, the logs will not be uploaded. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
+         * 
+         * @return builder
+         * 
+         */
         public Builder logUploadLocation(String logUploadLocation) {
             $.logUploadLocation = logUploadLocation;
             return this;
         }
 
+        /**
+         * @param oauthScopes The OAuth2 scopes to be requested by the taskrunner in order to access the Cloud Dataflow API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauthScopes(List<String> oauthScopes) {
             $.oauthScopes = oauthScopes;
             return this;
         }
 
+        /**
+         * @param oauthScopes The OAuth2 scopes to be requested by the taskrunner in order to access the Cloud Dataflow API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauthScopes(String... oauthScopes) {
             return oauthScopes(List.of(oauthScopes));
         }
 
+        /**
+         * @param parallelWorkerSettings The settings to pass to the parallel worker harness.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parallelWorkerSettings(WorkerSettingsResponse parallelWorkerSettings) {
             $.parallelWorkerSettings = parallelWorkerSettings;
             return this;
         }
 
+        /**
+         * @param streamingWorkerMainClass The streaming worker main class name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamingWorkerMainClass(String streamingWorkerMainClass) {
             $.streamingWorkerMainClass = streamingWorkerMainClass;
             return this;
         }
 
+        /**
+         * @param taskGroup The UNIX group ID on the worker VM to use for tasks launched by taskrunner; e.g. &#34;wheel&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskGroup(String taskGroup) {
             $.taskGroup = taskGroup;
             return this;
         }
 
+        /**
+         * @param taskUser The UNIX user ID on the worker VM to use for tasks launched by taskrunner; e.g. &#34;root&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskUser(String taskUser) {
             $.taskUser = taskUser;
             return this;
         }
 
+        /**
+         * @param tempStoragePrefix The prefix of the resources the taskrunner should use for temporary storage. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
+         * 
+         * @return builder
+         * 
+         */
         public Builder tempStoragePrefix(String tempStoragePrefix) {
             $.tempStoragePrefix = tempStoragePrefix;
             return this;
         }
 
+        /**
+         * @param vmId The ID string of the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmId(String vmId) {
             $.vmId = vmId;
             return this;
         }
 
+        /**
+         * @param workflowFileName The file to store the workflow in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workflowFileName(String workflowFileName) {
             $.workflowFileName = workflowFileName;
             return this;

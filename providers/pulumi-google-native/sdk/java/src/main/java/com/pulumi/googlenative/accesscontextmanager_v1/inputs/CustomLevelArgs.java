@@ -24,6 +24,10 @@ public final class CustomLevelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expr", required=true)
     private Output<ExprArgs> expr;
 
+    /**
+     * @return A Cloud CEL expression evaluating to a boolean.
+     * 
+     */
     public Output<ExprArgs> expr() {
         return this.expr;
     }
@@ -52,11 +56,23 @@ public final class CustomLevelArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CustomLevelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expr A Cloud CEL expression evaluating to a boolean.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expr(Output<ExprArgs> expr) {
             $.expr = expr;
             return this;
         }
 
+        /**
+         * @param expr A Cloud CEL expression evaluating to a boolean.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expr(ExprArgs expr) {
             return expr(Output.of(expr));
         }

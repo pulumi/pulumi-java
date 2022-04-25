@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class DefaultObjectAccessControlProjectTeamResponse {
-    /**
-     * The project number.
-     * 
-     */
+        /**
+         * @return The project number.
+         * 
+         */
     private final String projectNumber;
-    /**
-     * The team.
-     * 
-     */
+        /**
+         * @return The team.
+         * 
+         */
     private final String team;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class DefaultObjectAccessControlProjectTeamResponse {
     }
 
     /**
-     * The project number.
+     * @return The project number.
      * 
-    */
+     */
     public String projectNumber() {
         return this.projectNumber;
     }
     /**
-     * The team.
+     * @return The team.
      * 
-    */
+     */
     public String team() {
         return this.team;
     }

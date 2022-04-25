@@ -28,6 +28,10 @@ public final class GooglePrivacyDlpV2ConditionArgs extends com.pulumi.resources.
     @Import(name="field", required=true)
     private Output<GooglePrivacyDlpV2FieldIdArgs> field;
 
+    /**
+     * @return Field within the record this condition is evaluated against.
+     * 
+     */
     public Output<GooglePrivacyDlpV2FieldIdArgs> field() {
         return this.field;
     }
@@ -39,6 +43,10 @@ public final class GooglePrivacyDlpV2ConditionArgs extends com.pulumi.resources.
     @Import(name="operator", required=true)
     private Output<GooglePrivacyDlpV2ConditionOperator> operator;
 
+    /**
+     * @return Operator used to compare the field or infoType to the value.
+     * 
+     */
     public Output<GooglePrivacyDlpV2ConditionOperator> operator() {
         return this.operator;
     }
@@ -50,6 +58,10 @@ public final class GooglePrivacyDlpV2ConditionArgs extends com.pulumi.resources.
     @Import(name="value")
     private @Nullable Output<GooglePrivacyDlpV2ValueArgs> value;
 
+    /**
+     * @return Value to compare against. [Mandatory, except for `EXISTS` tests.]
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2ValueArgs>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -80,29 +92,65 @@ public final class GooglePrivacyDlpV2ConditionArgs extends com.pulumi.resources.
             $ = new GooglePrivacyDlpV2ConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param field Field within the record this condition is evaluated against.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(Output<GooglePrivacyDlpV2FieldIdArgs> field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param field Field within the record this condition is evaluated against.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(GooglePrivacyDlpV2FieldIdArgs field) {
             return field(Output.of(field));
         }
 
+        /**
+         * @param operator Operator used to compare the field or infoType to the value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Output<GooglePrivacyDlpV2ConditionOperator> operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param operator Operator used to compare the field or infoType to the value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(GooglePrivacyDlpV2ConditionOperator operator) {
             return operator(Output.of(operator));
         }
 
+        /**
+         * @param value Value to compare against. [Mandatory, except for `EXISTS` tests.]
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<GooglePrivacyDlpV2ValueArgs> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Value to compare against. [Mandatory, except for `EXISTS` tests.]
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(GooglePrivacyDlpV2ValueArgs value) {
             return value(Output.of(value));
         }

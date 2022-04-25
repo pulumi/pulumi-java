@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudChannelV1ProvisionedServiceResponse {
-    /**
-     * The product pertaining to the provisioning resource as specified in the Offer.
-     * 
-     */
+        /**
+         * @return The product pertaining to the provisioning resource as specified in the Offer.
+         * 
+         */
     private final String productId;
-    /**
-     * Provisioning ID of the entitlement. For Google Workspace, this would be the underlying Subscription ID. For Google Cloud Platform, this would be the Billing Account ID of the billing subaccount.&#34;
-     * 
-     */
+        /**
+         * @return Provisioning ID of the entitlement. For Google Workspace, this would be the underlying Subscription ID. For Google Cloud Platform, this would be the Billing Account ID of the billing subaccount.&#34;
+         * 
+         */
     private final String provisioningId;
-    /**
-     * The SKU pertaining to the provisioning resource as specified in the Offer.
-     * 
-     */
+        /**
+         * @return The SKU pertaining to the provisioning resource as specified in the Offer.
+         * 
+         */
     private final String skuId;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse {
     }
 
     /**
-     * The product pertaining to the provisioning resource as specified in the Offer.
+     * @return The product pertaining to the provisioning resource as specified in the Offer.
      * 
-    */
+     */
     public String productId() {
         return this.productId;
     }
     /**
-     * Provisioning ID of the entitlement. For Google Workspace, this would be the underlying Subscription ID. For Google Cloud Platform, this would be the Billing Account ID of the billing subaccount.&#34;
+     * @return Provisioning ID of the entitlement. For Google Workspace, this would be the underlying Subscription ID. For Google Cloud Platform, this would be the Billing Account ID of the billing subaccount.&#34;
      * 
-    */
+     */
     public String provisioningId() {
         return this.provisioningId;
     }
     /**
-     * The SKU pertaining to the provisioning resource as specified in the Offer.
+     * @return The SKU pertaining to the provisioning resource as specified in the Offer.
      * 
-    */
+     */
     public String skuId() {
         return this.skuId;
     }

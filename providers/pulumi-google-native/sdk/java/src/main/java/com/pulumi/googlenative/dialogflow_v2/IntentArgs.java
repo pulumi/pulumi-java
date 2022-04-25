@@ -31,6 +31,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="action")
     private @Nullable Output<String> action;
 
+    /**
+     * @return Optional. The name of the action associated with the intent. Note: The action name must not contain whitespaces.
+     * 
+     */
     public Optional<Output<String>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -42,6 +46,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultResponsePlatforms")
     private @Nullable Output<List<IntentDefaultResponsePlatformsItem>> defaultResponsePlatforms;
 
+    /**
+     * @return Optional. The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED (i.e. default platform).
+     * 
+     */
     public Optional<Output<List<IntentDefaultResponsePlatformsItem>>> defaultResponsePlatforms() {
         return Optional.ofNullable(this.defaultResponsePlatforms);
     }
@@ -53,6 +61,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The name of this intent.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -64,6 +76,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endInteraction")
     private @Nullable Output<Boolean> endInteraction;
 
+    /**
+     * @return Optional. Indicates that this intent ends an interaction. Some integrations (e.g., Actions on Google or Dialogflow phone gateway) use this information to close interaction with an end user. Default is false.
+     * 
+     */
     public Optional<Output<Boolean>> endInteraction() {
         return Optional.ofNullable(this.endInteraction);
     }
@@ -75,6 +91,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="events")
     private @Nullable Output<List<String>> events;
 
+    /**
+     * @return Optional. The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of the contexts must be present in the active user session for an event to trigger this intent. Event names are limited to 150 characters.
+     * 
+     */
     public Optional<Output<List<String>>> events() {
         return Optional.ofNullable(this.events);
     }
@@ -86,6 +106,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputContextNames")
     private @Nullable Output<List<String>> inputContextNames;
 
+    /**
+     * @return Optional. The list of context names required for this intent to be triggered. Format: `projects//agent/sessions/-/contexts/`.
+     * 
+     */
     public Optional<Output<List<String>>> inputContextNames() {
         return Optional.ofNullable(this.inputContextNames);
     }
@@ -104,6 +128,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isFallback")
     private @Nullable Output<Boolean> isFallback;
 
+    /**
+     * @return Optional. Indicates whether this is a fallback intent.
+     * 
+     */
     public Optional<Output<Boolean>> isFallback() {
         return Optional.ofNullable(this.isFallback);
     }
@@ -122,6 +150,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="liveAgentHandoff")
     private @Nullable Output<Boolean> liveAgentHandoff;
 
+    /**
+     * @return Optional. Indicates that a live agent should be brought in to handle the interaction with the user. In most cases, when you set this flag to true, you would also want to set end_interaction to true as well. Default is false.
+     * 
+     */
     public Optional<Output<Boolean>> liveAgentHandoff() {
         return Optional.ofNullable(this.liveAgentHandoff);
     }
@@ -140,6 +172,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="messages")
     private @Nullable Output<List<GoogleCloudDialogflowV2IntentMessageArgs>> messages;
 
+    /**
+     * @return Optional. The collection of rich messages corresponding to the `Response` field in the Dialogflow console.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDialogflowV2IntentMessageArgs>>> messages() {
         return Optional.ofNullable(this.messages);
     }
@@ -151,6 +187,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mlDisabled")
     private @Nullable Output<Boolean> mlDisabled;
 
+    /**
+     * @return Optional. Indicates whether Machine Learning is disabled for the intent. Note: If `ml_disabled` setting is set to true, then this intent is not taken into account during inference in `ML ONLY` match mode. Also, auto-markup in the UI is turned off.
+     * 
+     */
     public Optional<Output<Boolean>> mlDisabled() {
         return Optional.ofNullable(this.mlDisabled);
     }
@@ -162,6 +202,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Optional. The unique identifier of this intent. Required for Intents.UpdateIntent and Intents.BatchUpdateIntents methods. Format: `projects//agent/intents/`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -173,6 +217,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="outputContexts")
     private @Nullable Output<List<GoogleCloudDialogflowV2ContextArgs>> outputContexts;
 
+    /**
+     * @return Optional. The collection of contexts that are activated when the intent is matched. Context messages in this collection should not set the parameters field. Setting the `lifespan_count` to 0 will reset the context when the intent is matched. Format: `projects//agent/sessions/-/contexts/`.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDialogflowV2ContextArgs>>> outputContexts() {
         return Optional.ofNullable(this.outputContexts);
     }
@@ -184,6 +232,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
     private @Nullable Output<List<GoogleCloudDialogflowV2IntentParameterArgs>> parameters;
 
+    /**
+     * @return Optional. The collection of parameters associated with the intent.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDialogflowV2IntentParameterArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -195,6 +247,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parentFollowupIntentName")
     private @Nullable Output<String> parentFollowupIntentName;
 
+    /**
+     * @return Read-only after creation. The unique identifier of the parent intent in the chain of followup intents. You can set this field when creating an intent, for example with CreateIntent or BatchUpdateIntents, in order to make this intent a followup intent. It identifies the parent followup intent. Format: `projects//agent/intents/`.
+     * 
+     */
     public Optional<Output<String>> parentFollowupIntentName() {
         return Optional.ofNullable(this.parentFollowupIntentName);
     }
@@ -206,6 +262,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="priority")
     private @Nullable Output<Integer> priority;
 
+    /**
+     * @return Optional. The priority of this intent. Higher numbers represent higher priorities. - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds to the `Normal` priority in the console. - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
+     * 
+     */
     public Optional<Output<Integer>> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -224,6 +284,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resetContexts")
     private @Nullable Output<Boolean> resetContexts;
 
+    /**
+     * @return Optional. Indicates whether to delete all contexts in the current session when this intent is matched.
+     * 
+     */
     public Optional<Output<Boolean>> resetContexts() {
         return Optional.ofNullable(this.resetContexts);
     }
@@ -235,6 +299,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="trainingPhrases")
     private @Nullable Output<List<GoogleCloudDialogflowV2IntentTrainingPhraseArgs>> trainingPhrases;
 
+    /**
+     * @return Optional. The collection of examples that the agent is trained on.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDialogflowV2IntentTrainingPhraseArgs>>> trainingPhrases() {
         return Optional.ofNullable(this.trainingPhrases);
     }
@@ -246,6 +314,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="webhookState")
     private @Nullable Output<IntentWebhookState> webhookState;
 
+    /**
+     * @return Optional. Indicates whether webhooks are enabled for the intent.
+     * 
+     */
     public Optional<Output<IntentWebhookState>> webhookState() {
         return Optional.ofNullable(this.webhookState);
     }
@@ -295,68 +367,158 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IntentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Optional. The name of the action associated with the intent. Note: The action name must not contain whitespaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<String> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action Optional. The name of the action associated with the intent. Note: The action name must not contain whitespaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param defaultResponsePlatforms Optional. The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED (i.e. default platform).
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultResponsePlatforms(@Nullable Output<List<IntentDefaultResponsePlatformsItem>> defaultResponsePlatforms) {
             $.defaultResponsePlatforms = defaultResponsePlatforms;
             return this;
         }
 
+        /**
+         * @param defaultResponsePlatforms Optional. The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED (i.e. default platform).
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultResponsePlatforms(List<IntentDefaultResponsePlatformsItem> defaultResponsePlatforms) {
             return defaultResponsePlatforms(Output.of(defaultResponsePlatforms));
         }
 
+        /**
+         * @param defaultResponsePlatforms Optional. The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED (i.e. default platform).
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultResponsePlatforms(IntentDefaultResponsePlatformsItem... defaultResponsePlatforms) {
             return defaultResponsePlatforms(List.of(defaultResponsePlatforms));
         }
 
+        /**
+         * @param displayName The name of this intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The name of this intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param endInteraction Optional. Indicates that this intent ends an interaction. Some integrations (e.g., Actions on Google or Dialogflow phone gateway) use this information to close interaction with an end user. Default is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endInteraction(@Nullable Output<Boolean> endInteraction) {
             $.endInteraction = endInteraction;
             return this;
         }
 
+        /**
+         * @param endInteraction Optional. Indicates that this intent ends an interaction. Some integrations (e.g., Actions on Google or Dialogflow phone gateway) use this information to close interaction with an end user. Default is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endInteraction(Boolean endInteraction) {
             return endInteraction(Output.of(endInteraction));
         }
 
+        /**
+         * @param events Optional. The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of the contexts must be present in the active user session for an event to trigger this intent. Event names are limited to 150 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(@Nullable Output<List<String>> events) {
             $.events = events;
             return this;
         }
 
+        /**
+         * @param events Optional. The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of the contexts must be present in the active user session for an event to trigger this intent. Event names are limited to 150 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(List<String> events) {
             return events(Output.of(events));
         }
 
+        /**
+         * @param events Optional. The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of the contexts must be present in the active user session for an event to trigger this intent. Event names are limited to 150 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(String... events) {
             return events(List.of(events));
         }
 
+        /**
+         * @param inputContextNames Optional. The list of context names required for this intent to be triggered. Format: `projects//agent/sessions/-/contexts/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputContextNames(@Nullable Output<List<String>> inputContextNames) {
             $.inputContextNames = inputContextNames;
             return this;
         }
 
+        /**
+         * @param inputContextNames Optional. The list of context names required for this intent to be triggered. Format: `projects//agent/sessions/-/contexts/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputContextNames(List<String> inputContextNames) {
             return inputContextNames(Output.of(inputContextNames));
         }
 
+        /**
+         * @param inputContextNames Optional. The list of context names required for this intent to be triggered. Format: `projects//agent/sessions/-/contexts/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputContextNames(String... inputContextNames) {
             return inputContextNames(List.of(inputContextNames));
         }
@@ -370,11 +532,23 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
             return intentView(Output.of(intentView));
         }
 
+        /**
+         * @param isFallback Optional. Indicates whether this is a fallback intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isFallback(@Nullable Output<Boolean> isFallback) {
             $.isFallback = isFallback;
             return this;
         }
 
+        /**
+         * @param isFallback Optional. Indicates whether this is a fallback intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isFallback(Boolean isFallback) {
             return isFallback(Output.of(isFallback));
         }
@@ -388,11 +562,23 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
             return languageCode(Output.of(languageCode));
         }
 
+        /**
+         * @param liveAgentHandoff Optional. Indicates that a live agent should be brought in to handle the interaction with the user. In most cases, when you set this flag to true, you would also want to set end_interaction to true as well. Default is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder liveAgentHandoff(@Nullable Output<Boolean> liveAgentHandoff) {
             $.liveAgentHandoff = liveAgentHandoff;
             return this;
         }
 
+        /**
+         * @param liveAgentHandoff Optional. Indicates that a live agent should be brought in to handle the interaction with the user. In most cases, when you set this flag to true, you would also want to set end_interaction to true as well. Default is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder liveAgentHandoff(Boolean liveAgentHandoff) {
             return liveAgentHandoff(Output.of(liveAgentHandoff));
         }
@@ -406,77 +592,179 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param messages Optional. The collection of rich messages corresponding to the `Response` field in the Dialogflow console.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messages(@Nullable Output<List<GoogleCloudDialogflowV2IntentMessageArgs>> messages) {
             $.messages = messages;
             return this;
         }
 
+        /**
+         * @param messages Optional. The collection of rich messages corresponding to the `Response` field in the Dialogflow console.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messages(List<GoogleCloudDialogflowV2IntentMessageArgs> messages) {
             return messages(Output.of(messages));
         }
 
+        /**
+         * @param messages Optional. The collection of rich messages corresponding to the `Response` field in the Dialogflow console.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messages(GoogleCloudDialogflowV2IntentMessageArgs... messages) {
             return messages(List.of(messages));
         }
 
+        /**
+         * @param mlDisabled Optional. Indicates whether Machine Learning is disabled for the intent. Note: If `ml_disabled` setting is set to true, then this intent is not taken into account during inference in `ML ONLY` match mode. Also, auto-markup in the UI is turned off.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mlDisabled(@Nullable Output<Boolean> mlDisabled) {
             $.mlDisabled = mlDisabled;
             return this;
         }
 
+        /**
+         * @param mlDisabled Optional. Indicates whether Machine Learning is disabled for the intent. Note: If `ml_disabled` setting is set to true, then this intent is not taken into account during inference in `ML ONLY` match mode. Also, auto-markup in the UI is turned off.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mlDisabled(Boolean mlDisabled) {
             return mlDisabled(Output.of(mlDisabled));
         }
 
+        /**
+         * @param name Optional. The unique identifier of this intent. Required for Intents.UpdateIntent and Intents.BatchUpdateIntents methods. Format: `projects//agent/intents/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Optional. The unique identifier of this intent. Required for Intents.UpdateIntent and Intents.BatchUpdateIntents methods. Format: `projects//agent/intents/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param outputContexts Optional. The collection of contexts that are activated when the intent is matched. Context messages in this collection should not set the parameters field. Setting the `lifespan_count` to 0 will reset the context when the intent is matched. Format: `projects//agent/sessions/-/contexts/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputContexts(@Nullable Output<List<GoogleCloudDialogflowV2ContextArgs>> outputContexts) {
             $.outputContexts = outputContexts;
             return this;
         }
 
+        /**
+         * @param outputContexts Optional. The collection of contexts that are activated when the intent is matched. Context messages in this collection should not set the parameters field. Setting the `lifespan_count` to 0 will reset the context when the intent is matched. Format: `projects//agent/sessions/-/contexts/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputContexts(List<GoogleCloudDialogflowV2ContextArgs> outputContexts) {
             return outputContexts(Output.of(outputContexts));
         }
 
+        /**
+         * @param outputContexts Optional. The collection of contexts that are activated when the intent is matched. Context messages in this collection should not set the parameters field. Setting the `lifespan_count` to 0 will reset the context when the intent is matched. Format: `projects//agent/sessions/-/contexts/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputContexts(GoogleCloudDialogflowV2ContextArgs... outputContexts) {
             return outputContexts(List.of(outputContexts));
         }
 
+        /**
+         * @param parameters Optional. The collection of parameters associated with the intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<List<GoogleCloudDialogflowV2IntentParameterArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Optional. The collection of parameters associated with the intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<GoogleCloudDialogflowV2IntentParameterArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param parameters Optional. The collection of parameters associated with the intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(GoogleCloudDialogflowV2IntentParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param parentFollowupIntentName Read-only after creation. The unique identifier of the parent intent in the chain of followup intents. You can set this field when creating an intent, for example with CreateIntent or BatchUpdateIntents, in order to make this intent a followup intent. It identifies the parent followup intent. Format: `projects//agent/intents/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentFollowupIntentName(@Nullable Output<String> parentFollowupIntentName) {
             $.parentFollowupIntentName = parentFollowupIntentName;
             return this;
         }
 
+        /**
+         * @param parentFollowupIntentName Read-only after creation. The unique identifier of the parent intent in the chain of followup intents. You can set this field when creating an intent, for example with CreateIntent or BatchUpdateIntents, in order to make this intent a followup intent. It identifies the parent followup intent. Format: `projects//agent/intents/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentFollowupIntentName(String parentFollowupIntentName) {
             return parentFollowupIntentName(Output.of(parentFollowupIntentName));
         }
 
+        /**
+         * @param priority Optional. The priority of this intent. Higher numbers represent higher priorities. - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds to the `Normal` priority in the console. - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority Optional. The priority of this intent. Higher numbers represent higher priorities. - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds to the `Normal` priority in the console. - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
@@ -490,33 +778,75 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param resetContexts Optional. Indicates whether to delete all contexts in the current session when this intent is matched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resetContexts(@Nullable Output<Boolean> resetContexts) {
             $.resetContexts = resetContexts;
             return this;
         }
 
+        /**
+         * @param resetContexts Optional. Indicates whether to delete all contexts in the current session when this intent is matched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resetContexts(Boolean resetContexts) {
             return resetContexts(Output.of(resetContexts));
         }
 
+        /**
+         * @param trainingPhrases Optional. The collection of examples that the agent is trained on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trainingPhrases(@Nullable Output<List<GoogleCloudDialogflowV2IntentTrainingPhraseArgs>> trainingPhrases) {
             $.trainingPhrases = trainingPhrases;
             return this;
         }
 
+        /**
+         * @param trainingPhrases Optional. The collection of examples that the agent is trained on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trainingPhrases(List<GoogleCloudDialogflowV2IntentTrainingPhraseArgs> trainingPhrases) {
             return trainingPhrases(Output.of(trainingPhrases));
         }
 
+        /**
+         * @param trainingPhrases Optional. The collection of examples that the agent is trained on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trainingPhrases(GoogleCloudDialogflowV2IntentTrainingPhraseArgs... trainingPhrases) {
             return trainingPhrases(List.of(trainingPhrases));
         }
 
+        /**
+         * @param webhookState Optional. Indicates whether webhooks are enabled for the intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhookState(@Nullable Output<IntentWebhookState> webhookState) {
             $.webhookState = webhookState;
             return this;
         }
 
+        /**
+         * @param webhookState Optional. Indicates whether webhooks are enabled for the intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhookState(IntentWebhookState webhookState) {
             return webhookState(Output.of(webhookState));
         }

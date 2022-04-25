@@ -11,10 +11,10 @@ import java.util.Objects;
 
 @CustomType
 public final class RRSetRoutingPolicyGeoPolicyResponse {
-    /**
-     * The primary geo routing configuration. If there are multiple items with the same location, an error is returned instead.
-     * 
-     */
+        /**
+         * @return The primary geo routing configuration. If there are multiple items with the same location, an error is returned instead.
+         * 
+         */
     private final List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items;
     private final String kind;
 
@@ -27,9 +27,9 @@ public final class RRSetRoutingPolicyGeoPolicyResponse {
     }
 
     /**
-     * The primary geo routing configuration. If there are multiple items with the same location, an error is returned instead.
+     * @return The primary geo routing configuration. If there are multiple items with the same location, an error is returned instead.
      * 
-    */
+     */
     public List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items() {
         return this.items;
     }

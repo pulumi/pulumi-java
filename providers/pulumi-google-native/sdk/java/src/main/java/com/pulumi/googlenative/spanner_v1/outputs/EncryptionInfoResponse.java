@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class EncryptionInfoResponse {
-    /**
-     * If present, the status of a recent encrypt/decrypt call on underlying data for this database or backup. Regardless of status, data is always encrypted at rest.
-     * 
-     */
+        /**
+         * @return If present, the status of a recent encrypt/decrypt call on underlying data for this database or backup. Regardless of status, data is always encrypted at rest.
+         * 
+         */
     private final StatusResponse encryptionStatus;
-    /**
-     * The type of encryption.
-     * 
-     */
+        /**
+         * @return The type of encryption.
+         * 
+         */
     private final String encryptionType;
-    /**
-     * A Cloud KMS key version that is being used to protect the database or backup.
-     * 
-     */
+        /**
+         * @return A Cloud KMS key version that is being used to protect the database or backup.
+         * 
+         */
     private final String kmsKeyVersion;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class EncryptionInfoResponse {
     }
 
     /**
-     * If present, the status of a recent encrypt/decrypt call on underlying data for this database or backup. Regardless of status, data is always encrypted at rest.
+     * @return If present, the status of a recent encrypt/decrypt call on underlying data for this database or backup. Regardless of status, data is always encrypted at rest.
      * 
-    */
+     */
     public StatusResponse encryptionStatus() {
         return this.encryptionStatus;
     }
     /**
-     * The type of encryption.
+     * @return The type of encryption.
      * 
-    */
+     */
     public String encryptionType() {
         return this.encryptionType;
     }
     /**
-     * A Cloud KMS key version that is being used to protect the database or backup.
+     * @return A Cloud KMS key version that is being used to protect the database or backup.
      * 
-    */
+     */
     public String kmsKeyVersion() {
         return this.kmsKeyVersion;
     }

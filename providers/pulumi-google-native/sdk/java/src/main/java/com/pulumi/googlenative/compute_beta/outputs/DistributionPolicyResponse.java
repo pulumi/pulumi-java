@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class DistributionPolicyResponse {
-    /**
-     * The distribution shape to which the group converges either proactively or on resize events (depending on the value set in updatePolicy.instanceRedistributionType).
-     * 
-     */
+        /**
+         * @return The distribution shape to which the group converges either proactively or on resize events (depending on the value set in updatePolicy.instanceRedistributionType).
+         * 
+         */
     private final String targetShape;
-    /**
-     * Zones where the regional managed instance group will create and manage its instances.
-     * 
-     */
+        /**
+         * @return Zones where the regional managed instance group will create and manage its instances.
+         * 
+         */
     private final List<DistributionPolicyZoneConfigurationResponse> zones;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class DistributionPolicyResponse {
     }
 
     /**
-     * The distribution shape to which the group converges either proactively or on resize events (depending on the value set in updatePolicy.instanceRedistributionType).
+     * @return The distribution shape to which the group converges either proactively or on resize events (depending on the value set in updatePolicy.instanceRedistributionType).
      * 
-    */
+     */
     public String targetShape() {
         return this.targetShape;
     }
     /**
-     * Zones where the regional managed instance group will create and manage its instances.
+     * @return Zones where the regional managed instance group will create and manage its instances.
      * 
-    */
+     */
     public List<DistributionPolicyZoneConfigurationResponse> zones() {
         return this.zones;
     }

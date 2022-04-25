@@ -26,6 +26,10 @@ public final class PubSubIODetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="subscription")
     private @Nullable Output<String> subscription;
 
+    /**
+     * @return Subscription used in the connection.
+     * 
+     */
     public Optional<Output<String>> subscription() {
         return Optional.ofNullable(this.subscription);
     }
@@ -37,6 +41,10 @@ public final class PubSubIODetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="topic")
     private @Nullable Output<String> topic;
 
+    /**
+     * @return Topic accessed in the connection.
+     * 
+     */
     public Optional<Output<String>> topic() {
         return Optional.ofNullable(this.topic);
     }
@@ -66,20 +74,44 @@ public final class PubSubIODetailsArgs extends com.pulumi.resources.ResourceArgs
             $ = new PubSubIODetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subscription Subscription used in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscription(@Nullable Output<String> subscription) {
             $.subscription = subscription;
             return this;
         }
 
+        /**
+         * @param subscription Subscription used in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscription(String subscription) {
             return subscription(Output.of(subscription));
         }
 
+        /**
+         * @param topic Topic accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(@Nullable Output<String> topic) {
             $.topic = topic;
             return this;
         }
 
+        /**
+         * @param topic Topic accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(String topic) {
             return topic(Output.of(topic));
         }

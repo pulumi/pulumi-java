@@ -23,6 +23,10 @@ public final class ConfigConnectorConfigResponse extends com.pulumi.resources.In
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whether Cloud Connector is enabled for this cluster.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -51,6 +55,12 @@ public final class ConfigConnectorConfigResponse extends com.pulumi.resources.In
             $ = new ConfigConnectorConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether Cloud Connector is enabled for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

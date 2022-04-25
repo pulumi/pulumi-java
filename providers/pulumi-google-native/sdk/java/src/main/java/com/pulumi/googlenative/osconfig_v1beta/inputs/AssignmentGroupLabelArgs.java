@@ -27,6 +27,10 @@ public final class AssignmentGroupLabelArgs extends com.pulumi.resources.Resourc
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Google Compute Engine instance labels that must be present for an instance to be included in this assignment group.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -55,11 +59,23 @@ public final class AssignmentGroupLabelArgs extends com.pulumi.resources.Resourc
             $ = new AssignmentGroupLabelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labels Google Compute Engine instance labels that must be present for an instance to be included in this assignment group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Google Compute Engine instance labels that must be present for an instance to be included in this assignment group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }

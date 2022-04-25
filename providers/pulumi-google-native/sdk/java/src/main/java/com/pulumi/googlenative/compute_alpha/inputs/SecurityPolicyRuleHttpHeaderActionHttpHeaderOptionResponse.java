@@ -19,6 +19,10 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse ex
     @Import(name="headerName", required=true)
     private String headerName;
 
+    /**
+     * @return The name of the header to set.
+     * 
+     */
     public String headerName() {
         return this.headerName;
     }
@@ -30,6 +34,10 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse ex
     @Import(name="headerValue", required=true)
     private String headerValue;
 
+    /**
+     * @return The value to set the named header to.
+     * 
+     */
     public String headerValue() {
         return this.headerValue;
     }
@@ -59,11 +67,23 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse ex
             $ = new SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param headerName The name of the header to set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerName(String headerName) {
             $.headerName = headerName;
             return this;
         }
 
+        /**
+         * @param headerValue The value to set the named header to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerValue(String headerValue) {
             $.headerValue = headerValue;
             return this;

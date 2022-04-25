@@ -11,35 +11,35 @@ import java.util.Objects;
 
 @CustomType
 public final class ReleaseResponse {
-    /**
-     * The deploy description when the release was created. The value can be up to 512 characters.
-     * 
-     */
+        /**
+         * @return The deploy description when the release was created. The value can be up to 512 characters.
+         * 
+         */
     private final String message;
-    /**
-     * The unique identifier for the release, in either of the following formats: - sites/SITE_ID/releases/RELEASE_ID - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID This name is provided in the response body when you call [`releases.create`](sites.releases/create) or [`channels.releases.create`](sites.channels.releases/create).
-     * 
-     */
+        /**
+         * @return The unique identifier for the release, in either of the following formats: - sites/SITE_ID/releases/RELEASE_ID - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID This name is provided in the response body when you call [`releases.create`](sites.releases/create) or [`channels.releases.create`](sites.channels.releases/create).
+         * 
+         */
     private final String name;
-    /**
-     * The time at which the version is set to be public.
-     * 
-     */
+        /**
+         * @return The time at which the version is set to be public.
+         * 
+         */
     private final String releaseTime;
-    /**
-     * Identifies the user who created the release.
-     * 
-     */
+        /**
+         * @return Identifies the user who created the release.
+         * 
+         */
     private final ActingUserResponse releaseUser;
-    /**
-     * Explains the reason for the release. Specify a value for this field only when creating a `SITE_DISABLE` type release.
-     * 
-     */
+        /**
+         * @return Explains the reason for the release. Specify a value for this field only when creating a `SITE_DISABLE` type release.
+         * 
+         */
     private final String type;
-    /**
-     * The configuration and content that was released.
-     * 
-     */
+        /**
+         * @return The configuration and content that was released.
+         * 
+         */
     private final VersionResponse version;
 
     @CustomType.Constructor
@@ -59,44 +59,44 @@ public final class ReleaseResponse {
     }
 
     /**
-     * The deploy description when the release was created. The value can be up to 512 characters.
+     * @return The deploy description when the release was created. The value can be up to 512 characters.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * The unique identifier for the release, in either of the following formats: - sites/SITE_ID/releases/RELEASE_ID - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID This name is provided in the response body when you call [`releases.create`](sites.releases/create) or [`channels.releases.create`](sites.channels.releases/create).
+     * @return The unique identifier for the release, in either of the following formats: - sites/SITE_ID/releases/RELEASE_ID - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID This name is provided in the response body when you call [`releases.create`](sites.releases/create) or [`channels.releases.create`](sites.channels.releases/create).
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The time at which the version is set to be public.
+     * @return The time at which the version is set to be public.
      * 
-    */
+     */
     public String releaseTime() {
         return this.releaseTime;
     }
     /**
-     * Identifies the user who created the release.
+     * @return Identifies the user who created the release.
      * 
-    */
+     */
     public ActingUserResponse releaseUser() {
         return this.releaseUser;
     }
     /**
-     * Explains the reason for the release. Specify a value for this field only when creating a `SITE_DISABLE` type release.
+     * @return Explains the reason for the release. Specify a value for this field only when creating a `SITE_DISABLE` type release.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The configuration and content that was released.
+     * @return The configuration and content that was released.
      * 
-    */
+     */
     public VersionResponse version() {
         return this.version;
     }

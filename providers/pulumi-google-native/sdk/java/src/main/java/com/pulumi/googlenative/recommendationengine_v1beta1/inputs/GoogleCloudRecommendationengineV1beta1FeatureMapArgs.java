@@ -27,6 +27,10 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapArgs extends 
     @Import(name="categoricalFeatures")
     private @Nullable Output<Map<String,String>> categoricalFeatures;
 
+    /**
+     * @return Categorical features that can take on one of a limited number of possible values. Some examples would be the brand/maker of a product, or country of a customer. Feature names and values must be UTF-8 encoded strings. For example: `{ &#34;colors&#34;: {&#34;value&#34;: [&#34;yellow&#34;, &#34;green&#34;]}, &#34;sizes&#34;: {&#34;value&#34;:[&#34;S&#34;, &#34;M&#34;]}`
+     * 
+     */
     public Optional<Output<Map<String,String>>> categoricalFeatures() {
         return Optional.ofNullable(this.categoricalFeatures);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapArgs extends 
     @Import(name="numericalFeatures")
     private @Nullable Output<Map<String,String>> numericalFeatures;
 
+    /**
+     * @return Numerical features. Some examples would be the height/weight of a product, or age of a customer. Feature names must be UTF-8 encoded strings. For example: `{ &#34;lengths_cm&#34;: {&#34;value&#34;:[2.3, 15.4]}, &#34;heights_cm&#34;: {&#34;value&#34;:[8.1, 6.4]} }`
+     * 
+     */
     public Optional<Output<Map<String,String>>> numericalFeatures() {
         return Optional.ofNullable(this.numericalFeatures);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapArgs extends 
             $ = new GoogleCloudRecommendationengineV1beta1FeatureMapArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param categoricalFeatures Categorical features that can take on one of a limited number of possible values. Some examples would be the brand/maker of a product, or country of a customer. Feature names and values must be UTF-8 encoded strings. For example: `{ &#34;colors&#34;: {&#34;value&#34;: [&#34;yellow&#34;, &#34;green&#34;]}, &#34;sizes&#34;: {&#34;value&#34;:[&#34;S&#34;, &#34;M&#34;]}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder categoricalFeatures(@Nullable Output<Map<String,String>> categoricalFeatures) {
             $.categoricalFeatures = categoricalFeatures;
             return this;
         }
 
+        /**
+         * @param categoricalFeatures Categorical features that can take on one of a limited number of possible values. Some examples would be the brand/maker of a product, or country of a customer. Feature names and values must be UTF-8 encoded strings. For example: `{ &#34;colors&#34;: {&#34;value&#34;: [&#34;yellow&#34;, &#34;green&#34;]}, &#34;sizes&#34;: {&#34;value&#34;:[&#34;S&#34;, &#34;M&#34;]}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder categoricalFeatures(Map<String,String> categoricalFeatures) {
             return categoricalFeatures(Output.of(categoricalFeatures));
         }
 
+        /**
+         * @param numericalFeatures Numerical features. Some examples would be the height/weight of a product, or age of a customer. Feature names must be UTF-8 encoded strings. For example: `{ &#34;lengths_cm&#34;: {&#34;value&#34;:[2.3, 15.4]}, &#34;heights_cm&#34;: {&#34;value&#34;:[8.1, 6.4]} }`
+         * 
+         * @return builder
+         * 
+         */
         public Builder numericalFeatures(@Nullable Output<Map<String,String>> numericalFeatures) {
             $.numericalFeatures = numericalFeatures;
             return this;
         }
 
+        /**
+         * @param numericalFeatures Numerical features. Some examples would be the height/weight of a product, or age of a customer. Feature names must be UTF-8 encoded strings. For example: `{ &#34;lengths_cm&#34;: {&#34;value&#34;:[2.3, 15.4]}, &#34;heights_cm&#34;: {&#34;value&#34;:[8.1, 6.4]} }`
+         * 
+         * @return builder
+         * 
+         */
         public Builder numericalFeatures(Map<String,String> numericalFeatures) {
             return numericalFeatures(Output.of(numericalFeatures));
         }

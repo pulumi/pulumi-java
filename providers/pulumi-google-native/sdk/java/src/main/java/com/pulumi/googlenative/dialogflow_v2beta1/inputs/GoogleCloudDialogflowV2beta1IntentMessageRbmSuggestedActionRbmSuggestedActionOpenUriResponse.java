@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRb
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return The uri to open on the user device
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRb
             $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param uri The uri to open on the user device
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

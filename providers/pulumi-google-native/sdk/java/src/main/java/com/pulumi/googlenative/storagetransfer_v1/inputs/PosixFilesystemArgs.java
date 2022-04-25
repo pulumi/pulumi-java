@@ -26,6 +26,10 @@ public final class PosixFilesystemArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="rootDirectory")
     private @Nullable Output<String> rootDirectory;
 
+    /**
+     * @return Root directory path to the filesystem.
+     * 
+     */
     public Optional<Output<String>> rootDirectory() {
         return Optional.ofNullable(this.rootDirectory);
     }
@@ -54,11 +58,23 @@ public final class PosixFilesystemArgs extends com.pulumi.resources.ResourceArgs
             $ = new PosixFilesystemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rootDirectory Root directory path to the filesystem.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootDirectory(@Nullable Output<String> rootDirectory) {
             $.rootDirectory = rootDirectory;
             return this;
         }
 
+        /**
+         * @param rootDirectory Root directory path to the filesystem.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootDirectory(String rootDirectory) {
             return rootDirectory(Output.of(rootDirectory));
         }

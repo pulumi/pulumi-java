@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class OperationErrorErrorsItemResponse {
-    /**
-     * The error type identifier for this error.
-     * 
-     */
+        /**
+         * @return The error type identifier for this error.
+         * 
+         */
     private final String code;
-    /**
-     * Indicates the field in the request that caused the error. This property is optional.
-     * 
-     */
+        /**
+         * @return Indicates the field in the request that caused the error. This property is optional.
+         * 
+         */
     private final String location;
-    /**
-     * An optional, human-readable error message.
-     * 
-     */
+        /**
+         * @return An optional, human-readable error message.
+         * 
+         */
     private final String message;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class OperationErrorErrorsItemResponse {
     }
 
     /**
-     * The error type identifier for this error.
+     * @return The error type identifier for this error.
      * 
-    */
+     */
     public String code() {
         return this.code;
     }
     /**
-     * Indicates the field in the request that caused the error. This property is optional.
+     * @return Indicates the field in the request that caused the error. This property is optional.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * An optional, human-readable error message.
+     * @return An optional, human-readable error message.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }

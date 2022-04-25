@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ManagedZoneCloudLoggingConfigResponse {
-    /**
-     * If set, enable query logging for this ManagedZone. False by default, making logging opt-in.
-     * 
-     */
+        /**
+         * @return If set, enable query logging for this ManagedZone. False by default, making logging opt-in.
+         * 
+         */
     private final Boolean enableLogging;
     private final String kind;
 
@@ -26,9 +26,9 @@ public final class ManagedZoneCloudLoggingConfigResponse {
     }
 
     /**
-     * If set, enable query logging for this ManagedZone. False by default, making logging opt-in.
+     * @return If set, enable query logging for this ManagedZone. False by default, making logging opt-in.
      * 
-    */
+     */
     public Boolean enableLogging() {
         return this.enableLogging;
     }

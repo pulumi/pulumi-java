@@ -24,6 +24,10 @@ public final class DeblockResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Enable deblocker. The default is `false`.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -35,6 +39,10 @@ public final class DeblockResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="strength", required=true)
     private Double strength;
 
+    /**
+     * @return Set strength of the deblocker. Enter a value between 0 and 1. The higher the value, the stronger the block removal. 0 is no deblocking. The default is 0.
+     * 
+     */
     public Double strength() {
         return this.strength;
     }
@@ -64,11 +72,23 @@ public final class DeblockResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DeblockResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Enable deblocker. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param strength Set strength of the deblocker. Enter a value between 0 and 1. The higher the value, the stronger the block removal. 0 is no deblocking. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strength(Double strength) {
             $.strength = strength;
             return this;

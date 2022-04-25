@@ -17,60 +17,60 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSearchApplicationResult {
-    /**
-     * Retrictions applied to the configurations. The maximum number of elements is 10.
-     * 
-     */
+        /**
+         * @return Retrictions applied to the configurations. The maximum number of elements is 10.
+         * 
+         */
     private final List<DataSourceRestrictionResponse> dataSourceRestrictions;
-    /**
-     * The default fields for returning facet results. The sources specified here also have been included in data_source_restrictions above.
-     * 
-     */
+        /**
+         * @return The default fields for returning facet results. The sources specified here also have been included in data_source_restrictions above.
+         * 
+         */
     private final List<FacetOptionsResponse> defaultFacetOptions;
-    /**
-     * The default options for sorting the search results
-     * 
-     */
+        /**
+         * @return The default options for sorting the search results
+         * 
+         */
     private final SortOptionsResponse defaultSortOptions;
-    /**
-     * Display name of the Search Application. The maximum length is 300 characters.
-     * 
-     */
+        /**
+         * @return Display name of the Search Application. The maximum length is 300 characters.
+         * 
+         */
     private final String displayName;
-    /**
-     * Indicates whether audit logging is on/off for requests made for the search application in query APIs.
-     * 
-     */
+        /**
+         * @return Indicates whether audit logging is on/off for requests made for the search application in query APIs.
+         * 
+         */
     private final Boolean enableAuditLog;
-    /**
-     * Name of the Search Application. Format: searchapplications/{application_id}.
-     * 
-     */
+        /**
+         * @return Name of the Search Application. Format: searchapplications/{application_id}.
+         * 
+         */
     private final String name;
-    /**
-     * IDs of the Long Running Operations (LROs) currently running for this schema. Output only field.
-     * 
-     */
+        /**
+         * @return IDs of the Long Running Operations (LROs) currently running for this schema. Output only field.
+         * 
+         */
     private final List<String> operationIds;
-    /**
-     * The default options for query interpretation
-     * 
-     */
+        /**
+         * @return The default options for query interpretation
+         * 
+         */
     private final QueryInterpretationConfigResponse queryInterpretationConfig;
-    /**
-     * With each result we should return the URI for its thumbnail (when applicable)
-     * 
-     */
+        /**
+         * @return With each result we should return the URI for its thumbnail (when applicable)
+         * 
+         */
     private final Boolean returnResultThumbnailUrls;
-    /**
-     * Configuration for ranking results.
-     * 
-     */
+        /**
+         * @return Configuration for ranking results.
+         * 
+         */
     private final ScoringConfigResponse scoringConfig;
-    /**
-     * Configuration for a sources specified in data_source_restrictions.
-     * 
-     */
+        /**
+         * @return Configuration for a sources specified in data_source_restrictions.
+         * 
+         */
     private final List<SourceConfigResponse> sourceConfig;
 
     @CustomType.Constructor
@@ -100,79 +100,79 @@ public final class GetSearchApplicationResult {
     }
 
     /**
-     * Retrictions applied to the configurations. The maximum number of elements is 10.
+     * @return Retrictions applied to the configurations. The maximum number of elements is 10.
      * 
-    */
+     */
     public List<DataSourceRestrictionResponse> dataSourceRestrictions() {
         return this.dataSourceRestrictions;
     }
     /**
-     * The default fields for returning facet results. The sources specified here also have been included in data_source_restrictions above.
+     * @return The default fields for returning facet results. The sources specified here also have been included in data_source_restrictions above.
      * 
-    */
+     */
     public List<FacetOptionsResponse> defaultFacetOptions() {
         return this.defaultFacetOptions;
     }
     /**
-     * The default options for sorting the search results
+     * @return The default options for sorting the search results
      * 
-    */
+     */
     public SortOptionsResponse defaultSortOptions() {
         return this.defaultSortOptions;
     }
     /**
-     * Display name of the Search Application. The maximum length is 300 characters.
+     * @return Display name of the Search Application. The maximum length is 300 characters.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Indicates whether audit logging is on/off for requests made for the search application in query APIs.
+     * @return Indicates whether audit logging is on/off for requests made for the search application in query APIs.
      * 
-    */
+     */
     public Boolean enableAuditLog() {
         return this.enableAuditLog;
     }
     /**
-     * Name of the Search Application. Format: searchapplications/{application_id}.
+     * @return Name of the Search Application. Format: searchapplications/{application_id}.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * IDs of the Long Running Operations (LROs) currently running for this schema. Output only field.
+     * @return IDs of the Long Running Operations (LROs) currently running for this schema. Output only field.
      * 
-    */
+     */
     public List<String> operationIds() {
         return this.operationIds;
     }
     /**
-     * The default options for query interpretation
+     * @return The default options for query interpretation
      * 
-    */
+     */
     public QueryInterpretationConfigResponse queryInterpretationConfig() {
         return this.queryInterpretationConfig;
     }
     /**
-     * With each result we should return the URI for its thumbnail (when applicable)
+     * @return With each result we should return the URI for its thumbnail (when applicable)
      * 
-    */
+     */
     public Boolean returnResultThumbnailUrls() {
         return this.returnResultThumbnailUrls;
     }
     /**
-     * Configuration for ranking results.
+     * @return Configuration for ranking results.
      * 
-    */
+     */
     public ScoringConfigResponse scoringConfig() {
         return this.scoringConfig;
     }
     /**
-     * Configuration for a sources specified in data_source_restrictions.
+     * @return Configuration for a sources specified in data_source_restrictions.
      * 
-    */
+     */
     public List<SourceConfigResponse> sourceConfig() {
         return this.sourceConfig;
     }

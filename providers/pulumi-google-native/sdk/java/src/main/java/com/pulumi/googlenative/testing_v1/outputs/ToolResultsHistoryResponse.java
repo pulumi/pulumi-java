@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ToolResultsHistoryResponse {
-    /**
-     * A tool results history ID.
-     * 
-     */
+        /**
+         * @return A tool results history ID.
+         * 
+         */
     private final String historyId;
-    /**
-     * The cloud project that owns the tool results history.
-     * 
-     */
+        /**
+         * @return The cloud project that owns the tool results history.
+         * 
+         */
     private final String project;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ToolResultsHistoryResponse {
     }
 
     /**
-     * A tool results history ID.
+     * @return A tool results history ID.
      * 
-    */
+     */
     public String historyId() {
         return this.historyId;
     }
     /**
-     * The cloud project that owns the tool results history.
+     * @return The cloud project that owns the tool results history.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }

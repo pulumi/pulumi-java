@@ -27,6 +27,10 @@ public final class MonitoringDestinationArgs extends com.pulumi.resources.Resour
     @Import(name="metrics")
     private @Nullable Output<List<String>> metrics;
 
+    /**
+     * @return Types of the metrics to report to this monitoring destination. Each type must be defined in Service.metrics section.
+     * 
+     */
     public Optional<Output<List<String>>> metrics() {
         return Optional.ofNullable(this.metrics);
     }
@@ -38,6 +42,10 @@ public final class MonitoringDestinationArgs extends com.pulumi.resources.Resour
     @Import(name="monitoredResource")
     private @Nullable Output<String> monitoredResource;
 
+    /**
+     * @return The monitored resource type. The type must be defined in Service.monitored_resources section.
+     * 
+     */
     public Optional<Output<String>> monitoredResource() {
         return Optional.ofNullable(this.monitoredResource);
     }
@@ -67,24 +75,54 @@ public final class MonitoringDestinationArgs extends com.pulumi.resources.Resour
             $ = new MonitoringDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metrics Types of the metrics to report to this monitoring destination. Each type must be defined in Service.metrics section.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(@Nullable Output<List<String>> metrics) {
             $.metrics = metrics;
             return this;
         }
 
+        /**
+         * @param metrics Types of the metrics to report to this monitoring destination. Each type must be defined in Service.metrics section.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(List<String> metrics) {
             return metrics(Output.of(metrics));
         }
 
+        /**
+         * @param metrics Types of the metrics to report to this monitoring destination. Each type must be defined in Service.metrics section.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(String... metrics) {
             return metrics(List.of(metrics));
         }
 
+        /**
+         * @param monitoredResource The monitored resource type. The type must be defined in Service.monitored_resources section.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoredResource(@Nullable Output<String> monitoredResource) {
             $.monitoredResource = monitoredResource;
             return this;
         }
 
+        /**
+         * @param monitoredResource The monitored resource type. The type must be defined in Service.monitored_resources section.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoredResource(String monitoredResource) {
             return monitoredResource(Output.of(monitoredResource));
         }

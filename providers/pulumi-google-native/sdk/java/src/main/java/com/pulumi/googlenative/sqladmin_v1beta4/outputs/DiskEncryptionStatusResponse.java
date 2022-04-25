@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class DiskEncryptionStatusResponse {
-    /**
-     * This is always `sql#diskEncryptionStatus`.
-     * 
-     */
+        /**
+         * @return This is always `sql#diskEncryptionStatus`.
+         * 
+         */
     private final String kind;
-    /**
-     * KMS key version used to encrypt the Cloud SQL instance resource
-     * 
-     */
+        /**
+         * @return KMS key version used to encrypt the Cloud SQL instance resource
+         * 
+         */
     private final String kmsKeyVersionName;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class DiskEncryptionStatusResponse {
     }
 
     /**
-     * This is always `sql#diskEncryptionStatus`.
+     * @return This is always `sql#diskEncryptionStatus`.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * KMS key version used to encrypt the Cloud SQL instance resource
+     * @return KMS key version used to encrypt the Cloud SQL instance resource
      * 
-    */
+     */
     public String kmsKeyVersionName() {
         return this.kmsKeyVersionName;
     }

@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class InterconnectAttachmentPrivateInfoResponse {
-    /**
-     * 802.1q encapsulation tag to be used for traffic between Google and the customer, going to and from this network and region.
-     * 
-     */
+        /**
+         * @return 802.1q encapsulation tag to be used for traffic between Google and the customer, going to and from this network and region.
+         * 
+         */
     private final Integer tag8021q;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class InterconnectAttachmentPrivateInfoResponse {
     }
 
     /**
-     * 802.1q encapsulation tag to be used for traffic between Google and the customer, going to and from this network and region.
+     * @return 802.1q encapsulation tag to be used for traffic between Google and the customer, going to and from this network and region.
      * 
-    */
+     */
     public Integer tag8021q() {
         return this.tag8021q;
     }

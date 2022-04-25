@@ -24,6 +24,10 @@ public final class GoogleCloudMlV1__PredictionOutputResponse extends com.pulumi.
     @Import(name="errorCount", required=true)
     private String errorCount;
 
+    /**
+     * @return The number of data instances which resulted in errors.
+     * 
+     */
     public String errorCount() {
         return this.errorCount;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudMlV1__PredictionOutputResponse extends com.pulumi.
     @Import(name="nodeHours", required=true)
     private Double nodeHours;
 
+    /**
+     * @return Node hours used by the batch prediction job.
+     * 
+     */
     public Double nodeHours() {
         return this.nodeHours;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudMlV1__PredictionOutputResponse extends com.pulumi.
     @Import(name="outputPath", required=true)
     private String outputPath;
 
+    /**
+     * @return The output Google Cloud Storage location provided at the job creation time.
+     * 
+     */
     public String outputPath() {
         return this.outputPath;
     }
@@ -57,6 +69,10 @@ public final class GoogleCloudMlV1__PredictionOutputResponse extends com.pulumi.
     @Import(name="predictionCount", required=true)
     private String predictionCount;
 
+    /**
+     * @return The number of generated predictions.
+     * 
+     */
     public String predictionCount() {
         return this.predictionCount;
     }
@@ -88,21 +104,45 @@ public final class GoogleCloudMlV1__PredictionOutputResponse extends com.pulumi.
             $ = new GoogleCloudMlV1__PredictionOutputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errorCount The number of data instances which resulted in errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorCount(String errorCount) {
             $.errorCount = errorCount;
             return this;
         }
 
+        /**
+         * @param nodeHours Node hours used by the batch prediction job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeHours(Double nodeHours) {
             $.nodeHours = nodeHours;
             return this;
         }
 
+        /**
+         * @param outputPath The output Google Cloud Storage location provided at the job creation time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputPath(String outputPath) {
             $.outputPath = outputPath;
             return this;
         }
 
+        /**
+         * @param predictionCount The number of generated predictions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predictionCount(String predictionCount) {
             $.predictionCount = predictionCount;
             return this;

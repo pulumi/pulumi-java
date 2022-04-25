@@ -23,6 +23,10 @@ public final class MysqlSourceConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="allowlist", required=true)
     private MysqlRdbmsResponse allowlist;
 
+    /**
+     * @return MySQL objects to retrieve from the source.
+     * 
+     */
     public MysqlRdbmsResponse allowlist() {
         return this.allowlist;
     }
@@ -34,6 +38,10 @@ public final class MysqlSourceConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="rejectlist", required=true)
     private MysqlRdbmsResponse rejectlist;
 
+    /**
+     * @return MySQL objects to exclude from the stream.
+     * 
+     */
     public MysqlRdbmsResponse rejectlist() {
         return this.rejectlist;
     }
@@ -63,11 +71,23 @@ public final class MysqlSourceConfigResponse extends com.pulumi.resources.Invoke
             $ = new MysqlSourceConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowlist MySQL objects to retrieve from the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowlist(MysqlRdbmsResponse allowlist) {
             $.allowlist = allowlist;
             return this;
         }
 
+        /**
+         * @param rejectlist MySQL objects to exclude from the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rejectlist(MysqlRdbmsResponse rejectlist) {
             $.rejectlist = rejectlist;
             return this;

@@ -16,60 +16,60 @@ import java.util.Objects;
 
 @CustomType
 public final class InstanceGroupConfigResponse {
-    /**
-     * Optional. The Compute Engine accelerator configuration for these instances.
-     * 
-     */
+        /**
+         * @return Optional. The Compute Engine accelerator configuration for these instances.
+         * 
+         */
     private final List<AcceleratorConfigResponse> accelerators;
-    /**
-     * Optional. Disk option config settings.
-     * 
-     */
+        /**
+         * @return Optional. Disk option config settings.
+         * 
+         */
     private final DiskConfigResponse diskConfig;
-    /**
-     * Optional. The Compute Engine image resource used for cluster instances.The URI can represent an image or image family.Image examples: https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id] projects/[project_id]/global/images/[image-id] image-idImage family examples. Dataproc will use the most recent image from the family: https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-image-family-name] projects/[project_id]/global/images/family/[custom-image-family-name]If the URI is unspecified, it will be inferred from SoftwareConfig.image_version or the system default.
-     * 
-     */
+        /**
+         * @return Optional. The Compute Engine image resource used for cluster instances.The URI can represent an image or image family.Image examples: https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id] projects/[project_id]/global/images/[image-id] image-idImage family examples. Dataproc will use the most recent image from the family: https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-image-family-name] projects/[project_id]/global/images/family/[custom-image-family-name]If the URI is unspecified, it will be inferred from SoftwareConfig.image_version or the system default.
+         * 
+         */
     private final String imageUri;
-    /**
-     * The list of instance names. Dataproc derives the names from cluster_name, num_instances, and the instance group.
-     * 
-     */
+        /**
+         * @return The list of instance names. Dataproc derives the names from cluster_name, num_instances, and the instance group.
+         * 
+         */
     private final List<String> instanceNames;
-    /**
-     * List of references to Compute Engine instances.
-     * 
-     */
+        /**
+         * @return List of references to Compute Engine instances.
+         * 
+         */
     private final List<InstanceReferenceResponse> instanceReferences;
-    /**
-     * Specifies that this instance group contains preemptible instances.
-     * 
-     */
+        /**
+         * @return Specifies that this instance group contains preemptible instances.
+         * 
+         */
     private final Boolean isPreemptible;
-    /**
-     * Optional. The Compute Engine machine type used for cluster instances.A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2 projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2 n1-standard-2Auto Zone Exception: If you are using the Dataproc Auto Zone Placement (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example, n1-standard-2.
-     * 
-     */
+        /**
+         * @return Optional. The Compute Engine machine type used for cluster instances.A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2 projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2 n1-standard-2Auto Zone Exception: If you are using the Dataproc Auto Zone Placement (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example, n1-standard-2.
+         * 
+         */
     private final String machineTypeUri;
-    /**
-     * The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
-     * 
-     */
+        /**
+         * @return The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
+         * 
+         */
     private final ManagedGroupConfigResponse managedGroupConfig;
-    /**
-     * Optional. Specifies the minimum cpu platform for the Instance Group. See Dataproc -&gt; Minimum CPU Platform (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
-     * 
-     */
+        /**
+         * @return Optional. Specifies the minimum cpu platform for the Instance Group. See Dataproc -&gt; Minimum CPU Platform (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
+         * 
+         */
     private final String minCpuPlatform;
-    /**
-     * Optional. The number of VM instances in the instance group. For HA cluster master_config groups, must be set to 3. For standard cluster master_config groups, must be set to 1.
-     * 
-     */
+        /**
+         * @return Optional. The number of VM instances in the instance group. For HA cluster master_config groups, must be set to 3. For standard cluster master_config groups, must be set to 1.
+         * 
+         */
     private final Integer numInstances;
-    /**
-     * Optional. Specifies the preemptibility of the instance group.The default value for master and worker groups is NON_PREEMPTIBLE. This default cannot be changed.The default value for secondary instances is PREEMPTIBLE.
-     * 
-     */
+        /**
+         * @return Optional. Specifies the preemptibility of the instance group.The default value for master and worker groups is NON_PREEMPTIBLE. This default cannot be changed.The default value for secondary instances is PREEMPTIBLE.
+         * 
+         */
     private final String preemptibility;
 
     @CustomType.Constructor
@@ -99,79 +99,79 @@ public final class InstanceGroupConfigResponse {
     }
 
     /**
-     * Optional. The Compute Engine accelerator configuration for these instances.
+     * @return Optional. The Compute Engine accelerator configuration for these instances.
      * 
-    */
+     */
     public List<AcceleratorConfigResponse> accelerators() {
         return this.accelerators;
     }
     /**
-     * Optional. Disk option config settings.
+     * @return Optional. Disk option config settings.
      * 
-    */
+     */
     public DiskConfigResponse diskConfig() {
         return this.diskConfig;
     }
     /**
-     * Optional. The Compute Engine image resource used for cluster instances.The URI can represent an image or image family.Image examples: https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id] projects/[project_id]/global/images/[image-id] image-idImage family examples. Dataproc will use the most recent image from the family: https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-image-family-name] projects/[project_id]/global/images/family/[custom-image-family-name]If the URI is unspecified, it will be inferred from SoftwareConfig.image_version or the system default.
+     * @return Optional. The Compute Engine image resource used for cluster instances.The URI can represent an image or image family.Image examples: https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id] projects/[project_id]/global/images/[image-id] image-idImage family examples. Dataproc will use the most recent image from the family: https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-image-family-name] projects/[project_id]/global/images/family/[custom-image-family-name]If the URI is unspecified, it will be inferred from SoftwareConfig.image_version or the system default.
      * 
-    */
+     */
     public String imageUri() {
         return this.imageUri;
     }
     /**
-     * The list of instance names. Dataproc derives the names from cluster_name, num_instances, and the instance group.
+     * @return The list of instance names. Dataproc derives the names from cluster_name, num_instances, and the instance group.
      * 
-    */
+     */
     public List<String> instanceNames() {
         return this.instanceNames;
     }
     /**
-     * List of references to Compute Engine instances.
+     * @return List of references to Compute Engine instances.
      * 
-    */
+     */
     public List<InstanceReferenceResponse> instanceReferences() {
         return this.instanceReferences;
     }
     /**
-     * Specifies that this instance group contains preemptible instances.
+     * @return Specifies that this instance group contains preemptible instances.
      * 
-    */
+     */
     public Boolean isPreemptible() {
         return this.isPreemptible;
     }
     /**
-     * Optional. The Compute Engine machine type used for cluster instances.A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2 projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2 n1-standard-2Auto Zone Exception: If you are using the Dataproc Auto Zone Placement (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example, n1-standard-2.
+     * @return Optional. The Compute Engine machine type used for cluster instances.A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2 projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2 n1-standard-2Auto Zone Exception: If you are using the Dataproc Auto Zone Placement (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example, n1-standard-2.
      * 
-    */
+     */
     public String machineTypeUri() {
         return this.machineTypeUri;
     }
     /**
-     * The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
+     * @return The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
      * 
-    */
+     */
     public ManagedGroupConfigResponse managedGroupConfig() {
         return this.managedGroupConfig;
     }
     /**
-     * Optional. Specifies the minimum cpu platform for the Instance Group. See Dataproc -&gt; Minimum CPU Platform (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
+     * @return Optional. Specifies the minimum cpu platform for the Instance Group. See Dataproc -&gt; Minimum CPU Platform (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
      * 
-    */
+     */
     public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
     /**
-     * Optional. The number of VM instances in the instance group. For HA cluster master_config groups, must be set to 3. For standard cluster master_config groups, must be set to 1.
+     * @return Optional. The number of VM instances in the instance group. For HA cluster master_config groups, must be set to 3. For standard cluster master_config groups, must be set to 1.
      * 
-    */
+     */
     public Integer numInstances() {
         return this.numInstances;
     }
     /**
-     * Optional. Specifies the preemptibility of the instance group.The default value for master and worker groups is NON_PREEMPTIBLE. This default cannot be changed.The default value for secondary instances is PREEMPTIBLE.
+     * @return Optional. Specifies the preemptibility of the instance group.The default value for master and worker groups is NON_PREEMPTIBLE. This default cannot be changed.The default value for secondary instances is PREEMPTIBLE.
      * 
-    */
+     */
     public String preemptibility() {
         return this.preemptibility;
     }

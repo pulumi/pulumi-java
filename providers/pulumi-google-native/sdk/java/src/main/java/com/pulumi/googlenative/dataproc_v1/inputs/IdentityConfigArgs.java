@@ -25,6 +25,10 @@ public final class IdentityConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="userServiceAccountMapping", required=true)
     private Output<Map<String,String>> userServiceAccountMapping;
 
+    /**
+     * @return Map of user to service account.
+     * 
+     */
     public Output<Map<String,String>> userServiceAccountMapping() {
         return this.userServiceAccountMapping;
     }
@@ -53,11 +57,23 @@ public final class IdentityConfigArgs extends com.pulumi.resources.ResourceArgs 
             $ = new IdentityConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param userServiceAccountMapping Map of user to service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userServiceAccountMapping(Output<Map<String,String>> userServiceAccountMapping) {
             $.userServiceAccountMapping = userServiceAccountMapping;
             return this;
         }
 
+        /**
+         * @param userServiceAccountMapping Map of user to service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userServiceAccountMapping(Map<String,String> userServiceAccountMapping) {
             return userServiceAccountMapping(Output.of(userServiceAccountMapping));
         }

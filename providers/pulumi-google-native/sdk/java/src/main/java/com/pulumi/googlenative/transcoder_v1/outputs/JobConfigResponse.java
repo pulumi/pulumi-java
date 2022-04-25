@@ -19,55 +19,55 @@ import java.util.Objects;
 
 @CustomType
 public final class JobConfigResponse {
-    /**
-     * List of ad breaks. Specifies where to insert ad break tags in the output manifests.
-     * 
-     */
+        /**
+         * @return List of ad breaks. Specifies where to insert ad break tags in the output manifests.
+         * 
+         */
     private final List<AdBreakResponse> adBreaks;
-    /**
-     * List of `Edit atom`s. Defines the ultimate timeline of the resulting file or manifest.
-     * 
-     */
+        /**
+         * @return List of `Edit atom`s. Defines the ultimate timeline of the resulting file or manifest.
+         * 
+         */
     private final List<EditAtomResponse> editList;
-    /**
-     * List of elementary streams.
-     * 
-     */
+        /**
+         * @return List of elementary streams.
+         * 
+         */
     private final List<ElementaryStreamResponse> elementaryStreams;
-    /**
-     * List of input assets stored in Cloud Storage.
-     * 
-     */
+        /**
+         * @return List of input assets stored in Cloud Storage.
+         * 
+         */
     private final List<InputResponse> inputs;
-    /**
-     * List of output manifests.
-     * 
-     */
+        /**
+         * @return List of output manifests.
+         * 
+         */
     private final List<ManifestResponse> manifests;
-    /**
-     * List of multiplexing settings for output streams.
-     * 
-     */
+        /**
+         * @return List of multiplexing settings for output streams.
+         * 
+         */
     private final List<MuxStreamResponse> muxStreams;
-    /**
-     * Output configuration.
-     * 
-     */
+        /**
+         * @return Output configuration.
+         * 
+         */
     private final OutputResponse output;
-    /**
-     * List of overlays on the output video, in descending Z-order.
-     * 
-     */
+        /**
+         * @return List of overlays on the output video, in descending Z-order.
+         * 
+         */
     private final List<OverlayResponse> overlays;
-    /**
-     * Destination on Pub/Sub.
-     * 
-     */
+        /**
+         * @return Destination on Pub/Sub.
+         * 
+         */
     private final PubsubDestinationResponse pubsubDestination;
-    /**
-     * List of output sprite sheets.
-     * 
-     */
+        /**
+         * @return List of output sprite sheets.
+         * 
+         */
     private final List<SpriteSheetResponse> spriteSheets;
 
     @CustomType.Constructor
@@ -95,72 +95,72 @@ public final class JobConfigResponse {
     }
 
     /**
-     * List of ad breaks. Specifies where to insert ad break tags in the output manifests.
+     * @return List of ad breaks. Specifies where to insert ad break tags in the output manifests.
      * 
-    */
+     */
     public List<AdBreakResponse> adBreaks() {
         return this.adBreaks;
     }
     /**
-     * List of `Edit atom`s. Defines the ultimate timeline of the resulting file or manifest.
+     * @return List of `Edit atom`s. Defines the ultimate timeline of the resulting file or manifest.
      * 
-    */
+     */
     public List<EditAtomResponse> editList() {
         return this.editList;
     }
     /**
-     * List of elementary streams.
+     * @return List of elementary streams.
      * 
-    */
+     */
     public List<ElementaryStreamResponse> elementaryStreams() {
         return this.elementaryStreams;
     }
     /**
-     * List of input assets stored in Cloud Storage.
+     * @return List of input assets stored in Cloud Storage.
      * 
-    */
+     */
     public List<InputResponse> inputs() {
         return this.inputs;
     }
     /**
-     * List of output manifests.
+     * @return List of output manifests.
      * 
-    */
+     */
     public List<ManifestResponse> manifests() {
         return this.manifests;
     }
     /**
-     * List of multiplexing settings for output streams.
+     * @return List of multiplexing settings for output streams.
      * 
-    */
+     */
     public List<MuxStreamResponse> muxStreams() {
         return this.muxStreams;
     }
     /**
-     * Output configuration.
+     * @return Output configuration.
      * 
-    */
+     */
     public OutputResponse output() {
         return this.output;
     }
     /**
-     * List of overlays on the output video, in descending Z-order.
+     * @return List of overlays on the output video, in descending Z-order.
      * 
-    */
+     */
     public List<OverlayResponse> overlays() {
         return this.overlays;
     }
     /**
-     * Destination on Pub/Sub.
+     * @return Destination on Pub/Sub.
      * 
-    */
+     */
     public PubsubDestinationResponse pubsubDestination() {
         return this.pubsubDestination;
     }
     /**
-     * List of output sprite sheets.
+     * @return List of output sprite sheets.
      * 
-    */
+     */
     public List<SpriteSheetResponse> spriteSheets() {
         return this.spriteSheets;
     }

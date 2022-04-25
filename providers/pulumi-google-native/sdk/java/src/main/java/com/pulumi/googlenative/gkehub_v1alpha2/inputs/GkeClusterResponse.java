@@ -24,6 +24,10 @@ public final class GkeClusterResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterMissing", required=true)
     private Boolean clusterMissing;
 
+    /**
+     * @return If cluster_missing is set then it denotes that the GKE cluster no longer exists in the GKE Control Plane.
+     * 
+     */
     public Boolean clusterMissing() {
         return this.clusterMissing;
     }
@@ -35,6 +39,10 @@ public final class GkeClusterResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceLink", required=true)
     private String resourceLink;
 
+    /**
+     * @return Immutable. Self-link of the GCP resource for the GKE cluster. For example: //container.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster Zonal clusters are also supported.
+     * 
+     */
     public String resourceLink() {
         return this.resourceLink;
     }
@@ -64,11 +72,23 @@ public final class GkeClusterResponse extends com.pulumi.resources.InvokeArgs {
             $ = new GkeClusterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterMissing If cluster_missing is set then it denotes that the GKE cluster no longer exists in the GKE Control Plane.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterMissing(Boolean clusterMissing) {
             $.clusterMissing = clusterMissing;
             return this;
         }
 
+        /**
+         * @param resourceLink Immutable. Self-link of the GCP resource for the GKE cluster. For example: //container.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster Zonal clusters are also supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLink(String resourceLink) {
             $.resourceLink = resourceLink;
             return this;

@@ -25,6 +25,10 @@ public final class IndividualOutcomeResponse extends com.pulumi.resources.Invoke
     @Import(name="multistepNumber", required=true)
     private Integer multistepNumber;
 
+    /**
+     * @return Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.
+     * 
+     */
     public Integer multistepNumber() {
         return this.multistepNumber;
     }
@@ -43,6 +47,10 @@ public final class IndividualOutcomeResponse extends com.pulumi.resources.Invoke
     @Import(name="runDuration", required=true)
     private DurationResponse runDuration;
 
+    /**
+     * @return How long it took for this step to run.
+     * 
+     */
     public DurationResponse runDuration() {
         return this.runDuration;
     }
@@ -81,6 +89,12 @@ public final class IndividualOutcomeResponse extends com.pulumi.resources.Invoke
             $ = new IndividualOutcomeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param multistepNumber Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multistepNumber(Integer multistepNumber) {
             $.multistepNumber = multistepNumber;
             return this;
@@ -91,6 +105,12 @@ public final class IndividualOutcomeResponse extends com.pulumi.resources.Invoke
             return this;
         }
 
+        /**
+         * @param runDuration How long it took for this step to run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runDuration(DurationResponse runDuration) {
             $.runDuration = runDuration;
             return this;

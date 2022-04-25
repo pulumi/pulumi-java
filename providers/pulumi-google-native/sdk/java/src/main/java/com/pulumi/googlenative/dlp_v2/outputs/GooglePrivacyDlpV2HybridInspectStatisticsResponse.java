@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GooglePrivacyDlpV2HybridInspectStatisticsResponse {
-    /**
-     * The number of hybrid inspection requests aborted because the job ran out of quota or was ended before they could be processed.
-     * 
-     */
+        /**
+         * @return The number of hybrid inspection requests aborted because the job ran out of quota or was ended before they could be processed.
+         * 
+         */
     private final String abortedCount;
-    /**
-     * The number of hybrid requests currently being processed. Only populated when called via method `getDlpJob`. A burst of traffic may cause hybrid inspect requests to be enqueued. Processing will take place as quickly as possible, but resource limitations may impact how long a request is enqueued for.
-     * 
-     */
+        /**
+         * @return The number of hybrid requests currently being processed. Only populated when called via method `getDlpJob`. A burst of traffic may cause hybrid inspect requests to be enqueued. Processing will take place as quickly as possible, but resource limitations may impact how long a request is enqueued for.
+         * 
+         */
     private final String pendingCount;
-    /**
-     * The number of hybrid inspection requests processed within this job.
-     * 
-     */
+        /**
+         * @return The number of hybrid inspection requests processed within this job.
+         * 
+         */
     private final String processedCount;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class GooglePrivacyDlpV2HybridInspectStatisticsResponse {
     }
 
     /**
-     * The number of hybrid inspection requests aborted because the job ran out of quota or was ended before they could be processed.
+     * @return The number of hybrid inspection requests aborted because the job ran out of quota or was ended before they could be processed.
      * 
-    */
+     */
     public String abortedCount() {
         return this.abortedCount;
     }
     /**
-     * The number of hybrid requests currently being processed. Only populated when called via method `getDlpJob`. A burst of traffic may cause hybrid inspect requests to be enqueued. Processing will take place as quickly as possible, but resource limitations may impact how long a request is enqueued for.
+     * @return The number of hybrid requests currently being processed. Only populated when called via method `getDlpJob`. A burst of traffic may cause hybrid inspect requests to be enqueued. Processing will take place as quickly as possible, but resource limitations may impact how long a request is enqueued for.
      * 
-    */
+     */
     public String pendingCount() {
         return this.pendingCount;
     }
     /**
-     * The number of hybrid inspection requests processed within this job.
+     * @return The number of hybrid inspection requests processed within this job.
      * 
-    */
+     */
     public String processedCount() {
         return this.processedCount;
     }

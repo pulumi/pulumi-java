@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class AuthorizationLoggingOptionsResponse {
-    /**
-     * This is deprecated and has no effect. Do not use.
-     * 
-     */
+        /**
+         * @return This is deprecated and has no effect. Do not use.
+         * 
+         */
     private final String permissionType;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class AuthorizationLoggingOptionsResponse {
     }
 
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
-    */
+     */
     public String permissionType() {
         return this.permissionType;
     }

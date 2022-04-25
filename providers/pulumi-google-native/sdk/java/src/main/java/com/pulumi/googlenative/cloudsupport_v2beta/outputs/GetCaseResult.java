@@ -13,70 +13,70 @@ import java.util.Objects;
 
 @CustomType
 public final class GetCaseResult {
-    /**
-     * The issue classification applicable to this case.
-     * 
-     */
+        /**
+         * @return The issue classification applicable to this case.
+         * 
+         */
     private final CaseClassificationResponse classification;
-    /**
-     * The time this case was created.
-     * 
-     */
+        /**
+         * @return The time this case was created.
+         * 
+         */
     private final String createTime;
-    /**
-     * The user who created the case. Note: The name and email will be obfuscated if the case was created by Google Support.
-     * 
-     */
+        /**
+         * @return The user who created the case. Note: The name and email will be obfuscated if the case was created by Google Support.
+         * 
+         */
     private final ActorResponse creator;
-    /**
-     * A broad description of the issue.
-     * 
-     */
+        /**
+         * @return A broad description of the issue.
+         * 
+         */
     private final String description;
-    /**
-     * The short summary of the issue reported in this case.
-     * 
-     */
+        /**
+         * @return The short summary of the issue reported in this case.
+         * 
+         */
     private final String displayName;
-    /**
-     * Whether the case is currently escalated.
-     * 
-     */
+        /**
+         * @return Whether the case is currently escalated.
+         * 
+         */
     private final Boolean escalated;
-    /**
-     * The resource name for the case.
-     * 
-     */
+        /**
+         * @return The resource name for the case.
+         * 
+         */
     private final String name;
-    /**
-     * The priority of this case. If this is set, do not set severity.
-     * 
-     */
+        /**
+         * @return The priority of this case. If this is set, do not set severity.
+         * 
+         */
     private final String priority;
-    /**
-     * The current status of the support case.
-     * 
-     */
+        /**
+         * @return The current status of the support case.
+         * 
+         */
     private final String state;
-    /**
-     * The email addresses to receive updates on this case.
-     * 
-     */
+        /**
+         * @return The email addresses to receive updates on this case.
+         * 
+         */
     private final List<String> subscriberEmailAddresses;
-    /**
-     * Whether this case was created for internal API testing and should not be acted on by the support team.
-     * 
-     */
+        /**
+         * @return Whether this case was created for internal API testing and should not be acted on by the support team.
+         * 
+         */
     private final Boolean testCase;
-    /**
-     * The timezone of the user who created the support case. It should be in a format IANA recognizes: https://www.iana.org/time-zones. There is no additional validation done by the API.
-     * 
-     */
+        /**
+         * @return The timezone of the user who created the support case. It should be in a format IANA recognizes: https://www.iana.org/time-zones. There is no additional validation done by the API.
+         * 
+         */
     private final String timeZone;
-    /**
-     * The time this case was last updated.
-     * 
-     */
+        /**
+         * @return The time this case was last updated.
+         * 
+         */
     private final String updateTime;
 
     @CustomType.Constructor
@@ -110,93 +110,93 @@ public final class GetCaseResult {
     }
 
     /**
-     * The issue classification applicable to this case.
+     * @return The issue classification applicable to this case.
      * 
-    */
+     */
     public CaseClassificationResponse classification() {
         return this.classification;
     }
     /**
-     * The time this case was created.
+     * @return The time this case was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The user who created the case. Note: The name and email will be obfuscated if the case was created by Google Support.
+     * @return The user who created the case. Note: The name and email will be obfuscated if the case was created by Google Support.
      * 
-    */
+     */
     public ActorResponse creator() {
         return this.creator;
     }
     /**
-     * A broad description of the issue.
+     * @return A broad description of the issue.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The short summary of the issue reported in this case.
+     * @return The short summary of the issue reported in this case.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Whether the case is currently escalated.
+     * @return Whether the case is currently escalated.
      * 
-    */
+     */
     public Boolean escalated() {
         return this.escalated;
     }
     /**
-     * The resource name for the case.
+     * @return The resource name for the case.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The priority of this case. If this is set, do not set severity.
+     * @return The priority of this case. If this is set, do not set severity.
      * 
-    */
+     */
     public String priority() {
         return this.priority;
     }
     /**
-     * The current status of the support case.
+     * @return The current status of the support case.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The email addresses to receive updates on this case.
+     * @return The email addresses to receive updates on this case.
      * 
-    */
+     */
     public List<String> subscriberEmailAddresses() {
         return this.subscriberEmailAddresses;
     }
     /**
-     * Whether this case was created for internal API testing and should not be acted on by the support team.
+     * @return Whether this case was created for internal API testing and should not be acted on by the support team.
      * 
-    */
+     */
     public Boolean testCase() {
         return this.testCase;
     }
     /**
-     * The timezone of the user who created the support case. It should be in a format IANA recognizes: https://www.iana.org/time-zones. There is no additional validation done by the API.
+     * @return The timezone of the user who created the support case. It should be in a format IANA recognizes: https://www.iana.org/time-zones. There is no additional validation done by the API.
      * 
-    */
+     */
     public String timeZone() {
         return this.timeZone;
     }
     /**
-     * The time this case was last updated.
+     * @return The time this case was last updated.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

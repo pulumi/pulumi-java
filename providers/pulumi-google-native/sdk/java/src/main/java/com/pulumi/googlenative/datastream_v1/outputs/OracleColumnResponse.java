@@ -11,50 +11,50 @@ import java.util.Objects;
 
 @CustomType
 public final class OracleColumnResponse {
-    /**
-     * Column name.
-     * 
-     */
+        /**
+         * @return Column name.
+         * 
+         */
     private final String column;
-    /**
-     * The Oracle data type.
-     * 
-     */
+        /**
+         * @return The Oracle data type.
+         * 
+         */
     private final String dataType;
-    /**
-     * Column encoding.
-     * 
-     */
+        /**
+         * @return Column encoding.
+         * 
+         */
     private final String encoding;
-    /**
-     * Column length.
-     * 
-     */
+        /**
+         * @return Column length.
+         * 
+         */
     private final Integer length;
-    /**
-     * Whether or not the column can accept a null value.
-     * 
-     */
+        /**
+         * @return Whether or not the column can accept a null value.
+         * 
+         */
     private final Boolean nullable;
-    /**
-     * The ordinal position of the column in the table.
-     * 
-     */
+        /**
+         * @return The ordinal position of the column in the table.
+         * 
+         */
     private final Integer ordinalPosition;
-    /**
-     * Column precision.
-     * 
-     */
+        /**
+         * @return Column precision.
+         * 
+         */
     private final Integer precision;
-    /**
-     * Whether or not the column represents a primary key.
-     * 
-     */
+        /**
+         * @return Whether or not the column represents a primary key.
+         * 
+         */
     private final Boolean primaryKey;
-    /**
-     * Column scale.
-     * 
-     */
+        /**
+         * @return Column scale.
+         * 
+         */
     private final Integer scale;
 
     @CustomType.Constructor
@@ -80,65 +80,65 @@ public final class OracleColumnResponse {
     }
 
     /**
-     * Column name.
+     * @return Column name.
      * 
-    */
+     */
     public String column() {
         return this.column;
     }
     /**
-     * The Oracle data type.
+     * @return The Oracle data type.
      * 
-    */
+     */
     public String dataType() {
         return this.dataType;
     }
     /**
-     * Column encoding.
+     * @return Column encoding.
      * 
-    */
+     */
     public String encoding() {
         return this.encoding;
     }
     /**
-     * Column length.
+     * @return Column length.
      * 
-    */
+     */
     public Integer length() {
         return this.length;
     }
     /**
-     * Whether or not the column can accept a null value.
+     * @return Whether or not the column can accept a null value.
      * 
-    */
+     */
     public Boolean nullable() {
         return this.nullable;
     }
     /**
-     * The ordinal position of the column in the table.
+     * @return The ordinal position of the column in the table.
      * 
-    */
+     */
     public Integer ordinalPosition() {
         return this.ordinalPosition;
     }
     /**
-     * Column precision.
+     * @return Column precision.
      * 
-    */
+     */
     public Integer precision() {
         return this.precision;
     }
     /**
-     * Whether or not the column represents a primary key.
+     * @return Whether or not the column represents a primary key.
      * 
-    */
+     */
     public Boolean primaryKey() {
         return this.primaryKey;
     }
     /**
-     * Column scale.
+     * @return Column scale.
      * 
-    */
+     */
     public Integer scale() {
         return this.scale;
     }

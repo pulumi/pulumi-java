@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class ArgumentResponse {
-    /**
-     * Optional. Defaults to FIXED_TYPE.
-     * 
-     */
+        /**
+         * @return Optional. Defaults to FIXED_TYPE.
+         * 
+         */
     private final String argumentKind;
-    /**
-     * Required unless argument_kind = ANY_TYPE.
-     * 
-     */
+        /**
+         * @return Required unless argument_kind = ANY_TYPE.
+         * 
+         */
     private final StandardSqlDataTypeResponse dataType;
-    /**
-     * Optional. Specifies whether the argument is input or output. Can be set for procedures only.
-     * 
-     */
+        /**
+         * @return Optional. Specifies whether the argument is input or output. Can be set for procedures only.
+         * 
+         */
     private final String mode;
-    /**
-     * Optional. The name of this argument. Can be absent for function return argument.
-     * 
-     */
+        /**
+         * @return Optional. The name of this argument. Can be absent for function return argument.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class ArgumentResponse {
     }
 
     /**
-     * Optional. Defaults to FIXED_TYPE.
+     * @return Optional. Defaults to FIXED_TYPE.
      * 
-    */
+     */
     public String argumentKind() {
         return this.argumentKind;
     }
     /**
-     * Required unless argument_kind = ANY_TYPE.
+     * @return Required unless argument_kind = ANY_TYPE.
      * 
-    */
+     */
     public StandardSqlDataTypeResponse dataType() {
         return this.dataType;
     }
     /**
-     * Optional. Specifies whether the argument is input or output. Can be set for procedures only.
+     * @return Optional. Specifies whether the argument is input or output. Can be set for procedures only.
      * 
-    */
+     */
     public String mode() {
         return this.mode;
     }
     /**
-     * Optional. The name of this argument. Can be absent for function return argument.
+     * @return Optional. The name of this argument. Can be absent for function return argument.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

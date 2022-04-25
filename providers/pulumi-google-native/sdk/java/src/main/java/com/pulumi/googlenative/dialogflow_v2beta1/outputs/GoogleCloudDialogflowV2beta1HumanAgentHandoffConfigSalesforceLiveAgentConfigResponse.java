@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse {
-    /**
-     * Live Agent chat button ID.
-     * 
-     */
+        /**
+         * @return Live Agent chat button ID.
+         * 
+         */
     private final String buttonId;
-    /**
-     * Live Agent deployment ID.
-     * 
-     */
+        /**
+         * @return Live Agent deployment ID.
+         * 
+         */
     private final String deploymentId;
-    /**
-     * Domain of the Live Agent endpoint for this agent. You can find the endpoint URL in the `Live Agent settings` page. For example if URL has the form https://d.la4-c2-phx.salesforceliveagent.com/..., you should fill in d.la4-c2-phx.salesforceliveagent.com.
-     * 
-     */
+        /**
+         * @return Domain of the Live Agent endpoint for this agent. You can find the endpoint URL in the `Live Agent settings` page. For example if URL has the form https://d.la4-c2-phx.salesforceliveagent.com/..., you should fill in d.la4-c2-phx.salesforceliveagent.com.
+         * 
+         */
     private final String endpointDomain;
-    /**
-     * The organization ID of the Salesforce account.
-     * 
-     */
+        /**
+         * @return The organization ID of the Salesforce account.
+         * 
+         */
     private final String organizationId;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
     }
 
     /**
-     * Live Agent chat button ID.
+     * @return Live Agent chat button ID.
      * 
-    */
+     */
     public String buttonId() {
         return this.buttonId;
     }
     /**
-     * Live Agent deployment ID.
+     * @return Live Agent deployment ID.
      * 
-    */
+     */
     public String deploymentId() {
         return this.deploymentId;
     }
     /**
-     * Domain of the Live Agent endpoint for this agent. You can find the endpoint URL in the `Live Agent settings` page. For example if URL has the form https://d.la4-c2-phx.salesforceliveagent.com/..., you should fill in d.la4-c2-phx.salesforceliveagent.com.
+     * @return Domain of the Live Agent endpoint for this agent. You can find the endpoint URL in the `Live Agent settings` page. For example if URL has the form https://d.la4-c2-phx.salesforceliveagent.com/..., you should fill in d.la4-c2-phx.salesforceliveagent.com.
      * 
-    */
+     */
     public String endpointDomain() {
         return this.endpointDomain;
     }
     /**
-     * The organization ID of the Salesforce account.
+     * @return The organization ID of the Salesforce account.
      * 
-    */
+     */
     public String organizationId() {
         return this.organizationId;
     }

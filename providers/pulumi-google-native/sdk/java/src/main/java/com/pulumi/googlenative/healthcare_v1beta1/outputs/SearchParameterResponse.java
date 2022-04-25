@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class SearchParameterResponse {
-    /**
-     * The canonical url of the search parameter resource.
-     * 
-     */
+        /**
+         * @return The canonical url of the search parameter resource.
+         * 
+         */
     private final String canonicalUrl;
-    /**
-     * The versioned name of the search parameter resource. The format is projects/{project-id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-id}/fhir/SearchParameter/{resource-id}/_history/{version-id} For fhir stores with disable_resource_versioning=true, the format is projects/{project-id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-id}/fhir/SearchParameter/{resource-id}/
-     * 
-     */
+        /**
+         * @return The versioned name of the search parameter resource. The format is projects/{project-id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-id}/fhir/SearchParameter/{resource-id}/_history/{version-id} For fhir stores with disable_resource_versioning=true, the format is projects/{project-id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-id}/fhir/SearchParameter/{resource-id}/
+         * 
+         */
     private final String parameter;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class SearchParameterResponse {
     }
 
     /**
-     * The canonical url of the search parameter resource.
+     * @return The canonical url of the search parameter resource.
      * 
-    */
+     */
     public String canonicalUrl() {
         return this.canonicalUrl;
     }
     /**
-     * The versioned name of the search parameter resource. The format is projects/{project-id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-id}/fhir/SearchParameter/{resource-id}/_history/{version-id} For fhir stores with disable_resource_versioning=true, the format is projects/{project-id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-id}/fhir/SearchParameter/{resource-id}/
+     * @return The versioned name of the search parameter resource. The format is projects/{project-id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-id}/fhir/SearchParameter/{resource-id}/_history/{version-id} For fhir stores with disable_resource_versioning=true, the format is projects/{project-id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-id}/fhir/SearchParameter/{resource-id}/
      * 
-    */
+     */
     public String parameter() {
         return this.parameter;
     }

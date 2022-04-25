@@ -11,45 +11,45 @@ import java.util.Objects;
 
 @CustomType
 public final class GetInstructionResult {
-    /**
-     * The names of any related resources that are blocking changes to the instruction.
-     * 
-     */
+        /**
+         * @return The names of any related resources that are blocking changes to the instruction.
+         * 
+         */
     private final List<String> blockingResources;
-    /**
-     * Creation time of instruction.
-     * 
-     */
+        /**
+         * @return Creation time of instruction.
+         * 
+         */
     private final String createTime;
-    /**
-     * The data type of this instruction.
-     * 
-     */
+        /**
+         * @return The data type of this instruction.
+         * 
+         */
     private final String dataType;
-    /**
-     * Optional. User-provided description of the instruction. The description can be up to 10000 characters long.
-     * 
-     */
+        /**
+         * @return Optional. User-provided description of the instruction. The description can be up to 10000 characters long.
+         * 
+         */
     private final String description;
-    /**
-     * The display name of the instruction. Maximum of 64 characters.
-     * 
-     */
+        /**
+         * @return The display name of the instruction. Maximum of 64 characters.
+         * 
+         */
     private final String displayName;
-    /**
-     * Instruction resource name, format: projects/{project_id}/instructions/{instruction_id}
-     * 
-     */
+        /**
+         * @return Instruction resource name, format: projects/{project_id}/instructions/{instruction_id}
+         * 
+         */
     private final String name;
-    /**
-     * Instruction from a PDF document. The PDF should be in a Cloud Storage bucket.
-     * 
-     */
+        /**
+         * @return Instruction from a PDF document. The PDF should be in a Cloud Storage bucket.
+         * 
+         */
     private final GoogleCloudDatalabelingV1beta1PdfInstructionResponse pdfInstruction;
-    /**
-     * Last update time of instruction.
-     * 
-     */
+        /**
+         * @return Last update time of instruction.
+         * 
+         */
     private final String updateTime;
 
     @CustomType.Constructor
@@ -73,58 +73,58 @@ public final class GetInstructionResult {
     }
 
     /**
-     * The names of any related resources that are blocking changes to the instruction.
+     * @return The names of any related resources that are blocking changes to the instruction.
      * 
-    */
+     */
     public List<String> blockingResources() {
         return this.blockingResources;
     }
     /**
-     * Creation time of instruction.
+     * @return Creation time of instruction.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The data type of this instruction.
+     * @return The data type of this instruction.
      * 
-    */
+     */
     public String dataType() {
         return this.dataType;
     }
     /**
-     * Optional. User-provided description of the instruction. The description can be up to 10000 characters long.
+     * @return Optional. User-provided description of the instruction. The description can be up to 10000 characters long.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The display name of the instruction. Maximum of 64 characters.
+     * @return The display name of the instruction. Maximum of 64 characters.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Instruction resource name, format: projects/{project_id}/instructions/{instruction_id}
+     * @return Instruction resource name, format: projects/{project_id}/instructions/{instruction_id}
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Instruction from a PDF document. The PDF should be in a Cloud Storage bucket.
+     * @return Instruction from a PDF document. The PDF should be in a Cloud Storage bucket.
      * 
-    */
+     */
     public GoogleCloudDatalabelingV1beta1PdfInstructionResponse pdfInstruction() {
         return this.pdfInstruction;
     }
     /**
-     * Last update time of instruction.
+     * @return Last update time of instruction.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

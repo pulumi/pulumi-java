@@ -24,6 +24,10 @@ public final class ErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="context", required=true)
     private String context;
 
+    /**
+     * @return Human-readable stack trace string.
+     * 
+     */
     public String context() {
         return this.context;
     }
@@ -35,6 +39,10 @@ public final class ErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="payload", required=true)
     private String payload;
 
+    /**
+     * @return Error message and data returned represented as a JSON string.
+     * 
+     */
     public String payload() {
         return this.payload;
     }
@@ -46,6 +54,10 @@ public final class ErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="stackTrace", required=true)
     private StackTraceResponse stackTrace;
 
+    /**
+     * @return Stack trace with detailed information of where error was generated.
+     * 
+     */
     public StackTraceResponse stackTrace() {
         return this.stackTrace;
     }
@@ -76,16 +88,34 @@ public final class ErrorResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param context Human-readable stack trace string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder context(String context) {
             $.context = context;
             return this;
         }
 
+        /**
+         * @param payload Error message and data returned represented as a JSON string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder payload(String payload) {
             $.payload = payload;
             return this;
         }
 
+        /**
+         * @param stackTrace Stack trace with detailed information of where error was generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackTrace(StackTraceResponse stackTrace) {
             $.stackTrace = stackTrace;
             return this;

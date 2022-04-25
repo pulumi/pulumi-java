@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ExecStepResponse {
-    /**
-     * The ExecStepConfig for all Linux VMs targeted by the PatchJob.
-     * 
-     */
+        /**
+         * @return The ExecStepConfig for all Linux VMs targeted by the PatchJob.
+         * 
+         */
     private final ExecStepConfigResponse linuxExecStepConfig;
-    /**
-     * The ExecStepConfig for all Windows VMs targeted by the PatchJob.
-     * 
-     */
+        /**
+         * @return The ExecStepConfig for all Windows VMs targeted by the PatchJob.
+         * 
+         */
     private final ExecStepConfigResponse windowsExecStepConfig;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ExecStepResponse {
     }
 
     /**
-     * The ExecStepConfig for all Linux VMs targeted by the PatchJob.
+     * @return The ExecStepConfig for all Linux VMs targeted by the PatchJob.
      * 
-    */
+     */
     public ExecStepConfigResponse linuxExecStepConfig() {
         return this.linuxExecStepConfig;
     }
     /**
-     * The ExecStepConfig for all Windows VMs targeted by the PatchJob.
+     * @return The ExecStepConfig for all Windows VMs targeted by the PatchJob.
      * 
-    */
+     */
     public ExecStepConfigResponse windowsExecStepConfig() {
         return this.windowsExecStepConfig;
     }

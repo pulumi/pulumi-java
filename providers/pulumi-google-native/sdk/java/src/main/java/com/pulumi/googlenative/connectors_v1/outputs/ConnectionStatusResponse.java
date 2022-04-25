@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class ConnectionStatusResponse {
-    /**
-     * Description.
-     * 
-     */
+        /**
+         * @return Description.
+         * 
+         */
     private final String description;
-    /**
-     * State.
-     * 
-     */
+        /**
+         * @return State.
+         * 
+         */
     private final String state;
-    /**
-     * Status provides detailed information for the state.
-     * 
-     */
+        /**
+         * @return Status provides detailed information for the state.
+         * 
+         */
     private final String status;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class ConnectionStatusResponse {
     }
 
     /**
-     * Description.
+     * @return Description.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * State.
+     * @return State.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Status provides detailed information for the state.
+     * @return Status provides detailed information for the state.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

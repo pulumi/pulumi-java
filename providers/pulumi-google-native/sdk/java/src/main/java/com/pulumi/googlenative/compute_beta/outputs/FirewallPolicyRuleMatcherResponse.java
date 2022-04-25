@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class FirewallPolicyRuleMatcherResponse {
-    /**
-     * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
-     * 
-     */
+        /**
+         * @return CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
+         * 
+         */
     private final List<String> destIpRanges;
-    /**
-     * Pairs of IP protocols and ports that the rule should match.
-     * 
-     */
+        /**
+         * @return Pairs of IP protocols and ports that the rule should match.
+         * 
+         */
     private final List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs;
-    /**
-     * CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.
-     * 
-     */
+        /**
+         * @return CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.
+         * 
+         */
     private final List<String> srcIpRanges;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class FirewallPolicyRuleMatcherResponse {
     }
 
     /**
-     * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
+     * @return CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
      * 
-    */
+     */
     public List<String> destIpRanges() {
         return this.destIpRanges;
     }
     /**
-     * Pairs of IP protocols and ports that the rule should match.
+     * @return Pairs of IP protocols and ports that the rule should match.
      * 
-    */
+     */
     public List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs() {
         return this.layer4Configs;
     }
     /**
-     * CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.
+     * @return CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.
      * 
-    */
+     */
     public List<String> srcIpRanges() {
         return this.srcIpRanges;
     }

@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudApigeeV1TlsInfoCommonNameResponse {
-    /**
-     * The TLS Common Name string of the certificate.
-     * 
-     */
+        /**
+         * @return The TLS Common Name string of the certificate.
+         * 
+         */
     private final String value;
-    /**
-     * Indicates whether the cert should be matched against as a wildcard cert.
-     * 
-     */
+        /**
+         * @return Indicates whether the cert should be matched against as a wildcard cert.
+         * 
+         */
     private final Boolean wildcardMatch;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameResponse {
     }
 
     /**
-     * The TLS Common Name string of the certificate.
+     * @return The TLS Common Name string of the certificate.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }
     /**
-     * Indicates whether the cert should be matched against as a wildcard cert.
+     * @return Indicates whether the cert should be matched against as a wildcard cert.
      * 
-    */
+     */
     public Boolean wildcardMatch() {
         return this.wildcardMatch;
     }

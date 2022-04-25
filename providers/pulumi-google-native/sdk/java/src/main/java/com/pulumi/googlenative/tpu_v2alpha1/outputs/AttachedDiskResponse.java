@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class AttachedDiskResponse {
-    /**
-     * The mode in which to attach this disk. If not specified, the default is READ_WRITE mode. Only applicable to data_disks.
-     * 
-     */
+        /**
+         * @return The mode in which to attach this disk. If not specified, the default is READ_WRITE mode. Only applicable to data_disks.
+         * 
+         */
     private final String mode;
-    /**
-     * Specifies the full path to an existing disk. For example: &#34;projects/my-project/zones/us-central1-c/disks/my-disk&#34;.
-     * 
-     */
+        /**
+         * @return Specifies the full path to an existing disk. For example: &#34;projects/my-project/zones/us-central1-c/disks/my-disk&#34;.
+         * 
+         */
     private final String sourceDisk;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class AttachedDiskResponse {
     }
 
     /**
-     * The mode in which to attach this disk. If not specified, the default is READ_WRITE mode. Only applicable to data_disks.
+     * @return The mode in which to attach this disk. If not specified, the default is READ_WRITE mode. Only applicable to data_disks.
      * 
-    */
+     */
     public String mode() {
         return this.mode;
     }
     /**
-     * Specifies the full path to an existing disk. For example: &#34;projects/my-project/zones/us-central1-c/disks/my-disk&#34;.
+     * @return Specifies the full path to an existing disk. For example: &#34;projects/my-project/zones/us-central1-c/disks/my-disk&#34;.
      * 
-    */
+     */
     public String sourceDisk() {
         return this.sourceDisk;
     }

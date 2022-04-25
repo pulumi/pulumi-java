@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ContainerInfoResponse {
-    /**
-     * URI to the hosted container image in Google Container Registry. The URI must be fully qualified and include a tag or digest. Examples: &#34;gcr.io/my-project/image:tag&#34; or &#34;gcr.io/my-project/image@digest&#34;
-     * 
-     */
+        /**
+         * @return URI to the hosted container image in Google Container Registry. The URI must be fully qualified and include a tag or digest. Examples: &#34;gcr.io/my-project/image:tag&#34; or &#34;gcr.io/my-project/image@digest&#34;
+         * 
+         */
     private final String image;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ContainerInfoResponse {
     }
 
     /**
-     * URI to the hosted container image in Google Container Registry. The URI must be fully qualified and include a tag or digest. Examples: &#34;gcr.io/my-project/image:tag&#34; or &#34;gcr.io/my-project/image@digest&#34;
+     * @return URI to the hosted container image in Google Container Registry. The URI must be fully qualified and include a tag or digest. Examples: &#34;gcr.io/my-project/image:tag&#34; or &#34;gcr.io/my-project/image@digest&#34;
      * 
-    */
+     */
     public String image() {
         return this.image;
     }

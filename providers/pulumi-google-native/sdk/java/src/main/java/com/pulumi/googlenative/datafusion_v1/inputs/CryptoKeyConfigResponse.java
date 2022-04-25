@@ -23,6 +23,10 @@ public final class CryptoKeyConfigResponse extends com.pulumi.resources.InvokeAr
     @Import(name="keyReference", required=true)
     private String keyReference;
 
+    /**
+     * @return The name of the key which is used to encrypt/decrypt customer data. For key in Cloud KMS, the key should be in the format of `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
+     * 
+     */
     public String keyReference() {
         return this.keyReference;
     }
@@ -51,6 +55,12 @@ public final class CryptoKeyConfigResponse extends com.pulumi.resources.InvokeAr
             $ = new CryptoKeyConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyReference The name of the key which is used to encrypt/decrypt customer data. For key in Cloud KMS, the key should be in the format of `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyReference(String keyReference) {
             $.keyReference = keyReference;
             return this;

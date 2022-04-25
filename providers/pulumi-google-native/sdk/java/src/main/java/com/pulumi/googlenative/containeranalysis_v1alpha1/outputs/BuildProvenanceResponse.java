@@ -14,65 +14,65 @@ import java.util.Objects;
 
 @CustomType
 public final class BuildProvenanceResponse {
-    /**
-     * Special options applied to this build. This is a catch-all field where build providers can enter any desired additional details.
-     * 
-     */
+        /**
+         * @return Special options applied to this build. This is a catch-all field where build providers can enter any desired additional details.
+         * 
+         */
     private final Map<String,String> buildOptions;
-    /**
-     * Version string of the builder at the time this build was executed.
-     * 
-     */
+        /**
+         * @return Version string of the builder at the time this build was executed.
+         * 
+         */
     private final String builderVersion;
-    /**
-     * Output of the build.
-     * 
-     */
+        /**
+         * @return Output of the build.
+         * 
+         */
     private final List<ArtifactResponse> builtArtifacts;
-    /**
-     * Commands requested by the build.
-     * 
-     */
+        /**
+         * @return Commands requested by the build.
+         * 
+         */
     private final List<CommandResponse> commands;
-    /**
-     * Time at which the build was created.
-     * 
-     */
+        /**
+         * @return Time at which the build was created.
+         * 
+         */
     private final String createTime;
-    /**
-     * E-mail address of the user who initiated this build. Note that this was the user&#39;s e-mail address at the time the build was initiated; this address may not represent the same end-user for all time.
-     * 
-     */
+        /**
+         * @return E-mail address of the user who initiated this build. Note that this was the user&#39;s e-mail address at the time the build was initiated; this address may not represent the same end-user for all time.
+         * 
+         */
     private final String creator;
-    /**
-     * Time at which execution of the build was finished.
-     * 
-     */
+        /**
+         * @return Time at which execution of the build was finished.
+         * 
+         */
     private final String finishTime;
-    /**
-     * Google Cloud Storage bucket where logs were written.
-     * 
-     */
+        /**
+         * @return Google Cloud Storage bucket where logs were written.
+         * 
+         */
     private final String logsBucket;
-    /**
-     * ID of the project.
-     * 
-     */
+        /**
+         * @return ID of the project.
+         * 
+         */
     private final String project;
-    /**
-     * Details of the Source input to the build.
-     * 
-     */
+        /**
+         * @return Details of the Source input to the build.
+         * 
+         */
     private final SourceResponse sourceProvenance;
-    /**
-     * Time at which execution of the build was started.
-     * 
-     */
+        /**
+         * @return Time at which execution of the build was started.
+         * 
+         */
     private final String startTime;
-    /**
-     * Trigger identifier if the build was triggered automatically; empty if not.
-     * 
-     */
+        /**
+         * @return Trigger identifier if the build was triggered automatically; empty if not.
+         * 
+         */
     private final String triggerId;
 
     @CustomType.Constructor
@@ -104,86 +104,86 @@ public final class BuildProvenanceResponse {
     }
 
     /**
-     * Special options applied to this build. This is a catch-all field where build providers can enter any desired additional details.
+     * @return Special options applied to this build. This is a catch-all field where build providers can enter any desired additional details.
      * 
-    */
+     */
     public Map<String,String> buildOptions() {
         return this.buildOptions;
     }
     /**
-     * Version string of the builder at the time this build was executed.
+     * @return Version string of the builder at the time this build was executed.
      * 
-    */
+     */
     public String builderVersion() {
         return this.builderVersion;
     }
     /**
-     * Output of the build.
+     * @return Output of the build.
      * 
-    */
+     */
     public List<ArtifactResponse> builtArtifacts() {
         return this.builtArtifacts;
     }
     /**
-     * Commands requested by the build.
+     * @return Commands requested by the build.
      * 
-    */
+     */
     public List<CommandResponse> commands() {
         return this.commands;
     }
     /**
-     * Time at which the build was created.
+     * @return Time at which the build was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * E-mail address of the user who initiated this build. Note that this was the user&#39;s e-mail address at the time the build was initiated; this address may not represent the same end-user for all time.
+     * @return E-mail address of the user who initiated this build. Note that this was the user&#39;s e-mail address at the time the build was initiated; this address may not represent the same end-user for all time.
      * 
-    */
+     */
     public String creator() {
         return this.creator;
     }
     /**
-     * Time at which execution of the build was finished.
+     * @return Time at which execution of the build was finished.
      * 
-    */
+     */
     public String finishTime() {
         return this.finishTime;
     }
     /**
-     * Google Cloud Storage bucket where logs were written.
+     * @return Google Cloud Storage bucket where logs were written.
      * 
-    */
+     */
     public String logsBucket() {
         return this.logsBucket;
     }
     /**
-     * ID of the project.
+     * @return ID of the project.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }
     /**
-     * Details of the Source input to the build.
+     * @return Details of the Source input to the build.
      * 
-    */
+     */
     public SourceResponse sourceProvenance() {
         return this.sourceProvenance;
     }
     /**
-     * Time at which execution of the build was started.
+     * @return Time at which execution of the build was started.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * Trigger identifier if the build was triggered automatically; empty if not.
+     * @return Trigger identifier if the build was triggered automatically; empty if not.
      * 
-    */
+     */
     public String triggerId() {
         return this.triggerId;
     }

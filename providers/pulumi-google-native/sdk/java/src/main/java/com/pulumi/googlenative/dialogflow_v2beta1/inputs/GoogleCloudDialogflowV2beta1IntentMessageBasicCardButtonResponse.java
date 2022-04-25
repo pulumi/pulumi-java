@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonRespo
     @Import(name="openUriAction", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionResponse openUriAction;
 
+    /**
+     * @return Action to take when a user taps on the button.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionResponse openUriAction() {
         return this.openUriAction;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonRespo
     @Import(name="title", required=true)
     private String title;
 
+    /**
+     * @return The title of the button.
+     * 
+     */
     public String title() {
         return this.title;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonRespo
             $ = new GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param openUriAction Action to take when a user taps on the button.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openUriAction(GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionResponse openUriAction) {
             $.openUriAction = openUriAction;
             return this;
         }
 
+        /**
+         * @param title The title of the button.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             $.title = title;
             return this;

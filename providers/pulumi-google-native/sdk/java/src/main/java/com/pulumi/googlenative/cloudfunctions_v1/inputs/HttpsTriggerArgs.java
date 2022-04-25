@@ -26,6 +26,10 @@ public final class HttpsTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityLevel")
     private @Nullable Output<HttpsTriggerSecurityLevel> securityLevel;
 
+    /**
+     * @return The security level for the function.
+     * 
+     */
     public Optional<Output<HttpsTriggerSecurityLevel>> securityLevel() {
         return Optional.ofNullable(this.securityLevel);
     }
@@ -54,11 +58,23 @@ public final class HttpsTriggerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HttpsTriggerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param securityLevel The security level for the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityLevel(@Nullable Output<HttpsTriggerSecurityLevel> securityLevel) {
             $.securityLevel = securityLevel;
             return this;
         }
 
+        /**
+         * @param securityLevel The security level for the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityLevel(HttpsTriggerSecurityLevel securityLevel) {
             return securityLevel(Output.of(securityLevel));
         }

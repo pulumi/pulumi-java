@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class PushFilterResponse {
-    /**
-     * Regexes matching branches to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
-     * 
-     */
+        /**
+         * @return Regexes matching branches to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
+         * 
+         */
     private final String branch;
-    /**
-     * When true, only trigger a build if the revision regex does NOT match the git_ref regex.
-     * 
-     */
+        /**
+         * @return When true, only trigger a build if the revision regex does NOT match the git_ref regex.
+         * 
+         */
     private final Boolean invertRegex;
-    /**
-     * Regexes matching tags to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
-     * 
-     */
+        /**
+         * @return Regexes matching tags to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
+         * 
+         */
     private final String tag;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class PushFilterResponse {
     }
 
     /**
-     * Regexes matching branches to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
+     * @return Regexes matching branches to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
      * 
-    */
+     */
     public String branch() {
         return this.branch;
     }
     /**
-     * When true, only trigger a build if the revision regex does NOT match the git_ref regex.
+     * @return When true, only trigger a build if the revision regex does NOT match the git_ref regex.
      * 
-    */
+     */
     public Boolean invertRegex() {
         return this.invertRegex;
     }
     /**
-     * Regexes matching tags to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
+     * @return Regexes matching tags to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
      * 
-    */
+     */
     public String tag() {
         return this.tag;
     }

@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDatacatalogV1beta1UsageSignalResponse {
-    /**
-     * The timestamp of the end of the usage statistics duration.
-     * 
-     */
+        /**
+         * @return The timestamp of the end of the usage statistics duration.
+         * 
+         */
     private final String updateTime;
-    /**
-     * Usage statistics over each of the pre-defined time ranges, supported strings for time ranges are {&#34;24H&#34;, &#34;7D&#34;, &#34;30D&#34;}.
-     * 
-     */
+        /**
+         * @return Usage statistics over each of the pre-defined time ranges, supported strings for time ranges are {&#34;24H&#34;, &#34;7D&#34;, &#34;30D&#34;}.
+         * 
+         */
     private final Map<String,String> usageWithinTimeRange;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GoogleCloudDatacatalogV1beta1UsageSignalResponse {
     }
 
     /**
-     * The timestamp of the end of the usage statistics duration.
+     * @return The timestamp of the end of the usage statistics duration.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }
     /**
-     * Usage statistics over each of the pre-defined time ranges, supported strings for time ranges are {&#34;24H&#34;, &#34;7D&#34;, &#34;30D&#34;}.
+     * @return Usage statistics over each of the pre-defined time ranges, supported strings for time ranges are {&#34;24H&#34;, &#34;7D&#34;, &#34;30D&#34;}.
      * 
-    */
+     */
     public Map<String,String> usageWithinTimeRange() {
         return this.usageWithinTimeRange;
     }

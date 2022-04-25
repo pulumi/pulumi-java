@@ -21,6 +21,10 @@ public final class TargetConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="config", required=true)
     private ConfigFileResponse config;
 
+    /**
+     * @return The configuration to use for this deployment.
+     * 
+     */
     public ConfigFileResponse config() {
         return this.config;
     }
@@ -32,6 +36,10 @@ public final class TargetConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="imports", required=true)
     private List<ImportFileResponse> imports;
 
+    /**
+     * @return Specifies any files to import for this configuration. This can be used to import templates or other files. For example, you might import a text file in order to use the file in a template.
+     * 
+     */
     public List<ImportFileResponse> imports() {
         return this.imports;
     }
@@ -61,16 +69,34 @@ public final class TargetConfigurationResponse extends com.pulumi.resources.Invo
             $ = new TargetConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param config The configuration to use for this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(ConfigFileResponse config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param imports Specifies any files to import for this configuration. This can be used to import templates or other files. For example, you might import a text file in order to use the file in a template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imports(List<ImportFileResponse> imports) {
             $.imports = imports;
             return this;
         }
 
+        /**
+         * @param imports Specifies any files to import for this configuration. This can be used to import templates or other files. For example, you might import a text file in order to use the file in a template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imports(ImportFileResponse... imports) {
             return imports(List.of(imports));
         }

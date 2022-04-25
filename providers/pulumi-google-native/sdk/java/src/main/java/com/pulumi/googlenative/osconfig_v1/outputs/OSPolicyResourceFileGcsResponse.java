@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class OSPolicyResourceFileGcsResponse {
-    /**
-     * Bucket of the Cloud Storage object.
-     * 
-     */
+        /**
+         * @return Bucket of the Cloud Storage object.
+         * 
+         */
     private final String bucket;
-    /**
-     * Generation number of the Cloud Storage object.
-     * 
-     */
+        /**
+         * @return Generation number of the Cloud Storage object.
+         * 
+         */
     private final String generation;
-    /**
-     * Name of the Cloud Storage object.
-     * 
-     */
+        /**
+         * @return Name of the Cloud Storage object.
+         * 
+         */
     private final String object;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class OSPolicyResourceFileGcsResponse {
     }
 
     /**
-     * Bucket of the Cloud Storage object.
+     * @return Bucket of the Cloud Storage object.
      * 
-    */
+     */
     public String bucket() {
         return this.bucket;
     }
     /**
-     * Generation number of the Cloud Storage object.
+     * @return Generation number of the Cloud Storage object.
      * 
-    */
+     */
     public String generation() {
         return this.generation;
     }
     /**
-     * Name of the Cloud Storage object.
+     * @return Name of the Cloud Storage object.
      * 
-    */
+     */
     public String object() {
         return this.object;
     }

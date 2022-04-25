@@ -25,6 +25,10 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupResponse extends com.
     @Import(name="operationConfigType", required=true)
     private String operationConfigType;
 
+    /**
+     * @return Flag that specifies whether the configuration is for Apigee API proxy or a remote service. Valid values include `proxy` or `remoteservice`. Defaults to `proxy`. Set to `proxy` when Apigee API proxies are associated with the API product. Set to `remoteservice` when non-Apigee proxies like Istio-Envoy are associated with the API product.
+     * 
+     */
     public String operationConfigType() {
         return this.operationConfigType;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupResponse extends com.
     @Import(name="operationConfigs", required=true)
     private List<GoogleCloudApigeeV1GraphQLOperationConfigResponse> operationConfigs;
 
+    /**
+     * @return List of operation configurations for either Apigee API proxies or other remote services that are associated with this API product.
+     * 
+     */
     public List<GoogleCloudApigeeV1GraphQLOperationConfigResponse> operationConfigs() {
         return this.operationConfigs;
     }
@@ -65,16 +73,34 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupResponse extends com.
             $ = new GoogleCloudApigeeV1GraphQLOperationGroupResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operationConfigType Flag that specifies whether the configuration is for Apigee API proxy or a remote service. Valid values include `proxy` or `remoteservice`. Defaults to `proxy`. Set to `proxy` when Apigee API proxies are associated with the API product. Set to `remoteservice` when non-Apigee proxies like Istio-Envoy are associated with the API product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationConfigType(String operationConfigType) {
             $.operationConfigType = operationConfigType;
             return this;
         }
 
+        /**
+         * @param operationConfigs List of operation configurations for either Apigee API proxies or other remote services that are associated with this API product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationConfigs(List<GoogleCloudApigeeV1GraphQLOperationConfigResponse> operationConfigs) {
             $.operationConfigs = operationConfigs;
             return this;
         }
 
+        /**
+         * @param operationConfigs List of operation configurations for either Apigee API proxies or other remote services that are associated with this API product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationConfigs(GoogleCloudApigeeV1GraphQLOperationConfigResponse... operationConfigs) {
             return operationConfigs(List.of(operationConfigs));
         }

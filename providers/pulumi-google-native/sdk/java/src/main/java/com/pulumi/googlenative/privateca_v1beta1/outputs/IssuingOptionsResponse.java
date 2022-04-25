@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class IssuingOptionsResponse {
-    /**
-     * When true, includes a URL to the issuing CA certificate in the &#34;authority information access&#34; X.509 extension.
-     * 
-     */
+        /**
+         * @return When true, includes a URL to the issuing CA certificate in the &#34;authority information access&#34; X.509 extension.
+         * 
+         */
     private final Boolean includeCaCertUrl;
-    /**
-     * When true, includes a URL to the CRL corresponding to certificates issued from a CertificateAuthority. CRLs will expire 7 days from their creation. However, we will rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
-     * 
-     */
+        /**
+         * @return When true, includes a URL to the CRL corresponding to certificates issued from a CertificateAuthority. CRLs will expire 7 days from their creation. However, we will rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
+         * 
+         */
     private final Boolean includeCrlAccessUrl;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class IssuingOptionsResponse {
     }
 
     /**
-     * When true, includes a URL to the issuing CA certificate in the &#34;authority information access&#34; X.509 extension.
+     * @return When true, includes a URL to the issuing CA certificate in the &#34;authority information access&#34; X.509 extension.
      * 
-    */
+     */
     public Boolean includeCaCertUrl() {
         return this.includeCaCertUrl;
     }
     /**
-     * When true, includes a URL to the CRL corresponding to certificates issued from a CertificateAuthority. CRLs will expire 7 days from their creation. However, we will rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
+     * @return When true, includes a URL to the CRL corresponding to certificates issued from a CertificateAuthority. CRLs will expire 7 days from their creation. However, we will rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
      * 
-    */
+     */
     public Boolean includeCrlAccessUrl() {
         return this.includeCrlAccessUrl;
     }

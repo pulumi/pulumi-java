@@ -23,6 +23,10 @@ public final class PrivateConnectivityResponse extends com.pulumi.resources.Invo
     @Import(name="privateConnection", required=true)
     private String privateConnection;
 
+    /**
+     * @return A reference to a private connection resource. Format: `projects/{project}/locations/{location}/privateConnections/{name}`
+     * 
+     */
     public String privateConnection() {
         return this.privateConnection;
     }
@@ -51,6 +55,12 @@ public final class PrivateConnectivityResponse extends com.pulumi.resources.Invo
             $ = new PrivateConnectivityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateConnection A reference to a private connection resource. Format: `projects/{project}/locations/{location}/privateConnections/{name}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateConnection(String privateConnection) {
             $.privateConnection = privateConnection;
             return this;

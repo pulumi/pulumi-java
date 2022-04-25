@@ -27,6 +27,10 @@ public final class PackageIssueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="affectedLocation")
     private @Nullable Output<VulnerabilityLocationArgs> affectedLocation;
 
+    /**
+     * @return The location of the vulnerability.
+     * 
+     */
     public Optional<Output<VulnerabilityLocationArgs>> affectedLocation() {
         return Optional.ofNullable(this.affectedLocation);
     }
@@ -38,6 +42,10 @@ public final class PackageIssueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fixedLocation")
     private @Nullable Output<VulnerabilityLocationArgs> fixedLocation;
 
+    /**
+     * @return The location of the available fix for vulnerability.
+     * 
+     */
     public Optional<Output<VulnerabilityLocationArgs>> fixedLocation() {
         return Optional.ofNullable(this.fixedLocation);
     }
@@ -49,6 +57,10 @@ public final class PackageIssueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="packageType")
     private @Nullable Output<String> packageType;
 
+    /**
+     * @return The type of package (e.g. OS, MAVEN, GO).
+     * 
+     */
     public Optional<Output<String>> packageType() {
         return Optional.ofNullable(this.packageType);
     }
@@ -87,29 +99,65 @@ public final class PackageIssueArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PackageIssueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param affectedLocation The location of the vulnerability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder affectedLocation(@Nullable Output<VulnerabilityLocationArgs> affectedLocation) {
             $.affectedLocation = affectedLocation;
             return this;
         }
 
+        /**
+         * @param affectedLocation The location of the vulnerability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder affectedLocation(VulnerabilityLocationArgs affectedLocation) {
             return affectedLocation(Output.of(affectedLocation));
         }
 
+        /**
+         * @param fixedLocation The location of the available fix for vulnerability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedLocation(@Nullable Output<VulnerabilityLocationArgs> fixedLocation) {
             $.fixedLocation = fixedLocation;
             return this;
         }
 
+        /**
+         * @param fixedLocation The location of the available fix for vulnerability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedLocation(VulnerabilityLocationArgs fixedLocation) {
             return fixedLocation(Output.of(fixedLocation));
         }
 
+        /**
+         * @param packageType The type of package (e.g. OS, MAVEN, GO).
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageType(@Nullable Output<String> packageType) {
             $.packageType = packageType;
             return this;
         }
 
+        /**
+         * @param packageType The type of package (e.g. OS, MAVEN, GO).
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageType(String packageType) {
             return packageType(Output.of(packageType));
         }

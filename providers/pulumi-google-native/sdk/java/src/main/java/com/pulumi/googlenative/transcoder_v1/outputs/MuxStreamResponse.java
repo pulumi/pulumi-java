@@ -11,30 +11,30 @@ import java.util.Objects;
 
 @CustomType
 public final class MuxStreamResponse {
-    /**
-     * The container format. The default is `mp4` Supported container formats: - `ts` - `fmp4`- the corresponding file extension is `.m4s` - `mp4` - `vtt`
-     * 
-     */
+        /**
+         * @return The container format. The default is `mp4` Supported container formats: - `ts` - `fmp4`- the corresponding file extension is `.m4s` - `mp4` - `vtt`
+         * 
+         */
     private final String container;
-    /**
-     * List of `ElementaryStream.key`s multiplexed in this stream.
-     * 
-     */
+        /**
+         * @return List of `ElementaryStream.key`s multiplexed in this stream.
+         * 
+         */
     private final List<String> elementaryStreams;
-    /**
-     * The name of the generated file. The default is `MuxStream.key` with the extension suffix corresponding to the `MuxStream.container`. Individual segments also have an incremental 10-digit zero-padded suffix starting from 0 before the extension, such as `mux_stream0000000123.ts`.
-     * 
-     */
+        /**
+         * @return The name of the generated file. The default is `MuxStream.key` with the extension suffix corresponding to the `MuxStream.container`. Individual segments also have an incremental 10-digit zero-padded suffix starting from 0 before the extension, such as `mux_stream0000000123.ts`.
+         * 
+         */
     private final String fileName;
-    /**
-     * A unique key for this multiplexed stream. HLS media manifests will be named `MuxStream.key` with the `.m3u8` extension suffix.
-     * 
-     */
+        /**
+         * @return A unique key for this multiplexed stream. HLS media manifests will be named `MuxStream.key` with the `.m3u8` extension suffix.
+         * 
+         */
     private final String key;
-    /**
-     * Segment settings for `ts`, `fmp4` and `vtt`.
-     * 
-     */
+        /**
+         * @return Segment settings for `ts`, `fmp4` and `vtt`.
+         * 
+         */
     private final SegmentSettingsResponse segmentSettings;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class MuxStreamResponse {
     }
 
     /**
-     * The container format. The default is `mp4` Supported container formats: - `ts` - `fmp4`- the corresponding file extension is `.m4s` - `mp4` - `vtt`
+     * @return The container format. The default is `mp4` Supported container formats: - `ts` - `fmp4`- the corresponding file extension is `.m4s` - `mp4` - `vtt`
      * 
-    */
+     */
     public String container() {
         return this.container;
     }
     /**
-     * List of `ElementaryStream.key`s multiplexed in this stream.
+     * @return List of `ElementaryStream.key`s multiplexed in this stream.
      * 
-    */
+     */
     public List<String> elementaryStreams() {
         return this.elementaryStreams;
     }
     /**
-     * The name of the generated file. The default is `MuxStream.key` with the extension suffix corresponding to the `MuxStream.container`. Individual segments also have an incremental 10-digit zero-padded suffix starting from 0 before the extension, such as `mux_stream0000000123.ts`.
+     * @return The name of the generated file. The default is `MuxStream.key` with the extension suffix corresponding to the `MuxStream.container`. Individual segments also have an incremental 10-digit zero-padded suffix starting from 0 before the extension, such as `mux_stream0000000123.ts`.
      * 
-    */
+     */
     public String fileName() {
         return this.fileName;
     }
     /**
-     * A unique key for this multiplexed stream. HLS media manifests will be named `MuxStream.key` with the `.m3u8` extension suffix.
+     * @return A unique key for this multiplexed stream. HLS media manifests will be named `MuxStream.key` with the `.m3u8` extension suffix.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Segment settings for `ts`, `fmp4` and `vtt`.
+     * @return Segment settings for `ts`, `fmp4` and `vtt`.
      * 
-    */
+     */
     public SegmentSettingsResponse segmentSettings() {
         return this.segmentSettings;
     }

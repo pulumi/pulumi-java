@@ -10,50 +10,50 @@ import java.util.Objects;
 
 @CustomType
 public final class PackageInfoOccurrenceResponse {
-    /**
-     * A place for the SPDX file creator to record any general comments about the package being described
-     * 
-     */
+        /**
+         * @return A place for the SPDX file creator to record any general comments about the package being described
+         * 
+         */
     private final String comment;
-    /**
-     * Provide the actual file name of the package, or path of the directory being treated as a package
-     * 
-     */
+        /**
+         * @return Provide the actual file name of the package, or path of the directory being treated as a package
+         * 
+         */
     private final String filename;
-    /**
-     * Provide a place for the SPDX file creator to record a web site that serves as the package&#39;s home page
-     * 
-     */
+        /**
+         * @return Provide a place for the SPDX file creator to record a web site that serves as the package&#39;s home page
+         * 
+         */
     private final String homePage;
-    /**
-     * package or alternative values, if the governing license cannot be determined
-     * 
-     */
+        /**
+         * @return package or alternative values, if the governing license cannot be determined
+         * 
+         */
     private final LicenseResponse licenseConcluded;
-    /**
-     * The type of package: OS, MAVEN, GO, GO_STDLIB, etc.
-     * 
-     */
+        /**
+         * @return The type of package: OS, MAVEN, GO, GO_STDLIB, etc.
+         * 
+         */
     private final String packageType;
-    /**
-     * Provide a place for the SPDX file creator to record any relevant background information or additional comments about the origin of the package
-     * 
-     */
+        /**
+         * @return Provide a place for the SPDX file creator to record any relevant background information or additional comments about the origin of the package
+         * 
+         */
     private final String sourceInfo;
-    /**
-     * A short description of the package
-     * 
-     */
+        /**
+         * @return A short description of the package
+         * 
+         */
     private final String summaryDescription;
-    /**
-     * Identify the full name of the package as given by the Package Originator
-     * 
-     */
+        /**
+         * @return Identify the full name of the package as given by the Package Originator
+         * 
+         */
     private final String title;
-    /**
-     * Identify the version of the package
-     * 
-     */
+        /**
+         * @return Identify the version of the package
+         * 
+         */
     private final String version;
 
     @CustomType.Constructor
@@ -79,65 +79,65 @@ public final class PackageInfoOccurrenceResponse {
     }
 
     /**
-     * A place for the SPDX file creator to record any general comments about the package being described
+     * @return A place for the SPDX file creator to record any general comments about the package being described
      * 
-    */
+     */
     public String comment() {
         return this.comment;
     }
     /**
-     * Provide the actual file name of the package, or path of the directory being treated as a package
+     * @return Provide the actual file name of the package, or path of the directory being treated as a package
      * 
-    */
+     */
     public String filename() {
         return this.filename;
     }
     /**
-     * Provide a place for the SPDX file creator to record a web site that serves as the package&#39;s home page
+     * @return Provide a place for the SPDX file creator to record a web site that serves as the package&#39;s home page
      * 
-    */
+     */
     public String homePage() {
         return this.homePage;
     }
     /**
-     * package or alternative values, if the governing license cannot be determined
+     * @return package or alternative values, if the governing license cannot be determined
      * 
-    */
+     */
     public LicenseResponse licenseConcluded() {
         return this.licenseConcluded;
     }
     /**
-     * The type of package: OS, MAVEN, GO, GO_STDLIB, etc.
+     * @return The type of package: OS, MAVEN, GO, GO_STDLIB, etc.
      * 
-    */
+     */
     public String packageType() {
         return this.packageType;
     }
     /**
-     * Provide a place for the SPDX file creator to record any relevant background information or additional comments about the origin of the package
+     * @return Provide a place for the SPDX file creator to record any relevant background information or additional comments about the origin of the package
      * 
-    */
+     */
     public String sourceInfo() {
         return this.sourceInfo;
     }
     /**
-     * A short description of the package
+     * @return A short description of the package
      * 
-    */
+     */
     public String summaryDescription() {
         return this.summaryDescription;
     }
     /**
-     * Identify the full name of the package as given by the Package Originator
+     * @return Identify the full name of the package as given by the Package Originator
      * 
-    */
+     */
     public String title() {
         return this.title;
     }
     /**
-     * Identify the version of the package
+     * @return Identify the version of the package
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

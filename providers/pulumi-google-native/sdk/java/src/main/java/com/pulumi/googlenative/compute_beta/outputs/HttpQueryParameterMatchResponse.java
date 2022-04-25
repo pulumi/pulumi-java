@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class HttpQueryParameterMatchResponse {
-    /**
-     * The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch. Only one of presentMatch, exactMatch, or regexMatch must be set.
-     * 
-     */
+        /**
+         * @return The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch. Only one of presentMatch, exactMatch, or regexMatch must be set.
+         * 
+         */
     private final String exactMatch;
-    /**
-     * The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
-     * 
-     */
+        /**
+         * @return The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
+         * 
+         */
     private final String name;
-    /**
-     * Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not. Only one of presentMatch, exactMatch, or regexMatch must be set.
-     * 
-     */
+        /**
+         * @return Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not. Only one of presentMatch, exactMatch, or regexMatch must be set.
+         * 
+         */
     private final Boolean presentMatch;
-    /**
-     * The queryParameterMatch matches if the value of the parameter matches the regular expression specified by regexMatch. For more information about regular expression syntax, see Syntax. Only one of presentMatch, exactMatch, or regexMatch must be set. regexMatch only applies when the loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
-     * 
-     */
+        /**
+         * @return The queryParameterMatch matches if the value of the parameter matches the regular expression specified by regexMatch. For more information about regular expression syntax, see Syntax. Only one of presentMatch, exactMatch, or regexMatch must be set. regexMatch only applies when the loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
+         * 
+         */
     private final String regexMatch;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class HttpQueryParameterMatchResponse {
     }
 
     /**
-     * The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch. Only one of presentMatch, exactMatch, or regexMatch must be set.
+     * @return The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch. Only one of presentMatch, exactMatch, or regexMatch must be set.
      * 
-    */
+     */
     public String exactMatch() {
         return this.exactMatch;
     }
     /**
-     * The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
+     * @return The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not. Only one of presentMatch, exactMatch, or regexMatch must be set.
+     * @return Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not. Only one of presentMatch, exactMatch, or regexMatch must be set.
      * 
-    */
+     */
     public Boolean presentMatch() {
         return this.presentMatch;
     }
     /**
-     * The queryParameterMatch matches if the value of the parameter matches the regular expression specified by regexMatch. For more information about regular expression syntax, see Syntax. Only one of presentMatch, exactMatch, or regexMatch must be set. regexMatch only applies when the loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
+     * @return The queryParameterMatch matches if the value of the parameter matches the regular expression specified by regexMatch. For more information about regular expression syntax, see Syntax. Only one of presentMatch, exactMatch, or regexMatch must be set. regexMatch only applies when the loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
      * 
-    */
+     */
     public String regexMatch() {
         return this.regexMatch;
     }

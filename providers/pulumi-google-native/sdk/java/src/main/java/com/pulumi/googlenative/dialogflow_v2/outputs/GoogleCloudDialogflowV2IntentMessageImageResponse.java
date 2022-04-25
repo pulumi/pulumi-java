@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowV2IntentMessageImageResponse {
-    /**
-     * Optional. A text description of the image to be used for accessibility, e.g., screen readers.
-     * 
-     */
+        /**
+         * @return Optional. A text description of the image to be used for accessibility, e.g., screen readers.
+         * 
+         */
     private final String accessibilityText;
-    /**
-     * Optional. The public URI to an image file.
-     * 
-     */
+        /**
+         * @return Optional. The public URI to an image file.
+         * 
+         */
     private final String imageUri;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GoogleCloudDialogflowV2IntentMessageImageResponse {
     }
 
     /**
-     * Optional. A text description of the image to be used for accessibility, e.g., screen readers.
+     * @return Optional. A text description of the image to be used for accessibility, e.g., screen readers.
      * 
-    */
+     */
     public String accessibilityText() {
         return this.accessibilityText;
     }
     /**
-     * Optional. The public URI to an image file.
+     * @return Optional. The public URI to an image file.
      * 
-    */
+     */
     public String imageUri() {
         return this.imageUri;
     }

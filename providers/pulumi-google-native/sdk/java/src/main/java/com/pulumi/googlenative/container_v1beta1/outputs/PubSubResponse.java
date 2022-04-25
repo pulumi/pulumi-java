@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class PubSubResponse {
-    /**
-     * Enable notifications for Pub/Sub.
-     * 
-     */
+        /**
+         * @return Enable notifications for Pub/Sub.
+         * 
+         */
     private final Boolean enabled;
-    /**
-     * Allows filtering to one or more specific event types. If no filter is specified, or if a filter is specified with no event types, all event types will be sent
-     * 
-     */
+        /**
+         * @return Allows filtering to one or more specific event types. If no filter is specified, or if a filter is specified with no event types, all event types will be sent
+         * 
+         */
     private final FilterResponse filter;
-    /**
-     * The desired Pub/Sub topic to which notifications will be sent by GKE. Format is `projects/{project}/topics/{topic}`.
-     * 
-     */
+        /**
+         * @return The desired Pub/Sub topic to which notifications will be sent by GKE. Format is `projects/{project}/topics/{topic}`.
+         * 
+         */
     private final String topic;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class PubSubResponse {
     }
 
     /**
-     * Enable notifications for Pub/Sub.
+     * @return Enable notifications for Pub/Sub.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * Allows filtering to one or more specific event types. If no filter is specified, or if a filter is specified with no event types, all event types will be sent
+     * @return Allows filtering to one or more specific event types. If no filter is specified, or if a filter is specified with no event types, all event types will be sent
      * 
-    */
+     */
     public FilterResponse filter() {
         return this.filter;
     }
     /**
-     * The desired Pub/Sub topic to which notifications will be sent by GKE. Format is `projects/{project}/topics/{topic}`.
+     * @return The desired Pub/Sub topic to which notifications will be sent by GKE. Format is `projects/{project}/topics/{topic}`.
      * 
-    */
+     */
     public String topic() {
         return this.topic;
     }

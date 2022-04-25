@@ -23,6 +23,10 @@ public final class ServiceAttachmentConnectedEndpointResponse extends com.pulumi
     @Import(name="endpoint", required=true)
     private String endpoint;
 
+    /**
+     * @return The url of a connected endpoint.
+     * 
+     */
     public String endpoint() {
         return this.endpoint;
     }
@@ -34,6 +38,10 @@ public final class ServiceAttachmentConnectedEndpointResponse extends com.pulumi
     @Import(name="pscConnectionId", required=true)
     private String pscConnectionId;
 
+    /**
+     * @return The PSC connection id of the connected endpoint.
+     * 
+     */
     public String pscConnectionId() {
         return this.pscConnectionId;
     }
@@ -45,6 +53,10 @@ public final class ServiceAttachmentConnectedEndpointResponse extends com.pulumi
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The status of a connected endpoint to this service attachment.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -75,16 +87,34 @@ public final class ServiceAttachmentConnectedEndpointResponse extends com.pulumi
             $ = new ServiceAttachmentConnectedEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpoint The url of a connected endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(String endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param pscConnectionId The PSC connection id of the connected endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pscConnectionId(String pscConnectionId) {
             $.pscConnectionId = pscConnectionId;
             return this;
         }
 
+        /**
+         * @param status The status of a connected endpoint to this service attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

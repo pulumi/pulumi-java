@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDatacatalogV1beta1GcsFileSpecResponse {
-    /**
-     * The full file path. Example: `gs://bucket_name/a/b.txt`.
-     * 
-     */
+        /**
+         * @return The full file path. Example: `gs://bucket_name/a/b.txt`.
+         * 
+         */
     private final String filePath;
-    /**
-     * Timestamps about the Cloud Storage file.
-     * 
-     */
+        /**
+         * @return Timestamps about the Cloud Storage file.
+         * 
+         */
     private final GoogleCloudDatacatalogV1beta1SystemTimestampsResponse gcsTimestamps;
-    /**
-     * The size of the file, in bytes.
-     * 
-     */
+        /**
+         * @return The size of the file, in bytes.
+         * 
+         */
     private final String sizeBytes;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class GoogleCloudDatacatalogV1beta1GcsFileSpecResponse {
     }
 
     /**
-     * The full file path. Example: `gs://bucket_name/a/b.txt`.
+     * @return The full file path. Example: `gs://bucket_name/a/b.txt`.
      * 
-    */
+     */
     public String filePath() {
         return this.filePath;
     }
     /**
-     * Timestamps about the Cloud Storage file.
+     * @return Timestamps about the Cloud Storage file.
      * 
-    */
+     */
     public GoogleCloudDatacatalogV1beta1SystemTimestampsResponse gcsTimestamps() {
         return this.gcsTimestamps;
     }
     /**
-     * The size of the file, in bytes.
+     * @return The size of the file, in bytes.
      * 
-    */
+     */
     public String sizeBytes() {
         return this.sizeBytes;
     }

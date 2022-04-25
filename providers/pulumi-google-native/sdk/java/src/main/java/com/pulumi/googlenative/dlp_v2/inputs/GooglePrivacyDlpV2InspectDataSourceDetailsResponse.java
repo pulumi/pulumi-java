@@ -24,6 +24,10 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse extends co
     @Import(name="requestedOptions", required=true)
     private GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions;
 
+    /**
+     * @return The configuration used for this job.
+     * 
+     */
     public GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions() {
         return this.requestedOptions;
     }
@@ -35,6 +39,10 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse extends co
     @Import(name="result", required=true)
     private GooglePrivacyDlpV2ResultResponse result;
 
+    /**
+     * @return A summary of the outcome of this inspection job.
+     * 
+     */
     public GooglePrivacyDlpV2ResultResponse result() {
         return this.result;
     }
@@ -64,11 +72,23 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse extends co
             $ = new GooglePrivacyDlpV2InspectDataSourceDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param requestedOptions The configuration used for this job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestedOptions(GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions) {
             $.requestedOptions = requestedOptions;
             return this;
         }
 
+        /**
+         * @param result A summary of the outcome of this inspection job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder result(GooglePrivacyDlpV2ResultResponse result) {
             $.result = result;
             return this;

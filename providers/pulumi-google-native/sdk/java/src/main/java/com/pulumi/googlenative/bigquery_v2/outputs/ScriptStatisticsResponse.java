@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ScriptStatisticsResponse {
-    /**
-     * Whether this child job was a statement or expression.
-     * 
-     */
+        /**
+         * @return Whether this child job was a statement or expression.
+         * 
+         */
     private final String evaluationKind;
-    /**
-     * Stack trace showing the line/column/procedure name of each frame on the stack at the point where the current evaluation happened. The leaf frame is first, the primary script is last. Never empty.
-     * 
-     */
+        /**
+         * @return Stack trace showing the line/column/procedure name of each frame on the stack at the point where the current evaluation happened. The leaf frame is first, the primary script is last. Never empty.
+         * 
+         */
     private final List<ScriptStackFrameResponse> stackFrames;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ScriptStatisticsResponse {
     }
 
     /**
-     * Whether this child job was a statement or expression.
+     * @return Whether this child job was a statement or expression.
      * 
-    */
+     */
     public String evaluationKind() {
         return this.evaluationKind;
     }
     /**
-     * Stack trace showing the line/column/procedure name of each frame on the stack at the point where the current evaluation happened. The leaf frame is first, the primary script is last. Never empty.
+     * @return Stack trace showing the line/column/procedure name of each frame on the stack at the point where the current evaluation happened. The leaf frame is first, the primary script is last. Never empty.
      * 
-    */
+     */
     public List<ScriptStackFrameResponse> stackFrames() {
         return this.stackFrames;
     }

@@ -12,105 +12,105 @@ import java.util.Objects;
 
 @CustomType
 public final class H264CodecSettingsResponse {
-    /**
-     * Specifies whether an open Group of Pictures (GOP) structure should be allowed or not. The default is `false`.
-     * 
-     */
+        /**
+         * @return Specifies whether an open Group of Pictures (GOP) structure should be allowed or not. The default is `false`.
+         * 
+         */
     private final Boolean allowOpenGop;
-    /**
-     * Specify the intensity of the adaptive quantizer (AQ). Must be between 0 and 1, where 0 disables the quantizer and 1 maximizes the quantizer. A higher value equals a lower bitrate but smoother image. The default is 0.
-     * 
-     */
+        /**
+         * @return Specify the intensity of the adaptive quantizer (AQ). Must be between 0 and 1, where 0 disables the quantizer and 1 maximizes the quantizer. A higher value equals a lower bitrate but smoother image. The default is 0.
+         * 
+         */
     private final Double aqStrength;
-    /**
-     * The number of consecutive B-frames. Must be greater than or equal to zero. Must be less than `VideoStream.gop_frame_count` if set. The default is 0.
-     * 
-     */
+        /**
+         * @return The number of consecutive B-frames. Must be greater than or equal to zero. Must be less than `VideoStream.gop_frame_count` if set. The default is 0.
+         * 
+         */
     private final Integer bFrameCount;
-    /**
-     * Allow B-pyramid for reference frame selection. This may not be supported on all decoders. The default is `false`.
-     * 
-     */
+        /**
+         * @return Allow B-pyramid for reference frame selection. This may not be supported on all decoders. The default is `false`.
+         * 
+         */
     private final Boolean bPyramid;
-    /**
-     * The video bitrate in bits per second. The minimum value is 1,000. The maximum value is 800,000,000.
-     * 
-     */
+        /**
+         * @return The video bitrate in bits per second. The minimum value is 1,000. The maximum value is 800,000,000.
+         * 
+         */
     private final Integer bitrateBps;
-    /**
-     * Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most efficient compression. The default is 21.
-     * 
-     */
+        /**
+         * @return Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most efficient compression. The default is 21.
+         * 
+         */
     private final Integer crfLevel;
-    /**
-     * Use two-pass encoding strategy to achieve better video quality. `VideoStream.rate_control_mode` must be `vbr`. The default is `false`.
-     * 
-     */
+        /**
+         * @return Use two-pass encoding strategy to achieve better video quality. `VideoStream.rate_control_mode` must be `vbr`. The default is `false`.
+         * 
+         */
     private final Boolean enableTwoPass;
-    /**
-     * The entropy coder to use. The default is `cabac`. Supported entropy coders: - `cavlc` - `cabac`
-     * 
-     */
+        /**
+         * @return The entropy coder to use. The default is `cabac`. Supported entropy coders: - `cavlc` - `cabac`
+         * 
+         */
     private final String entropyCoder;
-    /**
-     * The target video frame rate in frames per second (FPS). Must be less than or equal to 120. Will default to the input frame rate if larger than the input frame rate. The API will generate an output FPS that is divisible by the input FPS, and smaller or equal to the target FPS. See [Calculating frame rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for more information.
-     * 
-     */
+        /**
+         * @return The target video frame rate in frames per second (FPS). Must be less than or equal to 120. Will default to the input frame rate if larger than the input frame rate. The API will generate an output FPS that is divisible by the input FPS, and smaller or equal to the target FPS. See [Calculating frame rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for more information.
+         * 
+         */
     private final Double frameRate;
-    /**
-     * Select the GOP size based on the specified duration. The default is `3s`. Note that `gopDuration` must be less than or equal to [`segmentDuration`](#SegmentSettings), and [`segmentDuration`](#SegmentSettings) must be divisible by `gopDuration`.
-     * 
-     */
+        /**
+         * @return Select the GOP size based on the specified duration. The default is `3s`. Note that `gopDuration` must be less than or equal to [`segmentDuration`](#SegmentSettings), and [`segmentDuration`](#SegmentSettings) must be divisible by `gopDuration`.
+         * 
+         */
     private final String gopDuration;
-    /**
-     * Select the GOP size based on the specified frame count. Must be greater than zero.
-     * 
-     */
+        /**
+         * @return Select the GOP size based on the specified frame count. Must be greater than zero.
+         * 
+         */
     private final Integer gopFrameCount;
-    /**
-     * The height of the video in pixels. Must be an even integer. When not specified, the height is adjusted to match the specified width and input aspect ratio. If both are omitted, the input height is used.
-     * 
-     */
+        /**
+         * @return The height of the video in pixels. Must be an even integer. When not specified, the height is adjusted to match the specified width and input aspect ratio. If both are omitted, the input height is used.
+         * 
+         */
     private final Integer heightPixels;
-    /**
-     * Pixel format to use. The default is `yuv420p`. Supported pixel formats: - `yuv420p` pixel format - `yuv422p` pixel format - `yuv444p` pixel format - `yuv420p10` 10-bit HDR pixel format - `yuv422p10` 10-bit HDR pixel format - `yuv444p10` 10-bit HDR pixel format - `yuv420p12` 12-bit HDR pixel format - `yuv422p12` 12-bit HDR pixel format - `yuv444p12` 12-bit HDR pixel format
-     * 
-     */
+        /**
+         * @return Pixel format to use. The default is `yuv420p`. Supported pixel formats: - `yuv420p` pixel format - `yuv422p` pixel format - `yuv444p` pixel format - `yuv420p10` 10-bit HDR pixel format - `yuv422p10` 10-bit HDR pixel format - `yuv444p10` 10-bit HDR pixel format - `yuv420p12` 12-bit HDR pixel format - `yuv422p12` 12-bit HDR pixel format - `yuv444p12` 12-bit HDR pixel format
+         * 
+         */
     private final String pixelFormat;
-    /**
-     * Enforces the specified codec preset. The default is `veryfast`. The available options are [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Preset). Note that certain values for this field may cause the transcoder to override other fields you set in the `H264CodecSettings` message.
-     * 
-     */
+        /**
+         * @return Enforces the specified codec preset. The default is `veryfast`. The available options are [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Preset). Note that certain values for this field may cause the transcoder to override other fields you set in the `H264CodecSettings` message.
+         * 
+         */
     private final String preset;
-    /**
-     * Enforces the specified codec profile. The following profiles are supported: * `baseline` * `main` * `high` (default) The available options are [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Tune). Note that certain values for this field may cause the transcoder to override other fields you set in the `H264CodecSettings` message.
-     * 
-     */
+        /**
+         * @return Enforces the specified codec profile. The following profiles are supported: * `baseline` * `main` * `high` (default) The available options are [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Tune). Note that certain values for this field may cause the transcoder to override other fields you set in the `H264CodecSettings` message.
+         * 
+         */
     private final String profile;
-    /**
-     * Specify the `rate_control_mode`. The default is `vbr`. Supported rate control modes: - `vbr` - variable bitrate - `crf` - constant rate factor
-     * 
-     */
+        /**
+         * @return Specify the `rate_control_mode`. The default is `vbr`. Supported rate control modes: - `vbr` - variable bitrate - `crf` - constant rate factor
+         * 
+         */
     private final String rateControlMode;
-    /**
-     * Enforces the specified codec tune. The available options are [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Tune). Note that certain values for this field may cause the transcoder to override other fields you set in the `H264CodecSettings` message.
-     * 
-     */
+        /**
+         * @return Enforces the specified codec tune. The available options are [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Tune). Note that certain values for this field may cause the transcoder to override other fields you set in the `H264CodecSettings` message.
+         * 
+         */
     private final String tune;
-    /**
-     * Initial fullness of the Video Buffering Verifier (VBV) buffer in bits. Must be greater than zero. The default is equal to 90% of `VideoStream.vbv_size_bits`.
-     * 
-     */
+        /**
+         * @return Initial fullness of the Video Buffering Verifier (VBV) buffer in bits. Must be greater than zero. The default is equal to 90% of `VideoStream.vbv_size_bits`.
+         * 
+         */
     private final Integer vbvFullnessBits;
-    /**
-     * Size of the Video Buffering Verifier (VBV) buffer in bits. Must be greater than zero. The default is equal to `VideoStream.bitrate_bps`.
-     * 
-     */
+        /**
+         * @return Size of the Video Buffering Verifier (VBV) buffer in bits. Must be greater than zero. The default is equal to `VideoStream.bitrate_bps`.
+         * 
+         */
     private final Integer vbvSizeBits;
-    /**
-     * The width of the video in pixels. Must be an even integer. When not specified, the width is adjusted to match the specified height and input aspect ratio. If both are omitted, the input width is used.
-     * 
-     */
+        /**
+         * @return The width of the video in pixels. Must be an even integer. When not specified, the width is adjusted to match the specified height and input aspect ratio. If both are omitted, the input width is used.
+         * 
+         */
     private final Integer widthPixels;
 
     @CustomType.Constructor
@@ -158,142 +158,142 @@ public final class H264CodecSettingsResponse {
     }
 
     /**
-     * Specifies whether an open Group of Pictures (GOP) structure should be allowed or not. The default is `false`.
+     * @return Specifies whether an open Group of Pictures (GOP) structure should be allowed or not. The default is `false`.
      * 
-    */
+     */
     public Boolean allowOpenGop() {
         return this.allowOpenGop;
     }
     /**
-     * Specify the intensity of the adaptive quantizer (AQ). Must be between 0 and 1, where 0 disables the quantizer and 1 maximizes the quantizer. A higher value equals a lower bitrate but smoother image. The default is 0.
+     * @return Specify the intensity of the adaptive quantizer (AQ). Must be between 0 and 1, where 0 disables the quantizer and 1 maximizes the quantizer. A higher value equals a lower bitrate but smoother image. The default is 0.
      * 
-    */
+     */
     public Double aqStrength() {
         return this.aqStrength;
     }
     /**
-     * The number of consecutive B-frames. Must be greater than or equal to zero. Must be less than `VideoStream.gop_frame_count` if set. The default is 0.
+     * @return The number of consecutive B-frames. Must be greater than or equal to zero. Must be less than `VideoStream.gop_frame_count` if set. The default is 0.
      * 
-    */
+     */
     public Integer bFrameCount() {
         return this.bFrameCount;
     }
     /**
-     * Allow B-pyramid for reference frame selection. This may not be supported on all decoders. The default is `false`.
+     * @return Allow B-pyramid for reference frame selection. This may not be supported on all decoders. The default is `false`.
      * 
-    */
+     */
     public Boolean bPyramid() {
         return this.bPyramid;
     }
     /**
-     * The video bitrate in bits per second. The minimum value is 1,000. The maximum value is 800,000,000.
+     * @return The video bitrate in bits per second. The minimum value is 1,000. The maximum value is 800,000,000.
      * 
-    */
+     */
     public Integer bitrateBps() {
         return this.bitrateBps;
     }
     /**
-     * Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most efficient compression. The default is 21.
+     * @return Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most efficient compression. The default is 21.
      * 
-    */
+     */
     public Integer crfLevel() {
         return this.crfLevel;
     }
     /**
-     * Use two-pass encoding strategy to achieve better video quality. `VideoStream.rate_control_mode` must be `vbr`. The default is `false`.
+     * @return Use two-pass encoding strategy to achieve better video quality. `VideoStream.rate_control_mode` must be `vbr`. The default is `false`.
      * 
-    */
+     */
     public Boolean enableTwoPass() {
         return this.enableTwoPass;
     }
     /**
-     * The entropy coder to use. The default is `cabac`. Supported entropy coders: - `cavlc` - `cabac`
+     * @return The entropy coder to use. The default is `cabac`. Supported entropy coders: - `cavlc` - `cabac`
      * 
-    */
+     */
     public String entropyCoder() {
         return this.entropyCoder;
     }
     /**
-     * The target video frame rate in frames per second (FPS). Must be less than or equal to 120. Will default to the input frame rate if larger than the input frame rate. The API will generate an output FPS that is divisible by the input FPS, and smaller or equal to the target FPS. See [Calculating frame rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for more information.
+     * @return The target video frame rate in frames per second (FPS). Must be less than or equal to 120. Will default to the input frame rate if larger than the input frame rate. The API will generate an output FPS that is divisible by the input FPS, and smaller or equal to the target FPS. See [Calculating frame rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for more information.
      * 
-    */
+     */
     public Double frameRate() {
         return this.frameRate;
     }
     /**
-     * Select the GOP size based on the specified duration. The default is `3s`. Note that `gopDuration` must be less than or equal to [`segmentDuration`](#SegmentSettings), and [`segmentDuration`](#SegmentSettings) must be divisible by `gopDuration`.
+     * @return Select the GOP size based on the specified duration. The default is `3s`. Note that `gopDuration` must be less than or equal to [`segmentDuration`](#SegmentSettings), and [`segmentDuration`](#SegmentSettings) must be divisible by `gopDuration`.
      * 
-    */
+     */
     public String gopDuration() {
         return this.gopDuration;
     }
     /**
-     * Select the GOP size based on the specified frame count. Must be greater than zero.
+     * @return Select the GOP size based on the specified frame count. Must be greater than zero.
      * 
-    */
+     */
     public Integer gopFrameCount() {
         return this.gopFrameCount;
     }
     /**
-     * The height of the video in pixels. Must be an even integer. When not specified, the height is adjusted to match the specified width and input aspect ratio. If both are omitted, the input height is used.
+     * @return The height of the video in pixels. Must be an even integer. When not specified, the height is adjusted to match the specified width and input aspect ratio. If both are omitted, the input height is used.
      * 
-    */
+     */
     public Integer heightPixels() {
         return this.heightPixels;
     }
     /**
-     * Pixel format to use. The default is `yuv420p`. Supported pixel formats: - `yuv420p` pixel format - `yuv422p` pixel format - `yuv444p` pixel format - `yuv420p10` 10-bit HDR pixel format - `yuv422p10` 10-bit HDR pixel format - `yuv444p10` 10-bit HDR pixel format - `yuv420p12` 12-bit HDR pixel format - `yuv422p12` 12-bit HDR pixel format - `yuv444p12` 12-bit HDR pixel format
+     * @return Pixel format to use. The default is `yuv420p`. Supported pixel formats: - `yuv420p` pixel format - `yuv422p` pixel format - `yuv444p` pixel format - `yuv420p10` 10-bit HDR pixel format - `yuv422p10` 10-bit HDR pixel format - `yuv444p10` 10-bit HDR pixel format - `yuv420p12` 12-bit HDR pixel format - `yuv422p12` 12-bit HDR pixel format - `yuv444p12` 12-bit HDR pixel format
      * 
-    */
+     */
     public String pixelFormat() {
         return this.pixelFormat;
     }
     /**
-     * Enforces the specified codec preset. The default is `veryfast`. The available options are [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Preset). Note that certain values for this field may cause the transcoder to override other fields you set in the `H264CodecSettings` message.
+     * @return Enforces the specified codec preset. The default is `veryfast`. The available options are [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Preset). Note that certain values for this field may cause the transcoder to override other fields you set in the `H264CodecSettings` message.
      * 
-    */
+     */
     public String preset() {
         return this.preset;
     }
     /**
-     * Enforces the specified codec profile. The following profiles are supported: * `baseline` * `main` * `high` (default) The available options are [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Tune). Note that certain values for this field may cause the transcoder to override other fields you set in the `H264CodecSettings` message.
+     * @return Enforces the specified codec profile. The following profiles are supported: * `baseline` * `main` * `high` (default) The available options are [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Tune). Note that certain values for this field may cause the transcoder to override other fields you set in the `H264CodecSettings` message.
      * 
-    */
+     */
     public String profile() {
         return this.profile;
     }
     /**
-     * Specify the `rate_control_mode`. The default is `vbr`. Supported rate control modes: - `vbr` - variable bitrate - `crf` - constant rate factor
+     * @return Specify the `rate_control_mode`. The default is `vbr`. Supported rate control modes: - `vbr` - variable bitrate - `crf` - constant rate factor
      * 
-    */
+     */
     public String rateControlMode() {
         return this.rateControlMode;
     }
     /**
-     * Enforces the specified codec tune. The available options are [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Tune). Note that certain values for this field may cause the transcoder to override other fields you set in the `H264CodecSettings` message.
+     * @return Enforces the specified codec tune. The available options are [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Tune). Note that certain values for this field may cause the transcoder to override other fields you set in the `H264CodecSettings` message.
      * 
-    */
+     */
     public String tune() {
         return this.tune;
     }
     /**
-     * Initial fullness of the Video Buffering Verifier (VBV) buffer in bits. Must be greater than zero. The default is equal to 90% of `VideoStream.vbv_size_bits`.
+     * @return Initial fullness of the Video Buffering Verifier (VBV) buffer in bits. Must be greater than zero. The default is equal to 90% of `VideoStream.vbv_size_bits`.
      * 
-    */
+     */
     public Integer vbvFullnessBits() {
         return this.vbvFullnessBits;
     }
     /**
-     * Size of the Video Buffering Verifier (VBV) buffer in bits. Must be greater than zero. The default is equal to `VideoStream.bitrate_bps`.
+     * @return Size of the Video Buffering Verifier (VBV) buffer in bits. Must be greater than zero. The default is equal to `VideoStream.bitrate_bps`.
      * 
-    */
+     */
     public Integer vbvSizeBits() {
         return this.vbvSizeBits;
     }
     /**
-     * The width of the video in pixels. Must be an even integer. When not specified, the width is adjusted to match the specified height and input aspect ratio. If both are omitted, the input width is used.
+     * @return The width of the video in pixels. Must be an even integer. When not specified, the width is adjusted to match the specified height and input aspect ratio. If both are omitted, the input width is used.
      * 
-    */
+     */
     public Integer widthPixels() {
         return this.widthPixels;
     }

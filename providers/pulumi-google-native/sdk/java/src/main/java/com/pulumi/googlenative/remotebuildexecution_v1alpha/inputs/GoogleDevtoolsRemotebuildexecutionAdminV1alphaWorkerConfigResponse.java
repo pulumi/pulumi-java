@@ -26,6 +26,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
     @Import(name="accelerator", required=true)
     private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse accelerator;
 
+    /**
+     * @return The accelerator card attached to each VM.
+     * 
+     */
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse accelerator() {
         return this.accelerator;
     }
@@ -37,6 +41,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
     @Import(name="diskSizeGb", required=true)
     private String diskSizeGb;
 
+    /**
+     * @return Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/
+     * 
+     */
     public String diskSizeGb() {
         return this.diskSizeGb;
     }
@@ -48,6 +56,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
     @Import(name="diskType", required=true)
     private String diskType;
 
+    /**
+     * @return Disk Type to use for the worker. See [Storage options](https://cloud.google.com/compute/docs/disks/#introduction). Currently only `pd-standard` and `pd-ssd` are supported.
+     * 
+     */
     public String diskType() {
         return this.diskType;
     }
@@ -59,6 +71,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
     @Import(name="labels", required=true)
     private Map<String,String> labels;
 
+    /**
+     * @return Labels associated with the workers. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International letters are permitted. Label keys must start with a letter. Label values are optional. There can not be more than 64 labels per resource.
+     * 
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
@@ -70,6 +86,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
     @Import(name="machineType", required=true)
     private String machineType;
 
+    /**
+     * @return Machine type of the worker, such as `e2-standard-2`. See https://cloud.google.com/compute/docs/machine-types for a list of supported machine types. Note that `f1-micro` and `g1-small` are not yet supported.
+     * 
+     */
     public String machineType() {
         return this.machineType;
     }
@@ -81,6 +101,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
     @Import(name="maxConcurrentActions", required=true)
     private String maxConcurrentActions;
 
+    /**
+     * @return The maximum number of actions a worker can execute concurrently.
+     * 
+     */
     public String maxConcurrentActions() {
         return this.maxConcurrentActions;
     }
@@ -92,6 +116,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
     @Import(name="minCpuPlatform", required=true)
     private String minCpuPlatform;
 
+    /**
+     * @return Minimum CPU platform to use when creating the worker. See [CPU Platforms](https://cloud.google.com/compute/docs/cpu-platforms).
+     * 
+     */
     public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
@@ -103,6 +131,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
     @Import(name="networkAccess", required=true)
     private String networkAccess;
 
+    /**
+     * @return Determines the type of network access granted to workers. Possible values: - &#34;public&#34;: Workers can connect to the public internet. - &#34;private&#34;: Workers can only connect to Google APIs and services. - &#34;restricted-private&#34;: Workers can only connect to Google APIs that are reachable through `restricted.googleapis.com` (`199.36.153.4/30`).
+     * 
+     */
     public String networkAccess() {
         return this.networkAccess;
     }
@@ -114,6 +146,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
     @Import(name="reserved", required=true)
     private Boolean reserved;
 
+    /**
+     * @return Determines whether the worker is reserved (equivalent to a Compute Engine on-demand VM and therefore won&#39;t be preempted). See [Preemptible VMs](https://cloud.google.com/preemptible-vms/) for more details.
+     * 
+     */
     public Boolean reserved() {
         return this.reserved;
     }
@@ -125,6 +161,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
     @Import(name="soleTenantNodeType", required=true)
     private String soleTenantNodeType;
 
+    /**
+     * @return The node type name to be used for sole-tenant nodes.
+     * 
+     */
     public String soleTenantNodeType() {
         return this.soleTenantNodeType;
     }
@@ -136,6 +176,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
     @Import(name="vmImage", required=true)
     private String vmImage;
 
+    /**
+     * @return The name of the image used by each VM.
+     * 
+     */
     public String vmImage() {
         return this.vmImage;
     }
@@ -174,56 +218,122 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
             $ = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accelerator The accelerator card attached to each VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accelerator(GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse accelerator) {
             $.accelerator = accelerator;
             return this;
         }
 
+        /**
+         * @param diskSizeGb Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGb(String diskSizeGb) {
             $.diskSizeGb = diskSizeGb;
             return this;
         }
 
+        /**
+         * @param diskType Disk Type to use for the worker. See [Storage options](https://cloud.google.com/compute/docs/disks/#introduction). Currently only `pd-standard` and `pd-ssd` are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(String diskType) {
             $.diskType = diskType;
             return this;
         }
 
+        /**
+         * @param labels Labels associated with the workers. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International letters are permitted. Label keys must start with a letter. Label values are optional. There can not be more than 64 labels per resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param machineType Machine type of the worker, such as `e2-standard-2`. See https://cloud.google.com/compute/docs/machine-types for a list of supported machine types. Note that `f1-micro` and `g1-small` are not yet supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(String machineType) {
             $.machineType = machineType;
             return this;
         }
 
+        /**
+         * @param maxConcurrentActions The maximum number of actions a worker can execute concurrently.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentActions(String maxConcurrentActions) {
             $.maxConcurrentActions = maxConcurrentActions;
             return this;
         }
 
+        /**
+         * @param minCpuPlatform Minimum CPU platform to use when creating the worker. See [CPU Platforms](https://cloud.google.com/compute/docs/cpu-platforms).
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCpuPlatform(String minCpuPlatform) {
             $.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
+        /**
+         * @param networkAccess Determines the type of network access granted to workers. Possible values: - &#34;public&#34;: Workers can connect to the public internet. - &#34;private&#34;: Workers can only connect to Google APIs and services. - &#34;restricted-private&#34;: Workers can only connect to Google APIs that are reachable through `restricted.googleapis.com` (`199.36.153.4/30`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkAccess(String networkAccess) {
             $.networkAccess = networkAccess;
             return this;
         }
 
+        /**
+         * @param reserved Determines whether the worker is reserved (equivalent to a Compute Engine on-demand VM and therefore won&#39;t be preempted). See [Preemptible VMs](https://cloud.google.com/preemptible-vms/) for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reserved(Boolean reserved) {
             $.reserved = reserved;
             return this;
         }
 
+        /**
+         * @param soleTenantNodeType The node type name to be used for sole-tenant nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder soleTenantNodeType(String soleTenantNodeType) {
             $.soleTenantNodeType = soleTenantNodeType;
             return this;
         }
 
+        /**
+         * @param vmImage The name of the image used by each VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmImage(String vmImage) {
             $.vmImage = vmImage;
             return this;

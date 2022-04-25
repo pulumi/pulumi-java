@@ -10,35 +10,35 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudApigeeV1QueryMetadataResponse {
-    /**
-     * Dimensions of the AsyncQuery.
-     * 
-     */
+        /**
+         * @return Dimensions of the AsyncQuery.
+         * 
+         */
     private final List<String> dimensions;
-    /**
-     * End timestamp of the query range.
-     * 
-     */
+        /**
+         * @return End timestamp of the query range.
+         * 
+         */
     private final String endTimestamp;
-    /**
-     * Metrics of the AsyncQuery. Example: [&#34;name:message_count,func:sum,alias:sum_message_count&#34;]
-     * 
-     */
+        /**
+         * @return Metrics of the AsyncQuery. Example: [&#34;name:message_count,func:sum,alias:sum_message_count&#34;]
+         * 
+         */
     private final List<String> metrics;
-    /**
-     * Output format.
-     * 
-     */
+        /**
+         * @return Output format.
+         * 
+         */
     private final String outputFormat;
-    /**
-     * Start timestamp of the query range.
-     * 
-     */
+        /**
+         * @return Start timestamp of the query range.
+         * 
+         */
     private final String startTimestamp;
-    /**
-     * Query GroupBy time unit.
-     * 
-     */
+        /**
+         * @return Query GroupBy time unit.
+         * 
+         */
     private final String timeUnit;
 
     @CustomType.Constructor
@@ -58,44 +58,44 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse {
     }
 
     /**
-     * Dimensions of the AsyncQuery.
+     * @return Dimensions of the AsyncQuery.
      * 
-    */
+     */
     public List<String> dimensions() {
         return this.dimensions;
     }
     /**
-     * End timestamp of the query range.
+     * @return End timestamp of the query range.
      * 
-    */
+     */
     public String endTimestamp() {
         return this.endTimestamp;
     }
     /**
-     * Metrics of the AsyncQuery. Example: [&#34;name:message_count,func:sum,alias:sum_message_count&#34;]
+     * @return Metrics of the AsyncQuery. Example: [&#34;name:message_count,func:sum,alias:sum_message_count&#34;]
      * 
-    */
+     */
     public List<String> metrics() {
         return this.metrics;
     }
     /**
-     * Output format.
+     * @return Output format.
      * 
-    */
+     */
     public String outputFormat() {
         return this.outputFormat;
     }
     /**
-     * Start timestamp of the query range.
+     * @return Start timestamp of the query range.
      * 
-    */
+     */
     public String startTimestamp() {
         return this.startTimestamp;
     }
     /**
-     * Query GroupBy time unit.
+     * @return Query GroupBy time unit.
      * 
-    */
+     */
     public String timeUnit() {
         return this.timeUnit;
     }

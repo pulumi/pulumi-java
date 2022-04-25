@@ -15,100 +15,100 @@ import java.util.Objects;
 
 @CustomType
 public final class GetMigrationJobResult {
-    /**
-     * The timestamp when the migration job resource was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
-     * 
-     */
+        /**
+         * @return The timestamp when the migration job resource was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         */
     private final String createTime;
-    /**
-     * The resource name (URI) of the destination connection profile.
-     * 
-     */
+        /**
+         * @return The resource name (URI) of the destination connection profile.
+         * 
+         */
     private final String destination;
-    /**
-     * The database engine type and provider of the destination.
-     * 
-     */
+        /**
+         * @return The database engine type and provider of the destination.
+         * 
+         */
     private final DatabaseTypeResponse destinationDatabase;
-    /**
-     * The migration job display name.
-     * 
-     */
+        /**
+         * @return The migration job display name.
+         * 
+         */
     private final String displayName;
-    /**
-     * The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]).
-     * 
-     */
+        /**
+         * @return The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]).
+         * 
+         */
     private final String dumpPath;
-    /**
-     * The duration of the migration job (in seconds). A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
-     * 
-     */
+        /**
+         * @return The duration of the migration job (in seconds). A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         */
     private final String duration;
-    /**
-     * If the migration job is completed, the time when it was completed.
-     * 
-     */
+        /**
+         * @return If the migration job is completed, the time when it was completed.
+         * 
+         */
     private final String endTime;
-    /**
-     * The error details in case of state FAILED.
-     * 
-     */
+        /**
+         * @return The error details in case of state FAILED.
+         * 
+         */
     private final StatusResponse error;
-    /**
-     * The resource labels for migration job to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of &#34;key&#34;: &#34;value&#34; pairs. Example: `{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }`.
-     * 
-     */
+        /**
+         * @return The resource labels for migration job to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of &#34;key&#34;: &#34;value&#34; pairs. Example: `{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }`.
+         * 
+         */
     private final Map<String,String> labels;
-    /**
-     * The name (URI) of this migration job resource, in the form of: projects/{project}/locations/{location}/migrationJobs/{migrationJob}.
-     * 
-     */
+        /**
+         * @return The name (URI) of this migration job resource, in the form of: projects/{project}/locations/{location}/migrationJobs/{migrationJob}.
+         * 
+         */
     private final String name;
-    /**
-     * The current migration job phase.
-     * 
-     */
+        /**
+         * @return The current migration job phase.
+         * 
+         */
     private final String phase;
-    /**
-     * The details needed to communicate to the source over Reverse SSH tunnel connectivity.
-     * 
-     */
+        /**
+         * @return The details needed to communicate to the source over Reverse SSH tunnel connectivity.
+         * 
+         */
     private final ReverseSshConnectivityResponse reverseSshConnectivity;
-    /**
-     * The resource name (URI) of the source connection profile.
-     * 
-     */
+        /**
+         * @return The resource name (URI) of the source connection profile.
+         * 
+         */
     private final String source;
-    /**
-     * The database engine type and provider of the source.
-     * 
-     */
+        /**
+         * @return The database engine type and provider of the source.
+         * 
+         */
     private final DatabaseTypeResponse sourceDatabase;
-    /**
-     * The current migration job state.
-     * 
-     */
+        /**
+         * @return The current migration job state.
+         * 
+         */
     private final String state;
-    /**
-     * static ip connectivity data (default, no additional details needed).
-     * 
-     */
+        /**
+         * @return static ip connectivity data (default, no additional details needed).
+         * 
+         */
     private final StaticIpConnectivityResponse staticIpConnectivity;
-    /**
-     * The migration job type.
-     * 
-     */
+        /**
+         * @return The migration job type.
+         * 
+         */
     private final String type;
-    /**
-     * The timestamp when the migration job resource was last updated. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
-     * 
-     */
+        /**
+         * @return The timestamp when the migration job resource was last updated. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         */
     private final String updateTime;
-    /**
-     * The details of the VPC network that the source database is located in.
-     * 
-     */
+        /**
+         * @return The details of the VPC network that the source database is located in.
+         * 
+         */
     private final VpcPeeringConnectivityResponse vpcPeeringConnectivity;
 
     @CustomType.Constructor
@@ -154,135 +154,135 @@ public final class GetMigrationJobResult {
     }
 
     /**
-     * The timestamp when the migration job resource was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+     * @return The timestamp when the migration job resource was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The resource name (URI) of the destination connection profile.
+     * @return The resource name (URI) of the destination connection profile.
      * 
-    */
+     */
     public String destination() {
         return this.destination;
     }
     /**
-     * The database engine type and provider of the destination.
+     * @return The database engine type and provider of the destination.
      * 
-    */
+     */
     public DatabaseTypeResponse destinationDatabase() {
         return this.destinationDatabase;
     }
     /**
-     * The migration job display name.
+     * @return The migration job display name.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]).
+     * @return The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]).
      * 
-    */
+     */
     public String dumpPath() {
         return this.dumpPath;
     }
     /**
-     * The duration of the migration job (in seconds). A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+     * @return The duration of the migration job (in seconds). A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
-    */
+     */
     public String duration() {
         return this.duration;
     }
     /**
-     * If the migration job is completed, the time when it was completed.
+     * @return If the migration job is completed, the time when it was completed.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * The error details in case of state FAILED.
+     * @return The error details in case of state FAILED.
      * 
-    */
+     */
     public StatusResponse error() {
         return this.error;
     }
     /**
-     * The resource labels for migration job to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of &#34;key&#34;: &#34;value&#34; pairs. Example: `{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }`.
+     * @return The resource labels for migration job to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of &#34;key&#34;: &#34;value&#34; pairs. Example: `{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }`.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The name (URI) of this migration job resource, in the form of: projects/{project}/locations/{location}/migrationJobs/{migrationJob}.
+     * @return The name (URI) of this migration job resource, in the form of: projects/{project}/locations/{location}/migrationJobs/{migrationJob}.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The current migration job phase.
+     * @return The current migration job phase.
      * 
-    */
+     */
     public String phase() {
         return this.phase;
     }
     /**
-     * The details needed to communicate to the source over Reverse SSH tunnel connectivity.
+     * @return The details needed to communicate to the source over Reverse SSH tunnel connectivity.
      * 
-    */
+     */
     public ReverseSshConnectivityResponse reverseSshConnectivity() {
         return this.reverseSshConnectivity;
     }
     /**
-     * The resource name (URI) of the source connection profile.
+     * @return The resource name (URI) of the source connection profile.
      * 
-    */
+     */
     public String source() {
         return this.source;
     }
     /**
-     * The database engine type and provider of the source.
+     * @return The database engine type and provider of the source.
      * 
-    */
+     */
     public DatabaseTypeResponse sourceDatabase() {
         return this.sourceDatabase;
     }
     /**
-     * The current migration job state.
+     * @return The current migration job state.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * static ip connectivity data (default, no additional details needed).
+     * @return static ip connectivity data (default, no additional details needed).
      * 
-    */
+     */
     public StaticIpConnectivityResponse staticIpConnectivity() {
         return this.staticIpConnectivity;
     }
     /**
-     * The migration job type.
+     * @return The migration job type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The timestamp when the migration job resource was last updated. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+     * @return The timestamp when the migration job resource was last updated. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }
     /**
-     * The details of the VPC network that the source database is located in.
+     * @return The details of the VPC network that the source database is located in.
      * 
-    */
+     */
     public VpcPeeringConnectivityResponse vpcPeeringConnectivity() {
         return this.vpcPeeringConnectivity;
     }

@@ -25,6 +25,10 @@ public final class ContactSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="adminContact", required=true)
     private Output<ContactArgs> adminContact;
 
+    /**
+     * @return The administrative contact for the `Registration`.
+     * 
+     */
     public Output<ContactArgs> adminContact() {
         return this.adminContact;
     }
@@ -36,6 +40,10 @@ public final class ContactSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="privacy", required=true)
     private Output<ContactSettingsPrivacy> privacy;
 
+    /**
+     * @return Privacy setting for the contacts associated with the `Registration`.
+     * 
+     */
     public Output<ContactSettingsPrivacy> privacy() {
         return this.privacy;
     }
@@ -47,6 +55,10 @@ public final class ContactSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="registrantContact", required=true)
     private Output<ContactArgs> registrantContact;
 
+    /**
+     * @return The registrant contact for the `Registration`. *Caution: Anyone with access to this email address, phone number, and/or postal address can take control of the domain.* *Warning: For new `Registration`s, the registrant receives an email confirmation that they must complete within 15 days to avoid domain suspension.*
+     * 
+     */
     public Output<ContactArgs> registrantContact() {
         return this.registrantContact;
     }
@@ -58,6 +70,10 @@ public final class ContactSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="technicalContact", required=true)
     private Output<ContactArgs> technicalContact;
 
+    /**
+     * @return The technical contact for the `Registration`.
+     * 
+     */
     public Output<ContactArgs> technicalContact() {
         return this.technicalContact;
     }
@@ -89,38 +105,86 @@ public final class ContactSettingsArgs extends com.pulumi.resources.ResourceArgs
             $ = new ContactSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adminContact The administrative contact for the `Registration`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminContact(Output<ContactArgs> adminContact) {
             $.adminContact = adminContact;
             return this;
         }
 
+        /**
+         * @param adminContact The administrative contact for the `Registration`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminContact(ContactArgs adminContact) {
             return adminContact(Output.of(adminContact));
         }
 
+        /**
+         * @param privacy Privacy setting for the contacts associated with the `Registration`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privacy(Output<ContactSettingsPrivacy> privacy) {
             $.privacy = privacy;
             return this;
         }
 
+        /**
+         * @param privacy Privacy setting for the contacts associated with the `Registration`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privacy(ContactSettingsPrivacy privacy) {
             return privacy(Output.of(privacy));
         }
 
+        /**
+         * @param registrantContact The registrant contact for the `Registration`. *Caution: Anyone with access to this email address, phone number, and/or postal address can take control of the domain.* *Warning: For new `Registration`s, the registrant receives an email confirmation that they must complete within 15 days to avoid domain suspension.*
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrantContact(Output<ContactArgs> registrantContact) {
             $.registrantContact = registrantContact;
             return this;
         }
 
+        /**
+         * @param registrantContact The registrant contact for the `Registration`. *Caution: Anyone with access to this email address, phone number, and/or postal address can take control of the domain.* *Warning: For new `Registration`s, the registrant receives an email confirmation that they must complete within 15 days to avoid domain suspension.*
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrantContact(ContactArgs registrantContact) {
             return registrantContact(Output.of(registrantContact));
         }
 
+        /**
+         * @param technicalContact The technical contact for the `Registration`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder technicalContact(Output<ContactArgs> technicalContact) {
             $.technicalContact = technicalContact;
             return this;
         }
 
+        /**
+         * @param technicalContact The technical contact for the `Registration`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder technicalContact(ContactArgs technicalContact) {
             return technicalContact(Output.of(technicalContact));
         }

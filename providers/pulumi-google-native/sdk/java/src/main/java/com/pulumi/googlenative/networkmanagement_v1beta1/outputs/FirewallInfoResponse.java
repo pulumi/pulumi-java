@@ -11,55 +11,55 @@ import java.util.Objects;
 
 @CustomType
 public final class FirewallInfoResponse {
-    /**
-     * Possible values: ALLOW, DENY
-     * 
-     */
+        /**
+         * @return Possible values: ALLOW, DENY
+         * 
+         */
     private final String action;
-    /**
-     * Possible values: INGRESS, EGRESS
-     * 
-     */
+        /**
+         * @return Possible values: INGRESS, EGRESS
+         * 
+         */
     private final String direction;
-    /**
-     * The display name of the VPC firewall rule. This field is not applicable to hierarchical firewall policy rules.
-     * 
-     */
+        /**
+         * @return The display name of the VPC firewall rule. This field is not applicable to hierarchical firewall policy rules.
+         * 
+         */
     private final String displayName;
-    /**
-     * The firewall rule&#39;s type.
-     * 
-     */
+        /**
+         * @return The firewall rule&#39;s type.
+         * 
+         */
     private final String firewallRuleType;
-    /**
-     * The URI of the VPC network that the firewall rule is associated with. This field is not applicable to hierarchical firewall policy rules.
-     * 
-     */
+        /**
+         * @return The URI of the VPC network that the firewall rule is associated with. This field is not applicable to hierarchical firewall policy rules.
+         * 
+         */
     private final String networkUri;
-    /**
-     * The hierarchical firewall policy that this rule is associated with. This field is not applicable to VPC firewall rules.
-     * 
-     */
+        /**
+         * @return The hierarchical firewall policy that this rule is associated with. This field is not applicable to VPC firewall rules.
+         * 
+         */
     private final String policy;
-    /**
-     * The priority of the firewall rule.
-     * 
-     */
+        /**
+         * @return The priority of the firewall rule.
+         * 
+         */
     private final Integer priority;
-    /**
-     * The target service accounts specified by the firewall rule.
-     * 
-     */
+        /**
+         * @return The target service accounts specified by the firewall rule.
+         * 
+         */
     private final List<String> targetServiceAccounts;
-    /**
-     * The target tags defined by the VPC firewall rule. This field is not applicable to hierarchical firewall policy rules.
-     * 
-     */
+        /**
+         * @return The target tags defined by the VPC firewall rule. This field is not applicable to hierarchical firewall policy rules.
+         * 
+         */
     private final List<String> targetTags;
-    /**
-     * The URI of the VPC firewall rule. This field is not applicable to implied firewall rules or hierarchical firewall policy rules.
-     * 
-     */
+        /**
+         * @return The URI of the VPC firewall rule. This field is not applicable to implied firewall rules or hierarchical firewall policy rules.
+         * 
+         */
     private final String uri;
 
     @CustomType.Constructor
@@ -87,72 +87,72 @@ public final class FirewallInfoResponse {
     }
 
     /**
-     * Possible values: ALLOW, DENY
+     * @return Possible values: ALLOW, DENY
      * 
-    */
+     */
     public String action() {
         return this.action;
     }
     /**
-     * Possible values: INGRESS, EGRESS
+     * @return Possible values: INGRESS, EGRESS
      * 
-    */
+     */
     public String direction() {
         return this.direction;
     }
     /**
-     * The display name of the VPC firewall rule. This field is not applicable to hierarchical firewall policy rules.
+     * @return The display name of the VPC firewall rule. This field is not applicable to hierarchical firewall policy rules.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The firewall rule&#39;s type.
+     * @return The firewall rule&#39;s type.
      * 
-    */
+     */
     public String firewallRuleType() {
         return this.firewallRuleType;
     }
     /**
-     * The URI of the VPC network that the firewall rule is associated with. This field is not applicable to hierarchical firewall policy rules.
+     * @return The URI of the VPC network that the firewall rule is associated with. This field is not applicable to hierarchical firewall policy rules.
      * 
-    */
+     */
     public String networkUri() {
         return this.networkUri;
     }
     /**
-     * The hierarchical firewall policy that this rule is associated with. This field is not applicable to VPC firewall rules.
+     * @return The hierarchical firewall policy that this rule is associated with. This field is not applicable to VPC firewall rules.
      * 
-    */
+     */
     public String policy() {
         return this.policy;
     }
     /**
-     * The priority of the firewall rule.
+     * @return The priority of the firewall rule.
      * 
-    */
+     */
     public Integer priority() {
         return this.priority;
     }
     /**
-     * The target service accounts specified by the firewall rule.
+     * @return The target service accounts specified by the firewall rule.
      * 
-    */
+     */
     public List<String> targetServiceAccounts() {
         return this.targetServiceAccounts;
     }
     /**
-     * The target tags defined by the VPC firewall rule. This field is not applicable to hierarchical firewall policy rules.
+     * @return The target tags defined by the VPC firewall rule. This field is not applicable to hierarchical firewall policy rules.
      * 
-    */
+     */
     public List<String> targetTags() {
         return this.targetTags;
     }
     /**
-     * The URI of the VPC firewall rule. This field is not applicable to implied firewall rules or hierarchical firewall policy rules.
+     * @return The URI of the VPC firewall rule. This field is not applicable to implied firewall rules or hierarchical firewall policy rules.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

@@ -23,6 +23,10 @@ public final class DeploymentUpdateLabelEntryResponse extends com.pulumi.resourc
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return Key of the label
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -34,6 +38,10 @@ public final class DeploymentUpdateLabelEntryResponse extends com.pulumi.resourc
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return Value of the label
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class DeploymentUpdateLabelEntryResponse extends com.pulumi.resourc
             $ = new DeploymentUpdateLabelEntryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key Key of the label
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param value Value of the label
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

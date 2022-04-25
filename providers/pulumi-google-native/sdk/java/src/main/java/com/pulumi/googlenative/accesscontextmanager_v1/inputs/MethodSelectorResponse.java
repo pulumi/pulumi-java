@@ -23,6 +23,10 @@ public final class MethodSelectorResponse extends com.pulumi.resources.InvokeArg
     @Import(name="method", required=true)
     private String method;
 
+    /**
+     * @return Value for `method` should be a valid method name for the corresponding `service_name` in ApiOperation. If `*` used as value for `method`, then ALL methods and permissions are allowed.
+     * 
+     */
     public String method() {
         return this.method;
     }
@@ -34,6 +38,10 @@ public final class MethodSelectorResponse extends com.pulumi.resources.InvokeArg
     @Import(name="permission", required=true)
     private String permission;
 
+    /**
+     * @return Value for `permission` should be a valid Cloud IAM permission for the corresponding `service_name` in ApiOperation.
+     * 
+     */
     public String permission() {
         return this.permission;
     }
@@ -63,11 +71,23 @@ public final class MethodSelectorResponse extends com.pulumi.resources.InvokeArg
             $ = new MethodSelectorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param method Value for `method` should be a valid method name for the corresponding `service_name` in ApiOperation. If `*` used as value for `method`, then ALL methods and permissions are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(String method) {
             $.method = method;
             return this;
         }
 
+        /**
+         * @param permission Value for `permission` should be a valid Cloud IAM permission for the corresponding `service_name` in ApiOperation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permission(String permission) {
             $.permission = permission;
             return this;

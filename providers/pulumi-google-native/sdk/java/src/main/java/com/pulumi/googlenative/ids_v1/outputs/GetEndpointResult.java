@@ -11,60 +11,60 @@ import java.util.Objects;
 
 @CustomType
 public final class GetEndpointResult {
-    /**
-     * The create time timestamp.
-     * 
-     */
+        /**
+         * @return The create time timestamp.
+         * 
+         */
     private final String createTime;
-    /**
-     * User-provided description of the endpoint
-     * 
-     */
+        /**
+         * @return User-provided description of the endpoint
+         * 
+         */
     private final String description;
-    /**
-     * The fully qualified URL of the endpoint&#39;s ILB Forwarding Rule.
-     * 
-     */
+        /**
+         * @return The fully qualified URL of the endpoint&#39;s ILB Forwarding Rule.
+         * 
+         */
     private final String endpointForwardingRule;
-    /**
-     * The IP address of the IDS Endpoint&#39;s ILB.
-     * 
-     */
+        /**
+         * @return The IP address of the IDS Endpoint&#39;s ILB.
+         * 
+         */
     private final String endpointIp;
-    /**
-     * The labels of the endpoint.
-     * 
-     */
+        /**
+         * @return The labels of the endpoint.
+         * 
+         */
     private final Map<String,String> labels;
-    /**
-     * The name of the endpoint.
-     * 
-     */
+        /**
+         * @return The name of the endpoint.
+         * 
+         */
     private final String name;
-    /**
-     * The fully qualified URL of the network to which the IDS Endpoint is attached.
-     * 
-     */
+        /**
+         * @return The fully qualified URL of the network to which the IDS Endpoint is attached.
+         * 
+         */
     private final String network;
-    /**
-     * Lowest threat severity that this endpoint will alert on.
-     * 
-     */
+        /**
+         * @return Lowest threat severity that this endpoint will alert on.
+         * 
+         */
     private final String severity;
-    /**
-     * Current state of the endpoint.
-     * 
-     */
+        /**
+         * @return Current state of the endpoint.
+         * 
+         */
     private final String state;
-    /**
-     * Whether the endpoint should report traffic logs in addition to threat logs.
-     * 
-     */
+        /**
+         * @return Whether the endpoint should report traffic logs in addition to threat logs.
+         * 
+         */
     private final Boolean trafficLogs;
-    /**
-     * The update time timestamp.
-     * 
-     */
+        /**
+         * @return The update time timestamp.
+         * 
+         */
     private final String updateTime;
 
     @CustomType.Constructor
@@ -94,79 +94,79 @@ public final class GetEndpointResult {
     }
 
     /**
-     * The create time timestamp.
+     * @return The create time timestamp.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * User-provided description of the endpoint
+     * @return User-provided description of the endpoint
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The fully qualified URL of the endpoint&#39;s ILB Forwarding Rule.
+     * @return The fully qualified URL of the endpoint&#39;s ILB Forwarding Rule.
      * 
-    */
+     */
     public String endpointForwardingRule() {
         return this.endpointForwardingRule;
     }
     /**
-     * The IP address of the IDS Endpoint&#39;s ILB.
+     * @return The IP address of the IDS Endpoint&#39;s ILB.
      * 
-    */
+     */
     public String endpointIp() {
         return this.endpointIp;
     }
     /**
-     * The labels of the endpoint.
+     * @return The labels of the endpoint.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The name of the endpoint.
+     * @return The name of the endpoint.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The fully qualified URL of the network to which the IDS Endpoint is attached.
+     * @return The fully qualified URL of the network to which the IDS Endpoint is attached.
      * 
-    */
+     */
     public String network() {
         return this.network;
     }
     /**
-     * Lowest threat severity that this endpoint will alert on.
+     * @return Lowest threat severity that this endpoint will alert on.
      * 
-    */
+     */
     public String severity() {
         return this.severity;
     }
     /**
-     * Current state of the endpoint.
+     * @return Current state of the endpoint.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Whether the endpoint should report traffic logs in addition to threat logs.
+     * @return Whether the endpoint should report traffic logs in addition to threat logs.
      * 
-    */
+     */
     public Boolean trafficLogs() {
         return this.trafficLogs;
     }
     /**
-     * The update time timestamp.
+     * @return The update time timestamp.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

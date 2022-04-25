@@ -13,45 +13,45 @@ import java.util.Objects;
 
 @CustomType
 public final class GetJobResult {
-    /**
-     * [Required] Describes the job configuration.
-     * 
-     */
+        /**
+         * @return [Required] Describes the job configuration.
+         * 
+         */
     private final JobConfigurationResponse configuration;
-    /**
-     * A hash of this resource.
-     * 
-     */
+        /**
+         * @return A hash of this resource.
+         * 
+         */
     private final String etag;
-    /**
-     * [Optional] Reference describing the unique-per-user name of the job.
-     * 
-     */
+        /**
+         * @return [Optional] Reference describing the unique-per-user name of the job.
+         * 
+         */
     private final JobReferenceResponse jobReference;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String kind;
-    /**
-     * A URL that can be used to access this resource again.
-     * 
-     */
+        /**
+         * @return A URL that can be used to access this resource again.
+         * 
+         */
     private final String selfLink;
-    /**
-     * Information about the job, including starting time and ending time of the job.
-     * 
-     */
+        /**
+         * @return Information about the job, including starting time and ending time of the job.
+         * 
+         */
     private final JobStatisticsResponse statistics;
-    /**
-     * The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.
-     * 
-     */
+        /**
+         * @return The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.
+         * 
+         */
     private final JobStatusResponse status;
-    /**
-     * Email address of the user who ran the job.
-     * 
-     */
+        /**
+         * @return Email address of the user who ran the job.
+         * 
+         */
     private final String userEmail;
 
     @CustomType.Constructor
@@ -75,58 +75,58 @@ public final class GetJobResult {
     }
 
     /**
-     * [Required] Describes the job configuration.
+     * @return [Required] Describes the job configuration.
      * 
-    */
+     */
     public JobConfigurationResponse configuration() {
         return this.configuration;
     }
     /**
-     * A hash of this resource.
+     * @return A hash of this resource.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * [Optional] Reference describing the unique-per-user name of the job.
+     * @return [Optional] Reference describing the unique-per-user name of the job.
      * 
-    */
+     */
     public JobReferenceResponse jobReference() {
         return this.jobReference;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * A URL that can be used to access this resource again.
+     * @return A URL that can be used to access this resource again.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }
     /**
-     * Information about the job, including starting time and ending time of the job.
+     * @return Information about the job, including starting time and ending time of the job.
      * 
-    */
+     */
     public JobStatisticsResponse statistics() {
         return this.statistics;
     }
     /**
-     * The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.
+     * @return The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.
      * 
-    */
+     */
     public JobStatusResponse status() {
         return this.status;
     }
     /**
-     * Email address of the user who ran the job.
+     * @return Email address of the user who ran the job.
      * 
-    */
+     */
     public String userEmail() {
         return this.userEmail;
     }

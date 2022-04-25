@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudChannelV1CommitmentSettingsResponse {
-    /**
-     * Commitment end timestamp.
-     * 
-     */
+        /**
+         * @return Commitment end timestamp.
+         * 
+         */
     private final String endTime;
-    /**
-     * Optional. Renewal settings applicable for a commitment-based Offer.
-     * 
-     */
+        /**
+         * @return Optional. Renewal settings applicable for a commitment-based Offer.
+         * 
+         */
     private final GoogleCloudChannelV1RenewalSettingsResponse renewalSettings;
-    /**
-     * Commitment start timestamp.
-     * 
-     */
+        /**
+         * @return Commitment start timestamp.
+         * 
+         */
     private final String startTime;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse {
     }
 
     /**
-     * Commitment end timestamp.
+     * @return Commitment end timestamp.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * Optional. Renewal settings applicable for a commitment-based Offer.
+     * @return Optional. Renewal settings applicable for a commitment-based Offer.
      * 
-    */
+     */
     public GoogleCloudChannelV1RenewalSettingsResponse renewalSettings() {
         return this.renewalSettings;
     }
     /**
-     * Commitment start timestamp.
+     * @return Commitment start timestamp.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }

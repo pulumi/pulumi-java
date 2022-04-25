@@ -32,6 +32,10 @@ public final class CertificateAuthorityPolicyArgs extends com.pulumi.resources.R
     @Import(name="allowedCommonNames")
     private @Nullable Output<List<String>> allowedCommonNames;
 
+    /**
+     * @return Optional. If any value is specified here, then all Certificates issued by the CertificateAuthority must match at least one listed value. If no value is specified, all values will be allowed for this fied. Glob patterns are also supported.
+     * 
+     */
     public Optional<Output<List<String>>> allowedCommonNames() {
         return Optional.ofNullable(this.allowedCommonNames);
     }
@@ -43,6 +47,10 @@ public final class CertificateAuthorityPolicyArgs extends com.pulumi.resources.R
     @Import(name="allowedConfigList")
     private @Nullable Output<AllowedConfigListArgs> allowedConfigList;
 
+    /**
+     * @return Optional. All Certificates issued by the CertificateAuthority must match at least one listed ReusableConfigWrapper in the list.
+     * 
+     */
     public Optional<Output<AllowedConfigListArgs>> allowedConfigList() {
         return Optional.ofNullable(this.allowedConfigList);
     }
@@ -54,6 +62,10 @@ public final class CertificateAuthorityPolicyArgs extends com.pulumi.resources.R
     @Import(name="allowedIssuanceModes")
     private @Nullable Output<IssuanceModesArgs> allowedIssuanceModes;
 
+    /**
+     * @return Optional. If specified, then only methods allowed in the IssuanceModes may be used to issue Certificates.
+     * 
+     */
     public Optional<Output<IssuanceModesArgs>> allowedIssuanceModes() {
         return Optional.ofNullable(this.allowedIssuanceModes);
     }
@@ -65,6 +77,10 @@ public final class CertificateAuthorityPolicyArgs extends com.pulumi.resources.R
     @Import(name="allowedLocationsAndOrganizations")
     private @Nullable Output<List<SubjectArgs>> allowedLocationsAndOrganizations;
 
+    /**
+     * @return Optional. If any Subject is specified here, then all Certificates issued by the CertificateAuthority must match at least one listed Subject. If a Subject has an empty field, any value will be allowed for that field.
+     * 
+     */
     public Optional<Output<List<SubjectArgs>>> allowedLocationsAndOrganizations() {
         return Optional.ofNullable(this.allowedLocationsAndOrganizations);
     }
@@ -76,6 +92,10 @@ public final class CertificateAuthorityPolicyArgs extends com.pulumi.resources.R
     @Import(name="allowedSans")
     private @Nullable Output<AllowedSubjectAltNamesArgs> allowedSans;
 
+    /**
+     * @return Optional. If a AllowedSubjectAltNames is specified here, then all Certificates issued by the CertificateAuthority must match AllowedSubjectAltNames. If no value or an empty value is specified, any value will be allowed for the SubjectAltNames field.
+     * 
+     */
     public Optional<Output<AllowedSubjectAltNamesArgs>> allowedSans() {
         return Optional.ofNullable(this.allowedSans);
     }
@@ -87,6 +107,10 @@ public final class CertificateAuthorityPolicyArgs extends com.pulumi.resources.R
     @Import(name="maximumLifetime")
     private @Nullable Output<String> maximumLifetime;
 
+    /**
+     * @return Optional. The maximum lifetime allowed by the CertificateAuthority. Note that if the any part if the issuing chain expires before a Certificate&#39;s requested maximum_lifetime, the effective lifetime will be explicitly truncated.
+     * 
+     */
     public Optional<Output<String>> maximumLifetime() {
         return Optional.ofNullable(this.maximumLifetime);
     }
@@ -98,6 +122,10 @@ public final class CertificateAuthorityPolicyArgs extends com.pulumi.resources.R
     @Import(name="overwriteConfigValues")
     private @Nullable Output<ReusableConfigWrapperArgs> overwriteConfigValues;
 
+    /**
+     * @return Optional. All Certificates issued by the CertificateAuthority will use the provided configuration values, overwriting any requested configuration values.
+     * 
+     */
     public Optional<Output<ReusableConfigWrapperArgs>> overwriteConfigValues() {
         return Optional.ofNullable(this.overwriteConfigValues);
     }
@@ -132,73 +160,169 @@ public final class CertificateAuthorityPolicyArgs extends com.pulumi.resources.R
             $ = new CertificateAuthorityPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedCommonNames Optional. If any value is specified here, then all Certificates issued by the CertificateAuthority must match at least one listed value. If no value is specified, all values will be allowed for this fied. Glob patterns are also supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedCommonNames(@Nullable Output<List<String>> allowedCommonNames) {
             $.allowedCommonNames = allowedCommonNames;
             return this;
         }
 
+        /**
+         * @param allowedCommonNames Optional. If any value is specified here, then all Certificates issued by the CertificateAuthority must match at least one listed value. If no value is specified, all values will be allowed for this fied. Glob patterns are also supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedCommonNames(List<String> allowedCommonNames) {
             return allowedCommonNames(Output.of(allowedCommonNames));
         }
 
+        /**
+         * @param allowedCommonNames Optional. If any value is specified here, then all Certificates issued by the CertificateAuthority must match at least one listed value. If no value is specified, all values will be allowed for this fied. Glob patterns are also supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedCommonNames(String... allowedCommonNames) {
             return allowedCommonNames(List.of(allowedCommonNames));
         }
 
+        /**
+         * @param allowedConfigList Optional. All Certificates issued by the CertificateAuthority must match at least one listed ReusableConfigWrapper in the list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedConfigList(@Nullable Output<AllowedConfigListArgs> allowedConfigList) {
             $.allowedConfigList = allowedConfigList;
             return this;
         }
 
+        /**
+         * @param allowedConfigList Optional. All Certificates issued by the CertificateAuthority must match at least one listed ReusableConfigWrapper in the list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedConfigList(AllowedConfigListArgs allowedConfigList) {
             return allowedConfigList(Output.of(allowedConfigList));
         }
 
+        /**
+         * @param allowedIssuanceModes Optional. If specified, then only methods allowed in the IssuanceModes may be used to issue Certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedIssuanceModes(@Nullable Output<IssuanceModesArgs> allowedIssuanceModes) {
             $.allowedIssuanceModes = allowedIssuanceModes;
             return this;
         }
 
+        /**
+         * @param allowedIssuanceModes Optional. If specified, then only methods allowed in the IssuanceModes may be used to issue Certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedIssuanceModes(IssuanceModesArgs allowedIssuanceModes) {
             return allowedIssuanceModes(Output.of(allowedIssuanceModes));
         }
 
+        /**
+         * @param allowedLocationsAndOrganizations Optional. If any Subject is specified here, then all Certificates issued by the CertificateAuthority must match at least one listed Subject. If a Subject has an empty field, any value will be allowed for that field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedLocationsAndOrganizations(@Nullable Output<List<SubjectArgs>> allowedLocationsAndOrganizations) {
             $.allowedLocationsAndOrganizations = allowedLocationsAndOrganizations;
             return this;
         }
 
+        /**
+         * @param allowedLocationsAndOrganizations Optional. If any Subject is specified here, then all Certificates issued by the CertificateAuthority must match at least one listed Subject. If a Subject has an empty field, any value will be allowed for that field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedLocationsAndOrganizations(List<SubjectArgs> allowedLocationsAndOrganizations) {
             return allowedLocationsAndOrganizations(Output.of(allowedLocationsAndOrganizations));
         }
 
+        /**
+         * @param allowedLocationsAndOrganizations Optional. If any Subject is specified here, then all Certificates issued by the CertificateAuthority must match at least one listed Subject. If a Subject has an empty field, any value will be allowed for that field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedLocationsAndOrganizations(SubjectArgs... allowedLocationsAndOrganizations) {
             return allowedLocationsAndOrganizations(List.of(allowedLocationsAndOrganizations));
         }
 
+        /**
+         * @param allowedSans Optional. If a AllowedSubjectAltNames is specified here, then all Certificates issued by the CertificateAuthority must match AllowedSubjectAltNames. If no value or an empty value is specified, any value will be allowed for the SubjectAltNames field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedSans(@Nullable Output<AllowedSubjectAltNamesArgs> allowedSans) {
             $.allowedSans = allowedSans;
             return this;
         }
 
+        /**
+         * @param allowedSans Optional. If a AllowedSubjectAltNames is specified here, then all Certificates issued by the CertificateAuthority must match AllowedSubjectAltNames. If no value or an empty value is specified, any value will be allowed for the SubjectAltNames field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedSans(AllowedSubjectAltNamesArgs allowedSans) {
             return allowedSans(Output.of(allowedSans));
         }
 
+        /**
+         * @param maximumLifetime Optional. The maximum lifetime allowed by the CertificateAuthority. Note that if the any part if the issuing chain expires before a Certificate&#39;s requested maximum_lifetime, the effective lifetime will be explicitly truncated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumLifetime(@Nullable Output<String> maximumLifetime) {
             $.maximumLifetime = maximumLifetime;
             return this;
         }
 
+        /**
+         * @param maximumLifetime Optional. The maximum lifetime allowed by the CertificateAuthority. Note that if the any part if the issuing chain expires before a Certificate&#39;s requested maximum_lifetime, the effective lifetime will be explicitly truncated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumLifetime(String maximumLifetime) {
             return maximumLifetime(Output.of(maximumLifetime));
         }
 
+        /**
+         * @param overwriteConfigValues Optional. All Certificates issued by the CertificateAuthority will use the provided configuration values, overwriting any requested configuration values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overwriteConfigValues(@Nullable Output<ReusableConfigWrapperArgs> overwriteConfigValues) {
             $.overwriteConfigValues = overwriteConfigValues;
             return this;
         }
 
+        /**
+         * @param overwriteConfigValues Optional. All Certificates issued by the CertificateAuthority will use the provided configuration values, overwriting any requested configuration values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overwriteConfigValues(ReusableConfigWrapperArgs overwriteConfigValues) {
             return overwriteConfigValues(Output.of(overwriteConfigValues));
         }

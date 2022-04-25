@@ -12,45 +12,45 @@ import java.util.Objects;
 
 @CustomType
 public final class GetPrivateConnectionResult {
-    /**
-     * The create time of the resource.
-     * 
-     */
+        /**
+         * @return The create time of the resource.
+         * 
+         */
     private final String createTime;
-    /**
-     * Display name.
-     * 
-     */
+        /**
+         * @return Display name.
+         * 
+         */
     private final String displayName;
-    /**
-     * In case of error, the details of the error in a user-friendly format.
-     * 
-     */
+        /**
+         * @return In case of error, the details of the error in a user-friendly format.
+         * 
+         */
     private final ErrorResponse error;
-    /**
-     * Labels.
-     * 
-     */
+        /**
+         * @return Labels.
+         * 
+         */
     private final Map<String,String> labels;
-    /**
-     * The resource&#39;s name.
-     * 
-     */
+        /**
+         * @return The resource&#39;s name.
+         * 
+         */
     private final String name;
-    /**
-     * The state of the Private Connection.
-     * 
-     */
+        /**
+         * @return The state of the Private Connection.
+         * 
+         */
     private final String state;
-    /**
-     * The update time of the resource.
-     * 
-     */
+        /**
+         * @return The update time of the resource.
+         * 
+         */
     private final String updateTime;
-    /**
-     * VPC Peering Config.
-     * 
-     */
+        /**
+         * @return VPC Peering Config.
+         * 
+         */
     private final VpcPeeringConfigResponse vpcPeeringConfig;
 
     @CustomType.Constructor
@@ -74,58 +74,58 @@ public final class GetPrivateConnectionResult {
     }
 
     /**
-     * The create time of the resource.
+     * @return The create time of the resource.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Display name.
+     * @return Display name.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * In case of error, the details of the error in a user-friendly format.
+     * @return In case of error, the details of the error in a user-friendly format.
      * 
-    */
+     */
     public ErrorResponse error() {
         return this.error;
     }
     /**
-     * Labels.
+     * @return Labels.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The resource&#39;s name.
+     * @return The resource&#39;s name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The state of the Private Connection.
+     * @return The state of the Private Connection.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The update time of the resource.
+     * @return The update time of the resource.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }
     /**
-     * VPC Peering Config.
+     * @return VPC Peering Config.
      * 
-    */
+     */
     public VpcPeeringConfigResponse vpcPeeringConfig() {
         return this.vpcPeeringConfig;
     }

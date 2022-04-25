@@ -23,6 +23,10 @@ public final class GoogleCloudRunV1ConditionResponse extends com.pulumi.resource
     @Import(name="lastTransitionTime", required=true)
     private String lastTransitionTime;
 
+    /**
+     * @return Optional. Last time the condition transitioned from one status to another.
+     * 
+     */
     public String lastTransitionTime() {
         return this.lastTransitionTime;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudRunV1ConditionResponse extends com.pulumi.resource
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return Optional. Human readable message indicating details about the current status.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -45,6 +53,10 @@ public final class GoogleCloudRunV1ConditionResponse extends com.pulumi.resource
     @Import(name="reason", required=true)
     private String reason;
 
+    /**
+     * @return Optional. One-word CamelCase reason for the condition&#39;s last transition.
+     * 
+     */
     public String reason() {
         return this.reason;
     }
@@ -56,6 +68,10 @@ public final class GoogleCloudRunV1ConditionResponse extends com.pulumi.resource
     @Import(name="severity", required=true)
     private String severity;
 
+    /**
+     * @return Optional. How to interpret failures of this condition, one of Error, Warning, Info
+     * 
+     */
     public String severity() {
         return this.severity;
     }
@@ -67,6 +83,10 @@ public final class GoogleCloudRunV1ConditionResponse extends com.pulumi.resource
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Status of the condition, one of True, False, Unknown.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -78,6 +98,10 @@ public final class GoogleCloudRunV1ConditionResponse extends com.pulumi.resource
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * &#34;Ready&#34;: True when the Resource is ready.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -111,31 +135,67 @@ public final class GoogleCloudRunV1ConditionResponse extends com.pulumi.resource
             $ = new GoogleCloudRunV1ConditionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastTransitionTime Optional. Last time the condition transitioned from one status to another.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastTransitionTime(String lastTransitionTime) {
             $.lastTransitionTime = lastTransitionTime;
             return this;
         }
 
+        /**
+         * @param message Optional. Human readable message indicating details about the current status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param reason Optional. One-word CamelCase reason for the condition&#39;s last transition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(String reason) {
             $.reason = reason;
             return this;
         }
 
+        /**
+         * @param severity Optional. How to interpret failures of this condition, one of Error, Warning, Info
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(String severity) {
             $.severity = severity;
             return this;
         }
 
+        /**
+         * @param status Status of the condition, one of True, False, Unknown.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param type type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * &#34;Ready&#34;: True when the Resource is ready.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

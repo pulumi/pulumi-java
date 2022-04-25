@@ -28,6 +28,10 @@ public final class TlsValidationContextArgs extends com.pulumi.resources.Resourc
     @Import(name="certificatePath")
     private @Nullable Output<String> certificatePath;
 
+    /**
+     * @return The path to the file holding the CA certificate to validate the client or server certificate.
+     * 
+     */
     public Optional<Output<String>> certificatePath() {
         return Optional.ofNullable(this.certificatePath);
     }
@@ -39,6 +43,10 @@ public final class TlsValidationContextArgs extends com.pulumi.resources.Resourc
     @Import(name="sdsConfig")
     private @Nullable Output<SdsConfigArgs> sdsConfig;
 
+    /**
+     * @return Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.
+     * 
+     */
     public Optional<Output<SdsConfigArgs>> sdsConfig() {
         return Optional.ofNullable(this.sdsConfig);
     }
@@ -50,6 +58,10 @@ public final class TlsValidationContextArgs extends com.pulumi.resources.Resourc
     @Import(name="validationSource")
     private @Nullable Output<TlsValidationContextValidationSource> validationSource;
 
+    /**
+     * @return Defines how TLS certificates are obtained.
+     * 
+     */
     public Optional<Output<TlsValidationContextValidationSource>> validationSource() {
         return Optional.ofNullable(this.validationSource);
     }
@@ -80,29 +92,65 @@ public final class TlsValidationContextArgs extends com.pulumi.resources.Resourc
             $ = new TlsValidationContextArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificatePath The path to the file holding the CA certificate to validate the client or server certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificatePath(@Nullable Output<String> certificatePath) {
             $.certificatePath = certificatePath;
             return this;
         }
 
+        /**
+         * @param certificatePath The path to the file holding the CA certificate to validate the client or server certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificatePath(String certificatePath) {
             return certificatePath(Output.of(certificatePath));
         }
 
+        /**
+         * @param sdsConfig Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sdsConfig(@Nullable Output<SdsConfigArgs> sdsConfig) {
             $.sdsConfig = sdsConfig;
             return this;
         }
 
+        /**
+         * @param sdsConfig Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sdsConfig(SdsConfigArgs sdsConfig) {
             return sdsConfig(Output.of(sdsConfig));
         }
 
+        /**
+         * @param validationSource Defines how TLS certificates are obtained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationSource(@Nullable Output<TlsValidationContextValidationSource> validationSource) {
             $.validationSource = validationSource;
             return this;
         }
 
+        /**
+         * @param validationSource Defines how TLS certificates are obtained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationSource(TlsValidationContextValidationSource validationSource) {
             return validationSource(Output.of(validationSource));
         }

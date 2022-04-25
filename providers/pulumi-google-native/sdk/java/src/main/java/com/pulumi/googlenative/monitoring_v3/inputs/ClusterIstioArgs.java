@@ -26,6 +26,10 @@ public final class ClusterIstioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterName")
     private @Nullable Output<String> clusterName;
 
+    /**
+     * @return The name of the Kubernetes cluster in which this Istio service is defined. Corresponds to the cluster_name resource label in k8s_cluster resources.
+     * 
+     */
     public Optional<Output<String>> clusterName() {
         return Optional.ofNullable(this.clusterName);
     }
@@ -37,6 +41,10 @@ public final class ClusterIstioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the Kubernetes cluster in which this Istio service is defined. Corresponds to the location resource label in k8s_cluster resources.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -48,6 +56,10 @@ public final class ClusterIstioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
     private @Nullable Output<String> serviceName;
 
+    /**
+     * @return The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.
+     * 
+     */
     public Optional<Output<String>> serviceName() {
         return Optional.ofNullable(this.serviceName);
     }
@@ -59,6 +71,10 @@ public final class ClusterIstioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceNamespace")
     private @Nullable Output<String> serviceNamespace;
 
+    /**
+     * @return The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.
+     * 
+     */
     public Optional<Output<String>> serviceNamespace() {
         return Optional.ofNullable(this.serviceNamespace);
     }
@@ -90,38 +106,86 @@ public final class ClusterIstioArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ClusterIstioArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName The name of the Kubernetes cluster in which this Istio service is defined. Corresponds to the cluster_name resource label in k8s_cluster resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(@Nullable Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName The name of the Kubernetes cluster in which this Istio service is defined. Corresponds to the cluster_name resource label in k8s_cluster resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }
 
+        /**
+         * @param location The location of the Kubernetes cluster in which this Istio service is defined. Corresponds to the location resource label in k8s_cluster resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the Kubernetes cluster in which this Istio service is defined. Corresponds to the location resource label in k8s_cluster resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param serviceName The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(@Nullable Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param serviceNamespace The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceNamespace(@Nullable Output<String> serviceNamespace) {
             $.serviceNamespace = serviceNamespace;
             return this;
         }
 
+        /**
+         * @param serviceNamespace The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceNamespace(String serviceNamespace) {
             return serviceNamespace(Output.of(serviceNamespace));
         }

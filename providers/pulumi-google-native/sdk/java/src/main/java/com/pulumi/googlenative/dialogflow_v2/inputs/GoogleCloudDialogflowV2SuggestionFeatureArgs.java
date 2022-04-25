@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowV2SuggestionFeatureArgs extends com.pulu
     @Import(name="type")
     private @Nullable Output<GoogleCloudDialogflowV2SuggestionFeatureType> type;
 
+    /**
+     * @return Type of Human Agent Assistant API feature to request.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2SuggestionFeatureType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudDialogflowV2SuggestionFeatureArgs extends com.pulu
             $ = new GoogleCloudDialogflowV2SuggestionFeatureArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Type of Human Agent Assistant API feature to request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<GoogleCloudDialogflowV2SuggestionFeatureType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of Human Agent Assistant API feature to request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(GoogleCloudDialogflowV2SuggestionFeatureType type) {
             return type(Output.of(type));
         }

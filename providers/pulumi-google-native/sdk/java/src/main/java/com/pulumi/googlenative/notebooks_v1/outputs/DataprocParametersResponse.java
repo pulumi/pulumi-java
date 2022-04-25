@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class DataprocParametersResponse {
-    /**
-     * URI for cluster used to run Dataproc execution. Format: `projects/{PROJECT_ID}/regions/{REGION}/clusters/{CLUSTER_NAME}`
-     * 
-     */
+        /**
+         * @return URI for cluster used to run Dataproc execution. Format: `projects/{PROJECT_ID}/regions/{REGION}/clusters/{CLUSTER_NAME}`
+         * 
+         */
     private final String cluster;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class DataprocParametersResponse {
     }
 
     /**
-     * URI for cluster used to run Dataproc execution. Format: `projects/{PROJECT_ID}/regions/{REGION}/clusters/{CLUSTER_NAME}`
+     * @return URI for cluster used to run Dataproc execution. Format: `projects/{PROJECT_ID}/regions/{REGION}/clusters/{CLUSTER_NAME}`
      * 
-    */
+     */
     public String cluster() {
         return this.cluster;
     }

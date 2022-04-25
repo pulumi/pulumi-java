@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class MysqlSourceConfigResponse {
-    /**
-     * MySQL objects to exclude from the stream.
-     * 
-     */
+        /**
+         * @return MySQL objects to exclude from the stream.
+         * 
+         */
     private final MysqlRdbmsResponse excludeObjects;
-    /**
-     * MySQL objects to retrieve from the source.
-     * 
-     */
+        /**
+         * @return MySQL objects to retrieve from the source.
+         * 
+         */
     private final MysqlRdbmsResponse includeObjects;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class MysqlSourceConfigResponse {
     }
 
     /**
-     * MySQL objects to exclude from the stream.
+     * @return MySQL objects to exclude from the stream.
      * 
-    */
+     */
     public MysqlRdbmsResponse excludeObjects() {
         return this.excludeObjects;
     }
     /**
-     * MySQL objects to retrieve from the source.
+     * @return MySQL objects to retrieve from the source.
      * 
-    */
+     */
     public MysqlRdbmsResponse includeObjects() {
         return this.includeObjects;
     }

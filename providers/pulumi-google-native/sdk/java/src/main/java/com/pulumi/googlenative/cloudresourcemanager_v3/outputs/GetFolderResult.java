@@ -9,45 +9,45 @@ import java.util.Objects;
 
 @CustomType
 public final class GetFolderResult {
-    /**
-     * Timestamp when the folder was created.
-     * 
-     */
+        /**
+         * @return Timestamp when the folder was created.
+         * 
+         */
     private final String createTime;
-    /**
-     * Timestamp when the folder was requested to be deleted.
-     * 
-     */
+        /**
+         * @return Timestamp when the folder was requested to be deleted.
+         * 
+         */
     private final String deleteTime;
-    /**
-     * The folder&#39;s display name. A folder&#39;s display name must be unique amongst its siblings. For example, no two folders with the same parent can share the same display name. The display name must start and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be no longer than 30 characters. This is captured by the regular expression: `[\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?`.
-     * 
-     */
+        /**
+         * @return The folder&#39;s display name. A folder&#39;s display name must be unique amongst its siblings. For example, no two folders with the same parent can share the same display name. The display name must start and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be no longer than 30 characters. This is captured by the regular expression: `[\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?`.
+         * 
+         */
     private final String displayName;
-    /**
-     * A checksum computed by the server based on the current value of the folder resource. This may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
-     * 
-     */
+        /**
+         * @return A checksum computed by the server based on the current value of the folder resource. This may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
+         * 
+         */
     private final String etag;
-    /**
-     * The resource name of the folder. Its format is `folders/{folder_id}`, for example: &#34;folders/1234&#34;.
-     * 
-     */
+        /**
+         * @return The resource name of the folder. Its format is `folders/{folder_id}`, for example: &#34;folders/1234&#34;.
+         * 
+         */
     private final String name;
-    /**
-     * The folder&#39;s parent&#39;s resource name. Updates to the folder&#39;s parent must be performed using MoveFolder.
-     * 
-     */
+        /**
+         * @return The folder&#39;s parent&#39;s resource name. Updates to the folder&#39;s parent must be performed using MoveFolder.
+         * 
+         */
     private final String parent;
-    /**
-     * The lifecycle state of the folder. Updates to the state must be performed using DeleteFolder and UndeleteFolder.
-     * 
-     */
+        /**
+         * @return The lifecycle state of the folder. Updates to the state must be performed using DeleteFolder and UndeleteFolder.
+         * 
+         */
     private final String state;
-    /**
-     * Timestamp when the folder was last modified.
-     * 
-     */
+        /**
+         * @return Timestamp when the folder was last modified.
+         * 
+         */
     private final String updateTime;
 
     @CustomType.Constructor
@@ -71,58 +71,58 @@ public final class GetFolderResult {
     }
 
     /**
-     * Timestamp when the folder was created.
+     * @return Timestamp when the folder was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Timestamp when the folder was requested to be deleted.
+     * @return Timestamp when the folder was requested to be deleted.
      * 
-    */
+     */
     public String deleteTime() {
         return this.deleteTime;
     }
     /**
-     * The folder&#39;s display name. A folder&#39;s display name must be unique amongst its siblings. For example, no two folders with the same parent can share the same display name. The display name must start and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be no longer than 30 characters. This is captured by the regular expression: `[\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?`.
+     * @return The folder&#39;s display name. A folder&#39;s display name must be unique amongst its siblings. For example, no two folders with the same parent can share the same display name. The display name must start and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be no longer than 30 characters. This is captured by the regular expression: `[\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?`.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * A checksum computed by the server based on the current value of the folder resource. This may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
+     * @return A checksum computed by the server based on the current value of the folder resource. This may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The resource name of the folder. Its format is `folders/{folder_id}`, for example: &#34;folders/1234&#34;.
+     * @return The resource name of the folder. Its format is `folders/{folder_id}`, for example: &#34;folders/1234&#34;.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The folder&#39;s parent&#39;s resource name. Updates to the folder&#39;s parent must be performed using MoveFolder.
+     * @return The folder&#39;s parent&#39;s resource name. Updates to the folder&#39;s parent must be performed using MoveFolder.
      * 
-    */
+     */
     public String parent() {
         return this.parent;
     }
     /**
-     * The lifecycle state of the folder. Updates to the state must be performed using DeleteFolder and UndeleteFolder.
+     * @return The lifecycle state of the folder. Updates to the state must be performed using DeleteFolder and UndeleteFolder.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Timestamp when the folder was last modified.
+     * @return Timestamp when the folder was last modified.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

@@ -23,6 +23,10 @@ public final class PublicKeyCredentialResponse extends com.pulumi.resources.Invo
     @Import(name="format", required=true)
     private String format;
 
+    /**
+     * @return The format of the key.
+     * 
+     */
     public String format() {
         return this.format;
     }
@@ -34,6 +38,10 @@ public final class PublicKeyCredentialResponse extends com.pulumi.resources.Invo
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return The key data.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -63,11 +71,23 @@ public final class PublicKeyCredentialResponse extends com.pulumi.resources.Invo
             $ = new PublicKeyCredentialResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param format The format of the key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(String format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param key The key data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;

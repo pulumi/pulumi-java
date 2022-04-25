@@ -27,6 +27,10 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnArgs extends co
     @Import(name="userInput")
     private @Nullable Output<GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputArgs> userInput;
 
+    /**
+     * @return The user input.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputArgs>> userInput() {
         return Optional.ofNullable(this.userInput);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnArgs extends co
     @Import(name="virtualAgentOutput")
     private @Nullable Output<GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputArgs> virtualAgentOutput;
 
+    /**
+     * @return The virtual agent output.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputArgs>> virtualAgentOutput() {
         return Optional.ofNullable(this.virtualAgentOutput);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnArgs extends co
             $ = new GoogleCloudDialogflowCxV3beta1ConversationTurnArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param userInput The user input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userInput(@Nullable Output<GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputArgs> userInput) {
             $.userInput = userInput;
             return this;
         }
 
+        /**
+         * @param userInput The user input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userInput(GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputArgs userInput) {
             return userInput(Output.of(userInput));
         }
 
+        /**
+         * @param virtualAgentOutput The virtual agent output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualAgentOutput(@Nullable Output<GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputArgs> virtualAgentOutput) {
             $.virtualAgentOutput = virtualAgentOutput;
             return this;
         }
 
+        /**
+         * @param virtualAgentOutput The virtual agent output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualAgentOutput(GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputArgs virtualAgentOutput) {
             return virtualAgentOutput(Output.of(virtualAgentOutput));
         }

@@ -14,90 +14,90 @@ import java.util.Objects;
 
 @CustomType
 public final class SchedulingResponse {
-    /**
-     * Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). You can only set the automatic restart option for standard instances. Preemptible instances cannot be automatically restarted. By default, this is set to true so an instance is automatically restarted if it is terminated by Compute Engine.
-     * 
-     */
+        /**
+         * @return Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). You can only set the automatic restart option for standard instances. Preemptible instances cannot be automatically restarted. By default, this is set to true so an instance is automatically restarted if it is terminated by Compute Engine.
+         * 
+         */
     private final Boolean automaticRestart;
-    /**
-     * Specifies the availability domain (AD), which this instance should be scheduled on. The AD belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the instance. Specify a value between 1-max count of availability domains in your GroupPlacementPolicy. See go/placement-policy-extension for more details.
-     * 
-     */
+        /**
+         * @return Specifies the availability domain (AD), which this instance should be scheduled on. The AD belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the instance. Specify a value between 1-max count of availability domains in your GroupPlacementPolicy. See go/placement-policy-extension for more details.
+         * 
+         */
     private final Integer availabilityDomain;
-    /**
-     * Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine type.
-     * 
-     */
+        /**
+         * @return Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine type.
+         * 
+         */
     private final Integer currentCpus;
-    /**
-     * Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of the current machine type.
-     * 
-     */
+        /**
+         * @return Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of the current machine type.
+         * 
+         */
     private final String currentMemoryMb;
-    /**
-     * Specify the time in seconds for host error detection, the value must be within the range of [90, 330] with the increment of 30, if unset, the default behavior of host error recovery will be used.
-     * 
-     */
+        /**
+         * @return Specify the time in seconds for host error detection, the value must be within the range of [90, 330] with the increment of 30, if unset, the default behavior of host error recovery will be used.
+         * 
+         */
     private final Integer hostErrorTimeoutSeconds;
-    /**
-     * Specifies the termination action for the instance.
-     * 
-     */
+        /**
+         * @return Specifies the termination action for the instance.
+         * 
+         */
     private final String instanceTerminationAction;
-    /**
-     * Defines whether the instance is tolerant of higher cpu latency. This can only be set during instance creation, or when the instance is not currently running. It must not be set if the preemptible option is also set.
-     * 
-     */
+        /**
+         * @return Defines whether the instance is tolerant of higher cpu latency. This can only be set during instance creation, or when the instance is not currently running. It must not be set if the preemptible option is also set.
+         * 
+         */
     private final Boolean latencyTolerant;
-    /**
-     * An opaque location hint used to place the instance close to other resources. This field is for use by internal tools that use the public API.
-     * 
-     */
+        /**
+         * @return An opaque location hint used to place the instance close to other resources. This field is for use by internal tools that use the public API.
+         * 
+         */
     private final String locationHint;
-    /**
-     * Specifies the number of hours after VM instance creation where the VM won&#39;t be scheduled for maintenance.
-     * 
-     */
+        /**
+         * @return Specifies the number of hours after VM instance creation where the VM won&#39;t be scheduled for maintenance.
+         * 
+         */
     private final Integer maintenanceFreezeDurationHours;
-    /**
-     * For more information about maintenance intervals, see Setting maintenance intervals.
-     * 
-     */
+        /**
+         * @return For more information about maintenance intervals, see Setting maintenance intervals.
+         * 
+         */
     private final String maintenanceInterval;
-    /**
-     * Specifies the max run duration for the given instance. If specified, the instance termination action will be performed at the end of the run duration.
-     * 
-     */
+        /**
+         * @return Specifies the max run duration for the given instance. If specified, the instance termination action will be performed at the end of the run duration.
+         * 
+         */
     private final DurationResponse maxRunDuration;
-    /**
-     * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
-     * 
-     */
+        /**
+         * @return The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
+         * 
+         */
     private final Integer minNodeCpus;
-    /**
-     * A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for more information. Overrides reservationAffinity.
-     * 
-     */
+        /**
+         * @return A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for more information. Overrides reservationAffinity.
+         * 
+         */
     private final List<SchedulingNodeAffinityResponse> nodeAffinities;
-    /**
-     * Defines the maintenance behavior for this instance. For standard instances, the default behavior is MIGRATE. For preemptible instances, the default and only possible behavior is TERMINATE. For more information, see Set VM availability policies.
-     * 
-     */
+        /**
+         * @return Defines the maintenance behavior for this instance. For standard instances, the default behavior is MIGRATE. For preemptible instances, the default and only possible behavior is TERMINATE. For more information, see Set VM availability policies.
+         * 
+         */
     private final String onHostMaintenance;
-    /**
-     * Defines whether the instance is preemptible. This can only be set during instance creation or while the instance is stopped and therefore, in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.
-     * 
-     */
+        /**
+         * @return Defines whether the instance is preemptible. This can only be set during instance creation or while the instance is stopped and therefore, in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.
+         * 
+         */
     private final Boolean preemptible;
-    /**
-     * Specifies the provisioning model of the instance.
-     * 
-     */
+        /**
+         * @return Specifies the provisioning model of the instance.
+         * 
+         */
     private final String provisioningModel;
-    /**
-     * Specifies the timestamp, when the instance will be terminated, in RFC3339 text format. If specified, the instance termination action will be performed at the termination time.
-     * 
-     */
+        /**
+         * @return Specifies the timestamp, when the instance will be terminated, in RFC3339 text format. If specified, the instance termination action will be performed at the termination time.
+         * 
+         */
     private final String terminationTime;
 
     @CustomType.Constructor
@@ -139,121 +139,121 @@ public final class SchedulingResponse {
     }
 
     /**
-     * Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). You can only set the automatic restart option for standard instances. Preemptible instances cannot be automatically restarted. By default, this is set to true so an instance is automatically restarted if it is terminated by Compute Engine.
+     * @return Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). You can only set the automatic restart option for standard instances. Preemptible instances cannot be automatically restarted. By default, this is set to true so an instance is automatically restarted if it is terminated by Compute Engine.
      * 
-    */
+     */
     public Boolean automaticRestart() {
         return this.automaticRestart;
     }
     /**
-     * Specifies the availability domain (AD), which this instance should be scheduled on. The AD belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the instance. Specify a value between 1-max count of availability domains in your GroupPlacementPolicy. See go/placement-policy-extension for more details.
+     * @return Specifies the availability domain (AD), which this instance should be scheduled on. The AD belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the instance. Specify a value between 1-max count of availability domains in your GroupPlacementPolicy. See go/placement-policy-extension for more details.
      * 
-    */
+     */
     public Integer availabilityDomain() {
         return this.availabilityDomain;
     }
     /**
-     * Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine type.
+     * @return Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine type.
      * 
-    */
+     */
     public Integer currentCpus() {
         return this.currentCpus;
     }
     /**
-     * Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of the current machine type.
+     * @return Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of the current machine type.
      * 
-    */
+     */
     public String currentMemoryMb() {
         return this.currentMemoryMb;
     }
     /**
-     * Specify the time in seconds for host error detection, the value must be within the range of [90, 330] with the increment of 30, if unset, the default behavior of host error recovery will be used.
+     * @return Specify the time in seconds for host error detection, the value must be within the range of [90, 330] with the increment of 30, if unset, the default behavior of host error recovery will be used.
      * 
-    */
+     */
     public Integer hostErrorTimeoutSeconds() {
         return this.hostErrorTimeoutSeconds;
     }
     /**
-     * Specifies the termination action for the instance.
+     * @return Specifies the termination action for the instance.
      * 
-    */
+     */
     public String instanceTerminationAction() {
         return this.instanceTerminationAction;
     }
     /**
-     * Defines whether the instance is tolerant of higher cpu latency. This can only be set during instance creation, or when the instance is not currently running. It must not be set if the preemptible option is also set.
+     * @return Defines whether the instance is tolerant of higher cpu latency. This can only be set during instance creation, or when the instance is not currently running. It must not be set if the preemptible option is also set.
      * 
-    */
+     */
     public Boolean latencyTolerant() {
         return this.latencyTolerant;
     }
     /**
-     * An opaque location hint used to place the instance close to other resources. This field is for use by internal tools that use the public API.
+     * @return An opaque location hint used to place the instance close to other resources. This field is for use by internal tools that use the public API.
      * 
-    */
+     */
     public String locationHint() {
         return this.locationHint;
     }
     /**
-     * Specifies the number of hours after VM instance creation where the VM won&#39;t be scheduled for maintenance.
+     * @return Specifies the number of hours after VM instance creation where the VM won&#39;t be scheduled for maintenance.
      * 
-    */
+     */
     public Integer maintenanceFreezeDurationHours() {
         return this.maintenanceFreezeDurationHours;
     }
     /**
-     * For more information about maintenance intervals, see Setting maintenance intervals.
+     * @return For more information about maintenance intervals, see Setting maintenance intervals.
      * 
-    */
+     */
     public String maintenanceInterval() {
         return this.maintenanceInterval;
     }
     /**
-     * Specifies the max run duration for the given instance. If specified, the instance termination action will be performed at the end of the run duration.
+     * @return Specifies the max run duration for the given instance. If specified, the instance termination action will be performed at the end of the run duration.
      * 
-    */
+     */
     public DurationResponse maxRunDuration() {
         return this.maxRunDuration;
     }
     /**
-     * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
+     * @return The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
      * 
-    */
+     */
     public Integer minNodeCpus() {
         return this.minNodeCpus;
     }
     /**
-     * A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for more information. Overrides reservationAffinity.
+     * @return A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for more information. Overrides reservationAffinity.
      * 
-    */
+     */
     public List<SchedulingNodeAffinityResponse> nodeAffinities() {
         return this.nodeAffinities;
     }
     /**
-     * Defines the maintenance behavior for this instance. For standard instances, the default behavior is MIGRATE. For preemptible instances, the default and only possible behavior is TERMINATE. For more information, see Set VM availability policies.
+     * @return Defines the maintenance behavior for this instance. For standard instances, the default behavior is MIGRATE. For preemptible instances, the default and only possible behavior is TERMINATE. For more information, see Set VM availability policies.
      * 
-    */
+     */
     public String onHostMaintenance() {
         return this.onHostMaintenance;
     }
     /**
-     * Defines whether the instance is preemptible. This can only be set during instance creation or while the instance is stopped and therefore, in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.
+     * @return Defines whether the instance is preemptible. This can only be set during instance creation or while the instance is stopped and therefore, in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.
      * 
-    */
+     */
     public Boolean preemptible() {
         return this.preemptible;
     }
     /**
-     * Specifies the provisioning model of the instance.
+     * @return Specifies the provisioning model of the instance.
      * 
-    */
+     */
     public String provisioningModel() {
         return this.provisioningModel;
     }
     /**
-     * Specifies the timestamp, when the instance will be terminated, in RFC3339 text format. If specified, the instance termination action will be performed at the termination time.
+     * @return Specifies the timestamp, when the instance will be terminated, in RFC3339 text format. If specified, the instance termination action will be performed at the termination time.
      * 
-    */
+     */
     public String terminationTime() {
         return this.terminationTime;
     }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class SDKInfoResponse {
-    /**
-     * The SDK Language.
-     * 
-     */
+        /**
+         * @return The SDK Language.
+         * 
+         */
     private final String language;
-    /**
-     * Optional. The SDK version.
-     * 
-     */
+        /**
+         * @return Optional. The SDK version.
+         * 
+         */
     private final String version;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class SDKInfoResponse {
     }
 
     /**
-     * The SDK Language.
+     * @return The SDK Language.
      * 
-    */
+     */
     public String language() {
         return this.language;
     }
     /**
-     * Optional. The SDK version.
+     * @return Optional. The SDK version.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

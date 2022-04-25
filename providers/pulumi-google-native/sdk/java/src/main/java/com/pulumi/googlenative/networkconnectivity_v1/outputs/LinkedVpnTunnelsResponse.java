@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class LinkedVpnTunnelsResponse {
-    /**
-     * A value that controls whether site-to-site data transfer is enabled for these resources. Data transfer is available only in [supported locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
-     * 
-     */
+        /**
+         * @return A value that controls whether site-to-site data transfer is enabled for these resources. Data transfer is available only in [supported locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
+         * 
+         */
     private final Boolean siteToSiteDataTransfer;
-    /**
-     * The URIs of linked VPN tunnel resources.
-     * 
-     */
+        /**
+         * @return The URIs of linked VPN tunnel resources.
+         * 
+         */
     private final List<String> uris;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class LinkedVpnTunnelsResponse {
     }
 
     /**
-     * A value that controls whether site-to-site data transfer is enabled for these resources. Data transfer is available only in [supported locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
+     * @return A value that controls whether site-to-site data transfer is enabled for these resources. Data transfer is available only in [supported locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
      * 
-    */
+     */
     public Boolean siteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer;
     }
     /**
-     * The URIs of linked VPN tunnel resources.
+     * @return The URIs of linked VPN tunnel resources.
      * 
-    */
+     */
     public List<String> uris() {
         return this.uris;
     }

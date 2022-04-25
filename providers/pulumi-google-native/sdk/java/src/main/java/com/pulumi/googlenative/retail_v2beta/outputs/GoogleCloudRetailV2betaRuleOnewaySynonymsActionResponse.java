@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse {
-    /**
-     * Will be [deprecated = true] post migration;
-     * 
-     */
+        /**
+         * @return Will be [deprecated = true] post migration;
+         * 
+         */
     private final List<String> onewayTerms;
-    /**
-     * Terms from the search query. Will treat synonyms as their synonyms. Not themselves synonyms of the synonyms. Can specify up to 100 terms.
-     * 
-     */
+        /**
+         * @return Terms from the search query. Will treat synonyms as their synonyms. Not themselves synonyms of the synonyms. Can specify up to 100 terms.
+         * 
+         */
     private final List<String> queryTerms;
-    /**
-     * Defines a set of synonyms. Cannot contain duplicates. Can specify up to 100 synonyms.
-     * 
-     */
+        /**
+         * @return Defines a set of synonyms. Cannot contain duplicates. Can specify up to 100 synonyms.
+         * 
+         */
     private final List<String> synonyms;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse {
     }
 
     /**
-     * Will be [deprecated = true] post migration;
+     * @return Will be [deprecated = true] post migration;
      * 
-    */
+     */
     public List<String> onewayTerms() {
         return this.onewayTerms;
     }
     /**
-     * Terms from the search query. Will treat synonyms as their synonyms. Not themselves synonyms of the synonyms. Can specify up to 100 terms.
+     * @return Terms from the search query. Will treat synonyms as their synonyms. Not themselves synonyms of the synonyms. Can specify up to 100 terms.
      * 
-    */
+     */
     public List<String> queryTerms() {
         return this.queryTerms;
     }
     /**
-     * Defines a set of synonyms. Cannot contain duplicates. Can specify up to 100 synonyms.
+     * @return Defines a set of synonyms. Cannot contain duplicates. Can specify up to 100 synonyms.
      * 
-    */
+     */
     public List<String> synonyms() {
         return this.synonyms;
     }

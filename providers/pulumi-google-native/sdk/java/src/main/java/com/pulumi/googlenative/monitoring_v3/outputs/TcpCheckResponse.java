@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class TcpCheckResponse {
-    /**
-     * The TCP port on the server against which to run the check. Will be combined with host (specified within the monitored_resource) to construct the full URL. Required.
-     * 
-     */
+        /**
+         * @return The TCP port on the server against which to run the check. Will be combined with host (specified within the monitored_resource) to construct the full URL. Required.
+         * 
+         */
     private final Integer port;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class TcpCheckResponse {
     }
 
     /**
-     * The TCP port on the server against which to run the check. Will be combined with host (specified within the monitored_resource) to construct the full URL. Required.
+     * @return The TCP port on the server against which to run the check. Will be combined with host (specified within the monitored_resource) to construct the full URL. Required.
      * 
-    */
+     */
     public Integer port() {
         return this.port;
     }

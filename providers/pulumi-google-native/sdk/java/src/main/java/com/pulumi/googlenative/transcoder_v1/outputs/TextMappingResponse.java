@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class TextMappingResponse {
-    /**
-     * The `EditAtom.key` that references atom with text inputs in the `Job.edit_list`.
-     * 
-     */
+        /**
+         * @return The `EditAtom.key` that references atom with text inputs in the `Job.edit_list`.
+         * 
+         */
     private final String atomKey;
-    /**
-     * The `Input.key` that identifies the input file.
-     * 
-     */
+        /**
+         * @return The `Input.key` that identifies the input file.
+         * 
+         */
     private final String inputKey;
-    /**
-     * The zero-based index of the track in the input file.
-     * 
-     */
+        /**
+         * @return The zero-based index of the track in the input file.
+         * 
+         */
     private final Integer inputTrack;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class TextMappingResponse {
     }
 
     /**
-     * The `EditAtom.key` that references atom with text inputs in the `Job.edit_list`.
+     * @return The `EditAtom.key` that references atom with text inputs in the `Job.edit_list`.
      * 
-    */
+     */
     public String atomKey() {
         return this.atomKey;
     }
     /**
-     * The `Input.key` that identifies the input file.
+     * @return The `Input.key` that identifies the input file.
      * 
-    */
+     */
     public String inputKey() {
         return this.inputKey;
     }
     /**
-     * The zero-based index of the track in the input file.
+     * @return The zero-based index of the track in the input file.
      * 
-    */
+     */
     public Integer inputTrack() {
         return this.inputTrack;
     }

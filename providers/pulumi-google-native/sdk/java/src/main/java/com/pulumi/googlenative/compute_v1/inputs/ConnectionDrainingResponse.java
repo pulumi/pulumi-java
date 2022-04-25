@@ -23,6 +23,10 @@ public final class ConnectionDrainingResponse extends com.pulumi.resources.Invok
     @Import(name="drainingTimeoutSec", required=true)
     private Integer drainingTimeoutSec;
 
+    /**
+     * @return Configures a duration timeout for existing requests on a removed backend instance. For supported load balancers and protocols, as described in Enabling connection draining.
+     * 
+     */
     public Integer drainingTimeoutSec() {
         return this.drainingTimeoutSec;
     }
@@ -51,6 +55,12 @@ public final class ConnectionDrainingResponse extends com.pulumi.resources.Invok
             $ = new ConnectionDrainingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param drainingTimeoutSec Configures a duration timeout for existing requests on a removed backend instance. For supported load balancers and protocols, as described in Enabling connection draining.
+         * 
+         * @return builder
+         * 
+         */
         public Builder drainingTimeoutSec(Integer drainingTimeoutSec) {
             $.drainingTimeoutSec = drainingTimeoutSec;
             return this;

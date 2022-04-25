@@ -24,6 +24,10 @@ public final class LanguageCodePairArgs extends com.pulumi.resources.ResourceArg
     @Import(name="sourceLanguageCode", required=true)
     private Output<String> sourceLanguageCode;
 
+    /**
+     * @return The BCP-47 language code of the input text, for example, &#34;en-US&#34;. Expected to be an exact match for GlossaryTerm.language_code.
+     * 
+     */
     public Output<String> sourceLanguageCode() {
         return this.sourceLanguageCode;
     }
@@ -35,6 +39,10 @@ public final class LanguageCodePairArgs extends com.pulumi.resources.ResourceArg
     @Import(name="targetLanguageCode", required=true)
     private Output<String> targetLanguageCode;
 
+    /**
+     * @return The BCP-47 language code for translation output, for example, &#34;zh-CN&#34;. Expected to be an exact match for GlossaryTerm.language_code.
+     * 
+     */
     public Output<String> targetLanguageCode() {
         return this.targetLanguageCode;
     }
@@ -64,20 +72,44 @@ public final class LanguageCodePairArgs extends com.pulumi.resources.ResourceArg
             $ = new LanguageCodePairArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceLanguageCode The BCP-47 language code of the input text, for example, &#34;en-US&#34;. Expected to be an exact match for GlossaryTerm.language_code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceLanguageCode(Output<String> sourceLanguageCode) {
             $.sourceLanguageCode = sourceLanguageCode;
             return this;
         }
 
+        /**
+         * @param sourceLanguageCode The BCP-47 language code of the input text, for example, &#34;en-US&#34;. Expected to be an exact match for GlossaryTerm.language_code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceLanguageCode(String sourceLanguageCode) {
             return sourceLanguageCode(Output.of(sourceLanguageCode));
         }
 
+        /**
+         * @param targetLanguageCode The BCP-47 language code for translation output, for example, &#34;zh-CN&#34;. Expected to be an exact match for GlossaryTerm.language_code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetLanguageCode(Output<String> targetLanguageCode) {
             $.targetLanguageCode = targetLanguageCode;
             return this;
         }
 
+        /**
+         * @param targetLanguageCode The BCP-47 language code for translation output, for example, &#34;zh-CN&#34;. Expected to be an exact match for GlossaryTerm.language_code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetLanguageCode(String targetLanguageCode) {
             return targetLanguageCode(Output.of(targetLanguageCode));
         }

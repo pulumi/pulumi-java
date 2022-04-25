@@ -12,25 +12,25 @@ import java.util.Objects;
 
 @CustomType
 public final class OSPolicyResourceRepositoryResourceResponse {
-    /**
-     * An Apt Repository.
-     * 
-     */
+        /**
+         * @return An Apt Repository.
+         * 
+         */
     private final OSPolicyResourceRepositoryResourceAptRepositoryResponse apt;
-    /**
-     * A Goo Repository.
-     * 
-     */
+        /**
+         * @return A Goo Repository.
+         * 
+         */
     private final OSPolicyResourceRepositoryResourceGooRepositoryResponse goo;
-    /**
-     * A Yum Repository.
-     * 
-     */
+        /**
+         * @return A Yum Repository.
+         * 
+         */
     private final OSPolicyResourceRepositoryResourceYumRepositoryResponse yum;
-    /**
-     * A Zypper Repository.
-     * 
-     */
+        /**
+         * @return A Zypper Repository.
+         * 
+         */
     private final OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class OSPolicyResourceRepositoryResourceResponse {
     }
 
     /**
-     * An Apt Repository.
+     * @return An Apt Repository.
      * 
-    */
+     */
     public OSPolicyResourceRepositoryResourceAptRepositoryResponse apt() {
         return this.apt;
     }
     /**
-     * A Goo Repository.
+     * @return A Goo Repository.
      * 
-    */
+     */
     public OSPolicyResourceRepositoryResourceGooRepositoryResponse goo() {
         return this.goo;
     }
     /**
-     * A Yum Repository.
+     * @return A Yum Repository.
      * 
-    */
+     */
     public OSPolicyResourceRepositoryResourceYumRepositoryResponse yum() {
         return this.yum;
     }
     /**
-     * A Zypper Repository.
+     * @return A Zypper Repository.
      * 
-    */
+     */
     public OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper() {
         return this.zypper;
     }

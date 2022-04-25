@@ -9,40 +9,40 @@ import java.util.Objects;
 
 @CustomType
 public final class ForwardingRuleInfoResponse {
-    /**
-     * Name of a Compute Engine forwarding rule.
-     * 
-     */
+        /**
+         * @return Name of a Compute Engine forwarding rule.
+         * 
+         */
     private final String displayName;
-    /**
-     * Port range defined in the forwarding rule that matches the test.
-     * 
-     */
+        /**
+         * @return Port range defined in the forwarding rule that matches the test.
+         * 
+         */
     private final String matchedPortRange;
-    /**
-     * Protocol defined in the forwarding rule that matches the test.
-     * 
-     */
+        /**
+         * @return Protocol defined in the forwarding rule that matches the test.
+         * 
+         */
     private final String matchedProtocol;
-    /**
-     * Network URI. Only valid for Internal Load Balancer.
-     * 
-     */
+        /**
+         * @return Network URI. Only valid for Internal Load Balancer.
+         * 
+         */
     private final String networkUri;
-    /**
-     * Target type of the forwarding rule.
-     * 
-     */
+        /**
+         * @return Target type of the forwarding rule.
+         * 
+         */
     private final String target;
-    /**
-     * URI of a Compute Engine forwarding rule.
-     * 
-     */
+        /**
+         * @return URI of a Compute Engine forwarding rule.
+         * 
+         */
     private final String uri;
-    /**
-     * VIP of the forwarding rule.
-     * 
-     */
+        /**
+         * @return VIP of the forwarding rule.
+         * 
+         */
     private final String vip;
 
     @CustomType.Constructor
@@ -64,51 +64,51 @@ public final class ForwardingRuleInfoResponse {
     }
 
     /**
-     * Name of a Compute Engine forwarding rule.
+     * @return Name of a Compute Engine forwarding rule.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Port range defined in the forwarding rule that matches the test.
+     * @return Port range defined in the forwarding rule that matches the test.
      * 
-    */
+     */
     public String matchedPortRange() {
         return this.matchedPortRange;
     }
     /**
-     * Protocol defined in the forwarding rule that matches the test.
+     * @return Protocol defined in the forwarding rule that matches the test.
      * 
-    */
+     */
     public String matchedProtocol() {
         return this.matchedProtocol;
     }
     /**
-     * Network URI. Only valid for Internal Load Balancer.
+     * @return Network URI. Only valid for Internal Load Balancer.
      * 
-    */
+     */
     public String networkUri() {
         return this.networkUri;
     }
     /**
-     * Target type of the forwarding rule.
+     * @return Target type of the forwarding rule.
      * 
-    */
+     */
     public String target() {
         return this.target;
     }
     /**
-     * URI of a Compute Engine forwarding rule.
+     * @return URI of a Compute Engine forwarding rule.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }
     /**
-     * VIP of the forwarding rule.
+     * @return VIP of the forwarding rule.
      * 
-    */
+     */
     public String vip() {
         return this.vip;
     }

@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse {
-    /**
-     * The key of this entity in conversation entities. Can be used to retrieve the exact `Entity` this mention is attached to.
-     * 
-     */
+        /**
+         * @return The key of this entity in conversation entities. Can be used to retrieve the exact `Entity` this mention is attached to.
+         * 
+         */
     private final String entityUniqueId;
-    /**
-     * Sentiment expressed for this mention of the entity.
-     * 
-     */
+        /**
+         * @return Sentiment expressed for this mention of the entity.
+         * 
+         */
     private final GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment;
-    /**
-     * The type of the entity mention.
-     * 
-     */
+        /**
+         * @return The type of the entity mention.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse {
     }
 
     /**
-     * The key of this entity in conversation entities. Can be used to retrieve the exact `Entity` this mention is attached to.
+     * @return The key of this entity in conversation entities. Can be used to retrieve the exact `Entity` this mention is attached to.
      * 
-    */
+     */
     public String entityUniqueId() {
         return this.entityUniqueId;
     }
     /**
-     * Sentiment expressed for this mention of the entity.
+     * @return Sentiment expressed for this mention of the entity.
      * 
-    */
+     */
     public GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment() {
         return this.sentiment;
     }
     /**
-     * The type of the entity mention.
+     * @return The type of the entity mention.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

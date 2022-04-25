@@ -11,10 +11,10 @@ import java.util.Objects;
 
 @CustomType
 public final class DatasetAccessEntryResponse {
-    /**
-     * [Required] The dataset this entry applies to.
-     * 
-     */
+        /**
+         * @return [Required] The dataset this entry applies to.
+         * 
+         */
     private final DatasetReferenceResponse dataset;
     private final List<String> targetTypes;
 
@@ -27,9 +27,9 @@ public final class DatasetAccessEntryResponse {
     }
 
     /**
-     * [Required] The dataset this entry applies to.
+     * @return [Required] The dataset this entry applies to.
      * 
-    */
+     */
     public DatasetReferenceResponse dataset() {
         return this.dataset;
     }

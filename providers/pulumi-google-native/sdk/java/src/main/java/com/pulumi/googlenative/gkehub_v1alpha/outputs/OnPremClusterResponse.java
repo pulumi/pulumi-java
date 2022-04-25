@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class OnPremClusterResponse {
-    /**
-     * Immutable. Whether the cluster is an admin cluster.
-     * 
-     */
+        /**
+         * @return Immutable. Whether the cluster is an admin cluster.
+         * 
+         */
     private final Boolean adminCluster;
-    /**
-     * If cluster_missing is set then it denotes that API(gkeonprem.googleapis.com) resource for this GKE On-Prem cluster no longer exists.
-     * 
-     */
+        /**
+         * @return If cluster_missing is set then it denotes that API(gkeonprem.googleapis.com) resource for this GKE On-Prem cluster no longer exists.
+         * 
+         */
     private final Boolean clusterMissing;
-    /**
-     * Immutable. Self-link of the GCP resource for the GKE On-Prem cluster. For example: //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-cluster
-     * 
-     */
+        /**
+         * @return Immutable. Self-link of the GCP resource for the GKE On-Prem cluster. For example: //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-cluster
+         * 
+         */
     private final String resourceLink;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class OnPremClusterResponse {
     }
 
     /**
-     * Immutable. Whether the cluster is an admin cluster.
+     * @return Immutable. Whether the cluster is an admin cluster.
      * 
-    */
+     */
     public Boolean adminCluster() {
         return this.adminCluster;
     }
     /**
-     * If cluster_missing is set then it denotes that API(gkeonprem.googleapis.com) resource for this GKE On-Prem cluster no longer exists.
+     * @return If cluster_missing is set then it denotes that API(gkeonprem.googleapis.com) resource for this GKE On-Prem cluster no longer exists.
      * 
-    */
+     */
     public Boolean clusterMissing() {
         return this.clusterMissing;
     }
     /**
-     * Immutable. Self-link of the GCP resource for the GKE On-Prem cluster. For example: //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-cluster
+     * @return Immutable. Self-link of the GCP resource for the GKE On-Prem cluster. For example: //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-cluster
      * 
-    */
+     */
     public String resourceLink() {
         return this.resourceLink;
     }

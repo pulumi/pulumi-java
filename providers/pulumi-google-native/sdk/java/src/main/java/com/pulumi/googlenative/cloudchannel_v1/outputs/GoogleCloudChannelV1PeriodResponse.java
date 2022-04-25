@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudChannelV1PeriodResponse {
-    /**
-     * Total duration of Period Type defined.
-     * 
-     */
+        /**
+         * @return Total duration of Period Type defined.
+         * 
+         */
     private final Integer duration;
-    /**
-     * Period Type.
-     * 
-     */
+        /**
+         * @return Period Type.
+         * 
+         */
     private final String periodType;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GoogleCloudChannelV1PeriodResponse {
     }
 
     /**
-     * Total duration of Period Type defined.
+     * @return Total duration of Period Type defined.
      * 
-    */
+     */
     public Integer duration() {
         return this.duration;
     }
     /**
-     * Period Type.
+     * @return Period Type.
      * 
-    */
+     */
     public String periodType() {
         return this.periodType;
     }

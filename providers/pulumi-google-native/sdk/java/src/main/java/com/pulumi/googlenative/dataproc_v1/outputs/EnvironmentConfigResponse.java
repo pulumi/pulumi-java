@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class EnvironmentConfigResponse {
-    /**
-     * Optional. Execution configuration for a workload.
-     * 
-     */
+        /**
+         * @return Optional. Execution configuration for a workload.
+         * 
+         */
     private final ExecutionConfigResponse executionConfig;
-    /**
-     * Optional. Peripherals configuration that workload has access to.
-     * 
-     */
+        /**
+         * @return Optional. Peripherals configuration that workload has access to.
+         * 
+         */
     private final PeripheralsConfigResponse peripheralsConfig;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class EnvironmentConfigResponse {
     }
 
     /**
-     * Optional. Execution configuration for a workload.
+     * @return Optional. Execution configuration for a workload.
      * 
-    */
+     */
     public ExecutionConfigResponse executionConfig() {
         return this.executionConfig;
     }
     /**
-     * Optional. Peripherals configuration that workload has access to.
+     * @return Optional. Peripherals configuration that workload has access to.
      * 
-    */
+     */
     public PeripheralsConfigResponse peripheralsConfig() {
         return this.peripheralsConfig;
     }

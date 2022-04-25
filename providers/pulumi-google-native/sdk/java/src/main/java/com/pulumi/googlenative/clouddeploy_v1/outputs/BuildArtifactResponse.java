@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class BuildArtifactResponse {
-    /**
-     * Image name in Skaffold configuration.
-     * 
-     */
+        /**
+         * @return Image name in Skaffold configuration.
+         * 
+         */
     private final String image;
-    /**
-     * Image tag to use. This will generally be the full path to an image, such as &#34;gcr.io/my-project/busybox:1.2.3&#34; or &#34;gcr.io/my-project/busybox@sha256:abc123&#34;.
-     * 
-     */
+        /**
+         * @return Image tag to use. This will generally be the full path to an image, such as &#34;gcr.io/my-project/busybox:1.2.3&#34; or &#34;gcr.io/my-project/busybox@sha256:abc123&#34;.
+         * 
+         */
     private final String tag;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class BuildArtifactResponse {
     }
 
     /**
-     * Image name in Skaffold configuration.
+     * @return Image name in Skaffold configuration.
      * 
-    */
+     */
     public String image() {
         return this.image;
     }
     /**
-     * Image tag to use. This will generally be the full path to an image, such as &#34;gcr.io/my-project/busybox:1.2.3&#34; or &#34;gcr.io/my-project/busybox@sha256:abc123&#34;.
+     * @return Image tag to use. This will generally be the full path to an image, such as &#34;gcr.io/my-project/busybox:1.2.3&#34; or &#34;gcr.io/my-project/busybox@sha256:abc123&#34;.
      * 
-    */
+     */
     public String tag() {
         return this.tag;
     }

@@ -23,6 +23,10 @@ public final class AclEntryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="expirationTime", required=true)
     private String expirationTime;
 
+    /**
+     * @return The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
+     * 
+     */
     public String expirationTime() {
         return this.expirationTime;
     }
@@ -34,6 +38,10 @@ public final class AclEntryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return This is always `sql#aclEntry`.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -45,6 +53,10 @@ public final class AclEntryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Optional. A label to identify this entry.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -56,6 +68,10 @@ public final class AclEntryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The allowlisted value for the access control list.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -87,21 +103,45 @@ public final class AclEntryResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AclEntryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expirationTime The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTime(String expirationTime) {
             $.expirationTime = expirationTime;
             return this;
         }
 
+        /**
+         * @param kind This is always `sql#aclEntry`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param name Optional. A label to identify this entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value The allowlisted value for the access control list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

@@ -9,30 +9,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GetGroupResult {
-    /**
-     * The create time timestamp.
-     * 
-     */
+        /**
+         * @return The create time timestamp.
+         * 
+         */
     private final String createTime;
-    /**
-     * User-provided description of the group.
-     * 
-     */
+        /**
+         * @return User-provided description of the group.
+         * 
+         */
     private final String description;
-    /**
-     * Display name is a user defined name for this group which can be updated.
-     * 
-     */
+        /**
+         * @return Display name is a user defined name for this group which can be updated.
+         * 
+         */
     private final String displayName;
-    /**
-     * The Group name.
-     * 
-     */
+        /**
+         * @return The Group name.
+         * 
+         */
     private final String name;
-    /**
-     * The update time timestamp.
-     * 
-     */
+        /**
+         * @return The update time timestamp.
+         * 
+         */
     private final String updateTime;
 
     @CustomType.Constructor
@@ -50,37 +50,37 @@ public final class GetGroupResult {
     }
 
     /**
-     * The create time timestamp.
+     * @return The create time timestamp.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * User-provided description of the group.
+     * @return User-provided description of the group.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Display name is a user defined name for this group which can be updated.
+     * @return Display name is a user defined name for this group which can be updated.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The Group name.
+     * @return The Group name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The update time timestamp.
+     * @return The update time timestamp.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

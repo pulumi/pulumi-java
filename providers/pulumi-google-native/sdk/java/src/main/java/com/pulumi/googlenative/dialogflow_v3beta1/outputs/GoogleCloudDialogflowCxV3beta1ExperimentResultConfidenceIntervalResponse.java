@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalResponse {
-    /**
-     * The confidence level used to construct the interval, i.e. there is X% chance that the true value is within this interval.
-     * 
-     */
+        /**
+         * @return The confidence level used to construct the interval, i.e. there is X% chance that the true value is within this interval.
+         * 
+         */
     private final Double confidenceLevel;
-    /**
-     * Lower bound of the interval.
-     * 
-     */
+        /**
+         * @return Lower bound of the interval.
+         * 
+         */
     private final Double lowerBound;
-    /**
-     * The percent change between an experiment metric&#39;s value and the value for its control.
-     * 
-     */
+        /**
+         * @return The percent change between an experiment metric&#39;s value and the value for its control.
+         * 
+         */
     private final Double ratio;
-    /**
-     * Upper bound of the interval.
-     * 
-     */
+        /**
+         * @return Upper bound of the interval.
+         * 
+         */
     private final Double upperBound;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceInter
     }
 
     /**
-     * The confidence level used to construct the interval, i.e. there is X% chance that the true value is within this interval.
+     * @return The confidence level used to construct the interval, i.e. there is X% chance that the true value is within this interval.
      * 
-    */
+     */
     public Double confidenceLevel() {
         return this.confidenceLevel;
     }
     /**
-     * Lower bound of the interval.
+     * @return Lower bound of the interval.
      * 
-    */
+     */
     public Double lowerBound() {
         return this.lowerBound;
     }
     /**
-     * The percent change between an experiment metric&#39;s value and the value for its control.
+     * @return The percent change between an experiment metric&#39;s value and the value for its control.
      * 
-    */
+     */
     public Double ratio() {
         return this.ratio;
     }
     /**
-     * Upper bound of the interval.
+     * @return Upper bound of the interval.
      * 
-    */
+     */
     public Double upperBound() {
         return this.upperBound;
     }

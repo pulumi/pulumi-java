@@ -9,35 +9,35 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudRunV1ConditionResponse {
-    /**
-     * Optional. Last time the condition transitioned from one status to another.
-     * 
-     */
+        /**
+         * @return Optional. Last time the condition transitioned from one status to another.
+         * 
+         */
     private final String lastTransitionTime;
-    /**
-     * Optional. Human readable message indicating details about the current status.
-     * 
-     */
+        /**
+         * @return Optional. Human readable message indicating details about the current status.
+         * 
+         */
     private final String message;
-    /**
-     * Optional. One-word CamelCase reason for the condition&#39;s last transition.
-     * 
-     */
+        /**
+         * @return Optional. One-word CamelCase reason for the condition&#39;s last transition.
+         * 
+         */
     private final String reason;
-    /**
-     * Optional. How to interpret failures of this condition, one of Error, Warning, Info
-     * 
-     */
+        /**
+         * @return Optional. How to interpret failures of this condition, one of Error, Warning, Info
+         * 
+         */
     private final String severity;
-    /**
-     * Status of the condition, one of True, False, Unknown.
-     * 
-     */
+        /**
+         * @return Status of the condition, one of True, False, Unknown.
+         * 
+         */
     private final String status;
-    /**
-     * type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * &#34;Ready&#34;: True when the Resource is ready.
-     * 
-     */
+        /**
+         * @return type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * &#34;Ready&#34;: True when the Resource is ready.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -57,44 +57,44 @@ public final class GoogleCloudRunV1ConditionResponse {
     }
 
     /**
-     * Optional. Last time the condition transitioned from one status to another.
+     * @return Optional. Last time the condition transitioned from one status to another.
      * 
-    */
+     */
     public String lastTransitionTime() {
         return this.lastTransitionTime;
     }
     /**
-     * Optional. Human readable message indicating details about the current status.
+     * @return Optional. Human readable message indicating details about the current status.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * Optional. One-word CamelCase reason for the condition&#39;s last transition.
+     * @return Optional. One-word CamelCase reason for the condition&#39;s last transition.
      * 
-    */
+     */
     public String reason() {
         return this.reason;
     }
     /**
-     * Optional. How to interpret failures of this condition, one of Error, Warning, Info
+     * @return Optional. How to interpret failures of this condition, one of Error, Warning, Info
      * 
-    */
+     */
     public String severity() {
         return this.severity;
     }
     /**
-     * Status of the condition, one of True, False, Unknown.
+     * @return Status of the condition, one of True, False, Unknown.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * &#34;Ready&#34;: True when the Resource is ready.
+     * @return type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * &#34;Ready&#34;: True when the Resource is ready.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

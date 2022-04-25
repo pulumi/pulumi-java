@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse {
-    /**
-     * Do not trigger if last utterance is small talk.
-     * 
-     */
+        /**
+         * @return Do not trigger if last utterance is small talk.
+         * 
+         */
     private final Boolean noSmalltalk;
-    /**
-     * Only trigger suggestion if participant role of last utterance is END_USER.
-     * 
-     */
+        /**
+         * @return Only trigger suggestion if participant role of last utterance is END_USER.
+         * 
+         */
     private final Boolean onlyEndUser;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTri
     }
 
     /**
-     * Do not trigger if last utterance is small talk.
+     * @return Do not trigger if last utterance is small talk.
      * 
-    */
+     */
     public Boolean noSmalltalk() {
         return this.noSmalltalk;
     }
     /**
-     * Only trigger suggestion if participant role of last utterance is END_USER.
+     * @return Only trigger suggestion if participant role of last utterance is END_USER.
      * 
-    */
+     */
     public Boolean onlyEndUser() {
         return this.onlyEndUser;
     }

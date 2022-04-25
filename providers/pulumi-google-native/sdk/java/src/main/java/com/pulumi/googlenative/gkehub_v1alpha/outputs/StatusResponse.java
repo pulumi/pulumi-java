@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class StatusResponse {
-    /**
-     * Code specifies AppDevExperienceFeature&#39;s subcomponent ready state.
-     * 
-     */
+        /**
+         * @return Code specifies AppDevExperienceFeature&#39;s subcomponent ready state.
+         * 
+         */
     private final String code;
-    /**
-     * Description is populated if Code is Failed, explaining why it has failed.
-     * 
-     */
+        /**
+         * @return Description is populated if Code is Failed, explaining why it has failed.
+         * 
+         */
     private final String description;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class StatusResponse {
     }
 
     /**
-     * Code specifies AppDevExperienceFeature&#39;s subcomponent ready state.
+     * @return Code specifies AppDevExperienceFeature&#39;s subcomponent ready state.
      * 
-    */
+     */
     public String code() {
         return this.code;
     }
     /**
-     * Description is populated if Code is Failed, explaining why it has failed.
+     * @return Description is populated if Code is Failed, explaining why it has failed.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }

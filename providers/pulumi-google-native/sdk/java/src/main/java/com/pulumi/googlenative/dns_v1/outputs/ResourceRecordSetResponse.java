@@ -13,35 +13,35 @@ import java.util.Objects;
 @CustomType
 public final class ResourceRecordSetResponse {
     private final String kind;
-    /**
-     * For example, www.example.com.
-     * 
-     */
+        /**
+         * @return For example, www.example.com.
+         * 
+         */
     private final String name;
-    /**
-     * Configures dynamic query responses based on geo location of querying user or a weighted round robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or routing_policy (dynamic). An error is returned otherwise.
-     * 
-     */
+        /**
+         * @return Configures dynamic query responses based on geo location of querying user or a weighted round robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or routing_policy (dynamic). An error is returned otherwise.
+         * 
+         */
     private final RRSetRoutingPolicyResponse routingPolicy;
-    /**
-     * As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.
-     * 
-     */
+        /**
+         * @return As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.
+         * 
+         */
     private final List<String> rrdatas;
-    /**
-     * As defined in RFC 4034 (section 3.2).
-     * 
-     */
+        /**
+         * @return As defined in RFC 4034 (section 3.2).
+         * 
+         */
     private final List<String> signatureRrdatas;
-    /**
-     * Number of seconds that this ResourceRecordSet can be cached by resolvers.
-     * 
-     */
+        /**
+         * @return Number of seconds that this ResourceRecordSet can be cached by resolvers.
+         * 
+         */
     private final Integer ttl;
-    /**
-     * The identifier of a supported record type. See the list of Supported DNS record types.
-     * 
-     */
+        /**
+         * @return The identifier of a supported record type. See the list of Supported DNS record types.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -66,44 +66,44 @@ public final class ResourceRecordSetResponse {
         return this.kind;
     }
     /**
-     * For example, www.example.com.
+     * @return For example, www.example.com.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Configures dynamic query responses based on geo location of querying user or a weighted round robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or routing_policy (dynamic). An error is returned otherwise.
+     * @return Configures dynamic query responses based on geo location of querying user or a weighted round robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or routing_policy (dynamic). An error is returned otherwise.
      * 
-    */
+     */
     public RRSetRoutingPolicyResponse routingPolicy() {
         return this.routingPolicy;
     }
     /**
-     * As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.
+     * @return As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.
      * 
-    */
+     */
     public List<String> rrdatas() {
         return this.rrdatas;
     }
     /**
-     * As defined in RFC 4034 (section 3.2).
+     * @return As defined in RFC 4034 (section 3.2).
      * 
-    */
+     */
     public List<String> signatureRrdatas() {
         return this.signatureRrdatas;
     }
     /**
-     * Number of seconds that this ResourceRecordSet can be cached by resolvers.
+     * @return Number of seconds that this ResourceRecordSet can be cached by resolvers.
      * 
-    */
+     */
     public Integer ttl() {
         return this.ttl;
     }
     /**
-     * The identifier of a supported record type. See the list of Supported DNS record types.
+     * @return The identifier of a supported record type. See the list of Supported DNS record types.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

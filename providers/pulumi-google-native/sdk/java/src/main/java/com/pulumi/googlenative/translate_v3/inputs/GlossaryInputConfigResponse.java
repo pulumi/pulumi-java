@@ -23,6 +23,10 @@ public final class GlossaryInputConfigResponse extends com.pulumi.resources.Invo
     @Import(name="gcsSource", required=true)
     private GcsSourceResponse gcsSource;
 
+    /**
+     * @return Google Cloud Storage location of glossary data. File format is determined based on the filename extension. API returns [google.rpc.Code.INVALID_ARGUMENT] for unsupported URI-s and file formats. Wildcards are not allowed. This must be a single file in one of the following formats: For unidirectional glossaries: - TSV/CSV (`.tsv`/`.csv`): 2 column file, tab- or comma-separated. The first column is source text. The second column is target text. The file must not contain headers. That is, the first row is data, not column names. - TMX (`.tmx`): TMX file with parallel data defining source/target term pairs. For equivalent term sets glossaries: - CSV (`.csv`): Multi-column CSV file defining equivalent glossary terms in multiple languages. See documentation for more information - [glossaries](https://cloud.google.com/translate/docs/advanced/glossary).
+     * 
+     */
     public GcsSourceResponse gcsSource() {
         return this.gcsSource;
     }
@@ -51,6 +55,12 @@ public final class GlossaryInputConfigResponse extends com.pulumi.resources.Invo
             $ = new GlossaryInputConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gcsSource Google Cloud Storage location of glossary data. File format is determined based on the filename extension. API returns [google.rpc.Code.INVALID_ARGUMENT] for unsupported URI-s and file formats. Wildcards are not allowed. This must be a single file in one of the following formats: For unidirectional glossaries: - TSV/CSV (`.tsv`/`.csv`): 2 column file, tab- or comma-separated. The first column is source text. The second column is target text. The file must not contain headers. That is, the first row is data, not column names. - TMX (`.tmx`): TMX file with parallel data defining source/target term pairs. For equivalent term sets glossaries: - CSV (`.csv`): Multi-column CSV file defining equivalent glossary terms in multiple languages. See documentation for more information - [glossaries](https://cloud.google.com/translate/docs/advanced/glossary).
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsSource(GcsSourceResponse gcsSource) {
             $.gcsSource = gcsSource;
             return this;

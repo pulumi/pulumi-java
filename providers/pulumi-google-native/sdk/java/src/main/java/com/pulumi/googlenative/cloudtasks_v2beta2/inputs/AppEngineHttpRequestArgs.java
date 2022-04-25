@@ -29,6 +29,10 @@ public final class AppEngineHttpRequestArgs extends com.pulumi.resources.Resourc
     @Import(name="appEngineRouting")
     private @Nullable Output<AppEngineRoutingArgs> appEngineRouting;
 
+    /**
+     * @return Task-level setting for App Engine routing. If set, app_engine_routing_override is used for all tasks in the queue, no matter what the setting is for the task-level app_engine_routing.
+     * 
+     */
     public Optional<Output<AppEngineRoutingArgs>> appEngineRouting() {
         return Optional.ofNullable(this.appEngineRouting);
     }
@@ -40,6 +44,10 @@ public final class AppEngineHttpRequestArgs extends com.pulumi.resources.Resourc
     @Import(name="headers")
     private @Nullable Output<Map<String,String>> headers;
 
+    /**
+     * @return HTTP request headers. This map contains the header field names and values. Headers can be set when the task is created. Repeated headers are not supported but a header value can contain commas. Cloud Tasks sets some headers to default values: * `User-Agent`: By default, this header is `&#34;AppEngine-Google; (+http://code.google.com/appengine)&#34;`. This header can be modified, but Cloud Tasks will append `&#34;AppEngine-Google; (+http://code.google.com/appengine)&#34;` to the modified `User-Agent`. If the task has a payload, Cloud Tasks sets the following headers: * `Content-Type`: By default, the `Content-Type` header is set to `&#34;application/octet-stream&#34;`. The default can be overridden by explicitly setting `Content-Type` to a particular media type when the task is created. For example, `Content-Type` can be set to `&#34;application/json&#34;`. * `Content-Length`: This is computed by Cloud Tasks. This value is output only. It cannot be changed. The headers below cannot be set or overridden: * `Host` * `X-Google-*` * `X-AppEngine-*` In addition, Cloud Tasks sets some headers when the task is dispatched, such as headers containing information about the task; see [request headers](https://cloud.google.com/appengine/docs/python/taskqueue/push/creating-handlers#reading_request_headers). These headers are set only when the task is dispatched, so they are not visible when the task is returned in a Cloud Tasks response. Although there is no specific limit for the maximum number of headers or the size, there is a limit on the maximum size of the Task. For more information, see the CreateTask documentation.
+     * 
+     */
     public Optional<Output<Map<String,String>>> headers() {
         return Optional.ofNullable(this.headers);
     }
@@ -51,6 +59,10 @@ public final class AppEngineHttpRequestArgs extends com.pulumi.resources.Resourc
     @Import(name="httpMethod")
     private @Nullable Output<AppEngineHttpRequestHttpMethod> httpMethod;
 
+    /**
+     * @return The HTTP method to use for the request. The default is POST. The app&#39;s request handler for the task&#39;s target URL must be able to handle HTTP requests with this http_method, otherwise the task attempt fails with error code 405 (Method Not Allowed). See [Writing a push task request handler](https://cloud.google.com/appengine/docs/java/taskqueue/push/creating-handlers#writing_a_push_task_request_handler) and the App Engine documentation for your runtime on [How Requests are Handled](https://cloud.google.com/appengine/docs/standard/python3/how-requests-are-handled).
+     * 
+     */
     public Optional<Output<AppEngineHttpRequestHttpMethod>> httpMethod() {
         return Optional.ofNullable(this.httpMethod);
     }
@@ -62,6 +74,10 @@ public final class AppEngineHttpRequestArgs extends com.pulumi.resources.Resourc
     @Import(name="payload")
     private @Nullable Output<String> payload;
 
+    /**
+     * @return Payload. The payload will be sent as the HTTP message body. A message body, and thus a payload, is allowed only if the HTTP method is POST or PUT. It is an error to set a data payload on a task with an incompatible HttpMethod.
+     * 
+     */
     public Optional<Output<String>> payload() {
         return Optional.ofNullable(this.payload);
     }
@@ -73,6 +89,10 @@ public final class AppEngineHttpRequestArgs extends com.pulumi.resources.Resourc
     @Import(name="relativeUrl")
     private @Nullable Output<String> relativeUrl;
 
+    /**
+     * @return The relative URL. The relative URL must begin with &#34;/&#34; and must be a valid HTTP relative URL. It can contain a path and query string arguments. If the relative URL is empty, then the root path &#34;/&#34; will be used. No spaces are allowed, and the maximum length allowed is 2083 characters.
+     * 
+     */
     public Optional<Output<String>> relativeUrl() {
         return Optional.ofNullable(this.relativeUrl);
     }
@@ -105,47 +125,107 @@ public final class AppEngineHttpRequestArgs extends com.pulumi.resources.Resourc
             $ = new AppEngineHttpRequestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appEngineRouting Task-level setting for App Engine routing. If set, app_engine_routing_override is used for all tasks in the queue, no matter what the setting is for the task-level app_engine_routing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appEngineRouting(@Nullable Output<AppEngineRoutingArgs> appEngineRouting) {
             $.appEngineRouting = appEngineRouting;
             return this;
         }
 
+        /**
+         * @param appEngineRouting Task-level setting for App Engine routing. If set, app_engine_routing_override is used for all tasks in the queue, no matter what the setting is for the task-level app_engine_routing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appEngineRouting(AppEngineRoutingArgs appEngineRouting) {
             return appEngineRouting(Output.of(appEngineRouting));
         }
 
+        /**
+         * @param headers HTTP request headers. This map contains the header field names and values. Headers can be set when the task is created. Repeated headers are not supported but a header value can contain commas. Cloud Tasks sets some headers to default values: * `User-Agent`: By default, this header is `&#34;AppEngine-Google; (+http://code.google.com/appengine)&#34;`. This header can be modified, but Cloud Tasks will append `&#34;AppEngine-Google; (+http://code.google.com/appengine)&#34;` to the modified `User-Agent`. If the task has a payload, Cloud Tasks sets the following headers: * `Content-Type`: By default, the `Content-Type` header is set to `&#34;application/octet-stream&#34;`. The default can be overridden by explicitly setting `Content-Type` to a particular media type when the task is created. For example, `Content-Type` can be set to `&#34;application/json&#34;`. * `Content-Length`: This is computed by Cloud Tasks. This value is output only. It cannot be changed. The headers below cannot be set or overridden: * `Host` * `X-Google-*` * `X-AppEngine-*` In addition, Cloud Tasks sets some headers when the task is dispatched, such as headers containing information about the task; see [request headers](https://cloud.google.com/appengine/docs/python/taskqueue/push/creating-handlers#reading_request_headers). These headers are set only when the task is dispatched, so they are not visible when the task is returned in a Cloud Tasks response. Although there is no specific limit for the maximum number of headers or the size, there is a limit on the maximum size of the Task. For more information, see the CreateTask documentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(@Nullable Output<Map<String,String>> headers) {
             $.headers = headers;
             return this;
         }
 
+        /**
+         * @param headers HTTP request headers. This map contains the header field names and values. Headers can be set when the task is created. Repeated headers are not supported but a header value can contain commas. Cloud Tasks sets some headers to default values: * `User-Agent`: By default, this header is `&#34;AppEngine-Google; (+http://code.google.com/appengine)&#34;`. This header can be modified, but Cloud Tasks will append `&#34;AppEngine-Google; (+http://code.google.com/appengine)&#34;` to the modified `User-Agent`. If the task has a payload, Cloud Tasks sets the following headers: * `Content-Type`: By default, the `Content-Type` header is set to `&#34;application/octet-stream&#34;`. The default can be overridden by explicitly setting `Content-Type` to a particular media type when the task is created. For example, `Content-Type` can be set to `&#34;application/json&#34;`. * `Content-Length`: This is computed by Cloud Tasks. This value is output only. It cannot be changed. The headers below cannot be set or overridden: * `Host` * `X-Google-*` * `X-AppEngine-*` In addition, Cloud Tasks sets some headers when the task is dispatched, such as headers containing information about the task; see [request headers](https://cloud.google.com/appengine/docs/python/taskqueue/push/creating-handlers#reading_request_headers). These headers are set only when the task is dispatched, so they are not visible when the task is returned in a Cloud Tasks response. Although there is no specific limit for the maximum number of headers or the size, there is a limit on the maximum size of the Task. For more information, see the CreateTask documentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(Map<String,String> headers) {
             return headers(Output.of(headers));
         }
 
+        /**
+         * @param httpMethod The HTTP method to use for the request. The default is POST. The app&#39;s request handler for the task&#39;s target URL must be able to handle HTTP requests with this http_method, otherwise the task attempt fails with error code 405 (Method Not Allowed). See [Writing a push task request handler](https://cloud.google.com/appengine/docs/java/taskqueue/push/creating-handlers#writing_a_push_task_request_handler) and the App Engine documentation for your runtime on [How Requests are Handled](https://cloud.google.com/appengine/docs/standard/python3/how-requests-are-handled).
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpMethod(@Nullable Output<AppEngineHttpRequestHttpMethod> httpMethod) {
             $.httpMethod = httpMethod;
             return this;
         }
 
+        /**
+         * @param httpMethod The HTTP method to use for the request. The default is POST. The app&#39;s request handler for the task&#39;s target URL must be able to handle HTTP requests with this http_method, otherwise the task attempt fails with error code 405 (Method Not Allowed). See [Writing a push task request handler](https://cloud.google.com/appengine/docs/java/taskqueue/push/creating-handlers#writing_a_push_task_request_handler) and the App Engine documentation for your runtime on [How Requests are Handled](https://cloud.google.com/appengine/docs/standard/python3/how-requests-are-handled).
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpMethod(AppEngineHttpRequestHttpMethod httpMethod) {
             return httpMethod(Output.of(httpMethod));
         }
 
+        /**
+         * @param payload Payload. The payload will be sent as the HTTP message body. A message body, and thus a payload, is allowed only if the HTTP method is POST or PUT. It is an error to set a data payload on a task with an incompatible HttpMethod.
+         * 
+         * @return builder
+         * 
+         */
         public Builder payload(@Nullable Output<String> payload) {
             $.payload = payload;
             return this;
         }
 
+        /**
+         * @param payload Payload. The payload will be sent as the HTTP message body. A message body, and thus a payload, is allowed only if the HTTP method is POST or PUT. It is an error to set a data payload on a task with an incompatible HttpMethod.
+         * 
+         * @return builder
+         * 
+         */
         public Builder payload(String payload) {
             return payload(Output.of(payload));
         }
 
+        /**
+         * @param relativeUrl The relative URL. The relative URL must begin with &#34;/&#34; and must be a valid HTTP relative URL. It can contain a path and query string arguments. If the relative URL is empty, then the root path &#34;/&#34; will be used. No spaces are allowed, and the maximum length allowed is 2083 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeUrl(@Nullable Output<String> relativeUrl) {
             $.relativeUrl = relativeUrl;
             return this;
         }
 
+        /**
+         * @param relativeUrl The relative URL. The relative URL must begin with &#34;/&#34; and must be a valid HTTP relative URL. It can contain a path and query string arguments. If the relative URL is empty, then the root path &#34;/&#34; will be used. No spaces are allowed, and the maximum length allowed is 2083 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeUrl(String relativeUrl) {
             return relativeUrl(Output.of(relativeUrl));
         }

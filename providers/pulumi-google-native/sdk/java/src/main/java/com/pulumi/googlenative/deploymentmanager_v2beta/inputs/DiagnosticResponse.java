@@ -19,6 +19,10 @@ public final class DiagnosticResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="field", required=true)
     private String field;
 
+    /**
+     * @return JsonPath expression on the resource that if non empty, indicates that this field needs to be extracted as a diagnostic.
+     * 
+     */
     public String field() {
         return this.field;
     }
@@ -30,6 +34,10 @@ public final class DiagnosticResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="level", required=true)
     private String level;
 
+    /**
+     * @return Level to record this diagnostic.
+     * 
+     */
     public String level() {
         return this.level;
     }
@@ -59,11 +67,23 @@ public final class DiagnosticResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DiagnosticResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param field JsonPath expression on the resource that if non empty, indicates that this field needs to be extracted as a diagnostic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(String field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param level Level to record this diagnostic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(String level) {
             $.level = level;
             return this;

@@ -27,6 +27,10 @@ public final class GoogleCloudApigeeV1PropertiesArgs extends com.pulumi.resource
     @Import(name="property")
     private @Nullable Output<List<GoogleCloudApigeeV1PropertyArgs>> property;
 
+    /**
+     * @return List of all properties in the object
+     * 
+     */
     public Optional<Output<List<GoogleCloudApigeeV1PropertyArgs>>> property() {
         return Optional.ofNullable(this.property);
     }
@@ -55,15 +59,33 @@ public final class GoogleCloudApigeeV1PropertiesArgs extends com.pulumi.resource
             $ = new GoogleCloudApigeeV1PropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param property List of all properties in the object
+         * 
+         * @return builder
+         * 
+         */
         public Builder property(@Nullable Output<List<GoogleCloudApigeeV1PropertyArgs>> property) {
             $.property = property;
             return this;
         }
 
+        /**
+         * @param property List of all properties in the object
+         * 
+         * @return builder
+         * 
+         */
         public Builder property(List<GoogleCloudApigeeV1PropertyArgs> property) {
             return property(Output.of(property));
         }
 
+        /**
+         * @param property List of all properties in the object
+         * 
+         * @return builder
+         * 
+         */
         public Builder property(GoogleCloudApigeeV1PropertyArgs... property) {
             return property(List.of(property));
         }

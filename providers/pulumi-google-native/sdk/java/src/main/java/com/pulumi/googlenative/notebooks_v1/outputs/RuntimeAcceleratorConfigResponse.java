@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class RuntimeAcceleratorConfigResponse {
-    /**
-     * Count of cores of this accelerator.
-     * 
-     */
+        /**
+         * @return Count of cores of this accelerator.
+         * 
+         */
     private final String coreCount;
-    /**
-     * Accelerator model.
-     * 
-     */
+        /**
+         * @return Accelerator model.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class RuntimeAcceleratorConfigResponse {
     }
 
     /**
-     * Count of cores of this accelerator.
+     * @return Count of cores of this accelerator.
      * 
-    */
+     */
     public String coreCount() {
         return this.coreCount;
     }
     /**
-     * Accelerator model.
+     * @return Accelerator model.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -23,6 +23,10 @@ public final class GoogleCloudContactcenterinsightsV1SentimentDataResponse exten
     @Import(name="magnitude", required=true)
     private Double magnitude;
 
+    /**
+     * @return A non-negative number from 0 to infinity which represents the abolute magnitude of sentiment regardless of score.
+     * 
+     */
     public Double magnitude() {
         return this.magnitude;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudContactcenterinsightsV1SentimentDataResponse exten
     @Import(name="score", required=true)
     private Double score;
 
+    /**
+     * @return The sentiment score between -1.0 (negative) and 1.0 (positive).
+     * 
+     */
     public Double score() {
         return this.score;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudContactcenterinsightsV1SentimentDataResponse exten
             $ = new GoogleCloudContactcenterinsightsV1SentimentDataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param magnitude A non-negative number from 0 to infinity which represents the abolute magnitude of sentiment regardless of score.
+         * 
+         * @return builder
+         * 
+         */
         public Builder magnitude(Double magnitude) {
             $.magnitude = magnitude;
             return this;
         }
 
+        /**
+         * @param score The sentiment score between -1.0 (negative) and 1.0 (positive).
+         * 
+         * @return builder
+         * 
+         */
         public Builder score(Double score) {
             $.score = score;
             return this;

@@ -26,6 +26,10 @@ public final class BasicAuthenticationArgs extends com.pulumi.resources.Resource
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return The password to use when authenticating with the HTTP server.
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -37,6 +41,10 @@ public final class BasicAuthenticationArgs extends com.pulumi.resources.Resource
     @Import(name="username")
     private @Nullable Output<String> username;
 
+    /**
+     * @return The username to use when authenticating with the HTTP server.
+     * 
+     */
     public Optional<Output<String>> username() {
         return Optional.ofNullable(this.username);
     }
@@ -66,20 +74,44 @@ public final class BasicAuthenticationArgs extends com.pulumi.resources.Resource
             $ = new BasicAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password The password to use when authenticating with the HTTP server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password The password to use when authenticating with the HTTP server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param username The username to use when authenticating with the HTTP server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username The username to use when authenticating with the HTTP server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

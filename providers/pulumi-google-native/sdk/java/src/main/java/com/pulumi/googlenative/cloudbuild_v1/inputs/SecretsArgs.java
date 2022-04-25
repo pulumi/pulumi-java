@@ -28,6 +28,10 @@ public final class SecretsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inline")
     private @Nullable Output<List<InlineSecretArgs>> inline;
 
+    /**
+     * @return Secrets encrypted with KMS key and the associated secret environment variable.
+     * 
+     */
     public Optional<Output<List<InlineSecretArgs>>> inline() {
         return Optional.ofNullable(this.inline);
     }
@@ -39,6 +43,10 @@ public final class SecretsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secretManager")
     private @Nullable Output<List<SecretManagerSecretArgs>> secretManager;
 
+    /**
+     * @return Secrets in Secret Manager and associated secret environment variable.
+     * 
+     */
     public Optional<Output<List<SecretManagerSecretArgs>>> secretManager() {
         return Optional.ofNullable(this.secretManager);
     }
@@ -68,28 +76,64 @@ public final class SecretsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SecretsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inline Secrets encrypted with KMS key and the associated secret environment variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inline(@Nullable Output<List<InlineSecretArgs>> inline) {
             $.inline = inline;
             return this;
         }
 
+        /**
+         * @param inline Secrets encrypted with KMS key and the associated secret environment variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inline(List<InlineSecretArgs> inline) {
             return inline(Output.of(inline));
         }
 
+        /**
+         * @param inline Secrets encrypted with KMS key and the associated secret environment variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inline(InlineSecretArgs... inline) {
             return inline(List.of(inline));
         }
 
+        /**
+         * @param secretManager Secrets in Secret Manager and associated secret environment variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretManager(@Nullable Output<List<SecretManagerSecretArgs>> secretManager) {
             $.secretManager = secretManager;
             return this;
         }
 
+        /**
+         * @param secretManager Secrets in Secret Manager and associated secret environment variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretManager(List<SecretManagerSecretArgs> secretManager) {
             return secretManager(Output.of(secretManager));
         }
 
+        /**
+         * @param secretManager Secrets in Secret Manager and associated secret environment variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretManager(SecretManagerSecretArgs... secretManager) {
             return secretManager(List.of(secretManager));
         }

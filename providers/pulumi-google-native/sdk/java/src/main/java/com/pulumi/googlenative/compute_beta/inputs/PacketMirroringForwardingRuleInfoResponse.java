@@ -19,6 +19,10 @@ public final class PacketMirroringForwardingRuleInfoResponse extends com.pulumi.
     @Import(name="canonicalUrl", required=true)
     private String canonicalUrl;
 
+    /**
+     * @return Unique identifier for the forwarding rule; defined by the server.
+     * 
+     */
     public String canonicalUrl() {
         return this.canonicalUrl;
     }
@@ -30,6 +34,10 @@ public final class PacketMirroringForwardingRuleInfoResponse extends com.pulumi.
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return Resource URL to the forwarding rule representing the ILB configured as destination of the mirrored traffic.
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -59,11 +67,23 @@ public final class PacketMirroringForwardingRuleInfoResponse extends com.pulumi.
             $ = new PacketMirroringForwardingRuleInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param canonicalUrl Unique identifier for the forwarding rule; defined by the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canonicalUrl(String canonicalUrl) {
             $.canonicalUrl = canonicalUrl;
             return this;
         }
 
+        /**
+         * @param url Resource URL to the forwarding rule representing the ILB configured as destination of the mirrored traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;

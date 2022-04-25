@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudRunOpV2TrafficTargetResponse {
-    /**
-     * Specifies percent of the traffic to this Revision. This defaults to zero if unspecified.
-     * 
-     */
+        /**
+         * @return Specifies percent of the traffic to this Revision. This defaults to zero if unspecified.
+         * 
+         */
     private final Integer percent;
-    /**
-     * Revision to which to send this portion of traffic, if traffic allocation is by revision.
-     * 
-     */
+        /**
+         * @return Revision to which to send this portion of traffic, if traffic allocation is by revision.
+         * 
+         */
     private final String revision;
-    /**
-     * Indicates a string to be part of the URI to exclusively reference this target.
-     * 
-     */
+        /**
+         * @return Indicates a string to be part of the URI to exclusively reference this target.
+         * 
+         */
     private final String tag;
-    /**
-     * The allocation type for this traffic target.
-     * 
-     */
+        /**
+         * @return The allocation type for this traffic target.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse {
     }
 
     /**
-     * Specifies percent of the traffic to this Revision. This defaults to zero if unspecified.
+     * @return Specifies percent of the traffic to this Revision. This defaults to zero if unspecified.
      * 
-    */
+     */
     public Integer percent() {
         return this.percent;
     }
     /**
-     * Revision to which to send this portion of traffic, if traffic allocation is by revision.
+     * @return Revision to which to send this portion of traffic, if traffic allocation is by revision.
      * 
-    */
+     */
     public String revision() {
         return this.revision;
     }
     /**
-     * Indicates a string to be part of the URI to exclusively reference this target.
+     * @return Indicates a string to be part of the URI to exclusively reference this target.
      * 
-    */
+     */
     public String tag() {
         return this.tag;
     }
     /**
-     * The allocation type for this traffic target.
+     * @return The allocation type for this traffic target.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

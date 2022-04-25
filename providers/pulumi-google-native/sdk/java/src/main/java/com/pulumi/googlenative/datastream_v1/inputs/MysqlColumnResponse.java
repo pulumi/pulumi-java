@@ -25,6 +25,10 @@ public final class MysqlColumnResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="collation", required=true)
     private String collation;
 
+    /**
+     * @return Column collation.
+     * 
+     */
     public String collation() {
         return this.collation;
     }
@@ -36,6 +40,10 @@ public final class MysqlColumnResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="column", required=true)
     private String column;
 
+    /**
+     * @return Column name.
+     * 
+     */
     public String column() {
         return this.column;
     }
@@ -47,6 +55,10 @@ public final class MysqlColumnResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataType", required=true)
     private String dataType;
 
+    /**
+     * @return The MySQL data type. Full data types list can be found here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html
+     * 
+     */
     public String dataType() {
         return this.dataType;
     }
@@ -58,6 +70,10 @@ public final class MysqlColumnResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="length", required=true)
     private Integer length;
 
+    /**
+     * @return Column length.
+     * 
+     */
     public Integer length() {
         return this.length;
     }
@@ -69,6 +85,10 @@ public final class MysqlColumnResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="nullable", required=true)
     private Boolean nullable;
 
+    /**
+     * @return Whether or not the column can accept a null value.
+     * 
+     */
     public Boolean nullable() {
         return this.nullable;
     }
@@ -80,6 +100,10 @@ public final class MysqlColumnResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ordinalPosition", required=true)
     private Integer ordinalPosition;
 
+    /**
+     * @return The ordinal position of the column in the table.
+     * 
+     */
     public Integer ordinalPosition() {
         return this.ordinalPosition;
     }
@@ -91,6 +115,10 @@ public final class MysqlColumnResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="primaryKey", required=true)
     private Boolean primaryKey;
 
+    /**
+     * @return Whether or not the column represents a primary key.
+     * 
+     */
     public Boolean primaryKey() {
         return this.primaryKey;
     }
@@ -125,36 +153,78 @@ public final class MysqlColumnResponse extends com.pulumi.resources.InvokeArgs {
             $ = new MysqlColumnResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param collation Column collation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collation(String collation) {
             $.collation = collation;
             return this;
         }
 
+        /**
+         * @param column Column name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder column(String column) {
             $.column = column;
             return this;
         }
 
+        /**
+         * @param dataType The MySQL data type. Full data types list can be found here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(String dataType) {
             $.dataType = dataType;
             return this;
         }
 
+        /**
+         * @param length Column length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder length(Integer length) {
             $.length = length;
             return this;
         }
 
+        /**
+         * @param nullable Whether or not the column can accept a null value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nullable(Boolean nullable) {
             $.nullable = nullable;
             return this;
         }
 
+        /**
+         * @param ordinalPosition The ordinal position of the column in the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ordinalPosition(Integer ordinalPosition) {
             $.ordinalPosition = ordinalPosition;
             return this;
         }
 
+        /**
+         * @param primaryKey Whether or not the column represents a primary key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryKey(Boolean primaryKey) {
             $.primaryKey = primaryKey;
             return this;

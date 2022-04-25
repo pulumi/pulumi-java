@@ -9,30 +9,30 @@ import java.util.Objects;
 
 @CustomType
 public final class FirewallPolicyAssociationResponse {
-    /**
-     * The target that the firewall policy is attached to.
-     * 
-     */
+        /**
+         * @return The target that the firewall policy is attached to.
+         * 
+         */
     private final String attachmentTarget;
-    /**
-     * Deprecated, please use short name instead. The display name of the firewall policy of the association.
-     * 
-     */
+        /**
+         * @return Deprecated, please use short name instead. The display name of the firewall policy of the association.
+         * 
+         */
     private final String displayName;
-    /**
-     * The firewall policy ID of the association.
-     * 
-     */
+        /**
+         * @return The firewall policy ID of the association.
+         * 
+         */
     private final String firewallPolicyId;
-    /**
-     * The name for an association.
-     * 
-     */
+        /**
+         * @return The name for an association.
+         * 
+         */
     private final String name;
-    /**
-     * The short name of the firewall policy of the association.
-     * 
-     */
+        /**
+         * @return The short name of the firewall policy of the association.
+         * 
+         */
     private final String shortName;
 
     @CustomType.Constructor
@@ -50,37 +50,37 @@ public final class FirewallPolicyAssociationResponse {
     }
 
     /**
-     * The target that the firewall policy is attached to.
+     * @return The target that the firewall policy is attached to.
      * 
-    */
+     */
     public String attachmentTarget() {
         return this.attachmentTarget;
     }
     /**
-     * Deprecated, please use short name instead. The display name of the firewall policy of the association.
+     * @return Deprecated, please use short name instead. The display name of the firewall policy of the association.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The firewall policy ID of the association.
+     * @return The firewall policy ID of the association.
      * 
-    */
+     */
     public String firewallPolicyId() {
         return this.firewallPolicyId;
     }
     /**
-     * The name for an association.
+     * @return The name for an association.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The short name of the firewall policy of the association.
+     * @return The short name of the firewall policy of the association.
      * 
-    */
+     */
     public String shortName() {
         return this.shortName;
     }

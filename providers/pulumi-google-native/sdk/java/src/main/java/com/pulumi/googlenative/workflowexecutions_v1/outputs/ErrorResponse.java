@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class ErrorResponse {
-    /**
-     * Human-readable stack trace string.
-     * 
-     */
+        /**
+         * @return Human-readable stack trace string.
+         * 
+         */
     private final String context;
-    /**
-     * Error message and data returned represented as a JSON string.
-     * 
-     */
+        /**
+         * @return Error message and data returned represented as a JSON string.
+         * 
+         */
     private final String payload;
-    /**
-     * Stack trace with detailed information of where error was generated.
-     * 
-     */
+        /**
+         * @return Stack trace with detailed information of where error was generated.
+         * 
+         */
     private final StackTraceResponse stackTrace;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class ErrorResponse {
     }
 
     /**
-     * Human-readable stack trace string.
+     * @return Human-readable stack trace string.
      * 
-    */
+     */
     public String context() {
         return this.context;
     }
     /**
-     * Error message and data returned represented as a JSON string.
+     * @return Error message and data returned represented as a JSON string.
      * 
-    */
+     */
     public String payload() {
         return this.payload;
     }
     /**
-     * Stack trace with detailed information of where error was generated.
+     * @return Stack trace with detailed information of where error was generated.
      * 
-    */
+     */
     public StackTraceResponse stackTrace() {
         return this.stackTrace;
     }

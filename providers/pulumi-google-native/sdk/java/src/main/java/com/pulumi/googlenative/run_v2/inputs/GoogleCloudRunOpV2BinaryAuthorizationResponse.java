@@ -24,6 +24,10 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationResponse extends com.pul
     @Import(name="breakglassJustification", required=true)
     private String breakglassJustification;
 
+    /**
+     * @return If present, indicates to use Breakglass using this justification. If use_default is False, then it must be empty. For more information on breakglass, see https://cloud.google.com/binary-authorization/docs/using-breakglass
+     * 
+     */
     public String breakglassJustification() {
         return this.breakglassJustification;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationResponse extends com.pul
     @Import(name="useDefault", required=true)
     private Boolean useDefault;
 
+    /**
+     * @return If True, indicates to use the default project&#39;s binary authorization policy. If False, binary authorization will be disabled.
+     * 
+     */
     public Boolean useDefault() {
         return this.useDefault;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationResponse extends com.pul
             $ = new GoogleCloudRunOpV2BinaryAuthorizationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param breakglassJustification If present, indicates to use Breakglass using this justification. If use_default is False, then it must be empty. For more information on breakglass, see https://cloud.google.com/binary-authorization/docs/using-breakglass
+         * 
+         * @return builder
+         * 
+         */
         public Builder breakglassJustification(String breakglassJustification) {
             $.breakglassJustification = breakglassJustification;
             return this;
         }
 
+        /**
+         * @param useDefault If True, indicates to use the default project&#39;s binary authorization policy. If False, binary authorization will be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useDefault(Boolean useDefault) {
             $.useDefault = useDefault;
             return this;

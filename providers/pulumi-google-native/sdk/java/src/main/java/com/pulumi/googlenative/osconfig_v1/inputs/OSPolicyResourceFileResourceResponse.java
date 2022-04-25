@@ -24,6 +24,10 @@ public final class OSPolicyResourceFileResourceResponse extends com.pulumi.resou
     @Import(name="content", required=true)
     private String content;
 
+    /**
+     * @return A a file with this content. The size of the content is limited to 1024 characters.
+     * 
+     */
     public String content() {
         return this.content;
     }
@@ -35,6 +39,10 @@ public final class OSPolicyResourceFileResourceResponse extends com.pulumi.resou
     @Import(name="file", required=true)
     private OSPolicyResourceFileResponse file;
 
+    /**
+     * @return A remote or local source.
+     * 
+     */
     public OSPolicyResourceFileResponse file() {
         return this.file;
     }
@@ -46,6 +54,10 @@ public final class OSPolicyResourceFileResourceResponse extends com.pulumi.resou
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return The absolute path of the file within the VM.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -57,6 +69,10 @@ public final class OSPolicyResourceFileResourceResponse extends com.pulumi.resou
     @Import(name="permissions", required=true)
     private String permissions;
 
+    /**
+     * @return Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit number with the 4 bit corresponding to the read permissions, the 2 bit corresponds to the write bit, and the one bit corresponds to the execute permission. Default behavior is 755. Below are some examples of permissions and their associated values: read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
+     * 
+     */
     public String permissions() {
         return this.permissions;
     }
@@ -68,6 +84,10 @@ public final class OSPolicyResourceFileResourceResponse extends com.pulumi.resou
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return Desired state of the file.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -100,26 +120,56 @@ public final class OSPolicyResourceFileResourceResponse extends com.pulumi.resou
             $ = new OSPolicyResourceFileResourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content A a file with this content. The size of the content is limited to 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param file A remote or local source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(OSPolicyResourceFileResponse file) {
             $.file = file;
             return this;
         }
 
+        /**
+         * @param path The absolute path of the file within the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param permissions Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit number with the 4 bit corresponding to the read permissions, the 2 bit corresponds to the write bit, and the one bit corresponds to the execute permission. Default behavior is 755. Below are some examples of permissions and their associated values: read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(String permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param state Desired state of the file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;

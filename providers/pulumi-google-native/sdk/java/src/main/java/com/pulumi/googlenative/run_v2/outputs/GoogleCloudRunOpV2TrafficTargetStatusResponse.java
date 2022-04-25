@@ -10,30 +10,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudRunOpV2TrafficTargetStatusResponse {
-    /**
-     * Specifies percent of the traffic to this Revision.
-     * 
-     */
+        /**
+         * @return Specifies percent of the traffic to this Revision.
+         * 
+         */
     private final Integer percent;
-    /**
-     * Revision to which this traffic is sent.
-     * 
-     */
+        /**
+         * @return Revision to which this traffic is sent.
+         * 
+         */
     private final String revision;
-    /**
-     * Indicates the string used in the URI to exclusively reference this target.
-     * 
-     */
+        /**
+         * @return Indicates the string used in the URI to exclusively reference this target.
+         * 
+         */
     private final String tag;
-    /**
-     * The allocation type for this traffic target.
-     * 
-     */
+        /**
+         * @return The allocation type for this traffic target.
+         * 
+         */
     private final String type;
-    /**
-     * Displays the target URI.
-     * 
-     */
+        /**
+         * @return Displays the target URI.
+         * 
+         */
     private final String uri;
 
     @CustomType.Constructor
@@ -51,37 +51,37 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse {
     }
 
     /**
-     * Specifies percent of the traffic to this Revision.
+     * @return Specifies percent of the traffic to this Revision.
      * 
-    */
+     */
     public Integer percent() {
         return this.percent;
     }
     /**
-     * Revision to which this traffic is sent.
+     * @return Revision to which this traffic is sent.
      * 
-    */
+     */
     public String revision() {
         return this.revision;
     }
     /**
-     * Indicates the string used in the URI to exclusively reference this target.
+     * @return Indicates the string used in the URI to exclusively reference this target.
      * 
-    */
+     */
     public String tag() {
         return this.tag;
     }
     /**
-     * The allocation type for this traffic target.
+     * @return The allocation type for this traffic target.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Displays the target URI.
+     * @return Displays the target URI.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudMlV1__ManualScalingResponse {
-    /**
-     * The number of nodes to allocate for this model. These nodes are always up, starting from the time the model is deployed, so the cost of operating this model will be proportional to `nodes` * number of hours since last billing cycle plus the cost for each prediction performed.
-     * 
-     */
+        /**
+         * @return The number of nodes to allocate for this model. These nodes are always up, starting from the time the model is deployed, so the cost of operating this model will be proportional to `nodes` * number of hours since last billing cycle plus the cost for each prediction performed.
+         * 
+         */
     private final Integer nodes;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GoogleCloudMlV1__ManualScalingResponse {
     }
 
     /**
-     * The number of nodes to allocate for this model. These nodes are always up, starting from the time the model is deployed, so the cost of operating this model will be proportional to `nodes` * number of hours since last billing cycle plus the cost for each prediction performed.
+     * @return The number of nodes to allocate for this model. These nodes are always up, starting from the time the model is deployed, so the cost of operating this model will be proportional to `nodes` * number of hours since last billing cycle plus the cost for each prediction performed.
      * 
-    */
+     */
     public Integer nodes() {
         return this.nodes;
     }

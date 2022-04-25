@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class BucketObjectCustomerEncryptionResponse {
-    /**
-     * The encryption algorithm.
-     * 
-     */
+        /**
+         * @return The encryption algorithm.
+         * 
+         */
     private final String encryptionAlgorithm;
-    /**
-     * SHA256 hash value of the encryption key.
-     * 
-     */
+        /**
+         * @return SHA256 hash value of the encryption key.
+         * 
+         */
     private final String keySha256;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class BucketObjectCustomerEncryptionResponse {
     }
 
     /**
-     * The encryption algorithm.
+     * @return The encryption algorithm.
      * 
-    */
+     */
     public String encryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
     /**
-     * SHA256 hash value of the encryption key.
+     * @return SHA256 hash value of the encryption key.
      * 
-    */
+     */
     public String keySha256() {
         return this.keySha256;
     }

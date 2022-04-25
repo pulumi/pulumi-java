@@ -31,6 +31,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
     @Import(name="conversationModelConfig")
     private @Nullable Output<GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigArgs> conversationModelConfig;
 
+    /**
+     * @return Configs of custom conversation model.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigArgs>> conversationModelConfig() {
         return Optional.ofNullable(this.conversationModelConfig);
     }
@@ -42,6 +46,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
     @Import(name="conversationProcessConfig")
     private @Nullable Output<GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs> conversationProcessConfig;
 
+    /**
+     * @return Configs for processing conversation.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs>> conversationProcessConfig() {
         return Optional.ofNullable(this.conversationProcessConfig);
     }
@@ -53,6 +61,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
     @Import(name="enableEventBasedSuggestion")
     private @Nullable Output<Boolean> enableEventBasedSuggestion;
 
+    /**
+     * @return Automatically iterates all participants and tries to compile suggestions. Supported features: ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST.
+     * 
+     */
     public Optional<Output<Boolean>> enableEventBasedSuggestion() {
         return Optional.ofNullable(this.enableEventBasedSuggestion);
     }
@@ -64,6 +76,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
     @Import(name="queryConfig")
     private @Nullable Output<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigArgs> queryConfig;
 
+    /**
+     * @return Configs of query.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigArgs>> queryConfig() {
         return Optional.ofNullable(this.queryConfig);
     }
@@ -75,6 +91,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
     @Import(name="suggestionFeature")
     private @Nullable Output<GoogleCloudDialogflowV2SuggestionFeatureArgs> suggestionFeature;
 
+    /**
+     * @return The suggestion feature.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2SuggestionFeatureArgs>> suggestionFeature() {
         return Optional.ofNullable(this.suggestionFeature);
     }
@@ -86,6 +106,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
     @Import(name="suggestionTriggerSettings")
     private @Nullable Output<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsArgs> suggestionTriggerSettings;
 
+    /**
+     * @return Settings of suggestion trigger. Currently, only ARTICLE_SUGGESTION and FAQ will use this field.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsArgs>> suggestionTriggerSettings() {
         return Optional.ofNullable(this.suggestionTriggerSettings);
     }
@@ -119,56 +143,128 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
             $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conversationModelConfig Configs of custom conversation model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conversationModelConfig(@Nullable Output<GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigArgs> conversationModelConfig) {
             $.conversationModelConfig = conversationModelConfig;
             return this;
         }
 
+        /**
+         * @param conversationModelConfig Configs of custom conversation model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conversationModelConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigArgs conversationModelConfig) {
             return conversationModelConfig(Output.of(conversationModelConfig));
         }
 
+        /**
+         * @param conversationProcessConfig Configs for processing conversation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conversationProcessConfig(@Nullable Output<GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs> conversationProcessConfig) {
             $.conversationProcessConfig = conversationProcessConfig;
             return this;
         }
 
+        /**
+         * @param conversationProcessConfig Configs for processing conversation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conversationProcessConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs conversationProcessConfig) {
             return conversationProcessConfig(Output.of(conversationProcessConfig));
         }
 
+        /**
+         * @param enableEventBasedSuggestion Automatically iterates all participants and tries to compile suggestions. Supported features: ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableEventBasedSuggestion(@Nullable Output<Boolean> enableEventBasedSuggestion) {
             $.enableEventBasedSuggestion = enableEventBasedSuggestion;
             return this;
         }
 
+        /**
+         * @param enableEventBasedSuggestion Automatically iterates all participants and tries to compile suggestions. Supported features: ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableEventBasedSuggestion(Boolean enableEventBasedSuggestion) {
             return enableEventBasedSuggestion(Output.of(enableEventBasedSuggestion));
         }
 
+        /**
+         * @param queryConfig Configs of query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryConfig(@Nullable Output<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigArgs> queryConfig) {
             $.queryConfig = queryConfig;
             return this;
         }
 
+        /**
+         * @param queryConfig Configs of query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigArgs queryConfig) {
             return queryConfig(Output.of(queryConfig));
         }
 
+        /**
+         * @param suggestionFeature The suggestion feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suggestionFeature(@Nullable Output<GoogleCloudDialogflowV2SuggestionFeatureArgs> suggestionFeature) {
             $.suggestionFeature = suggestionFeature;
             return this;
         }
 
+        /**
+         * @param suggestionFeature The suggestion feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suggestionFeature(GoogleCloudDialogflowV2SuggestionFeatureArgs suggestionFeature) {
             return suggestionFeature(Output.of(suggestionFeature));
         }
 
+        /**
+         * @param suggestionTriggerSettings Settings of suggestion trigger. Currently, only ARTICLE_SUGGESTION and FAQ will use this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suggestionTriggerSettings(@Nullable Output<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsArgs> suggestionTriggerSettings) {
             $.suggestionTriggerSettings = suggestionTriggerSettings;
             return this;
         }
 
+        /**
+         * @param suggestionTriggerSettings Settings of suggestion trigger. Currently, only ARTICLE_SUGGESTION and FAQ will use this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suggestionTriggerSettings(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsArgs suggestionTriggerSettings) {
             return suggestionTriggerSettings(Output.of(suggestionTriggerSettings));
         }

@@ -11,40 +11,40 @@ import java.util.Objects;
 
 @CustomType
 public final class SubjectDescriptionResponse {
-    /**
-     * The &#34;common name&#34; of the distinguished name.
-     * 
-     */
+        /**
+         * @return The &#34;common name&#34; of the distinguished name.
+         * 
+         */
     private final String commonName;
-    /**
-     * The serial number encoded in lowercase hexadecimal.
-     * 
-     */
+        /**
+         * @return The serial number encoded in lowercase hexadecimal.
+         * 
+         */
     private final String hexSerialNumber;
-    /**
-     * For convenience, the actual lifetime of an issued certificate. Corresponds to &#39;not_after_time&#39; - &#39;not_before_time&#39;.
-     * 
-     */
+        /**
+         * @return For convenience, the actual lifetime of an issued certificate. Corresponds to &#39;not_after_time&#39; - &#39;not_before_time&#39;.
+         * 
+         */
     private final String lifetime;
-    /**
-     * The time at which the certificate expires.
-     * 
-     */
+        /**
+         * @return The time at which the certificate expires.
+         * 
+         */
     private final String notAfterTime;
-    /**
-     * The time at which the certificate becomes valid.
-     * 
-     */
+        /**
+         * @return The time at which the certificate becomes valid.
+         * 
+         */
     private final String notBeforeTime;
-    /**
-     * Contains distinguished name fields such as the location and organization.
-     * 
-     */
+        /**
+         * @return Contains distinguished name fields such as the location and organization.
+         * 
+         */
     private final SubjectResponse subject;
-    /**
-     * The subject alternative name fields.
-     * 
-     */
+        /**
+         * @return The subject alternative name fields.
+         * 
+         */
     private final SubjectAltNamesResponse subjectAltName;
 
     @CustomType.Constructor
@@ -66,51 +66,51 @@ public final class SubjectDescriptionResponse {
     }
 
     /**
-     * The &#34;common name&#34; of the distinguished name.
+     * @return The &#34;common name&#34; of the distinguished name.
      * 
-    */
+     */
     public String commonName() {
         return this.commonName;
     }
     /**
-     * The serial number encoded in lowercase hexadecimal.
+     * @return The serial number encoded in lowercase hexadecimal.
      * 
-    */
+     */
     public String hexSerialNumber() {
         return this.hexSerialNumber;
     }
     /**
-     * For convenience, the actual lifetime of an issued certificate. Corresponds to &#39;not_after_time&#39; - &#39;not_before_time&#39;.
+     * @return For convenience, the actual lifetime of an issued certificate. Corresponds to &#39;not_after_time&#39; - &#39;not_before_time&#39;.
      * 
-    */
+     */
     public String lifetime() {
         return this.lifetime;
     }
     /**
-     * The time at which the certificate expires.
+     * @return The time at which the certificate expires.
      * 
-    */
+     */
     public String notAfterTime() {
         return this.notAfterTime;
     }
     /**
-     * The time at which the certificate becomes valid.
+     * @return The time at which the certificate becomes valid.
      * 
-    */
+     */
     public String notBeforeTime() {
         return this.notBeforeTime;
     }
     /**
-     * Contains distinguished name fields such as the location and organization.
+     * @return Contains distinguished name fields such as the location and organization.
      * 
-    */
+     */
     public SubjectResponse subject() {
         return this.subject;
     }
     /**
-     * The subject alternative name fields.
+     * @return The subject alternative name fields.
      * 
-    */
+     */
     public SubjectAltNamesResponse subjectAltName() {
         return this.subjectAltName;
     }

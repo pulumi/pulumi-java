@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class YarnApplicationResponse {
-    /**
-     * The application name.
-     * 
-     */
+        /**
+         * @return The application name.
+         * 
+         */
     private final String name;
-    /**
-     * The numerical progress of the application, from 1 to 100.
-     * 
-     */
+        /**
+         * @return The numerical progress of the application, from 1 to 100.
+         * 
+         */
     private final Double progress;
-    /**
-     * The application state.
-     * 
-     */
+        /**
+         * @return The application state.
+         * 
+         */
     private final String state;
-    /**
-     * Optional. The HTTP URL of the ApplicationMaster, HistoryServer, or TimelineServer that provides application-specific information. The URL uses the internal hostname, and requires a proxy server for resolution and, possibly, access.
-     * 
-     */
+        /**
+         * @return Optional. The HTTP URL of the ApplicationMaster, HistoryServer, or TimelineServer that provides application-specific information. The URL uses the internal hostname, and requires a proxy server for resolution and, possibly, access.
+         * 
+         */
     private final String trackingUrl;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class YarnApplicationResponse {
     }
 
     /**
-     * The application name.
+     * @return The application name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The numerical progress of the application, from 1 to 100.
+     * @return The numerical progress of the application, from 1 to 100.
      * 
-    */
+     */
     public Double progress() {
         return this.progress;
     }
     /**
-     * The application state.
+     * @return The application state.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Optional. The HTTP URL of the ApplicationMaster, HistoryServer, or TimelineServer that provides application-specific information. The URL uses the internal hostname, and requires a proxy server for resolution and, possibly, access.
+     * @return Optional. The HTTP URL of the ApplicationMaster, HistoryServer, or TimelineServer that provides application-specific information. The URL uses the internal hostname, and requires a proxy server for resolution and, possibly, access.
      * 
-    */
+     */
     public String trackingUrl() {
         return this.trackingUrl;
     }

@@ -24,6 +24,10 @@ public final class AwsS3DataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="awsAccessKey", required=true)
     private AwsAccessKeyResponse awsAccessKey;
 
+    /**
+     * @return Input only. AWS access key used to sign the API requests to the AWS S3 bucket. Permissions on the bucket must be granted to the access ID of the AWS access key. For information on our data retention policy for user credentials, see [User credentials](/storage-transfer/docs/data-retention#user-credentials).
+     * 
+     */
     public AwsAccessKeyResponse awsAccessKey() {
         return this.awsAccessKey;
     }
@@ -35,6 +39,10 @@ public final class AwsS3DataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="bucketName", required=true)
     private String bucketName;
 
+    /**
+     * @return S3 Bucket name (see [Creating a bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/create-bucket-get-location-example.html)).
+     * 
+     */
     public String bucketName() {
         return this.bucketName;
     }
@@ -46,6 +54,10 @@ public final class AwsS3DataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return Root path to transfer objects. Must be an empty string or full path name that ends with a &#39;/&#39;. This field is treated as an object prefix. As such, it should generally not begin with a &#39;/&#39;.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -57,6 +69,10 @@ public final class AwsS3DataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="roleArn", required=true)
     private String roleArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the role to support temporary credentials via `AssumeRoleWithWebIdentity`. For more information about ARNs, see [IAM ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns). When a role ARN is provided, Transfer Service fetches temporary credentials for the session using a `AssumeRoleWithWebIdentity` call for the provided role using the GoogleServiceAccount for this project.
+     * 
+     */
     public String roleArn() {
         return this.roleArn;
     }
@@ -88,21 +104,45 @@ public final class AwsS3DataResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AwsS3DataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param awsAccessKey Input only. AWS access key used to sign the API requests to the AWS S3 bucket. Permissions on the bucket must be granted to the access ID of the AWS access key. For information on our data retention policy for user credentials, see [User credentials](/storage-transfer/docs/data-retention#user-credentials).
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsAccessKey(AwsAccessKeyResponse awsAccessKey) {
             $.awsAccessKey = awsAccessKey;
             return this;
         }
 
+        /**
+         * @param bucketName S3 Bucket name (see [Creating a bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/create-bucket-get-location-example.html)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(String bucketName) {
             $.bucketName = bucketName;
             return this;
         }
 
+        /**
+         * @param path Root path to transfer objects. Must be an empty string or full path name that ends with a &#39;/&#39;. This field is treated as an object prefix. As such, it should generally not begin with a &#39;/&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param roleArn The Amazon Resource Name (ARN) of the role to support temporary credentials via `AssumeRoleWithWebIdentity`. For more information about ARNs, see [IAM ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns). When a role ARN is provided, Transfer Service fetches temporary credentials for the session using a `AssumeRoleWithWebIdentity` call for the provided role using the GoogleServiceAccount for this project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             $.roleArn = roleArn;
             return this;

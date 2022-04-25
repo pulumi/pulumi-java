@@ -23,6 +23,10 @@ public final class PositionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="column", required=true)
     private String column;
 
+    /**
+     * @return The source code column position (of the line) the current instruction was generated from.
+     * 
+     */
     public String column() {
         return this.column;
     }
@@ -34,6 +38,10 @@ public final class PositionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="length", required=true)
     private String length;
 
+    /**
+     * @return The number of bytes of source code making up this stack trace element.
+     * 
+     */
     public String length() {
         return this.length;
     }
@@ -45,6 +53,10 @@ public final class PositionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="line", required=true)
     private String line;
 
+    /**
+     * @return The source code line number the current instruction was generated from.
+     * 
+     */
     public String line() {
         return this.line;
     }
@@ -75,16 +87,34 @@ public final class PositionResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PositionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param column The source code column position (of the line) the current instruction was generated from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder column(String column) {
             $.column = column;
             return this;
         }
 
+        /**
+         * @param length The number of bytes of source code making up this stack trace element.
+         * 
+         * @return builder
+         * 
+         */
         public Builder length(String length) {
             $.length = length;
             return this;
         }
 
+        /**
+         * @param line The source code line number the current instruction was generated from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder line(String line) {
             $.line = line;
             return this;

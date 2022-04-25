@@ -11,30 +11,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GetAppProfileResult {
-    /**
-     * Long form description of the use case for this AppProfile.
-     * 
-     */
+        /**
+         * @return Long form description of the use case for this AppProfile.
+         * 
+         */
     private final String description;
-    /**
-     * Strongly validated etag for optimistic concurrency control. Preserve the value returned from `GetAppProfile` when calling `UpdateAppProfile` to fail the request if there has been a modification in the mean time. The `update_mask` of the request need not include `etag` for this protection to apply. See [Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag) and [RFC 7232](https://tools.ietf.org/html/rfc7232#section-2.3) for more details.
-     * 
-     */
+        /**
+         * @return Strongly validated etag for optimistic concurrency control. Preserve the value returned from `GetAppProfile` when calling `UpdateAppProfile` to fail the request if there has been a modification in the mean time. The `update_mask` of the request need not include `etag` for this protection to apply. See [Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag) and [RFC 7232](https://tools.ietf.org/html/rfc7232#section-2.3) for more details.
+         * 
+         */
     private final String etag;
-    /**
-     * Use a multi-cluster routing policy.
-     * 
-     */
+        /**
+         * @return Use a multi-cluster routing policy.
+         * 
+         */
     private final MultiClusterRoutingUseAnyResponse multiClusterRoutingUseAny;
-    /**
-     * The unique name of the app profile. Values are of the form `projects/{project}/instances/{instance}/appProfiles/_a-zA-Z0-9*`.
-     * 
-     */
+        /**
+         * @return The unique name of the app profile. Values are of the form `projects/{project}/instances/{instance}/appProfiles/_a-zA-Z0-9*`.
+         * 
+         */
     private final String name;
-    /**
-     * Use a single-cluster routing policy.
-     * 
-     */
+        /**
+         * @return Use a single-cluster routing policy.
+         * 
+         */
     private final SingleClusterRoutingResponse singleClusterRouting;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class GetAppProfileResult {
     }
 
     /**
-     * Long form description of the use case for this AppProfile.
+     * @return Long form description of the use case for this AppProfile.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Strongly validated etag for optimistic concurrency control. Preserve the value returned from `GetAppProfile` when calling `UpdateAppProfile` to fail the request if there has been a modification in the mean time. The `update_mask` of the request need not include `etag` for this protection to apply. See [Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag) and [RFC 7232](https://tools.ietf.org/html/rfc7232#section-2.3) for more details.
+     * @return Strongly validated etag for optimistic concurrency control. Preserve the value returned from `GetAppProfile` when calling `UpdateAppProfile` to fail the request if there has been a modification in the mean time. The `update_mask` of the request need not include `etag` for this protection to apply. See [Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag) and [RFC 7232](https://tools.ietf.org/html/rfc7232#section-2.3) for more details.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Use a multi-cluster routing policy.
+     * @return Use a multi-cluster routing policy.
      * 
-    */
+     */
     public MultiClusterRoutingUseAnyResponse multiClusterRoutingUseAny() {
         return this.multiClusterRoutingUseAny;
     }
     /**
-     * The unique name of the app profile. Values are of the form `projects/{project}/instances/{instance}/appProfiles/_a-zA-Z0-9*`.
+     * @return The unique name of the app profile. Values are of the form `projects/{project}/instances/{instance}/appProfiles/_a-zA-Z0-9*`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Use a single-cluster routing policy.
+     * @return Use a single-cluster routing policy.
      * 
-    */
+     */
     public SingleClusterRoutingResponse singleClusterRouting() {
         return this.singleClusterRouting;
     }

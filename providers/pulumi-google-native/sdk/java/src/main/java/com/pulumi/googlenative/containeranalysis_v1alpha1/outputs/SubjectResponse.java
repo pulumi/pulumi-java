@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class SubjectResponse {
-    /**
-     * &#34;&#34;: &#34;&#34; Algorithms can be e.g. sha256, sha512 See https://github.com/in-toto/attestation/blob/main/spec/field_types.md#DigestSet
-     * 
-     */
+        /**
+         * @return &#34;&#34;: &#34;&#34; Algorithms can be e.g. sha256, sha512 See https://github.com/in-toto/attestation/blob/main/spec/field_types.md#DigestSet
+         * 
+         */
     private final Map<String,String> digest;
-    /**
-     * name is the name of the Subject used here
-     * 
-     */
+        /**
+         * @return name is the name of the Subject used here
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class SubjectResponse {
     }
 
     /**
-     * &#34;&#34;: &#34;&#34; Algorithms can be e.g. sha256, sha512 See https://github.com/in-toto/attestation/blob/main/spec/field_types.md#DigestSet
+     * @return &#34;&#34;: &#34;&#34; Algorithms can be e.g. sha256, sha512 See https://github.com/in-toto/attestation/blob/main/spec/field_types.md#DigestSet
      * 
-    */
+     */
     public Map<String,String> digest() {
         return this.digest;
     }
     /**
-     * name is the name of the Subject used here
+     * @return name is the name of the Subject used here
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

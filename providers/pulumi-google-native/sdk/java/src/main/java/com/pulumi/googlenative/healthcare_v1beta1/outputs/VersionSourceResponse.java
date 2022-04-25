@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class VersionSourceResponse {
-    /**
-     * The field to extract from the MSH segment. For example, &#34;3.1&#34; or &#34;18[1].1&#34;.
-     * 
-     */
+        /**
+         * @return The field to extract from the MSH segment. For example, &#34;3.1&#34; or &#34;18[1].1&#34;.
+         * 
+         */
     private final String mshField;
-    /**
-     * The value to match with the field. For example, &#34;My Application Name&#34; or &#34;2.3&#34;.
-     * 
-     */
+        /**
+         * @return The value to match with the field. For example, &#34;My Application Name&#34; or &#34;2.3&#34;.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class VersionSourceResponse {
     }
 
     /**
-     * The field to extract from the MSH segment. For example, &#34;3.1&#34; or &#34;18[1].1&#34;.
+     * @return The field to extract from the MSH segment. For example, &#34;3.1&#34; or &#34;18[1].1&#34;.
      * 
-    */
+     */
     public String mshField() {
         return this.mshField;
     }
     /**
-     * The value to match with the field. For example, &#34;My Application Name&#34; or &#34;2.3&#34;.
+     * @return The value to match with the field. For example, &#34;My Application Name&#34; or &#34;2.3&#34;.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

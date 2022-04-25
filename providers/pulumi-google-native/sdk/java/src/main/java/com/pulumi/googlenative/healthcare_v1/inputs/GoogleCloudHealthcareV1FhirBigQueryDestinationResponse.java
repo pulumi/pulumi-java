@@ -25,6 +25,10 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationResponse extend
     @Import(name="datasetUri", required=true)
     private String datasetUri;
 
+    /**
+     * @return BigQuery URI to an existing dataset, up to 2000 characters long, in the format `bq://projectId.bqDatasetId`.
+     * 
+     */
     public String datasetUri() {
         return this.datasetUri;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationResponse extend
     @Import(name="force", required=true)
     private Boolean force;
 
+    /**
+     * @return If this flag is `TRUE`, all tables are deleted from the dataset before the new exported tables are written. If the flag is not set and the destination dataset contains tables, the export call returns an error. If `write_disposition` is specified, this parameter is ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is equivalent to write_disposition=WRITE_TRUNCATE.
+     * 
+     */
     public Boolean force() {
         return this.force;
     }
@@ -47,6 +55,10 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationResponse extend
     @Import(name="schemaConfig", required=true)
     private SchemaConfigResponse schemaConfig;
 
+    /**
+     * @return The configuration for the exported BigQuery schema.
+     * 
+     */
     public SchemaConfigResponse schemaConfig() {
         return this.schemaConfig;
     }
@@ -58,6 +70,10 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationResponse extend
     @Import(name="writeDisposition", required=true)
     private String writeDisposition;
 
+    /**
+     * @return Determines if existing data in the destination dataset is overwritten, appended to, or not written if the tables contain data. If a write_disposition is specified, the `force` parameter is ignored.
+     * 
+     */
     public String writeDisposition() {
         return this.writeDisposition;
     }
@@ -89,21 +105,45 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationResponse extend
             $ = new GoogleCloudHealthcareV1FhirBigQueryDestinationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetUri BigQuery URI to an existing dataset, up to 2000 characters long, in the format `bq://projectId.bqDatasetId`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetUri(String datasetUri) {
             $.datasetUri = datasetUri;
             return this;
         }
 
+        /**
+         * @param force If this flag is `TRUE`, all tables are deleted from the dataset before the new exported tables are written. If the flag is not set and the destination dataset contains tables, the export call returns an error. If `write_disposition` is specified, this parameter is ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is equivalent to write_disposition=WRITE_TRUNCATE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder force(Boolean force) {
             $.force = force;
             return this;
         }
 
+        /**
+         * @param schemaConfig The configuration for the exported BigQuery schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaConfig(SchemaConfigResponse schemaConfig) {
             $.schemaConfig = schemaConfig;
             return this;
         }
 
+        /**
+         * @param writeDisposition Determines if existing data in the destination dataset is overwritten, appended to, or not written if the tables contain data. If a write_disposition is specified, the `force` parameter is ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeDisposition(String writeDisposition) {
             $.writeDisposition = writeDisposition;
             return this;

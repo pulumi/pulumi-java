@@ -23,6 +23,10 @@ public final class GoogleCloudMlV1__XraiAttributionResponse extends com.pulumi.r
     @Import(name="numIntegralSteps", required=true)
     private Integer numIntegralSteps;
 
+    /**
+     * @return Number of steps for approximating the path integral. A good value to start is 50 and gradually increase until the sum to diff property is met within the desired error range.
+     * 
+     */
     public Integer numIntegralSteps() {
         return this.numIntegralSteps;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudMlV1__XraiAttributionResponse extends com.pulumi.r
             $ = new GoogleCloudMlV1__XraiAttributionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param numIntegralSteps Number of steps for approximating the path integral. A good value to start is 50 and gradually increase until the sum to diff property is met within the desired error range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numIntegralSteps(Integer numIntegralSteps) {
             $.numIntegralSteps = numIntegralSteps;
             return this;

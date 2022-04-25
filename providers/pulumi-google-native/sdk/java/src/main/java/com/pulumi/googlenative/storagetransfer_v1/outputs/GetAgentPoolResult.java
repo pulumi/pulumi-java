@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GetAgentPoolResult {
-    /**
-     * Specifies the bandwidth limit details. If this field is unspecified, the default value is set as &#39;No Limit&#39;.
-     * 
-     */
+        /**
+         * @return Specifies the bandwidth limit details. If this field is unspecified, the default value is set as &#39;No Limit&#39;.
+         * 
+         */
     private final BandwidthLimitResponse bandwidthLimit;
-    /**
-     * Specifies the client-specified AgentPool description.
-     * 
-     */
+        /**
+         * @return Specifies the client-specified AgentPool description.
+         * 
+         */
     private final String displayName;
-    /**
-     * Specifies a unique string that identifies the agent pool. Format: `projects/{project_id}/agentPools/{agent_pool_id}`
-     * 
-     */
+        /**
+         * @return Specifies a unique string that identifies the agent pool. Format: `projects/{project_id}/agentPools/{agent_pool_id}`
+         * 
+         */
     private final String name;
-    /**
-     * Specifies the state of the AgentPool.
-     * 
-     */
+        /**
+         * @return Specifies the state of the AgentPool.
+         * 
+         */
     private final String state;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class GetAgentPoolResult {
     }
 
     /**
-     * Specifies the bandwidth limit details. If this field is unspecified, the default value is set as &#39;No Limit&#39;.
+     * @return Specifies the bandwidth limit details. If this field is unspecified, the default value is set as &#39;No Limit&#39;.
      * 
-    */
+     */
     public BandwidthLimitResponse bandwidthLimit() {
         return this.bandwidthLimit;
     }
     /**
-     * Specifies the client-specified AgentPool description.
+     * @return Specifies the client-specified AgentPool description.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Specifies a unique string that identifies the agent pool. Format: `projects/{project_id}/agentPools/{agent_pool_id}`
+     * @return Specifies a unique string that identifies the agent pool. Format: `projects/{project_id}/agentPools/{agent_pool_id}`
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Specifies the state of the AgentPool.
+     * @return Specifies the state of the AgentPool.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

@@ -9,45 +9,45 @@ import java.util.Objects;
 
 @CustomType
 public final class GetTagValueResult {
-    /**
-     * Creation time.
-     * 
-     */
+        /**
+         * @return Creation time.
+         * 
+         */
     private final String createTime;
-    /**
-     * Optional. User-assigned description of the TagValue. Must not exceed 256 characters. Read-write.
-     * 
-     */
+        /**
+         * @return Optional. User-assigned description of the TagValue. Must not exceed 256 characters. Read-write.
+         * 
+         */
     private final String description;
-    /**
-     * Optional. Entity tag which users can pass to prevent race conditions. This field is always set in server responses. See UpdateTagValueRequest for details.
-     * 
-     */
+        /**
+         * @return Optional. Entity tag which users can pass to prevent race conditions. This field is always set in server responses. See UpdateTagValueRequest for details.
+         * 
+         */
     private final String etag;
-    /**
-     * Immutable. Resource name for TagValue in the format `tagValues/456`.
-     * 
-     */
+        /**
+         * @return Immutable. Resource name for TagValue in the format `tagValues/456`.
+         * 
+         */
     private final String name;
-    /**
-     * Namespaced name of the TagValue. Must be in the format `{organization_id}/{tag_key_short_name}/{short_name}`.
-     * 
-     */
+        /**
+         * @return Namespaced name of the TagValue. Must be in the format `{organization_id}/{tag_key_short_name}/{short_name}`.
+         * 
+         */
     private final String namespacedName;
-    /**
-     * Immutable. The resource name of the new TagValue&#39;s parent TagKey. Must be of the form `tagKeys/{tag_key_id}`.
-     * 
-     */
+        /**
+         * @return Immutable. The resource name of the new TagValue&#39;s parent TagKey. Must be of the form `tagKeys/{tag_key_id}`.
+         * 
+         */
     private final String parent;
-    /**
-     * Immutable. User-assigned short name for TagValue. The short name should be unique for TagValues within the same parent TagKey. The short name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
-     * 
-     */
+        /**
+         * @return Immutable. User-assigned short name for TagValue. The short name should be unique for TagValues within the same parent TagKey. The short name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
+         * 
+         */
     private final String shortName;
-    /**
-     * Update time.
-     * 
-     */
+        /**
+         * @return Update time.
+         * 
+         */
     private final String updateTime;
 
     @CustomType.Constructor
@@ -71,58 +71,58 @@ public final class GetTagValueResult {
     }
 
     /**
-     * Creation time.
+     * @return Creation time.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Optional. User-assigned description of the TagValue. Must not exceed 256 characters. Read-write.
+     * @return Optional. User-assigned description of the TagValue. Must not exceed 256 characters. Read-write.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Optional. Entity tag which users can pass to prevent race conditions. This field is always set in server responses. See UpdateTagValueRequest for details.
+     * @return Optional. Entity tag which users can pass to prevent race conditions. This field is always set in server responses. See UpdateTagValueRequest for details.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Immutable. Resource name for TagValue in the format `tagValues/456`.
+     * @return Immutable. Resource name for TagValue in the format `tagValues/456`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Namespaced name of the TagValue. Must be in the format `{organization_id}/{tag_key_short_name}/{short_name}`.
+     * @return Namespaced name of the TagValue. Must be in the format `{organization_id}/{tag_key_short_name}/{short_name}`.
      * 
-    */
+     */
     public String namespacedName() {
         return this.namespacedName;
     }
     /**
-     * Immutable. The resource name of the new TagValue&#39;s parent TagKey. Must be of the form `tagKeys/{tag_key_id}`.
+     * @return Immutable. The resource name of the new TagValue&#39;s parent TagKey. Must be of the form `tagKeys/{tag_key_id}`.
      * 
-    */
+     */
     public String parent() {
         return this.parent;
     }
     /**
-     * Immutable. User-assigned short name for TagValue. The short name should be unique for TagValues within the same parent TagKey. The short name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
+     * @return Immutable. User-assigned short name for TagValue. The short name should be unique for TagValues within the same parent TagKey. The short name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
      * 
-    */
+     */
     public String shortName() {
         return this.shortName;
     }
     /**
-     * Update time.
+     * @return Update time.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

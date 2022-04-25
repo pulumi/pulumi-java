@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class SparkSqlBatchResponse {
-    /**
-     * Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
-     * 
-     */
+        /**
+         * @return Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
+         * 
+         */
     private final List<String> jarFileUris;
-    /**
-     * The HCFS URI of the script that contains Spark SQL queries to execute.
-     * 
-     */
+        /**
+         * @return The HCFS URI of the script that contains Spark SQL queries to execute.
+         * 
+         */
     private final String queryFileUri;
-    /**
-     * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name=&#34;value&#34;;).
-     * 
-     */
+        /**
+         * @return Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name=&#34;value&#34;;).
+         * 
+         */
     private final Map<String,String> queryVariables;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class SparkSqlBatchResponse {
     }
 
     /**
-     * Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
+     * @return Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
      * 
-    */
+     */
     public List<String> jarFileUris() {
         return this.jarFileUris;
     }
     /**
-     * The HCFS URI of the script that contains Spark SQL queries to execute.
+     * @return The HCFS URI of the script that contains Spark SQL queries to execute.
      * 
-    */
+     */
     public String queryFileUri() {
         return this.queryFileUri;
     }
     /**
-     * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name=&#34;value&#34;;).
+     * @return Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name=&#34;value&#34;;).
      * 
-    */
+     */
     public Map<String,String> queryVariables() {
         return this.queryVariables;
     }

@@ -22,6 +22,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiproduct")
     private @Nullable Output<String> apiproduct;
 
+    /**
+     * @return Name of the API product for which the developer is purchasing a subscription.
+     * 
+     */
     public Optional<Output<String>> apiproduct() {
         return Optional.ofNullable(this.apiproduct);
     }
@@ -40,6 +44,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endTime")
     private @Nullable Output<String> endTime;
 
+    /**
+     * @return Time when the API product subscription ends in milliseconds since epoch.
+     * 
+     */
     public Optional<Output<String>> endTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -58,6 +66,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startTime")
     private @Nullable Output<String> startTime;
 
+    /**
+     * @return Time when the API product subscription starts in milliseconds since epoch.
+     * 
+     */
     public Optional<Output<String>> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -90,11 +102,23 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiproduct Name of the API product for which the developer is purchasing a subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiproduct(@Nullable Output<String> apiproduct) {
             $.apiproduct = apiproduct;
             return this;
         }
 
+        /**
+         * @param apiproduct Name of the API product for which the developer is purchasing a subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiproduct(String apiproduct) {
             return apiproduct(Output.of(apiproduct));
         }
@@ -108,11 +132,23 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
             return developerId(Output.of(developerId));
         }
 
+        /**
+         * @param endTime Time when the API product subscription ends in milliseconds since epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(@Nullable Output<String> endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param endTime Time when the API product subscription ends in milliseconds since epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             return endTime(Output.of(endTime));
         }
@@ -126,11 +162,23 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
             return organizationId(Output.of(organizationId));
         }
 
+        /**
+         * @param startTime Time when the API product subscription starts in milliseconds since epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime Time when the API product subscription starts in milliseconds since epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }

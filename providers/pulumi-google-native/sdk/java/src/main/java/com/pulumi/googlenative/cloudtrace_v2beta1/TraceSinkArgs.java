@@ -23,6 +23,10 @@ public final class TraceSinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The canonical sink resource name, unique within the project. Must be of the form: project/[PROJECT_NUMBER]/traceSinks/[SINK_ID]. E.g.: `&#34;projects/12345/traceSinks/my-project-trace-sink&#34;`. Sink identifiers are limited to 256 characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -34,6 +38,10 @@ public final class TraceSinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="outputConfig", required=true)
     private Output<OutputConfigArgs> outputConfig;
 
+    /**
+     * @return The export destination.
+     * 
+     */
     public Output<OutputConfigArgs> outputConfig() {
         return this.outputConfig;
     }
@@ -71,20 +79,44 @@ public final class TraceSinkArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TraceSinkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The canonical sink resource name, unique within the project. Must be of the form: project/[PROJECT_NUMBER]/traceSinks/[SINK_ID]. E.g.: `&#34;projects/12345/traceSinks/my-project-trace-sink&#34;`. Sink identifiers are limited to 256 characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The canonical sink resource name, unique within the project. Must be of the form: project/[PROJECT_NUMBER]/traceSinks/[SINK_ID]. E.g.: `&#34;projects/12345/traceSinks/my-project-trace-sink&#34;`. Sink identifiers are limited to 256 characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param outputConfig The export destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputConfig(Output<OutputConfigArgs> outputConfig) {
             $.outputConfig = outputConfig;
             return this;
         }
 
+        /**
+         * @param outputConfig The export destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputConfig(OutputConfigArgs outputConfig) {
             return outputConfig(Output.of(outputConfig));
         }

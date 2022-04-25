@@ -26,6 +26,10 @@ public final class AttestationAuthorityHintArgs extends com.pulumi.resources.Res
     @Import(name="humanReadableName")
     private @Nullable Output<String> humanReadableName;
 
+    /**
+     * @return The human readable name of this Attestation Authority, for example &#34;qa&#34;.
+     * 
+     */
     public Optional<Output<String>> humanReadableName() {
         return Optional.ofNullable(this.humanReadableName);
     }
@@ -54,11 +58,23 @@ public final class AttestationAuthorityHintArgs extends com.pulumi.resources.Res
             $ = new AttestationAuthorityHintArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param humanReadableName The human readable name of this Attestation Authority, for example &#34;qa&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder humanReadableName(@Nullable Output<String> humanReadableName) {
             $.humanReadableName = humanReadableName;
             return this;
         }
 
+        /**
+         * @param humanReadableName The human readable name of this Attestation Authority, for example &#34;qa&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder humanReadableName(String humanReadableName) {
             return humanReadableName(Output.of(humanReadableName));
         }

@@ -13,90 +13,90 @@ import java.util.Objects;
 
 @CustomType
 public final class PackageInfoNoteResponse {
-    /**
-     * Indicates whether the file content of this package has been available for or subjected to analysis when creating the SPDX document
-     * 
-     */
+        /**
+         * @return Indicates whether the file content of this package has been available for or subjected to analysis when creating the SPDX document
+         * 
+         */
     private final Boolean analyzed;
-    /**
-     * A place for the SPDX data creator to record, at the package level, acknowledgements that may be needed to be communicated in some contexts
-     * 
-     */
+        /**
+         * @return A place for the SPDX data creator to record, at the package level, acknowledgements that may be needed to be communicated in some contexts
+         * 
+         */
     private final String attribution;
-    /**
-     * Provide an independently reproducible mechanism that permits unique identification of a specific package that correlates to the data in this SPDX file
-     * 
-     */
+        /**
+         * @return Provide an independently reproducible mechanism that permits unique identification of a specific package that correlates to the data in this SPDX file
+         * 
+         */
     private final String checksum;
-    /**
-     * Identify the copyright holders of the package, as well as any dates present
-     * 
-     */
+        /**
+         * @return Identify the copyright holders of the package, as well as any dates present
+         * 
+         */
     private final String copyright;
-    /**
-     * A more detailed description of the package
-     * 
-     */
+        /**
+         * @return A more detailed description of the package
+         * 
+         */
     private final String detailedDescription;
-    /**
-     * This section identifies the download Universal Resource Locator (URL), or a specific location within a version control system (VCS) for the package at the time that the SPDX file was created
-     * 
-     */
+        /**
+         * @return This section identifies the download Universal Resource Locator (URL), or a specific location within a version control system (VCS) for the package at the time that the SPDX file was created
+         * 
+         */
     private final String downloadLocation;
-    /**
-     * ExternalRef
-     * 
-     */
+        /**
+         * @return ExternalRef
+         * 
+         */
     private final List<ExternalRefResponse> externalRefs;
-    /**
-     * Contain the license the SPDX file creator has concluded as governing the This field is to contain a list of all licenses found in the package. The relationship between licenses (i.e., conjunctive, disjunctive) is not specified in this field – it is simply a listing of all licenses found
-     * 
-     */
+        /**
+         * @return Contain the license the SPDX file creator has concluded as governing the This field is to contain a list of all licenses found in the package. The relationship between licenses (i.e., conjunctive, disjunctive) is not specified in this field – it is simply a listing of all licenses found
+         * 
+         */
     private final List<String> filesLicenseInfo;
-    /**
-     * Provide a place for the SPDX file creator to record a web site that serves as the package&#39;s home page
-     * 
-     */
+        /**
+         * @return Provide a place for the SPDX file creator to record a web site that serves as the package&#39;s home page
+         * 
+         */
     private final String homePage;
-    /**
-     * List the licenses that have been declared by the authors of the package
-     * 
-     */
+        /**
+         * @return List the licenses that have been declared by the authors of the package
+         * 
+         */
     private final LicenseResponse licenseDeclared;
-    /**
-     * If the package identified in the SPDX file originated from a different person or organization than identified as Package Supplier, this field identifies from where or whom the package originally came
-     * 
-     */
+        /**
+         * @return If the package identified in the SPDX file originated from a different person or organization than identified as Package Supplier, this field identifies from where or whom the package originally came
+         * 
+         */
     private final String originator;
-    /**
-     * The type of package: OS, MAVEN, GO, GO_STDLIB, etc.
-     * 
-     */
+        /**
+         * @return The type of package: OS, MAVEN, GO, GO_STDLIB, etc.
+         * 
+         */
     private final String packageType;
-    /**
-     * A short description of the package
-     * 
-     */
+        /**
+         * @return A short description of the package
+         * 
+         */
     private final String summaryDescription;
-    /**
-     * Identify the actual distribution source for the package/directory identified in the SPDX file
-     * 
-     */
+        /**
+         * @return Identify the actual distribution source for the package/directory identified in the SPDX file
+         * 
+         */
     private final String supplier;
-    /**
-     * Identify the full name of the package as given by the Package Originator
-     * 
-     */
+        /**
+         * @return Identify the full name of the package as given by the Package Originator
+         * 
+         */
     private final String title;
-    /**
-     * This field provides an independently reproducible mechanism identifying specific contents of a package based on the actual files (except the SPDX file itself, if it is included in the package) that make up each package and that correlates to the data in this SPDX file
-     * 
-     */
+        /**
+         * @return This field provides an independently reproducible mechanism identifying specific contents of a package based on the actual files (except the SPDX file itself, if it is included in the package) that make up each package and that correlates to the data in this SPDX file
+         * 
+         */
     private final String verificationCode;
-    /**
-     * Identify the version of the package
-     * 
-     */
+        /**
+         * @return Identify the version of the package
+         * 
+         */
     private final String version;
 
     @CustomType.Constructor
@@ -138,121 +138,121 @@ public final class PackageInfoNoteResponse {
     }
 
     /**
-     * Indicates whether the file content of this package has been available for or subjected to analysis when creating the SPDX document
+     * @return Indicates whether the file content of this package has been available for or subjected to analysis when creating the SPDX document
      * 
-    */
+     */
     public Boolean analyzed() {
         return this.analyzed;
     }
     /**
-     * A place for the SPDX data creator to record, at the package level, acknowledgements that may be needed to be communicated in some contexts
+     * @return A place for the SPDX data creator to record, at the package level, acknowledgements that may be needed to be communicated in some contexts
      * 
-    */
+     */
     public String attribution() {
         return this.attribution;
     }
     /**
-     * Provide an independently reproducible mechanism that permits unique identification of a specific package that correlates to the data in this SPDX file
+     * @return Provide an independently reproducible mechanism that permits unique identification of a specific package that correlates to the data in this SPDX file
      * 
-    */
+     */
     public String checksum() {
         return this.checksum;
     }
     /**
-     * Identify the copyright holders of the package, as well as any dates present
+     * @return Identify the copyright holders of the package, as well as any dates present
      * 
-    */
+     */
     public String copyright() {
         return this.copyright;
     }
     /**
-     * A more detailed description of the package
+     * @return A more detailed description of the package
      * 
-    */
+     */
     public String detailedDescription() {
         return this.detailedDescription;
     }
     /**
-     * This section identifies the download Universal Resource Locator (URL), or a specific location within a version control system (VCS) for the package at the time that the SPDX file was created
+     * @return This section identifies the download Universal Resource Locator (URL), or a specific location within a version control system (VCS) for the package at the time that the SPDX file was created
      * 
-    */
+     */
     public String downloadLocation() {
         return this.downloadLocation;
     }
     /**
-     * ExternalRef
+     * @return ExternalRef
      * 
-    */
+     */
     public List<ExternalRefResponse> externalRefs() {
         return this.externalRefs;
     }
     /**
-     * Contain the license the SPDX file creator has concluded as governing the This field is to contain a list of all licenses found in the package. The relationship between licenses (i.e., conjunctive, disjunctive) is not specified in this field – it is simply a listing of all licenses found
+     * @return Contain the license the SPDX file creator has concluded as governing the This field is to contain a list of all licenses found in the package. The relationship between licenses (i.e., conjunctive, disjunctive) is not specified in this field – it is simply a listing of all licenses found
      * 
-    */
+     */
     public List<String> filesLicenseInfo() {
         return this.filesLicenseInfo;
     }
     /**
-     * Provide a place for the SPDX file creator to record a web site that serves as the package&#39;s home page
+     * @return Provide a place for the SPDX file creator to record a web site that serves as the package&#39;s home page
      * 
-    */
+     */
     public String homePage() {
         return this.homePage;
     }
     /**
-     * List the licenses that have been declared by the authors of the package
+     * @return List the licenses that have been declared by the authors of the package
      * 
-    */
+     */
     public LicenseResponse licenseDeclared() {
         return this.licenseDeclared;
     }
     /**
-     * If the package identified in the SPDX file originated from a different person or organization than identified as Package Supplier, this field identifies from where or whom the package originally came
+     * @return If the package identified in the SPDX file originated from a different person or organization than identified as Package Supplier, this field identifies from where or whom the package originally came
      * 
-    */
+     */
     public String originator() {
         return this.originator;
     }
     /**
-     * The type of package: OS, MAVEN, GO, GO_STDLIB, etc.
+     * @return The type of package: OS, MAVEN, GO, GO_STDLIB, etc.
      * 
-    */
+     */
     public String packageType() {
         return this.packageType;
     }
     /**
-     * A short description of the package
+     * @return A short description of the package
      * 
-    */
+     */
     public String summaryDescription() {
         return this.summaryDescription;
     }
     /**
-     * Identify the actual distribution source for the package/directory identified in the SPDX file
+     * @return Identify the actual distribution source for the package/directory identified in the SPDX file
      * 
-    */
+     */
     public String supplier() {
         return this.supplier;
     }
     /**
-     * Identify the full name of the package as given by the Package Originator
+     * @return Identify the full name of the package as given by the Package Originator
      * 
-    */
+     */
     public String title() {
         return this.title;
     }
     /**
-     * This field provides an independently reproducible mechanism identifying specific contents of a package based on the actual files (except the SPDX file itself, if it is included in the package) that make up each package and that correlates to the data in this SPDX file
+     * @return This field provides an independently reproducible mechanism identifying specific contents of a package based on the actual files (except the SPDX file itself, if it is included in the package) that make up each package and that correlates to the data in this SPDX file
      * 
-    */
+     */
     public String verificationCode() {
         return this.verificationCode;
     }
     /**
-     * Identify the version of the package
+     * @return Identify the version of the package
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

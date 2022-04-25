@@ -30,6 +30,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="byproducts")
     private @Nullable Output<ByProductsArgs> byproducts;
 
+    /**
+     * @return ByProducts are data generated as part of a software supply chain step, but are not the actual result of the step.
+     * 
+     */
     public Optional<Output<ByProductsArgs>> byproducts() {
         return Optional.ofNullable(this.byproducts);
     }
@@ -41,6 +45,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="command")
     private @Nullable Output<List<String>> command;
 
+    /**
+     * @return This field contains the full command executed for the step. This can also be empty if links are generated for operations that aren&#39;t directly mapped to a specific command. Each term in the command is an independent string in the list. An example of a command in the in-toto metadata field is: &#34;command&#34;: [&#34;git&#34;, &#34;clone&#34;, &#34;https://github.com/in-toto/demo-project.git&#34;]
+     * 
+     */
     public Optional<Output<List<String>>> command() {
         return Optional.ofNullable(this.command);
     }
@@ -52,6 +60,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="environment")
     private @Nullable Output<EnvironmentArgs> environment;
 
+    /**
+     * @return This is a field that can be used to capture information about the environment. It is suggested for this field to contain information that details environment variables, filesystem information, and the present working directory. The recommended structure of this field is: &#34;environment&#34;: { &#34;custom_values&#34;: { &#34;variables&#34;: &#34;&#34;, &#34;filesystem&#34;: &#34;&#34;, &#34;workdir&#34;: &#34;&#34;, &#34;&#34;: &#34;...&#34; } }
+     * 
+     */
     public Optional<Output<EnvironmentArgs>> environment() {
         return Optional.ofNullable(this.environment);
     }
@@ -63,6 +75,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="materials")
     private @Nullable Output<List<GrafeasV1beta1IntotoArtifactArgs>> materials;
 
+    /**
+     * @return Materials are the supply chain artifacts that go into the step and are used for the operation performed. The key of the map is the path of the artifact and the structure contains the recorded hash information. An example is: &#34;materials&#34;: [ { &#34;resource_uri&#34;: &#34;foo/bar&#34;, &#34;hashes&#34;: { &#34;sha256&#34;: &#34;ebebf...&#34;, : } } ]
+     * 
+     */
     public Optional<Output<List<GrafeasV1beta1IntotoArtifactArgs>>> materials() {
         return Optional.ofNullable(this.materials);
     }
@@ -74,6 +90,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="products")
     private @Nullable Output<List<GrafeasV1beta1IntotoArtifactArgs>> products;
 
+    /**
+     * @return Products are the supply chain artifacts generated as a result of the step. The structure is identical to that of materials.
+     * 
+     */
     public Optional<Output<List<GrafeasV1beta1IntotoArtifactArgs>>> products() {
         return Optional.ofNullable(this.products);
     }
@@ -106,59 +126,137 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LinkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param byproducts ByProducts are data generated as part of a software supply chain step, but are not the actual result of the step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder byproducts(@Nullable Output<ByProductsArgs> byproducts) {
             $.byproducts = byproducts;
             return this;
         }
 
+        /**
+         * @param byproducts ByProducts are data generated as part of a software supply chain step, but are not the actual result of the step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder byproducts(ByProductsArgs byproducts) {
             return byproducts(Output.of(byproducts));
         }
 
+        /**
+         * @param command This field contains the full command executed for the step. This can also be empty if links are generated for operations that aren&#39;t directly mapped to a specific command. Each term in the command is an independent string in the list. An example of a command in the in-toto metadata field is: &#34;command&#34;: [&#34;git&#34;, &#34;clone&#34;, &#34;https://github.com/in-toto/demo-project.git&#34;]
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(@Nullable Output<List<String>> command) {
             $.command = command;
             return this;
         }
 
+        /**
+         * @param command This field contains the full command executed for the step. This can also be empty if links are generated for operations that aren&#39;t directly mapped to a specific command. Each term in the command is an independent string in the list. An example of a command in the in-toto metadata field is: &#34;command&#34;: [&#34;git&#34;, &#34;clone&#34;, &#34;https://github.com/in-toto/demo-project.git&#34;]
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(List<String> command) {
             return command(Output.of(command));
         }
 
+        /**
+         * @param command This field contains the full command executed for the step. This can also be empty if links are generated for operations that aren&#39;t directly mapped to a specific command. Each term in the command is an independent string in the list. An example of a command in the in-toto metadata field is: &#34;command&#34;: [&#34;git&#34;, &#34;clone&#34;, &#34;https://github.com/in-toto/demo-project.git&#34;]
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(String... command) {
             return command(List.of(command));
         }
 
+        /**
+         * @param environment This is a field that can be used to capture information about the environment. It is suggested for this field to contain information that details environment variables, filesystem information, and the present working directory. The recommended structure of this field is: &#34;environment&#34;: { &#34;custom_values&#34;: { &#34;variables&#34;: &#34;&#34;, &#34;filesystem&#34;: &#34;&#34;, &#34;workdir&#34;: &#34;&#34;, &#34;&#34;: &#34;...&#34; } }
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(@Nullable Output<EnvironmentArgs> environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param environment This is a field that can be used to capture information about the environment. It is suggested for this field to contain information that details environment variables, filesystem information, and the present working directory. The recommended structure of this field is: &#34;environment&#34;: { &#34;custom_values&#34;: { &#34;variables&#34;: &#34;&#34;, &#34;filesystem&#34;: &#34;&#34;, &#34;workdir&#34;: &#34;&#34;, &#34;&#34;: &#34;...&#34; } }
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(EnvironmentArgs environment) {
             return environment(Output.of(environment));
         }
 
+        /**
+         * @param materials Materials are the supply chain artifacts that go into the step and are used for the operation performed. The key of the map is the path of the artifact and the structure contains the recorded hash information. An example is: &#34;materials&#34;: [ { &#34;resource_uri&#34;: &#34;foo/bar&#34;, &#34;hashes&#34;: { &#34;sha256&#34;: &#34;ebebf...&#34;, : } } ]
+         * 
+         * @return builder
+         * 
+         */
         public Builder materials(@Nullable Output<List<GrafeasV1beta1IntotoArtifactArgs>> materials) {
             $.materials = materials;
             return this;
         }
 
+        /**
+         * @param materials Materials are the supply chain artifacts that go into the step and are used for the operation performed. The key of the map is the path of the artifact and the structure contains the recorded hash information. An example is: &#34;materials&#34;: [ { &#34;resource_uri&#34;: &#34;foo/bar&#34;, &#34;hashes&#34;: { &#34;sha256&#34;: &#34;ebebf...&#34;, : } } ]
+         * 
+         * @return builder
+         * 
+         */
         public Builder materials(List<GrafeasV1beta1IntotoArtifactArgs> materials) {
             return materials(Output.of(materials));
         }
 
+        /**
+         * @param materials Materials are the supply chain artifacts that go into the step and are used for the operation performed. The key of the map is the path of the artifact and the structure contains the recorded hash information. An example is: &#34;materials&#34;: [ { &#34;resource_uri&#34;: &#34;foo/bar&#34;, &#34;hashes&#34;: { &#34;sha256&#34;: &#34;ebebf...&#34;, : } } ]
+         * 
+         * @return builder
+         * 
+         */
         public Builder materials(GrafeasV1beta1IntotoArtifactArgs... materials) {
             return materials(List.of(materials));
         }
 
+        /**
+         * @param products Products are the supply chain artifacts generated as a result of the step. The structure is identical to that of materials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder products(@Nullable Output<List<GrafeasV1beta1IntotoArtifactArgs>> products) {
             $.products = products;
             return this;
         }
 
+        /**
+         * @param products Products are the supply chain artifacts generated as a result of the step. The structure is identical to that of materials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder products(List<GrafeasV1beta1IntotoArtifactArgs> products) {
             return products(Output.of(products));
         }
 
+        /**
+         * @param products Products are the supply chain artifacts generated as a result of the step. The structure is identical to that of materials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder products(GrafeasV1beta1IntotoArtifactArgs... products) {
             return products(List.of(products));
         }

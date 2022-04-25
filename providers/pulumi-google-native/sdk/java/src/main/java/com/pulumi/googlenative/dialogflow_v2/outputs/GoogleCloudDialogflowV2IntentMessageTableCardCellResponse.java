@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowV2IntentMessageTableCardCellResponse {
-    /**
-     * Text in this cell.
-     * 
-     */
+        /**
+         * @return Text in this cell.
+         * 
+         */
     private final String text;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardCellResponse {
     }
 
     /**
-     * Text in this cell.
+     * @return Text in this cell.
      * 
-    */
+     */
     public String text() {
         return this.text;
     }

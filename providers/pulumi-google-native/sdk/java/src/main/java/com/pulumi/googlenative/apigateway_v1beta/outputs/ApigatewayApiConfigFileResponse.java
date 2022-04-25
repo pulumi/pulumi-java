@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ApigatewayApiConfigFileResponse {
-    /**
-     * The bytes that constitute the file.
-     * 
-     */
+        /**
+         * @return The bytes that constitute the file.
+         * 
+         */
     private final String contents;
-    /**
-     * The file path (full or relative path). This is typically the path of the file when it is uploaded.
-     * 
-     */
+        /**
+         * @return The file path (full or relative path). This is typically the path of the file when it is uploaded.
+         * 
+         */
     private final String path;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ApigatewayApiConfigFileResponse {
     }
 
     /**
-     * The bytes that constitute the file.
+     * @return The bytes that constitute the file.
      * 
-    */
+     */
     public String contents() {
         return this.contents;
     }
     /**
-     * The file path (full or relative path). This is typically the path of the file when it is uploaded.
+     * @return The file path (full or relative path). This is typically the path of the file when it is uploaded.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }

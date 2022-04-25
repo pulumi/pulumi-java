@@ -27,6 +27,10 @@ public final class TypeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fields", required=true)
     private List<FieldResponse> fields;
 
+    /**
+     * @return The list of fields.
+     * 
+     */
     public List<FieldResponse> fields() {
         return this.fields;
     }
@@ -38,6 +42,10 @@ public final class TypeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The fully qualified message name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -49,6 +57,10 @@ public final class TypeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="oneofs", required=true)
     private List<String> oneofs;
 
+    /**
+     * @return The list of types appearing in `oneof` definitions in this type.
+     * 
+     */
     public List<String> oneofs() {
         return this.oneofs;
     }
@@ -60,6 +72,10 @@ public final class TypeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="options", required=true)
     private List<OptionResponse> options;
 
+    /**
+     * @return The protocol buffer options.
+     * 
+     */
     public List<OptionResponse> options() {
         return this.options;
     }
@@ -71,6 +87,10 @@ public final class TypeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceContext", required=true)
     private SourceContextResponse sourceContext;
 
+    /**
+     * @return The source context.
+     * 
+     */
     public SourceContextResponse sourceContext() {
         return this.sourceContext;
     }
@@ -82,6 +102,10 @@ public final class TypeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="syntax", required=true)
     private String syntax;
 
+    /**
+     * @return The source syntax.
+     * 
+     */
     public String syntax() {
         return this.syntax;
     }
@@ -115,43 +139,97 @@ public final class TypeResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TypeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fields The list of fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(List<FieldResponse> fields) {
             $.fields = fields;
             return this;
         }
 
+        /**
+         * @param fields The list of fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(FieldResponse... fields) {
             return fields(List.of(fields));
         }
 
+        /**
+         * @param name The fully qualified message name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param oneofs The list of types appearing in `oneof` definitions in this type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oneofs(List<String> oneofs) {
             $.oneofs = oneofs;
             return this;
         }
 
+        /**
+         * @param oneofs The list of types appearing in `oneof` definitions in this type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oneofs(String... oneofs) {
             return oneofs(List.of(oneofs));
         }
 
+        /**
+         * @param options The protocol buffer options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(List<OptionResponse> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options The protocol buffer options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(OptionResponse... options) {
             return options(List.of(options));
         }
 
+        /**
+         * @param sourceContext The source context.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceContext(SourceContextResponse sourceContext) {
             $.sourceContext = sourceContext;
             return this;
         }
 
+        /**
+         * @param syntax The source syntax.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syntax(String syntax) {
             $.syntax = syntax;
             return this;

@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class DistributionPolicyZoneConfigurationResponse {
-    /**
-     * The URL of the zone. The zone must exist in the region where the managed instance group is located.
-     * 
-     */
+        /**
+         * @return The URL of the zone. The zone must exist in the region where the managed instance group is located.
+         * 
+         */
     private final String zone;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class DistributionPolicyZoneConfigurationResponse {
     }
 
     /**
-     * The URL of the zone. The zone must exist in the region where the managed instance group is located.
+     * @return The URL of the zone. The zone must exist in the region where the managed instance group is located.
      * 
-    */
+     */
     public String zone() {
         return this.zone;
     }

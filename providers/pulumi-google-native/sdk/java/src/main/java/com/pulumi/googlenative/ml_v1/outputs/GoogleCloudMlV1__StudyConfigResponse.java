@@ -13,25 +13,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudMlV1__StudyConfigResponse {
-    /**
-     * The search algorithm specified for the study.
-     * 
-     */
+        /**
+         * @return The search algorithm specified for the study.
+         * 
+         */
     private final String algorithm;
-    /**
-     * Configuration for automated stopping of unpromising Trials.
-     * 
-     */
+        /**
+         * @return Configuration for automated stopping of unpromising Trials.
+         * 
+         */
     private final GoogleCloudMlV1__AutomatedStoppingConfigResponse automatedStoppingConfig;
-    /**
-     * Metric specs for the study.
-     * 
-     */
+        /**
+         * @return Metric specs for the study.
+         * 
+         */
     private final List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> metrics;
-    /**
-     * The set of parameters to tune.
-     * 
-     */
+        /**
+         * @return The set of parameters to tune.
+         * 
+         */
     private final List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> parameters;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class GoogleCloudMlV1__StudyConfigResponse {
     }
 
     /**
-     * The search algorithm specified for the study.
+     * @return The search algorithm specified for the study.
      * 
-    */
+     */
     public String algorithm() {
         return this.algorithm;
     }
     /**
-     * Configuration for automated stopping of unpromising Trials.
+     * @return Configuration for automated stopping of unpromising Trials.
      * 
-    */
+     */
     public GoogleCloudMlV1__AutomatedStoppingConfigResponse automatedStoppingConfig() {
         return this.automatedStoppingConfig;
     }
     /**
-     * Metric specs for the study.
+     * @return Metric specs for the study.
      * 
-    */
+     */
     public List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> metrics() {
         return this.metrics;
     }
     /**
-     * The set of parameters to tune.
+     * @return The set of parameters to tune.
      * 
-    */
+     */
     public List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> parameters() {
         return this.parameters;
     }

@@ -11,30 +11,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceResponse {
-    /**
-     * Optional. Specifies a list of allowed custom CA certificates (in DER format) for HTTPS verification. This overrides the default SSL trust store. If this is empty or unspecified, Dialogflow will use Google&#39;s default trust store to verify certificates. N.B. Make sure the HTTPS server certificates are signed with &#34;subject alt name&#34;. For instance a certificate can be self-signed using the following command, openssl x509 -req -days 200 -in example.com.csr \ -signkey example.com.key \ -out example.com.crt \ -extfile &lt;(printf &#34;\nsubjectAltName=&#39;DNS:www.example.com&#39;&#34;)
-     * 
-     */
+        /**
+         * @return Optional. Specifies a list of allowed custom CA certificates (in DER format) for HTTPS verification. This overrides the default SSL trust store. If this is empty or unspecified, Dialogflow will use Google&#39;s default trust store to verify certificates. N.B. Make sure the HTTPS server certificates are signed with &#34;subject alt name&#34;. For instance a certificate can be self-signed using the following command, openssl x509 -req -days 200 -in example.com.csr \ -signkey example.com.key \ -out example.com.crt \ -extfile &lt;(printf &#34;\nsubjectAltName=&#39;DNS:www.example.com&#39;&#34;)
+         * 
+         */
     private final List<String> allowedCaCerts;
-    /**
-     * The password for HTTP Basic authentication.
-     * 
-     */
+        /**
+         * @return The password for HTTP Basic authentication.
+         * 
+         */
     private final String password;
-    /**
-     * The HTTP request headers to send together with webhook requests.
-     * 
-     */
+        /**
+         * @return The HTTP request headers to send together with webhook requests.
+         * 
+         */
     private final Map<String,String> requestHeaders;
-    /**
-     * The webhook URI for receiving POST requests. It must use https protocol.
-     * 
-     */
+        /**
+         * @return The webhook URI for receiving POST requests. It must use https protocol.
+         * 
+         */
     private final String uri;
-    /**
-     * The user name for HTTP Basic authentication.
-     * 
-     */
+        /**
+         * @return The user name for HTTP Basic authentication.
+         * 
+         */
     private final String username;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceRespons
     }
 
     /**
-     * Optional. Specifies a list of allowed custom CA certificates (in DER format) for HTTPS verification. This overrides the default SSL trust store. If this is empty or unspecified, Dialogflow will use Google&#39;s default trust store to verify certificates. N.B. Make sure the HTTPS server certificates are signed with &#34;subject alt name&#34;. For instance a certificate can be self-signed using the following command, openssl x509 -req -days 200 -in example.com.csr \ -signkey example.com.key \ -out example.com.crt \ -extfile &lt;(printf &#34;\nsubjectAltName=&#39;DNS:www.example.com&#39;&#34;)
+     * @return Optional. Specifies a list of allowed custom CA certificates (in DER format) for HTTPS verification. This overrides the default SSL trust store. If this is empty or unspecified, Dialogflow will use Google&#39;s default trust store to verify certificates. N.B. Make sure the HTTPS server certificates are signed with &#34;subject alt name&#34;. For instance a certificate can be self-signed using the following command, openssl x509 -req -days 200 -in example.com.csr \ -signkey example.com.key \ -out example.com.crt \ -extfile &lt;(printf &#34;\nsubjectAltName=&#39;DNS:www.example.com&#39;&#34;)
      * 
-    */
+     */
     public List<String> allowedCaCerts() {
         return this.allowedCaCerts;
     }
     /**
-     * The password for HTTP Basic authentication.
+     * @return The password for HTTP Basic authentication.
      * 
-    */
+     */
     public String password() {
         return this.password;
     }
     /**
-     * The HTTP request headers to send together with webhook requests.
+     * @return The HTTP request headers to send together with webhook requests.
      * 
-    */
+     */
     public Map<String,String> requestHeaders() {
         return this.requestHeaders;
     }
     /**
-     * The webhook URI for receiving POST requests. It must use https protocol.
+     * @return The webhook URI for receiving POST requests. It must use https protocol.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }
     /**
-     * The user name for HTTP Basic authentication.
+     * @return The user name for HTTP Basic authentication.
      * 
-    */
+     */
     public String username() {
         return this.username;
     }

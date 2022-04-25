@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDatacatalogV1beta1ViewSpecResponse {
-    /**
-     * The query that defines the table view.
-     * 
-     */
+        /**
+         * @return The query that defines the table view.
+         * 
+         */
     private final String viewQuery;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GoogleCloudDatacatalogV1beta1ViewSpecResponse {
     }
 
     /**
-     * The query that defines the table view.
+     * @return The query that defines the table view.
      * 
-    */
+     */
     public String viewQuery() {
         return this.viewQuery;
     }

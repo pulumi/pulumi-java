@@ -12,30 +12,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudChannelV1ValueResponse {
-    /**
-     * Represents a boolean value.
-     * 
-     */
+        /**
+         * @return Represents a boolean value.
+         * 
+         */
     private final Boolean boolValue;
-    /**
-     * Represents a double value.
-     * 
-     */
+        /**
+         * @return Represents a double value.
+         * 
+         */
     private final Double doubleValue;
-    /**
-     * Represents an int64 value.
-     * 
-     */
+        /**
+         * @return Represents an int64 value.
+         * 
+         */
     private final String int64Value;
-    /**
-     * Represents an &#39;Any&#39; proto value.
-     * 
-     */
+        /**
+         * @return Represents an &#39;Any&#39; proto value.
+         * 
+         */
     private final Map<String,String> protoValue;
-    /**
-     * Represents a string value.
-     * 
-     */
+        /**
+         * @return Represents a string value.
+         * 
+         */
     private final String stringValue;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class GoogleCloudChannelV1ValueResponse {
     }
 
     /**
-     * Represents a boolean value.
+     * @return Represents a boolean value.
      * 
-    */
+     */
     public Boolean boolValue() {
         return this.boolValue;
     }
     /**
-     * Represents a double value.
+     * @return Represents a double value.
      * 
-    */
+     */
     public Double doubleValue() {
         return this.doubleValue;
     }
     /**
-     * Represents an int64 value.
+     * @return Represents an int64 value.
      * 
-    */
+     */
     public String int64Value() {
         return this.int64Value;
     }
     /**
-     * Represents an &#39;Any&#39; proto value.
+     * @return Represents an &#39;Any&#39; proto value.
      * 
-    */
+     */
     public Map<String,String> protoValue() {
         return this.protoValue;
     }
     /**
-     * Represents a string value.
+     * @return Represents a string value.
      * 
-    */
+     */
     public String stringValue() {
         return this.stringValue;
     }

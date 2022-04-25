@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class ToolResultsExecutionResponse {
-    /**
-     * A tool results execution ID.
-     * 
-     */
+        /**
+         * @return A tool results execution ID.
+         * 
+         */
     private final String executionId;
-    /**
-     * A tool results history ID.
-     * 
-     */
+        /**
+         * @return A tool results history ID.
+         * 
+         */
     private final String historyId;
-    /**
-     * The cloud project that owns the tool results execution.
-     * 
-     */
+        /**
+         * @return The cloud project that owns the tool results execution.
+         * 
+         */
     private final String project;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class ToolResultsExecutionResponse {
     }
 
     /**
-     * A tool results execution ID.
+     * @return A tool results execution ID.
      * 
-    */
+     */
     public String executionId() {
         return this.executionId;
     }
     /**
-     * A tool results history ID.
+     * @return A tool results history ID.
      * 
-    */
+     */
     public String historyId() {
         return this.historyId;
     }
     /**
-     * The cloud project that owns the tool results execution.
+     * @return The cloud project that owns the tool results execution.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }

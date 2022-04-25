@@ -23,6 +23,10 @@ public final class OperationErrorResponse extends com.pulumi.resources.InvokeArg
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return Identifies the specific error that occurred.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -34,6 +38,10 @@ public final class OperationErrorResponse extends com.pulumi.resources.InvokeArg
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return This is always `sql#operationError`.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -45,6 +53,10 @@ public final class OperationErrorResponse extends com.pulumi.resources.InvokeArg
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return Additional information about the error encountered.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -75,16 +87,34 @@ public final class OperationErrorResponse extends com.pulumi.resources.InvokeArg
             $ = new OperationErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Identifies the specific error that occurred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param kind This is always `sql#operationError`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param message Additional information about the error encountered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;

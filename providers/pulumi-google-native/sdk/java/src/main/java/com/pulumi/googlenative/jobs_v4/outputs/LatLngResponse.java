@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class LatLngResponse {
-    /**
-     * The latitude in degrees. It must be in the range [-90.0, +90.0].
-     * 
-     */
+        /**
+         * @return The latitude in degrees. It must be in the range [-90.0, +90.0].
+         * 
+         */
     private final Double latitude;
-    /**
-     * The longitude in degrees. It must be in the range [-180.0, +180.0].
-     * 
-     */
+        /**
+         * @return The longitude in degrees. It must be in the range [-180.0, +180.0].
+         * 
+         */
     private final Double longitude;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class LatLngResponse {
     }
 
     /**
-     * The latitude in degrees. It must be in the range [-90.0, +90.0].
+     * @return The latitude in degrees. It must be in the range [-90.0, +90.0].
      * 
-    */
+     */
     public Double latitude() {
         return this.latitude;
     }
     /**
-     * The longitude in degrees. It must be in the range [-180.0, +180.0].
+     * @return The longitude in degrees. It must be in the range [-180.0, +180.0].
      * 
-    */
+     */
     public Double longitude() {
         return this.longitude;
     }

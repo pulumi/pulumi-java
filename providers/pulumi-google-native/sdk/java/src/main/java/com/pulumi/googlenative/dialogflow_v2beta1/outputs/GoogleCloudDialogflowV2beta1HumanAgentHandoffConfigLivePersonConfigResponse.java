@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse {
-    /**
-     * Account number of the LivePerson account to connect. This is the account number you input at the login page.
-     * 
-     */
+        /**
+         * @return Account number of the LivePerson account to connect. This is the account number you input at the login page.
+         * 
+         */
     private final String accountNumber;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePerson
     }
 
     /**
-     * Account number of the LivePerson account to connect. This is the account number you input at the login page.
+     * @return Account number of the LivePerson account to connect. This is the account number you input at the login page.
      * 
-    */
+     */
     public String accountNumber() {
         return this.accountNumber;
     }

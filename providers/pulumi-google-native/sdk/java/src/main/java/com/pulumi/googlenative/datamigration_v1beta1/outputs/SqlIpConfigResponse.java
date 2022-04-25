@@ -12,25 +12,25 @@ import java.util.Objects;
 
 @CustomType
 public final class SqlIpConfigResponse {
-    /**
-     * The list of external networks that are allowed to connect to the instance using the IP. See https://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation, also known as &#39;slash&#39; notation (e.g. `192.168.100.0/24`).
-     * 
-     */
+        /**
+         * @return The list of external networks that are allowed to connect to the instance using the IP. See https://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation, also known as &#39;slash&#39; notation (e.g. `192.168.100.0/24`).
+         * 
+         */
     private final List<SqlAclEntryResponse> authorizedNetworks;
-    /**
-     * Whether the instance is assigned a public IP address or not.
-     * 
-     */
+        /**
+         * @return Whether the instance is assigned a public IP address or not.
+         * 
+         */
     private final Boolean enableIpv4;
-    /**
-     * The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, `/projects/myProject/global/networks/default`. This setting can be updated, but it cannot be removed after it is set.
-     * 
-     */
+        /**
+         * @return The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, `/projects/myProject/global/networks/default`. This setting can be updated, but it cannot be removed after it is set.
+         * 
+         */
     private final String privateNetwork;
-    /**
-     * Whether SSL connections over IP should be enforced or not.
-     * 
-     */
+        /**
+         * @return Whether SSL connections over IP should be enforced or not.
+         * 
+         */
     private final Boolean requireSsl;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class SqlIpConfigResponse {
     }
 
     /**
-     * The list of external networks that are allowed to connect to the instance using the IP. See https://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation, also known as &#39;slash&#39; notation (e.g. `192.168.100.0/24`).
+     * @return The list of external networks that are allowed to connect to the instance using the IP. See https://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation, also known as &#39;slash&#39; notation (e.g. `192.168.100.0/24`).
      * 
-    */
+     */
     public List<SqlAclEntryResponse> authorizedNetworks() {
         return this.authorizedNetworks;
     }
     /**
-     * Whether the instance is assigned a public IP address or not.
+     * @return Whether the instance is assigned a public IP address or not.
      * 
-    */
+     */
     public Boolean enableIpv4() {
         return this.enableIpv4;
     }
     /**
-     * The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, `/projects/myProject/global/networks/default`. This setting can be updated, but it cannot be removed after it is set.
+     * @return The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, `/projects/myProject/global/networks/default`. This setting can be updated, but it cannot be removed after it is set.
      * 
-    */
+     */
     public String privateNetwork() {
         return this.privateNetwork;
     }
     /**
-     * Whether SSL connections over IP should be enforced or not.
+     * @return Whether SSL connections over IP should be enforced or not.
      * 
-    */
+     */
     public Boolean requireSsl() {
         return this.requireSsl;
     }

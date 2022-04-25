@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse {
-    /**
-     * The number of seconds to wait for a readiness signal during initialization before timing out.
-     * 
-     */
+        /**
+         * @return The number of seconds to wait for a readiness signal during initialization before timing out.
+         * 
+         */
     private final Integer timeoutSec;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
     }
 
     /**
-     * The number of seconds to wait for a readiness signal during initialization before timing out.
+     * @return The number of seconds to wait for a readiness signal during initialization before timing out.
      * 
-    */
+     */
     public Integer timeoutSec() {
         return this.timeoutSec;
     }

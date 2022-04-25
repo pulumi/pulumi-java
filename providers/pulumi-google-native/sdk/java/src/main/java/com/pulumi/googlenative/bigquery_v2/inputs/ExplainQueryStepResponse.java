@@ -20,6 +20,10 @@ public final class ExplainQueryStepResponse extends com.pulumi.resources.InvokeA
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return Machine-readable operation type.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -31,6 +35,10 @@ public final class ExplainQueryStepResponse extends com.pulumi.resources.InvokeA
     @Import(name="substeps", required=true)
     private List<String> substeps;
 
+    /**
+     * @return Human-readable stage descriptions.
+     * 
+     */
     public List<String> substeps() {
         return this.substeps;
     }
@@ -60,16 +68,34 @@ public final class ExplainQueryStepResponse extends com.pulumi.resources.InvokeA
             $ = new ExplainQueryStepResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kind Machine-readable operation type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param substeps Human-readable stage descriptions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder substeps(List<String> substeps) {
             $.substeps = substeps;
             return this;
         }
 
+        /**
+         * @param substeps Human-readable stage descriptions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder substeps(String... substeps) {
             return substeps(List.of(substeps));
         }

@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class SecurityPolicyCloudArmorConfigResponse {
-    /**
-     * If set to true, enables Cloud Armor Machine Learning.
-     * 
-     */
+        /**
+         * @return If set to true, enables Cloud Armor Machine Learning.
+         * 
+         */
     private final Boolean enableMl;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class SecurityPolicyCloudArmorConfigResponse {
     }
 
     /**
-     * If set to true, enables Cloud Armor Machine Learning.
+     * @return If set to true, enables Cloud Armor Machine Learning.
      * 
-    */
+     */
     public Boolean enableMl() {
         return this.enableMl;
     }

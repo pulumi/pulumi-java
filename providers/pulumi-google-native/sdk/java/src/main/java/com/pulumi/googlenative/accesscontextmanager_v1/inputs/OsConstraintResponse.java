@@ -24,6 +24,10 @@ public final class OsConstraintResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="minimumVersion", required=true)
     private String minimumVersion;
 
+    /**
+     * @return The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: `&#34;major.minor.patch&#34;`. Examples: `&#34;10.5.301&#34;`, `&#34;9.2.1&#34;`.
+     * 
+     */
     public String minimumVersion() {
         return this.minimumVersion;
     }
@@ -35,6 +39,10 @@ public final class OsConstraintResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="osType", required=true)
     private String osType;
 
+    /**
+     * @return The allowed OS type.
+     * 
+     */
     public String osType() {
         return this.osType;
     }
@@ -46,6 +54,10 @@ public final class OsConstraintResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="requireVerifiedChromeOs", required=true)
     private Boolean requireVerifiedChromeOs;
 
+    /**
+     * @return Only allows requests from devices with a verified Chrome OS. Verifications includes requirements that the device is enterprise-managed, conformant to domain policies, and the caller has permission to call the API targeted by the request.
+     * 
+     */
     public Boolean requireVerifiedChromeOs() {
         return this.requireVerifiedChromeOs;
     }
@@ -76,16 +88,34 @@ public final class OsConstraintResponse extends com.pulumi.resources.InvokeArgs 
             $ = new OsConstraintResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param minimumVersion The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: `&#34;major.minor.patch&#34;`. Examples: `&#34;10.5.301&#34;`, `&#34;9.2.1&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumVersion(String minimumVersion) {
             $.minimumVersion = minimumVersion;
             return this;
         }
 
+        /**
+         * @param osType The allowed OS type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(String osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param requireVerifiedChromeOs Only allows requests from devices with a verified Chrome OS. Verifications includes requirements that the device is enterprise-managed, conformant to domain policies, and the caller has permission to call the API targeted by the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireVerifiedChromeOs(Boolean requireVerifiedChromeOs) {
             $.requireVerifiedChromeOs = requireVerifiedChromeOs;
             return this;

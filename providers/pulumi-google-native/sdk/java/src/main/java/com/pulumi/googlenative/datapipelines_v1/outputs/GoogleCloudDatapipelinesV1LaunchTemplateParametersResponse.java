@@ -12,30 +12,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse {
-    /**
-     * The runtime environment for the job.
-     * 
-     */
+        /**
+         * @return The runtime environment for the job.
+         * 
+         */
     private final GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment;
-    /**
-     * The job name to use for the created job.
-     * 
-     */
+        /**
+         * @return The job name to use for the created job.
+         * 
+         */
     private final String jobName;
-    /**
-     * The runtime parameters to pass to the job.
-     * 
-     */
+        /**
+         * @return The runtime parameters to pass to the job.
+         * 
+         */
     private final Map<String,String> parameters;
-    /**
-     * Map of transform name prefixes of the job to be replaced to the corresponding name prefixes of the new job. Only applicable when updating a pipeline.
-     * 
-     */
+        /**
+         * @return Map of transform name prefixes of the job to be replaced to the corresponding name prefixes of the new job. Only applicable when updating a pipeline.
+         * 
+         */
     private final Map<String,String> transformNameMapping;
-    /**
-     * If set, replace the existing pipeline with the name specified by jobName with this pipeline, preserving state.
-     * 
-     */
+        /**
+         * @return If set, replace the existing pipeline with the name specified by jobName with this pipeline, preserving state.
+         * 
+         */
     private final Boolean update;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse {
     }
 
     /**
-     * The runtime environment for the job.
+     * @return The runtime environment for the job.
      * 
-    */
+     */
     public GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment() {
         return this.environment;
     }
     /**
-     * The job name to use for the created job.
+     * @return The job name to use for the created job.
      * 
-    */
+     */
     public String jobName() {
         return this.jobName;
     }
     /**
-     * The runtime parameters to pass to the job.
+     * @return The runtime parameters to pass to the job.
      * 
-    */
+     */
     public Map<String,String> parameters() {
         return this.parameters;
     }
     /**
-     * Map of transform name prefixes of the job to be replaced to the corresponding name prefixes of the new job. Only applicable when updating a pipeline.
+     * @return Map of transform name prefixes of the job to be replaced to the corresponding name prefixes of the new job. Only applicable when updating a pipeline.
      * 
-    */
+     */
     public Map<String,String> transformNameMapping() {
         return this.transformNameMapping;
     }
     /**
-     * If set, replace the existing pipeline with the name specified by jobName with this pipeline, preserving state.
+     * @return If set, replace the existing pipeline with the name specified by jobName with this pipeline, preserving state.
      * 
-    */
+     */
     public Boolean update() {
         return this.update;
     }

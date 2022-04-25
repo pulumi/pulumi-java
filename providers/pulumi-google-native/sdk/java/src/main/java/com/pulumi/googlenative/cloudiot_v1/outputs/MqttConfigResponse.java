@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class MqttConfigResponse {
-    /**
-     * If enabled, allows connections using the MQTT protocol. Otherwise, MQTT connections to this registry will fail.
-     * 
-     */
+        /**
+         * @return If enabled, allows connections using the MQTT protocol. Otherwise, MQTT connections to this registry will fail.
+         * 
+         */
     private final String mqttEnabledState;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class MqttConfigResponse {
     }
 
     /**
-     * If enabled, allows connections using the MQTT protocol. Otherwise, MQTT connections to this registry will fail.
+     * @return If enabled, allows connections using the MQTT protocol. Otherwise, MQTT connections to this registry will fail.
      * 
-    */
+     */
     public String mqttEnabledState() {
         return this.mqttEnabledState;
     }

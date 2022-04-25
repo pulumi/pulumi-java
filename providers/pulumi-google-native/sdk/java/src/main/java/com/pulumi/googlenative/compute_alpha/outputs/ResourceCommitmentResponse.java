@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class ResourceCommitmentResponse {
-    /**
-     * Name of the accelerator type resource. Applicable only when the type is ACCELERATOR.
-     * 
-     */
+        /**
+         * @return Name of the accelerator type resource. Applicable only when the type is ACCELERATOR.
+         * 
+         */
     private final String acceleratorType;
-    /**
-     * The amount of the resource purchased (in a type-dependent unit, such as bytes). For vCPUs, this can just be an integer. For memory, this must be provided in MB. Memory must be a multiple of 256 MB, with up to 6.5GB of memory per every vCPU.
-     * 
-     */
+        /**
+         * @return The amount of the resource purchased (in a type-dependent unit, such as bytes). For vCPUs, this can just be an integer. For memory, this must be provided in MB. Memory must be a multiple of 256 MB, with up to 6.5GB of memory per every vCPU.
+         * 
+         */
     private final String amount;
-    /**
-     * Type of resource for which this commitment applies. Possible values are VCPU and MEMORY
-     * 
-     */
+        /**
+         * @return Type of resource for which this commitment applies. Possible values are VCPU and MEMORY
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class ResourceCommitmentResponse {
     }
 
     /**
-     * Name of the accelerator type resource. Applicable only when the type is ACCELERATOR.
+     * @return Name of the accelerator type resource. Applicable only when the type is ACCELERATOR.
      * 
-    */
+     */
     public String acceleratorType() {
         return this.acceleratorType;
     }
     /**
-     * The amount of the resource purchased (in a type-dependent unit, such as bytes). For vCPUs, this can just be an integer. For memory, this must be provided in MB. Memory must be a multiple of 256 MB, with up to 6.5GB of memory per every vCPU.
+     * @return The amount of the resource purchased (in a type-dependent unit, such as bytes). For vCPUs, this can just be an integer. For memory, this must be provided in MB. Memory must be a multiple of 256 MB, with up to 6.5GB of memory per every vCPU.
      * 
-    */
+     */
     public String amount() {
         return this.amount;
     }
     /**
-     * Type of resource for which this commitment applies. Possible values are VCPU and MEMORY
+     * @return Type of resource for which this commitment applies. Possible values are VCPU and MEMORY
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

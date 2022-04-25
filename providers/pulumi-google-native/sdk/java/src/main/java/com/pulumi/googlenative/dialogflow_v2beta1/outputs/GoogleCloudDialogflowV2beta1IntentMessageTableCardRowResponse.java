@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse {
-    /**
-     * Optional. List of cells that make up this row.
-     * 
-     */
+        /**
+         * @return Optional. List of cells that make up this row.
+         * 
+         */
     private final List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse> cells;
-    /**
-     * Optional. Whether to add a visual divider after this row.
-     * 
-     */
+        /**
+         * @return Optional. Whether to add a visual divider after this row.
+         * 
+         */
     private final Boolean dividerAfter;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse
     }
 
     /**
-     * Optional. List of cells that make up this row.
+     * @return Optional. List of cells that make up this row.
      * 
-    */
+     */
     public List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse> cells() {
         return this.cells;
     }
     /**
-     * Optional. Whether to add a visual divider after this row.
+     * @return Optional. Whether to add a visual divider after this row.
      * 
-    */
+     */
     public Boolean dividerAfter() {
         return this.dividerAfter;
     }

@@ -13,60 +13,60 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSpokeResult {
-    /**
-     * The time the spoke was created.
-     * 
-     */
+        /**
+         * @return The time the spoke was created.
+         * 
+         */
     private final String createTime;
-    /**
-     * An optional description of the spoke.
-     * 
-     */
+        /**
+         * @return An optional description of the spoke.
+         * 
+         */
     private final String description;
-    /**
-     * Immutable. The name of the hub that this spoke is attached to.
-     * 
-     */
+        /**
+         * @return Immutable. The name of the hub that this spoke is attached to.
+         * 
+         */
     private final String hub;
-    /**
-     * Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
-     * 
-     */
+        /**
+         * @return Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
+         * 
+         */
     private final Map<String,String> labels;
-    /**
-     * VLAN attachments that are associated with the spoke.
-     * 
-     */
+        /**
+         * @return VLAN attachments that are associated with the spoke.
+         * 
+         */
     private final LinkedInterconnectAttachmentsResponse linkedInterconnectAttachments;
-    /**
-     * Router appliance instances that are associated with the spoke.
-     * 
-     */
+        /**
+         * @return Router appliance instances that are associated with the spoke.
+         * 
+         */
     private final LinkedRouterApplianceInstancesResponse linkedRouterApplianceInstances;
-    /**
-     * VPN tunnels that are associated with the spoke.
-     * 
-     */
+        /**
+         * @return VPN tunnels that are associated with the spoke.
+         * 
+         */
     private final LinkedVpnTunnelsResponse linkedVpnTunnels;
-    /**
-     * Immutable. The name of the spoke. Spoke names must be unique. They use the following form: `projects/{project_number}/locations/{region}/spokes/{spoke_id}`
-     * 
-     */
+        /**
+         * @return Immutable. The name of the spoke. Spoke names must be unique. They use the following form: `projects/{project_number}/locations/{region}/spokes/{spoke_id}`
+         * 
+         */
     private final String name;
-    /**
-     * The current lifecycle state of this spoke.
-     * 
-     */
+        /**
+         * @return The current lifecycle state of this spoke.
+         * 
+         */
     private final String state;
-    /**
-     * The Google-generated UUID for the spoke. This value is unique across all spoke resources. If a spoke is deleted and another with the same name is created, the new spoke is assigned a different unique_id.
-     * 
-     */
+        /**
+         * @return The Google-generated UUID for the spoke. This value is unique across all spoke resources. If a spoke is deleted and another with the same name is created, the new spoke is assigned a different unique_id.
+         * 
+         */
     private final String uniqueId;
-    /**
-     * The time the spoke was last updated.
-     * 
-     */
+        /**
+         * @return The time the spoke was last updated.
+         * 
+         */
     private final String updateTime;
 
     @CustomType.Constructor
@@ -96,79 +96,79 @@ public final class GetSpokeResult {
     }
 
     /**
-     * The time the spoke was created.
+     * @return The time the spoke was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * An optional description of the spoke.
+     * @return An optional description of the spoke.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Immutable. The name of the hub that this spoke is attached to.
+     * @return Immutable. The name of the hub that this spoke is attached to.
      * 
-    */
+     */
     public String hub() {
         return this.hub;
     }
     /**
-     * Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
+     * @return Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * VLAN attachments that are associated with the spoke.
+     * @return VLAN attachments that are associated with the spoke.
      * 
-    */
+     */
     public LinkedInterconnectAttachmentsResponse linkedInterconnectAttachments() {
         return this.linkedInterconnectAttachments;
     }
     /**
-     * Router appliance instances that are associated with the spoke.
+     * @return Router appliance instances that are associated with the spoke.
      * 
-    */
+     */
     public LinkedRouterApplianceInstancesResponse linkedRouterApplianceInstances() {
         return this.linkedRouterApplianceInstances;
     }
     /**
-     * VPN tunnels that are associated with the spoke.
+     * @return VPN tunnels that are associated with the spoke.
      * 
-    */
+     */
     public LinkedVpnTunnelsResponse linkedVpnTunnels() {
         return this.linkedVpnTunnels;
     }
     /**
-     * Immutable. The name of the spoke. Spoke names must be unique. They use the following form: `projects/{project_number}/locations/{region}/spokes/{spoke_id}`
+     * @return Immutable. The name of the spoke. Spoke names must be unique. They use the following form: `projects/{project_number}/locations/{region}/spokes/{spoke_id}`
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The current lifecycle state of this spoke.
+     * @return The current lifecycle state of this spoke.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The Google-generated UUID for the spoke. This value is unique across all spoke resources. If a spoke is deleted and another with the same name is created, the new spoke is assigned a different unique_id.
+     * @return The Google-generated UUID for the spoke. This value is unique across all spoke resources. If a spoke is deleted and another with the same name is created, the new spoke is assigned a different unique_id.
      * 
-    */
+     */
     public String uniqueId() {
         return this.uniqueId;
     }
     /**
-     * The time the spoke was last updated.
+     * @return The time the spoke was last updated.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class CustomHttpPatternResponse {
-    /**
-     * The name of this custom HTTP verb.
-     * 
-     */
+        /**
+         * @return The name of this custom HTTP verb.
+         * 
+         */
     private final String kind;
-    /**
-     * The path matched by this custom verb.
-     * 
-     */
+        /**
+         * @return The path matched by this custom verb.
+         * 
+         */
     private final String path;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class CustomHttpPatternResponse {
     }
 
     /**
-     * The name of this custom HTTP verb.
+     * @return The name of this custom HTTP verb.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The path matched by this custom verb.
+     * @return The path matched by this custom verb.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }

@@ -13,15 +13,15 @@ import java.util.Objects;
 public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse {
     private final String kind;
     private final List<String> rrdatas;
-    /**
-     * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there&#39;s a restriction of 1 ip per item. .
-     * 
-     */
+        /**
+         * @return DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there&#39;s a restriction of 1 ip per item. .
+         * 
+         */
     private final List<String> signatureRrdatas;
-    /**
-     * The weight corresponding to this subset of rrdata. When multiple WeightedRoundRobinPolicyItems are configured, the probability of returning an rrset is proportional to its weight relative to the sum of weights configured for all items. This weight should be non-negative.
-     * 
-     */
+        /**
+         * @return The weight corresponding to this subset of rrdata. When multiple WeightedRoundRobinPolicyItems are configured, the probability of returning an rrset is proportional to its weight relative to the sum of weights configured for all items. This weight should be non-negative.
+         * 
+         */
     private final Double weight;
 
     @CustomType.Constructor
@@ -43,16 +43,16 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse {
         return this.rrdatas;
     }
     /**
-     * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there&#39;s a restriction of 1 ip per item. .
+     * @return DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there&#39;s a restriction of 1 ip per item. .
      * 
-    */
+     */
     public List<String> signatureRrdatas() {
         return this.signatureRrdatas;
     }
     /**
-     * The weight corresponding to this subset of rrdata. When multiple WeightedRoundRobinPolicyItems are configured, the probability of returning an rrset is proportional to its weight relative to the sum of weights configured for all items. This weight should be non-negative.
+     * @return The weight corresponding to this subset of rrdata. When multiple WeightedRoundRobinPolicyItems are configured, the probability of returning an rrset is proportional to its weight relative to the sum of weights configured for all items. This weight should be non-negative.
      * 
-    */
+     */
     public Double weight() {
         return this.weight;
     }

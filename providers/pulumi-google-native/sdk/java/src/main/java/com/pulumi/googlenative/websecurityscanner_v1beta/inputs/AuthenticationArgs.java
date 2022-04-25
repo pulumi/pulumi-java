@@ -28,6 +28,10 @@ public final class AuthenticationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="customAccount")
     private @Nullable Output<CustomAccountArgs> customAccount;
 
+    /**
+     * @return Authentication using a custom account.
+     * 
+     */
     public Optional<Output<CustomAccountArgs>> customAccount() {
         return Optional.ofNullable(this.customAccount);
     }
@@ -39,6 +43,10 @@ public final class AuthenticationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="googleAccount")
     private @Nullable Output<GoogleAccountArgs> googleAccount;
 
+    /**
+     * @return Authentication using a Google account.
+     * 
+     */
     public Optional<Output<GoogleAccountArgs>> googleAccount() {
         return Optional.ofNullable(this.googleAccount);
     }
@@ -50,6 +58,10 @@ public final class AuthenticationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="iapCredential")
     private @Nullable Output<IapCredentialArgs> iapCredential;
 
+    /**
+     * @return Authentication using Identity-Aware-Proxy (IAP).
+     * 
+     */
     public Optional<Output<IapCredentialArgs>> iapCredential() {
         return Optional.ofNullable(this.iapCredential);
     }
@@ -80,29 +92,65 @@ public final class AuthenticationArgs extends com.pulumi.resources.ResourceArgs 
             $ = new AuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customAccount Authentication using a custom account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customAccount(@Nullable Output<CustomAccountArgs> customAccount) {
             $.customAccount = customAccount;
             return this;
         }
 
+        /**
+         * @param customAccount Authentication using a custom account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customAccount(CustomAccountArgs customAccount) {
             return customAccount(Output.of(customAccount));
         }
 
+        /**
+         * @param googleAccount Authentication using a Google account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder googleAccount(@Nullable Output<GoogleAccountArgs> googleAccount) {
             $.googleAccount = googleAccount;
             return this;
         }
 
+        /**
+         * @param googleAccount Authentication using a Google account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder googleAccount(GoogleAccountArgs googleAccount) {
             return googleAccount(Output.of(googleAccount));
         }
 
+        /**
+         * @param iapCredential Authentication using Identity-Aware-Proxy (IAP).
+         * 
+         * @return builder
+         * 
+         */
         public Builder iapCredential(@Nullable Output<IapCredentialArgs> iapCredential) {
             $.iapCredential = iapCredential;
             return this;
         }
 
+        /**
+         * @param iapCredential Authentication using Identity-Aware-Proxy (IAP).
+         * 
+         * @return builder
+         * 
+         */
         public Builder iapCredential(IapCredentialArgs iapCredential) {
             return iapCredential(Output.of(iapCredential));
         }

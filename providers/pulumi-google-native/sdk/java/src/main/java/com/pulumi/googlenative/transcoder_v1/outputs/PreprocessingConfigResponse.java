@@ -14,35 +14,35 @@ import java.util.Objects;
 
 @CustomType
 public final class PreprocessingConfigResponse {
-    /**
-     * Audio preprocessing configuration.
-     * 
-     */
+        /**
+         * @return Audio preprocessing configuration.
+         * 
+         */
     private final AudioResponse audio;
-    /**
-     * Color preprocessing configuration.
-     * 
-     */
+        /**
+         * @return Color preprocessing configuration.
+         * 
+         */
     private final ColorResponse color;
-    /**
-     * Specify the video cropping configuration.
-     * 
-     */
+        /**
+         * @return Specify the video cropping configuration.
+         * 
+         */
     private final CropResponse crop;
-    /**
-     * Deblock preprocessing configuration.
-     * 
-     */
+        /**
+         * @return Deblock preprocessing configuration.
+         * 
+         */
     private final DeblockResponse deblock;
-    /**
-     * Denoise preprocessing configuration.
-     * 
-     */
+        /**
+         * @return Denoise preprocessing configuration.
+         * 
+         */
     private final DenoiseResponse denoise;
-    /**
-     * Specify the video pad filter configuration.
-     * 
-     */
+        /**
+         * @return Specify the video pad filter configuration.
+         * 
+         */
     private final PadResponse pad;
 
     @CustomType.Constructor
@@ -62,44 +62,44 @@ public final class PreprocessingConfigResponse {
     }
 
     /**
-     * Audio preprocessing configuration.
+     * @return Audio preprocessing configuration.
      * 
-    */
+     */
     public AudioResponse audio() {
         return this.audio;
     }
     /**
-     * Color preprocessing configuration.
+     * @return Color preprocessing configuration.
      * 
-    */
+     */
     public ColorResponse color() {
         return this.color;
     }
     /**
-     * Specify the video cropping configuration.
+     * @return Specify the video cropping configuration.
      * 
-    */
+     */
     public CropResponse crop() {
         return this.crop;
     }
     /**
-     * Deblock preprocessing configuration.
+     * @return Deblock preprocessing configuration.
      * 
-    */
+     */
     public DeblockResponse deblock() {
         return this.deblock;
     }
     /**
-     * Denoise preprocessing configuration.
+     * @return Denoise preprocessing configuration.
      * 
-    */
+     */
     public DenoiseResponse denoise() {
         return this.denoise;
     }
     /**
-     * Specify the video pad filter configuration.
+     * @return Specify the video pad filter configuration.
      * 
-    */
+     */
     public PadResponse pad() {
         return this.pad;
     }

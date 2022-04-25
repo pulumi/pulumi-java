@@ -12,20 +12,20 @@ import java.util.Objects;
 
 @CustomType
 public final class DnsSettingsResponse {
-    /**
-     * An arbitrary DNS provider identified by its name servers.
-     * 
-     */
+        /**
+         * @return An arbitrary DNS provider identified by its name servers.
+         * 
+         */
     private final CustomDnsResponse customDns;
-    /**
-     * The list of glue records for this `Registration`. Commonly empty.
-     * 
-     */
+        /**
+         * @return The list of glue records for this `Registration`. Commonly empty.
+         * 
+         */
     private final List<GlueRecordResponse> glueRecords;
-    /**
-     * The free DNS zone provided by [Google Domains](https://domains.google/).
-     * 
-     */
+        /**
+         * @return The free DNS zone provided by [Google Domains](https://domains.google/).
+         * 
+         */
     private final GoogleDomainsDnsResponse googleDomainsDns;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class DnsSettingsResponse {
     }
 
     /**
-     * An arbitrary DNS provider identified by its name servers.
+     * @return An arbitrary DNS provider identified by its name servers.
      * 
-    */
+     */
     public CustomDnsResponse customDns() {
         return this.customDns;
     }
     /**
-     * The list of glue records for this `Registration`. Commonly empty.
+     * @return The list of glue records for this `Registration`. Commonly empty.
      * 
-    */
+     */
     public List<GlueRecordResponse> glueRecords() {
         return this.glueRecords;
     }
     /**
-     * The free DNS zone provided by [Google Domains](https://domains.google/).
+     * @return The free DNS zone provided by [Google Domains](https://domains.google/).
      * 
-    */
+     */
     public GoogleDomainsDnsResponse googleDomainsDns() {
         return this.googleDomainsDns;
     }

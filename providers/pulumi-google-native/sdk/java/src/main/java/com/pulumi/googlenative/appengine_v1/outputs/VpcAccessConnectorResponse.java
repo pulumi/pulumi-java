@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class VpcAccessConnectorResponse {
-    /**
-     * The egress setting for the connector, controlling what traffic is diverted through it.
-     * 
-     */
+        /**
+         * @return The egress setting for the connector, controlling what traffic is diverted through it.
+         * 
+         */
     private final String egressSetting;
-    /**
-     * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
-     * 
-     */
+        /**
+         * @return Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class VpcAccessConnectorResponse {
     }
 
     /**
-     * The egress setting for the connector, controlling what traffic is diverted through it.
+     * @return The egress setting for the connector, controlling what traffic is diverted through it.
      * 
-    */
+     */
     public String egressSetting() {
         return this.egressSetting;
     }
     /**
-     * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * @return Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

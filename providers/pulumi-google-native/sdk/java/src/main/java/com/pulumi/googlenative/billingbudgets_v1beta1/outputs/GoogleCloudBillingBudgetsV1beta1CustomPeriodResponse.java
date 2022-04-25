@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse {
-    /**
-     * Optional. The end date of the time period. Budgets with elapsed end date won&#39;t be processed. If unset, specifies to track all usage incurred since the start_date.
-     * 
-     */
+        /**
+         * @return Optional. The end date of the time period. Budgets with elapsed end date won&#39;t be processed. If unset, specifies to track all usage incurred since the start_date.
+         * 
+         */
     private final GoogleTypeDateResponse endDate;
-    /**
-     * The start date must be after January 1, 2017.
-     * 
-     */
+        /**
+         * @return The start date must be after January 1, 2017.
+         * 
+         */
     private final GoogleTypeDateResponse startDate;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse {
     }
 
     /**
-     * Optional. The end date of the time period. Budgets with elapsed end date won&#39;t be processed. If unset, specifies to track all usage incurred since the start_date.
+     * @return Optional. The end date of the time period. Budgets with elapsed end date won&#39;t be processed. If unset, specifies to track all usage incurred since the start_date.
      * 
-    */
+     */
     public GoogleTypeDateResponse endDate() {
         return this.endDate;
     }
     /**
-     * The start date must be after January 1, 2017.
+     * @return The start date must be after January 1, 2017.
      * 
-    */
+     */
     public GoogleTypeDateResponse startDate() {
         return this.startDate;
     }

@@ -23,6 +23,10 @@ public final class LicenseResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="comments", required=true)
     private String comments;
 
+    /**
+     * @return Comments
+     * 
+     */
     public String comments() {
         return this.comments;
     }
@@ -34,6 +38,10 @@ public final class LicenseResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="expression", required=true)
     private String expression;
 
+    /**
+     * @return Expression: https://spdx.github.io/spdx-spec/appendix-IV-SPDX-license-expressions/
+     * 
+     */
     public String expression() {
         return this.expression;
     }
@@ -63,11 +71,23 @@ public final class LicenseResponse extends com.pulumi.resources.InvokeArgs {
             $ = new LicenseResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param comments Comments
+         * 
+         * @return builder
+         * 
+         */
         public Builder comments(String comments) {
             $.comments = comments;
             return this;
         }
 
+        /**
+         * @param expression Expression: https://spdx.github.io/spdx-spec/appendix-IV-SPDX-license-expressions/
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(String expression) {
             $.expression = expression;
             return this;

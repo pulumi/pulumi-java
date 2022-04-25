@@ -10,50 +10,50 @@ import java.util.Objects;
 
 @CustomType
 public final class GetExecutionResult {
-    /**
-     * Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `&#39;{&#34;argument&#34;:&#34;{\&#34;firstName\&#34;:\&#34;FIRST\&#34;,\&#34;lastName\&#34;:\&#34;LAST\&#34;}&#34;}&#39;`
-     * 
-     */
+        /**
+         * @return Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `&#39;{&#34;argument&#34;:&#34;{\&#34;firstName\&#34;:\&#34;FIRST\&#34;,\&#34;lastName\&#34;:\&#34;LAST\&#34;}&#34;}&#39;`
+         * 
+         */
     private final String argument;
-    /**
-     * The call logging level associated to this execution.
-     * 
-     */
+        /**
+         * @return The call logging level associated to this execution.
+         * 
+         */
     private final String callLogLevel;
-    /**
-     * Marks the end of execution, successful or not.
-     * 
-     */
+        /**
+         * @return Marks the end of execution, successful or not.
+         * 
+         */
     private final String endTime;
-    /**
-     * The error which caused the execution to finish prematurely. The value is only present if the execution&#39;s state is `FAILED` or `CANCELLED`.
-     * 
-     */
+        /**
+         * @return The error which caused the execution to finish prematurely. The value is only present if the execution&#39;s state is `FAILED` or `CANCELLED`.
+         * 
+         */
     private final ErrorResponse error;
-    /**
-     * The resource name of the execution. Format: projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
-     * 
-     */
+        /**
+         * @return The resource name of the execution. Format: projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
+         * 
+         */
     private final String name;
-    /**
-     * Output of the execution represented as a JSON string. The value can only be present if the execution&#39;s state is `SUCCEEDED`.
-     * 
-     */
+        /**
+         * @return Output of the execution represented as a JSON string. The value can only be present if the execution&#39;s state is `SUCCEEDED`.
+         * 
+         */
     private final String result;
-    /**
-     * Marks the beginning of execution.
-     * 
-     */
+        /**
+         * @return Marks the beginning of execution.
+         * 
+         */
     private final String startTime;
-    /**
-     * Current state of the execution.
-     * 
-     */
+        /**
+         * @return Current state of the execution.
+         * 
+         */
     private final String state;
-    /**
-     * Revision of the workflow this execution is using.
-     * 
-     */
+        /**
+         * @return Revision of the workflow this execution is using.
+         * 
+         */
     private final String workflowRevisionId;
 
     @CustomType.Constructor
@@ -79,65 +79,65 @@ public final class GetExecutionResult {
     }
 
     /**
-     * Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `&#39;{&#34;argument&#34;:&#34;{\&#34;firstName\&#34;:\&#34;FIRST\&#34;,\&#34;lastName\&#34;:\&#34;LAST\&#34;}&#34;}&#39;`
+     * @return Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `&#39;{&#34;argument&#34;:&#34;{\&#34;firstName\&#34;:\&#34;FIRST\&#34;,\&#34;lastName\&#34;:\&#34;LAST\&#34;}&#34;}&#39;`
      * 
-    */
+     */
     public String argument() {
         return this.argument;
     }
     /**
-     * The call logging level associated to this execution.
+     * @return The call logging level associated to this execution.
      * 
-    */
+     */
     public String callLogLevel() {
         return this.callLogLevel;
     }
     /**
-     * Marks the end of execution, successful or not.
+     * @return Marks the end of execution, successful or not.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * The error which caused the execution to finish prematurely. The value is only present if the execution&#39;s state is `FAILED` or `CANCELLED`.
+     * @return The error which caused the execution to finish prematurely. The value is only present if the execution&#39;s state is `FAILED` or `CANCELLED`.
      * 
-    */
+     */
     public ErrorResponse error() {
         return this.error;
     }
     /**
-     * The resource name of the execution. Format: projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
+     * @return The resource name of the execution. Format: projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Output of the execution represented as a JSON string. The value can only be present if the execution&#39;s state is `SUCCEEDED`.
+     * @return Output of the execution represented as a JSON string. The value can only be present if the execution&#39;s state is `SUCCEEDED`.
      * 
-    */
+     */
     public String result() {
         return this.result;
     }
     /**
-     * Marks the beginning of execution.
+     * @return Marks the beginning of execution.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * Current state of the execution.
+     * @return Current state of the execution.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Revision of the workflow this execution is using.
+     * @return Revision of the workflow this execution is using.
      * 
-    */
+     */
     public String workflowRevisionId() {
         return this.workflowRevisionId;
     }

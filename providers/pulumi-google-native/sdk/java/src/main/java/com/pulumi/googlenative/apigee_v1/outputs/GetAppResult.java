@@ -12,70 +12,70 @@ import java.util.Objects;
 
 @CustomType
 public final class GetAppResult {
-    /**
-     * List of API products associated with the developer app.
-     * 
-     */
+        /**
+         * @return List of API products associated with the developer app.
+         * 
+         */
     private final List<String> apiProducts;
-    /**
-     * Developer app family.
-     * 
-     */
+        /**
+         * @return Developer app family.
+         * 
+         */
     private final String appFamily;
-    /**
-     * ID of the developer app.
-     * 
-     */
+        /**
+         * @return ID of the developer app.
+         * 
+         */
     private final String appId;
-    /**
-     * List of attributes for the developer app.
-     * 
-     */
+        /**
+         * @return List of attributes for the developer app.
+         * 
+         */
     private final List<GoogleCloudApigeeV1AttributeResponse> attributes;
-    /**
-     * Callback URL used by OAuth 2.0 authorization servers to communicate authorization codes back to developer apps.
-     * 
-     */
+        /**
+         * @return Callback URL used by OAuth 2.0 authorization servers to communicate authorization codes back to developer apps.
+         * 
+         */
     private final String callbackUrl;
-    /**
-     * Time the developer app was created in milliseconds since epoch.
-     * 
-     */
+        /**
+         * @return Time the developer app was created in milliseconds since epoch.
+         * 
+         */
     private final String createdAt;
-    /**
-     * Set of credentials for the developer app consisting of the consumer key/secret pairs associated with the API products.
-     * 
-     */
+        /**
+         * @return Set of credentials for the developer app consisting of the consumer key/secret pairs associated with the API products.
+         * 
+         */
     private final List<GoogleCloudApigeeV1CredentialResponse> credentials;
-    /**
-     * ID of the developer.
-     * 
-     */
+        /**
+         * @return ID of the developer.
+         * 
+         */
     private final String developerId;
-    /**
-     * Expiration time, in milliseconds, for the consumer key that is generated for the developer app. If not set or left to the default value of `-1`, the API key never expires. The expiration time can&#39;t be updated after it is set.
-     * 
-     */
+        /**
+         * @return Expiration time, in milliseconds, for the consumer key that is generated for the developer app. If not set or left to the default value of `-1`, the API key never expires. The expiration time can&#39;t be updated after it is set.
+         * 
+         */
     private final String keyExpiresIn;
-    /**
-     * Time the developer app was modified in milliseconds since epoch.
-     * 
-     */
+        /**
+         * @return Time the developer app was modified in milliseconds since epoch.
+         * 
+         */
     private final String lastModifiedAt;
-    /**
-     * Name of the developer app.
-     * 
-     */
+        /**
+         * @return Name of the developer app.
+         * 
+         */
     private final String name;
-    /**
-     * Scopes to apply to the developer app. The specified scopes must already exist for the API product that you associate with the developer app.
-     * 
-     */
+        /**
+         * @return Scopes to apply to the developer app. The specified scopes must already exist for the API product that you associate with the developer app.
+         * 
+         */
     private final List<String> scopes;
-    /**
-     * Status of the credential. Valid values include `approved` or `revoked`.
-     * 
-     */
+        /**
+         * @return Status of the credential. Valid values include `approved` or `revoked`.
+         * 
+         */
     private final String status;
 
     @CustomType.Constructor
@@ -109,93 +109,93 @@ public final class GetAppResult {
     }
 
     /**
-     * List of API products associated with the developer app.
+     * @return List of API products associated with the developer app.
      * 
-    */
+     */
     public List<String> apiProducts() {
         return this.apiProducts;
     }
     /**
-     * Developer app family.
+     * @return Developer app family.
      * 
-    */
+     */
     public String appFamily() {
         return this.appFamily;
     }
     /**
-     * ID of the developer app.
+     * @return ID of the developer app.
      * 
-    */
+     */
     public String appId() {
         return this.appId;
     }
     /**
-     * List of attributes for the developer app.
+     * @return List of attributes for the developer app.
      * 
-    */
+     */
     public List<GoogleCloudApigeeV1AttributeResponse> attributes() {
         return this.attributes;
     }
     /**
-     * Callback URL used by OAuth 2.0 authorization servers to communicate authorization codes back to developer apps.
+     * @return Callback URL used by OAuth 2.0 authorization servers to communicate authorization codes back to developer apps.
      * 
-    */
+     */
     public String callbackUrl() {
         return this.callbackUrl;
     }
     /**
-     * Time the developer app was created in milliseconds since epoch.
+     * @return Time the developer app was created in milliseconds since epoch.
      * 
-    */
+     */
     public String createdAt() {
         return this.createdAt;
     }
     /**
-     * Set of credentials for the developer app consisting of the consumer key/secret pairs associated with the API products.
+     * @return Set of credentials for the developer app consisting of the consumer key/secret pairs associated with the API products.
      * 
-    */
+     */
     public List<GoogleCloudApigeeV1CredentialResponse> credentials() {
         return this.credentials;
     }
     /**
-     * ID of the developer.
+     * @return ID of the developer.
      * 
-    */
+     */
     public String developerId() {
         return this.developerId;
     }
     /**
-     * Expiration time, in milliseconds, for the consumer key that is generated for the developer app. If not set or left to the default value of `-1`, the API key never expires. The expiration time can&#39;t be updated after it is set.
+     * @return Expiration time, in milliseconds, for the consumer key that is generated for the developer app. If not set or left to the default value of `-1`, the API key never expires. The expiration time can&#39;t be updated after it is set.
      * 
-    */
+     */
     public String keyExpiresIn() {
         return this.keyExpiresIn;
     }
     /**
-     * Time the developer app was modified in milliseconds since epoch.
+     * @return Time the developer app was modified in milliseconds since epoch.
      * 
-    */
+     */
     public String lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
-     * Name of the developer app.
+     * @return Name of the developer app.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Scopes to apply to the developer app. The specified scopes must already exist for the API product that you associate with the developer app.
+     * @return Scopes to apply to the developer app. The specified scopes must already exist for the API product that you associate with the developer app.
      * 
-    */
+     */
     public List<String> scopes() {
         return this.scopes;
     }
     /**
-     * Status of the credential. Valid values include `approved` or `revoked`.
+     * @return Status of the credential. Valid values include `approved` or `revoked`.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

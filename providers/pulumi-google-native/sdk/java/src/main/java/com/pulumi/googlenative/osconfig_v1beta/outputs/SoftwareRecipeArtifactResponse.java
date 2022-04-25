@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class SoftwareRecipeArtifactResponse {
-    /**
-     * Defaults to false. When false, recipes are subject to validations based on the artifact type: Remote: A checksum must be specified, and only protocols with transport-layer security are permitted. GCS: An object generation number must be specified.
-     * 
-     */
+        /**
+         * @return Defaults to false. When false, recipes are subject to validations based on the artifact type: Remote: A checksum must be specified, and only protocols with transport-layer security are permitted. GCS: An object generation number must be specified.
+         * 
+         */
     private final Boolean allowInsecure;
-    /**
-     * A Google Cloud Storage artifact.
-     * 
-     */
+        /**
+         * @return A Google Cloud Storage artifact.
+         * 
+         */
     private final SoftwareRecipeArtifactGcsResponse gcs;
-    /**
-     * A generic remote artifact.
-     * 
-     */
+        /**
+         * @return A generic remote artifact.
+         * 
+         */
     private final SoftwareRecipeArtifactRemoteResponse remote;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class SoftwareRecipeArtifactResponse {
     }
 
     /**
-     * Defaults to false. When false, recipes are subject to validations based on the artifact type: Remote: A checksum must be specified, and only protocols with transport-layer security are permitted. GCS: An object generation number must be specified.
+     * @return Defaults to false. When false, recipes are subject to validations based on the artifact type: Remote: A checksum must be specified, and only protocols with transport-layer security are permitted. GCS: An object generation number must be specified.
      * 
-    */
+     */
     public Boolean allowInsecure() {
         return this.allowInsecure;
     }
     /**
-     * A Google Cloud Storage artifact.
+     * @return A Google Cloud Storage artifact.
      * 
-    */
+     */
     public SoftwareRecipeArtifactGcsResponse gcs() {
         return this.gcs;
     }
     /**
-     * A generic remote artifact.
+     * @return A generic remote artifact.
      * 
-    */
+     */
     public SoftwareRecipeArtifactRemoteResponse remote() {
         return this.remote;
     }

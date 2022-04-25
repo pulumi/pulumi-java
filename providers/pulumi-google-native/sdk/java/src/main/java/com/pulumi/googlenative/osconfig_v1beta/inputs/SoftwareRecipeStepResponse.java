@@ -29,6 +29,10 @@ public final class SoftwareRecipeStepResponse extends com.pulumi.resources.Invok
     @Import(name="archiveExtraction", required=true)
     private SoftwareRecipeStepExtractArchiveResponse archiveExtraction;
 
+    /**
+     * @return Extracts an archive into the specified directory.
+     * 
+     */
     public SoftwareRecipeStepExtractArchiveResponse archiveExtraction() {
         return this.archiveExtraction;
     }
@@ -40,6 +44,10 @@ public final class SoftwareRecipeStepResponse extends com.pulumi.resources.Invok
     @Import(name="dpkgInstallation", required=true)
     private SoftwareRecipeStepInstallDpkgResponse dpkgInstallation;
 
+    /**
+     * @return Installs a deb file via dpkg.
+     * 
+     */
     public SoftwareRecipeStepInstallDpkgResponse dpkgInstallation() {
         return this.dpkgInstallation;
     }
@@ -51,6 +59,10 @@ public final class SoftwareRecipeStepResponse extends com.pulumi.resources.Invok
     @Import(name="fileCopy", required=true)
     private SoftwareRecipeStepCopyFileResponse fileCopy;
 
+    /**
+     * @return Copies a file onto the instance.
+     * 
+     */
     public SoftwareRecipeStepCopyFileResponse fileCopy() {
         return this.fileCopy;
     }
@@ -62,6 +74,10 @@ public final class SoftwareRecipeStepResponse extends com.pulumi.resources.Invok
     @Import(name="fileExec", required=true)
     private SoftwareRecipeStepExecFileResponse fileExec;
 
+    /**
+     * @return Executes an artifact or local file.
+     * 
+     */
     public SoftwareRecipeStepExecFileResponse fileExec() {
         return this.fileExec;
     }
@@ -73,6 +89,10 @@ public final class SoftwareRecipeStepResponse extends com.pulumi.resources.Invok
     @Import(name="msiInstallation", required=true)
     private SoftwareRecipeStepInstallMsiResponse msiInstallation;
 
+    /**
+     * @return Installs an MSI file.
+     * 
+     */
     public SoftwareRecipeStepInstallMsiResponse msiInstallation() {
         return this.msiInstallation;
     }
@@ -84,6 +104,10 @@ public final class SoftwareRecipeStepResponse extends com.pulumi.resources.Invok
     @Import(name="rpmInstallation", required=true)
     private SoftwareRecipeStepInstallRpmResponse rpmInstallation;
 
+    /**
+     * @return Installs an rpm file via the rpm utility.
+     * 
+     */
     public SoftwareRecipeStepInstallRpmResponse rpmInstallation() {
         return this.rpmInstallation;
     }
@@ -95,6 +119,10 @@ public final class SoftwareRecipeStepResponse extends com.pulumi.resources.Invok
     @Import(name="scriptRun", required=true)
     private SoftwareRecipeStepRunScriptResponse scriptRun;
 
+    /**
+     * @return Runs commands in a shell.
+     * 
+     */
     public SoftwareRecipeStepRunScriptResponse scriptRun() {
         return this.scriptRun;
     }
@@ -129,36 +157,78 @@ public final class SoftwareRecipeStepResponse extends com.pulumi.resources.Invok
             $ = new SoftwareRecipeStepResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param archiveExtraction Extracts an archive into the specified directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder archiveExtraction(SoftwareRecipeStepExtractArchiveResponse archiveExtraction) {
             $.archiveExtraction = archiveExtraction;
             return this;
         }
 
+        /**
+         * @param dpkgInstallation Installs a deb file via dpkg.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dpkgInstallation(SoftwareRecipeStepInstallDpkgResponse dpkgInstallation) {
             $.dpkgInstallation = dpkgInstallation;
             return this;
         }
 
+        /**
+         * @param fileCopy Copies a file onto the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileCopy(SoftwareRecipeStepCopyFileResponse fileCopy) {
             $.fileCopy = fileCopy;
             return this;
         }
 
+        /**
+         * @param fileExec Executes an artifact or local file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileExec(SoftwareRecipeStepExecFileResponse fileExec) {
             $.fileExec = fileExec;
             return this;
         }
 
+        /**
+         * @param msiInstallation Installs an MSI file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder msiInstallation(SoftwareRecipeStepInstallMsiResponse msiInstallation) {
             $.msiInstallation = msiInstallation;
             return this;
         }
 
+        /**
+         * @param rpmInstallation Installs an rpm file via the rpm utility.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rpmInstallation(SoftwareRecipeStepInstallRpmResponse rpmInstallation) {
             $.rpmInstallation = rpmInstallation;
             return this;
         }
 
+        /**
+         * @param scriptRun Runs commands in a shell.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptRun(SoftwareRecipeStepRunScriptResponse scriptRun) {
             $.scriptRun = scriptRun;
             return this;

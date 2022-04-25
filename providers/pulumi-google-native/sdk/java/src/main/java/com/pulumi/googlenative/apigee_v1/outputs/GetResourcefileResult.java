@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GetResourcefileResult {
-    /**
-     * The HTTP Content-Type header value specifying the content type of the body.
-     * 
-     */
+        /**
+         * @return The HTTP Content-Type header value specifying the content type of the body.
+         * 
+         */
     private final String contentType;
-    /**
-     * The HTTP request/response body as raw binary.
-     * 
-     */
+        /**
+         * @return The HTTP request/response body as raw binary.
+         * 
+         */
     private final String data;
-    /**
-     * Application specific response metadata. Must be set in the first response for streaming APIs.
-     * 
-     */
+        /**
+         * @return Application specific response metadata. Must be set in the first response for streaming APIs.
+         * 
+         */
     private final List<Map<String,String>> extensions;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class GetResourcefileResult {
     }
 
     /**
-     * The HTTP Content-Type header value specifying the content type of the body.
+     * @return The HTTP Content-Type header value specifying the content type of the body.
      * 
-    */
+     */
     public String contentType() {
         return this.contentType;
     }
     /**
-     * The HTTP request/response body as raw binary.
+     * @return The HTTP request/response body as raw binary.
      * 
-    */
+     */
     public String data() {
         return this.data;
     }
     /**
-     * Application specific response metadata. Must be set in the first response for streaming APIs.
+     * @return Application specific response metadata. Must be set in the first response for streaming APIs.
      * 
-    */
+     */
     public List<Map<String,String>> extensions() {
         return this.extensions;
     }

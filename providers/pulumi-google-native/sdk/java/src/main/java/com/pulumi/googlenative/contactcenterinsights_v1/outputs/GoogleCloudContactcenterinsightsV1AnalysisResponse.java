@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudContactcenterinsightsV1AnalysisResponse {
-    /**
-     * The result of the analysis, which is populated when the analysis finishes.
-     * 
-     */
+        /**
+         * @return The result of the analysis, which is populated when the analysis finishes.
+         * 
+         */
     private final GoogleCloudContactcenterinsightsV1AnalysisResultResponse analysisResult;
-    /**
-     * The time at which the analysis was created, which occurs when the long-running operation completes.
-     * 
-     */
+        /**
+         * @return The time at which the analysis was created, which occurs when the long-running operation completes.
+         * 
+         */
     private final String createTime;
-    /**
-     * Immutable. The resource name of the analysis. Format: projects/{project}/locations/{location}/conversations/{conversation}/analyses/{analysis}
-     * 
-     */
+        /**
+         * @return Immutable. The resource name of the analysis. Format: projects/{project}/locations/{location}/conversations/{conversation}/analyses/{analysis}
+         * 
+         */
     private final String name;
-    /**
-     * The time at which the analysis was requested.
-     * 
-     */
+        /**
+         * @return The time at which the analysis was requested.
+         * 
+         */
     private final String requestTime;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResponse {
     }
 
     /**
-     * The result of the analysis, which is populated when the analysis finishes.
+     * @return The result of the analysis, which is populated when the analysis finishes.
      * 
-    */
+     */
     public GoogleCloudContactcenterinsightsV1AnalysisResultResponse analysisResult() {
         return this.analysisResult;
     }
     /**
-     * The time at which the analysis was created, which occurs when the long-running operation completes.
+     * @return The time at which the analysis was created, which occurs when the long-running operation completes.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Immutable. The resource name of the analysis. Format: projects/{project}/locations/{location}/conversations/{conversation}/analyses/{analysis}
+     * @return Immutable. The resource name of the analysis. Format: projects/{project}/locations/{location}/conversations/{conversation}/analyses/{analysis}
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The time at which the analysis was requested.
+     * @return The time at which the analysis was requested.
      * 
-    */
+     */
     public String requestTime() {
         return this.requestTime;
     }

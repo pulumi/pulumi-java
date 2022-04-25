@@ -13,25 +13,25 @@ import java.util.Objects;
 
 @CustomType
 public final class SourceProvenanceResponse {
-    /**
-     * Hash(es) of the build source, which can be used to verify that the original source integrity was maintained in the build. Note that `FileHashes` will only be populated if `BuildOptions` has requested a `SourceProvenanceHash`. The keys to this map are file paths used as build source and the values contain the hash values for those files. If the build source came in a single package such as a gzipped tarfile (`.tar.gz`), the `FileHash` will be for the single path to that file.
-     * 
-     */
+        /**
+         * @return Hash(es) of the build source, which can be used to verify that the original source integrity was maintained in the build. Note that `FileHashes` will only be populated if `BuildOptions` has requested a `SourceProvenanceHash`. The keys to this map are file paths used as build source and the values contain the hash values for those files. If the build source came in a single package such as a gzipped tarfile (`.tar.gz`), the `FileHash` will be for the single path to that file.
+         * 
+         */
     private final Map<String,String> fileHashes;
-    /**
-     * A copy of the build&#39;s `source.repo_source`, if exists, with any revisions resolved.
-     * 
-     */
+        /**
+         * @return A copy of the build&#39;s `source.repo_source`, if exists, with any revisions resolved.
+         * 
+         */
     private final RepoSourceResponse resolvedRepoSource;
-    /**
-     * A copy of the build&#39;s `source.storage_source`, if exists, with any generations resolved.
-     * 
-     */
+        /**
+         * @return A copy of the build&#39;s `source.storage_source`, if exists, with any generations resolved.
+         * 
+         */
     private final StorageSourceResponse resolvedStorageSource;
-    /**
-     * A copy of the build&#39;s `source.storage_source_manifest`, if exists, with any revisions resolved. This feature is in Preview.
-     * 
-     */
+        /**
+         * @return A copy of the build&#39;s `source.storage_source_manifest`, if exists, with any revisions resolved. This feature is in Preview.
+         * 
+         */
     private final StorageSourceManifestResponse resolvedStorageSourceManifest;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class SourceProvenanceResponse {
     }
 
     /**
-     * Hash(es) of the build source, which can be used to verify that the original source integrity was maintained in the build. Note that `FileHashes` will only be populated if `BuildOptions` has requested a `SourceProvenanceHash`. The keys to this map are file paths used as build source and the values contain the hash values for those files. If the build source came in a single package such as a gzipped tarfile (`.tar.gz`), the `FileHash` will be for the single path to that file.
+     * @return Hash(es) of the build source, which can be used to verify that the original source integrity was maintained in the build. Note that `FileHashes` will only be populated if `BuildOptions` has requested a `SourceProvenanceHash`. The keys to this map are file paths used as build source and the values contain the hash values for those files. If the build source came in a single package such as a gzipped tarfile (`.tar.gz`), the `FileHash` will be for the single path to that file.
      * 
-    */
+     */
     public Map<String,String> fileHashes() {
         return this.fileHashes;
     }
     /**
-     * A copy of the build&#39;s `source.repo_source`, if exists, with any revisions resolved.
+     * @return A copy of the build&#39;s `source.repo_source`, if exists, with any revisions resolved.
      * 
-    */
+     */
     public RepoSourceResponse resolvedRepoSource() {
         return this.resolvedRepoSource;
     }
     /**
-     * A copy of the build&#39;s `source.storage_source`, if exists, with any generations resolved.
+     * @return A copy of the build&#39;s `source.storage_source`, if exists, with any generations resolved.
      * 
-    */
+     */
     public StorageSourceResponse resolvedStorageSource() {
         return this.resolvedStorageSource;
     }
     /**
-     * A copy of the build&#39;s `source.storage_source_manifest`, if exists, with any revisions resolved. This feature is in Preview.
+     * @return A copy of the build&#39;s `source.storage_source_manifest`, if exists, with any revisions resolved. This feature is in Preview.
      * 
-    */
+     */
     public StorageSourceManifestResponse resolvedStorageSourceManifest() {
         return this.resolvedStorageSourceManifest;
     }

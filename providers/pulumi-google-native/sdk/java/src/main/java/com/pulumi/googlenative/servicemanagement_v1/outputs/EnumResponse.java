@@ -13,30 +13,30 @@ import java.util.Objects;
 
 @CustomType
 public final class EnumResponse {
-    /**
-     * Enum value definitions.
-     * 
-     */
+        /**
+         * @return Enum value definitions.
+         * 
+         */
     private final List<EnumValueResponse> enumvalue;
-    /**
-     * Enum type name.
-     * 
-     */
+        /**
+         * @return Enum type name.
+         * 
+         */
     private final String name;
-    /**
-     * Protocol buffer options.
-     * 
-     */
+        /**
+         * @return Protocol buffer options.
+         * 
+         */
     private final List<OptionResponse> options;
-    /**
-     * The source context.
-     * 
-     */
+        /**
+         * @return The source context.
+         * 
+         */
     private final SourceContextResponse sourceContext;
-    /**
-     * The source syntax.
-     * 
-     */
+        /**
+         * @return The source syntax.
+         * 
+         */
     private final String syntax;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class EnumResponse {
     }
 
     /**
-     * Enum value definitions.
+     * @return Enum value definitions.
      * 
-    */
+     */
     public List<EnumValueResponse> enumvalue() {
         return this.enumvalue;
     }
     /**
-     * Enum type name.
+     * @return Enum type name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Protocol buffer options.
+     * @return Protocol buffer options.
      * 
-    */
+     */
     public List<OptionResponse> options() {
         return this.options;
     }
     /**
-     * The source context.
+     * @return The source context.
      * 
-    */
+     */
     public SourceContextResponse sourceContext() {
         return this.sourceContext;
     }
     /**
-     * The source syntax.
+     * @return The source syntax.
      * 
-    */
+     */
     public String syntax() {
         return this.syntax;
     }

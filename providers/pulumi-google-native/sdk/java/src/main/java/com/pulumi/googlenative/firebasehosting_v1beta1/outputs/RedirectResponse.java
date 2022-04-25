@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class RedirectResponse {
-    /**
-     * The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
-     * 
-     */
+        /**
+         * @return The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
+         * 
+         */
     private final String glob;
-    /**
-     * The value to put in the HTTP location header of the response. The location can contain capture group values from the pattern using a `:` prefix to identify the segment and an optional `*` to capture the rest of the URL. For example: &#34;glob&#34;: &#34;/:capture*&#34;, &#34;statusCode&#34;: 301, &#34;location&#34;: &#34;https://example.com/foo/:capture&#34;
-     * 
-     */
+        /**
+         * @return The value to put in the HTTP location header of the response. The location can contain capture group values from the pattern using a `:` prefix to identify the segment and an optional `*` to capture the rest of the URL. For example: &#34;glob&#34;: &#34;/:capture*&#34;, &#34;statusCode&#34;: 301, &#34;location&#34;: &#34;https://example.com/foo/:capture&#34;
+         * 
+         */
     private final String location;
-    /**
-     * The user-supplied RE2 regular expression to match against the request URL path.
-     * 
-     */
+        /**
+         * @return The user-supplied RE2 regular expression to match against the request URL path.
+         * 
+         */
     private final String regex;
-    /**
-     * The status HTTP code to return in the response. It must be a valid 3xx status code.
-     * 
-     */
+        /**
+         * @return The status HTTP code to return in the response. It must be a valid 3xx status code.
+         * 
+         */
     private final Integer statusCode;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class RedirectResponse {
     }
 
     /**
-     * The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
+     * @return The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
      * 
-    */
+     */
     public String glob() {
         return this.glob;
     }
     /**
-     * The value to put in the HTTP location header of the response. The location can contain capture group values from the pattern using a `:` prefix to identify the segment and an optional `*` to capture the rest of the URL. For example: &#34;glob&#34;: &#34;/:capture*&#34;, &#34;statusCode&#34;: 301, &#34;location&#34;: &#34;https://example.com/foo/:capture&#34;
+     * @return The value to put in the HTTP location header of the response. The location can contain capture group values from the pattern using a `:` prefix to identify the segment and an optional `*` to capture the rest of the URL. For example: &#34;glob&#34;: &#34;/:capture*&#34;, &#34;statusCode&#34;: 301, &#34;location&#34;: &#34;https://example.com/foo/:capture&#34;
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The user-supplied RE2 regular expression to match against the request URL path.
+     * @return The user-supplied RE2 regular expression to match against the request URL path.
      * 
-    */
+     */
     public String regex() {
         return this.regex;
     }
     /**
-     * The status HTTP code to return in the response. It must be a valid 3xx status code.
+     * @return The status HTTP code to return in the response. It must be a valid 3xx status code.
      * 
-    */
+     */
     public Integer statusCode() {
         return this.statusCode;
     }

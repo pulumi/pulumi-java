@@ -28,6 +28,10 @@ public final class OracleProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectionAttributes")
     private @Nullable Output<Map<String,String>> connectionAttributes;
 
+    /**
+     * @return Connection string attributes
+     * 
+     */
     public Optional<Output<Map<String,String>>> connectionAttributes() {
         return Optional.ofNullable(this.connectionAttributes);
     }
@@ -39,6 +43,10 @@ public final class OracleProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseService", required=true)
     private Output<String> databaseService;
 
+    /**
+     * @return Database for the Oracle connection.
+     * 
+     */
     public Output<String> databaseService() {
         return this.databaseService;
     }
@@ -50,6 +58,10 @@ public final class OracleProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostname", required=true)
     private Output<String> hostname;
 
+    /**
+     * @return Hostname for the Oracle connection.
+     * 
+     */
     public Output<String> hostname() {
         return this.hostname;
     }
@@ -61,6 +73,10 @@ public final class OracleProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="password", required=true)
     private Output<String> password;
 
+    /**
+     * @return Password for the Oracle connection.
+     * 
+     */
     public Output<String> password() {
         return this.password;
     }
@@ -72,6 +88,10 @@ public final class OracleProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return Port for the Oracle connection, default value is 1521.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -83,6 +103,10 @@ public final class OracleProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="username", required=true)
     private Output<String> username;
 
+    /**
+     * @return Username for the Oracle connection.
+     * 
+     */
     public Output<String> username() {
         return this.username;
     }
@@ -116,56 +140,128 @@ public final class OracleProfileArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OracleProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionAttributes Connection string attributes
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionAttributes(@Nullable Output<Map<String,String>> connectionAttributes) {
             $.connectionAttributes = connectionAttributes;
             return this;
         }
 
+        /**
+         * @param connectionAttributes Connection string attributes
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionAttributes(Map<String,String> connectionAttributes) {
             return connectionAttributes(Output.of(connectionAttributes));
         }
 
+        /**
+         * @param databaseService Database for the Oracle connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseService(Output<String> databaseService) {
             $.databaseService = databaseService;
             return this;
         }
 
+        /**
+         * @param databaseService Database for the Oracle connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseService(String databaseService) {
             return databaseService(Output.of(databaseService));
         }
 
+        /**
+         * @param hostname Hostname for the Oracle connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(Output<String> hostname) {
             $.hostname = hostname;
             return this;
         }
 
+        /**
+         * @param hostname Hostname for the Oracle connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(String hostname) {
             return hostname(Output.of(hostname));
         }
 
+        /**
+         * @param password Password for the Oracle connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password for the Oracle connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param port Port for the Oracle connection, default value is 1521.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port Port for the Oracle connection, default value is 1521.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param username Username for the Oracle connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username Username for the Oracle connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

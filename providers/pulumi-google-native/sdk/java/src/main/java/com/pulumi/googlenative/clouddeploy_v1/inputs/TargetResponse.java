@@ -29,6 +29,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="annotations", required=true)
     private Map<String,String> annotations;
 
+    /**
+     * @return Optional. User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+     * 
+     */
     public Map<String,String> annotations() {
         return this.annotations;
     }
@@ -40,6 +44,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="anthosCluster", required=true)
     private AnthosClusterResponse anthosCluster;
 
+    /**
+     * @return Information specifying an Anthos Cluster.
+     * 
+     */
     public AnthosClusterResponse anthosCluster() {
         return this.anthosCluster;
     }
@@ -51,6 +59,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createTime", required=true)
     private String createTime;
 
+    /**
+     * @return Time at which the `Target` was created.
+     * 
+     */
     public String createTime() {
         return this.createTime;
     }
@@ -62,6 +74,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Optional. Description of the `Target`. Max length is 255 characters.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -73,6 +89,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return Optional. This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -84,6 +104,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="executionConfigs", required=true)
     private List<ExecutionConfigResponse> executionConfigs;
 
+    /**
+     * @return Configurations for all execution that relates to this `Target`. Each `ExecutionEnvironmentUsage` value may only be used in a single configuration; using the same value multiple times is an error. When one or more configurations are specified, they must include the `RENDER` and `DEPLOY` `ExecutionEnvironmentUsage` values. When no configurations are specified, execution will use the default specified in `DefaultPool`.
+     * 
+     */
     public List<ExecutionConfigResponse> executionConfigs() {
         return this.executionConfigs;
     }
@@ -95,6 +119,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="gke", required=true)
     private GkeClusterResponse gke;
 
+    /**
+     * @return Information specifying a GKE Cluster.
+     * 
+     */
     public GkeClusterResponse gke() {
         return this.gke;
     }
@@ -106,6 +134,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="labels", required=true)
     private Map<String,String> labels;
 
+    /**
+     * @return Optional. Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be &lt;= 128 bytes.
+     * 
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
@@ -117,6 +149,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Optional. Name of the `Target`. Format is projects/{project}/locations/{location}/targets/a-z{0,62}.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -128,6 +164,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="requireApproval", required=true)
     private Boolean requireApproval;
 
+    /**
+     * @return Optional. Whether or not the `Target` requires approval.
+     * 
+     */
     public Boolean requireApproval() {
         return this.requireApproval;
     }
@@ -139,6 +179,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="targetId", required=true)
     private String targetId;
 
+    /**
+     * @return Resource id of the `Target`.
+     * 
+     */
     public String targetId() {
         return this.targetId;
     }
@@ -150,6 +194,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="uid", required=true)
     private String uid;
 
+    /**
+     * @return Unique identifier of the `Target`.
+     * 
+     */
     public String uid() {
         return this.uid;
     }
@@ -161,6 +209,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="updateTime", required=true)
     private String updateTime;
 
+    /**
+     * @return Most recent time at which the `Target` was updated.
+     * 
+     */
     public String updateTime() {
         return this.updateTime;
     }
@@ -201,70 +253,154 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TargetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations Optional. User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Map<String,String> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param anthosCluster Information specifying an Anthos Cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder anthosCluster(AnthosClusterResponse anthosCluster) {
             $.anthosCluster = anthosCluster;
             return this;
         }
 
+        /**
+         * @param createTime Time at which the `Target` was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param description Optional. Description of the `Target`. Max length is 255 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param etag Optional. This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param executionConfigs Configurations for all execution that relates to this `Target`. Each `ExecutionEnvironmentUsage` value may only be used in a single configuration; using the same value multiple times is an error. When one or more configurations are specified, they must include the `RENDER` and `DEPLOY` `ExecutionEnvironmentUsage` values. When no configurations are specified, execution will use the default specified in `DefaultPool`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionConfigs(List<ExecutionConfigResponse> executionConfigs) {
             $.executionConfigs = executionConfigs;
             return this;
         }
 
+        /**
+         * @param executionConfigs Configurations for all execution that relates to this `Target`. Each `ExecutionEnvironmentUsage` value may only be used in a single configuration; using the same value multiple times is an error. When one or more configurations are specified, they must include the `RENDER` and `DEPLOY` `ExecutionEnvironmentUsage` values. When no configurations are specified, execution will use the default specified in `DefaultPool`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionConfigs(ExecutionConfigResponse... executionConfigs) {
             return executionConfigs(List.of(executionConfigs));
         }
 
+        /**
+         * @param gke Information specifying a GKE Cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gke(GkeClusterResponse gke) {
             $.gke = gke;
             return this;
         }
 
+        /**
+         * @param labels Optional. Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be &lt;= 128 bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param name Optional. Name of the `Target`. Format is projects/{project}/locations/{location}/targets/a-z{0,62}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param requireApproval Optional. Whether or not the `Target` requires approval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireApproval(Boolean requireApproval) {
             $.requireApproval = requireApproval;
             return this;
         }
 
+        /**
+         * @param targetId Resource id of the `Target`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetId(String targetId) {
             $.targetId = targetId;
             return this;
         }
 
+        /**
+         * @param uid Unique identifier of the `Target`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(String uid) {
             $.uid = uid;
             return this;
         }
 
+        /**
+         * @param updateTime Most recent time at which the `Target` was updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             $.updateTime = updateTime;
             return this;

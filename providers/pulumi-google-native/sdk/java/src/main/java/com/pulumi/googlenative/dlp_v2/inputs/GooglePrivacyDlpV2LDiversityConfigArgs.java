@@ -27,6 +27,10 @@ public final class GooglePrivacyDlpV2LDiversityConfigArgs extends com.pulumi.res
     @Import(name="quasiIds")
     private @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds;
 
+    /**
+     * @return Set of quasi-identifiers indicating how equivalence classes are defined for the l-diversity computation. When multiple fields are specified, they are considered a single composite key.
+     * 
+     */
     public Optional<Output<List<GooglePrivacyDlpV2FieldIdArgs>>> quasiIds() {
         return Optional.ofNullable(this.quasiIds);
     }
@@ -38,6 +42,10 @@ public final class GooglePrivacyDlpV2LDiversityConfigArgs extends com.pulumi.res
     @Import(name="sensitiveAttribute")
     private @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> sensitiveAttribute;
 
+    /**
+     * @return Sensitive field for computing the l-value.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2FieldIdArgs>> sensitiveAttribute() {
         return Optional.ofNullable(this.sensitiveAttribute);
     }
@@ -67,24 +75,54 @@ public final class GooglePrivacyDlpV2LDiversityConfigArgs extends com.pulumi.res
             $ = new GooglePrivacyDlpV2LDiversityConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param quasiIds Set of quasi-identifiers indicating how equivalence classes are defined for the l-diversity computation. When multiple fields are specified, they are considered a single composite key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quasiIds(@Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds) {
             $.quasiIds = quasiIds;
             return this;
         }
 
+        /**
+         * @param quasiIds Set of quasi-identifiers indicating how equivalence classes are defined for the l-diversity computation. When multiple fields are specified, they are considered a single composite key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quasiIds(List<GooglePrivacyDlpV2FieldIdArgs> quasiIds) {
             return quasiIds(Output.of(quasiIds));
         }
 
+        /**
+         * @param quasiIds Set of quasi-identifiers indicating how equivalence classes are defined for the l-diversity computation. When multiple fields are specified, they are considered a single composite key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quasiIds(GooglePrivacyDlpV2FieldIdArgs... quasiIds) {
             return quasiIds(List.of(quasiIds));
         }
 
+        /**
+         * @param sensitiveAttribute Sensitive field for computing the l-value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sensitiveAttribute(@Nullable Output<GooglePrivacyDlpV2FieldIdArgs> sensitiveAttribute) {
             $.sensitiveAttribute = sensitiveAttribute;
             return this;
         }
 
+        /**
+         * @param sensitiveAttribute Sensitive field for computing the l-value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sensitiveAttribute(GooglePrivacyDlpV2FieldIdArgs sensitiveAttribute) {
             return sensitiveAttribute(Output.of(sensitiveAttribute));
         }

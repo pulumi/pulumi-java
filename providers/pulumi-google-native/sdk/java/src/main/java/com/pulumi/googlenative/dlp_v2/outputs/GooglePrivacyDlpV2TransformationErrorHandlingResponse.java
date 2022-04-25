@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GooglePrivacyDlpV2TransformationErrorHandlingResponse {
-    /**
-     * Ignore errors
-     * 
-     */
+        /**
+         * @return Ignore errors
+         * 
+         */
     private final GooglePrivacyDlpV2LeaveUntransformedResponse leaveUntransformed;
-    /**
-     * Throw an error
-     * 
-     */
+        /**
+         * @return Throw an error
+         * 
+         */
     private final GooglePrivacyDlpV2ThrowErrorResponse throwError;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingResponse {
     }
 
     /**
-     * Ignore errors
+     * @return Ignore errors
      * 
-    */
+     */
     public GooglePrivacyDlpV2LeaveUntransformedResponse leaveUntransformed() {
         return this.leaveUntransformed;
     }
     /**
-     * Throw an error
+     * @return Throw an error
      * 
-    */
+     */
     public GooglePrivacyDlpV2ThrowErrorResponse throwError() {
         return this.throwError;
     }

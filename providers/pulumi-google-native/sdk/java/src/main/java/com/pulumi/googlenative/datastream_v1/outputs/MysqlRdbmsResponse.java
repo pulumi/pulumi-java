@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class MysqlRdbmsResponse {
-    /**
-     * Mysql databases on the server
-     * 
-     */
+        /**
+         * @return Mysql databases on the server
+         * 
+         */
     private final List<MysqlDatabaseResponse> mysqlDatabases;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class MysqlRdbmsResponse {
     }
 
     /**
-     * Mysql databases on the server
+     * @return Mysql databases on the server
      * 
-    */
+     */
     public List<MysqlDatabaseResponse> mysqlDatabases() {
         return this.mysqlDatabases;
     }

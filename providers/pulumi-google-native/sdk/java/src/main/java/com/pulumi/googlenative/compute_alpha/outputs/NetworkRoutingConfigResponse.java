@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class NetworkRoutingConfigResponse {
-    /**
-     * The network-wide routing mode to use. If set to REGIONAL, this network&#39;s Cloud Routers will only advertise routes with subnets of this network in the same region as the router. If set to GLOBAL, this network&#39;s Cloud Routers will advertise routes with all subnets of this network, across regions.
-     * 
-     */
+        /**
+         * @return The network-wide routing mode to use. If set to REGIONAL, this network&#39;s Cloud Routers will only advertise routes with subnets of this network in the same region as the router. If set to GLOBAL, this network&#39;s Cloud Routers will advertise routes with all subnets of this network, across regions.
+         * 
+         */
     private final String routingMode;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class NetworkRoutingConfigResponse {
     }
 
     /**
-     * The network-wide routing mode to use. If set to REGIONAL, this network&#39;s Cloud Routers will only advertise routes with subnets of this network in the same region as the router. If set to GLOBAL, this network&#39;s Cloud Routers will advertise routes with all subnets of this network, across regions.
+     * @return The network-wide routing mode to use. If set to REGIONAL, this network&#39;s Cloud Routers will only advertise routes with subnets of this network in the same region as the router. If set to GLOBAL, this network&#39;s Cloud Routers will advertise routes with all subnets of this network, across regions.
      * 
-    */
+     */
     public String routingMode() {
         return this.routingMode;
     }

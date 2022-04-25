@@ -24,6 +24,10 @@ public final class AndroidDeviceListResponse extends com.pulumi.resources.Invoke
     @Import(name="androidDevices", required=true)
     private List<AndroidDeviceResponse> androidDevices;
 
+    /**
+     * @return A list of Android devices.
+     * 
+     */
     public List<AndroidDeviceResponse> androidDevices() {
         return this.androidDevices;
     }
@@ -52,11 +56,23 @@ public final class AndroidDeviceListResponse extends com.pulumi.resources.Invoke
             $ = new AndroidDeviceListResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param androidDevices A list of Android devices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidDevices(List<AndroidDeviceResponse> androidDevices) {
             $.androidDevices = androidDevices;
             return this;
         }
 
+        /**
+         * @param androidDevices A list of Android devices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidDevices(AndroidDeviceResponse... androidDevices) {
             return androidDevices(List.of(androidDevices));
         }

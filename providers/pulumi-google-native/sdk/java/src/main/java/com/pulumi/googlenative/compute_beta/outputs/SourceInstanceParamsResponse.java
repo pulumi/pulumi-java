@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class SourceInstanceParamsResponse {
-    /**
-     * Attached disks configuration. If not provided, defaults are applied: For boot disk and any other R/W disks, new custom images will be created from each disk. For read-only disks, they will be attached in read-only mode. Local SSD disks will be created as blank volumes.
-     * 
-     */
+        /**
+         * @return Attached disks configuration. If not provided, defaults are applied: For boot disk and any other R/W disks, new custom images will be created from each disk. For read-only disks, they will be attached in read-only mode. Local SSD disks will be created as blank volumes.
+         * 
+         */
     private final List<DiskInstantiationConfigResponse> diskConfigs;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class SourceInstanceParamsResponse {
     }
 
     /**
-     * Attached disks configuration. If not provided, defaults are applied: For boot disk and any other R/W disks, new custom images will be created from each disk. For read-only disks, they will be attached in read-only mode. Local SSD disks will be created as blank volumes.
+     * @return Attached disks configuration. If not provided, defaults are applied: For boot disk and any other R/W disks, new custom images will be created from each disk. For read-only disks, they will be attached in read-only mode. Local SSD disks will be created as blank volumes.
      * 
-    */
+     */
     public List<DiskInstantiationConfigResponse> diskConfigs() {
         return this.diskConfigs;
     }

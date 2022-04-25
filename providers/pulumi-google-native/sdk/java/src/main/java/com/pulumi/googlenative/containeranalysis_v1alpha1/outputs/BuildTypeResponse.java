@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class BuildTypeResponse {
-    /**
-     * Version of the builder which produced this Note.
-     * 
-     */
+        /**
+         * @return Version of the builder which produced this Note.
+         * 
+         */
     private final String builderVersion;
-    /**
-     * Signature of the build in Occurrences pointing to the Note containing this `BuilderDetails`.
-     * 
-     */
+        /**
+         * @return Signature of the build in Occurrences pointing to the Note containing this `BuilderDetails`.
+         * 
+         */
     private final BuildSignatureResponse signature;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class BuildTypeResponse {
     }
 
     /**
-     * Version of the builder which produced this Note.
+     * @return Version of the builder which produced this Note.
      * 
-    */
+     */
     public String builderVersion() {
         return this.builderVersion;
     }
     /**
-     * Signature of the build in Occurrences pointing to the Note containing this `BuilderDetails`.
+     * @return Signature of the build in Occurrences pointing to the Note containing this `BuilderDetails`.
      * 
-    */
+     */
     public BuildSignatureResponse signature() {
         return this.signature;
     }

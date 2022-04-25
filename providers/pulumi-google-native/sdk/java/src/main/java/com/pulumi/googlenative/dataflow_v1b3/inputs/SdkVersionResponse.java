@@ -23,6 +23,10 @@ public final class SdkVersionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sdkSupportStatus", required=true)
     private String sdkSupportStatus;
 
+    /**
+     * @return The support status for this SDK version.
+     * 
+     */
     public String sdkSupportStatus() {
         return this.sdkSupportStatus;
     }
@@ -34,6 +38,10 @@ public final class SdkVersionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return The version of the SDK used to run the job.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -45,6 +53,10 @@ public final class SdkVersionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="versionDisplayName", required=true)
     private String versionDisplayName;
 
+    /**
+     * @return A readable string describing the version of the SDK.
+     * 
+     */
     public String versionDisplayName() {
         return this.versionDisplayName;
     }
@@ -75,16 +87,34 @@ public final class SdkVersionResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SdkVersionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sdkSupportStatus The support status for this SDK version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sdkSupportStatus(String sdkSupportStatus) {
             $.sdkSupportStatus = sdkSupportStatus;
             return this;
         }
 
+        /**
+         * @param version The version of the SDK used to run the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param versionDisplayName A readable string describing the version of the SDK.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionDisplayName(String versionDisplayName) {
             $.versionDisplayName = versionDisplayName;
             return this;

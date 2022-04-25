@@ -26,6 +26,10 @@ public final class SpokeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of the spoke.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class SpokeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hub")
     private @Nullable Output<String> hub;
 
+    /**
+     * @return Immutable. The name of the hub that this spoke is attached to.
+     * 
+     */
     public Optional<Output<String>> hub() {
         return Optional.ofNullable(this.hub);
     }
@@ -48,6 +56,10 @@ public final class SpokeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -59,6 +71,10 @@ public final class SpokeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="linkedInterconnectAttachments")
     private @Nullable Output<LinkedInterconnectAttachmentsArgs> linkedInterconnectAttachments;
 
+    /**
+     * @return VLAN attachments that are associated with the spoke.
+     * 
+     */
     public Optional<Output<LinkedInterconnectAttachmentsArgs>> linkedInterconnectAttachments() {
         return Optional.ofNullable(this.linkedInterconnectAttachments);
     }
@@ -70,6 +86,10 @@ public final class SpokeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="linkedRouterApplianceInstances")
     private @Nullable Output<LinkedRouterApplianceInstancesArgs> linkedRouterApplianceInstances;
 
+    /**
+     * @return Router appliance instances that are associated with the spoke.
+     * 
+     */
     public Optional<Output<LinkedRouterApplianceInstancesArgs>> linkedRouterApplianceInstances() {
         return Optional.ofNullable(this.linkedRouterApplianceInstances);
     }
@@ -81,6 +101,10 @@ public final class SpokeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="linkedVpnTunnels")
     private @Nullable Output<LinkedVpnTunnelsArgs> linkedVpnTunnels;
 
+    /**
+     * @return VPN tunnels that are associated with the spoke.
+     * 
+     */
     public Optional<Output<LinkedVpnTunnelsArgs>> linkedVpnTunnels() {
         return Optional.ofNullable(this.linkedVpnTunnels);
     }
@@ -99,6 +123,10 @@ public final class SpokeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Immutable. The name of the spoke. Spoke names must be unique. They use the following form: `projects/{project_number}/locations/{region}/spokes/{spoke_id}`
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -158,56 +186,128 @@ public final class SpokeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SpokeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description An optional description of the spoke.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of the spoke.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param hub Immutable. The name of the hub that this spoke is attached to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hub(@Nullable Output<String> hub) {
             $.hub = hub;
             return this;
         }
 
+        /**
+         * @param hub Immutable. The name of the hub that this spoke is attached to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hub(String hub) {
             return hub(Output.of(hub));
         }
 
+        /**
+         * @param labels Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param linkedInterconnectAttachments VLAN attachments that are associated with the spoke.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedInterconnectAttachments(@Nullable Output<LinkedInterconnectAttachmentsArgs> linkedInterconnectAttachments) {
             $.linkedInterconnectAttachments = linkedInterconnectAttachments;
             return this;
         }
 
+        /**
+         * @param linkedInterconnectAttachments VLAN attachments that are associated with the spoke.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedInterconnectAttachments(LinkedInterconnectAttachmentsArgs linkedInterconnectAttachments) {
             return linkedInterconnectAttachments(Output.of(linkedInterconnectAttachments));
         }
 
+        /**
+         * @param linkedRouterApplianceInstances Router appliance instances that are associated with the spoke.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedRouterApplianceInstances(@Nullable Output<LinkedRouterApplianceInstancesArgs> linkedRouterApplianceInstances) {
             $.linkedRouterApplianceInstances = linkedRouterApplianceInstances;
             return this;
         }
 
+        /**
+         * @param linkedRouterApplianceInstances Router appliance instances that are associated with the spoke.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedRouterApplianceInstances(LinkedRouterApplianceInstancesArgs linkedRouterApplianceInstances) {
             return linkedRouterApplianceInstances(Output.of(linkedRouterApplianceInstances));
         }
 
+        /**
+         * @param linkedVpnTunnels VPN tunnels that are associated with the spoke.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedVpnTunnels(@Nullable Output<LinkedVpnTunnelsArgs> linkedVpnTunnels) {
             $.linkedVpnTunnels = linkedVpnTunnels;
             return this;
         }
 
+        /**
+         * @param linkedVpnTunnels VPN tunnels that are associated with the spoke.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedVpnTunnels(LinkedVpnTunnelsArgs linkedVpnTunnels) {
             return linkedVpnTunnels(Output.of(linkedVpnTunnels));
         }
@@ -221,11 +321,23 @@ public final class SpokeArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Immutable. The name of the spoke. Spoke names must be unique. They use the following form: `projects/{project_number}/locations/{region}/spokes/{spoke_id}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Immutable. The name of the spoke. Spoke names must be unique. They use the following form: `projects/{project_number}/locations/{region}/spokes/{spoke_id}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

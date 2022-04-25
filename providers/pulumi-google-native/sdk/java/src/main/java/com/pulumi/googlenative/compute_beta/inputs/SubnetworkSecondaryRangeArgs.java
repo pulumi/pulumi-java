@@ -26,6 +26,10 @@ public final class SubnetworkSecondaryRangeArgs extends com.pulumi.resources.Res
     @Import(name="ipCidrRange")
     private @Nullable Output<String> ipCidrRange;
 
+    /**
+     * @return The range of IP addresses belonging to this subnetwork secondary range. Provide this property when you create the subnetwork. Ranges must be unique and non-overlapping with all primary and secondary IP ranges within a network. Only IPv4 is supported. The range can be any range listed in the Valid ranges list.
+     * 
+     */
     public Optional<Output<String>> ipCidrRange() {
         return Optional.ofNullable(this.ipCidrRange);
     }
@@ -37,6 +41,10 @@ public final class SubnetworkSecondaryRangeArgs extends com.pulumi.resources.Res
     @Import(name="rangeName")
     private @Nullable Output<String> rangeName;
 
+    /**
+     * @return The name associated with this subnetwork secondary range, used when adding an alias IP range to a VM instance. The name must be 1-63 characters long, and comply with RFC1035. The name must be unique within the subnetwork.
+     * 
+     */
     public Optional<Output<String>> rangeName() {
         return Optional.ofNullable(this.rangeName);
     }
@@ -66,20 +74,44 @@ public final class SubnetworkSecondaryRangeArgs extends com.pulumi.resources.Res
             $ = new SubnetworkSecondaryRangeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipCidrRange The range of IP addresses belonging to this subnetwork secondary range. Provide this property when you create the subnetwork. Ranges must be unique and non-overlapping with all primary and secondary IP ranges within a network. Only IPv4 is supported. The range can be any range listed in the Valid ranges list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipCidrRange(@Nullable Output<String> ipCidrRange) {
             $.ipCidrRange = ipCidrRange;
             return this;
         }
 
+        /**
+         * @param ipCidrRange The range of IP addresses belonging to this subnetwork secondary range. Provide this property when you create the subnetwork. Ranges must be unique and non-overlapping with all primary and secondary IP ranges within a network. Only IPv4 is supported. The range can be any range listed in the Valid ranges list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipCidrRange(String ipCidrRange) {
             return ipCidrRange(Output.of(ipCidrRange));
         }
 
+        /**
+         * @param rangeName The name associated with this subnetwork secondary range, used when adding an alias IP range to a VM instance. The name must be 1-63 characters long, and comply with RFC1035. The name must be unique within the subnetwork.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeName(@Nullable Output<String> rangeName) {
             $.rangeName = rangeName;
             return this;
         }
 
+        /**
+         * @param rangeName The name associated with this subnetwork secondary range, used when adding an alias IP range to a VM instance. The name must be 1-63 characters long, and comply with RFC1035. The name must be unique within the subnetwork.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeName(String rangeName) {
             return rangeName(Output.of(rangeName));
         }

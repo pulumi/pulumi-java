@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GrpcServiceConfigResponse {
-    /**
-     * The call credentials to access the SDS server.
-     * 
-     */
+        /**
+         * @return The call credentials to access the SDS server.
+         * 
+         */
     private final CallCredentialsResponse callCredentials;
-    /**
-     * The channel credentials to access the SDS server.
-     * 
-     */
+        /**
+         * @return The channel credentials to access the SDS server.
+         * 
+         */
     private final ChannelCredentialsResponse channelCredentials;
-    /**
-     * The target URI of the SDS server.
-     * 
-     */
+        /**
+         * @return The target URI of the SDS server.
+         * 
+         */
     private final String targetUri;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class GrpcServiceConfigResponse {
     }
 
     /**
-     * The call credentials to access the SDS server.
+     * @return The call credentials to access the SDS server.
      * 
-    */
+     */
     public CallCredentialsResponse callCredentials() {
         return this.callCredentials;
     }
     /**
-     * The channel credentials to access the SDS server.
+     * @return The channel credentials to access the SDS server.
      * 
-    */
+     */
     public ChannelCredentialsResponse channelCredentials() {
         return this.channelCredentials;
     }
     /**
-     * The target URI of the SDS server.
+     * @return The target URI of the SDS server.
      * 
-    */
+     */
     public String targetUri() {
         return this.targetUri;
     }

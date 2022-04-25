@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GkeClusterResponse {
-    /**
-     * Information specifying a GKE Cluster. Format is `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}.
-     * 
-     */
+        /**
+         * @return Information specifying a GKE Cluster. Format is `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}.
+         * 
+         */
     private final String cluster;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GkeClusterResponse {
     }
 
     /**
-     * Information specifying a GKE Cluster. Format is `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}.
+     * @return Information specifying a GKE Cluster. Format is `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}.
      * 
-    */
+     */
     public String cluster() {
         return this.cluster;
     }

@@ -11,70 +11,70 @@ import java.util.Objects;
 
 @CustomType
 public final class GetHostQueryResult {
-    /**
-     * Creation time of the query.
-     * 
-     */
+        /**
+         * @return Creation time of the query.
+         * 
+         */
     private final String created;
-    /**
-     * Hostname is available only when query is executed at host level.
-     * 
-     */
+        /**
+         * @return Hostname is available only when query is executed at host level.
+         * 
+         */
     private final String envgroupHostname;
-    /**
-     * Error is set when query fails.
-     * 
-     */
+        /**
+         * @return Error is set when query fails.
+         * 
+         */
     private final String error;
-    /**
-     * ExecutionTime is available only after the query is completed.
-     * 
-     */
+        /**
+         * @return ExecutionTime is available only after the query is completed.
+         * 
+         */
     private final String executionTime;
-    /**
-     * Asynchronous Query Name.
-     * 
-     */
+        /**
+         * @return Asynchronous Query Name.
+         * 
+         */
     private final String name;
-    /**
-     * Contains information like metrics, dimenstions etc of the AsyncQuery.
-     * 
-     */
+        /**
+         * @return Contains information like metrics, dimenstions etc of the AsyncQuery.
+         * 
+         */
     private final GoogleCloudApigeeV1QueryMetadataResponse queryParams;
-    /**
-     * Asynchronous Report ID.
-     * 
-     */
+        /**
+         * @return Asynchronous Report ID.
+         * 
+         */
     private final String reportDefinitionId;
-    /**
-     * Result is available only after the query is completed.
-     * 
-     */
+        /**
+         * @return Result is available only after the query is completed.
+         * 
+         */
     private final GoogleCloudApigeeV1AsyncQueryResultResponse result;
-    /**
-     * ResultFileSize is available only after the query is completed.
-     * 
-     */
+        /**
+         * @return ResultFileSize is available only after the query is completed.
+         * 
+         */
     private final String resultFileSize;
-    /**
-     * ResultRows is available only after the query is completed.
-     * 
-     */
+        /**
+         * @return ResultRows is available only after the query is completed.
+         * 
+         */
     private final String resultRows;
-    /**
-     * Self link of the query. Example: `/organizations/myorg/environments/myenv/queries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd` or following format if query is running at host level: `/organizations/myorg/hostQueries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd`
-     * 
-     */
+        /**
+         * @return Self link of the query. Example: `/organizations/myorg/environments/myenv/queries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd` or following format if query is running at host level: `/organizations/myorg/hostQueries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd`
+         * 
+         */
     private final String self;
-    /**
-     * Query state could be &#34;enqueued&#34;, &#34;running&#34;, &#34;completed&#34;, &#34;failed&#34;.
-     * 
-     */
+        /**
+         * @return Query state could be &#34;enqueued&#34;, &#34;running&#34;, &#34;completed&#34;, &#34;failed&#34;.
+         * 
+         */
     private final String state;
-    /**
-     * Last updated timestamp for the query.
-     * 
-     */
+        /**
+         * @return Last updated timestamp for the query.
+         * 
+         */
     private final String updated;
 
     @CustomType.Constructor
@@ -108,93 +108,93 @@ public final class GetHostQueryResult {
     }
 
     /**
-     * Creation time of the query.
+     * @return Creation time of the query.
      * 
-    */
+     */
     public String created() {
         return this.created;
     }
     /**
-     * Hostname is available only when query is executed at host level.
+     * @return Hostname is available only when query is executed at host level.
      * 
-    */
+     */
     public String envgroupHostname() {
         return this.envgroupHostname;
     }
     /**
-     * Error is set when query fails.
+     * @return Error is set when query fails.
      * 
-    */
+     */
     public String error() {
         return this.error;
     }
     /**
-     * ExecutionTime is available only after the query is completed.
+     * @return ExecutionTime is available only after the query is completed.
      * 
-    */
+     */
     public String executionTime() {
         return this.executionTime;
     }
     /**
-     * Asynchronous Query Name.
+     * @return Asynchronous Query Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Contains information like metrics, dimenstions etc of the AsyncQuery.
+     * @return Contains information like metrics, dimenstions etc of the AsyncQuery.
      * 
-    */
+     */
     public GoogleCloudApigeeV1QueryMetadataResponse queryParams() {
         return this.queryParams;
     }
     /**
-     * Asynchronous Report ID.
+     * @return Asynchronous Report ID.
      * 
-    */
+     */
     public String reportDefinitionId() {
         return this.reportDefinitionId;
     }
     /**
-     * Result is available only after the query is completed.
+     * @return Result is available only after the query is completed.
      * 
-    */
+     */
     public GoogleCloudApigeeV1AsyncQueryResultResponse result() {
         return this.result;
     }
     /**
-     * ResultFileSize is available only after the query is completed.
+     * @return ResultFileSize is available only after the query is completed.
      * 
-    */
+     */
     public String resultFileSize() {
         return this.resultFileSize;
     }
     /**
-     * ResultRows is available only after the query is completed.
+     * @return ResultRows is available only after the query is completed.
      * 
-    */
+     */
     public String resultRows() {
         return this.resultRows;
     }
     /**
-     * Self link of the query. Example: `/organizations/myorg/environments/myenv/queries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd` or following format if query is running at host level: `/organizations/myorg/hostQueries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd`
+     * @return Self link of the query. Example: `/organizations/myorg/environments/myenv/queries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd` or following format if query is running at host level: `/organizations/myorg/hostQueries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd`
      * 
-    */
+     */
     public String self() {
         return this.self;
     }
     /**
-     * Query state could be &#34;enqueued&#34;, &#34;running&#34;, &#34;completed&#34;, &#34;failed&#34;.
+     * @return Query state could be &#34;enqueued&#34;, &#34;running&#34;, &#34;completed&#34;, &#34;failed&#34;.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Last updated timestamp for the query.
+     * @return Last updated timestamp for the query.
      * 
-    */
+     */
     public String updated() {
         return this.updated;
     }

@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class AlertChartResponse {
-    /**
-     * The resource name of the alert policy. The format is: projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]
-     * 
-     */
+        /**
+         * @return The resource name of the alert policy. The format is: projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class AlertChartResponse {
     }
 
     /**
-     * The resource name of the alert policy. The format is: projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]
+     * @return The resource name of the alert policy. The format is: projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

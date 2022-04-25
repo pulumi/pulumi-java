@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ServiceAccountResponse {
-    /**
-     * Email address of the service account. If empty, default Compute service account will be used.
-     * 
-     */
+        /**
+         * @return Email address of the service account. If empty, default Compute service account will be used.
+         * 
+         */
     private final String email;
-    /**
-     * The list of scopes to be made available for this service account. If empty, access to all Cloud APIs will be allowed.
-     * 
-     */
+        /**
+         * @return The list of scopes to be made available for this service account. If empty, access to all Cloud APIs will be allowed.
+         * 
+         */
     private final List<String> scope;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class ServiceAccountResponse {
     }
 
     /**
-     * Email address of the service account. If empty, default Compute service account will be used.
+     * @return Email address of the service account. If empty, default Compute service account will be used.
      * 
-    */
+     */
     public String email() {
         return this.email;
     }
     /**
-     * The list of scopes to be made available for this service account. If empty, access to all Cloud APIs will be allowed.
+     * @return The list of scopes to be made available for this service account. If empty, access to all Cloud APIs will be allowed.
      * 
-    */
+     */
     public List<String> scope() {
         return this.scope;
     }

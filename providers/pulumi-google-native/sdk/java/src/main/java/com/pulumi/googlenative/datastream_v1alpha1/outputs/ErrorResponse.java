@@ -10,30 +10,30 @@ import java.util.Objects;
 
 @CustomType
 public final class ErrorResponse {
-    /**
-     * Additional information about the error.
-     * 
-     */
+        /**
+         * @return Additional information about the error.
+         * 
+         */
     private final Map<String,String> details;
-    /**
-     * The time when the error occurred.
-     * 
-     */
+        /**
+         * @return The time when the error occurred.
+         * 
+         */
     private final String errorTime;
-    /**
-     * A unique identifier for this specific error, allowing it to be traced throughout the system in logs and API responses.
-     * 
-     */
+        /**
+         * @return A unique identifier for this specific error, allowing it to be traced throughout the system in logs and API responses.
+         * 
+         */
     private final String errorUuid;
-    /**
-     * A message containing more information about the error that occurred.
-     * 
-     */
+        /**
+         * @return A message containing more information about the error that occurred.
+         * 
+         */
     private final String message;
-    /**
-     * A title that explains the reason for the error.
-     * 
-     */
+        /**
+         * @return A title that explains the reason for the error.
+         * 
+         */
     private final String reason;
 
     @CustomType.Constructor
@@ -51,37 +51,37 @@ public final class ErrorResponse {
     }
 
     /**
-     * Additional information about the error.
+     * @return Additional information about the error.
      * 
-    */
+     */
     public Map<String,String> details() {
         return this.details;
     }
     /**
-     * The time when the error occurred.
+     * @return The time when the error occurred.
      * 
-    */
+     */
     public String errorTime() {
         return this.errorTime;
     }
     /**
-     * A unique identifier for this specific error, allowing it to be traced throughout the system in logs and API responses.
+     * @return A unique identifier for this specific error, allowing it to be traced throughout the system in logs and API responses.
      * 
-    */
+     */
     public String errorUuid() {
         return this.errorUuid;
     }
     /**
-     * A message containing more information about the error that occurred.
+     * @return A message containing more information about the error that occurred.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * A title that explains the reason for the error.
+     * @return A title that explains the reason for the error.
      * 
-    */
+     */
     public String reason() {
         return this.reason;
     }

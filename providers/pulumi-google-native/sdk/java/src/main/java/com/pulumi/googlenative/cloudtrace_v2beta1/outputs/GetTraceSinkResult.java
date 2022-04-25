@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GetTraceSinkResult {
-    /**
-     * The canonical sink resource name, unique within the project. Must be of the form: project/[PROJECT_NUMBER]/traceSinks/[SINK_ID]. E.g.: `&#34;projects/12345/traceSinks/my-project-trace-sink&#34;`. Sink identifiers are limited to 256 characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
-     * 
-     */
+        /**
+         * @return The canonical sink resource name, unique within the project. Must be of the form: project/[PROJECT_NUMBER]/traceSinks/[SINK_ID]. E.g.: `&#34;projects/12345/traceSinks/my-project-trace-sink&#34;`. Sink identifiers are limited to 256 characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
+         * 
+         */
     private final String name;
-    /**
-     * The export destination.
-     * 
-     */
+        /**
+         * @return The export destination.
+         * 
+         */
     private final OutputConfigResponse outputConfig;
-    /**
-     * A service account name for exporting the data. This field is set by sinks.create and sinks.update. The service account will need to be granted write access to the destination specified in the output configuration, see [Granting access for a resource](/iam/docs/granting-roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource). To create tables and write data this account will need the dataEditor role. Read more about roles in the [BigQuery documentation](https://cloud.google.com/bigquery/docs/access-control). E.g.: &#34;service-00000001@00000002.iam.gserviceaccount.com&#34;
-     * 
-     */
+        /**
+         * @return A service account name for exporting the data. This field is set by sinks.create and sinks.update. The service account will need to be granted write access to the destination specified in the output configuration, see [Granting access for a resource](/iam/docs/granting-roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource). To create tables and write data this account will need the dataEditor role. Read more about roles in the [BigQuery documentation](https://cloud.google.com/bigquery/docs/access-control). E.g.: &#34;service-00000001@00000002.iam.gserviceaccount.com&#34;
+         * 
+         */
     private final String writerIdentity;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class GetTraceSinkResult {
     }
 
     /**
-     * The canonical sink resource name, unique within the project. Must be of the form: project/[PROJECT_NUMBER]/traceSinks/[SINK_ID]. E.g.: `&#34;projects/12345/traceSinks/my-project-trace-sink&#34;`. Sink identifiers are limited to 256 characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
+     * @return The canonical sink resource name, unique within the project. Must be of the form: project/[PROJECT_NUMBER]/traceSinks/[SINK_ID]. E.g.: `&#34;projects/12345/traceSinks/my-project-trace-sink&#34;`. Sink identifiers are limited to 256 characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The export destination.
+     * @return The export destination.
      * 
-    */
+     */
     public OutputConfigResponse outputConfig() {
         return this.outputConfig;
     }
     /**
-     * A service account name for exporting the data. This field is set by sinks.create and sinks.update. The service account will need to be granted write access to the destination specified in the output configuration, see [Granting access for a resource](/iam/docs/granting-roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource). To create tables and write data this account will need the dataEditor role. Read more about roles in the [BigQuery documentation](https://cloud.google.com/bigquery/docs/access-control). E.g.: &#34;service-00000001@00000002.iam.gserviceaccount.com&#34;
+     * @return A service account name for exporting the data. This field is set by sinks.create and sinks.update. The service account will need to be granted write access to the destination specified in the output configuration, see [Granting access for a resource](/iam/docs/granting-roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource). To create tables and write data this account will need the dataEditor role. Read more about roles in the [BigQuery documentation](https://cloud.google.com/bigquery/docs/access-control). E.g.: &#34;service-00000001@00000002.iam.gserviceaccount.com&#34;
      * 
-    */
+     */
     public String writerIdentity() {
         return this.writerIdentity;
     }

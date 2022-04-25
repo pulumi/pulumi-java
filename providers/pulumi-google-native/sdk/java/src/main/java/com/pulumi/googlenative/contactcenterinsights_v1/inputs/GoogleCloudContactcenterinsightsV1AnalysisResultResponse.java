@@ -24,6 +24,10 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultResponse exte
     @Import(name="callAnalysisMetadata", required=true)
     private GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse callAnalysisMetadata;
 
+    /**
+     * @return Call-specific metadata created by the analysis.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse callAnalysisMetadata() {
         return this.callAnalysisMetadata;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultResponse exte
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return The time at which the analysis ended.
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultResponse exte
             $ = new GoogleCloudContactcenterinsightsV1AnalysisResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param callAnalysisMetadata Call-specific metadata created by the analysis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder callAnalysisMetadata(GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse callAnalysisMetadata) {
             $.callAnalysisMetadata = callAnalysisMetadata;
             return this;
         }
 
+        /**
+         * @param endTime The time at which the analysis ended.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;

@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class WeeklyScheduleResponse {
-    /**
-     * Day of the week.
-     * 
-     */
+        /**
+         * @return Day of the week.
+         * 
+         */
     private final String dayOfWeek;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class WeeklyScheduleResponse {
     }
 
     /**
-     * Day of the week.
+     * @return Day of the week.
      * 
-    */
+     */
     public String dayOfWeek() {
         return this.dayOfWeek;
     }

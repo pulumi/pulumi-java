@@ -23,6 +23,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="cpuCount", required=true)
     private Integer cpuCount;
 
+    /**
+     * @return Number of cpus per Memcached node.
+     * 
+     */
     public Integer cpuCount() {
         return this.cpuCount;
     }
@@ -34,6 +38,10 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="memorySizeMb", required=true)
     private Integer memorySizeMb;
 
+    /**
+     * @return Memory size in MiB for each Memcached node.
+     * 
+     */
     public Integer memorySizeMb() {
         return this.memorySizeMb;
     }
@@ -63,11 +71,23 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
             $ = new NodeConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpuCount Number of cpus per Memcached node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuCount(Integer cpuCount) {
             $.cpuCount = cpuCount;
             return this;
         }
 
+        /**
+         * @param memorySizeMb Memory size in MiB for each Memcached node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memorySizeMb(Integer memorySizeMb) {
             $.memorySizeMb = memorySizeMb;
             return this;

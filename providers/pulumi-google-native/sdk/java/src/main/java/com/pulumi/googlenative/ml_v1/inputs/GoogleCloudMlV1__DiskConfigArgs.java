@@ -27,6 +27,10 @@ public final class GoogleCloudMlV1__DiskConfigArgs extends com.pulumi.resources.
     @Import(name="bootDiskSizeGb")
     private @Nullable Output<Integer> bootDiskSizeGb;
 
+    /**
+     * @return Size in GB of the boot disk (default is 100GB).
+     * 
+     */
     public Optional<Output<Integer>> bootDiskSizeGb() {
         return Optional.ofNullable(this.bootDiskSizeGb);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudMlV1__DiskConfigArgs extends com.pulumi.resources.
     @Import(name="bootDiskType")
     private @Nullable Output<String> bootDiskType;
 
+    /**
+     * @return Type of the boot disk (default is &#34;pd-ssd&#34;). Valid values: &#34;pd-ssd&#34; (Persistent Disk Solid State Drive) or &#34;pd-standard&#34; (Persistent Disk Hard Disk Drive).
+     * 
+     */
     public Optional<Output<String>> bootDiskType() {
         return Optional.ofNullable(this.bootDiskType);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudMlV1__DiskConfigArgs extends com.pulumi.resources.
             $ = new GoogleCloudMlV1__DiskConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bootDiskSizeGb Size in GB of the boot disk (default is 100GB).
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootDiskSizeGb(@Nullable Output<Integer> bootDiskSizeGb) {
             $.bootDiskSizeGb = bootDiskSizeGb;
             return this;
         }
 
+        /**
+         * @param bootDiskSizeGb Size in GB of the boot disk (default is 100GB).
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootDiskSizeGb(Integer bootDiskSizeGb) {
             return bootDiskSizeGb(Output.of(bootDiskSizeGb));
         }
 
+        /**
+         * @param bootDiskType Type of the boot disk (default is &#34;pd-ssd&#34;). Valid values: &#34;pd-ssd&#34; (Persistent Disk Solid State Drive) or &#34;pd-standard&#34; (Persistent Disk Hard Disk Drive).
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootDiskType(@Nullable Output<String> bootDiskType) {
             $.bootDiskType = bootDiskType;
             return this;
         }
 
+        /**
+         * @param bootDiskType Type of the boot disk (default is &#34;pd-ssd&#34;). Valid values: &#34;pd-ssd&#34; (Persistent Disk Solid State Drive) or &#34;pd-standard&#34; (Persistent Disk Hard Disk Drive).
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootDiskType(String bootDiskType) {
             return bootDiskType(Output.of(bootDiskType));
         }

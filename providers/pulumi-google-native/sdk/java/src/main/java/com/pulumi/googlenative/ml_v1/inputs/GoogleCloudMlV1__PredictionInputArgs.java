@@ -29,6 +29,10 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends com.pulumi.resou
     @Import(name="batchSize")
     private @Nullable Output<String> batchSize;
 
+    /**
+     * @return Optional. Number of records per batch, defaults to 64. The service will buffer batch_size number of records in memory before invoking one Tensorflow prediction call internally. So take the record size and memory available into consideration when setting this parameter.
+     * 
+     */
     public Optional<Output<String>> batchSize() {
         return Optional.ofNullable(this.batchSize);
     }
@@ -40,6 +44,10 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends com.pulumi.resou
     @Import(name="dataFormat", required=true)
     private Output<GoogleCloudMlV1__PredictionInputDataFormat> dataFormat;
 
+    /**
+     * @return The format of the input data files.
+     * 
+     */
     public Output<GoogleCloudMlV1__PredictionInputDataFormat> dataFormat() {
         return this.dataFormat;
     }
@@ -51,6 +59,10 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends com.pulumi.resou
     @Import(name="inputPaths", required=true)
     private Output<List<String>> inputPaths;
 
+    /**
+     * @return The Cloud Storage location of the input data files. May contain wildcards.
+     * 
+     */
     public Output<List<String>> inputPaths() {
         return this.inputPaths;
     }
@@ -62,6 +74,10 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends com.pulumi.resou
     @Import(name="maxWorkerCount")
     private @Nullable Output<String> maxWorkerCount;
 
+    /**
+     * @return Optional. The maximum number of workers to be used for parallel processing. Defaults to 10 if not specified.
+     * 
+     */
     public Optional<Output<String>> maxWorkerCount() {
         return Optional.ofNullable(this.maxWorkerCount);
     }
@@ -73,6 +89,10 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends com.pulumi.resou
     @Import(name="modelName")
     private @Nullable Output<String> modelName;
 
+    /**
+     * @return Use this field if you want to use the default version for the specified model. The string must use the following format: `&#34;projects/YOUR_PROJECT/models/YOUR_MODEL&#34;`
+     * 
+     */
     public Optional<Output<String>> modelName() {
         return Optional.ofNullable(this.modelName);
     }
@@ -84,6 +104,10 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends com.pulumi.resou
     @Import(name="outputDataFormat")
     private @Nullable Output<GoogleCloudMlV1__PredictionInputOutputDataFormat> outputDataFormat;
 
+    /**
+     * @return Optional. Format of the output data files, defaults to JSON.
+     * 
+     */
     public Optional<Output<GoogleCloudMlV1__PredictionInputOutputDataFormat>> outputDataFormat() {
         return Optional.ofNullable(this.outputDataFormat);
     }
@@ -95,6 +119,10 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends com.pulumi.resou
     @Import(name="outputPath", required=true)
     private Output<String> outputPath;
 
+    /**
+     * @return The output Google Cloud Storage location.
+     * 
+     */
     public Output<String> outputPath() {
         return this.outputPath;
     }
@@ -106,6 +134,10 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends com.pulumi.resou
     @Import(name="region", required=true)
     private Output<String> region;
 
+    /**
+     * @return The Google Compute Engine region to run the prediction job in. See the available regions for AI Platform services.
+     * 
+     */
     public Output<String> region() {
         return this.region;
     }
@@ -117,6 +149,10 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends com.pulumi.resou
     @Import(name="runtimeVersion")
     private @Nullable Output<String> runtimeVersion;
 
+    /**
+     * @return Optional. The AI Platform runtime version to use for this batch prediction. If not set, AI Platform will pick the runtime version used during the CreateVersion request for this model version, or choose the latest stable version when model version information is not available such as when the model is specified by uri.
+     * 
+     */
     public Optional<Output<String>> runtimeVersion() {
         return Optional.ofNullable(this.runtimeVersion);
     }
@@ -128,6 +164,10 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends com.pulumi.resou
     @Import(name="signatureName")
     private @Nullable Output<String> signatureName;
 
+    /**
+     * @return Optional. The name of the signature defined in the SavedModel to use for this job. Please refer to [SavedModel](https://tensorflow.github.io/serving/serving_basic.html) for information about how to use signatures. Defaults to [DEFAULT_SERVING_SIGNATURE_DEF_KEY](https://www.tensorflow.org/api_docs/python/tf/saved_model/signature_constants) , which is &#34;serving_default&#34;.
+     * 
+     */
     public Optional<Output<String>> signatureName() {
         return Optional.ofNullable(this.signatureName);
     }
@@ -139,6 +179,10 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends com.pulumi.resou
     @Import(name="uri")
     private @Nullable Output<String> uri;
 
+    /**
+     * @return Use this field if you want to specify a Google Cloud Storage path for the model to use.
+     * 
+     */
     public Optional<Output<String>> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -150,6 +194,10 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends com.pulumi.resou
     @Import(name="versionName")
     private @Nullable Output<String> versionName;
 
+    /**
+     * @return Use this field if you want to specify a version of the model to use. The string is formatted the same way as `model_version`, with the addition of the version information: `&#34;projects/YOUR_PROJECT/models/YOUR_MODEL/versions/YOUR_VERSION&#34;`
+     * 
+     */
     public Optional<Output<String>> versionName() {
         return Optional.ofNullable(this.versionName);
     }
@@ -189,114 +237,264 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends com.pulumi.resou
             $ = new GoogleCloudMlV1__PredictionInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param batchSize Optional. Number of records per batch, defaults to 64. The service will buffer batch_size number of records in memory before invoking one Tensorflow prediction call internally. So take the record size and memory available into consideration when setting this parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder batchSize(@Nullable Output<String> batchSize) {
             $.batchSize = batchSize;
             return this;
         }
 
+        /**
+         * @param batchSize Optional. Number of records per batch, defaults to 64. The service will buffer batch_size number of records in memory before invoking one Tensorflow prediction call internally. So take the record size and memory available into consideration when setting this parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder batchSize(String batchSize) {
             return batchSize(Output.of(batchSize));
         }
 
+        /**
+         * @param dataFormat The format of the input data files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataFormat(Output<GoogleCloudMlV1__PredictionInputDataFormat> dataFormat) {
             $.dataFormat = dataFormat;
             return this;
         }
 
+        /**
+         * @param dataFormat The format of the input data files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataFormat(GoogleCloudMlV1__PredictionInputDataFormat dataFormat) {
             return dataFormat(Output.of(dataFormat));
         }
 
+        /**
+         * @param inputPaths The Cloud Storage location of the input data files. May contain wildcards.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputPaths(Output<List<String>> inputPaths) {
             $.inputPaths = inputPaths;
             return this;
         }
 
+        /**
+         * @param inputPaths The Cloud Storage location of the input data files. May contain wildcards.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputPaths(List<String> inputPaths) {
             return inputPaths(Output.of(inputPaths));
         }
 
+        /**
+         * @param inputPaths The Cloud Storage location of the input data files. May contain wildcards.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputPaths(String... inputPaths) {
             return inputPaths(List.of(inputPaths));
         }
 
+        /**
+         * @param maxWorkerCount Optional. The maximum number of workers to be used for parallel processing. Defaults to 10 if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxWorkerCount(@Nullable Output<String> maxWorkerCount) {
             $.maxWorkerCount = maxWorkerCount;
             return this;
         }
 
+        /**
+         * @param maxWorkerCount Optional. The maximum number of workers to be used for parallel processing. Defaults to 10 if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxWorkerCount(String maxWorkerCount) {
             return maxWorkerCount(Output.of(maxWorkerCount));
         }
 
+        /**
+         * @param modelName Use this field if you want to use the default version for the specified model. The string must use the following format: `&#34;projects/YOUR_PROJECT/models/YOUR_MODEL&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelName(@Nullable Output<String> modelName) {
             $.modelName = modelName;
             return this;
         }
 
+        /**
+         * @param modelName Use this field if you want to use the default version for the specified model. The string must use the following format: `&#34;projects/YOUR_PROJECT/models/YOUR_MODEL&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelName(String modelName) {
             return modelName(Output.of(modelName));
         }
 
+        /**
+         * @param outputDataFormat Optional. Format of the output data files, defaults to JSON.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputDataFormat(@Nullable Output<GoogleCloudMlV1__PredictionInputOutputDataFormat> outputDataFormat) {
             $.outputDataFormat = outputDataFormat;
             return this;
         }
 
+        /**
+         * @param outputDataFormat Optional. Format of the output data files, defaults to JSON.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputDataFormat(GoogleCloudMlV1__PredictionInputOutputDataFormat outputDataFormat) {
             return outputDataFormat(Output.of(outputDataFormat));
         }
 
+        /**
+         * @param outputPath The output Google Cloud Storage location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputPath(Output<String> outputPath) {
             $.outputPath = outputPath;
             return this;
         }
 
+        /**
+         * @param outputPath The output Google Cloud Storage location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputPath(String outputPath) {
             return outputPath(Output.of(outputPath));
         }
 
+        /**
+         * @param region The Google Compute Engine region to run the prediction job in. See the available regions for AI Platform services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region The Google Compute Engine region to run the prediction job in. See the available regions for AI Platform services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param runtimeVersion Optional. The AI Platform runtime version to use for this batch prediction. If not set, AI Platform will pick the runtime version used during the CreateVersion request for this model version, or choose the latest stable version when model version information is not available such as when the model is specified by uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeVersion(@Nullable Output<String> runtimeVersion) {
             $.runtimeVersion = runtimeVersion;
             return this;
         }
 
+        /**
+         * @param runtimeVersion Optional. The AI Platform runtime version to use for this batch prediction. If not set, AI Platform will pick the runtime version used during the CreateVersion request for this model version, or choose the latest stable version when model version information is not available such as when the model is specified by uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeVersion(String runtimeVersion) {
             return runtimeVersion(Output.of(runtimeVersion));
         }
 
+        /**
+         * @param signatureName Optional. The name of the signature defined in the SavedModel to use for this job. Please refer to [SavedModel](https://tensorflow.github.io/serving/serving_basic.html) for information about how to use signatures. Defaults to [DEFAULT_SERVING_SIGNATURE_DEF_KEY](https://www.tensorflow.org/api_docs/python/tf/saved_model/signature_constants) , which is &#34;serving_default&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureName(@Nullable Output<String> signatureName) {
             $.signatureName = signatureName;
             return this;
         }
 
+        /**
+         * @param signatureName Optional. The name of the signature defined in the SavedModel to use for this job. Please refer to [SavedModel](https://tensorflow.github.io/serving/serving_basic.html) for information about how to use signatures. Defaults to [DEFAULT_SERVING_SIGNATURE_DEF_KEY](https://www.tensorflow.org/api_docs/python/tf/saved_model/signature_constants) , which is &#34;serving_default&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureName(String signatureName) {
             return signatureName(Output.of(signatureName));
         }
 
+        /**
+         * @param uri Use this field if you want to specify a Google Cloud Storage path for the model to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri Use this field if you want to specify a Google Cloud Storage path for the model to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }
 
+        /**
+         * @param versionName Use this field if you want to specify a version of the model to use. The string is formatted the same way as `model_version`, with the addition of the version information: `&#34;projects/YOUR_PROJECT/models/YOUR_MODEL/versions/YOUR_VERSION&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionName(@Nullable Output<String> versionName) {
             $.versionName = versionName;
             return this;
         }
 
+        /**
+         * @param versionName Use this field if you want to specify a version of the model to use. The string is formatted the same way as `model_version`, with the addition of the version information: `&#34;projects/YOUR_PROJECT/models/YOUR_MODEL/versions/YOUR_VERSION&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionName(String versionName) {
             return versionName(Output.of(versionName));
         }

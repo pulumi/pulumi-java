@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudRetailV2alphaConditionQueryTermResponse {
-    /**
-     * Whether this is supposed to be a full or partial match.
-     * 
-     */
+        /**
+         * @return Whether this is supposed to be a full or partial match.
+         * 
+         */
     private final Boolean fullMatch;
-    /**
-     * The value of the term to match on. Value cannot be empty. Value can have at most 3 terms if specified as a partial match. Each space separated string is considered as one term. Example) &#34;a b c&#34; is 3 terms and allowed, &#34; a b c d&#34; is 4 terms and not allowed for partial match.
-     * 
-     */
+        /**
+         * @return The value of the term to match on. Value cannot be empty. Value can have at most 3 terms if specified as a partial match. Each space separated string is considered as one term. Example) &#34;a b c&#34; is 3 terms and allowed, &#34; a b c d&#34; is 4 terms and not allowed for partial match.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermResponse {
     }
 
     /**
-     * Whether this is supposed to be a full or partial match.
+     * @return Whether this is supposed to be a full or partial match.
      * 
-    */
+     */
     public Boolean fullMatch() {
         return this.fullMatch;
     }
     /**
-     * The value of the term to match on. Value cannot be empty. Value can have at most 3 terms if specified as a partial match. Each space separated string is considered as one term. Example) &#34;a b c&#34; is 3 terms and allowed, &#34; a b c d&#34; is 4 terms and not allowed for partial match.
+     * @return The value of the term to match on. Value cannot be empty. Value can have at most 3 terms if specified as a partial match. Each space separated string is considered as one term. Example) &#34;a b c&#34; is 3 terms and allowed, &#34; a b c d&#34; is 4 terms and not allowed for partial match.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

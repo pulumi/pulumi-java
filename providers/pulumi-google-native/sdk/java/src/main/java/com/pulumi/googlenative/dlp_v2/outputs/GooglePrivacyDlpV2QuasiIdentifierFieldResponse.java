@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GooglePrivacyDlpV2QuasiIdentifierFieldResponse {
-    /**
-     * A column can be tagged with a custom tag. In this case, the user must indicate an auxiliary table that contains statistical information on the possible values of this column (below).
-     * 
-     */
+        /**
+         * @return A column can be tagged with a custom tag. In this case, the user must indicate an auxiliary table that contains statistical information on the possible values of this column (below).
+         * 
+         */
     private final String customTag;
-    /**
-     * Identifies the column.
-     * 
-     */
+        /**
+         * @return Identifies the column.
+         * 
+         */
     private final GooglePrivacyDlpV2FieldIdResponse field;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GooglePrivacyDlpV2QuasiIdentifierFieldResponse {
     }
 
     /**
-     * A column can be tagged with a custom tag. In this case, the user must indicate an auxiliary table that contains statistical information on the possible values of this column (below).
+     * @return A column can be tagged with a custom tag. In this case, the user must indicate an auxiliary table that contains statistical information on the possible values of this column (below).
      * 
-    */
+     */
     public String customTag() {
         return this.customTag;
     }
     /**
-     * Identifies the column.
+     * @return Identifies the column.
      * 
-    */
+     */
     public GooglePrivacyDlpV2FieldIdResponse field() {
         return this.field;
     }

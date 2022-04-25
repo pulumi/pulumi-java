@@ -14,35 +14,35 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigResponse {
-    /**
-     * Configs of custom conversation model.
-     * 
-     */
+        /**
+         * @return Configs of custom conversation model.
+         * 
+         */
     private final GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse conversationModelConfig;
-    /**
-     * Configs for processing conversation.
-     * 
-     */
+        /**
+         * @return Configs for processing conversation.
+         * 
+         */
     private final GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigResponse conversationProcessConfig;
-    /**
-     * Automatically iterates all participants and tries to compile suggestions. Supported features: ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST.
-     * 
-     */
+        /**
+         * @return Automatically iterates all participants and tries to compile suggestions. Supported features: ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST.
+         * 
+         */
     private final Boolean enableEventBasedSuggestion;
-    /**
-     * Configs of query.
-     * 
-     */
+        /**
+         * @return Configs of query.
+         * 
+         */
     private final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse queryConfig;
-    /**
-     * The suggestion feature.
-     * 
-     */
+        /**
+         * @return The suggestion feature.
+         * 
+         */
     private final GoogleCloudDialogflowV2SuggestionFeatureResponse suggestionFeature;
-    /**
-     * Settings of suggestion trigger. Currently, only ARTICLE_SUGGESTION and FAQ will use this field.
-     * 
-     */
+        /**
+         * @return Settings of suggestion trigger. Currently, only ARTICLE_SUGGESTION and FAQ will use this field.
+         * 
+         */
     private final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse suggestionTriggerSettings;
 
     @CustomType.Constructor
@@ -62,44 +62,44 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
     }
 
     /**
-     * Configs of custom conversation model.
+     * @return Configs of custom conversation model.
      * 
-    */
+     */
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse conversationModelConfig() {
         return this.conversationModelConfig;
     }
     /**
-     * Configs for processing conversation.
+     * @return Configs for processing conversation.
      * 
-    */
+     */
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigResponse conversationProcessConfig() {
         return this.conversationProcessConfig;
     }
     /**
-     * Automatically iterates all participants and tries to compile suggestions. Supported features: ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST.
+     * @return Automatically iterates all participants and tries to compile suggestions. Supported features: ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST.
      * 
-    */
+     */
     public Boolean enableEventBasedSuggestion() {
         return this.enableEventBasedSuggestion;
     }
     /**
-     * Configs of query.
+     * @return Configs of query.
      * 
-    */
+     */
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse queryConfig() {
         return this.queryConfig;
     }
     /**
-     * The suggestion feature.
+     * @return The suggestion feature.
      * 
-    */
+     */
     public GoogleCloudDialogflowV2SuggestionFeatureResponse suggestionFeature() {
         return this.suggestionFeature;
     }
     /**
-     * Settings of suggestion trigger. Currently, only ARTICLE_SUGGESTION and FAQ will use this field.
+     * @return Settings of suggestion trigger. Currently, only ARTICLE_SUGGESTION and FAQ will use this field.
      * 
-    */
+     */
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse suggestionTriggerSettings() {
         return this.suggestionTriggerSettings;
     }

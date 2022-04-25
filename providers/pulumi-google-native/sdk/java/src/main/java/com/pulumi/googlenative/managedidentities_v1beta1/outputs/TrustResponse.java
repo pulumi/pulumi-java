@@ -11,60 +11,60 @@ import java.util.Objects;
 
 @CustomType
 public final class TrustResponse {
-    /**
-     * The time the instance was created.
-     * 
-     */
+        /**
+         * @return The time the instance was created.
+         * 
+         */
     private final String createTime;
-    /**
-     * The last heartbeat time when the trust was known to be connected.
-     * 
-     */
+        /**
+         * @return The last heartbeat time when the trust was known to be connected.
+         * 
+         */
     private final String lastTrustHeartbeatTime;
-    /**
-     * The trust authentication type, which decides whether the trusted side has forest/domain wide access or selective access to an approved set of resources.
-     * 
-     */
+        /**
+         * @return The trust authentication type, which decides whether the trusted side has forest/domain wide access or selective access to an approved set of resources.
+         * 
+         */
     private final Boolean selectiveAuthentication;
-    /**
-     * The current state of the trust.
-     * 
-     */
+        /**
+         * @return The current state of the trust.
+         * 
+         */
     private final String state;
-    /**
-     * Additional information about the current state of the trust, if available.
-     * 
-     */
+        /**
+         * @return Additional information about the current state of the trust, if available.
+         * 
+         */
     private final String stateDescription;
-    /**
-     * The target DNS server IP addresses which can resolve the remote domain involved in the trust.
-     * 
-     */
+        /**
+         * @return The target DNS server IP addresses which can resolve the remote domain involved in the trust.
+         * 
+         */
     private final List<String> targetDnsIpAddresses;
-    /**
-     * The fully qualified target domain name which will be in trust with the current domain.
-     * 
-     */
+        /**
+         * @return The fully qualified target domain name which will be in trust with the current domain.
+         * 
+         */
     private final String targetDomainName;
-    /**
-     * The trust direction, which decides if the current domain is trusted, trusting, or both.
-     * 
-     */
+        /**
+         * @return The trust direction, which decides if the current domain is trusted, trusting, or both.
+         * 
+         */
     private final String trustDirection;
-    /**
-     * Input only. The trust secret used for the handshake with the target domain. It will not be stored.
-     * 
-     */
+        /**
+         * @return Input only. The trust secret used for the handshake with the target domain. It will not be stored.
+         * 
+         */
     private final String trustHandshakeSecret;
-    /**
-     * The type of trust represented by the trust resource.
-     * 
-     */
+        /**
+         * @return The type of trust represented by the trust resource.
+         * 
+         */
     private final String trustType;
-    /**
-     * The last update time.
-     * 
-     */
+        /**
+         * @return The last update time.
+         * 
+         */
     private final String updateTime;
 
     @CustomType.Constructor
@@ -94,79 +94,79 @@ public final class TrustResponse {
     }
 
     /**
-     * The time the instance was created.
+     * @return The time the instance was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The last heartbeat time when the trust was known to be connected.
+     * @return The last heartbeat time when the trust was known to be connected.
      * 
-    */
+     */
     public String lastTrustHeartbeatTime() {
         return this.lastTrustHeartbeatTime;
     }
     /**
-     * The trust authentication type, which decides whether the trusted side has forest/domain wide access or selective access to an approved set of resources.
+     * @return The trust authentication type, which decides whether the trusted side has forest/domain wide access or selective access to an approved set of resources.
      * 
-    */
+     */
     public Boolean selectiveAuthentication() {
         return this.selectiveAuthentication;
     }
     /**
-     * The current state of the trust.
+     * @return The current state of the trust.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Additional information about the current state of the trust, if available.
+     * @return Additional information about the current state of the trust, if available.
      * 
-    */
+     */
     public String stateDescription() {
         return this.stateDescription;
     }
     /**
-     * The target DNS server IP addresses which can resolve the remote domain involved in the trust.
+     * @return The target DNS server IP addresses which can resolve the remote domain involved in the trust.
      * 
-    */
+     */
     public List<String> targetDnsIpAddresses() {
         return this.targetDnsIpAddresses;
     }
     /**
-     * The fully qualified target domain name which will be in trust with the current domain.
+     * @return The fully qualified target domain name which will be in trust with the current domain.
      * 
-    */
+     */
     public String targetDomainName() {
         return this.targetDomainName;
     }
     /**
-     * The trust direction, which decides if the current domain is trusted, trusting, or both.
+     * @return The trust direction, which decides if the current domain is trusted, trusting, or both.
      * 
-    */
+     */
     public String trustDirection() {
         return this.trustDirection;
     }
     /**
-     * Input only. The trust secret used for the handshake with the target domain. It will not be stored.
+     * @return Input only. The trust secret used for the handshake with the target domain. It will not be stored.
      * 
-    */
+     */
     public String trustHandshakeSecret() {
         return this.trustHandshakeSecret;
     }
     /**
-     * The type of trust represented by the trust resource.
+     * @return The type of trust represented by the trust resource.
      * 
-    */
+     */
     public String trustType() {
         return this.trustType;
     }
     /**
-     * The last update time.
+     * @return The last update time.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

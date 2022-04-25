@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class BackupInfoResponse {
-    /**
-     * Name of the backup.
-     * 
-     */
+        /**
+         * @return Name of the backup.
+         * 
+         */
     private final String backup;
-    /**
-     * This time that the backup was finished. Row data in the backup will be no newer than this timestamp.
-     * 
-     */
+        /**
+         * @return This time that the backup was finished. Row data in the backup will be no newer than this timestamp.
+         * 
+         */
     private final String endTime;
-    /**
-     * Name of the table the backup was created from.
-     * 
-     */
+        /**
+         * @return Name of the table the backup was created from.
+         * 
+         */
     private final String sourceTable;
-    /**
-     * The time that the backup was started. Row data in the backup will be no older than this timestamp.
-     * 
-     */
+        /**
+         * @return The time that the backup was started. Row data in the backup will be no older than this timestamp.
+         * 
+         */
     private final String startTime;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class BackupInfoResponse {
     }
 
     /**
-     * Name of the backup.
+     * @return Name of the backup.
      * 
-    */
+     */
     public String backup() {
         return this.backup;
     }
     /**
-     * This time that the backup was finished. Row data in the backup will be no newer than this timestamp.
+     * @return This time that the backup was finished. Row data in the backup will be no newer than this timestamp.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * Name of the table the backup was created from.
+     * @return Name of the table the backup was created from.
      * 
-    */
+     */
     public String sourceTable() {
         return this.sourceTable;
     }
     /**
-     * The time that the backup was started. Row data in the backup will be no older than this timestamp.
+     * @return The time that the backup was started. Row data in the backup will be no older than this timestamp.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }

@@ -27,6 +27,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
     @Import(name="cloudRepo", required=true)
     private GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse cloudRepo;
 
+    /**
+     * @return A SourceContext referring to a revision in a Google Cloud Source Repo.
+     * 
+     */
     public GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse cloudRepo() {
         return this.cloudRepo;
     }
@@ -38,6 +42,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
     @Import(name="gerrit", required=true)
     private GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse gerrit;
 
+    /**
+     * @return A SourceContext referring to a Gerrit project.
+     * 
+     */
     public GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse gerrit() {
         return this.gerrit;
     }
@@ -49,6 +57,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
     @Import(name="git", required=true)
     private GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse git;
 
+    /**
+     * @return A SourceContext referring to any third party Git repo (e.g., GitHub).
+     * 
+     */
     public GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse git() {
         return this.git;
     }
@@ -60,6 +72,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
     @Import(name="labels", required=true)
     private Map<String,String> labels;
 
+    /**
+     * @return Labels with user defined metadata.
+     * 
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
@@ -91,21 +107,45 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
             $ = new GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudRepo A SourceContext referring to a revision in a Google Cloud Source Repo.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudRepo(GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse cloudRepo) {
             $.cloudRepo = cloudRepo;
             return this;
         }
 
+        /**
+         * @param gerrit A SourceContext referring to a Gerrit project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gerrit(GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse gerrit) {
             $.gerrit = gerrit;
             return this;
         }
 
+        /**
+         * @param git A SourceContext referring to any third party Git repo (e.g., GitHub).
+         * 
+         * @return builder
+         * 
+         */
         public Builder git(GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse git) {
             $.git = git;
             return this;
         }
 
+        /**
+         * @param labels Labels with user defined metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             $.labels = labels;
             return this;

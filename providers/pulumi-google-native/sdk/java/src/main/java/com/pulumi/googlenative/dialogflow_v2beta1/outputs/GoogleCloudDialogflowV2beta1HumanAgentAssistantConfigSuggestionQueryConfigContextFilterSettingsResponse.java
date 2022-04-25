@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse {
-    /**
-     * If set to true, the last message from virtual agent (hand off message) and the message before it (trigger message of hand off) are dropped.
-     * 
-     */
+        /**
+         * @return If set to true, the last message from virtual agent (hand off message) and the message before it (trigger message of hand off) are dropped.
+         * 
+         */
     private final Boolean dropHandoffMessages;
-    /**
-     * If set to true, all messages from ivr stage are dropped.
-     * 
-     */
+        /**
+         * @return If set to true, all messages from ivr stage are dropped.
+         * 
+         */
     private final Boolean dropIvrMessages;
-    /**
-     * If set to true, all messages from virtual agent are dropped.
-     * 
-     */
+        /**
+         * @return If set to true, all messages from virtual agent are dropped.
+         * 
+         */
     private final Boolean dropVirtualAgentMessages;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     }
 
     /**
-     * If set to true, the last message from virtual agent (hand off message) and the message before it (trigger message of hand off) are dropped.
+     * @return If set to true, the last message from virtual agent (hand off message) and the message before it (trigger message of hand off) are dropped.
      * 
-    */
+     */
     public Boolean dropHandoffMessages() {
         return this.dropHandoffMessages;
     }
     /**
-     * If set to true, all messages from ivr stage are dropped.
+     * @return If set to true, all messages from ivr stage are dropped.
      * 
-    */
+     */
     public Boolean dropIvrMessages() {
         return this.dropIvrMessages;
     }
     /**
-     * If set to true, all messages from virtual agent are dropped.
+     * @return If set to true, all messages from virtual agent are dropped.
      * 
-    */
+     */
     public Boolean dropVirtualAgentMessages() {
         return this.dropVirtualAgentMessages;
     }

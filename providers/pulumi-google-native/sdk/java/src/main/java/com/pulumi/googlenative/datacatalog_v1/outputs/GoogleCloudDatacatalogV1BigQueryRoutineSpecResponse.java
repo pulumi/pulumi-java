@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse {
-    /**
-     * Paths of the imported libraries.
-     * 
-     */
+        /**
+         * @return Paths of the imported libraries.
+         * 
+         */
     private final List<String> importedLibraries;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse {
     }
 
     /**
-     * Paths of the imported libraries.
+     * @return Paths of the imported libraries.
      * 
-    */
+     */
     public List<String> importedLibraries() {
         return this.importedLibraries;
     }

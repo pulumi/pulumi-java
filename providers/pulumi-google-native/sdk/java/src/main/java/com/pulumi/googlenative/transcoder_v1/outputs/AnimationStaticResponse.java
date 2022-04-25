@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class AnimationStaticResponse {
-    /**
-     * The time to start displaying the overlay object, in seconds. Default: 0
-     * 
-     */
+        /**
+         * @return The time to start displaying the overlay object, in seconds. Default: 0
+         * 
+         */
     private final String startTimeOffset;
-    /**
-     * Normalized coordinates based on output video resolution. Valid values: `0.0`–`1.0`. `xy` is the upper-left coordinate of the overlay object. For example, use the x and y coordinates {0,0} to position the top-left corner of the overlay animation in the top-left corner of the output video.
-     * 
-     */
+        /**
+         * @return Normalized coordinates based on output video resolution. Valid values: `0.0`–`1.0`. `xy` is the upper-left coordinate of the overlay object. For example, use the x and y coordinates {0,0} to position the top-left corner of the overlay animation in the top-left corner of the output video.
+         * 
+         */
     private final NormalizedCoordinateResponse xy;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class AnimationStaticResponse {
     }
 
     /**
-     * The time to start displaying the overlay object, in seconds. Default: 0
+     * @return The time to start displaying the overlay object, in seconds. Default: 0
      * 
-    */
+     */
     public String startTimeOffset() {
         return this.startTimeOffset;
     }
     /**
-     * Normalized coordinates based on output video resolution. Valid values: `0.0`–`1.0`. `xy` is the upper-left coordinate of the overlay object. For example, use the x and y coordinates {0,0} to position the top-left corner of the overlay animation in the top-left corner of the output video.
+     * @return Normalized coordinates based on output video resolution. Valid values: `0.0`–`1.0`. `xy` is the upper-left coordinate of the overlay object. For example, use the x and y coordinates {0,0} to position the top-left corner of the overlay animation in the top-left corner of the output video.
      * 
-    */
+     */
     public NormalizedCoordinateResponse xy() {
         return this.xy;
     }

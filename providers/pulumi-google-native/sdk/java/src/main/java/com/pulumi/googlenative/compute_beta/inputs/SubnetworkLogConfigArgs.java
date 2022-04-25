@@ -31,6 +31,10 @@ public final class SubnetworkLogConfigArgs extends com.pulumi.resources.Resource
     @Import(name="aggregationInterval")
     private @Nullable Output<SubnetworkLogConfigAggregationInterval> aggregationInterval;
 
+    /**
+     * @return Can only be specified if VPC flow logging for this subnetwork is enabled. Toggles the aggregation interval for collecting flow logs. Increasing the interval time will reduce the amount of generated flow logs for long lasting connections. Default is an interval of 5 seconds per connection.
+     * 
+     */
     public Optional<Output<SubnetworkLogConfigAggregationInterval>> aggregationInterval() {
         return Optional.ofNullable(this.aggregationInterval);
     }
@@ -42,6 +46,10 @@ public final class SubnetworkLogConfigArgs extends com.pulumi.resources.Resource
     @Import(name="enable")
     private @Nullable Output<Boolean> enable;
 
+    /**
+     * @return Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it will not appear in get listings. If not set the default behavior is determined by the org policy, if there is no org policy specified, then it will default to disabled.
+     * 
+     */
     public Optional<Output<Boolean>> enable() {
         return Optional.ofNullable(this.enable);
     }
@@ -53,6 +61,10 @@ public final class SubnetworkLogConfigArgs extends com.pulumi.resources.Resource
     @Import(name="filterExpr")
     private @Nullable Output<String> filterExpr;
 
+    /**
+     * @return Can only be specified if VPC flow logs for this subnetwork is enabled. Export filter used to define which VPC flow logs should be logged.
+     * 
+     */
     public Optional<Output<String>> filterExpr() {
         return Optional.ofNullable(this.filterExpr);
     }
@@ -64,6 +76,10 @@ public final class SubnetworkLogConfigArgs extends com.pulumi.resources.Resource
     @Import(name="flowSampling")
     private @Nullable Output<Double> flowSampling;
 
+    /**
+     * @return Can only be specified if VPC flow logging for this subnetwork is enabled. The value of the field must be in [0, 1]. Set the sampling rate of VPC flow logs within the subnetwork where 1.0 means all collected logs are reported and 0.0 means no logs are reported. Default is 0.5 unless otherwise specified by the org policy, which means half of all collected logs are reported.
+     * 
+     */
     public Optional<Output<Double>> flowSampling() {
         return Optional.ofNullable(this.flowSampling);
     }
@@ -75,6 +91,10 @@ public final class SubnetworkLogConfigArgs extends com.pulumi.resources.Resource
     @Import(name="metadata")
     private @Nullable Output<SubnetworkLogConfigMetadata> metadata;
 
+    /**
+     * @return Can only be specified if VPC flow logs for this subnetwork is enabled. Configures whether all, none or a subset of metadata fields should be added to the reported VPC flow logs. Default is EXCLUDE_ALL_METADATA.
+     * 
+     */
     public Optional<Output<SubnetworkLogConfigMetadata>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -86,6 +106,10 @@ public final class SubnetworkLogConfigArgs extends com.pulumi.resources.Resource
     @Import(name="metadataFields")
     private @Nullable Output<List<String>> metadataFields;
 
+    /**
+     * @return Can only be specified if VPC flow logs for this subnetwork is enabled and &#34;metadata&#34; was set to CUSTOM_METADATA.
+     * 
+     */
     public Optional<Output<List<String>>> metadataFields() {
         return Optional.ofNullable(this.metadataFields);
     }
@@ -119,60 +143,138 @@ public final class SubnetworkLogConfigArgs extends com.pulumi.resources.Resource
             $ = new SubnetworkLogConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aggregationInterval Can only be specified if VPC flow logging for this subnetwork is enabled. Toggles the aggregation interval for collecting flow logs. Increasing the interval time will reduce the amount of generated flow logs for long lasting connections. Default is an interval of 5 seconds per connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aggregationInterval(@Nullable Output<SubnetworkLogConfigAggregationInterval> aggregationInterval) {
             $.aggregationInterval = aggregationInterval;
             return this;
         }
 
+        /**
+         * @param aggregationInterval Can only be specified if VPC flow logging for this subnetwork is enabled. Toggles the aggregation interval for collecting flow logs. Increasing the interval time will reduce the amount of generated flow logs for long lasting connections. Default is an interval of 5 seconds per connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aggregationInterval(SubnetworkLogConfigAggregationInterval aggregationInterval) {
             return aggregationInterval(Output.of(aggregationInterval));
         }
 
+        /**
+         * @param enable Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it will not appear in get listings. If not set the default behavior is determined by the org policy, if there is no org policy specified, then it will default to disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(@Nullable Output<Boolean> enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param enable Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it will not appear in get listings. If not set the default behavior is determined by the org policy, if there is no org policy specified, then it will default to disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(Boolean enable) {
             return enable(Output.of(enable));
         }
 
+        /**
+         * @param filterExpr Can only be specified if VPC flow logs for this subnetwork is enabled. Export filter used to define which VPC flow logs should be logged.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterExpr(@Nullable Output<String> filterExpr) {
             $.filterExpr = filterExpr;
             return this;
         }
 
+        /**
+         * @param filterExpr Can only be specified if VPC flow logs for this subnetwork is enabled. Export filter used to define which VPC flow logs should be logged.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterExpr(String filterExpr) {
             return filterExpr(Output.of(filterExpr));
         }
 
+        /**
+         * @param flowSampling Can only be specified if VPC flow logging for this subnetwork is enabled. The value of the field must be in [0, 1]. Set the sampling rate of VPC flow logs within the subnetwork where 1.0 means all collected logs are reported and 0.0 means no logs are reported. Default is 0.5 unless otherwise specified by the org policy, which means half of all collected logs are reported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flowSampling(@Nullable Output<Double> flowSampling) {
             $.flowSampling = flowSampling;
             return this;
         }
 
+        /**
+         * @param flowSampling Can only be specified if VPC flow logging for this subnetwork is enabled. The value of the field must be in [0, 1]. Set the sampling rate of VPC flow logs within the subnetwork where 1.0 means all collected logs are reported and 0.0 means no logs are reported. Default is 0.5 unless otherwise specified by the org policy, which means half of all collected logs are reported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flowSampling(Double flowSampling) {
             return flowSampling(Output.of(flowSampling));
         }
 
+        /**
+         * @param metadata Can only be specified if VPC flow logs for this subnetwork is enabled. Configures whether all, none or a subset of metadata fields should be added to the reported VPC flow logs. Default is EXCLUDE_ALL_METADATA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<SubnetworkLogConfigMetadata> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata Can only be specified if VPC flow logs for this subnetwork is enabled. Configures whether all, none or a subset of metadata fields should be added to the reported VPC flow logs. Default is EXCLUDE_ALL_METADATA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(SubnetworkLogConfigMetadata metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param metadataFields Can only be specified if VPC flow logs for this subnetwork is enabled and &#34;metadata&#34; was set to CUSTOM_METADATA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataFields(@Nullable Output<List<String>> metadataFields) {
             $.metadataFields = metadataFields;
             return this;
         }
 
+        /**
+         * @param metadataFields Can only be specified if VPC flow logs for this subnetwork is enabled and &#34;metadata&#34; was set to CUSTOM_METADATA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataFields(List<String> metadataFields) {
             return metadataFields(Output.of(metadataFields));
         }
 
+        /**
+         * @param metadataFields Can only be specified if VPC flow logs for this subnetwork is enabled and &#34;metadata&#34; was set to CUSTOM_METADATA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataFields(String... metadataFields) {
             return metadataFields(List.of(metadataFields));
         }

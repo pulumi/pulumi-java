@@ -23,6 +23,10 @@ public final class SchemaSettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="encoding", required=true)
     private String encoding;
 
+    /**
+     * @return The encoding of messages validated against `schema`.
+     * 
+     */
     public String encoding() {
         return this.encoding;
     }
@@ -34,6 +38,10 @@ public final class SchemaSettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="schema", required=true)
     private String schema;
 
+    /**
+     * @return The name of the schema that messages published should be validated against. Format is `projects/{project}/schemas/{schema}`. The value of this field will be `_deleted-schema_` if the schema has been deleted.
+     * 
+     */
     public String schema() {
         return this.schema;
     }
@@ -63,11 +71,23 @@ public final class SchemaSettingsResponse extends com.pulumi.resources.InvokeArg
             $ = new SchemaSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encoding The encoding of messages validated against `schema`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encoding(String encoding) {
             $.encoding = encoding;
             return this;
         }
 
+        /**
+         * @param schema The name of the schema that messages published should be validated against. Format is `projects/{project}/schemas/{schema}`. The value of this field will be `_deleted-schema_` if the schema has been deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(String schema) {
             $.schema = schema;
             return this;

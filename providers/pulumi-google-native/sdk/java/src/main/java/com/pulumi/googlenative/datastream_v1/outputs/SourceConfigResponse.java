@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class SourceConfigResponse {
-    /**
-     * MySQL data source configuration
-     * 
-     */
+        /**
+         * @return MySQL data source configuration
+         * 
+         */
     private final MysqlSourceConfigResponse mysqlSourceConfig;
-    /**
-     * Oracle data source configuration
-     * 
-     */
+        /**
+         * @return Oracle data source configuration
+         * 
+         */
     private final OracleSourceConfigResponse oracleSourceConfig;
-    /**
-     * Source connection profile resoource. Format: `projects/{project}/locations/{location}/connectionProfiles/{name}`
-     * 
-     */
+        /**
+         * @return Source connection profile resoource. Format: `projects/{project}/locations/{location}/connectionProfiles/{name}`
+         * 
+         */
     private final String sourceConnectionProfile;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class SourceConfigResponse {
     }
 
     /**
-     * MySQL data source configuration
+     * @return MySQL data source configuration
      * 
-    */
+     */
     public MysqlSourceConfigResponse mysqlSourceConfig() {
         return this.mysqlSourceConfig;
     }
     /**
-     * Oracle data source configuration
+     * @return Oracle data source configuration
      * 
-    */
+     */
     public OracleSourceConfigResponse oracleSourceConfig() {
         return this.oracleSourceConfig;
     }
     /**
-     * Source connection profile resoource. Format: `projects/{project}/locations/{location}/connectionProfiles/{name}`
+     * @return Source connection profile resoource. Format: `projects/{project}/locations/{location}/connectionProfiles/{name}`
      * 
-    */
+     */
     public String sourceConnectionProfile() {
         return this.sourceConnectionProfile;
     }

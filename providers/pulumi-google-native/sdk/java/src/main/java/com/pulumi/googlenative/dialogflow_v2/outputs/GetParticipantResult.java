@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GetParticipantResult {
-    /**
-     * Optional. Key-value filters on the metadata of documents returned by article suggestion. If specified, article suggestion only returns suggested documents that match all filters in their Document.metadata. Multiple values for a metadata key should be concatenated by comma. For example, filters to match all documents that have &#39;US&#39; or &#39;CA&#39; in their market metadata values and &#39;agent&#39; in their user metadata values will be ```documents_metadata_filters { key: &#34;market&#34; value: &#34;US,CA&#34; } documents_metadata_filters { key: &#34;user&#34; value: &#34;agent&#34; }```
-     * 
-     */
+        /**
+         * @return Optional. Key-value filters on the metadata of documents returned by article suggestion. If specified, article suggestion only returns suggested documents that match all filters in their Document.metadata. Multiple values for a metadata key should be concatenated by comma. For example, filters to match all documents that have &#39;US&#39; or &#39;CA&#39; in their market metadata values and &#39;agent&#39; in their user metadata values will be ```documents_metadata_filters { key: &#34;market&#34; value: &#34;US,CA&#34; } documents_metadata_filters { key: &#34;user&#34; value: &#34;agent&#34; }```
+         * 
+         */
     private final Map<String,String> documentsMetadataFilters;
-    /**
-     * Optional. The unique identifier of this participant. Format: `projects//locations//conversations//participants/`.
-     * 
-     */
+        /**
+         * @return Optional. The unique identifier of this participant. Format: `projects//locations//conversations//participants/`.
+         * 
+         */
     private final String name;
-    /**
-     * Immutable. The role this participant plays in the conversation. This field must be set during participant creation and is then immutable.
-     * 
-     */
+        /**
+         * @return Immutable. The role this participant plays in the conversation. This field must be set during participant creation and is then immutable.
+         * 
+         */
     private final String role;
-    /**
-     * Optional. Label applied to streams representing this participant in SIPREC XML metadata and SDP. This is used to assign transcriptions from that media stream to this participant. This field can be updated.
-     * 
-     */
+        /**
+         * @return Optional. Label applied to streams representing this participant in SIPREC XML metadata and SDP. This is used to assign transcriptions from that media stream to this participant. This field can be updated.
+         * 
+         */
     private final String sipRecordingMediaLabel;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class GetParticipantResult {
     }
 
     /**
-     * Optional. Key-value filters on the metadata of documents returned by article suggestion. If specified, article suggestion only returns suggested documents that match all filters in their Document.metadata. Multiple values for a metadata key should be concatenated by comma. For example, filters to match all documents that have &#39;US&#39; or &#39;CA&#39; in their market metadata values and &#39;agent&#39; in their user metadata values will be ```documents_metadata_filters { key: &#34;market&#34; value: &#34;US,CA&#34; } documents_metadata_filters { key: &#34;user&#34; value: &#34;agent&#34; }```
+     * @return Optional. Key-value filters on the metadata of documents returned by article suggestion. If specified, article suggestion only returns suggested documents that match all filters in their Document.metadata. Multiple values for a metadata key should be concatenated by comma. For example, filters to match all documents that have &#39;US&#39; or &#39;CA&#39; in their market metadata values and &#39;agent&#39; in their user metadata values will be ```documents_metadata_filters { key: &#34;market&#34; value: &#34;US,CA&#34; } documents_metadata_filters { key: &#34;user&#34; value: &#34;agent&#34; }```
      * 
-    */
+     */
     public Map<String,String> documentsMetadataFilters() {
         return this.documentsMetadataFilters;
     }
     /**
-     * Optional. The unique identifier of this participant. Format: `projects//locations//conversations//participants/`.
+     * @return Optional. The unique identifier of this participant. Format: `projects//locations//conversations//participants/`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Immutable. The role this participant plays in the conversation. This field must be set during participant creation and is then immutable.
+     * @return Immutable. The role this participant plays in the conversation. This field must be set during participant creation and is then immutable.
      * 
-    */
+     */
     public String role() {
         return this.role;
     }
     /**
-     * Optional. Label applied to streams representing this participant in SIPREC XML metadata and SDP. This is used to assign transcriptions from that media stream to this participant. This field can be updated.
+     * @return Optional. Label applied to streams representing this participant in SIPREC XML metadata and SDP. This is used to assign transcriptions from that media stream to this participant. This field can be updated.
      * 
-    */
+     */
     public String sipRecordingMediaLabel() {
         return this.sipRecordingMediaLabel;
     }

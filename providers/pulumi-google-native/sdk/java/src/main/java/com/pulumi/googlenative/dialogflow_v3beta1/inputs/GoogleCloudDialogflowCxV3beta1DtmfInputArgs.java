@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowCxV3beta1DtmfInputArgs extends com.pulum
     @Import(name="digits")
     private @Nullable Output<String> digits;
 
+    /**
+     * @return The dtmf digits.
+     * 
+     */
     public Optional<Output<String>> digits() {
         return Optional.ofNullable(this.digits);
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudDialogflowCxV3beta1DtmfInputArgs extends com.pulum
     @Import(name="finishDigit")
     private @Nullable Output<String> finishDigit;
 
+    /**
+     * @return The finish digit (if any).
+     * 
+     */
     public Optional<Output<String>> finishDigit() {
         return Optional.ofNullable(this.finishDigit);
     }
@@ -66,20 +74,44 @@ public final class GoogleCloudDialogflowCxV3beta1DtmfInputArgs extends com.pulum
             $ = new GoogleCloudDialogflowCxV3beta1DtmfInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param digits The dtmf digits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder digits(@Nullable Output<String> digits) {
             $.digits = digits;
             return this;
         }
 
+        /**
+         * @param digits The dtmf digits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder digits(String digits) {
             return digits(Output.of(digits));
         }
 
+        /**
+         * @param finishDigit The finish digit (if any).
+         * 
+         * @return builder
+         * 
+         */
         public Builder finishDigit(@Nullable Output<String> finishDigit) {
             $.finishDigit = finishDigit;
             return this;
         }
 
+        /**
+         * @param finishDigit The finish digit (if any).
+         * 
+         * @return builder
+         * 
+         */
         public Builder finishDigit(String finishDigit) {
             return finishDigit(Output.of(finishDigit));
         }

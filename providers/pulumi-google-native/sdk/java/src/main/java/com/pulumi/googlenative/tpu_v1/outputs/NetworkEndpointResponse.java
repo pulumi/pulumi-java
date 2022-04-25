@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class NetworkEndpointResponse {
-    /**
-     * The IP address of this network endpoint.
-     * 
-     */
+        /**
+         * @return The IP address of this network endpoint.
+         * 
+         */
     private final String ipAddress;
-    /**
-     * The port of this network endpoint.
-     * 
-     */
+        /**
+         * @return The port of this network endpoint.
+         * 
+         */
     private final Integer port;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class NetworkEndpointResponse {
     }
 
     /**
-     * The IP address of this network endpoint.
+     * @return The IP address of this network endpoint.
      * 
-    */
+     */
     public String ipAddress() {
         return this.ipAddress;
     }
     /**
-     * The port of this network endpoint.
+     * @return The port of this network endpoint.
      * 
-    */
+     */
     public Integer port() {
         return this.port;
     }

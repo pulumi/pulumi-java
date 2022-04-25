@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowCxV3VariantsHistoryResponse {
-    /**
-     * Update time of the variants.
-     * 
-     */
+        /**
+         * @return Update time of the variants.
+         * 
+         */
     private final String updateTime;
-    /**
-     * The flow versions as the variants.
-     * 
-     */
+        /**
+         * @return The flow versions as the variants.
+         * 
+         */
     private final GoogleCloudDialogflowCxV3VersionVariantsResponse versionVariants;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GoogleCloudDialogflowCxV3VariantsHistoryResponse {
     }
 
     /**
-     * Update time of the variants.
+     * @return Update time of the variants.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }
     /**
-     * The flow versions as the variants.
+     * @return The flow versions as the variants.
      * 
-    */
+     */
     public GoogleCloudDialogflowCxV3VersionVariantsResponse versionVariants() {
         return this.versionVariants;
     }

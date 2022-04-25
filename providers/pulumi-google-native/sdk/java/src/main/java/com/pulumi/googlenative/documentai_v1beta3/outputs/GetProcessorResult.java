@@ -9,45 +9,45 @@ import java.util.Objects;
 
 @CustomType
 public final class GetProcessorResult {
-    /**
-     * The time the processor was created.
-     * 
-     */
+        /**
+         * @return The time the processor was created.
+         * 
+         */
     private final String createTime;
-    /**
-     * The default processor version.
-     * 
-     */
+        /**
+         * @return The default processor version.
+         * 
+         */
     private final String defaultProcessorVersion;
-    /**
-     * The display name of the processor.
-     * 
-     */
+        /**
+         * @return The display name of the processor.
+         * 
+         */
     private final String displayName;
-    /**
-     * The KMS key used for encryption/decryption in CMEK scenarios. See https://cloud.google.com/security-key-management.
-     * 
-     */
+        /**
+         * @return The KMS key used for encryption/decryption in CMEK scenarios. See https://cloud.google.com/security-key-management.
+         * 
+         */
     private final String kmsKeyName;
-    /**
-     * Immutable. The resource name of the processor. Format: `projects/{project}/locations/{location}/processors/{processor}`
-     * 
-     */
+        /**
+         * @return Immutable. The resource name of the processor. Format: `projects/{project}/locations/{location}/processors/{processor}`
+         * 
+         */
     private final String name;
-    /**
-     * Immutable. The http endpoint that can be called to invoke processing.
-     * 
-     */
+        /**
+         * @return Immutable. The http endpoint that can be called to invoke processing.
+         * 
+         */
     private final String processEndpoint;
-    /**
-     * The state of the processor.
-     * 
-     */
+        /**
+         * @return The state of the processor.
+         * 
+         */
     private final String state;
-    /**
-     * The processor type, e.g., INVOICE_PARSING, W2_PARSING, etc.
-     * 
-     */
+        /**
+         * @return The processor type, e.g., INVOICE_PARSING, W2_PARSING, etc.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -71,58 +71,58 @@ public final class GetProcessorResult {
     }
 
     /**
-     * The time the processor was created.
+     * @return The time the processor was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The default processor version.
+     * @return The default processor version.
      * 
-    */
+     */
     public String defaultProcessorVersion() {
         return this.defaultProcessorVersion;
     }
     /**
-     * The display name of the processor.
+     * @return The display name of the processor.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The KMS key used for encryption/decryption in CMEK scenarios. See https://cloud.google.com/security-key-management.
+     * @return The KMS key used for encryption/decryption in CMEK scenarios. See https://cloud.google.com/security-key-management.
      * 
-    */
+     */
     public String kmsKeyName() {
         return this.kmsKeyName;
     }
     /**
-     * Immutable. The resource name of the processor. Format: `projects/{project}/locations/{location}/processors/{processor}`
+     * @return Immutable. The resource name of the processor. Format: `projects/{project}/locations/{location}/processors/{processor}`
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Immutable. The http endpoint that can be called to invoke processing.
+     * @return Immutable. The http endpoint that can be called to invoke processing.
      * 
-    */
+     */
     public String processEndpoint() {
         return this.processEndpoint;
     }
     /**
-     * The state of the processor.
+     * @return The state of the processor.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The processor type, e.g., INVOICE_PARSING, W2_PARSING, etc.
+     * @return The processor type, e.g., INVOICE_PARSING, W2_PARSING, etc.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

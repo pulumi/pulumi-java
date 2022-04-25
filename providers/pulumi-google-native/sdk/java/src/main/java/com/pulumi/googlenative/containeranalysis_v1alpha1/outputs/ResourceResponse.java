@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class ResourceResponse {
-    /**
-     * The hash of the resource content. E.g., the Docker digest.
-     * 
-     */
+        /**
+         * @return The hash of the resource content. E.g., the Docker digest.
+         * 
+         */
     private final HashResponse contentHash;
-    /**
-     * The name of the resource. E.g., the name of a Docker image - &#34;Debian&#34;.
-     * 
-     */
+        /**
+         * @return The name of the resource. E.g., the name of a Docker image - &#34;Debian&#34;.
+         * 
+         */
     private final String name;
-    /**
-     * The unique URI of the resource. E.g., &#34;https://gcr.io/project/image@sha256:foo&#34; for a Docker image.
-     * 
-     */
+        /**
+         * @return The unique URI of the resource. E.g., &#34;https://gcr.io/project/image@sha256:foo&#34; for a Docker image.
+         * 
+         */
     private final String uri;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class ResourceResponse {
     }
 
     /**
-     * The hash of the resource content. E.g., the Docker digest.
+     * @return The hash of the resource content. E.g., the Docker digest.
      * 
-    */
+     */
     public HashResponse contentHash() {
         return this.contentHash;
     }
     /**
-     * The name of the resource. E.g., the name of a Docker image - &#34;Debian&#34;.
+     * @return The name of the resource. E.g., the name of a Docker image - &#34;Debian&#34;.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The unique URI of the resource. E.g., &#34;https://gcr.io/project/image@sha256:foo&#34; for a Docker image.
+     * @return The unique URI of the resource. E.g., &#34;https://gcr.io/project/image@sha256:foo&#34; for a Docker image.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

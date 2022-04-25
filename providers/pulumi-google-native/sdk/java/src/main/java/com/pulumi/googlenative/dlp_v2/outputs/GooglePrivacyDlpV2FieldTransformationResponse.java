@@ -13,25 +13,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GooglePrivacyDlpV2FieldTransformationResponse {
-    /**
-     * Only apply the transformation if the condition evaluates to true for the given `RecordCondition`. The conditions are allowed to reference fields that are not used in the actual transformation. Example Use Cases: - Apply a different bucket transformation to an age column if the zip code column for the same record is within a specific range. - Redact a field if the date of birth field is greater than 85.
-     * 
-     */
+        /**
+         * @return Only apply the transformation if the condition evaluates to true for the given `RecordCondition`. The conditions are allowed to reference fields that are not used in the actual transformation. Example Use Cases: - Apply a different bucket transformation to an age column if the zip code column for the same record is within a specific range. - Redact a field if the date of birth field is greater than 85.
+         * 
+         */
     private final GooglePrivacyDlpV2RecordConditionResponse condition;
-    /**
-     * Input field(s) to apply the transformation to. When you have columns that reference their position within a list, omit the index from the FieldId. FieldId name matching ignores the index. For example, instead of &#34;contact.nums[0].type&#34;, use &#34;contact.nums.type&#34;.
-     * 
-     */
+        /**
+         * @return Input field(s) to apply the transformation to. When you have columns that reference their position within a list, omit the index from the FieldId. FieldId name matching ignores the index. For example, instead of &#34;contact.nums[0].type&#34;, use &#34;contact.nums.type&#34;.
+         * 
+         */
     private final List<GooglePrivacyDlpV2FieldIdResponse> fields;
-    /**
-     * Treat the contents of the field as free text, and selectively transform content that matches an `InfoType`.
-     * 
-     */
+        /**
+         * @return Treat the contents of the field as free text, and selectively transform content that matches an `InfoType`.
+         * 
+         */
     private final GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations;
-    /**
-     * Apply the transformation to the entire field.
-     * 
-     */
+        /**
+         * @return Apply the transformation to the entire field.
+         * 
+         */
     private final GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class GooglePrivacyDlpV2FieldTransformationResponse {
     }
 
     /**
-     * Only apply the transformation if the condition evaluates to true for the given `RecordCondition`. The conditions are allowed to reference fields that are not used in the actual transformation. Example Use Cases: - Apply a different bucket transformation to an age column if the zip code column for the same record is within a specific range. - Redact a field if the date of birth field is greater than 85.
+     * @return Only apply the transformation if the condition evaluates to true for the given `RecordCondition`. The conditions are allowed to reference fields that are not used in the actual transformation. Example Use Cases: - Apply a different bucket transformation to an age column if the zip code column for the same record is within a specific range. - Redact a field if the date of birth field is greater than 85.
      * 
-    */
+     */
     public GooglePrivacyDlpV2RecordConditionResponse condition() {
         return this.condition;
     }
     /**
-     * Input field(s) to apply the transformation to. When you have columns that reference their position within a list, omit the index from the FieldId. FieldId name matching ignores the index. For example, instead of &#34;contact.nums[0].type&#34;, use &#34;contact.nums.type&#34;.
+     * @return Input field(s) to apply the transformation to. When you have columns that reference their position within a list, omit the index from the FieldId. FieldId name matching ignores the index. For example, instead of &#34;contact.nums[0].type&#34;, use &#34;contact.nums.type&#34;.
      * 
-    */
+     */
     public List<GooglePrivacyDlpV2FieldIdResponse> fields() {
         return this.fields;
     }
     /**
-     * Treat the contents of the field as free text, and selectively transform content that matches an `InfoType`.
+     * @return Treat the contents of the field as free text, and selectively transform content that matches an `InfoType`.
      * 
-    */
+     */
     public GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations() {
         return this.infoTypeTransformations;
     }
     /**
-     * Apply the transformation to the entire field.
+     * @return Apply the transformation to the entire field.
      * 
-    */
+     */
     public GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation() {
         return this.primitiveTransformation;
     }

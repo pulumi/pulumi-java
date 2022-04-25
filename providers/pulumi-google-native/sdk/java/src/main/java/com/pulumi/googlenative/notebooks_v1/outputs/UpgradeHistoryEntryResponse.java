@@ -9,55 +9,55 @@ import java.util.Objects;
 
 @CustomType
 public final class UpgradeHistoryEntryResponse {
-    /**
-     * Action. Rolloback or Upgrade.
-     * 
-     */
+        /**
+         * @return Action. Rolloback or Upgrade.
+         * 
+         */
     private final String action;
-    /**
-     * The container image before this instance upgrade.
-     * 
-     */
+        /**
+         * @return The container image before this instance upgrade.
+         * 
+         */
     private final String containerImage;
-    /**
-     * The time that this instance upgrade history entry is created.
-     * 
-     */
+        /**
+         * @return The time that this instance upgrade history entry is created.
+         * 
+         */
     private final String createTime;
-    /**
-     * The framework of this notebook instance.
-     * 
-     */
+        /**
+         * @return The framework of this notebook instance.
+         * 
+         */
     private final String framework;
-    /**
-     * The snapshot of the boot disk of this notebook instance before upgrade.
-     * 
-     */
+        /**
+         * @return The snapshot of the boot disk of this notebook instance before upgrade.
+         * 
+         */
     private final String snapshot;
-    /**
-     * The state of this instance upgrade history entry.
-     * 
-     */
+        /**
+         * @return The state of this instance upgrade history entry.
+         * 
+         */
     private final String state;
-    /**
-     * Target VM Image. Format: ainotebooks-vm/project/image-name/name.
-     * 
-     */
+        /**
+         * @return Target VM Image. Format: ainotebooks-vm/project/image-name/name.
+         * 
+         */
     private final String targetImage;
-    /**
-     * Target VM Version, like m63.
-     * 
-     */
+        /**
+         * @return Target VM Version, like m63.
+         * 
+         */
     private final String targetVersion;
-    /**
-     * The version of the notebook instance before this upgrade.
-     * 
-     */
+        /**
+         * @return The version of the notebook instance before this upgrade.
+         * 
+         */
     private final String version;
-    /**
-     * The VM image before this instance upgrade.
-     * 
-     */
+        /**
+         * @return The VM image before this instance upgrade.
+         * 
+         */
     private final String vmImage;
 
     @CustomType.Constructor
@@ -85,72 +85,72 @@ public final class UpgradeHistoryEntryResponse {
     }
 
     /**
-     * Action. Rolloback or Upgrade.
+     * @return Action. Rolloback or Upgrade.
      * 
-    */
+     */
     public String action() {
         return this.action;
     }
     /**
-     * The container image before this instance upgrade.
+     * @return The container image before this instance upgrade.
      * 
-    */
+     */
     public String containerImage() {
         return this.containerImage;
     }
     /**
-     * The time that this instance upgrade history entry is created.
+     * @return The time that this instance upgrade history entry is created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The framework of this notebook instance.
+     * @return The framework of this notebook instance.
      * 
-    */
+     */
     public String framework() {
         return this.framework;
     }
     /**
-     * The snapshot of the boot disk of this notebook instance before upgrade.
+     * @return The snapshot of the boot disk of this notebook instance before upgrade.
      * 
-    */
+     */
     public String snapshot() {
         return this.snapshot;
     }
     /**
-     * The state of this instance upgrade history entry.
+     * @return The state of this instance upgrade history entry.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Target VM Image. Format: ainotebooks-vm/project/image-name/name.
+     * @return Target VM Image. Format: ainotebooks-vm/project/image-name/name.
      * 
-    */
+     */
     public String targetImage() {
         return this.targetImage;
     }
     /**
-     * Target VM Version, like m63.
+     * @return Target VM Version, like m63.
      * 
-    */
+     */
     public String targetVersion() {
         return this.targetVersion;
     }
     /**
-     * The version of the notebook instance before this upgrade.
+     * @return The version of the notebook instance before this upgrade.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }
     /**
-     * The VM image before this instance upgrade.
+     * @return The VM image before this instance upgrade.
      * 
-    */
+     */
     public String vmImage() {
         return this.vmImage;
     }

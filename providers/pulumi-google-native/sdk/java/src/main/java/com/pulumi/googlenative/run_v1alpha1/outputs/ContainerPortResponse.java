@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class ContainerPortResponse {
-    /**
-     * (Optional) Port number the container listens on. This must be a valid port number, 0 &lt; x &lt; 65536.
-     * 
-     */
+        /**
+         * @return (Optional) Port number the container listens on. This must be a valid port number, 0 &lt; x &lt; 65536.
+         * 
+         */
     private final Integer containerPort;
-    /**
-     * (Optional) If specified, used to specify which protocol to use. Allowed values are &#34;http1&#34; and &#34;h2c&#34;.
-     * 
-     */
+        /**
+         * @return (Optional) If specified, used to specify which protocol to use. Allowed values are &#34;http1&#34; and &#34;h2c&#34;.
+         * 
+         */
     private final String name;
-    /**
-     * (Optional) Protocol for port. Must be &#34;TCP&#34;. Defaults to &#34;TCP&#34;.
-     * 
-     */
+        /**
+         * @return (Optional) Protocol for port. Must be &#34;TCP&#34;. Defaults to &#34;TCP&#34;.
+         * 
+         */
     private final String protocol;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class ContainerPortResponse {
     }
 
     /**
-     * (Optional) Port number the container listens on. This must be a valid port number, 0 &lt; x &lt; 65536.
+     * @return (Optional) Port number the container listens on. This must be a valid port number, 0 &lt; x &lt; 65536.
      * 
-    */
+     */
     public Integer containerPort() {
         return this.containerPort;
     }
     /**
-     * (Optional) If specified, used to specify which protocol to use. Allowed values are &#34;http1&#34; and &#34;h2c&#34;.
+     * @return (Optional) If specified, used to specify which protocol to use. Allowed values are &#34;http1&#34; and &#34;h2c&#34;.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * (Optional) Protocol for port. Must be &#34;TCP&#34;. Defaults to &#34;TCP&#34;.
+     * @return (Optional) Protocol for port. Must be &#34;TCP&#34;. Defaults to &#34;TCP&#34;.
      * 
-    */
+     */
     public String protocol() {
         return this.protocol;
     }

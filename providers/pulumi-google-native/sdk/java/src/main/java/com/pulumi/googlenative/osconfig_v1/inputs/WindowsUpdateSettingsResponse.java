@@ -24,6 +24,10 @@ public final class WindowsUpdateSettingsResponse extends com.pulumi.resources.In
     @Import(name="classifications", required=true)
     private List<String> classifications;
 
+    /**
+     * @return Only apply updates of these windows update classifications. If empty, all updates are applied.
+     * 
+     */
     public List<String> classifications() {
         return this.classifications;
     }
@@ -35,6 +39,10 @@ public final class WindowsUpdateSettingsResponse extends com.pulumi.resources.In
     @Import(name="excludes", required=true)
     private List<String> excludes;
 
+    /**
+     * @return List of KBs to exclude from update.
+     * 
+     */
     public List<String> excludes() {
         return this.excludes;
     }
@@ -46,6 +54,10 @@ public final class WindowsUpdateSettingsResponse extends com.pulumi.resources.In
     @Import(name="exclusivePatches", required=true)
     private List<String> exclusivePatches;
 
+    /**
+     * @return An exclusive list of kbs to be updated. These are the only patches that will be updated. This field must not be used with other patch configurations.
+     * 
+     */
     public List<String> exclusivePatches() {
         return this.exclusivePatches;
     }
@@ -76,29 +88,65 @@ public final class WindowsUpdateSettingsResponse extends com.pulumi.resources.In
             $ = new WindowsUpdateSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param classifications Only apply updates of these windows update classifications. If empty, all updates are applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder classifications(List<String> classifications) {
             $.classifications = classifications;
             return this;
         }
 
+        /**
+         * @param classifications Only apply updates of these windows update classifications. If empty, all updates are applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder classifications(String... classifications) {
             return classifications(List.of(classifications));
         }
 
+        /**
+         * @param excludes List of KBs to exclude from update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludes(List<String> excludes) {
             $.excludes = excludes;
             return this;
         }
 
+        /**
+         * @param excludes List of KBs to exclude from update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludes(String... excludes) {
             return excludes(List.of(excludes));
         }
 
+        /**
+         * @param exclusivePatches An exclusive list of kbs to be updated. These are the only patches that will be updated. This field must not be used with other patch configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusivePatches(List<String> exclusivePatches) {
             $.exclusivePatches = exclusivePatches;
             return this;
         }
 
+        /**
+         * @param exclusivePatches An exclusive list of kbs to be updated. These are the only patches that will be updated. This field must not be used with other patch configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusivePatches(String... exclusivePatches) {
             return exclusivePatches(List.of(exclusivePatches));
         }

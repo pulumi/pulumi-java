@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class DiskEncryptionConfigurationResponse {
-    /**
-     * This is always `sql#diskEncryptionConfiguration`.
-     * 
-     */
+        /**
+         * @return This is always `sql#diskEncryptionConfiguration`.
+         * 
+         */
     private final String kind;
-    /**
-     * Resource name of KMS key for disk encryption
-     * 
-     */
+        /**
+         * @return Resource name of KMS key for disk encryption
+         * 
+         */
     private final String kmsKeyName;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class DiskEncryptionConfigurationResponse {
     }
 
     /**
-     * This is always `sql#diskEncryptionConfiguration`.
+     * @return This is always `sql#diskEncryptionConfiguration`.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Resource name of KMS key for disk encryption
+     * @return Resource name of KMS key for disk encryption
      * 
-    */
+     */
     public String kmsKeyName() {
         return this.kmsKeyName;
     }

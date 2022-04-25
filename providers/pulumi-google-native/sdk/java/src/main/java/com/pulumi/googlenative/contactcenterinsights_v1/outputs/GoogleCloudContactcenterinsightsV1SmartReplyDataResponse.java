@@ -11,25 +11,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudContactcenterinsightsV1SmartReplyDataResponse {
-    /**
-     * The system&#39;s confidence score that this reply is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
-     * 
-     */
+        /**
+         * @return The system&#39;s confidence score that this reply is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
+         * 
+         */
     private final Double confidenceScore;
-    /**
-     * Map that contains metadata about the Smart Reply and the document from which it originates.
-     * 
-     */
+        /**
+         * @return Map that contains metadata about the Smart Reply and the document from which it originates.
+         * 
+         */
     private final Map<String,String> metadata;
-    /**
-     * Name of the query record. Format: projects/{project}/locations/{location}/queryRecords/{query_record}
-     * 
-     */
+        /**
+         * @return Name of the query record. Format: projects/{project}/locations/{location}/queryRecords/{query_record}
+         * 
+         */
     private final String queryRecord;
-    /**
-     * The content of the reply.
-     * 
-     */
+        /**
+         * @return The content of the reply.
+         * 
+         */
     private final String reply;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class GoogleCloudContactcenterinsightsV1SmartReplyDataResponse {
     }
 
     /**
-     * The system&#39;s confidence score that this reply is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
+     * @return The system&#39;s confidence score that this reply is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
      * 
-    */
+     */
     public Double confidenceScore() {
         return this.confidenceScore;
     }
     /**
-     * Map that contains metadata about the Smart Reply and the document from which it originates.
+     * @return Map that contains metadata about the Smart Reply and the document from which it originates.
      * 
-    */
+     */
     public Map<String,String> metadata() {
         return this.metadata;
     }
     /**
-     * Name of the query record. Format: projects/{project}/locations/{location}/queryRecords/{query_record}
+     * @return Name of the query record. Format: projects/{project}/locations/{location}/queryRecords/{query_record}
      * 
-    */
+     */
     public String queryRecord() {
         return this.queryRecord;
     }
     /**
-     * The content of the reply.
+     * @return The content of the reply.
      * 
-    */
+     */
     public String reply() {
         return this.reply;
     }

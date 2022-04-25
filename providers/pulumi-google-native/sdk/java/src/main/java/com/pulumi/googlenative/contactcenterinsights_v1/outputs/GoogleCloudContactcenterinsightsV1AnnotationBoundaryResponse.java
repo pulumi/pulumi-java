@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse {
-    /**
-     * The index in the sequence of transcribed pieces of the conversation where the boundary is located. This index starts at zero.
-     * 
-     */
+        /**
+         * @return The index in the sequence of transcribed pieces of the conversation where the boundary is located. This index starts at zero.
+         * 
+         */
     private final Integer transcriptIndex;
-    /**
-     * The word index of this boundary with respect to the first word in the transcript piece. This index starts at zero.
-     * 
-     */
+        /**
+         * @return The word index of this boundary with respect to the first word in the transcript piece. This index starts at zero.
+         * 
+         */
     private final Integer wordIndex;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse 
     }
 
     /**
-     * The index in the sequence of transcribed pieces of the conversation where the boundary is located. This index starts at zero.
+     * @return The index in the sequence of transcribed pieces of the conversation where the boundary is located. This index starts at zero.
      * 
-    */
+     */
     public Integer transcriptIndex() {
         return this.transcriptIndex;
     }
     /**
-     * The word index of this boundary with respect to the first word in the transcript piece. This index starts at zero.
+     * @return The word index of this boundary with respect to the first word in the transcript piece. This index starts at zero.
      * 
-    */
+     */
     public Integer wordIndex() {
         return this.wordIndex;
     }

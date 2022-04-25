@@ -28,6 +28,10 @@ public final class GrpcServiceConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="callCredentials")
     private @Nullable Output<CallCredentialsArgs> callCredentials;
 
+    /**
+     * @return The call credentials to access the SDS server.
+     * 
+     */
     public Optional<Output<CallCredentialsArgs>> callCredentials() {
         return Optional.ofNullable(this.callCredentials);
     }
@@ -39,6 +43,10 @@ public final class GrpcServiceConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="channelCredentials")
     private @Nullable Output<ChannelCredentialsArgs> channelCredentials;
 
+    /**
+     * @return The channel credentials to access the SDS server.
+     * 
+     */
     public Optional<Output<ChannelCredentialsArgs>> channelCredentials() {
         return Optional.ofNullable(this.channelCredentials);
     }
@@ -50,6 +58,10 @@ public final class GrpcServiceConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="targetUri")
     private @Nullable Output<String> targetUri;
 
+    /**
+     * @return The target URI of the SDS server.
+     * 
+     */
     public Optional<Output<String>> targetUri() {
         return Optional.ofNullable(this.targetUri);
     }
@@ -80,29 +92,65 @@ public final class GrpcServiceConfigArgs extends com.pulumi.resources.ResourceAr
             $ = new GrpcServiceConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param callCredentials The call credentials to access the SDS server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder callCredentials(@Nullable Output<CallCredentialsArgs> callCredentials) {
             $.callCredentials = callCredentials;
             return this;
         }
 
+        /**
+         * @param callCredentials The call credentials to access the SDS server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder callCredentials(CallCredentialsArgs callCredentials) {
             return callCredentials(Output.of(callCredentials));
         }
 
+        /**
+         * @param channelCredentials The channel credentials to access the SDS server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelCredentials(@Nullable Output<ChannelCredentialsArgs> channelCredentials) {
             $.channelCredentials = channelCredentials;
             return this;
         }
 
+        /**
+         * @param channelCredentials The channel credentials to access the SDS server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelCredentials(ChannelCredentialsArgs channelCredentials) {
             return channelCredentials(Output.of(channelCredentials));
         }
 
+        /**
+         * @param targetUri The target URI of the SDS server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetUri(@Nullable Output<String> targetUri) {
             $.targetUri = targetUri;
             return this;
         }
 
+        /**
+         * @param targetUri The target URI of the SDS server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetUri(String targetUri) {
             return targetUri(Output.of(targetUri));
         }

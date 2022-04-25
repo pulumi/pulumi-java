@@ -27,6 +27,10 @@ public final class GoogleCloudChannelV1ParameterArgs extends com.pulumi.resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the parameter.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudChannelV1ParameterArgs extends com.pulumi.resource
     @Import(name="value")
     private @Nullable Output<GoogleCloudChannelV1ValueArgs> value;
 
+    /**
+     * @return Value of the parameter.
+     * 
+     */
     public Optional<Output<GoogleCloudChannelV1ValueArgs>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudChannelV1ParameterArgs extends com.pulumi.resource
             $ = new GoogleCloudChannelV1ParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param value Value of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<GoogleCloudChannelV1ValueArgs> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Value of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(GoogleCloudChannelV1ValueArgs value) {
             return value(Output.of(value));
         }

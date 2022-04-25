@@ -25,6 +25,10 @@ public final class BasicLevelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="combiningFunction", required=true)
     private String combiningFunction;
 
+    /**
+     * @return How the `conditions` list should be combined to determine if a request is granted this `AccessLevel`. If AND is used, each `Condition` in `conditions` must be satisfied for the `AccessLevel` to be applied. If OR is used, at least one `Condition` in `conditions` must be satisfied for the `AccessLevel` to be applied. Default behavior is AND.
+     * 
+     */
     public String combiningFunction() {
         return this.combiningFunction;
     }
@@ -36,6 +40,10 @@ public final class BasicLevelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="conditions", required=true)
     private List<ConditionResponse> conditions;
 
+    /**
+     * @return A list of requirements for the `AccessLevel` to be granted.
+     * 
+     */
     public List<ConditionResponse> conditions() {
         return this.conditions;
     }
@@ -65,16 +73,34 @@ public final class BasicLevelResponse extends com.pulumi.resources.InvokeArgs {
             $ = new BasicLevelResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param combiningFunction How the `conditions` list should be combined to determine if a request is granted this `AccessLevel`. If AND is used, each `Condition` in `conditions` must be satisfied for the `AccessLevel` to be applied. If OR is used, at least one `Condition` in `conditions` must be satisfied for the `AccessLevel` to be applied. Default behavior is AND.
+         * 
+         * @return builder
+         * 
+         */
         public Builder combiningFunction(String combiningFunction) {
             $.combiningFunction = combiningFunction;
             return this;
         }
 
+        /**
+         * @param conditions A list of requirements for the `AccessLevel` to be granted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<ConditionResponse> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions A list of requirements for the `AccessLevel` to be granted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(ConditionResponse... conditions) {
             return conditions(List.of(conditions));
         }

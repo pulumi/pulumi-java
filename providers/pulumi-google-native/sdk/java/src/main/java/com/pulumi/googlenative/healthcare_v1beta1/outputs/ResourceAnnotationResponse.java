@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ResourceAnnotationResponse {
-    /**
-     * A description of the annotation record.
-     * 
-     */
+        /**
+         * @return A description of the annotation record.
+         * 
+         */
     private final String label;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ResourceAnnotationResponse {
     }
 
     /**
-     * A description of the annotation record.
+     * @return A description of the annotation record.
      * 
-    */
+     */
     public String label() {
         return this.label;
     }

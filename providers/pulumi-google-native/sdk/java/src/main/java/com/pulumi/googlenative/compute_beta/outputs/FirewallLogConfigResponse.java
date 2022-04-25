@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class FirewallLogConfigResponse {
-    /**
-     * This field denotes whether to enable logging for a particular firewall rule.
-     * 
-     */
+        /**
+         * @return This field denotes whether to enable logging for a particular firewall rule.
+         * 
+         */
     private final Boolean enable;
-    /**
-     * This field can only be specified for a particular firewall rule if logging is enabled for that rule. This field denotes whether to include or exclude metadata for firewall logs.
-     * 
-     */
+        /**
+         * @return This field can only be specified for a particular firewall rule if logging is enabled for that rule. This field denotes whether to include or exclude metadata for firewall logs.
+         * 
+         */
     private final String metadata;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class FirewallLogConfigResponse {
     }
 
     /**
-     * This field denotes whether to enable logging for a particular firewall rule.
+     * @return This field denotes whether to enable logging for a particular firewall rule.
      * 
-    */
+     */
     public Boolean enable() {
         return this.enable;
     }
     /**
-     * This field can only be specified for a particular firewall rule if logging is enabled for that rule. This field denotes whether to include or exclude metadata for firewall logs.
+     * @return This field can only be specified for a particular firewall rule if logging is enabled for that rule. This field denotes whether to include or exclude metadata for firewall logs.
      * 
-    */
+     */
     public String metadata() {
         return this.metadata;
     }

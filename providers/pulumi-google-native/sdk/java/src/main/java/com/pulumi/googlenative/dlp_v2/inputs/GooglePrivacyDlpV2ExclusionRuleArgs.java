@@ -29,6 +29,10 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends com.pulumi.resour
     @Import(name="dictionary")
     private @Nullable Output<GooglePrivacyDlpV2DictionaryArgs> dictionary;
 
+    /**
+     * @return Dictionary which defines the rule.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2DictionaryArgs>> dictionary() {
         return Optional.ofNullable(this.dictionary);
     }
@@ -40,6 +44,10 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends com.pulumi.resour
     @Import(name="excludeInfoTypes")
     private @Nullable Output<GooglePrivacyDlpV2ExcludeInfoTypesArgs> excludeInfoTypes;
 
+    /**
+     * @return Set of infoTypes for which findings would affect this rule.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2ExcludeInfoTypesArgs>> excludeInfoTypes() {
         return Optional.ofNullable(this.excludeInfoTypes);
     }
@@ -51,6 +59,10 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends com.pulumi.resour
     @Import(name="matchingType")
     private @Nullable Output<GooglePrivacyDlpV2ExclusionRuleMatchingType> matchingType;
 
+    /**
+     * @return How the rule is applied, see MatchingType documentation for details.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2ExclusionRuleMatchingType>> matchingType() {
         return Optional.ofNullable(this.matchingType);
     }
@@ -62,6 +74,10 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends com.pulumi.resour
     @Import(name="regex")
     private @Nullable Output<GooglePrivacyDlpV2RegexArgs> regex;
 
+    /**
+     * @return Regular expression which defines the rule.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2RegexArgs>> regex() {
         return Optional.ofNullable(this.regex);
     }
@@ -93,38 +109,86 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends com.pulumi.resour
             $ = new GooglePrivacyDlpV2ExclusionRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dictionary Dictionary which defines the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dictionary(@Nullable Output<GooglePrivacyDlpV2DictionaryArgs> dictionary) {
             $.dictionary = dictionary;
             return this;
         }
 
+        /**
+         * @param dictionary Dictionary which defines the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dictionary(GooglePrivacyDlpV2DictionaryArgs dictionary) {
             return dictionary(Output.of(dictionary));
         }
 
+        /**
+         * @param excludeInfoTypes Set of infoTypes for which findings would affect this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeInfoTypes(@Nullable Output<GooglePrivacyDlpV2ExcludeInfoTypesArgs> excludeInfoTypes) {
             $.excludeInfoTypes = excludeInfoTypes;
             return this;
         }
 
+        /**
+         * @param excludeInfoTypes Set of infoTypes for which findings would affect this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeInfoTypes(GooglePrivacyDlpV2ExcludeInfoTypesArgs excludeInfoTypes) {
             return excludeInfoTypes(Output.of(excludeInfoTypes));
         }
 
+        /**
+         * @param matchingType How the rule is applied, see MatchingType documentation for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchingType(@Nullable Output<GooglePrivacyDlpV2ExclusionRuleMatchingType> matchingType) {
             $.matchingType = matchingType;
             return this;
         }
 
+        /**
+         * @param matchingType How the rule is applied, see MatchingType documentation for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchingType(GooglePrivacyDlpV2ExclusionRuleMatchingType matchingType) {
             return matchingType(Output.of(matchingType));
         }
 
+        /**
+         * @param regex Regular expression which defines the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(@Nullable Output<GooglePrivacyDlpV2RegexArgs> regex) {
             $.regex = regex;
             return this;
         }
 
+        /**
+         * @param regex Regular expression which defines the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(GooglePrivacyDlpV2RegexArgs regex) {
             return regex(Output.of(regex));
         }

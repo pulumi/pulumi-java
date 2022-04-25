@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse {
-    /**
-     * The name of the rollout step;
-     * 
-     */
+        /**
+         * @return The name of the rollout step;
+         * 
+         */
     private final String displayName;
-    /**
-     * The minimum time that this step should last. Should be longer than 1 hour. If not set, the default minimum duration for each step will be 1 hour.
-     * 
-     */
+        /**
+         * @return The minimum time that this step should last. Should be longer than 1 hour. If not set, the default minimum duration for each step will be 1 hour.
+         * 
+         */
     private final String minDuration;
-    /**
-     * The percentage of traffic allocated to the flow version of this rollout step. (0%, 100%].
-     * 
-     */
+        /**
+         * @return The percentage of traffic allocated to the flow version of this rollout step. (0%, 100%].
+         * 
+         */
     private final Integer trafficPercent;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse {
     }
 
     /**
-     * The name of the rollout step;
+     * @return The name of the rollout step;
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The minimum time that this step should last. Should be longer than 1 hour. If not set, the default minimum duration for each step will be 1 hour.
+     * @return The minimum time that this step should last. Should be longer than 1 hour. If not set, the default minimum duration for each step will be 1 hour.
      * 
-    */
+     */
     public String minDuration() {
         return this.minDuration;
     }
     /**
-     * The percentage of traffic allocated to the flow version of this rollout step. (0%, 100%].
+     * @return The percentage of traffic allocated to the flow version of this rollout step. (0%, 100%].
      * 
-    */
+     */
     public Integer trafficPercent() {
         return this.trafficPercent;
     }

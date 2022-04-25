@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class VolumeMountResponse {
-    /**
-     * Path within the container at which the volume should be mounted. Must not contain &#39;:&#39;.
-     * 
-     */
+        /**
+         * @return Path within the container at which the volume should be mounted. Must not contain &#39;:&#39;.
+         * 
+         */
     private final String mountPath;
-    /**
-     * The name of the volume. There must be a corresponding Volume with the same name.
-     * 
-     */
+        /**
+         * @return The name of the volume. There must be a corresponding Volume with the same name.
+         * 
+         */
     private final String name;
-    /**
-     * (Optional) Only true is accepted. Defaults to true.
-     * 
-     */
+        /**
+         * @return (Optional) Only true is accepted. Defaults to true.
+         * 
+         */
     private final Boolean readOnly;
-    /**
-     * (Optional) Path within the volume from which the container&#39;s volume should be mounted. Defaults to &#34;&#34; (volume&#39;s root).
-     * 
-     */
+        /**
+         * @return (Optional) Path within the volume from which the container&#39;s volume should be mounted. Defaults to &#34;&#34; (volume&#39;s root).
+         * 
+         */
     private final String subPath;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class VolumeMountResponse {
     }
 
     /**
-     * Path within the container at which the volume should be mounted. Must not contain &#39;:&#39;.
+     * @return Path within the container at which the volume should be mounted. Must not contain &#39;:&#39;.
      * 
-    */
+     */
     public String mountPath() {
         return this.mountPath;
     }
     /**
-     * The name of the volume. There must be a corresponding Volume with the same name.
+     * @return The name of the volume. There must be a corresponding Volume with the same name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * (Optional) Only true is accepted. Defaults to true.
+     * @return (Optional) Only true is accepted. Defaults to true.
      * 
-    */
+     */
     public Boolean readOnly() {
         return this.readOnly;
     }
     /**
-     * (Optional) Path within the volume from which the container&#39;s volume should be mounted. Defaults to &#34;&#34; (volume&#39;s root).
+     * @return (Optional) Path within the volume from which the container&#39;s volume should be mounted. Defaults to &#34;&#34; (volume&#39;s root).
      * 
-    */
+     */
     public String subPath() {
         return this.subPath;
     }

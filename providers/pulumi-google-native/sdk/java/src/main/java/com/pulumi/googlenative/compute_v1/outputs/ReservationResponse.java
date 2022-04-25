@@ -12,65 +12,65 @@ import java.util.Objects;
 
 @CustomType
 public final class ReservationResponse {
-    /**
-     * Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
-     * 
-     */
+        /**
+         * @return Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
+         * 
+         */
     private final String commitment;
-    /**
-     * Creation timestamp in RFC3339 text format.
-     * 
-     */
+        /**
+         * @return Creation timestamp in RFC3339 text format.
+         * 
+         */
     private final String creationTimestamp;
-    /**
-     * An optional description of this resource. Provide this property when you create the resource.
-     * 
-     */
+        /**
+         * @return An optional description of this resource. Provide this property when you create the resource.
+         * 
+         */
     private final String description;
-    /**
-     * Type of the resource. Always compute#reservations for reservations.
-     * 
-     */
+        /**
+         * @return Type of the resource. Always compute#reservations for reservations.
+         * 
+         */
     private final String kind;
-    /**
-     * The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
-     */
+        /**
+         * @return The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         */
     private final String name;
-    /**
-     * Reserved for future use.
-     * 
-     */
+        /**
+         * @return Reserved for future use.
+         * 
+         */
     private final Boolean satisfiesPzs;
-    /**
-     * Server-defined fully-qualified URL for this resource.
-     * 
-     */
+        /**
+         * @return Server-defined fully-qualified URL for this resource.
+         * 
+         */
     private final String selfLink;
-    /**
-     * Share-settings for shared-reservation
-     * 
-     */
+        /**
+         * @return Share-settings for shared-reservation
+         * 
+         */
     private final ShareSettingsResponse shareSettings;
-    /**
-     * Reservation for instances with specific machine shapes.
-     * 
-     */
+        /**
+         * @return Reservation for instances with specific machine shapes.
+         * 
+         */
     private final AllocationSpecificSKUReservationResponse specificReservation;
-    /**
-     * Indicates whether the reservation can be consumed by VMs with affinity for &#34;any&#34; reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.
-     * 
-     */
+        /**
+         * @return Indicates whether the reservation can be consumed by VMs with affinity for &#34;any&#34; reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.
+         * 
+         */
     private final Boolean specificReservationRequired;
-    /**
-     * The status of the reservation.
-     * 
-     */
+        /**
+         * @return The status of the reservation.
+         * 
+         */
     private final String status;
-    /**
-     * Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.
-     * 
-     */
+        /**
+         * @return Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.
+         * 
+         */
     private final String zone;
 
     @CustomType.Constructor
@@ -102,86 +102,86 @@ public final class ReservationResponse {
     }
 
     /**
-     * Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
+     * @return Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
      * 
-    */
+     */
     public String commitment() {
         return this.commitment;
     }
     /**
-     * Creation timestamp in RFC3339 text format.
+     * @return Creation timestamp in RFC3339 text format.
      * 
-    */
+     */
     public String creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
-     * An optional description of this resource. Provide this property when you create the resource.
+     * @return An optional description of this resource. Provide this property when you create the resource.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Type of the resource. Always compute#reservations for reservations.
+     * @return Type of the resource. Always compute#reservations for reservations.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * @return The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Reserved for future use.
+     * @return Reserved for future use.
      * 
-    */
+     */
     public Boolean satisfiesPzs() {
         return this.satisfiesPzs;
     }
     /**
-     * Server-defined fully-qualified URL for this resource.
+     * @return Server-defined fully-qualified URL for this resource.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }
     /**
-     * Share-settings for shared-reservation
+     * @return Share-settings for shared-reservation
      * 
-    */
+     */
     public ShareSettingsResponse shareSettings() {
         return this.shareSettings;
     }
     /**
-     * Reservation for instances with specific machine shapes.
+     * @return Reservation for instances with specific machine shapes.
      * 
-    */
+     */
     public AllocationSpecificSKUReservationResponse specificReservation() {
         return this.specificReservation;
     }
     /**
-     * Indicates whether the reservation can be consumed by VMs with affinity for &#34;any&#34; reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.
+     * @return Indicates whether the reservation can be consumed by VMs with affinity for &#34;any&#34; reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.
      * 
-    */
+     */
     public Boolean specificReservationRequired() {
         return this.specificReservationRequired;
     }
     /**
-     * The status of the reservation.
+     * @return The status of the reservation.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.
+     * @return Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.
      * 
-    */
+     */
     public String zone() {
         return this.zone;
     }

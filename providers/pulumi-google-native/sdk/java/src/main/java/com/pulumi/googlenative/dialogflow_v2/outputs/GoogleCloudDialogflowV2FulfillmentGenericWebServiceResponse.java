@@ -11,30 +11,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse {
-    /**
-     * Optional. Indicates if generic web service is created through Cloud Functions integration. Defaults to false. is_cloud_function is deprecated. Cloud functions can be configured by its uri as a regular web service now.
-     * 
-     */
+        /**
+         * @return Optional. Indicates if generic web service is created through Cloud Functions integration. Defaults to false. is_cloud_function is deprecated. Cloud functions can be configured by its uri as a regular web service now.
+         * 
+         */
     private final Boolean isCloudFunction;
-    /**
-     * Optional. The password for HTTP Basic authentication.
-     * 
-     */
+        /**
+         * @return Optional. The password for HTTP Basic authentication.
+         * 
+         */
     private final String password;
-    /**
-     * Optional. The HTTP request headers to send together with fulfillment requests.
-     * 
-     */
+        /**
+         * @return Optional. The HTTP request headers to send together with fulfillment requests.
+         * 
+         */
     private final Map<String,String> requestHeaders;
-    /**
-     * The fulfillment URI for receiving POST requests. It must use https protocol.
-     * 
-     */
+        /**
+         * @return The fulfillment URI for receiving POST requests. It must use https protocol.
+         * 
+         */
     private final String uri;
-    /**
-     * Optional. The user name for HTTP Basic authentication.
-     * 
-     */
+        /**
+         * @return Optional. The user name for HTTP Basic authentication.
+         * 
+         */
     private final String username;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse {
     }
 
     /**
-     * Optional. Indicates if generic web service is created through Cloud Functions integration. Defaults to false. is_cloud_function is deprecated. Cloud functions can be configured by its uri as a regular web service now.
+     * @return Optional. Indicates if generic web service is created through Cloud Functions integration. Defaults to false. is_cloud_function is deprecated. Cloud functions can be configured by its uri as a regular web service now.
      * 
-    */
+     */
     public Boolean isCloudFunction() {
         return this.isCloudFunction;
     }
     /**
-     * Optional. The password for HTTP Basic authentication.
+     * @return Optional. The password for HTTP Basic authentication.
      * 
-    */
+     */
     public String password() {
         return this.password;
     }
     /**
-     * Optional. The HTTP request headers to send together with fulfillment requests.
+     * @return Optional. The HTTP request headers to send together with fulfillment requests.
      * 
-    */
+     */
     public Map<String,String> requestHeaders() {
         return this.requestHeaders;
     }
     /**
-     * The fulfillment URI for receiving POST requests. It must use https protocol.
+     * @return The fulfillment URI for receiving POST requests. It must use https protocol.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }
     /**
-     * Optional. The user name for HTTP Basic authentication.
+     * @return Optional. The user name for HTTP Basic authentication.
      * 
-    */
+     */
     public String username() {
         return this.username;
     }

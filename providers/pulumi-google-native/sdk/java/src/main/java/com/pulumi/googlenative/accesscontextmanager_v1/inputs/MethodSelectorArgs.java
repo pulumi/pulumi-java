@@ -26,6 +26,10 @@ public final class MethodSelectorArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="method")
     private @Nullable Output<String> method;
 
+    /**
+     * @return Value for `method` should be a valid method name for the corresponding `service_name` in ApiOperation. If `*` used as value for `method`, then ALL methods and permissions are allowed.
+     * 
+     */
     public Optional<Output<String>> method() {
         return Optional.ofNullable(this.method);
     }
@@ -37,6 +41,10 @@ public final class MethodSelectorArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="permission")
     private @Nullable Output<String> permission;
 
+    /**
+     * @return Value for `permission` should be a valid Cloud IAM permission for the corresponding `service_name` in ApiOperation.
+     * 
+     */
     public Optional<Output<String>> permission() {
         return Optional.ofNullable(this.permission);
     }
@@ -66,20 +74,44 @@ public final class MethodSelectorArgs extends com.pulumi.resources.ResourceArgs 
             $ = new MethodSelectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param method Value for `method` should be a valid method name for the corresponding `service_name` in ApiOperation. If `*` used as value for `method`, then ALL methods and permissions are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(@Nullable Output<String> method) {
             $.method = method;
             return this;
         }
 
+        /**
+         * @param method Value for `method` should be a valid method name for the corresponding `service_name` in ApiOperation. If `*` used as value for `method`, then ALL methods and permissions are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(String method) {
             return method(Output.of(method));
         }
 
+        /**
+         * @param permission Value for `permission` should be a valid Cloud IAM permission for the corresponding `service_name` in ApiOperation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permission(@Nullable Output<String> permission) {
             $.permission = permission;
             return this;
         }
 
+        /**
+         * @param permission Value for `permission` should be a valid Cloud IAM permission for the corresponding `service_name` in ApiOperation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permission(String permission) {
             return permission(Output.of(permission));
         }

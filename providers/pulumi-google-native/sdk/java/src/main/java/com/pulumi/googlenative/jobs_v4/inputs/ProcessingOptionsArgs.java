@@ -27,6 +27,10 @@ public final class ProcessingOptionsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="disableStreetAddressResolution")
     private @Nullable Output<Boolean> disableStreetAddressResolution;
 
+    /**
+     * @return If set to `true`, the service does not attempt to resolve a more precise address for the job.
+     * 
+     */
     public Optional<Output<Boolean>> disableStreetAddressResolution() {
         return Optional.ofNullable(this.disableStreetAddressResolution);
     }
@@ -38,6 +42,10 @@ public final class ProcessingOptionsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="htmlSanitization")
     private @Nullable Output<ProcessingOptionsHtmlSanitization> htmlSanitization;
 
+    /**
+     * @return Option for job HTML content sanitization. Applied fields are: * description * applicationInfo.instruction * incentives * qualifications * responsibilities HTML tags in these fields may be stripped if sanitiazation isn&#39;t disabled. Defaults to HtmlSanitization.SIMPLE_FORMATTING_ONLY.
+     * 
+     */
     public Optional<Output<ProcessingOptionsHtmlSanitization>> htmlSanitization() {
         return Optional.ofNullable(this.htmlSanitization);
     }
@@ -67,20 +75,44 @@ public final class ProcessingOptionsArgs extends com.pulumi.resources.ResourceAr
             $ = new ProcessingOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disableStreetAddressResolution If set to `true`, the service does not attempt to resolve a more precise address for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableStreetAddressResolution(@Nullable Output<Boolean> disableStreetAddressResolution) {
             $.disableStreetAddressResolution = disableStreetAddressResolution;
             return this;
         }
 
+        /**
+         * @param disableStreetAddressResolution If set to `true`, the service does not attempt to resolve a more precise address for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableStreetAddressResolution(Boolean disableStreetAddressResolution) {
             return disableStreetAddressResolution(Output.of(disableStreetAddressResolution));
         }
 
+        /**
+         * @param htmlSanitization Option for job HTML content sanitization. Applied fields are: * description * applicationInfo.instruction * incentives * qualifications * responsibilities HTML tags in these fields may be stripped if sanitiazation isn&#39;t disabled. Defaults to HtmlSanitization.SIMPLE_FORMATTING_ONLY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder htmlSanitization(@Nullable Output<ProcessingOptionsHtmlSanitization> htmlSanitization) {
             $.htmlSanitization = htmlSanitization;
             return this;
         }
 
+        /**
+         * @param htmlSanitization Option for job HTML content sanitization. Applied fields are: * description * applicationInfo.instruction * incentives * qualifications * responsibilities HTML tags in these fields may be stripped if sanitiazation isn&#39;t disabled. Defaults to HtmlSanitization.SIMPLE_FORMATTING_ONLY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder htmlSanitization(ProcessingOptionsHtmlSanitization htmlSanitization) {
             return htmlSanitization(Output.of(htmlSanitization));
         }

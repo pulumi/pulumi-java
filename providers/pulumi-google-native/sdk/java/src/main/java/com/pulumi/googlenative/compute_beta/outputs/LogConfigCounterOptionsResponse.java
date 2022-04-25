@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class LogConfigCounterOptionsResponse {
-    /**
-     * This is deprecated and has no effect. Do not use.
-     * 
-     */
+        /**
+         * @return This is deprecated and has no effect. Do not use.
+         * 
+         */
     private final List<LogConfigCounterOptionsCustomFieldResponse> customFields;
-    /**
-     * This is deprecated and has no effect. Do not use.
-     * 
-     */
+        /**
+         * @return This is deprecated and has no effect. Do not use.
+         * 
+         */
     private final String field;
-    /**
-     * This is deprecated and has no effect. Do not use.
-     * 
-     */
+        /**
+         * @return This is deprecated and has no effect. Do not use.
+         * 
+         */
     private final String metric;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class LogConfigCounterOptionsResponse {
     }
 
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
-    */
+     */
     public List<LogConfigCounterOptionsCustomFieldResponse> customFields() {
         return this.customFields;
     }
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
-    */
+     */
     public String field() {
         return this.field;
     }
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
-    */
+     */
     public String metric() {
         return this.metric;
     }

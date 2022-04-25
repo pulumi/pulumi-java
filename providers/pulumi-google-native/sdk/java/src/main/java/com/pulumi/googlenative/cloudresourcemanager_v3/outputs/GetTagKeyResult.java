@@ -9,45 +9,45 @@ import java.util.Objects;
 
 @CustomType
 public final class GetTagKeyResult {
-    /**
-     * Creation time.
-     * 
-     */
+        /**
+         * @return Creation time.
+         * 
+         */
     private final String createTime;
-    /**
-     * Optional. User-assigned description of the TagKey. Must not exceed 256 characters. Read-write.
-     * 
-     */
+        /**
+         * @return Optional. User-assigned description of the TagKey. Must not exceed 256 characters. Read-write.
+         * 
+         */
     private final String description;
-    /**
-     * Optional. Entity tag which users can pass to prevent race conditions. This field is always set in server responses. See UpdateTagKeyRequest for details.
-     * 
-     */
+        /**
+         * @return Optional. Entity tag which users can pass to prevent race conditions. This field is always set in server responses. See UpdateTagKeyRequest for details.
+         * 
+         */
     private final String etag;
-    /**
-     * Immutable. The resource name for a TagKey. Must be in the format `tagKeys/{tag_key_id}`, where `tag_key_id` is the generated numeric id for the TagKey.
-     * 
-     */
+        /**
+         * @return Immutable. The resource name for a TagKey. Must be in the format `tagKeys/{tag_key_id}`, where `tag_key_id` is the generated numeric id for the TagKey.
+         * 
+         */
     private final String name;
-    /**
-     * Immutable. Namespaced name of the TagKey.
-     * 
-     */
+        /**
+         * @return Immutable. Namespaced name of the TagKey.
+         * 
+         */
     private final String namespacedName;
-    /**
-     * Immutable. The resource name of the new TagKey&#39;s parent. Must be of the form `organizations/{org_id}`.
-     * 
-     */
+        /**
+         * @return Immutable. The resource name of the new TagKey&#39;s parent. Must be of the form `organizations/{org_id}`.
+         * 
+         */
     private final String parent;
-    /**
-     * Immutable. The user friendly name for a TagKey. The short name should be unique for TagKeys within the same tag namespace. The short name must be 1-63 characters, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
-     * 
-     */
+        /**
+         * @return Immutable. The user friendly name for a TagKey. The short name should be unique for TagKeys within the same tag namespace. The short name must be 1-63 characters, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
+         * 
+         */
     private final String shortName;
-    /**
-     * Update time.
-     * 
-     */
+        /**
+         * @return Update time.
+         * 
+         */
     private final String updateTime;
 
     @CustomType.Constructor
@@ -71,58 +71,58 @@ public final class GetTagKeyResult {
     }
 
     /**
-     * Creation time.
+     * @return Creation time.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Optional. User-assigned description of the TagKey. Must not exceed 256 characters. Read-write.
+     * @return Optional. User-assigned description of the TagKey. Must not exceed 256 characters. Read-write.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Optional. Entity tag which users can pass to prevent race conditions. This field is always set in server responses. See UpdateTagKeyRequest for details.
+     * @return Optional. Entity tag which users can pass to prevent race conditions. This field is always set in server responses. See UpdateTagKeyRequest for details.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Immutable. The resource name for a TagKey. Must be in the format `tagKeys/{tag_key_id}`, where `tag_key_id` is the generated numeric id for the TagKey.
+     * @return Immutable. The resource name for a TagKey. Must be in the format `tagKeys/{tag_key_id}`, where `tag_key_id` is the generated numeric id for the TagKey.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Immutable. Namespaced name of the TagKey.
+     * @return Immutable. Namespaced name of the TagKey.
      * 
-    */
+     */
     public String namespacedName() {
         return this.namespacedName;
     }
     /**
-     * Immutable. The resource name of the new TagKey&#39;s parent. Must be of the form `organizations/{org_id}`.
+     * @return Immutable. The resource name of the new TagKey&#39;s parent. Must be of the form `organizations/{org_id}`.
      * 
-    */
+     */
     public String parent() {
         return this.parent;
     }
     /**
-     * Immutable. The user friendly name for a TagKey. The short name should be unique for TagKeys within the same tag namespace. The short name must be 1-63 characters, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
+     * @return Immutable. The user friendly name for a TagKey. The short name should be unique for TagKeys within the same tag namespace. The short name must be 1-63 characters, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
      * 
-    */
+     */
     public String shortName() {
         return this.shortName;
     }
     /**
-     * Update time.
+     * @return Update time.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

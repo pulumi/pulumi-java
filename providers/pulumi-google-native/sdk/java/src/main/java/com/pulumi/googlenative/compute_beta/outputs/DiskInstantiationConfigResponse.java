@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class DiskInstantiationConfigResponse {
-    /**
-     * Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).
-     * 
-     */
+        /**
+         * @return Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).
+         * 
+         */
     private final Boolean autoDelete;
-    /**
-     * The custom source image to be used to restore this disk when instantiating this instance template.
-     * 
-     */
+        /**
+         * @return The custom source image to be used to restore this disk when instantiating this instance template.
+         * 
+         */
     private final String customImage;
-    /**
-     * Specifies the device name of the disk to which the configurations apply to.
-     * 
-     */
+        /**
+         * @return Specifies the device name of the disk to which the configurations apply to.
+         * 
+         */
     private final String deviceName;
-    /**
-     * Specifies whether to include the disk and what image to use. Possible values are: - source-image: to use the same image that was used to create the source instance&#39;s corresponding disk. Applicable to the boot disk and additional read-write disks. - source-image-family: to use the same image family that was used to create the source instance&#39;s corresponding disk. Applicable to the boot disk and additional read-write disks. - custom-image: to use a user-provided image url for disk creation. Applicable to the boot disk and additional read-write disks. - attach-read-only: to attach a read-only disk. Applicable to read-only disks. - do-not-include: to exclude a disk from the template. Applicable to additional read-write disks, local SSDs, and read-only disks.
-     * 
-     */
+        /**
+         * @return Specifies whether to include the disk and what image to use. Possible values are: - source-image: to use the same image that was used to create the source instance&#39;s corresponding disk. Applicable to the boot disk and additional read-write disks. - source-image-family: to use the same image family that was used to create the source instance&#39;s corresponding disk. Applicable to the boot disk and additional read-write disks. - custom-image: to use a user-provided image url for disk creation. Applicable to the boot disk and additional read-write disks. - attach-read-only: to attach a read-only disk. Applicable to read-only disks. - do-not-include: to exclude a disk from the template. Applicable to additional read-write disks, local SSDs, and read-only disks.
+         * 
+         */
     private final String instantiateFrom;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class DiskInstantiationConfigResponse {
     }
 
     /**
-     * Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).
+     * @return Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).
      * 
-    */
+     */
     public Boolean autoDelete() {
         return this.autoDelete;
     }
     /**
-     * The custom source image to be used to restore this disk when instantiating this instance template.
+     * @return The custom source image to be used to restore this disk when instantiating this instance template.
      * 
-    */
+     */
     public String customImage() {
         return this.customImage;
     }
     /**
-     * Specifies the device name of the disk to which the configurations apply to.
+     * @return Specifies the device name of the disk to which the configurations apply to.
      * 
-    */
+     */
     public String deviceName() {
         return this.deviceName;
     }
     /**
-     * Specifies whether to include the disk and what image to use. Possible values are: - source-image: to use the same image that was used to create the source instance&#39;s corresponding disk. Applicable to the boot disk and additional read-write disks. - source-image-family: to use the same image family that was used to create the source instance&#39;s corresponding disk. Applicable to the boot disk and additional read-write disks. - custom-image: to use a user-provided image url for disk creation. Applicable to the boot disk and additional read-write disks. - attach-read-only: to attach a read-only disk. Applicable to read-only disks. - do-not-include: to exclude a disk from the template. Applicable to additional read-write disks, local SSDs, and read-only disks.
+     * @return Specifies whether to include the disk and what image to use. Possible values are: - source-image: to use the same image that was used to create the source instance&#39;s corresponding disk. Applicable to the boot disk and additional read-write disks. - source-image-family: to use the same image family that was used to create the source instance&#39;s corresponding disk. Applicable to the boot disk and additional read-write disks. - custom-image: to use a user-provided image url for disk creation. Applicable to the boot disk and additional read-write disks. - attach-read-only: to attach a read-only disk. Applicable to read-only disks. - do-not-include: to exclude a disk from the template. Applicable to additional read-write disks, local SSDs, and read-only disks.
      * 
-    */
+     */
     public String instantiateFrom() {
         return this.instantiateFrom;
     }

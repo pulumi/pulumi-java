@@ -24,6 +24,10 @@ public final class AllocationSpecificSKUReservationResponse extends com.pulumi.r
     @Import(name="assuredCount", required=true)
     private String assuredCount;
 
+    /**
+     * @return Indicates how many instances are actually usable currently.
+     * 
+     */
     public String assuredCount() {
         return this.assuredCount;
     }
@@ -35,6 +39,10 @@ public final class AllocationSpecificSKUReservationResponse extends com.pulumi.r
     @Import(name="count", required=true)
     private String count;
 
+    /**
+     * @return Specifies the number of resources that are allocated.
+     * 
+     */
     public String count() {
         return this.count;
     }
@@ -46,6 +54,10 @@ public final class AllocationSpecificSKUReservationResponse extends com.pulumi.r
     @Import(name="inUseCount", required=true)
     private String inUseCount;
 
+    /**
+     * @return Indicates how many instances are in use.
+     * 
+     */
     public String inUseCount() {
         return this.inUseCount;
     }
@@ -57,6 +69,10 @@ public final class AllocationSpecificSKUReservationResponse extends com.pulumi.r
     @Import(name="instanceProperties", required=true)
     private AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties;
 
+    /**
+     * @return The instance properties for the reservation.
+     * 
+     */
     public AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties() {
         return this.instanceProperties;
     }
@@ -88,21 +104,45 @@ public final class AllocationSpecificSKUReservationResponse extends com.pulumi.r
             $ = new AllocationSpecificSKUReservationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assuredCount Indicates how many instances are actually usable currently.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assuredCount(String assuredCount) {
             $.assuredCount = assuredCount;
             return this;
         }
 
+        /**
+         * @param count Specifies the number of resources that are allocated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(String count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param inUseCount Indicates how many instances are in use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inUseCount(String inUseCount) {
             $.inUseCount = inUseCount;
             return this;
         }
 
+        /**
+         * @param instanceProperties The instance properties for the reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceProperties(AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties) {
             $.instanceProperties = instanceProperties;
             return this;

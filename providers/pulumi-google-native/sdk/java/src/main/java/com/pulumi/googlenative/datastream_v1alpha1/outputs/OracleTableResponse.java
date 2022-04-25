@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class OracleTableResponse {
-    /**
-     * Oracle columns in the schema. When unspecified as part of inclue/exclude lists, includes/excludes everything.
-     * 
-     */
+        /**
+         * @return Oracle columns in the schema. When unspecified as part of inclue/exclude lists, includes/excludes everything.
+         * 
+         */
     private final List<OracleColumnResponse> oracleColumns;
-    /**
-     * Table name.
-     * 
-     */
+        /**
+         * @return Table name.
+         * 
+         */
     private final String tableName;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class OracleTableResponse {
     }
 
     /**
-     * Oracle columns in the schema. When unspecified as part of inclue/exclude lists, includes/excludes everything.
+     * @return Oracle columns in the schema. When unspecified as part of inclue/exclude lists, includes/excludes everything.
      * 
-    */
+     */
     public List<OracleColumnResponse> oracleColumns() {
         return this.oracleColumns;
     }
     /**
-     * Table name.
+     * @return Table name.
      * 
-    */
+     */
     public String tableName() {
         return this.tableName;
     }

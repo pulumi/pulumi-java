@@ -23,6 +23,10 @@ public final class GoogleCloudApigeeV1EntityMetadataResponse extends com.pulumi.
     @Import(name="createdAt", required=true)
     private String createdAt;
 
+    /**
+     * @return Time at which the API proxy was created, in milliseconds since epoch.
+     * 
+     */
     public String createdAt() {
         return this.createdAt;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudApigeeV1EntityMetadataResponse extends com.pulumi.
     @Import(name="lastModifiedAt", required=true)
     private String lastModifiedAt;
 
+    /**
+     * @return Time at which the API proxy was most recently modified, in milliseconds since epoch.
+     * 
+     */
     public String lastModifiedAt() {
         return this.lastModifiedAt;
     }
@@ -45,6 +53,10 @@ public final class GoogleCloudApigeeV1EntityMetadataResponse extends com.pulumi.
     @Import(name="subType", required=true)
     private String subType;
 
+    /**
+     * @return The type of entity described
+     * 
+     */
     public String subType() {
         return this.subType;
     }
@@ -75,16 +87,34 @@ public final class GoogleCloudApigeeV1EntityMetadataResponse extends com.pulumi.
             $ = new GoogleCloudApigeeV1EntityMetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createdAt Time at which the API proxy was created, in milliseconds since epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdAt(String createdAt) {
             $.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * @param lastModifiedAt Time at which the API proxy was most recently modified, in milliseconds since epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedAt(String lastModifiedAt) {
             $.lastModifiedAt = lastModifiedAt;
             return this;
         }
 
+        /**
+         * @param subType The type of entity described
+         * 
+         * @return builder
+         * 
+         */
         public Builder subType(String subType) {
             $.subType = subType;
             return this;

@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class LabelDescriptorResponse {
-    /**
-     * A human-readable description for the label.
-     * 
-     */
+        /**
+         * @return A human-readable description for the label.
+         * 
+         */
     private final String description;
-    /**
-     * The label key.
-     * 
-     */
+        /**
+         * @return The label key.
+         * 
+         */
     private final String key;
-    /**
-     * The type of data that can be assigned to the label.
-     * 
-     */
+        /**
+         * @return The type of data that can be assigned to the label.
+         * 
+         */
     private final String valueType;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class LabelDescriptorResponse {
     }
 
     /**
-     * A human-readable description for the label.
+     * @return A human-readable description for the label.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The label key.
+     * @return The label key.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * The type of data that can be assigned to the label.
+     * @return The type of data that can be assigned to the label.
      * 
-    */
+     */
     public String valueType() {
         return this.valueType;
     }

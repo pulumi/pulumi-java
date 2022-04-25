@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class VolumeResponse {
-    /**
-     * Unique name for the volume.
-     * 
-     */
+        /**
+         * @return Unique name for the volume.
+         * 
+         */
     private final String name;
-    /**
-     * Volume size in gigabytes.
-     * 
-     */
+        /**
+         * @return Volume size in gigabytes.
+         * 
+         */
     private final Double sizeGb;
-    /**
-     * Underlying volume type, e.g. &#39;tmpfs&#39;.
-     * 
-     */
+        /**
+         * @return Underlying volume type, e.g. &#39;tmpfs&#39;.
+         * 
+         */
     private final String volumeType;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class VolumeResponse {
     }
 
     /**
-     * Unique name for the volume.
+     * @return Unique name for the volume.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Volume size in gigabytes.
+     * @return Volume size in gigabytes.
      * 
-    */
+     */
     public Double sizeGb() {
         return this.sizeGb;
     }
     /**
-     * Underlying volume type, e.g. &#39;tmpfs&#39;.
+     * @return Underlying volume type, e.g. &#39;tmpfs&#39;.
      * 
-    */
+     */
     public String volumeType() {
         return this.volumeType;
     }

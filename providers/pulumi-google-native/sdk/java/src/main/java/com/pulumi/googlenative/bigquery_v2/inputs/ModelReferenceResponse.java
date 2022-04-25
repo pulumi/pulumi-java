@@ -19,6 +19,10 @@ public final class ModelReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="datasetId", required=true)
     private String datasetId;
 
+    /**
+     * @return [Required] The ID of the dataset containing this model.
+     * 
+     */
     public String datasetId() {
         return this.datasetId;
     }
@@ -30,6 +34,10 @@ public final class ModelReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="modelId", required=true)
     private String modelId;
 
+    /**
+     * @return [Required] The ID of the model. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
+     * 
+     */
     public String modelId() {
         return this.modelId;
     }
@@ -41,6 +49,10 @@ public final class ModelReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return [Required] The ID of the project containing this model.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -71,16 +83,34 @@ public final class ModelReferenceResponse extends com.pulumi.resources.InvokeArg
             $ = new ModelReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetId [Required] The ID of the dataset containing this model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(String datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
+        /**
+         * @param modelId [Required] The ID of the model. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelId(String modelId) {
             $.modelId = modelId;
             return this;
         }
 
+        /**
+         * @param project [Required] The ID of the project containing this model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;

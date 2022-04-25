@@ -24,6 +24,10 @@ public final class AnimationFadeResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="endTimeOffset", required=true)
     private String endTimeOffset;
 
+    /**
+     * @return The time to end the fade animation, in seconds. Default: `start_time_offset` + 1s
+     * 
+     */
     public String endTimeOffset() {
         return this.endTimeOffset;
     }
@@ -35,6 +39,10 @@ public final class AnimationFadeResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="fadeType", required=true)
     private String fadeType;
 
+    /**
+     * @return Type of fade animation: `FADE_IN` or `FADE_OUT`.
+     * 
+     */
     public String fadeType() {
         return this.fadeType;
     }
@@ -46,6 +54,10 @@ public final class AnimationFadeResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="startTimeOffset", required=true)
     private String startTimeOffset;
 
+    /**
+     * @return The time to start the fade animation, in seconds. Default: 0
+     * 
+     */
     public String startTimeOffset() {
         return this.startTimeOffset;
     }
@@ -57,6 +69,10 @@ public final class AnimationFadeResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="xy", required=true)
     private NormalizedCoordinateResponse xy;
 
+    /**
+     * @return Normalized coordinates based on output video resolution. Valid values: `0.0`–`1.0`. `xy` is the upper-left coordinate of the overlay object. For example, use the x and y coordinates {0,0} to position the top-left corner of the overlay animation in the top-left corner of the output video.
+     * 
+     */
     public NormalizedCoordinateResponse xy() {
         return this.xy;
     }
@@ -88,21 +104,45 @@ public final class AnimationFadeResponse extends com.pulumi.resources.InvokeArgs
             $ = new AnimationFadeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endTimeOffset The time to end the fade animation, in seconds. Default: `start_time_offset` + 1s
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTimeOffset(String endTimeOffset) {
             $.endTimeOffset = endTimeOffset;
             return this;
         }
 
+        /**
+         * @param fadeType Type of fade animation: `FADE_IN` or `FADE_OUT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fadeType(String fadeType) {
             $.fadeType = fadeType;
             return this;
         }
 
+        /**
+         * @param startTimeOffset The time to start the fade animation, in seconds. Default: 0
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTimeOffset(String startTimeOffset) {
             $.startTimeOffset = startTimeOffset;
             return this;
         }
 
+        /**
+         * @param xy Normalized coordinates based on output video resolution. Valid values: `0.0`–`1.0`. `xy` is the upper-left coordinate of the overlay object. For example, use the x and y coordinates {0,0} to position the top-left corner of the overlay animation in the top-left corner of the output video.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xy(NormalizedCoordinateResponse xy) {
             $.xy = xy;
             return this;

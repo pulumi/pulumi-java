@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class InstanceGroupManagerStatusAllInstancesConfigResponse {
-    /**
-     * Current instances&#39; config revision. This value is in RFC3339 text format.
-     * 
-     */
+        /**
+         * @return Current instances&#39; config revision. This value is in RFC3339 text format.
+         * 
+         */
     private final String currentRevision;
-    /**
-     * A bit indicating whether instances&#39; config has been applied to all managed instances in managed instance group.
-     * 
-     */
+        /**
+         * @return A bit indicating whether instances&#39; config has been applied to all managed instances in managed instance group.
+         * 
+         */
     private final Boolean effective;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse {
     }
 
     /**
-     * Current instances&#39; config revision. This value is in RFC3339 text format.
+     * @return Current instances&#39; config revision. This value is in RFC3339 text format.
      * 
-    */
+     */
     public String currentRevision() {
         return this.currentRevision;
     }
     /**
-     * A bit indicating whether instances&#39; config has been applied to all managed instances in managed instance group.
+     * @return A bit indicating whether instances&#39; config has been applied to all managed instances in managed instance group.
      * 
-    */
+     */
     public Boolean effective() {
         return this.effective;
     }

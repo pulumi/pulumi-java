@@ -10,35 +10,35 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowCxV3beta1TransitionRouteResponse {
-    /**
-     * The condition to evaluate against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition). At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.
-     * 
-     */
+        /**
+         * @return The condition to evaluate against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition). At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.
+         * 
+         */
     private final String condition;
-    /**
-     * The unique identifier of an Intent. Format: `projects//locations//agents//intents/`. Indicates that the transition can only happen when the given intent is matched. At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.
-     * 
-     */
+        /**
+         * @return The unique identifier of an Intent. Format: `projects//locations//agents//intents/`. Indicates that the transition can only happen when the given intent is matched. At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.
+         * 
+         */
     private final String intent;
-    /**
-     * The unique identifier of this transition route.
-     * 
-     */
+        /**
+         * @return The unique identifier of this transition route.
+         * 
+         */
     private final String name;
-    /**
-     * The target flow to transition to. Format: `projects//locations//agents//flows/`.
-     * 
-     */
+        /**
+         * @return The target flow to transition to. Format: `projects//locations//agents//flows/`.
+         * 
+         */
     private final String targetFlow;
-    /**
-     * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
-     * 
-     */
+        /**
+         * @return The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
+         * 
+         */
     private final String targetPage;
-    /**
-     * The fulfillment to call when the condition is satisfied. At least one of `trigger_fulfillment` and `target` must be specified. When both are defined, `trigger_fulfillment` is executed first.
-     * 
-     */
+        /**
+         * @return The fulfillment to call when the condition is satisfied. At least one of `trigger_fulfillment` and `target` must be specified. When both are defined, `trigger_fulfillment` is executed first.
+         * 
+         */
     private final GoogleCloudDialogflowCxV3beta1FulfillmentResponse triggerFulfillment;
 
     @CustomType.Constructor
@@ -58,44 +58,44 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteResponse {
     }
 
     /**
-     * The condition to evaluate against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition). At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.
+     * @return The condition to evaluate against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition). At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.
      * 
-    */
+     */
     public String condition() {
         return this.condition;
     }
     /**
-     * The unique identifier of an Intent. Format: `projects//locations//agents//intents/`. Indicates that the transition can only happen when the given intent is matched. At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.
+     * @return The unique identifier of an Intent. Format: `projects//locations//agents//intents/`. Indicates that the transition can only happen when the given intent is matched. At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.
      * 
-    */
+     */
     public String intent() {
         return this.intent;
     }
     /**
-     * The unique identifier of this transition route.
+     * @return The unique identifier of this transition route.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The target flow to transition to. Format: `projects//locations//agents//flows/`.
+     * @return The target flow to transition to. Format: `projects//locations//agents//flows/`.
      * 
-    */
+     */
     public String targetFlow() {
         return this.targetFlow;
     }
     /**
-     * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
+     * @return The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
      * 
-    */
+     */
     public String targetPage() {
         return this.targetPage;
     }
     /**
-     * The fulfillment to call when the condition is satisfied. At least one of `trigger_fulfillment` and `target` must be specified. When both are defined, `trigger_fulfillment` is executed first.
+     * @return The fulfillment to call when the condition is satisfied. At least one of `trigger_fulfillment` and `target` must be specified. When both are defined, `trigger_fulfillment` is executed first.
      * 
-    */
+     */
     public GoogleCloudDialogflowCxV3beta1FulfillmentResponse triggerFulfillment() {
         return this.triggerFulfillment;
     }

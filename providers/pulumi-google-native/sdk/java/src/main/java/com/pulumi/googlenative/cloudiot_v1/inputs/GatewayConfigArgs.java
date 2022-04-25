@@ -27,6 +27,10 @@ public final class GatewayConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayAuthMethod")
     private @Nullable Output<GatewayConfigGatewayAuthMethod> gatewayAuthMethod;
 
+    /**
+     * @return Indicates how to authorize and/or authenticate devices to access the gateway.
+     * 
+     */
     public Optional<Output<GatewayConfigGatewayAuthMethod>> gatewayAuthMethod() {
         return Optional.ofNullable(this.gatewayAuthMethod);
     }
@@ -38,6 +42,10 @@ public final class GatewayConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayType")
     private @Nullable Output<GatewayConfigGatewayType> gatewayType;
 
+    /**
+     * @return Indicates whether the device is a gateway.
+     * 
+     */
     public Optional<Output<GatewayConfigGatewayType>> gatewayType() {
         return Optional.ofNullable(this.gatewayType);
     }
@@ -67,20 +75,44 @@ public final class GatewayConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GatewayConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gatewayAuthMethod Indicates how to authorize and/or authenticate devices to access the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayAuthMethod(@Nullable Output<GatewayConfigGatewayAuthMethod> gatewayAuthMethod) {
             $.gatewayAuthMethod = gatewayAuthMethod;
             return this;
         }
 
+        /**
+         * @param gatewayAuthMethod Indicates how to authorize and/or authenticate devices to access the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayAuthMethod(GatewayConfigGatewayAuthMethod gatewayAuthMethod) {
             return gatewayAuthMethod(Output.of(gatewayAuthMethod));
         }
 
+        /**
+         * @param gatewayType Indicates whether the device is a gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayType(@Nullable Output<GatewayConfigGatewayType> gatewayType) {
             $.gatewayType = gatewayType;
             return this;
         }
 
+        /**
+         * @param gatewayType Indicates whether the device is a gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayType(GatewayConfigGatewayType gatewayType) {
             return gatewayType(Output.of(gatewayType));
         }

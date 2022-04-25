@@ -9,30 +9,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSnapshotResult {
-    /**
-     * The creation time of the storage volume snapshot.
-     * 
-     */
+        /**
+         * @return The creation time of the storage volume snapshot.
+         * 
+         */
     private final String createTime;
-    /**
-     * The description of the storage volume snapshot.
-     * 
-     */
+        /**
+         * @return The description of the storage volume snapshot.
+         * 
+         */
     private final String description;
-    /**
-     * The name of the storage volume snapshot.
-     * 
-     */
+        /**
+         * @return The name of the storage volume snapshot.
+         * 
+         */
     private final String name;
-    /**
-     * The size of the storage volume snapshot, in bytes.
-     * 
-     */
+        /**
+         * @return The size of the storage volume snapshot, in bytes.
+         * 
+         */
     private final String sizeBytes;
-    /**
-     * The storage volume this snapshot belongs to.
-     * 
-     */
+        /**
+         * @return The storage volume this snapshot belongs to.
+         * 
+         */
     private final String storageVolume;
 
     @CustomType.Constructor
@@ -50,37 +50,37 @@ public final class GetSnapshotResult {
     }
 
     /**
-     * The creation time of the storage volume snapshot.
+     * @return The creation time of the storage volume snapshot.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The description of the storage volume snapshot.
+     * @return The description of the storage volume snapshot.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The name of the storage volume snapshot.
+     * @return The name of the storage volume snapshot.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The size of the storage volume snapshot, in bytes.
+     * @return The size of the storage volume snapshot, in bytes.
      * 
-    */
+     */
     public String sizeBytes() {
         return this.sizeBytes;
     }
     /**
-     * The storage volume this snapshot belongs to.
+     * @return The storage volume this snapshot belongs to.
      * 
-    */
+     */
     public String storageVolume() {
         return this.storageVolume;
     }

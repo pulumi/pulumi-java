@@ -26,6 +26,10 @@ public final class CategoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="categoryId")
     private @Nullable Output<String> categoryId;
 
+    /**
+     * @return The identifier of the category.
+     * 
+     */
     public Optional<Output<String>> categoryId() {
         return Optional.ofNullable(this.categoryId);
     }
@@ -37,6 +41,10 @@ public final class CategoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The localized name of the category.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -66,20 +74,44 @@ public final class CategoryArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CategoryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param categoryId The identifier of the category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder categoryId(@Nullable Output<String> categoryId) {
             $.categoryId = categoryId;
             return this;
         }
 
+        /**
+         * @param categoryId The identifier of the category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder categoryId(String categoryId) {
             return categoryId(Output.of(categoryId));
         }
 
+        /**
+         * @param name The localized name of the category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The localized name of the category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

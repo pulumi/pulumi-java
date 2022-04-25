@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class RegionSslPolicyWarningsItemResponse {
-    /**
-     * A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.
-     * 
-     */
+        /**
+         * @return A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.
+         * 
+         */
     private final String code;
-    /**
-     * Metadata about this warning in key: value format. For example: &#34;data&#34;: [ { &#34;key&#34;: &#34;scope&#34;, &#34;value&#34;: &#34;zones/us-east1-d&#34; }
-     * 
-     */
+        /**
+         * @return Metadata about this warning in key: value format. For example: &#34;data&#34;: [ { &#34;key&#34;: &#34;scope&#34;, &#34;value&#34;: &#34;zones/us-east1-d&#34; }
+         * 
+         */
     private final List<RegionSslPolicyWarningsItemDataItemResponse> data;
-    /**
-     * A human-readable description of the warning code.
-     * 
-     */
+        /**
+         * @return A human-readable description of the warning code.
+         * 
+         */
     private final String message;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class RegionSslPolicyWarningsItemResponse {
     }
 
     /**
-     * A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.
+     * @return A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.
      * 
-    */
+     */
     public String code() {
         return this.code;
     }
     /**
-     * Metadata about this warning in key: value format. For example: &#34;data&#34;: [ { &#34;key&#34;: &#34;scope&#34;, &#34;value&#34;: &#34;zones/us-east1-d&#34; }
+     * @return Metadata about this warning in key: value format. For example: &#34;data&#34;: [ { &#34;key&#34;: &#34;scope&#34;, &#34;value&#34;: &#34;zones/us-east1-d&#34; }
      * 
-    */
+     */
     public List<RegionSslPolicyWarningsItemDataItemResponse> data() {
         return this.data;
     }
     /**
-     * A human-readable description of the warning code.
+     * @return A human-readable description of the warning code.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }

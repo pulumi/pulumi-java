@@ -25,6 +25,10 @@ public final class PrimaryStepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="individualOutcome", required=true)
     private List<IndividualOutcomeResponse> individualOutcome;
 
+    /**
+     * @return Step Id and outcome of each individual step.
+     * 
+     */
     public List<IndividualOutcomeResponse> individualOutcome() {
         return this.individualOutcome;
     }
@@ -36,6 +40,10 @@ public final class PrimaryStepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="rollUp", required=true)
     private String rollUp;
 
+    /**
+     * @return Rollup test status of multiple steps that were run with the same configuration as a group.
+     * 
+     */
     public String rollUp() {
         return this.rollUp;
     }
@@ -65,15 +73,33 @@ public final class PrimaryStepResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PrimaryStepResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param individualOutcome Step Id and outcome of each individual step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder individualOutcome(List<IndividualOutcomeResponse> individualOutcome) {
             $.individualOutcome = individualOutcome;
             return this;
         }
 
+        /**
+         * @param individualOutcome Step Id and outcome of each individual step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder individualOutcome(IndividualOutcomeResponse... individualOutcome) {
             return individualOutcome(List.of(individualOutcome));
         }
 
+        /**
+         * @param rollUp Rollup test status of multiple steps that were run with the same configuration as a group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollUp(String rollUp) {
             $.rollUp = rollUp;
             return this;

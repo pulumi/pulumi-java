@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionArgs exten
     @Import(name="title", required=true)
     private Output<String> title;
 
+    /**
+     * @return The text shown the in the suggestion chip.
+     * 
+     */
     public Output<String> title() {
         return this.title;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionArgs exten
             $ = new GoogleCloudDialogflowV2beta1IntentMessageSuggestionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param title The text shown the in the suggestion chip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title The text shown the in the suggestion chip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

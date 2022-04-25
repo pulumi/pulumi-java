@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class RoutingVPCResponse {
-    /**
-     * If true, indicates that this VPC network is currently associated with spokes that use the data transfer feature (spokes where the site_to_site_data_transfer field is set to true). If you create new spokes that use data transfer, they must be associated with this VPC network. At most, one VPC network will have this field set to true.
-     * 
-     */
+        /**
+         * @return If true, indicates that this VPC network is currently associated with spokes that use the data transfer feature (spokes where the site_to_site_data_transfer field is set to true). If you create new spokes that use data transfer, they must be associated with this VPC network. At most, one VPC network will have this field set to true.
+         * 
+         */
     private final Boolean requiredForNewSiteToSiteDataTransferSpokes;
-    /**
-     * The URI of the VPC network.
-     * 
-     */
+        /**
+         * @return The URI of the VPC network.
+         * 
+         */
     private final String uri;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class RoutingVPCResponse {
     }
 
     /**
-     * If true, indicates that this VPC network is currently associated with spokes that use the data transfer feature (spokes where the site_to_site_data_transfer field is set to true). If you create new spokes that use data transfer, they must be associated with this VPC network. At most, one VPC network will have this field set to true.
+     * @return If true, indicates that this VPC network is currently associated with spokes that use the data transfer feature (spokes where the site_to_site_data_transfer field is set to true). If you create new spokes that use data transfer, they must be associated with this VPC network. At most, one VPC network will have this field set to true.
      * 
-    */
+     */
     public Boolean requiredForNewSiteToSiteDataTransferSpokes() {
         return this.requiredForNewSiteToSiteDataTransferSpokes;
     }
     /**
-     * The URI of the VPC network.
+     * @return The URI of the VPC network.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

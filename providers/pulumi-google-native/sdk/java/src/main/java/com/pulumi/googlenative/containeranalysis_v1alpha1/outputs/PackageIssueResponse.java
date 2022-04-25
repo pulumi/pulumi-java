@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class PackageIssueResponse {
-    /**
-     * The location of the vulnerability.
-     * 
-     */
+        /**
+         * @return The location of the vulnerability.
+         * 
+         */
     private final VulnerabilityLocationResponse affectedLocation;
-    /**
-     * The distro or language system assigned severity for this vulnerability when that is available and note provider assigned severity when distro or language system has not yet assigned a severity for this vulnerability.
-     * 
-     */
+        /**
+         * @return The distro or language system assigned severity for this vulnerability when that is available and note provider assigned severity when distro or language system has not yet assigned a severity for this vulnerability.
+         * 
+         */
     private final String effectiveSeverity;
-    /**
-     * The location of the available fix for vulnerability.
-     * 
-     */
+        /**
+         * @return The location of the available fix for vulnerability.
+         * 
+         */
     private final VulnerabilityLocationResponse fixedLocation;
-    /**
-     * The type of package (e.g. OS, MAVEN, GO).
-     * 
-     */
+        /**
+         * @return The type of package (e.g. OS, MAVEN, GO).
+         * 
+         */
     private final String packageType;
     private final String severityName;
 
@@ -47,30 +47,30 @@ public final class PackageIssueResponse {
     }
 
     /**
-     * The location of the vulnerability.
+     * @return The location of the vulnerability.
      * 
-    */
+     */
     public VulnerabilityLocationResponse affectedLocation() {
         return this.affectedLocation;
     }
     /**
-     * The distro or language system assigned severity for this vulnerability when that is available and note provider assigned severity when distro or language system has not yet assigned a severity for this vulnerability.
+     * @return The distro or language system assigned severity for this vulnerability when that is available and note provider assigned severity when distro or language system has not yet assigned a severity for this vulnerability.
      * 
-    */
+     */
     public String effectiveSeverity() {
         return this.effectiveSeverity;
     }
     /**
-     * The location of the available fix for vulnerability.
+     * @return The location of the available fix for vulnerability.
      * 
-    */
+     */
     public VulnerabilityLocationResponse fixedLocation() {
         return this.fixedLocation;
     }
     /**
-     * The type of package (e.g. OS, MAVEN, GO).
+     * @return The type of package (e.g. OS, MAVEN, GO).
      * 
-    */
+     */
     public String packageType() {
         return this.packageType;
     }

@@ -28,6 +28,10 @@ public final class UserOwnedGrafeasNoteArgs extends com.pulumi.resources.Resourc
     @Import(name="noteReference", required=true)
     private Output<String> noteReference;
 
+    /**
+     * @return The Grafeas resource name of a Attestation.Authority Note, created by the user, in the format: `projects/*{@literal /}notes/*`. This field may not be updated. An attestation by this attestor is stored as a Grafeas Attestation.Authority Occurrence that names a container image and that links to this Note. Grafeas is an external dependency.
+     * 
+     */
     public Output<String> noteReference() {
         return this.noteReference;
     }
@@ -39,6 +43,10 @@ public final class UserOwnedGrafeasNoteArgs extends com.pulumi.resources.Resourc
     @Import(name="publicKeys")
     private @Nullable Output<List<AttestorPublicKeyArgs>> publicKeys;
 
+    /**
+     * @return Optional. Public keys that verify attestations signed by this attestor. This field may be updated. If this field is non-empty, one of the specified public keys must verify that an attestation was signed by this attestor for the image specified in the admission request. If this field is empty, this attestor always returns that no valid attestations exist.
+     * 
+     */
     public Optional<Output<List<AttestorPublicKeyArgs>>> publicKeys() {
         return Optional.ofNullable(this.publicKeys);
     }
@@ -68,24 +76,54 @@ public final class UserOwnedGrafeasNoteArgs extends com.pulumi.resources.Resourc
             $ = new UserOwnedGrafeasNoteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param noteReference The Grafeas resource name of a Attestation.Authority Note, created by the user, in the format: `projects/*{@literal /}notes/*`. This field may not be updated. An attestation by this attestor is stored as a Grafeas Attestation.Authority Occurrence that names a container image and that links to this Note. Grafeas is an external dependency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noteReference(Output<String> noteReference) {
             $.noteReference = noteReference;
             return this;
         }
 
+        /**
+         * @param noteReference The Grafeas resource name of a Attestation.Authority Note, created by the user, in the format: `projects/*{@literal /}notes/*`. This field may not be updated. An attestation by this attestor is stored as a Grafeas Attestation.Authority Occurrence that names a container image and that links to this Note. Grafeas is an external dependency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noteReference(String noteReference) {
             return noteReference(Output.of(noteReference));
         }
 
+        /**
+         * @param publicKeys Optional. Public keys that verify attestations signed by this attestor. This field may be updated. If this field is non-empty, one of the specified public keys must verify that an attestation was signed by this attestor for the image specified in the admission request. If this field is empty, this attestor always returns that no valid attestations exist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeys(@Nullable Output<List<AttestorPublicKeyArgs>> publicKeys) {
             $.publicKeys = publicKeys;
             return this;
         }
 
+        /**
+         * @param publicKeys Optional. Public keys that verify attestations signed by this attestor. This field may be updated. If this field is non-empty, one of the specified public keys must verify that an attestation was signed by this attestor for the image specified in the admission request. If this field is empty, this attestor always returns that no valid attestations exist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeys(List<AttestorPublicKeyArgs> publicKeys) {
             return publicKeys(Output.of(publicKeys));
         }
 
+        /**
+         * @param publicKeys Optional. Public keys that verify attestations signed by this attestor. This field may be updated. If this field is non-empty, one of the specified public keys must verify that an attestation was signed by this attestor for the image specified in the admission request. If this field is empty, this attestor always returns that no valid attestations exist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeys(AttestorPublicKeyArgs... publicKeys) {
             return publicKeys(List.of(publicKeys));
         }

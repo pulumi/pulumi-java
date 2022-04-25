@@ -10,30 +10,30 @@ import java.util.Objects;
 
 @CustomType
 public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse {
-    /**
-     * Type of archive files in this repository.
-     * 
-     */
+        /**
+         * @return Type of archive files in this repository.
+         * 
+         */
     private final String archiveType;
-    /**
-     * List of components for this repository. Must contain at least one item.
-     * 
-     */
+        /**
+         * @return List of components for this repository. Must contain at least one item.
+         * 
+         */
     private final List<String> components;
-    /**
-     * Distribution of this repository.
-     * 
-     */
+        /**
+         * @return Distribution of this repository.
+         * 
+         */
     private final String distribution;
-    /**
-     * URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
-     * 
-     */
+        /**
+         * @return URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
+         * 
+         */
     private final String gpgKey;
-    /**
-     * URI for this repository.
-     * 
-     */
+        /**
+         * @return URI for this repository.
+         * 
+         */
     private final String uri;
 
     @CustomType.Constructor
@@ -51,37 +51,37 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse {
     }
 
     /**
-     * Type of archive files in this repository.
+     * @return Type of archive files in this repository.
      * 
-    */
+     */
     public String archiveType() {
         return this.archiveType;
     }
     /**
-     * List of components for this repository. Must contain at least one item.
+     * @return List of components for this repository. Must contain at least one item.
      * 
-    */
+     */
     public List<String> components() {
         return this.components;
     }
     /**
-     * Distribution of this repository.
+     * @return Distribution of this repository.
      * 
-    */
+     */
     public String distribution() {
         return this.distribution;
     }
     /**
-     * URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
+     * @return URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
      * 
-    */
+     */
     public String gpgKey() {
         return this.gpgKey;
     }
     /**
-     * URI for this repository.
+     * @return URI for this repository.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class MysqlTableResponse {
-    /**
-     * MySQL columns in the database. When unspecified as part of include/exclude lists, includes/excludes everything.
-     * 
-     */
+        /**
+         * @return MySQL columns in the database. When unspecified as part of include/exclude lists, includes/excludes everything.
+         * 
+         */
     private final List<MysqlColumnResponse> mysqlColumns;
-    /**
-     * Table name.
-     * 
-     */
+        /**
+         * @return Table name.
+         * 
+         */
     private final String tableName;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class MysqlTableResponse {
     }
 
     /**
-     * MySQL columns in the database. When unspecified as part of include/exclude lists, includes/excludes everything.
+     * @return MySQL columns in the database. When unspecified as part of include/exclude lists, includes/excludes everything.
      * 
-    */
+     */
     public List<MysqlColumnResponse> mysqlColumns() {
         return this.mysqlColumns;
     }
     /**
-     * Table name.
+     * @return Table name.
      * 
-    */
+     */
     public String tableName() {
         return this.tableName;
     }

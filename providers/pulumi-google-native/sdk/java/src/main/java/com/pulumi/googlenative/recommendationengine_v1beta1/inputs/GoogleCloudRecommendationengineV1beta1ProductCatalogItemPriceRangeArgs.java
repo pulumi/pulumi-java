@@ -24,6 +24,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
     @Import(name="max", required=true)
     private Output<Double> max;
 
+    /**
+     * @return The maximum product price.
+     * 
+     */
     public Output<Double> max() {
         return this.max;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
     @Import(name="min", required=true)
     private Output<Double> min;
 
+    /**
+     * @return The minimum product price.
+     * 
+     */
     public Output<Double> min() {
         return this.min;
     }
@@ -64,20 +72,44 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
             $ = new GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param max The maximum product price.
+         * 
+         * @return builder
+         * 
+         */
         public Builder max(Output<Double> max) {
             $.max = max;
             return this;
         }
 
+        /**
+         * @param max The maximum product price.
+         * 
+         * @return builder
+         * 
+         */
         public Builder max(Double max) {
             return max(Output.of(max));
         }
 
+        /**
+         * @param min The minimum product price.
+         * 
+         * @return builder
+         * 
+         */
         public Builder min(Output<Double> min) {
             $.min = min;
             return this;
         }
 
+        /**
+         * @param min The minimum product price.
+         * 
+         * @return builder
+         * 
+         */
         public Builder min(Double min) {
             return min(Output.of(min));
         }

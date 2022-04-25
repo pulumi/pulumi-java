@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GooglePrivacyDlpV2CloudStorageFileSetResponse {
-    /**
-     * The url, in the format `gs:///`. Trailing wildcard in the path is allowed.
-     * 
-     */
+        /**
+         * @return The url, in the format `gs:///`. Trailing wildcard in the path is allowed.
+         * 
+         */
     private final String url;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GooglePrivacyDlpV2CloudStorageFileSetResponse {
     }
 
     /**
-     * The url, in the format `gs:///`. Trailing wildcard in the path is allowed.
+     * @return The url, in the format `gs:///`. Trailing wildcard in the path is allowed.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

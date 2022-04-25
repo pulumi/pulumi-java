@@ -28,6 +28,10 @@ public final class ImageOccurrenceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="fingerprint", required=true)
     private Output<FingerprintArgs> fingerprint;
 
+    /**
+     * @return The fingerprint of the derived image.
+     * 
+     */
     public Output<FingerprintArgs> fingerprint() {
         return this.fingerprint;
     }
@@ -39,6 +43,10 @@ public final class ImageOccurrenceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="layerInfo")
     private @Nullable Output<List<LayerArgs>> layerInfo;
 
+    /**
+     * @return This contains layer-specific metadata, if populated it has length &#34;distance&#34; and is ordered with [distance] being the layer immediately following the base image and [1] being the final layer.
+     * 
+     */
     public Optional<Output<List<LayerArgs>>> layerInfo() {
         return Optional.ofNullable(this.layerInfo);
     }
@@ -68,24 +76,54 @@ public final class ImageOccurrenceArgs extends com.pulumi.resources.ResourceArgs
             $ = new ImageOccurrenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fingerprint The fingerprint of the derived image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fingerprint(Output<FingerprintArgs> fingerprint) {
             $.fingerprint = fingerprint;
             return this;
         }
 
+        /**
+         * @param fingerprint The fingerprint of the derived image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fingerprint(FingerprintArgs fingerprint) {
             return fingerprint(Output.of(fingerprint));
         }
 
+        /**
+         * @param layerInfo This contains layer-specific metadata, if populated it has length &#34;distance&#34; and is ordered with [distance] being the layer immediately following the base image and [1] being the final layer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layerInfo(@Nullable Output<List<LayerArgs>> layerInfo) {
             $.layerInfo = layerInfo;
             return this;
         }
 
+        /**
+         * @param layerInfo This contains layer-specific metadata, if populated it has length &#34;distance&#34; and is ordered with [distance] being the layer immediately following the base image and [1] being the final layer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layerInfo(List<LayerArgs> layerInfo) {
             return layerInfo(Output.of(layerInfo));
         }
 
+        /**
+         * @param layerInfo This contains layer-specific metadata, if populated it has length &#34;distance&#34; and is ordered with [distance] being the layer immediately following the base image and [1] being the final layer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layerInfo(LayerArgs... layerInfo) {
             return layerInfo(List.of(layerInfo));
         }

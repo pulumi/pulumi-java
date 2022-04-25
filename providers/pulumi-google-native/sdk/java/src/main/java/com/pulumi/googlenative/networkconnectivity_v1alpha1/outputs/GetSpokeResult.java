@@ -12,60 +12,60 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSpokeResult {
-    /**
-     * The time when the Spoke was created.
-     * 
-     */
+        /**
+         * @return The time when the Spoke was created.
+         * 
+         */
     private final String createTime;
-    /**
-     * Short description of the spoke resource
-     * 
-     */
+        /**
+         * @return Short description of the spoke resource
+         * 
+         */
     private final String description;
-    /**
-     * The resource URL of the hub resource that the spoke is attached to
-     * 
-     */
+        /**
+         * @return The resource URL of the hub resource that the spoke is attached to
+         * 
+         */
     private final String hub;
-    /**
-     * User-defined labels.
-     * 
-     */
+        /**
+         * @return User-defined labels.
+         * 
+         */
     private final Map<String,String> labels;
-    /**
-     * The URIs of linked interconnect attachment resources
-     * 
-     */
+        /**
+         * @return The URIs of linked interconnect attachment resources
+         * 
+         */
     private final List<String> linkedInterconnectAttachments;
-    /**
-     * The URIs of linked Router appliance resources
-     * 
-     */
+        /**
+         * @return The URIs of linked Router appliance resources
+         * 
+         */
     private final List<RouterApplianceInstanceResponse> linkedRouterApplianceInstances;
-    /**
-     * The URIs of linked VPN tunnel resources
-     * 
-     */
+        /**
+         * @return The URIs of linked VPN tunnel resources
+         * 
+         */
     private final List<String> linkedVpnTunnels;
-    /**
-     * Immutable. The name of a Spoke resource.
-     * 
-     */
+        /**
+         * @return Immutable. The name of a Spoke resource.
+         * 
+         */
     private final String name;
-    /**
-     * The current lifecycle state of this Hub.
-     * 
-     */
+        /**
+         * @return The current lifecycle state of this Hub.
+         * 
+         */
     private final String state;
-    /**
-     * Google-generated UUID for this resource. This is unique across all Spoke resources. If a Spoke resource is deleted and another with the same name is created, it gets a different unique_id.
-     * 
-     */
+        /**
+         * @return Google-generated UUID for this resource. This is unique across all Spoke resources. If a Spoke resource is deleted and another with the same name is created, it gets a different unique_id.
+         * 
+         */
     private final String uniqueId;
-    /**
-     * The time when the Spoke was updated.
-     * 
-     */
+        /**
+         * @return The time when the Spoke was updated.
+         * 
+         */
     private final String updateTime;
 
     @CustomType.Constructor
@@ -95,79 +95,79 @@ public final class GetSpokeResult {
     }
 
     /**
-     * The time when the Spoke was created.
+     * @return The time when the Spoke was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Short description of the spoke resource
+     * @return Short description of the spoke resource
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The resource URL of the hub resource that the spoke is attached to
+     * @return The resource URL of the hub resource that the spoke is attached to
      * 
-    */
+     */
     public String hub() {
         return this.hub;
     }
     /**
-     * User-defined labels.
+     * @return User-defined labels.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The URIs of linked interconnect attachment resources
+     * @return The URIs of linked interconnect attachment resources
      * 
-    */
+     */
     public List<String> linkedInterconnectAttachments() {
         return this.linkedInterconnectAttachments;
     }
     /**
-     * The URIs of linked Router appliance resources
+     * @return The URIs of linked Router appliance resources
      * 
-    */
+     */
     public List<RouterApplianceInstanceResponse> linkedRouterApplianceInstances() {
         return this.linkedRouterApplianceInstances;
     }
     /**
-     * The URIs of linked VPN tunnel resources
+     * @return The URIs of linked VPN tunnel resources
      * 
-    */
+     */
     public List<String> linkedVpnTunnels() {
         return this.linkedVpnTunnels;
     }
     /**
-     * Immutable. The name of a Spoke resource.
+     * @return Immutable. The name of a Spoke resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The current lifecycle state of this Hub.
+     * @return The current lifecycle state of this Hub.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Google-generated UUID for this resource. This is unique across all Spoke resources. If a Spoke resource is deleted and another with the same name is created, it gets a different unique_id.
+     * @return Google-generated UUID for this resource. This is unique across all Spoke resources. If a Spoke resource is deleted and another with the same name is created, it gets a different unique_id.
      * 
-    */
+     */
     public String uniqueId() {
         return this.uniqueId;
     }
     /**
-     * The time when the Spoke was updated.
+     * @return The time when the Spoke was updated.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

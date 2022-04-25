@@ -27,6 +27,10 @@ public final class GoogleCloudDialogflowV2NotificationConfigArgs extends com.pul
     @Import(name="messageFormat")
     private @Nullable Output<GoogleCloudDialogflowV2NotificationConfigMessageFormat> messageFormat;
 
+    /**
+     * @return Format of message.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2NotificationConfigMessageFormat>> messageFormat() {
         return Optional.ofNullable(this.messageFormat);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudDialogflowV2NotificationConfigArgs extends com.pul
     @Import(name="topic")
     private @Nullable Output<String> topic;
 
+    /**
+     * @return Name of the Pub/Sub topic to publish conversation events like CONVERSATION_STARTED as serialized ConversationEvent protos. Notification works for phone calls, if this topic either is in the same project as the conversation or you grant `service-@gcp-sa-dialogflow.iam.gserviceaccount.com` the `Dialogflow Service Agent` role in the topic project. Format: `projects//locations//topics/`.
+     * 
+     */
     public Optional<Output<String>> topic() {
         return Optional.ofNullable(this.topic);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudDialogflowV2NotificationConfigArgs extends com.pul
             $ = new GoogleCloudDialogflowV2NotificationConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param messageFormat Format of message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageFormat(@Nullable Output<GoogleCloudDialogflowV2NotificationConfigMessageFormat> messageFormat) {
             $.messageFormat = messageFormat;
             return this;
         }
 
+        /**
+         * @param messageFormat Format of message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageFormat(GoogleCloudDialogflowV2NotificationConfigMessageFormat messageFormat) {
             return messageFormat(Output.of(messageFormat));
         }
 
+        /**
+         * @param topic Name of the Pub/Sub topic to publish conversation events like CONVERSATION_STARTED as serialized ConversationEvent protos. Notification works for phone calls, if this topic either is in the same project as the conversation or you grant `service-@gcp-sa-dialogflow.iam.gserviceaccount.com` the `Dialogflow Service Agent` role in the topic project. Format: `projects//locations//topics/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(@Nullable Output<String> topic) {
             $.topic = topic;
             return this;
         }
 
+        /**
+         * @param topic Name of the Pub/Sub topic to publish conversation events like CONVERSATION_STARTED as serialized ConversationEvent protos. Notification works for phone calls, if this topic either is in the same project as the conversation or you grant `service-@gcp-sa-dialogflow.iam.gserviceaccount.com` the `Dialogflow Service Agent` role in the topic project. Format: `projects//locations//topics/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(String topic) {
             return topic(Output.of(topic));
         }

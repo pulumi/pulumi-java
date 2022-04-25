@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class X509ExtensionResponse {
-    /**
-     * Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
-     * 
-     */
+        /**
+         * @return Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
+         * 
+         */
     private final Boolean critical;
-    /**
-     * The OID for this X.509 extension.
-     * 
-     */
+        /**
+         * @return The OID for this X.509 extension.
+         * 
+         */
     private final ObjectIdResponse objectId;
-    /**
-     * The value of this X.509 extension.
-     * 
-     */
+        /**
+         * @return The value of this X.509 extension.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class X509ExtensionResponse {
     }
 
     /**
-     * Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
+     * @return Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
      * 
-    */
+     */
     public Boolean critical() {
         return this.critical;
     }
     /**
-     * The OID for this X.509 extension.
+     * @return The OID for this X.509 extension.
      * 
-    */
+     */
     public ObjectIdResponse objectId() {
         return this.objectId;
     }
     /**
-     * The value of this X.509 extension.
+     * @return The value of this X.509 extension.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

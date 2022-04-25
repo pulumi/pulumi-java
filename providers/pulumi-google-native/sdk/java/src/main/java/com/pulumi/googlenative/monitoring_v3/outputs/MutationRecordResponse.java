@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class MutationRecordResponse {
-    /**
-     * When the change occurred.
-     * 
-     */
+        /**
+         * @return When the change occurred.
+         * 
+         */
     private final String mutateTime;
-    /**
-     * The email address of the user making the change.
-     * 
-     */
+        /**
+         * @return The email address of the user making the change.
+         * 
+         */
     private final String mutatedBy;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class MutationRecordResponse {
     }
 
     /**
-     * When the change occurred.
+     * @return When the change occurred.
      * 
-    */
+     */
     public String mutateTime() {
         return this.mutateTime;
     }
     /**
-     * The email address of the user making the change.
+     * @return The email address of the user making the change.
      * 
-    */
+     */
     public String mutatedBy() {
         return this.mutatedBy;
     }

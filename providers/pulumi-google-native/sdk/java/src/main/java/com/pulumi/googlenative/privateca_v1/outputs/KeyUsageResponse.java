@@ -12,20 +12,20 @@ import java.util.Objects;
 
 @CustomType
 public final class KeyUsageResponse {
-    /**
-     * Describes high-level ways in which a key may be used.
-     * 
-     */
+        /**
+         * @return Describes high-level ways in which a key may be used.
+         * 
+         */
     private final KeyUsageOptionsResponse baseKeyUsage;
-    /**
-     * Detailed scenarios in which a key may be used.
-     * 
-     */
+        /**
+         * @return Detailed scenarios in which a key may be used.
+         * 
+         */
     private final ExtendedKeyUsageOptionsResponse extendedKeyUsage;
-    /**
-     * Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
-     * 
-     */
+        /**
+         * @return Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
+         * 
+         */
     private final List<ObjectIdResponse> unknownExtendedKeyUsages;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class KeyUsageResponse {
     }
 
     /**
-     * Describes high-level ways in which a key may be used.
+     * @return Describes high-level ways in which a key may be used.
      * 
-    */
+     */
     public KeyUsageOptionsResponse baseKeyUsage() {
         return this.baseKeyUsage;
     }
     /**
-     * Detailed scenarios in which a key may be used.
+     * @return Detailed scenarios in which a key may be used.
      * 
-    */
+     */
     public ExtendedKeyUsageOptionsResponse extendedKeyUsage() {
         return this.extendedKeyUsage;
     }
     /**
-     * Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
+     * @return Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
      * 
-    */
+     */
     public List<ObjectIdResponse> unknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages;
     }

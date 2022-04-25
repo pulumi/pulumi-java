@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class DebugOptionsResponse {
-    /**
-     * When true, enables the logging of the literal hot key to the user&#39;s Cloud Logging.
-     * 
-     */
+        /**
+         * @return When true, enables the logging of the literal hot key to the user&#39;s Cloud Logging.
+         * 
+         */
     private final Boolean enableHotKeyLogging;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class DebugOptionsResponse {
     }
 
     /**
-     * When true, enables the logging of the literal hot key to the user&#39;s Cloud Logging.
+     * @return When true, enables the logging of the literal hot key to the user&#39;s Cloud Logging.
      * 
-    */
+     */
     public Boolean enableHotKeyLogging() {
         return this.enableHotKeyLogging;
     }

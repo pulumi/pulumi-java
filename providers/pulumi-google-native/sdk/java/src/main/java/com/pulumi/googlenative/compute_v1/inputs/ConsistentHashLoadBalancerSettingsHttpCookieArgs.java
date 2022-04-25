@@ -27,6 +27,10 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends com.
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the cookie.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -38,6 +42,10 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends com.
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return Path to set for the cookie.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -49,6 +57,10 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends com.
     @Import(name="ttl")
     private @Nullable Output<DurationArgs> ttl;
 
+    /**
+     * @return Lifetime of the cookie.
+     * 
+     */
     public Optional<Output<DurationArgs>> ttl() {
         return Optional.ofNullable(this.ttl);
     }
@@ -79,29 +91,65 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends com.
             $ = new ConsistentHashLoadBalancerSettingsHttpCookieArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the cookie.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the cookie.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param path Path to set for the cookie.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path Path to set for the cookie.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param ttl Lifetime of the cookie.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(@Nullable Output<DurationArgs> ttl) {
             $.ttl = ttl;
             return this;
         }
 
+        /**
+         * @param ttl Lifetime of the cookie.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(DurationArgs ttl) {
             return ttl(Output.of(ttl));
         }

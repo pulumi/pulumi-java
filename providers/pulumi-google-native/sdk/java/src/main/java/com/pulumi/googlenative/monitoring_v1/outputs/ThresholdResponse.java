@@ -10,30 +10,30 @@ import java.util.Objects;
 
 @CustomType
 public final class ThresholdResponse {
-    /**
-     * The state color for this threshold. Color is not allowed in a XyChart.
-     * 
-     */
+        /**
+         * @return The state color for this threshold. Color is not allowed in a XyChart.
+         * 
+         */
     private final String color;
-    /**
-     * The direction for the current threshold. Direction is not allowed in a XyChart.
-     * 
-     */
+        /**
+         * @return The direction for the current threshold. Direction is not allowed in a XyChart.
+         * 
+         */
     private final String direction;
-    /**
-     * A label for the threshold.
-     * 
-     */
+        /**
+         * @return A label for the threshold.
+         * 
+         */
     private final String label;
-    /**
-     * The target axis to use for plotting the threshold. Target axis is not allowed in a Scorecard.
-     * 
-     */
+        /**
+         * @return The target axis to use for plotting the threshold. Target axis is not allowed in a Scorecard.
+         * 
+         */
     private final String targetAxis;
-    /**
-     * The value of the threshold. The value should be defined in the native scale of the metric.
-     * 
-     */
+        /**
+         * @return The value of the threshold. The value should be defined in the native scale of the metric.
+         * 
+         */
     private final Double value;
 
     @CustomType.Constructor
@@ -51,37 +51,37 @@ public final class ThresholdResponse {
     }
 
     /**
-     * The state color for this threshold. Color is not allowed in a XyChart.
+     * @return The state color for this threshold. Color is not allowed in a XyChart.
      * 
-    */
+     */
     public String color() {
         return this.color;
     }
     /**
-     * The direction for the current threshold. Direction is not allowed in a XyChart.
+     * @return The direction for the current threshold. Direction is not allowed in a XyChart.
      * 
-    */
+     */
     public String direction() {
         return this.direction;
     }
     /**
-     * A label for the threshold.
+     * @return A label for the threshold.
      * 
-    */
+     */
     public String label() {
         return this.label;
     }
     /**
-     * The target axis to use for plotting the threshold. Target axis is not allowed in a Scorecard.
+     * @return The target axis to use for plotting the threshold. Target axis is not allowed in a Scorecard.
      * 
-    */
+     */
     public String targetAxis() {
         return this.targetAxis;
     }
     /**
-     * The value of the threshold. The value should be defined in the native scale of the metric.
+     * @return The value of the threshold. The value should be defined in the native scale of the metric.
      * 
-    */
+     */
     public Double value() {
         return this.value;
     }

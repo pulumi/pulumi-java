@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class RelatedUrlResponse {
-    /**
-     * Label to describe usage of the URL
-     * 
-     */
+        /**
+         * @return Label to describe usage of the URL
+         * 
+         */
     private final String label;
-    /**
-     * Specific URL to associate with the note
-     * 
-     */
+        /**
+         * @return Specific URL to associate with the note
+         * 
+         */
     private final String url;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class RelatedUrlResponse {
     }
 
     /**
-     * Label to describe usage of the URL
+     * @return Label to describe usage of the URL
      * 
-    */
+     */
     public String label() {
         return this.label;
     }
     /**
-     * Specific URL to associate with the note
+     * @return Specific URL to associate with the note
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

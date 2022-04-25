@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ExpirationPolicyResponse {
-    /**
-     * Specifies the &#34;time-to-live&#34; duration for an associated resource. The resource expires if it is not active for a period of `ttl`. The definition of &#34;activity&#34; depends on the type of the associated resource. The minimum and maximum allowed values for `ttl` depend on the type of the associated resource, as well. If `ttl` is not set, the associated resource never expires.
-     * 
-     */
+        /**
+         * @return Specifies the &#34;time-to-live&#34; duration for an associated resource. The resource expires if it is not active for a period of `ttl`. The definition of &#34;activity&#34; depends on the type of the associated resource. The minimum and maximum allowed values for `ttl` depend on the type of the associated resource, as well. If `ttl` is not set, the associated resource never expires.
+         * 
+         */
     private final String ttl;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ExpirationPolicyResponse {
     }
 
     /**
-     * Specifies the &#34;time-to-live&#34; duration for an associated resource. The resource expires if it is not active for a period of `ttl`. The definition of &#34;activity&#34; depends on the type of the associated resource. The minimum and maximum allowed values for `ttl` depend on the type of the associated resource, as well. If `ttl` is not set, the associated resource never expires.
+     * @return Specifies the &#34;time-to-live&#34; duration for an associated resource. The resource expires if it is not active for a period of `ttl`. The definition of &#34;activity&#34; depends on the type of the associated resource. The minimum and maximum allowed values for `ttl` depend on the type of the associated resource, as well. If `ttl` is not set, the associated resource never expires.
      * 
-    */
+     */
     public String ttl() {
         return this.ttl;
     }

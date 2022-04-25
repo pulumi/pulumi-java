@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class V2IosKeyRestrictionsResponse {
-    /**
-     * A list of bundle IDs that are allowed when making API calls with this key.
-     * 
-     */
+        /**
+         * @return A list of bundle IDs that are allowed when making API calls with this key.
+         * 
+         */
     private final List<String> allowedBundleIds;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class V2IosKeyRestrictionsResponse {
     }
 
     /**
-     * A list of bundle IDs that are allowed when making API calls with this key.
+     * @return A list of bundle IDs that are allowed when making API calls with this key.
      * 
-    */
+     */
     public List<String> allowedBundleIds() {
         return this.allowedBundleIds;
     }

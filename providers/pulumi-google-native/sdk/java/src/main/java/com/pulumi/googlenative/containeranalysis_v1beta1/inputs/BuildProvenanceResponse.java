@@ -28,6 +28,10 @@ public final class BuildProvenanceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="buildOptions", required=true)
     private Map<String,String> buildOptions;
 
+    /**
+     * @return Special options applied to this build. This is a catch-all field where build providers can enter any desired additional details.
+     * 
+     */
     public Map<String,String> buildOptions() {
         return this.buildOptions;
     }
@@ -39,6 +43,10 @@ public final class BuildProvenanceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="builderVersion", required=true)
     private String builderVersion;
 
+    /**
+     * @return Version string of the builder at the time this build was executed.
+     * 
+     */
     public String builderVersion() {
         return this.builderVersion;
     }
@@ -50,6 +58,10 @@ public final class BuildProvenanceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="builtArtifacts", required=true)
     private List<ArtifactResponse> builtArtifacts;
 
+    /**
+     * @return Output of the build.
+     * 
+     */
     public List<ArtifactResponse> builtArtifacts() {
         return this.builtArtifacts;
     }
@@ -61,6 +73,10 @@ public final class BuildProvenanceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="commands", required=true)
     private List<CommandResponse> commands;
 
+    /**
+     * @return Commands requested by the build.
+     * 
+     */
     public List<CommandResponse> commands() {
         return this.commands;
     }
@@ -72,6 +88,10 @@ public final class BuildProvenanceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="createTime", required=true)
     private String createTime;
 
+    /**
+     * @return Time at which the build was created.
+     * 
+     */
     public String createTime() {
         return this.createTime;
     }
@@ -83,6 +103,10 @@ public final class BuildProvenanceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="creator", required=true)
     private String creator;
 
+    /**
+     * @return E-mail address of the user who initiated this build. Note that this was the user&#39;s e-mail address at the time the build was initiated; this address may not represent the same end-user for all time.
+     * 
+     */
     public String creator() {
         return this.creator;
     }
@@ -94,6 +118,10 @@ public final class BuildProvenanceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return Time at which execution of the build was finished.
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -105,6 +133,10 @@ public final class BuildProvenanceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="logsUri", required=true)
     private String logsUri;
 
+    /**
+     * @return URI where any logs for this provenance were written.
+     * 
+     */
     public String logsUri() {
         return this.logsUri;
     }
@@ -116,6 +148,10 @@ public final class BuildProvenanceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return ID of the project.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -127,6 +163,10 @@ public final class BuildProvenanceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="sourceProvenance", required=true)
     private SourceResponse sourceProvenance;
 
+    /**
+     * @return Details of the Source input to the build.
+     * 
+     */
     public SourceResponse sourceProvenance() {
         return this.sourceProvenance;
     }
@@ -138,6 +178,10 @@ public final class BuildProvenanceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return Time at which execution of the build was started.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -149,6 +193,10 @@ public final class BuildProvenanceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="triggerId", required=true)
     private String triggerId;
 
+    /**
+     * @return Trigger identifier if the build was triggered automatically; empty if not.
+     * 
+     */
     public String triggerId() {
         return this.triggerId;
     }
@@ -188,69 +236,153 @@ public final class BuildProvenanceResponse extends com.pulumi.resources.InvokeAr
             $ = new BuildProvenanceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param buildOptions Special options applied to this build. This is a catch-all field where build providers can enter any desired additional details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildOptions(Map<String,String> buildOptions) {
             $.buildOptions = buildOptions;
             return this;
         }
 
+        /**
+         * @param builderVersion Version string of the builder at the time this build was executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder builderVersion(String builderVersion) {
             $.builderVersion = builderVersion;
             return this;
         }
 
+        /**
+         * @param builtArtifacts Output of the build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder builtArtifacts(List<ArtifactResponse> builtArtifacts) {
             $.builtArtifacts = builtArtifacts;
             return this;
         }
 
+        /**
+         * @param builtArtifacts Output of the build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder builtArtifacts(ArtifactResponse... builtArtifacts) {
             return builtArtifacts(List.of(builtArtifacts));
         }
 
+        /**
+         * @param commands Commands requested by the build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commands(List<CommandResponse> commands) {
             $.commands = commands;
             return this;
         }
 
+        /**
+         * @param commands Commands requested by the build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commands(CommandResponse... commands) {
             return commands(List.of(commands));
         }
 
+        /**
+         * @param createTime Time at which the build was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param creator E-mail address of the user who initiated this build. Note that this was the user&#39;s e-mail address at the time the build was initiated; this address may not represent the same end-user for all time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creator(String creator) {
             $.creator = creator;
             return this;
         }
 
+        /**
+         * @param endTime Time at which execution of the build was finished.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param logsUri URI where any logs for this provenance were written.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logsUri(String logsUri) {
             $.logsUri = logsUri;
             return this;
         }
 
+        /**
+         * @param project ID of the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param sourceProvenance Details of the Source input to the build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceProvenance(SourceResponse sourceProvenance) {
             $.sourceProvenance = sourceProvenance;
             return this;
         }
 
+        /**
+         * @param startTime Time at which execution of the build was started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param triggerId Trigger identifier if the build was triggered automatically; empty if not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerId(String triggerId) {
             $.triggerId = triggerId;
             return this;

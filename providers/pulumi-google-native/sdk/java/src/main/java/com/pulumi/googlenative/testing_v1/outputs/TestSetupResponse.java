@@ -15,40 +15,40 @@ import java.util.Objects;
 
 @CustomType
 public final class TestSetupResponse {
-    /**
-     * The device will be logged in on this account for the duration of the test.
-     * 
-     */
+        /**
+         * @return The device will be logged in on this account for the duration of the test.
+         * 
+         */
     private final AccountResponse account;
-    /**
-     * APKs to install in addition to those being directly tested. Currently capped at 100.
-     * 
-     */
+        /**
+         * @return APKs to install in addition to those being directly tested. Currently capped at 100.
+         * 
+         */
     private final List<ApkResponse> additionalApks;
-    /**
-     * List of directories on the device to upload to GCS at the end of the test; they must be absolute paths under /sdcard, /storage or /data/local/tmp. Path names are restricted to characters a-z A-Z 0-9 _ - . + and / Note: The paths /sdcard and /data will be made available and treated as implicit path substitutions. E.g. if /sdcard on a particular device does not map to external storage, the system will replace it with the external storage path prefix for that device.
-     * 
-     */
+        /**
+         * @return List of directories on the device to upload to GCS at the end of the test; they must be absolute paths under /sdcard, /storage or /data/local/tmp. Path names are restricted to characters a-z A-Z 0-9 _ - . + and / Note: The paths /sdcard and /data will be made available and treated as implicit path substitutions. E.g. if /sdcard on a particular device does not map to external storage, the system will replace it with the external storage path prefix for that device.
+         * 
+         */
     private final List<String> directoriesToPull;
-    /**
-     * Whether to prevent all runtime permissions to be granted at app install
-     * 
-     */
+        /**
+         * @return Whether to prevent all runtime permissions to be granted at app install
+         * 
+         */
     private final Boolean dontAutograntPermissions;
-    /**
-     * Environment variables to set for the test (only applicable for instrumentation tests).
-     * 
-     */
+        /**
+         * @return Environment variables to set for the test (only applicable for instrumentation tests).
+         * 
+         */
     private final List<EnvironmentVariableResponse> environmentVariables;
-    /**
-     * List of files to push to the device before starting the test.
-     * 
-     */
+        /**
+         * @return List of files to push to the device before starting the test.
+         * 
+         */
     private final List<DeviceFileResponse> filesToPush;
-    /**
-     * The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
-     * 
-     */
+        /**
+         * @return The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
+         * 
+         */
     private final String networkProfile;
 
     @CustomType.Constructor
@@ -70,51 +70,51 @@ public final class TestSetupResponse {
     }
 
     /**
-     * The device will be logged in on this account for the duration of the test.
+     * @return The device will be logged in on this account for the duration of the test.
      * 
-    */
+     */
     public AccountResponse account() {
         return this.account;
     }
     /**
-     * APKs to install in addition to those being directly tested. Currently capped at 100.
+     * @return APKs to install in addition to those being directly tested. Currently capped at 100.
      * 
-    */
+     */
     public List<ApkResponse> additionalApks() {
         return this.additionalApks;
     }
     /**
-     * List of directories on the device to upload to GCS at the end of the test; they must be absolute paths under /sdcard, /storage or /data/local/tmp. Path names are restricted to characters a-z A-Z 0-9 _ - . + and / Note: The paths /sdcard and /data will be made available and treated as implicit path substitutions. E.g. if /sdcard on a particular device does not map to external storage, the system will replace it with the external storage path prefix for that device.
+     * @return List of directories on the device to upload to GCS at the end of the test; they must be absolute paths under /sdcard, /storage or /data/local/tmp. Path names are restricted to characters a-z A-Z 0-9 _ - . + and / Note: The paths /sdcard and /data will be made available and treated as implicit path substitutions. E.g. if /sdcard on a particular device does not map to external storage, the system will replace it with the external storage path prefix for that device.
      * 
-    */
+     */
     public List<String> directoriesToPull() {
         return this.directoriesToPull;
     }
     /**
-     * Whether to prevent all runtime permissions to be granted at app install
+     * @return Whether to prevent all runtime permissions to be granted at app install
      * 
-    */
+     */
     public Boolean dontAutograntPermissions() {
         return this.dontAutograntPermissions;
     }
     /**
-     * Environment variables to set for the test (only applicable for instrumentation tests).
+     * @return Environment variables to set for the test (only applicable for instrumentation tests).
      * 
-    */
+     */
     public List<EnvironmentVariableResponse> environmentVariables() {
         return this.environmentVariables;
     }
     /**
-     * List of files to push to the device before starting the test.
+     * @return List of files to push to the device before starting the test.
      * 
-    */
+     */
     public List<DeviceFileResponse> filesToPush() {
         return this.filesToPush;
     }
     /**
-     * The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
+     * @return The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
      * 
-    */
+     */
     public String networkProfile() {
         return this.networkProfile;
     }

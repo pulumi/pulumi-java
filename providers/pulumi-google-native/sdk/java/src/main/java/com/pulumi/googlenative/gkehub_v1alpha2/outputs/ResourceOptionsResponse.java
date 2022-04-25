@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class ResourceOptionsResponse {
-    /**
-     * Optional. The Connect agent version to use for connect_resources. Defaults to the latest GKE Connect version. The version must be a currently supported version, obsolete versions will be rejected.
-     * 
-     */
+        /**
+         * @return Optional. The Connect agent version to use for connect_resources. Defaults to the latest GKE Connect version. The version must be a currently supported version, obsolete versions will be rejected.
+         * 
+         */
     private final String connectVersion;
-    /**
-     * Optional. Major version of the Kubernetes cluster. This is only used to determine which version to use for the CustomResourceDefinition resources, `apiextensions/v1beta1` or`apiextensions/v1`.
-     * 
-     */
+        /**
+         * @return Optional. Major version of the Kubernetes cluster. This is only used to determine which version to use for the CustomResourceDefinition resources, `apiextensions/v1beta1` or`apiextensions/v1`.
+         * 
+         */
     private final String k8sVersion;
-    /**
-     * Optional. Use `apiextensions/v1beta1` instead of `apiextensions/v1` for CustomResourceDefinition resources. This option should be set for clusters with Kubernetes apiserver versions &lt;1.16.
-     * 
-     */
+        /**
+         * @return Optional. Use `apiextensions/v1beta1` instead of `apiextensions/v1` for CustomResourceDefinition resources. This option should be set for clusters with Kubernetes apiserver versions &lt;1.16.
+         * 
+         */
     private final Boolean v1beta1Crd;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class ResourceOptionsResponse {
     }
 
     /**
-     * Optional. The Connect agent version to use for connect_resources. Defaults to the latest GKE Connect version. The version must be a currently supported version, obsolete versions will be rejected.
+     * @return Optional. The Connect agent version to use for connect_resources. Defaults to the latest GKE Connect version. The version must be a currently supported version, obsolete versions will be rejected.
      * 
-    */
+     */
     public String connectVersion() {
         return this.connectVersion;
     }
     /**
-     * Optional. Major version of the Kubernetes cluster. This is only used to determine which version to use for the CustomResourceDefinition resources, `apiextensions/v1beta1` or`apiextensions/v1`.
+     * @return Optional. Major version of the Kubernetes cluster. This is only used to determine which version to use for the CustomResourceDefinition resources, `apiextensions/v1beta1` or`apiextensions/v1`.
      * 
-    */
+     */
     public String k8sVersion() {
         return this.k8sVersion;
     }
     /**
-     * Optional. Use `apiextensions/v1beta1` instead of `apiextensions/v1` for CustomResourceDefinition resources. This option should be set for clusters with Kubernetes apiserver versions &lt;1.16.
+     * @return Optional. Use `apiextensions/v1beta1` instead of `apiextensions/v1` for CustomResourceDefinition resources. This option should be set for clusters with Kubernetes apiserver versions &lt;1.16.
      * 
-    */
+     */
     public Boolean v1beta1Crd() {
         return this.v1beta1Crd;
     }

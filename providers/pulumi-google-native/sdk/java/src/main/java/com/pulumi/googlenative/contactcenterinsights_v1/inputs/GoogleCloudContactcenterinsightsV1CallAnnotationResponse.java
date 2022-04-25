@@ -31,6 +31,10 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
     @Import(name="annotationEndBoundary", required=true)
     private GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationEndBoundary;
 
+    /**
+     * @return The boundary in the conversation where the annotation ends, inclusive.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationEndBoundary() {
         return this.annotationEndBoundary;
     }
@@ -42,6 +46,10 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
     @Import(name="annotationStartBoundary", required=true)
     private GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationStartBoundary;
 
+    /**
+     * @return The boundary in the conversation where the annotation starts, inclusive.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationStartBoundary() {
         return this.annotationStartBoundary;
     }
@@ -53,6 +61,10 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
     @Import(name="channelTag", required=true)
     private Integer channelTag;
 
+    /**
+     * @return The channel of the audio where the annotation occurs. For single-channel audio, this field is not populated.
+     * 
+     */
     public Integer channelTag() {
         return this.channelTag;
     }
@@ -64,6 +76,10 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
     @Import(name="entityMentionData", required=true)
     private GoogleCloudContactcenterinsightsV1EntityMentionDataResponse entityMentionData;
 
+    /**
+     * @return Data specifying an entity mention.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1EntityMentionDataResponse entityMentionData() {
         return this.entityMentionData;
     }
@@ -75,6 +91,10 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
     @Import(name="holdData", required=true)
     private GoogleCloudContactcenterinsightsV1HoldDataResponse holdData;
 
+    /**
+     * @return Data specifying a hold.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1HoldDataResponse holdData() {
         return this.holdData;
     }
@@ -86,6 +106,10 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
     @Import(name="intentMatchData", required=true)
     private GoogleCloudContactcenterinsightsV1IntentMatchDataResponse intentMatchData;
 
+    /**
+     * @return Data specifying an intent match.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1IntentMatchDataResponse intentMatchData() {
         return this.intentMatchData;
     }
@@ -97,6 +121,10 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
     @Import(name="interruptionData", required=true)
     private GoogleCloudContactcenterinsightsV1InterruptionDataResponse interruptionData;
 
+    /**
+     * @return Data specifying an interruption.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1InterruptionDataResponse interruptionData() {
         return this.interruptionData;
     }
@@ -108,6 +136,10 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
     @Import(name="phraseMatchData", required=true)
     private GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse phraseMatchData;
 
+    /**
+     * @return Data specifying a phrase match.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse phraseMatchData() {
         return this.phraseMatchData;
     }
@@ -119,6 +151,10 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
     @Import(name="sentimentData", required=true)
     private GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData;
 
+    /**
+     * @return Data specifying sentiment.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData() {
         return this.sentimentData;
     }
@@ -130,6 +166,10 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
     @Import(name="silenceData", required=true)
     private GoogleCloudContactcenterinsightsV1SilenceDataResponse silenceData;
 
+    /**
+     * @return Data specifying silence.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1SilenceDataResponse silenceData() {
         return this.silenceData;
     }
@@ -167,51 +207,111 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
             $ = new GoogleCloudContactcenterinsightsV1CallAnnotationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotationEndBoundary The boundary in the conversation where the annotation ends, inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotationEndBoundary(GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationEndBoundary) {
             $.annotationEndBoundary = annotationEndBoundary;
             return this;
         }
 
+        /**
+         * @param annotationStartBoundary The boundary in the conversation where the annotation starts, inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotationStartBoundary(GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationStartBoundary) {
             $.annotationStartBoundary = annotationStartBoundary;
             return this;
         }
 
+        /**
+         * @param channelTag The channel of the audio where the annotation occurs. For single-channel audio, this field is not populated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelTag(Integer channelTag) {
             $.channelTag = channelTag;
             return this;
         }
 
+        /**
+         * @param entityMentionData Data specifying an entity mention.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityMentionData(GoogleCloudContactcenterinsightsV1EntityMentionDataResponse entityMentionData) {
             $.entityMentionData = entityMentionData;
             return this;
         }
 
+        /**
+         * @param holdData Data specifying a hold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder holdData(GoogleCloudContactcenterinsightsV1HoldDataResponse holdData) {
             $.holdData = holdData;
             return this;
         }
 
+        /**
+         * @param intentMatchData Data specifying an intent match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intentMatchData(GoogleCloudContactcenterinsightsV1IntentMatchDataResponse intentMatchData) {
             $.intentMatchData = intentMatchData;
             return this;
         }
 
+        /**
+         * @param interruptionData Data specifying an interruption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interruptionData(GoogleCloudContactcenterinsightsV1InterruptionDataResponse interruptionData) {
             $.interruptionData = interruptionData;
             return this;
         }
 
+        /**
+         * @param phraseMatchData Data specifying a phrase match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phraseMatchData(GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse phraseMatchData) {
             $.phraseMatchData = phraseMatchData;
             return this;
         }
 
+        /**
+         * @param sentimentData Data specifying sentiment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sentimentData(GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData) {
             $.sentimentData = sentimentData;
             return this;
         }
 
+        /**
+         * @param silenceData Data specifying silence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder silenceData(GoogleCloudContactcenterinsightsV1SilenceDataResponse silenceData) {
             $.silenceData = silenceData;
             return this;

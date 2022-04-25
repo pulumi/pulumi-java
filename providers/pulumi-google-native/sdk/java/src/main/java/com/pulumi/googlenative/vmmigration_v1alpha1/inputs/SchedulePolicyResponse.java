@@ -24,6 +24,10 @@ public final class SchedulePolicyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="idleDuration", required=true)
     private String idleDuration;
 
+    /**
+     * @return The idle duration between replication stages.
+     * 
+     */
     public String idleDuration() {
         return this.idleDuration;
     }
@@ -35,6 +39,10 @@ public final class SchedulePolicyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="skipOsAdaptation", required=true)
     private Boolean skipOsAdaptation;
 
+    /**
+     * @return A flag to indicate whether to skip OS adaptation during the replication sync. OS adaptation is a process where the VM&#39;s operating system undergoes changes and adaptations to fully function on Compute Engine.
+     * 
+     */
     public Boolean skipOsAdaptation() {
         return this.skipOsAdaptation;
     }
@@ -64,11 +72,23 @@ public final class SchedulePolicyResponse extends com.pulumi.resources.InvokeArg
             $ = new SchedulePolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param idleDuration The idle duration between replication stages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleDuration(String idleDuration) {
             $.idleDuration = idleDuration;
             return this;
         }
 
+        /**
+         * @param skipOsAdaptation A flag to indicate whether to skip OS adaptation during the replication sync. OS adaptation is a process where the VM&#39;s operating system undergoes changes and adaptations to fully function on Compute Engine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipOsAdaptation(Boolean skipOsAdaptation) {
             $.skipOsAdaptation = skipOsAdaptation;
             return this;

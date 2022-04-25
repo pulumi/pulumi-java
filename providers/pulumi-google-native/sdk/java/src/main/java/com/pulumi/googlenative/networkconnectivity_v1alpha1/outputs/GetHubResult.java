@@ -10,40 +10,40 @@ import java.util.Objects;
 
 @CustomType
 public final class GetHubResult {
-    /**
-     * Time when the Hub was created.
-     * 
-     */
+        /**
+         * @return Time when the Hub was created.
+         * 
+         */
     private final String createTime;
-    /**
-     * Short description of the hub resource.
-     * 
-     */
+        /**
+         * @return Short description of the hub resource.
+         * 
+         */
     private final String description;
-    /**
-     * User-defined labels.
-     * 
-     */
+        /**
+         * @return User-defined labels.
+         * 
+         */
     private final Map<String,String> labels;
-    /**
-     * Immutable. The name of a Hub resource.
-     * 
-     */
+        /**
+         * @return Immutable. The name of a Hub resource.
+         * 
+         */
     private final String name;
-    /**
-     * The current lifecycle state of this Hub.
-     * 
-     */
+        /**
+         * @return The current lifecycle state of this Hub.
+         * 
+         */
     private final String state;
-    /**
-     * Google-generated UUID for this resource. This is unique across all Hub resources. If a Hub resource is deleted and another with the same name is created, it gets a different unique_id.
-     * 
-     */
+        /**
+         * @return Google-generated UUID for this resource. This is unique across all Hub resources. If a Hub resource is deleted and another with the same name is created, it gets a different unique_id.
+         * 
+         */
     private final String uniqueId;
-    /**
-     * Time when the Hub was updated.
-     * 
-     */
+        /**
+         * @return Time when the Hub was updated.
+         * 
+         */
     private final String updateTime;
 
     @CustomType.Constructor
@@ -65,51 +65,51 @@ public final class GetHubResult {
     }
 
     /**
-     * Time when the Hub was created.
+     * @return Time when the Hub was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Short description of the hub resource.
+     * @return Short description of the hub resource.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * User-defined labels.
+     * @return User-defined labels.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * Immutable. The name of a Hub resource.
+     * @return Immutable. The name of a Hub resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The current lifecycle state of this Hub.
+     * @return The current lifecycle state of this Hub.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Google-generated UUID for this resource. This is unique across all Hub resources. If a Hub resource is deleted and another with the same name is created, it gets a different unique_id.
+     * @return Google-generated UUID for this resource. This is unique across all Hub resources. If a Hub resource is deleted and another with the same name is created, it gets a different unique_id.
      * 
-    */
+     */
     public String uniqueId() {
         return this.uniqueId;
     }
     /**
-     * Time when the Hub was updated.
+     * @return Time when the Hub was updated.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

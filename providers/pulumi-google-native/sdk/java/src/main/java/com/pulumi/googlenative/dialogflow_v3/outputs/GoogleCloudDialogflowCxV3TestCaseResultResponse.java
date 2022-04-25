@@ -11,30 +11,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowCxV3TestCaseResultResponse {
-    /**
-     * The conversation turns uttered during the test case replay in chronological order.
-     * 
-     */
+        /**
+         * @return The conversation turns uttered during the test case replay in chronological order.
+         * 
+         */
     private final List<GoogleCloudDialogflowCxV3ConversationTurnResponse> conversationTurns;
-    /**
-     * Environment where the test was run. If not set, it indicates the draft environment.
-     * 
-     */
+        /**
+         * @return Environment where the test was run. If not set, it indicates the draft environment.
+         * 
+         */
     private final String environment;
-    /**
-     * The resource name for the test case result. Format: `projects//locations//agents//testCases/ /results/`.
-     * 
-     */
+        /**
+         * @return The resource name for the test case result. Format: `projects//locations//agents//testCases/ /results/`.
+         * 
+         */
     private final String name;
-    /**
-     * Whether the test case passed in the agent environment.
-     * 
-     */
+        /**
+         * @return Whether the test case passed in the agent environment.
+         * 
+         */
     private final String testResult;
-    /**
-     * The time that the test was run.
-     * 
-     */
+        /**
+         * @return The time that the test was run.
+         * 
+         */
     private final String testTime;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultResponse {
     }
 
     /**
-     * The conversation turns uttered during the test case replay in chronological order.
+     * @return The conversation turns uttered during the test case replay in chronological order.
      * 
-    */
+     */
     public List<GoogleCloudDialogflowCxV3ConversationTurnResponse> conversationTurns() {
         return this.conversationTurns;
     }
     /**
-     * Environment where the test was run. If not set, it indicates the draft environment.
+     * @return Environment where the test was run. If not set, it indicates the draft environment.
      * 
-    */
+     */
     public String environment() {
         return this.environment;
     }
     /**
-     * The resource name for the test case result. Format: `projects//locations//agents//testCases/ /results/`.
+     * @return The resource name for the test case result. Format: `projects//locations//agents//testCases/ /results/`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Whether the test case passed in the agent environment.
+     * @return Whether the test case passed in the agent environment.
      * 
-    */
+     */
     public String testResult() {
         return this.testResult;
     }
     /**
-     * The time that the test was run.
+     * @return The time that the test was run.
      * 
-    */
+     */
     public String testTime() {
         return this.testTime;
     }

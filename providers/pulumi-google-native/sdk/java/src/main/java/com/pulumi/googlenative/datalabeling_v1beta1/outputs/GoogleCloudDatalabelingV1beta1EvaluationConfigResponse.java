@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDatalabelingV1beta1EvaluationConfigResponse {
-    /**
-     * Only specify this field if the related model performs image object detection (`IMAGE_BOUNDING_BOX_ANNOTATION`). Describes how to evaluate bounding boxes.
-     * 
-     */
+        /**
+         * @return Only specify this field if the related model performs image object detection (`IMAGE_BOUNDING_BOX_ANNOTATION`). Describes how to evaluate bounding boxes.
+         * 
+         */
     private final GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse boundingBoxEvaluationOptions;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationConfigResponse {
     }
 
     /**
-     * Only specify this field if the related model performs image object detection (`IMAGE_BOUNDING_BOX_ANNOTATION`). Describes how to evaluate bounding boxes.
+     * @return Only specify this field if the related model performs image object detection (`IMAGE_BOUNDING_BOX_ANNOTATION`). Describes how to evaluate bounding boxes.
      * 
-    */
+     */
     public GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse boundingBoxEvaluationOptions() {
         return this.boundingBoxEvaluationOptions;
     }

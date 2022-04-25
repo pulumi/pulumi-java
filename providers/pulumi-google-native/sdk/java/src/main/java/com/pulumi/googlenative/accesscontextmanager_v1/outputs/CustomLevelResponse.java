@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class CustomLevelResponse {
-    /**
-     * A Cloud CEL expression evaluating to a boolean.
-     * 
-     */
+        /**
+         * @return A Cloud CEL expression evaluating to a boolean.
+         * 
+         */
     private final ExprResponse expr;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class CustomLevelResponse {
     }
 
     /**
-     * A Cloud CEL expression evaluating to a boolean.
+     * @return A Cloud CEL expression evaluating to a boolean.
      * 
-    */
+     */
     public ExprResponse expr() {
         return this.expr;
     }

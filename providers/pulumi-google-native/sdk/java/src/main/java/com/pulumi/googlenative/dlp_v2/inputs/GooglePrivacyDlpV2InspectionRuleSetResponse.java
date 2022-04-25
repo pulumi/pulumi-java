@@ -25,6 +25,10 @@ public final class GooglePrivacyDlpV2InspectionRuleSetResponse extends com.pulum
     @Import(name="infoTypes", required=true)
     private List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
 
+    /**
+     * @return List of infoTypes this rule set is applied to.
+     * 
+     */
     public List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes() {
         return this.infoTypes;
     }
@@ -36,6 +40,10 @@ public final class GooglePrivacyDlpV2InspectionRuleSetResponse extends com.pulum
     @Import(name="rules", required=true)
     private List<GooglePrivacyDlpV2InspectionRuleResponse> rules;
 
+    /**
+     * @return Set of rules to be applied to infoTypes. The rules are applied in order.
+     * 
+     */
     public List<GooglePrivacyDlpV2InspectionRuleResponse> rules() {
         return this.rules;
     }
@@ -65,20 +73,44 @@ public final class GooglePrivacyDlpV2InspectionRuleSetResponse extends com.pulum
             $ = new GooglePrivacyDlpV2InspectionRuleSetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param infoTypes List of infoTypes this rule set is applied to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypes(List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes) {
             $.infoTypes = infoTypes;
             return this;
         }
 
+        /**
+         * @param infoTypes List of infoTypes this rule set is applied to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypes(GooglePrivacyDlpV2InfoTypeResponse... infoTypes) {
             return infoTypes(List.of(infoTypes));
         }
 
+        /**
+         * @param rules Set of rules to be applied to infoTypes. The rules are applied in order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<GooglePrivacyDlpV2InspectionRuleResponse> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules Set of rules to be applied to infoTypes. The rules are applied in order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(GooglePrivacyDlpV2InspectionRuleResponse... rules) {
             return rules(List.of(rules));
         }

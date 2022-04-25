@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class ConfigMapEnvSourceResponse {
-    /**
-     * This field should not be used directly as it is meant to be inlined directly into the message. Use the &#34;name&#34; field instead.
-     * 
-     */
+        /**
+         * @return This field should not be used directly as it is meant to be inlined directly into the message. Use the &#34;name&#34; field instead.
+         * 
+         */
     private final LocalObjectReferenceResponse localObjectReference;
-    /**
-     * The ConfigMap to select from.
-     * 
-     */
+        /**
+         * @return The ConfigMap to select from.
+         * 
+         */
     private final String name;
-    /**
-     * (Optional) Specify whether the ConfigMap must be defined
-     * 
-     */
+        /**
+         * @return (Optional) Specify whether the ConfigMap must be defined
+         * 
+         */
     private final Boolean optional;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class ConfigMapEnvSourceResponse {
     }
 
     /**
-     * This field should not be used directly as it is meant to be inlined directly into the message. Use the &#34;name&#34; field instead.
+     * @return This field should not be used directly as it is meant to be inlined directly into the message. Use the &#34;name&#34; field instead.
      * 
-    */
+     */
     public LocalObjectReferenceResponse localObjectReference() {
         return this.localObjectReference;
     }
     /**
-     * The ConfigMap to select from.
+     * @return The ConfigMap to select from.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * (Optional) Specify whether the ConfigMap must be defined
+     * @return (Optional) Specify whether the ConfigMap must be defined
      * 
-    */
+     */
     public Boolean optional() {
         return this.optional;
     }

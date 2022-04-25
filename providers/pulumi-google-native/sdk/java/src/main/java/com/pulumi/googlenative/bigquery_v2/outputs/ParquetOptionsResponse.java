@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ParquetOptionsResponse {
-    /**
-     * [Optional] Indicates whether to use schema inference specifically for Parquet LIST logical type.
-     * 
-     */
+        /**
+         * @return [Optional] Indicates whether to use schema inference specifically for Parquet LIST logical type.
+         * 
+         */
     private final Boolean enableListInference;
-    /**
-     * [Optional] Indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by default.
-     * 
-     */
+        /**
+         * @return [Optional] Indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by default.
+         * 
+         */
     private final Boolean enumAsString;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ParquetOptionsResponse {
     }
 
     /**
-     * [Optional] Indicates whether to use schema inference specifically for Parquet LIST logical type.
+     * @return [Optional] Indicates whether to use schema inference specifically for Parquet LIST logical type.
      * 
-    */
+     */
     public Boolean enableListInference() {
         return this.enableListInference;
     }
     /**
-     * [Optional] Indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by default.
+     * @return [Optional] Indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by default.
      * 
-    */
+     */
     public Boolean enumAsString() {
         return this.enumAsString;
     }

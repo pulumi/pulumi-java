@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowCxV3IntentInputResponse extends com.pulu
     @Import(name="intent", required=true)
     private String intent;
 
+    /**
+     * @return The unique identifier of the intent. Format: `projects//locations//agents//intents/`.
+     * 
+     */
     public String intent() {
         return this.intent;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudDialogflowCxV3IntentInputResponse extends com.pulu
             $ = new GoogleCloudDialogflowCxV3IntentInputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param intent The unique identifier of the intent. Format: `projects//locations//agents//intents/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intent(String intent) {
             $.intent = intent;
             return this;

@@ -23,6 +23,10 @@ public final class PrivateClusterMasterGlobalAccessConfigResponse extends com.pu
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whenever master is accessible globally or not.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -51,6 +55,12 @@ public final class PrivateClusterMasterGlobalAccessConfigResponse extends com.pu
             $ = new PrivateClusterMasterGlobalAccessConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whenever master is accessible globally or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

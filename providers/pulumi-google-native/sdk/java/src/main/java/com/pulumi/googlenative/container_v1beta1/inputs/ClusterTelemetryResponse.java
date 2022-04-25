@@ -23,6 +23,10 @@ public final class ClusterTelemetryResponse extends com.pulumi.resources.InvokeA
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the integration.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -51,6 +55,12 @@ public final class ClusterTelemetryResponse extends com.pulumi.resources.InvokeA
             $ = new ClusterTelemetryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Type of the integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

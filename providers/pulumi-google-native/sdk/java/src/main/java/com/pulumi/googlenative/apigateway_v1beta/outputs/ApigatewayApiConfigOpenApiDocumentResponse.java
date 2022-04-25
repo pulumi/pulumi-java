@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ApigatewayApiConfigOpenApiDocumentResponse {
-    /**
-     * The OpenAPI Specification document file.
-     * 
-     */
+        /**
+         * @return The OpenAPI Specification document file.
+         * 
+         */
     private final ApigatewayApiConfigFileResponse document;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ApigatewayApiConfigOpenApiDocumentResponse {
     }
 
     /**
-     * The OpenAPI Specification document file.
+     * @return The OpenAPI Specification document file.
      * 
-    */
+     */
     public ApigatewayApiConfigFileResponse document() {
         return this.document;
     }

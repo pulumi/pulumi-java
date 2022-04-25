@@ -20,6 +20,10 @@ public final class DestinationTablePropertiesResponse extends com.pulumi.resourc
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return [Optional] The description for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current description is provided, the job will fail.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -31,6 +35,10 @@ public final class DestinationTablePropertiesResponse extends com.pulumi.resourc
     @Import(name="expirationTime", required=true)
     private String expirationTime;
 
+    /**
+     * @return [Internal] This field is for Google internal use only.
+     * 
+     */
     public String expirationTime() {
         return this.expirationTime;
     }
@@ -42,6 +50,10 @@ public final class DestinationTablePropertiesResponse extends com.pulumi.resourc
     @Import(name="friendlyName", required=true)
     private String friendlyName;
 
+    /**
+     * @return [Optional] The friendly name for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current friendly name is provided, the job will fail.
+     * 
+     */
     public String friendlyName() {
         return this.friendlyName;
     }
@@ -53,6 +65,10 @@ public final class DestinationTablePropertiesResponse extends com.pulumi.resourc
     @Import(name="labels", required=true)
     private Map<String,String> labels;
 
+    /**
+     * @return [Optional] The labels associated with this table. You can use these to organize and group your tables. This will only be used if the destination table is newly created. If the table already exists and labels are different than the current labels are provided, the job will fail.
+     * 
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
@@ -84,21 +100,45 @@ public final class DestinationTablePropertiesResponse extends com.pulumi.resourc
             $ = new DestinationTablePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description [Optional] The description for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current description is provided, the job will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param expirationTime [Internal] This field is for Google internal use only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTime(String expirationTime) {
             $.expirationTime = expirationTime;
             return this;
         }
 
+        /**
+         * @param friendlyName [Optional] The friendly name for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current friendly name is provided, the job will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(String friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param labels [Optional] The labels associated with this table. You can use these to organize and group your tables. This will only be used if the destination table is newly created. If the table already exists and labels are different than the current labels are provided, the job will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             $.labels = labels;
             return this;

@@ -12,45 +12,45 @@ import java.util.Objects;
 
 @CustomType
 public final class UrlMapResponse {
-    /**
-     * Uses API Endpoints to handle requests.
-     * 
-     */
+        /**
+         * @return Uses API Endpoints to handle requests.
+         * 
+         */
     private final ApiEndpointHandlerResponse apiEndpoint;
-    /**
-     * Action to take when users access resources that require authentication. Defaults to redirect.
-     * 
-     */
+        /**
+         * @return Action to take when users access resources that require authentication. Defaults to redirect.
+         * 
+         */
     private final String authFailAction;
-    /**
-     * Level of login required to access this resource. Not supported for Node.js in the App Engine standard environment.
-     * 
-     */
+        /**
+         * @return Level of login required to access this resource. Not supported for Node.js in the App Engine standard environment.
+         * 
+         */
     private final String login;
-    /**
-     * 30x code to use when performing redirects for the secure field. Defaults to 302.
-     * 
-     */
+        /**
+         * @return 30x code to use when performing redirects for the secure field. Defaults to 302.
+         * 
+         */
     private final String redirectHttpResponseCode;
-    /**
-     * Executes a script to handle the requests that match this URL pattern. Only the auto value is supported for Node.js in the App Engine standard environment, for example &#34;script&#34;: &#34;auto&#34;.
-     * 
-     */
+        /**
+         * @return Executes a script to handle the requests that match this URL pattern. Only the auto value is supported for Node.js in the App Engine standard environment, for example &#34;script&#34;: &#34;auto&#34;.
+         * 
+         */
     private final ScriptHandlerResponse script;
-    /**
-     * Security (HTTPS) enforcement for this URL.
-     * 
-     */
+        /**
+         * @return Security (HTTPS) enforcement for this URL.
+         * 
+         */
     private final String securityLevel;
-    /**
-     * Returns the contents of a file, such as an image, as the response.
-     * 
-     */
+        /**
+         * @return Returns the contents of a file, such as an image, as the response.
+         * 
+         */
     private final StaticFilesHandlerResponse staticFiles;
-    /**
-     * URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings. All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
-     * 
-     */
+        /**
+         * @return URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings. All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
+         * 
+         */
     private final String urlRegex;
 
     @CustomType.Constructor
@@ -74,58 +74,58 @@ public final class UrlMapResponse {
     }
 
     /**
-     * Uses API Endpoints to handle requests.
+     * @return Uses API Endpoints to handle requests.
      * 
-    */
+     */
     public ApiEndpointHandlerResponse apiEndpoint() {
         return this.apiEndpoint;
     }
     /**
-     * Action to take when users access resources that require authentication. Defaults to redirect.
+     * @return Action to take when users access resources that require authentication. Defaults to redirect.
      * 
-    */
+     */
     public String authFailAction() {
         return this.authFailAction;
     }
     /**
-     * Level of login required to access this resource. Not supported for Node.js in the App Engine standard environment.
+     * @return Level of login required to access this resource. Not supported for Node.js in the App Engine standard environment.
      * 
-    */
+     */
     public String login() {
         return this.login;
     }
     /**
-     * 30x code to use when performing redirects for the secure field. Defaults to 302.
+     * @return 30x code to use when performing redirects for the secure field. Defaults to 302.
      * 
-    */
+     */
     public String redirectHttpResponseCode() {
         return this.redirectHttpResponseCode;
     }
     /**
-     * Executes a script to handle the requests that match this URL pattern. Only the auto value is supported for Node.js in the App Engine standard environment, for example &#34;script&#34;: &#34;auto&#34;.
+     * @return Executes a script to handle the requests that match this URL pattern. Only the auto value is supported for Node.js in the App Engine standard environment, for example &#34;script&#34;: &#34;auto&#34;.
      * 
-    */
+     */
     public ScriptHandlerResponse script() {
         return this.script;
     }
     /**
-     * Security (HTTPS) enforcement for this URL.
+     * @return Security (HTTPS) enforcement for this URL.
      * 
-    */
+     */
     public String securityLevel() {
         return this.securityLevel;
     }
     /**
-     * Returns the contents of a file, such as an image, as the response.
+     * @return Returns the contents of a file, such as an image, as the response.
      * 
-    */
+     */
     public StaticFilesHandlerResponse staticFiles() {
         return this.staticFiles;
     }
     /**
-     * URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings. All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
+     * @return URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings. All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
      * 
-    */
+     */
     public String urlRegex() {
         return this.urlRegex;
     }

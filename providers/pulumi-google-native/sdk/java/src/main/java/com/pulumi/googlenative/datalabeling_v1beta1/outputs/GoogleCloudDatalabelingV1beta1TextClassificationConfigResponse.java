@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse {
-    /**
-     * Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one text segment.
-     * 
-     */
+        /**
+         * @return Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one text segment.
+         * 
+         */
     private final Boolean allowMultiLabel;
-    /**
-     * Annotation spec set resource name.
-     * 
-     */
+        /**
+         * @return Annotation spec set resource name.
+         * 
+         */
     private final String annotationSpecSet;
-    /**
-     * Optional. Configs for sentiment selection. We deprecate sentiment analysis in data labeling side as it is incompatible with uCAIP.
-     * 
-     */
+        /**
+         * @return Optional. Configs for sentiment selection. We deprecate sentiment analysis in data labeling side as it is incompatible with uCAIP.
+         * 
+         */
     private final GoogleCloudDatalabelingV1beta1SentimentConfigResponse sentimentConfig;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigRespons
     }
 
     /**
-     * Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one text segment.
+     * @return Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one text segment.
      * 
-    */
+     */
     public Boolean allowMultiLabel() {
         return this.allowMultiLabel;
     }
     /**
-     * Annotation spec set resource name.
+     * @return Annotation spec set resource name.
      * 
-    */
+     */
     public String annotationSpecSet() {
         return this.annotationSpecSet;
     }
     /**
-     * Optional. Configs for sentiment selection. We deprecate sentiment analysis in data labeling side as it is incompatible with uCAIP.
+     * @return Optional. Configs for sentiment selection. We deprecate sentiment analysis in data labeling side as it is incompatible with uCAIP.
      * 
-    */
+     */
     public GoogleCloudDatalabelingV1beta1SentimentConfigResponse sentimentConfig() {
         return this.sentimentConfig;
     }

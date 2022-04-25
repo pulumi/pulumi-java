@@ -29,6 +29,10 @@ public final class UrlMapTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of this test case.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -40,6 +44,10 @@ public final class UrlMapTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expectedOutputUrl")
     private @Nullable Output<String> expectedOutputUrl;
 
+    /**
+     * @return The expected output URL evaluated by the load balancer containing the scheme, host, path and query parameters. For rules that forward requests to backends, the test passes only when expectedOutputUrl matches the request forwarded by the load balancer to backends. For rules with urlRewrite, the test verifies that the forwarded request matches hostRewrite and pathPrefixRewrite in the urlRewrite action. When service is specified, expectedOutputUrl`s scheme is ignored. For rules with urlRedirect, the test passes only if expectedOutputUrl matches the URL in the load balancer&#39;s redirect response. If urlRedirect specifies https_redirect, the test passes only if the scheme in expectedOutputUrl is also set to HTTPS. If urlRedirect specifies strip_query, the test passes only if expectedOutputUrl does not contain any query parameters. expectedOutputUrl is optional when service is specified.
+     * 
+     */
     public Optional<Output<String>> expectedOutputUrl() {
         return Optional.ofNullable(this.expectedOutputUrl);
     }
@@ -51,6 +59,10 @@ public final class UrlMapTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expectedRedirectResponseCode")
     private @Nullable Output<Integer> expectedRedirectResponseCode;
 
+    /**
+     * @return For rules with urlRedirect, the test passes only if expectedRedirectResponseCode matches the HTTP status code in load balancer&#39;s redirect response. expectedRedirectResponseCode cannot be set when service is set.
+     * 
+     */
     public Optional<Output<Integer>> expectedRedirectResponseCode() {
         return Optional.ofNullable(this.expectedRedirectResponseCode);
     }
@@ -62,6 +74,10 @@ public final class UrlMapTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="headers")
     private @Nullable Output<List<UrlMapTestHeaderArgs>> headers;
 
+    /**
+     * @return HTTP headers for this request. If headers contains a host header, then host must also match the header value.
+     * 
+     */
     public Optional<Output<List<UrlMapTestHeaderArgs>>> headers() {
         return Optional.ofNullable(this.headers);
     }
@@ -73,6 +89,10 @@ public final class UrlMapTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="host")
     private @Nullable Output<String> host;
 
+    /**
+     * @return Host portion of the URL. If headers contains a host header, then host must also match the header value.
+     * 
+     */
     public Optional<Output<String>> host() {
         return Optional.ofNullable(this.host);
     }
@@ -84,6 +104,10 @@ public final class UrlMapTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return Path portion of the URL.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -95,6 +119,10 @@ public final class UrlMapTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="service")
     private @Nullable Output<String> service;
 
+    /**
+     * @return Expected BackendService or BackendBucket resource the given URL should be mapped to. The service field cannot be set if expectedRedirectResponseCode is set.
+     * 
+     */
     public Optional<Output<String>> service() {
         return Optional.ofNullable(this.service);
     }
@@ -129,69 +157,159 @@ public final class UrlMapTestArgs extends com.pulumi.resources.ResourceArgs {
             $ = new UrlMapTestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of this test case.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of this test case.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param expectedOutputUrl The expected output URL evaluated by the load balancer containing the scheme, host, path and query parameters. For rules that forward requests to backends, the test passes only when expectedOutputUrl matches the request forwarded by the load balancer to backends. For rules with urlRewrite, the test verifies that the forwarded request matches hostRewrite and pathPrefixRewrite in the urlRewrite action. When service is specified, expectedOutputUrl`s scheme is ignored. For rules with urlRedirect, the test passes only if expectedOutputUrl matches the URL in the load balancer&#39;s redirect response. If urlRedirect specifies https_redirect, the test passes only if the scheme in expectedOutputUrl is also set to HTTPS. If urlRedirect specifies strip_query, the test passes only if expectedOutputUrl does not contain any query parameters. expectedOutputUrl is optional when service is specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expectedOutputUrl(@Nullable Output<String> expectedOutputUrl) {
             $.expectedOutputUrl = expectedOutputUrl;
             return this;
         }
 
+        /**
+         * @param expectedOutputUrl The expected output URL evaluated by the load balancer containing the scheme, host, path and query parameters. For rules that forward requests to backends, the test passes only when expectedOutputUrl matches the request forwarded by the load balancer to backends. For rules with urlRewrite, the test verifies that the forwarded request matches hostRewrite and pathPrefixRewrite in the urlRewrite action. When service is specified, expectedOutputUrl`s scheme is ignored. For rules with urlRedirect, the test passes only if expectedOutputUrl matches the URL in the load balancer&#39;s redirect response. If urlRedirect specifies https_redirect, the test passes only if the scheme in expectedOutputUrl is also set to HTTPS. If urlRedirect specifies strip_query, the test passes only if expectedOutputUrl does not contain any query parameters. expectedOutputUrl is optional when service is specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expectedOutputUrl(String expectedOutputUrl) {
             return expectedOutputUrl(Output.of(expectedOutputUrl));
         }
 
+        /**
+         * @param expectedRedirectResponseCode For rules with urlRedirect, the test passes only if expectedRedirectResponseCode matches the HTTP status code in load balancer&#39;s redirect response. expectedRedirectResponseCode cannot be set when service is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expectedRedirectResponseCode(@Nullable Output<Integer> expectedRedirectResponseCode) {
             $.expectedRedirectResponseCode = expectedRedirectResponseCode;
             return this;
         }
 
+        /**
+         * @param expectedRedirectResponseCode For rules with urlRedirect, the test passes only if expectedRedirectResponseCode matches the HTTP status code in load balancer&#39;s redirect response. expectedRedirectResponseCode cannot be set when service is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expectedRedirectResponseCode(Integer expectedRedirectResponseCode) {
             return expectedRedirectResponseCode(Output.of(expectedRedirectResponseCode));
         }
 
+        /**
+         * @param headers HTTP headers for this request. If headers contains a host header, then host must also match the header value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(@Nullable Output<List<UrlMapTestHeaderArgs>> headers) {
             $.headers = headers;
             return this;
         }
 
+        /**
+         * @param headers HTTP headers for this request. If headers contains a host header, then host must also match the header value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(List<UrlMapTestHeaderArgs> headers) {
             return headers(Output.of(headers));
         }
 
+        /**
+         * @param headers HTTP headers for this request. If headers contains a host header, then host must also match the header value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(UrlMapTestHeaderArgs... headers) {
             return headers(List.of(headers));
         }
 
+        /**
+         * @param host Host portion of the URL. If headers contains a host header, then host must also match the header value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(@Nullable Output<String> host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param host Host portion of the URL. If headers contains a host header, then host must also match the header value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             return host(Output.of(host));
         }
 
+        /**
+         * @param path Path portion of the URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path Path portion of the URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param service Expected BackendService or BackendBucket resource the given URL should be mapped to. The service field cannot be set if expectedRedirectResponseCode is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service Expected BackendService or BackendBucket resource the given URL should be mapped to. The service field cannot be set if expectedRedirectResponseCode is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }

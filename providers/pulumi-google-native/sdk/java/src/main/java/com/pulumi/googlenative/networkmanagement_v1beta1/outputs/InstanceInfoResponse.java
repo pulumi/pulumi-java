@@ -10,45 +10,45 @@ import java.util.Objects;
 
 @CustomType
 public final class InstanceInfoResponse {
-    /**
-     * Name of a Compute Engine instance.
-     * 
-     */
+        /**
+         * @return Name of a Compute Engine instance.
+         * 
+         */
     private final String displayName;
-    /**
-     * External IP address of the network interface.
-     * 
-     */
+        /**
+         * @return External IP address of the network interface.
+         * 
+         */
     private final String externalIp;
-    /**
-     * Name of the network interface of a Compute Engine instance.
-     * 
-     */
+        /**
+         * @return Name of the network interface of a Compute Engine instance.
+         * 
+         */
     private final String interface_;
-    /**
-     * Internal IP address of the network interface.
-     * 
-     */
+        /**
+         * @return Internal IP address of the network interface.
+         * 
+         */
     private final String internalIp;
-    /**
-     * Network tags configured on the instance.
-     * 
-     */
+        /**
+         * @return Network tags configured on the instance.
+         * 
+         */
     private final List<String> networkTags;
-    /**
-     * URI of a Compute Engine network.
-     * 
-     */
+        /**
+         * @return URI of a Compute Engine network.
+         * 
+         */
     private final String networkUri;
-    /**
-     * Service account authorized for the instance.
-     * 
-     */
+        /**
+         * @return Service account authorized for the instance.
+         * 
+         */
     private final String serviceAccount;
-    /**
-     * URI of a Compute Engine instance.
-     * 
-     */
+        /**
+         * @return URI of a Compute Engine instance.
+         * 
+         */
     private final String uri;
 
     @CustomType.Constructor
@@ -72,58 +72,58 @@ public final class InstanceInfoResponse {
     }
 
     /**
-     * Name of a Compute Engine instance.
+     * @return Name of a Compute Engine instance.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * External IP address of the network interface.
+     * @return External IP address of the network interface.
      * 
-    */
+     */
     public String externalIp() {
         return this.externalIp;
     }
     /**
-     * Name of the network interface of a Compute Engine instance.
+     * @return Name of the network interface of a Compute Engine instance.
      * 
-    */
+     */
     public String interface_() {
         return this.interface_;
     }
     /**
-     * Internal IP address of the network interface.
+     * @return Internal IP address of the network interface.
      * 
-    */
+     */
     public String internalIp() {
         return this.internalIp;
     }
     /**
-     * Network tags configured on the instance.
+     * @return Network tags configured on the instance.
      * 
-    */
+     */
     public List<String> networkTags() {
         return this.networkTags;
     }
     /**
-     * URI of a Compute Engine network.
+     * @return URI of a Compute Engine network.
      * 
-    */
+     */
     public String networkUri() {
         return this.networkUri;
     }
     /**
-     * Service account authorized for the instance.
+     * @return Service account authorized for the instance.
      * 
-    */
+     */
     public String serviceAccount() {
         return this.serviceAccount;
     }
     /**
-     * URI of a Compute Engine instance.
+     * @return URI of a Compute Engine instance.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

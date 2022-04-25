@@ -24,6 +24,10 @@ public final class ShareSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="projectMap", required=true)
     private Map<String,String> projectMap;
 
+    /**
+     * @return A map of project id and project config. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
+     * 
+     */
     public Map<String,String> projectMap() {
         return this.projectMap;
     }
@@ -35,6 +39,10 @@ public final class ShareSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="shareType", required=true)
     private String shareType;
 
+    /**
+     * @return Type of sharing for this shared-reservation
+     * 
+     */
     public String shareType() {
         return this.shareType;
     }
@@ -64,11 +72,23 @@ public final class ShareSettingsResponse extends com.pulumi.resources.InvokeArgs
             $ = new ShareSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param projectMap A map of project id and project config. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectMap(Map<String,String> projectMap) {
             $.projectMap = projectMap;
             return this;
         }
 
+        /**
+         * @param shareType Type of sharing for this shared-reservation
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareType(String shareType) {
             $.shareType = shareType;
             return this;

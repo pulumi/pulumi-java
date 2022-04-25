@@ -26,6 +26,10 @@ public final class EndConditionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cardinality")
     private @Nullable Output<CardinalityArgs> cardinality;
 
+    /**
+     * @return The cardinality of the `EndCondition`.
+     * 
+     */
     public Optional<Output<CardinalityArgs>> cardinality() {
         return Optional.ofNullable(this.cardinality);
     }
@@ -54,11 +58,23 @@ public final class EndConditionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EndConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cardinality The cardinality of the `EndCondition`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cardinality(@Nullable Output<CardinalityArgs> cardinality) {
             $.cardinality = cardinality;
             return this;
         }
 
+        /**
+         * @param cardinality The cardinality of the `EndCondition`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cardinality(CardinalityArgs cardinality) {
             return cardinality(Output.of(cardinality));
         }

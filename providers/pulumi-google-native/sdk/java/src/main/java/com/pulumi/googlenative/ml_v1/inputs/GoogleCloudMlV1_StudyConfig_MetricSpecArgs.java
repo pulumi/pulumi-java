@@ -25,6 +25,10 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecArgs extends com.pulumi
     @Import(name="goal", required=true)
     private Output<GoogleCloudMlV1_StudyConfig_MetricSpecGoal> goal;
 
+    /**
+     * @return The optimization goal of the metric.
+     * 
+     */
     public Output<GoogleCloudMlV1_StudyConfig_MetricSpecGoal> goal() {
         return this.goal;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecArgs extends com.pulumi
     @Import(name="metric", required=true)
     private Output<String> metric;
 
+    /**
+     * @return The name of the metric.
+     * 
+     */
     public Output<String> metric() {
         return this.metric;
     }
@@ -65,20 +73,44 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecArgs extends com.pulumi
             $ = new GoogleCloudMlV1_StudyConfig_MetricSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param goal The optimization goal of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goal(Output<GoogleCloudMlV1_StudyConfig_MetricSpecGoal> goal) {
             $.goal = goal;
             return this;
         }
 
+        /**
+         * @param goal The optimization goal of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goal(GoogleCloudMlV1_StudyConfig_MetricSpecGoal goal) {
             return goal(Output.of(goal));
         }
 
+        /**
+         * @param metric The name of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(Output<String> metric) {
             $.metric = metric;
             return this;
         }
 
+        /**
+         * @param metric The name of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(String metric) {
             return metric(Output.of(metric));
         }

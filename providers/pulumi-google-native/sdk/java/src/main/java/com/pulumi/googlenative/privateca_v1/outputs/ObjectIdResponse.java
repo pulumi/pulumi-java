@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ObjectIdResponse {
-    /**
-     * The parts of an OID path. The most significant parts of the path come first.
-     * 
-     */
+        /**
+         * @return The parts of an OID path. The most significant parts of the path come first.
+         * 
+         */
     private final List<Integer> objectIdPath;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class ObjectIdResponse {
     }
 
     /**
-     * The parts of an OID path. The most significant parts of the path come first.
+     * @return The parts of an OID path. The most significant parts of the path come first.
      * 
-    */
+     */
     public List<Integer> objectIdPath() {
         return this.objectIdPath;
     }

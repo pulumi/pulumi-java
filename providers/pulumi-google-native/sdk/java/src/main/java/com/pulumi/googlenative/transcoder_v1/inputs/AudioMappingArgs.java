@@ -28,6 +28,10 @@ public final class AudioMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="atomKey", required=true)
     private Output<String> atomKey;
 
+    /**
+     * @return The `EditAtom.key` that references the atom with audio inputs in the `Job.edit_list`.
+     * 
+     */
     public Output<String> atomKey() {
         return this.atomKey;
     }
@@ -39,6 +43,10 @@ public final class AudioMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gainDb")
     private @Nullable Output<Double> gainDb;
 
+    /**
+     * @return Audio volume control in dB. Negative values decrease volume, positive values increase. The default is 0.
+     * 
+     */
     public Optional<Output<Double>> gainDb() {
         return Optional.ofNullable(this.gainDb);
     }
@@ -50,6 +58,10 @@ public final class AudioMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputChannel", required=true)
     private Output<Integer> inputChannel;
 
+    /**
+     * @return The zero-based index of the channel in the input audio stream.
+     * 
+     */
     public Output<Integer> inputChannel() {
         return this.inputChannel;
     }
@@ -61,6 +73,10 @@ public final class AudioMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputKey", required=true)
     private Output<String> inputKey;
 
+    /**
+     * @return The `Input.key` that identifies the input file.
+     * 
+     */
     public Output<String> inputKey() {
         return this.inputKey;
     }
@@ -72,6 +88,10 @@ public final class AudioMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputTrack", required=true)
     private Output<Integer> inputTrack;
 
+    /**
+     * @return The zero-based index of the track in the input file.
+     * 
+     */
     public Output<Integer> inputTrack() {
         return this.inputTrack;
     }
@@ -83,6 +103,10 @@ public final class AudioMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="outputChannel", required=true)
     private Output<Integer> outputChannel;
 
+    /**
+     * @return The zero-based index of the channel in the output audio stream.
+     * 
+     */
     public Output<Integer> outputChannel() {
         return this.outputChannel;
     }
@@ -116,56 +140,128 @@ public final class AudioMappingArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AudioMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param atomKey The `EditAtom.key` that references the atom with audio inputs in the `Job.edit_list`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder atomKey(Output<String> atomKey) {
             $.atomKey = atomKey;
             return this;
         }
 
+        /**
+         * @param atomKey The `EditAtom.key` that references the atom with audio inputs in the `Job.edit_list`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder atomKey(String atomKey) {
             return atomKey(Output.of(atomKey));
         }
 
+        /**
+         * @param gainDb Audio volume control in dB. Negative values decrease volume, positive values increase. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gainDb(@Nullable Output<Double> gainDb) {
             $.gainDb = gainDb;
             return this;
         }
 
+        /**
+         * @param gainDb Audio volume control in dB. Negative values decrease volume, positive values increase. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gainDb(Double gainDb) {
             return gainDb(Output.of(gainDb));
         }
 
+        /**
+         * @param inputChannel The zero-based index of the channel in the input audio stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputChannel(Output<Integer> inputChannel) {
             $.inputChannel = inputChannel;
             return this;
         }
 
+        /**
+         * @param inputChannel The zero-based index of the channel in the input audio stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputChannel(Integer inputChannel) {
             return inputChannel(Output.of(inputChannel));
         }
 
+        /**
+         * @param inputKey The `Input.key` that identifies the input file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputKey(Output<String> inputKey) {
             $.inputKey = inputKey;
             return this;
         }
 
+        /**
+         * @param inputKey The `Input.key` that identifies the input file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputKey(String inputKey) {
             return inputKey(Output.of(inputKey));
         }
 
+        /**
+         * @param inputTrack The zero-based index of the track in the input file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputTrack(Output<Integer> inputTrack) {
             $.inputTrack = inputTrack;
             return this;
         }
 
+        /**
+         * @param inputTrack The zero-based index of the track in the input file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputTrack(Integer inputTrack) {
             return inputTrack(Output.of(inputTrack));
         }
 
+        /**
+         * @param outputChannel The zero-based index of the channel in the output audio stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputChannel(Output<Integer> outputChannel) {
             $.outputChannel = outputChannel;
             return this;
         }
 
+        /**
+         * @param outputChannel The zero-based index of the channel in the output audio stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputChannel(Integer outputChannel) {
             return outputChannel(Output.of(outputChannel));
         }

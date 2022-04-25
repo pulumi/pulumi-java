@@ -24,6 +24,10 @@ public final class SchedulingNodeAffinityResponse extends com.pulumi.resources.I
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return The label key of Node resource to reference.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -35,6 +39,10 @@ public final class SchedulingNodeAffinityResponse extends com.pulumi.resources.I
     @Import(name="operator", required=true)
     private String operator;
 
+    /**
+     * @return The operator to use for the node resources specified in the `values` parameter.
+     * 
+     */
     public String operator() {
         return this.operator;
     }
@@ -46,6 +54,10 @@ public final class SchedulingNodeAffinityResponse extends com.pulumi.resources.I
     @Import(name="values", required=true)
     private List<String> values;
 
+    /**
+     * @return Corresponds to the label values of Node resource.
+     * 
+     */
     public List<String> values() {
         return this.values;
     }
@@ -76,21 +88,45 @@ public final class SchedulingNodeAffinityResponse extends com.pulumi.resources.I
             $ = new SchedulingNodeAffinityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The label key of Node resource to reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param operator The operator to use for the node resources specified in the `values` parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param values Corresponds to the label values of Node resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values Corresponds to the label values of Node resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

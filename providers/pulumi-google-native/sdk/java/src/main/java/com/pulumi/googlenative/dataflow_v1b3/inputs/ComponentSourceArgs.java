@@ -26,6 +26,10 @@ public final class ComponentSourceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Dataflow service generated name for this source.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class ComponentSourceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="originalTransformOrCollection")
     private @Nullable Output<String> originalTransformOrCollection;
 
+    /**
+     * @return User name for the original user transform or collection with which this source is most closely associated.
+     * 
+     */
     public Optional<Output<String>> originalTransformOrCollection() {
         return Optional.ofNullable(this.originalTransformOrCollection);
     }
@@ -48,6 +56,10 @@ public final class ComponentSourceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="userName")
     private @Nullable Output<String> userName;
 
+    /**
+     * @return Human-readable name for this transform; may be user or system generated.
+     * 
+     */
     public Optional<Output<String>> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -78,29 +90,65 @@ public final class ComponentSourceArgs extends com.pulumi.resources.ResourceArgs
             $ = new ComponentSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Dataflow service generated name for this source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Dataflow service generated name for this source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param originalTransformOrCollection User name for the original user transform or collection with which this source is most closely associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originalTransformOrCollection(@Nullable Output<String> originalTransformOrCollection) {
             $.originalTransformOrCollection = originalTransformOrCollection;
             return this;
         }
 
+        /**
+         * @param originalTransformOrCollection User name for the original user transform or collection with which this source is most closely associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originalTransformOrCollection(String originalTransformOrCollection) {
             return originalTransformOrCollection(Output.of(originalTransformOrCollection));
         }
 
+        /**
+         * @param userName Human-readable name for this transform; may be user or system generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable Output<String> userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userName Human-readable name for this transform; may be user or system generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             return userName(Output.of(userName));
         }

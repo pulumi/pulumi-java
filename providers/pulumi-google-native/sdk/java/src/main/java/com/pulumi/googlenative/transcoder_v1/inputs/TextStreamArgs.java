@@ -28,6 +28,10 @@ public final class TextStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="codec")
     private @Nullable Output<String> codec;
 
+    /**
+     * @return The codec for this text stream. The default is `webvtt`. Supported text codecs: - `srt` - `ttml` - `cea608` - `cea708` - `webvtt`
+     * 
+     */
     public Optional<Output<String>> codec() {
         return Optional.ofNullable(this.codec);
     }
@@ -39,6 +43,10 @@ public final class TextStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mapping")
     private @Nullable Output<List<TextMappingArgs>> mapping;
 
+    /**
+     * @return The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.
+     * 
+     */
     public Optional<Output<List<TextMappingArgs>>> mapping() {
         return Optional.ofNullable(this.mapping);
     }
@@ -68,24 +76,54 @@ public final class TextStreamArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TextStreamArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param codec The codec for this text stream. The default is `webvtt`. Supported text codecs: - `srt` - `ttml` - `cea608` - `cea708` - `webvtt`
+         * 
+         * @return builder
+         * 
+         */
         public Builder codec(@Nullable Output<String> codec) {
             $.codec = codec;
             return this;
         }
 
+        /**
+         * @param codec The codec for this text stream. The default is `webvtt`. Supported text codecs: - `srt` - `ttml` - `cea608` - `cea708` - `webvtt`
+         * 
+         * @return builder
+         * 
+         */
         public Builder codec(String codec) {
             return codec(Output.of(codec));
         }
 
+        /**
+         * @param mapping The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mapping(@Nullable Output<List<TextMappingArgs>> mapping) {
             $.mapping = mapping;
             return this;
         }
 
+        /**
+         * @param mapping The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mapping(List<TextMappingArgs> mapping) {
             return mapping(Output.of(mapping));
         }
 
+        /**
+         * @param mapping The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mapping(TextMappingArgs... mapping) {
             return mapping(List.of(mapping));
         }

@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse {
-    /**
-     * Display name of the parameter.
-     * 
-     */
+        /**
+         * @return Display name of the parameter.
+         * 
+         */
     private final String parameter;
-    /**
-     * The new value of the parameter. A null value clears the parameter.
-     * 
-     */
+        /**
+         * @return The new value of the parameter. A null value clears the parameter.
+         * 
+         */
     private final Object value;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GoogleCloudDialogflowCxV3FulfillmentSetParameterActionRespons
     }
 
     /**
-     * Display name of the parameter.
+     * @return Display name of the parameter.
      * 
-    */
+     */
     public String parameter() {
         return this.parameter;
     }
     /**
-     * The new value of the parameter. A null value clears the parameter.
+     * @return The new value of the parameter. A null value clears the parameter.
      * 
-    */
+     */
     public Object value() {
         return this.value;
     }

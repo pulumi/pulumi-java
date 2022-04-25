@@ -23,6 +23,10 @@ public final class DailyMaintenanceWindowResponse extends com.pulumi.resources.I
     @Import(name="duration", required=true)
     private String duration;
 
+    /**
+     * @return [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
+     * 
+     */
     public String duration() {
         return this.duration;
     }
@@ -34,6 +38,10 @@ public final class DailyMaintenanceWindowResponse extends com.pulumi.resources.I
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return Time within the maintenance window to start the maintenance operations. It must be in format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-59] GMT.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -63,11 +71,23 @@ public final class DailyMaintenanceWindowResponse extends com.pulumi.resources.I
             $ = new DailyMaintenanceWindowResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param duration [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(String duration) {
             $.duration = duration;
             return this;
         }
 
+        /**
+         * @param startTime Time within the maintenance window to start the maintenance operations. It must be in format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-59] GMT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;

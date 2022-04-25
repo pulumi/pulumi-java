@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GooglePrivacyDlpV2QuasiIdFieldResponse {
-    /**
-     * A auxiliary field.
-     * 
-     */
+        /**
+         * @return A auxiliary field.
+         * 
+         */
     private final String customTag;
-    /**
-     * Identifies the column.
-     * 
-     */
+        /**
+         * @return Identifies the column.
+         * 
+         */
     private final GooglePrivacyDlpV2FieldIdResponse field;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GooglePrivacyDlpV2QuasiIdFieldResponse {
     }
 
     /**
-     * A auxiliary field.
+     * @return A auxiliary field.
      * 
-    */
+     */
     public String customTag() {
         return this.customTag;
     }
     /**
-     * Identifies the column.
+     * @return Identifies the column.
      * 
-    */
+     */
     public GooglePrivacyDlpV2FieldIdResponse field() {
         return this.field;
     }

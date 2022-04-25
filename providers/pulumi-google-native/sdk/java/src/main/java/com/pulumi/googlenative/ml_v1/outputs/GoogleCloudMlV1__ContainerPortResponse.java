@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudMlV1__ContainerPortResponse {
-    /**
-     * Number of the port to expose on the container. This must be a valid port number: 0 &lt; PORT_NUMBER &lt; 65536.
-     * 
-     */
+        /**
+         * @return Number of the port to expose on the container. This must be a valid port number: 0 &lt; PORT_NUMBER &lt; 65536.
+         * 
+         */
     private final Integer containerPort;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GoogleCloudMlV1__ContainerPortResponse {
     }
 
     /**
-     * Number of the port to expose on the container. This must be a valid port number: 0 &lt; PORT_NUMBER &lt; 65536.
+     * @return Number of the port to expose on the container. This must be a valid port number: 0 &lt; PORT_NUMBER &lt; 65536.
      * 
-    */
+     */
     public Integer containerPort() {
         return this.containerPort;
     }

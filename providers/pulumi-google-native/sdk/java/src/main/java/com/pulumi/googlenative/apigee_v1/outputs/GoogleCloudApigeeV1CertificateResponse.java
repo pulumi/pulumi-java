@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudApigeeV1CertificateResponse {
-    /**
-     * Chain of certificates under this name.
-     * 
-     */
+        /**
+         * @return Chain of certificates under this name.
+         * 
+         */
     private final List<GoogleCloudApigeeV1CertInfoResponse> certInfo;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class GoogleCloudApigeeV1CertificateResponse {
     }
 
     /**
-     * Chain of certificates under this name.
+     * @return Chain of certificates under this name.
      * 
-    */
+     */
     public List<GoogleCloudApigeeV1CertInfoResponse> certInfo() {
         return this.certInfo;
     }

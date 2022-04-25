@@ -24,6 +24,10 @@ public final class ResourcefileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentType")
     private @Nullable Output<String> contentType;
 
+    /**
+     * @return The HTTP Content-Type header value specifying the content type of the body.
+     * 
+     */
     public Optional<Output<String>> contentType() {
         return Optional.ofNullable(this.contentType);
     }
@@ -35,6 +39,10 @@ public final class ResourcefileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="data")
     private @Nullable Output<String> data;
 
+    /**
+     * @return The HTTP request/response body as raw binary.
+     * 
+     */
     public Optional<Output<String>> data() {
         return Optional.ofNullable(this.data);
     }
@@ -53,6 +61,10 @@ public final class ResourcefileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="extensions")
     private @Nullable Output<List<Map<String,String>>> extensions;
 
+    /**
+     * @return Application specific response metadata. Must be set in the first response for streaming APIs.
+     * 
+     */
     public Optional<Output<List<Map<String,String>>>> extensions() {
         return Optional.ofNullable(this.extensions);
     }
@@ -108,20 +120,44 @@ public final class ResourcefileArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ResourcefileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentType The HTTP Content-Type header value specifying the content type of the body.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(@Nullable Output<String> contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param contentType The HTTP Content-Type header value specifying the content type of the body.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(String contentType) {
             return contentType(Output.of(contentType));
         }
 
+        /**
+         * @param data The HTTP request/response body as raw binary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(@Nullable Output<String> data) {
             $.data = data;
             return this;
         }
 
+        /**
+         * @param data The HTTP request/response body as raw binary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(String data) {
             return data(Output.of(data));
         }
@@ -135,15 +171,33 @@ public final class ResourcefileArgs extends com.pulumi.resources.ResourceArgs {
             return environmentId(Output.of(environmentId));
         }
 
+        /**
+         * @param extensions Application specific response metadata. Must be set in the first response for streaming APIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensions(@Nullable Output<List<Map<String,String>>> extensions) {
             $.extensions = extensions;
             return this;
         }
 
+        /**
+         * @param extensions Application specific response metadata. Must be set in the first response for streaming APIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensions(List<Map<String,String>> extensions) {
             return extensions(Output.of(extensions));
         }
 
+        /**
+         * @param extensions Application specific response metadata. Must be set in the first response for streaming APIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensions(Map<String,String>... extensions) {
             return extensions(List.of(extensions));
         }

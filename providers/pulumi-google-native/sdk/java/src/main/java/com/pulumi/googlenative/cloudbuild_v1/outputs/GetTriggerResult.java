@@ -21,120 +21,120 @@ import java.util.Objects;
 
 @CustomType
 public final class GetTriggerResult {
-    /**
-     * Configuration for manual approval to start a build invocation of this BuildTrigger.
-     * 
-     */
+        /**
+         * @return Configuration for manual approval to start a build invocation of this BuildTrigger.
+         * 
+         */
     private final ApprovalConfigResponse approvalConfig;
-    /**
-     * Autodetect build configuration. The following precedence is used (case insensitive): 1. cloudbuild.yaml 2. cloudbuild.yml 3. cloudbuild.json 4. Dockerfile Currently only available for GitHub App Triggers.
-     * 
-     */
+        /**
+         * @return Autodetect build configuration. The following precedence is used (case insensitive): 1. cloudbuild.yaml 2. cloudbuild.yml 3. cloudbuild.json 4. Dockerfile Currently only available for GitHub App Triggers.
+         * 
+         */
     private final Boolean autodetect;
-    /**
-     * BitbucketServerTriggerConfig describes the configuration of a trigger that creates a build whenever a Bitbucket Server event is received.
-     * 
-     */
+        /**
+         * @return BitbucketServerTriggerConfig describes the configuration of a trigger that creates a build whenever a Bitbucket Server event is received.
+         * 
+         */
     private final BitbucketServerTriggerConfigResponse bitbucketServerTriggerConfig;
-    /**
-     * Contents of the build template.
-     * 
-     */
+        /**
+         * @return Contents of the build template.
+         * 
+         */
     private final BuildResponse build;
-    /**
-     * Time when the trigger was created.
-     * 
-     */
+        /**
+         * @return Time when the trigger was created.
+         * 
+         */
     private final String createTime;
-    /**
-     * Human-readable description of this trigger.
-     * 
-     */
+        /**
+         * @return Human-readable description of this trigger.
+         * 
+         */
     private final String description;
-    /**
-     * If true, the trigger will never automatically execute a build.
-     * 
-     */
+        /**
+         * @return If true, the trigger will never automatically execute a build.
+         * 
+         */
     private final Boolean disabled;
-    /**
-     * EventType allows the user to explicitly set the type of event to which this BuildTrigger should respond. This field will be validated against the rest of the configuration if it is set.
-     * 
-     */
+        /**
+         * @return EventType allows the user to explicitly set the type of event to which this BuildTrigger should respond. This field will be validated against the rest of the configuration if it is set.
+         * 
+         */
     private final String eventType;
-    /**
-     * Path, from the source root, to the build configuration file (i.e. cloudbuild.yaml).
-     * 
-     */
+        /**
+         * @return Path, from the source root, to the build configuration file (i.e. cloudbuild.yaml).
+         * 
+         */
     private final String filename;
-    /**
-     * A Common Expression Language string.
-     * 
-     */
+        /**
+         * @return A Common Expression Language string.
+         * 
+         */
     private final String filter;
-    /**
-     * The file source describing the local or remote Build template.
-     * 
-     */
+        /**
+         * @return The file source describing the local or remote Build template.
+         * 
+         */
     private final GitFileSourceResponse gitFileSource;
-    /**
-     * GitHubEventsConfig describes the configuration of a trigger that creates a build whenever a GitHub event is received. Mutually exclusive with `trigger_template`.
-     * 
-     */
+        /**
+         * @return GitHubEventsConfig describes the configuration of a trigger that creates a build whenever a GitHub event is received. Mutually exclusive with `trigger_template`.
+         * 
+         */
     private final GitHubEventsConfigResponse github;
-    /**
-     * ignored_files and included_files are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with support for &#34;**&#34;. If ignored_files and changed files are both empty, then they are not used to determine whether or not to trigger a build. If ignored_files is not empty, then we ignore any files that match any of the ignored_file globs. If the change has no files that are outside of the ignored_files globs, then we do not trigger a build.
-     * 
-     */
+        /**
+         * @return ignored_files and included_files are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with support for &#34;**&#34;. If ignored_files and changed files are both empty, then they are not used to determine whether or not to trigger a build. If ignored_files is not empty, then we ignore any files that match any of the ignored_file globs. If the change has no files that are outside of the ignored_files globs, then we do not trigger a build.
+         * 
+         */
     private final List<String> ignoredFiles;
-    /**
-     * If any of the files altered in the commit pass the ignored_files filter and included_files is empty, then as far as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the ignored_files filter and included_files is not empty, then we make sure that at least one of those files matches a included_files glob. If not, then we do not trigger a build.
-     * 
-     */
+        /**
+         * @return If any of the files altered in the commit pass the ignored_files filter and included_files is empty, then as far as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the ignored_files filter and included_files is not empty, then we make sure that at least one of those files matches a included_files glob. If not, then we do not trigger a build.
+         * 
+         */
     private final List<String> includedFiles;
-    /**
-     * User-assigned name of the trigger. Must be unique within the project. Trigger names must meet the following requirements: + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters long. + They must begin and end with an alphanumeric character.
-     * 
-     */
+        /**
+         * @return User-assigned name of the trigger. Must be unique within the project. Trigger names must meet the following requirements: + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters long. + They must begin and end with an alphanumeric character.
+         * 
+         */
     private final String name;
-    /**
-     * PubsubConfig describes the configuration of a trigger that creates a build whenever a Pub/Sub message is published.
-     * 
-     */
+        /**
+         * @return PubsubConfig describes the configuration of a trigger that creates a build whenever a Pub/Sub message is published.
+         * 
+         */
     private final PubsubConfigResponse pubsubConfig;
-    /**
-     * The `Trigger` name with format: `projects/{project}/locations/{location}/triggers/{trigger}`, where {trigger} is a unique identifier generated by the service.
-     * 
-     */
+        /**
+         * @return The `Trigger` name with format: `projects/{project}/locations/{location}/triggers/{trigger}`, where {trigger} is a unique identifier generated by the service.
+         * 
+         */
     private final String resourceName;
-    /**
-     * The service account used for all user-controlled operations including UpdateBuildTrigger, RunBuildTrigger, CreateBuild, and CancelBuild. If no service account is set, then the standard Cloud Build service account ([PROJECT_NUM]@system.gserviceaccount.com) will be used instead. Format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`
-     * 
-     */
+        /**
+         * @return The service account used for all user-controlled operations including UpdateBuildTrigger, RunBuildTrigger, CreateBuild, and CancelBuild. If no service account is set, then the standard Cloud Build service account ([PROJECT_NUM]@system.gserviceaccount.com) will be used instead. Format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`
+         * 
+         */
     private final String serviceAccount;
-    /**
-     * The repo and ref of the repository from which to build. This field is used only for those triggers that do not respond to SCM events. Triggers that respond to such events build source at whatever commit caused the event. This field is currently only used by Webhook, Pub/Sub, Manual, and Cron triggers.
-     * 
-     */
+        /**
+         * @return The repo and ref of the repository from which to build. This field is used only for those triggers that do not respond to SCM events. Triggers that respond to such events build source at whatever commit caused the event. This field is currently only used by Webhook, Pub/Sub, Manual, and Cron triggers.
+         * 
+         */
     private final GitRepoSourceResponse sourceToBuild;
-    /**
-     * Substitutions for Build resource. The keys must match the following regular expression: `^_[A-Z0-9_]+$`.
-     * 
-     */
+        /**
+         * @return Substitutions for Build resource. The keys must match the following regular expression: `^_[A-Z0-9_]+$`.
+         * 
+         */
     private final Map<String,String> substitutions;
-    /**
-     * Tags for annotation of a `BuildTrigger`
-     * 
-     */
+        /**
+         * @return Tags for annotation of a `BuildTrigger`
+         * 
+         */
     private final List<String> tags;
-    /**
-     * Template describing the types of source changes to trigger a build. Branch and tag names in trigger templates are interpreted as regular expressions. Any branch or tag change that matches that regular expression will trigger a build. Mutually exclusive with `github`.
-     * 
-     */
+        /**
+         * @return Template describing the types of source changes to trigger a build. Branch and tag names in trigger templates are interpreted as regular expressions. Any branch or tag change that matches that regular expression will trigger a build. Mutually exclusive with `github`.
+         * 
+         */
     private final RepoSourceResponse triggerTemplate;
-    /**
-     * WebhookConfig describes the configuration of a trigger that creates a build whenever a webhook is sent to a trigger&#39;s webhook URL.
-     * 
-     */
+        /**
+         * @return WebhookConfig describes the configuration of a trigger that creates a build whenever a webhook is sent to a trigger&#39;s webhook URL.
+         * 
+         */
     private final WebhookConfigResponse webhookConfig;
 
     @CustomType.Constructor
@@ -188,163 +188,163 @@ public final class GetTriggerResult {
     }
 
     /**
-     * Configuration for manual approval to start a build invocation of this BuildTrigger.
+     * @return Configuration for manual approval to start a build invocation of this BuildTrigger.
      * 
-    */
+     */
     public ApprovalConfigResponse approvalConfig() {
         return this.approvalConfig;
     }
     /**
-     * Autodetect build configuration. The following precedence is used (case insensitive): 1. cloudbuild.yaml 2. cloudbuild.yml 3. cloudbuild.json 4. Dockerfile Currently only available for GitHub App Triggers.
+     * @return Autodetect build configuration. The following precedence is used (case insensitive): 1. cloudbuild.yaml 2. cloudbuild.yml 3. cloudbuild.json 4. Dockerfile Currently only available for GitHub App Triggers.
      * 
-    */
+     */
     public Boolean autodetect() {
         return this.autodetect;
     }
     /**
-     * BitbucketServerTriggerConfig describes the configuration of a trigger that creates a build whenever a Bitbucket Server event is received.
+     * @return BitbucketServerTriggerConfig describes the configuration of a trigger that creates a build whenever a Bitbucket Server event is received.
      * 
-    */
+     */
     public BitbucketServerTriggerConfigResponse bitbucketServerTriggerConfig() {
         return this.bitbucketServerTriggerConfig;
     }
     /**
-     * Contents of the build template.
+     * @return Contents of the build template.
      * 
-    */
+     */
     public BuildResponse build() {
         return this.build;
     }
     /**
-     * Time when the trigger was created.
+     * @return Time when the trigger was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Human-readable description of this trigger.
+     * @return Human-readable description of this trigger.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * If true, the trigger will never automatically execute a build.
+     * @return If true, the trigger will never automatically execute a build.
      * 
-    */
+     */
     public Boolean disabled() {
         return this.disabled;
     }
     /**
-     * EventType allows the user to explicitly set the type of event to which this BuildTrigger should respond. This field will be validated against the rest of the configuration if it is set.
+     * @return EventType allows the user to explicitly set the type of event to which this BuildTrigger should respond. This field will be validated against the rest of the configuration if it is set.
      * 
-    */
+     */
     public String eventType() {
         return this.eventType;
     }
     /**
-     * Path, from the source root, to the build configuration file (i.e. cloudbuild.yaml).
+     * @return Path, from the source root, to the build configuration file (i.e. cloudbuild.yaml).
      * 
-    */
+     */
     public String filename() {
         return this.filename;
     }
     /**
-     * A Common Expression Language string.
+     * @return A Common Expression Language string.
      * 
-    */
+     */
     public String filter() {
         return this.filter;
     }
     /**
-     * The file source describing the local or remote Build template.
+     * @return The file source describing the local or remote Build template.
      * 
-    */
+     */
     public GitFileSourceResponse gitFileSource() {
         return this.gitFileSource;
     }
     /**
-     * GitHubEventsConfig describes the configuration of a trigger that creates a build whenever a GitHub event is received. Mutually exclusive with `trigger_template`.
+     * @return GitHubEventsConfig describes the configuration of a trigger that creates a build whenever a GitHub event is received. Mutually exclusive with `trigger_template`.
      * 
-    */
+     */
     public GitHubEventsConfigResponse github() {
         return this.github;
     }
     /**
-     * ignored_files and included_files are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with support for &#34;**&#34;. If ignored_files and changed files are both empty, then they are not used to determine whether or not to trigger a build. If ignored_files is not empty, then we ignore any files that match any of the ignored_file globs. If the change has no files that are outside of the ignored_files globs, then we do not trigger a build.
+     * @return ignored_files and included_files are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with support for &#34;**&#34;. If ignored_files and changed files are both empty, then they are not used to determine whether or not to trigger a build. If ignored_files is not empty, then we ignore any files that match any of the ignored_file globs. If the change has no files that are outside of the ignored_files globs, then we do not trigger a build.
      * 
-    */
+     */
     public List<String> ignoredFiles() {
         return this.ignoredFiles;
     }
     /**
-     * If any of the files altered in the commit pass the ignored_files filter and included_files is empty, then as far as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the ignored_files filter and included_files is not empty, then we make sure that at least one of those files matches a included_files glob. If not, then we do not trigger a build.
+     * @return If any of the files altered in the commit pass the ignored_files filter and included_files is empty, then as far as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the ignored_files filter and included_files is not empty, then we make sure that at least one of those files matches a included_files glob. If not, then we do not trigger a build.
      * 
-    */
+     */
     public List<String> includedFiles() {
         return this.includedFiles;
     }
     /**
-     * User-assigned name of the trigger. Must be unique within the project. Trigger names must meet the following requirements: + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters long. + They must begin and end with an alphanumeric character.
+     * @return User-assigned name of the trigger. Must be unique within the project. Trigger names must meet the following requirements: + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters long. + They must begin and end with an alphanumeric character.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * PubsubConfig describes the configuration of a trigger that creates a build whenever a Pub/Sub message is published.
+     * @return PubsubConfig describes the configuration of a trigger that creates a build whenever a Pub/Sub message is published.
      * 
-    */
+     */
     public PubsubConfigResponse pubsubConfig() {
         return this.pubsubConfig;
     }
     /**
-     * The `Trigger` name with format: `projects/{project}/locations/{location}/triggers/{trigger}`, where {trigger} is a unique identifier generated by the service.
+     * @return The `Trigger` name with format: `projects/{project}/locations/{location}/triggers/{trigger}`, where {trigger} is a unique identifier generated by the service.
      * 
-    */
+     */
     public String resourceName() {
         return this.resourceName;
     }
     /**
-     * The service account used for all user-controlled operations including UpdateBuildTrigger, RunBuildTrigger, CreateBuild, and CancelBuild. If no service account is set, then the standard Cloud Build service account ([PROJECT_NUM]@system.gserviceaccount.com) will be used instead. Format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`
+     * @return The service account used for all user-controlled operations including UpdateBuildTrigger, RunBuildTrigger, CreateBuild, and CancelBuild. If no service account is set, then the standard Cloud Build service account ([PROJECT_NUM]@system.gserviceaccount.com) will be used instead. Format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`
      * 
-    */
+     */
     public String serviceAccount() {
         return this.serviceAccount;
     }
     /**
-     * The repo and ref of the repository from which to build. This field is used only for those triggers that do not respond to SCM events. Triggers that respond to such events build source at whatever commit caused the event. This field is currently only used by Webhook, Pub/Sub, Manual, and Cron triggers.
+     * @return The repo and ref of the repository from which to build. This field is used only for those triggers that do not respond to SCM events. Triggers that respond to such events build source at whatever commit caused the event. This field is currently only used by Webhook, Pub/Sub, Manual, and Cron triggers.
      * 
-    */
+     */
     public GitRepoSourceResponse sourceToBuild() {
         return this.sourceToBuild;
     }
     /**
-     * Substitutions for Build resource. The keys must match the following regular expression: `^_[A-Z0-9_]+$`.
+     * @return Substitutions for Build resource. The keys must match the following regular expression: `^_[A-Z0-9_]+$`.
      * 
-    */
+     */
     public Map<String,String> substitutions() {
         return this.substitutions;
     }
     /**
-     * Tags for annotation of a `BuildTrigger`
+     * @return Tags for annotation of a `BuildTrigger`
      * 
-    */
+     */
     public List<String> tags() {
         return this.tags;
     }
     /**
-     * Template describing the types of source changes to trigger a build. Branch and tag names in trigger templates are interpreted as regular expressions. Any branch or tag change that matches that regular expression will trigger a build. Mutually exclusive with `github`.
+     * @return Template describing the types of source changes to trigger a build. Branch and tag names in trigger templates are interpreted as regular expressions. Any branch or tag change that matches that regular expression will trigger a build. Mutually exclusive with `github`.
      * 
-    */
+     */
     public RepoSourceResponse triggerTemplate() {
         return this.triggerTemplate;
     }
     /**
-     * WebhookConfig describes the configuration of a trigger that creates a build whenever a webhook is sent to a trigger&#39;s webhook URL.
+     * @return WebhookConfig describes the configuration of a trigger that creates a build whenever a webhook is sent to a trigger&#39;s webhook URL.
      * 
-    */
+     */
     public WebhookConfigResponse webhookConfig() {
         return this.webhookConfig;
     }

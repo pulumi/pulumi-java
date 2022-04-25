@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ExpiryDetailResponse {
-    /**
-     * The time at which the `MembershipRole` will expire.
-     * 
-     */
+        /**
+         * @return The time at which the `MembershipRole` will expire.
+         * 
+         */
     private final String expireTime;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ExpiryDetailResponse {
     }
 
     /**
-     * The time at which the `MembershipRole` will expire.
+     * @return The time at which the `MembershipRole` will expire.
      * 
-    */
+     */
     public String expireTime() {
         return this.expireTime;
     }

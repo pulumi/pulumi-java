@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ClientCertificateConfigResponse {
-    /**
-     * Issue a client certificate.
-     * 
-     */
+        /**
+         * @return Issue a client certificate.
+         * 
+         */
     private final Boolean issueClientCertificate;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ClientCertificateConfigResponse {
     }
 
     /**
-     * Issue a client certificate.
+     * @return Issue a client certificate.
      * 
-    */
+     */
     public Boolean issueClientCertificate() {
         return this.issueClientCertificate;
     }

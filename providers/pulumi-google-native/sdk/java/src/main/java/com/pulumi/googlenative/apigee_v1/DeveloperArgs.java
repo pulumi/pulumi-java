@@ -24,6 +24,10 @@ public final class DeveloperArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessType")
     private @Nullable Output<String> accessType;
 
+    /**
+     * @return Access type.
+     * 
+     */
     public Optional<Output<String>> accessType() {
         return Optional.ofNullable(this.accessType);
     }
@@ -35,6 +39,10 @@ public final class DeveloperArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appFamily")
     private @Nullable Output<String> appFamily;
 
+    /**
+     * @return Developer app family.
+     * 
+     */
     public Optional<Output<String>> appFamily() {
         return Optional.ofNullable(this.appFamily);
     }
@@ -46,6 +54,10 @@ public final class DeveloperArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apps")
     private @Nullable Output<List<String>> apps;
 
+    /**
+     * @return List of apps associated with the developer.
+     * 
+     */
     public Optional<Output<List<String>>> apps() {
         return Optional.ofNullable(this.apps);
     }
@@ -57,6 +69,10 @@ public final class DeveloperArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
     private @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
 
+    /**
+     * @return Optional. Developer attributes (name/value pairs). The custom attribute limit is 18.
+     * 
+     */
     public Optional<Output<List<GoogleCloudApigeeV1AttributeArgs>>> attributes() {
         return Optional.ofNullable(this.attributes);
     }
@@ -68,6 +84,10 @@ public final class DeveloperArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="companies")
     private @Nullable Output<List<String>> companies;
 
+    /**
+     * @return List of companies associated with the developer.
+     * 
+     */
     public Optional<Output<List<String>>> companies() {
         return Optional.ofNullable(this.companies);
     }
@@ -79,6 +99,10 @@ public final class DeveloperArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="developerId")
     private @Nullable Output<String> developerId;
 
+    /**
+     * @return ID of the developer. **Note**: IDs are generated internally by Apigee and are not guaranteed to stay the same over time.
+     * 
+     */
     public Optional<Output<String>> developerId() {
         return Optional.ofNullable(this.developerId);
     }
@@ -90,6 +114,10 @@ public final class DeveloperArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="email", required=true)
     private Output<String> email;
 
+    /**
+     * @return Email address of the developer. This value is used to uniquely identify the developer in Apigee hybrid. Note that the email address has to be in lowercase only.
+     * 
+     */
     public Output<String> email() {
         return this.email;
     }
@@ -101,6 +129,10 @@ public final class DeveloperArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="firstName", required=true)
     private Output<String> firstName;
 
+    /**
+     * @return First name of the developer.
+     * 
+     */
     public Output<String> firstName() {
         return this.firstName;
     }
@@ -112,6 +144,10 @@ public final class DeveloperArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastName", required=true)
     private Output<String> lastName;
 
+    /**
+     * @return Last name of the developer.
+     * 
+     */
     public Output<String> lastName() {
         return this.lastName;
     }
@@ -130,6 +166,10 @@ public final class DeveloperArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userName", required=true)
     private Output<String> userName;
 
+    /**
+     * @return User name of the developer. Not used by Apigee hybrid.
+     * 
+     */
     public Output<String> userName() {
         return this.userName;
     }
@@ -168,95 +208,221 @@ public final class DeveloperArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DeveloperArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessType Access type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessType(@Nullable Output<String> accessType) {
             $.accessType = accessType;
             return this;
         }
 
+        /**
+         * @param accessType Access type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessType(String accessType) {
             return accessType(Output.of(accessType));
         }
 
+        /**
+         * @param appFamily Developer app family.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appFamily(@Nullable Output<String> appFamily) {
             $.appFamily = appFamily;
             return this;
         }
 
+        /**
+         * @param appFamily Developer app family.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appFamily(String appFamily) {
             return appFamily(Output.of(appFamily));
         }
 
+        /**
+         * @param apps List of apps associated with the developer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apps(@Nullable Output<List<String>> apps) {
             $.apps = apps;
             return this;
         }
 
+        /**
+         * @param apps List of apps associated with the developer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apps(List<String> apps) {
             return apps(Output.of(apps));
         }
 
+        /**
+         * @param apps List of apps associated with the developer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apps(String... apps) {
             return apps(List.of(apps));
         }
 
+        /**
+         * @param attributes Optional. Developer attributes (name/value pairs). The custom attribute limit is 18.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(@Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param attributes Optional. Developer attributes (name/value pairs). The custom attribute limit is 18.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(List<GoogleCloudApigeeV1AttributeArgs> attributes) {
             return attributes(Output.of(attributes));
         }
 
+        /**
+         * @param attributes Optional. Developer attributes (name/value pairs). The custom attribute limit is 18.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(GoogleCloudApigeeV1AttributeArgs... attributes) {
             return attributes(List.of(attributes));
         }
 
+        /**
+         * @param companies List of companies associated with the developer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder companies(@Nullable Output<List<String>> companies) {
             $.companies = companies;
             return this;
         }
 
+        /**
+         * @param companies List of companies associated with the developer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder companies(List<String> companies) {
             return companies(Output.of(companies));
         }
 
+        /**
+         * @param companies List of companies associated with the developer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder companies(String... companies) {
             return companies(List.of(companies));
         }
 
+        /**
+         * @param developerId ID of the developer. **Note**: IDs are generated internally by Apigee and are not guaranteed to stay the same over time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder developerId(@Nullable Output<String> developerId) {
             $.developerId = developerId;
             return this;
         }
 
+        /**
+         * @param developerId ID of the developer. **Note**: IDs are generated internally by Apigee and are not guaranteed to stay the same over time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder developerId(String developerId) {
             return developerId(Output.of(developerId));
         }
 
+        /**
+         * @param email Email address of the developer. This value is used to uniquely identify the developer in Apigee hybrid. Note that the email address has to be in lowercase only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(Output<String> email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param email Email address of the developer. This value is used to uniquely identify the developer in Apigee hybrid. Note that the email address has to be in lowercase only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             return email(Output.of(email));
         }
 
+        /**
+         * @param firstName First name of the developer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstName(Output<String> firstName) {
             $.firstName = firstName;
             return this;
         }
 
+        /**
+         * @param firstName First name of the developer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstName(String firstName) {
             return firstName(Output.of(firstName));
         }
 
+        /**
+         * @param lastName Last name of the developer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastName(Output<String> lastName) {
             $.lastName = lastName;
             return this;
         }
 
+        /**
+         * @param lastName Last name of the developer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastName(String lastName) {
             return lastName(Output.of(lastName));
         }
@@ -270,11 +436,23 @@ public final class DeveloperArgs extends com.pulumi.resources.ResourceArgs {
             return organizationId(Output.of(organizationId));
         }
 
+        /**
+         * @param userName User name of the developer. Not used by Apigee hybrid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(Output<String> userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userName User name of the developer. Not used by Apigee hybrid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             return userName(Output.of(userName));
         }

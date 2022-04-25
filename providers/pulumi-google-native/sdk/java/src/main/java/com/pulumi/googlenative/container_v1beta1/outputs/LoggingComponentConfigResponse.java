@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class LoggingComponentConfigResponse {
-    /**
-     * Select components to collect logs. An empty set would disable all logging.
-     * 
-     */
+        /**
+         * @return Select components to collect logs. An empty set would disable all logging.
+         * 
+         */
     private final List<String> enableComponents;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class LoggingComponentConfigResponse {
     }
 
     /**
-     * Select components to collect logs. An empty set would disable all logging.
+     * @return Select components to collect logs. An empty set would disable all logging.
      * 
-    */
+     */
     public List<String> enableComponents() {
         return this.enableComponents;
     }

@@ -24,6 +24,10 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="advertiseMode", required=true)
     private String advertiseMode;
 
+    /**
+     * @return User-specified flag to indicate which mode to use for advertisement.
+     * 
+     */
     public String advertiseMode() {
         return this.advertiseMode;
     }
@@ -35,6 +39,10 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="advertisedGroups", required=true)
     private List<String> advertisedGroups;
 
+    /**
+     * @return User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: - ALL_SUBNETS: Advertises all available subnets, including peer VPC subnets. - ALL_VPC_SUBNETS: Advertises the router&#39;s own VPC subnets. Note that this field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the &#34;bgp&#34; message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.
+     * 
+     */
     public List<String> advertisedGroups() {
         return this.advertisedGroups;
     }
@@ -46,6 +54,10 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="advertisedIpRanges", required=true)
     private List<RouterAdvertisedIpRangeResponse> advertisedIpRanges;
 
+    /**
+     * @return User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the &#34;bgp&#34; message). These IP ranges are advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges.
+     * 
+     */
     public List<RouterAdvertisedIpRangeResponse> advertisedIpRanges() {
         return this.advertisedIpRanges;
     }
@@ -57,6 +69,10 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="advertisedRoutePriority", required=true)
     private Integer advertisedRoutePriority;
 
+    /**
+     * @return The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the routes with the lowest priority value win.
+     * 
+     */
     public Integer advertisedRoutePriority() {
         return this.advertisedRoutePriority;
     }
@@ -68,6 +84,10 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="bfd", required=true)
     private RouterBgpPeerBfdResponse bfd;
 
+    /**
+     * @return BFD configuration for the BGP peering.
+     * 
+     */
     public RouterBgpPeerBfdResponse bfd() {
         return this.bfd;
     }
@@ -79,6 +99,10 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="enable", required=true)
     private String enable;
 
+    /**
+     * @return The status of the BGP peer connection. If set to FALSE, any active session with the peer is terminated and all associated routing information is removed. If set to TRUE, the peer connection can be established with routing information. The default is TRUE.
+     * 
+     */
     public String enable() {
         return this.enable;
     }
@@ -90,6 +114,10 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="enableIpv6", required=true)
     private Boolean enableIpv6;
 
+    /**
+     * @return Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default.
+     * 
+     */
     public Boolean enableIpv6() {
         return this.enableIpv6;
     }
@@ -101,6 +129,10 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="interfaceName", required=true)
     private String interfaceName;
 
+    /**
+     * @return Name of the interface the BGP peer is associated with.
+     * 
+     */
     public String interfaceName() {
         return this.interfaceName;
     }
@@ -112,6 +144,10 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="ipAddress", required=true)
     private String ipAddress;
 
+    /**
+     * @return IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
+     * 
+     */
     public String ipAddress() {
         return this.ipAddress;
     }
@@ -123,6 +159,10 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="ipv6NexthopAddress", required=true)
     private String ipv6NexthopAddress;
 
+    /**
+     * @return IPv6 address of the interface inside Google Cloud Platform.
+     * 
+     */
     public String ipv6NexthopAddress() {
         return this.ipv6NexthopAddress;
     }
@@ -134,6 +174,10 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="managementType", required=true)
     private String managementType;
 
+    /**
+     * @return The resource that configures and manages this BGP peer. - MANAGED_BY_USER is the default value and can be managed by you or other users - MANAGED_BY_ATTACHMENT is a BGP peer that is configured and managed by Cloud Interconnect, specifically by an InterconnectAttachment of type PARTNER. Google automatically creates, updates, and deletes this type of BGP peer when the PARTNER InterconnectAttachment is created, updated, or deleted.
+     * 
+     */
     public String managementType() {
         return this.managementType;
     }
@@ -145,6 +189,10 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -156,6 +204,10 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="peerAsn", required=true)
     private Integer peerAsn;
 
+    /**
+     * @return Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
+     * 
+     */
     public Integer peerAsn() {
         return this.peerAsn;
     }
@@ -167,6 +219,10 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="peerIpAddress", required=true)
     private String peerIpAddress;
 
+    /**
+     * @return IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
+     * 
+     */
     public String peerIpAddress() {
         return this.peerIpAddress;
     }
@@ -178,6 +234,10 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="peerIpv6NexthopAddress", required=true)
     private String peerIpv6NexthopAddress;
 
+    /**
+     * @return IPv6 address of the BGP interface outside Google Cloud Platform.
+     * 
+     */
     public String peerIpv6NexthopAddress() {
         return this.peerIpv6NexthopAddress;
     }
@@ -189,6 +249,10 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="routerApplianceInstance", required=true)
     private String routerApplianceInstance;
 
+    /**
+     * @return URI of the VM instance that is used as third-party router appliances such as Next Gen Firewalls, Virtual Routers, or Router Appliances. The VM instance must be located in zones contained in the same region as this Cloud Router. The VM instance is the peer side of the BGP session.
+     * 
+     */
     public String routerApplianceInstance() {
         return this.routerApplianceInstance;
     }
@@ -232,89 +296,197 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
             $ = new RouterBgpPeerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param advertiseMode User-specified flag to indicate which mode to use for advertisement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertiseMode(String advertiseMode) {
             $.advertiseMode = advertiseMode;
             return this;
         }
 
+        /**
+         * @param advertisedGroups User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: - ALL_SUBNETS: Advertises all available subnets, including peer VPC subnets. - ALL_VPC_SUBNETS: Advertises the router&#39;s own VPC subnets. Note that this field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the &#34;bgp&#34; message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedGroups(List<String> advertisedGroups) {
             $.advertisedGroups = advertisedGroups;
             return this;
         }
 
+        /**
+         * @param advertisedGroups User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: - ALL_SUBNETS: Advertises all available subnets, including peer VPC subnets. - ALL_VPC_SUBNETS: Advertises the router&#39;s own VPC subnets. Note that this field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the &#34;bgp&#34; message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedGroups(String... advertisedGroups) {
             return advertisedGroups(List.of(advertisedGroups));
         }
 
+        /**
+         * @param advertisedIpRanges User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the &#34;bgp&#34; message). These IP ranges are advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedIpRanges(List<RouterAdvertisedIpRangeResponse> advertisedIpRanges) {
             $.advertisedIpRanges = advertisedIpRanges;
             return this;
         }
 
+        /**
+         * @param advertisedIpRanges User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the &#34;bgp&#34; message). These IP ranges are advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedIpRanges(RouterAdvertisedIpRangeResponse... advertisedIpRanges) {
             return advertisedIpRanges(List.of(advertisedIpRanges));
         }
 
+        /**
+         * @param advertisedRoutePriority The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the routes with the lowest priority value win.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedRoutePriority(Integer advertisedRoutePriority) {
             $.advertisedRoutePriority = advertisedRoutePriority;
             return this;
         }
 
+        /**
+         * @param bfd BFD configuration for the BGP peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bfd(RouterBgpPeerBfdResponse bfd) {
             $.bfd = bfd;
             return this;
         }
 
+        /**
+         * @param enable The status of the BGP peer connection. If set to FALSE, any active session with the peer is terminated and all associated routing information is removed. If set to TRUE, the peer connection can be established with routing information. The default is TRUE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(String enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param enableIpv6 Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableIpv6(Boolean enableIpv6) {
             $.enableIpv6 = enableIpv6;
             return this;
         }
 
+        /**
+         * @param interfaceName Name of the interface the BGP peer is associated with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interfaceName(String interfaceName) {
             $.interfaceName = interfaceName;
             return this;
         }
 
+        /**
+         * @param ipAddress IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param ipv6NexthopAddress IPv6 address of the interface inside Google Cloud Platform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6NexthopAddress(String ipv6NexthopAddress) {
             $.ipv6NexthopAddress = ipv6NexthopAddress;
             return this;
         }
 
+        /**
+         * @param managementType The resource that configures and manages this BGP peer. - MANAGED_BY_USER is the default value and can be managed by you or other users - MANAGED_BY_ATTACHMENT is a BGP peer that is configured and managed by Cloud Interconnect, specifically by an InterconnectAttachment of type PARTNER. Google automatically creates, updates, and deletes this type of BGP peer when the PARTNER InterconnectAttachment is created, updated, or deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementType(String managementType) {
             $.managementType = managementType;
             return this;
         }
 
+        /**
+         * @param name Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param peerAsn Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerAsn(Integer peerAsn) {
             $.peerAsn = peerAsn;
             return this;
         }
 
+        /**
+         * @param peerIpAddress IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerIpAddress(String peerIpAddress) {
             $.peerIpAddress = peerIpAddress;
             return this;
         }
 
+        /**
+         * @param peerIpv6NexthopAddress IPv6 address of the BGP interface outside Google Cloud Platform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerIpv6NexthopAddress(String peerIpv6NexthopAddress) {
             $.peerIpv6NexthopAddress = peerIpv6NexthopAddress;
             return this;
         }
 
+        /**
+         * @param routerApplianceInstance URI of the VM instance that is used as third-party router appliances such as Next Gen Firewalls, Virtual Routers, or Router Appliances. The VM instance must be located in zones contained in the same region as this Cloud Router. The VM instance is the peer side of the BGP session.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routerApplianceInstance(String routerApplianceInstance) {
             $.routerApplianceInstance = routerApplianceInstance;
             return this;

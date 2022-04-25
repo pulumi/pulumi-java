@@ -12,25 +12,25 @@ import java.util.Objects;
 
 @CustomType
 public final class DeploymentUpdateResponse {
-    /**
-     * The user-provided default credential to use when deploying this preview.
-     * 
-     */
+        /**
+         * @return The user-provided default credential to use when deploying this preview.
+         * 
+         */
     private final CredentialResponse credential;
-    /**
-     * An optional user-provided description of the deployment after the current update has been applied.
-     * 
-     */
+        /**
+         * @return An optional user-provided description of the deployment after the current update has been applied.
+         * 
+         */
     private final String description;
-    /**
-     * Map of One Platform labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
-     * 
-     */
+        /**
+         * @return Map of One Platform labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
+         * 
+         */
     private final List<DeploymentUpdateLabelEntryResponse> labels;
-    /**
-     * URL of the manifest representing the update configuration of this deployment.
-     * 
-     */
+        /**
+         * @return URL of the manifest representing the update configuration of this deployment.
+         * 
+         */
     private final String manifest;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class DeploymentUpdateResponse {
     }
 
     /**
-     * The user-provided default credential to use when deploying this preview.
+     * @return The user-provided default credential to use when deploying this preview.
      * 
-    */
+     */
     public CredentialResponse credential() {
         return this.credential;
     }
     /**
-     * An optional user-provided description of the deployment after the current update has been applied.
+     * @return An optional user-provided description of the deployment after the current update has been applied.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Map of One Platform labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
+     * @return Map of One Platform labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
      * 
-    */
+     */
     public List<DeploymentUpdateLabelEntryResponse> labels() {
         return this.labels;
     }
     /**
-     * URL of the manifest representing the update configuration of this deployment.
+     * @return URL of the manifest representing the update configuration of this deployment.
      * 
-    */
+     */
     public String manifest() {
         return this.manifest;
     }

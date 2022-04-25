@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class BuildNoteResponse {
-    /**
-     * Immutable. Version of the builder which produced this build.
-     * 
-     */
+        /**
+         * @return Immutable. Version of the builder which produced this build.
+         * 
+         */
     private final String builderVersion;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class BuildNoteResponse {
     }
 
     /**
-     * Immutable. Version of the builder which produced this build.
+     * @return Immutable. Version of the builder which produced this build.
      * 
-    */
+     */
     public String builderVersion() {
         return this.builderVersion;
     }

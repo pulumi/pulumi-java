@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GlueRecordResponse {
-    /**
-     * Domain name of the host in Punycode format.
-     * 
-     */
+        /**
+         * @return Domain name of the host in Punycode format.
+         * 
+         */
     private final String hostName;
-    /**
-     * List of IPv4 addresses corresponding to this host in the standard decimal format (e.g. `198.51.100.1`). At least one of `ipv4_address` and `ipv6_address` must be set.
-     * 
-     */
+        /**
+         * @return List of IPv4 addresses corresponding to this host in the standard decimal format (e.g. `198.51.100.1`). At least one of `ipv4_address` and `ipv6_address` must be set.
+         * 
+         */
     private final List<String> ipv4Addresses;
-    /**
-     * List of IPv6 addresses corresponding to this host in the standard hexadecimal format (e.g. `2001:db8::`). At least one of `ipv4_address` and `ipv6_address` must be set.
-     * 
-     */
+        /**
+         * @return List of IPv6 addresses corresponding to this host in the standard hexadecimal format (e.g. `2001:db8::`). At least one of `ipv4_address` and `ipv6_address` must be set.
+         * 
+         */
     private final List<String> ipv6Addresses;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class GlueRecordResponse {
     }
 
     /**
-     * Domain name of the host in Punycode format.
+     * @return Domain name of the host in Punycode format.
      * 
-    */
+     */
     public String hostName() {
         return this.hostName;
     }
     /**
-     * List of IPv4 addresses corresponding to this host in the standard decimal format (e.g. `198.51.100.1`). At least one of `ipv4_address` and `ipv6_address` must be set.
+     * @return List of IPv4 addresses corresponding to this host in the standard decimal format (e.g. `198.51.100.1`). At least one of `ipv4_address` and `ipv6_address` must be set.
      * 
-    */
+     */
     public List<String> ipv4Addresses() {
         return this.ipv4Addresses;
     }
     /**
-     * List of IPv6 addresses corresponding to this host in the standard hexadecimal format (e.g. `2001:db8::`). At least one of `ipv4_address` and `ipv6_address` must be set.
+     * @return List of IPv6 addresses corresponding to this host in the standard hexadecimal format (e.g. `2001:db8::`). At least one of `ipv4_address` and `ipv6_address` must be set.
      * 
-    */
+     */
     public List<String> ipv6Addresses() {
         return this.ipv6Addresses;
     }

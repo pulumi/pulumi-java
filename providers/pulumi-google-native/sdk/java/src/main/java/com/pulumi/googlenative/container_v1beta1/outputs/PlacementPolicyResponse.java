@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class PlacementPolicyResponse {
-    /**
-     * The type of placement.
-     * 
-     */
+        /**
+         * @return The type of placement.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class PlacementPolicyResponse {
     }
 
     /**
-     * The type of placement.
+     * @return The type of placement.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

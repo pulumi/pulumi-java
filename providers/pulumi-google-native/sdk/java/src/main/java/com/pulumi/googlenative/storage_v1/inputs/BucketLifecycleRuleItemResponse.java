@@ -20,6 +20,10 @@ public final class BucketLifecycleRuleItemResponse extends com.pulumi.resources.
     @Import(name="action", required=true)
     private BucketLifecycleRuleItemActionResponse action;
 
+    /**
+     * @return The action to take.
+     * 
+     */
     public BucketLifecycleRuleItemActionResponse action() {
         return this.action;
     }
@@ -31,6 +35,10 @@ public final class BucketLifecycleRuleItemResponse extends com.pulumi.resources.
     @Import(name="condition", required=true)
     private BucketLifecycleRuleItemConditionResponse condition;
 
+    /**
+     * @return The condition(s) under which the action will be taken.
+     * 
+     */
     public BucketLifecycleRuleItemConditionResponse condition() {
         return this.condition;
     }
@@ -60,11 +68,23 @@ public final class BucketLifecycleRuleItemResponse extends com.pulumi.resources.
             $ = new BucketLifecycleRuleItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action to take.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(BucketLifecycleRuleItemActionResponse action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param condition The condition(s) under which the action will be taken.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(BucketLifecycleRuleItemConditionResponse condition) {
             $.condition = condition;
             return this;

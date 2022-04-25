@@ -25,6 +25,10 @@ public final class TargetPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="backupPool")
     private @Nullable Output<String> backupPool;
 
+    /**
+     * @return The server-defined URL for the resource. This field is applicable only when the containing target pool is serving a forwarding rule as the primary pool, and its failoverRatio field is properly set to a value between [0, 1]. backupPool and failoverRatio together define the fallback behavior of the primary target pool: if the ratio of the healthy instances in the primary pool is at or below failoverRatio, traffic arriving at the load-balanced IP will be directed to the backup pool. In case where failoverRatio and backupPool are not set, or all the instances in the backup pool are unhealthy, the traffic will be directed back to the primary pool in the &#34;force&#34; mode, where traffic will be spread to the healthy instances with the best effort, or to all instances when no instance is healthy.
+     * 
+     */
     public Optional<Output<String>> backupPool() {
         return Optional.ofNullable(this.backupPool);
     }
@@ -36,6 +40,10 @@ public final class TargetPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class TargetPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="failoverRatio")
     private @Nullable Output<Double> failoverRatio;
 
+    /**
+     * @return This field is applicable only when the containing target pool is serving a forwarding rule as the primary pool (i.e., not as a backup pool to some other target pool). The value of the field must be in [0, 1]. If set, backupPool must also be set. They together define the fallback behavior of the primary target pool: if the ratio of the healthy instances in the primary pool is at or below this number, traffic arriving at the load-balanced IP will be directed to the backup pool. In case where failoverRatio is not set or all the instances in the backup pool are unhealthy, the traffic will be directed back to the primary pool in the &#34;force&#34; mode, where traffic will be spread to the healthy instances with the best effort, or to all instances when no instance is healthy.
+     * 
+     */
     public Optional<Output<Double>> failoverRatio() {
         return Optional.ofNullable(this.failoverRatio);
     }
@@ -58,6 +70,10 @@ public final class TargetPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthChecks")
     private @Nullable Output<List<String>> healthChecks;
 
+    /**
+     * @return The URL of the HttpHealthCheck resource. A member instance in this pool is considered healthy if and only if the health checks pass. Only legacy HttpHealthChecks are supported. Only one health check may be specified.
+     * 
+     */
     public Optional<Output<List<String>>> healthChecks() {
         return Optional.ofNullable(this.healthChecks);
     }
@@ -69,6 +85,10 @@ public final class TargetPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instances")
     private @Nullable Output<List<String>> instances;
 
+    /**
+     * @return A list of resource URLs to the virtual machine instances serving this pool. They must live in zones contained in the same region as this pool.
+     * 
+     */
     public Optional<Output<List<String>>> instances() {
         return Optional.ofNullable(this.instances);
     }
@@ -80,6 +100,10 @@ public final class TargetPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -112,6 +136,10 @@ public final class TargetPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sessionAffinity")
     private @Nullable Output<TargetPoolSessionAffinity> sessionAffinity;
 
+    /**
+     * @return Session affinity option, must be one of the following values: NONE: Connections from the same client IP may go to any instance in the pool. CLIENT_IP: Connections from the same client IP will go to the same instance in the pool while that instance remains healthy. CLIENT_IP_PROTO: Connections from the same client IP with the same IP protocol will go to the same instance in the pool while that instance remains healthy.
+     * 
+     */
     public Optional<Output<TargetPoolSessionAffinity>> sessionAffinity() {
         return Optional.ofNullable(this.sessionAffinity);
     }
@@ -149,64 +177,148 @@ public final class TargetPoolArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TargetPoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupPool The server-defined URL for the resource. This field is applicable only when the containing target pool is serving a forwarding rule as the primary pool, and its failoverRatio field is properly set to a value between [0, 1]. backupPool and failoverRatio together define the fallback behavior of the primary target pool: if the ratio of the healthy instances in the primary pool is at or below failoverRatio, traffic arriving at the load-balanced IP will be directed to the backup pool. In case where failoverRatio and backupPool are not set, or all the instances in the backup pool are unhealthy, the traffic will be directed back to the primary pool in the &#34;force&#34; mode, where traffic will be spread to the healthy instances with the best effort, or to all instances when no instance is healthy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupPool(@Nullable Output<String> backupPool) {
             $.backupPool = backupPool;
             return this;
         }
 
+        /**
+         * @param backupPool The server-defined URL for the resource. This field is applicable only when the containing target pool is serving a forwarding rule as the primary pool, and its failoverRatio field is properly set to a value between [0, 1]. backupPool and failoverRatio together define the fallback behavior of the primary target pool: if the ratio of the healthy instances in the primary pool is at or below failoverRatio, traffic arriving at the load-balanced IP will be directed to the backup pool. In case where failoverRatio and backupPool are not set, or all the instances in the backup pool are unhealthy, the traffic will be directed back to the primary pool in the &#34;force&#34; mode, where traffic will be spread to the healthy instances with the best effort, or to all instances when no instance is healthy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupPool(String backupPool) {
             return backupPool(Output.of(backupPool));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param failoverRatio This field is applicable only when the containing target pool is serving a forwarding rule as the primary pool (i.e., not as a backup pool to some other target pool). The value of the field must be in [0, 1]. If set, backupPool must also be set. They together define the fallback behavior of the primary target pool: if the ratio of the healthy instances in the primary pool is at or below this number, traffic arriving at the load-balanced IP will be directed to the backup pool. In case where failoverRatio is not set or all the instances in the backup pool are unhealthy, the traffic will be directed back to the primary pool in the &#34;force&#34; mode, where traffic will be spread to the healthy instances with the best effort, or to all instances when no instance is healthy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverRatio(@Nullable Output<Double> failoverRatio) {
             $.failoverRatio = failoverRatio;
             return this;
         }
 
+        /**
+         * @param failoverRatio This field is applicable only when the containing target pool is serving a forwarding rule as the primary pool (i.e., not as a backup pool to some other target pool). The value of the field must be in [0, 1]. If set, backupPool must also be set. They together define the fallback behavior of the primary target pool: if the ratio of the healthy instances in the primary pool is at or below this number, traffic arriving at the load-balanced IP will be directed to the backup pool. In case where failoverRatio is not set or all the instances in the backup pool are unhealthy, the traffic will be directed back to the primary pool in the &#34;force&#34; mode, where traffic will be spread to the healthy instances with the best effort, or to all instances when no instance is healthy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverRatio(Double failoverRatio) {
             return failoverRatio(Output.of(failoverRatio));
         }
 
+        /**
+         * @param healthChecks The URL of the HttpHealthCheck resource. A member instance in this pool is considered healthy if and only if the health checks pass. Only legacy HttpHealthChecks are supported. Only one health check may be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthChecks(@Nullable Output<List<String>> healthChecks) {
             $.healthChecks = healthChecks;
             return this;
         }
 
+        /**
+         * @param healthChecks The URL of the HttpHealthCheck resource. A member instance in this pool is considered healthy if and only if the health checks pass. Only legacy HttpHealthChecks are supported. Only one health check may be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthChecks(List<String> healthChecks) {
             return healthChecks(Output.of(healthChecks));
         }
 
+        /**
+         * @param healthChecks The URL of the HttpHealthCheck resource. A member instance in this pool is considered healthy if and only if the health checks pass. Only legacy HttpHealthChecks are supported. Only one health check may be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthChecks(String... healthChecks) {
             return healthChecks(List.of(healthChecks));
         }
 
+        /**
+         * @param instances A list of resource URLs to the virtual machine instances serving this pool. They must live in zones contained in the same region as this pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(@Nullable Output<List<String>> instances) {
             $.instances = instances;
             return this;
         }
 
+        /**
+         * @param instances A list of resource URLs to the virtual machine instances serving this pool. They must live in zones contained in the same region as this pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(List<String> instances) {
             return instances(Output.of(instances));
         }
 
+        /**
+         * @param instances A list of resource URLs to the virtual machine instances serving this pool. They must live in zones contained in the same region as this pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(String... instances) {
             return instances(List.of(instances));
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -238,11 +350,23 @@ public final class TargetPoolArgs extends com.pulumi.resources.ResourceArgs {
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param sessionAffinity Session affinity option, must be one of the following values: NONE: Connections from the same client IP may go to any instance in the pool. CLIENT_IP: Connections from the same client IP will go to the same instance in the pool while that instance remains healthy. CLIENT_IP_PROTO: Connections from the same client IP with the same IP protocol will go to the same instance in the pool while that instance remains healthy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionAffinity(@Nullable Output<TargetPoolSessionAffinity> sessionAffinity) {
             $.sessionAffinity = sessionAffinity;
             return this;
         }
 
+        /**
+         * @param sessionAffinity Session affinity option, must be one of the following values: NONE: Connections from the same client IP may go to any instance in the pool. CLIENT_IP: Connections from the same client IP will go to the same instance in the pool while that instance remains healthy. CLIENT_IP_PROTO: Connections from the same client IP with the same IP protocol will go to the same instance in the pool while that instance remains healthy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionAffinity(TargetPoolSessionAffinity sessionAffinity) {
             return sessionAffinity(Output.of(sessionAffinity));
         }

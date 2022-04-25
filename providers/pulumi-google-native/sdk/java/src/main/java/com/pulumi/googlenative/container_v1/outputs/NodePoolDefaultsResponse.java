@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class NodePoolDefaultsResponse {
-    /**
-     * Subset of NodeConfig message that has defaults.
-     * 
-     */
+        /**
+         * @return Subset of NodeConfig message that has defaults.
+         * 
+         */
     private final NodeConfigDefaultsResponse nodeConfigDefaults;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class NodePoolDefaultsResponse {
     }
 
     /**
-     * Subset of NodeConfig message that has defaults.
+     * @return Subset of NodeConfig message that has defaults.
      * 
-    */
+     */
     public NodeConfigDefaultsResponse nodeConfigDefaults() {
         return this.nodeConfigDefaults;
     }

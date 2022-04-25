@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class IosAppInfoResponse {
-    /**
-     * The name of the app. Required
-     * 
-     */
+        /**
+         * @return The name of the app. Required
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class IosAppInfoResponse {
     }
 
     /**
-     * The name of the app. Required
+     * @return The name of the app. Required
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

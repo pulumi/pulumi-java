@@ -41,265 +41,265 @@ import java.util.Objects;
 
 @CustomType
 public final class GetClusterResult {
-    /**
-     * Configurations for the various addons available to run in the cluster.
-     * 
-     */
+        /**
+         * @return Configurations for the various addons available to run in the cluster.
+         * 
+         */
     private final AddonsConfigResponse addonsConfig;
-    /**
-     * Configuration controlling RBAC group membership information.
-     * 
-     */
+        /**
+         * @return Configuration controlling RBAC group membership information.
+         * 
+         */
     private final AuthenticatorGroupsConfigResponse authenticatorGroupsConfig;
-    /**
-     * Autopilot configuration for the cluster.
-     * 
-     */
+        /**
+         * @return Autopilot configuration for the cluster.
+         * 
+         */
     private final AutopilotResponse autopilot;
-    /**
-     * Cluster-level autoscaling configuration.
-     * 
-     */
+        /**
+         * @return Cluster-level autoscaling configuration.
+         * 
+         */
     private final ClusterAutoscalingResponse autoscaling;
-    /**
-     * Configuration for Binary Authorization.
-     * 
-     */
+        /**
+         * @return Configuration for Binary Authorization.
+         * 
+         */
     private final BinaryAuthorizationResponse binaryAuthorization;
-    /**
-     * The IP address range of the container pods in this cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`). Leave blank to have one automatically chosen or specify a `/14` block in `10.0.0.0/8`.
-     * 
-     */
+        /**
+         * @return The IP address range of the container pods in this cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`). Leave blank to have one automatically chosen or specify a `/14` block in `10.0.0.0/8`.
+         * 
+         */
     private final String clusterIpv4Cidr;
-    /**
-     * Which conditions caused the current cluster state.
-     * 
-     */
+        /**
+         * @return Which conditions caused the current cluster state.
+         * 
+         */
     private final List<StatusConditionResponse> conditions;
-    /**
-     * Configuration of Confidential Nodes
-     * 
-     */
+        /**
+         * @return Configuration of Confidential Nodes
+         * 
+         */
     private final ConfidentialNodesResponse confidentialNodes;
-    /**
-     * [Output only] The time the cluster was created, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
-     * 
-     */
+        /**
+         * @return [Output only] The time the cluster was created, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+         * 
+         */
     private final String createTime;
-    /**
-     * [Output only] The current software version of the master endpoint.
-     * 
-     */
+        /**
+         * @return [Output only] The current software version of the master endpoint.
+         * 
+         */
     private final String currentMasterVersion;
-    /**
-     * [Output only] Deprecated, use [NodePools.version](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools) instead. The current version of the node software components. If they are currently at multiple versions because they&#39;re in the process of being upgraded, this reflects the minimum version of all nodes.
-     * 
-     */
+        /**
+         * @return [Output only] Deprecated, use [NodePools.version](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools) instead. The current version of the node software components. If they are currently at multiple versions because they&#39;re in the process of being upgraded, this reflects the minimum version of all nodes.
+         * 
+         */
     private final String currentNodeVersion;
-    /**
-     * Configuration of etcd encryption.
-     * 
-     */
+        /**
+         * @return Configuration of etcd encryption.
+         * 
+         */
     private final DatabaseEncryptionResponse databaseEncryption;
-    /**
-     * The default constraint on the maximum number of pods that can be run simultaneously on a node in the node pool of this cluster. Only honored if cluster created with IP Alias support.
-     * 
-     */
+        /**
+         * @return The default constraint on the maximum number of pods that can be run simultaneously on a node in the node pool of this cluster. Only honored if cluster created with IP Alias support.
+         * 
+         */
     private final MaxPodsConstraintResponse defaultMaxPodsConstraint;
-    /**
-     * An optional description of this cluster.
-     * 
-     */
+        /**
+         * @return An optional description of this cluster.
+         * 
+         */
     private final String description;
-    /**
-     * Kubernetes alpha features are enabled on this cluster. This includes alpha API groups (e.g. v1alpha1) and features that may not be production ready in the kubernetes version of the master and nodes. The cluster has no SLA for uptime and master/node upgrades are disabled. Alpha enabled clusters are automatically deleted thirty days after creation.
-     * 
-     */
+        /**
+         * @return Kubernetes alpha features are enabled on this cluster. This includes alpha API groups (e.g. v1alpha1) and features that may not be production ready in the kubernetes version of the master and nodes. The cluster has no SLA for uptime and master/node upgrades are disabled. Alpha enabled clusters are automatically deleted thirty days after creation.
+         * 
+         */
     private final Boolean enableKubernetesAlpha;
-    /**
-     * Enable the ability to use Cloud TPUs in this cluster.
-     * 
-     */
+        /**
+         * @return Enable the ability to use Cloud TPUs in this cluster.
+         * 
+         */
     private final Boolean enableTpu;
-    /**
-     * [Output only] The IP address of this cluster&#39;s master endpoint. The endpoint can be accessed from the internet at `https://username:password@endpoint/`. See the `masterAuth` property of this resource for username and password information.
-     * 
-     */
+        /**
+         * @return [Output only] The IP address of this cluster&#39;s master endpoint. The endpoint can be accessed from the internet at `https://username:password@endpoint/`. See the `masterAuth` property of this resource for username and password information.
+         * 
+         */
     private final String endpoint;
-    /**
-     * [Output only] The time the cluster will be automatically deleted in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
-     * 
-     */
+        /**
+         * @return [Output only] The time the cluster will be automatically deleted in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+         * 
+         */
     private final String expireTime;
-    /**
-     * The initial Kubernetes version for this cluster. Valid versions are those found in validMasterVersions returned by getServerConfig. The version can be upgraded over time; such upgrades are reflected in currentMasterVersion and currentNodeVersion. Users may specify either explicit versions offered by Kubernetes Engine or version aliases, which have the following behavior: - &#34;latest&#34;: picks the highest valid Kubernetes version - &#34;1.X&#34;: picks the highest valid patch+gke.N patch in the 1.X version - &#34;1.X.Y&#34;: picks the highest valid gke.N patch in the 1.X.Y version - &#34;1.X.Y-gke.N&#34;: picks an explicit Kubernetes version - &#34;&#34;,&#34;-&#34;: picks the default Kubernetes version
-     * 
-     */
+        /**
+         * @return The initial Kubernetes version for this cluster. Valid versions are those found in validMasterVersions returned by getServerConfig. The version can be upgraded over time; such upgrades are reflected in currentMasterVersion and currentNodeVersion. Users may specify either explicit versions offered by Kubernetes Engine or version aliases, which have the following behavior: - &#34;latest&#34;: picks the highest valid Kubernetes version - &#34;1.X&#34;: picks the highest valid patch+gke.N patch in the 1.X version - &#34;1.X.Y&#34;: picks the highest valid gke.N patch in the 1.X.Y version - &#34;1.X.Y-gke.N&#34;: picks an explicit Kubernetes version - &#34;&#34;,&#34;-&#34;: picks the default Kubernetes version
+         * 
+         */
     private final String initialClusterVersion;
-    /**
-     * Configuration for cluster IP allocation.
-     * 
-     */
+        /**
+         * @return Configuration for cluster IP allocation.
+         * 
+         */
     private final IPAllocationPolicyResponse ipAllocationPolicy;
-    /**
-     * The fingerprint of the set of labels for this cluster.
-     * 
-     */
+        /**
+         * @return The fingerprint of the set of labels for this cluster.
+         * 
+         */
     private final String labelFingerprint;
-    /**
-     * Configuration for the legacy ABAC authorization mode.
-     * 
-     */
+        /**
+         * @return Configuration for the legacy ABAC authorization mode.
+         * 
+         */
     private final LegacyAbacResponse legacyAbac;
-    /**
-     * [Output only] The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which the cluster resides.
-     * 
-     */
+        /**
+         * @return [Output only] The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which the cluster resides.
+         * 
+         */
     private final String location;
-    /**
-     * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster&#39;s nodes should be located. This field provides a default value if [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) are not specified during node pool creation. Warning: changing cluster locations will update the [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) of all node pools and will result in nodes being added and/or removed.
-     * 
-     */
+        /**
+         * @return The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster&#39;s nodes should be located. This field provides a default value if [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) are not specified during node pool creation. Warning: changing cluster locations will update the [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) of all node pools and will result in nodes being added and/or removed.
+         * 
+         */
     private final List<String> locations;
-    /**
-     * Logging configuration for the cluster.
-     * 
-     */
+        /**
+         * @return Logging configuration for the cluster.
+         * 
+         */
     private final LoggingConfigResponse loggingConfig;
-    /**
-     * The logging service the cluster should use to write logs. Currently available options: * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer available as of GKE 1.15). * `none` - no logs will be exported from the cluster. If left as an empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or `logging.googleapis.com` for earlier versions.
-     * 
-     */
+        /**
+         * @return The logging service the cluster should use to write logs. Currently available options: * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer available as of GKE 1.15). * `none` - no logs will be exported from the cluster. If left as an empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or `logging.googleapis.com` for earlier versions.
+         * 
+         */
     private final String loggingService;
-    /**
-     * Configure the maintenance policy for this cluster.
-     * 
-     */
+        /**
+         * @return Configure the maintenance policy for this cluster.
+         * 
+         */
     private final MaintenancePolicyResponse maintenancePolicy;
-    /**
-     * The authentication information for accessing the master endpoint. If unspecified, the defaults are used: For clusters before v1.12, if master_auth is unspecified, `username` will be set to &#34;admin&#34;, a random password will be generated, and a client certificate will be issued.
-     * 
-     */
+        /**
+         * @return The authentication information for accessing the master endpoint. If unspecified, the defaults are used: For clusters before v1.12, if master_auth is unspecified, `username` will be set to &#34;admin&#34;, a random password will be generated, and a client certificate will be issued.
+         * 
+         */
     private final MasterAuthResponse masterAuth;
-    /**
-     * The configuration options for master authorized networks feature.
-     * 
-     */
+        /**
+         * @return The configuration options for master authorized networks feature.
+         * 
+         */
     private final MasterAuthorizedNetworksConfigResponse masterAuthorizedNetworksConfig;
-    /**
-     * Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
-     * 
-     */
+        /**
+         * @return Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
+         * 
+         */
     private final MeshCertificatesResponse meshCertificates;
-    /**
-     * Monitoring configuration for the cluster.
-     * 
-     */
+        /**
+         * @return Monitoring configuration for the cluster.
+         * 
+         */
     private final MonitoringConfigResponse monitoringConfig;
-    /**
-     * The monitoring service the cluster should use to write metrics. Currently available options: * &#34;monitoring.googleapis.com/kubernetes&#34; - The Cloud Monitoring service with a Kubernetes-native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no longer available as of GKE 1.15). * `none` - No metrics will be exported from the cluster. If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or `monitoring.googleapis.com` for earlier versions.
-     * 
-     */
+        /**
+         * @return The monitoring service the cluster should use to write metrics. Currently available options: * &#34;monitoring.googleapis.com/kubernetes&#34; - The Cloud Monitoring service with a Kubernetes-native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no longer available as of GKE 1.15). * `none` - No metrics will be exported from the cluster. If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or `monitoring.googleapis.com` for earlier versions.
+         * 
+         */
     private final String monitoringService;
-    /**
-     * The name of this cluster. The name must be unique within this project and location (e.g. zone or region), and can be up to 40 characters with the following restrictions: * Lowercase letters, numbers, and hyphens only. * Must start with a letter. * Must end with a number or a letter.
-     * 
-     */
+        /**
+         * @return The name of this cluster. The name must be unique within this project and location (e.g. zone or region), and can be up to 40 characters with the following restrictions: * Lowercase letters, numbers, and hyphens only. * Must start with a letter. * Must end with a number or a letter.
+         * 
+         */
     private final String name;
-    /**
-     * The name of the Google Compute Engine [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the cluster is connected. If left unspecified, the `default` network will be used.
-     * 
-     */
+        /**
+         * @return The name of the Google Compute Engine [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the cluster is connected. If left unspecified, the `default` network will be used.
+         * 
+         */
     private final String network;
-    /**
-     * Configuration for cluster networking.
-     * 
-     */
+        /**
+         * @return Configuration for cluster networking.
+         * 
+         */
     private final NetworkConfigResponse networkConfig;
-    /**
-     * Configuration options for the NetworkPolicy feature.
-     * 
-     */
+        /**
+         * @return Configuration options for the NetworkPolicy feature.
+         * 
+         */
     private final NetworkPolicyResponse networkPolicy;
-    /**
-     * [Output only] The size of the address space on each node for hosting containers. This is provisioned from within the `container_ipv4_cidr` range. This field will only be set when cluster is in route-based network mode.
-     * 
-     */
+        /**
+         * @return [Output only] The size of the address space on each node for hosting containers. This is provisioned from within the `container_ipv4_cidr` range. This field will only be set when cluster is in route-based network mode.
+         * 
+         */
     private final Integer nodeIpv4CidrSize;
-    /**
-     * Default NodePool settings for the entire cluster. These settings are overridden if specified on the specific NodePool object.
-     * 
-     */
+        /**
+         * @return Default NodePool settings for the entire cluster. These settings are overridden if specified on the specific NodePool object.
+         * 
+         */
     private final NodePoolDefaultsResponse nodePoolDefaults;
-    /**
-     * The node pools associated with this cluster. This field should not be set if &#34;node_config&#34; or &#34;initial_node_count&#34; are specified.
-     * 
-     */
+        /**
+         * @return The node pools associated with this cluster. This field should not be set if &#34;node_config&#34; or &#34;initial_node_count&#34; are specified.
+         * 
+         */
     private final List<NodePoolResponse> nodePools;
-    /**
-     * Notification configuration of the cluster.
-     * 
-     */
+        /**
+         * @return Notification configuration of the cluster.
+         * 
+         */
     private final NotificationConfigResponse notificationConfig;
-    /**
-     * Configuration for private cluster.
-     * 
-     */
+        /**
+         * @return Configuration for private cluster.
+         * 
+         */
     private final PrivateClusterConfigResponse privateClusterConfig;
-    /**
-     * Release channel configuration.
-     * 
-     */
+        /**
+         * @return Release channel configuration.
+         * 
+         */
     private final ReleaseChannelResponse releaseChannel;
-    /**
-     * The resource labels for the cluster to use to annotate any related Google Compute Engine resources.
-     * 
-     */
+        /**
+         * @return The resource labels for the cluster to use to annotate any related Google Compute Engine resources.
+         * 
+         */
     private final Map<String,String> resourceLabels;
-    /**
-     * Configuration for exporting resource usages. Resource usage export is disabled when this config is unspecified.
-     * 
-     */
+        /**
+         * @return Configuration for exporting resource usages. Resource usage export is disabled when this config is unspecified.
+         * 
+         */
     private final ResourceUsageExportConfigResponse resourceUsageExportConfig;
-    /**
-     * [Output only] Server-defined URL for the resource.
-     * 
-     */
+        /**
+         * @return [Output only] Server-defined URL for the resource.
+         * 
+         */
     private final String selfLink;
-    /**
-     * [Output only] The IP address range of the Kubernetes services in this cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `1.2.3.4/29`). Service addresses are typically put in the last `/16` from the container CIDR.
-     * 
-     */
+        /**
+         * @return [Output only] The IP address range of the Kubernetes services in this cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `1.2.3.4/29`). Service addresses are typically put in the last `/16` from the container CIDR.
+         * 
+         */
     private final String servicesIpv4Cidr;
-    /**
-     * Shielded Nodes configuration.
-     * 
-     */
+        /**
+         * @return Shielded Nodes configuration.
+         * 
+         */
     private final ShieldedNodesResponse shieldedNodes;
-    /**
-     * [Output only] The current status of this cluster.
-     * 
-     */
+        /**
+         * @return [Output only] The current status of this cluster.
+         * 
+         */
     private final String status;
-    /**
-     * The name of the Google Compute Engine [subnetwork](https://cloud.google.com/compute/docs/subnetworks) to which the cluster is connected.
-     * 
-     */
+        /**
+         * @return The name of the Google Compute Engine [subnetwork](https://cloud.google.com/compute/docs/subnetworks) to which the cluster is connected.
+         * 
+         */
     private final String subnetwork;
-    /**
-     * [Output only] The IP address range of the Cloud TPUs in this cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `1.2.3.4/29`).
-     * 
-     */
+        /**
+         * @return [Output only] The IP address range of the Cloud TPUs in this cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `1.2.3.4/29`).
+         * 
+         */
     private final String tpuIpv4CidrBlock;
-    /**
-     * Cluster-level Vertical Pod Autoscaling configuration.
-     * 
-     */
+        /**
+         * @return Cluster-level Vertical Pod Autoscaling configuration.
+         * 
+         */
     private final VerticalPodAutoscalingResponse verticalPodAutoscaling;
-    /**
-     * Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.
-     * 
-     */
+        /**
+         * @return Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.
+         * 
+         */
     private final WorkloadIdentityConfigResponse workloadIdentityConfig;
 
     @CustomType.Constructor
@@ -411,366 +411,366 @@ public final class GetClusterResult {
     }
 
     /**
-     * Configurations for the various addons available to run in the cluster.
+     * @return Configurations for the various addons available to run in the cluster.
      * 
-    */
+     */
     public AddonsConfigResponse addonsConfig() {
         return this.addonsConfig;
     }
     /**
-     * Configuration controlling RBAC group membership information.
+     * @return Configuration controlling RBAC group membership information.
      * 
-    */
+     */
     public AuthenticatorGroupsConfigResponse authenticatorGroupsConfig() {
         return this.authenticatorGroupsConfig;
     }
     /**
-     * Autopilot configuration for the cluster.
+     * @return Autopilot configuration for the cluster.
      * 
-    */
+     */
     public AutopilotResponse autopilot() {
         return this.autopilot;
     }
     /**
-     * Cluster-level autoscaling configuration.
+     * @return Cluster-level autoscaling configuration.
      * 
-    */
+     */
     public ClusterAutoscalingResponse autoscaling() {
         return this.autoscaling;
     }
     /**
-     * Configuration for Binary Authorization.
+     * @return Configuration for Binary Authorization.
      * 
-    */
+     */
     public BinaryAuthorizationResponse binaryAuthorization() {
         return this.binaryAuthorization;
     }
     /**
-     * The IP address range of the container pods in this cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`). Leave blank to have one automatically chosen or specify a `/14` block in `10.0.0.0/8`.
+     * @return The IP address range of the container pods in this cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`). Leave blank to have one automatically chosen or specify a `/14` block in `10.0.0.0/8`.
      * 
-    */
+     */
     public String clusterIpv4Cidr() {
         return this.clusterIpv4Cidr;
     }
     /**
-     * Which conditions caused the current cluster state.
+     * @return Which conditions caused the current cluster state.
      * 
-    */
+     */
     public List<StatusConditionResponse> conditions() {
         return this.conditions;
     }
     /**
-     * Configuration of Confidential Nodes
+     * @return Configuration of Confidential Nodes
      * 
-    */
+     */
     public ConfidentialNodesResponse confidentialNodes() {
         return this.confidentialNodes;
     }
     /**
-     * [Output only] The time the cluster was created, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * @return [Output only] The time the cluster was created, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * [Output only] The current software version of the master endpoint.
+     * @return [Output only] The current software version of the master endpoint.
      * 
-    */
+     */
     public String currentMasterVersion() {
         return this.currentMasterVersion;
     }
     /**
-     * [Output only] Deprecated, use [NodePools.version](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools) instead. The current version of the node software components. If they are currently at multiple versions because they&#39;re in the process of being upgraded, this reflects the minimum version of all nodes.
+     * @return [Output only] Deprecated, use [NodePools.version](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools) instead. The current version of the node software components. If they are currently at multiple versions because they&#39;re in the process of being upgraded, this reflects the minimum version of all nodes.
      * 
-    */
+     */
     public String currentNodeVersion() {
         return this.currentNodeVersion;
     }
     /**
-     * Configuration of etcd encryption.
+     * @return Configuration of etcd encryption.
      * 
-    */
+     */
     public DatabaseEncryptionResponse databaseEncryption() {
         return this.databaseEncryption;
     }
     /**
-     * The default constraint on the maximum number of pods that can be run simultaneously on a node in the node pool of this cluster. Only honored if cluster created with IP Alias support.
+     * @return The default constraint on the maximum number of pods that can be run simultaneously on a node in the node pool of this cluster. Only honored if cluster created with IP Alias support.
      * 
-    */
+     */
     public MaxPodsConstraintResponse defaultMaxPodsConstraint() {
         return this.defaultMaxPodsConstraint;
     }
     /**
-     * An optional description of this cluster.
+     * @return An optional description of this cluster.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Kubernetes alpha features are enabled on this cluster. This includes alpha API groups (e.g. v1alpha1) and features that may not be production ready in the kubernetes version of the master and nodes. The cluster has no SLA for uptime and master/node upgrades are disabled. Alpha enabled clusters are automatically deleted thirty days after creation.
+     * @return Kubernetes alpha features are enabled on this cluster. This includes alpha API groups (e.g. v1alpha1) and features that may not be production ready in the kubernetes version of the master and nodes. The cluster has no SLA for uptime and master/node upgrades are disabled. Alpha enabled clusters are automatically deleted thirty days after creation.
      * 
-    */
+     */
     public Boolean enableKubernetesAlpha() {
         return this.enableKubernetesAlpha;
     }
     /**
-     * Enable the ability to use Cloud TPUs in this cluster.
+     * @return Enable the ability to use Cloud TPUs in this cluster.
      * 
-    */
+     */
     public Boolean enableTpu() {
         return this.enableTpu;
     }
     /**
-     * [Output only] The IP address of this cluster&#39;s master endpoint. The endpoint can be accessed from the internet at `https://username:password@endpoint/`. See the `masterAuth` property of this resource for username and password information.
+     * @return [Output only] The IP address of this cluster&#39;s master endpoint. The endpoint can be accessed from the internet at `https://username:password@endpoint/`. See the `masterAuth` property of this resource for username and password information.
      * 
-    */
+     */
     public String endpoint() {
         return this.endpoint;
     }
     /**
-     * [Output only] The time the cluster will be automatically deleted in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * @return [Output only] The time the cluster will be automatically deleted in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
      * 
-    */
+     */
     public String expireTime() {
         return this.expireTime;
     }
     /**
-     * The initial Kubernetes version for this cluster. Valid versions are those found in validMasterVersions returned by getServerConfig. The version can be upgraded over time; such upgrades are reflected in currentMasterVersion and currentNodeVersion. Users may specify either explicit versions offered by Kubernetes Engine or version aliases, which have the following behavior: - &#34;latest&#34;: picks the highest valid Kubernetes version - &#34;1.X&#34;: picks the highest valid patch+gke.N patch in the 1.X version - &#34;1.X.Y&#34;: picks the highest valid gke.N patch in the 1.X.Y version - &#34;1.X.Y-gke.N&#34;: picks an explicit Kubernetes version - &#34;&#34;,&#34;-&#34;: picks the default Kubernetes version
+     * @return The initial Kubernetes version for this cluster. Valid versions are those found in validMasterVersions returned by getServerConfig. The version can be upgraded over time; such upgrades are reflected in currentMasterVersion and currentNodeVersion. Users may specify either explicit versions offered by Kubernetes Engine or version aliases, which have the following behavior: - &#34;latest&#34;: picks the highest valid Kubernetes version - &#34;1.X&#34;: picks the highest valid patch+gke.N patch in the 1.X version - &#34;1.X.Y&#34;: picks the highest valid gke.N patch in the 1.X.Y version - &#34;1.X.Y-gke.N&#34;: picks an explicit Kubernetes version - &#34;&#34;,&#34;-&#34;: picks the default Kubernetes version
      * 
-    */
+     */
     public String initialClusterVersion() {
         return this.initialClusterVersion;
     }
     /**
-     * Configuration for cluster IP allocation.
+     * @return Configuration for cluster IP allocation.
      * 
-    */
+     */
     public IPAllocationPolicyResponse ipAllocationPolicy() {
         return this.ipAllocationPolicy;
     }
     /**
-     * The fingerprint of the set of labels for this cluster.
+     * @return The fingerprint of the set of labels for this cluster.
      * 
-    */
+     */
     public String labelFingerprint() {
         return this.labelFingerprint;
     }
     /**
-     * Configuration for the legacy ABAC authorization mode.
+     * @return Configuration for the legacy ABAC authorization mode.
      * 
-    */
+     */
     public LegacyAbacResponse legacyAbac() {
         return this.legacyAbac;
     }
     /**
-     * [Output only] The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which the cluster resides.
+     * @return [Output only] The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which the cluster resides.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster&#39;s nodes should be located. This field provides a default value if [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) are not specified during node pool creation. Warning: changing cluster locations will update the [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) of all node pools and will result in nodes being added and/or removed.
+     * @return The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster&#39;s nodes should be located. This field provides a default value if [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) are not specified during node pool creation. Warning: changing cluster locations will update the [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) of all node pools and will result in nodes being added and/or removed.
      * 
-    */
+     */
     public List<String> locations() {
         return this.locations;
     }
     /**
-     * Logging configuration for the cluster.
+     * @return Logging configuration for the cluster.
      * 
-    */
+     */
     public LoggingConfigResponse loggingConfig() {
         return this.loggingConfig;
     }
     /**
-     * The logging service the cluster should use to write logs. Currently available options: * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer available as of GKE 1.15). * `none` - no logs will be exported from the cluster. If left as an empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or `logging.googleapis.com` for earlier versions.
+     * @return The logging service the cluster should use to write logs. Currently available options: * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer available as of GKE 1.15). * `none` - no logs will be exported from the cluster. If left as an empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or `logging.googleapis.com` for earlier versions.
      * 
-    */
+     */
     public String loggingService() {
         return this.loggingService;
     }
     /**
-     * Configure the maintenance policy for this cluster.
+     * @return Configure the maintenance policy for this cluster.
      * 
-    */
+     */
     public MaintenancePolicyResponse maintenancePolicy() {
         return this.maintenancePolicy;
     }
     /**
-     * The authentication information for accessing the master endpoint. If unspecified, the defaults are used: For clusters before v1.12, if master_auth is unspecified, `username` will be set to &#34;admin&#34;, a random password will be generated, and a client certificate will be issued.
+     * @return The authentication information for accessing the master endpoint. If unspecified, the defaults are used: For clusters before v1.12, if master_auth is unspecified, `username` will be set to &#34;admin&#34;, a random password will be generated, and a client certificate will be issued.
      * 
-    */
+     */
     public MasterAuthResponse masterAuth() {
         return this.masterAuth;
     }
     /**
-     * The configuration options for master authorized networks feature.
+     * @return The configuration options for master authorized networks feature.
      * 
-    */
+     */
     public MasterAuthorizedNetworksConfigResponse masterAuthorizedNetworksConfig() {
         return this.masterAuthorizedNetworksConfig;
     }
     /**
-     * Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
+     * @return Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
      * 
-    */
+     */
     public MeshCertificatesResponse meshCertificates() {
         return this.meshCertificates;
     }
     /**
-     * Monitoring configuration for the cluster.
+     * @return Monitoring configuration for the cluster.
      * 
-    */
+     */
     public MonitoringConfigResponse monitoringConfig() {
         return this.monitoringConfig;
     }
     /**
-     * The monitoring service the cluster should use to write metrics. Currently available options: * &#34;monitoring.googleapis.com/kubernetes&#34; - The Cloud Monitoring service with a Kubernetes-native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no longer available as of GKE 1.15). * `none` - No metrics will be exported from the cluster. If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or `monitoring.googleapis.com` for earlier versions.
+     * @return The monitoring service the cluster should use to write metrics. Currently available options: * &#34;monitoring.googleapis.com/kubernetes&#34; - The Cloud Monitoring service with a Kubernetes-native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no longer available as of GKE 1.15). * `none` - No metrics will be exported from the cluster. If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or `monitoring.googleapis.com` for earlier versions.
      * 
-    */
+     */
     public String monitoringService() {
         return this.monitoringService;
     }
     /**
-     * The name of this cluster. The name must be unique within this project and location (e.g. zone or region), and can be up to 40 characters with the following restrictions: * Lowercase letters, numbers, and hyphens only. * Must start with a letter. * Must end with a number or a letter.
+     * @return The name of this cluster. The name must be unique within this project and location (e.g. zone or region), and can be up to 40 characters with the following restrictions: * Lowercase letters, numbers, and hyphens only. * Must start with a letter. * Must end with a number or a letter.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The name of the Google Compute Engine [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the cluster is connected. If left unspecified, the `default` network will be used.
+     * @return The name of the Google Compute Engine [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the cluster is connected. If left unspecified, the `default` network will be used.
      * 
-    */
+     */
     public String network() {
         return this.network;
     }
     /**
-     * Configuration for cluster networking.
+     * @return Configuration for cluster networking.
      * 
-    */
+     */
     public NetworkConfigResponse networkConfig() {
         return this.networkConfig;
     }
     /**
-     * Configuration options for the NetworkPolicy feature.
+     * @return Configuration options for the NetworkPolicy feature.
      * 
-    */
+     */
     public NetworkPolicyResponse networkPolicy() {
         return this.networkPolicy;
     }
     /**
-     * [Output only] The size of the address space on each node for hosting containers. This is provisioned from within the `container_ipv4_cidr` range. This field will only be set when cluster is in route-based network mode.
+     * @return [Output only] The size of the address space on each node for hosting containers. This is provisioned from within the `container_ipv4_cidr` range. This field will only be set when cluster is in route-based network mode.
      * 
-    */
+     */
     public Integer nodeIpv4CidrSize() {
         return this.nodeIpv4CidrSize;
     }
     /**
-     * Default NodePool settings for the entire cluster. These settings are overridden if specified on the specific NodePool object.
+     * @return Default NodePool settings for the entire cluster. These settings are overridden if specified on the specific NodePool object.
      * 
-    */
+     */
     public NodePoolDefaultsResponse nodePoolDefaults() {
         return this.nodePoolDefaults;
     }
     /**
-     * The node pools associated with this cluster. This field should not be set if &#34;node_config&#34; or &#34;initial_node_count&#34; are specified.
+     * @return The node pools associated with this cluster. This field should not be set if &#34;node_config&#34; or &#34;initial_node_count&#34; are specified.
      * 
-    */
+     */
     public List<NodePoolResponse> nodePools() {
         return this.nodePools;
     }
     /**
-     * Notification configuration of the cluster.
+     * @return Notification configuration of the cluster.
      * 
-    */
+     */
     public NotificationConfigResponse notificationConfig() {
         return this.notificationConfig;
     }
     /**
-     * Configuration for private cluster.
+     * @return Configuration for private cluster.
      * 
-    */
+     */
     public PrivateClusterConfigResponse privateClusterConfig() {
         return this.privateClusterConfig;
     }
     /**
-     * Release channel configuration.
+     * @return Release channel configuration.
      * 
-    */
+     */
     public ReleaseChannelResponse releaseChannel() {
         return this.releaseChannel;
     }
     /**
-     * The resource labels for the cluster to use to annotate any related Google Compute Engine resources.
+     * @return The resource labels for the cluster to use to annotate any related Google Compute Engine resources.
      * 
-    */
+     */
     public Map<String,String> resourceLabels() {
         return this.resourceLabels;
     }
     /**
-     * Configuration for exporting resource usages. Resource usage export is disabled when this config is unspecified.
+     * @return Configuration for exporting resource usages. Resource usage export is disabled when this config is unspecified.
      * 
-    */
+     */
     public ResourceUsageExportConfigResponse resourceUsageExportConfig() {
         return this.resourceUsageExportConfig;
     }
     /**
-     * [Output only] Server-defined URL for the resource.
+     * @return [Output only] Server-defined URL for the resource.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }
     /**
-     * [Output only] The IP address range of the Kubernetes services in this cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `1.2.3.4/29`). Service addresses are typically put in the last `/16` from the container CIDR.
+     * @return [Output only] The IP address range of the Kubernetes services in this cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `1.2.3.4/29`). Service addresses are typically put in the last `/16` from the container CIDR.
      * 
-    */
+     */
     public String servicesIpv4Cidr() {
         return this.servicesIpv4Cidr;
     }
     /**
-     * Shielded Nodes configuration.
+     * @return Shielded Nodes configuration.
      * 
-    */
+     */
     public ShieldedNodesResponse shieldedNodes() {
         return this.shieldedNodes;
     }
     /**
-     * [Output only] The current status of this cluster.
+     * @return [Output only] The current status of this cluster.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * The name of the Google Compute Engine [subnetwork](https://cloud.google.com/compute/docs/subnetworks) to which the cluster is connected.
+     * @return The name of the Google Compute Engine [subnetwork](https://cloud.google.com/compute/docs/subnetworks) to which the cluster is connected.
      * 
-    */
+     */
     public String subnetwork() {
         return this.subnetwork;
     }
     /**
-     * [Output only] The IP address range of the Cloud TPUs in this cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `1.2.3.4/29`).
+     * @return [Output only] The IP address range of the Cloud TPUs in this cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `1.2.3.4/29`).
      * 
-    */
+     */
     public String tpuIpv4CidrBlock() {
         return this.tpuIpv4CidrBlock;
     }
     /**
-     * Cluster-level Vertical Pod Autoscaling configuration.
+     * @return Cluster-level Vertical Pod Autoscaling configuration.
      * 
-    */
+     */
     public VerticalPodAutoscalingResponse verticalPodAutoscaling() {
         return this.verticalPodAutoscaling;
     }
     /**
-     * Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.
+     * @return Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.
      * 
-    */
+     */
     public WorkloadIdentityConfigResponse workloadIdentityConfig() {
         return this.workloadIdentityConfig;
     }

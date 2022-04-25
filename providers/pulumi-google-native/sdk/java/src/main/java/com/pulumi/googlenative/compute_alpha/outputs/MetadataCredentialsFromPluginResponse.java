@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class MetadataCredentialsFromPluginResponse {
-    /**
-     * Plugin name.
-     * 
-     */
+        /**
+         * @return Plugin name.
+         * 
+         */
     private final String name;
-    /**
-     * A text proto that conforms to a Struct type definition interpreted by the plugin.
-     * 
-     */
+        /**
+         * @return A text proto that conforms to a Struct type definition interpreted by the plugin.
+         * 
+         */
     private final String structConfig;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class MetadataCredentialsFromPluginResponse {
     }
 
     /**
-     * Plugin name.
+     * @return Plugin name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A text proto that conforms to a Struct type definition interpreted by the plugin.
+     * @return A text proto that conforms to a Struct type definition interpreted by the plugin.
      * 
-    */
+     */
     public String structConfig() {
         return this.structConfig;
     }

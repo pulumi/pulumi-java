@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class MaintenanceScheduleResponse {
-    /**
-     * If the scheduled maintenance can be rescheduled, default is true.
-     * 
-     */
+        /**
+         * @return If the scheduled maintenance can be rescheduled, default is true.
+         * 
+         */
     private final Boolean canReschedule;
-    /**
-     * The end time of any upcoming scheduled maintenance for this instance.
-     * 
-     */
+        /**
+         * @return The end time of any upcoming scheduled maintenance for this instance.
+         * 
+         */
     private final String endTime;
-    /**
-     * The deadline that the maintenance schedule start time can not go beyond, including reschedule.
-     * 
-     */
+        /**
+         * @return The deadline that the maintenance schedule start time can not go beyond, including reschedule.
+         * 
+         */
     private final String scheduleDeadlineTime;
-    /**
-     * The start time of any upcoming scheduled maintenance for this instance.
-     * 
-     */
+        /**
+         * @return The start time of any upcoming scheduled maintenance for this instance.
+         * 
+         */
     private final String startTime;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class MaintenanceScheduleResponse {
     }
 
     /**
-     * If the scheduled maintenance can be rescheduled, default is true.
+     * @return If the scheduled maintenance can be rescheduled, default is true.
      * 
-    */
+     */
     public Boolean canReschedule() {
         return this.canReschedule;
     }
     /**
-     * The end time of any upcoming scheduled maintenance for this instance.
+     * @return The end time of any upcoming scheduled maintenance for this instance.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * The deadline that the maintenance schedule start time can not go beyond, including reschedule.
+     * @return The deadline that the maintenance schedule start time can not go beyond, including reschedule.
      * 
-    */
+     */
     public String scheduleDeadlineTime() {
         return this.scheduleDeadlineTime;
     }
     /**
-     * The start time of any upcoming scheduled maintenance for this instance.
+     * @return The start time of any upcoming scheduled maintenance for this instance.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }

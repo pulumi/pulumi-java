@@ -27,6 +27,10 @@ public final class GooglePrivacyDlpV2BigQueryFieldArgs extends com.pulumi.resour
     @Import(name="field")
     private @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field;
 
+    /**
+     * @return Designated field in the BigQuery table.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2FieldIdArgs>> field() {
         return Optional.ofNullable(this.field);
     }
@@ -38,6 +42,10 @@ public final class GooglePrivacyDlpV2BigQueryFieldArgs extends com.pulumi.resour
     @Import(name="table")
     private @Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> table;
 
+    /**
+     * @return Source table of the field.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2BigQueryTableArgs>> table() {
         return Optional.ofNullable(this.table);
     }
@@ -67,20 +75,44 @@ public final class GooglePrivacyDlpV2BigQueryFieldArgs extends com.pulumi.resour
             $ = new GooglePrivacyDlpV2BigQueryFieldArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param field Designated field in the BigQuery table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(@Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param field Designated field in the BigQuery table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(GooglePrivacyDlpV2FieldIdArgs field) {
             return field(Output.of(field));
         }
 
+        /**
+         * @param table Source table of the field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(@Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> table) {
             $.table = table;
             return this;
         }
 
+        /**
+         * @param table Source table of the field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(GooglePrivacyDlpV2BigQueryTableArgs table) {
             return table(Output.of(table));
         }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class CertHttpChallengeResponse {
-    /**
-     * The URL path on which to serve the specified token to satisfy the certificate challenge.
-     * 
-     */
+        /**
+         * @return The URL path on which to serve the specified token to satisfy the certificate challenge.
+         * 
+         */
     private final String path;
-    /**
-     * The token to serve at the specified URL path to satisfy the certificate challenge.
-     * 
-     */
+        /**
+         * @return The token to serve at the specified URL path to satisfy the certificate challenge.
+         * 
+         */
     private final String token;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class CertHttpChallengeResponse {
     }
 
     /**
-     * The URL path on which to serve the specified token to satisfy the certificate challenge.
+     * @return The URL path on which to serve the specified token to satisfy the certificate challenge.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }
     /**
-     * The token to serve at the specified URL path to satisfy the certificate challenge.
+     * @return The token to serve at the specified URL path to satisfy the certificate challenge.
      * 
-    */
+     */
     public String token() {
         return this.token;
     }

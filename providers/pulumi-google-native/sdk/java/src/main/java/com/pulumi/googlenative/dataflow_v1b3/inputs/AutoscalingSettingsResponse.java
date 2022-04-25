@@ -24,6 +24,10 @@ public final class AutoscalingSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="algorithm", required=true)
     private String algorithm;
 
+    /**
+     * @return The algorithm to use for autoscaling.
+     * 
+     */
     public String algorithm() {
         return this.algorithm;
     }
@@ -35,6 +39,10 @@ public final class AutoscalingSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="maxNumWorkers", required=true)
     private Integer maxNumWorkers;
 
+    /**
+     * @return The maximum number of workers to cap scaling at.
+     * 
+     */
     public Integer maxNumWorkers() {
         return this.maxNumWorkers;
     }
@@ -64,11 +72,23 @@ public final class AutoscalingSettingsResponse extends com.pulumi.resources.Invo
             $ = new AutoscalingSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param algorithm The algorithm to use for autoscaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(String algorithm) {
             $.algorithm = algorithm;
             return this;
         }
 
+        /**
+         * @param maxNumWorkers The maximum number of workers to cap scaling at.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxNumWorkers(Integer maxNumWorkers) {
             $.maxNumWorkers = maxNumWorkers;
             return this;

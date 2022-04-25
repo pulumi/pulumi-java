@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class BackendServiceCdnPolicyBypassCacheOnRequestHeaderResponse {
-    /**
-     * The header field name to match on when bypassing cache. Values are case-insensitive.
-     * 
-     */
+        /**
+         * @return The header field name to match on when bypassing cache. Values are case-insensitive.
+         * 
+         */
     private final String headerName;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class BackendServiceCdnPolicyBypassCacheOnRequestHeaderResponse {
     }
 
     /**
-     * The header field name to match on when bypassing cache. Values are case-insensitive.
+     * @return The header field name to match on when bypassing cache. Values are case-insensitive.
      * 
-    */
+     */
     public String headerName() {
         return this.headerName;
     }

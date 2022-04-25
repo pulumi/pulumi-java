@@ -11,35 +11,35 @@ import java.util.Objects;
 
 @CustomType
 public final class GetIndexResult {
-    /**
-     * The index&#39;s ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
-     * 
-     */
+        /**
+         * @return The index&#39;s ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
+         * 
+         */
     private final String ancestor;
-    /**
-     * The resource ID of the index.
-     * 
-     */
+        /**
+         * @return The resource ID of the index.
+         * 
+         */
     private final String indexId;
-    /**
-     * The entity kind to which this index applies.
-     * 
-     */
+        /**
+         * @return The entity kind to which this index applies.
+         * 
+         */
     private final String kind;
-    /**
-     * Project ID.
-     * 
-     */
+        /**
+         * @return Project ID.
+         * 
+         */
     private final String project;
-    /**
-     * An ordered sequence of property names and their index attributes.
-     * 
-     */
+        /**
+         * @return An ordered sequence of property names and their index attributes.
+         * 
+         */
     private final List<GoogleDatastoreAdminV1IndexedPropertyResponse> properties;
-    /**
-     * The state of the index.
-     * 
-     */
+        /**
+         * @return The state of the index.
+         * 
+         */
     private final String state;
 
     @CustomType.Constructor
@@ -59,44 +59,44 @@ public final class GetIndexResult {
     }
 
     /**
-     * The index&#39;s ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
+     * @return The index&#39;s ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
      * 
-    */
+     */
     public String ancestor() {
         return this.ancestor;
     }
     /**
-     * The resource ID of the index.
+     * @return The resource ID of the index.
      * 
-    */
+     */
     public String indexId() {
         return this.indexId;
     }
     /**
-     * The entity kind to which this index applies.
+     * @return The entity kind to which this index applies.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Project ID.
+     * @return Project ID.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }
     /**
-     * An ordered sequence of property names and their index attributes.
+     * @return An ordered sequence of property names and their index attributes.
      * 
-    */
+     */
     public List<GoogleDatastoreAdminV1IndexedPropertyResponse> properties() {
         return this.properties;
     }
     /**
-     * The state of the index.
+     * @return The state of the index.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

@@ -16,160 +16,160 @@ import java.util.Objects;
 
 @CustomType
 public final class GetBucketObjectResult {
-    /**
-     * Access controls on the object.
-     * 
-     */
+        /**
+         * @return Access controls on the object.
+         * 
+         */
     private final List<ObjectAccessControlResponse> acl;
-    /**
-     * The name of the bucket containing this object.
-     * 
-     */
+        /**
+         * @return The name of the bucket containing this object.
+         * 
+         */
     private final String bucket;
-    /**
-     * Cache-Control directive for the object data. If omitted, and the object is accessible to all anonymous users, the default will be public, max-age=3600.
-     * 
-     */
+        /**
+         * @return Cache-Control directive for the object data. If omitted, and the object is accessible to all anonymous users, the default will be public, max-age=3600.
+         * 
+         */
     private final String cacheControl;
-    /**
-     * Number of underlying components that make up this object. Components are accumulated by compose operations.
-     * 
-     */
+        /**
+         * @return Number of underlying components that make up this object. Components are accumulated by compose operations.
+         * 
+         */
     private final Integer componentCount;
-    /**
-     * Content-Disposition of the object data.
-     * 
-     */
+        /**
+         * @return Content-Disposition of the object data.
+         * 
+         */
     private final String contentDisposition;
-    /**
-     * Content-Encoding of the object data.
-     * 
-     */
+        /**
+         * @return Content-Encoding of the object data.
+         * 
+         */
     private final String contentEncoding;
-    /**
-     * Content-Language of the object data.
-     * 
-     */
+        /**
+         * @return Content-Language of the object data.
+         * 
+         */
     private final String contentLanguage;
-    /**
-     * Content-Type of the object data. If an object is stored without a Content-Type, it is served as application/octet-stream.
-     * 
-     */
+        /**
+         * @return Content-Type of the object data. If an object is stored without a Content-Type, it is served as application/octet-stream.
+         * 
+         */
     private final String contentType;
-    /**
-     * CRC32c checksum, as described in RFC 4960, Appendix B; encoded using base64 in big-endian byte order. For more information about using the CRC32c checksum, see Hashes and ETags: Best Practices.
-     * 
-     */
+        /**
+         * @return CRC32c checksum, as described in RFC 4960, Appendix B; encoded using base64 in big-endian byte order. For more information about using the CRC32c checksum, see Hashes and ETags: Best Practices.
+         * 
+         */
     private final String crc32c;
-    /**
-     * A timestamp in RFC 3339 format specified by the user for an object.
-     * 
-     */
+        /**
+         * @return A timestamp in RFC 3339 format specified by the user for an object.
+         * 
+         */
     private final String customTime;
-    /**
-     * Metadata of customer-supplied encryption key, if the object is encrypted by such a key.
-     * 
-     */
+        /**
+         * @return Metadata of customer-supplied encryption key, if the object is encrypted by such a key.
+         * 
+         */
     private final BucketObjectCustomerEncryptionResponse customerEncryption;
-    /**
-     * HTTP 1.1 Entity tag for the object.
-     * 
-     */
+        /**
+         * @return HTTP 1.1 Entity tag for the object.
+         * 
+         */
     private final String etag;
-    /**
-     * Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is signified by the hold&#39;s release (i.e. this value is set to false). After being released (set to false), such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is the loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false.
-     * 
-     */
+        /**
+         * @return Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is signified by the hold&#39;s release (i.e. this value is set to false). After being released (set to false), such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is the loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false.
+         * 
+         */
     private final Boolean eventBasedHold;
-    /**
-     * The content generation of this object. Used for object versioning.
-     * 
-     */
+        /**
+         * @return The content generation of this object. Used for object versioning.
+         * 
+         */
     private final String generation;
-    /**
-     * The kind of item this is. For objects, this is always storage#object.
-     * 
-     */
+        /**
+         * @return The kind of item this is. For objects, this is always storage#object.
+         * 
+         */
     private final String kind;
-    /**
-     * Not currently supported. Specifying the parameter causes the request to fail with status code 400 - Bad Request.
-     * 
-     */
+        /**
+         * @return Not currently supported. Specifying the parameter causes the request to fail with status code 400 - Bad Request.
+         * 
+         */
     private final String kmsKeyName;
-    /**
-     * MD5 hash of the data; encoded using base64. For more information about using the MD5 hash, see Hashes and ETags: Best Practices.
-     * 
-     */
+        /**
+         * @return MD5 hash of the data; encoded using base64. For more information about using the MD5 hash, see Hashes and ETags: Best Practices.
+         * 
+         */
     private final String md5Hash;
-    /**
-     * Media download link.
-     * 
-     */
+        /**
+         * @return Media download link.
+         * 
+         */
     private final String mediaLink;
-    /**
-     * User-provided metadata, in key/value pairs.
-     * 
-     */
+        /**
+         * @return User-provided metadata, in key/value pairs.
+         * 
+         */
     private final Map<String,String> metadata;
-    /**
-     * The version of the metadata for this object at this generation. Used for preconditions and for detecting changes in metadata. A metageneration number is only meaningful in the context of a particular generation of a particular object.
-     * 
-     */
+        /**
+         * @return The version of the metadata for this object at this generation. Used for preconditions and for detecting changes in metadata. A metageneration number is only meaningful in the context of a particular generation of a particular object.
+         * 
+         */
     private final String metageneration;
-    /**
-     * The name of the object. Required if not specified by URL parameter.
-     * 
-     */
+        /**
+         * @return The name of the object. Required if not specified by URL parameter.
+         * 
+         */
     private final String name;
-    /**
-     * The owner of the object. This will always be the uploader of the object.
-     * 
-     */
+        /**
+         * @return The owner of the object. This will always be the uploader of the object.
+         * 
+         */
     private final BucketObjectOwnerResponse owner;
-    /**
-     * A server-determined value that specifies the earliest time that the object&#39;s retention period expires. This value is in RFC 3339 format. Note 1: This field is not provided for objects with an active event-based hold, since retention expiration is unknown until the hold is removed. Note 2: This value can be provided even when temporary hold is set (so that the user can reason about policy without having to first unset the temporary hold).
-     * 
-     */
+        /**
+         * @return A server-determined value that specifies the earliest time that the object&#39;s retention period expires. This value is in RFC 3339 format. Note 1: This field is not provided for objects with an active event-based hold, since retention expiration is unknown until the hold is removed. Note 2: This value can be provided even when temporary hold is set (so that the user can reason about policy without having to first unset the temporary hold).
+         * 
+         */
     private final String retentionExpirationTime;
-    /**
-     * The link to this object.
-     * 
-     */
+        /**
+         * @return The link to this object.
+         * 
+         */
     private final String selfLink;
-    /**
-     * Content-Length of the data in bytes.
-     * 
-     */
+        /**
+         * @return Content-Length of the data in bytes.
+         * 
+         */
     private final String size;
-    /**
-     * Storage class of the object.
-     * 
-     */
+        /**
+         * @return Storage class of the object.
+         * 
+         */
     private final String storageClass;
-    /**
-     * Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and overwrites. A common use case of this flag is regulatory investigations where objects need to be retained while the investigation is ongoing. Note that unlike event-based hold, temporary hold does not impact retention expiration time of an object.
-     * 
-     */
+        /**
+         * @return Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and overwrites. A common use case of this flag is regulatory investigations where objects need to be retained while the investigation is ongoing. Note that unlike event-based hold, temporary hold does not impact retention expiration time of an object.
+         * 
+         */
     private final Boolean temporaryHold;
-    /**
-     * The creation time of the object in RFC 3339 format.
-     * 
-     */
+        /**
+         * @return The creation time of the object in RFC 3339 format.
+         * 
+         */
     private final String timeCreated;
-    /**
-     * The deletion time of the object in RFC 3339 format. Will be returned if and only if this version of the object has been deleted.
-     * 
-     */
+        /**
+         * @return The deletion time of the object in RFC 3339 format. Will be returned if and only if this version of the object has been deleted.
+         * 
+         */
     private final String timeDeleted;
-    /**
-     * The time at which the object&#39;s storage class was last changed. When the object is initially created, it will be set to timeCreated.
-     * 
-     */
+        /**
+         * @return The time at which the object&#39;s storage class was last changed. When the object is initially created, it will be set to timeCreated.
+         * 
+         */
     private final String timeStorageClassUpdated;
-    /**
-     * The modification time of the object metadata in RFC 3339 format.
-     * 
-     */
+        /**
+         * @return The modification time of the object metadata in RFC 3339 format.
+         * 
+         */
     private final String updated;
 
     @CustomType.Constructor
@@ -239,219 +239,219 @@ public final class GetBucketObjectResult {
     }
 
     /**
-     * Access controls on the object.
+     * @return Access controls on the object.
      * 
-    */
+     */
     public List<ObjectAccessControlResponse> acl() {
         return this.acl;
     }
     /**
-     * The name of the bucket containing this object.
+     * @return The name of the bucket containing this object.
      * 
-    */
+     */
     public String bucket() {
         return this.bucket;
     }
     /**
-     * Cache-Control directive for the object data. If omitted, and the object is accessible to all anonymous users, the default will be public, max-age=3600.
+     * @return Cache-Control directive for the object data. If omitted, and the object is accessible to all anonymous users, the default will be public, max-age=3600.
      * 
-    */
+     */
     public String cacheControl() {
         return this.cacheControl;
     }
     /**
-     * Number of underlying components that make up this object. Components are accumulated by compose operations.
+     * @return Number of underlying components that make up this object. Components are accumulated by compose operations.
      * 
-    */
+     */
     public Integer componentCount() {
         return this.componentCount;
     }
     /**
-     * Content-Disposition of the object data.
+     * @return Content-Disposition of the object data.
      * 
-    */
+     */
     public String contentDisposition() {
         return this.contentDisposition;
     }
     /**
-     * Content-Encoding of the object data.
+     * @return Content-Encoding of the object data.
      * 
-    */
+     */
     public String contentEncoding() {
         return this.contentEncoding;
     }
     /**
-     * Content-Language of the object data.
+     * @return Content-Language of the object data.
      * 
-    */
+     */
     public String contentLanguage() {
         return this.contentLanguage;
     }
     /**
-     * Content-Type of the object data. If an object is stored without a Content-Type, it is served as application/octet-stream.
+     * @return Content-Type of the object data. If an object is stored without a Content-Type, it is served as application/octet-stream.
      * 
-    */
+     */
     public String contentType() {
         return this.contentType;
     }
     /**
-     * CRC32c checksum, as described in RFC 4960, Appendix B; encoded using base64 in big-endian byte order. For more information about using the CRC32c checksum, see Hashes and ETags: Best Practices.
+     * @return CRC32c checksum, as described in RFC 4960, Appendix B; encoded using base64 in big-endian byte order. For more information about using the CRC32c checksum, see Hashes and ETags: Best Practices.
      * 
-    */
+     */
     public String crc32c() {
         return this.crc32c;
     }
     /**
-     * A timestamp in RFC 3339 format specified by the user for an object.
+     * @return A timestamp in RFC 3339 format specified by the user for an object.
      * 
-    */
+     */
     public String customTime() {
         return this.customTime;
     }
     /**
-     * Metadata of customer-supplied encryption key, if the object is encrypted by such a key.
+     * @return Metadata of customer-supplied encryption key, if the object is encrypted by such a key.
      * 
-    */
+     */
     public BucketObjectCustomerEncryptionResponse customerEncryption() {
         return this.customerEncryption;
     }
     /**
-     * HTTP 1.1 Entity tag for the object.
+     * @return HTTP 1.1 Entity tag for the object.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is signified by the hold&#39;s release (i.e. this value is set to false). After being released (set to false), such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is the loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false.
+     * @return Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is signified by the hold&#39;s release (i.e. this value is set to false). After being released (set to false), such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is the loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false.
      * 
-    */
+     */
     public Boolean eventBasedHold() {
         return this.eventBasedHold;
     }
     /**
-     * The content generation of this object. Used for object versioning.
+     * @return The content generation of this object. Used for object versioning.
      * 
-    */
+     */
     public String generation() {
         return this.generation;
     }
     /**
-     * The kind of item this is. For objects, this is always storage#object.
+     * @return The kind of item this is. For objects, this is always storage#object.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Not currently supported. Specifying the parameter causes the request to fail with status code 400 - Bad Request.
+     * @return Not currently supported. Specifying the parameter causes the request to fail with status code 400 - Bad Request.
      * 
-    */
+     */
     public String kmsKeyName() {
         return this.kmsKeyName;
     }
     /**
-     * MD5 hash of the data; encoded using base64. For more information about using the MD5 hash, see Hashes and ETags: Best Practices.
+     * @return MD5 hash of the data; encoded using base64. For more information about using the MD5 hash, see Hashes and ETags: Best Practices.
      * 
-    */
+     */
     public String md5Hash() {
         return this.md5Hash;
     }
     /**
-     * Media download link.
+     * @return Media download link.
      * 
-    */
+     */
     public String mediaLink() {
         return this.mediaLink;
     }
     /**
-     * User-provided metadata, in key/value pairs.
+     * @return User-provided metadata, in key/value pairs.
      * 
-    */
+     */
     public Map<String,String> metadata() {
         return this.metadata;
     }
     /**
-     * The version of the metadata for this object at this generation. Used for preconditions and for detecting changes in metadata. A metageneration number is only meaningful in the context of a particular generation of a particular object.
+     * @return The version of the metadata for this object at this generation. Used for preconditions and for detecting changes in metadata. A metageneration number is only meaningful in the context of a particular generation of a particular object.
      * 
-    */
+     */
     public String metageneration() {
         return this.metageneration;
     }
     /**
-     * The name of the object. Required if not specified by URL parameter.
+     * @return The name of the object. Required if not specified by URL parameter.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The owner of the object. This will always be the uploader of the object.
+     * @return The owner of the object. This will always be the uploader of the object.
      * 
-    */
+     */
     public BucketObjectOwnerResponse owner() {
         return this.owner;
     }
     /**
-     * A server-determined value that specifies the earliest time that the object&#39;s retention period expires. This value is in RFC 3339 format. Note 1: This field is not provided for objects with an active event-based hold, since retention expiration is unknown until the hold is removed. Note 2: This value can be provided even when temporary hold is set (so that the user can reason about policy without having to first unset the temporary hold).
+     * @return A server-determined value that specifies the earliest time that the object&#39;s retention period expires. This value is in RFC 3339 format. Note 1: This field is not provided for objects with an active event-based hold, since retention expiration is unknown until the hold is removed. Note 2: This value can be provided even when temporary hold is set (so that the user can reason about policy without having to first unset the temporary hold).
      * 
-    */
+     */
     public String retentionExpirationTime() {
         return this.retentionExpirationTime;
     }
     /**
-     * The link to this object.
+     * @return The link to this object.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }
     /**
-     * Content-Length of the data in bytes.
+     * @return Content-Length of the data in bytes.
      * 
-    */
+     */
     public String size() {
         return this.size;
     }
     /**
-     * Storage class of the object.
+     * @return Storage class of the object.
      * 
-    */
+     */
     public String storageClass() {
         return this.storageClass;
     }
     /**
-     * Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and overwrites. A common use case of this flag is regulatory investigations where objects need to be retained while the investigation is ongoing. Note that unlike event-based hold, temporary hold does not impact retention expiration time of an object.
+     * @return Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and overwrites. A common use case of this flag is regulatory investigations where objects need to be retained while the investigation is ongoing. Note that unlike event-based hold, temporary hold does not impact retention expiration time of an object.
      * 
-    */
+     */
     public Boolean temporaryHold() {
         return this.temporaryHold;
     }
     /**
-     * The creation time of the object in RFC 3339 format.
+     * @return The creation time of the object in RFC 3339 format.
      * 
-    */
+     */
     public String timeCreated() {
         return this.timeCreated;
     }
     /**
-     * The deletion time of the object in RFC 3339 format. Will be returned if and only if this version of the object has been deleted.
+     * @return The deletion time of the object in RFC 3339 format. Will be returned if and only if this version of the object has been deleted.
      * 
-    */
+     */
     public String timeDeleted() {
         return this.timeDeleted;
     }
     /**
-     * The time at which the object&#39;s storage class was last changed. When the object is initially created, it will be set to timeCreated.
+     * @return The time at which the object&#39;s storage class was last changed. When the object is initially created, it will be set to timeCreated.
      * 
-    */
+     */
     public String timeStorageClassUpdated() {
         return this.timeStorageClassUpdated;
     }
     /**
-     * The modification time of the object metadata in RFC 3339 format.
+     * @return The modification time of the object metadata in RFC 3339 format.
      * 
-    */
+     */
     public String updated() {
         return this.updated;
     }

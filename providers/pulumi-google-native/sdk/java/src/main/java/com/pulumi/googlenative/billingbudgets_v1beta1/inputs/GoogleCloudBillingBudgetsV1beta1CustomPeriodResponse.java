@@ -23,6 +23,10 @@ public final class GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse extends 
     @Import(name="endDate", required=true)
     private GoogleTypeDateResponse endDate;
 
+    /**
+     * @return Optional. The end date of the time period. Budgets with elapsed end date won&#39;t be processed. If unset, specifies to track all usage incurred since the start_date.
+     * 
+     */
     public GoogleTypeDateResponse endDate() {
         return this.endDate;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse extends 
     @Import(name="startDate", required=true)
     private GoogleTypeDateResponse startDate;
 
+    /**
+     * @return The start date must be after January 1, 2017.
+     * 
+     */
     public GoogleTypeDateResponse startDate() {
         return this.startDate;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse extends 
             $ = new GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endDate Optional. The end date of the time period. Budgets with elapsed end date won&#39;t be processed. If unset, specifies to track all usage incurred since the start_date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endDate(GoogleTypeDateResponse endDate) {
             $.endDate = endDate;
             return this;
         }
 
+        /**
+         * @param startDate The start date must be after January 1, 2017.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startDate(GoogleTypeDateResponse startDate) {
             $.startDate = startDate;
             return this;

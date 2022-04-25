@@ -9,30 +9,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudApigeeV1DatastoreConfigResponse {
-    /**
-     * Name of the Cloud Storage bucket. Required for `gcs` target_type.
-     * 
-     */
+        /**
+         * @return Name of the Cloud Storage bucket. Required for `gcs` target_type.
+         * 
+         */
     private final String bucketName;
-    /**
-     * BigQuery dataset name Required for `bigquery` target_type.
-     * 
-     */
+        /**
+         * @return BigQuery dataset name Required for `bigquery` target_type.
+         * 
+         */
     private final String datasetName;
-    /**
-     * Path of Cloud Storage bucket Required for `gcs` target_type.
-     * 
-     */
+        /**
+         * @return Path of Cloud Storage bucket Required for `gcs` target_type.
+         * 
+         */
     private final String path;
-    /**
-     * GCP project in which the datastore exists
-     * 
-     */
+        /**
+         * @return GCP project in which the datastore exists
+         * 
+         */
     private final String project;
-    /**
-     * Prefix of BigQuery table Required for `bigquery` target_type.
-     * 
-     */
+        /**
+         * @return Prefix of BigQuery table Required for `bigquery` target_type.
+         * 
+         */
     private final String tablePrefix;
 
     @CustomType.Constructor
@@ -50,37 +50,37 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse {
     }
 
     /**
-     * Name of the Cloud Storage bucket. Required for `gcs` target_type.
+     * @return Name of the Cloud Storage bucket. Required for `gcs` target_type.
      * 
-    */
+     */
     public String bucketName() {
         return this.bucketName;
     }
     /**
-     * BigQuery dataset name Required for `bigquery` target_type.
+     * @return BigQuery dataset name Required for `bigquery` target_type.
      * 
-    */
+     */
     public String datasetName() {
         return this.datasetName;
     }
     /**
-     * Path of Cloud Storage bucket Required for `gcs` target_type.
+     * @return Path of Cloud Storage bucket Required for `gcs` target_type.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }
     /**
-     * GCP project in which the datastore exists
+     * @return GCP project in which the datastore exists
      * 
-    */
+     */
     public String project() {
         return this.project;
     }
     /**
-     * Prefix of BigQuery table Required for `bigquery` target_type.
+     * @return Prefix of BigQuery table Required for `bigquery` target_type.
      * 
-    */
+     */
     public String tablePrefix() {
         return this.tablePrefix;
     }

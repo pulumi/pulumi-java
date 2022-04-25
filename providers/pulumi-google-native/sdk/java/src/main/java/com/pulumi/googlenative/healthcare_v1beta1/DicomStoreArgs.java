@@ -40,6 +40,10 @@ public final class DicomStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -58,6 +62,10 @@ public final class DicomStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name of the DICOM store, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -69,6 +77,10 @@ public final class DicomStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notificationConfig")
     private @Nullable Output<NotificationConfigArgs> notificationConfig;
 
+    /**
+     * @return Notification destination for new DICOM instances. Supplied by the client.
+     * 
+     */
     public Optional<Output<NotificationConfigArgs>> notificationConfig() {
         return Optional.ofNullable(this.notificationConfig);
     }
@@ -87,6 +99,10 @@ public final class DicomStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="streamConfigs")
     private @Nullable Output<List<GoogleCloudHealthcareV1beta1DicomStreamConfigArgs>> streamConfigs;
 
+    /**
+     * @return A list of streaming configs used to configure the destination of streaming exports for every DICOM instance insertion in this DICOM store. After a new config is added to `stream_configs`, DICOM instance insertions are streamed to the new destination. When a config is removed from `stream_configs`, the server stops streaming to that destination. Each config must contain a unique destination.
+     * 
+     */
     public Optional<Output<List<GoogleCloudHealthcareV1beta1DicomStreamConfigArgs>>> streamConfigs() {
         return Optional.ofNullable(this.streamConfigs);
     }
@@ -140,11 +156,23 @@ public final class DicomStoreArgs extends com.pulumi.resources.ResourceArgs {
             return dicomStoreId(Output.of(dicomStoreId));
         }
 
+        /**
+         * @param labels User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -158,20 +186,44 @@ public final class DicomStoreArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Resource name of the DICOM store, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name of the DICOM store, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param notificationConfig Notification destination for new DICOM instances. Supplied by the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationConfig(@Nullable Output<NotificationConfigArgs> notificationConfig) {
             $.notificationConfig = notificationConfig;
             return this;
         }
 
+        /**
+         * @param notificationConfig Notification destination for new DICOM instances. Supplied by the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationConfig(NotificationConfigArgs notificationConfig) {
             return notificationConfig(Output.of(notificationConfig));
         }
@@ -185,15 +237,33 @@ public final class DicomStoreArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param streamConfigs A list of streaming configs used to configure the destination of streaming exports for every DICOM instance insertion in this DICOM store. After a new config is added to `stream_configs`, DICOM instance insertions are streamed to the new destination. When a config is removed from `stream_configs`, the server stops streaming to that destination. Each config must contain a unique destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamConfigs(@Nullable Output<List<GoogleCloudHealthcareV1beta1DicomStreamConfigArgs>> streamConfigs) {
             $.streamConfigs = streamConfigs;
             return this;
         }
 
+        /**
+         * @param streamConfigs A list of streaming configs used to configure the destination of streaming exports for every DICOM instance insertion in this DICOM store. After a new config is added to `stream_configs`, DICOM instance insertions are streamed to the new destination. When a config is removed from `stream_configs`, the server stops streaming to that destination. Each config must contain a unique destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamConfigs(List<GoogleCloudHealthcareV1beta1DicomStreamConfigArgs> streamConfigs) {
             return streamConfigs(Output.of(streamConfigs));
         }
 
+        /**
+         * @param streamConfigs A list of streaming configs used to configure the destination of streaming exports for every DICOM instance insertion in this DICOM store. After a new config is added to `stream_configs`, DICOM instance insertions are streamed to the new destination. When a config is removed from `stream_configs`, the server stops streaming to that destination. Each config must contain a unique destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamConfigs(GoogleCloudHealthcareV1beta1DicomStreamConfigArgs... streamConfigs) {
             return streamConfigs(List.of(streamConfigs));
         }

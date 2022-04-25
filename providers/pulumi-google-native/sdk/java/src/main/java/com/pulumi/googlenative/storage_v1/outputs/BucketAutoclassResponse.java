@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class BucketAutoclassResponse {
-    /**
-     * Whether or not Autoclass is enabled on this bucket
-     * 
-     */
+        /**
+         * @return Whether or not Autoclass is enabled on this bucket
+         * 
+         */
     private final Boolean enabled;
-    /**
-     * A date and time in RFC 3339 format representing the instant at which &#34;enabled&#34; was last toggled.
-     * 
-     */
+        /**
+         * @return A date and time in RFC 3339 format representing the instant at which &#34;enabled&#34; was last toggled.
+         * 
+         */
     private final String toggleTime;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class BucketAutoclassResponse {
     }
 
     /**
-     * Whether or not Autoclass is enabled on this bucket
+     * @return Whether or not Autoclass is enabled on this bucket
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * A date and time in RFC 3339 format representing the instant at which &#34;enabled&#34; was last toggled.
+     * @return A date and time in RFC 3339 format representing the instant at which &#34;enabled&#34; was last toggled.
      * 
-    */
+     */
     public String toggleTime() {
         return this.toggleTime;
     }

@@ -25,6 +25,10 @@ public final class PacketMirroringMirroredResourceInfoArgs extends com.pulumi.re
     @Import(name="instances")
     private @Nullable Output<List<PacketMirroringMirroredResourceInfoInstanceInfoArgs>> instances;
 
+    /**
+     * @return A set of virtual machine instances that are being mirrored. They must live in zones contained in the same region as this packetMirroring. Note that this config will apply only to those network interfaces of the Instances that belong to the network specified in this packetMirroring. You may specify a maximum of 50 Instances.
+     * 
+     */
     public Optional<Output<List<PacketMirroringMirroredResourceInfoInstanceInfoArgs>>> instances() {
         return Optional.ofNullable(this.instances);
     }
@@ -36,6 +40,10 @@ public final class PacketMirroringMirroredResourceInfoArgs extends com.pulumi.re
     @Import(name="subnetworks")
     private @Nullable Output<List<PacketMirroringMirroredResourceInfoSubnetInfoArgs>> subnetworks;
 
+    /**
+     * @return A set of subnetworks for which traffic from/to all VM instances will be mirrored. They must live in the same region as this packetMirroring. You may specify a maximum of 5 subnetworks.
+     * 
+     */
     public Optional<Output<List<PacketMirroringMirroredResourceInfoSubnetInfoArgs>>> subnetworks() {
         return Optional.ofNullable(this.subnetworks);
     }
@@ -47,6 +55,10 @@ public final class PacketMirroringMirroredResourceInfoArgs extends com.pulumi.re
     @Import(name="tags")
     private @Nullable Output<List<String>> tags;
 
+    /**
+     * @return A set of mirrored tags. Traffic from/to all VM instances that have one or more of these tags will be mirrored.
+     * 
+     */
     public Optional<Output<List<String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -77,41 +89,95 @@ public final class PacketMirroringMirroredResourceInfoArgs extends com.pulumi.re
             $ = new PacketMirroringMirroredResourceInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instances A set of virtual machine instances that are being mirrored. They must live in zones contained in the same region as this packetMirroring. Note that this config will apply only to those network interfaces of the Instances that belong to the network specified in this packetMirroring. You may specify a maximum of 50 Instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(@Nullable Output<List<PacketMirroringMirroredResourceInfoInstanceInfoArgs>> instances) {
             $.instances = instances;
             return this;
         }
 
+        /**
+         * @param instances A set of virtual machine instances that are being mirrored. They must live in zones contained in the same region as this packetMirroring. Note that this config will apply only to those network interfaces of the Instances that belong to the network specified in this packetMirroring. You may specify a maximum of 50 Instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(List<PacketMirroringMirroredResourceInfoInstanceInfoArgs> instances) {
             return instances(Output.of(instances));
         }
 
+        /**
+         * @param instances A set of virtual machine instances that are being mirrored. They must live in zones contained in the same region as this packetMirroring. Note that this config will apply only to those network interfaces of the Instances that belong to the network specified in this packetMirroring. You may specify a maximum of 50 Instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(PacketMirroringMirroredResourceInfoInstanceInfoArgs... instances) {
             return instances(List.of(instances));
         }
 
+        /**
+         * @param subnetworks A set of subnetworks for which traffic from/to all VM instances will be mirrored. They must live in the same region as this packetMirroring. You may specify a maximum of 5 subnetworks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetworks(@Nullable Output<List<PacketMirroringMirroredResourceInfoSubnetInfoArgs>> subnetworks) {
             $.subnetworks = subnetworks;
             return this;
         }
 
+        /**
+         * @param subnetworks A set of subnetworks for which traffic from/to all VM instances will be mirrored. They must live in the same region as this packetMirroring. You may specify a maximum of 5 subnetworks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetworks(List<PacketMirroringMirroredResourceInfoSubnetInfoArgs> subnetworks) {
             return subnetworks(Output.of(subnetworks));
         }
 
+        /**
+         * @param subnetworks A set of subnetworks for which traffic from/to all VM instances will be mirrored. They must live in the same region as this packetMirroring. You may specify a maximum of 5 subnetworks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetworks(PacketMirroringMirroredResourceInfoSubnetInfoArgs... subnetworks) {
             return subnetworks(List.of(subnetworks));
         }
 
+        /**
+         * @param tags A set of mirrored tags. Traffic from/to all VM instances that have one or more of these tags will be mirrored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A set of mirrored tags. Traffic from/to all VM instances that have one or more of these tags will be mirrored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A set of mirrored tags. Traffic from/to all VM instances that have one or more of these tags will be mirrored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }

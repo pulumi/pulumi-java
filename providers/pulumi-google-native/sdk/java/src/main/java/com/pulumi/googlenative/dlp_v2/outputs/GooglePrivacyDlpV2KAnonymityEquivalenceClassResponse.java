@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse {
-    /**
-     * Size of the equivalence class, for example number of rows with the above set of values.
-     * 
-     */
+        /**
+         * @return Size of the equivalence class, for example number of rows with the above set of values.
+         * 
+         */
     private final String equivalenceClassSize;
-    /**
-     * Set of values defining the equivalence class. One value per quasi-identifier column in the original KAnonymity metric message. The order is always the same as the original request.
-     * 
-     */
+        /**
+         * @return Set of values defining the equivalence class. One value per quasi-identifier column in the original KAnonymity metric message. The order is always the same as the original request.
+         * 
+         */
     private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse {
     }
 
     /**
-     * Size of the equivalence class, for example number of rows with the above set of values.
+     * @return Size of the equivalence class, for example number of rows with the above set of values.
      * 
-    */
+     */
     public String equivalenceClassSize() {
         return this.equivalenceClassSize;
     }
     /**
-     * Set of values defining the equivalence class. One value per quasi-identifier column in the original KAnonymity metric message. The order is always the same as the original request.
+     * @return Set of values defining the equivalence class. One value per quasi-identifier column in the original KAnonymity metric message. The order is always the same as the original request.
      * 
-    */
+     */
     public List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues() {
         return this.quasiIdsValues;
     }

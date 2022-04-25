@@ -19,6 +19,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResp
     @Import(name="maxValue", required=true)
     private String maxValue;
 
+    /**
+     * @return Must be specified if type is `INTEGER`. Maximum value of the parameter.
+     * 
+     */
     public String maxValue() {
         return this.maxValue;
     }
@@ -30,6 +34,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResp
     @Import(name="minValue", required=true)
     private String minValue;
 
+    /**
+     * @return Must be specified if type is `INTEGER`. Minimum value of the parameter.
+     * 
+     */
     public String minValue() {
         return this.minValue;
     }
@@ -59,11 +67,23 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResp
             $ = new GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxValue Must be specified if type is `INTEGER`. Maximum value of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxValue(String maxValue) {
             $.maxValue = maxValue;
             return this;
         }
 
+        /**
+         * @param minValue Must be specified if type is `INTEGER`. Minimum value of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minValue(String minValue) {
             $.minValue = minValue;
             return this;

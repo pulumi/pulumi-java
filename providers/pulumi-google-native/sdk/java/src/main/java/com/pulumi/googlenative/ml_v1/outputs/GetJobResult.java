@@ -14,70 +14,70 @@ import java.util.Objects;
 
 @CustomType
 public final class GetJobResult {
-    /**
-     * When the job was created.
-     * 
-     */
+        /**
+         * @return When the job was created.
+         * 
+         */
     private final String createTime;
-    /**
-     * When the job processing was completed.
-     * 
-     */
+        /**
+         * @return When the job processing was completed.
+         * 
+         */
     private final String endTime;
-    /**
-     * The details of a failure or a cancellation.
-     * 
-     */
+        /**
+         * @return The details of a failure or a cancellation.
+         * 
+         */
     private final String errorMessage;
-    /**
-     * `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a job from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform job updates in order to avoid race conditions: An `etag` is returned in the response to `GetJob`, and systems are expected to put that etag in the request to `UpdateJob` to ensure that their change will be applied to the same version of the job.
-     * 
-     */
+        /**
+         * @return `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a job from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform job updates in order to avoid race conditions: An `etag` is returned in the response to `GetJob`, and systems are expected to put that etag in the request to `UpdateJob` to ensure that their change will be applied to the same version of the job.
+         * 
+         */
     private final String etag;
-    /**
-     * The user-specified id of the job.
-     * 
-     */
+        /**
+         * @return The user-specified id of the job.
+         * 
+         */
     private final String jobId;
-    /**
-     * It&#39;s only effect when the job is in QUEUED state. If it&#39;s positive, it indicates the job&#39;s position in the job scheduler. It&#39;s 0 when the job is already scheduled.
-     * 
-     */
+        /**
+         * @return It&#39;s only effect when the job is in QUEUED state. If it&#39;s positive, it indicates the job&#39;s position in the job scheduler. It&#39;s 0 when the job is already scheduled.
+         * 
+         */
     private final String jobPosition;
-    /**
-     * Optional. One or more labels that you can add, to organize your jobs. Each label is a key-value pair, where both the key and the value are arbitrary strings that you supply. For more information, see the documentation on using labels.
-     * 
-     */
+        /**
+         * @return Optional. One or more labels that you can add, to organize your jobs. Each label is a key-value pair, where both the key and the value are arbitrary strings that you supply. For more information, see the documentation on using labels.
+         * 
+         */
     private final Map<String,String> labels;
-    /**
-     * Input parameters to create a prediction job.
-     * 
-     */
+        /**
+         * @return Input parameters to create a prediction job.
+         * 
+         */
     private final GoogleCloudMlV1__PredictionInputResponse predictionInput;
-    /**
-     * The current prediction job result.
-     * 
-     */
+        /**
+         * @return The current prediction job result.
+         * 
+         */
     private final GoogleCloudMlV1__PredictionOutputResponse predictionOutput;
-    /**
-     * When the job processing was started.
-     * 
-     */
+        /**
+         * @return When the job processing was started.
+         * 
+         */
     private final String startTime;
-    /**
-     * The detailed state of a job.
-     * 
-     */
+        /**
+         * @return The detailed state of a job.
+         * 
+         */
     private final String state;
-    /**
-     * Input parameters to create a training job.
-     * 
-     */
+        /**
+         * @return Input parameters to create a training job.
+         * 
+         */
     private final GoogleCloudMlV1__TrainingInputResponse trainingInput;
-    /**
-     * The current training job result.
-     * 
-     */
+        /**
+         * @return The current training job result.
+         * 
+         */
     private final GoogleCloudMlV1__TrainingOutputResponse trainingOutput;
 
     @CustomType.Constructor
@@ -111,93 +111,93 @@ public final class GetJobResult {
     }
 
     /**
-     * When the job was created.
+     * @return When the job was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * When the job processing was completed.
+     * @return When the job processing was completed.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * The details of a failure or a cancellation.
+     * @return The details of a failure or a cancellation.
      * 
-    */
+     */
     public String errorMessage() {
         return this.errorMessage;
     }
     /**
-     * `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a job from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform job updates in order to avoid race conditions: An `etag` is returned in the response to `GetJob`, and systems are expected to put that etag in the request to `UpdateJob` to ensure that their change will be applied to the same version of the job.
+     * @return `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a job from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform job updates in order to avoid race conditions: An `etag` is returned in the response to `GetJob`, and systems are expected to put that etag in the request to `UpdateJob` to ensure that their change will be applied to the same version of the job.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The user-specified id of the job.
+     * @return The user-specified id of the job.
      * 
-    */
+     */
     public String jobId() {
         return this.jobId;
     }
     /**
-     * It&#39;s only effect when the job is in QUEUED state. If it&#39;s positive, it indicates the job&#39;s position in the job scheduler. It&#39;s 0 when the job is already scheduled.
+     * @return It&#39;s only effect when the job is in QUEUED state. If it&#39;s positive, it indicates the job&#39;s position in the job scheduler. It&#39;s 0 when the job is already scheduled.
      * 
-    */
+     */
     public String jobPosition() {
         return this.jobPosition;
     }
     /**
-     * Optional. One or more labels that you can add, to organize your jobs. Each label is a key-value pair, where both the key and the value are arbitrary strings that you supply. For more information, see the documentation on using labels.
+     * @return Optional. One or more labels that you can add, to organize your jobs. Each label is a key-value pair, where both the key and the value are arbitrary strings that you supply. For more information, see the documentation on using labels.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * Input parameters to create a prediction job.
+     * @return Input parameters to create a prediction job.
      * 
-    */
+     */
     public GoogleCloudMlV1__PredictionInputResponse predictionInput() {
         return this.predictionInput;
     }
     /**
-     * The current prediction job result.
+     * @return The current prediction job result.
      * 
-    */
+     */
     public GoogleCloudMlV1__PredictionOutputResponse predictionOutput() {
         return this.predictionOutput;
     }
     /**
-     * When the job processing was started.
+     * @return When the job processing was started.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * The detailed state of a job.
+     * @return The detailed state of a job.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Input parameters to create a training job.
+     * @return Input parameters to create a training job.
      * 
-    */
+     */
     public GoogleCloudMlV1__TrainingInputResponse trainingInput() {
         return this.trainingInput;
     }
     /**
-     * The current training job result.
+     * @return The current training job result.
      * 
-    */
+     */
     public GoogleCloudMlV1__TrainingOutputResponse trainingOutput() {
         return this.trainingOutput;
     }

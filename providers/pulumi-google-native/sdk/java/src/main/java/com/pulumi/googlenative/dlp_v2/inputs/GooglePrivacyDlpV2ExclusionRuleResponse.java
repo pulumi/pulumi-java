@@ -26,6 +26,10 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse extends com.pulumi.re
     @Import(name="dictionary", required=true)
     private GooglePrivacyDlpV2DictionaryResponse dictionary;
 
+    /**
+     * @return Dictionary which defines the rule.
+     * 
+     */
     public GooglePrivacyDlpV2DictionaryResponse dictionary() {
         return this.dictionary;
     }
@@ -37,6 +41,10 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse extends com.pulumi.re
     @Import(name="excludeInfoTypes", required=true)
     private GooglePrivacyDlpV2ExcludeInfoTypesResponse excludeInfoTypes;
 
+    /**
+     * @return Set of infoTypes for which findings would affect this rule.
+     * 
+     */
     public GooglePrivacyDlpV2ExcludeInfoTypesResponse excludeInfoTypes() {
         return this.excludeInfoTypes;
     }
@@ -48,6 +56,10 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse extends com.pulumi.re
     @Import(name="matchingType", required=true)
     private String matchingType;
 
+    /**
+     * @return How the rule is applied, see MatchingType documentation for details.
+     * 
+     */
     public String matchingType() {
         return this.matchingType;
     }
@@ -59,6 +71,10 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse extends com.pulumi.re
     @Import(name="regex", required=true)
     private GooglePrivacyDlpV2RegexResponse regex;
 
+    /**
+     * @return Regular expression which defines the rule.
+     * 
+     */
     public GooglePrivacyDlpV2RegexResponse regex() {
         return this.regex;
     }
@@ -90,21 +106,45 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse extends com.pulumi.re
             $ = new GooglePrivacyDlpV2ExclusionRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dictionary Dictionary which defines the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dictionary(GooglePrivacyDlpV2DictionaryResponse dictionary) {
             $.dictionary = dictionary;
             return this;
         }
 
+        /**
+         * @param excludeInfoTypes Set of infoTypes for which findings would affect this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeInfoTypes(GooglePrivacyDlpV2ExcludeInfoTypesResponse excludeInfoTypes) {
             $.excludeInfoTypes = excludeInfoTypes;
             return this;
         }
 
+        /**
+         * @param matchingType How the rule is applied, see MatchingType documentation for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchingType(String matchingType) {
             $.matchingType = matchingType;
             return this;
         }
 
+        /**
+         * @param regex Regular expression which defines the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(GooglePrivacyDlpV2RegexResponse regex) {
             $.regex = regex;
             return this;

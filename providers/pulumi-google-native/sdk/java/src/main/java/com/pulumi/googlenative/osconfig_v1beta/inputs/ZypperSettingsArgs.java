@@ -28,6 +28,10 @@ public final class ZypperSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="categories")
     private @Nullable Output<List<String>> categories;
 
+    /**
+     * @return Install only patches with these categories. Common categories include security, recommended, and feature.
+     * 
+     */
     public Optional<Output<List<String>>> categories() {
         return Optional.ofNullable(this.categories);
     }
@@ -39,6 +43,10 @@ public final class ZypperSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="excludes")
     private @Nullable Output<List<String>> excludes;
 
+    /**
+     * @return List of patches to exclude from update.
+     * 
+     */
     public Optional<Output<List<String>>> excludes() {
         return Optional.ofNullable(this.excludes);
     }
@@ -50,6 +58,10 @@ public final class ZypperSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="exclusivePatches")
     private @Nullable Output<List<String>> exclusivePatches;
 
+    /**
+     * @return An exclusive list of patches to be updated. These are the only patches that will be installed using &#39;zypper patch patch:&#39; command. This field must not be used with any other patch configuration fields.
+     * 
+     */
     public Optional<Output<List<String>>> exclusivePatches() {
         return Optional.ofNullable(this.exclusivePatches);
     }
@@ -61,6 +73,10 @@ public final class ZypperSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="severities")
     private @Nullable Output<List<String>> severities;
 
+    /**
+     * @return Install only patches with these severities. Common severities include critical, important, moderate, and low.
+     * 
+     */
     public Optional<Output<List<String>>> severities() {
         return Optional.ofNullable(this.severities);
     }
@@ -72,6 +88,10 @@ public final class ZypperSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="withOptional")
     private @Nullable Output<Boolean> withOptional;
 
+    /**
+     * @return Adds the `--with-optional` flag to `zypper patch`.
+     * 
+     */
     public Optional<Output<Boolean>> withOptional() {
         return Optional.ofNullable(this.withOptional);
     }
@@ -83,6 +103,10 @@ public final class ZypperSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="withUpdate")
     private @Nullable Output<Boolean> withUpdate;
 
+    /**
+     * @return Adds the `--with-update` flag, to `zypper patch`.
+     * 
+     */
     public Optional<Output<Boolean>> withUpdate() {
         return Optional.ofNullable(this.withUpdate);
     }
@@ -116,72 +140,168 @@ public final class ZypperSettingsArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ZypperSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param categories Install only patches with these categories. Common categories include security, recommended, and feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder categories(@Nullable Output<List<String>> categories) {
             $.categories = categories;
             return this;
         }
 
+        /**
+         * @param categories Install only patches with these categories. Common categories include security, recommended, and feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder categories(List<String> categories) {
             return categories(Output.of(categories));
         }
 
+        /**
+         * @param categories Install only patches with these categories. Common categories include security, recommended, and feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder categories(String... categories) {
             return categories(List.of(categories));
         }
 
+        /**
+         * @param excludes List of patches to exclude from update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludes(@Nullable Output<List<String>> excludes) {
             $.excludes = excludes;
             return this;
         }
 
+        /**
+         * @param excludes List of patches to exclude from update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludes(List<String> excludes) {
             return excludes(Output.of(excludes));
         }
 
+        /**
+         * @param excludes List of patches to exclude from update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludes(String... excludes) {
             return excludes(List.of(excludes));
         }
 
+        /**
+         * @param exclusivePatches An exclusive list of patches to be updated. These are the only patches that will be installed using &#39;zypper patch patch:&#39; command. This field must not be used with any other patch configuration fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusivePatches(@Nullable Output<List<String>> exclusivePatches) {
             $.exclusivePatches = exclusivePatches;
             return this;
         }
 
+        /**
+         * @param exclusivePatches An exclusive list of patches to be updated. These are the only patches that will be installed using &#39;zypper patch patch:&#39; command. This field must not be used with any other patch configuration fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusivePatches(List<String> exclusivePatches) {
             return exclusivePatches(Output.of(exclusivePatches));
         }
 
+        /**
+         * @param exclusivePatches An exclusive list of patches to be updated. These are the only patches that will be installed using &#39;zypper patch patch:&#39; command. This field must not be used with any other patch configuration fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusivePatches(String... exclusivePatches) {
             return exclusivePatches(List.of(exclusivePatches));
         }
 
+        /**
+         * @param severities Install only patches with these severities. Common severities include critical, important, moderate, and low.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severities(@Nullable Output<List<String>> severities) {
             $.severities = severities;
             return this;
         }
 
+        /**
+         * @param severities Install only patches with these severities. Common severities include critical, important, moderate, and low.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severities(List<String> severities) {
             return severities(Output.of(severities));
         }
 
+        /**
+         * @param severities Install only patches with these severities. Common severities include critical, important, moderate, and low.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severities(String... severities) {
             return severities(List.of(severities));
         }
 
+        /**
+         * @param withOptional Adds the `--with-optional` flag to `zypper patch`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder withOptional(@Nullable Output<Boolean> withOptional) {
             $.withOptional = withOptional;
             return this;
         }
 
+        /**
+         * @param withOptional Adds the `--with-optional` flag to `zypper patch`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder withOptional(Boolean withOptional) {
             return withOptional(Output.of(withOptional));
         }
 
+        /**
+         * @param withUpdate Adds the `--with-update` flag, to `zypper patch`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder withUpdate(@Nullable Output<Boolean> withUpdate) {
             $.withUpdate = withUpdate;
             return this;
         }
 
+        /**
+         * @param withUpdate Adds the `--with-update` flag, to `zypper patch`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder withUpdate(Boolean withUpdate) {
             return withUpdate(Output.of(withUpdate));
         }

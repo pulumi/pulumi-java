@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class FailureInfoResponse {
-    /**
-     * Explains the failure issue in more detail using hard-coded text.
-     * 
-     */
+        /**
+         * @return Explains the failure issue in more detail using hard-coded text.
+         * 
+         */
     private final String detail;
-    /**
-     * The name of the failure.
-     * 
-     */
+        /**
+         * @return The name of the failure.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class FailureInfoResponse {
     }
 
     /**
-     * Explains the failure issue in more detail using hard-coded text.
+     * @return Explains the failure issue in more detail using hard-coded text.
      * 
-    */
+     */
     public String detail() {
         return this.detail;
     }
     /**
-     * The name of the failure.
+     * @return The name of the failure.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

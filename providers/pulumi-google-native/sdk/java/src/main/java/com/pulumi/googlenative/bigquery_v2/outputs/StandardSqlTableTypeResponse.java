@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class StandardSqlTableTypeResponse {
-    /**
-     * The columns in this table type
-     * 
-     */
+        /**
+         * @return The columns in this table type
+         * 
+         */
     private final List<StandardSqlFieldResponse> columns;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class StandardSqlTableTypeResponse {
     }
 
     /**
-     * The columns in this table type
+     * @return The columns in this table type
      * 
-    */
+     */
     public List<StandardSqlFieldResponse> columns() {
         return this.columns;
     }

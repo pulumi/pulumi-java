@@ -32,6 +32,10 @@ public final class ResponsePolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return User-provided description for this Response Policy.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -43,6 +47,10 @@ public final class ResponsePolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="gkeClusters")
     private @Nullable Output<List<ResponsePolicyGKEClusterArgs>> gkeClusters;
 
+    /**
+     * @return The list of Google Kubernetes Engine clusters to which this response policy is applied.
+     * 
+     */
     public Optional<Output<List<ResponsePolicyGKEClusterArgs>>> gkeClusters() {
         return Optional.ofNullable(this.gkeClusters);
     }
@@ -54,6 +62,10 @@ public final class ResponsePolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Unique identifier for the resource; defined by the server (output only).
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -72,6 +84,10 @@ public final class ResponsePolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="networks")
     private @Nullable Output<List<ResponsePolicyNetworkArgs>> networks;
 
+    /**
+     * @return List of network names specifying networks to which this policy is applied.
+     * 
+     */
     public Optional<Output<List<ResponsePolicyNetworkArgs>>> networks() {
         return Optional.ofNullable(this.networks);
     }
@@ -90,6 +106,10 @@ public final class ResponsePolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="responsePolicyName")
     private @Nullable Output<String> responsePolicyName;
 
+    /**
+     * @return User assigned name for this Response Policy.
+     * 
+     */
     public Optional<Output<String>> responsePolicyName() {
         return Optional.ofNullable(this.responsePolicyName);
     }
@@ -134,33 +154,75 @@ public final class ResponsePolicyArgs extends com.pulumi.resources.ResourceArgs 
             return clientOperationId(Output.of(clientOperationId));
         }
 
+        /**
+         * @param description User-provided description for this Response Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description User-provided description for this Response Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param gkeClusters The list of Google Kubernetes Engine clusters to which this response policy is applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gkeClusters(@Nullable Output<List<ResponsePolicyGKEClusterArgs>> gkeClusters) {
             $.gkeClusters = gkeClusters;
             return this;
         }
 
+        /**
+         * @param gkeClusters The list of Google Kubernetes Engine clusters to which this response policy is applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gkeClusters(List<ResponsePolicyGKEClusterArgs> gkeClusters) {
             return gkeClusters(Output.of(gkeClusters));
         }
 
+        /**
+         * @param gkeClusters The list of Google Kubernetes Engine clusters to which this response policy is applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gkeClusters(ResponsePolicyGKEClusterArgs... gkeClusters) {
             return gkeClusters(List.of(gkeClusters));
         }
 
+        /**
+         * @param id Unique identifier for the resource; defined by the server (output only).
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Unique identifier for the resource; defined by the server (output only).
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
@@ -174,15 +236,33 @@ public final class ResponsePolicyArgs extends com.pulumi.resources.ResourceArgs 
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param networks List of network names specifying networks to which this policy is applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networks(@Nullable Output<List<ResponsePolicyNetworkArgs>> networks) {
             $.networks = networks;
             return this;
         }
 
+        /**
+         * @param networks List of network names specifying networks to which this policy is applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networks(List<ResponsePolicyNetworkArgs> networks) {
             return networks(Output.of(networks));
         }
 
+        /**
+         * @param networks List of network names specifying networks to which this policy is applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networks(ResponsePolicyNetworkArgs... networks) {
             return networks(List.of(networks));
         }
@@ -196,11 +276,23 @@ public final class ResponsePolicyArgs extends com.pulumi.resources.ResourceArgs 
             return project(Output.of(project));
         }
 
+        /**
+         * @param responsePolicyName User assigned name for this Response Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responsePolicyName(@Nullable Output<String> responsePolicyName) {
             $.responsePolicyName = responsePolicyName;
             return this;
         }
 
+        /**
+         * @param responsePolicyName User assigned name for this Response Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responsePolicyName(String responsePolicyName) {
             return responsePolicyName(Output.of(responsePolicyName));
         }

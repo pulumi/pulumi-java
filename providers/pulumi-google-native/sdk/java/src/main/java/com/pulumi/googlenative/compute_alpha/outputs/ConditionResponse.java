@@ -10,30 +10,30 @@ import java.util.Objects;
 
 @CustomType
 public final class ConditionResponse {
-    /**
-     * This is deprecated and has no effect. Do not use.
-     * 
-     */
+        /**
+         * @return This is deprecated and has no effect. Do not use.
+         * 
+         */
     private final String iam;
-    /**
-     * This is deprecated and has no effect. Do not use.
-     * 
-     */
+        /**
+         * @return This is deprecated and has no effect. Do not use.
+         * 
+         */
     private final String op;
-    /**
-     * This is deprecated and has no effect. Do not use.
-     * 
-     */
+        /**
+         * @return This is deprecated and has no effect. Do not use.
+         * 
+         */
     private final String svc;
-    /**
-     * This is deprecated and has no effect. Do not use.
-     * 
-     */
+        /**
+         * @return This is deprecated and has no effect. Do not use.
+         * 
+         */
     private final String sys;
-    /**
-     * This is deprecated and has no effect. Do not use.
-     * 
-     */
+        /**
+         * @return This is deprecated and has no effect. Do not use.
+         * 
+         */
     private final List<String> values;
 
     @CustomType.Constructor
@@ -51,37 +51,37 @@ public final class ConditionResponse {
     }
 
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
-    */
+     */
     public String iam() {
         return this.iam;
     }
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
-    */
+     */
     public String op() {
         return this.op;
     }
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
-    */
+     */
     public String svc() {
         return this.svc;
     }
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
-    */
+     */
     public String sys() {
         return this.sys;
     }
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
-    */
+     */
     public List<String> values() {
         return this.values;
     }

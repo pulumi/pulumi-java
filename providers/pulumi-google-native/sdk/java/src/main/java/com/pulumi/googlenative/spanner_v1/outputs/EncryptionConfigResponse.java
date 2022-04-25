@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class EncryptionConfigResponse {
-    /**
-     * The Cloud KMS key to be used for encrypting and decrypting the database. Values are of the form `projects//locations//keyRings//cryptoKeys/`.
-     * 
-     */
+        /**
+         * @return The Cloud KMS key to be used for encrypting and decrypting the database. Values are of the form `projects//locations//keyRings//cryptoKeys/`.
+         * 
+         */
     private final String kmsKeyName;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class EncryptionConfigResponse {
     }
 
     /**
-     * The Cloud KMS key to be used for encrypting and decrypting the database. Values are of the form `projects//locations//keyRings//cryptoKeys/`.
+     * @return The Cloud KMS key to be used for encrypting and decrypting the database. Values are of the form `projects//locations//keyRings//cryptoKeys/`.
      * 
-    */
+     */
     public String kmsKeyName() {
         return this.kmsKeyName;
     }

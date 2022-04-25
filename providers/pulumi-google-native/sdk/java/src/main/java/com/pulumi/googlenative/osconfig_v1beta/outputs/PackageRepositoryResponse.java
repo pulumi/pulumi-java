@@ -12,25 +12,25 @@ import java.util.Objects;
 
 @CustomType
 public final class PackageRepositoryResponse {
-    /**
-     * An Apt Repository.
-     * 
-     */
+        /**
+         * @return An Apt Repository.
+         * 
+         */
     private final AptRepositoryResponse apt;
-    /**
-     * A Goo Repository.
-     * 
-     */
+        /**
+         * @return A Goo Repository.
+         * 
+         */
     private final GooRepositoryResponse goo;
-    /**
-     * A Yum Repository.
-     * 
-     */
+        /**
+         * @return A Yum Repository.
+         * 
+         */
     private final YumRepositoryResponse yum;
-    /**
-     * A Zypper Repository.
-     * 
-     */
+        /**
+         * @return A Zypper Repository.
+         * 
+         */
     private final ZypperRepositoryResponse zypper;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class PackageRepositoryResponse {
     }
 
     /**
-     * An Apt Repository.
+     * @return An Apt Repository.
      * 
-    */
+     */
     public AptRepositoryResponse apt() {
         return this.apt;
     }
     /**
-     * A Goo Repository.
+     * @return A Goo Repository.
      * 
-    */
+     */
     public GooRepositoryResponse goo() {
         return this.goo;
     }
     /**
-     * A Yum Repository.
+     * @return A Yum Repository.
      * 
-    */
+     */
     public YumRepositoryResponse yum() {
         return this.yum;
     }
     /**
-     * A Zypper Repository.
+     * @return A Zypper Repository.
      * 
-    */
+     */
     public ZypperRepositoryResponse zypper() {
         return this.zypper;
     }

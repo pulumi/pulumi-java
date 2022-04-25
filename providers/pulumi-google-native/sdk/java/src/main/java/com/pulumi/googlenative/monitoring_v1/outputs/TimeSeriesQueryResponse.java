@@ -11,25 +11,25 @@ import java.util.Objects;
 
 @CustomType
 public final class TimeSeriesQueryResponse {
-    /**
-     * Filter parameters to fetch time series.
-     * 
-     */
+        /**
+         * @return Filter parameters to fetch time series.
+         * 
+         */
     private final TimeSeriesFilterResponse timeSeriesFilter;
-    /**
-     * Parameters to fetch a ratio between two time series filters.
-     * 
-     */
+        /**
+         * @return Parameters to fetch a ratio between two time series filters.
+         * 
+         */
     private final TimeSeriesFilterRatioResponse timeSeriesFilterRatio;
-    /**
-     * A query used to fetch time series.
-     * 
-     */
+        /**
+         * @return A query used to fetch time series.
+         * 
+         */
     private final String timeSeriesQueryLanguage;
-    /**
-     * The unit of data contained in fetched time series. If non-empty, this unit will override any unit that accompanies fetched data. The format is the same as the unit (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors) field in MetricDescriptor.
-     * 
-     */
+        /**
+         * @return The unit of data contained in fetched time series. If non-empty, this unit will override any unit that accompanies fetched data. The format is the same as the unit (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors) field in MetricDescriptor.
+         * 
+         */
     private final String unitOverride;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class TimeSeriesQueryResponse {
     }
 
     /**
-     * Filter parameters to fetch time series.
+     * @return Filter parameters to fetch time series.
      * 
-    */
+     */
     public TimeSeriesFilterResponse timeSeriesFilter() {
         return this.timeSeriesFilter;
     }
     /**
-     * Parameters to fetch a ratio between two time series filters.
+     * @return Parameters to fetch a ratio between two time series filters.
      * 
-    */
+     */
     public TimeSeriesFilterRatioResponse timeSeriesFilterRatio() {
         return this.timeSeriesFilterRatio;
     }
     /**
-     * A query used to fetch time series.
+     * @return A query used to fetch time series.
      * 
-    */
+     */
     public String timeSeriesQueryLanguage() {
         return this.timeSeriesQueryLanguage;
     }
     /**
-     * The unit of data contained in fetched time series. If non-empty, this unit will override any unit that accompanies fetched data. The format is the same as the unit (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors) field in MetricDescriptor.
+     * @return The unit of data contained in fetched time series. If non-empty, this unit will override any unit that accompanies fetched data. The format is the same as the unit (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors) field in MetricDescriptor.
      * 
-    */
+     */
     public String unitOverride() {
         return this.unitOverride;
     }

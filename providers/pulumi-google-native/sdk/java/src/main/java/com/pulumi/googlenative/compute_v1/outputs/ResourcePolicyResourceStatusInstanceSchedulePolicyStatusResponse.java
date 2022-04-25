@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse {
-    /**
-     * The last time the schedule successfully ran. The timestamp is an RFC3339 string.
-     * 
-     */
+        /**
+         * @return The last time the schedule successfully ran. The timestamp is an RFC3339 string.
+         * 
+         */
     private final String lastRunStartTime;
-    /**
-     * The next time the schedule is planned to run. The actual time might be slightly different. The timestamp is an RFC3339 string.
-     * 
-     */
+        /**
+         * @return The next time the schedule is planned to run. The actual time might be slightly different. The timestamp is an RFC3339 string.
+         * 
+         */
     private final String nextRunStartTime;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatusRespo
     }
 
     /**
-     * The last time the schedule successfully ran. The timestamp is an RFC3339 string.
+     * @return The last time the schedule successfully ran. The timestamp is an RFC3339 string.
      * 
-    */
+     */
     public String lastRunStartTime() {
         return this.lastRunStartTime;
     }
     /**
-     * The next time the schedule is planned to run. The actual time might be slightly different. The timestamp is an RFC3339 string.
+     * @return The next time the schedule is planned to run. The actual time might be slightly different. The timestamp is an RFC3339 string.
      * 
-    */
+     */
     public String nextRunStartTime() {
         return this.nextRunStartTime;
     }

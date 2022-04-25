@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDatacatalogV1ContactsPersonResponse {
-    /**
-     * Designation of the person, for example, Data Steward.
-     * 
-     */
+        /**
+         * @return Designation of the person, for example, Data Steward.
+         * 
+         */
     private final String designation;
-    /**
-     * Email of the person in the format of `john.doe@xyz`, ``, or `John Doe`.
-     * 
-     */
+        /**
+         * @return Email of the person in the format of `john.doe@xyz`, ``, or `John Doe`.
+         * 
+         */
     private final String email;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GoogleCloudDatacatalogV1ContactsPersonResponse {
     }
 
     /**
-     * Designation of the person, for example, Data Steward.
+     * @return Designation of the person, for example, Data Steward.
      * 
-    */
+     */
     public String designation() {
         return this.designation;
     }
     /**
-     * Email of the person in the format of `john.doe@xyz`, ``, or `John Doe`.
+     * @return Email of the person in the format of `john.doe@xyz`, ``, or `John Doe`.
      * 
-    */
+     */
     public String email() {
         return this.email;
     }

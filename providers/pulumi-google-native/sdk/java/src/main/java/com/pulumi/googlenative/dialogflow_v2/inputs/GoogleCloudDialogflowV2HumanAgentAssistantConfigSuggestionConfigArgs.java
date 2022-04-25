@@ -28,6 +28,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
     @Import(name="featureConfigs")
     private @Nullable Output<List<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigArgs>> featureConfigs;
 
+    /**
+     * @return Configuration of different suggestion features. One feature can have only one config.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigArgs>>> featureConfigs() {
         return Optional.ofNullable(this.featureConfigs);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
     @Import(name="groupSuggestionResponses")
     private @Nullable Output<Boolean> groupSuggestionResponses;
 
+    /**
+     * @return If `group_suggestion_responses` is false, and there are multiple `feature_configs` in `event based suggestion` or StreamingAnalyzeContent, we will try to deliver suggestions to customers as soon as we get new suggestion. Different type of suggestions based on the same context will be in separate Pub/Sub event or `StreamingAnalyzeContentResponse`. If `group_suggestion_responses` set to true. All the suggestions to the same participant based on the same context will be grouped into a single Pub/Sub event or StreamingAnalyzeContentResponse.
+     * 
+     */
     public Optional<Output<Boolean>> groupSuggestionResponses() {
         return Optional.ofNullable(this.groupSuggestionResponses);
     }
@@ -68,24 +76,54 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
             $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param featureConfigs Configuration of different suggestion features. One feature can have only one config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder featureConfigs(@Nullable Output<List<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigArgs>> featureConfigs) {
             $.featureConfigs = featureConfigs;
             return this;
         }
 
+        /**
+         * @param featureConfigs Configuration of different suggestion features. One feature can have only one config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder featureConfigs(List<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigArgs> featureConfigs) {
             return featureConfigs(Output.of(featureConfigs));
         }
 
+        /**
+         * @param featureConfigs Configuration of different suggestion features. One feature can have only one config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder featureConfigs(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigArgs... featureConfigs) {
             return featureConfigs(List.of(featureConfigs));
         }
 
+        /**
+         * @param groupSuggestionResponses If `group_suggestion_responses` is false, and there are multiple `feature_configs` in `event based suggestion` or StreamingAnalyzeContent, we will try to deliver suggestions to customers as soon as we get new suggestion. Different type of suggestions based on the same context will be in separate Pub/Sub event or `StreamingAnalyzeContentResponse`. If `group_suggestion_responses` set to true. All the suggestions to the same participant based on the same context will be grouped into a single Pub/Sub event or StreamingAnalyzeContentResponse.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupSuggestionResponses(@Nullable Output<Boolean> groupSuggestionResponses) {
             $.groupSuggestionResponses = groupSuggestionResponses;
             return this;
         }
 
+        /**
+         * @param groupSuggestionResponses If `group_suggestion_responses` is false, and there are multiple `feature_configs` in `event based suggestion` or StreamingAnalyzeContent, we will try to deliver suggestions to customers as soon as we get new suggestion. Different type of suggestions based on the same context will be in separate Pub/Sub event or `StreamingAnalyzeContentResponse`. If `group_suggestion_responses` set to true. All the suggestions to the same participant based on the same context will be grouped into a single Pub/Sub event or StreamingAnalyzeContentResponse.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupSuggestionResponses(Boolean groupSuggestionResponses) {
             return groupSuggestionResponses(Output.of(groupSuggestionResponses));
         }

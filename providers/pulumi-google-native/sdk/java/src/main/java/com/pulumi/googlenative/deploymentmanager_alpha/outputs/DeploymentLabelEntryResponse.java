@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class DeploymentLabelEntryResponse {
-    /**
-     * Key of the label
-     * 
-     */
+        /**
+         * @return Key of the label
+         * 
+         */
     private final String key;
-    /**
-     * Value of the label
-     * 
-     */
+        /**
+         * @return Value of the label
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class DeploymentLabelEntryResponse {
     }
 
     /**
-     * Key of the label
+     * @return Key of the label
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Value of the label
+     * @return Value of the label
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

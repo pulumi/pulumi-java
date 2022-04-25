@@ -26,6 +26,10 @@ public final class SqlAclEntryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expireTime")
     private @Nullable Output<String> expireTime;
 
+    /**
+     * @return The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example: `2012-11-15T16:19:00.094Z`.
+     * 
+     */
     public Optional<Output<String>> expireTime() {
         return Optional.ofNullable(this.expireTime);
     }
@@ -37,6 +41,10 @@ public final class SqlAclEntryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="label")
     private @Nullable Output<String> label;
 
+    /**
+     * @return A label to identify this entry.
+     * 
+     */
     public Optional<Output<String>> label() {
         return Optional.ofNullable(this.label);
     }
@@ -48,6 +56,10 @@ public final class SqlAclEntryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ttl")
     private @Nullable Output<String> ttl;
 
+    /**
+     * @return Input only. The time-to-leave of this access control entry.
+     * 
+     */
     public Optional<Output<String>> ttl() {
         return Optional.ofNullable(this.ttl);
     }
@@ -59,6 +71,10 @@ public final class SqlAclEntryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return The allowlisted value for the access control list.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -90,38 +106,86 @@ public final class SqlAclEntryArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SqlAclEntryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expireTime The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example: `2012-11-15T16:19:00.094Z`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expireTime(@Nullable Output<String> expireTime) {
             $.expireTime = expireTime;
             return this;
         }
 
+        /**
+         * @param expireTime The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example: `2012-11-15T16:19:00.094Z`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expireTime(String expireTime) {
             return expireTime(Output.of(expireTime));
         }
 
+        /**
+         * @param label A label to identify this entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(@Nullable Output<String> label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param label A label to identify this entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(String label) {
             return label(Output.of(label));
         }
 
+        /**
+         * @param ttl Input only. The time-to-leave of this access control entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(@Nullable Output<String> ttl) {
             $.ttl = ttl;
             return this;
         }
 
+        /**
+         * @param ttl Input only. The time-to-leave of this access control entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(String ttl) {
             return ttl(Output.of(ttl));
         }
 
+        /**
+         * @param value The allowlisted value for the access control list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The allowlisted value for the access control list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

@@ -10,30 +10,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowCxV3EventHandlerResponse {
-    /**
-     * The name of the event to handle.
-     * 
-     */
+        /**
+         * @return The name of the event to handle.
+         * 
+         */
     private final String event;
-    /**
-     * The unique identifier of this event handler.
-     * 
-     */
+        /**
+         * @return The unique identifier of this event handler.
+         * 
+         */
     private final String name;
-    /**
-     * The target flow to transition to. Format: `projects//locations//agents//flows/`.
-     * 
-     */
+        /**
+         * @return The target flow to transition to. Format: `projects//locations//agents//flows/`.
+         * 
+         */
     private final String targetFlow;
-    /**
-     * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
-     * 
-     */
+        /**
+         * @return The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
+         * 
+         */
     private final String targetPage;
-    /**
-     * The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
-     * 
-     */
+        /**
+         * @return The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
+         * 
+         */
     private final GoogleCloudDialogflowCxV3FulfillmentResponse triggerFulfillment;
 
     @CustomType.Constructor
@@ -51,37 +51,37 @@ public final class GoogleCloudDialogflowCxV3EventHandlerResponse {
     }
 
     /**
-     * The name of the event to handle.
+     * @return The name of the event to handle.
      * 
-    */
+     */
     public String event() {
         return this.event;
     }
     /**
-     * The unique identifier of this event handler.
+     * @return The unique identifier of this event handler.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The target flow to transition to. Format: `projects//locations//agents//flows/`.
+     * @return The target flow to transition to. Format: `projects//locations//agents//flows/`.
      * 
-    */
+     */
     public String targetFlow() {
         return this.targetFlow;
     }
     /**
-     * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
+     * @return The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
      * 
-    */
+     */
     public String targetPage() {
         return this.targetPage;
     }
     /**
-     * The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
+     * @return The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
      * 
-    */
+     */
     public GoogleCloudDialogflowCxV3FulfillmentResponse triggerFulfillment() {
         return this.triggerFulfillment;
     }

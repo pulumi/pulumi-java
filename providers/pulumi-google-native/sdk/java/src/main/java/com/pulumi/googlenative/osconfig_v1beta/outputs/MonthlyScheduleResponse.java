@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class MonthlyScheduleResponse {
-    /**
-     * One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month. Months without the target day will be skipped. For example, a schedule to run &#34;every month on the 31st&#34; will not run in February, April, June, etc.
-     * 
-     */
+        /**
+         * @return One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month. Months without the target day will be skipped. For example, a schedule to run &#34;every month on the 31st&#34; will not run in February, April, June, etc.
+         * 
+         */
     private final Integer monthDay;
-    /**
-     * Week day in a month.
-     * 
-     */
+        /**
+         * @return Week day in a month.
+         * 
+         */
     private final WeekDayOfMonthResponse weekDayOfMonth;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class MonthlyScheduleResponse {
     }
 
     /**
-     * One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month. Months without the target day will be skipped. For example, a schedule to run &#34;every month on the 31st&#34; will not run in February, April, June, etc.
+     * @return One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month. Months without the target day will be skipped. For example, a schedule to run &#34;every month on the 31st&#34; will not run in February, April, June, etc.
      * 
-    */
+     */
     public Integer monthDay() {
         return this.monthDay;
     }
     /**
-     * Week day in a month.
+     * @return Week day in a month.
      * 
-    */
+     */
     public WeekDayOfMonthResponse weekDayOfMonth() {
         return this.weekDayOfMonth;
     }

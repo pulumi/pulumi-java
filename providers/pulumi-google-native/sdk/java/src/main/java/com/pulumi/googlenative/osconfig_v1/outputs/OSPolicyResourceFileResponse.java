@@ -12,25 +12,25 @@ import java.util.Objects;
 
 @CustomType
 public final class OSPolicyResourceFileResponse {
-    /**
-     * Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
-     * 
-     */
+        /**
+         * @return Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
+         * 
+         */
     private final Boolean allowInsecure;
-    /**
-     * A Cloud Storage object.
-     * 
-     */
+        /**
+         * @return A Cloud Storage object.
+         * 
+         */
     private final OSPolicyResourceFileGcsResponse gcs;
-    /**
-     * A local path within the VM to use.
-     * 
-     */
+        /**
+         * @return A local path within the VM to use.
+         * 
+         */
     private final String localPath;
-    /**
-     * A generic remote file.
-     * 
-     */
+        /**
+         * @return A generic remote file.
+         * 
+         */
     private final OSPolicyResourceFileRemoteResponse remote;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class OSPolicyResourceFileResponse {
     }
 
     /**
-     * Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
+     * @return Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
      * 
-    */
+     */
     public Boolean allowInsecure() {
         return this.allowInsecure;
     }
     /**
-     * A Cloud Storage object.
+     * @return A Cloud Storage object.
      * 
-    */
+     */
     public OSPolicyResourceFileGcsResponse gcs() {
         return this.gcs;
     }
     /**
-     * A local path within the VM to use.
+     * @return A local path within the VM to use.
      * 
-    */
+     */
     public String localPath() {
         return this.localPath;
     }
     /**
-     * A generic remote file.
+     * @return A generic remote file.
      * 
-    */
+     */
     public OSPolicyResourceFileRemoteResponse remote() {
         return this.remote;
     }

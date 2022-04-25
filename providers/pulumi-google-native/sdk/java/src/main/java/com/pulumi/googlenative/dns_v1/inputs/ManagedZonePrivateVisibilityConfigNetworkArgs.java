@@ -29,6 +29,10 @@ public final class ManagedZonePrivateVisibilityConfigNetworkArgs extends com.pul
     @Import(name="networkUrl")
     private @Nullable Output<String> networkUrl;
 
+    /**
+     * @return The fully qualified URL of the VPC network to bind to. Format this URL like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
+     * 
+     */
     public Optional<Output<String>> networkUrl() {
         return Optional.ofNullable(this.networkUrl);
     }
@@ -67,11 +71,23 @@ public final class ManagedZonePrivateVisibilityConfigNetworkArgs extends com.pul
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param networkUrl The fully qualified URL of the VPC network to bind to. Format this URL like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkUrl(@Nullable Output<String> networkUrl) {
             $.networkUrl = networkUrl;
             return this;
         }
 
+        /**
+         * @param networkUrl The fully qualified URL of the VPC network to bind to. Format this URL like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkUrl(String networkUrl) {
             return networkUrl(Output.of(networkUrl));
         }

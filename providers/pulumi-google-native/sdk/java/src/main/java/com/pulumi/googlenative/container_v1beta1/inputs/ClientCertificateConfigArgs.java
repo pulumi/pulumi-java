@@ -26,6 +26,10 @@ public final class ClientCertificateConfigArgs extends com.pulumi.resources.Reso
     @Import(name="issueClientCertificate")
     private @Nullable Output<Boolean> issueClientCertificate;
 
+    /**
+     * @return Issue a client certificate.
+     * 
+     */
     public Optional<Output<Boolean>> issueClientCertificate() {
         return Optional.ofNullable(this.issueClientCertificate);
     }
@@ -54,11 +58,23 @@ public final class ClientCertificateConfigArgs extends com.pulumi.resources.Reso
             $ = new ClientCertificateConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param issueClientCertificate Issue a client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issueClientCertificate(@Nullable Output<Boolean> issueClientCertificate) {
             $.issueClientCertificate = issueClientCertificate;
             return this;
         }
 
+        /**
+         * @param issueClientCertificate Issue a client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issueClientCertificate(Boolean issueClientCertificate) {
             return issueClientCertificate(Output.of(issueClientCertificate));
         }

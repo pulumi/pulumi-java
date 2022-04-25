@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class TypeResponse {
-    /**
-     * The (sub) fields this type has (if not primitive).
-     * 
-     */
+        /**
+         * @return The (sub) fields this type has (if not primitive).
+         * 
+         */
     private final List<FieldResponse> fields;
-    /**
-     * The name of this type. This would be the segment or datatype name. For example, &#34;PID&#34; or &#34;XPN&#34;.
-     * 
-     */
+        /**
+         * @return The name of this type. This would be the segment or datatype name. For example, &#34;PID&#34; or &#34;XPN&#34;.
+         * 
+         */
     private final String name;
-    /**
-     * If this is a primitive type then this field is the type of the primitive For example, STRING. Leave unspecified for composite types.
-     * 
-     */
+        /**
+         * @return If this is a primitive type then this field is the type of the primitive For example, STRING. Leave unspecified for composite types.
+         * 
+         */
     private final String primitive;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class TypeResponse {
     }
 
     /**
-     * The (sub) fields this type has (if not primitive).
+     * @return The (sub) fields this type has (if not primitive).
      * 
-    */
+     */
     public List<FieldResponse> fields() {
         return this.fields;
     }
     /**
-     * The name of this type. This would be the segment or datatype name. For example, &#34;PID&#34; or &#34;XPN&#34;.
+     * @return The name of this type. This would be the segment or datatype name. For example, &#34;PID&#34; or &#34;XPN&#34;.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * If this is a primitive type then this field is the type of the primitive For example, STRING. Leave unspecified for composite types.
+     * @return If this is a primitive type then this field is the type of the primitive For example, STRING. Leave unspecified for composite types.
      * 
-    */
+     */
     public String primitive() {
         return this.primitive;
     }

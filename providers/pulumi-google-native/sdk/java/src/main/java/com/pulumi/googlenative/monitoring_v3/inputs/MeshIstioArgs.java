@@ -26,6 +26,10 @@ public final class MeshIstioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="meshUid")
     private @Nullable Output<String> meshUid;
 
+    /**
+     * @return Identifier for the mesh in which this Istio service is defined. Corresponds to the mesh_uid metric label in Istio metrics.
+     * 
+     */
     public Optional<Output<String>> meshUid() {
         return Optional.ofNullable(this.meshUid);
     }
@@ -37,6 +41,10 @@ public final class MeshIstioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
     private @Nullable Output<String> serviceName;
 
+    /**
+     * @return The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.
+     * 
+     */
     public Optional<Output<String>> serviceName() {
         return Optional.ofNullable(this.serviceName);
     }
@@ -48,6 +56,10 @@ public final class MeshIstioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceNamespace")
     private @Nullable Output<String> serviceNamespace;
 
+    /**
+     * @return The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.
+     * 
+     */
     public Optional<Output<String>> serviceNamespace() {
         return Optional.ofNullable(this.serviceNamespace);
     }
@@ -78,29 +90,65 @@ public final class MeshIstioArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MeshIstioArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param meshUid Identifier for the mesh in which this Istio service is defined. Corresponds to the mesh_uid metric label in Istio metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder meshUid(@Nullable Output<String> meshUid) {
             $.meshUid = meshUid;
             return this;
         }
 
+        /**
+         * @param meshUid Identifier for the mesh in which this Istio service is defined. Corresponds to the mesh_uid metric label in Istio metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder meshUid(String meshUid) {
             return meshUid(Output.of(meshUid));
         }
 
+        /**
+         * @param serviceName The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(@Nullable Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param serviceNamespace The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceNamespace(@Nullable Output<String> serviceNamespace) {
             $.serviceNamespace = serviceNamespace;
             return this;
         }
 
+        /**
+         * @param serviceNamespace The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceNamespace(String serviceNamespace) {
             return serviceNamespace(Output.of(serviceNamespace));
         }

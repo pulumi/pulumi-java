@@ -27,6 +27,10 @@ public final class GooglePrivacyDlpV2StorageConfigResponse extends com.pulumi.re
     @Import(name="bigQueryOptions", required=true)
     private GooglePrivacyDlpV2BigQueryOptionsResponse bigQueryOptions;
 
+    /**
+     * @return BigQuery options.
+     * 
+     */
     public GooglePrivacyDlpV2BigQueryOptionsResponse bigQueryOptions() {
         return this.bigQueryOptions;
     }
@@ -38,6 +42,10 @@ public final class GooglePrivacyDlpV2StorageConfigResponse extends com.pulumi.re
     @Import(name="cloudStorageOptions", required=true)
     private GooglePrivacyDlpV2CloudStorageOptionsResponse cloudStorageOptions;
 
+    /**
+     * @return Google Cloud Storage options.
+     * 
+     */
     public GooglePrivacyDlpV2CloudStorageOptionsResponse cloudStorageOptions() {
         return this.cloudStorageOptions;
     }
@@ -49,6 +57,10 @@ public final class GooglePrivacyDlpV2StorageConfigResponse extends com.pulumi.re
     @Import(name="datastoreOptions", required=true)
     private GooglePrivacyDlpV2DatastoreOptionsResponse datastoreOptions;
 
+    /**
+     * @return Google Cloud Datastore options.
+     * 
+     */
     public GooglePrivacyDlpV2DatastoreOptionsResponse datastoreOptions() {
         return this.datastoreOptions;
     }
@@ -60,6 +72,10 @@ public final class GooglePrivacyDlpV2StorageConfigResponse extends com.pulumi.re
     @Import(name="hybridOptions", required=true)
     private GooglePrivacyDlpV2HybridOptionsResponse hybridOptions;
 
+    /**
+     * @return Hybrid inspection options.
+     * 
+     */
     public GooglePrivacyDlpV2HybridOptionsResponse hybridOptions() {
         return this.hybridOptions;
     }
@@ -99,21 +115,45 @@ public final class GooglePrivacyDlpV2StorageConfigResponse extends com.pulumi.re
             $ = new GooglePrivacyDlpV2StorageConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bigQueryOptions BigQuery options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigQueryOptions(GooglePrivacyDlpV2BigQueryOptionsResponse bigQueryOptions) {
             $.bigQueryOptions = bigQueryOptions;
             return this;
         }
 
+        /**
+         * @param cloudStorageOptions Google Cloud Storage options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudStorageOptions(GooglePrivacyDlpV2CloudStorageOptionsResponse cloudStorageOptions) {
             $.cloudStorageOptions = cloudStorageOptions;
             return this;
         }
 
+        /**
+         * @param datastoreOptions Google Cloud Datastore options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreOptions(GooglePrivacyDlpV2DatastoreOptionsResponse datastoreOptions) {
             $.datastoreOptions = datastoreOptions;
             return this;
         }
 
+        /**
+         * @param hybridOptions Hybrid inspection options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hybridOptions(GooglePrivacyDlpV2HybridOptionsResponse hybridOptions) {
             $.hybridOptions = hybridOptions;
             return this;

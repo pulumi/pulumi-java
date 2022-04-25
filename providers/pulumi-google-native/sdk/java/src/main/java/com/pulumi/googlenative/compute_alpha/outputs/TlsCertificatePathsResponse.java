@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class TlsCertificatePathsResponse {
-    /**
-     * The path to the file holding the client or server TLS certificate to use.
-     * 
-     */
+        /**
+         * @return The path to the file holding the client or server TLS certificate to use.
+         * 
+         */
     private final String certificatePath;
-    /**
-     * The path to the file holding the client or server private key.
-     * 
-     */
+        /**
+         * @return The path to the file holding the client or server private key.
+         * 
+         */
     private final String privateKeyPath;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class TlsCertificatePathsResponse {
     }
 
     /**
-     * The path to the file holding the client or server TLS certificate to use.
+     * @return The path to the file holding the client or server TLS certificate to use.
      * 
-    */
+     */
     public String certificatePath() {
         return this.certificatePath;
     }
     /**
-     * The path to the file holding the client or server private key.
+     * @return The path to the file holding the client or server private key.
      * 
-    */
+     */
     public String privateKeyPath() {
         return this.privateKeyPath;
     }

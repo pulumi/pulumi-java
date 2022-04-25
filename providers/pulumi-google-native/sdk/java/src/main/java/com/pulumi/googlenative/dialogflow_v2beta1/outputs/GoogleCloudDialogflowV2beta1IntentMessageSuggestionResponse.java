@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse {
-    /**
-     * The text shown the in the suggestion chip.
-     * 
-     */
+        /**
+         * @return The text shown the in the suggestion chip.
+         * 
+         */
     private final String title;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse {
     }
 
     /**
-     * The text shown the in the suggestion chip.
+     * @return The text shown the in the suggestion chip.
      * 
-    */
+     */
     public String title() {
         return this.title;
     }

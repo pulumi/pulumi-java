@@ -10,50 +10,50 @@ import java.util.Objects;
 
 @CustomType
 public final class CertificateAttributesResponse {
-    /**
-     * The X.509 extension for CertificateTemplate.
-     * 
-     */
+        /**
+         * @return The X.509 extension for CertificateTemplate.
+         * 
+         */
     private final CertificateTemplateResponse certificateTemplate;
-    /**
-     * The encoded certificate fingerprint.
-     * 
-     */
+        /**
+         * @return The encoded certificate fingerprint.
+         * 
+         */
     private final String fingerprint;
-    /**
-     * The name of the issuer of this certificate.
-     * 
-     */
+        /**
+         * @return The name of the issuer of this certificate.
+         * 
+         */
     private final String issuer;
-    /**
-     * Serial number of the certificate, Example: &#34;123456789&#34;.
-     * 
-     */
+        /**
+         * @return Serial number of the certificate, Example: &#34;123456789&#34;.
+         * 
+         */
     private final String serialNumber;
-    /**
-     * The subject name of this certificate.
-     * 
-     */
+        /**
+         * @return The subject name of this certificate.
+         * 
+         */
     private final String subject;
-    /**
-     * The certificate thumbprint.
-     * 
-     */
+        /**
+         * @return The certificate thumbprint.
+         * 
+         */
     private final String thumbprint;
-    /**
-     * Validation state of this certificate.
-     * 
-     */
+        /**
+         * @return Validation state of this certificate.
+         * 
+         */
     private final String validationState;
-    /**
-     * Certificate not valid at or after this timestamp.
-     * 
-     */
+        /**
+         * @return Certificate not valid at or after this timestamp.
+         * 
+         */
     private final String validityExpirationTime;
-    /**
-     * Certificate not valid before this timestamp.
-     * 
-     */
+        /**
+         * @return Certificate not valid before this timestamp.
+         * 
+         */
     private final String validityStartTime;
 
     @CustomType.Constructor
@@ -79,65 +79,65 @@ public final class CertificateAttributesResponse {
     }
 
     /**
-     * The X.509 extension for CertificateTemplate.
+     * @return The X.509 extension for CertificateTemplate.
      * 
-    */
+     */
     public CertificateTemplateResponse certificateTemplate() {
         return this.certificateTemplate;
     }
     /**
-     * The encoded certificate fingerprint.
+     * @return The encoded certificate fingerprint.
      * 
-    */
+     */
     public String fingerprint() {
         return this.fingerprint;
     }
     /**
-     * The name of the issuer of this certificate.
+     * @return The name of the issuer of this certificate.
      * 
-    */
+     */
     public String issuer() {
         return this.issuer;
     }
     /**
-     * Serial number of the certificate, Example: &#34;123456789&#34;.
+     * @return Serial number of the certificate, Example: &#34;123456789&#34;.
      * 
-    */
+     */
     public String serialNumber() {
         return this.serialNumber;
     }
     /**
-     * The subject name of this certificate.
+     * @return The subject name of this certificate.
      * 
-    */
+     */
     public String subject() {
         return this.subject;
     }
     /**
-     * The certificate thumbprint.
+     * @return The certificate thumbprint.
      * 
-    */
+     */
     public String thumbprint() {
         return this.thumbprint;
     }
     /**
-     * Validation state of this certificate.
+     * @return Validation state of this certificate.
      * 
-    */
+     */
     public String validationState() {
         return this.validationState;
     }
     /**
-     * Certificate not valid at or after this timestamp.
+     * @return Certificate not valid at or after this timestamp.
      * 
-    */
+     */
     public String validityExpirationTime() {
         return this.validityExpirationTime;
     }
     /**
-     * Certificate not valid before this timestamp.
+     * @return Certificate not valid before this timestamp.
      * 
-    */
+     */
     public String validityStartTime() {
         return this.validityStartTime;
     }

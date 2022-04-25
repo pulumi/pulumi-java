@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class EndpointResponse {
-    /**
-     * Allowing [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing), aka cross-domain traffic, would allow the backends served from this endpoint to receive and respond to HTTP OPTIONS requests. The response will be used by the browser to determine whether the subsequent cross-origin request is allowed to proceed.
-     * 
-     */
+        /**
+         * @return Allowing [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing), aka cross-domain traffic, would allow the backends served from this endpoint to receive and respond to HTTP OPTIONS requests. The response will be used by the browser to determine whether the subsequent cross-origin request is allowed to proceed.
+         * 
+         */
     private final Boolean allowCors;
-    /**
-     * The canonical name of this endpoint.
-     * 
-     */
+        /**
+         * @return The canonical name of this endpoint.
+         * 
+         */
     private final String name;
-    /**
-     * The specification of an Internet routable address of API frontend that will handle requests to this [API Endpoint](https://cloud.google.com/apis/design/glossary). It should be either a valid IPv4 address or a fully-qualified domain name. For example, &#34;8.8.8.8&#34; or &#34;myservice.appspot.com&#34;.
-     * 
-     */
+        /**
+         * @return The specification of an Internet routable address of API frontend that will handle requests to this [API Endpoint](https://cloud.google.com/apis/design/glossary). It should be either a valid IPv4 address or a fully-qualified domain name. For example, &#34;8.8.8.8&#34; or &#34;myservice.appspot.com&#34;.
+         * 
+         */
     private final String target;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class EndpointResponse {
     }
 
     /**
-     * Allowing [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing), aka cross-domain traffic, would allow the backends served from this endpoint to receive and respond to HTTP OPTIONS requests. The response will be used by the browser to determine whether the subsequent cross-origin request is allowed to proceed.
+     * @return Allowing [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing), aka cross-domain traffic, would allow the backends served from this endpoint to receive and respond to HTTP OPTIONS requests. The response will be used by the browser to determine whether the subsequent cross-origin request is allowed to proceed.
      * 
-    */
+     */
     public Boolean allowCors() {
         return this.allowCors;
     }
     /**
-     * The canonical name of this endpoint.
+     * @return The canonical name of this endpoint.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The specification of an Internet routable address of API frontend that will handle requests to this [API Endpoint](https://cloud.google.com/apis/design/glossary). It should be either a valid IPv4 address or a fully-qualified domain name. For example, &#34;8.8.8.8&#34; or &#34;myservice.appspot.com&#34;.
+     * @return The specification of an Internet routable address of API frontend that will handle requests to this [API Endpoint](https://cloud.google.com/apis/design/glossary). It should be either a valid IPv4 address or a fully-qualified domain name. For example, &#34;8.8.8.8&#34; or &#34;myservice.appspot.com&#34;.
      * 
-    */
+     */
     public String target() {
         return this.target;
     }

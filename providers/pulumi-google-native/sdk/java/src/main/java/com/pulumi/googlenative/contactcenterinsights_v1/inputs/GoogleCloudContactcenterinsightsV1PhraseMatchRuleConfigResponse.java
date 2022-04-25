@@ -23,6 +23,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigRespon
     @Import(name="exactMatchConfig", required=true)
     private GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse exactMatchConfig;
 
+    /**
+     * @return The configuration for the exact match rule.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse exactMatchConfig() {
         return this.exactMatchConfig;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigRespon
             $ = new GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exactMatchConfig The configuration for the exact match rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exactMatchConfig(GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse exactMatchConfig) {
             $.exactMatchConfig = exactMatchConfig;
             return this;

@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class KerberosConfigResponse {
-    /**
-     * A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key Distribution Center (KDC).
-     * 
-     */
+        /**
+         * @return A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key Distribution Center (KDC).
+         * 
+         */
     private final SecretResponse keytab;
-    /**
-     * A Cloud Storage URI that specifies the path to a krb5.conf file. It is of the form gs://{bucket_name}/path/to/krb5.conf, although the file does not need to be named krb5.conf explicitly.
-     * 
-     */
+        /**
+         * @return A Cloud Storage URI that specifies the path to a krb5.conf file. It is of the form gs://{bucket_name}/path/to/krb5.conf, although the file does not need to be named krb5.conf explicitly.
+         * 
+         */
     private final String krb5ConfigGcsUri;
-    /**
-     * A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical principal is of the form primary/instance@REALM, but there is no exact format.
-     * 
-     */
+        /**
+         * @return A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical principal is of the form primary/instance@REALM, but there is no exact format.
+         * 
+         */
     private final String principal;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class KerberosConfigResponse {
     }
 
     /**
-     * A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key Distribution Center (KDC).
+     * @return A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key Distribution Center (KDC).
      * 
-    */
+     */
     public SecretResponse keytab() {
         return this.keytab;
     }
     /**
-     * A Cloud Storage URI that specifies the path to a krb5.conf file. It is of the form gs://{bucket_name}/path/to/krb5.conf, although the file does not need to be named krb5.conf explicitly.
+     * @return A Cloud Storage URI that specifies the path to a krb5.conf file. It is of the form gs://{bucket_name}/path/to/krb5.conf, although the file does not need to be named krb5.conf explicitly.
      * 
-    */
+     */
     public String krb5ConfigGcsUri() {
         return this.krb5ConfigGcsUri;
     }
     /**
-     * A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical principal is of the form primary/instance@REALM, but there is no exact format.
+     * @return A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical principal is of the form primary/instance@REALM, but there is no exact format.
      * 
-    */
+     */
     public String principal() {
         return this.principal;
     }

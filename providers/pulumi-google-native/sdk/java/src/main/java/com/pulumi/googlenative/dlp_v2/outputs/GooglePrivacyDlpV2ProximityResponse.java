@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GooglePrivacyDlpV2ProximityResponse {
-    /**
-     * Number of characters after the finding to consider.
-     * 
-     */
+        /**
+         * @return Number of characters after the finding to consider.
+         * 
+         */
     private final Integer windowAfter;
-    /**
-     * Number of characters before the finding to consider.
-     * 
-     */
+        /**
+         * @return Number of characters before the finding to consider.
+         * 
+         */
     private final Integer windowBefore;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GooglePrivacyDlpV2ProximityResponse {
     }
 
     /**
-     * Number of characters after the finding to consider.
+     * @return Number of characters after the finding to consider.
      * 
-    */
+     */
     public Integer windowAfter() {
         return this.windowAfter;
     }
     /**
-     * Number of characters before the finding to consider.
+     * @return Number of characters before the finding to consider.
      * 
-    */
+     */
     public Integer windowBefore() {
         return this.windowBefore;
     }

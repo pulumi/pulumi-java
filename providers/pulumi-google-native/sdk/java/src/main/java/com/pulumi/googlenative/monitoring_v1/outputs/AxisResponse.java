@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class AxisResponse {
-    /**
-     * The label of the axis.
-     * 
-     */
+        /**
+         * @return The label of the axis.
+         * 
+         */
     private final String label;
-    /**
-     * The axis scale. By default, a linear scale is used.
-     * 
-     */
+        /**
+         * @return The axis scale. By default, a linear scale is used.
+         * 
+         */
     private final String scale;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class AxisResponse {
     }
 
     /**
-     * The label of the axis.
+     * @return The label of the axis.
      * 
-    */
+     */
     public String label() {
         return this.label;
     }
     /**
-     * The axis scale. By default, a linear scale is used.
+     * @return The axis scale. By default, a linear scale is used.
      * 
-    */
+     */
     public String scale() {
         return this.scale;
     }

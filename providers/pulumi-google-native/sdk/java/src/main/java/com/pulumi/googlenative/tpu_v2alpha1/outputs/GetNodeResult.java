@@ -17,100 +17,100 @@ import java.util.Objects;
 
 @CustomType
 public final class GetNodeResult {
-    /**
-     * The type of hardware accelerators associated with this node.
-     * 
-     */
+        /**
+         * @return The type of hardware accelerators associated with this node.
+         * 
+         */
     private final String acceleratorType;
-    /**
-     * The API version that created this Node.
-     * 
-     */
+        /**
+         * @return The API version that created this Node.
+         * 
+         */
     private final String apiVersion;
-    /**
-     * The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block conflicts with any subnetworks in the user&#39;s provided network, or the provided network is peered with another network that is using that CIDR block.
-     * 
-     */
+        /**
+         * @return The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block conflicts with any subnetworks in the user&#39;s provided network, or the provided network is peered with another network that is using that CIDR block.
+         * 
+         */
     private final String cidrBlock;
-    /**
-     * The time when the node was created.
-     * 
-     */
+        /**
+         * @return The time when the node was created.
+         * 
+         */
     private final String createTime;
-    /**
-     * The additional data disks for the Node.
-     * 
-     */
+        /**
+         * @return The additional data disks for the Node.
+         * 
+         */
     private final List<AttachedDiskResponse> dataDisks;
-    /**
-     * The user-supplied description of the TPU. Maximum of 512 characters.
-     * 
-     */
+        /**
+         * @return The user-supplied description of the TPU. Maximum of 512 characters.
+         * 
+         */
     private final String description;
-    /**
-     * The health status of the TPU node.
-     * 
-     */
+        /**
+         * @return The health status of the TPU node.
+         * 
+         */
     private final String health;
-    /**
-     * If this field is populated, it contains a description of why the TPU Node is unhealthy.
-     * 
-     */
+        /**
+         * @return If this field is populated, it contains a description of why the TPU Node is unhealthy.
+         * 
+         */
     private final String healthDescription;
-    /**
-     * Resource labels to represent user-provided metadata.
-     * 
-     */
+        /**
+         * @return Resource labels to represent user-provided metadata.
+         * 
+         */
     private final Map<String,String> labels;
-    /**
-     * Custom metadata to apply to the TPU Node. Can set startup-script and shutdown-script
-     * 
-     */
+        /**
+         * @return Custom metadata to apply to the TPU Node. Can set startup-script and shutdown-script
+         * 
+         */
     private final Map<String,String> metadata;
-    /**
-     * Immutable. The name of the TPU.
-     * 
-     */
+        /**
+         * @return Immutable. The name of the TPU.
+         * 
+         */
     private final String name;
-    /**
-     * Network configurations for the TPU node.
-     * 
-     */
+        /**
+         * @return Network configurations for the TPU node.
+         * 
+         */
     private final NetworkConfigResponse networkConfig;
-    /**
-     * The network endpoints where TPU workers can be accessed and sent work. It is recommended that runtime clients of the node reach out to the 0th entry in this map first.
-     * 
-     */
+        /**
+         * @return The network endpoints where TPU workers can be accessed and sent work. It is recommended that runtime clients of the node reach out to the 0th entry in this map first.
+         * 
+         */
     private final List<NetworkEndpointResponse> networkEndpoints;
-    /**
-     * The runtime version running in the Node.
-     * 
-     */
+        /**
+         * @return The runtime version running in the Node.
+         * 
+         */
     private final String runtimeVersion;
-    /**
-     * The scheduling options for this node.
-     * 
-     */
+        /**
+         * @return The scheduling options for this node.
+         * 
+         */
     private final SchedulingConfigResponse schedulingConfig;
-    /**
-     * The Google Cloud Platform Service Account to be used by the TPU node VMs. If None is specified, the default compute service account will be used.
-     * 
-     */
+        /**
+         * @return The Google Cloud Platform Service Account to be used by the TPU node VMs. If None is specified, the default compute service account will be used.
+         * 
+         */
     private final ServiceAccountResponse serviceAccount;
-    /**
-     * The current state for the TPU Node.
-     * 
-     */
+        /**
+         * @return The current state for the TPU Node.
+         * 
+         */
     private final String state;
-    /**
-     * The Symptoms that have occurred to the TPU Node.
-     * 
-     */
+        /**
+         * @return The Symptoms that have occurred to the TPU Node.
+         * 
+         */
     private final List<SymptomResponse> symptoms;
-    /**
-     * Tags to apply to the TPU Node. Tags are used to identify valid sources or targets for network firewalls.
-     * 
-     */
+        /**
+         * @return Tags to apply to the TPU Node. Tags are used to identify valid sources or targets for network firewalls.
+         * 
+         */
     private final List<String> tags;
 
     @CustomType.Constructor
@@ -156,135 +156,135 @@ public final class GetNodeResult {
     }
 
     /**
-     * The type of hardware accelerators associated with this node.
+     * @return The type of hardware accelerators associated with this node.
      * 
-    */
+     */
     public String acceleratorType() {
         return this.acceleratorType;
     }
     /**
-     * The API version that created this Node.
+     * @return The API version that created this Node.
      * 
-    */
+     */
     public String apiVersion() {
         return this.apiVersion;
     }
     /**
-     * The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block conflicts with any subnetworks in the user&#39;s provided network, or the provided network is peered with another network that is using that CIDR block.
+     * @return The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block conflicts with any subnetworks in the user&#39;s provided network, or the provided network is peered with another network that is using that CIDR block.
      * 
-    */
+     */
     public String cidrBlock() {
         return this.cidrBlock;
     }
     /**
-     * The time when the node was created.
+     * @return The time when the node was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The additional data disks for the Node.
+     * @return The additional data disks for the Node.
      * 
-    */
+     */
     public List<AttachedDiskResponse> dataDisks() {
         return this.dataDisks;
     }
     /**
-     * The user-supplied description of the TPU. Maximum of 512 characters.
+     * @return The user-supplied description of the TPU. Maximum of 512 characters.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The health status of the TPU node.
+     * @return The health status of the TPU node.
      * 
-    */
+     */
     public String health() {
         return this.health;
     }
     /**
-     * If this field is populated, it contains a description of why the TPU Node is unhealthy.
+     * @return If this field is populated, it contains a description of why the TPU Node is unhealthy.
      * 
-    */
+     */
     public String healthDescription() {
         return this.healthDescription;
     }
     /**
-     * Resource labels to represent user-provided metadata.
+     * @return Resource labels to represent user-provided metadata.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * Custom metadata to apply to the TPU Node. Can set startup-script and shutdown-script
+     * @return Custom metadata to apply to the TPU Node. Can set startup-script and shutdown-script
      * 
-    */
+     */
     public Map<String,String> metadata() {
         return this.metadata;
     }
     /**
-     * Immutable. The name of the TPU.
+     * @return Immutable. The name of the TPU.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Network configurations for the TPU node.
+     * @return Network configurations for the TPU node.
      * 
-    */
+     */
     public NetworkConfigResponse networkConfig() {
         return this.networkConfig;
     }
     /**
-     * The network endpoints where TPU workers can be accessed and sent work. It is recommended that runtime clients of the node reach out to the 0th entry in this map first.
+     * @return The network endpoints where TPU workers can be accessed and sent work. It is recommended that runtime clients of the node reach out to the 0th entry in this map first.
      * 
-    */
+     */
     public List<NetworkEndpointResponse> networkEndpoints() {
         return this.networkEndpoints;
     }
     /**
-     * The runtime version running in the Node.
+     * @return The runtime version running in the Node.
      * 
-    */
+     */
     public String runtimeVersion() {
         return this.runtimeVersion;
     }
     /**
-     * The scheduling options for this node.
+     * @return The scheduling options for this node.
      * 
-    */
+     */
     public SchedulingConfigResponse schedulingConfig() {
         return this.schedulingConfig;
     }
     /**
-     * The Google Cloud Platform Service Account to be used by the TPU node VMs. If None is specified, the default compute service account will be used.
+     * @return The Google Cloud Platform Service Account to be used by the TPU node VMs. If None is specified, the default compute service account will be used.
      * 
-    */
+     */
     public ServiceAccountResponse serviceAccount() {
         return this.serviceAccount;
     }
     /**
-     * The current state for the TPU Node.
+     * @return The current state for the TPU Node.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The Symptoms that have occurred to the TPU Node.
+     * @return The Symptoms that have occurred to the TPU Node.
      * 
-    */
+     */
     public List<SymptomResponse> symptoms() {
         return this.symptoms;
     }
     /**
-     * Tags to apply to the TPU Node. Tags are used to identify valid sources or targets for network firewalls.
+     * @return Tags to apply to the TPU Node. Tags are used to identify valid sources or targets for network firewalls.
      * 
-    */
+     */
     public List<String> tags() {
         return this.tags;
     }

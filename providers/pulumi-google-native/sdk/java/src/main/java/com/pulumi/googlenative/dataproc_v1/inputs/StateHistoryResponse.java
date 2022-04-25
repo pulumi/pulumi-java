@@ -23,6 +23,10 @@ public final class StateHistoryResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The state of the batch at this point in history.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -34,6 +38,10 @@ public final class StateHistoryResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="stateMessage", required=true)
     private String stateMessage;
 
+    /**
+     * @return Details about the state at this point in history.
+     * 
+     */
     public String stateMessage() {
         return this.stateMessage;
     }
@@ -45,6 +53,10 @@ public final class StateHistoryResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="stateStartTime", required=true)
     private String stateStartTime;
 
+    /**
+     * @return The time when the batch entered the historical state.
+     * 
+     */
     public String stateStartTime() {
         return this.stateStartTime;
     }
@@ -75,16 +87,34 @@ public final class StateHistoryResponse extends com.pulumi.resources.InvokeArgs 
             $ = new StateHistoryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param state The state of the batch at this point in history.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param stateMessage Details about the state at this point in history.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stateMessage(String stateMessage) {
             $.stateMessage = stateMessage;
             return this;
         }
 
+        /**
+         * @param stateStartTime The time when the batch entered the historical state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stateStartTime(String stateStartTime) {
             $.stateStartTime = stateStartTime;
             return this;

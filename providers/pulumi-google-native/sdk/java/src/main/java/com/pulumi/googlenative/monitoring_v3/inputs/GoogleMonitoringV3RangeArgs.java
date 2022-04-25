@@ -26,6 +26,10 @@ public final class GoogleMonitoringV3RangeArgs extends com.pulumi.resources.Reso
     @Import(name="max")
     private @Nullable Output<Double> max;
 
+    /**
+     * @return Range maximum.
+     * 
+     */
     public Optional<Output<Double>> max() {
         return Optional.ofNullable(this.max);
     }
@@ -37,6 +41,10 @@ public final class GoogleMonitoringV3RangeArgs extends com.pulumi.resources.Reso
     @Import(name="min")
     private @Nullable Output<Double> min;
 
+    /**
+     * @return Range minimum.
+     * 
+     */
     public Optional<Output<Double>> min() {
         return Optional.ofNullable(this.min);
     }
@@ -66,20 +74,44 @@ public final class GoogleMonitoringV3RangeArgs extends com.pulumi.resources.Reso
             $ = new GoogleMonitoringV3RangeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param max Range maximum.
+         * 
+         * @return builder
+         * 
+         */
         public Builder max(@Nullable Output<Double> max) {
             $.max = max;
             return this;
         }
 
+        /**
+         * @param max Range maximum.
+         * 
+         * @return builder
+         * 
+         */
         public Builder max(Double max) {
             return max(Output.of(max));
         }
 
+        /**
+         * @param min Range minimum.
+         * 
+         * @return builder
+         * 
+         */
         public Builder min(@Nullable Output<Double> min) {
             $.min = min;
             return this;
         }
 
+        /**
+         * @param min Range minimum.
+         * 
+         * @return builder
+         * 
+         */
         public Builder min(Double min) {
             return min(Output.of(min));
         }

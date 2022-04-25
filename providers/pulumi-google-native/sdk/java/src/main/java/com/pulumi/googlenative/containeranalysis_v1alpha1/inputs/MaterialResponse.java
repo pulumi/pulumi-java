@@ -24,6 +24,10 @@ public final class MaterialResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="digest", required=true)
     private Map<String,String> digest;
 
+    /**
+     * @return digest is a map from a hash algorithm (e.g. sha256) to the value in the material
+     * 
+     */
     public Map<String,String> digest() {
         return this.digest;
     }
@@ -35,6 +39,10 @@ public final class MaterialResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return uri is the uri of the material
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -64,11 +72,23 @@ public final class MaterialResponse extends com.pulumi.resources.InvokeArgs {
             $ = new MaterialResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param digest digest is a map from a hash algorithm (e.g. sha256) to the value in the material
+         * 
+         * @return builder
+         * 
+         */
         public Builder digest(Map<String,String> digest) {
             $.digest = digest;
             return this;
         }
 
+        /**
+         * @param uri uri is the uri of the material
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

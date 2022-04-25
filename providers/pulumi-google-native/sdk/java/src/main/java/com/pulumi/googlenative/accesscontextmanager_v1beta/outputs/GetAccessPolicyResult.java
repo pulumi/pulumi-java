@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GetAccessPolicyResult {
-    /**
-     * Resource name of the `AccessPolicy`. Format: `accessPolicies/{policy_id}`
-     * 
-     */
+        /**
+         * @return Resource name of the `AccessPolicy`. Format: `accessPolicies/{policy_id}`
+         * 
+         */
     private final String name;
-    /**
-     * The parent of this `AccessPolicy` in the Cloud Resource Hierarchy. Currently immutable once created. Format: `organizations/{organization_id}`
-     * 
-     */
+        /**
+         * @return The parent of this `AccessPolicy` in the Cloud Resource Hierarchy. Currently immutable once created. Format: `organizations/{organization_id}`
+         * 
+         */
     private final String parent;
-    /**
-     * Human readable title. Does not affect behavior.
-     * 
-     */
+        /**
+         * @return Human readable title. Does not affect behavior.
+         * 
+         */
     private final String title;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class GetAccessPolicyResult {
     }
 
     /**
-     * Resource name of the `AccessPolicy`. Format: `accessPolicies/{policy_id}`
+     * @return Resource name of the `AccessPolicy`. Format: `accessPolicies/{policy_id}`
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The parent of this `AccessPolicy` in the Cloud Resource Hierarchy. Currently immutable once created. Format: `organizations/{organization_id}`
+     * @return The parent of this `AccessPolicy` in the Cloud Resource Hierarchy. Currently immutable once created. Format: `organizations/{organization_id}`
      * 
-    */
+     */
     public String parent() {
         return this.parent;
     }
     /**
-     * Human readable title. Does not affect behavior.
+     * @return Human readable title. Does not affect behavior.
      * 
-    */
+     */
     public String title() {
         return this.title;
     }

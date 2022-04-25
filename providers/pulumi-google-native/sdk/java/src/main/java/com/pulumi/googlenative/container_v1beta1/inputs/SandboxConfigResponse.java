@@ -23,6 +23,10 @@ public final class SandboxConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="sandboxType", required=true)
     private String sandboxType;
 
+    /**
+     * @return Type of the sandbox to use for the node (e.g. &#39;gvisor&#39;)
+     * 
+     */
     public String sandboxType() {
         return this.sandboxType;
     }
@@ -34,6 +38,10 @@ public final class SandboxConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the sandbox to use for the node.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -63,11 +71,23 @@ public final class SandboxConfigResponse extends com.pulumi.resources.InvokeArgs
             $ = new SandboxConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sandboxType Type of the sandbox to use for the node (e.g. &#39;gvisor&#39;)
+         * 
+         * @return builder
+         * 
+         */
         public Builder sandboxType(String sandboxType) {
             $.sandboxType = sandboxType;
             return this;
         }
 
+        /**
+         * @param type Type of the sandbox to use for the node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

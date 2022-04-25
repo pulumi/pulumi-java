@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ResourceIdResponse {
-    /**
-     * Required field representing the resource type this id is for. At present, the valid types are &#34;project&#34;, &#34;folder&#34;, and &#34;organization&#34;.
-     * 
-     */
+        /**
+         * @return Required field representing the resource type this id is for. At present, the valid types are &#34;project&#34;, &#34;folder&#34;, and &#34;organization&#34;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ResourceIdResponse {
     }
 
     /**
-     * Required field representing the resource type this id is for. At present, the valid types are &#34;project&#34;, &#34;folder&#34;, and &#34;organization&#34;.
+     * @return Required field representing the resource type this id is for. At present, the valid types are &#34;project&#34;, &#34;folder&#34;, and &#34;organization&#34;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

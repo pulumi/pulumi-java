@@ -23,6 +23,10 @@ public final class GoogleCloudChannelV1AssociationInfoResponse extends com.pulum
     @Import(name="baseEntitlement", required=true)
     private String baseEntitlement;
 
+    /**
+     * @return The name of the base entitlement, for which this entitlement is an add-on.
+     * 
+     */
     public String baseEntitlement() {
         return this.baseEntitlement;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudChannelV1AssociationInfoResponse extends com.pulum
             $ = new GoogleCloudChannelV1AssociationInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baseEntitlement The name of the base entitlement, for which this entitlement is an add-on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseEntitlement(String baseEntitlement) {
             $.baseEntitlement = baseEntitlement;
             return this;

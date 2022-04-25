@@ -24,6 +24,10 @@ public final class InstanceFailoverReplicaResponse extends com.pulumi.resources.
     @Import(name="available", required=true)
     private Boolean available;
 
+    /**
+     * @return The availability status of the failover replica. A false status indicates that the failover replica is out of sync. The primary instance can only failover to the failover replica when the status is true.
+     * 
+     */
     public Boolean available() {
         return this.available;
     }
@@ -35,6 +39,10 @@ public final class InstanceFailoverReplicaResponse extends com.pulumi.resources.
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn&#39;t include the project ID.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -64,11 +72,23 @@ public final class InstanceFailoverReplicaResponse extends com.pulumi.resources.
             $ = new InstanceFailoverReplicaResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param available The availability status of the failover replica. A false status indicates that the failover replica is out of sync. The primary instance can only failover to the failover replica when the status is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder available(Boolean available) {
             $.available = available;
             return this;
         }
 
+        /**
+         * @param name The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn&#39;t include the project ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

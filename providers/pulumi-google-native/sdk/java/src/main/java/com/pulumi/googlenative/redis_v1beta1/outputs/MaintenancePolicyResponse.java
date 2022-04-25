@@ -11,25 +11,25 @@ import java.util.Objects;
 
 @CustomType
 public final class MaintenancePolicyResponse {
-    /**
-     * The time when the policy was created.
-     * 
-     */
+        /**
+         * @return The time when the policy was created.
+         * 
+         */
     private final String createTime;
-    /**
-     * Optional. Description of what this policy is for. Create/Update methods return INVALID_ARGUMENT if the length is greater than 512.
-     * 
-     */
+        /**
+         * @return Optional. Description of what this policy is for. Create/Update methods return INVALID_ARGUMENT if the length is greater than 512.
+         * 
+         */
     private final String description;
-    /**
-     * The time when the policy was last updated.
-     * 
-     */
+        /**
+         * @return The time when the policy was last updated.
+         * 
+         */
     private final String updateTime;
-    /**
-     * Optional. Maintenance window that is applied to resources covered by this policy. Minimum 1. For the current version, the maximum number of weekly_window is expected to be one.
-     * 
-     */
+        /**
+         * @return Optional. Maintenance window that is applied to resources covered by this policy. Minimum 1. For the current version, the maximum number of weekly_window is expected to be one.
+         * 
+         */
     private final List<WeeklyMaintenanceWindowResponse> weeklyMaintenanceWindow;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class MaintenancePolicyResponse {
     }
 
     /**
-     * The time when the policy was created.
+     * @return The time when the policy was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Optional. Description of what this policy is for. Create/Update methods return INVALID_ARGUMENT if the length is greater than 512.
+     * @return Optional. Description of what this policy is for. Create/Update methods return INVALID_ARGUMENT if the length is greater than 512.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The time when the policy was last updated.
+     * @return The time when the policy was last updated.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }
     /**
-     * Optional. Maintenance window that is applied to resources covered by this policy. Minimum 1. For the current version, the maximum number of weekly_window is expected to be one.
+     * @return Optional. Maintenance window that is applied to resources covered by this policy. Minimum 1. For the current version, the maximum number of weekly_window is expected to be one.
      * 
-    */
+     */
     public List<WeeklyMaintenanceWindowResponse> weeklyMaintenanceWindow() {
         return this.weeklyMaintenanceWindow;
     }

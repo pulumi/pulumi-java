@@ -13,40 +13,40 @@ import java.util.Objects;
 
 @CustomType
 public final class ExecutionStageSummaryResponse {
-    /**
-     * Collections produced and consumed by component transforms of this stage.
-     * 
-     */
+        /**
+         * @return Collections produced and consumed by component transforms of this stage.
+         * 
+         */
     private final List<ComponentSourceResponse> componentSource;
-    /**
-     * Transforms that comprise this execution stage.
-     * 
-     */
+        /**
+         * @return Transforms that comprise this execution stage.
+         * 
+         */
     private final List<ComponentTransformResponse> componentTransform;
-    /**
-     * Input sources for this stage.
-     * 
-     */
+        /**
+         * @return Input sources for this stage.
+         * 
+         */
     private final List<StageSourceResponse> inputSource;
-    /**
-     * Type of transform this stage is executing.
-     * 
-     */
+        /**
+         * @return Type of transform this stage is executing.
+         * 
+         */
     private final String kind;
-    /**
-     * Dataflow service generated name for this stage.
-     * 
-     */
+        /**
+         * @return Dataflow service generated name for this stage.
+         * 
+         */
     private final String name;
-    /**
-     * Output sources for this stage.
-     * 
-     */
+        /**
+         * @return Output sources for this stage.
+         * 
+         */
     private final List<StageSourceResponse> outputSource;
-    /**
-     * Other stages that must complete before this stage can run.
-     * 
-     */
+        /**
+         * @return Other stages that must complete before this stage can run.
+         * 
+         */
     private final List<String> prerequisiteStage;
 
     @CustomType.Constructor
@@ -68,51 +68,51 @@ public final class ExecutionStageSummaryResponse {
     }
 
     /**
-     * Collections produced and consumed by component transforms of this stage.
+     * @return Collections produced and consumed by component transforms of this stage.
      * 
-    */
+     */
     public List<ComponentSourceResponse> componentSource() {
         return this.componentSource;
     }
     /**
-     * Transforms that comprise this execution stage.
+     * @return Transforms that comprise this execution stage.
      * 
-    */
+     */
     public List<ComponentTransformResponse> componentTransform() {
         return this.componentTransform;
     }
     /**
-     * Input sources for this stage.
+     * @return Input sources for this stage.
      * 
-    */
+     */
     public List<StageSourceResponse> inputSource() {
         return this.inputSource;
     }
     /**
-     * Type of transform this stage is executing.
+     * @return Type of transform this stage is executing.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Dataflow service generated name for this stage.
+     * @return Dataflow service generated name for this stage.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Output sources for this stage.
+     * @return Output sources for this stage.
      * 
-    */
+     */
     public List<StageSourceResponse> outputSource() {
         return this.outputSource;
     }
     /**
-     * Other stages that must complete before this stage can run.
+     * @return Other stages that must complete before this stage can run.
      * 
-    */
+     */
     public List<String> prerequisiteStage() {
         return this.prerequisiteStage;
     }

@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class AllocationSpecificSKUReservationResponse {
-    /**
-     * Indicates how many instances are actually usable currently.
-     * 
-     */
+        /**
+         * @return Indicates how many instances are actually usable currently.
+         * 
+         */
     private final String assuredCount;
-    /**
-     * Specifies the number of resources that are allocated.
-     * 
-     */
+        /**
+         * @return Specifies the number of resources that are allocated.
+         * 
+         */
     private final String count;
-    /**
-     * Indicates how many instances are in use.
-     * 
-     */
+        /**
+         * @return Indicates how many instances are in use.
+         * 
+         */
     private final String inUseCount;
-    /**
-     * The instance properties for the reservation.
-     * 
-     */
+        /**
+         * @return The instance properties for the reservation.
+         * 
+         */
     private final AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class AllocationSpecificSKUReservationResponse {
     }
 
     /**
-     * Indicates how many instances are actually usable currently.
+     * @return Indicates how many instances are actually usable currently.
      * 
-    */
+     */
     public String assuredCount() {
         return this.assuredCount;
     }
     /**
-     * Specifies the number of resources that are allocated.
+     * @return Specifies the number of resources that are allocated.
      * 
-    */
+     */
     public String count() {
         return this.count;
     }
     /**
-     * Indicates how many instances are in use.
+     * @return Indicates how many instances are in use.
      * 
-    */
+     */
     public String inUseCount() {
         return this.inUseCount;
     }
     /**
-     * The instance properties for the reservation.
+     * @return The instance properties for the reservation.
      * 
-    */
+     */
     public AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties() {
         return this.instanceProperties;
     }

@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class AutopilotResponse {
-    /**
-     * Enable Autopilot
-     * 
-     */
+        /**
+         * @return Enable Autopilot
+         * 
+         */
     private final Boolean enabled;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class AutopilotResponse {
     }
 
     /**
-     * Enable Autopilot
+     * @return Enable Autopilot
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }

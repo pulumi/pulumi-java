@@ -22,6 +22,10 @@ public final class FirewallPolicyAssociationArgs extends com.pulumi.resources.Re
     @Import(name="attachmentTarget")
     private @Nullable Output<String> attachmentTarget;
 
+    /**
+     * @return The target that the firewall policy is attached to.
+     * 
+     */
     public Optional<Output<String>> attachmentTarget() {
         return Optional.ofNullable(this.attachmentTarget);
     }
@@ -33,6 +37,10 @@ public final class FirewallPolicyAssociationArgs extends com.pulumi.resources.Re
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name for an association.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -62,20 +70,44 @@ public final class FirewallPolicyAssociationArgs extends com.pulumi.resources.Re
             $ = new FirewallPolicyAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attachmentTarget The target that the firewall policy is attached to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachmentTarget(@Nullable Output<String> attachmentTarget) {
             $.attachmentTarget = attachmentTarget;
             return this;
         }
 
+        /**
+         * @param attachmentTarget The target that the firewall policy is attached to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachmentTarget(String attachmentTarget) {
             return attachmentTarget(Output.of(attachmentTarget));
         }
 
+        /**
+         * @param name The name for an association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name for an association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

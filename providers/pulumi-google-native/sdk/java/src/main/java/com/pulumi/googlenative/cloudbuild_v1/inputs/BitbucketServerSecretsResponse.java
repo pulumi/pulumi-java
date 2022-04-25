@@ -23,6 +23,10 @@ public final class BitbucketServerSecretsResponse extends com.pulumi.resources.I
     @Import(name="adminAccessTokenVersionName", required=true)
     private String adminAccessTokenVersionName;
 
+    /**
+     * @return The resource name for the admin access token&#39;s secret version.
+     * 
+     */
     public String adminAccessTokenVersionName() {
         return this.adminAccessTokenVersionName;
     }
@@ -34,6 +38,10 @@ public final class BitbucketServerSecretsResponse extends com.pulumi.resources.I
     @Import(name="readAccessTokenVersionName", required=true)
     private String readAccessTokenVersionName;
 
+    /**
+     * @return The resource name for the read access token&#39;s secret version.
+     * 
+     */
     public String readAccessTokenVersionName() {
         return this.readAccessTokenVersionName;
     }
@@ -45,6 +53,10 @@ public final class BitbucketServerSecretsResponse extends com.pulumi.resources.I
     @Import(name="webhookSecretVersionName", required=true)
     private String webhookSecretVersionName;
 
+    /**
+     * @return Immutable. The resource name for the webhook secret&#39;s secret version. Once this field has been set, it cannot be changed. If you need to change it, please create another BitbucketServerConfig.
+     * 
+     */
     public String webhookSecretVersionName() {
         return this.webhookSecretVersionName;
     }
@@ -75,16 +87,34 @@ public final class BitbucketServerSecretsResponse extends com.pulumi.resources.I
             $ = new BitbucketServerSecretsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adminAccessTokenVersionName The resource name for the admin access token&#39;s secret version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminAccessTokenVersionName(String adminAccessTokenVersionName) {
             $.adminAccessTokenVersionName = adminAccessTokenVersionName;
             return this;
         }
 
+        /**
+         * @param readAccessTokenVersionName The resource name for the read access token&#39;s secret version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readAccessTokenVersionName(String readAccessTokenVersionName) {
             $.readAccessTokenVersionName = readAccessTokenVersionName;
             return this;
         }
 
+        /**
+         * @param webhookSecretVersionName Immutable. The resource name for the webhook secret&#39;s secret version. Once this field has been set, it cannot be changed. If you need to change it, please create another BitbucketServerConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhookSecretVersionName(String webhookSecretVersionName) {
             $.webhookSecretVersionName = webhookSecretVersionName;
             return this;

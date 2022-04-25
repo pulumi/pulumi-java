@@ -26,6 +26,10 @@ public final class InstanceSpecResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="activeDeadlineSeconds", required=true)
     private String activeDeadlineSeconds;
 
+    /**
+     * @return Optional. Optional duration in seconds the instance may be active relative to StartTime before the system will actively try to mark it failed and kill associated containers. If set to zero, the system will never attempt to kill an instance based on time. Otherwise, value must be a positive integer. +optional
+     * 
+     */
     public String activeDeadlineSeconds() {
         return this.activeDeadlineSeconds;
     }
@@ -37,6 +41,10 @@ public final class InstanceSpecResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="containers", required=true)
     private List<ContainerResponse> containers;
 
+    /**
+     * @return Optional. List of containers belonging to the instance. We disallow a number of fields on this Container. Only a single container may be provided.
+     * 
+     */
     public List<ContainerResponse> containers() {
         return this.containers;
     }
@@ -48,6 +56,10 @@ public final class InstanceSpecResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="restartPolicy", required=true)
     private String restartPolicy;
 
+    /**
+     * @return Optional. Restart policy for all containers within the instance. Allowed values are: - OnFailure: Instances will always be restarted on failure if the backoffLimit has not been reached. - Never: Instances are never restarted and all failures are permanent. Cannot be used if backoffLimit is set. +optional
+     * 
+     */
     public String restartPolicy() {
         return this.restartPolicy;
     }
@@ -59,6 +71,10 @@ public final class InstanceSpecResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="serviceAccountName", required=true)
     private String serviceAccountName;
 
+    /**
+     * @return Optional. Email address of the IAM service account associated with the instance of a Job. The service account represents the identity of the running instance, and determines what permissions the instance has. If not provided, the instance will use the project&#39;s default service account. +optional
+     * 
+     */
     public String serviceAccountName() {
         return this.serviceAccountName;
     }
@@ -70,6 +86,10 @@ public final class InstanceSpecResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="terminationGracePeriodSeconds", required=true)
     private String terminationGracePeriodSeconds;
 
+    /**
+     * @return Optional. Optional duration in seconds the instance needs to terminate gracefully. Value must be non-negative integer. The value zero indicates delete immediately. The grace period is the duration in seconds after the processes running in the instance are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. +optional
+     * 
+     */
     public String terminationGracePeriodSeconds() {
         return this.terminationGracePeriodSeconds;
     }
@@ -81,6 +101,10 @@ public final class InstanceSpecResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="volumes", required=true)
     private List<VolumeResponse> volumes;
 
+    /**
+     * @return Optional. List of volumes that can be mounted by containers belonging to the instance. More info: https://kubernetes.io/docs/concepts/storage/volumes +optional
+     * 
+     */
     public List<VolumeResponse> volumes() {
         return this.volumes;
     }
@@ -114,40 +138,88 @@ public final class InstanceSpecResponse extends com.pulumi.resources.InvokeArgs 
             $ = new InstanceSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activeDeadlineSeconds Optional. Optional duration in seconds the instance may be active relative to StartTime before the system will actively try to mark it failed and kill associated containers. If set to zero, the system will never attempt to kill an instance based on time. Otherwise, value must be a positive integer. +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeDeadlineSeconds(String activeDeadlineSeconds) {
             $.activeDeadlineSeconds = activeDeadlineSeconds;
             return this;
         }
 
+        /**
+         * @param containers Optional. List of containers belonging to the instance. We disallow a number of fields on this Container. Only a single container may be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containers(List<ContainerResponse> containers) {
             $.containers = containers;
             return this;
         }
 
+        /**
+         * @param containers Optional. List of containers belonging to the instance. We disallow a number of fields on this Container. Only a single container may be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containers(ContainerResponse... containers) {
             return containers(List.of(containers));
         }
 
+        /**
+         * @param restartPolicy Optional. Restart policy for all containers within the instance. Allowed values are: - OnFailure: Instances will always be restarted on failure if the backoffLimit has not been reached. - Never: Instances are never restarted and all failures are permanent. Cannot be used if backoffLimit is set. +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder restartPolicy(String restartPolicy) {
             $.restartPolicy = restartPolicy;
             return this;
         }
 
+        /**
+         * @param serviceAccountName Optional. Email address of the IAM service account associated with the instance of a Job. The service account represents the identity of the running instance, and determines what permissions the instance has. If not provided, the instance will use the project&#39;s default service account. +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountName(String serviceAccountName) {
             $.serviceAccountName = serviceAccountName;
             return this;
         }
 
+        /**
+         * @param terminationGracePeriodSeconds Optional. Optional duration in seconds the instance needs to terminate gracefully. Value must be non-negative integer. The value zero indicates delete immediately. The grace period is the duration in seconds after the processes running in the instance are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder terminationGracePeriodSeconds(String terminationGracePeriodSeconds) {
             $.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
             return this;
         }
 
+        /**
+         * @param volumes Optional. List of volumes that can be mounted by containers belonging to the instance. More info: https://kubernetes.io/docs/concepts/storage/volumes +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(List<VolumeResponse> volumes) {
             $.volumes = volumes;
             return this;
         }
 
+        /**
+         * @param volumes Optional. List of volumes that can be mounted by containers belonging to the instance. More info: https://kubernetes.io/docs/concepts/storage/volumes +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(VolumeResponse... volumes) {
             return volumes(List.of(volumes));
         }

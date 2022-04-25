@@ -25,6 +25,10 @@ public final class BucketIamConfigurationResponse extends com.pulumi.resources.I
     @Import(name="bucketPolicyOnly", required=true)
     private BucketIamConfigurationBucketPolicyOnlyResponse bucketPolicyOnly;
 
+    /**
+     * @return The bucket&#39;s uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.
+     * 
+     */
     public BucketIamConfigurationBucketPolicyOnlyResponse bucketPolicyOnly() {
         return this.bucketPolicyOnly;
     }
@@ -36,6 +40,10 @@ public final class BucketIamConfigurationResponse extends com.pulumi.resources.I
     @Import(name="publicAccessPrevention", required=true)
     private String publicAccessPrevention;
 
+    /**
+     * @return The bucket&#39;s Public Access Prevention configuration. Currently, &#39;inherited&#39; and &#39;enforced&#39; are supported.
+     * 
+     */
     public String publicAccessPrevention() {
         return this.publicAccessPrevention;
     }
@@ -47,6 +55,10 @@ public final class BucketIamConfigurationResponse extends com.pulumi.resources.I
     @Import(name="uniformBucketLevelAccess", required=true)
     private BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess;
 
+    /**
+     * @return The bucket&#39;s uniform bucket-level access configuration.
+     * 
+     */
     public BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess() {
         return this.uniformBucketLevelAccess;
     }
@@ -77,16 +89,34 @@ public final class BucketIamConfigurationResponse extends com.pulumi.resources.I
             $ = new BucketIamConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketPolicyOnly The bucket&#39;s uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketPolicyOnly(BucketIamConfigurationBucketPolicyOnlyResponse bucketPolicyOnly) {
             $.bucketPolicyOnly = bucketPolicyOnly;
             return this;
         }
 
+        /**
+         * @param publicAccessPrevention The bucket&#39;s Public Access Prevention configuration. Currently, &#39;inherited&#39; and &#39;enforced&#39; are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicAccessPrevention(String publicAccessPrevention) {
             $.publicAccessPrevention = publicAccessPrevention;
             return this;
         }
 
+        /**
+         * @param uniformBucketLevelAccess The bucket&#39;s uniform bucket-level access configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uniformBucketLevelAccess(BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess) {
             $.uniformBucketLevelAccess = uniformBucketLevelAccess;
             return this;

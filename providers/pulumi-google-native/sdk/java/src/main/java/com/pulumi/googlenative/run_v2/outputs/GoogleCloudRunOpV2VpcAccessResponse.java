@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudRunOpV2VpcAccessResponse {
-    /**
-     * VPC Access connector name. Format: projects/{project}/locations/{location}/connectors/{connector}
-     * 
-     */
+        /**
+         * @return VPC Access connector name. Format: projects/{project}/locations/{location}/connectors/{connector}
+         * 
+         */
     private final String connector;
-    /**
-     * Traffic VPC egress settings.
-     * 
-     */
+        /**
+         * @return Traffic VPC egress settings.
+         * 
+         */
     private final String egress;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GoogleCloudRunOpV2VpcAccessResponse {
     }
 
     /**
-     * VPC Access connector name. Format: projects/{project}/locations/{location}/connectors/{connector}
+     * @return VPC Access connector name. Format: projects/{project}/locations/{location}/connectors/{connector}
      * 
-    */
+     */
     public String connector() {
         return this.connector;
     }
     /**
-     * Traffic VPC egress settings.
+     * @return Traffic VPC egress settings.
      * 
-    */
+     */
     public String egress() {
         return this.egress;
     }

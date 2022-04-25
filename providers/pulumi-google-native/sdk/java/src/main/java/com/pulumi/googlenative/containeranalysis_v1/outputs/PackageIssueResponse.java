@@ -11,50 +11,50 @@ import java.util.Objects;
 
 @CustomType
 public final class PackageIssueResponse {
-    /**
-     * The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was found in.
-     * 
-     */
+        /**
+         * @return The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was found in.
+         * 
+         */
     private final String affectedCpeUri;
-    /**
-     * The package this vulnerability was found in.
-     * 
-     */
+        /**
+         * @return The package this vulnerability was found in.
+         * 
+         */
     private final String affectedPackage;
-    /**
-     * The version of the package that is installed on the resource affected by this vulnerability.
-     * 
-     */
+        /**
+         * @return The version of the package that is installed on the resource affected by this vulnerability.
+         * 
+         */
     private final VersionResponse affectedVersion;
-    /**
-     * The distro or language system assigned severity for this vulnerability when that is available and note provider assigned severity when it is not available.
-     * 
-     */
+        /**
+         * @return The distro or language system assigned severity for this vulnerability when that is available and note provider assigned severity when it is not available.
+         * 
+         */
     private final String effectiveSeverity;
-    /**
-     * Whether a fix is available for this package.
-     * 
-     */
+        /**
+         * @return Whether a fix is available for this package.
+         * 
+         */
     private final Boolean fixAvailable;
-    /**
-     * The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was fixed in. It is possible for this to be different from the affected_cpe_uri.
-     * 
-     */
+        /**
+         * @return The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was fixed in. It is possible for this to be different from the affected_cpe_uri.
+         * 
+         */
     private final String fixedCpeUri;
-    /**
-     * The package this vulnerability was fixed in. It is possible for this to be different from the affected_package.
-     * 
-     */
+        /**
+         * @return The package this vulnerability was fixed in. It is possible for this to be different from the affected_package.
+         * 
+         */
     private final String fixedPackage;
-    /**
-     * The version of the package this vulnerability was fixed in. Setting this to VersionKind.MAXIMUM means no fix is yet available.
-     * 
-     */
+        /**
+         * @return The version of the package this vulnerability was fixed in. Setting this to VersionKind.MAXIMUM means no fix is yet available.
+         * 
+         */
     private final VersionResponse fixedVersion;
-    /**
-     * The type of package (e.g. OS, MAVEN, GO).
-     * 
-     */
+        /**
+         * @return The type of package (e.g. OS, MAVEN, GO).
+         * 
+         */
     private final String packageType;
 
     @CustomType.Constructor
@@ -80,65 +80,65 @@ public final class PackageIssueResponse {
     }
 
     /**
-     * The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was found in.
+     * @return The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was found in.
      * 
-    */
+     */
     public String affectedCpeUri() {
         return this.affectedCpeUri;
     }
     /**
-     * The package this vulnerability was found in.
+     * @return The package this vulnerability was found in.
      * 
-    */
+     */
     public String affectedPackage() {
         return this.affectedPackage;
     }
     /**
-     * The version of the package that is installed on the resource affected by this vulnerability.
+     * @return The version of the package that is installed on the resource affected by this vulnerability.
      * 
-    */
+     */
     public VersionResponse affectedVersion() {
         return this.affectedVersion;
     }
     /**
-     * The distro or language system assigned severity for this vulnerability when that is available and note provider assigned severity when it is not available.
+     * @return The distro or language system assigned severity for this vulnerability when that is available and note provider assigned severity when it is not available.
      * 
-    */
+     */
     public String effectiveSeverity() {
         return this.effectiveSeverity;
     }
     /**
-     * Whether a fix is available for this package.
+     * @return Whether a fix is available for this package.
      * 
-    */
+     */
     public Boolean fixAvailable() {
         return this.fixAvailable;
     }
     /**
-     * The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was fixed in. It is possible for this to be different from the affected_cpe_uri.
+     * @return The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was fixed in. It is possible for this to be different from the affected_cpe_uri.
      * 
-    */
+     */
     public String fixedCpeUri() {
         return this.fixedCpeUri;
     }
     /**
-     * The package this vulnerability was fixed in. It is possible for this to be different from the affected_package.
+     * @return The package this vulnerability was fixed in. It is possible for this to be different from the affected_package.
      * 
-    */
+     */
     public String fixedPackage() {
         return this.fixedPackage;
     }
     /**
-     * The version of the package this vulnerability was fixed in. Setting this to VersionKind.MAXIMUM means no fix is yet available.
+     * @return The version of the package this vulnerability was fixed in. Setting this to VersionKind.MAXIMUM means no fix is yet available.
      * 
-    */
+     */
     public VersionResponse fixedVersion() {
         return this.fixedVersion;
     }
     /**
-     * The type of package (e.g. OS, MAVEN, GO).
+     * @return The type of package (e.g. OS, MAVEN, GO).
      * 
-    */
+     */
     public String packageType() {
         return this.packageType;
     }

@@ -22,150 +22,150 @@ import java.util.Objects;
 
 @CustomType
 public final class GetRegionInstanceGroupManagerResult {
-    /**
-     * Specifies the instances configs overrides that should be applied for all instances in the MIG.
-     * 
-     */
+        /**
+         * @return Specifies the instances configs overrides that should be applied for all instances in the MIG.
+         * 
+         */
     private final InstanceGroupManagerAllInstancesConfigResponse allInstancesConfig;
-    /**
-     * The autohealing policy for this managed instance group. You can specify only one value.
-     * 
-     */
+        /**
+         * @return The autohealing policy for this managed instance group. You can specify only one value.
+         * 
+         */
     private final List<InstanceGroupManagerAutoHealingPolicyResponse> autoHealingPolicies;
-    /**
-     * The base instance name to use for instances in this group. The value must be 1-58 characters long. Instances are named by appending a hyphen and a random four-character string to the base instance name. The base instance name must comply with RFC1035.
-     * 
-     */
+        /**
+         * @return The base instance name to use for instances in this group. The value must be 1-58 characters long. Instances are named by appending a hyphen and a random four-character string to the base instance name. The base instance name must comply with RFC1035.
+         * 
+         */
     private final String baseInstanceName;
-    /**
-     * The creation timestamp for this managed instance group in RFC3339 text format.
-     * 
-     */
+        /**
+         * @return The creation timestamp for this managed instance group in RFC3339 text format.
+         * 
+         */
     private final String creationTimestamp;
-    /**
-     * The list of instance actions and the number of instances in this managed instance group that are scheduled for each of those actions.
-     * 
-     */
+        /**
+         * @return The list of instance actions and the number of instances in this managed instance group that are scheduled for each of those actions.
+         * 
+         */
     private final InstanceGroupManagerActionsSummaryResponse currentActions;
-    /**
-     * An optional description of this resource.
-     * 
-     */
+        /**
+         * @return An optional description of this resource.
+         * 
+         */
     private final String description;
-    /**
-     * Policy specifying the intended distribution of managed instances across zones in a regional managed instance group.
-     * 
-     */
+        /**
+         * @return Policy specifying the intended distribution of managed instances across zones in a regional managed instance group.
+         * 
+         */
     private final DistributionPolicyResponse distributionPolicy;
-    /**
-     * The action to perform in case of zone failure. Only one value is supported, NO_FAILOVER. The default is NO_FAILOVER.
-     * 
-     */
+        /**
+         * @return The action to perform in case of zone failure. Only one value is supported, NO_FAILOVER. The default is NO_FAILOVER.
+         * 
+         */
     private final String failoverAction;
-    /**
-     * Fingerprint of this resource. This field may be used in optimistic locking. It will be ignored when inserting an InstanceGroupManager. An up-to-date fingerprint must be provided in order to update the InstanceGroupManager, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve an InstanceGroupManager.
-     * 
-     */
+        /**
+         * @return Fingerprint of this resource. This field may be used in optimistic locking. It will be ignored when inserting an InstanceGroupManager. An up-to-date fingerprint must be provided in order to update the InstanceGroupManager, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve an InstanceGroupManager.
+         * 
+         */
     private final String fingerprint;
-    /**
-     * The URL of the Instance Group resource.
-     * 
-     */
+        /**
+         * @return The URL of the Instance Group resource.
+         * 
+         */
     private final String instanceGroup;
-    /**
-     * Instance lifecycle policy for this Instance Group Manager.
-     * 
-     */
+        /**
+         * @return Instance lifecycle policy for this Instance Group Manager.
+         * 
+         */
     private final InstanceGroupManagerInstanceLifecyclePolicyResponse instanceLifecyclePolicy;
-    /**
-     * The URL of the instance template that is specified for this managed instance group. The group uses this template to create all new instances in the managed instance group. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group&#39;s updatePolicy.type to PROACTIVE.
-     * 
-     */
+        /**
+         * @return The URL of the instance template that is specified for this managed instance group. The group uses this template to create all new instances in the managed instance group. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group&#39;s updatePolicy.type to PROACTIVE.
+         * 
+         */
     private final String instanceTemplate;
-    /**
-     * The resource type, which is always compute#instanceGroupManager for managed instance groups.
-     * 
-     */
+        /**
+         * @return The resource type, which is always compute#instanceGroupManager for managed instance groups.
+         * 
+         */
     private final String kind;
-    /**
-     * The name of the managed instance group. The name must be 1-63 characters long, and comply with RFC1035.
-     * 
-     */
+        /**
+         * @return The name of the managed instance group. The name must be 1-63 characters long, and comply with RFC1035.
+         * 
+         */
     private final String name;
-    /**
-     * Named ports configured for the Instance Groups complementary to this Instance Group Manager.
-     * 
-     */
+        /**
+         * @return Named ports configured for the Instance Groups complementary to this Instance Group Manager.
+         * 
+         */
     private final List<NamedPortResponse> namedPorts;
-    /**
-     * The URL of the region where the managed instance group resides (for regional resources).
-     * 
-     */
+        /**
+         * @return The URL of the region where the managed instance group resides (for regional resources).
+         * 
+         */
     private final String region;
-    /**
-     * The URL for this managed instance group. The server defines this URL.
-     * 
-     */
+        /**
+         * @return The URL for this managed instance group. The server defines this URL.
+         * 
+         */
     private final String selfLink;
-    /**
-     * Server-defined URL for this resource with the resource id.
-     * 
-     */
+        /**
+         * @return Server-defined URL for this resource with the resource id.
+         * 
+         */
     private final String selfLinkWithId;
-    /**
-     * The service account to be used as credentials for all operations performed by the managed instance group on instances. The service accounts needs all permissions required to create and delete instances. By default, the service account {projectNumber}@cloudservices.gserviceaccount.com is used.
-     * 
-     */
+        /**
+         * @return The service account to be used as credentials for all operations performed by the managed instance group on instances. The service accounts needs all permissions required to create and delete instances. By default, the service account {projectNumber}@cloudservices.gserviceaccount.com is used.
+         * 
+         */
     private final String serviceAccount;
-    /**
-     * Standby policy for stopped and suspended instances.
-     * 
-     */
+        /**
+         * @return Standby policy for stopped and suspended instances.
+         * 
+         */
     private final InstanceGroupManagerStandbyPolicyResponse standbyPolicy;
-    /**
-     * Stateful configuration for this Instanced Group Manager
-     * 
-     */
+        /**
+         * @return Stateful configuration for this Instanced Group Manager
+         * 
+         */
     private final StatefulPolicyResponse statefulPolicy;
-    /**
-     * The status of this managed instance group.
-     * 
-     */
+        /**
+         * @return The status of this managed instance group.
+         * 
+         */
     private final InstanceGroupManagerStatusResponse status;
-    /**
-     * The URLs for all TargetPool resources to which instances in the instanceGroup field are added. The target pools automatically apply to all of the instances in the managed instance group.
-     * 
-     */
+        /**
+         * @return The URLs for all TargetPool resources to which instances in the instanceGroup field are added. The target pools automatically apply to all of the instances in the managed instance group.
+         * 
+         */
     private final List<String> targetPools;
-    /**
-     * The target number of running instances for this managed instance group. You can reduce this number by using the instanceGroupManager deleteInstances or abandonInstances methods. Resizing the group also changes this number.
-     * 
-     */
+        /**
+         * @return The target number of running instances for this managed instance group. You can reduce this number by using the instanceGroupManager deleteInstances or abandonInstances methods. Resizing the group also changes this number.
+         * 
+         */
     private final Integer targetSize;
-    /**
-     * The target number of stopped instances for this managed instance group. This number changes when you: - Stop instance using the stopInstances method or start instances using the startInstances method. - Manually change the targetStoppedSize using the update method.
-     * 
-     */
+        /**
+         * @return The target number of stopped instances for this managed instance group. This number changes when you: - Stop instance using the stopInstances method or start instances using the startInstances method. - Manually change the targetStoppedSize using the update method.
+         * 
+         */
     private final Integer targetStoppedSize;
-    /**
-     * The target number of suspended instances for this managed instance group. This number changes when you: - Suspend instance using the suspendInstances method or resume instances using the resumeInstances method. - Manually change the targetSuspendedSize using the update method.
-     * 
-     */
+        /**
+         * @return The target number of suspended instances for this managed instance group. This number changes when you: - Suspend instance using the suspendInstances method or resume instances using the resumeInstances method. - Manually change the targetSuspendedSize using the update method.
+         * 
+         */
     private final Integer targetSuspendedSize;
-    /**
-     * The update policy for this managed instance group.
-     * 
-     */
+        /**
+         * @return The update policy for this managed instance group.
+         * 
+         */
     private final InstanceGroupManagerUpdatePolicyResponse updatePolicy;
-    /**
-     * Specifies the instance templates used by this managed instance group to create instances. Each version is defined by an instanceTemplate and a name. Every version can appear at most once per instance group. This field overrides the top-level instanceTemplate field. Read more about the relationships between these fields. Exactly one version must leave the targetSize field unset. That version will be applied to all remaining instances. For more information, read about canary updates.
-     * 
-     */
+        /**
+         * @return Specifies the instance templates used by this managed instance group to create instances. Each version is defined by an instanceTemplate and a name. Every version can appear at most once per instance group. This field overrides the top-level instanceTemplate field. Read more about the relationships between these fields. Exactly one version must leave the targetSize field unset. That version will be applied to all remaining instances. For more information, read about canary updates.
+         * 
+         */
     private final List<InstanceGroupManagerVersionResponse> versions;
-    /**
-     * The URL of a zone where the managed instance group is located (for zonal resources).
-     * 
-     */
+        /**
+         * @return The URL of a zone where the managed instance group is located (for zonal resources).
+         * 
+         */
     private final String zone;
 
     @CustomType.Constructor
@@ -231,205 +231,205 @@ public final class GetRegionInstanceGroupManagerResult {
     }
 
     /**
-     * Specifies the instances configs overrides that should be applied for all instances in the MIG.
+     * @return Specifies the instances configs overrides that should be applied for all instances in the MIG.
      * 
-    */
+     */
     public InstanceGroupManagerAllInstancesConfigResponse allInstancesConfig() {
         return this.allInstancesConfig;
     }
     /**
-     * The autohealing policy for this managed instance group. You can specify only one value.
+     * @return The autohealing policy for this managed instance group. You can specify only one value.
      * 
-    */
+     */
     public List<InstanceGroupManagerAutoHealingPolicyResponse> autoHealingPolicies() {
         return this.autoHealingPolicies;
     }
     /**
-     * The base instance name to use for instances in this group. The value must be 1-58 characters long. Instances are named by appending a hyphen and a random four-character string to the base instance name. The base instance name must comply with RFC1035.
+     * @return The base instance name to use for instances in this group. The value must be 1-58 characters long. Instances are named by appending a hyphen and a random four-character string to the base instance name. The base instance name must comply with RFC1035.
      * 
-    */
+     */
     public String baseInstanceName() {
         return this.baseInstanceName;
     }
     /**
-     * The creation timestamp for this managed instance group in RFC3339 text format.
+     * @return The creation timestamp for this managed instance group in RFC3339 text format.
      * 
-    */
+     */
     public String creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
-     * The list of instance actions and the number of instances in this managed instance group that are scheduled for each of those actions.
+     * @return The list of instance actions and the number of instances in this managed instance group that are scheduled for each of those actions.
      * 
-    */
+     */
     public InstanceGroupManagerActionsSummaryResponse currentActions() {
         return this.currentActions;
     }
     /**
-     * An optional description of this resource.
+     * @return An optional description of this resource.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Policy specifying the intended distribution of managed instances across zones in a regional managed instance group.
+     * @return Policy specifying the intended distribution of managed instances across zones in a regional managed instance group.
      * 
-    */
+     */
     public DistributionPolicyResponse distributionPolicy() {
         return this.distributionPolicy;
     }
     /**
-     * The action to perform in case of zone failure. Only one value is supported, NO_FAILOVER. The default is NO_FAILOVER.
+     * @return The action to perform in case of zone failure. Only one value is supported, NO_FAILOVER. The default is NO_FAILOVER.
      * 
-    */
+     */
     public String failoverAction() {
         return this.failoverAction;
     }
     /**
-     * Fingerprint of this resource. This field may be used in optimistic locking. It will be ignored when inserting an InstanceGroupManager. An up-to-date fingerprint must be provided in order to update the InstanceGroupManager, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve an InstanceGroupManager.
+     * @return Fingerprint of this resource. This field may be used in optimistic locking. It will be ignored when inserting an InstanceGroupManager. An up-to-date fingerprint must be provided in order to update the InstanceGroupManager, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve an InstanceGroupManager.
      * 
-    */
+     */
     public String fingerprint() {
         return this.fingerprint;
     }
     /**
-     * The URL of the Instance Group resource.
+     * @return The URL of the Instance Group resource.
      * 
-    */
+     */
     public String instanceGroup() {
         return this.instanceGroup;
     }
     /**
-     * Instance lifecycle policy for this Instance Group Manager.
+     * @return Instance lifecycle policy for this Instance Group Manager.
      * 
-    */
+     */
     public InstanceGroupManagerInstanceLifecyclePolicyResponse instanceLifecyclePolicy() {
         return this.instanceLifecyclePolicy;
     }
     /**
-     * The URL of the instance template that is specified for this managed instance group. The group uses this template to create all new instances in the managed instance group. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group&#39;s updatePolicy.type to PROACTIVE.
+     * @return The URL of the instance template that is specified for this managed instance group. The group uses this template to create all new instances in the managed instance group. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group&#39;s updatePolicy.type to PROACTIVE.
      * 
-    */
+     */
     public String instanceTemplate() {
         return this.instanceTemplate;
     }
     /**
-     * The resource type, which is always compute#instanceGroupManager for managed instance groups.
+     * @return The resource type, which is always compute#instanceGroupManager for managed instance groups.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The name of the managed instance group. The name must be 1-63 characters long, and comply with RFC1035.
+     * @return The name of the managed instance group. The name must be 1-63 characters long, and comply with RFC1035.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Named ports configured for the Instance Groups complementary to this Instance Group Manager.
+     * @return Named ports configured for the Instance Groups complementary to this Instance Group Manager.
      * 
-    */
+     */
     public List<NamedPortResponse> namedPorts() {
         return this.namedPorts;
     }
     /**
-     * The URL of the region where the managed instance group resides (for regional resources).
+     * @return The URL of the region where the managed instance group resides (for regional resources).
      * 
-    */
+     */
     public String region() {
         return this.region;
     }
     /**
-     * The URL for this managed instance group. The server defines this URL.
+     * @return The URL for this managed instance group. The server defines this URL.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }
     /**
-     * Server-defined URL for this resource with the resource id.
+     * @return Server-defined URL for this resource with the resource id.
      * 
-    */
+     */
     public String selfLinkWithId() {
         return this.selfLinkWithId;
     }
     /**
-     * The service account to be used as credentials for all operations performed by the managed instance group on instances. The service accounts needs all permissions required to create and delete instances. By default, the service account {projectNumber}@cloudservices.gserviceaccount.com is used.
+     * @return The service account to be used as credentials for all operations performed by the managed instance group on instances. The service accounts needs all permissions required to create and delete instances. By default, the service account {projectNumber}@cloudservices.gserviceaccount.com is used.
      * 
-    */
+     */
     public String serviceAccount() {
         return this.serviceAccount;
     }
     /**
-     * Standby policy for stopped and suspended instances.
+     * @return Standby policy for stopped and suspended instances.
      * 
-    */
+     */
     public InstanceGroupManagerStandbyPolicyResponse standbyPolicy() {
         return this.standbyPolicy;
     }
     /**
-     * Stateful configuration for this Instanced Group Manager
+     * @return Stateful configuration for this Instanced Group Manager
      * 
-    */
+     */
     public StatefulPolicyResponse statefulPolicy() {
         return this.statefulPolicy;
     }
     /**
-     * The status of this managed instance group.
+     * @return The status of this managed instance group.
      * 
-    */
+     */
     public InstanceGroupManagerStatusResponse status() {
         return this.status;
     }
     /**
-     * The URLs for all TargetPool resources to which instances in the instanceGroup field are added. The target pools automatically apply to all of the instances in the managed instance group.
+     * @return The URLs for all TargetPool resources to which instances in the instanceGroup field are added. The target pools automatically apply to all of the instances in the managed instance group.
      * 
-    */
+     */
     public List<String> targetPools() {
         return this.targetPools;
     }
     /**
-     * The target number of running instances for this managed instance group. You can reduce this number by using the instanceGroupManager deleteInstances or abandonInstances methods. Resizing the group also changes this number.
+     * @return The target number of running instances for this managed instance group. You can reduce this number by using the instanceGroupManager deleteInstances or abandonInstances methods. Resizing the group also changes this number.
      * 
-    */
+     */
     public Integer targetSize() {
         return this.targetSize;
     }
     /**
-     * The target number of stopped instances for this managed instance group. This number changes when you: - Stop instance using the stopInstances method or start instances using the startInstances method. - Manually change the targetStoppedSize using the update method.
+     * @return The target number of stopped instances for this managed instance group. This number changes when you: - Stop instance using the stopInstances method or start instances using the startInstances method. - Manually change the targetStoppedSize using the update method.
      * 
-    */
+     */
     public Integer targetStoppedSize() {
         return this.targetStoppedSize;
     }
     /**
-     * The target number of suspended instances for this managed instance group. This number changes when you: - Suspend instance using the suspendInstances method or resume instances using the resumeInstances method. - Manually change the targetSuspendedSize using the update method.
+     * @return The target number of suspended instances for this managed instance group. This number changes when you: - Suspend instance using the suspendInstances method or resume instances using the resumeInstances method. - Manually change the targetSuspendedSize using the update method.
      * 
-    */
+     */
     public Integer targetSuspendedSize() {
         return this.targetSuspendedSize;
     }
     /**
-     * The update policy for this managed instance group.
+     * @return The update policy for this managed instance group.
      * 
-    */
+     */
     public InstanceGroupManagerUpdatePolicyResponse updatePolicy() {
         return this.updatePolicy;
     }
     /**
-     * Specifies the instance templates used by this managed instance group to create instances. Each version is defined by an instanceTemplate and a name. Every version can appear at most once per instance group. This field overrides the top-level instanceTemplate field. Read more about the relationships between these fields. Exactly one version must leave the targetSize field unset. That version will be applied to all remaining instances. For more information, read about canary updates.
+     * @return Specifies the instance templates used by this managed instance group to create instances. Each version is defined by an instanceTemplate and a name. Every version can appear at most once per instance group. This field overrides the top-level instanceTemplate field. Read more about the relationships between these fields. Exactly one version must leave the targetSize field unset. That version will be applied to all remaining instances. For more information, read about canary updates.
      * 
-    */
+     */
     public List<InstanceGroupManagerVersionResponse> versions() {
         return this.versions;
     }
     /**
-     * The URL of a zone where the managed instance group is located (for zonal resources).
+     * @return The URL of a zone where the managed instance group is located (for zonal resources).
      * 
-    */
+     */
     public String zone() {
         return this.zone;
     }

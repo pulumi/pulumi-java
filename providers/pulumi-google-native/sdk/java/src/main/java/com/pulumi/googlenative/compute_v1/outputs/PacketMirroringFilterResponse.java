@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class PacketMirroringFilterResponse {
-    /**
-     * IP CIDR ranges that apply as filter on the source (ingress) or destination (egress) IP in the IP header. Only IPv4 is supported. If no ranges are specified, all traffic that matches the specified IPProtocols is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.
-     * 
-     */
+        /**
+         * @return IP CIDR ranges that apply as filter on the source (ingress) or destination (egress) IP in the IP header. Only IPv4 is supported. If no ranges are specified, all traffic that matches the specified IPProtocols is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.
+         * 
+         */
     private final List<String> cidrRanges;
-    /**
-     * Direction of traffic to mirror, either INGRESS, EGRESS, or BOTH. The default is BOTH.
-     * 
-     */
+        /**
+         * @return Direction of traffic to mirror, either INGRESS, EGRESS, or BOTH. The default is BOTH.
+         * 
+         */
     private final String direction;
-    /**
-     * Protocols that apply as filter on mirrored traffic. If no protocols are specified, all traffic that matches the specified CIDR ranges is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.
-     * 
-     */
+        /**
+         * @return Protocols that apply as filter on mirrored traffic. If no protocols are specified, all traffic that matches the specified CIDR ranges is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.
+         * 
+         */
     private final List<String> ipProtocols;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class PacketMirroringFilterResponse {
     }
 
     /**
-     * IP CIDR ranges that apply as filter on the source (ingress) or destination (egress) IP in the IP header. Only IPv4 is supported. If no ranges are specified, all traffic that matches the specified IPProtocols is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.
+     * @return IP CIDR ranges that apply as filter on the source (ingress) or destination (egress) IP in the IP header. Only IPv4 is supported. If no ranges are specified, all traffic that matches the specified IPProtocols is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.
      * 
-    */
+     */
     public List<String> cidrRanges() {
         return this.cidrRanges;
     }
     /**
-     * Direction of traffic to mirror, either INGRESS, EGRESS, or BOTH. The default is BOTH.
+     * @return Direction of traffic to mirror, either INGRESS, EGRESS, or BOTH. The default is BOTH.
      * 
-    */
+     */
     public String direction() {
         return this.direction;
     }
     /**
-     * Protocols that apply as filter on mirrored traffic. If no protocols are specified, all traffic that matches the specified CIDR ranges is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.
+     * @return Protocols that apply as filter on mirrored traffic. If no protocols are specified, all traffic that matches the specified CIDR ranges is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.
      * 
-    */
+     */
     public List<String> ipProtocols() {
         return this.ipProtocols;
     }

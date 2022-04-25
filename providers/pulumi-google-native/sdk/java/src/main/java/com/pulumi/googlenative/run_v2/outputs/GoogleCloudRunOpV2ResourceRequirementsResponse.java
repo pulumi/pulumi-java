@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudRunOpV2ResourceRequirementsResponse {
-    /**
-     * Determines whether CPU should be throttled or not outside of requests.
-     * 
-     */
+        /**
+         * @return Determines whether CPU should be throttled or not outside of requests.
+         * 
+         */
     private final Boolean cpuIdle;
-    /**
-     * Only memory and CPU are supported. Note: The only supported values for CPU are &#39;1&#39;, &#39;2&#39;, and &#39;4&#39;. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of the &#39;quantity&#39; k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
-     * 
-     */
+        /**
+         * @return Only memory and CPU are supported. Note: The only supported values for CPU are &#39;1&#39;, &#39;2&#39;, and &#39;4&#39;. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of the &#39;quantity&#39; k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+         * 
+         */
     private final Map<String,String> limits;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class GoogleCloudRunOpV2ResourceRequirementsResponse {
     }
 
     /**
-     * Determines whether CPU should be throttled or not outside of requests.
+     * @return Determines whether CPU should be throttled or not outside of requests.
      * 
-    */
+     */
     public Boolean cpuIdle() {
         return this.cpuIdle;
     }
     /**
-     * Only memory and CPU are supported. Note: The only supported values for CPU are &#39;1&#39;, &#39;2&#39;, and &#39;4&#39;. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of the &#39;quantity&#39; k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+     * @return Only memory and CPU are supported. Note: The only supported values for CPU are &#39;1&#39;, &#39;2&#39;, and &#39;4&#39;. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of the &#39;quantity&#39; k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
      * 
-    */
+     */
     public Map<String,String> limits() {
         return this.limits;
     }

@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class VirtualNICResponse {
-    /**
-     * Whether gVNIC features are enabled in the node pool.
-     * 
-     */
+        /**
+         * @return Whether gVNIC features are enabled in the node pool.
+         * 
+         */
     private final Boolean enabled;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class VirtualNICResponse {
     }
 
     /**
-     * Whether gVNIC features are enabled in the node pool.
+     * @return Whether gVNIC features are enabled in the node pool.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }

@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ImageAnnotationResponse {
-    /**
-     * The list of polygons outlining the sensitive regions in the image.
-     * 
-     */
+        /**
+         * @return The list of polygons outlining the sensitive regions in the image.
+         * 
+         */
     private final List<BoundingPolyResponse> boundingPolys;
-    /**
-     * 0-based index of the image frame. For example, an image frame in a DICOM instance.
-     * 
-     */
+        /**
+         * @return 0-based index of the image frame. For example, an image frame in a DICOM instance.
+         * 
+         */
     private final Integer frameIndex;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ImageAnnotationResponse {
     }
 
     /**
-     * The list of polygons outlining the sensitive regions in the image.
+     * @return The list of polygons outlining the sensitive regions in the image.
      * 
-    */
+     */
     public List<BoundingPolyResponse> boundingPolys() {
         return this.boundingPolys;
     }
     /**
-     * 0-based index of the image frame. For example, an image frame in a DICOM instance.
+     * @return 0-based index of the image frame. For example, an image frame in a DICOM instance.
      * 
-    */
+     */
     public Integer frameIndex() {
         return this.frameIndex;
     }

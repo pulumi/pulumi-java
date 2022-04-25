@@ -10,30 +10,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GetServicePerimeterResult {
-    /**
-     * Description of the `ServicePerimeter` and its use. Does not affect behavior.
-     * 
-     */
+        /**
+         * @return Description of the `ServicePerimeter` and its use. Does not affect behavior.
+         * 
+         */
     private final String description;
-    /**
-     * Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and &#39;_&#39;. Format: `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
-     * 
-     */
+        /**
+         * @return Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and &#39;_&#39;. Format: `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
+         * 
+         */
     private final String name;
-    /**
-     * Perimeter type indicator. A single project is allowed to be a member of single regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a perimeter bridge without being included in regular perimeter. For perimeter bridges, restricted/unrestricted service lists as well as access lists must be empty.
-     * 
-     */
+        /**
+         * @return Perimeter type indicator. A single project is allowed to be a member of single regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a perimeter bridge without being included in regular perimeter. For perimeter bridges, restricted/unrestricted service lists as well as access lists must be empty.
+         * 
+         */
     private final String perimeterType;
-    /**
-     * Current ServicePerimeter configuration. Specifies sets of resources, restricted/unrestricted services and access levels that determine perimeter content and boundaries.
-     * 
-     */
+        /**
+         * @return Current ServicePerimeter configuration. Specifies sets of resources, restricted/unrestricted services and access levels that determine perimeter content and boundaries.
+         * 
+         */
     private final ServicePerimeterConfigResponse status;
-    /**
-     * Human readable title. Must be unique within the Policy.
-     * 
-     */
+        /**
+         * @return Human readable title. Must be unique within the Policy.
+         * 
+         */
     private final String title;
 
     @CustomType.Constructor
@@ -51,37 +51,37 @@ public final class GetServicePerimeterResult {
     }
 
     /**
-     * Description of the `ServicePerimeter` and its use. Does not affect behavior.
+     * @return Description of the `ServicePerimeter` and its use. Does not affect behavior.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and &#39;_&#39;. Format: `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
+     * @return Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and &#39;_&#39;. Format: `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Perimeter type indicator. A single project is allowed to be a member of single regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a perimeter bridge without being included in regular perimeter. For perimeter bridges, restricted/unrestricted service lists as well as access lists must be empty.
+     * @return Perimeter type indicator. A single project is allowed to be a member of single regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a perimeter bridge without being included in regular perimeter. For perimeter bridges, restricted/unrestricted service lists as well as access lists must be empty.
      * 
-    */
+     */
     public String perimeterType() {
         return this.perimeterType;
     }
     /**
-     * Current ServicePerimeter configuration. Specifies sets of resources, restricted/unrestricted services and access levels that determine perimeter content and boundaries.
+     * @return Current ServicePerimeter configuration. Specifies sets of resources, restricted/unrestricted services and access levels that determine perimeter content and boundaries.
      * 
-    */
+     */
     public ServicePerimeterConfigResponse status() {
         return this.status;
     }
     /**
-     * Human readable title. Must be unique within the Policy.
+     * @return Human readable title. Must be unique within the Policy.
      * 
-    */
+     */
     public String title() {
         return this.title;
     }

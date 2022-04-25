@@ -13,52 +13,52 @@ import java.util.Objects;
 
 @CustomType
 public final class GetResourcePolicyResult {
-    /**
-     * Creation timestamp in RFC3339 text format.
-     * 
-     */
+        /**
+         * @return Creation timestamp in RFC3339 text format.
+         * 
+         */
     private final String creationTimestamp;
     private final String description;
-    /**
-     * Resource policy for instances for placement configuration.
-     * 
-     */
+        /**
+         * @return Resource policy for instances for placement configuration.
+         * 
+         */
     private final ResourcePolicyGroupPlacementPolicyResponse groupPlacementPolicy;
-    /**
-     * Resource policy for scheduling instance operations.
-     * 
-     */
+        /**
+         * @return Resource policy for scheduling instance operations.
+         * 
+         */
     private final ResourcePolicyInstanceSchedulePolicyResponse instanceSchedulePolicy;
-    /**
-     * Type of the resource. Always compute#resource_policies for resource policies.
-     * 
-     */
+        /**
+         * @return Type of the resource. Always compute#resource_policies for resource policies.
+         * 
+         */
     private final String kind;
-    /**
-     * The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
-     */
+        /**
+         * @return The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         */
     private final String name;
     private final String region;
-    /**
-     * The system status of the resource policy.
-     * 
-     */
+        /**
+         * @return The system status of the resource policy.
+         * 
+         */
     private final ResourcePolicyResourceStatusResponse resourceStatus;
-    /**
-     * Server-defined fully-qualified URL for this resource.
-     * 
-     */
+        /**
+         * @return Server-defined fully-qualified URL for this resource.
+         * 
+         */
     private final String selfLink;
-    /**
-     * Resource policy for persistent disks for creating snapshots.
-     * 
-     */
+        /**
+         * @return Resource policy for persistent disks for creating snapshots.
+         * 
+         */
     private final ResourcePolicySnapshotSchedulePolicyResponse snapshotSchedulePolicy;
-    /**
-     * The status of resource policy creation.
-     * 
-     */
+        /**
+         * @return The status of resource policy creation.
+         * 
+         */
     private final String status;
 
     @CustomType.Constructor
@@ -88,9 +88,9 @@ public final class GetResourcePolicyResult {
     }
 
     /**
-     * Creation timestamp in RFC3339 text format.
+     * @return Creation timestamp in RFC3339 text format.
      * 
-    */
+     */
     public String creationTimestamp() {
         return this.creationTimestamp;
     }
@@ -98,30 +98,30 @@ public final class GetResourcePolicyResult {
         return this.description;
     }
     /**
-     * Resource policy for instances for placement configuration.
+     * @return Resource policy for instances for placement configuration.
      * 
-    */
+     */
     public ResourcePolicyGroupPlacementPolicyResponse groupPlacementPolicy() {
         return this.groupPlacementPolicy;
     }
     /**
-     * Resource policy for scheduling instance operations.
+     * @return Resource policy for scheduling instance operations.
      * 
-    */
+     */
     public ResourcePolicyInstanceSchedulePolicyResponse instanceSchedulePolicy() {
         return this.instanceSchedulePolicy;
     }
     /**
-     * Type of the resource. Always compute#resource_policies for resource policies.
+     * @return Type of the resource. Always compute#resource_policies for resource policies.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * @return The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
@@ -129,30 +129,30 @@ public final class GetResourcePolicyResult {
         return this.region;
     }
     /**
-     * The system status of the resource policy.
+     * @return The system status of the resource policy.
      * 
-    */
+     */
     public ResourcePolicyResourceStatusResponse resourceStatus() {
         return this.resourceStatus;
     }
     /**
-     * Server-defined fully-qualified URL for this resource.
+     * @return Server-defined fully-qualified URL for this resource.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }
     /**
-     * Resource policy for persistent disks for creating snapshots.
+     * @return Resource policy for persistent disks for creating snapshots.
      * 
-    */
+     */
     public ResourcePolicySnapshotSchedulePolicyResponse snapshotSchedulePolicy() {
         return this.snapshotSchedulePolicy;
     }
     /**
-     * The status of resource policy creation.
+     * @return The status of resource policy creation.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

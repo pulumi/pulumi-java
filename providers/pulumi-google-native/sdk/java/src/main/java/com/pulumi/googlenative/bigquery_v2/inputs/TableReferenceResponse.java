@@ -19,6 +19,10 @@ public final class TableReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="datasetId", required=true)
     private String datasetId;
 
+    /**
+     * @return [Required] The ID of the dataset containing this table.
+     * 
+     */
     public String datasetId() {
         return this.datasetId;
     }
@@ -30,6 +34,10 @@ public final class TableReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return [Required] The ID of the project containing this table.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -41,6 +49,10 @@ public final class TableReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="tableId", required=true)
     private String tableId;
 
+    /**
+     * @return [Required] The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
+     * 
+     */
     public String tableId() {
         return this.tableId;
     }
@@ -71,16 +83,34 @@ public final class TableReferenceResponse extends com.pulumi.resources.InvokeArg
             $ = new TableReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetId [Required] The ID of the dataset containing this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(String datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
+        /**
+         * @param project [Required] The ID of the project containing this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param tableId [Required] The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableId(String tableId) {
             $.tableId = tableId;
             return this;

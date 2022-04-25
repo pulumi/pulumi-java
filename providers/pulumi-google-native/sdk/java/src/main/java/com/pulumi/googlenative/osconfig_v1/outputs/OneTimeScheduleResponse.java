@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class OneTimeScheduleResponse {
-    /**
-     * The desired patch job execution time.
-     * 
-     */
+        /**
+         * @return The desired patch job execution time.
+         * 
+         */
     private final String executeTime;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class OneTimeScheduleResponse {
     }
 
     /**
-     * The desired patch job execution time.
+     * @return The desired patch job execution time.
      * 
-    */
+     */
     public String executeTime() {
         return this.executeTime;
     }

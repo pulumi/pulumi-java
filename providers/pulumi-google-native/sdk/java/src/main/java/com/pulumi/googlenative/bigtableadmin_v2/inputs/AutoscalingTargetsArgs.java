@@ -26,6 +26,10 @@ public final class AutoscalingTargetsArgs extends com.pulumi.resources.ResourceA
     @Import(name="cpuUtilizationPercent")
     private @Nullable Output<Integer> cpuUtilizationPercent;
 
+    /**
+     * @return The cpu utilization that the Autoscaler should be trying to achieve. This number is on a scale from 0 (no utilization) to 100 (total utilization), and is limited between 10 and 80.
+     * 
+     */
     public Optional<Output<Integer>> cpuUtilizationPercent() {
         return Optional.ofNullable(this.cpuUtilizationPercent);
     }
@@ -54,11 +58,23 @@ public final class AutoscalingTargetsArgs extends com.pulumi.resources.ResourceA
             $ = new AutoscalingTargetsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpuUtilizationPercent The cpu utilization that the Autoscaler should be trying to achieve. This number is on a scale from 0 (no utilization) to 100 (total utilization), and is limited between 10 and 80.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuUtilizationPercent(@Nullable Output<Integer> cpuUtilizationPercent) {
             $.cpuUtilizationPercent = cpuUtilizationPercent;
             return this;
         }
 
+        /**
+         * @param cpuUtilizationPercent The cpu utilization that the Autoscaler should be trying to achieve. This number is on a scale from 0 (no utilization) to 100 (total utilization), and is limited between 10 and 80.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuUtilizationPercent(Integer cpuUtilizationPercent) {
             return cpuUtilizationPercent(Output.of(cpuUtilizationPercent));
         }

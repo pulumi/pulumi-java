@@ -11,25 +11,25 @@ import java.util.Objects;
 
 @CustomType
 public final class BucketCorsItemResponse {
-    /**
-     * The value, in seconds, to return in the  Access-Control-Max-Age header used in preflight responses.
-     * 
-     */
+        /**
+         * @return The value, in seconds, to return in the  Access-Control-Max-Age header used in preflight responses.
+         * 
+         */
     private final Integer maxAgeSeconds;
-    /**
-     * The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: &#34;*&#34; is permitted in the list of methods, and means &#34;any method&#34;.
-     * 
-     */
+        /**
+         * @return The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: &#34;*&#34; is permitted in the list of methods, and means &#34;any method&#34;.
+         * 
+         */
     private final List<String> method;
-    /**
-     * The list of Origins eligible to receive CORS response headers. Note: &#34;*&#34; is permitted in the list of origins, and means &#34;any Origin&#34;.
-     * 
-     */
+        /**
+         * @return The list of Origins eligible to receive CORS response headers. Note: &#34;*&#34; is permitted in the list of origins, and means &#34;any Origin&#34;.
+         * 
+         */
     private final List<String> origin;
-    /**
-     * The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains.
-     * 
-     */
+        /**
+         * @return The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains.
+         * 
+         */
     private final List<String> responseHeader;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class BucketCorsItemResponse {
     }
 
     /**
-     * The value, in seconds, to return in the  Access-Control-Max-Age header used in preflight responses.
+     * @return The value, in seconds, to return in the  Access-Control-Max-Age header used in preflight responses.
      * 
-    */
+     */
     public Integer maxAgeSeconds() {
         return this.maxAgeSeconds;
     }
     /**
-     * The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: &#34;*&#34; is permitted in the list of methods, and means &#34;any method&#34;.
+     * @return The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: &#34;*&#34; is permitted in the list of methods, and means &#34;any method&#34;.
      * 
-    */
+     */
     public List<String> method() {
         return this.method;
     }
     /**
-     * The list of Origins eligible to receive CORS response headers. Note: &#34;*&#34; is permitted in the list of origins, and means &#34;any Origin&#34;.
+     * @return The list of Origins eligible to receive CORS response headers. Note: &#34;*&#34; is permitted in the list of origins, and means &#34;any Origin&#34;.
      * 
-    */
+     */
     public List<String> origin() {
         return this.origin;
     }
     /**
-     * The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains.
+     * @return The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains.
      * 
-    */
+     */
     public List<String> responseHeader() {
         return this.responseHeader;
     }

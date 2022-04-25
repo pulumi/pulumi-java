@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class SecurityPolicyRuleRedirectOptionsResponse {
-    /**
-     * Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.
-     * 
-     */
+        /**
+         * @return Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.
+         * 
+         */
     private final String target;
-    /**
-     * Type of the redirect action.
-     * 
-     */
+        /**
+         * @return Type of the redirect action.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class SecurityPolicyRuleRedirectOptionsResponse {
     }
 
     /**
-     * Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.
+     * @return Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.
      * 
-    */
+     */
     public String target() {
         return this.target;
     }
     /**
-     * Type of the redirect action.
+     * @return Type of the redirect action.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

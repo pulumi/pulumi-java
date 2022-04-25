@@ -9,35 +9,35 @@ import java.util.Objects;
 
 @CustomType
 public final class VpnGatewayInfoResponse {
-    /**
-     * Name of a VPN gateway.
-     * 
-     */
+        /**
+         * @return Name of a VPN gateway.
+         * 
+         */
     private final String displayName;
-    /**
-     * IP address of the VPN gateway.
-     * 
-     */
+        /**
+         * @return IP address of the VPN gateway.
+         * 
+         */
     private final String ipAddress;
-    /**
-     * URI of a Compute Engine network where the VPN gateway is configured.
-     * 
-     */
+        /**
+         * @return URI of a Compute Engine network where the VPN gateway is configured.
+         * 
+         */
     private final String networkUri;
-    /**
-     * Name of a Google Cloud region where this VPN gateway is configured.
-     * 
-     */
+        /**
+         * @return Name of a Google Cloud region where this VPN gateway is configured.
+         * 
+         */
     private final String region;
-    /**
-     * URI of a VPN gateway.
-     * 
-     */
+        /**
+         * @return URI of a VPN gateway.
+         * 
+         */
     private final String uri;
-    /**
-     * A VPN tunnel that is associated with this VPN gateway. There may be multiple VPN tunnels configured on a VPN gateway, and only the one relevant to the test is displayed.
-     * 
-     */
+        /**
+         * @return A VPN tunnel that is associated with this VPN gateway. There may be multiple VPN tunnels configured on a VPN gateway, and only the one relevant to the test is displayed.
+         * 
+         */
     private final String vpnTunnelUri;
 
     @CustomType.Constructor
@@ -57,44 +57,44 @@ public final class VpnGatewayInfoResponse {
     }
 
     /**
-     * Name of a VPN gateway.
+     * @return Name of a VPN gateway.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * IP address of the VPN gateway.
+     * @return IP address of the VPN gateway.
      * 
-    */
+     */
     public String ipAddress() {
         return this.ipAddress;
     }
     /**
-     * URI of a Compute Engine network where the VPN gateway is configured.
+     * @return URI of a Compute Engine network where the VPN gateway is configured.
      * 
-    */
+     */
     public String networkUri() {
         return this.networkUri;
     }
     /**
-     * Name of a Google Cloud region where this VPN gateway is configured.
+     * @return Name of a Google Cloud region where this VPN gateway is configured.
      * 
-    */
+     */
     public String region() {
         return this.region;
     }
     /**
-     * URI of a VPN gateway.
+     * @return URI of a VPN gateway.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }
     /**
-     * A VPN tunnel that is associated with this VPN gateway. There may be multiple VPN tunnels configured on a VPN gateway, and only the one relevant to the test is displayed.
+     * @return A VPN tunnel that is associated with this VPN gateway. There may be multiple VPN tunnels configured on a VPN gateway, and only the one relevant to the test is displayed.
      * 
-    */
+     */
     public String vpnTunnelUri() {
         return this.vpnTunnelUri;
     }

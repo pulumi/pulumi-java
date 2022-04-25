@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class OutputResponse {
-    /**
-     * URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty the value is populated from `Job.output_uri`.
-     * 
-     */
+        /**
+         * @return URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty the value is populated from `Job.output_uri`.
+         * 
+         */
     private final String uri;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class OutputResponse {
     }
 
     /**
-     * URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty the value is populated from `Job.output_uri`.
+     * @return URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty the value is populated from `Job.output_uri`.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

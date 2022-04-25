@@ -25,6 +25,10 @@ public final class SecretVolumeResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="mountPath", required=true)
     private String mountPath;
 
+    /**
+     * @return The path within the container to mount the secret volume. For example, setting the mount_path as `/etc/secrets` would mount the secret value files under the `/etc/secrets` directory. This directory will also be completely shadowed and unavailable to mount any other secrets. Recommended mount paths: /etc/secrets Restricted mount paths: /cloudsql, /dev/log, /pod, /proc, /var/log
+     * 
+     */
     public String mountPath() {
         return this.mountPath;
     }
@@ -36,6 +40,10 @@ public final class SecretVolumeResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return Project identifier (preferrably project number but can also be the project ID) of the project that contains the secret. If not set, it will be populated with the function&#39;s project assuming that the secret exists in the same project as of the function.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -47,6 +55,10 @@ public final class SecretVolumeResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="secret", required=true)
     private String secret;
 
+    /**
+     * @return Name of the secret in secret manager (not the full resource name).
+     * 
+     */
     public String secret() {
         return this.secret;
     }
@@ -58,6 +70,10 @@ public final class SecretVolumeResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="versions", required=true)
     private List<SecretVersionResponse> versions;
 
+    /**
+     * @return List of secret versions to mount for this secret. If empty, the `latest` version of the secret will be made available in a file named after the secret under the mount point.
+     * 
+     */
     public List<SecretVersionResponse> versions() {
         return this.versions;
     }
@@ -89,26 +105,56 @@ public final class SecretVolumeResponse extends com.pulumi.resources.InvokeArgs 
             $ = new SecretVolumeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mountPath The path within the container to mount the secret volume. For example, setting the mount_path as `/etc/secrets` would mount the secret value files under the `/etc/secrets` directory. This directory will also be completely shadowed and unavailable to mount any other secrets. Recommended mount paths: /etc/secrets Restricted mount paths: /cloudsql, /dev/log, /pod, /proc, /var/log
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountPath(String mountPath) {
             $.mountPath = mountPath;
             return this;
         }
 
+        /**
+         * @param project Project identifier (preferrably project number but can also be the project ID) of the project that contains the secret. If not set, it will be populated with the function&#39;s project assuming that the secret exists in the same project as of the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param secret Name of the secret in secret manager (not the full resource name).
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(String secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param versions List of secret versions to mount for this secret. If empty, the `latest` version of the secret will be made available in a file named after the secret under the mount point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versions(List<SecretVersionResponse> versions) {
             $.versions = versions;
             return this;
         }
 
+        /**
+         * @param versions List of secret versions to mount for this secret. If empty, the `latest` version of the secret will be made available in a file named after the secret under the mount point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versions(SecretVersionResponse... versions) {
             return versions(List.of(versions));
         }

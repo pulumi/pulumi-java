@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse extend
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the feature that enabled for fulfillment.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse extend
             $ = new GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of the feature that enabled for fulfillment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

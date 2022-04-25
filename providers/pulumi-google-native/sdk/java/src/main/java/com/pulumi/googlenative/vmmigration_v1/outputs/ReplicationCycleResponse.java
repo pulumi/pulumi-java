@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ReplicationCycleResponse {
-    /**
-     * The current progress in percentage of this cycle.
-     * 
-     */
+        /**
+         * @return The current progress in percentage of this cycle.
+         * 
+         */
     private final Integer progressPercent;
-    /**
-     * The time the replication cycle has started.
-     * 
-     */
+        /**
+         * @return The time the replication cycle has started.
+         * 
+         */
     private final String startTime;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class ReplicationCycleResponse {
     }
 
     /**
-     * The current progress in percentage of this cycle.
+     * @return The current progress in percentage of this cycle.
      * 
-    */
+     */
     public Integer progressPercent() {
         return this.progressPercent;
     }
     /**
-     * The time the replication cycle has started.
+     * @return The time the replication cycle has started.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }

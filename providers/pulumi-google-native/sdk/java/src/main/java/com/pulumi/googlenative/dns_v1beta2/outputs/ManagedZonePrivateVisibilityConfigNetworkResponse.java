@@ -10,10 +10,10 @@ import java.util.Objects;
 @CustomType
 public final class ManagedZonePrivateVisibilityConfigNetworkResponse {
     private final String kind;
-    /**
-     * The fully qualified URL of the VPC network to bind to. Format this URL like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
-     * 
-     */
+        /**
+         * @return The fully qualified URL of the VPC network to bind to. Format this URL like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
+         * 
+         */
     private final String networkUrl;
 
     @CustomType.Constructor
@@ -28,9 +28,9 @@ public final class ManagedZonePrivateVisibilityConfigNetworkResponse {
         return this.kind;
     }
     /**
-     * The fully qualified URL of the VPC network to bind to. Format this URL like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
+     * @return The fully qualified URL of the VPC network to bind to. Format this URL like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
      * 
-    */
+     */
     public String networkUrl() {
         return this.networkUrl;
     }

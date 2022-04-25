@@ -9,30 +9,30 @@ import java.util.Objects;
 
 @CustomType
 public final class CircuitBreakersResponse {
-    /**
-     * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
-     * 
-     */
+        /**
+         * @return Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+         * 
+         */
     private final Integer maxConnections;
-    /**
-     * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
-     * 
-     */
+        /**
+         * @return Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+         * 
+         */
     private final Integer maxPendingRequests;
-    /**
-     * The maximum number of parallel requests that allowed to the backend service. If not specified, there is no limit.
-     * 
-     */
+        /**
+         * @return The maximum number of parallel requests that allowed to the backend service. If not specified, there is no limit.
+         * 
+         */
     private final Integer maxRequests;
-    /**
-     * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
-     * 
-     */
+        /**
+         * @return Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+         * 
+         */
     private final Integer maxRequestsPerConnection;
-    /**
-     * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
-     * 
-     */
+        /**
+         * @return Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+         * 
+         */
     private final Integer maxRetries;
 
     @CustomType.Constructor
@@ -50,37 +50,37 @@ public final class CircuitBreakersResponse {
     }
 
     /**
-     * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+     * @return Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
-    */
+     */
     public Integer maxConnections() {
         return this.maxConnections;
     }
     /**
-     * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+     * @return Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
-    */
+     */
     public Integer maxPendingRequests() {
         return this.maxPendingRequests;
     }
     /**
-     * The maximum number of parallel requests that allowed to the backend service. If not specified, there is no limit.
+     * @return The maximum number of parallel requests that allowed to the backend service. If not specified, there is no limit.
      * 
-    */
+     */
     public Integer maxRequests() {
         return this.maxRequests;
     }
     /**
-     * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+     * @return Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
-    */
+     */
     public Integer maxRequestsPerConnection() {
         return this.maxRequestsPerConnection;
     }
     /**
-     * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+     * @return Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
-    */
+     */
     public Integer maxRetries() {
         return this.maxRetries;
     }

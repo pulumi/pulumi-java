@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse ext
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The word or phrase to be excluded.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse ext
             $ = new GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param value The word or phrase to be excluded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

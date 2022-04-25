@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class AuthenticationResponse {
-    /**
-     * Defines a set of authentication providers that a service supports.
-     * 
-     */
+        /**
+         * @return Defines a set of authentication providers that a service supports.
+         * 
+         */
     private final List<AuthProviderResponse> providers;
-    /**
-     * A list of authentication rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
-     * 
-     */
+        /**
+         * @return A list of authentication rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         */
     private final List<AuthenticationRuleResponse> rules;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class AuthenticationResponse {
     }
 
     /**
-     * Defines a set of authentication providers that a service supports.
+     * @return Defines a set of authentication providers that a service supports.
      * 
-    */
+     */
     public List<AuthProviderResponse> providers() {
         return this.providers;
     }
     /**
-     * A list of authentication rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+     * @return A list of authentication rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
      * 
-    */
+     */
     public List<AuthenticationRuleResponse> rules() {
         return this.rules;
     }

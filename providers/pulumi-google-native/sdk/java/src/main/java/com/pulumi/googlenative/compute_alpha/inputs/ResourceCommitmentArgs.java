@@ -27,6 +27,10 @@ public final class ResourceCommitmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="acceleratorType")
     private @Nullable Output<String> acceleratorType;
 
+    /**
+     * @return Name of the accelerator type resource. Applicable only when the type is ACCELERATOR.
+     * 
+     */
     public Optional<Output<String>> acceleratorType() {
         return Optional.ofNullable(this.acceleratorType);
     }
@@ -38,6 +42,10 @@ public final class ResourceCommitmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="amount")
     private @Nullable Output<String> amount;
 
+    /**
+     * @return The amount of the resource purchased (in a type-dependent unit, such as bytes). For vCPUs, this can just be an integer. For memory, this must be provided in MB. Memory must be a multiple of 256 MB, with up to 6.5GB of memory per every vCPU.
+     * 
+     */
     public Optional<Output<String>> amount() {
         return Optional.ofNullable(this.amount);
     }
@@ -49,6 +57,10 @@ public final class ResourceCommitmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="type")
     private @Nullable Output<ResourceCommitmentType> type;
 
+    /**
+     * @return Type of resource for which this commitment applies. Possible values are VCPU and MEMORY
+     * 
+     */
     public Optional<Output<ResourceCommitmentType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -79,29 +91,65 @@ public final class ResourceCommitmentArgs extends com.pulumi.resources.ResourceA
             $ = new ResourceCommitmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceleratorType Name of the accelerator type resource. Applicable only when the type is ACCELERATOR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorType(@Nullable Output<String> acceleratorType) {
             $.acceleratorType = acceleratorType;
             return this;
         }
 
+        /**
+         * @param acceleratorType Name of the accelerator type resource. Applicable only when the type is ACCELERATOR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorType(String acceleratorType) {
             return acceleratorType(Output.of(acceleratorType));
         }
 
+        /**
+         * @param amount The amount of the resource purchased (in a type-dependent unit, such as bytes). For vCPUs, this can just be an integer. For memory, this must be provided in MB. Memory must be a multiple of 256 MB, with up to 6.5GB of memory per every vCPU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amount(@Nullable Output<String> amount) {
             $.amount = amount;
             return this;
         }
 
+        /**
+         * @param amount The amount of the resource purchased (in a type-dependent unit, such as bytes). For vCPUs, this can just be an integer. For memory, this must be provided in MB. Memory must be a multiple of 256 MB, with up to 6.5GB of memory per every vCPU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amount(String amount) {
             return amount(Output.of(amount));
         }
 
+        /**
+         * @param type Type of resource for which this commitment applies. Possible values are VCPU and MEMORY
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<ResourceCommitmentType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of resource for which this commitment applies. Possible values are VCPU and MEMORY
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ResourceCommitmentType type) {
             return type(Output.of(type));
         }

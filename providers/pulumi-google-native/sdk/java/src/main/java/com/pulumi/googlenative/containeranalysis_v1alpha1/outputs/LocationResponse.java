@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class LocationResponse {
-    /**
-     * The cpe_uri in [cpe format](https://cpe.mitre.org/specification/) denoting the package manager version distributing a package.
-     * 
-     */
+        /**
+         * @return The cpe_uri in [cpe format](https://cpe.mitre.org/specification/) denoting the package manager version distributing a package.
+         * 
+         */
     private final String cpeUri;
-    /**
-     * The path from which we gathered that this package/version is installed.
-     * 
-     */
+        /**
+         * @return The path from which we gathered that this package/version is installed.
+         * 
+         */
     private final String path;
-    /**
-     * The version installed at this location.
-     * 
-     */
+        /**
+         * @return The version installed at this location.
+         * 
+         */
     private final VersionResponse version;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class LocationResponse {
     }
 
     /**
-     * The cpe_uri in [cpe format](https://cpe.mitre.org/specification/) denoting the package manager version distributing a package.
+     * @return The cpe_uri in [cpe format](https://cpe.mitre.org/specification/) denoting the package manager version distributing a package.
      * 
-    */
+     */
     public String cpeUri() {
         return this.cpeUri;
     }
     /**
-     * The path from which we gathered that this package/version is installed.
+     * @return The path from which we gathered that this package/version is installed.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }
     /**
-     * The version installed at this location.
+     * @return The version installed at this location.
      * 
-    */
+     */
     public VersionResponse version() {
         return this.version;
     }

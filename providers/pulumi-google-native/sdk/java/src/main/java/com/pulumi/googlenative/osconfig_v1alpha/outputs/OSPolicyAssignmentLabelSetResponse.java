@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class OSPolicyAssignmentLabelSetResponse {
-    /**
-     * Labels are identified by key/value pairs in this map. A VM should contain all the key/value pairs specified in this map to be selected.
-     * 
-     */
+        /**
+         * @return Labels are identified by key/value pairs in this map. A VM should contain all the key/value pairs specified in this map to be selected.
+         * 
+         */
     private final Map<String,String> labels;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class OSPolicyAssignmentLabelSetResponse {
     }
 
     /**
-     * Labels are identified by key/value pairs in this map. A VM should contain all the key/value pairs specified in this map to be selected.
+     * @return Labels are identified by key/value pairs in this map. A VM should contain all the key/value pairs specified in this map to be selected.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }

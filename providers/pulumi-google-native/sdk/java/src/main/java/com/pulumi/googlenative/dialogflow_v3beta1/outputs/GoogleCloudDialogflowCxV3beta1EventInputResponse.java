@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowCxV3beta1EventInputResponse {
-    /**
-     * Name of the event.
-     * 
-     */
+        /**
+         * @return Name of the event.
+         * 
+         */
     private final String event;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GoogleCloudDialogflowCxV3beta1EventInputResponse {
     }
 
     /**
-     * Name of the event.
+     * @return Name of the event.
      * 
-    */
+     */
     public String event() {
         return this.event;
     }

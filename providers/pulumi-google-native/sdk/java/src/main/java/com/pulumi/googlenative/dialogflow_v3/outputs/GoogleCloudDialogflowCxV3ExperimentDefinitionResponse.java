@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowCxV3ExperimentDefinitionResponse {
-    /**
-     * The condition defines which subset of sessions are selected for this experiment. If not specified, all sessions are eligible. E.g. &#34;query_input.language_code=en&#34; See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
-     * 
-     */
+        /**
+         * @return The condition defines which subset of sessions are selected for this experiment. If not specified, all sessions are eligible. E.g. &#34;query_input.language_code=en&#34; See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
+         * 
+         */
     private final String condition;
-    /**
-     * The flow versions as the variants of this experiment.
-     * 
-     */
+        /**
+         * @return The flow versions as the variants of this experiment.
+         * 
+         */
     private final GoogleCloudDialogflowCxV3VersionVariantsResponse versionVariants;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GoogleCloudDialogflowCxV3ExperimentDefinitionResponse {
     }
 
     /**
-     * The condition defines which subset of sessions are selected for this experiment. If not specified, all sessions are eligible. E.g. &#34;query_input.language_code=en&#34; See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
+     * @return The condition defines which subset of sessions are selected for this experiment. If not specified, all sessions are eligible. E.g. &#34;query_input.language_code=en&#34; See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
      * 
-    */
+     */
     public String condition() {
         return this.condition;
     }
     /**
-     * The flow versions as the variants of this experiment.
+     * @return The flow versions as the variants of this experiment.
      * 
-    */
+     */
     public GoogleCloudDialogflowCxV3VersionVariantsResponse versionVariants() {
         return this.versionVariants;
     }

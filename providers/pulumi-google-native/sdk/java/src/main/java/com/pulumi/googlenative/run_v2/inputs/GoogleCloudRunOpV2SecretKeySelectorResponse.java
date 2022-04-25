@@ -23,6 +23,10 @@ public final class GoogleCloudRunOpV2SecretKeySelectorResponse extends com.pulum
     @Import(name="secret", required=true)
     private String secret;
 
+    /**
+     * @return The name of the secret in Cloud Secret Manager. Format: {secret_name} if the secret is in the same project. projects/{project}/secrets/{secret_name} if the secret is in a different project.
+     * 
+     */
     public String secret() {
         return this.secret;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudRunOpV2SecretKeySelectorResponse extends com.pulum
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return The Cloud Secret Manager secret version. Can be &#39;latest&#39; for the latest value or an integer for a specific version.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudRunOpV2SecretKeySelectorResponse extends com.pulum
             $ = new GoogleCloudRunOpV2SecretKeySelectorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param secret The name of the secret in Cloud Secret Manager. Format: {secret_name} if the secret is in the same project. projects/{project}/secrets/{secret_name} if the secret is in a different project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(String secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param version The Cloud Secret Manager secret version. Can be &#39;latest&#39; for the latest value or an integer for a specific version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

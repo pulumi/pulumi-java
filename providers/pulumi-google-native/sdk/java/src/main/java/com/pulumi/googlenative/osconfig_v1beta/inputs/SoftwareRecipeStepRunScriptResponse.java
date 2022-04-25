@@ -25,6 +25,10 @@ public final class SoftwareRecipeStepRunScriptResponse extends com.pulumi.resour
     @Import(name="allowedExitCodes", required=true)
     private List<Integer> allowedExitCodes;
 
+    /**
+     * @return Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+     * 
+     */
     public List<Integer> allowedExitCodes() {
         return this.allowedExitCodes;
     }
@@ -36,6 +40,10 @@ public final class SoftwareRecipeStepRunScriptResponse extends com.pulumi.resour
     @Import(name="interpreter", required=true)
     private String interpreter;
 
+    /**
+     * @return The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](&lt;https://en.wikipedia.org/wiki/Shebang_\(Unix\)&gt;).
+     * 
+     */
     public String interpreter() {
         return this.interpreter;
     }
@@ -47,6 +55,10 @@ public final class SoftwareRecipeStepRunScriptResponse extends com.pulumi.resour
     @Import(name="script", required=true)
     private String script;
 
+    /**
+     * @return The shell script to be executed.
+     * 
+     */
     public String script() {
         return this.script;
     }
@@ -77,20 +89,44 @@ public final class SoftwareRecipeStepRunScriptResponse extends com.pulumi.resour
             $ = new SoftwareRecipeStepRunScriptResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedExitCodes Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedExitCodes(List<Integer> allowedExitCodes) {
             $.allowedExitCodes = allowedExitCodes;
             return this;
         }
 
+        /**
+         * @param allowedExitCodes Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedExitCodes(Integer... allowedExitCodes) {
             return allowedExitCodes(List.of(allowedExitCodes));
         }
 
+        /**
+         * @param interpreter The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](&lt;https://en.wikipedia.org/wiki/Shebang_\(Unix\)&gt;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder interpreter(String interpreter) {
             $.interpreter = interpreter;
             return this;
         }
 
+        /**
+         * @param script The shell script to be executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(String script) {
             $.script = script;
             return this;

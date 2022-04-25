@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ComplianceOccurrenceResponse {
-    /**
-     * The reason for non compliance of these files.
-     * 
-     */
+        /**
+         * @return The reason for non compliance of these files.
+         * 
+         */
     private final String nonComplianceReason;
-    /**
-     * A list of files which are violating compliance checks.
-     * 
-     */
+        /**
+         * @return A list of files which are violating compliance checks.
+         * 
+         */
     private final List<NonCompliantFileResponse> nonCompliantFiles;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ComplianceOccurrenceResponse {
     }
 
     /**
-     * The reason for non compliance of these files.
+     * @return The reason for non compliance of these files.
      * 
-    */
+     */
     public String nonComplianceReason() {
         return this.nonComplianceReason;
     }
     /**
-     * A list of files which are violating compliance checks.
+     * @return A list of files which are violating compliance checks.
      * 
-    */
+     */
     public List<NonCompliantFileResponse> nonCompliantFiles() {
         return this.nonCompliantFiles;
     }

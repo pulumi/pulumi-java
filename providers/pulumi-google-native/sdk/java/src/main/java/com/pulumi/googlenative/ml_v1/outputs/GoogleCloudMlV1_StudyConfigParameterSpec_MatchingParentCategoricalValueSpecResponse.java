@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecResponse {
-    /**
-     * Matches values of the parent parameter with type &#39;CATEGORICAL&#39;. All values must exist in `categorical_value_spec` of parent parameter.
-     * 
-     */
+        /**
+         * @return Matches values of the parent parameter with type &#39;CATEGORICAL&#39;. All values must exist in `categorical_value_spec` of parent parameter.
+         * 
+         */
     private final List<String> values;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCatego
     }
 
     /**
-     * Matches values of the parent parameter with type &#39;CATEGORICAL&#39;. All values must exist in `categorical_value_spec` of parent parameter.
+     * @return Matches values of the parent parameter with type &#39;CATEGORICAL&#39;. All values must exist in `categorical_value_spec` of parent parameter.
      * 
-    */
+     */
     public List<String> values() {
         return this.values;
     }

@@ -11,40 +11,40 @@ import java.util.Objects;
 
 @CustomType
 public final class PrivateEnvironmentConfigResponse {
-    /**
-     * Optional. The CIDR block from which IP range for Cloud Composer Network in tenant project will be reserved. Needs to be disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
-     * 
-     */
+        /**
+         * @return Optional. The CIDR block from which IP range for Cloud Composer Network in tenant project will be reserved. Needs to be disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
+         * 
+         */
     private final String cloudComposerNetworkIpv4CidrBlock;
-    /**
-     * The IP range reserved for the tenant project&#39;s Cloud Composer network. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
-     * 
-     */
+        /**
+         * @return The IP range reserved for the tenant project&#39;s Cloud Composer network. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
+         * 
+         */
     private final String cloudComposerNetworkIpv4ReservedRange;
-    /**
-     * Optional. The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from `web_server_ipv4_cidr_block`.
-     * 
-     */
+        /**
+         * @return Optional. The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from `web_server_ipv4_cidr_block`.
+         * 
+         */
     private final String cloudSqlIpv4CidrBlock;
-    /**
-     * Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is set to true, `IPAllocationPolicy.use_ip_aliases` must be set to true for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
-     * 
-     */
+        /**
+         * @return Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is set to true, `IPAllocationPolicy.use_ip_aliases` must be set to true for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+         * 
+         */
     private final Boolean enablePrivateEnvironment;
-    /**
-     * Optional. Configuration for the private GKE cluster for a Private IP Cloud Composer environment.
-     * 
-     */
+        /**
+         * @return Optional. Configuration for the private GKE cluster for a Private IP Cloud Composer environment.
+         * 
+         */
     private final PrivateClusterConfigResponse privateClusterConfig;
-    /**
-     * Optional. The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from `private_cluster_config.master_ipv4_cidr_block` and `cloud_sql_ipv4_cidr_block`. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
-     * 
-     */
+        /**
+         * @return Optional. The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from `private_cluster_config.master_ipv4_cidr_block` and `cloud_sql_ipv4_cidr_block`. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+         * 
+         */
     private final String webServerIpv4CidrBlock;
-    /**
-     * The IP range reserved for the tenant project&#39;s App Engine VMs. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
-     * 
-     */
+        /**
+         * @return The IP range reserved for the tenant project&#39;s App Engine VMs. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+         * 
+         */
     private final String webServerIpv4ReservedRange;
 
     @CustomType.Constructor
@@ -66,51 +66,51 @@ public final class PrivateEnvironmentConfigResponse {
     }
 
     /**
-     * Optional. The CIDR block from which IP range for Cloud Composer Network in tenant project will be reserved. Needs to be disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
+     * @return Optional. The CIDR block from which IP range for Cloud Composer Network in tenant project will be reserved. Needs to be disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
      * 
-    */
+     */
     public String cloudComposerNetworkIpv4CidrBlock() {
         return this.cloudComposerNetworkIpv4CidrBlock;
     }
     /**
-     * The IP range reserved for the tenant project&#39;s Cloud Composer network. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
+     * @return The IP range reserved for the tenant project&#39;s Cloud Composer network. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
      * 
-    */
+     */
     public String cloudComposerNetworkIpv4ReservedRange() {
         return this.cloudComposerNetworkIpv4ReservedRange;
     }
     /**
-     * Optional. The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from `web_server_ipv4_cidr_block`.
+     * @return Optional. The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from `web_server_ipv4_cidr_block`.
      * 
-    */
+     */
     public String cloudSqlIpv4CidrBlock() {
         return this.cloudSqlIpv4CidrBlock;
     }
     /**
-     * Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is set to true, `IPAllocationPolicy.use_ip_aliases` must be set to true for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+     * @return Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is set to true, `IPAllocationPolicy.use_ip_aliases` must be set to true for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
      * 
-    */
+     */
     public Boolean enablePrivateEnvironment() {
         return this.enablePrivateEnvironment;
     }
     /**
-     * Optional. Configuration for the private GKE cluster for a Private IP Cloud Composer environment.
+     * @return Optional. Configuration for the private GKE cluster for a Private IP Cloud Composer environment.
      * 
-    */
+     */
     public PrivateClusterConfigResponse privateClusterConfig() {
         return this.privateClusterConfig;
     }
     /**
-     * Optional. The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from `private_cluster_config.master_ipv4_cidr_block` and `cloud_sql_ipv4_cidr_block`. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+     * @return Optional. The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from `private_cluster_config.master_ipv4_cidr_block` and `cloud_sql_ipv4_cidr_block`. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
      * 
-    */
+     */
     public String webServerIpv4CidrBlock() {
         return this.webServerIpv4CidrBlock;
     }
     /**
-     * The IP range reserved for the tenant project&#39;s App Engine VMs. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+     * @return The IP range reserved for the tenant project&#39;s App Engine VMs. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
      * 
-    */
+     */
     public String webServerIpv4ReservedRange() {
         return this.webServerIpv4ReservedRange;
     }

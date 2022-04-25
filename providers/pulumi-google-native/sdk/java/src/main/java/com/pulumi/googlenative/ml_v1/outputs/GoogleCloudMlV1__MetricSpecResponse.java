@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudMlV1__MetricSpecResponse {
-    /**
-     * metric name.
-     * 
-     */
+        /**
+         * @return metric name.
+         * 
+         */
     private final String name;
-    /**
-     * Target specifies the target value for the given metric; once real metric deviates from the threshold by a certain percentage, the node count changes.
-     * 
-     */
+        /**
+         * @return Target specifies the target value for the given metric; once real metric deviates from the threshold by a certain percentage, the node count changes.
+         * 
+         */
     private final Integer target;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GoogleCloudMlV1__MetricSpecResponse {
     }
 
     /**
-     * metric name.
+     * @return metric name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Target specifies the target value for the given metric; once real metric deviates from the threshold by a certain percentage, the node count changes.
+     * @return Target specifies the target value for the given metric; once real metric deviates from the threshold by a certain percentage, the node count changes.
      * 
-    */
+     */
     public Integer target() {
         return this.target;
     }

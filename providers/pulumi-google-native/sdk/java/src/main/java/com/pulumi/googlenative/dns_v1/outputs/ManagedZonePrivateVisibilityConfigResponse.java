@@ -12,10 +12,10 @@ import java.util.Objects;
 @CustomType
 public final class ManagedZonePrivateVisibilityConfigResponse {
     private final String kind;
-    /**
-     * The list of VPC networks that can see this zone.
-     * 
-     */
+        /**
+         * @return The list of VPC networks that can see this zone.
+         * 
+         */
     private final List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks;
 
     @CustomType.Constructor
@@ -30,9 +30,9 @@ public final class ManagedZonePrivateVisibilityConfigResponse {
         return this.kind;
     }
     /**
-     * The list of VPC networks that can see this zone.
+     * @return The list of VPC networks that can see this zone.
      * 
-    */
+     */
     public List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks() {
         return this.networks;
     }

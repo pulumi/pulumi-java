@@ -28,6 +28,10 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldArgs extends com.pulumi.
     @Import(name="arrayConfig")
     private @Nullable Output<GoogleFirestoreAdminV1beta2IndexFieldArrayConfig> arrayConfig;
 
+    /**
+     * @return Indicates that this field supports operations on `array_value`s.
+     * 
+     */
     public Optional<Output<GoogleFirestoreAdminV1beta2IndexFieldArrayConfig>> arrayConfig() {
         return Optional.ofNullable(this.arrayConfig);
     }
@@ -39,6 +43,10 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldArgs extends com.pulumi.
     @Import(name="fieldPath")
     private @Nullable Output<String> fieldPath;
 
+    /**
+     * @return Can be __name__. For single field indexes, this must match the name of the field or may be omitted.
+     * 
+     */
     public Optional<Output<String>> fieldPath() {
         return Optional.ofNullable(this.fieldPath);
     }
@@ -50,6 +58,10 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldArgs extends com.pulumi.
     @Import(name="order")
     private @Nullable Output<GoogleFirestoreAdminV1beta2IndexFieldOrder> order;
 
+    /**
+     * @return Indicates that this field supports ordering by the specified order or comparing using =, &lt;, &lt;=, &gt;, &gt;=.
+     * 
+     */
     public Optional<Output<GoogleFirestoreAdminV1beta2IndexFieldOrder>> order() {
         return Optional.ofNullable(this.order);
     }
@@ -80,29 +92,65 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldArgs extends com.pulumi.
             $ = new GoogleFirestoreAdminV1beta2IndexFieldArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arrayConfig Indicates that this field supports operations on `array_value`s.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arrayConfig(@Nullable Output<GoogleFirestoreAdminV1beta2IndexFieldArrayConfig> arrayConfig) {
             $.arrayConfig = arrayConfig;
             return this;
         }
 
+        /**
+         * @param arrayConfig Indicates that this field supports operations on `array_value`s.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arrayConfig(GoogleFirestoreAdminV1beta2IndexFieldArrayConfig arrayConfig) {
             return arrayConfig(Output.of(arrayConfig));
         }
 
+        /**
+         * @param fieldPath Can be __name__. For single field indexes, this must match the name of the field or may be omitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldPath(@Nullable Output<String> fieldPath) {
             $.fieldPath = fieldPath;
             return this;
         }
 
+        /**
+         * @param fieldPath Can be __name__. For single field indexes, this must match the name of the field or may be omitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldPath(String fieldPath) {
             return fieldPath(Output.of(fieldPath));
         }
 
+        /**
+         * @param order Indicates that this field supports ordering by the specified order or comparing using =, &lt;, &lt;=, &gt;, &gt;=.
+         * 
+         * @return builder
+         * 
+         */
         public Builder order(@Nullable Output<GoogleFirestoreAdminV1beta2IndexFieldOrder> order) {
             $.order = order;
             return this;
         }
 
+        /**
+         * @param order Indicates that this field supports ordering by the specified order or comparing using =, &lt;, &lt;=, &gt;, &gt;=.
+         * 
+         * @return builder
+         * 
+         */
         public Builder order(GoogleFirestoreAdminV1beta2IndexFieldOrder order) {
             return order(Output.of(order));
         }

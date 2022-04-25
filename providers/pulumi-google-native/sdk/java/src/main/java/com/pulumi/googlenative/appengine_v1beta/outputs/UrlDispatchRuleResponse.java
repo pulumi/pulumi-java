@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class UrlDispatchRuleResponse {
-    /**
-     * Domain name to match against. The wildcard &#34;*&#34; is supported if specified before a period: &#34;*.&#34;.Defaults to matching all domains: &#34;*&#34;.
-     * 
-     */
+        /**
+         * @return Domain name to match against. The wildcard &#34;*&#34; is supported if specified before a period: &#34;*.&#34;.Defaults to matching all domains: &#34;*&#34;.
+         * 
+         */
     private final String domain;
-    /**
-     * Pathname within the host. Must start with a &#34;/&#34;. A single &#34;*&#34; can be included at the end of the path.The sum of the lengths of the domain and path may not exceed 100 characters.
-     * 
-     */
+        /**
+         * @return Pathname within the host. Must start with a &#34;/&#34;. A single &#34;*&#34; can be included at the end of the path.The sum of the lengths of the domain and path may not exceed 100 characters.
+         * 
+         */
     private final String path;
-    /**
-     * Resource ID of a service in this application that should serve the matched request. The service must already exist. Example: default.
-     * 
-     */
+        /**
+         * @return Resource ID of a service in this application that should serve the matched request. The service must already exist. Example: default.
+         * 
+         */
     private final String service;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class UrlDispatchRuleResponse {
     }
 
     /**
-     * Domain name to match against. The wildcard &#34;*&#34; is supported if specified before a period: &#34;*.&#34;.Defaults to matching all domains: &#34;*&#34;.
+     * @return Domain name to match against. The wildcard &#34;*&#34; is supported if specified before a period: &#34;*.&#34;.Defaults to matching all domains: &#34;*&#34;.
      * 
-    */
+     */
     public String domain() {
         return this.domain;
     }
     /**
-     * Pathname within the host. Must start with a &#34;/&#34;. A single &#34;*&#34; can be included at the end of the path.The sum of the lengths of the domain and path may not exceed 100 characters.
+     * @return Pathname within the host. Must start with a &#34;/&#34;. A single &#34;*&#34; can be included at the end of the path.The sum of the lengths of the domain and path may not exceed 100 characters.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }
     /**
-     * Resource ID of a service in this application that should serve the matched request. The service must already exist. Example: default.
+     * @return Resource ID of a service in this application that should serve the matched request. The service must already exist. Example: default.
      * 
-    */
+     */
     public String service() {
         return this.service;
     }

@@ -24,6 +24,10 @@ public final class MetricRangeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="range", required=true)
     private GoogleMonitoringV3RangeResponse range;
 
+    /**
+     * @return Range of values considered &#34;good.&#34; For a one-sided range, set one bound to an infinite value.
+     * 
+     */
     public GoogleMonitoringV3RangeResponse range() {
         return this.range;
     }
@@ -35,6 +39,10 @@ public final class MetricRangeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="timeSeries", required=true)
     private String timeSeries;
 
+    /**
+     * @return A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying the TimeSeries to use for evaluating window quality.
+     * 
+     */
     public String timeSeries() {
         return this.timeSeries;
     }
@@ -64,11 +72,23 @@ public final class MetricRangeResponse extends com.pulumi.resources.InvokeArgs {
             $ = new MetricRangeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param range Range of values considered &#34;good.&#34; For a one-sided range, set one bound to an infinite value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder range(GoogleMonitoringV3RangeResponse range) {
             $.range = range;
             return this;
         }
 
+        /**
+         * @param timeSeries A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying the TimeSeries to use for evaluating window quality.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeSeries(String timeSeries) {
             $.timeSeries = timeSeries;
             return this;

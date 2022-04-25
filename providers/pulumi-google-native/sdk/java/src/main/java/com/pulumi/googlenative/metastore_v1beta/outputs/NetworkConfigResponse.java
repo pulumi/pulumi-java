@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class NetworkConfigResponse {
-    /**
-     * Immutable. The consumer-side network configuration for the Dataproc Metastore instance.
-     * 
-     */
+        /**
+         * @return Immutable. The consumer-side network configuration for the Dataproc Metastore instance.
+         * 
+         */
     private final List<ConsumerResponse> consumers;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class NetworkConfigResponse {
     }
 
     /**
-     * Immutable. The consumer-side network configuration for the Dataproc Metastore instance.
+     * @return Immutable. The consumer-side network configuration for the Dataproc Metastore instance.
      * 
-    */
+     */
     public List<ConsumerResponse> consumers() {
         return this.consumers;
     }

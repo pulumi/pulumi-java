@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class DocumentNoteResponse {
-    /**
-     * Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields (&#34;SPDX-Metadata&#34;)
-     * 
-     */
+        /**
+         * @return Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields (&#34;SPDX-Metadata&#34;)
+         * 
+         */
     private final String dataLicence;
-    /**
-     * Provide a reference number that can be used to understand how to parse and interpret the rest of the file
-     * 
-     */
+        /**
+         * @return Provide a reference number that can be used to understand how to parse and interpret the rest of the file
+         * 
+         */
     private final String spdxVersion;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class DocumentNoteResponse {
     }
 
     /**
-     * Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields (&#34;SPDX-Metadata&#34;)
+     * @return Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields (&#34;SPDX-Metadata&#34;)
      * 
-    */
+     */
     public String dataLicence() {
         return this.dataLicence;
     }
     /**
-     * Provide a reference number that can be used to understand how to parse and interpret the rest of the file
+     * @return Provide a reference number that can be used to understand how to parse and interpret the rest of the file
      * 
-    */
+     */
     public String spdxVersion() {
         return this.spdxVersion;
     }

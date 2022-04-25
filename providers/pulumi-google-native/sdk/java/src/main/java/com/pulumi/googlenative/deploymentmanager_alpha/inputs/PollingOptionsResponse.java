@@ -21,6 +21,10 @@ public final class PollingOptionsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="diagnostics", required=true)
     private List<DiagnosticResponse> diagnostics;
 
+    /**
+     * @return An array of diagnostics to be collected by Deployment Manager, these diagnostics will be displayed to the user.
+     * 
+     */
     public List<DiagnosticResponse> diagnostics() {
         return this.diagnostics;
     }
@@ -32,6 +36,10 @@ public final class PollingOptionsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="failCondition", required=true)
     private String failCondition;
 
+    /**
+     * @return JsonPath expression that determines if the request failed.
+     * 
+     */
     public String failCondition() {
         return this.failCondition;
     }
@@ -43,6 +51,10 @@ public final class PollingOptionsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="finishCondition", required=true)
     private String finishCondition;
 
+    /**
+     * @return JsonPath expression that determines if the request is completed.
+     * 
+     */
     public String finishCondition() {
         return this.finishCondition;
     }
@@ -54,6 +66,10 @@ public final class PollingOptionsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="pollingLink", required=true)
     private String pollingLink;
 
+    /**
+     * @return JsonPath expression that evaluates to string, it indicates where to poll.
+     * 
+     */
     public String pollingLink() {
         return this.pollingLink;
     }
@@ -65,6 +81,10 @@ public final class PollingOptionsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="targetLink", required=true)
     private String targetLink;
 
+    /**
+     * @return JsonPath expression, after polling is completed, indicates where to fetch the resource.
+     * 
+     */
     public String targetLink() {
         return this.targetLink;
     }
@@ -97,30 +117,66 @@ public final class PollingOptionsResponse extends com.pulumi.resources.InvokeArg
             $ = new PollingOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diagnostics An array of diagnostics to be collected by Deployment Manager, these diagnostics will be displayed to the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diagnostics(List<DiagnosticResponse> diagnostics) {
             $.diagnostics = diagnostics;
             return this;
         }
 
+        /**
+         * @param diagnostics An array of diagnostics to be collected by Deployment Manager, these diagnostics will be displayed to the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diagnostics(DiagnosticResponse... diagnostics) {
             return diagnostics(List.of(diagnostics));
         }
 
+        /**
+         * @param failCondition JsonPath expression that determines if the request failed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failCondition(String failCondition) {
             $.failCondition = failCondition;
             return this;
         }
 
+        /**
+         * @param finishCondition JsonPath expression that determines if the request is completed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder finishCondition(String finishCondition) {
             $.finishCondition = finishCondition;
             return this;
         }
 
+        /**
+         * @param pollingLink JsonPath expression that evaluates to string, it indicates where to poll.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pollingLink(String pollingLink) {
             $.pollingLink = pollingLink;
             return this;
         }
 
+        /**
+         * @param targetLink JsonPath expression, after polling is completed, indicates where to fetch the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetLink(String targetLink) {
             $.targetLink = targetLink;
             return this;

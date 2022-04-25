@@ -26,6 +26,10 @@ public final class GooglePrivacyDlpV2AuxiliaryTableResponse extends com.pulumi.r
     @Import(name="quasiIds", required=true)
     private List<GooglePrivacyDlpV2QuasiIdFieldResponse> quasiIds;
 
+    /**
+     * @return Quasi-identifier columns.
+     * 
+     */
     public List<GooglePrivacyDlpV2QuasiIdFieldResponse> quasiIds() {
         return this.quasiIds;
     }
@@ -37,6 +41,10 @@ public final class GooglePrivacyDlpV2AuxiliaryTableResponse extends com.pulumi.r
     @Import(name="relativeFrequency", required=true)
     private GooglePrivacyDlpV2FieldIdResponse relativeFrequency;
 
+    /**
+     * @return The relative frequency column must contain a floating-point number between 0 and 1 (inclusive). Null values are assumed to be zero.
+     * 
+     */
     public GooglePrivacyDlpV2FieldIdResponse relativeFrequency() {
         return this.relativeFrequency;
     }
@@ -48,6 +56,10 @@ public final class GooglePrivacyDlpV2AuxiliaryTableResponse extends com.pulumi.r
     @Import(name="table", required=true)
     private GooglePrivacyDlpV2BigQueryTableResponse table;
 
+    /**
+     * @return Auxiliary table location.
+     * 
+     */
     public GooglePrivacyDlpV2BigQueryTableResponse table() {
         return this.table;
     }
@@ -78,20 +90,44 @@ public final class GooglePrivacyDlpV2AuxiliaryTableResponse extends com.pulumi.r
             $ = new GooglePrivacyDlpV2AuxiliaryTableResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param quasiIds Quasi-identifier columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quasiIds(List<GooglePrivacyDlpV2QuasiIdFieldResponse> quasiIds) {
             $.quasiIds = quasiIds;
             return this;
         }
 
+        /**
+         * @param quasiIds Quasi-identifier columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quasiIds(GooglePrivacyDlpV2QuasiIdFieldResponse... quasiIds) {
             return quasiIds(List.of(quasiIds));
         }
 
+        /**
+         * @param relativeFrequency The relative frequency column must contain a floating-point number between 0 and 1 (inclusive). Null values are assumed to be zero.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeFrequency(GooglePrivacyDlpV2FieldIdResponse relativeFrequency) {
             $.relativeFrequency = relativeFrequency;
             return this;
         }
 
+        /**
+         * @param table Auxiliary table location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(GooglePrivacyDlpV2BigQueryTableResponse table) {
             $.table = table;
             return this;

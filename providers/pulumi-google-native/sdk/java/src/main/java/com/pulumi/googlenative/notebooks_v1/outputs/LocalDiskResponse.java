@@ -14,65 +14,65 @@ import java.util.Objects;
 
 @CustomType
 public final class LocalDiskResponse {
-    /**
-     * Optional. Output only. Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).
-     * 
-     */
+        /**
+         * @return Optional. Output only. Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).
+         * 
+         */
     private final Boolean autoDelete;
-    /**
-     * Optional. Output only. Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.
-     * 
-     */
+        /**
+         * @return Optional. Output only. Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.
+         * 
+         */
     private final Boolean boot;
-    /**
-     * Optional. Output only. Specifies a unique device name of your choice that is reflected into the /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This name can be used to reference the device for mounting, resizing, and so on, from within the instance. If not specified, the server chooses a default device name to apply to this disk, in the form persistent-disk-x, where x is a number assigned by Google Compute Engine. This field is only applicable for persistent disks.
-     * 
-     */
+        /**
+         * @return Optional. Output only. Specifies a unique device name of your choice that is reflected into the /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This name can be used to reference the device for mounting, resizing, and so on, from within the instance. If not specified, the server chooses a default device name to apply to this disk, in the form persistent-disk-x, where x is a number assigned by Google Compute Engine. This field is only applicable for persistent disks.
+         * 
+         */
     private final String deviceName;
-    /**
-     * Indicates a list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.
-     * 
-     */
+        /**
+         * @return Indicates a list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.
+         * 
+         */
     private final List<RuntimeGuestOsFeatureResponse> guestOsFeatures;
-    /**
-     * A zero-based index to this disk, where 0 is reserved for the boot disk. If you have many disks attached to an instance, each disk would have a unique index number.
-     * 
-     */
+        /**
+         * @return A zero-based index to this disk, where 0 is reserved for the boot disk. If you have many disks attached to an instance, each disk would have a unique index number.
+         * 
+         */
     private final Integer index;
-    /**
-     * Input only. Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance. This property is mutually exclusive with the source property; you can only define one or the other, but not both.
-     * 
-     */
+        /**
+         * @return Input only. Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance. This property is mutually exclusive with the source property; you can only define one or the other, but not both.
+         * 
+         */
     private final LocalDiskInitializeParamsResponse initializeParams;
-    /**
-     * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance. Valid values: * NVME * SCSI
-     * 
-     */
+        /**
+         * @return Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance. Valid values: * NVME * SCSI
+         * 
+         */
     private final String interface_;
-    /**
-     * Type of the resource. Always compute#attachedDisk for attached disks.
-     * 
-     */
+        /**
+         * @return Type of the resource. Always compute#attachedDisk for attached disks.
+         * 
+         */
     private final String kind;
-    /**
-     * Any valid publicly visible licenses.
-     * 
-     */
+        /**
+         * @return Any valid publicly visible licenses.
+         * 
+         */
     private final List<String> licenses;
-    /**
-     * The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode. Valid values: * READ_ONLY * READ_WRITE
-     * 
-     */
+        /**
+         * @return The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode. Valid values: * READ_ONLY * READ_WRITE
+         * 
+         */
     private final String mode;
-    /**
-     * Specifies a valid partial or full URL to an existing Persistent Disk resource.
-     * 
-     */
+        /**
+         * @return Specifies a valid partial or full URL to an existing Persistent Disk resource.
+         * 
+         */
     private final String source;
-    /**
-     * Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT. Valid values: * PERSISTENT * SCRATCH
-     * 
-     */
+        /**
+         * @return Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT. Valid values: * PERSISTENT * SCRATCH
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -104,86 +104,86 @@ public final class LocalDiskResponse {
     }
 
     /**
-     * Optional. Output only. Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).
+     * @return Optional. Output only. Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).
      * 
-    */
+     */
     public Boolean autoDelete() {
         return this.autoDelete;
     }
     /**
-     * Optional. Output only. Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.
+     * @return Optional. Output only. Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.
      * 
-    */
+     */
     public Boolean boot() {
         return this.boot;
     }
     /**
-     * Optional. Output only. Specifies a unique device name of your choice that is reflected into the /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This name can be used to reference the device for mounting, resizing, and so on, from within the instance. If not specified, the server chooses a default device name to apply to this disk, in the form persistent-disk-x, where x is a number assigned by Google Compute Engine. This field is only applicable for persistent disks.
+     * @return Optional. Output only. Specifies a unique device name of your choice that is reflected into the /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This name can be used to reference the device for mounting, resizing, and so on, from within the instance. If not specified, the server chooses a default device name to apply to this disk, in the form persistent-disk-x, where x is a number assigned by Google Compute Engine. This field is only applicable for persistent disks.
      * 
-    */
+     */
     public String deviceName() {
         return this.deviceName;
     }
     /**
-     * Indicates a list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.
+     * @return Indicates a list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.
      * 
-    */
+     */
     public List<RuntimeGuestOsFeatureResponse> guestOsFeatures() {
         return this.guestOsFeatures;
     }
     /**
-     * A zero-based index to this disk, where 0 is reserved for the boot disk. If you have many disks attached to an instance, each disk would have a unique index number.
+     * @return A zero-based index to this disk, where 0 is reserved for the boot disk. If you have many disks attached to an instance, each disk would have a unique index number.
      * 
-    */
+     */
     public Integer index() {
         return this.index;
     }
     /**
-     * Input only. Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance. This property is mutually exclusive with the source property; you can only define one or the other, but not both.
+     * @return Input only. Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance. This property is mutually exclusive with the source property; you can only define one or the other, but not both.
      * 
-    */
+     */
     public LocalDiskInitializeParamsResponse initializeParams() {
         return this.initializeParams;
     }
     /**
-     * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance. Valid values: * NVME * SCSI
+     * @return Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance. Valid values: * NVME * SCSI
      * 
-    */
+     */
     public String interface_() {
         return this.interface_;
     }
     /**
-     * Type of the resource. Always compute#attachedDisk for attached disks.
+     * @return Type of the resource. Always compute#attachedDisk for attached disks.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Any valid publicly visible licenses.
+     * @return Any valid publicly visible licenses.
      * 
-    */
+     */
     public List<String> licenses() {
         return this.licenses;
     }
     /**
-     * The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode. Valid values: * READ_ONLY * READ_WRITE
+     * @return The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode. Valid values: * READ_ONLY * READ_WRITE
      * 
-    */
+     */
     public String mode() {
         return this.mode;
     }
     /**
-     * Specifies a valid partial or full URL to an existing Persistent Disk resource.
+     * @return Specifies a valid partial or full URL to an existing Persistent Disk resource.
      * 
-    */
+     */
     public String source() {
         return this.source;
     }
     /**
-     * Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT. Valid values: * PERSISTENT * SCRATCH
+     * @return Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT. Valid values: * PERSISTENT * SCRATCH
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

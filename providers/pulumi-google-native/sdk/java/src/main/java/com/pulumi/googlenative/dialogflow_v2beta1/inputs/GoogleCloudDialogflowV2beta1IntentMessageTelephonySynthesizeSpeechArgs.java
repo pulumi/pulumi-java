@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
     @Import(name="ssml")
     private @Nullable Output<String> ssml;
 
+    /**
+     * @return The SSML to be synthesized. For more information, see [SSML](https://developers.google.com/actions/reference/ssml).
+     * 
+     */
     public Optional<Output<String>> ssml() {
         return Optional.ofNullable(this.ssml);
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
     @Import(name="text")
     private @Nullable Output<String> text;
 
+    /**
+     * @return The raw text to be synthesized.
+     * 
+     */
     public Optional<Output<String>> text() {
         return Optional.ofNullable(this.text);
     }
@@ -66,20 +74,44 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
             $ = new GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ssml The SSML to be synthesized. For more information, see [SSML](https://developers.google.com/actions/reference/ssml).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssml(@Nullable Output<String> ssml) {
             $.ssml = ssml;
             return this;
         }
 
+        /**
+         * @param ssml The SSML to be synthesized. For more information, see [SSML](https://developers.google.com/actions/reference/ssml).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssml(String ssml) {
             return ssml(Output.of(ssml));
         }
 
+        /**
+         * @param text The raw text to be synthesized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(@Nullable Output<String> text) {
             $.text = text;
             return this;
         }
 
+        /**
+         * @param text The raw text to be synthesized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String text) {
             return text(Output.of(text));
         }

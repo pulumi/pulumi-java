@@ -12,25 +12,25 @@ import java.util.Objects;
 
 @CustomType
 public final class ReachabilityDetailsResponse {
-    /**
-     * The details of a failure or a cancellation of reachability analysis.
-     * 
-     */
+        /**
+         * @return The details of a failure or a cancellation of reachability analysis.
+         * 
+         */
     private final StatusResponse error;
-    /**
-     * The overall result of the test&#39;s configuration analysis.
-     * 
-     */
+        /**
+         * @return The overall result of the test&#39;s configuration analysis.
+         * 
+         */
     private final String result;
-    /**
-     * Result may contain a list of traces if a test has multiple possible paths in the network, such as when destination endpoint is a load balancer with multiple backends.
-     * 
-     */
+        /**
+         * @return Result may contain a list of traces if a test has multiple possible paths in the network, such as when destination endpoint is a load balancer with multiple backends.
+         * 
+         */
     private final List<TraceResponse> traces;
-    /**
-     * The time of the configuration analysis.
-     * 
-     */
+        /**
+         * @return The time of the configuration analysis.
+         * 
+         */
     private final String verifyTime;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class ReachabilityDetailsResponse {
     }
 
     /**
-     * The details of a failure or a cancellation of reachability analysis.
+     * @return The details of a failure or a cancellation of reachability analysis.
      * 
-    */
+     */
     public StatusResponse error() {
         return this.error;
     }
     /**
-     * The overall result of the test&#39;s configuration analysis.
+     * @return The overall result of the test&#39;s configuration analysis.
      * 
-    */
+     */
     public String result() {
         return this.result;
     }
     /**
-     * Result may contain a list of traces if a test has multiple possible paths in the network, such as when destination endpoint is a load balancer with multiple backends.
+     * @return Result may contain a list of traces if a test has multiple possible paths in the network, such as when destination endpoint is a load balancer with multiple backends.
      * 
-    */
+     */
     public List<TraceResponse> traces() {
         return this.traces;
     }
     /**
-     * The time of the configuration analysis.
+     * @return The time of the configuration analysis.
      * 
-    */
+     */
     public String verifyTime() {
         return this.verifyTime;
     }

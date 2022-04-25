@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSchemaResult {
-    /**
-     * The definition of the schema. This should contain a string representing the full definition of the schema that is a valid schema definition of the type specified in `type`.
-     * 
-     */
+        /**
+         * @return The definition of the schema. This should contain a string representing the full definition of the schema that is a valid schema definition of the type specified in `type`.
+         * 
+         */
     private final String definition;
-    /**
-     * Name of the schema. Format is `projects/{project}/schemas/{schema}`.
-     * 
-     */
+        /**
+         * @return Name of the schema. Format is `projects/{project}/schemas/{schema}`.
+         * 
+         */
     private final String name;
-    /**
-     * The type of the schema definition.
-     * 
-     */
+        /**
+         * @return The type of the schema definition.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class GetSchemaResult {
     }
 
     /**
-     * The definition of the schema. This should contain a string representing the full definition of the schema that is a valid schema definition of the type specified in `type`.
+     * @return The definition of the schema. This should contain a string representing the full definition of the schema that is a valid schema definition of the type specified in `type`.
      * 
-    */
+     */
     public String definition() {
         return this.definition;
     }
     /**
-     * Name of the schema. Format is `projects/{project}/schemas/{schema}`.
+     * @return Name of the schema. Format is `projects/{project}/schemas/{schema}`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The type of the schema definition.
+     * @return The type of the schema definition.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

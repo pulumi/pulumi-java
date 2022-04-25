@@ -25,6 +25,10 @@ public final class GenericSignedAttestationResponse extends com.pulumi.resources
     @Import(name="contentType", required=true)
     private String contentType;
 
+    /**
+     * @return Type (for example schema) of the attestation payload that was signed. The verifier must ensure that the provided type is one that the verifier supports, and that the attestation payload is a valid instantiation of that type (for example by validating a JSON schema).
+     * 
+     */
     public String contentType() {
         return this.contentType;
     }
@@ -36,6 +40,10 @@ public final class GenericSignedAttestationResponse extends com.pulumi.resources
     @Import(name="serializedPayload", required=true)
     private String serializedPayload;
 
+    /**
+     * @return The serialized payload that is verified by one or more `signatures`. The encoding and semantic meaning of this payload must match what is set in `content_type`.
+     * 
+     */
     public String serializedPayload() {
         return this.serializedPayload;
     }
@@ -47,6 +55,10 @@ public final class GenericSignedAttestationResponse extends com.pulumi.resources
     @Import(name="signatures", required=true)
     private List<SignatureResponse> signatures;
 
+    /**
+     * @return One or more signatures over `serialized_payload`. Verifier implementations should consider this attestation message verified if at least one `signature` verifies `serialized_payload`. See `Signature` in common.proto for more details on signature structure and verification.
+     * 
+     */
     public List<SignatureResponse> signatures() {
         return this.signatures;
     }
@@ -77,21 +89,45 @@ public final class GenericSignedAttestationResponse extends com.pulumi.resources
             $ = new GenericSignedAttestationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentType Type (for example schema) of the attestation payload that was signed. The verifier must ensure that the provided type is one that the verifier supports, and that the attestation payload is a valid instantiation of that type (for example by validating a JSON schema).
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(String contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param serializedPayload The serialized payload that is verified by one or more `signatures`. The encoding and semantic meaning of this payload must match what is set in `content_type`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serializedPayload(String serializedPayload) {
             $.serializedPayload = serializedPayload;
             return this;
         }
 
+        /**
+         * @param signatures One or more signatures over `serialized_payload`. Verifier implementations should consider this attestation message verified if at least one `signature` verifies `serialized_payload`. See `Signature` in common.proto for more details on signature structure and verification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatures(List<SignatureResponse> signatures) {
             $.signatures = signatures;
             return this;
         }
 
+        /**
+         * @param signatures One or more signatures over `serialized_payload`. Verifier implementations should consider this attestation message verified if at least one `signature` verifies `serialized_payload`. See `Signature` in common.proto for more details on signature structure and verification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatures(SignatureResponse... signatures) {
             return signatures(List.of(signatures));
         }

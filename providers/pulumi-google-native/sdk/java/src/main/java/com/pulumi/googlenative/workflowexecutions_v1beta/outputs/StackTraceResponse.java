@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class StackTraceResponse {
-    /**
-     * An array of stack elements.
-     * 
-     */
+        /**
+         * @return An array of stack elements.
+         * 
+         */
     private final List<StackTraceElementResponse> elements;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class StackTraceResponse {
     }
 
     /**
-     * An array of stack elements.
+     * @return An array of stack elements.
      * 
-    */
+     */
     public List<StackTraceElementResponse> elements() {
         return this.elements;
     }

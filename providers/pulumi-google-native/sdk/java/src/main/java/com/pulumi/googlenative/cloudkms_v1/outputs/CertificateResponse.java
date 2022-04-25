@@ -11,50 +11,50 @@ import java.util.Objects;
 
 @CustomType
 public final class CertificateResponse {
-    /**
-     * The issuer distinguished name in RFC 2253 format. Only present if parsed is true.
-     * 
-     */
+        /**
+         * @return The issuer distinguished name in RFC 2253 format. Only present if parsed is true.
+         * 
+         */
     private final String issuer;
-    /**
-     * The certificate is not valid after this time. Only present if parsed is true.
-     * 
-     */
+        /**
+         * @return The certificate is not valid after this time. Only present if parsed is true.
+         * 
+         */
     private final String notAfterTime;
-    /**
-     * The certificate is not valid before this time. Only present if parsed is true.
-     * 
-     */
+        /**
+         * @return The certificate is not valid before this time. Only present if parsed is true.
+         * 
+         */
     private final String notBeforeTime;
-    /**
-     * True if the certificate was parsed successfully.
-     * 
-     */
+        /**
+         * @return True if the certificate was parsed successfully.
+         * 
+         */
     private final Boolean parsed;
-    /**
-     * The raw certificate bytes in DER format.
-     * 
-     */
+        /**
+         * @return The raw certificate bytes in DER format.
+         * 
+         */
     private final String rawDer;
-    /**
-     * The certificate serial number as a hex string. Only present if parsed is true.
-     * 
-     */
+        /**
+         * @return The certificate serial number as a hex string. Only present if parsed is true.
+         * 
+         */
     private final String serialNumber;
-    /**
-     * The SHA-256 certificate fingerprint as a hex string. Only present if parsed is true.
-     * 
-     */
+        /**
+         * @return The SHA-256 certificate fingerprint as a hex string. Only present if parsed is true.
+         * 
+         */
     private final String sha256Fingerprint;
-    /**
-     * The subject distinguished name in RFC 2253 format. Only present if parsed is true.
-     * 
-     */
+        /**
+         * @return The subject distinguished name in RFC 2253 format. Only present if parsed is true.
+         * 
+         */
     private final String subject;
-    /**
-     * The subject Alternative DNS names. Only present if parsed is true.
-     * 
-     */
+        /**
+         * @return The subject Alternative DNS names. Only present if parsed is true.
+         * 
+         */
     private final List<String> subjectAlternativeDnsNames;
 
     @CustomType.Constructor
@@ -80,65 +80,65 @@ public final class CertificateResponse {
     }
 
     /**
-     * The issuer distinguished name in RFC 2253 format. Only present if parsed is true.
+     * @return The issuer distinguished name in RFC 2253 format. Only present if parsed is true.
      * 
-    */
+     */
     public String issuer() {
         return this.issuer;
     }
     /**
-     * The certificate is not valid after this time. Only present if parsed is true.
+     * @return The certificate is not valid after this time. Only present if parsed is true.
      * 
-    */
+     */
     public String notAfterTime() {
         return this.notAfterTime;
     }
     /**
-     * The certificate is not valid before this time. Only present if parsed is true.
+     * @return The certificate is not valid before this time. Only present if parsed is true.
      * 
-    */
+     */
     public String notBeforeTime() {
         return this.notBeforeTime;
     }
     /**
-     * True if the certificate was parsed successfully.
+     * @return True if the certificate was parsed successfully.
      * 
-    */
+     */
     public Boolean parsed() {
         return this.parsed;
     }
     /**
-     * The raw certificate bytes in DER format.
+     * @return The raw certificate bytes in DER format.
      * 
-    */
+     */
     public String rawDer() {
         return this.rawDer;
     }
     /**
-     * The certificate serial number as a hex string. Only present if parsed is true.
+     * @return The certificate serial number as a hex string. Only present if parsed is true.
      * 
-    */
+     */
     public String serialNumber() {
         return this.serialNumber;
     }
     /**
-     * The SHA-256 certificate fingerprint as a hex string. Only present if parsed is true.
+     * @return The SHA-256 certificate fingerprint as a hex string. Only present if parsed is true.
      * 
-    */
+     */
     public String sha256Fingerprint() {
         return this.sha256Fingerprint;
     }
     /**
-     * The subject distinguished name in RFC 2253 format. Only present if parsed is true.
+     * @return The subject distinguished name in RFC 2253 format. Only present if parsed is true.
      * 
-    */
+     */
     public String subject() {
         return this.subject;
     }
     /**
-     * The subject Alternative DNS names. Only present if parsed is true.
+     * @return The subject Alternative DNS names. Only present if parsed is true.
      * 
-    */
+     */
     public List<String> subjectAlternativeDnsNames() {
         return this.subjectAlternativeDnsNames;
     }

@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class IosDeviceFileResponse {
-    /**
-     * The bundle id of the app where this file lives. iOS apps sandbox their own filesystem, so app files must specify which app installed on the device.
-     * 
-     */
+        /**
+         * @return The bundle id of the app where this file lives. iOS apps sandbox their own filesystem, so app files must specify which app installed on the device.
+         * 
+         */
     private final String bundleId;
-    /**
-     * The source file
-     * 
-     */
+        /**
+         * @return The source file
+         * 
+         */
     private final FileReferenceResponse content;
-    /**
-     * Location of the file on the device, inside the app&#39;s sandboxed filesystem
-     * 
-     */
+        /**
+         * @return Location of the file on the device, inside the app&#39;s sandboxed filesystem
+         * 
+         */
     private final String devicePath;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class IosDeviceFileResponse {
     }
 
     /**
-     * The bundle id of the app where this file lives. iOS apps sandbox their own filesystem, so app files must specify which app installed on the device.
+     * @return The bundle id of the app where this file lives. iOS apps sandbox their own filesystem, so app files must specify which app installed on the device.
      * 
-    */
+     */
     public String bundleId() {
         return this.bundleId;
     }
     /**
-     * The source file
+     * @return The source file
      * 
-    */
+     */
     public FileReferenceResponse content() {
         return this.content;
     }
     /**
-     * Location of the file on the device, inside the app&#39;s sandboxed filesystem
+     * @return Location of the file on the device, inside the app&#39;s sandboxed filesystem
      * 
-    */
+     */
     public String devicePath() {
         return this.devicePath;
     }

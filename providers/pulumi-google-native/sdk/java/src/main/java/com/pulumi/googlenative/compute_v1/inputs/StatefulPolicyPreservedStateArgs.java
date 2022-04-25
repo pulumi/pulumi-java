@@ -27,6 +27,10 @@ public final class StatefulPolicyPreservedStateArgs extends com.pulumi.resources
     @Import(name="disks")
     private @Nullable Output<Map<String,String>> disks;
 
+    /**
+     * @return Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.
+     * 
+     */
     public Optional<Output<Map<String,String>>> disks() {
         return Optional.ofNullable(this.disks);
     }
@@ -55,11 +59,23 @@ public final class StatefulPolicyPreservedStateArgs extends com.pulumi.resources
             $ = new StatefulPolicyPreservedStateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disks Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(@Nullable Output<Map<String,String>> disks) {
             $.disks = disks;
             return this;
         }
 
+        /**
+         * @param disks Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(Map<String,String> disks) {
             return disks(Output.of(disks));
         }

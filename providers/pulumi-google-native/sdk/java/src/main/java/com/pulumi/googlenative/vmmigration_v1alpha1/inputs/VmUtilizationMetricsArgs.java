@@ -27,6 +27,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
     @Import(name="cpuAverage")
     private @Nullable Output<Integer> cpuAverage;
 
+    /**
+     * @return Average CPU usage, percent.
+     * 
+     */
     public Optional<Output<Integer>> cpuAverage() {
         return Optional.ofNullable(this.cpuAverage);
     }
@@ -38,6 +42,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
     @Import(name="cpuAveragePercent")
     private @Nullable Output<Integer> cpuAveragePercent;
 
+    /**
+     * @return Average CPU usage, percent.
+     * 
+     */
     public Optional<Output<Integer>> cpuAveragePercent() {
         return Optional.ofNullable(this.cpuAveragePercent);
     }
@@ -49,6 +57,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
     @Import(name="cpuMax")
     private @Nullable Output<Integer> cpuMax;
 
+    /**
+     * @return Max CPU usage, percent.
+     * 
+     */
     public Optional<Output<Integer>> cpuMax() {
         return Optional.ofNullable(this.cpuMax);
     }
@@ -60,6 +72,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
     @Import(name="cpuMaxPercent")
     private @Nullable Output<Integer> cpuMaxPercent;
 
+    /**
+     * @return Max CPU usage, percent.
+     * 
+     */
     public Optional<Output<Integer>> cpuMaxPercent() {
         return Optional.ofNullable(this.cpuMaxPercent);
     }
@@ -71,6 +87,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
     @Import(name="diskIoRateAverage")
     private @Nullable Output<String> diskIoRateAverage;
 
+    /**
+     * @return Average disk IO rate, in kilobytes per second.
+     * 
+     */
     public Optional<Output<String>> diskIoRateAverage() {
         return Optional.ofNullable(this.diskIoRateAverage);
     }
@@ -82,6 +102,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
     @Import(name="diskIoRateAverageKbps")
     private @Nullable Output<String> diskIoRateAverageKbps;
 
+    /**
+     * @return Average disk IO rate, in kilobytes per second.
+     * 
+     */
     public Optional<Output<String>> diskIoRateAverageKbps() {
         return Optional.ofNullable(this.diskIoRateAverageKbps);
     }
@@ -93,6 +117,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
     @Import(name="diskIoRateMax")
     private @Nullable Output<String> diskIoRateMax;
 
+    /**
+     * @return Max disk IO rate, in kilobytes per second.
+     * 
+     */
     public Optional<Output<String>> diskIoRateMax() {
         return Optional.ofNullable(this.diskIoRateMax);
     }
@@ -104,6 +132,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
     @Import(name="diskIoRateMaxKbps")
     private @Nullable Output<String> diskIoRateMaxKbps;
 
+    /**
+     * @return Max disk IO rate, in kilobytes per second.
+     * 
+     */
     public Optional<Output<String>> diskIoRateMaxKbps() {
         return Optional.ofNullable(this.diskIoRateMaxKbps);
     }
@@ -115,6 +147,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
     @Import(name="memoryAverage")
     private @Nullable Output<Integer> memoryAverage;
 
+    /**
+     * @return Average memory usage, percent.
+     * 
+     */
     public Optional<Output<Integer>> memoryAverage() {
         return Optional.ofNullable(this.memoryAverage);
     }
@@ -126,6 +162,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
     @Import(name="memoryAveragePercent")
     private @Nullable Output<Integer> memoryAveragePercent;
 
+    /**
+     * @return Average memory usage, percent.
+     * 
+     */
     public Optional<Output<Integer>> memoryAveragePercent() {
         return Optional.ofNullable(this.memoryAveragePercent);
     }
@@ -137,6 +177,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
     @Import(name="memoryMax")
     private @Nullable Output<Integer> memoryMax;
 
+    /**
+     * @return Max memory usage, percent.
+     * 
+     */
     public Optional<Output<Integer>> memoryMax() {
         return Optional.ofNullable(this.memoryMax);
     }
@@ -148,6 +192,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
     @Import(name="memoryMaxPercent")
     private @Nullable Output<Integer> memoryMaxPercent;
 
+    /**
+     * @return Max memory usage, percent.
+     * 
+     */
     public Optional<Output<Integer>> memoryMaxPercent() {
         return Optional.ofNullable(this.memoryMaxPercent);
     }
@@ -159,6 +207,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
     @Import(name="networkThroughputAverage")
     private @Nullable Output<String> networkThroughputAverage;
 
+    /**
+     * @return Average network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
+     * 
+     */
     public Optional<Output<String>> networkThroughputAverage() {
         return Optional.ofNullable(this.networkThroughputAverage);
     }
@@ -170,6 +222,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
     @Import(name="networkThroughputAverageKbps")
     private @Nullable Output<String> networkThroughputAverageKbps;
 
+    /**
+     * @return Average network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
+     * 
+     */
     public Optional<Output<String>> networkThroughputAverageKbps() {
         return Optional.ofNullable(this.networkThroughputAverageKbps);
     }
@@ -181,6 +237,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
     @Import(name="networkThroughputMax")
     private @Nullable Output<String> networkThroughputMax;
 
+    /**
+     * @return Max network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
+     * 
+     */
     public Optional<Output<String>> networkThroughputMax() {
         return Optional.ofNullable(this.networkThroughputMax);
     }
@@ -192,6 +252,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
     @Import(name="networkThroughputMaxKbps")
     private @Nullable Output<String> networkThroughputMaxKbps;
 
+    /**
+     * @return Max network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
+     * 
+     */
     public Optional<Output<String>> networkThroughputMaxKbps() {
         return Optional.ofNullable(this.networkThroughputMaxKbps);
     }
@@ -235,146 +299,338 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
             $ = new VmUtilizationMetricsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpuAverage Average CPU usage, percent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuAverage(@Nullable Output<Integer> cpuAverage) {
             $.cpuAverage = cpuAverage;
             return this;
         }
 
+        /**
+         * @param cpuAverage Average CPU usage, percent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuAverage(Integer cpuAverage) {
             return cpuAverage(Output.of(cpuAverage));
         }
 
+        /**
+         * @param cpuAveragePercent Average CPU usage, percent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuAveragePercent(@Nullable Output<Integer> cpuAveragePercent) {
             $.cpuAveragePercent = cpuAveragePercent;
             return this;
         }
 
+        /**
+         * @param cpuAveragePercent Average CPU usage, percent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuAveragePercent(Integer cpuAveragePercent) {
             return cpuAveragePercent(Output.of(cpuAveragePercent));
         }
 
+        /**
+         * @param cpuMax Max CPU usage, percent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuMax(@Nullable Output<Integer> cpuMax) {
             $.cpuMax = cpuMax;
             return this;
         }
 
+        /**
+         * @param cpuMax Max CPU usage, percent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuMax(Integer cpuMax) {
             return cpuMax(Output.of(cpuMax));
         }
 
+        /**
+         * @param cpuMaxPercent Max CPU usage, percent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuMaxPercent(@Nullable Output<Integer> cpuMaxPercent) {
             $.cpuMaxPercent = cpuMaxPercent;
             return this;
         }
 
+        /**
+         * @param cpuMaxPercent Max CPU usage, percent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuMaxPercent(Integer cpuMaxPercent) {
             return cpuMaxPercent(Output.of(cpuMaxPercent));
         }
 
+        /**
+         * @param diskIoRateAverage Average disk IO rate, in kilobytes per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskIoRateAverage(@Nullable Output<String> diskIoRateAverage) {
             $.diskIoRateAverage = diskIoRateAverage;
             return this;
         }
 
+        /**
+         * @param diskIoRateAverage Average disk IO rate, in kilobytes per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskIoRateAverage(String diskIoRateAverage) {
             return diskIoRateAverage(Output.of(diskIoRateAverage));
         }
 
+        /**
+         * @param diskIoRateAverageKbps Average disk IO rate, in kilobytes per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskIoRateAverageKbps(@Nullable Output<String> diskIoRateAverageKbps) {
             $.diskIoRateAverageKbps = diskIoRateAverageKbps;
             return this;
         }
 
+        /**
+         * @param diskIoRateAverageKbps Average disk IO rate, in kilobytes per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskIoRateAverageKbps(String diskIoRateAverageKbps) {
             return diskIoRateAverageKbps(Output.of(diskIoRateAverageKbps));
         }
 
+        /**
+         * @param diskIoRateMax Max disk IO rate, in kilobytes per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskIoRateMax(@Nullable Output<String> diskIoRateMax) {
             $.diskIoRateMax = diskIoRateMax;
             return this;
         }
 
+        /**
+         * @param diskIoRateMax Max disk IO rate, in kilobytes per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskIoRateMax(String diskIoRateMax) {
             return diskIoRateMax(Output.of(diskIoRateMax));
         }
 
+        /**
+         * @param diskIoRateMaxKbps Max disk IO rate, in kilobytes per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskIoRateMaxKbps(@Nullable Output<String> diskIoRateMaxKbps) {
             $.diskIoRateMaxKbps = diskIoRateMaxKbps;
             return this;
         }
 
+        /**
+         * @param diskIoRateMaxKbps Max disk IO rate, in kilobytes per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskIoRateMaxKbps(String diskIoRateMaxKbps) {
             return diskIoRateMaxKbps(Output.of(diskIoRateMaxKbps));
         }
 
+        /**
+         * @param memoryAverage Average memory usage, percent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryAverage(@Nullable Output<Integer> memoryAverage) {
             $.memoryAverage = memoryAverage;
             return this;
         }
 
+        /**
+         * @param memoryAverage Average memory usage, percent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryAverage(Integer memoryAverage) {
             return memoryAverage(Output.of(memoryAverage));
         }
 
+        /**
+         * @param memoryAveragePercent Average memory usage, percent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryAveragePercent(@Nullable Output<Integer> memoryAveragePercent) {
             $.memoryAveragePercent = memoryAveragePercent;
             return this;
         }
 
+        /**
+         * @param memoryAveragePercent Average memory usage, percent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryAveragePercent(Integer memoryAveragePercent) {
             return memoryAveragePercent(Output.of(memoryAveragePercent));
         }
 
+        /**
+         * @param memoryMax Max memory usage, percent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryMax(@Nullable Output<Integer> memoryMax) {
             $.memoryMax = memoryMax;
             return this;
         }
 
+        /**
+         * @param memoryMax Max memory usage, percent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryMax(Integer memoryMax) {
             return memoryMax(Output.of(memoryMax));
         }
 
+        /**
+         * @param memoryMaxPercent Max memory usage, percent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryMaxPercent(@Nullable Output<Integer> memoryMaxPercent) {
             $.memoryMaxPercent = memoryMaxPercent;
             return this;
         }
 
+        /**
+         * @param memoryMaxPercent Max memory usage, percent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryMaxPercent(Integer memoryMaxPercent) {
             return memoryMaxPercent(Output.of(memoryMaxPercent));
         }
 
+        /**
+         * @param networkThroughputAverage Average network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkThroughputAverage(@Nullable Output<String> networkThroughputAverage) {
             $.networkThroughputAverage = networkThroughputAverage;
             return this;
         }
 
+        /**
+         * @param networkThroughputAverage Average network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkThroughputAverage(String networkThroughputAverage) {
             return networkThroughputAverage(Output.of(networkThroughputAverage));
         }
 
+        /**
+         * @param networkThroughputAverageKbps Average network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkThroughputAverageKbps(@Nullable Output<String> networkThroughputAverageKbps) {
             $.networkThroughputAverageKbps = networkThroughputAverageKbps;
             return this;
         }
 
+        /**
+         * @param networkThroughputAverageKbps Average network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkThroughputAverageKbps(String networkThroughputAverageKbps) {
             return networkThroughputAverageKbps(Output.of(networkThroughputAverageKbps));
         }
 
+        /**
+         * @param networkThroughputMax Max network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkThroughputMax(@Nullable Output<String> networkThroughputMax) {
             $.networkThroughputMax = networkThroughputMax;
             return this;
         }
 
+        /**
+         * @param networkThroughputMax Max network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkThroughputMax(String networkThroughputMax) {
             return networkThroughputMax(Output.of(networkThroughputMax));
         }
 
+        /**
+         * @param networkThroughputMaxKbps Max network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkThroughputMaxKbps(@Nullable Output<String> networkThroughputMaxKbps) {
             $.networkThroughputMaxKbps = networkThroughputMaxKbps;
             return this;
         }
 
+        /**
+         * @param networkThroughputMaxKbps Max network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkThroughputMaxKbps(String networkThroughputMaxKbps) {
             return networkThroughputMaxKbps(Output.of(networkThroughputMaxKbps));
         }

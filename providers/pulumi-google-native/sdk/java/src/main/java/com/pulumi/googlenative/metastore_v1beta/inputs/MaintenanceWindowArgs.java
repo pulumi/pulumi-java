@@ -27,6 +27,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="dayOfWeek")
     private @Nullable Output<MaintenanceWindowDayOfWeek> dayOfWeek;
 
+    /**
+     * @return The day of week, when the window starts.
+     * 
+     */
     public Optional<Output<MaintenanceWindowDayOfWeek>> dayOfWeek() {
         return Optional.ofNullable(this.dayOfWeek);
     }
@@ -38,6 +42,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="hourOfDay")
     private @Nullable Output<Integer> hourOfDay;
 
+    /**
+     * @return The hour of day (0-23) when the window starts.
+     * 
+     */
     public Optional<Output<Integer>> hourOfDay() {
         return Optional.ofNullable(this.hourOfDay);
     }
@@ -67,20 +75,44 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
             $ = new MaintenanceWindowArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dayOfWeek The day of week, when the window starts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeek(@Nullable Output<MaintenanceWindowDayOfWeek> dayOfWeek) {
             $.dayOfWeek = dayOfWeek;
             return this;
         }
 
+        /**
+         * @param dayOfWeek The day of week, when the window starts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeek(MaintenanceWindowDayOfWeek dayOfWeek) {
             return dayOfWeek(Output.of(dayOfWeek));
         }
 
+        /**
+         * @param hourOfDay The hour of day (0-23) when the window starts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hourOfDay(@Nullable Output<Integer> hourOfDay) {
             $.hourOfDay = hourOfDay;
             return this;
         }
 
+        /**
+         * @param hourOfDay The hour of day (0-23) when the window starts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hourOfDay(Integer hourOfDay) {
             return hourOfDay(Output.of(hourOfDay));
         }

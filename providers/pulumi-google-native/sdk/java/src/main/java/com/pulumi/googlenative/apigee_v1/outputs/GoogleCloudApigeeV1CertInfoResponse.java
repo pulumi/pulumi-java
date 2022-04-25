@@ -11,60 +11,60 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudApigeeV1CertInfoResponse {
-    /**
-     * X.509 basic constraints extension.
-     * 
-     */
+        /**
+         * @return X.509 basic constraints extension.
+         * 
+         */
     private final String basicConstraints;
-    /**
-     * X.509 `notAfter` validity period in milliseconds since epoch.
-     * 
-     */
+        /**
+         * @return X.509 `notAfter` validity period in milliseconds since epoch.
+         * 
+         */
     private final String expiryDate;
-    /**
-     * Flag that specifies whether the certificate is valid. Flag is set to `Yes` if the certificate is valid, `No` if expired, or `Not yet` if not yet valid.
-     * 
-     */
+        /**
+         * @return Flag that specifies whether the certificate is valid. Flag is set to `Yes` if the certificate is valid, `No` if expired, or `Not yet` if not yet valid.
+         * 
+         */
     private final String isValid;
-    /**
-     * X.509 issuer.
-     * 
-     */
+        /**
+         * @return X.509 issuer.
+         * 
+         */
     private final String issuer;
-    /**
-     * Public key component of the X.509 subject public key info.
-     * 
-     */
+        /**
+         * @return Public key component of the X.509 subject public key info.
+         * 
+         */
     private final String publicKey;
-    /**
-     * X.509 serial number.
-     * 
-     */
+        /**
+         * @return X.509 serial number.
+         * 
+         */
     private final String serialNumber;
-    /**
-     * X.509 signatureAlgorithm.
-     * 
-     */
+        /**
+         * @return X.509 signatureAlgorithm.
+         * 
+         */
     private final String sigAlgName;
-    /**
-     * X.509 subject.
-     * 
-     */
+        /**
+         * @return X.509 subject.
+         * 
+         */
     private final String subject;
-    /**
-     * X.509 subject alternative names (SANs) extension.
-     * 
-     */
+        /**
+         * @return X.509 subject alternative names (SANs) extension.
+         * 
+         */
     private final List<String> subjectAlternativeNames;
-    /**
-     * X.509 `notBefore` validity period in milliseconds since epoch.
-     * 
-     */
+        /**
+         * @return X.509 `notBefore` validity period in milliseconds since epoch.
+         * 
+         */
     private final String validFrom;
-    /**
-     * X.509 version.
-     * 
-     */
+        /**
+         * @return X.509 version.
+         * 
+         */
     private final Integer version;
 
     @CustomType.Constructor
@@ -94,79 +94,79 @@ public final class GoogleCloudApigeeV1CertInfoResponse {
     }
 
     /**
-     * X.509 basic constraints extension.
+     * @return X.509 basic constraints extension.
      * 
-    */
+     */
     public String basicConstraints() {
         return this.basicConstraints;
     }
     /**
-     * X.509 `notAfter` validity period in milliseconds since epoch.
+     * @return X.509 `notAfter` validity period in milliseconds since epoch.
      * 
-    */
+     */
     public String expiryDate() {
         return this.expiryDate;
     }
     /**
-     * Flag that specifies whether the certificate is valid. Flag is set to `Yes` if the certificate is valid, `No` if expired, or `Not yet` if not yet valid.
+     * @return Flag that specifies whether the certificate is valid. Flag is set to `Yes` if the certificate is valid, `No` if expired, or `Not yet` if not yet valid.
      * 
-    */
+     */
     public String isValid() {
         return this.isValid;
     }
     /**
-     * X.509 issuer.
+     * @return X.509 issuer.
      * 
-    */
+     */
     public String issuer() {
         return this.issuer;
     }
     /**
-     * Public key component of the X.509 subject public key info.
+     * @return Public key component of the X.509 subject public key info.
      * 
-    */
+     */
     public String publicKey() {
         return this.publicKey;
     }
     /**
-     * X.509 serial number.
+     * @return X.509 serial number.
      * 
-    */
+     */
     public String serialNumber() {
         return this.serialNumber;
     }
     /**
-     * X.509 signatureAlgorithm.
+     * @return X.509 signatureAlgorithm.
      * 
-    */
+     */
     public String sigAlgName() {
         return this.sigAlgName;
     }
     /**
-     * X.509 subject.
+     * @return X.509 subject.
      * 
-    */
+     */
     public String subject() {
         return this.subject;
     }
     /**
-     * X.509 subject alternative names (SANs) extension.
+     * @return X.509 subject alternative names (SANs) extension.
      * 
-    */
+     */
     public List<String> subjectAlternativeNames() {
         return this.subjectAlternativeNames;
     }
     /**
-     * X.509 `notBefore` validity period in milliseconds since epoch.
+     * @return X.509 `notBefore` validity period in milliseconds since epoch.
      * 
-    */
+     */
     public String validFrom() {
         return this.validFrom;
     }
     /**
-     * X.509 version.
+     * @return X.509 version.
      * 
-    */
+     */
     public Integer version() {
         return this.version;
     }

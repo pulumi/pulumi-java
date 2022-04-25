@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class LocationPreferenceResponse {
-    /**
-     * The App Engine application to follow, it must be in the same region as the Cloud SQL instance. WARNING: Changing this might restart the instance.
-     * 
-     */
+        /**
+         * @return The App Engine application to follow, it must be in the same region as the Cloud SQL instance. WARNING: Changing this might restart the instance.
+         * 
+         */
     private final String followGaeApplication;
-    /**
-     * This is always `sql#locationPreference`.
-     * 
-     */
+        /**
+         * @return This is always `sql#locationPreference`.
+         * 
+         */
     private final String kind;
-    /**
-     * The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.). Reserved for future use.
-     * 
-     */
+        /**
+         * @return The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.). Reserved for future use.
+         * 
+         */
     private final String secondaryZone;
-    /**
-     * The preferred Compute Engine zone (for example: us-central1-a, us-central1-b, etc.). WARNING: Changing this might restart the instance.
-     * 
-     */
+        /**
+         * @return The preferred Compute Engine zone (for example: us-central1-a, us-central1-b, etc.). WARNING: Changing this might restart the instance.
+         * 
+         */
     private final String zone;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class LocationPreferenceResponse {
     }
 
     /**
-     * The App Engine application to follow, it must be in the same region as the Cloud SQL instance. WARNING: Changing this might restart the instance.
+     * @return The App Engine application to follow, it must be in the same region as the Cloud SQL instance. WARNING: Changing this might restart the instance.
      * 
-    */
+     */
     public String followGaeApplication() {
         return this.followGaeApplication;
     }
     /**
-     * This is always `sql#locationPreference`.
+     * @return This is always `sql#locationPreference`.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.). Reserved for future use.
+     * @return The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.). Reserved for future use.
      * 
-    */
+     */
     public String secondaryZone() {
         return this.secondaryZone;
     }
     /**
-     * The preferred Compute Engine zone (for example: us-central1-a, us-central1-b, etc.). WARNING: Changing this might restart the instance.
+     * @return The preferred Compute Engine zone (for example: us-central1-a, us-central1-b, etc.). WARNING: Changing this might restart the instance.
      * 
-    */
+     */
     public String zone() {
         return this.zone;
     }

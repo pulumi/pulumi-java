@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowCxV3beta1TestConfigResponse {
-    /**
-     * Flow name. If not set, default start flow is assumed. Format: `projects//locations//agents//flows/`.
-     * 
-     */
+        /**
+         * @return Flow name. If not set, default start flow is assumed. Format: `projects//locations//agents//flows/`.
+         * 
+         */
     private final String flow;
-    /**
-     * Session parameters to be compared when calculating differences.
-     * 
-     */
+        /**
+         * @return Session parameters to be compared when calculating differences.
+         * 
+         */
     private final List<String> trackingParameters;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigResponse {
     }
 
     /**
-     * Flow name. If not set, default start flow is assumed. Format: `projects//locations//agents//flows/`.
+     * @return Flow name. If not set, default start flow is assumed. Format: `projects//locations//agents//flows/`.
      * 
-    */
+     */
     public String flow() {
         return this.flow;
     }
     /**
-     * Session parameters to be compared when calculating differences.
+     * @return Session parameters to be compared when calculating differences.
      * 
-    */
+     */
     public List<String> trackingParameters() {
         return this.trackingParameters;
     }

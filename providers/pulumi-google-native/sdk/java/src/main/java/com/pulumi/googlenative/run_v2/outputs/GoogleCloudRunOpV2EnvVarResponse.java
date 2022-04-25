@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudRunOpV2EnvVarResponse {
-    /**
-     * Name of the environment variable. Must be a C_IDENTIFIER, and mnay not exceed 32768 characters.
-     * 
-     */
+        /**
+         * @return Name of the environment variable. Must be a C_IDENTIFIER, and mnay not exceed 32768 characters.
+         * 
+         */
     private final String name;
-    /**
-     * Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any route environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to &#34;&#34;, and the maximum length is 32768 bytes.
-     * 
-     */
+        /**
+         * @return Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any route environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to &#34;&#34;, and the maximum length is 32768 bytes.
+         * 
+         */
     private final String value;
-    /**
-     * Source for the environment variable&#39;s value.
-     * 
-     */
+        /**
+         * @return Source for the environment variable&#39;s value.
+         * 
+         */
     private final GoogleCloudRunOpV2EnvVarSourceResponse valueSource;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class GoogleCloudRunOpV2EnvVarResponse {
     }
 
     /**
-     * Name of the environment variable. Must be a C_IDENTIFIER, and mnay not exceed 32768 characters.
+     * @return Name of the environment variable. Must be a C_IDENTIFIER, and mnay not exceed 32768 characters.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any route environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to &#34;&#34;, and the maximum length is 32768 bytes.
+     * @return Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any route environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to &#34;&#34;, and the maximum length is 32768 bytes.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }
     /**
-     * Source for the environment variable&#39;s value.
+     * @return Source for the environment variable&#39;s value.
      * 
-    */
+     */
     public GoogleCloudRunOpV2EnvVarSourceResponse valueSource() {
         return this.valueSource;
     }

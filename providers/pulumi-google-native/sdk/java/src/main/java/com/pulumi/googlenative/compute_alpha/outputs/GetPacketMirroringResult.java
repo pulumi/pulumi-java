@@ -14,70 +14,70 @@ import java.util.Objects;
 
 @CustomType
 public final class GetPacketMirroringResult {
-    /**
-     * The Forwarding Rule resource of type loadBalancingScheme=INTERNAL that will be used as collector for mirrored traffic. The specified forwarding rule must have isMirroringCollector set to true.
-     * 
-     */
+        /**
+         * @return The Forwarding Rule resource of type loadBalancingScheme=INTERNAL that will be used as collector for mirrored traffic. The specified forwarding rule must have isMirroringCollector set to true.
+         * 
+         */
     private final PacketMirroringForwardingRuleInfoResponse collectorIlb;
-    /**
-     * Creation timestamp in RFC3339 text format.
-     * 
-     */
+        /**
+         * @return Creation timestamp in RFC3339 text format.
+         * 
+         */
     private final String creationTimestamp;
-    /**
-     * An optional description of this resource. Provide this property when you create the resource.
-     * 
-     */
+        /**
+         * @return An optional description of this resource. Provide this property when you create the resource.
+         * 
+         */
     private final String description;
-    /**
-     * Indicates whether or not this packet mirroring takes effect. If set to FALSE, this packet mirroring policy will not be enforced on the network. The default is TRUE.
-     * 
-     */
+        /**
+         * @return Indicates whether or not this packet mirroring takes effect. If set to FALSE, this packet mirroring policy will not be enforced on the network. The default is TRUE.
+         * 
+         */
     private final String enable;
-    /**
-     * Filter for mirrored traffic. If unspecified, all traffic is mirrored.
-     * 
-     */
+        /**
+         * @return Filter for mirrored traffic. If unspecified, all traffic is mirrored.
+         * 
+         */
     private final PacketMirroringFilterResponse filter;
-    /**
-     * Type of the resource. Always compute#packetMirroring for packet mirrorings.
-     * 
-     */
+        /**
+         * @return Type of the resource. Always compute#packetMirroring for packet mirrorings.
+         * 
+         */
     private final String kind;
-    /**
-     * PacketMirroring mirroredResourceInfos. MirroredResourceInfo specifies a set of mirrored VM instances, subnetworks and/or tags for which traffic from/to all VM instances will be mirrored.
-     * 
-     */
+        /**
+         * @return PacketMirroring mirroredResourceInfos. MirroredResourceInfo specifies a set of mirrored VM instances, subnetworks and/or tags for which traffic from/to all VM instances will be mirrored.
+         * 
+         */
     private final PacketMirroringMirroredResourceInfoResponse mirroredResources;
-    /**
-     * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     * 
-     */
+        /**
+         * @return Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         */
     private final String name;
-    /**
-     * Specifies the mirrored VPC network. Only packets in this network will be mirrored. All mirrored VMs should have a NIC in the given network. All mirrored subnetworks should belong to the given network.
-     * 
-     */
+        /**
+         * @return Specifies the mirrored VPC network. Only packets in this network will be mirrored. All mirrored VMs should have a NIC in the given network. All mirrored subnetworks should belong to the given network.
+         * 
+         */
     private final PacketMirroringNetworkInfoResponse network;
-    /**
-     * The priority of applying this configuration. Priority is used to break ties in cases where there is more than one matching rule. In the case of two rules that apply for a given Instance, the one with the lowest-numbered priority value wins. Default value is 1000. Valid range is 0 through 65535.
-     * 
-     */
+        /**
+         * @return The priority of applying this configuration. Priority is used to break ties in cases where there is more than one matching rule. In the case of two rules that apply for a given Instance, the one with the lowest-numbered priority value wins. Default value is 1000. Valid range is 0 through 65535.
+         * 
+         */
     private final Integer priority;
-    /**
-     * URI of the region where the packetMirroring resides.
-     * 
-     */
+        /**
+         * @return URI of the region where the packetMirroring resides.
+         * 
+         */
     private final String region;
-    /**
-     * Server-defined URL for the resource.
-     * 
-     */
+        /**
+         * @return Server-defined URL for the resource.
+         * 
+         */
     private final String selfLink;
-    /**
-     * Server-defined URL for this resource with the resource id.
-     * 
-     */
+        /**
+         * @return Server-defined URL for this resource with the resource id.
+         * 
+         */
     private final String selfLinkWithId;
 
     @CustomType.Constructor
@@ -111,93 +111,93 @@ public final class GetPacketMirroringResult {
     }
 
     /**
-     * The Forwarding Rule resource of type loadBalancingScheme=INTERNAL that will be used as collector for mirrored traffic. The specified forwarding rule must have isMirroringCollector set to true.
+     * @return The Forwarding Rule resource of type loadBalancingScheme=INTERNAL that will be used as collector for mirrored traffic. The specified forwarding rule must have isMirroringCollector set to true.
      * 
-    */
+     */
     public PacketMirroringForwardingRuleInfoResponse collectorIlb() {
         return this.collectorIlb;
     }
     /**
-     * Creation timestamp in RFC3339 text format.
+     * @return Creation timestamp in RFC3339 text format.
      * 
-    */
+     */
     public String creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
-     * An optional description of this resource. Provide this property when you create the resource.
+     * @return An optional description of this resource. Provide this property when you create the resource.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Indicates whether or not this packet mirroring takes effect. If set to FALSE, this packet mirroring policy will not be enforced on the network. The default is TRUE.
+     * @return Indicates whether or not this packet mirroring takes effect. If set to FALSE, this packet mirroring policy will not be enforced on the network. The default is TRUE.
      * 
-    */
+     */
     public String enable() {
         return this.enable;
     }
     /**
-     * Filter for mirrored traffic. If unspecified, all traffic is mirrored.
+     * @return Filter for mirrored traffic. If unspecified, all traffic is mirrored.
      * 
-    */
+     */
     public PacketMirroringFilterResponse filter() {
         return this.filter;
     }
     /**
-     * Type of the resource. Always compute#packetMirroring for packet mirrorings.
+     * @return Type of the resource. Always compute#packetMirroring for packet mirrorings.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * PacketMirroring mirroredResourceInfos. MirroredResourceInfo specifies a set of mirrored VM instances, subnetworks and/or tags for which traffic from/to all VM instances will be mirrored.
+     * @return PacketMirroring mirroredResourceInfos. MirroredResourceInfo specifies a set of mirrored VM instances, subnetworks and/or tags for which traffic from/to all VM instances will be mirrored.
      * 
-    */
+     */
     public PacketMirroringMirroredResourceInfoResponse mirroredResources() {
         return this.mirroredResources;
     }
     /**
-     * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * @return Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Specifies the mirrored VPC network. Only packets in this network will be mirrored. All mirrored VMs should have a NIC in the given network. All mirrored subnetworks should belong to the given network.
+     * @return Specifies the mirrored VPC network. Only packets in this network will be mirrored. All mirrored VMs should have a NIC in the given network. All mirrored subnetworks should belong to the given network.
      * 
-    */
+     */
     public PacketMirroringNetworkInfoResponse network() {
         return this.network;
     }
     /**
-     * The priority of applying this configuration. Priority is used to break ties in cases where there is more than one matching rule. In the case of two rules that apply for a given Instance, the one with the lowest-numbered priority value wins. Default value is 1000. Valid range is 0 through 65535.
+     * @return The priority of applying this configuration. Priority is used to break ties in cases where there is more than one matching rule. In the case of two rules that apply for a given Instance, the one with the lowest-numbered priority value wins. Default value is 1000. Valid range is 0 through 65535.
      * 
-    */
+     */
     public Integer priority() {
         return this.priority;
     }
     /**
-     * URI of the region where the packetMirroring resides.
+     * @return URI of the region where the packetMirroring resides.
      * 
-    */
+     */
     public String region() {
         return this.region;
     }
     /**
-     * Server-defined URL for the resource.
+     * @return Server-defined URL for the resource.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }
     /**
-     * Server-defined URL for this resource with the resource id.
+     * @return Server-defined URL for this resource with the resource id.
      * 
-    */
+     */
     public String selfLinkWithId() {
         return this.selfLinkWithId;
     }

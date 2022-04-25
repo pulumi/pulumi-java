@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudApigeeV1GraphQLOperationResponse {
-    /**
-     * GraphQL operation name. The name and operation type will be used to apply quotas. If no name is specified, the quota will be applied to all GraphQL operations irrespective of their operation names in the payload.
-     * 
-     */
+        /**
+         * @return GraphQL operation name. The name and operation type will be used to apply quotas. If no name is specified, the quota will be applied to all GraphQL operations irrespective of their operation names in the payload.
+         * 
+         */
     private final String operation;
-    /**
-     * GraphQL operation types. Valid values include `query` or `mutation`. **Note**: Apigee does not currently support `subscription` types.
-     * 
-     */
+        /**
+         * @return GraphQL operation types. Valid values include `query` or `mutation`. **Note**: Apigee does not currently support `subscription` types.
+         * 
+         */
     private final List<String> operationTypes;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GoogleCloudApigeeV1GraphQLOperationResponse {
     }
 
     /**
-     * GraphQL operation name. The name and operation type will be used to apply quotas. If no name is specified, the quota will be applied to all GraphQL operations irrespective of their operation names in the payload.
+     * @return GraphQL operation name. The name and operation type will be used to apply quotas. If no name is specified, the quota will be applied to all GraphQL operations irrespective of their operation names in the payload.
      * 
-    */
+     */
     public String operation() {
         return this.operation;
     }
     /**
-     * GraphQL operation types. Valid values include `query` or `mutation`. **Note**: Apigee does not currently support `subscription` types.
+     * @return GraphQL operation types. Valid values include `query` or `mutation`. **Note**: Apigee does not currently support `subscription` types.
      * 
-    */
+     */
     public List<String> operationTypes() {
         return this.operationTypes;
     }

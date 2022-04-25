@@ -9,30 +9,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GetInstanceResult {
-    /**
-     * Immutable. The globally unique hostname of the database.
-     * 
-     */
+        /**
+         * @return Immutable. The globally unique hostname of the database.
+         * 
+         */
     private final String databaseUrl;
-    /**
-     * The fully qualified resource name of the database instance, in the form: `projects/{project-number}/locations/{location-id}/instances/{database-id}`.
-     * 
-     */
+        /**
+         * @return The fully qualified resource name of the database instance, in the form: `projects/{project-number}/locations/{location-id}/instances/{database-id}`.
+         * 
+         */
     private final String name;
-    /**
-     * The resource name of the project this instance belongs to. For example: `projects/{project-number}`.
-     * 
-     */
+        /**
+         * @return The resource name of the project this instance belongs to. For example: `projects/{project-number}`.
+         * 
+         */
     private final String project;
-    /**
-     * The database&#39;s lifecycle state. Read-only.
-     * 
-     */
+        /**
+         * @return The database&#39;s lifecycle state. Read-only.
+         * 
+         */
     private final String state;
-    /**
-     * The database instance type. On creation only USER_DATABASE is allowed, which is also the default when omitted.
-     * 
-     */
+        /**
+         * @return The database instance type. On creation only USER_DATABASE is allowed, which is also the default when omitted.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -50,37 +50,37 @@ public final class GetInstanceResult {
     }
 
     /**
-     * Immutable. The globally unique hostname of the database.
+     * @return Immutable. The globally unique hostname of the database.
      * 
-    */
+     */
     public String databaseUrl() {
         return this.databaseUrl;
     }
     /**
-     * The fully qualified resource name of the database instance, in the form: `projects/{project-number}/locations/{location-id}/instances/{database-id}`.
+     * @return The fully qualified resource name of the database instance, in the form: `projects/{project-number}/locations/{location-id}/instances/{database-id}`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The resource name of the project this instance belongs to. For example: `projects/{project-number}`.
+     * @return The resource name of the project this instance belongs to. For example: `projects/{project-number}`.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }
     /**
-     * The database&#39;s lifecycle state. Read-only.
+     * @return The database&#39;s lifecycle state. Read-only.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The database instance type. On creation only USER_DATABASE is allowed, which is also the default when omitted.
+     * @return The database instance type. On creation only USER_DATABASE is allowed, which is also the default when omitted.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

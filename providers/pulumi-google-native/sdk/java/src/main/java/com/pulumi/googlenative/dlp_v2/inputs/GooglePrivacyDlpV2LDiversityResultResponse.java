@@ -24,6 +24,10 @@ public final class GooglePrivacyDlpV2LDiversityResultResponse extends com.pulumi
     @Import(name="sensitiveValueFrequencyHistogramBuckets", required=true)
     private List<GooglePrivacyDlpV2LDiversityHistogramBucketResponse> sensitiveValueFrequencyHistogramBuckets;
 
+    /**
+     * @return Histogram of l-diversity equivalence class sensitive value frequencies.
+     * 
+     */
     public List<GooglePrivacyDlpV2LDiversityHistogramBucketResponse> sensitiveValueFrequencyHistogramBuckets() {
         return this.sensitiveValueFrequencyHistogramBuckets;
     }
@@ -52,11 +56,23 @@ public final class GooglePrivacyDlpV2LDiversityResultResponse extends com.pulumi
             $ = new GooglePrivacyDlpV2LDiversityResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sensitiveValueFrequencyHistogramBuckets Histogram of l-diversity equivalence class sensitive value frequencies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sensitiveValueFrequencyHistogramBuckets(List<GooglePrivacyDlpV2LDiversityHistogramBucketResponse> sensitiveValueFrequencyHistogramBuckets) {
             $.sensitiveValueFrequencyHistogramBuckets = sensitiveValueFrequencyHistogramBuckets;
             return this;
         }
 
+        /**
+         * @param sensitiveValueFrequencyHistogramBuckets Histogram of l-diversity equivalence class sensitive value frequencies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sensitiveValueFrequencyHistogramBuckets(GooglePrivacyDlpV2LDiversityHistogramBucketResponse... sensitiveValueFrequencyHistogramBuckets) {
             return sensitiveValueFrequencyHistogramBuckets(List.of(sensitiveValueFrequencyHistogramBuckets));
         }

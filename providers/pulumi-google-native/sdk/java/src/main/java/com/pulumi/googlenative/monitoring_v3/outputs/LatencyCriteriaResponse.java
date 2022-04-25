@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class LatencyCriteriaResponse {
-    /**
-     * Good service is defined to be the count of requests made to this service that return in no more than threshold.
-     * 
-     */
+        /**
+         * @return Good service is defined to be the count of requests made to this service that return in no more than threshold.
+         * 
+         */
     private final String threshold;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class LatencyCriteriaResponse {
     }
 
     /**
-     * Good service is defined to be the count of requests made to this service that return in no more than threshold.
+     * @return Good service is defined to be the count of requests made to this service that return in no more than threshold.
      * 
-    */
+     */
     public String threshold() {
         return this.threshold;
     }

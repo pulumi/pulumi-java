@@ -11,30 +11,30 @@ import java.util.Objects;
 
 @CustomType
 public final class VersionResponse {
-    /**
-     * Used to correct mistakes in the version numbering scheme.
-     * 
-     */
+        /**
+         * @return Used to correct mistakes in the version numbering scheme.
+         * 
+         */
     private final Integer epoch;
-    /**
-     * Whether this version is vulnerable, when defining the version bounds. For example, if the minimum version is 2.0, inclusive=true would say 2.0 is vulnerable, while inclusive=false would say it&#39;s not
-     * 
-     */
+        /**
+         * @return Whether this version is vulnerable, when defining the version bounds. For example, if the minimum version is 2.0, inclusive=true would say 2.0 is vulnerable, while inclusive=false would say it&#39;s not
+         * 
+         */
     private final Boolean inclusive;
-    /**
-     * Distinguish between sentinel MIN/MAX versions and normal versions. If kind is not NORMAL, then the other fields are ignored.
-     * 
-     */
+        /**
+         * @return Distinguish between sentinel MIN/MAX versions and normal versions. If kind is not NORMAL, then the other fields are ignored.
+         * 
+         */
     private final String kind;
-    /**
-     * The main part of the version name.
-     * 
-     */
+        /**
+         * @return The main part of the version name.
+         * 
+         */
     private final String name;
-    /**
-     * The iteration of the package build from the above version.
-     * 
-     */
+        /**
+         * @return The iteration of the package build from the above version.
+         * 
+         */
     private final String revision;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class VersionResponse {
     }
 
     /**
-     * Used to correct mistakes in the version numbering scheme.
+     * @return Used to correct mistakes in the version numbering scheme.
      * 
-    */
+     */
     public Integer epoch() {
         return this.epoch;
     }
     /**
-     * Whether this version is vulnerable, when defining the version bounds. For example, if the minimum version is 2.0, inclusive=true would say 2.0 is vulnerable, while inclusive=false would say it&#39;s not
+     * @return Whether this version is vulnerable, when defining the version bounds. For example, if the minimum version is 2.0, inclusive=true would say 2.0 is vulnerable, while inclusive=false would say it&#39;s not
      * 
-    */
+     */
     public Boolean inclusive() {
         return this.inclusive;
     }
     /**
-     * Distinguish between sentinel MIN/MAX versions and normal versions. If kind is not NORMAL, then the other fields are ignored.
+     * @return Distinguish between sentinel MIN/MAX versions and normal versions. If kind is not NORMAL, then the other fields are ignored.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The main part of the version name.
+     * @return The main part of the version name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The iteration of the package build from the above version.
+     * @return The iteration of the package build from the above version.
      * 
-    */
+     */
     public String revision() {
         return this.revision;
     }

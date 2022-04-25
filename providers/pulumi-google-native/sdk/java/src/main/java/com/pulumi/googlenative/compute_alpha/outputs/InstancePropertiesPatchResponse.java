@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class InstancePropertiesPatchResponse {
-    /**
-     * The label key-value pairs that you want to patch onto the instance.
-     * 
-     */
+        /**
+         * @return The label key-value pairs that you want to patch onto the instance.
+         * 
+         */
     private final Map<String,String> labels;
-    /**
-     * The metadata key-value pairs that you want to patch onto the instance. For more information, see Project and instance metadata.
-     * 
-     */
+        /**
+         * @return The metadata key-value pairs that you want to patch onto the instance. For more information, see Project and instance metadata.
+         * 
+         */
     private final Map<String,String> metadata;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class InstancePropertiesPatchResponse {
     }
 
     /**
-     * The label key-value pairs that you want to patch onto the instance.
+     * @return The label key-value pairs that you want to patch onto the instance.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The metadata key-value pairs that you want to patch onto the instance. For more information, see Project and instance metadata.
+     * @return The metadata key-value pairs that you want to patch onto the instance. For more information, see Project and instance metadata.
      * 
-    */
+     */
     public Map<String,String> metadata() {
         return this.metadata;
     }

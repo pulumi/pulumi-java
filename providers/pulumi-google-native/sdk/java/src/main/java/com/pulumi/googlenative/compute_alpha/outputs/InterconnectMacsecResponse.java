@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class InterconnectMacsecResponse {
-    /**
-     * If set to true, the Interconnect will be configured with a should-secure MACsec security policy, that allows the Google router to fallback to cleartext traffic if the MKA session cannot be established. By default, the Interconnect will be configured with a must-secure security policy that drops all traffic if the MKA session cannot be established with your router.
-     * 
-     */
+        /**
+         * @return If set to true, the Interconnect will be configured with a should-secure MACsec security policy, that allows the Google router to fallback to cleartext traffic if the MKA session cannot be established. By default, the Interconnect will be configured with a must-secure security policy that drops all traffic if the MKA session cannot be established with your router.
+         * 
+         */
     private final Boolean failOpen;
-    /**
-     * A keychain placeholder describing a set of named key objects along with their start times. A MACsec CKN/CAK will be generated for each key in the key chain. Google router will automatically pick the key with the most recent startTime when establishing or re-establishing a MACsec secure link.
-     * 
-     */
+        /**
+         * @return A keychain placeholder describing a set of named key objects along with their start times. A MACsec CKN/CAK will be generated for each key in the key chain. Google router will automatically pick the key with the most recent startTime when establishing or re-establishing a MACsec secure link.
+         * 
+         */
     private final List<InterconnectMacsecPreSharedKeyResponse> preSharedKeys;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class InterconnectMacsecResponse {
     }
 
     /**
-     * If set to true, the Interconnect will be configured with a should-secure MACsec security policy, that allows the Google router to fallback to cleartext traffic if the MKA session cannot be established. By default, the Interconnect will be configured with a must-secure security policy that drops all traffic if the MKA session cannot be established with your router.
+     * @return If set to true, the Interconnect will be configured with a should-secure MACsec security policy, that allows the Google router to fallback to cleartext traffic if the MKA session cannot be established. By default, the Interconnect will be configured with a must-secure security policy that drops all traffic if the MKA session cannot be established with your router.
      * 
-    */
+     */
     public Boolean failOpen() {
         return this.failOpen;
     }
     /**
-     * A keychain placeholder describing a set of named key objects along with their start times. A MACsec CKN/CAK will be generated for each key in the key chain. Google router will automatically pick the key with the most recent startTime when establishing or re-establishing a MACsec secure link.
+     * @return A keychain placeholder describing a set of named key objects along with their start times. A MACsec CKN/CAK will be generated for each key in the key chain. Google router will automatically pick the key with the most recent startTime when establishing or re-establishing a MACsec secure link.
      * 
-    */
+     */
     public List<InterconnectMacsecPreSharedKeyResponse> preSharedKeys() {
         return this.preSharedKeys;
     }

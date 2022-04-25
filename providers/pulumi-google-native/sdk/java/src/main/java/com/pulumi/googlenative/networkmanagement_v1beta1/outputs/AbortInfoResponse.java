@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class AbortInfoResponse {
-    /**
-     * Causes that the analysis is aborted.
-     * 
-     */
+        /**
+         * @return Causes that the analysis is aborted.
+         * 
+         */
     private final String cause;
-    /**
-     * URI of the resource that caused the abort.
-     * 
-     */
+        /**
+         * @return URI of the resource that caused the abort.
+         * 
+         */
     private final String resourceUri;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class AbortInfoResponse {
     }
 
     /**
-     * Causes that the analysis is aborted.
+     * @return Causes that the analysis is aborted.
      * 
-    */
+     */
     public String cause() {
         return this.cause;
     }
     /**
-     * URI of the resource that caused the abort.
+     * @return URI of the resource that caused the abort.
      * 
-    */
+     */
     public String resourceUri() {
         return this.resourceUri;
     }

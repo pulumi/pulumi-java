@@ -23,6 +23,10 @@ public final class OSPolicyResourcePackageResourceGooGetResponse extends com.pul
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Package name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -51,6 +55,12 @@ public final class OSPolicyResourcePackageResourceGooGetResponse extends com.pul
             $ = new OSPolicyResourcePackageResourceGooGetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Package name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

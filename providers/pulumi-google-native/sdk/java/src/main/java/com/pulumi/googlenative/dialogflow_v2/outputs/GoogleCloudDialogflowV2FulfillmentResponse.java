@@ -13,30 +13,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowV2FulfillmentResponse {
-    /**
-     * Optional. The human-readable name of the fulfillment, unique within the agent. This field is not used for Fulfillment in an Environment.
-     * 
-     */
+        /**
+         * @return Optional. The human-readable name of the fulfillment, unique within the agent. This field is not used for Fulfillment in an Environment.
+         * 
+         */
     private final String displayName;
-    /**
-     * Optional. Whether fulfillment is enabled.
-     * 
-     */
+        /**
+         * @return Optional. Whether fulfillment is enabled.
+         * 
+         */
     private final Boolean enabled;
-    /**
-     * Optional. The field defines whether the fulfillment is enabled for certain features.
-     * 
-     */
+        /**
+         * @return Optional. The field defines whether the fulfillment is enabled for certain features.
+         * 
+         */
     private final List<GoogleCloudDialogflowV2FulfillmentFeatureResponse> features;
-    /**
-     * Configuration for a generic web service.
-     * 
-     */
+        /**
+         * @return Configuration for a generic web service.
+         * 
+         */
     private final GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse genericWebService;
-    /**
-     * The unique identifier of the fulfillment. Supported formats: - `projects//agent/fulfillment` - `projects//locations//agent/fulfillment` This field is not used for Fulfillment in an Environment.
-     * 
-     */
+        /**
+         * @return The unique identifier of the fulfillment. Supported formats: - `projects//agent/fulfillment` - `projects//locations//agent/fulfillment` This field is not used for Fulfillment in an Environment.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class GoogleCloudDialogflowV2FulfillmentResponse {
     }
 
     /**
-     * Optional. The human-readable name of the fulfillment, unique within the agent. This field is not used for Fulfillment in an Environment.
+     * @return Optional. The human-readable name of the fulfillment, unique within the agent. This field is not used for Fulfillment in an Environment.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Optional. Whether fulfillment is enabled.
+     * @return Optional. Whether fulfillment is enabled.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * Optional. The field defines whether the fulfillment is enabled for certain features.
+     * @return Optional. The field defines whether the fulfillment is enabled for certain features.
      * 
-    */
+     */
     public List<GoogleCloudDialogflowV2FulfillmentFeatureResponse> features() {
         return this.features;
     }
     /**
-     * Configuration for a generic web service.
+     * @return Configuration for a generic web service.
      * 
-    */
+     */
     public GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse genericWebService() {
         return this.genericWebService;
     }
     /**
-     * The unique identifier of the fulfillment. Supported formats: - `projects//agent/fulfillment` - `projects//locations//agent/fulfillment` This field is not used for Fulfillment in an Environment.
+     * @return The unique identifier of the fulfillment. Supported formats: - `projects//agent/fulfillment` - `projects//locations//agent/fulfillment` This field is not used for Fulfillment in an Environment.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

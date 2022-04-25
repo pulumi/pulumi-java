@@ -21,6 +21,10 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="errorResult", required=true)
     private ErrorProtoResponse errorResult;
 
+    /**
+     * @return Final error result of the job. If present, indicates that the job has completed and was unsuccessful.
+     * 
+     */
     public ErrorProtoResponse errorResult() {
         return this.errorResult;
     }
@@ -32,6 +36,10 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="errors", required=true)
     private List<ErrorProtoResponse> errors;
 
+    /**
+     * @return The first errors encountered during the running of the job. The final message includes the number of errors that caused the process to stop. Errors here do not necessarily mean that the job has completed or was unsuccessful.
+     * 
+     */
     public List<ErrorProtoResponse> errors() {
         return this.errors;
     }
@@ -43,6 +51,10 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return Running state of the job.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -73,20 +85,44 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
             $ = new JobStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errorResult Final error result of the job. If present, indicates that the job has completed and was unsuccessful.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorResult(ErrorProtoResponse errorResult) {
             $.errorResult = errorResult;
             return this;
         }
 
+        /**
+         * @param errors The first errors encountered during the running of the job. The final message includes the number of errors that caused the process to stop. Errors here do not necessarily mean that the job has completed or was unsuccessful.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(List<ErrorProtoResponse> errors) {
             $.errors = errors;
             return this;
         }
 
+        /**
+         * @param errors The first errors encountered during the running of the job. The final message includes the number of errors that caused the process to stop. Errors here do not necessarily mean that the job has completed or was unsuccessful.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(ErrorProtoResponse... errors) {
             return errors(List.of(errors));
         }
 
+        /**
+         * @param state Running state of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;

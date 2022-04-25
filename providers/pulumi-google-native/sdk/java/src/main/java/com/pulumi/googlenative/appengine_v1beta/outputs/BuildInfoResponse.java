@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class BuildInfoResponse {
-    /**
-     * The Google Cloud Build id. Example: &#34;f966068f-08b2-42c8-bdfe-74137dff2bf9&#34;
-     * 
-     */
+        /**
+         * @return The Google Cloud Build id. Example: &#34;f966068f-08b2-42c8-bdfe-74137dff2bf9&#34;
+         * 
+         */
     private final String cloudBuildId;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class BuildInfoResponse {
     }
 
     /**
-     * The Google Cloud Build id. Example: &#34;f966068f-08b2-42c8-bdfe-74137dff2bf9&#34;
+     * @return The Google Cloud Build id. Example: &#34;f966068f-08b2-42c8-bdfe-74137dff2bf9&#34;
      * 
-    */
+     */
     public String cloudBuildId() {
         return this.cloudBuildId;
     }

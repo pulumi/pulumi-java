@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class NetworkUtilizationResponse {
-    /**
-     * Target bytes received per second.
-     * 
-     */
+        /**
+         * @return Target bytes received per second.
+         * 
+         */
     private final Integer targetReceivedBytesPerSecond;
-    /**
-     * Target packets received per second.
-     * 
-     */
+        /**
+         * @return Target packets received per second.
+         * 
+         */
     private final Integer targetReceivedPacketsPerSecond;
-    /**
-     * Target bytes sent per second.
-     * 
-     */
+        /**
+         * @return Target bytes sent per second.
+         * 
+         */
     private final Integer targetSentBytesPerSecond;
-    /**
-     * Target packets sent per second.
-     * 
-     */
+        /**
+         * @return Target packets sent per second.
+         * 
+         */
     private final Integer targetSentPacketsPerSecond;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class NetworkUtilizationResponse {
     }
 
     /**
-     * Target bytes received per second.
+     * @return Target bytes received per second.
      * 
-    */
+     */
     public Integer targetReceivedBytesPerSecond() {
         return this.targetReceivedBytesPerSecond;
     }
     /**
-     * Target packets received per second.
+     * @return Target packets received per second.
      * 
-    */
+     */
     public Integer targetReceivedPacketsPerSecond() {
         return this.targetReceivedPacketsPerSecond;
     }
     /**
-     * Target bytes sent per second.
+     * @return Target bytes sent per second.
      * 
-    */
+     */
     public Integer targetSentBytesPerSecond() {
         return this.targetSentBytesPerSecond;
     }
     /**
-     * Target packets sent per second.
+     * @return Target packets sent per second.
      * 
-    */
+     */
     public Integer targetSentPacketsPerSecond() {
         return this.targetSentPacketsPerSecond;
     }

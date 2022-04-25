@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ServiceAttachmentConsumerProjectLimitResponse {
-    /**
-     * The value of the limit to set.
-     * 
-     */
+        /**
+         * @return The value of the limit to set.
+         * 
+         */
     private final Integer connectionLimit;
-    /**
-     * The project id or number for the project to set the limit for.
-     * 
-     */
+        /**
+         * @return The project id or number for the project to set the limit for.
+         * 
+         */
     private final String projectIdOrNum;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class ServiceAttachmentConsumerProjectLimitResponse {
     }
 
     /**
-     * The value of the limit to set.
+     * @return The value of the limit to set.
      * 
-    */
+     */
     public Integer connectionLimit() {
         return this.connectionLimit;
     }
     /**
-     * The project id or number for the project to set the limit for.
+     * @return The project id or number for the project to set the limit for.
      * 
-    */
+     */
     public String projectIdOrNum() {
         return this.projectIdOrNum;
     }

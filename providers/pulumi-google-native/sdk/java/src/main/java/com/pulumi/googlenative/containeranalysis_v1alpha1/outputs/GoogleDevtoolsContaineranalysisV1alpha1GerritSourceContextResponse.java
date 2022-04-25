@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse {
-    /**
-     * An alias, which may be a branch or tag.
-     * 
-     */
+        /**
+         * @return An alias, which may be a branch or tag.
+         * 
+         */
     private final GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext;
-    /**
-     * The full project name within the host. Projects may be nested, so &#34;project/subproject&#34; is a valid project name. The &#34;repo name&#34; is the hostURI/project.
-     * 
-     */
+        /**
+         * @return The full project name within the host. Projects may be nested, so &#34;project/subproject&#34; is a valid project name. The &#34;repo name&#34; is the hostURI/project.
+         * 
+         */
     private final String gerritProject;
-    /**
-     * The URI of a running Gerrit instance.
-     * 
-     */
+        /**
+         * @return The URI of a running Gerrit instance.
+         * 
+         */
     private final String hostUri;
-    /**
-     * A revision (commit) ID.
-     * 
-     */
+        /**
+         * @return A revision (commit) ID.
+         * 
+         */
     private final String revisionId;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextRes
     }
 
     /**
-     * An alias, which may be a branch or tag.
+     * @return An alias, which may be a branch or tag.
      * 
-    */
+     */
     public GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext() {
         return this.aliasContext;
     }
     /**
-     * The full project name within the host. Projects may be nested, so &#34;project/subproject&#34; is a valid project name. The &#34;repo name&#34; is the hostURI/project.
+     * @return The full project name within the host. Projects may be nested, so &#34;project/subproject&#34; is a valid project name. The &#34;repo name&#34; is the hostURI/project.
      * 
-    */
+     */
     public String gerritProject() {
         return this.gerritProject;
     }
     /**
-     * The URI of a running Gerrit instance.
+     * @return The URI of a running Gerrit instance.
      * 
-    */
+     */
     public String hostUri() {
         return this.hostUri;
     }
     /**
-     * A revision (commit) ID.
+     * @return A revision (commit) ID.
      * 
-    */
+     */
     public String revisionId() {
         return this.revisionId;
     }

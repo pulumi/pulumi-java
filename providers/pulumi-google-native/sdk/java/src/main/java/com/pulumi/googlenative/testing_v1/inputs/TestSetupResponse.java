@@ -29,6 +29,10 @@ public final class TestSetupResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="account", required=true)
     private AccountResponse account;
 
+    /**
+     * @return The device will be logged in on this account for the duration of the test.
+     * 
+     */
     public AccountResponse account() {
         return this.account;
     }
@@ -40,6 +44,10 @@ public final class TestSetupResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="additionalApks", required=true)
     private List<ApkResponse> additionalApks;
 
+    /**
+     * @return APKs to install in addition to those being directly tested. Currently capped at 100.
+     * 
+     */
     public List<ApkResponse> additionalApks() {
         return this.additionalApks;
     }
@@ -51,6 +59,10 @@ public final class TestSetupResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="directoriesToPull", required=true)
     private List<String> directoriesToPull;
 
+    /**
+     * @return List of directories on the device to upload to GCS at the end of the test; they must be absolute paths under /sdcard, /storage or /data/local/tmp. Path names are restricted to characters a-z A-Z 0-9 _ - . + and / Note: The paths /sdcard and /data will be made available and treated as implicit path substitutions. E.g. if /sdcard on a particular device does not map to external storage, the system will replace it with the external storage path prefix for that device.
+     * 
+     */
     public List<String> directoriesToPull() {
         return this.directoriesToPull;
     }
@@ -62,6 +74,10 @@ public final class TestSetupResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dontAutograntPermissions", required=true)
     private Boolean dontAutograntPermissions;
 
+    /**
+     * @return Whether to prevent all runtime permissions to be granted at app install
+     * 
+     */
     public Boolean dontAutograntPermissions() {
         return this.dontAutograntPermissions;
     }
@@ -73,6 +89,10 @@ public final class TestSetupResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="environmentVariables", required=true)
     private List<EnvironmentVariableResponse> environmentVariables;
 
+    /**
+     * @return Environment variables to set for the test (only applicable for instrumentation tests).
+     * 
+     */
     public List<EnvironmentVariableResponse> environmentVariables() {
         return this.environmentVariables;
     }
@@ -84,6 +104,10 @@ public final class TestSetupResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="filesToPush", required=true)
     private List<DeviceFileResponse> filesToPush;
 
+    /**
+     * @return List of files to push to the device before starting the test.
+     * 
+     */
     public List<DeviceFileResponse> filesToPush() {
         return this.filesToPush;
     }
@@ -95,6 +119,10 @@ public final class TestSetupResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="networkProfile", required=true)
     private String networkProfile;
 
+    /**
+     * @return The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
+     * 
+     */
     public String networkProfile() {
         return this.networkProfile;
     }
@@ -129,52 +157,118 @@ public final class TestSetupResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TestSetupResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param account The device will be logged in on this account for the duration of the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder account(AccountResponse account) {
             $.account = account;
             return this;
         }
 
+        /**
+         * @param additionalApks APKs to install in addition to those being directly tested. Currently capped at 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalApks(List<ApkResponse> additionalApks) {
             $.additionalApks = additionalApks;
             return this;
         }
 
+        /**
+         * @param additionalApks APKs to install in addition to those being directly tested. Currently capped at 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalApks(ApkResponse... additionalApks) {
             return additionalApks(List.of(additionalApks));
         }
 
+        /**
+         * @param directoriesToPull List of directories on the device to upload to GCS at the end of the test; they must be absolute paths under /sdcard, /storage or /data/local/tmp. Path names are restricted to characters a-z A-Z 0-9 _ - . + and / Note: The paths /sdcard and /data will be made available and treated as implicit path substitutions. E.g. if /sdcard on a particular device does not map to external storage, the system will replace it with the external storage path prefix for that device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoriesToPull(List<String> directoriesToPull) {
             $.directoriesToPull = directoriesToPull;
             return this;
         }
 
+        /**
+         * @param directoriesToPull List of directories on the device to upload to GCS at the end of the test; they must be absolute paths under /sdcard, /storage or /data/local/tmp. Path names are restricted to characters a-z A-Z 0-9 _ - . + and / Note: The paths /sdcard and /data will be made available and treated as implicit path substitutions. E.g. if /sdcard on a particular device does not map to external storage, the system will replace it with the external storage path prefix for that device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoriesToPull(String... directoriesToPull) {
             return directoriesToPull(List.of(directoriesToPull));
         }
 
+        /**
+         * @param dontAutograntPermissions Whether to prevent all runtime permissions to be granted at app install
+         * 
+         * @return builder
+         * 
+         */
         public Builder dontAutograntPermissions(Boolean dontAutograntPermissions) {
             $.dontAutograntPermissions = dontAutograntPermissions;
             return this;
         }
 
+        /**
+         * @param environmentVariables Environment variables to set for the test (only applicable for instrumentation tests).
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(List<EnvironmentVariableResponse> environmentVariables) {
             $.environmentVariables = environmentVariables;
             return this;
         }
 
+        /**
+         * @param environmentVariables Environment variables to set for the test (only applicable for instrumentation tests).
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(EnvironmentVariableResponse... environmentVariables) {
             return environmentVariables(List.of(environmentVariables));
         }
 
+        /**
+         * @param filesToPush List of files to push to the device before starting the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filesToPush(List<DeviceFileResponse> filesToPush) {
             $.filesToPush = filesToPush;
             return this;
         }
 
+        /**
+         * @param filesToPush List of files to push to the device before starting the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filesToPush(DeviceFileResponse... filesToPush) {
             return filesToPush(List.of(filesToPush));
         }
 
+        /**
+         * @param networkProfile The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkProfile(String networkProfile) {
             $.networkProfile = networkProfile;
             return this;

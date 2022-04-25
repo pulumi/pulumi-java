@@ -12,35 +12,35 @@ import java.util.Objects;
 
 @CustomType
 public final class ConditionResponse {
-    /**
-     * Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed.
-     * 
-     */
+        /**
+         * @return Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed.
+         * 
+         */
     private final DevicePolicyResponse devicePolicy;
-    /**
-     * CIDR block IP subnetwork specification. May be IPv4 or IPv6. Note that for a CIDR IP address block, the specified IP address portion must be properly truncated (i.e. all the host bits must be zero) or the input is considered malformed. For example, &#34;192.0.2.0/24&#34; is accepted but &#34;192.0.2.1/24&#34; is not. Similarly, for IPv6, &#34;2001:db8::/32&#34; is accepted whereas &#34;2001:db8::1/32&#34; is not. The originating IP of a request must be in one of the listed subnets in order for this Condition to be true. If empty, all IP addresses are allowed.
-     * 
-     */
+        /**
+         * @return CIDR block IP subnetwork specification. May be IPv4 or IPv6. Note that for a CIDR IP address block, the specified IP address portion must be properly truncated (i.e. all the host bits must be zero) or the input is considered malformed. For example, &#34;192.0.2.0/24&#34; is accepted but &#34;192.0.2.1/24&#34; is not. Similarly, for IPv6, &#34;2001:db8::/32&#34; is accepted whereas &#34;2001:db8::1/32&#34; is not. The originating IP of a request must be in one of the listed subnets in order for this Condition to be true. If empty, all IP addresses are allowed.
+         * 
+         */
     private final List<String> ipSubnetworks;
-    /**
-     * The request must be made by one of the provided user or service accounts. Groups are not supported. Syntax: `user:{emailid}` `serviceAccount:{emailid}` If not specified, a request may come from any user.
-     * 
-     */
+        /**
+         * @return The request must be made by one of the provided user or service accounts. Groups are not supported. Syntax: `user:{emailid}` `serviceAccount:{emailid}` If not specified, a request may come from any user.
+         * 
+         */
     private final List<String> members;
-    /**
-     * Whether to negate the Condition. If true, the Condition becomes a NAND over its non-empty fields, each field must be false for the Condition overall to be satisfied. Defaults to false.
-     * 
-     */
+        /**
+         * @return Whether to negate the Condition. If true, the Condition becomes a NAND over its non-empty fields, each field must be false for the Condition overall to be satisfied. Defaults to false.
+         * 
+         */
     private final Boolean negate;
-    /**
-     * The request must originate from one of the provided countries/regions. Must be valid ISO 3166-1 alpha-2 codes.
-     * 
-     */
+        /**
+         * @return The request must originate from one of the provided countries/regions. Must be valid ISO 3166-1 alpha-2 codes.
+         * 
+         */
     private final List<String> regions;
-    /**
-     * A list of other access levels defined in the same `Policy`, referenced by resource name. Referencing an `AccessLevel` which does not exist is an error. All access levels listed must be granted for the Condition to be true. Example: &#34;`accessPolicies/MY_POLICY/accessLevels/LEVEL_NAME&#34;`
-     * 
-     */
+        /**
+         * @return A list of other access levels defined in the same `Policy`, referenced by resource name. Referencing an `AccessLevel` which does not exist is an error. All access levels listed must be granted for the Condition to be true. Example: &#34;`accessPolicies/MY_POLICY/accessLevels/LEVEL_NAME&#34;`
+         * 
+         */
     private final List<String> requiredAccessLevels;
 
     @CustomType.Constructor
@@ -60,44 +60,44 @@ public final class ConditionResponse {
     }
 
     /**
-     * Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed.
+     * @return Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed.
      * 
-    */
+     */
     public DevicePolicyResponse devicePolicy() {
         return this.devicePolicy;
     }
     /**
-     * CIDR block IP subnetwork specification. May be IPv4 or IPv6. Note that for a CIDR IP address block, the specified IP address portion must be properly truncated (i.e. all the host bits must be zero) or the input is considered malformed. For example, &#34;192.0.2.0/24&#34; is accepted but &#34;192.0.2.1/24&#34; is not. Similarly, for IPv6, &#34;2001:db8::/32&#34; is accepted whereas &#34;2001:db8::1/32&#34; is not. The originating IP of a request must be in one of the listed subnets in order for this Condition to be true. If empty, all IP addresses are allowed.
+     * @return CIDR block IP subnetwork specification. May be IPv4 or IPv6. Note that for a CIDR IP address block, the specified IP address portion must be properly truncated (i.e. all the host bits must be zero) or the input is considered malformed. For example, &#34;192.0.2.0/24&#34; is accepted but &#34;192.0.2.1/24&#34; is not. Similarly, for IPv6, &#34;2001:db8::/32&#34; is accepted whereas &#34;2001:db8::1/32&#34; is not. The originating IP of a request must be in one of the listed subnets in order for this Condition to be true. If empty, all IP addresses are allowed.
      * 
-    */
+     */
     public List<String> ipSubnetworks() {
         return this.ipSubnetworks;
     }
     /**
-     * The request must be made by one of the provided user or service accounts. Groups are not supported. Syntax: `user:{emailid}` `serviceAccount:{emailid}` If not specified, a request may come from any user.
+     * @return The request must be made by one of the provided user or service accounts. Groups are not supported. Syntax: `user:{emailid}` `serviceAccount:{emailid}` If not specified, a request may come from any user.
      * 
-    */
+     */
     public List<String> members() {
         return this.members;
     }
     /**
-     * Whether to negate the Condition. If true, the Condition becomes a NAND over its non-empty fields, each field must be false for the Condition overall to be satisfied. Defaults to false.
+     * @return Whether to negate the Condition. If true, the Condition becomes a NAND over its non-empty fields, each field must be false for the Condition overall to be satisfied. Defaults to false.
      * 
-    */
+     */
     public Boolean negate() {
         return this.negate;
     }
     /**
-     * The request must originate from one of the provided countries/regions. Must be valid ISO 3166-1 alpha-2 codes.
+     * @return The request must originate from one of the provided countries/regions. Must be valid ISO 3166-1 alpha-2 codes.
      * 
-    */
+     */
     public List<String> regions() {
         return this.regions;
     }
     /**
-     * A list of other access levels defined in the same `Policy`, referenced by resource name. Referencing an `AccessLevel` which does not exist is an error. All access levels listed must be granted for the Condition to be true. Example: &#34;`accessPolicies/MY_POLICY/accessLevels/LEVEL_NAME&#34;`
+     * @return A list of other access levels defined in the same `Policy`, referenced by resource name. Referencing an `AccessLevel` which does not exist is an error. All access levels listed must be granted for the Condition to be true. Example: &#34;`accessPolicies/MY_POLICY/accessLevels/LEVEL_NAME&#34;`
      * 
-    */
+     */
     public List<String> requiredAccessLevels() {
         return this.requiredAccessLevels;
     }

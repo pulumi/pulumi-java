@@ -26,6 +26,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="externalIp")
     private @Nullable Output<String> externalIp;
 
+    /**
+     * @return The external IP to define in the NIC.
+     * 
+     */
     public Optional<Output<String>> externalIp() {
         return Optional.ofNullable(this.externalIp);
     }
@@ -37,6 +41,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="internalIp")
     private @Nullable Output<String> internalIp;
 
+    /**
+     * @return The internal IP to define in the NIC. The formats accepted are: `ephemeral` \ ipv4 address \ a named address resource full path.
+     * 
+     */
     public Optional<Output<String>> internalIp() {
         return Optional.ofNullable(this.internalIp);
     }
@@ -48,6 +56,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="network")
     private @Nullable Output<String> network;
 
+    /**
+     * @return The network to connect the NIC to.
+     * 
+     */
     public Optional<Output<String>> network() {
         return Optional.ofNullable(this.network);
     }
@@ -59,6 +71,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="subnetwork")
     private @Nullable Output<String> subnetwork;
 
+    /**
+     * @return The subnetwork to connect the NIC to.
+     * 
+     */
     public Optional<Output<String>> subnetwork() {
         return Optional.ofNullable(this.subnetwork);
     }
@@ -90,38 +106,86 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
             $ = new NetworkInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param externalIp The external IP to define in the NIC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalIp(@Nullable Output<String> externalIp) {
             $.externalIp = externalIp;
             return this;
         }
 
+        /**
+         * @param externalIp The external IP to define in the NIC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalIp(String externalIp) {
             return externalIp(Output.of(externalIp));
         }
 
+        /**
+         * @param internalIp The internal IP to define in the NIC. The formats accepted are: `ephemeral` \ ipv4 address \ a named address resource full path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalIp(@Nullable Output<String> internalIp) {
             $.internalIp = internalIp;
             return this;
         }
 
+        /**
+         * @param internalIp The internal IP to define in the NIC. The formats accepted are: `ephemeral` \ ipv4 address \ a named address resource full path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalIp(String internalIp) {
             return internalIp(Output.of(internalIp));
         }
 
+        /**
+         * @param network The network to connect the NIC to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(@Nullable Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network The network to connect the NIC to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }
 
+        /**
+         * @param subnetwork The subnetwork to connect the NIC to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
             $.subnetwork = subnetwork;
             return this;
         }
 
+        /**
+         * @param subnetwork The subnetwork to connect the NIC to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetwork(String subnetwork) {
             return subnetwork(Output.of(subnetwork));
         }

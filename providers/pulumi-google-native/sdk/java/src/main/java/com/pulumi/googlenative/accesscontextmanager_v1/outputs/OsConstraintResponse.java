@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class OsConstraintResponse {
-    /**
-     * The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: `&#34;major.minor.patch&#34;`. Examples: `&#34;10.5.301&#34;`, `&#34;9.2.1&#34;`.
-     * 
-     */
+        /**
+         * @return The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: `&#34;major.minor.patch&#34;`. Examples: `&#34;10.5.301&#34;`, `&#34;9.2.1&#34;`.
+         * 
+         */
     private final String minimumVersion;
-    /**
-     * The allowed OS type.
-     * 
-     */
+        /**
+         * @return The allowed OS type.
+         * 
+         */
     private final String osType;
-    /**
-     * Only allows requests from devices with a verified Chrome OS. Verifications includes requirements that the device is enterprise-managed, conformant to domain policies, and the caller has permission to call the API targeted by the request.
-     * 
-     */
+        /**
+         * @return Only allows requests from devices with a verified Chrome OS. Verifications includes requirements that the device is enterprise-managed, conformant to domain policies, and the caller has permission to call the API targeted by the request.
+         * 
+         */
     private final Boolean requireVerifiedChromeOs;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class OsConstraintResponse {
     }
 
     /**
-     * The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: `&#34;major.minor.patch&#34;`. Examples: `&#34;10.5.301&#34;`, `&#34;9.2.1&#34;`.
+     * @return The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: `&#34;major.minor.patch&#34;`. Examples: `&#34;10.5.301&#34;`, `&#34;9.2.1&#34;`.
      * 
-    */
+     */
     public String minimumVersion() {
         return this.minimumVersion;
     }
     /**
-     * The allowed OS type.
+     * @return The allowed OS type.
      * 
-    */
+     */
     public String osType() {
         return this.osType;
     }
     /**
-     * Only allows requests from devices with a verified Chrome OS. Verifications includes requirements that the device is enterprise-managed, conformant to domain policies, and the caller has permission to call the API targeted by the request.
+     * @return Only allows requests from devices with a verified Chrome OS. Verifications includes requirements that the device is enterprise-managed, conformant to domain policies, and the caller has permission to call the API targeted by the request.
      * 
-    */
+     */
     public Boolean requireVerifiedChromeOs() {
         return this.requireVerifiedChromeOs;
     }

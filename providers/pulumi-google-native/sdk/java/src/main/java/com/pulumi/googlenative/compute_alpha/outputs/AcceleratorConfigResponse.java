@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class AcceleratorConfigResponse {
-    /**
-     * The number of the guest accelerator cards exposed to this instance.
-     * 
-     */
+        /**
+         * @return The number of the guest accelerator cards exposed to this instance.
+         * 
+         */
     private final Integer acceleratorCount;
-    /**
-     * Full or partial URL of the accelerator type resource to attach to this instance. For example: projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100 If you are creating an instance template, specify only the accelerator name. See GPUs on Compute Engine for a full list of accelerator types.
-     * 
-     */
+        /**
+         * @return Full or partial URL of the accelerator type resource to attach to this instance. For example: projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100 If you are creating an instance template, specify only the accelerator name. See GPUs on Compute Engine for a full list of accelerator types.
+         * 
+         */
     private final String acceleratorType;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class AcceleratorConfigResponse {
     }
 
     /**
-     * The number of the guest accelerator cards exposed to this instance.
+     * @return The number of the guest accelerator cards exposed to this instance.
      * 
-    */
+     */
     public Integer acceleratorCount() {
         return this.acceleratorCount;
     }
     /**
-     * Full or partial URL of the accelerator type resource to attach to this instance. For example: projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100 If you are creating an instance template, specify only the accelerator name. See GPUs on Compute Engine for a full list of accelerator types.
+     * @return Full or partial URL of the accelerator type resource to attach to this instance. For example: projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100 If you are creating an instance template, specify only the accelerator name. See GPUs on Compute Engine for a full list of accelerator types.
      * 
-    */
+     */
     public String acceleratorType() {
         return this.acceleratorType;
     }

@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class StartActivityIntentResponse {
-    /**
-     * Action name. Required for START_ACTIVITY.
-     * 
-     */
+        /**
+         * @return Action name. Required for START_ACTIVITY.
+         * 
+         */
     private final String action;
-    /**
-     * Intent categories to set on the intent.
-     * 
-     */
+        /**
+         * @return Intent categories to set on the intent.
+         * 
+         */
     private final List<String> categories;
-    /**
-     * URI for the action.
-     * 
-     */
+        /**
+         * @return URI for the action.
+         * 
+         */
     private final String uri;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class StartActivityIntentResponse {
     }
 
     /**
-     * Action name. Required for START_ACTIVITY.
+     * @return Action name. Required for START_ACTIVITY.
      * 
-    */
+     */
     public String action() {
         return this.action;
     }
     /**
-     * Intent categories to set on the intent.
+     * @return Intent categories to set on the intent.
      * 
-    */
+     */
     public List<String> categories() {
         return this.categories;
     }
     /**
-     * URI for the action.
+     * @return URI for the action.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

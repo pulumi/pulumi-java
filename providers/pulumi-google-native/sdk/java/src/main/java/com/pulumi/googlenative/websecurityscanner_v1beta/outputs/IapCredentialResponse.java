@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class IapCredentialResponse {
-    /**
-     * Authentication configuration when Web-Security-Scanner service account is added in Identity-Aware-Proxy (IAP) access policies.
-     * 
-     */
+        /**
+         * @return Authentication configuration when Web-Security-Scanner service account is added in Identity-Aware-Proxy (IAP) access policies.
+         * 
+         */
     private final IapTestServiceAccountInfoResponse iapTestServiceAccountInfo;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class IapCredentialResponse {
     }
 
     /**
-     * Authentication configuration when Web-Security-Scanner service account is added in Identity-Aware-Proxy (IAP) access policies.
+     * @return Authentication configuration when Web-Security-Scanner service account is added in Identity-Aware-Proxy (IAP) access policies.
      * 
-    */
+     */
     public IapTestServiceAccountInfoResponse iapTestServiceAccountInfo() {
         return this.iapTestServiceAccountInfo;
     }

@@ -22,6 +22,10 @@ public final class KnowledgeBaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The KB name (generally of the form KB[0-9]+ (e.g., KB123456)).
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -33,6 +37,10 @@ public final class KnowledgeBaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="url")
     private @Nullable Output<String> url;
 
+    /**
+     * @return A link to the KB in the [Windows update catalog] (https://www.catalog.update.microsoft.com/).
+     * 
+     */
     public Optional<Output<String>> url() {
         return Optional.ofNullable(this.url);
     }
@@ -62,20 +70,44 @@ public final class KnowledgeBaseArgs extends com.pulumi.resources.ResourceArgs {
             $ = new KnowledgeBaseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The KB name (generally of the form KB[0-9]+ (e.g., KB123456)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The KB name (generally of the form KB[0-9]+ (e.g., KB123456)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param url A link to the KB in the [Windows update catalog] (https://www.catalog.update.microsoft.com/).
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url A link to the KB in the [Windows update catalog] (https://www.catalog.update.microsoft.com/).
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

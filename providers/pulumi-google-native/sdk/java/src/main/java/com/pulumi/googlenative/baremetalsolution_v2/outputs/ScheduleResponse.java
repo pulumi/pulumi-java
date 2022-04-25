@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class ScheduleResponse {
-    /**
-     * A crontab-like specification that the schedule uses to take snapshots.
-     * 
-     */
+        /**
+         * @return A crontab-like specification that the schedule uses to take snapshots.
+         * 
+         */
     private final String crontabSpec;
-    /**
-     * A list of snapshot names created in this schedule.
-     * 
-     */
+        /**
+         * @return A list of snapshot names created in this schedule.
+         * 
+         */
     private final String prefix;
-    /**
-     * The maximum number of snapshots to retain in this schedule.
-     * 
-     */
+        /**
+         * @return The maximum number of snapshots to retain in this schedule.
+         * 
+         */
     private final Integer retentionCount;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class ScheduleResponse {
     }
 
     /**
-     * A crontab-like specification that the schedule uses to take snapshots.
+     * @return A crontab-like specification that the schedule uses to take snapshots.
      * 
-    */
+     */
     public String crontabSpec() {
         return this.crontabSpec;
     }
     /**
-     * A list of snapshot names created in this schedule.
+     * @return A list of snapshot names created in this schedule.
      * 
-    */
+     */
     public String prefix() {
         return this.prefix;
     }
     /**
-     * The maximum number of snapshots to retain in this schedule.
+     * @return The maximum number of snapshots to retain in this schedule.
      * 
-    */
+     */
     public Integer retentionCount() {
         return this.retentionCount;
     }

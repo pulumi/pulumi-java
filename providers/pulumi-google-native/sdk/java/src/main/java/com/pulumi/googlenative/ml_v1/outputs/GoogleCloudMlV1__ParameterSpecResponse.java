@@ -11,40 +11,40 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudMlV1__ParameterSpecResponse {
-    /**
-     * Required if type is `CATEGORICAL`. The list of possible categories.
-     * 
-     */
+        /**
+         * @return Required if type is `CATEGORICAL`. The list of possible categories.
+         * 
+         */
     private final List<String> categoricalValues;
-    /**
-     * Required if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.
-     * 
-     */
+        /**
+         * @return Required if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.
+         * 
+         */
     private final List<Double> discreteValues;
-    /**
-     * Required if type is `DOUBLE` or `INTEGER`. This field should be unset if type is `CATEGORICAL`. This value should be integers if type is `INTEGER`.
-     * 
-     */
+        /**
+         * @return Required if type is `DOUBLE` or `INTEGER`. This field should be unset if type is `CATEGORICAL`. This value should be integers if type is `INTEGER`.
+         * 
+         */
     private final Double maxValue;
-    /**
-     * Required if type is `DOUBLE` or `INTEGER`. This field should be unset if type is `CATEGORICAL`. This value should be integers if type is INTEGER.
-     * 
-     */
+        /**
+         * @return Required if type is `DOUBLE` or `INTEGER`. This field should be unset if type is `CATEGORICAL`. This value should be integers if type is INTEGER.
+         * 
+         */
     private final Double minValue;
-    /**
-     * The parameter name must be unique amongst all ParameterConfigs in a HyperparameterSpec message. E.g., &#34;learning_rate&#34;.
-     * 
-     */
+        /**
+         * @return The parameter name must be unique amongst all ParameterConfigs in a HyperparameterSpec message. E.g., &#34;learning_rate&#34;.
+         * 
+         */
     private final String parameterName;
-    /**
-     * Optional. How the parameter should be scaled to the hypercube. Leave unset for categorical parameters. Some kind of scaling is strongly recommended for real or integral parameters (e.g., `UNIT_LINEAR_SCALE`).
-     * 
-     */
+        /**
+         * @return Optional. How the parameter should be scaled to the hypercube. Leave unset for categorical parameters. Some kind of scaling is strongly recommended for real or integral parameters (e.g., `UNIT_LINEAR_SCALE`).
+         * 
+         */
     private final String scaleType;
-    /**
-     * The type of the parameter.
-     * 
-     */
+        /**
+         * @return The type of the parameter.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -66,51 +66,51 @@ public final class GoogleCloudMlV1__ParameterSpecResponse {
     }
 
     /**
-     * Required if type is `CATEGORICAL`. The list of possible categories.
+     * @return Required if type is `CATEGORICAL`. The list of possible categories.
      * 
-    */
+     */
     public List<String> categoricalValues() {
         return this.categoricalValues;
     }
     /**
-     * Required if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.
+     * @return Required if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.
      * 
-    */
+     */
     public List<Double> discreteValues() {
         return this.discreteValues;
     }
     /**
-     * Required if type is `DOUBLE` or `INTEGER`. This field should be unset if type is `CATEGORICAL`. This value should be integers if type is `INTEGER`.
+     * @return Required if type is `DOUBLE` or `INTEGER`. This field should be unset if type is `CATEGORICAL`. This value should be integers if type is `INTEGER`.
      * 
-    */
+     */
     public Double maxValue() {
         return this.maxValue;
     }
     /**
-     * Required if type is `DOUBLE` or `INTEGER`. This field should be unset if type is `CATEGORICAL`. This value should be integers if type is INTEGER.
+     * @return Required if type is `DOUBLE` or `INTEGER`. This field should be unset if type is `CATEGORICAL`. This value should be integers if type is INTEGER.
      * 
-    */
+     */
     public Double minValue() {
         return this.minValue;
     }
     /**
-     * The parameter name must be unique amongst all ParameterConfigs in a HyperparameterSpec message. E.g., &#34;learning_rate&#34;.
+     * @return The parameter name must be unique amongst all ParameterConfigs in a HyperparameterSpec message. E.g., &#34;learning_rate&#34;.
      * 
-    */
+     */
     public String parameterName() {
         return this.parameterName;
     }
     /**
-     * Optional. How the parameter should be scaled to the hypercube. Leave unset for categorical parameters. Some kind of scaling is strongly recommended for real or integral parameters (e.g., `UNIT_LINEAR_SCALE`).
+     * @return Optional. How the parameter should be scaled to the hypercube. Leave unset for categorical parameters. Some kind of scaling is strongly recommended for real or integral parameters (e.g., `UNIT_LINEAR_SCALE`).
      * 
-    */
+     */
     public String scaleType() {
         return this.scaleType;
     }
     /**
-     * The type of the parameter.
+     * @return The type of the parameter.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

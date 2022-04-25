@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class ClusterStatusResponse {
-    /**
-     * Optional details of cluster&#39;s state.
-     * 
-     */
+        /**
+         * @return Optional details of cluster&#39;s state.
+         * 
+         */
     private final String detail;
-    /**
-     * The cluster&#39;s state.
-     * 
-     */
+        /**
+         * @return The cluster&#39;s state.
+         * 
+         */
     private final String state;
-    /**
-     * Time when this state was entered (see JSON representation of Timestamp (https://developers.google.com/protocol-buffers/docs/proto3#json)).
-     * 
-     */
+        /**
+         * @return Time when this state was entered (see JSON representation of Timestamp (https://developers.google.com/protocol-buffers/docs/proto3#json)).
+         * 
+         */
     private final String stateStartTime;
-    /**
-     * Additional state information that includes status reported by the agent.
-     * 
-     */
+        /**
+         * @return Additional state information that includes status reported by the agent.
+         * 
+         */
     private final String substate;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class ClusterStatusResponse {
     }
 
     /**
-     * Optional details of cluster&#39;s state.
+     * @return Optional details of cluster&#39;s state.
      * 
-    */
+     */
     public String detail() {
         return this.detail;
     }
     /**
-     * The cluster&#39;s state.
+     * @return The cluster&#39;s state.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Time when this state was entered (see JSON representation of Timestamp (https://developers.google.com/protocol-buffers/docs/proto3#json)).
+     * @return Time when this state was entered (see JSON representation of Timestamp (https://developers.google.com/protocol-buffers/docs/proto3#json)).
      * 
-    */
+     */
     public String stateStartTime() {
         return this.stateStartTime;
     }
     /**
-     * Additional state information that includes status reported by the agent.
+     * @return Additional state information that includes status reported by the agent.
      * 
-    */
+     */
     public String substate() {
         return this.substate;
     }

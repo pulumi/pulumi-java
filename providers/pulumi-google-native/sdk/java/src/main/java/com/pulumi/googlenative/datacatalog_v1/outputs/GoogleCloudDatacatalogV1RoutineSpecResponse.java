@@ -12,35 +12,35 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDatacatalogV1RoutineSpecResponse {
-    /**
-     * Fields specific for BigQuery routines.
-     * 
-     */
+        /**
+         * @return Fields specific for BigQuery routines.
+         * 
+         */
     private final GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse bigqueryRoutineSpec;
-    /**
-     * The body of the routine.
-     * 
-     */
+        /**
+         * @return The body of the routine.
+         * 
+         */
     private final String definitionBody;
-    /**
-     * The language the routine is written in. The exact value depends on the source system. For BigQuery routines, possible values are: * `SQL` * `JAVASCRIPT`
-     * 
-     */
+        /**
+         * @return The language the routine is written in. The exact value depends on the source system. For BigQuery routines, possible values are: * `SQL` * `JAVASCRIPT`
+         * 
+         */
     private final String language;
-    /**
-     * Return type of the argument. The exact value depends on the source system and the language.
-     * 
-     */
+        /**
+         * @return Return type of the argument. The exact value depends on the source system and the language.
+         * 
+         */
     private final String returnType;
-    /**
-     * Arguments of the routine.
-     * 
-     */
+        /**
+         * @return Arguments of the routine.
+         * 
+         */
     private final List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> routineArguments;
-    /**
-     * The type of the routine.
-     * 
-     */
+        /**
+         * @return The type of the routine.
+         * 
+         */
     private final String routineType;
 
     @CustomType.Constructor
@@ -60,44 +60,44 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse {
     }
 
     /**
-     * Fields specific for BigQuery routines.
+     * @return Fields specific for BigQuery routines.
      * 
-    */
+     */
     public GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse bigqueryRoutineSpec() {
         return this.bigqueryRoutineSpec;
     }
     /**
-     * The body of the routine.
+     * @return The body of the routine.
      * 
-    */
+     */
     public String definitionBody() {
         return this.definitionBody;
     }
     /**
-     * The language the routine is written in. The exact value depends on the source system. For BigQuery routines, possible values are: * `SQL` * `JAVASCRIPT`
+     * @return The language the routine is written in. The exact value depends on the source system. For BigQuery routines, possible values are: * `SQL` * `JAVASCRIPT`
      * 
-    */
+     */
     public String language() {
         return this.language;
     }
     /**
-     * Return type of the argument. The exact value depends on the source system and the language.
+     * @return Return type of the argument. The exact value depends on the source system and the language.
      * 
-    */
+     */
     public String returnType() {
         return this.returnType;
     }
     /**
-     * Arguments of the routine.
+     * @return Arguments of the routine.
      * 
-    */
+     */
     public List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> routineArguments() {
         return this.routineArguments;
     }
     /**
-     * The type of the routine.
+     * @return The type of the routine.
      * 
-    */
+     */
     public String routineType() {
         return this.routineType;
     }

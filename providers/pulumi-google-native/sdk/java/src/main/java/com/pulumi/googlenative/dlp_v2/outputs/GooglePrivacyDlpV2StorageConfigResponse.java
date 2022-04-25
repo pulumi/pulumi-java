@@ -13,25 +13,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GooglePrivacyDlpV2StorageConfigResponse {
-    /**
-     * BigQuery options.
-     * 
-     */
+        /**
+         * @return BigQuery options.
+         * 
+         */
     private final GooglePrivacyDlpV2BigQueryOptionsResponse bigQueryOptions;
-    /**
-     * Google Cloud Storage options.
-     * 
-     */
+        /**
+         * @return Google Cloud Storage options.
+         * 
+         */
     private final GooglePrivacyDlpV2CloudStorageOptionsResponse cloudStorageOptions;
-    /**
-     * Google Cloud Datastore options.
-     * 
-     */
+        /**
+         * @return Google Cloud Datastore options.
+         * 
+         */
     private final GooglePrivacyDlpV2DatastoreOptionsResponse datastoreOptions;
-    /**
-     * Hybrid inspection options.
-     * 
-     */
+        /**
+         * @return Hybrid inspection options.
+         * 
+         */
     private final GooglePrivacyDlpV2HybridOptionsResponse hybridOptions;
     private final GooglePrivacyDlpV2TimespanConfigResponse timespanConfig;
 
@@ -50,30 +50,30 @@ public final class GooglePrivacyDlpV2StorageConfigResponse {
     }
 
     /**
-     * BigQuery options.
+     * @return BigQuery options.
      * 
-    */
+     */
     public GooglePrivacyDlpV2BigQueryOptionsResponse bigQueryOptions() {
         return this.bigQueryOptions;
     }
     /**
-     * Google Cloud Storage options.
+     * @return Google Cloud Storage options.
      * 
-    */
+     */
     public GooglePrivacyDlpV2CloudStorageOptionsResponse cloudStorageOptions() {
         return this.cloudStorageOptions;
     }
     /**
-     * Google Cloud Datastore options.
+     * @return Google Cloud Datastore options.
      * 
-    */
+     */
     public GooglePrivacyDlpV2DatastoreOptionsResponse datastoreOptions() {
         return this.datastoreOptions;
     }
     /**
-     * Hybrid inspection options.
+     * @return Hybrid inspection options.
      * 
-    */
+     */
     public GooglePrivacyDlpV2HybridOptionsResponse hybridOptions() {
         return this.hybridOptions;
     }

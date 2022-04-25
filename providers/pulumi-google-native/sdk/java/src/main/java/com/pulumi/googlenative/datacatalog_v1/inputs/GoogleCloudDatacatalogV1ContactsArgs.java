@@ -27,6 +27,10 @@ public final class GoogleCloudDatacatalogV1ContactsArgs extends com.pulumi.resou
     @Import(name="people")
     private @Nullable Output<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> people;
 
+    /**
+     * @return The list of contact people for the entry.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDatacatalogV1ContactsPersonArgs>>> people() {
         return Optional.ofNullable(this.people);
     }
@@ -55,15 +59,33 @@ public final class GoogleCloudDatacatalogV1ContactsArgs extends com.pulumi.resou
             $ = new GoogleCloudDatacatalogV1ContactsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param people The list of contact people for the entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder people(@Nullable Output<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> people) {
             $.people = people;
             return this;
         }
 
+        /**
+         * @param people The list of contact people for the entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder people(List<GoogleCloudDatacatalogV1ContactsPersonArgs> people) {
             return people(Output.of(people));
         }
 
+        /**
+         * @param people The list of contact people for the entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder people(GoogleCloudDatacatalogV1ContactsPersonArgs... people) {
             return people(List.of(people));
         }

@@ -23,6 +23,10 @@ public final class BigTableIODetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="instanceId", required=true)
     private String instanceId;
 
+    /**
+     * @return InstanceId accessed in the connection.
+     * 
+     */
     public String instanceId() {
         return this.instanceId;
     }
@@ -34,6 +38,10 @@ public final class BigTableIODetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return ProjectId accessed in the connection.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -45,6 +53,10 @@ public final class BigTableIODetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="tableId", required=true)
     private String tableId;
 
+    /**
+     * @return TableId accessed in the connection.
+     * 
+     */
     public String tableId() {
         return this.tableId;
     }
@@ -75,16 +87,34 @@ public final class BigTableIODetailsResponse extends com.pulumi.resources.Invoke
             $ = new BigTableIODetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceId InstanceId accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param project ProjectId accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param tableId TableId accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableId(String tableId) {
             $.tableId = tableId;
             return this;

@@ -27,6 +27,10 @@ public final class MetadataIntegrationArgs extends com.pulumi.resources.Resource
     @Import(name="dataCatalogConfig")
     private @Nullable Output<DataCatalogConfigArgs> dataCatalogConfig;
 
+    /**
+     * @return The integration config for the Data Catalog service.
+     * 
+     */
     public Optional<Output<DataCatalogConfigArgs>> dataCatalogConfig() {
         return Optional.ofNullable(this.dataCatalogConfig);
     }
@@ -38,6 +42,10 @@ public final class MetadataIntegrationArgs extends com.pulumi.resources.Resource
     @Import(name="dataplexConfig")
     private @Nullable Output<DataplexConfigArgs> dataplexConfig;
 
+    /**
+     * @return The integration config for the Dataplex service.
+     * 
+     */
     public Optional<Output<DataplexConfigArgs>> dataplexConfig() {
         return Optional.ofNullable(this.dataplexConfig);
     }
@@ -67,20 +75,44 @@ public final class MetadataIntegrationArgs extends com.pulumi.resources.Resource
             $ = new MetadataIntegrationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataCatalogConfig The integration config for the Data Catalog service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCatalogConfig(@Nullable Output<DataCatalogConfigArgs> dataCatalogConfig) {
             $.dataCatalogConfig = dataCatalogConfig;
             return this;
         }
 
+        /**
+         * @param dataCatalogConfig The integration config for the Data Catalog service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCatalogConfig(DataCatalogConfigArgs dataCatalogConfig) {
             return dataCatalogConfig(Output.of(dataCatalogConfig));
         }
 
+        /**
+         * @param dataplexConfig The integration config for the Dataplex service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataplexConfig(@Nullable Output<DataplexConfigArgs> dataplexConfig) {
             $.dataplexConfig = dataplexConfig;
             return this;
         }
 
+        /**
+         * @param dataplexConfig The integration config for the Dataplex service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataplexConfig(DataplexConfigArgs dataplexConfig) {
             return dataplexConfig(Output.of(dataplexConfig));
         }

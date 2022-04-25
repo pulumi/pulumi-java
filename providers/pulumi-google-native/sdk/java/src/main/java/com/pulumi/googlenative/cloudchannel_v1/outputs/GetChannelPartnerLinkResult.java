@@ -10,45 +10,45 @@ import java.util.Objects;
 
 @CustomType
 public final class GetChannelPartnerLinkResult {
-    /**
-     * Cloud Identity info of the channel partner (IR).
-     * 
-     */
+        /**
+         * @return Cloud Identity info of the channel partner (IR).
+         * 
+         */
     private final GoogleCloudChannelV1CloudIdentityInfoResponse channelPartnerCloudIdentityInfo;
-    /**
-     * Timestamp of when the channel partner link is created.
-     * 
-     */
+        /**
+         * @return Timestamp of when the channel partner link is created.
+         * 
+         */
     private final String createTime;
-    /**
-     * URI of the web page where partner accepts the link invitation.
-     * 
-     */
+        /**
+         * @return URI of the web page where partner accepts the link invitation.
+         * 
+         */
     private final String inviteLinkUri;
-    /**
-     * State of the channel partner link.
-     * 
-     */
+        /**
+         * @return State of the channel partner link.
+         * 
+         */
     private final String linkState;
-    /**
-     * Resource name for the channel partner link, in the format accounts/{account_id}/channelPartnerLinks/{id}.
-     * 
-     */
+        /**
+         * @return Resource name for the channel partner link, in the format accounts/{account_id}/channelPartnerLinks/{id}.
+         * 
+         */
     private final String name;
-    /**
-     * Public identifier that a customer must use to generate a transfer token to move to this distributor-reseller combination.
-     * 
-     */
+        /**
+         * @return Public identifier that a customer must use to generate a transfer token to move to this distributor-reseller combination.
+         * 
+         */
     private final String publicId;
-    /**
-     * Cloud Identity ID of the linked reseller.
-     * 
-     */
+        /**
+         * @return Cloud Identity ID of the linked reseller.
+         * 
+         */
     private final String resellerCloudIdentityId;
-    /**
-     * Timestamp of when the channel partner link is updated.
-     * 
-     */
+        /**
+         * @return Timestamp of when the channel partner link is updated.
+         * 
+         */
     private final String updateTime;
 
     @CustomType.Constructor
@@ -72,58 +72,58 @@ public final class GetChannelPartnerLinkResult {
     }
 
     /**
-     * Cloud Identity info of the channel partner (IR).
+     * @return Cloud Identity info of the channel partner (IR).
      * 
-    */
+     */
     public GoogleCloudChannelV1CloudIdentityInfoResponse channelPartnerCloudIdentityInfo() {
         return this.channelPartnerCloudIdentityInfo;
     }
     /**
-     * Timestamp of when the channel partner link is created.
+     * @return Timestamp of when the channel partner link is created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * URI of the web page where partner accepts the link invitation.
+     * @return URI of the web page where partner accepts the link invitation.
      * 
-    */
+     */
     public String inviteLinkUri() {
         return this.inviteLinkUri;
     }
     /**
-     * State of the channel partner link.
+     * @return State of the channel partner link.
      * 
-    */
+     */
     public String linkState() {
         return this.linkState;
     }
     /**
-     * Resource name for the channel partner link, in the format accounts/{account_id}/channelPartnerLinks/{id}.
+     * @return Resource name for the channel partner link, in the format accounts/{account_id}/channelPartnerLinks/{id}.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Public identifier that a customer must use to generate a transfer token to move to this distributor-reseller combination.
+     * @return Public identifier that a customer must use to generate a transfer token to move to this distributor-reseller combination.
      * 
-    */
+     */
     public String publicId() {
         return this.publicId;
     }
     /**
-     * Cloud Identity ID of the linked reseller.
+     * @return Cloud Identity ID of the linked reseller.
      * 
-    */
+     */
     public String resellerCloudIdentityId() {
         return this.resellerCloudIdentityId;
     }
     /**
-     * Timestamp of when the channel partner link is updated.
+     * @return Timestamp of when the channel partner link is updated.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

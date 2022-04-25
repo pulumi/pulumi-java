@@ -22,6 +22,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Optional. A user-assigned display name of the Fleet. When present, it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, single-quote, double-quote, space, and exclamation point. Example: `Production Fleet`
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -33,6 +37,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fleetName")
     private @Nullable Output<String> fleetName;
 
+    /**
+     * @return The name for the fleet. The name must meet the following constraints: + The name of a fleet should be unique within the organization; + It must consist of lower case alphanumeric characters or `-`; + The length of the name must be less than or equal to 63; + Unicode names must be expressed in Punycode format (rfc3492). Examples: + prod-fleet + xn--wlq33vhyw9jb （Punycode form for &#34;生产环境&#34;)
+     * 
+     */
     public Optional<Output<String>> fleetName() {
         return Optional.ofNullable(this.fleetName);
     }
@@ -78,20 +86,44 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FleetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName Optional. A user-assigned display name of the Fleet. When present, it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, single-quote, double-quote, space, and exclamation point. Example: `Production Fleet`
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Optional. A user-assigned display name of the Fleet. When present, it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, single-quote, double-quote, space, and exclamation point. Example: `Production Fleet`
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param fleetName The name for the fleet. The name must meet the following constraints: + The name of a fleet should be unique within the organization; + It must consist of lower case alphanumeric characters or `-`; + The length of the name must be less than or equal to 63; + Unicode names must be expressed in Punycode format (rfc3492). Examples: + prod-fleet + xn--wlq33vhyw9jb （Punycode form for &#34;生产环境&#34;)
+         * 
+         * @return builder
+         * 
+         */
         public Builder fleetName(@Nullable Output<String> fleetName) {
             $.fleetName = fleetName;
             return this;
         }
 
+        /**
+         * @param fleetName The name for the fleet. The name must meet the following constraints: + The name of a fleet should be unique within the organization; + It must consist of lower case alphanumeric characters or `-`; + The length of the name must be less than or equal to 63; + Unicode names must be expressed in Punycode format (rfc3492). Examples: + prod-fleet + xn--wlq33vhyw9jb （Punycode form for &#34;生产环境&#34;)
+         * 
+         * @return builder
+         * 
+         */
         public Builder fleetName(String fleetName) {
             return fleetName(Output.of(fleetName));
         }

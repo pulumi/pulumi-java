@@ -31,6 +31,10 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
     @Import(name="acceleratorConfig", required=true)
     private RuntimeAcceleratorConfigResponse acceleratorConfig;
 
+    /**
+     * @return Optional. The Compute Engine accelerator configuration for this runtime.
+     * 
+     */
     public RuntimeAcceleratorConfigResponse acceleratorConfig() {
         return this.acceleratorConfig;
     }
@@ -42,6 +46,10 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
     @Import(name="containerImages", required=true)
     private List<ContainerImageResponse> containerImages;
 
+    /**
+     * @return Optional. Use a list of container images to use as Kernels in the notebook instance.
+     * 
+     */
     public List<ContainerImageResponse> containerImages() {
         return this.containerImages;
     }
@@ -53,6 +61,10 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
     @Import(name="dataDisk", required=true)
     private LocalDiskResponse dataDisk;
 
+    /**
+     * @return Data disk option configuration settings.
+     * 
+     */
     public LocalDiskResponse dataDisk() {
         return this.dataDisk;
     }
@@ -64,6 +76,10 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
     @Import(name="encryptionConfig", required=true)
     private EncryptionConfigResponse encryptionConfig;
 
+    /**
+     * @return Optional. Encryption settings for virtual machine data disk.
+     * 
+     */
     public EncryptionConfigResponse encryptionConfig() {
         return this.encryptionConfig;
     }
@@ -75,6 +91,10 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
     @Import(name="guestAttributes", required=true)
     private Map<String,String> guestAttributes;
 
+    /**
+     * @return The Compute Engine guest attributes. (see [Project and instance guest attributes](https://cloud.google.com/compute/docs/storing-retrieving-metadata#guest_attributes)).
+     * 
+     */
     public Map<String,String> guestAttributes() {
         return this.guestAttributes;
     }
@@ -86,6 +106,10 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
     @Import(name="internalIpOnly", required=true)
     private Boolean internalIpOnly;
 
+    /**
+     * @return Optional. If true, runtime will only have internal IP addresses. By default, runtimes are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each vm. This `internal_ip_only` restriction can only be enabled for subnetwork enabled networks, and all dependencies must be configured to be accessible without external IP addresses.
+     * 
+     */
     public Boolean internalIpOnly() {
         return this.internalIpOnly;
     }
@@ -97,6 +121,10 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
     @Import(name="labels", required=true)
     private Map<String,String> labels;
 
+    /**
+     * @return Optional. The labels to associate with this runtime. Label **keys** must contain 1 to 63 characters, and must conform to [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt). Label **values** may be empty, but, if present, must contain 1 to 63 characters, and must conform to [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a cluster.
+     * 
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
@@ -108,6 +136,10 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
     @Import(name="machineType", required=true)
     private String machineType;
 
+    /**
+     * @return The Compute Engine machine type used for runtimes. Short name is valid. Examples: * `n1-standard-2` * `e2-standard-8`
+     * 
+     */
     public String machineType() {
         return this.machineType;
     }
@@ -119,6 +151,10 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
     @Import(name="metadata", required=true)
     private Map<String,String> metadata;
 
+    /**
+     * @return Optional. The Compute Engine metadata entries to add to virtual machine. (see [Project and instance metadata](https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
+     * 
+     */
     public Map<String,String> metadata() {
         return this.metadata;
     }
@@ -130,6 +166,10 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
     @Import(name="network", required=true)
     private String network;
 
+    /**
+     * @return Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork. If neither `network` nor `subnet` is specified, the &#34;default&#34; network of the project is used, if it exists. A full URL or partial URI. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default` * `projects/[project_id]/regions/global/default` Runtimes are managed resources inside Google Infrastructure. Runtimes support the following network configurations: * Google Managed Network (Network &amp; subnet are empty) * Consumer Project VPC (network &amp; subnet are required). Requires configuring Private Service Access. * Shared VPC (network &amp; subnet are required). Requires configuring Private Service Access.
+     * 
+     */
     public String network() {
         return this.network;
     }
@@ -141,6 +181,10 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
     @Import(name="nicType", required=true)
     private String nicType;
 
+    /**
+     * @return Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.
+     * 
+     */
     public String nicType() {
         return this.nicType;
     }
@@ -152,6 +196,10 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
     @Import(name="shieldedInstanceConfig", required=true)
     private RuntimeShieldedInstanceConfigResponse shieldedInstanceConfig;
 
+    /**
+     * @return Optional. Shielded VM Instance configuration settings.
+     * 
+     */
     public RuntimeShieldedInstanceConfigResponse shieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
     }
@@ -163,6 +211,10 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
     @Import(name="subnet", required=true)
     private String subnet;
 
+    /**
+     * @return Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be specified with network. A full URL or partial URI are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0` * `projects/[project_id]/regions/us-east1/subnetworks/sub0`
+     * 
+     */
     public String subnet() {
         return this.subnet;
     }
@@ -174,6 +226,10 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
     @Import(name="tags", required=true)
     private List<String> tags;
 
+    /**
+     * @return Optional. The Compute Engine tags to add to runtime (see [Tagging instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+     * 
+     */
     public List<String> tags() {
         return this.tags;
     }
@@ -185,6 +241,10 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
     @Import(name="zone", required=true)
     private String zone;
 
+    /**
+     * @return The zone where the virtual machine is located. If using regional request, the notebooks service will pick a location in the corresponding runtime region. On a get request, zone will always be present. Example: * `us-central1-b`
+     * 
+     */
     public String zone() {
         return this.zone;
     }
@@ -227,84 +287,186 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
             $ = new VirtualMachineConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceleratorConfig Optional. The Compute Engine accelerator configuration for this runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorConfig(RuntimeAcceleratorConfigResponse acceleratorConfig) {
             $.acceleratorConfig = acceleratorConfig;
             return this;
         }
 
+        /**
+         * @param containerImages Optional. Use a list of container images to use as Kernels in the notebook instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerImages(List<ContainerImageResponse> containerImages) {
             $.containerImages = containerImages;
             return this;
         }
 
+        /**
+         * @param containerImages Optional. Use a list of container images to use as Kernels in the notebook instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerImages(ContainerImageResponse... containerImages) {
             return containerImages(List.of(containerImages));
         }
 
+        /**
+         * @param dataDisk Data disk option configuration settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisk(LocalDiskResponse dataDisk) {
             $.dataDisk = dataDisk;
             return this;
         }
 
+        /**
+         * @param encryptionConfig Optional. Encryption settings for virtual machine data disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfig(EncryptionConfigResponse encryptionConfig) {
             $.encryptionConfig = encryptionConfig;
             return this;
         }
 
+        /**
+         * @param guestAttributes The Compute Engine guest attributes. (see [Project and instance guest attributes](https://cloud.google.com/compute/docs/storing-retrieving-metadata#guest_attributes)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestAttributes(Map<String,String> guestAttributes) {
             $.guestAttributes = guestAttributes;
             return this;
         }
 
+        /**
+         * @param internalIpOnly Optional. If true, runtime will only have internal IP addresses. By default, runtimes are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each vm. This `internal_ip_only` restriction can only be enabled for subnetwork enabled networks, and all dependencies must be configured to be accessible without external IP addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalIpOnly(Boolean internalIpOnly) {
             $.internalIpOnly = internalIpOnly;
             return this;
         }
 
+        /**
+         * @param labels Optional. The labels to associate with this runtime. Label **keys** must contain 1 to 63 characters, and must conform to [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt). Label **values** may be empty, but, if present, must contain 1 to 63 characters, and must conform to [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param machineType The Compute Engine machine type used for runtimes. Short name is valid. Examples: * `n1-standard-2` * `e2-standard-8`
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(String machineType) {
             $.machineType = machineType;
             return this;
         }
 
+        /**
+         * @param metadata Optional. The Compute Engine metadata entries to add to virtual machine. (see [Project and instance metadata](https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param network Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork. If neither `network` nor `subnet` is specified, the &#34;default&#34; network of the project is used, if it exists. A full URL or partial URI. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default` * `projects/[project_id]/regions/global/default` Runtimes are managed resources inside Google Infrastructure. Runtimes support the following network configurations: * Google Managed Network (Network &amp; subnet are empty) * Consumer Project VPC (network &amp; subnet are required). Requires configuring Private Service Access. * Shared VPC (network &amp; subnet are required). Requires configuring Private Service Access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param nicType Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nicType(String nicType) {
             $.nicType = nicType;
             return this;
         }
 
+        /**
+         * @param shieldedInstanceConfig Optional. Shielded VM Instance configuration settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shieldedInstanceConfig(RuntimeShieldedInstanceConfigResponse shieldedInstanceConfig) {
             $.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
+        /**
+         * @param subnet Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be specified with network. A full URL or partial URI are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0` * `projects/[project_id]/regions/us-east1/subnetworks/sub0`
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(String subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param tags Optional. The Compute Engine tags to add to runtime (see [Tagging instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Optional. The Compute Engine tags to add to runtime (see [Tagging instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param zone The zone where the virtual machine is located. If using regional request, the notebooks service will pick a location in the corresponding runtime region. On a get request, zone will always be present. Example: * `us-central1-b`
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             $.zone = zone;
             return this;

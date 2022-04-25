@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class AuthorizationLoggingOptionsResponse {
-    /**
-     * The type of the permission that was checked.
-     * 
-     */
+        /**
+         * @return The type of the permission that was checked.
+         * 
+         */
     private final String permissionType;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class AuthorizationLoggingOptionsResponse {
     }
 
     /**
-     * The type of the permission that was checked.
+     * @return The type of the permission that was checked.
      * 
-    */
+     */
     public String permissionType() {
         return this.permissionType;
     }

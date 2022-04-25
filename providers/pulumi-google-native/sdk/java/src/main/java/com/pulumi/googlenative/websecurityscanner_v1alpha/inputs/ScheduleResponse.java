@@ -24,6 +24,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="intervalDurationDays", required=true)
     private Integer intervalDurationDays;
 
+    /**
+     * @return The duration of time between executions in days.
+     * 
+     */
     public Integer intervalDurationDays() {
         return this.intervalDurationDays;
     }
@@ -35,6 +39,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="scheduleTime", required=true)
     private String scheduleTime;
 
+    /**
+     * @return A timestamp indicates when the next run will be scheduled. The value is refreshed by the server after each run. If unspecified, it will default to current server time, which means the scan will be scheduled to start immediately.
+     * 
+     */
     public String scheduleTime() {
         return this.scheduleTime;
     }
@@ -64,11 +72,23 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param intervalDurationDays The duration of time between executions in days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intervalDurationDays(Integer intervalDurationDays) {
             $.intervalDurationDays = intervalDurationDays;
             return this;
         }
 
+        /**
+         * @param scheduleTime A timestamp indicates when the next run will be scheduled. The value is refreshed by the server after each run. If unspecified, it will default to current server time, which means the scan will be scheduled to start immediately.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleTime(String scheduleTime) {
             $.scheduleTime = scheduleTime;
             return this;

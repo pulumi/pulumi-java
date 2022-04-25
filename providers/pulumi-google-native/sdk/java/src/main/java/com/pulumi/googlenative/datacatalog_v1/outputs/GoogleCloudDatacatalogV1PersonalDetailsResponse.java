@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDatacatalogV1PersonalDetailsResponse {
-    /**
-     * Set if the entry is starred; unset otherwise.
-     * 
-     */
+        /**
+         * @return Set if the entry is starred; unset otherwise.
+         * 
+         */
     private final String starTime;
-    /**
-     * True if the entry is starred by the user; false otherwise.
-     * 
-     */
+        /**
+         * @return True if the entry is starred by the user; false otherwise.
+         * 
+         */
     private final Boolean starred;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GoogleCloudDatacatalogV1PersonalDetailsResponse {
     }
 
     /**
-     * Set if the entry is starred; unset otherwise.
+     * @return Set if the entry is starred; unset otherwise.
      * 
-    */
+     */
     public String starTime() {
         return this.starTime;
     }
     /**
-     * True if the entry is starred by the user; false otherwise.
+     * @return True if the entry is starred by the user; false otherwise.
      * 
-    */
+     */
     public Boolean starred() {
         return this.starred;
     }

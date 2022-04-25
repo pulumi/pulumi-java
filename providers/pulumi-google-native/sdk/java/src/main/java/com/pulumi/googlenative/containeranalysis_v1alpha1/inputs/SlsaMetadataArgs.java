@@ -28,6 +28,10 @@ public final class SlsaMetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="buildFinishedOn")
     private @Nullable Output<String> buildFinishedOn;
 
+    /**
+     * @return The timestamp of when the build completed.
+     * 
+     */
     public Optional<Output<String>> buildFinishedOn() {
         return Optional.ofNullable(this.buildFinishedOn);
     }
@@ -39,6 +43,10 @@ public final class SlsaMetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="buildInvocationId")
     private @Nullable Output<String> buildInvocationId;
 
+    /**
+     * @return Identifies the particular build invocation, which can be useful for finding associated logs or other ad-hoc analysis. The value SHOULD be globally unique, per in-toto Provenance spec.
+     * 
+     */
     public Optional<Output<String>> buildInvocationId() {
         return Optional.ofNullable(this.buildInvocationId);
     }
@@ -50,6 +58,10 @@ public final class SlsaMetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="buildStartedOn")
     private @Nullable Output<String> buildStartedOn;
 
+    /**
+     * @return The timestamp of when the build started.
+     * 
+     */
     public Optional<Output<String>> buildStartedOn() {
         return Optional.ofNullable(this.buildStartedOn);
     }
@@ -61,6 +73,10 @@ public final class SlsaMetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="completeness")
     private @Nullable Output<SlsaCompletenessArgs> completeness;
 
+    /**
+     * @return Indicates that the builder claims certain fields in this message to be complete.
+     * 
+     */
     public Optional<Output<SlsaCompletenessArgs>> completeness() {
         return Optional.ofNullable(this.completeness);
     }
@@ -72,6 +88,10 @@ public final class SlsaMetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reproducible")
     private @Nullable Output<Boolean> reproducible;
 
+    /**
+     * @return If true, the builder claims that running the recipe on materials will produce bit-for-bit identical output.
+     * 
+     */
     public Optional<Output<Boolean>> reproducible() {
         return Optional.ofNullable(this.reproducible);
     }
@@ -104,47 +124,107 @@ public final class SlsaMetadataArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SlsaMetadataArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param buildFinishedOn The timestamp of when the build completed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildFinishedOn(@Nullable Output<String> buildFinishedOn) {
             $.buildFinishedOn = buildFinishedOn;
             return this;
         }
 
+        /**
+         * @param buildFinishedOn The timestamp of when the build completed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildFinishedOn(String buildFinishedOn) {
             return buildFinishedOn(Output.of(buildFinishedOn));
         }
 
+        /**
+         * @param buildInvocationId Identifies the particular build invocation, which can be useful for finding associated logs or other ad-hoc analysis. The value SHOULD be globally unique, per in-toto Provenance spec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildInvocationId(@Nullable Output<String> buildInvocationId) {
             $.buildInvocationId = buildInvocationId;
             return this;
         }
 
+        /**
+         * @param buildInvocationId Identifies the particular build invocation, which can be useful for finding associated logs or other ad-hoc analysis. The value SHOULD be globally unique, per in-toto Provenance spec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildInvocationId(String buildInvocationId) {
             return buildInvocationId(Output.of(buildInvocationId));
         }
 
+        /**
+         * @param buildStartedOn The timestamp of when the build started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildStartedOn(@Nullable Output<String> buildStartedOn) {
             $.buildStartedOn = buildStartedOn;
             return this;
         }
 
+        /**
+         * @param buildStartedOn The timestamp of when the build started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildStartedOn(String buildStartedOn) {
             return buildStartedOn(Output.of(buildStartedOn));
         }
 
+        /**
+         * @param completeness Indicates that the builder claims certain fields in this message to be complete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder completeness(@Nullable Output<SlsaCompletenessArgs> completeness) {
             $.completeness = completeness;
             return this;
         }
 
+        /**
+         * @param completeness Indicates that the builder claims certain fields in this message to be complete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder completeness(SlsaCompletenessArgs completeness) {
             return completeness(Output.of(completeness));
         }
 
+        /**
+         * @param reproducible If true, the builder claims that running the recipe on materials will produce bit-for-bit identical output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reproducible(@Nullable Output<Boolean> reproducible) {
             $.reproducible = reproducible;
             return this;
         }
 
+        /**
+         * @param reproducible If true, the builder claims that running the recipe on materials will produce bit-for-bit identical output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reproducible(Boolean reproducible) {
             return reproducible(Output.of(reproducible));
         }

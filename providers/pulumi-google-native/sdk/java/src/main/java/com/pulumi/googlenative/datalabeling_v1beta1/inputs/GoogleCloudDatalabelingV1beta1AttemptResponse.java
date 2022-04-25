@@ -32,6 +32,10 @@ public final class GoogleCloudDatalabelingV1beta1AttemptResponse extends com.pul
     @Import(name="partialFailures", required=true)
     private List<GoogleRpcStatusResponse> partialFailures;
 
+    /**
+     * @return Details of errors that occurred.
+     * 
+     */
     public List<GoogleRpcStatusResponse> partialFailures() {
         return this.partialFailures;
     }
@@ -66,11 +70,23 @@ public final class GoogleCloudDatalabelingV1beta1AttemptResponse extends com.pul
             return this;
         }
 
+        /**
+         * @param partialFailures Details of errors that occurred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partialFailures(List<GoogleRpcStatusResponse> partialFailures) {
             $.partialFailures = partialFailures;
             return this;
         }
 
+        /**
+         * @param partialFailures Details of errors that occurred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partialFailures(GoogleRpcStatusResponse... partialFailures) {
             return partialFailures(List.of(partialFailures));
         }

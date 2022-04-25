@@ -27,6 +27,10 @@ public final class ColumnLayoutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="columns")
     private @Nullable Output<List<ColumnArgs>> columns;
 
+    /**
+     * @return The columns of content to display.
+     * 
+     */
     public Optional<Output<List<ColumnArgs>>> columns() {
         return Optional.ofNullable(this.columns);
     }
@@ -55,15 +59,33 @@ public final class ColumnLayoutArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ColumnLayoutArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columns The columns of content to display.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(@Nullable Output<List<ColumnArgs>> columns) {
             $.columns = columns;
             return this;
         }
 
+        /**
+         * @param columns The columns of content to display.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(List<ColumnArgs> columns) {
             return columns(Output.of(columns));
         }
 
+        /**
+         * @param columns The columns of content to display.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(ColumnArgs... columns) {
             return columns(List.of(columns));
         }

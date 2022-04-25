@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudContactcenterinsightsV1SentimentDataResponse {
-    /**
-     * A non-negative number from 0 to infinity which represents the abolute magnitude of sentiment regardless of score.
-     * 
-     */
+        /**
+         * @return A non-negative number from 0 to infinity which represents the abolute magnitude of sentiment regardless of score.
+         * 
+         */
     private final Double magnitude;
-    /**
-     * The sentiment score between -1.0 (negative) and 1.0 (positive).
-     * 
-     */
+        /**
+         * @return The sentiment score between -1.0 (negative) and 1.0 (positive).
+         * 
+         */
     private final Double score;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GoogleCloudContactcenterinsightsV1SentimentDataResponse {
     }
 
     /**
-     * A non-negative number from 0 to infinity which represents the abolute magnitude of sentiment regardless of score.
+     * @return A non-negative number from 0 to infinity which represents the abolute magnitude of sentiment regardless of score.
      * 
-    */
+     */
     public Double magnitude() {
         return this.magnitude;
     }
     /**
-     * The sentiment score between -1.0 (negative) and 1.0 (positive).
+     * @return The sentiment score between -1.0 (negative) and 1.0 (positive).
      * 
-    */
+     */
     public Double score() {
         return this.score;
     }

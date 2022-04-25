@@ -19,6 +19,10 @@ public final class InstanceMessageResponse extends com.pulumi.resources.InvokeAr
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return A code that correspond to one type of user-facing message.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -30,6 +34,10 @@ public final class InstanceMessageResponse extends com.pulumi.resources.InvokeAr
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return Message on memcached instance which will be exposed to users.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -59,11 +67,23 @@ public final class InstanceMessageResponse extends com.pulumi.resources.InvokeAr
             $ = new InstanceMessageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code A code that correspond to one type of user-facing message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param message Message on memcached instance which will be exposed to users.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;

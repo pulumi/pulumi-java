@@ -30,6 +30,10 @@ public final class DomainMappingStatusArgs extends com.pulumi.resources.Resource
     @Import(name="conditions")
     private @Nullable Output<List<GoogleCloudRunV1ConditionArgs>> conditions;
 
+    /**
+     * @return Array of observed DomainMappingConditions, indicating the current state of the DomainMapping.
+     * 
+     */
     public Optional<Output<List<GoogleCloudRunV1ConditionArgs>>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
@@ -41,6 +45,10 @@ public final class DomainMappingStatusArgs extends com.pulumi.resources.Resource
     @Import(name="mappedRouteName")
     private @Nullable Output<String> mappedRouteName;
 
+    /**
+     * @return The name of the route that the mapping currently points to.
+     * 
+     */
     public Optional<Output<String>> mappedRouteName() {
         return Optional.ofNullable(this.mappedRouteName);
     }
@@ -52,6 +60,10 @@ public final class DomainMappingStatusArgs extends com.pulumi.resources.Resource
     @Import(name="observedGeneration")
     private @Nullable Output<Integer> observedGeneration;
 
+    /**
+     * @return ObservedGeneration is the &#39;Generation&#39; of the DomainMapping that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition&#39;s status is True or False.
+     * 
+     */
     public Optional<Output<Integer>> observedGeneration() {
         return Optional.ofNullable(this.observedGeneration);
     }
@@ -63,6 +75,10 @@ public final class DomainMappingStatusArgs extends com.pulumi.resources.Resource
     @Import(name="resourceRecords")
     private @Nullable Output<List<ResourceRecordArgs>> resourceRecords;
 
+    /**
+     * @return The resource records required to configure this domain mapping. These records must be added to the domain&#39;s DNS configuration in order to serve the application via this domain mapping.
+     * 
+     */
     public Optional<Output<List<ResourceRecordArgs>>> resourceRecords() {
         return Optional.ofNullable(this.resourceRecords);
     }
@@ -74,6 +90,10 @@ public final class DomainMappingStatusArgs extends com.pulumi.resources.Resource
     @Import(name="url")
     private @Nullable Output<String> url;
 
+    /**
+     * @return Optional. Cloud Run fully managed: not supported Cloud Run on GKE: supported Holds the URL that will serve the traffic of the DomainMapping.
+     * 
+     */
     public Optional<Output<String>> url() {
         return Optional.ofNullable(this.url);
     }
@@ -106,55 +126,127 @@ public final class DomainMappingStatusArgs extends com.pulumi.resources.Resource
             $ = new DomainMappingStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conditions Array of observed DomainMappingConditions, indicating the current state of the DomainMapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(@Nullable Output<List<GoogleCloudRunV1ConditionArgs>> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions Array of observed DomainMappingConditions, indicating the current state of the DomainMapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<GoogleCloudRunV1ConditionArgs> conditions) {
             return conditions(Output.of(conditions));
         }
 
+        /**
+         * @param conditions Array of observed DomainMappingConditions, indicating the current state of the DomainMapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(GoogleCloudRunV1ConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
 
+        /**
+         * @param mappedRouteName The name of the route that the mapping currently points to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mappedRouteName(@Nullable Output<String> mappedRouteName) {
             $.mappedRouteName = mappedRouteName;
             return this;
         }
 
+        /**
+         * @param mappedRouteName The name of the route that the mapping currently points to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mappedRouteName(String mappedRouteName) {
             return mappedRouteName(Output.of(mappedRouteName));
         }
 
+        /**
+         * @param observedGeneration ObservedGeneration is the &#39;Generation&#39; of the DomainMapping that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition&#39;s status is True or False.
+         * 
+         * @return builder
+         * 
+         */
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
             $.observedGeneration = observedGeneration;
             return this;
         }
 
+        /**
+         * @param observedGeneration ObservedGeneration is the &#39;Generation&#39; of the DomainMapping that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition&#39;s status is True or False.
+         * 
+         * @return builder
+         * 
+         */
         public Builder observedGeneration(Integer observedGeneration) {
             return observedGeneration(Output.of(observedGeneration));
         }
 
+        /**
+         * @param resourceRecords The resource records required to configure this domain mapping. These records must be added to the domain&#39;s DNS configuration in order to serve the application via this domain mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceRecords(@Nullable Output<List<ResourceRecordArgs>> resourceRecords) {
             $.resourceRecords = resourceRecords;
             return this;
         }
 
+        /**
+         * @param resourceRecords The resource records required to configure this domain mapping. These records must be added to the domain&#39;s DNS configuration in order to serve the application via this domain mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceRecords(List<ResourceRecordArgs> resourceRecords) {
             return resourceRecords(Output.of(resourceRecords));
         }
 
+        /**
+         * @param resourceRecords The resource records required to configure this domain mapping. These records must be added to the domain&#39;s DNS configuration in order to serve the application via this domain mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceRecords(ResourceRecordArgs... resourceRecords) {
             return resourceRecords(List.of(resourceRecords));
         }
 
+        /**
+         * @param url Optional. Cloud Run fully managed: not supported Cloud Run on GKE: supported Holds the URL that will serve the traffic of the DomainMapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url Optional. Cloud Run fully managed: not supported Cloud Run on GKE: supported Holds the URL that will serve the traffic of the DomainMapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

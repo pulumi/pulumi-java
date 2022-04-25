@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse {
-    /**
-     * Matches values of the parent parameter with type &#39;INTEGER&#39;. All values must lie in `integer_value_spec` of parent parameter.
-     * 
-     */
+        /**
+         * @return Matches values of the parent parameter with type &#39;INTEGER&#39;. All values must lie in `integer_value_spec` of parent parameter.
+         * 
+         */
     private final List<String> values;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntVal
     }
 
     /**
-     * Matches values of the parent parameter with type &#39;INTEGER&#39;. All values must lie in `integer_value_spec` of parent parameter.
+     * @return Matches values of the parent parameter with type &#39;INTEGER&#39;. All values must lie in `integer_value_spec` of parent parameter.
      * 
-    */
+     */
     public List<String> values() {
         return this.values;
     }

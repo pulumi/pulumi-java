@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigResponse {
-    /**
-     * Number of recent non-small-talk sentences to use as context for article and FAQ suggestion
-     * 
-     */
+        /**
+         * @return Number of recent non-small-talk sentences to use as context for article and FAQ suggestion
+         * 
+         */
     private final Integer recentSentencesCount;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationP
     }
 
     /**
-     * Number of recent non-small-talk sentences to use as context for article and FAQ suggestion
+     * @return Number of recent non-small-talk sentences to use as context for article and FAQ suggestion
      * 
-    */
+     */
     public Integer recentSentencesCount() {
         return this.recentSentencesCount;
     }

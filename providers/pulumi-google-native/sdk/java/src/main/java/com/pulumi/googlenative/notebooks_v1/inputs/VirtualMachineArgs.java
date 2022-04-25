@@ -26,6 +26,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="virtualMachineConfig")
     private @Nullable Output<VirtualMachineConfigArgs> virtualMachineConfig;
 
+    /**
+     * @return Virtual Machine configuration settings.
+     * 
+     */
     public Optional<Output<VirtualMachineConfigArgs>> virtualMachineConfig() {
         return Optional.ofNullable(this.virtualMachineConfig);
     }
@@ -54,11 +58,23 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
             $ = new VirtualMachineArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param virtualMachineConfig Virtual Machine configuration settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineConfig(@Nullable Output<VirtualMachineConfigArgs> virtualMachineConfig) {
             $.virtualMachineConfig = virtualMachineConfig;
             return this;
         }
 
+        /**
+         * @param virtualMachineConfig Virtual Machine configuration settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineConfig(VirtualMachineConfigArgs virtualMachineConfig) {
             return virtualMachineConfig(Output.of(virtualMachineConfig));
         }

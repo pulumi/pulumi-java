@@ -12,45 +12,45 @@ import java.util.Objects;
 
 @CustomType
 public final class GetHubResult {
-    /**
-     * The time the hub was created.
-     * 
-     */
+        /**
+         * @return The time the hub was created.
+         * 
+         */
     private final String createTime;
-    /**
-     * An optional description of the hub.
-     * 
-     */
+        /**
+         * @return An optional description of the hub.
+         * 
+         */
     private final String description;
-    /**
-     * Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
-     * 
-     */
+        /**
+         * @return Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
+         * 
+         */
     private final Map<String,String> labels;
-    /**
-     * Immutable. The name of the hub. Hub names must be unique. They use the following form: `projects/{project_number}/locations/global/hubs/{hub_id}`
-     * 
-     */
+        /**
+         * @return Immutable. The name of the hub. Hub names must be unique. They use the following form: `projects/{project_number}/locations/global/hubs/{hub_id}`
+         * 
+         */
     private final String name;
-    /**
-     * The VPC networks associated with this hub&#39;s spokes. This field is read-only. Network Connectivity Center automatically populates it based on the set of spokes attached to the hub.
-     * 
-     */
+        /**
+         * @return The VPC networks associated with this hub&#39;s spokes. This field is read-only. Network Connectivity Center automatically populates it based on the set of spokes attached to the hub.
+         * 
+         */
     private final List<RoutingVPCResponse> routingVpcs;
-    /**
-     * The current lifecycle state of this hub.
-     * 
-     */
+        /**
+         * @return The current lifecycle state of this hub.
+         * 
+         */
     private final String state;
-    /**
-     * The Google-generated UUID for the hub. This value is unique across all hub resources. If a hub is deleted and another with the same name is created, the new hub is assigned a different unique_id.
-     * 
-     */
+        /**
+         * @return The Google-generated UUID for the hub. This value is unique across all hub resources. If a hub is deleted and another with the same name is created, the new hub is assigned a different unique_id.
+         * 
+         */
     private final String uniqueId;
-    /**
-     * The time the hub was last updated.
-     * 
-     */
+        /**
+         * @return The time the hub was last updated.
+         * 
+         */
     private final String updateTime;
 
     @CustomType.Constructor
@@ -74,58 +74,58 @@ public final class GetHubResult {
     }
 
     /**
-     * The time the hub was created.
+     * @return The time the hub was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * An optional description of the hub.
+     * @return An optional description of the hub.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
+     * @return Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * Immutable. The name of the hub. Hub names must be unique. They use the following form: `projects/{project_number}/locations/global/hubs/{hub_id}`
+     * @return Immutable. The name of the hub. Hub names must be unique. They use the following form: `projects/{project_number}/locations/global/hubs/{hub_id}`
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The VPC networks associated with this hub&#39;s spokes. This field is read-only. Network Connectivity Center automatically populates it based on the set of spokes attached to the hub.
+     * @return The VPC networks associated with this hub&#39;s spokes. This field is read-only. Network Connectivity Center automatically populates it based on the set of spokes attached to the hub.
      * 
-    */
+     */
     public List<RoutingVPCResponse> routingVpcs() {
         return this.routingVpcs;
     }
     /**
-     * The current lifecycle state of this hub.
+     * @return The current lifecycle state of this hub.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The Google-generated UUID for the hub. This value is unique across all hub resources. If a hub is deleted and another with the same name is created, the new hub is assigned a different unique_id.
+     * @return The Google-generated UUID for the hub. This value is unique across all hub resources. If a hub is deleted and another with the same name is created, the new hub is assigned a different unique_id.
      * 
-    */
+     */
     public String uniqueId() {
         return this.uniqueId;
     }
     /**
-     * The time the hub was last updated.
+     * @return The time the hub was last updated.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

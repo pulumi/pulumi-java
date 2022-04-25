@@ -25,6 +25,10 @@ public final class ServiceLevelIndicatorResponse extends com.pulumi.resources.In
     @Import(name="basicSli", required=true)
     private BasicSliResponse basicSli;
 
+    /**
+     * @return Basic SLI on a well-known service type.
+     * 
+     */
     public BasicSliResponse basicSli() {
         return this.basicSli;
     }
@@ -36,6 +40,10 @@ public final class ServiceLevelIndicatorResponse extends com.pulumi.resources.In
     @Import(name="requestBased", required=true)
     private RequestBasedSliResponse requestBased;
 
+    /**
+     * @return Request-based SLIs
+     * 
+     */
     public RequestBasedSliResponse requestBased() {
         return this.requestBased;
     }
@@ -47,6 +55,10 @@ public final class ServiceLevelIndicatorResponse extends com.pulumi.resources.In
     @Import(name="windowsBased", required=true)
     private WindowsBasedSliResponse windowsBased;
 
+    /**
+     * @return Windows-based SLIs
+     * 
+     */
     public WindowsBasedSliResponse windowsBased() {
         return this.windowsBased;
     }
@@ -77,16 +89,34 @@ public final class ServiceLevelIndicatorResponse extends com.pulumi.resources.In
             $ = new ServiceLevelIndicatorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param basicSli Basic SLI on a well-known service type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basicSli(BasicSliResponse basicSli) {
             $.basicSli = basicSli;
             return this;
         }
 
+        /**
+         * @param requestBased Request-based SLIs
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestBased(RequestBasedSliResponse requestBased) {
             $.requestBased = requestBased;
             return this;
         }
 
+        /**
+         * @param windowsBased Windows-based SLIs
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsBased(WindowsBasedSliResponse windowsBased) {
             $.windowsBased = windowsBased;
             return this;

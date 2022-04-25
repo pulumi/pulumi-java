@@ -27,6 +27,10 @@ public final class RateLimitsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxConcurrentDispatches")
     private @Nullable Output<Integer> maxConcurrentDispatches;
 
+    /**
+     * @return The maximum number of concurrent tasks that Cloud Tasks allows to be dispatched for this queue. After this threshold has been reached, Cloud Tasks stops dispatching tasks until the number of concurrent requests decreases. If unspecified when the queue is created, Cloud Tasks will pick the default. The maximum allowed value is 5,000. This field has the same meaning as [max_concurrent_requests in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#max_concurrent_requests).
+     * 
+     */
     public Optional<Output<Integer>> maxConcurrentDispatches() {
         return Optional.ofNullable(this.maxConcurrentDispatches);
     }
@@ -38,6 +42,10 @@ public final class RateLimitsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxDispatchesPerSecond")
     private @Nullable Output<Double> maxDispatchesPerSecond;
 
+    /**
+     * @return The maximum rate at which tasks are dispatched from this queue. If unspecified when the queue is created, Cloud Tasks will pick the default. * The maximum allowed value is 500. This field has the same meaning as [rate in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#rate).
+     * 
+     */
     public Optional<Output<Double>> maxDispatchesPerSecond() {
         return Optional.ofNullable(this.maxDispatchesPerSecond);
     }
@@ -67,20 +75,44 @@ public final class RateLimitsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RateLimitsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxConcurrentDispatches The maximum number of concurrent tasks that Cloud Tasks allows to be dispatched for this queue. After this threshold has been reached, Cloud Tasks stops dispatching tasks until the number of concurrent requests decreases. If unspecified when the queue is created, Cloud Tasks will pick the default. The maximum allowed value is 5,000. This field has the same meaning as [max_concurrent_requests in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#max_concurrent_requests).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentDispatches(@Nullable Output<Integer> maxConcurrentDispatches) {
             $.maxConcurrentDispatches = maxConcurrentDispatches;
             return this;
         }
 
+        /**
+         * @param maxConcurrentDispatches The maximum number of concurrent tasks that Cloud Tasks allows to be dispatched for this queue. After this threshold has been reached, Cloud Tasks stops dispatching tasks until the number of concurrent requests decreases. If unspecified when the queue is created, Cloud Tasks will pick the default. The maximum allowed value is 5,000. This field has the same meaning as [max_concurrent_requests in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#max_concurrent_requests).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentDispatches(Integer maxConcurrentDispatches) {
             return maxConcurrentDispatches(Output.of(maxConcurrentDispatches));
         }
 
+        /**
+         * @param maxDispatchesPerSecond The maximum rate at which tasks are dispatched from this queue. If unspecified when the queue is created, Cloud Tasks will pick the default. * The maximum allowed value is 500. This field has the same meaning as [rate in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#rate).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDispatchesPerSecond(@Nullable Output<Double> maxDispatchesPerSecond) {
             $.maxDispatchesPerSecond = maxDispatchesPerSecond;
             return this;
         }
 
+        /**
+         * @param maxDispatchesPerSecond The maximum rate at which tasks are dispatched from this queue. If unspecified when the queue is created, Cloud Tasks will pick the default. * The maximum allowed value is 500. This field has the same meaning as [rate in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#rate).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDispatchesPerSecond(Double maxDispatchesPerSecond) {
             return maxDispatchesPerSecond(Output.of(maxDispatchesPerSecond));
         }

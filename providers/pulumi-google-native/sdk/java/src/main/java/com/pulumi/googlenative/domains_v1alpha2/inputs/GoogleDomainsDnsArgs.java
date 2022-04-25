@@ -24,6 +24,10 @@ public final class GoogleDomainsDnsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="dsState", required=true)
     private Output<GoogleDomainsDnsDsState> dsState;
 
+    /**
+     * @return The state of DS records for this domain. Used to enable or disable automatic DNSSEC.
+     * 
+     */
     public Output<GoogleDomainsDnsDsState> dsState() {
         return this.dsState;
     }
@@ -52,11 +56,23 @@ public final class GoogleDomainsDnsArgs extends com.pulumi.resources.ResourceArg
             $ = new GoogleDomainsDnsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dsState The state of DS records for this domain. Used to enable or disable automatic DNSSEC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dsState(Output<GoogleDomainsDnsDsState> dsState) {
             $.dsState = dsState;
             return this;
         }
 
+        /**
+         * @param dsState The state of DS records for this domain. Used to enable or disable automatic DNSSEC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dsState(GoogleDomainsDnsDsState dsState) {
             return dsState(Output.of(dsState));
         }

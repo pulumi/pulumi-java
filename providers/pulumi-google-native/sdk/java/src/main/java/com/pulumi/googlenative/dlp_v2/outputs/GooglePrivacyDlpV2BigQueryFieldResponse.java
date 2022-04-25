@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GooglePrivacyDlpV2BigQueryFieldResponse {
-    /**
-     * Designated field in the BigQuery table.
-     * 
-     */
+        /**
+         * @return Designated field in the BigQuery table.
+         * 
+         */
     private final GooglePrivacyDlpV2FieldIdResponse field;
-    /**
-     * Source table of the field.
-     * 
-     */
+        /**
+         * @return Source table of the field.
+         * 
+         */
     private final GooglePrivacyDlpV2BigQueryTableResponse table;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GooglePrivacyDlpV2BigQueryFieldResponse {
     }
 
     /**
-     * Designated field in the BigQuery table.
+     * @return Designated field in the BigQuery table.
      * 
-    */
+     */
     public GooglePrivacyDlpV2FieldIdResponse field() {
         return this.field;
     }
     /**
-     * Source table of the field.
+     * @return Source table of the field.
      * 
-    */
+     */
     public GooglePrivacyDlpV2BigQueryTableResponse table() {
         return this.table;
     }

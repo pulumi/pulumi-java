@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class UserManagedResponse {
-    /**
-     * The list of Replicas for this Secret. Cannot be empty.
-     * 
-     */
+        /**
+         * @return The list of Replicas for this Secret. Cannot be empty.
+         * 
+         */
     private final List<ReplicaResponse> replicas;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class UserManagedResponse {
     }
 
     /**
-     * The list of Replicas for this Secret. Cannot be empty.
+     * @return The list of Replicas for this Secret. Cannot be empty.
      * 
-    */
+     */
     public List<ReplicaResponse> replicas() {
         return this.replicas;
     }

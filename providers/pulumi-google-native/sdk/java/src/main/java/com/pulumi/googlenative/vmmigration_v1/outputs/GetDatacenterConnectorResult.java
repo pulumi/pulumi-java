@@ -10,55 +10,55 @@ import java.util.Objects;
 
 @CustomType
 public final class GetDatacenterConnectorResult {
-    /**
-     * The communication channel between the datacenter connector and GCP.
-     * 
-     */
+        /**
+         * @return The communication channel between the datacenter connector and GCP.
+         * 
+         */
     private final String bucket;
-    /**
-     * The time the connector was created (as an API call, not when it was actually installed).
-     * 
-     */
+        /**
+         * @return The time the connector was created (as an API call, not when it was actually installed).
+         * 
+         */
     private final String createTime;
-    /**
-     * Provides details on the state of the Datacenter Connector in case of an error.
-     * 
-     */
+        /**
+         * @return Provides details on the state of the Datacenter Connector in case of an error.
+         * 
+         */
     private final StatusResponse error;
-    /**
-     * The connector&#39;s name.
-     * 
-     */
+        /**
+         * @return The connector&#39;s name.
+         * 
+         */
     private final String name;
-    /**
-     * Immutable. A unique key for this connector. This key is internal to the OVA connector and is supplied with its creation during the registration process and can not be modified.
-     * 
-     */
+        /**
+         * @return Immutable. A unique key for this connector. This key is internal to the OVA connector and is supplied with its creation during the registration process and can not be modified.
+         * 
+         */
     private final String registrationId;
-    /**
-     * The service account to use in the connector when communicating with the cloud.
-     * 
-     */
+        /**
+         * @return The service account to use in the connector when communicating with the cloud.
+         * 
+         */
     private final String serviceAccount;
-    /**
-     * State of the DatacenterConnector, as determined by the health checks.
-     * 
-     */
+        /**
+         * @return State of the DatacenterConnector, as determined by the health checks.
+         * 
+         */
     private final String state;
-    /**
-     * The time the state was last set.
-     * 
-     */
+        /**
+         * @return The time the state was last set.
+         * 
+         */
     private final String stateTime;
-    /**
-     * The last time the connector was updated with an API call.
-     * 
-     */
+        /**
+         * @return The last time the connector was updated with an API call.
+         * 
+         */
     private final String updateTime;
-    /**
-     * The version running in the DatacenterConnector. This is supplied by the OVA connector during the registration process and can not be modified.
-     * 
-     */
+        /**
+         * @return The version running in the DatacenterConnector. This is supplied by the OVA connector during the registration process and can not be modified.
+         * 
+         */
     private final String version;
 
     @CustomType.Constructor
@@ -86,72 +86,72 @@ public final class GetDatacenterConnectorResult {
     }
 
     /**
-     * The communication channel between the datacenter connector and GCP.
+     * @return The communication channel between the datacenter connector and GCP.
      * 
-    */
+     */
     public String bucket() {
         return this.bucket;
     }
     /**
-     * The time the connector was created (as an API call, not when it was actually installed).
+     * @return The time the connector was created (as an API call, not when it was actually installed).
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Provides details on the state of the Datacenter Connector in case of an error.
+     * @return Provides details on the state of the Datacenter Connector in case of an error.
      * 
-    */
+     */
     public StatusResponse error() {
         return this.error;
     }
     /**
-     * The connector&#39;s name.
+     * @return The connector&#39;s name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Immutable. A unique key for this connector. This key is internal to the OVA connector and is supplied with its creation during the registration process and can not be modified.
+     * @return Immutable. A unique key for this connector. This key is internal to the OVA connector and is supplied with its creation during the registration process and can not be modified.
      * 
-    */
+     */
     public String registrationId() {
         return this.registrationId;
     }
     /**
-     * The service account to use in the connector when communicating with the cloud.
+     * @return The service account to use in the connector when communicating with the cloud.
      * 
-    */
+     */
     public String serviceAccount() {
         return this.serviceAccount;
     }
     /**
-     * State of the DatacenterConnector, as determined by the health checks.
+     * @return State of the DatacenterConnector, as determined by the health checks.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The time the state was last set.
+     * @return The time the state was last set.
      * 
-    */
+     */
     public String stateTime() {
         return this.stateTime;
     }
     /**
-     * The last time the connector was updated with an API call.
+     * @return The last time the connector was updated with an API call.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }
     /**
-     * The version running in the DatacenterConnector. This is supplied by the OVA connector during the registration process and can not be modified.
+     * @return The version running in the DatacenterConnector. This is supplied by the OVA connector during the registration process and can not be modified.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

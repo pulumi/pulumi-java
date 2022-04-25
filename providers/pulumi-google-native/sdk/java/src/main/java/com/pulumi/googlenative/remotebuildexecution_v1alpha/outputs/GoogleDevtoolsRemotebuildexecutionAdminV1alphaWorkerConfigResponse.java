@@ -12,60 +12,60 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse {
-    /**
-     * The accelerator card attached to each VM.
-     * 
-     */
+        /**
+         * @return The accelerator card attached to each VM.
+         * 
+         */
     private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse accelerator;
-    /**
-     * Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/
-     * 
-     */
+        /**
+         * @return Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/
+         * 
+         */
     private final String diskSizeGb;
-    /**
-     * Disk Type to use for the worker. See [Storage options](https://cloud.google.com/compute/docs/disks/#introduction). Currently only `pd-standard` and `pd-ssd` are supported.
-     * 
-     */
+        /**
+         * @return Disk Type to use for the worker. See [Storage options](https://cloud.google.com/compute/docs/disks/#introduction). Currently only `pd-standard` and `pd-ssd` are supported.
+         * 
+         */
     private final String diskType;
-    /**
-     * Labels associated with the workers. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International letters are permitted. Label keys must start with a letter. Label values are optional. There can not be more than 64 labels per resource.
-     * 
-     */
+        /**
+         * @return Labels associated with the workers. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International letters are permitted. Label keys must start with a letter. Label values are optional. There can not be more than 64 labels per resource.
+         * 
+         */
     private final Map<String,String> labels;
-    /**
-     * Machine type of the worker, such as `e2-standard-2`. See https://cloud.google.com/compute/docs/machine-types for a list of supported machine types. Note that `f1-micro` and `g1-small` are not yet supported.
-     * 
-     */
+        /**
+         * @return Machine type of the worker, such as `e2-standard-2`. See https://cloud.google.com/compute/docs/machine-types for a list of supported machine types. Note that `f1-micro` and `g1-small` are not yet supported.
+         * 
+         */
     private final String machineType;
-    /**
-     * The maximum number of actions a worker can execute concurrently.
-     * 
-     */
+        /**
+         * @return The maximum number of actions a worker can execute concurrently.
+         * 
+         */
     private final String maxConcurrentActions;
-    /**
-     * Minimum CPU platform to use when creating the worker. See [CPU Platforms](https://cloud.google.com/compute/docs/cpu-platforms).
-     * 
-     */
+        /**
+         * @return Minimum CPU platform to use when creating the worker. See [CPU Platforms](https://cloud.google.com/compute/docs/cpu-platforms).
+         * 
+         */
     private final String minCpuPlatform;
-    /**
-     * Determines the type of network access granted to workers. Possible values: - &#34;public&#34;: Workers can connect to the public internet. - &#34;private&#34;: Workers can only connect to Google APIs and services. - &#34;restricted-private&#34;: Workers can only connect to Google APIs that are reachable through `restricted.googleapis.com` (`199.36.153.4/30`).
-     * 
-     */
+        /**
+         * @return Determines the type of network access granted to workers. Possible values: - &#34;public&#34;: Workers can connect to the public internet. - &#34;private&#34;: Workers can only connect to Google APIs and services. - &#34;restricted-private&#34;: Workers can only connect to Google APIs that are reachable through `restricted.googleapis.com` (`199.36.153.4/30`).
+         * 
+         */
     private final String networkAccess;
-    /**
-     * Determines whether the worker is reserved (equivalent to a Compute Engine on-demand VM and therefore won&#39;t be preempted). See [Preemptible VMs](https://cloud.google.com/preemptible-vms/) for more details.
-     * 
-     */
+        /**
+         * @return Determines whether the worker is reserved (equivalent to a Compute Engine on-demand VM and therefore won&#39;t be preempted). See [Preemptible VMs](https://cloud.google.com/preemptible-vms/) for more details.
+         * 
+         */
     private final Boolean reserved;
-    /**
-     * The node type name to be used for sole-tenant nodes.
-     * 
-     */
+        /**
+         * @return The node type name to be used for sole-tenant nodes.
+         * 
+         */
     private final String soleTenantNodeType;
-    /**
-     * The name of the image used by each VM.
-     * 
-     */
+        /**
+         * @return The name of the image used by each VM.
+         * 
+         */
     private final String vmImage;
 
     @CustomType.Constructor
@@ -95,79 +95,79 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
     }
 
     /**
-     * The accelerator card attached to each VM.
+     * @return The accelerator card attached to each VM.
      * 
-    */
+     */
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse accelerator() {
         return this.accelerator;
     }
     /**
-     * Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/
+     * @return Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/
      * 
-    */
+     */
     public String diskSizeGb() {
         return this.diskSizeGb;
     }
     /**
-     * Disk Type to use for the worker. See [Storage options](https://cloud.google.com/compute/docs/disks/#introduction). Currently only `pd-standard` and `pd-ssd` are supported.
+     * @return Disk Type to use for the worker. See [Storage options](https://cloud.google.com/compute/docs/disks/#introduction). Currently only `pd-standard` and `pd-ssd` are supported.
      * 
-    */
+     */
     public String diskType() {
         return this.diskType;
     }
     /**
-     * Labels associated with the workers. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International letters are permitted. Label keys must start with a letter. Label values are optional. There can not be more than 64 labels per resource.
+     * @return Labels associated with the workers. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International letters are permitted. Label keys must start with a letter. Label values are optional. There can not be more than 64 labels per resource.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * Machine type of the worker, such as `e2-standard-2`. See https://cloud.google.com/compute/docs/machine-types for a list of supported machine types. Note that `f1-micro` and `g1-small` are not yet supported.
+     * @return Machine type of the worker, such as `e2-standard-2`. See https://cloud.google.com/compute/docs/machine-types for a list of supported machine types. Note that `f1-micro` and `g1-small` are not yet supported.
      * 
-    */
+     */
     public String machineType() {
         return this.machineType;
     }
     /**
-     * The maximum number of actions a worker can execute concurrently.
+     * @return The maximum number of actions a worker can execute concurrently.
      * 
-    */
+     */
     public String maxConcurrentActions() {
         return this.maxConcurrentActions;
     }
     /**
-     * Minimum CPU platform to use when creating the worker. See [CPU Platforms](https://cloud.google.com/compute/docs/cpu-platforms).
+     * @return Minimum CPU platform to use when creating the worker. See [CPU Platforms](https://cloud.google.com/compute/docs/cpu-platforms).
      * 
-    */
+     */
     public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
     /**
-     * Determines the type of network access granted to workers. Possible values: - &#34;public&#34;: Workers can connect to the public internet. - &#34;private&#34;: Workers can only connect to Google APIs and services. - &#34;restricted-private&#34;: Workers can only connect to Google APIs that are reachable through `restricted.googleapis.com` (`199.36.153.4/30`).
+     * @return Determines the type of network access granted to workers. Possible values: - &#34;public&#34;: Workers can connect to the public internet. - &#34;private&#34;: Workers can only connect to Google APIs and services. - &#34;restricted-private&#34;: Workers can only connect to Google APIs that are reachable through `restricted.googleapis.com` (`199.36.153.4/30`).
      * 
-    */
+     */
     public String networkAccess() {
         return this.networkAccess;
     }
     /**
-     * Determines whether the worker is reserved (equivalent to a Compute Engine on-demand VM and therefore won&#39;t be preempted). See [Preemptible VMs](https://cloud.google.com/preemptible-vms/) for more details.
+     * @return Determines whether the worker is reserved (equivalent to a Compute Engine on-demand VM and therefore won&#39;t be preempted). See [Preemptible VMs](https://cloud.google.com/preemptible-vms/) for more details.
      * 
-    */
+     */
     public Boolean reserved() {
         return this.reserved;
     }
     /**
-     * The node type name to be used for sole-tenant nodes.
+     * @return The node type name to be used for sole-tenant nodes.
      * 
-    */
+     */
     public String soleTenantNodeType() {
         return this.soleTenantNodeType;
     }
     /**
-     * The name of the image used by each VM.
+     * @return The name of the image used by each VM.
      * 
-    */
+     */
     public String vmImage() {
         return this.vmImage;
     }

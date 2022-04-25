@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDatapipelinesV1ScheduleSpecResponse {
-    /**
-     * When the next Scheduler job is going to run.
-     * 
-     */
+        /**
+         * @return When the next Scheduler job is going to run.
+         * 
+         */
     private final String nextJobTime;
-    /**
-     * Unix-cron format of the schedule. This information is retrieved from the linked Cloud Scheduler.
-     * 
-     */
+        /**
+         * @return Unix-cron format of the schedule. This information is retrieved from the linked Cloud Scheduler.
+         * 
+         */
     private final String schedule;
-    /**
-     * Timezone ID. This matches the timezone IDs used by the Cloud Scheduler API. If empty, UTC time is assumed.
-     * 
-     */
+        /**
+         * @return Timezone ID. This matches the timezone IDs used by the Cloud Scheduler API. If empty, UTC time is assumed.
+         * 
+         */
     private final String timeZone;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecResponse {
     }
 
     /**
-     * When the next Scheduler job is going to run.
+     * @return When the next Scheduler job is going to run.
      * 
-    */
+     */
     public String nextJobTime() {
         return this.nextJobTime;
     }
     /**
-     * Unix-cron format of the schedule. This information is retrieved from the linked Cloud Scheduler.
+     * @return Unix-cron format of the schedule. This information is retrieved from the linked Cloud Scheduler.
      * 
-    */
+     */
     public String schedule() {
         return this.schedule;
     }
     /**
-     * Timezone ID. This matches the timezone IDs used by the Cloud Scheduler API. If empty, UTC time is assumed.
+     * @return Timezone ID. This matches the timezone IDs used by the Cloud Scheduler API. If empty, UTC time is assumed.
      * 
-    */
+     */
     public String timeZone() {
         return this.timeZone;
     }

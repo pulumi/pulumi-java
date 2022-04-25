@@ -26,6 +26,10 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="config", required=true)
     private ServingConfigResponse config;
 
+    /**
+     * @return The configuration for the behavior of the site. This configuration exists in the [`firebase.json`](https://firebase.google.com/docs/cli/#the_firebasejson_file) file.
+     * 
+     */
     public ServingConfigResponse config() {
         return this.config;
     }
@@ -37,6 +41,10 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createTime", required=true)
     private String createTime;
 
+    /**
+     * @return The time at which the version was created.
+     * 
+     */
     public String createTime() {
         return this.createTime;
     }
@@ -48,6 +56,10 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createUser", required=true)
     private ActingUserResponse createUser;
 
+    /**
+     * @return Identifies the user who created the version.
+     * 
+     */
     public ActingUserResponse createUser() {
         return this.createUser;
     }
@@ -59,6 +71,10 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="deleteTime", required=true)
     private String deleteTime;
 
+    /**
+     * @return The time at which the version was `DELETED`.
+     * 
+     */
     public String deleteTime() {
         return this.deleteTime;
     }
@@ -70,6 +86,10 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="deleteUser", required=true)
     private ActingUserResponse deleteUser;
 
+    /**
+     * @return Identifies the user who `DELETED` the version.
+     * 
+     */
     public ActingUserResponse deleteUser() {
         return this.deleteUser;
     }
@@ -81,6 +101,10 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fileCount", required=true)
     private String fileCount;
 
+    /**
+     * @return The total number of files associated with the version. This value is calculated after a version is `FINALIZED`.
+     * 
+     */
     public String fileCount() {
         return this.fileCount;
     }
@@ -92,6 +116,10 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="finalizeTime", required=true)
     private String finalizeTime;
 
+    /**
+     * @return The time at which the version was `FINALIZED`.
+     * 
+     */
     public String finalizeTime() {
         return this.finalizeTime;
     }
@@ -103,6 +131,10 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="finalizeUser", required=true)
     private ActingUserResponse finalizeUser;
 
+    /**
+     * @return Identifies the user who `FINALIZED` the version.
+     * 
+     */
     public ActingUserResponse finalizeUser() {
         return this.finalizeUser;
     }
@@ -114,6 +146,10 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="labels", required=true)
     private Map<String,String> labels;
 
+    /**
+     * @return The labels used for extra metadata and/or filtering.
+     * 
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
@@ -125,6 +161,10 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The fully-qualified resource name for the version, in the format: sites/ SITE_ID/versions/VERSION_ID This name is provided in the response body when you call [`CreateVersion`](sites.versions/create).
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -136,6 +176,10 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The deploy status of the version. For a successful deploy, call [`CreateVersion`](sites.versions/create) to make a new version (`CREATED` status), [upload all desired files](sites.versions/populateFiles) to the version, then [update](sites.versions/patch) the version to the `FINALIZED` status. Note that if you leave the version in the `CREATED` state for more than 12 hours, the system will automatically mark the version as `ABANDONED`. You can also change the status of a version to `DELETED` by calling [`DeleteVersion`](sites.versions/delete).
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -147,6 +191,10 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="versionBytes", required=true)
     private String versionBytes;
 
+    /**
+     * @return The total stored bytesize of the version. This value is calculated after a version is `FINALIZED`.
+     * 
+     */
     public String versionBytes() {
         return this.versionBytes;
     }
@@ -186,61 +234,133 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
             $ = new VersionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param config The configuration for the behavior of the site. This configuration exists in the [`firebase.json`](https://firebase.google.com/docs/cli/#the_firebasejson_file) file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(ServingConfigResponse config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param createTime The time at which the version was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param createUser Identifies the user who created the version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createUser(ActingUserResponse createUser) {
             $.createUser = createUser;
             return this;
         }
 
+        /**
+         * @param deleteTime The time at which the version was `DELETED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteTime(String deleteTime) {
             $.deleteTime = deleteTime;
             return this;
         }
 
+        /**
+         * @param deleteUser Identifies the user who `DELETED` the version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteUser(ActingUserResponse deleteUser) {
             $.deleteUser = deleteUser;
             return this;
         }
 
+        /**
+         * @param fileCount The total number of files associated with the version. This value is calculated after a version is `FINALIZED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileCount(String fileCount) {
             $.fileCount = fileCount;
             return this;
         }
 
+        /**
+         * @param finalizeTime The time at which the version was `FINALIZED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder finalizeTime(String finalizeTime) {
             $.finalizeTime = finalizeTime;
             return this;
         }
 
+        /**
+         * @param finalizeUser Identifies the user who `FINALIZED` the version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder finalizeUser(ActingUserResponse finalizeUser) {
             $.finalizeUser = finalizeUser;
             return this;
         }
 
+        /**
+         * @param labels The labels used for extra metadata and/or filtering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param name The fully-qualified resource name for the version, in the format: sites/ SITE_ID/versions/VERSION_ID This name is provided in the response body when you call [`CreateVersion`](sites.versions/create).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param status The deploy status of the version. For a successful deploy, call [`CreateVersion`](sites.versions/create) to make a new version (`CREATED` status), [upload all desired files](sites.versions/populateFiles) to the version, then [update](sites.versions/patch) the version to the `FINALIZED` status. Note that if you leave the version in the `CREATED` state for more than 12 hours, the system will automatically mark the version as `ABANDONED`. You can also change the status of a version to `DELETED` by calling [`DeleteVersion`](sites.versions/delete).
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param versionBytes The total stored bytesize of the version. This value is calculated after a version is `FINALIZED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionBytes(String versionBytes) {
             $.versionBytes = versionBytes;
             return this;

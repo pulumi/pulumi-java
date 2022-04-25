@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class SecretResponse {
-    /**
-     * The relative resource name of a Secret Manager secret version, in the following form:projects/{project_number}/secrets/{secret_id}/versions/{version_id}.
-     * 
-     */
+        /**
+         * @return The relative resource name of a Secret Manager secret version, in the following form:projects/{project_number}/secrets/{secret_id}/versions/{version_id}.
+         * 
+         */
     private final String cloudSecret;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class SecretResponse {
     }
 
     /**
-     * The relative resource name of a Secret Manager secret version, in the following form:projects/{project_number}/secrets/{secret_id}/versions/{version_id}.
+     * @return The relative resource name of a Secret Manager secret version, in the following form:projects/{project_number}/secrets/{secret_id}/versions/{version_id}.
      * 
-    */
+     */
     public String cloudSecret() {
         return this.cloudSecret;
     }

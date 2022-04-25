@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GooglePrivacyDlpV2RecordTransformationsResponse {
-    /**
-     * Transform the record by applying various field transformations.
-     * 
-     */
+        /**
+         * @return Transform the record by applying various field transformations.
+         * 
+         */
     private final List<GooglePrivacyDlpV2FieldTransformationResponse> fieldTransformations;
-    /**
-     * Configuration defining which records get suppressed entirely. Records that match any suppression rule are omitted from the output.
-     * 
-     */
+        /**
+         * @return Configuration defining which records get suppressed entirely. Records that match any suppression rule are omitted from the output.
+         * 
+         */
     private final List<GooglePrivacyDlpV2RecordSuppressionResponse> recordSuppressions;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class GooglePrivacyDlpV2RecordTransformationsResponse {
     }
 
     /**
-     * Transform the record by applying various field transformations.
+     * @return Transform the record by applying various field transformations.
      * 
-    */
+     */
     public List<GooglePrivacyDlpV2FieldTransformationResponse> fieldTransformations() {
         return this.fieldTransformations;
     }
     /**
-     * Configuration defining which records get suppressed entirely. Records that match any suppression rule are omitted from the output.
+     * @return Configuration defining which records get suppressed entirely. Records that match any suppression rule are omitted from the output.
      * 
-    */
+     */
     public List<GooglePrivacyDlpV2RecordSuppressionResponse> recordSuppressions() {
         return this.recordSuppressions;
     }

@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class ReservationAffinityResponse {
-    /**
-     * Optional. Type of reservation to consume
-     * 
-     */
+        /**
+         * @return Optional. Type of reservation to consume
+         * 
+         */
     private final String consumeReservationType;
-    /**
-     * Optional. Corresponds to the label key of reservation resource.
-     * 
-     */
+        /**
+         * @return Optional. Corresponds to the label key of reservation resource.
+         * 
+         */
     private final String key;
-    /**
-     * Optional. Corresponds to the label values of reservation resource.
-     * 
-     */
+        /**
+         * @return Optional. Corresponds to the label values of reservation resource.
+         * 
+         */
     private final List<String> values;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class ReservationAffinityResponse {
     }
 
     /**
-     * Optional. Type of reservation to consume
+     * @return Optional. Type of reservation to consume
      * 
-    */
+     */
     public String consumeReservationType() {
         return this.consumeReservationType;
     }
     /**
-     * Optional. Corresponds to the label key of reservation resource.
+     * @return Optional. Corresponds to the label key of reservation resource.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Optional. Corresponds to the label values of reservation resource.
+     * @return Optional. Corresponds to the label values of reservation resource.
      * 
-    */
+     */
     public List<String> values() {
         return this.values;
     }

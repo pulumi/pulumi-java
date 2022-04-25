@@ -11,45 +11,45 @@ import java.util.Objects;
 
 @CustomType
 public final class GetWorkerPoolResult {
-    /**
-     * Time at which the request to create the `WorkerPool` was received.
-     * 
-     */
+        /**
+         * @return Time at which the request to create the `WorkerPool` was received.
+         * 
+         */
     private final String createTime;
-    /**
-     * Time at which the request to delete the `WorkerPool` was received.
-     * 
-     */
+        /**
+         * @return Time at which the request to delete the `WorkerPool` was received.
+         * 
+         */
     private final String deleteTime;
-    /**
-     * The resource name of the `WorkerPool`. Format of the name is `projects/{project_id}/workerPools/{worker_pool_id}`, where the value of {worker_pool_id} is provided in the CreateWorkerPool request.
-     * 
-     */
+        /**
+         * @return The resource name of the `WorkerPool`. Format of the name is `projects/{project_id}/workerPools/{worker_pool_id}`, where the value of {worker_pool_id} is provided in the CreateWorkerPool request.
+         * 
+         */
     private final String name;
-    /**
-     * Network configuration for the `WorkerPool`.
-     * 
-     */
+        /**
+         * @return Network configuration for the `WorkerPool`.
+         * 
+         */
     private final NetworkConfigResponse networkConfig;
-    /**
-     * Immutable. The region where the `WorkerPool` runs. Only &#34;us-central1&#34; is currently supported. Note that `region` cannot be changed once the `WorkerPool` is created.
-     * 
-     */
+        /**
+         * @return Immutable. The region where the `WorkerPool` runs. Only &#34;us-central1&#34; is currently supported. Note that `region` cannot be changed once the `WorkerPool` is created.
+         * 
+         */
     private final String region;
-    /**
-     * WorkerPool state.
-     * 
-     */
+        /**
+         * @return WorkerPool state.
+         * 
+         */
     private final String state;
-    /**
-     * Time at which the request to update the `WorkerPool` was received.
-     * 
-     */
+        /**
+         * @return Time at which the request to update the `WorkerPool` was received.
+         * 
+         */
     private final String updateTime;
-    /**
-     * Worker configuration for the `WorkerPool`.
-     * 
-     */
+        /**
+         * @return Worker configuration for the `WorkerPool`.
+         * 
+         */
     private final WorkerConfigResponse workerConfig;
 
     @CustomType.Constructor
@@ -73,58 +73,58 @@ public final class GetWorkerPoolResult {
     }
 
     /**
-     * Time at which the request to create the `WorkerPool` was received.
+     * @return Time at which the request to create the `WorkerPool` was received.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Time at which the request to delete the `WorkerPool` was received.
+     * @return Time at which the request to delete the `WorkerPool` was received.
      * 
-    */
+     */
     public String deleteTime() {
         return this.deleteTime;
     }
     /**
-     * The resource name of the `WorkerPool`. Format of the name is `projects/{project_id}/workerPools/{worker_pool_id}`, where the value of {worker_pool_id} is provided in the CreateWorkerPool request.
+     * @return The resource name of the `WorkerPool`. Format of the name is `projects/{project_id}/workerPools/{worker_pool_id}`, where the value of {worker_pool_id} is provided in the CreateWorkerPool request.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Network configuration for the `WorkerPool`.
+     * @return Network configuration for the `WorkerPool`.
      * 
-    */
+     */
     public NetworkConfigResponse networkConfig() {
         return this.networkConfig;
     }
     /**
-     * Immutable. The region where the `WorkerPool` runs. Only &#34;us-central1&#34; is currently supported. Note that `region` cannot be changed once the `WorkerPool` is created.
+     * @return Immutable. The region where the `WorkerPool` runs. Only &#34;us-central1&#34; is currently supported. Note that `region` cannot be changed once the `WorkerPool` is created.
      * 
-    */
+     */
     public String region() {
         return this.region;
     }
     /**
-     * WorkerPool state.
+     * @return WorkerPool state.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Time at which the request to update the `WorkerPool` was received.
+     * @return Time at which the request to update the `WorkerPool` was received.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }
     /**
-     * Worker configuration for the `WorkerPool`.
+     * @return Worker configuration for the `WorkerPool`.
      * 
-    */
+     */
     public WorkerConfigResponse workerConfig() {
         return this.workerConfig;
     }

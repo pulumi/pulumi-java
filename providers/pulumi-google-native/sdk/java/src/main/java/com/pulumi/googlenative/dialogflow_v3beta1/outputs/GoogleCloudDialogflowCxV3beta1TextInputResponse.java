@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowCxV3beta1TextInputResponse {
-    /**
-     * The UTF-8 encoded natural language text to be processed. Text length must not exceed 256 characters.
-     * 
-     */
+        /**
+         * @return The UTF-8 encoded natural language text to be processed. Text length must not exceed 256 characters.
+         * 
+         */
     private final String text;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GoogleCloudDialogflowCxV3beta1TextInputResponse {
     }
 
     /**
-     * The UTF-8 encoded natural language text to be processed. Text length must not exceed 256 characters.
+     * @return The UTF-8 encoded natural language text to be processed. Text length must not exceed 256 characters.
      * 
-    */
+     */
     public String text() {
         return this.text;
     }

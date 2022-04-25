@@ -21,6 +21,10 @@ public final class BucketCorsItemResponse extends com.pulumi.resources.InvokeArg
     @Import(name="maxAgeSeconds", required=true)
     private Integer maxAgeSeconds;
 
+    /**
+     * @return The value, in seconds, to return in the  Access-Control-Max-Age header used in preflight responses.
+     * 
+     */
     public Integer maxAgeSeconds() {
         return this.maxAgeSeconds;
     }
@@ -32,6 +36,10 @@ public final class BucketCorsItemResponse extends com.pulumi.resources.InvokeArg
     @Import(name="method", required=true)
     private List<String> method;
 
+    /**
+     * @return The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: &#34;*&#34; is permitted in the list of methods, and means &#34;any method&#34;.
+     * 
+     */
     public List<String> method() {
         return this.method;
     }
@@ -43,6 +51,10 @@ public final class BucketCorsItemResponse extends com.pulumi.resources.InvokeArg
     @Import(name="origin", required=true)
     private List<String> origin;
 
+    /**
+     * @return The list of Origins eligible to receive CORS response headers. Note: &#34;*&#34; is permitted in the list of origins, and means &#34;any Origin&#34;.
+     * 
+     */
     public List<String> origin() {
         return this.origin;
     }
@@ -54,6 +66,10 @@ public final class BucketCorsItemResponse extends com.pulumi.resources.InvokeArg
     @Import(name="responseHeader", required=true)
     private List<String> responseHeader;
 
+    /**
+     * @return The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains.
+     * 
+     */
     public List<String> responseHeader() {
         return this.responseHeader;
     }
@@ -85,34 +101,76 @@ public final class BucketCorsItemResponse extends com.pulumi.resources.InvokeArg
             $ = new BucketCorsItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxAgeSeconds The value, in seconds, to return in the  Access-Control-Max-Age header used in preflight responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAgeSeconds(Integer maxAgeSeconds) {
             $.maxAgeSeconds = maxAgeSeconds;
             return this;
         }
 
+        /**
+         * @param method The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: &#34;*&#34; is permitted in the list of methods, and means &#34;any method&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(List<String> method) {
             $.method = method;
             return this;
         }
 
+        /**
+         * @param method The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: &#34;*&#34; is permitted in the list of methods, and means &#34;any method&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(String... method) {
             return method(List.of(method));
         }
 
+        /**
+         * @param origin The list of Origins eligible to receive CORS response headers. Note: &#34;*&#34; is permitted in the list of origins, and means &#34;any Origin&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder origin(List<String> origin) {
             $.origin = origin;
             return this;
         }
 
+        /**
+         * @param origin The list of Origins eligible to receive CORS response headers. Note: &#34;*&#34; is permitted in the list of origins, and means &#34;any Origin&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder origin(String... origin) {
             return origin(List.of(origin));
         }
 
+        /**
+         * @param responseHeader The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseHeader(List<String> responseHeader) {
             $.responseHeader = responseHeader;
             return this;
         }
 
+        /**
+         * @param responseHeader The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseHeader(String... responseHeader) {
             return responseHeader(List.of(responseHeader));
         }

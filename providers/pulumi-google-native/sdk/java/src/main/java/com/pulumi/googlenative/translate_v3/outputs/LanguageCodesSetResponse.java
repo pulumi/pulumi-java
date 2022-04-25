@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class LanguageCodesSetResponse {
-    /**
-     * The BCP-47 language code(s) for terms defined in the glossary. All entries are unique. The list contains at least two entries. Expected to be an exact match for GlossaryTerm.language_code.
-     * 
-     */
+        /**
+         * @return The BCP-47 language code(s) for terms defined in the glossary. All entries are unique. The list contains at least two entries. Expected to be an exact match for GlossaryTerm.language_code.
+         * 
+         */
     private final List<String> languageCodes;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class LanguageCodesSetResponse {
     }
 
     /**
-     * The BCP-47 language code(s) for terms defined in the glossary. All entries are unique. The list contains at least two entries. Expected to be an exact match for GlossaryTerm.language_code.
+     * @return The BCP-47 language code(s) for terms defined in the glossary. All entries are unique. The list contains at least two entries. Expected to be an exact match for GlossaryTerm.language_code.
      * 
-    */
+     */
     public List<String> languageCodes() {
         return this.languageCodes;
     }

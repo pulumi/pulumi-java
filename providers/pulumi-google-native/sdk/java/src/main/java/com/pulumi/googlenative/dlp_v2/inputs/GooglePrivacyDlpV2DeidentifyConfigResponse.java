@@ -25,6 +25,10 @@ public final class GooglePrivacyDlpV2DeidentifyConfigResponse extends com.pulumi
     @Import(name="infoTypeTransformations", required=true)
     private GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations;
 
+    /**
+     * @return Treat the dataset as free-form text and apply the same free text transformation everywhere.
+     * 
+     */
     public GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations() {
         return this.infoTypeTransformations;
     }
@@ -36,6 +40,10 @@ public final class GooglePrivacyDlpV2DeidentifyConfigResponse extends com.pulumi
     @Import(name="recordTransformations", required=true)
     private GooglePrivacyDlpV2RecordTransformationsResponse recordTransformations;
 
+    /**
+     * @return Treat the dataset as structured. Transformations can be applied to specific locations within structured datasets, such as transforming a column within a table.
+     * 
+     */
     public GooglePrivacyDlpV2RecordTransformationsResponse recordTransformations() {
         return this.recordTransformations;
     }
@@ -47,6 +55,10 @@ public final class GooglePrivacyDlpV2DeidentifyConfigResponse extends com.pulumi
     @Import(name="transformationErrorHandling", required=true)
     private GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling;
 
+    /**
+     * @return Mode for handling transformation errors. If left unspecified, the default mode is `TransformationErrorHandling.ThrowError`.
+     * 
+     */
     public GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling() {
         return this.transformationErrorHandling;
     }
@@ -77,16 +89,34 @@ public final class GooglePrivacyDlpV2DeidentifyConfigResponse extends com.pulumi
             $ = new GooglePrivacyDlpV2DeidentifyConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param infoTypeTransformations Treat the dataset as free-form text and apply the same free text transformation everywhere.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypeTransformations(GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations) {
             $.infoTypeTransformations = infoTypeTransformations;
             return this;
         }
 
+        /**
+         * @param recordTransformations Treat the dataset as structured. Transformations can be applied to specific locations within structured datasets, such as transforming a column within a table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordTransformations(GooglePrivacyDlpV2RecordTransformationsResponse recordTransformations) {
             $.recordTransformations = recordTransformations;
             return this;
         }
 
+        /**
+         * @param transformationErrorHandling Mode for handling transformation errors. If left unspecified, the default mode is `TransformationErrorHandling.ThrowError`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transformationErrorHandling(GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling) {
             $.transformationErrorHandling = transformationErrorHandling;
             return this;

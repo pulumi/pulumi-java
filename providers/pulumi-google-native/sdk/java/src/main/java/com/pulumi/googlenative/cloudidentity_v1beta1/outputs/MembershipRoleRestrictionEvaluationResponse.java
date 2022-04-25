@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class MembershipRoleRestrictionEvaluationResponse {
-    /**
-     * The current state of the restriction
-     * 
-     */
+        /**
+         * @return The current state of the restriction
+         * 
+         */
     private final String state;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class MembershipRoleRestrictionEvaluationResponse {
     }
 
     /**
-     * The current state of the restriction
+     * @return The current state of the restriction
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

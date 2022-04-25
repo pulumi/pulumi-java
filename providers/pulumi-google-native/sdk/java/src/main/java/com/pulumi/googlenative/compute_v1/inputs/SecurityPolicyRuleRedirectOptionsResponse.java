@@ -19,6 +19,10 @@ public final class SecurityPolicyRuleRedirectOptionsResponse extends com.pulumi.
     @Import(name="target", required=true)
     private String target;
 
+    /**
+     * @return Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.
+     * 
+     */
     public String target() {
         return this.target;
     }
@@ -30,6 +34,10 @@ public final class SecurityPolicyRuleRedirectOptionsResponse extends com.pulumi.
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the redirect action.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -59,11 +67,23 @@ public final class SecurityPolicyRuleRedirectOptionsResponse extends com.pulumi.
             $ = new SecurityPolicyRuleRedirectOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param target Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(String target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param type Type of the redirect action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

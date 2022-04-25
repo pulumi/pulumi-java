@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class AcceleratorResponse {
-    /**
-     * The type of an accelator for a CDF instance.
-     * 
-     */
+        /**
+         * @return The type of an accelator for a CDF instance.
+         * 
+         */
     private final String acceleratorType;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class AcceleratorResponse {
     }
 
     /**
-     * The type of an accelator for a CDF instance.
+     * @return The type of an accelator for a CDF instance.
      * 
-    */
+     */
     public String acceleratorType() {
         return this.acceleratorType;
     }

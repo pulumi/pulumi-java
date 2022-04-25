@@ -24,6 +24,10 @@ public final class ResponsePolicyRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="behavior")
     private @Nullable Output<ResponsePolicyRuleBehavior> behavior;
 
+    /**
+     * @return Answer this query with a behavior rather than DNS data.
+     * 
+     */
     public Optional<Output<ResponsePolicyRuleBehavior>> behavior() {
         return Optional.ofNullable(this.behavior);
     }
@@ -42,6 +46,10 @@ public final class ResponsePolicyRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="dnsName")
     private @Nullable Output<String> dnsName;
 
+    /**
+     * @return The DNS name (wildcard or exact) to apply this rule to. Must be unique within the Response Policy Rule.
+     * 
+     */
     public Optional<Output<String>> dnsName() {
         return Optional.ofNullable(this.dnsName);
     }
@@ -60,6 +68,10 @@ public final class ResponsePolicyRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="localData")
     private @Nullable Output<ResponsePolicyRuleLocalDataArgs> localData;
 
+    /**
+     * @return Answer this query directly with DNS data. These ResourceRecordSets override any other DNS behavior for the matched name; in particular they override private zones, the public internet, and GCP internal DNS. No SOA nor NS types are allowed.
+     * 
+     */
     public Optional<Output<ResponsePolicyRuleLocalDataArgs>> localData() {
         return Optional.ofNullable(this.localData);
     }
@@ -85,6 +97,10 @@ public final class ResponsePolicyRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="ruleName")
     private @Nullable Output<String> ruleName;
 
+    /**
+     * @return An identifier for this rule. Must be unique with the ResponsePolicy.
+     * 
+     */
     public Optional<Output<String>> ruleName() {
         return Optional.ofNullable(this.ruleName);
     }
@@ -120,11 +136,23 @@ public final class ResponsePolicyRuleArgs extends com.pulumi.resources.ResourceA
             $ = new ResponsePolicyRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param behavior Answer this query with a behavior rather than DNS data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder behavior(@Nullable Output<ResponsePolicyRuleBehavior> behavior) {
             $.behavior = behavior;
             return this;
         }
 
+        /**
+         * @param behavior Answer this query with a behavior rather than DNS data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder behavior(ResponsePolicyRuleBehavior behavior) {
             return behavior(Output.of(behavior));
         }
@@ -138,11 +166,23 @@ public final class ResponsePolicyRuleArgs extends com.pulumi.resources.ResourceA
             return clientOperationId(Output.of(clientOperationId));
         }
 
+        /**
+         * @param dnsName The DNS name (wildcard or exact) to apply this rule to. Must be unique within the Response Policy Rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsName(@Nullable Output<String> dnsName) {
             $.dnsName = dnsName;
             return this;
         }
 
+        /**
+         * @param dnsName The DNS name (wildcard or exact) to apply this rule to. Must be unique within the Response Policy Rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsName(String dnsName) {
             return dnsName(Output.of(dnsName));
         }
@@ -156,11 +196,23 @@ public final class ResponsePolicyRuleArgs extends com.pulumi.resources.ResourceA
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param localData Answer this query directly with DNS data. These ResourceRecordSets override any other DNS behavior for the matched name; in particular they override private zones, the public internet, and GCP internal DNS. No SOA nor NS types are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localData(@Nullable Output<ResponsePolicyRuleLocalDataArgs> localData) {
             $.localData = localData;
             return this;
         }
 
+        /**
+         * @param localData Answer this query directly with DNS data. These ResourceRecordSets override any other DNS behavior for the matched name; in particular they override private zones, the public internet, and GCP internal DNS. No SOA nor NS types are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localData(ResponsePolicyRuleLocalDataArgs localData) {
             return localData(Output.of(localData));
         }
@@ -183,11 +235,23 @@ public final class ResponsePolicyRuleArgs extends com.pulumi.resources.ResourceA
             return responsePolicy(Output.of(responsePolicy));
         }
 
+        /**
+         * @param ruleName An identifier for this rule. Must be unique with the ResponsePolicy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(@Nullable Output<String> ruleName) {
             $.ruleName = ruleName;
             return this;
         }
 
+        /**
+         * @param ruleName An identifier for this rule. Must be unique with the ResponsePolicy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(String ruleName) {
             return ruleName(Output.of(ruleName));
         }

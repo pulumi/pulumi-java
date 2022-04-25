@@ -29,6 +29,10 @@ public final class DiscoveryOccurrenceArgs extends com.pulumi.resources.Resource
     @Import(name="analysisStatus")
     private @Nullable Output<DiscoveryOccurrenceAnalysisStatus> analysisStatus;
 
+    /**
+     * @return The status of discovery for the resource.
+     * 
+     */
     public Optional<Output<DiscoveryOccurrenceAnalysisStatus>> analysisStatus() {
         return Optional.ofNullable(this.analysisStatus);
     }
@@ -40,6 +44,10 @@ public final class DiscoveryOccurrenceArgs extends com.pulumi.resources.Resource
     @Import(name="analysisStatusError")
     private @Nullable Output<StatusArgs> analysisStatusError;
 
+    /**
+     * @return When an error is encountered this will contain a LocalizedMessage under details to show to the user. The LocalizedMessage is output only and populated by the API.
+     * 
+     */
     public Optional<Output<StatusArgs>> analysisStatusError() {
         return Optional.ofNullable(this.analysisStatusError);
     }
@@ -51,6 +59,10 @@ public final class DiscoveryOccurrenceArgs extends com.pulumi.resources.Resource
     @Import(name="continuousAnalysis")
     private @Nullable Output<DiscoveryOccurrenceContinuousAnalysis> continuousAnalysis;
 
+    /**
+     * @return Whether the resource is continuously analyzed.
+     * 
+     */
     public Optional<Output<DiscoveryOccurrenceContinuousAnalysis>> continuousAnalysis() {
         return Optional.ofNullable(this.continuousAnalysis);
     }
@@ -62,6 +74,10 @@ public final class DiscoveryOccurrenceArgs extends com.pulumi.resources.Resource
     @Import(name="cpe")
     private @Nullable Output<String> cpe;
 
+    /**
+     * @return The CPE of the resource being scanned.
+     * 
+     */
     public Optional<Output<String>> cpe() {
         return Optional.ofNullable(this.cpe);
     }
@@ -73,6 +89,10 @@ public final class DiscoveryOccurrenceArgs extends com.pulumi.resources.Resource
     @Import(name="lastScanTime")
     private @Nullable Output<String> lastScanTime;
 
+    /**
+     * @return The last time this resource was scanned.
+     * 
+     */
     public Optional<Output<String>> lastScanTime() {
         return Optional.ofNullable(this.lastScanTime);
     }
@@ -105,47 +125,107 @@ public final class DiscoveryOccurrenceArgs extends com.pulumi.resources.Resource
             $ = new DiscoveryOccurrenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param analysisStatus The status of discovery for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder analysisStatus(@Nullable Output<DiscoveryOccurrenceAnalysisStatus> analysisStatus) {
             $.analysisStatus = analysisStatus;
             return this;
         }
 
+        /**
+         * @param analysisStatus The status of discovery for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder analysisStatus(DiscoveryOccurrenceAnalysisStatus analysisStatus) {
             return analysisStatus(Output.of(analysisStatus));
         }
 
+        /**
+         * @param analysisStatusError When an error is encountered this will contain a LocalizedMessage under details to show to the user. The LocalizedMessage is output only and populated by the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder analysisStatusError(@Nullable Output<StatusArgs> analysisStatusError) {
             $.analysisStatusError = analysisStatusError;
             return this;
         }
 
+        /**
+         * @param analysisStatusError When an error is encountered this will contain a LocalizedMessage under details to show to the user. The LocalizedMessage is output only and populated by the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder analysisStatusError(StatusArgs analysisStatusError) {
             return analysisStatusError(Output.of(analysisStatusError));
         }
 
+        /**
+         * @param continuousAnalysis Whether the resource is continuously analyzed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder continuousAnalysis(@Nullable Output<DiscoveryOccurrenceContinuousAnalysis> continuousAnalysis) {
             $.continuousAnalysis = continuousAnalysis;
             return this;
         }
 
+        /**
+         * @param continuousAnalysis Whether the resource is continuously analyzed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder continuousAnalysis(DiscoveryOccurrenceContinuousAnalysis continuousAnalysis) {
             return continuousAnalysis(Output.of(continuousAnalysis));
         }
 
+        /**
+         * @param cpe The CPE of the resource being scanned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpe(@Nullable Output<String> cpe) {
             $.cpe = cpe;
             return this;
         }
 
+        /**
+         * @param cpe The CPE of the resource being scanned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpe(String cpe) {
             return cpe(Output.of(cpe));
         }
 
+        /**
+         * @param lastScanTime The last time this resource was scanned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastScanTime(@Nullable Output<String> lastScanTime) {
             $.lastScanTime = lastScanTime;
             return this;
         }
 
+        /**
+         * @param lastScanTime The last time this resource was scanned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastScanTime(String lastScanTime) {
             return lastScanTime(Output.of(lastScanTime));
         }

@@ -25,6 +25,10 @@ public final class OSPolicyResourcePackageResourceMSIResponse extends com.pulumi
     @Import(name="properties", required=true)
     private List<String> properties;
 
+    /**
+     * @return Additional properties to use during installation. This should be in the format of Property=Setting. Appended to the defaults of `ACTION=INSTALL REBOOT=ReallySuppress`.
+     * 
+     */
     public List<String> properties() {
         return this.properties;
     }
@@ -36,6 +40,10 @@ public final class OSPolicyResourcePackageResourceMSIResponse extends com.pulumi
     @Import(name="source", required=true)
     private OSPolicyResourceFileResponse source;
 
+    /**
+     * @return The MSI package.
+     * 
+     */
     public OSPolicyResourceFileResponse source() {
         return this.source;
     }
@@ -65,15 +73,33 @@ public final class OSPolicyResourcePackageResourceMSIResponse extends com.pulumi
             $ = new OSPolicyResourcePackageResourceMSIResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param properties Additional properties to use during installation. This should be in the format of Property=Setting. Appended to the defaults of `ACTION=INSTALL REBOOT=ReallySuppress`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(List<String> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Additional properties to use during installation. This should be in the format of Property=Setting. Appended to the defaults of `ACTION=INSTALL REBOOT=ReallySuppress`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(String... properties) {
             return properties(List.of(properties));
         }
 
+        /**
+         * @param source The MSI package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(OSPolicyResourceFileResponse source) {
             $.source = source;
             return this;

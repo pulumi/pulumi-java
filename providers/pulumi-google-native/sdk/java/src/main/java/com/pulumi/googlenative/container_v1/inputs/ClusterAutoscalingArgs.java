@@ -31,6 +31,10 @@ public final class ClusterAutoscalingArgs extends com.pulumi.resources.ResourceA
     @Import(name="autoprovisioningLocations")
     private @Nullable Output<List<String>> autoprovisioningLocations;
 
+    /**
+     * @return The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool&#39;s nodes can be created by NAP.
+     * 
+     */
     public Optional<Output<List<String>>> autoprovisioningLocations() {
         return Optional.ofNullable(this.autoprovisioningLocations);
     }
@@ -42,6 +46,10 @@ public final class ClusterAutoscalingArgs extends com.pulumi.resources.ResourceA
     @Import(name="autoprovisioningNodePoolDefaults")
     private @Nullable Output<AutoprovisioningNodePoolDefaultsArgs> autoprovisioningNodePoolDefaults;
 
+    /**
+     * @return AutoprovisioningNodePoolDefaults contains defaults for a node pool created by NAP.
+     * 
+     */
     public Optional<Output<AutoprovisioningNodePoolDefaultsArgs>> autoprovisioningNodePoolDefaults() {
         return Optional.ofNullable(this.autoprovisioningNodePoolDefaults);
     }
@@ -53,6 +61,10 @@ public final class ClusterAutoscalingArgs extends com.pulumi.resources.ResourceA
     @Import(name="autoscalingProfile")
     private @Nullable Output<ClusterAutoscalingAutoscalingProfile> autoscalingProfile;
 
+    /**
+     * @return Defines autoscaling behaviour.
+     * 
+     */
     public Optional<Output<ClusterAutoscalingAutoscalingProfile>> autoscalingProfile() {
         return Optional.ofNullable(this.autoscalingProfile);
     }
@@ -64,6 +76,10 @@ public final class ClusterAutoscalingArgs extends com.pulumi.resources.ResourceA
     @Import(name="enableNodeAutoprovisioning")
     private @Nullable Output<Boolean> enableNodeAutoprovisioning;
 
+    /**
+     * @return Enables automatic node pool creation and deletion.
+     * 
+     */
     public Optional<Output<Boolean>> enableNodeAutoprovisioning() {
         return Optional.ofNullable(this.enableNodeAutoprovisioning);
     }
@@ -75,6 +91,10 @@ public final class ClusterAutoscalingArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceLimits")
     private @Nullable Output<List<ResourceLimitArgs>> resourceLimits;
 
+    /**
+     * @return Contains global constraints regarding minimum and maximum amount of resources in the cluster.
+     * 
+     */
     public Optional<Output<List<ResourceLimitArgs>>> resourceLimits() {
         return Optional.ofNullable(this.resourceLimits);
     }
@@ -107,55 +127,127 @@ public final class ClusterAutoscalingArgs extends com.pulumi.resources.ResourceA
             $ = new ClusterAutoscalingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoprovisioningLocations The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool&#39;s nodes can be created by NAP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoprovisioningLocations(@Nullable Output<List<String>> autoprovisioningLocations) {
             $.autoprovisioningLocations = autoprovisioningLocations;
             return this;
         }
 
+        /**
+         * @param autoprovisioningLocations The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool&#39;s nodes can be created by NAP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoprovisioningLocations(List<String> autoprovisioningLocations) {
             return autoprovisioningLocations(Output.of(autoprovisioningLocations));
         }
 
+        /**
+         * @param autoprovisioningLocations The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool&#39;s nodes can be created by NAP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoprovisioningLocations(String... autoprovisioningLocations) {
             return autoprovisioningLocations(List.of(autoprovisioningLocations));
         }
 
+        /**
+         * @param autoprovisioningNodePoolDefaults AutoprovisioningNodePoolDefaults contains defaults for a node pool created by NAP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoprovisioningNodePoolDefaults(@Nullable Output<AutoprovisioningNodePoolDefaultsArgs> autoprovisioningNodePoolDefaults) {
             $.autoprovisioningNodePoolDefaults = autoprovisioningNodePoolDefaults;
             return this;
         }
 
+        /**
+         * @param autoprovisioningNodePoolDefaults AutoprovisioningNodePoolDefaults contains defaults for a node pool created by NAP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoprovisioningNodePoolDefaults(AutoprovisioningNodePoolDefaultsArgs autoprovisioningNodePoolDefaults) {
             return autoprovisioningNodePoolDefaults(Output.of(autoprovisioningNodePoolDefaults));
         }
 
+        /**
+         * @param autoscalingProfile Defines autoscaling behaviour.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingProfile(@Nullable Output<ClusterAutoscalingAutoscalingProfile> autoscalingProfile) {
             $.autoscalingProfile = autoscalingProfile;
             return this;
         }
 
+        /**
+         * @param autoscalingProfile Defines autoscaling behaviour.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingProfile(ClusterAutoscalingAutoscalingProfile autoscalingProfile) {
             return autoscalingProfile(Output.of(autoscalingProfile));
         }
 
+        /**
+         * @param enableNodeAutoprovisioning Enables automatic node pool creation and deletion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNodeAutoprovisioning(@Nullable Output<Boolean> enableNodeAutoprovisioning) {
             $.enableNodeAutoprovisioning = enableNodeAutoprovisioning;
             return this;
         }
 
+        /**
+         * @param enableNodeAutoprovisioning Enables automatic node pool creation and deletion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNodeAutoprovisioning(Boolean enableNodeAutoprovisioning) {
             return enableNodeAutoprovisioning(Output.of(enableNodeAutoprovisioning));
         }
 
+        /**
+         * @param resourceLimits Contains global constraints regarding minimum and maximum amount of resources in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLimits(@Nullable Output<List<ResourceLimitArgs>> resourceLimits) {
             $.resourceLimits = resourceLimits;
             return this;
         }
 
+        /**
+         * @param resourceLimits Contains global constraints regarding minimum and maximum amount of resources in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLimits(List<ResourceLimitArgs> resourceLimits) {
             return resourceLimits(Output.of(resourceLimits));
         }
 
+        /**
+         * @param resourceLimits Contains global constraints regarding minimum and maximum amount of resources in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLimits(ResourceLimitArgs... resourceLimits) {
             return resourceLimits(List.of(resourceLimits));
         }

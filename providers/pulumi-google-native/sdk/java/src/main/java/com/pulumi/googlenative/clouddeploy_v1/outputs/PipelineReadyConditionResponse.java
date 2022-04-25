@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class PipelineReadyConditionResponse {
-    /**
-     * True if the Pipeline is in a valid state. Otherwise at least one condition in `PipelineCondition` is in an invalid state. Iterate over those conditions and see which condition(s) has status = false to find out what is wrong with the Pipeline.
-     * 
-     */
+        /**
+         * @return True if the Pipeline is in a valid state. Otherwise at least one condition in `PipelineCondition` is in an invalid state. Iterate over those conditions and see which condition(s) has status = false to find out what is wrong with the Pipeline.
+         * 
+         */
     private final Boolean status;
-    /**
-     * Last time the condition was updated.
-     * 
-     */
+        /**
+         * @return Last time the condition was updated.
+         * 
+         */
     private final String updateTime;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class PipelineReadyConditionResponse {
     }
 
     /**
-     * True if the Pipeline is in a valid state. Otherwise at least one condition in `PipelineCondition` is in an invalid state. Iterate over those conditions and see which condition(s) has status = false to find out what is wrong with the Pipeline.
+     * @return True if the Pipeline is in a valid state. Otherwise at least one condition in `PipelineCondition` is in an invalid state. Iterate over those conditions and see which condition(s) has status = false to find out what is wrong with the Pipeline.
      * 
-    */
+     */
     public Boolean status() {
         return this.status;
     }
     /**
-     * Last time the condition was updated.
+     * @return Last time the condition was updated.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

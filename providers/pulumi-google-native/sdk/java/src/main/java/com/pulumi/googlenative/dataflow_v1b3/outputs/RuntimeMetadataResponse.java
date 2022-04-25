@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class RuntimeMetadataResponse {
-    /**
-     * The parameters for the template.
-     * 
-     */
+        /**
+         * @return The parameters for the template.
+         * 
+         */
     private final List<ParameterMetadataResponse> parameters;
-    /**
-     * SDK Info for the template.
-     * 
-     */
+        /**
+         * @return SDK Info for the template.
+         * 
+         */
     private final SDKInfoResponse sdkInfo;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class RuntimeMetadataResponse {
     }
 
     /**
-     * The parameters for the template.
+     * @return The parameters for the template.
      * 
-    */
+     */
     public List<ParameterMetadataResponse> parameters() {
         return this.parameters;
     }
     /**
-     * SDK Info for the template.
+     * @return SDK Info for the template.
      * 
-    */
+     */
     public SDKInfoResponse sdkInfo() {
         return this.sdkInfo;
     }

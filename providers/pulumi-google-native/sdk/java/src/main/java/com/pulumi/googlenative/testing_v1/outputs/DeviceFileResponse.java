@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class DeviceFileResponse {
-    /**
-     * A reference to an opaque binary blob file.
-     * 
-     */
+        /**
+         * @return A reference to an opaque binary blob file.
+         * 
+         */
     private final ObbFileResponse obbFile;
-    /**
-     * A reference to a regular file.
-     * 
-     */
+        /**
+         * @return A reference to a regular file.
+         * 
+         */
     private final RegularFileResponse regularFile;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class DeviceFileResponse {
     }
 
     /**
-     * A reference to an opaque binary blob file.
+     * @return A reference to an opaque binary blob file.
      * 
-    */
+     */
     public ObbFileResponse obbFile() {
         return this.obbFile;
     }
     /**
-     * A reference to a regular file.
+     * @return A reference to a regular file.
      * 
-    */
+     */
     public RegularFileResponse regularFile() {
         return this.regularFile;
     }

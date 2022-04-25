@@ -12,30 +12,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GetCaPoolResult {
-    /**
-     * Optional. The IssuancePolicy to control how Certificates will be issued from this CaPool.
-     * 
-     */
+        /**
+         * @return Optional. The IssuancePolicy to control how Certificates will be issued from this CaPool.
+         * 
+         */
     private final IssuancePolicyResponse issuancePolicy;
-    /**
-     * Optional. Labels with user-defined metadata.
-     * 
-     */
+        /**
+         * @return Optional. Labels with user-defined metadata.
+         * 
+         */
     private final Map<String,String> labels;
-    /**
-     * The resource name for this CaPool in the format `projects/*{@literal /}locations/*{@literal /}caPools/*`.
-     * 
-     */
+        /**
+         * @return The resource name for this CaPool in the format `projects/*{@literal /}locations/*{@literal /}caPools/*`.
+         * 
+         */
     private final String name;
-    /**
-     * Optional. The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool.
-     * 
-     */
+        /**
+         * @return Optional. The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool.
+         * 
+         */
     private final PublishingOptionsResponse publishingOptions;
-    /**
-     * Immutable. The Tier of this CaPool.
-     * 
-     */
+        /**
+         * @return Immutable. The Tier of this CaPool.
+         * 
+         */
     private final String tier;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class GetCaPoolResult {
     }
 
     /**
-     * Optional. The IssuancePolicy to control how Certificates will be issued from this CaPool.
+     * @return Optional. The IssuancePolicy to control how Certificates will be issued from this CaPool.
      * 
-    */
+     */
     public IssuancePolicyResponse issuancePolicy() {
         return this.issuancePolicy;
     }
     /**
-     * Optional. Labels with user-defined metadata.
+     * @return Optional. Labels with user-defined metadata.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The resource name for this CaPool in the format `projects/*{@literal /}locations/*{@literal /}caPools/*`.
+     * @return The resource name for this CaPool in the format `projects/*{@literal /}locations/*{@literal /}caPools/*`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Optional. The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool.
+     * @return Optional. The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool.
      * 
-    */
+     */
     public PublishingOptionsResponse publishingOptions() {
         return this.publishingOptions;
     }
     /**
-     * Immutable. The Tier of this CaPool.
+     * @return Immutable. The Tier of this CaPool.
      * 
-    */
+     */
     public String tier() {
         return this.tier;
     }

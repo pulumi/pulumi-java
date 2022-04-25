@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class FeatureStateResponse {
-    /**
-     * The high-level, machine-readable status of this Feature.
-     * 
-     */
+        /**
+         * @return The high-level, machine-readable status of this Feature.
+         * 
+         */
     private final String code;
-    /**
-     * A human-readable description of the current status.
-     * 
-     */
+        /**
+         * @return A human-readable description of the current status.
+         * 
+         */
     private final String description;
-    /**
-     * The time this status and any related Feature-specific details were updated.
-     * 
-     */
+        /**
+         * @return The time this status and any related Feature-specific details were updated.
+         * 
+         */
     private final String updateTime;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class FeatureStateResponse {
     }
 
     /**
-     * The high-level, machine-readable status of this Feature.
+     * @return The high-level, machine-readable status of this Feature.
      * 
-    */
+     */
     public String code() {
         return this.code;
     }
     /**
-     * A human-readable description of the current status.
+     * @return A human-readable description of the current status.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The time this status and any related Feature-specific details were updated.
+     * @return The time this status and any related Feature-specific details were updated.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

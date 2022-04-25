@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowV2FulfillmentFeatureArgs extends com.pul
     @Import(name="type")
     private @Nullable Output<GoogleCloudDialogflowV2FulfillmentFeatureType> type;
 
+    /**
+     * @return The type of the feature that enabled for fulfillment.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2FulfillmentFeatureType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudDialogflowV2FulfillmentFeatureArgs extends com.pul
             $ = new GoogleCloudDialogflowV2FulfillmentFeatureArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of the feature that enabled for fulfillment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<GoogleCloudDialogflowV2FulfillmentFeatureType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the feature that enabled for fulfillment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(GoogleCloudDialogflowV2FulfillmentFeatureType type) {
             return type(Output.of(type));
         }

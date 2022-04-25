@@ -24,6 +24,10 @@ public final class ResourcePolicyHourlyCycleResponse extends com.pulumi.resource
     @Import(name="duration", required=true)
     private String duration;
 
+    /**
+     * @return [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
+     * 
+     */
     public String duration() {
         return this.duration;
     }
@@ -35,6 +39,10 @@ public final class ResourcePolicyHourlyCycleResponse extends com.pulumi.resource
     @Import(name="hoursInCycle", required=true)
     private Integer hoursInCycle;
 
+    /**
+     * @return Defines a schedule with units measured in hours. The value determines how many hours pass between the start of each cycle.
+     * 
+     */
     public Integer hoursInCycle() {
         return this.hoursInCycle;
     }
@@ -46,6 +54,10 @@ public final class ResourcePolicyHourlyCycleResponse extends com.pulumi.resource
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return Time within the window to start the operations. It must be in format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-00] GMT.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -76,16 +88,34 @@ public final class ResourcePolicyHourlyCycleResponse extends com.pulumi.resource
             $ = new ResourcePolicyHourlyCycleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param duration [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(String duration) {
             $.duration = duration;
             return this;
         }
 
+        /**
+         * @param hoursInCycle Defines a schedule with units measured in hours. The value determines how many hours pass between the start of each cycle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hoursInCycle(Integer hoursInCycle) {
             $.hoursInCycle = hoursInCycle;
             return this;
         }
 
+        /**
+         * @param startTime Time within the window to start the operations. It must be in format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-00] GMT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;

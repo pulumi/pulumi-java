@@ -27,6 +27,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs 
     @Import(name="dialogflowSource")
     private @Nullable Output<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs> dialogflowSource;
 
+    /**
+     * @return The source when the conversation comes from Dialogflow.
+     * 
+     */
     public Optional<Output<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs>> dialogflowSource() {
         return Optional.ofNullable(this.dialogflowSource);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs 
     @Import(name="gcsSource")
     private @Nullable Output<GoogleCloudContactcenterinsightsV1GcsSourceArgs> gcsSource;
 
+    /**
+     * @return A Cloud Storage location specification for the audio and transcript.
+     * 
+     */
     public Optional<Output<GoogleCloudContactcenterinsightsV1GcsSourceArgs>> gcsSource() {
         return Optional.ofNullable(this.gcsSource);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs 
             $ = new GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dialogflowSource The source when the conversation comes from Dialogflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dialogflowSource(@Nullable Output<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs> dialogflowSource) {
             $.dialogflowSource = dialogflowSource;
             return this;
         }
 
+        /**
+         * @param dialogflowSource The source when the conversation comes from Dialogflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dialogflowSource(GoogleCloudContactcenterinsightsV1DialogflowSourceArgs dialogflowSource) {
             return dialogflowSource(Output.of(dialogflowSource));
         }
 
+        /**
+         * @param gcsSource A Cloud Storage location specification for the audio and transcript.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsSource(@Nullable Output<GoogleCloudContactcenterinsightsV1GcsSourceArgs> gcsSource) {
             $.gcsSource = gcsSource;
             return this;
         }
 
+        /**
+         * @param gcsSource A Cloud Storage location specification for the audio and transcript.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsSource(GoogleCloudContactcenterinsightsV1GcsSourceArgs gcsSource) {
             return gcsSource(Output.of(gcsSource));
         }

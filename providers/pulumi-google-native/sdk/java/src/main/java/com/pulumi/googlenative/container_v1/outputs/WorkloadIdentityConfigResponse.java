@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class WorkloadIdentityConfigResponse {
-    /**
-     * The workload pool to attach all Kubernetes service accounts to.
-     * 
-     */
+        /**
+         * @return The workload pool to attach all Kubernetes service accounts to.
+         * 
+         */
     private final String workloadPool;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class WorkloadIdentityConfigResponse {
     }
 
     /**
-     * The workload pool to attach all Kubernetes service accounts to.
+     * @return The workload pool to attach all Kubernetes service accounts to.
      * 
-    */
+     */
     public String workloadPool() {
         return this.workloadPool;
     }

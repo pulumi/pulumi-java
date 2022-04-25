@@ -27,6 +27,10 @@ public final class V2ApiTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="methods")
     private @Nullable Output<List<String>> methods;
 
+    /**
+     * @return Optional. List of one or more methods that can be called. If empty, all methods for the service are allowed. A wildcard (*) can be used as the last symbol. Valid examples: `google.cloud.translate.v2.TranslateService.GetSupportedLanguage` `TranslateText` `Get*` `translate.googleapis.com.Get*`
+     * 
+     */
     public Optional<Output<List<String>>> methods() {
         return Optional.ofNullable(this.methods);
     }
@@ -38,6 +42,10 @@ public final class V2ApiTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="service")
     private @Nullable Output<String> service;
 
+    /**
+     * @return The service for this restriction. It should be the canonical service name, for example: `translate.googleapis.com`. You can use [`gcloud services list`](/sdk/gcloud/reference/services/list) to get a list of services that are enabled in the project.
+     * 
+     */
     public Optional<Output<String>> service() {
         return Optional.ofNullable(this.service);
     }
@@ -67,24 +75,54 @@ public final class V2ApiTargetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new V2ApiTargetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param methods Optional. List of one or more methods that can be called. If empty, all methods for the service are allowed. A wildcard (*) can be used as the last symbol. Valid examples: `google.cloud.translate.v2.TranslateService.GetSupportedLanguage` `TranslateText` `Get*` `translate.googleapis.com.Get*`
+         * 
+         * @return builder
+         * 
+         */
         public Builder methods(@Nullable Output<List<String>> methods) {
             $.methods = methods;
             return this;
         }
 
+        /**
+         * @param methods Optional. List of one or more methods that can be called. If empty, all methods for the service are allowed. A wildcard (*) can be used as the last symbol. Valid examples: `google.cloud.translate.v2.TranslateService.GetSupportedLanguage` `TranslateText` `Get*` `translate.googleapis.com.Get*`
+         * 
+         * @return builder
+         * 
+         */
         public Builder methods(List<String> methods) {
             return methods(Output.of(methods));
         }
 
+        /**
+         * @param methods Optional. List of one or more methods that can be called. If empty, all methods for the service are allowed. A wildcard (*) can be used as the last symbol. Valid examples: `google.cloud.translate.v2.TranslateService.GetSupportedLanguage` `TranslateText` `Get*` `translate.googleapis.com.Get*`
+         * 
+         * @return builder
+         * 
+         */
         public Builder methods(String... methods) {
             return methods(List.of(methods));
         }
 
+        /**
+         * @param service The service for this restriction. It should be the canonical service name, for example: `translate.googleapis.com`. You can use [`gcloud services list`](/sdk/gcloud/reference/services/list) to get a list of services that are enabled in the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service The service for this restriction. It should be the canonical service name, for example: `translate.googleapis.com`. You can use [`gcloud services list`](/sdk/gcloud/reference/services/list) to get a list of services that are enabled in the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class JobStatisticsReservationUsageItemResponse {
-    /**
-     * Reservation name or &#34;unreserved&#34; for on-demand resources usage.
-     * 
-     */
+        /**
+         * @return Reservation name or &#34;unreserved&#34; for on-demand resources usage.
+         * 
+         */
     private final String name;
-    /**
-     * Slot-milliseconds the job spent in the given reservation.
-     * 
-     */
+        /**
+         * @return Slot-milliseconds the job spent in the given reservation.
+         * 
+         */
     private final String slotMs;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class JobStatisticsReservationUsageItemResponse {
     }
 
     /**
-     * Reservation name or &#34;unreserved&#34; for on-demand resources usage.
+     * @return Reservation name or &#34;unreserved&#34; for on-demand resources usage.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Slot-milliseconds the job spent in the given reservation.
+     * @return Slot-milliseconds the job spent in the given reservation.
      * 
-    */
+     */
     public String slotMs() {
         return this.slotMs;
     }

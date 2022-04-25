@@ -23,6 +23,10 @@ public final class GoogleTypeExprResponse extends com.pulumi.resources.InvokeArg
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -34,6 +38,10 @@ public final class GoogleTypeExprResponse extends com.pulumi.resources.InvokeArg
     @Import(name="expression", required=true)
     private String expression;
 
+    /**
+     * @return Textual representation of an expression in Common Expression Language syntax.
+     * 
+     */
     public String expression() {
         return this.expression;
     }
@@ -45,6 +53,10 @@ public final class GoogleTypeExprResponse extends com.pulumi.resources.InvokeArg
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -56,6 +68,10 @@ public final class GoogleTypeExprResponse extends com.pulumi.resources.InvokeArg
     @Import(name="title", required=true)
     private String title;
 
+    /**
+     * @return Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
+     * 
+     */
     public String title() {
         return this.title;
     }
@@ -87,21 +103,45 @@ public final class GoogleTypeExprResponse extends com.pulumi.resources.InvokeArg
             $ = new GoogleTypeExprResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param expression Textual representation of an expression in Common Expression Language syntax.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(String expression) {
             $.expression = expression;
             return this;
         }
 
+        /**
+         * @param location Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param title Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             $.title = title;
             return this;

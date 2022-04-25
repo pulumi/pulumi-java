@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ResourcePolicyWeeklyCycleResponse {
-    /**
-     * Up to 7 intervals/windows, one for each day of the week.
-     * 
-     */
+        /**
+         * @return Up to 7 intervals/windows, one for each day of the week.
+         * 
+         */
     private final List<ResourcePolicyWeeklyCycleDayOfWeekResponse> dayOfWeeks;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class ResourcePolicyWeeklyCycleResponse {
     }
 
     /**
-     * Up to 7 intervals/windows, one for each day of the week.
+     * @return Up to 7 intervals/windows, one for each day of the week.
      * 
-    */
+     */
     public List<ResourcePolicyWeeklyCycleDayOfWeekResponse> dayOfWeeks() {
         return this.dayOfWeeks;
     }

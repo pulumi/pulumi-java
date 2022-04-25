@@ -30,6 +30,10 @@ public final class RulesetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="source", required=true)
     private Output<SourceArgs> source;
 
+    /**
+     * @return `Source` for the `Ruleset`.
+     * 
+     */
     public Output<SourceArgs> source() {
         return this.source;
     }
@@ -68,11 +72,23 @@ public final class RulesetArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param source `Source` for the `Ruleset`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Output<SourceArgs> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source `Source` for the `Ruleset`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(SourceArgs source) {
             return source(Output.of(source));
         }

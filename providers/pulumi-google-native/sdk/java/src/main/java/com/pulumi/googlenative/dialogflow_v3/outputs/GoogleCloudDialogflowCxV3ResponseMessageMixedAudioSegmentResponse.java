@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResponse {
-    /**
-     * Whether the playback of this segment can be interrupted by the end user&#39;s speech and the client should then start the next Dialogflow request.
-     * 
-     */
+        /**
+         * @return Whether the playback of this segment can be interrupted by the end user&#39;s speech and the client should then start the next Dialogflow request.
+         * 
+         */
     private final Boolean allowPlaybackInterruption;
-    /**
-     * Raw audio synthesized from the Dialogflow agent&#39;s response using the output config specified in the request.
-     * 
-     */
+        /**
+         * @return Raw audio synthesized from the Dialogflow agent&#39;s response using the output config specified in the request.
+         * 
+         */
     private final String audio;
-    /**
-     * Client-specific URI that points to an audio clip accessible to the client. Dialogflow does not impose any validation on it.
-     * 
-     */
+        /**
+         * @return Client-specific URI that points to an audio clip accessible to the client. Dialogflow does not impose any validation on it.
+         * 
+         */
     private final String uri;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResp
     }
 
     /**
-     * Whether the playback of this segment can be interrupted by the end user&#39;s speech and the client should then start the next Dialogflow request.
+     * @return Whether the playback of this segment can be interrupted by the end user&#39;s speech and the client should then start the next Dialogflow request.
      * 
-    */
+     */
     public Boolean allowPlaybackInterruption() {
         return this.allowPlaybackInterruption;
     }
     /**
-     * Raw audio synthesized from the Dialogflow agent&#39;s response using the output config specified in the request.
+     * @return Raw audio synthesized from the Dialogflow agent&#39;s response using the output config specified in the request.
      * 
-    */
+     */
     public String audio() {
         return this.audio;
     }
     /**
-     * Client-specific URI that points to an audio clip accessible to the client. Dialogflow does not impose any validation on it.
+     * @return Client-specific URI that points to an audio clip accessible to the client. Dialogflow does not impose any validation on it.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

@@ -23,6 +23,10 @@ public final class GooglePrivacyDlpV2CategoricalStatsConfigResponse extends com.
     @Import(name="field", required=true)
     private GooglePrivacyDlpV2FieldIdResponse field;
 
+    /**
+     * @return Field to compute categorical stats on. All column types are supported except for arrays and structs. However, it may be more informative to use NumericalStats when the field type is supported, depending on the data.
+     * 
+     */
     public GooglePrivacyDlpV2FieldIdResponse field() {
         return this.field;
     }
@@ -51,6 +55,12 @@ public final class GooglePrivacyDlpV2CategoricalStatsConfigResponse extends com.
             $ = new GooglePrivacyDlpV2CategoricalStatsConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param field Field to compute categorical stats on. All column types are supported except for arrays and structs. However, it may be more informative to use NumericalStats when the field type is supported, depending on the data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(GooglePrivacyDlpV2FieldIdResponse field) {
             $.field = field;
             return this;

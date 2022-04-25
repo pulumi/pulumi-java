@@ -29,6 +29,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
     @Import(name="environment")
     private @Nullable Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs> environment;
 
+    /**
+     * @return The runtime environment for the job.
+     * 
+     */
     public Optional<Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs>> environment() {
         return Optional.ofNullable(this.environment);
     }
@@ -40,6 +44,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
     @Import(name="jobName", required=true)
     private Output<String> jobName;
 
+    /**
+     * @return The job name to use for the created job.
+     * 
+     */
     public Output<String> jobName() {
         return this.jobName;
     }
@@ -51,6 +59,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
     @Import(name="parameters")
     private @Nullable Output<Map<String,String>> parameters;
 
+    /**
+     * @return The runtime parameters to pass to the job.
+     * 
+     */
     public Optional<Output<Map<String,String>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -62,6 +74,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
     @Import(name="transformNameMapping")
     private @Nullable Output<Map<String,String>> transformNameMapping;
 
+    /**
+     * @return Map of transform name prefixes of the job to be replaced to the corresponding name prefixes of the new job. Only applicable when updating a pipeline.
+     * 
+     */
     public Optional<Output<Map<String,String>>> transformNameMapping() {
         return Optional.ofNullable(this.transformNameMapping);
     }
@@ -73,6 +89,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
     @Import(name="update")
     private @Nullable Output<Boolean> update;
 
+    /**
+     * @return If set, replace the existing pipeline with the name specified by jobName with this pipeline, preserving state.
+     * 
+     */
     public Optional<Output<Boolean>> update() {
         return Optional.ofNullable(this.update);
     }
@@ -105,47 +125,107 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
             $ = new GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param environment The runtime environment for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(@Nullable Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs> environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param environment The runtime environment for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs environment) {
             return environment(Output.of(environment));
         }
 
+        /**
+         * @param jobName The job name to use for the created job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobName(Output<String> jobName) {
             $.jobName = jobName;
             return this;
         }
 
+        /**
+         * @param jobName The job name to use for the created job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobName(String jobName) {
             return jobName(Output.of(jobName));
         }
 
+        /**
+         * @param parameters The runtime parameters to pass to the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The runtime parameters to pass to the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,String> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param transformNameMapping Map of transform name prefixes of the job to be replaced to the corresponding name prefixes of the new job. Only applicable when updating a pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transformNameMapping(@Nullable Output<Map<String,String>> transformNameMapping) {
             $.transformNameMapping = transformNameMapping;
             return this;
         }
 
+        /**
+         * @param transformNameMapping Map of transform name prefixes of the job to be replaced to the corresponding name prefixes of the new job. Only applicable when updating a pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transformNameMapping(Map<String,String> transformNameMapping) {
             return transformNameMapping(Output.of(transformNameMapping));
         }
 
+        /**
+         * @param update If set, replace the existing pipeline with the name specified by jobName with this pipeline, preserving state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder update(@Nullable Output<Boolean> update) {
             $.update = update;
             return this;
         }
 
+        /**
+         * @param update If set, replace the existing pipeline with the name specified by jobName with this pipeline, preserving state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder update(Boolean update) {
             return update(Output.of(update));
         }

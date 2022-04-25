@@ -23,6 +23,10 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse extends c
     @Import(name="audioUri", required=true)
     private String audioUri;
 
+    /**
+     * @return Cloud Storage URI that points to a file that contains the conversation audio.
+     * 
+     */
     public String audioUri() {
         return this.audioUri;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse extends c
     @Import(name="transcriptUri", required=true)
     private String transcriptUri;
 
+    /**
+     * @return Immutable. Cloud Storage URI that points to a file that contains the conversation transcript.
+     * 
+     */
     public String transcriptUri() {
         return this.transcriptUri;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse extends c
             $ = new GoogleCloudContactcenterinsightsV1GcsSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audioUri Cloud Storage URI that points to a file that contains the conversation audio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audioUri(String audioUri) {
             $.audioUri = audioUri;
             return this;
         }
 
+        /**
+         * @param transcriptUri Immutable. Cloud Storage URI that points to a file that contains the conversation transcript.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transcriptUri(String transcriptUri) {
             $.transcriptUri = transcriptUri;
             return this;

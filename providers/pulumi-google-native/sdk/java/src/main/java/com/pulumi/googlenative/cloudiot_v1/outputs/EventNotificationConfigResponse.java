@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class EventNotificationConfigResponse {
-    /**
-     * A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
-     * 
-     */
+        /**
+         * @return A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
+         * 
+         */
     private final String pubsubTopicName;
-    /**
-     * If the subfolder name matches this string exactly, this configuration will be used. The string must not include the leading &#39;/&#39; character. If empty, all strings are matched. This field is used only for telemetry events; subfolders are not supported for state changes.
-     * 
-     */
+        /**
+         * @return If the subfolder name matches this string exactly, this configuration will be used. The string must not include the leading &#39;/&#39; character. If empty, all strings are matched. This field is used only for telemetry events; subfolders are not supported for state changes.
+         * 
+         */
     private final String subfolderMatches;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class EventNotificationConfigResponse {
     }
 
     /**
-     * A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
+     * @return A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
      * 
-    */
+     */
     public String pubsubTopicName() {
         return this.pubsubTopicName;
     }
     /**
-     * If the subfolder name matches this string exactly, this configuration will be used. The string must not include the leading &#39;/&#39; character. If empty, all strings are matched. This field is used only for telemetry events; subfolders are not supported for state changes.
+     * @return If the subfolder name matches this string exactly, this configuration will be used. The string must not include the leading &#39;/&#39; character. If empty, all strings are matched. This field is used only for telemetry events; subfolders are not supported for state changes.
      * 
-    */
+     */
     public String subfolderMatches() {
         return this.subfolderMatches;
     }

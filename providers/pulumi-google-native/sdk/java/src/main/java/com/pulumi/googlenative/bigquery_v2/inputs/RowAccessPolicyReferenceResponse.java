@@ -19,6 +19,10 @@ public final class RowAccessPolicyReferenceResponse extends com.pulumi.resources
     @Import(name="datasetId", required=true)
     private String datasetId;
 
+    /**
+     * @return [Required] The ID of the dataset containing this row access policy.
+     * 
+     */
     public String datasetId() {
         return this.datasetId;
     }
@@ -30,6 +34,10 @@ public final class RowAccessPolicyReferenceResponse extends com.pulumi.resources
     @Import(name="policyId", required=true)
     private String policyId;
 
+    /**
+     * @return [Required] The ID of the row access policy. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
+     * 
+     */
     public String policyId() {
         return this.policyId;
     }
@@ -41,6 +49,10 @@ public final class RowAccessPolicyReferenceResponse extends com.pulumi.resources
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return [Required] The ID of the project containing this row access policy.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -52,6 +64,10 @@ public final class RowAccessPolicyReferenceResponse extends com.pulumi.resources
     @Import(name="tableId", required=true)
     private String tableId;
 
+    /**
+     * @return [Required] The ID of the table containing this row access policy.
+     * 
+     */
     public String tableId() {
         return this.tableId;
     }
@@ -83,21 +99,45 @@ public final class RowAccessPolicyReferenceResponse extends com.pulumi.resources
             $ = new RowAccessPolicyReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetId [Required] The ID of the dataset containing this row access policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(String datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
+        /**
+         * @param policyId [Required] The ID of the row access policy. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(String policyId) {
             $.policyId = policyId;
             return this;
         }
 
+        /**
+         * @param project [Required] The ID of the project containing this row access policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param tableId [Required] The ID of the table containing this row access policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableId(String tableId) {
             $.tableId = tableId;
             return this;

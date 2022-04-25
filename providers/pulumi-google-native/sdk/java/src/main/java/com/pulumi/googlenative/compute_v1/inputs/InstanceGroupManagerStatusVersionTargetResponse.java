@@ -19,6 +19,10 @@ public final class InstanceGroupManagerStatusVersionTargetResponse extends com.p
     @Import(name="isReached", required=true)
     private Boolean isReached;
 
+    /**
+     * @return A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances&#39; target version are specified by version field on Instance Group Manager.
+     * 
+     */
     public Boolean isReached() {
         return this.isReached;
     }
@@ -47,6 +51,12 @@ public final class InstanceGroupManagerStatusVersionTargetResponse extends com.p
             $ = new InstanceGroupManagerStatusVersionTargetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isReached A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances&#39; target version are specified by version field on Instance Group Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isReached(Boolean isReached) {
             $.isReached = isReached;
             return this;

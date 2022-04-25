@@ -29,6 +29,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizedNetwork")
     private @Nullable Output<String> authorizedNetwork;
 
+    /**
+     * @return The full name of the Google Compute Engine [network](/compute/docs/networks-and-firewalls#networks) to which the instance is connected. If left unspecified, the `default` network will be used.
+     * 
+     */
     public Optional<Output<String>> authorizedNetwork() {
         return Optional.ofNullable(this.authorizedNetwork);
     }
@@ -40,6 +44,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return User provided name for the instance, which is only used for display purposes. Cannot be more than 80 characters.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -58,6 +66,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceMessages")
     private @Nullable Output<List<InstanceMessageArgs>> instanceMessages;
 
+    /**
+     * @return List of messages that describe the current state of the Memcached instance.
+     * 
+     */
     public Optional<Output<List<InstanceMessageArgs>>> instanceMessages() {
         return Optional.ofNullable(this.instanceMessages);
     }
@@ -69,6 +81,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -87,6 +103,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="memcacheVersion")
     private @Nullable Output<InstanceMemcacheVersion> memcacheVersion;
 
+    /**
+     * @return The major version of Memcached software. If not provided, latest supported version will be used. Currently the latest supported major version is `MEMCACHE_1_5`. The minor version will be automatically determined by our system based on the latest supported minor version.
+     * 
+     */
     public Optional<Output<InstanceMemcacheVersion>> memcacheVersion() {
         return Optional.ofNullable(this.memcacheVersion);
     }
@@ -98,6 +118,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Unique name of the resource in this scope including project and location using the form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Memcached instances are managed and addressed at the regional level so `location_id` here refers to a Google Cloud region; however, users may choose which zones Memcached nodes should be provisioned in within an instance. Refer to zones field for more details.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -109,6 +133,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeConfig", required=true)
     private Output<NodeConfigArgs> nodeConfig;
 
+    /**
+     * @return Configuration for Memcached nodes.
+     * 
+     */
     public Output<NodeConfigArgs> nodeConfig() {
         return this.nodeConfig;
     }
@@ -120,6 +148,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeCount", required=true)
     private Output<Integer> nodeCount;
 
+    /**
+     * @return Number of nodes in the Memcached instance.
+     * 
+     */
     public Output<Integer> nodeCount() {
         return this.nodeCount;
     }
@@ -131,6 +163,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
     private @Nullable Output<MemcacheParametersArgs> parameters;
 
+    /**
+     * @return User defined parameters to apply to the memcached process on each node.
+     * 
+     */
     public Optional<Output<MemcacheParametersArgs>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -149,6 +185,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="zones")
     private @Nullable Output<List<String>> zones;
 
+    /**
+     * @return Zones in which Memcached nodes should be provisioned. Memcached nodes will be equally distributed across these zones. If not provided, the service will by default create nodes in all zones in the region for the instance.
+     * 
+     */
     public Optional<Output<List<String>>> zones() {
         return Optional.ofNullable(this.zones);
     }
@@ -189,20 +229,44 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizedNetwork The full name of the Google Compute Engine [network](/compute/docs/networks-and-firewalls#networks) to which the instance is connected. If left unspecified, the `default` network will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedNetwork(@Nullable Output<String> authorizedNetwork) {
             $.authorizedNetwork = authorizedNetwork;
             return this;
         }
 
+        /**
+         * @param authorizedNetwork The full name of the Google Compute Engine [network](/compute/docs/networks-and-firewalls#networks) to which the instance is connected. If left unspecified, the `default` network will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedNetwork(String authorizedNetwork) {
             return authorizedNetwork(Output.of(authorizedNetwork));
         }
 
+        /**
+         * @param displayName User provided name for the instance, which is only used for display purposes. Cannot be more than 80 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName User provided name for the instance, which is only used for display purposes. Cannot be more than 80 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
@@ -216,24 +280,54 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             return instanceId(Output.of(instanceId));
         }
 
+        /**
+         * @param instanceMessages List of messages that describe the current state of the Memcached instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceMessages(@Nullable Output<List<InstanceMessageArgs>> instanceMessages) {
             $.instanceMessages = instanceMessages;
             return this;
         }
 
+        /**
+         * @param instanceMessages List of messages that describe the current state of the Memcached instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceMessages(List<InstanceMessageArgs> instanceMessages) {
             return instanceMessages(Output.of(instanceMessages));
         }
 
+        /**
+         * @param instanceMessages List of messages that describe the current state of the Memcached instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceMessages(InstanceMessageArgs... instanceMessages) {
             return instanceMessages(List.of(instanceMessages));
         }
 
+        /**
+         * @param labels Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -247,47 +341,107 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param memcacheVersion The major version of Memcached software. If not provided, latest supported version will be used. Currently the latest supported major version is `MEMCACHE_1_5`. The minor version will be automatically determined by our system based on the latest supported minor version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memcacheVersion(@Nullable Output<InstanceMemcacheVersion> memcacheVersion) {
             $.memcacheVersion = memcacheVersion;
             return this;
         }
 
+        /**
+         * @param memcacheVersion The major version of Memcached software. If not provided, latest supported version will be used. Currently the latest supported major version is `MEMCACHE_1_5`. The minor version will be automatically determined by our system based on the latest supported minor version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memcacheVersion(InstanceMemcacheVersion memcacheVersion) {
             return memcacheVersion(Output.of(memcacheVersion));
         }
 
+        /**
+         * @param name Unique name of the resource in this scope including project and location using the form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Memcached instances are managed and addressed at the regional level so `location_id` here refers to a Google Cloud region; however, users may choose which zones Memcached nodes should be provisioned in within an instance. Refer to zones field for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Unique name of the resource in this scope including project and location using the form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Memcached instances are managed and addressed at the regional level so `location_id` here refers to a Google Cloud region; however, users may choose which zones Memcached nodes should be provisioned in within an instance. Refer to zones field for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param nodeConfig Configuration for Memcached nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeConfig(Output<NodeConfigArgs> nodeConfig) {
             $.nodeConfig = nodeConfig;
             return this;
         }
 
+        /**
+         * @param nodeConfig Configuration for Memcached nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeConfig(NodeConfigArgs nodeConfig) {
             return nodeConfig(Output.of(nodeConfig));
         }
 
+        /**
+         * @param nodeCount Number of nodes in the Memcached instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeCount(Output<Integer> nodeCount) {
             $.nodeCount = nodeCount;
             return this;
         }
 
+        /**
+         * @param nodeCount Number of nodes in the Memcached instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeCount(Integer nodeCount) {
             return nodeCount(Output.of(nodeCount));
         }
 
+        /**
+         * @param parameters User defined parameters to apply to the memcached process on each node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<MemcacheParametersArgs> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters User defined parameters to apply to the memcached process on each node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(MemcacheParametersArgs parameters) {
             return parameters(Output.of(parameters));
         }
@@ -301,15 +455,33 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param zones Zones in which Memcached nodes should be provisioned. Memcached nodes will be equally distributed across these zones. If not provided, the service will by default create nodes in all zones in the region for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(@Nullable Output<List<String>> zones) {
             $.zones = zones;
             return this;
         }
 
+        /**
+         * @param zones Zones in which Memcached nodes should be provisioned. Memcached nodes will be equally distributed across these zones. If not provided, the service will by default create nodes in all zones in the region for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(List<String> zones) {
             return zones(Output.of(zones));
         }
 
+        /**
+         * @param zones Zones in which Memcached nodes should be provisioned. Memcached nodes will be equally distributed across these zones. If not provided, the service will by default create nodes in all zones in the region for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(String... zones) {
             return zones(List.of(zones));
         }

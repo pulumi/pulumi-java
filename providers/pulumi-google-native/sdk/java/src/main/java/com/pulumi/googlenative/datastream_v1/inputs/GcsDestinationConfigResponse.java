@@ -26,6 +26,10 @@ public final class GcsDestinationConfigResponse extends com.pulumi.resources.Inv
     @Import(name="avroFileFormat", required=true)
     private AvroFileFormatResponse avroFileFormat;
 
+    /**
+     * @return AVRO file format configuration.
+     * 
+     */
     public AvroFileFormatResponse avroFileFormat() {
         return this.avroFileFormat;
     }
@@ -37,6 +41,10 @@ public final class GcsDestinationConfigResponse extends com.pulumi.resources.Inv
     @Import(name="fileRotationInterval", required=true)
     private String fileRotationInterval;
 
+    /**
+     * @return The maximum duration for which new events are added before a file is closed and a new file is created.
+     * 
+     */
     public String fileRotationInterval() {
         return this.fileRotationInterval;
     }
@@ -48,6 +56,10 @@ public final class GcsDestinationConfigResponse extends com.pulumi.resources.Inv
     @Import(name="fileRotationMb", required=true)
     private Integer fileRotationMb;
 
+    /**
+     * @return The maximum file size to be saved in the bucket.
+     * 
+     */
     public Integer fileRotationMb() {
         return this.fileRotationMb;
     }
@@ -59,6 +71,10 @@ public final class GcsDestinationConfigResponse extends com.pulumi.resources.Inv
     @Import(name="jsonFileFormat", required=true)
     private JsonFileFormatResponse jsonFileFormat;
 
+    /**
+     * @return JSON file format configuration.
+     * 
+     */
     public JsonFileFormatResponse jsonFileFormat() {
         return this.jsonFileFormat;
     }
@@ -70,6 +86,10 @@ public final class GcsDestinationConfigResponse extends com.pulumi.resources.Inv
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return Path inside the Cloud Storage bucket to write data to.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -102,26 +122,56 @@ public final class GcsDestinationConfigResponse extends com.pulumi.resources.Inv
             $ = new GcsDestinationConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param avroFileFormat AVRO file format configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder avroFileFormat(AvroFileFormatResponse avroFileFormat) {
             $.avroFileFormat = avroFileFormat;
             return this;
         }
 
+        /**
+         * @param fileRotationInterval The maximum duration for which new events are added before a file is closed and a new file is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileRotationInterval(String fileRotationInterval) {
             $.fileRotationInterval = fileRotationInterval;
             return this;
         }
 
+        /**
+         * @param fileRotationMb The maximum file size to be saved in the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileRotationMb(Integer fileRotationMb) {
             $.fileRotationMb = fileRotationMb;
             return this;
         }
 
+        /**
+         * @param jsonFileFormat JSON file format configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jsonFileFormat(JsonFileFormatResponse jsonFileFormat) {
             $.jsonFileFormat = jsonFileFormat;
             return this;
         }
 
+        /**
+         * @param path Path inside the Cloud Storage bucket to write data to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;

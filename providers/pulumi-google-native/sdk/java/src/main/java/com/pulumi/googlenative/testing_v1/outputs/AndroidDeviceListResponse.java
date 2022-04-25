@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class AndroidDeviceListResponse {
-    /**
-     * A list of Android devices.
-     * 
-     */
+        /**
+         * @return A list of Android devices.
+         * 
+         */
     private final List<AndroidDeviceResponse> androidDevices;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class AndroidDeviceListResponse {
     }
 
     /**
-     * A list of Android devices.
+     * @return A list of Android devices.
      * 
-    */
+     */
     public List<AndroidDeviceResponse> androidDevices() {
         return this.androidDevices;
     }

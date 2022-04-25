@@ -26,6 +26,10 @@ public final class ResourcesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="cpu", required=true)
     private Double cpu;
 
+    /**
+     * @return Number of CPU cores needed.
+     * 
+     */
     public Double cpu() {
         return this.cpu;
     }
@@ -37,6 +41,10 @@ public final class ResourcesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskGb", required=true)
     private Double diskGb;
 
+    /**
+     * @return Disk size (GB) needed.
+     * 
+     */
     public Double diskGb() {
         return this.diskGb;
     }
@@ -48,6 +56,10 @@ public final class ResourcesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="kmsKeyReference", required=true)
     private String kmsKeyReference;
 
+    /**
+     * @return The name of the encryption key that is stored in Google Cloud KMS. Only should be used by Cloud Composer to encrypt the vm disk
+     * 
+     */
     public String kmsKeyReference() {
         return this.kmsKeyReference;
     }
@@ -59,6 +71,10 @@ public final class ResourcesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="memoryGb", required=true)
     private Double memoryGb;
 
+    /**
+     * @return Memory (GB) needed.
+     * 
+     */
     public Double memoryGb() {
         return this.memoryGb;
     }
@@ -70,6 +86,10 @@ public final class ResourcesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="volumes", required=true)
     private List<VolumeResponse> volumes;
 
+    /**
+     * @return User specified volumes.
+     * 
+     */
     public List<VolumeResponse> volumes() {
         return this.volumes;
     }
@@ -102,31 +122,67 @@ public final class ResourcesResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ResourcesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpu Number of CPU cores needed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(Double cpu) {
             $.cpu = cpu;
             return this;
         }
 
+        /**
+         * @param diskGb Disk size (GB) needed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskGb(Double diskGb) {
             $.diskGb = diskGb;
             return this;
         }
 
+        /**
+         * @param kmsKeyReference The name of the encryption key that is stored in Google Cloud KMS. Only should be used by Cloud Composer to encrypt the vm disk
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyReference(String kmsKeyReference) {
             $.kmsKeyReference = kmsKeyReference;
             return this;
         }
 
+        /**
+         * @param memoryGb Memory (GB) needed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryGb(Double memoryGb) {
             $.memoryGb = memoryGb;
             return this;
         }
 
+        /**
+         * @param volumes User specified volumes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(List<VolumeResponse> volumes) {
             $.volumes = volumes;
             return this;
         }
 
+        /**
+         * @param volumes User specified volumes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(VolumeResponse... volumes) {
             return volumes(List.of(volumes));
         }

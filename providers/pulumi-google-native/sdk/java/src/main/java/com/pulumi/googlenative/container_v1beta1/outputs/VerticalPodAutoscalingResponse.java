@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class VerticalPodAutoscalingResponse {
-    /**
-     * Enables vertical pod autoscaling.
-     * 
-     */
+        /**
+         * @return Enables vertical pod autoscaling.
+         * 
+         */
     private final Boolean enabled;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class VerticalPodAutoscalingResponse {
     }
 
     /**
-     * Enables vertical pod autoscaling.
+     * @return Enables vertical pod autoscaling.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }

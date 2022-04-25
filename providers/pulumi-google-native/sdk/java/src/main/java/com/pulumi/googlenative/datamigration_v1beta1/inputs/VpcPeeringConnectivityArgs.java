@@ -26,6 +26,10 @@ public final class VpcPeeringConnectivityArgs extends com.pulumi.resources.Resou
     @Import(name="vpc")
     private @Nullable Output<String> vpc;
 
+    /**
+     * @return The name of the VPC network to peer with the Cloud SQL private network.
+     * 
+     */
     public Optional<Output<String>> vpc() {
         return Optional.ofNullable(this.vpc);
     }
@@ -54,11 +58,23 @@ public final class VpcPeeringConnectivityArgs extends com.pulumi.resources.Resou
             $ = new VpcPeeringConnectivityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param vpc The name of the VPC network to peer with the Cloud SQL private network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpc(@Nullable Output<String> vpc) {
             $.vpc = vpc;
             return this;
         }
 
+        /**
+         * @param vpc The name of the VPC network to peer with the Cloud SQL private network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpc(String vpc) {
             return vpc(Output.of(vpc));
         }

@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class HttpConfigResponse {
-    /**
-     * If enabled, allows devices to use DeviceService via the HTTP protocol. Otherwise, any requests to DeviceService will fail for this registry.
-     * 
-     */
+        /**
+         * @return If enabled, allows devices to use DeviceService via the HTTP protocol. Otherwise, any requests to DeviceService will fail for this registry.
+         * 
+         */
     private final String httpEnabledState;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class HttpConfigResponse {
     }
 
     /**
-     * If enabled, allows devices to use DeviceService via the HTTP protocol. Otherwise, any requests to DeviceService will fail for this registry.
+     * @return If enabled, allows devices to use DeviceService via the HTTP protocol. Otherwise, any requests to DeviceService will fail for this registry.
      * 
-    */
+     */
     public String httpEnabledState() {
         return this.httpEnabledState;
     }

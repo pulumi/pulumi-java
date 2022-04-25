@@ -13,50 +13,50 @@ import java.util.Objects;
 
 @CustomType
 public final class GetRuntimeResult {
-    /**
-     * The config settings for accessing runtime.
-     * 
-     */
+        /**
+         * @return The config settings for accessing runtime.
+         * 
+         */
     private final RuntimeAccessConfigResponse accessConfig;
-    /**
-     * Runtime creation time.
-     * 
-     */
+        /**
+         * @return Runtime creation time.
+         * 
+         */
     private final String createTime;
-    /**
-     * Runtime health_state.
-     * 
-     */
+        /**
+         * @return Runtime health_state.
+         * 
+         */
     private final String healthState;
-    /**
-     * Contains Runtime daemon metrics such as Service status and JupyterLab stats.
-     * 
-     */
+        /**
+         * @return Contains Runtime daemon metrics such as Service status and JupyterLab stats.
+         * 
+         */
     private final RuntimeMetricsResponse metrics;
-    /**
-     * The resource name of the runtime. Format: `projects/{project}/locations/{location}/runtimes/{runtimeId}`
-     * 
-     */
+        /**
+         * @return The resource name of the runtime. Format: `projects/{project}/locations/{location}/runtimes/{runtimeId}`
+         * 
+         */
     private final String name;
-    /**
-     * The config settings for software inside the runtime.
-     * 
-     */
+        /**
+         * @return The config settings for software inside the runtime.
+         * 
+         */
     private final RuntimeSoftwareConfigResponse softwareConfig;
-    /**
-     * Runtime state.
-     * 
-     */
+        /**
+         * @return Runtime state.
+         * 
+         */
     private final String state;
-    /**
-     * Runtime update time.
-     * 
-     */
+        /**
+         * @return Runtime update time.
+         * 
+         */
     private final String updateTime;
-    /**
-     * Use a Compute Engine VM image to start the managed notebook instance.
-     * 
-     */
+        /**
+         * @return Use a Compute Engine VM image to start the managed notebook instance.
+         * 
+         */
     private final VirtualMachineResponse virtualMachine;
 
     @CustomType.Constructor
@@ -82,65 +82,65 @@ public final class GetRuntimeResult {
     }
 
     /**
-     * The config settings for accessing runtime.
+     * @return The config settings for accessing runtime.
      * 
-    */
+     */
     public RuntimeAccessConfigResponse accessConfig() {
         return this.accessConfig;
     }
     /**
-     * Runtime creation time.
+     * @return Runtime creation time.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Runtime health_state.
+     * @return Runtime health_state.
      * 
-    */
+     */
     public String healthState() {
         return this.healthState;
     }
     /**
-     * Contains Runtime daemon metrics such as Service status and JupyterLab stats.
+     * @return Contains Runtime daemon metrics such as Service status and JupyterLab stats.
      * 
-    */
+     */
     public RuntimeMetricsResponse metrics() {
         return this.metrics;
     }
     /**
-     * The resource name of the runtime. Format: `projects/{project}/locations/{location}/runtimes/{runtimeId}`
+     * @return The resource name of the runtime. Format: `projects/{project}/locations/{location}/runtimes/{runtimeId}`
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The config settings for software inside the runtime.
+     * @return The config settings for software inside the runtime.
      * 
-    */
+     */
     public RuntimeSoftwareConfigResponse softwareConfig() {
         return this.softwareConfig;
     }
     /**
-     * Runtime state.
+     * @return Runtime state.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Runtime update time.
+     * @return Runtime update time.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }
     /**
-     * Use a Compute Engine VM image to start the managed notebook instance.
+     * @return Use a Compute Engine VM image to start the managed notebook instance.
      * 
-    */
+     */
     public VirtualMachineResponse virtualMachine() {
         return this.virtualMachine;
     }

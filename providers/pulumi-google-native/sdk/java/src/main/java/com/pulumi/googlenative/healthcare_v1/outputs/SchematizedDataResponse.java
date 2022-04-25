@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class SchematizedDataResponse {
-    /**
-     * JSON output of the parser.
-     * 
-     */
+        /**
+         * @return JSON output of the parser.
+         * 
+         */
     private final String data;
-    /**
-     * The error output of the parser.
-     * 
-     */
+        /**
+         * @return The error output of the parser.
+         * 
+         */
     private final String error;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class SchematizedDataResponse {
     }
 
     /**
-     * JSON output of the parser.
+     * @return JSON output of the parser.
      * 
-    */
+     */
     public String data() {
         return this.data;
     }
     /**
-     * The error output of the parser.
+     * @return The error output of the parser.
      * 
-    */
+     */
     public String error() {
         return this.error;
     }

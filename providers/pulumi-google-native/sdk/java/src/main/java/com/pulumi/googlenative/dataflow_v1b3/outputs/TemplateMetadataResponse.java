@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class TemplateMetadataResponse {
-    /**
-     * Optional. A description of the template.
-     * 
-     */
+        /**
+         * @return Optional. A description of the template.
+         * 
+         */
     private final String description;
-    /**
-     * The name of the template.
-     * 
-     */
+        /**
+         * @return The name of the template.
+         * 
+         */
     private final String name;
-    /**
-     * The parameters for the template.
-     * 
-     */
+        /**
+         * @return The parameters for the template.
+         * 
+         */
     private final List<ParameterMetadataResponse> parameters;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class TemplateMetadataResponse {
     }
 
     /**
-     * Optional. A description of the template.
+     * @return Optional. A description of the template.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The name of the template.
+     * @return The name of the template.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The parameters for the template.
+     * @return The parameters for the template.
      * 
-    */
+     */
     public List<ParameterMetadataResponse> parameters() {
         return this.parameters;
     }

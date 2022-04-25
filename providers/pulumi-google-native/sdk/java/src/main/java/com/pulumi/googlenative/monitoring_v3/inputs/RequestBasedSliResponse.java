@@ -24,6 +24,10 @@ public final class RequestBasedSliResponse extends com.pulumi.resources.InvokeAr
     @Import(name="distributionCut", required=true)
     private DistributionCutResponse distributionCut;
 
+    /**
+     * @return distribution_cut is used when good_service is a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution.
+     * 
+     */
     public DistributionCutResponse distributionCut() {
         return this.distributionCut;
     }
@@ -35,6 +39,10 @@ public final class RequestBasedSliResponse extends com.pulumi.resources.InvokeAr
     @Import(name="goodTotalRatio", required=true)
     private TimeSeriesRatioResponse goodTotalRatio;
 
+    /**
+     * @return good_total_ratio is used when the ratio of good_service to total_service is computed from two TimeSeries.
+     * 
+     */
     public TimeSeriesRatioResponse goodTotalRatio() {
         return this.goodTotalRatio;
     }
@@ -64,11 +72,23 @@ public final class RequestBasedSliResponse extends com.pulumi.resources.InvokeAr
             $ = new RequestBasedSliResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param distributionCut distribution_cut is used when good_service is a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionCut(DistributionCutResponse distributionCut) {
             $.distributionCut = distributionCut;
             return this;
         }
 
+        /**
+         * @param goodTotalRatio good_total_ratio is used when the ratio of good_service to total_service is computed from two TimeSeries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goodTotalRatio(TimeSeriesRatioResponse goodTotalRatio) {
             $.goodTotalRatio = goodTotalRatio;
             return this;

@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class SigningKeyResponse {
-    /**
-     * key_id is an identifier for the signing key.
-     * 
-     */
+        /**
+         * @return key_id is an identifier for the signing key.
+         * 
+         */
     private final String keyId;
-    /**
-     * This field contains the corresponding signature scheme. Eg: &#34;rsassa-pss-sha256&#34;.
-     * 
-     */
+        /**
+         * @return This field contains the corresponding signature scheme. Eg: &#34;rsassa-pss-sha256&#34;.
+         * 
+         */
     private final String keyScheme;
-    /**
-     * This field identifies the specific signing method. Eg: &#34;rsa&#34;, &#34;ed25519&#34;, and &#34;ecdsa&#34;.
-     * 
-     */
+        /**
+         * @return This field identifies the specific signing method. Eg: &#34;rsa&#34;, &#34;ed25519&#34;, and &#34;ecdsa&#34;.
+         * 
+         */
     private final String keyType;
-    /**
-     * This field contains the actual public key.
-     * 
-     */
+        /**
+         * @return This field contains the actual public key.
+         * 
+         */
     private final String publicKeyValue;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class SigningKeyResponse {
     }
 
     /**
-     * key_id is an identifier for the signing key.
+     * @return key_id is an identifier for the signing key.
      * 
-    */
+     */
     public String keyId() {
         return this.keyId;
     }
     /**
-     * This field contains the corresponding signature scheme. Eg: &#34;rsassa-pss-sha256&#34;.
+     * @return This field contains the corresponding signature scheme. Eg: &#34;rsassa-pss-sha256&#34;.
      * 
-    */
+     */
     public String keyScheme() {
         return this.keyScheme;
     }
     /**
-     * This field identifies the specific signing method. Eg: &#34;rsa&#34;, &#34;ed25519&#34;, and &#34;ecdsa&#34;.
+     * @return This field identifies the specific signing method. Eg: &#34;rsa&#34;, &#34;ed25519&#34;, and &#34;ecdsa&#34;.
      * 
-    */
+     */
     public String keyType() {
         return this.keyType;
     }
     /**
-     * This field contains the actual public key.
+     * @return This field contains the actual public key.
      * 
-    */
+     */
     public String publicKeyValue() {
         return this.publicKeyValue;
     }

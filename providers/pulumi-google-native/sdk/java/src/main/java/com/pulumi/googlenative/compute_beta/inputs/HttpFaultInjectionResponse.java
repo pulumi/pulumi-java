@@ -24,6 +24,10 @@ public final class HttpFaultInjectionResponse extends com.pulumi.resources.Invok
     @Import(name="abort", required=true)
     private HttpFaultAbortResponse abort;
 
+    /**
+     * @return The specification for how client requests are aborted as part of fault injection.
+     * 
+     */
     public HttpFaultAbortResponse abort() {
         return this.abort;
     }
@@ -35,6 +39,10 @@ public final class HttpFaultInjectionResponse extends com.pulumi.resources.Invok
     @Import(name="delay", required=true)
     private HttpFaultDelayResponse delay;
 
+    /**
+     * @return The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
+     * 
+     */
     public HttpFaultDelayResponse delay() {
         return this.delay;
     }
@@ -64,11 +72,23 @@ public final class HttpFaultInjectionResponse extends com.pulumi.resources.Invok
             $ = new HttpFaultInjectionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param abort The specification for how client requests are aborted as part of fault injection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder abort(HttpFaultAbortResponse abort) {
             $.abort = abort;
             return this;
         }
 
+        /**
+         * @param delay The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delay(HttpFaultDelayResponse delay) {
             $.delay = delay;
             return this;

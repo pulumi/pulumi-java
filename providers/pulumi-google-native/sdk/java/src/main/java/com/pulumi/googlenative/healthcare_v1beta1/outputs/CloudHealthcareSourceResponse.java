@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class CloudHealthcareSourceResponse {
-    /**
-     * Full path of a Cloud Healthcare API resource.
-     * 
-     */
+        /**
+         * @return Full path of a Cloud Healthcare API resource.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class CloudHealthcareSourceResponse {
     }
 
     /**
-     * Full path of a Cloud Healthcare API resource.
+     * @return Full path of a Cloud Healthcare API resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

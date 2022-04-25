@@ -31,6 +31,10 @@ public final class CompensationEntryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="amount")
     private @Nullable Output<MoneyArgs> amount;
 
+    /**
+     * @return Optional. Compensation amount.
+     * 
+     */
     public Optional<Output<MoneyArgs>> amount() {
         return Optional.ofNullable(this.amount);
     }
@@ -42,6 +46,10 @@ public final class CompensationEntryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. Compensation description. For example, could indicate equity terms or provide additional context to an estimated bonus.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -53,6 +61,10 @@ public final class CompensationEntryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="expectedUnitsPerYear")
     private @Nullable Output<Double> expectedUnitsPerYear;
 
+    /**
+     * @return Optional. Expected number of units paid each year. If not specified, when Job.employment_types is FULLTIME, a default value is inferred based on unit. Default values: - HOURLY: 2080 - DAILY: 260 - WEEKLY: 52 - MONTHLY: 12 - ANNUAL: 1
+     * 
+     */
     public Optional<Output<Double>> expectedUnitsPerYear() {
         return Optional.ofNullable(this.expectedUnitsPerYear);
     }
@@ -64,6 +76,10 @@ public final class CompensationEntryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="range")
     private @Nullable Output<CompensationRangeArgs> range;
 
+    /**
+     * @return Optional. Compensation range.
+     * 
+     */
     public Optional<Output<CompensationRangeArgs>> range() {
         return Optional.ofNullable(this.range);
     }
@@ -75,6 +91,10 @@ public final class CompensationEntryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type")
     private @Nullable Output<CompensationEntryType> type;
 
+    /**
+     * @return Optional. Compensation type. Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.
+     * 
+     */
     public Optional<Output<CompensationEntryType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -86,6 +106,10 @@ public final class CompensationEntryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="unit")
     private @Nullable Output<CompensationEntryUnit> unit;
 
+    /**
+     * @return Optional. Frequency of the specified amount. Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
+     * 
+     */
     public Optional<Output<CompensationEntryUnit>> unit() {
         return Optional.ofNullable(this.unit);
     }
@@ -119,56 +143,128 @@ public final class CompensationEntryArgs extends com.pulumi.resources.ResourceAr
             $ = new CompensationEntryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param amount Optional. Compensation amount.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amount(@Nullable Output<MoneyArgs> amount) {
             $.amount = amount;
             return this;
         }
 
+        /**
+         * @param amount Optional. Compensation amount.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amount(MoneyArgs amount) {
             return amount(Output.of(amount));
         }
 
+        /**
+         * @param description Optional. Compensation description. For example, could indicate equity terms or provide additional context to an estimated bonus.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. Compensation description. For example, could indicate equity terms or provide additional context to an estimated bonus.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param expectedUnitsPerYear Optional. Expected number of units paid each year. If not specified, when Job.employment_types is FULLTIME, a default value is inferred based on unit. Default values: - HOURLY: 2080 - DAILY: 260 - WEEKLY: 52 - MONTHLY: 12 - ANNUAL: 1
+         * 
+         * @return builder
+         * 
+         */
         public Builder expectedUnitsPerYear(@Nullable Output<Double> expectedUnitsPerYear) {
             $.expectedUnitsPerYear = expectedUnitsPerYear;
             return this;
         }
 
+        /**
+         * @param expectedUnitsPerYear Optional. Expected number of units paid each year. If not specified, when Job.employment_types is FULLTIME, a default value is inferred based on unit. Default values: - HOURLY: 2080 - DAILY: 260 - WEEKLY: 52 - MONTHLY: 12 - ANNUAL: 1
+         * 
+         * @return builder
+         * 
+         */
         public Builder expectedUnitsPerYear(Double expectedUnitsPerYear) {
             return expectedUnitsPerYear(Output.of(expectedUnitsPerYear));
         }
 
+        /**
+         * @param range Optional. Compensation range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder range(@Nullable Output<CompensationRangeArgs> range) {
             $.range = range;
             return this;
         }
 
+        /**
+         * @param range Optional. Compensation range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder range(CompensationRangeArgs range) {
             return range(Output.of(range));
         }
 
+        /**
+         * @param type Optional. Compensation type. Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<CompensationEntryType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Optional. Compensation type. Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(CompensationEntryType type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param unit Optional. Frequency of the specified amount. Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unit(@Nullable Output<CompensationEntryUnit> unit) {
             $.unit = unit;
             return this;
         }
 
+        /**
+         * @param unit Optional. Frequency of the specified amount. Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unit(CompensationEntryUnit unit) {
             return unit(Output.of(unit));
         }

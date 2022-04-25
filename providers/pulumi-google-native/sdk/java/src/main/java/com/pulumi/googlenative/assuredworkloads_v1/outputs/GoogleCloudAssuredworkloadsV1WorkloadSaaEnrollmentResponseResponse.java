@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse {
-    /**
-     * Indicates SAA enrollment setup error if any.
-     * 
-     */
+        /**
+         * @return Indicates SAA enrollment setup error if any.
+         * 
+         */
     private final List<String> setupErrors;
-    /**
-     * Indicates SAA enrollment status of a given workload.
-     * 
-     */
+        /**
+         * @return Indicates SAA enrollment status of a given workload.
+         * 
+         */
     private final String setupStatus;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseRes
     }
 
     /**
-     * Indicates SAA enrollment setup error if any.
+     * @return Indicates SAA enrollment setup error if any.
      * 
-    */
+     */
     public List<String> setupErrors() {
         return this.setupErrors;
     }
     /**
-     * Indicates SAA enrollment status of a given workload.
+     * @return Indicates SAA enrollment status of a given workload.
      * 
-    */
+     */
     public String setupStatus() {
         return this.setupStatus;
     }

@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class AptSettingsResponse {
-    /**
-     * List of packages to exclude from update. These packages will be excluded
-     * 
-     */
+        /**
+         * @return List of packages to exclude from update. These packages will be excluded
+         * 
+         */
     private final List<String> excludes;
-    /**
-     * An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field cannot be specified with any other patch configuration fields.
-     * 
-     */
+        /**
+         * @return An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field cannot be specified with any other patch configuration fields.
+         * 
+         */
     private final List<String> exclusivePackages;
-    /**
-     * By changing the type to DIST, the patching is performed using `apt-get dist-upgrade` instead.
-     * 
-     */
+        /**
+         * @return By changing the type to DIST, the patching is performed using `apt-get dist-upgrade` instead.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class AptSettingsResponse {
     }
 
     /**
-     * List of packages to exclude from update. These packages will be excluded
+     * @return List of packages to exclude from update. These packages will be excluded
      * 
-    */
+     */
     public List<String> excludes() {
         return this.excludes;
     }
     /**
-     * An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field cannot be specified with any other patch configuration fields.
+     * @return An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field cannot be specified with any other patch configuration fields.
      * 
-    */
+     */
     public List<String> exclusivePackages() {
         return this.exclusivePackages;
     }
     /**
-     * By changing the type to DIST, the patching is performed using `apt-get dist-upgrade` instead.
+     * @return By changing the type to DIST, the patching is performed using `apt-get dist-upgrade` instead.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

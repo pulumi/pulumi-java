@@ -24,6 +24,10 @@ public final class RatioPartResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="aggregation", required=true)
     private AggregationResponse aggregation;
 
+    /**
+     * @return By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.
+     * 
+     */
     public AggregationResponse aggregation() {
         return this.aggregation;
     }
@@ -35,6 +39,10 @@ public final class RatioPartResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="filter", required=true)
     private String filter;
 
+    /**
+     * @return The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies the metric types, resources, and projects to query.
+     * 
+     */
     public String filter() {
         return this.filter;
     }
@@ -64,11 +72,23 @@ public final class RatioPartResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RatioPartResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aggregation By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aggregation(AggregationResponse aggregation) {
             $.aggregation = aggregation;
             return this;
         }
 
+        /**
+         * @param filter The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies the metric types, resources, and projects to query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(String filter) {
             $.filter = filter;
             return this;

@@ -28,6 +28,10 @@ public final class GooglePrivacyDlpV2CryptoKeyArgs extends com.pulumi.resources.
     @Import(name="kmsWrapped")
     private @Nullable Output<GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs> kmsWrapped;
 
+    /**
+     * @return Key wrapped using Cloud KMS
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs>> kmsWrapped() {
         return Optional.ofNullable(this.kmsWrapped);
     }
@@ -39,6 +43,10 @@ public final class GooglePrivacyDlpV2CryptoKeyArgs extends com.pulumi.resources.
     @Import(name="transient")
     private @Nullable Output<GooglePrivacyDlpV2TransientCryptoKeyArgs> transient_;
 
+    /**
+     * @return Transient crypto key
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2TransientCryptoKeyArgs>> transient_() {
         return Optional.ofNullable(this.transient_);
     }
@@ -50,6 +58,10 @@ public final class GooglePrivacyDlpV2CryptoKeyArgs extends com.pulumi.resources.
     @Import(name="unwrapped")
     private @Nullable Output<GooglePrivacyDlpV2UnwrappedCryptoKeyArgs> unwrapped;
 
+    /**
+     * @return Unwrapped crypto key
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2UnwrappedCryptoKeyArgs>> unwrapped() {
         return Optional.ofNullable(this.unwrapped);
     }
@@ -80,29 +92,65 @@ public final class GooglePrivacyDlpV2CryptoKeyArgs extends com.pulumi.resources.
             $ = new GooglePrivacyDlpV2CryptoKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsWrapped Key wrapped using Cloud KMS
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsWrapped(@Nullable Output<GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs> kmsWrapped) {
             $.kmsWrapped = kmsWrapped;
             return this;
         }
 
+        /**
+         * @param kmsWrapped Key wrapped using Cloud KMS
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsWrapped(GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs kmsWrapped) {
             return kmsWrapped(Output.of(kmsWrapped));
         }
 
+        /**
+         * @param transient_ Transient crypto key
+         * 
+         * @return builder
+         * 
+         */
         public Builder transient_(@Nullable Output<GooglePrivacyDlpV2TransientCryptoKeyArgs> transient_) {
             $.transient_ = transient_;
             return this;
         }
 
+        /**
+         * @param transient_ Transient crypto key
+         * 
+         * @return builder
+         * 
+         */
         public Builder transient_(GooglePrivacyDlpV2TransientCryptoKeyArgs transient_) {
             return transient_(Output.of(transient_));
         }
 
+        /**
+         * @param unwrapped Unwrapped crypto key
+         * 
+         * @return builder
+         * 
+         */
         public Builder unwrapped(@Nullable Output<GooglePrivacyDlpV2UnwrappedCryptoKeyArgs> unwrapped) {
             $.unwrapped = unwrapped;
             return this;
         }
 
+        /**
+         * @param unwrapped Unwrapped crypto key
+         * 
+         * @return builder
+         * 
+         */
         public Builder unwrapped(GooglePrivacyDlpV2UnwrappedCryptoKeyArgs unwrapped) {
             return unwrapped(Output.of(unwrapped));
         }

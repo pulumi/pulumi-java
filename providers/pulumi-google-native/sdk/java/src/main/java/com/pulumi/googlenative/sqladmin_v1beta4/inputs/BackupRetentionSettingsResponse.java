@@ -24,6 +24,10 @@ public final class BackupRetentionSettingsResponse extends com.pulumi.resources.
     @Import(name="retainedBackups", required=true)
     private Integer retainedBackups;
 
+    /**
+     * @return Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit is &#39;COUNT&#39;, we will retain this many backups.
+     * 
+     */
     public Integer retainedBackups() {
         return this.retainedBackups;
     }
@@ -35,6 +39,10 @@ public final class BackupRetentionSettingsResponse extends com.pulumi.resources.
     @Import(name="retentionUnit", required=true)
     private String retentionUnit;
 
+    /**
+     * @return The unit that &#39;retained_backups&#39; represents.
+     * 
+     */
     public String retentionUnit() {
         return this.retentionUnit;
     }
@@ -64,11 +72,23 @@ public final class BackupRetentionSettingsResponse extends com.pulumi.resources.
             $ = new BackupRetentionSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param retainedBackups Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit is &#39;COUNT&#39;, we will retain this many backups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retainedBackups(Integer retainedBackups) {
             $.retainedBackups = retainedBackups;
             return this;
         }
 
+        /**
+         * @param retentionUnit The unit that &#39;retained_backups&#39; represents.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionUnit(String retentionUnit) {
             $.retentionUnit = retentionUnit;
             return this;

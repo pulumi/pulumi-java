@@ -16,45 +16,45 @@ import java.util.Objects;
 
 @CustomType
 public final class GooglePrivacyDlpV2CustomInfoTypeResponse {
-    /**
-     * Set of detection rules to apply to all findings of this CustomInfoType. Rules are applied in order that they are specified. Not supported for the `surrogate_type` CustomInfoType.
-     * 
-     */
+        /**
+         * @return Set of detection rules to apply to all findings of this CustomInfoType. Rules are applied in order that they are specified. Not supported for the `surrogate_type` CustomInfoType.
+         * 
+         */
     private final List<GooglePrivacyDlpV2DetectionRuleResponse> detectionRules;
-    /**
-     * A list of phrases to detect as a CustomInfoType.
-     * 
-     */
+        /**
+         * @return A list of phrases to detect as a CustomInfoType.
+         * 
+         */
     private final GooglePrivacyDlpV2DictionaryResponse dictionary;
-    /**
-     * If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.
-     * 
-     */
+        /**
+         * @return If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.
+         * 
+         */
     private final String exclusionType;
-    /**
-     * CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing infoTypes and that infoType is specified in `InspectContent.info_types` field. Specifying the latter adds findings to the one detected by the system. If built-in info type is not specified in `InspectContent.info_types` list then the name is treated as a custom info type.
-     * 
-     */
+        /**
+         * @return CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing infoTypes and that infoType is specified in `InspectContent.info_types` field. Specifying the latter adds findings to the one detected by the system. If built-in info type is not specified in `InspectContent.info_types` list then the name is treated as a custom info type.
+         * 
+         */
     private final GooglePrivacyDlpV2InfoTypeResponse infoType;
-    /**
-     * Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria specified by the rule. Defaults to `VERY_LIKELY` if not specified.
-     * 
-     */
+        /**
+         * @return Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria specified by the rule. Defaults to `VERY_LIKELY` if not specified.
+         * 
+         */
     private final String likelihood;
-    /**
-     * Regular expression based CustomInfoType.
-     * 
-     */
+        /**
+         * @return Regular expression based CustomInfoType.
+         * 
+         */
     private final GooglePrivacyDlpV2RegexResponse regex;
-    /**
-     * Load an existing `StoredInfoType` resource for use in `InspectDataSource`. Not currently supported in `InspectContent`.
-     * 
-     */
+        /**
+         * @return Load an existing `StoredInfoType` resource for use in `InspectDataSource`. Not currently supported in `InspectContent`.
+         * 
+         */
     private final GooglePrivacyDlpV2StoredTypeResponse storedType;
-    /**
-     * Message for detecting output from deidentification transformations that support reversing.
-     * 
-     */
+        /**
+         * @return Message for detecting output from deidentification transformations that support reversing.
+         * 
+         */
     private final GooglePrivacyDlpV2SurrogateTypeResponse surrogateType;
 
     @CustomType.Constructor
@@ -78,58 +78,58 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse {
     }
 
     /**
-     * Set of detection rules to apply to all findings of this CustomInfoType. Rules are applied in order that they are specified. Not supported for the `surrogate_type` CustomInfoType.
+     * @return Set of detection rules to apply to all findings of this CustomInfoType. Rules are applied in order that they are specified. Not supported for the `surrogate_type` CustomInfoType.
      * 
-    */
+     */
     public List<GooglePrivacyDlpV2DetectionRuleResponse> detectionRules() {
         return this.detectionRules;
     }
     /**
-     * A list of phrases to detect as a CustomInfoType.
+     * @return A list of phrases to detect as a CustomInfoType.
      * 
-    */
+     */
     public GooglePrivacyDlpV2DictionaryResponse dictionary() {
         return this.dictionary;
     }
     /**
-     * If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.
+     * @return If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.
      * 
-    */
+     */
     public String exclusionType() {
         return this.exclusionType;
     }
     /**
-     * CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing infoTypes and that infoType is specified in `InspectContent.info_types` field. Specifying the latter adds findings to the one detected by the system. If built-in info type is not specified in `InspectContent.info_types` list then the name is treated as a custom info type.
+     * @return CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing infoTypes and that infoType is specified in `InspectContent.info_types` field. Specifying the latter adds findings to the one detected by the system. If built-in info type is not specified in `InspectContent.info_types` list then the name is treated as a custom info type.
      * 
-    */
+     */
     public GooglePrivacyDlpV2InfoTypeResponse infoType() {
         return this.infoType;
     }
     /**
-     * Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria specified by the rule. Defaults to `VERY_LIKELY` if not specified.
+     * @return Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria specified by the rule. Defaults to `VERY_LIKELY` if not specified.
      * 
-    */
+     */
     public String likelihood() {
         return this.likelihood;
     }
     /**
-     * Regular expression based CustomInfoType.
+     * @return Regular expression based CustomInfoType.
      * 
-    */
+     */
     public GooglePrivacyDlpV2RegexResponse regex() {
         return this.regex;
     }
     /**
-     * Load an existing `StoredInfoType` resource for use in `InspectDataSource`. Not currently supported in `InspectContent`.
+     * @return Load an existing `StoredInfoType` resource for use in `InspectDataSource`. Not currently supported in `InspectContent`.
      * 
-    */
+     */
     public GooglePrivacyDlpV2StoredTypeResponse storedType() {
         return this.storedType;
     }
     /**
-     * Message for detecting output from deidentification transformations that support reversing.
+     * @return Message for detecting output from deidentification transformations that support reversing.
      * 
-    */
+     */
     public GooglePrivacyDlpV2SurrogateTypeResponse surrogateType() {
         return this.surrogateType;
     }

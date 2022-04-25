@@ -24,6 +24,10 @@ public final class ReplicationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="automatic", required=true)
     private AutomaticResponse automatic;
 
+    /**
+     * @return The Secret will automatically be replicated without any restrictions.
+     * 
+     */
     public AutomaticResponse automatic() {
         return this.automatic;
     }
@@ -35,6 +39,10 @@ public final class ReplicationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="userManaged", required=true)
     private UserManagedResponse userManaged;
 
+    /**
+     * @return The Secret will only be replicated into the locations specified.
+     * 
+     */
     public UserManagedResponse userManaged() {
         return this.userManaged;
     }
@@ -64,11 +72,23 @@ public final class ReplicationResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ReplicationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automatic The Secret will automatically be replicated without any restrictions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automatic(AutomaticResponse automatic) {
             $.automatic = automatic;
             return this;
         }
 
+        /**
+         * @param userManaged The Secret will only be replicated into the locations specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userManaged(UserManagedResponse userManaged) {
             $.userManaged = userManaged;
             return this;

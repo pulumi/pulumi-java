@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class SingleClusterRoutingResponse {
-    /**
-     * Whether or not `CheckAndMutateRow` and `ReadModifyWriteRow` requests are allowed by this app profile. It is unsafe to send these requests to the same table/row/column in multiple clusters.
-     * 
-     */
+        /**
+         * @return Whether or not `CheckAndMutateRow` and `ReadModifyWriteRow` requests are allowed by this app profile. It is unsafe to send these requests to the same table/row/column in multiple clusters.
+         * 
+         */
     private final Boolean allowTransactionalWrites;
-    /**
-     * The cluster to which read/write requests should be routed.
-     * 
-     */
+        /**
+         * @return The cluster to which read/write requests should be routed.
+         * 
+         */
     private final String clusterId;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class SingleClusterRoutingResponse {
     }
 
     /**
-     * Whether or not `CheckAndMutateRow` and `ReadModifyWriteRow` requests are allowed by this app profile. It is unsafe to send these requests to the same table/row/column in multiple clusters.
+     * @return Whether or not `CheckAndMutateRow` and `ReadModifyWriteRow` requests are allowed by this app profile. It is unsafe to send these requests to the same table/row/column in multiple clusters.
      * 
-    */
+     */
     public Boolean allowTransactionalWrites() {
         return this.allowTransactionalWrites;
     }
     /**
-     * The cluster to which read/write requests should be routed.
+     * @return The cluster to which read/write requests should be routed.
      * 
-    */
+     */
     public String clusterId() {
         return this.clusterId;
     }

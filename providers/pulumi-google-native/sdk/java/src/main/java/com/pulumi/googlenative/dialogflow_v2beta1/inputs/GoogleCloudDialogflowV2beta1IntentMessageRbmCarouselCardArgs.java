@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs 
     @Import(name="cardContents", required=true)
     private Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs>> cardContents;
 
+    /**
+     * @return The cards in the carousel. A carousel must have at least 2 cards and at most 10.
+     * 
+     */
     public Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs>> cardContents() {
         return this.cardContents;
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs 
     @Import(name="cardWidth", required=true)
     private Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth> cardWidth;
 
+    /**
+     * @return The width of the cards in the carousel.
+     * 
+     */
     public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth> cardWidth() {
         return this.cardWidth;
     }
@@ -66,24 +74,54 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs 
             $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cardContents The cards in the carousel. A carousel must have at least 2 cards and at most 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cardContents(Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs>> cardContents) {
             $.cardContents = cardContents;
             return this;
         }
 
+        /**
+         * @param cardContents The cards in the carousel. A carousel must have at least 2 cards and at most 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cardContents(List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs> cardContents) {
             return cardContents(Output.of(cardContents));
         }
 
+        /**
+         * @param cardContents The cards in the carousel. A carousel must have at least 2 cards and at most 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cardContents(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs... cardContents) {
             return cardContents(List.of(cardContents));
         }
 
+        /**
+         * @param cardWidth The width of the cards in the carousel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cardWidth(Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth> cardWidth) {
             $.cardWidth = cardWidth;
             return this;
         }
 
+        /**
+         * @param cardWidth The width of the cards in the carousel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cardWidth(GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth cardWidth) {
             return cardWidth(Output.of(cardWidth));
         }

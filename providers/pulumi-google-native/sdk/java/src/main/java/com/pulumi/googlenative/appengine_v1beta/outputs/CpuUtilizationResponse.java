@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class CpuUtilizationResponse {
-    /**
-     * Period of time over which CPU utilization is calculated.
-     * 
-     */
+        /**
+         * @return Period of time over which CPU utilization is calculated.
+         * 
+         */
     private final String aggregationWindowLength;
-    /**
-     * Target CPU utilization ratio to maintain when scaling. Must be between 0 and 1.
-     * 
-     */
+        /**
+         * @return Target CPU utilization ratio to maintain when scaling. Must be between 0 and 1.
+         * 
+         */
     private final Double targetUtilization;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class CpuUtilizationResponse {
     }
 
     /**
-     * Period of time over which CPU utilization is calculated.
+     * @return Period of time over which CPU utilization is calculated.
      * 
-    */
+     */
     public String aggregationWindowLength() {
         return this.aggregationWindowLength;
     }
     /**
-     * Target CPU utilization ratio to maintain when scaling. Must be between 0 and 1.
+     * @return Target CPU utilization ratio to maintain when scaling. Must be between 0 and 1.
      * 
-    */
+     */
     public Double targetUtilization() {
         return this.targetUtilization;
     }

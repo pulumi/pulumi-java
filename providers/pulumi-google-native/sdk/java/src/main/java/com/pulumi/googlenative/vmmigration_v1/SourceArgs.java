@@ -24,6 +24,10 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return User-provided description of the source.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -35,6 +39,10 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return The labels of the source.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -74,6 +82,10 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vmware")
     private @Nullable Output<VmwareSourceDetailsArgs> vmware;
 
+    /**
+     * @return Vmware type source details.
+     * 
+     */
     public Optional<Output<VmwareSourceDetailsArgs>> vmware() {
         return Optional.ofNullable(this.vmware);
     }
@@ -108,20 +120,44 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description User-provided description of the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description User-provided description of the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param labels The labels of the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels The labels of the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -162,11 +198,23 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
             return sourceId(Output.of(sourceId));
         }
 
+        /**
+         * @param vmware Vmware type source details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmware(@Nullable Output<VmwareSourceDetailsArgs> vmware) {
             $.vmware = vmware;
             return this;
         }
 
+        /**
+         * @param vmware Vmware type source details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmware(VmwareSourceDetailsArgs vmware) {
             return vmware(Output.of(vmware));
         }

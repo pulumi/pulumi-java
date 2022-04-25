@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsResponse ex
     @Import(name="enableSpeechAdaptation", required=true)
     private Boolean enableSpeechAdaptation;
 
+    /**
+     * @return Whether to use speech adaptation for speech recognition.
+     * 
+     */
     public Boolean enableSpeechAdaptation() {
         return this.enableSpeechAdaptation;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsResponse ex
             $ = new GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableSpeechAdaptation Whether to use speech adaptation for speech recognition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSpeechAdaptation(Boolean enableSpeechAdaptation) {
             $.enableSpeechAdaptation = enableSpeechAdaptation;
             return this;

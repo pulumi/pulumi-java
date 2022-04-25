@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class OSPolicyResourcePackageResourceGooGetResponse {
-    /**
-     * Package name.
-     * 
-     */
+        /**
+         * @return Package name.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class OSPolicyResourcePackageResourceGooGetResponse {
     }
 
     /**
-     * Package name.
+     * @return Package name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

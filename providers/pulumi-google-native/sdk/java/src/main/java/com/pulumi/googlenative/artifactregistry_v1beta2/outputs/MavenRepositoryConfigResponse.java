@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class MavenRepositoryConfigResponse {
-    /**
-     * The repository with this flag will allow publishing the same snapshot versions.
-     * 
-     */
+        /**
+         * @return The repository with this flag will allow publishing the same snapshot versions.
+         * 
+         */
     private final Boolean allowSnapshotOverwrites;
-    /**
-     * Version policy defines the versions that the registry will accept.
-     * 
-     */
+        /**
+         * @return Version policy defines the versions that the registry will accept.
+         * 
+         */
     private final String versionPolicy;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class MavenRepositoryConfigResponse {
     }
 
     /**
-     * The repository with this flag will allow publishing the same snapshot versions.
+     * @return The repository with this flag will allow publishing the same snapshot versions.
      * 
-    */
+     */
     public Boolean allowSnapshotOverwrites() {
         return this.allowSnapshotOverwrites;
     }
     /**
-     * Version policy defines the versions that the registry will accept.
+     * @return Version policy defines the versions that the registry will accept.
      * 
-    */
+     */
     public String versionPolicy() {
         return this.versionPolicy;
     }

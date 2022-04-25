@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GatewayConfigResponse {
-    /**
-     * Indicates how to authorize and/or authenticate devices to access the gateway.
-     * 
-     */
+        /**
+         * @return Indicates how to authorize and/or authenticate devices to access the gateway.
+         * 
+         */
     private final String gatewayAuthMethod;
-    /**
-     * Indicates whether the device is a gateway.
-     * 
-     */
+        /**
+         * @return Indicates whether the device is a gateway.
+         * 
+         */
     private final String gatewayType;
-    /**
-     * [Output only] The ID of the gateway the device accessed most recently.
-     * 
-     */
+        /**
+         * @return [Output only] The ID of the gateway the device accessed most recently.
+         * 
+         */
     private final String lastAccessedGatewayId;
-    /**
-     * [Output only] The most recent time at which the device accessed the gateway specified in `last_accessed_gateway`.
-     * 
-     */
+        /**
+         * @return [Output only] The most recent time at which the device accessed the gateway specified in `last_accessed_gateway`.
+         * 
+         */
     private final String lastAccessedGatewayTime;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class GatewayConfigResponse {
     }
 
     /**
-     * Indicates how to authorize and/or authenticate devices to access the gateway.
+     * @return Indicates how to authorize and/or authenticate devices to access the gateway.
      * 
-    */
+     */
     public String gatewayAuthMethod() {
         return this.gatewayAuthMethod;
     }
     /**
-     * Indicates whether the device is a gateway.
+     * @return Indicates whether the device is a gateway.
      * 
-    */
+     */
     public String gatewayType() {
         return this.gatewayType;
     }
     /**
-     * [Output only] The ID of the gateway the device accessed most recently.
+     * @return [Output only] The ID of the gateway the device accessed most recently.
      * 
-    */
+     */
     public String lastAccessedGatewayId() {
         return this.lastAccessedGatewayId;
     }
     /**
-     * [Output only] The most recent time at which the device accessed the gateway specified in `last_accessed_gateway`.
+     * @return [Output only] The most recent time at which the device accessed the gateway specified in `last_accessed_gateway`.
      * 
-    */
+     */
     public String lastAccessedGatewayTime() {
         return this.lastAccessedGatewayTime;
     }

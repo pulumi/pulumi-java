@@ -9,16 +9,16 @@ import java.util.Objects;
 
 @CustomType
 public final class ManagedZoneServiceDirectoryConfigNamespaceResponse {
-    /**
-     * The time that the namespace backing this zone was deleted; an empty string if it still exists. This is in RFC3339 text format. Output only.
-     * 
-     */
+        /**
+         * @return The time that the namespace backing this zone was deleted; an empty string if it still exists. This is in RFC3339 text format. Output only.
+         * 
+         */
     private final String deletionTime;
     private final String kind;
-    /**
-     * The fully qualified URL of the namespace associated with the zone. Format must be https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace}
-     * 
-     */
+        /**
+         * @return The fully qualified URL of the namespace associated with the zone. Format must be https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace}
+         * 
+         */
     private final String namespaceUrl;
 
     @CustomType.Constructor
@@ -32,9 +32,9 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceResponse {
     }
 
     /**
-     * The time that the namespace backing this zone was deleted; an empty string if it still exists. This is in RFC3339 text format. Output only.
+     * @return The time that the namespace backing this zone was deleted; an empty string if it still exists. This is in RFC3339 text format. Output only.
      * 
-    */
+     */
     public String deletionTime() {
         return this.deletionTime;
     }
@@ -42,9 +42,9 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceResponse {
         return this.kind;
     }
     /**
-     * The fully qualified URL of the namespace associated with the zone. Format must be https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace}
+     * @return The fully qualified URL of the namespace associated with the zone. Format must be https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace}
      * 
-    */
+     */
     public String namespaceUrl() {
         return this.namespaceUrl;
     }

@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse {
-    /**
-     * Database name.
-     * 
-     */
+        /**
+         * @return Database name.
+         * 
+         */
     private final String database;
-    /**
-     * Cloud SQL instance ID in the format of `project:location:instance`.
-     * 
-     */
+        /**
+         * @return Cloud SQL instance ID in the format of `project:location:instance`.
+         * 
+         */
     private final String instanceId;
-    /**
-     * Type of the Cloud SQL database.
-     * 
-     */
+        /**
+         * @return Type of the Cloud SQL database.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecRespons
     }
 
     /**
-     * Database name.
+     * @return Database name.
      * 
-    */
+     */
     public String database() {
         return this.database;
     }
     /**
-     * Cloud SQL instance ID in the format of `project:location:instance`.
+     * @return Cloud SQL instance ID in the format of `project:location:instance`.
      * 
-    */
+     */
     public String instanceId() {
         return this.instanceId;
     }
     /**
-     * Type of the Cloud SQL database.
+     * @return Type of the Cloud SQL database.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

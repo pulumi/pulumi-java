@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class TextStreamResponse {
-    /**
-     * The codec for this text stream. The default is `webvtt`. Supported text codecs: - `srt` - `ttml` - `cea608` - `cea708` - `webvtt`
-     * 
-     */
+        /**
+         * @return The codec for this text stream. The default is `webvtt`. Supported text codecs: - `srt` - `ttml` - `cea608` - `cea708` - `webvtt`
+         * 
+         */
     private final String codec;
-    /**
-     * The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.
-     * 
-     */
+        /**
+         * @return The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.
+         * 
+         */
     private final List<TextMappingResponse> mapping;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class TextStreamResponse {
     }
 
     /**
-     * The codec for this text stream. The default is `webvtt`. Supported text codecs: - `srt` - `ttml` - `cea608` - `cea708` - `webvtt`
+     * @return The codec for this text stream. The default is `webvtt`. Supported text codecs: - `srt` - `ttml` - `cea608` - `cea708` - `webvtt`
      * 
-    */
+     */
     public String codec() {
         return this.codec;
     }
     /**
-     * The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.
+     * @return The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.
      * 
-    */
+     */
     public List<TextMappingResponse> mapping() {
         return this.mapping;
     }

@@ -28,6 +28,10 @@ public final class XyChartResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="chartOptions", required=true)
     private ChartOptionsResponse chartOptions;
 
+    /**
+     * @return Display options for the chart.
+     * 
+     */
     public ChartOptionsResponse chartOptions() {
         return this.chartOptions;
     }
@@ -39,6 +43,10 @@ public final class XyChartResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataSets", required=true)
     private List<DataSetResponse> dataSets;
 
+    /**
+     * @return The data displayed in this chart.
+     * 
+     */
     public List<DataSetResponse> dataSets() {
         return this.dataSets;
     }
@@ -50,6 +58,10 @@ public final class XyChartResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="thresholds", required=true)
     private List<ThresholdResponse> thresholds;
 
+    /**
+     * @return Threshold lines drawn horizontally across the chart.
+     * 
+     */
     public List<ThresholdResponse> thresholds() {
         return this.thresholds;
     }
@@ -61,6 +73,10 @@ public final class XyChartResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="timeshiftDuration", required=true)
     private String timeshiftDuration;
 
+    /**
+     * @return The duration used to display a comparison chart. A comparison chart simultaneously shows values from two similar-length time periods (e.g., week-over-week metrics). The duration must be positive, and it can only be applied to charts with data sets of LINE plot type.
+     * 
+     */
     public String timeshiftDuration() {
         return this.timeshiftDuration;
     }
@@ -72,6 +88,10 @@ public final class XyChartResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="xAxis", required=true)
     private AxisResponse xAxis;
 
+    /**
+     * @return The properties applied to the X axis.
+     * 
+     */
     public AxisResponse xAxis() {
         return this.xAxis;
     }
@@ -83,6 +103,10 @@ public final class XyChartResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="y2Axis", required=true)
     private AxisResponse y2Axis;
 
+    /**
+     * @return The properties applied to the Y2 axis.
+     * 
+     */
     public AxisResponse y2Axis() {
         return this.y2Axis;
     }
@@ -94,6 +118,10 @@ public final class XyChartResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="yAxis", required=true)
     private AxisResponse yAxis;
 
+    /**
+     * @return The properties applied to the Y axis.
+     * 
+     */
     public AxisResponse yAxis() {
         return this.yAxis;
     }
@@ -128,44 +156,98 @@ public final class XyChartResponse extends com.pulumi.resources.InvokeArgs {
             $ = new XyChartResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param chartOptions Display options for the chart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder chartOptions(ChartOptionsResponse chartOptions) {
             $.chartOptions = chartOptions;
             return this;
         }
 
+        /**
+         * @param dataSets The data displayed in this chart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSets(List<DataSetResponse> dataSets) {
             $.dataSets = dataSets;
             return this;
         }
 
+        /**
+         * @param dataSets The data displayed in this chart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSets(DataSetResponse... dataSets) {
             return dataSets(List.of(dataSets));
         }
 
+        /**
+         * @param thresholds Threshold lines drawn horizontally across the chart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholds(List<ThresholdResponse> thresholds) {
             $.thresholds = thresholds;
             return this;
         }
 
+        /**
+         * @param thresholds Threshold lines drawn horizontally across the chart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholds(ThresholdResponse... thresholds) {
             return thresholds(List.of(thresholds));
         }
 
+        /**
+         * @param timeshiftDuration The duration used to display a comparison chart. A comparison chart simultaneously shows values from two similar-length time periods (e.g., week-over-week metrics). The duration must be positive, and it can only be applied to charts with data sets of LINE plot type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeshiftDuration(String timeshiftDuration) {
             $.timeshiftDuration = timeshiftDuration;
             return this;
         }
 
+        /**
+         * @param xAxis The properties applied to the X axis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xAxis(AxisResponse xAxis) {
             $.xAxis = xAxis;
             return this;
         }
 
+        /**
+         * @param y2Axis The properties applied to the Y2 axis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder y2Axis(AxisResponse y2Axis) {
             $.y2Axis = y2Axis;
             return this;
         }
 
+        /**
+         * @param yAxis The properties applied to the Y axis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yAxis(AxisResponse yAxis) {
             $.yAxis = yAxis;
             return this;

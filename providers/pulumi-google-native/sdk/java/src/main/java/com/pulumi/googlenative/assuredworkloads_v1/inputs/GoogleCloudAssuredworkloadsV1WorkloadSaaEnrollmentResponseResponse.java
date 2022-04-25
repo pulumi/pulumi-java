@@ -24,6 +24,10 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseRes
     @Import(name="setupErrors", required=true)
     private List<String> setupErrors;
 
+    /**
+     * @return Indicates SAA enrollment setup error if any.
+     * 
+     */
     public List<String> setupErrors() {
         return this.setupErrors;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseRes
     @Import(name="setupStatus", required=true)
     private String setupStatus;
 
+    /**
+     * @return Indicates SAA enrollment status of a given workload.
+     * 
+     */
     public String setupStatus() {
         return this.setupStatus;
     }
@@ -64,15 +72,33 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseRes
             $ = new GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param setupErrors Indicates SAA enrollment setup error if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder setupErrors(List<String> setupErrors) {
             $.setupErrors = setupErrors;
             return this;
         }
 
+        /**
+         * @param setupErrors Indicates SAA enrollment setup error if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder setupErrors(String... setupErrors) {
             return setupErrors(List.of(setupErrors));
         }
 
+        /**
+         * @param setupStatus Indicates SAA enrollment status of a given workload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder setupStatus(String setupStatus) {
             $.setupStatus = setupStatus;
             return this;

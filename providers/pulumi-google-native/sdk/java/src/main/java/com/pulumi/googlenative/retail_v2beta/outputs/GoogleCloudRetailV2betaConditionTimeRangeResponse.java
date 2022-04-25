@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudRetailV2betaConditionTimeRangeResponse {
-    /**
-     * End of time range. Range is inclusive.
-     * 
-     */
+        /**
+         * @return End of time range. Range is inclusive.
+         * 
+         */
     private final String endTime;
-    /**
-     * Start of time range. Range is inclusive.
-     * 
-     */
+        /**
+         * @return Start of time range. Range is inclusive.
+         * 
+         */
     private final String startTime;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GoogleCloudRetailV2betaConditionTimeRangeResponse {
     }
 
     /**
-     * End of time range. Range is inclusive.
+     * @return End of time range. Range is inclusive.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * Start of time range. Range is inclusive.
+     * @return Start of time range. Range is inclusive.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }

@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class RowLayoutResponse {
-    /**
-     * The rows of content to display.
-     * 
-     */
+        /**
+         * @return The rows of content to display.
+         * 
+         */
     private final List<RowResponse> rows;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class RowLayoutResponse {
     }
 
     /**
-     * The rows of content to display.
+     * @return The rows of content to display.
      * 
-    */
+     */
     public List<RowResponse> rows() {
         return this.rows;
     }

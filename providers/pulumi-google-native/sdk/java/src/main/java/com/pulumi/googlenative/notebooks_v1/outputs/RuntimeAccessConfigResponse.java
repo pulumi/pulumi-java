@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class RuntimeAccessConfigResponse {
-    /**
-     * The type of access mode this instance.
-     * 
-     */
+        /**
+         * @return The type of access mode this instance.
+         * 
+         */
     private final String accessType;
-    /**
-     * The proxy endpoint that is used to access the runtime.
-     * 
-     */
+        /**
+         * @return The proxy endpoint that is used to access the runtime.
+         * 
+         */
     private final String proxyUri;
-    /**
-     * The owner of this runtime after creation. Format: `alias@example.com` Currently supports one owner only.
-     * 
-     */
+        /**
+         * @return The owner of this runtime after creation. Format: `alias@example.com` Currently supports one owner only.
+         * 
+         */
     private final String runtimeOwner;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class RuntimeAccessConfigResponse {
     }
 
     /**
-     * The type of access mode this instance.
+     * @return The type of access mode this instance.
      * 
-    */
+     */
     public String accessType() {
         return this.accessType;
     }
     /**
-     * The proxy endpoint that is used to access the runtime.
+     * @return The proxy endpoint that is used to access the runtime.
      * 
-    */
+     */
     public String proxyUri() {
         return this.proxyUri;
     }
     /**
-     * The owner of this runtime after creation. Format: `alias@example.com` Currently supports one owner only.
+     * @return The owner of this runtime after creation. Format: `alias@example.com` Currently supports one owner only.
      * 
-    */
+     */
     public String runtimeOwner() {
         return this.runtimeOwner;
     }

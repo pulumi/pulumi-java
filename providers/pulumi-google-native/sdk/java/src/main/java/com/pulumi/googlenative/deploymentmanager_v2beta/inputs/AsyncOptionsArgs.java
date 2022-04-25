@@ -27,6 +27,10 @@ public final class AsyncOptionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="methodMatch")
     private @Nullable Output<String> methodMatch;
 
+    /**
+     * @return Method regex where this policy will apply.
+     * 
+     */
     public Optional<Output<String>> methodMatch() {
         return Optional.ofNullable(this.methodMatch);
     }
@@ -38,6 +42,10 @@ public final class AsyncOptionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pollingOptions")
     private @Nullable Output<PollingOptionsArgs> pollingOptions;
 
+    /**
+     * @return Deployment manager will poll instances for this API resource setting a RUNNING state, and blocking until polling conditions tell whether the resource is completed or failed.
+     * 
+     */
     public Optional<Output<PollingOptionsArgs>> pollingOptions() {
         return Optional.ofNullable(this.pollingOptions);
     }
@@ -67,20 +75,44 @@ public final class AsyncOptionsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AsyncOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param methodMatch Method regex where this policy will apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methodMatch(@Nullable Output<String> methodMatch) {
             $.methodMatch = methodMatch;
             return this;
         }
 
+        /**
+         * @param methodMatch Method regex where this policy will apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methodMatch(String methodMatch) {
             return methodMatch(Output.of(methodMatch));
         }
 
+        /**
+         * @param pollingOptions Deployment manager will poll instances for this API resource setting a RUNNING state, and blocking until polling conditions tell whether the resource is completed or failed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pollingOptions(@Nullable Output<PollingOptionsArgs> pollingOptions) {
             $.pollingOptions = pollingOptions;
             return this;
         }
 
+        /**
+         * @param pollingOptions Deployment manager will poll instances for this API resource setting a RUNNING state, and blocking until polling conditions tell whether the resource is completed or failed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pollingOptions(PollingOptionsArgs pollingOptions) {
             return pollingOptions(Output.of(pollingOptions));
         }

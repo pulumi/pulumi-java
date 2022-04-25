@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class SubordinateConfigResponse {
-    /**
-     * This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects/*{@literal /}locations/*{@literal /}certificateAuthorities/*`.
-     * 
-     */
+        /**
+         * @return This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects/*{@literal /}locations/*{@literal /}certificateAuthorities/*`.
+         * 
+         */
     private final String certificateAuthority;
-    /**
-     * Contains the PEM certificate chain for the issuers of this CertificateAuthority, but not pem certificate for this CA itself.
-     * 
-     */
+        /**
+         * @return Contains the PEM certificate chain for the issuers of this CertificateAuthority, but not pem certificate for this CA itself.
+         * 
+         */
     private final SubordinateConfigChainResponse pemIssuerChain;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class SubordinateConfigResponse {
     }
 
     /**
-     * This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects/*{@literal /}locations/*{@literal /}certificateAuthorities/*`.
+     * @return This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects/*{@literal /}locations/*{@literal /}certificateAuthorities/*`.
      * 
-    */
+     */
     public String certificateAuthority() {
         return this.certificateAuthority;
     }
     /**
-     * Contains the PEM certificate chain for the issuers of this CertificateAuthority, but not pem certificate for this CA itself.
+     * @return Contains the PEM certificate chain for the issuers of this CertificateAuthority, but not pem certificate for this CA itself.
      * 
-    */
+     */
     public SubordinateConfigChainResponse pemIssuerChain() {
         return this.pemIssuerChain;
     }

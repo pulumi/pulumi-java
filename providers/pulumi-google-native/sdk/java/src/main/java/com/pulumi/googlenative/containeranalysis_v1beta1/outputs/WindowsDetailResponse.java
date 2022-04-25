@@ -11,25 +11,25 @@ import java.util.Objects;
 
 @CustomType
 public final class WindowsDetailResponse {
-    /**
-     * The CPE URI in [cpe format](https://cpe.mitre.org/specification/) in which the vulnerability manifests. Examples include distro or storage location for vulnerable jar.
-     * 
-     */
+        /**
+         * @return The CPE URI in [cpe format](https://cpe.mitre.org/specification/) in which the vulnerability manifests. Examples include distro or storage location for vulnerable jar.
+         * 
+         */
     private final String cpeUri;
-    /**
-     * The description of the vulnerability.
-     * 
-     */
+        /**
+         * @return The description of the vulnerability.
+         * 
+         */
     private final String description;
-    /**
-     * The names of the KBs which have hotfixes to mitigate this vulnerability. Note that there may be multiple hotfixes (and thus multiple KBs) that mitigate a given vulnerability. Currently any listed kb&#39;s presence is considered a fix.
-     * 
-     */
+        /**
+         * @return The names of the KBs which have hotfixes to mitigate this vulnerability. Note that there may be multiple hotfixes (and thus multiple KBs) that mitigate a given vulnerability. Currently any listed kb&#39;s presence is considered a fix.
+         * 
+         */
     private final List<KnowledgeBaseResponse> fixingKbs;
-    /**
-     * The name of the vulnerability.
-     * 
-     */
+        /**
+         * @return The name of the vulnerability.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class WindowsDetailResponse {
     }
 
     /**
-     * The CPE URI in [cpe format](https://cpe.mitre.org/specification/) in which the vulnerability manifests. Examples include distro or storage location for vulnerable jar.
+     * @return The CPE URI in [cpe format](https://cpe.mitre.org/specification/) in which the vulnerability manifests. Examples include distro or storage location for vulnerable jar.
      * 
-    */
+     */
     public String cpeUri() {
         return this.cpeUri;
     }
     /**
-     * The description of the vulnerability.
+     * @return The description of the vulnerability.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The names of the KBs which have hotfixes to mitigate this vulnerability. Note that there may be multiple hotfixes (and thus multiple KBs) that mitigate a given vulnerability. Currently any listed kb&#39;s presence is considered a fix.
+     * @return The names of the KBs which have hotfixes to mitigate this vulnerability. Note that there may be multiple hotfixes (and thus multiple KBs) that mitigate a given vulnerability. Currently any listed kb&#39;s presence is considered a fix.
      * 
-    */
+     */
     public List<KnowledgeBaseResponse> fixingKbs() {
         return this.fixingKbs;
     }
     /**
-     * The name of the vulnerability.
+     * @return The name of the vulnerability.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

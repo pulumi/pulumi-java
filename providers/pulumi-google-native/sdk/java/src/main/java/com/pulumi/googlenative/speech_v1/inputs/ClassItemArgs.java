@@ -26,6 +26,10 @@ public final class ClassItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return The class item&#39;s value.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -54,11 +58,23 @@ public final class ClassItemArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ClassItemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param value The class item&#39;s value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The class item&#39;s value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

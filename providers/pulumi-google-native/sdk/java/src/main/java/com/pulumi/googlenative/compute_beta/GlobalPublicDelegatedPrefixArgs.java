@@ -25,6 +25,10 @@ public final class GlobalPublicDelegatedPrefixArgs extends com.pulumi.resources.
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class GlobalPublicDelegatedPrefixArgs extends com.pulumi.resources.
     @Import(name="ipCidrRange")
     private @Nullable Output<String> ipCidrRange;
 
+    /**
+     * @return The IPv4 address range, in CIDR format, represented by this public delegated prefix.
+     * 
+     */
     public Optional<Output<String>> ipCidrRange() {
         return Optional.ofNullable(this.ipCidrRange);
     }
@@ -47,6 +55,10 @@ public final class GlobalPublicDelegatedPrefixArgs extends com.pulumi.resources.
     @Import(name="isLiveMigration")
     private @Nullable Output<Boolean> isLiveMigration;
 
+    /**
+     * @return If true, the prefix will be live migrated.
+     * 
+     */
     public Optional<Output<Boolean>> isLiveMigration() {
         return Optional.ofNullable(this.isLiveMigration);
     }
@@ -58,6 +70,10 @@ public final class GlobalPublicDelegatedPrefixArgs extends com.pulumi.resources.
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -69,6 +85,10 @@ public final class GlobalPublicDelegatedPrefixArgs extends com.pulumi.resources.
     @Import(name="parentPrefix")
     private @Nullable Output<String> parentPrefix;
 
+    /**
+     * @return The URL of parent prefix. Either PublicAdvertisedPrefix or PublicDelegatedPrefix.
+     * 
+     */
     public Optional<Output<String>> parentPrefix() {
         return Optional.ofNullable(this.parentPrefix);
     }
@@ -87,6 +107,10 @@ public final class GlobalPublicDelegatedPrefixArgs extends com.pulumi.resources.
     @Import(name="publicDelegatedSubPrefixs")
     private @Nullable Output<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> publicDelegatedSubPrefixs;
 
+    /**
+     * @return The list of sub public delegated prefixes that exist for this public delegated prefix.
+     * 
+     */
     public Optional<Output<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>>> publicDelegatedSubPrefixs() {
         return Optional.ofNullable(this.publicDelegatedSubPrefixs);
     }
@@ -129,47 +153,107 @@ public final class GlobalPublicDelegatedPrefixArgs extends com.pulumi.resources.
             $ = new GlobalPublicDelegatedPrefixArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param ipCidrRange The IPv4 address range, in CIDR format, represented by this public delegated prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipCidrRange(@Nullable Output<String> ipCidrRange) {
             $.ipCidrRange = ipCidrRange;
             return this;
         }
 
+        /**
+         * @param ipCidrRange The IPv4 address range, in CIDR format, represented by this public delegated prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipCidrRange(String ipCidrRange) {
             return ipCidrRange(Output.of(ipCidrRange));
         }
 
+        /**
+         * @param isLiveMigration If true, the prefix will be live migrated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isLiveMigration(@Nullable Output<Boolean> isLiveMigration) {
             $.isLiveMigration = isLiveMigration;
             return this;
         }
 
+        /**
+         * @param isLiveMigration If true, the prefix will be live migrated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isLiveMigration(Boolean isLiveMigration) {
             return isLiveMigration(Output.of(isLiveMigration));
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parentPrefix The URL of parent prefix. Either PublicAdvertisedPrefix or PublicDelegatedPrefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentPrefix(@Nullable Output<String> parentPrefix) {
             $.parentPrefix = parentPrefix;
             return this;
         }
 
+        /**
+         * @param parentPrefix The URL of parent prefix. Either PublicAdvertisedPrefix or PublicDelegatedPrefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentPrefix(String parentPrefix) {
             return parentPrefix(Output.of(parentPrefix));
         }
@@ -183,15 +267,33 @@ public final class GlobalPublicDelegatedPrefixArgs extends com.pulumi.resources.
             return project(Output.of(project));
         }
 
+        /**
+         * @param publicDelegatedSubPrefixs The list of sub public delegated prefixes that exist for this public delegated prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicDelegatedSubPrefixs(@Nullable Output<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> publicDelegatedSubPrefixs) {
             $.publicDelegatedSubPrefixs = publicDelegatedSubPrefixs;
             return this;
         }
 
+        /**
+         * @param publicDelegatedSubPrefixs The list of sub public delegated prefixes that exist for this public delegated prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicDelegatedSubPrefixs(List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs> publicDelegatedSubPrefixs) {
             return publicDelegatedSubPrefixs(Output.of(publicDelegatedSubPrefixs));
         }
 
+        /**
+         * @param publicDelegatedSubPrefixs The list of sub public delegated prefixes that exist for this public delegated prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicDelegatedSubPrefixs(PublicDelegatedPrefixPublicDelegatedSubPrefixArgs... publicDelegatedSubPrefixs) {
             return publicDelegatedSubPrefixs(List.of(publicDelegatedSubPrefixs));
         }

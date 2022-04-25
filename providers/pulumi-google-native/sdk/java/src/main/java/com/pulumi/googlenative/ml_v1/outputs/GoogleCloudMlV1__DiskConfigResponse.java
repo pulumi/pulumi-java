@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudMlV1__DiskConfigResponse {
-    /**
-     * Size in GB of the boot disk (default is 100GB).
-     * 
-     */
+        /**
+         * @return Size in GB of the boot disk (default is 100GB).
+         * 
+         */
     private final Integer bootDiskSizeGb;
-    /**
-     * Type of the boot disk (default is &#34;pd-ssd&#34;). Valid values: &#34;pd-ssd&#34; (Persistent Disk Solid State Drive) or &#34;pd-standard&#34; (Persistent Disk Hard Disk Drive).
-     * 
-     */
+        /**
+         * @return Type of the boot disk (default is &#34;pd-ssd&#34;). Valid values: &#34;pd-ssd&#34; (Persistent Disk Solid State Drive) or &#34;pd-standard&#34; (Persistent Disk Hard Disk Drive).
+         * 
+         */
     private final String bootDiskType;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GoogleCloudMlV1__DiskConfigResponse {
     }
 
     /**
-     * Size in GB of the boot disk (default is 100GB).
+     * @return Size in GB of the boot disk (default is 100GB).
      * 
-    */
+     */
     public Integer bootDiskSizeGb() {
         return this.bootDiskSizeGb;
     }
     /**
-     * Type of the boot disk (default is &#34;pd-ssd&#34;). Valid values: &#34;pd-ssd&#34; (Persistent Disk Solid State Drive) or &#34;pd-standard&#34; (Persistent Disk Hard Disk Drive).
+     * @return Type of the boot disk (default is &#34;pd-ssd&#34;). Valid values: &#34;pd-ssd&#34; (Persistent Disk Solid State Drive) or &#34;pd-standard&#34; (Persistent Disk Hard Disk Drive).
      * 
-    */
+     */
     public String bootDiskType() {
         return this.bootDiskType;
     }

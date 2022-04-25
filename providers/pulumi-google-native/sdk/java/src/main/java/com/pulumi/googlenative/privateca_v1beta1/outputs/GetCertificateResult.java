@@ -14,60 +14,60 @@ import java.util.Objects;
 
 @CustomType
 public final class GetCertificateResult {
-    /**
-     * A structured description of the issued X.509 certificate.
-     * 
-     */
+        /**
+         * @return A structured description of the issued X.509 certificate.
+         * 
+         */
     private final CertificateDescriptionResponse certificateDescription;
-    /**
-     * Immutable. A description of the certificate and key that does not require X.509 or ASN.1.
-     * 
-     */
+        /**
+         * @return Immutable. A description of the certificate and key that does not require X.509 or ASN.1.
+         * 
+         */
     private final CertificateConfigResponse config;
-    /**
-     * The time at which this Certificate was created.
-     * 
-     */
+        /**
+         * @return The time at which this Certificate was created.
+         * 
+         */
     private final String createTime;
-    /**
-     * Optional. Labels with user-defined metadata.
-     * 
-     */
+        /**
+         * @return Optional. Labels with user-defined metadata.
+         * 
+         */
     private final Map<String,String> labels;
-    /**
-     * Immutable. The desired lifetime of a certificate. Used to create the &#34;not_before_time&#34; and &#34;not_after_time&#34; fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.
-     * 
-     */
+        /**
+         * @return Immutable. The desired lifetime of a certificate. Used to create the &#34;not_before_time&#34; and &#34;not_after_time&#34; fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.
+         * 
+         */
     private final String lifetime;
-    /**
-     * The resource path for this Certificate in the format `projects/*{@literal /}locations/*{@literal /}certificateAuthorities/*{@literal /}certificates/*`.
-     * 
-     */
+        /**
+         * @return The resource path for this Certificate in the format `projects/*{@literal /}locations/*{@literal /}certificateAuthorities/*{@literal /}certificates/*`.
+         * 
+         */
     private final String name;
-    /**
-     * The pem-encoded, signed X.509 certificate.
-     * 
-     */
+        /**
+         * @return The pem-encoded, signed X.509 certificate.
+         * 
+         */
     private final String pemCertificate;
-    /**
-     * The chain that may be used to verify the X.509 certificate. Expected to be in issuer-to-root order according to RFC 5246.
-     * 
-     */
+        /**
+         * @return The chain that may be used to verify the X.509 certificate. Expected to be in issuer-to-root order according to RFC 5246.
+         * 
+         */
     private final List<String> pemCertificateChain;
-    /**
-     * Immutable. A pem-encoded X.509 certificate signing request (CSR).
-     * 
-     */
+        /**
+         * @return Immutable. A pem-encoded X.509 certificate signing request (CSR).
+         * 
+         */
     private final String pemCsr;
-    /**
-     * Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if this field is present.
-     * 
-     */
+        /**
+         * @return Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if this field is present.
+         * 
+         */
     private final RevocationDetailsResponse revocationDetails;
-    /**
-     * The time at which this Certificate was updated.
-     * 
-     */
+        /**
+         * @return The time at which this Certificate was updated.
+         * 
+         */
     private final String updateTime;
 
     @CustomType.Constructor
@@ -97,79 +97,79 @@ public final class GetCertificateResult {
     }
 
     /**
-     * A structured description of the issued X.509 certificate.
+     * @return A structured description of the issued X.509 certificate.
      * 
-    */
+     */
     public CertificateDescriptionResponse certificateDescription() {
         return this.certificateDescription;
     }
     /**
-     * Immutable. A description of the certificate and key that does not require X.509 or ASN.1.
+     * @return Immutable. A description of the certificate and key that does not require X.509 or ASN.1.
      * 
-    */
+     */
     public CertificateConfigResponse config() {
         return this.config;
     }
     /**
-     * The time at which this Certificate was created.
+     * @return The time at which this Certificate was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Optional. Labels with user-defined metadata.
+     * @return Optional. Labels with user-defined metadata.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * Immutable. The desired lifetime of a certificate. Used to create the &#34;not_before_time&#34; and &#34;not_after_time&#34; fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.
+     * @return Immutable. The desired lifetime of a certificate. Used to create the &#34;not_before_time&#34; and &#34;not_after_time&#34; fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.
      * 
-    */
+     */
     public String lifetime() {
         return this.lifetime;
     }
     /**
-     * The resource path for this Certificate in the format `projects/*{@literal /}locations/*{@literal /}certificateAuthorities/*{@literal /}certificates/*`.
+     * @return The resource path for this Certificate in the format `projects/*{@literal /}locations/*{@literal /}certificateAuthorities/*{@literal /}certificates/*`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The pem-encoded, signed X.509 certificate.
+     * @return The pem-encoded, signed X.509 certificate.
      * 
-    */
+     */
     public String pemCertificate() {
         return this.pemCertificate;
     }
     /**
-     * The chain that may be used to verify the X.509 certificate. Expected to be in issuer-to-root order according to RFC 5246.
+     * @return The chain that may be used to verify the X.509 certificate. Expected to be in issuer-to-root order according to RFC 5246.
      * 
-    */
+     */
     public List<String> pemCertificateChain() {
         return this.pemCertificateChain;
     }
     /**
-     * Immutable. A pem-encoded X.509 certificate signing request (CSR).
+     * @return Immutable. A pem-encoded X.509 certificate signing request (CSR).
      * 
-    */
+     */
     public String pemCsr() {
         return this.pemCsr;
     }
     /**
-     * Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if this field is present.
+     * @return Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if this field is present.
      * 
-    */
+     */
     public RevocationDetailsResponse revocationDetails() {
         return this.revocationDetails;
     }
     /**
-     * The time at which this Certificate was updated.
+     * @return The time at which this Certificate was updated.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

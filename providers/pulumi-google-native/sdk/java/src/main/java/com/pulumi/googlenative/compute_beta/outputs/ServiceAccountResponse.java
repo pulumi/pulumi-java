@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ServiceAccountResponse {
-    /**
-     * Email address of the service account.
-     * 
-     */
+        /**
+         * @return Email address of the service account.
+         * 
+         */
     private final String email;
-    /**
-     * The list of scopes to be made available for this service account.
-     * 
-     */
+        /**
+         * @return The list of scopes to be made available for this service account.
+         * 
+         */
     private final List<String> scopes;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class ServiceAccountResponse {
     }
 
     /**
-     * Email address of the service account.
+     * @return Email address of the service account.
      * 
-    */
+     */
     public String email() {
         return this.email;
     }
     /**
-     * The list of scopes to be made available for this service account.
+     * @return The list of scopes to be made available for this service account.
      * 
-    */
+     */
     public List<String> scopes() {
         return this.scopes;
     }

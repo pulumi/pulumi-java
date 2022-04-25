@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class HttpsTriggerResponse {
-    /**
-     * The security level for the function.
-     * 
-     */
+        /**
+         * @return The security level for the function.
+         * 
+         */
     private final String securityLevel;
-    /**
-     * The deployed url for the function.
-     * 
-     */
+        /**
+         * @return The deployed url for the function.
+         * 
+         */
     private final String url;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class HttpsTriggerResponse {
     }
 
     /**
-     * The security level for the function.
+     * @return The security level for the function.
      * 
-    */
+     */
     public String securityLevel() {
         return this.securityLevel;
     }
     /**
-     * The deployed url for the function.
+     * @return The deployed url for the function.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

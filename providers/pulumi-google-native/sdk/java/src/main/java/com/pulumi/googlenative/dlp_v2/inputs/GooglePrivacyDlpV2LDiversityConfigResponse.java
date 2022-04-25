@@ -24,6 +24,10 @@ public final class GooglePrivacyDlpV2LDiversityConfigResponse extends com.pulumi
     @Import(name="quasiIds", required=true)
     private List<GooglePrivacyDlpV2FieldIdResponse> quasiIds;
 
+    /**
+     * @return Set of quasi-identifiers indicating how equivalence classes are defined for the l-diversity computation. When multiple fields are specified, they are considered a single composite key.
+     * 
+     */
     public List<GooglePrivacyDlpV2FieldIdResponse> quasiIds() {
         return this.quasiIds;
     }
@@ -35,6 +39,10 @@ public final class GooglePrivacyDlpV2LDiversityConfigResponse extends com.pulumi
     @Import(name="sensitiveAttribute", required=true)
     private GooglePrivacyDlpV2FieldIdResponse sensitiveAttribute;
 
+    /**
+     * @return Sensitive field for computing the l-value.
+     * 
+     */
     public GooglePrivacyDlpV2FieldIdResponse sensitiveAttribute() {
         return this.sensitiveAttribute;
     }
@@ -64,15 +72,33 @@ public final class GooglePrivacyDlpV2LDiversityConfigResponse extends com.pulumi
             $ = new GooglePrivacyDlpV2LDiversityConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param quasiIds Set of quasi-identifiers indicating how equivalence classes are defined for the l-diversity computation. When multiple fields are specified, they are considered a single composite key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quasiIds(List<GooglePrivacyDlpV2FieldIdResponse> quasiIds) {
             $.quasiIds = quasiIds;
             return this;
         }
 
+        /**
+         * @param quasiIds Set of quasi-identifiers indicating how equivalence classes are defined for the l-diversity computation. When multiple fields are specified, they are considered a single composite key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quasiIds(GooglePrivacyDlpV2FieldIdResponse... quasiIds) {
             return quasiIds(List.of(quasiIds));
         }
 
+        /**
+         * @param sensitiveAttribute Sensitive field for computing the l-value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sensitiveAttribute(GooglePrivacyDlpV2FieldIdResponse sensitiveAttribute) {
             $.sensitiveAttribute = sensitiveAttribute;
             return this;

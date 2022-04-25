@@ -23,6 +23,10 @@ public final class RuntimeAccessConfigResponse extends com.pulumi.resources.Invo
     @Import(name="accessType", required=true)
     private String accessType;
 
+    /**
+     * @return The type of access mode this instance.
+     * 
+     */
     public String accessType() {
         return this.accessType;
     }
@@ -34,6 +38,10 @@ public final class RuntimeAccessConfigResponse extends com.pulumi.resources.Invo
     @Import(name="proxyUri", required=true)
     private String proxyUri;
 
+    /**
+     * @return The proxy endpoint that is used to access the runtime.
+     * 
+     */
     public String proxyUri() {
         return this.proxyUri;
     }
@@ -45,6 +53,10 @@ public final class RuntimeAccessConfigResponse extends com.pulumi.resources.Invo
     @Import(name="runtimeOwner", required=true)
     private String runtimeOwner;
 
+    /**
+     * @return The owner of this runtime after creation. Format: `alias@example.com` Currently supports one owner only.
+     * 
+     */
     public String runtimeOwner() {
         return this.runtimeOwner;
     }
@@ -75,16 +87,34 @@ public final class RuntimeAccessConfigResponse extends com.pulumi.resources.Invo
             $ = new RuntimeAccessConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessType The type of access mode this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessType(String accessType) {
             $.accessType = accessType;
             return this;
         }
 
+        /**
+         * @param proxyUri The proxy endpoint that is used to access the runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyUri(String proxyUri) {
             $.proxyUri = proxyUri;
             return this;
         }
 
+        /**
+         * @param runtimeOwner The owner of this runtime after creation. Format: `alias@example.com` Currently supports one owner only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeOwner(String runtimeOwner) {
             $.runtimeOwner = runtimeOwner;
             return this;

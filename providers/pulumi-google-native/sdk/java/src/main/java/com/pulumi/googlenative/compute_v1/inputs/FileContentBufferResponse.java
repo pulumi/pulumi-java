@@ -19,6 +19,10 @@ public final class FileContentBufferResponse extends com.pulumi.resources.Invoke
     @Import(name="content", required=true)
     private String content;
 
+    /**
+     * @return The raw content in the secure keys file.
+     * 
+     */
     public String content() {
         return this.content;
     }
@@ -30,6 +34,10 @@ public final class FileContentBufferResponse extends com.pulumi.resources.Invoke
     @Import(name="fileType", required=true)
     private String fileType;
 
+    /**
+     * @return The file type of source file.
+     * 
+     */
     public String fileType() {
         return this.fileType;
     }
@@ -59,11 +67,23 @@ public final class FileContentBufferResponse extends com.pulumi.resources.Invoke
             $ = new FileContentBufferResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The raw content in the secure keys file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param fileType The file type of source file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileType(String fileType) {
             $.fileType = fileType;
             return this;

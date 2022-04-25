@@ -27,6 +27,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="columnLayout")
     private @Nullable Output<ColumnLayoutArgs> columnLayout;
 
+    /**
+     * @return The content is divided into equally spaced columns and the widgets are arranged vertically.
+     * 
+     */
     public Optional<Output<ColumnLayoutArgs>> columnLayout() {
         return Optional.ofNullable(this.columnLayout);
     }
@@ -38,6 +42,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The mutable, human-readable name.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -49,6 +57,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return etag is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other. An etag is returned in the response to GetDashboard, and users are expected to put that etag in the request to UpdateDashboard to ensure that their change will be applied to the same version of the Dashboard configuration. The field should not be passed during dashboard creation.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -60,6 +72,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gridLayout")
     private @Nullable Output<GridLayoutArgs> gridLayout;
 
+    /**
+     * @return Content is arranged with a basic layout that re-flows a simple list of informational elements like widgets or tiles.
+     * 
+     */
     public Optional<Output<GridLayoutArgs>> gridLayout() {
         return Optional.ofNullable(this.gridLayout);
     }
@@ -71,6 +87,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels applied to the dashboard
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -82,6 +102,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mosaicLayout")
     private @Nullable Output<MosaicLayoutArgs> mosaicLayout;
 
+    /**
+     * @return The content is arranged as a grid of tiles, with each content widget occupying one or more grid blocks.
+     * 
+     */
     public Optional<Output<MosaicLayoutArgs>> mosaicLayout() {
         return Optional.ofNullable(this.mosaicLayout);
     }
@@ -93,6 +117,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Immutable. The resource name of the dashboard.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -111,6 +139,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rowLayout")
     private @Nullable Output<RowLayoutArgs> rowLayout;
 
+    /**
+     * @return The content is divided into equally spaced rows and the widgets are arranged horizontally.
+     * 
+     */
     public Optional<Output<RowLayoutArgs>> rowLayout() {
         return Optional.ofNullable(this.rowLayout);
     }
@@ -155,65 +187,149 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DashboardArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columnLayout The content is divided into equally spaced columns and the widgets are arranged vertically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnLayout(@Nullable Output<ColumnLayoutArgs> columnLayout) {
             $.columnLayout = columnLayout;
             return this;
         }
 
+        /**
+         * @param columnLayout The content is divided into equally spaced columns and the widgets are arranged vertically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnLayout(ColumnLayoutArgs columnLayout) {
             return columnLayout(Output.of(columnLayout));
         }
 
+        /**
+         * @param displayName The mutable, human-readable name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The mutable, human-readable name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param etag etag is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other. An etag is returned in the response to GetDashboard, and users are expected to put that etag in the request to UpdateDashboard to ensure that their change will be applied to the same version of the Dashboard configuration. The field should not be passed during dashboard creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag etag is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other. An etag is returned in the response to GetDashboard, and users are expected to put that etag in the request to UpdateDashboard to ensure that their change will be applied to the same version of the Dashboard configuration. The field should not be passed during dashboard creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param gridLayout Content is arranged with a basic layout that re-flows a simple list of informational elements like widgets or tiles.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gridLayout(@Nullable Output<GridLayoutArgs> gridLayout) {
             $.gridLayout = gridLayout;
             return this;
         }
 
+        /**
+         * @param gridLayout Content is arranged with a basic layout that re-flows a simple list of informational elements like widgets or tiles.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gridLayout(GridLayoutArgs gridLayout) {
             return gridLayout(Output.of(gridLayout));
         }
 
+        /**
+         * @param labels Labels applied to the dashboard
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels applied to the dashboard
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param mosaicLayout The content is arranged as a grid of tiles, with each content widget occupying one or more grid blocks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mosaicLayout(@Nullable Output<MosaicLayoutArgs> mosaicLayout) {
             $.mosaicLayout = mosaicLayout;
             return this;
         }
 
+        /**
+         * @param mosaicLayout The content is arranged as a grid of tiles, with each content widget occupying one or more grid blocks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mosaicLayout(MosaicLayoutArgs mosaicLayout) {
             return mosaicLayout(Output.of(mosaicLayout));
         }
 
+        /**
+         * @param name Immutable. The resource name of the dashboard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Immutable. The resource name of the dashboard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -227,11 +343,23 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param rowLayout The content is divided into equally spaced rows and the widgets are arranged horizontally.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rowLayout(@Nullable Output<RowLayoutArgs> rowLayout) {
             $.rowLayout = rowLayout;
             return this;
         }
 
+        /**
+         * @param rowLayout The content is divided into equally spaced rows and the widgets are arranged horizontally.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rowLayout(RowLayoutArgs rowLayout) {
             return rowLayout(Output.of(rowLayout));
         }

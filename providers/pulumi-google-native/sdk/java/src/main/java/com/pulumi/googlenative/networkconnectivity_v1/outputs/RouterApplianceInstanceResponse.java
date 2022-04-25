@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class RouterApplianceInstanceResponse {
-    /**
-     * The IP address on the VM to use for peering.
-     * 
-     */
+        /**
+         * @return The IP address on the VM to use for peering.
+         * 
+         */
     private final String ipAddress;
-    /**
-     * The URI of the VM.
-     * 
-     */
+        /**
+         * @return The URI of the VM.
+         * 
+         */
     private final String virtualMachine;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class RouterApplianceInstanceResponse {
     }
 
     /**
-     * The IP address on the VM to use for peering.
+     * @return The IP address on the VM to use for peering.
      * 
-    */
+     */
     public String ipAddress() {
         return this.ipAddress;
     }
     /**
-     * The URI of the VM.
+     * @return The URI of the VM.
      * 
-    */
+     */
     public String virtualMachine() {
         return this.virtualMachine;
     }

@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class ExecutionStageStateResponse {
-    /**
-     * The time at which the stage transitioned to this state.
-     * 
-     */
+        /**
+         * @return The time at which the stage transitioned to this state.
+         * 
+         */
     private final String currentStateTime;
-    /**
-     * The name of the execution stage.
-     * 
-     */
+        /**
+         * @return The name of the execution stage.
+         * 
+         */
     private final String executionStageName;
-    /**
-     * Executions stage states allow the same set of values as JobState.
-     * 
-     */
+        /**
+         * @return Executions stage states allow the same set of values as JobState.
+         * 
+         */
     private final String executionStageState;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class ExecutionStageStateResponse {
     }
 
     /**
-     * The time at which the stage transitioned to this state.
+     * @return The time at which the stage transitioned to this state.
      * 
-    */
+     */
     public String currentStateTime() {
         return this.currentStateTime;
     }
     /**
-     * The name of the execution stage.
+     * @return The name of the execution stage.
      * 
-    */
+     */
     public String executionStageName() {
         return this.executionStageName;
     }
     /**
-     * Executions stage states allow the same set of values as JobState.
+     * @return Executions stage states allow the same set of values as JobState.
      * 
-    */
+     */
     public String executionStageState() {
         return this.executionStageState;
     }

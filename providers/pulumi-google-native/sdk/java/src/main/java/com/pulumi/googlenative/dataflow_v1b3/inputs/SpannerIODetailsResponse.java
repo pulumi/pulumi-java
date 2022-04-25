@@ -23,6 +23,10 @@ public final class SpannerIODetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="databaseId", required=true)
     private String databaseId;
 
+    /**
+     * @return DatabaseId accessed in the connection.
+     * 
+     */
     public String databaseId() {
         return this.databaseId;
     }
@@ -34,6 +38,10 @@ public final class SpannerIODetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="instanceId", required=true)
     private String instanceId;
 
+    /**
+     * @return InstanceId accessed in the connection.
+     * 
+     */
     public String instanceId() {
         return this.instanceId;
     }
@@ -45,6 +53,10 @@ public final class SpannerIODetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return ProjectId accessed in the connection.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -75,16 +87,34 @@ public final class SpannerIODetailsResponse extends com.pulumi.resources.InvokeA
             $ = new SpannerIODetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseId DatabaseId accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseId(String databaseId) {
             $.databaseId = databaseId;
             return this;
         }
 
+        /**
+         * @param instanceId InstanceId accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param project ProjectId accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;

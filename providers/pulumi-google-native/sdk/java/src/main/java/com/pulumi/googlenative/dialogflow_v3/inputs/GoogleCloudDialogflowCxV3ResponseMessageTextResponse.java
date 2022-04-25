@@ -25,6 +25,10 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTextResponse extends 
     @Import(name="allowPlaybackInterruption", required=true)
     private Boolean allowPlaybackInterruption;
 
+    /**
+     * @return Whether the playback of this message can be interrupted by the end user&#39;s speech and the client can then starts the next Dialogflow request.
+     * 
+     */
     public Boolean allowPlaybackInterruption() {
         return this.allowPlaybackInterruption;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTextResponse extends 
     @Import(name="text", required=true)
     private List<String> text;
 
+    /**
+     * @return A collection of text responses.
+     * 
+     */
     public List<String> text() {
         return this.text;
     }
@@ -65,16 +73,34 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTextResponse extends 
             $ = new GoogleCloudDialogflowCxV3ResponseMessageTextResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowPlaybackInterruption Whether the playback of this message can be interrupted by the end user&#39;s speech and the client can then starts the next Dialogflow request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowPlaybackInterruption(Boolean allowPlaybackInterruption) {
             $.allowPlaybackInterruption = allowPlaybackInterruption;
             return this;
         }
 
+        /**
+         * @param text A collection of text responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(List<String> text) {
             $.text = text;
             return this;
         }
 
+        /**
+         * @param text A collection of text responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String... text) {
             return text(List.of(text));
         }

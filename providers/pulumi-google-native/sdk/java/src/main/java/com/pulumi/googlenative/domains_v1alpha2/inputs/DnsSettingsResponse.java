@@ -26,6 +26,10 @@ public final class DnsSettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="customDns", required=true)
     private CustomDnsResponse customDns;
 
+    /**
+     * @return An arbitrary DNS provider identified by its name servers.
+     * 
+     */
     public CustomDnsResponse customDns() {
         return this.customDns;
     }
@@ -37,6 +41,10 @@ public final class DnsSettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="glueRecords", required=true)
     private List<GlueRecordResponse> glueRecords;
 
+    /**
+     * @return The list of glue records for this `Registration`. Commonly empty.
+     * 
+     */
     public List<GlueRecordResponse> glueRecords() {
         return this.glueRecords;
     }
@@ -48,6 +56,10 @@ public final class DnsSettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="googleDomainsDns", required=true)
     private GoogleDomainsDnsResponse googleDomainsDns;
 
+    /**
+     * @return The free DNS zone provided by [Google Domains](https://domains.google/).
+     * 
+     */
     public GoogleDomainsDnsResponse googleDomainsDns() {
         return this.googleDomainsDns;
     }
@@ -78,20 +90,44 @@ public final class DnsSettingsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DnsSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customDns An arbitrary DNS provider identified by its name servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customDns(CustomDnsResponse customDns) {
             $.customDns = customDns;
             return this;
         }
 
+        /**
+         * @param glueRecords The list of glue records for this `Registration`. Commonly empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder glueRecords(List<GlueRecordResponse> glueRecords) {
             $.glueRecords = glueRecords;
             return this;
         }
 
+        /**
+         * @param glueRecords The list of glue records for this `Registration`. Commonly empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder glueRecords(GlueRecordResponse... glueRecords) {
             return glueRecords(List.of(glueRecords));
         }
 
+        /**
+         * @param googleDomainsDns The free DNS zone provided by [Google Domains](https://domains.google/).
+         * 
+         * @return builder
+         * 
+         */
         public Builder googleDomainsDns(GoogleDomainsDnsResponse googleDomainsDns) {
             $.googleDomainsDns = googleDomainsDns;
             return this;

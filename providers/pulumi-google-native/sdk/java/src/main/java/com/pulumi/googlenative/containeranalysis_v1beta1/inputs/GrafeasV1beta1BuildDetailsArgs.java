@@ -27,6 +27,10 @@ public final class GrafeasV1beta1BuildDetailsArgs extends com.pulumi.resources.R
     @Import(name="provenance", required=true)
     private Output<BuildProvenanceArgs> provenance;
 
+    /**
+     * @return The actual provenance for the build.
+     * 
+     */
     public Output<BuildProvenanceArgs> provenance() {
         return this.provenance;
     }
@@ -38,6 +42,10 @@ public final class GrafeasV1beta1BuildDetailsArgs extends com.pulumi.resources.R
     @Import(name="provenanceBytes")
     private @Nullable Output<String> provenanceBytes;
 
+    /**
+     * @return Serialized JSON representation of the provenance, used in generating the build signature in the corresponding build note. After verifying the signature, `provenance_bytes` can be unmarshalled and compared to the provenance to confirm that it is unchanged. A base64-encoded string representation of the provenance bytes is used for the signature in order to interoperate with openssl which expects this format for signature verification. The serialized form is captured both to avoid ambiguity in how the provenance is marshalled to json as well to prevent incompatibilities with future changes.
+     * 
+     */
     public Optional<Output<String>> provenanceBytes() {
         return Optional.ofNullable(this.provenanceBytes);
     }
@@ -67,20 +75,44 @@ public final class GrafeasV1beta1BuildDetailsArgs extends com.pulumi.resources.R
             $ = new GrafeasV1beta1BuildDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param provenance The actual provenance for the build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provenance(Output<BuildProvenanceArgs> provenance) {
             $.provenance = provenance;
             return this;
         }
 
+        /**
+         * @param provenance The actual provenance for the build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provenance(BuildProvenanceArgs provenance) {
             return provenance(Output.of(provenance));
         }
 
+        /**
+         * @param provenanceBytes Serialized JSON representation of the provenance, used in generating the build signature in the corresponding build note. After verifying the signature, `provenance_bytes` can be unmarshalled and compared to the provenance to confirm that it is unchanged. A base64-encoded string representation of the provenance bytes is used for the signature in order to interoperate with openssl which expects this format for signature verification. The serialized form is captured both to avoid ambiguity in how the provenance is marshalled to json as well to prevent incompatibilities with future changes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provenanceBytes(@Nullable Output<String> provenanceBytes) {
             $.provenanceBytes = provenanceBytes;
             return this;
         }
 
+        /**
+         * @param provenanceBytes Serialized JSON representation of the provenance, used in generating the build signature in the corresponding build note. After verifying the signature, `provenance_bytes` can be unmarshalled and compared to the provenance to confirm that it is unchanged. A base64-encoded string representation of the provenance bytes is used for the signature in order to interoperate with openssl which expects this format for signature verification. The serialized form is captured both to avoid ambiguity in how the provenance is marshalled to json as well to prevent incompatibilities with future changes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provenanceBytes(String provenanceBytes) {
             return provenanceBytes(Output.of(provenanceBytes));
         }

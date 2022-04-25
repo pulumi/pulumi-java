@@ -28,6 +28,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
     @Import(name="allowedValues")
     private @Nullable Output<List<String>> allowedValues;
 
+    /**
+     * @return A list of acceptable values. Only effective when the policy is `RESTRICTED`.
+     * 
+     */
     public Optional<Output<List<String>>> allowedValues() {
         return Optional.ofNullable(this.allowedValues);
     }
@@ -39,6 +43,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
     @Import(name="policy")
     private @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> policy;
 
+    /**
+     * @return The policy of the feature.
+     * 
+     */
     public Optional<Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy>> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -68,24 +76,54 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
             $ = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedValues A list of acceptable values. Only effective when the policy is `RESTRICTED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedValues(@Nullable Output<List<String>> allowedValues) {
             $.allowedValues = allowedValues;
             return this;
         }
 
+        /**
+         * @param allowedValues A list of acceptable values. Only effective when the policy is `RESTRICTED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedValues(List<String> allowedValues) {
             return allowedValues(Output.of(allowedValues));
         }
 
+        /**
+         * @param allowedValues A list of acceptable values. Only effective when the policy is `RESTRICTED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedValues(String... allowedValues) {
             return allowedValues(List.of(allowedValues));
         }
 
+        /**
+         * @param policy The policy of the feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy The policy of the feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy policy) {
             return policy(Output.of(policy));
         }

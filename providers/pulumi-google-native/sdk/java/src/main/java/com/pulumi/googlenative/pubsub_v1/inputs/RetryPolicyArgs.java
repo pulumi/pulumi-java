@@ -26,6 +26,10 @@ public final class RetryPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maximumBackoff")
     private @Nullable Output<String> maximumBackoff;
 
+    /**
+     * @return The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds.
+     * 
+     */
     public Optional<Output<String>> maximumBackoff() {
         return Optional.ofNullable(this.maximumBackoff);
     }
@@ -37,6 +41,10 @@ public final class RetryPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minimumBackoff")
     private @Nullable Output<String> minimumBackoff;
 
+    /**
+     * @return The minimum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 10 seconds.
+     * 
+     */
     public Optional<Output<String>> minimumBackoff() {
         return Optional.ofNullable(this.minimumBackoff);
     }
@@ -66,20 +74,44 @@ public final class RetryPolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RetryPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maximumBackoff The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumBackoff(@Nullable Output<String> maximumBackoff) {
             $.maximumBackoff = maximumBackoff;
             return this;
         }
 
+        /**
+         * @param maximumBackoff The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumBackoff(String maximumBackoff) {
             return maximumBackoff(Output.of(maximumBackoff));
         }
 
+        /**
+         * @param minimumBackoff The minimum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 10 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumBackoff(@Nullable Output<String> minimumBackoff) {
             $.minimumBackoff = minimumBackoff;
             return this;
         }
 
+        /**
+         * @param minimumBackoff The minimum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 10 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumBackoff(String minimumBackoff) {
             return minimumBackoff(Output.of(minimumBackoff));
         }

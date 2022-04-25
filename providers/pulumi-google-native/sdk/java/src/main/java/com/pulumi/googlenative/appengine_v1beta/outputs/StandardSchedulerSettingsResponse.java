@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class StandardSchedulerSettingsResponse {
-    /**
-     * Maximum number of instances to run for this version. Set to zero to disable max_instances configuration.
-     * 
-     */
+        /**
+         * @return Maximum number of instances to run for this version. Set to zero to disable max_instances configuration.
+         * 
+         */
     private final Integer maxInstances;
-    /**
-     * Minimum number of instances to run for this version. Set to zero to disable min_instances configuration.
-     * 
-     */
+        /**
+         * @return Minimum number of instances to run for this version. Set to zero to disable min_instances configuration.
+         * 
+         */
     private final Integer minInstances;
-    /**
-     * Target CPU utilization ratio to maintain when scaling.
-     * 
-     */
+        /**
+         * @return Target CPU utilization ratio to maintain when scaling.
+         * 
+         */
     private final Double targetCpuUtilization;
-    /**
-     * Target throughput utilization ratio to maintain when scaling
-     * 
-     */
+        /**
+         * @return Target throughput utilization ratio to maintain when scaling
+         * 
+         */
     private final Double targetThroughputUtilization;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class StandardSchedulerSettingsResponse {
     }
 
     /**
-     * Maximum number of instances to run for this version. Set to zero to disable max_instances configuration.
+     * @return Maximum number of instances to run for this version. Set to zero to disable max_instances configuration.
      * 
-    */
+     */
     public Integer maxInstances() {
         return this.maxInstances;
     }
     /**
-     * Minimum number of instances to run for this version. Set to zero to disable min_instances configuration.
+     * @return Minimum number of instances to run for this version. Set to zero to disable min_instances configuration.
      * 
-    */
+     */
     public Integer minInstances() {
         return this.minInstances;
     }
     /**
-     * Target CPU utilization ratio to maintain when scaling.
+     * @return Target CPU utilization ratio to maintain when scaling.
      * 
-    */
+     */
     public Double targetCpuUtilization() {
         return this.targetCpuUtilization;
     }
     /**
-     * Target throughput utilization ratio to maintain when scaling
+     * @return Target throughput utilization ratio to maintain when scaling
      * 
-    */
+     */
     public Double targetThroughputUtilization() {
         return this.targetThroughputUtilization;
     }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse {
-    /**
-     * Annotation spec set resource name.
-     * 
-     */
+        /**
+         * @return Annotation spec set resource name.
+         * 
+         */
     private final String annotationSpecSet;
-    /**
-     * Optional. Instruction message showed on contributors UI.
-     * 
-     */
+        /**
+         * @return Optional. Instruction message showed on contributors UI.
+         * 
+         */
     private final String instructionMessage;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse {
     }
 
     /**
-     * Annotation spec set resource name.
+     * @return Annotation spec set resource name.
      * 
-    */
+     */
     public String annotationSpecSet() {
         return this.annotationSpecSet;
     }
     /**
-     * Optional. Instruction message showed on contributors UI.
+     * @return Optional. Instruction message showed on contributors UI.
      * 
-    */
+     */
     public String instructionMessage() {
         return this.instructionMessage;
     }

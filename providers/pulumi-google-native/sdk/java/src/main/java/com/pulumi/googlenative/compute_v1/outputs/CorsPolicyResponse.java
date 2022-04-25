@@ -12,45 +12,45 @@ import java.util.Objects;
 
 @CustomType
 public final class CorsPolicyResponse {
-    /**
-     * In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This field translates to the Access-Control-Allow-Credentials header. Default is false.
-     * 
-     */
+        /**
+         * @return In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This field translates to the Access-Control-Allow-Credentials header. Default is false.
+         * 
+         */
     private final Boolean allowCredentials;
-    /**
-     * Specifies the content for the Access-Control-Allow-Headers header.
-     * 
-     */
+        /**
+         * @return Specifies the content for the Access-Control-Allow-Headers header.
+         * 
+         */
     private final List<String> allowHeaders;
-    /**
-     * Specifies the content for the Access-Control-Allow-Methods header.
-     * 
-     */
+        /**
+         * @return Specifies the content for the Access-Control-Allow-Methods header.
+         * 
+         */
     private final List<String> allowMethods;
-    /**
-     * Specifies a regular expression that matches allowed origins. For more information about the regular expression syntax, see Syntax. An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-     * 
-     */
+        /**
+         * @return Specifies a regular expression that matches allowed origins. For more information about the regular expression syntax, see Syntax. An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+         * 
+         */
     private final List<String> allowOriginRegexes;
-    /**
-     * Specifies the list of origins that is allowed to do CORS requests. An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-     * 
-     */
+        /**
+         * @return Specifies the list of origins that is allowed to do CORS requests. An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+         * 
+         */
     private final List<String> allowOrigins;
-    /**
-     * If true, the setting specifies the CORS policy is disabled. The default value of false, which indicates that the CORS policy is in effect.
-     * 
-     */
+        /**
+         * @return If true, the setting specifies the CORS policy is disabled. The default value of false, which indicates that the CORS policy is in effect.
+         * 
+         */
     private final Boolean disabled;
-    /**
-     * Specifies the content for the Access-Control-Expose-Headers header.
-     * 
-     */
+        /**
+         * @return Specifies the content for the Access-Control-Expose-Headers header.
+         * 
+         */
     private final List<String> exposeHeaders;
-    /**
-     * Specifies how long results of a preflight request can be cached in seconds. This field translates to the Access-Control-Max-Age header.
-     * 
-     */
+        /**
+         * @return Specifies how long results of a preflight request can be cached in seconds. This field translates to the Access-Control-Max-Age header.
+         * 
+         */
     private final Integer maxAge;
 
     @CustomType.Constructor
@@ -74,58 +74,58 @@ public final class CorsPolicyResponse {
     }
 
     /**
-     * In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This field translates to the Access-Control-Allow-Credentials header. Default is false.
+     * @return In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This field translates to the Access-Control-Allow-Credentials header. Default is false.
      * 
-    */
+     */
     public Boolean allowCredentials() {
         return this.allowCredentials;
     }
     /**
-     * Specifies the content for the Access-Control-Allow-Headers header.
+     * @return Specifies the content for the Access-Control-Allow-Headers header.
      * 
-    */
+     */
     public List<String> allowHeaders() {
         return this.allowHeaders;
     }
     /**
-     * Specifies the content for the Access-Control-Allow-Methods header.
+     * @return Specifies the content for the Access-Control-Allow-Methods header.
      * 
-    */
+     */
     public List<String> allowMethods() {
         return this.allowMethods;
     }
     /**
-     * Specifies a regular expression that matches allowed origins. For more information about the regular expression syntax, see Syntax. An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+     * @return Specifies a regular expression that matches allowed origins. For more information about the regular expression syntax, see Syntax. An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
      * 
-    */
+     */
     public List<String> allowOriginRegexes() {
         return this.allowOriginRegexes;
     }
     /**
-     * Specifies the list of origins that is allowed to do CORS requests. An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+     * @return Specifies the list of origins that is allowed to do CORS requests. An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
      * 
-    */
+     */
     public List<String> allowOrigins() {
         return this.allowOrigins;
     }
     /**
-     * If true, the setting specifies the CORS policy is disabled. The default value of false, which indicates that the CORS policy is in effect.
+     * @return If true, the setting specifies the CORS policy is disabled. The default value of false, which indicates that the CORS policy is in effect.
      * 
-    */
+     */
     public Boolean disabled() {
         return this.disabled;
     }
     /**
-     * Specifies the content for the Access-Control-Expose-Headers header.
+     * @return Specifies the content for the Access-Control-Expose-Headers header.
      * 
-    */
+     */
     public List<String> exposeHeaders() {
         return this.exposeHeaders;
     }
     /**
-     * Specifies how long results of a preflight request can be cached in seconds. This field translates to the Access-Control-Max-Age header.
+     * @return Specifies how long results of a preflight request can be cached in seconds. This field translates to the Access-Control-Max-Age header.
      * 
-    */
+     */
     public Integer maxAge() {
         return this.maxAge;
     }

@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class StandardSqlFieldResponse {
-    /**
-     * Optional. The name of this field. Can be absent for struct fields.
-     * 
-     */
+        /**
+         * @return Optional. The name of this field. Can be absent for struct fields.
+         * 
+         */
     private final String name;
-    /**
-     * Optional. The type of this parameter. Absent if not explicitly specified (e.g., CREATE FUNCTION statement can omit the return type; in this case the output parameter does not have this &#34;type&#34; field).
-     * 
-     */
+        /**
+         * @return Optional. The type of this parameter. Absent if not explicitly specified (e.g., CREATE FUNCTION statement can omit the return type; in this case the output parameter does not have this &#34;type&#34; field).
+         * 
+         */
     private final StandardSqlDataTypeResponse type;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class StandardSqlFieldResponse {
     }
 
     /**
-     * Optional. The name of this field. Can be absent for struct fields.
+     * @return Optional. The name of this field. Can be absent for struct fields.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Optional. The type of this parameter. Absent if not explicitly specified (e.g., CREATE FUNCTION statement can omit the return type; in this case the output parameter does not have this &#34;type&#34; field).
+     * @return Optional. The type of this parameter. Absent if not explicitly specified (e.g., CREATE FUNCTION statement can omit the return type; in this case the output parameter does not have this &#34;type&#34; field).
      * 
-    */
+     */
     public StandardSqlDataTypeResponse type() {
         return this.type;
     }

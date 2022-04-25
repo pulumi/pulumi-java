@@ -11,30 +11,30 @@ import java.util.Objects;
 
 @CustomType
 public final class ConfigVariableResponse {
-    /**
-     * Value is a bool.
-     * 
-     */
+        /**
+         * @return Value is a bool.
+         * 
+         */
     private final Boolean boolValue;
-    /**
-     * Value is an integer
-     * 
-     */
+        /**
+         * @return Value is an integer
+         * 
+         */
     private final String intValue;
-    /**
-     * Key of the config variable.
-     * 
-     */
+        /**
+         * @return Key of the config variable.
+         * 
+         */
     private final String key;
-    /**
-     * Value is a secret.
-     * 
-     */
+        /**
+         * @return Value is a secret.
+         * 
+         */
     private final SecretResponse secretValue;
-    /**
-     * Value is a string.
-     * 
-     */
+        /**
+         * @return Value is a string.
+         * 
+         */
     private final String stringValue;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class ConfigVariableResponse {
     }
 
     /**
-     * Value is a bool.
+     * @return Value is a bool.
      * 
-    */
+     */
     public Boolean boolValue() {
         return this.boolValue;
     }
     /**
-     * Value is an integer
+     * @return Value is an integer
      * 
-    */
+     */
     public String intValue() {
         return this.intValue;
     }
     /**
-     * Key of the config variable.
+     * @return Key of the config variable.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Value is a secret.
+     * @return Value is a secret.
      * 
-    */
+     */
     public SecretResponse secretValue() {
         return this.secretValue;
     }
     /**
-     * Value is a string.
+     * @return Value is a string.
      * 
-    */
+     */
     public String stringValue() {
         return this.stringValue;
     }

@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class ResourcePolicyHourlyCycleResponse {
-    /**
-     * [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
-     * 
-     */
+        /**
+         * @return [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
+         * 
+         */
     private final String duration;
-    /**
-     * Defines a schedule with units measured in hours. The value determines how many hours pass between the start of each cycle.
-     * 
-     */
+        /**
+         * @return Defines a schedule with units measured in hours. The value determines how many hours pass between the start of each cycle.
+         * 
+         */
     private final Integer hoursInCycle;
-    /**
-     * Time within the window to start the operations. It must be in format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-00] GMT.
-     * 
-     */
+        /**
+         * @return Time within the window to start the operations. It must be in format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-00] GMT.
+         * 
+         */
     private final String startTime;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class ResourcePolicyHourlyCycleResponse {
     }
 
     /**
-     * [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
+     * @return [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
      * 
-    */
+     */
     public String duration() {
         return this.duration;
     }
     /**
-     * Defines a schedule with units measured in hours. The value determines how many hours pass between the start of each cycle.
+     * @return Defines a schedule with units measured in hours. The value determines how many hours pass between the start of each cycle.
      * 
-    */
+     */
     public Integer hoursInCycle() {
         return this.hoursInCycle;
     }
     /**
-     * Time within the window to start the operations. It must be in format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-00] GMT.
+     * @return Time within the window to start the operations. It must be in format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-00] GMT.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }

@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudChannelV1AssociationInfoResponse {
-    /**
-     * The name of the base entitlement, for which this entitlement is an add-on.
-     * 
-     */
+        /**
+         * @return The name of the base entitlement, for which this entitlement is an add-on.
+         * 
+         */
     private final String baseEntitlement;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GoogleCloudChannelV1AssociationInfoResponse {
     }
 
     /**
-     * The name of the base entitlement, for which this entitlement is an add-on.
+     * @return The name of the base entitlement, for which this entitlement is an add-on.
      * 
-    */
+     */
     public String baseEntitlement() {
         return this.baseEntitlement;
     }

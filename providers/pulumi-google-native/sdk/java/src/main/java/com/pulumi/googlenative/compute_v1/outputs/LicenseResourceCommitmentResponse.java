@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class LicenseResourceCommitmentResponse {
-    /**
-     * The number of licenses purchased.
-     * 
-     */
+        /**
+         * @return The number of licenses purchased.
+         * 
+         */
     private final String amount;
-    /**
-     * Specifies the core range of the instance for which this license applies.
-     * 
-     */
+        /**
+         * @return Specifies the core range of the instance for which this license applies.
+         * 
+         */
     private final String coresPerLicense;
-    /**
-     * Any applicable license URI.
-     * 
-     */
+        /**
+         * @return Any applicable license URI.
+         * 
+         */
     private final String license;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class LicenseResourceCommitmentResponse {
     }
 
     /**
-     * The number of licenses purchased.
+     * @return The number of licenses purchased.
      * 
-    */
+     */
     public String amount() {
         return this.amount;
     }
     /**
-     * Specifies the core range of the instance for which this license applies.
+     * @return Specifies the core range of the instance for which this license applies.
      * 
-    */
+     */
     public String coresPerLicense() {
         return this.coresPerLicense;
     }
     /**
-     * Any applicable license URI.
+     * @return Any applicable license URI.
      * 
-    */
+     */
     public String license() {
         return this.license;
     }

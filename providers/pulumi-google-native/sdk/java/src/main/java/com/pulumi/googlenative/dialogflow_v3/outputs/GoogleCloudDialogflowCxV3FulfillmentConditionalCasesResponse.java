@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse {
-    /**
-     * A list of cascading if-else conditions.
-     * 
-     */
+        /**
+         * @return A list of cascading if-else conditions.
+         * 
+         */
     private final List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse> cases;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse 
     }
 
     /**
-     * A list of cascading if-else conditions.
+     * @return A list of cascading if-else conditions.
      * 
-    */
+     */
     public List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse> cases() {
         return this.cases;
     }

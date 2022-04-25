@@ -10,50 +10,50 @@ import java.util.Objects;
 
 @CustomType
 public final class GetGithubEnterpriseConfigResult {
-    /**
-     * The GitHub app id of the Cloud Build app on the GitHub Enterprise server.
-     * 
-     */
+        /**
+         * @return The GitHub app id of the Cloud Build app on the GitHub Enterprise server.
+         * 
+         */
     private final String appId;
-    /**
-     * Time when the installation was associated with the project.
-     * 
-     */
+        /**
+         * @return Time when the installation was associated with the project.
+         * 
+         */
     private final String createTime;
-    /**
-     * Name to display for this config.
-     * 
-     */
+        /**
+         * @return Name to display for this config.
+         * 
+         */
     private final String displayName;
-    /**
-     * The URL of the github enterprise host the configuration is for.
-     * 
-     */
+        /**
+         * @return The URL of the github enterprise host the configuration is for.
+         * 
+         */
     private final String hostUrl;
-    /**
-     * Optional. The full resource name for the GitHubEnterpriseConfig For example: &#34;projects/{$project_id}/githubEnterpriseConfigs/{$config_id}&#34;
-     * 
-     */
+        /**
+         * @return Optional. The full resource name for the GitHubEnterpriseConfig For example: &#34;projects/{$project_id}/githubEnterpriseConfigs/{$config_id}&#34;
+         * 
+         */
     private final String name;
-    /**
-     * Optional. The network to be used when reaching out to the GitHub Enterprise server. The VPC network must be enabled for private service connection. This should be set if the GitHub Enterprise server is hosted on-premises and not reachable by public internet. If this field is left empty, no network peering will occur and calls to the GitHub Enterprise server will be made over the public internet. Must be in the format `projects/{project}/global/networks/{network}`, where {project} is a project number or id and {network} is the name of a VPC network in the project.
-     * 
-     */
+        /**
+         * @return Optional. The network to be used when reaching out to the GitHub Enterprise server. The VPC network must be enabled for private service connection. This should be set if the GitHub Enterprise server is hosted on-premises and not reachable by public internet. If this field is left empty, no network peering will occur and calls to the GitHub Enterprise server will be made over the public internet. Must be in the format `projects/{project}/global/networks/{network}`, where {project} is a project number or id and {network} is the name of a VPC network in the project.
+         * 
+         */
     private final String peeredNetwork;
-    /**
-     * Names of secrets in Secret Manager.
-     * 
-     */
+        /**
+         * @return Names of secrets in Secret Manager.
+         * 
+         */
     private final GitHubEnterpriseSecretsResponse secrets;
-    /**
-     * Optional. SSL certificate to use for requests to GitHub Enterprise.
-     * 
-     */
+        /**
+         * @return Optional. SSL certificate to use for requests to GitHub Enterprise.
+         * 
+         */
     private final String sslCa;
-    /**
-     * The key that should be attached to webhook calls to the ReceiveWebhook endpoint.
-     * 
-     */
+        /**
+         * @return The key that should be attached to webhook calls to the ReceiveWebhook endpoint.
+         * 
+         */
     private final String webhookKey;
 
     @CustomType.Constructor
@@ -79,65 +79,65 @@ public final class GetGithubEnterpriseConfigResult {
     }
 
     /**
-     * The GitHub app id of the Cloud Build app on the GitHub Enterprise server.
+     * @return The GitHub app id of the Cloud Build app on the GitHub Enterprise server.
      * 
-    */
+     */
     public String appId() {
         return this.appId;
     }
     /**
-     * Time when the installation was associated with the project.
+     * @return Time when the installation was associated with the project.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Name to display for this config.
+     * @return Name to display for this config.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The URL of the github enterprise host the configuration is for.
+     * @return The URL of the github enterprise host the configuration is for.
      * 
-    */
+     */
     public String hostUrl() {
         return this.hostUrl;
     }
     /**
-     * Optional. The full resource name for the GitHubEnterpriseConfig For example: &#34;projects/{$project_id}/githubEnterpriseConfigs/{$config_id}&#34;
+     * @return Optional. The full resource name for the GitHubEnterpriseConfig For example: &#34;projects/{$project_id}/githubEnterpriseConfigs/{$config_id}&#34;
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Optional. The network to be used when reaching out to the GitHub Enterprise server. The VPC network must be enabled for private service connection. This should be set if the GitHub Enterprise server is hosted on-premises and not reachable by public internet. If this field is left empty, no network peering will occur and calls to the GitHub Enterprise server will be made over the public internet. Must be in the format `projects/{project}/global/networks/{network}`, where {project} is a project number or id and {network} is the name of a VPC network in the project.
+     * @return Optional. The network to be used when reaching out to the GitHub Enterprise server. The VPC network must be enabled for private service connection. This should be set if the GitHub Enterprise server is hosted on-premises and not reachable by public internet. If this field is left empty, no network peering will occur and calls to the GitHub Enterprise server will be made over the public internet. Must be in the format `projects/{project}/global/networks/{network}`, where {project} is a project number or id and {network} is the name of a VPC network in the project.
      * 
-    */
+     */
     public String peeredNetwork() {
         return this.peeredNetwork;
     }
     /**
-     * Names of secrets in Secret Manager.
+     * @return Names of secrets in Secret Manager.
      * 
-    */
+     */
     public GitHubEnterpriseSecretsResponse secrets() {
         return this.secrets;
     }
     /**
-     * Optional. SSL certificate to use for requests to GitHub Enterprise.
+     * @return Optional. SSL certificate to use for requests to GitHub Enterprise.
      * 
-    */
+     */
     public String sslCa() {
         return this.sslCa;
     }
     /**
-     * The key that should be attached to webhook calls to the ReceiveWebhook endpoint.
+     * @return The key that should be attached to webhook calls to the ReceiveWebhook endpoint.
      * 
-    */
+     */
     public String webhookKey() {
         return this.webhookKey;
     }

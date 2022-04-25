@@ -23,6 +23,10 @@ public final class GKEMasterInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="clusterNetworkUri", required=true)
     private String clusterNetworkUri;
 
+    /**
+     * @return URI of a GKE cluster network.
+     * 
+     */
     public String clusterNetworkUri() {
         return this.clusterNetworkUri;
     }
@@ -34,6 +38,10 @@ public final class GKEMasterInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="clusterUri", required=true)
     private String clusterUri;
 
+    /**
+     * @return URI of a GKE cluster.
+     * 
+     */
     public String clusterUri() {
         return this.clusterUri;
     }
@@ -45,6 +53,10 @@ public final class GKEMasterInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="externalIp", required=true)
     private String externalIp;
 
+    /**
+     * @return External IP address of a GKE cluster master.
+     * 
+     */
     public String externalIp() {
         return this.externalIp;
     }
@@ -56,6 +68,10 @@ public final class GKEMasterInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="internalIp", required=true)
     private String internalIp;
 
+    /**
+     * @return Internal IP address of a GKE cluster master.
+     * 
+     */
     public String internalIp() {
         return this.internalIp;
     }
@@ -87,21 +103,45 @@ public final class GKEMasterInfoResponse extends com.pulumi.resources.InvokeArgs
             $ = new GKEMasterInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterNetworkUri URI of a GKE cluster network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterNetworkUri(String clusterNetworkUri) {
             $.clusterNetworkUri = clusterNetworkUri;
             return this;
         }
 
+        /**
+         * @param clusterUri URI of a GKE cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterUri(String clusterUri) {
             $.clusterUri = clusterUri;
             return this;
         }
 
+        /**
+         * @param externalIp External IP address of a GKE cluster master.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalIp(String externalIp) {
             $.externalIp = externalIp;
             return this;
         }
 
+        /**
+         * @param internalIp Internal IP address of a GKE cluster master.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalIp(String internalIp) {
             $.internalIp = internalIp;
             return this;

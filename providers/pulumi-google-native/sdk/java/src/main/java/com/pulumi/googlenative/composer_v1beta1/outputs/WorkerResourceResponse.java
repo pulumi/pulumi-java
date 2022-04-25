@@ -10,30 +10,30 @@ import java.util.Objects;
 
 @CustomType
 public final class WorkerResourceResponse {
-    /**
-     * Optional. CPU request and limit for a single Airflow worker replica.
-     * 
-     */
+        /**
+         * @return Optional. CPU request and limit for a single Airflow worker replica.
+         * 
+         */
     private final Double cpu;
-    /**
-     * Optional. Maximum number of workers for autoscaling.
-     * 
-     */
+        /**
+         * @return Optional. Maximum number of workers for autoscaling.
+         * 
+         */
     private final Integer maxCount;
-    /**
-     * Optional. Memory (GB) request and limit for a single Airflow worker replica.
-     * 
-     */
+        /**
+         * @return Optional. Memory (GB) request and limit for a single Airflow worker replica.
+         * 
+         */
     private final Double memoryGb;
-    /**
-     * Optional. Minimum number of workers for autoscaling.
-     * 
-     */
+        /**
+         * @return Optional. Minimum number of workers for autoscaling.
+         * 
+         */
     private final Integer minCount;
-    /**
-     * Optional. Storage (GB) request and limit for a single Airflow worker replica.
-     * 
-     */
+        /**
+         * @return Optional. Storage (GB) request and limit for a single Airflow worker replica.
+         * 
+         */
     private final Double storageGb;
 
     @CustomType.Constructor
@@ -51,37 +51,37 @@ public final class WorkerResourceResponse {
     }
 
     /**
-     * Optional. CPU request and limit for a single Airflow worker replica.
+     * @return Optional. CPU request and limit for a single Airflow worker replica.
      * 
-    */
+     */
     public Double cpu() {
         return this.cpu;
     }
     /**
-     * Optional. Maximum number of workers for autoscaling.
+     * @return Optional. Maximum number of workers for autoscaling.
      * 
-    */
+     */
     public Integer maxCount() {
         return this.maxCount;
     }
     /**
-     * Optional. Memory (GB) request and limit for a single Airflow worker replica.
+     * @return Optional. Memory (GB) request and limit for a single Airflow worker replica.
      * 
-    */
+     */
     public Double memoryGb() {
         return this.memoryGb;
     }
     /**
-     * Optional. Minimum number of workers for autoscaling.
+     * @return Optional. Minimum number of workers for autoscaling.
      * 
-    */
+     */
     public Integer minCount() {
         return this.minCount;
     }
     /**
-     * Optional. Storage (GB) request and limit for a single Airflow worker replica.
+     * @return Optional. Storage (GB) request and limit for a single Airflow worker replica.
      * 
-    */
+     */
     public Double storageGb() {
         return this.storageGb;
     }

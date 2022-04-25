@@ -25,6 +25,10 @@ public final class GoogleCloudChannelV1ParameterResponse extends com.pulumi.reso
     @Import(name="editable", required=true)
     private Boolean editable;
 
+    /**
+     * @return Specifies whether this parameter is allowed to be changed. For example, for a Google Workspace Business Starter entitlement in commitment plan, num_units is editable when entitlement is active.
+     * 
+     */
     public Boolean editable() {
         return this.editable;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudChannelV1ParameterResponse extends com.pulumi.reso
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the parameter.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +55,10 @@ public final class GoogleCloudChannelV1ParameterResponse extends com.pulumi.reso
     @Import(name="value", required=true)
     private GoogleCloudChannelV1ValueResponse value;
 
+    /**
+     * @return Value of the parameter.
+     * 
+     */
     public GoogleCloudChannelV1ValueResponse value() {
         return this.value;
     }
@@ -77,16 +89,34 @@ public final class GoogleCloudChannelV1ParameterResponse extends com.pulumi.reso
             $ = new GoogleCloudChannelV1ParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param editable Specifies whether this parameter is allowed to be changed. For example, for a Google Workspace Business Starter entitlement in commitment plan, num_units is editable when entitlement is active.
+         * 
+         * @return builder
+         * 
+         */
         public Builder editable(Boolean editable) {
             $.editable = editable;
             return this;
         }
 
+        /**
+         * @param name Name of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value Value of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(GoogleCloudChannelV1ValueResponse value) {
             $.value = value;
             return this;

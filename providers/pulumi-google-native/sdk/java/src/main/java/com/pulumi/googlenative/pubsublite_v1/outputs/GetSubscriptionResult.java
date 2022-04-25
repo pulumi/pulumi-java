@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSubscriptionResult {
-    /**
-     * The settings for this subscription&#39;s message delivery.
-     * 
-     */
+        /**
+         * @return The settings for this subscription&#39;s message delivery.
+         * 
+         */
     private final DeliveryConfigResponse deliveryConfig;
-    /**
-     * The name of the subscription. Structured like: projects/{project_number}/locations/{location}/subscriptions/{subscription_id}
-     * 
-     */
+        /**
+         * @return The name of the subscription. Structured like: projects/{project_number}/locations/{location}/subscriptions/{subscription_id}
+         * 
+         */
     private final String name;
-    /**
-     * The name of the topic this subscription is attached to. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
-     * 
-     */
+        /**
+         * @return The name of the topic this subscription is attached to. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
+         * 
+         */
     private final String topic;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class GetSubscriptionResult {
     }
 
     /**
-     * The settings for this subscription&#39;s message delivery.
+     * @return The settings for this subscription&#39;s message delivery.
      * 
-    */
+     */
     public DeliveryConfigResponse deliveryConfig() {
         return this.deliveryConfig;
     }
     /**
-     * The name of the subscription. Structured like: projects/{project_number}/locations/{location}/subscriptions/{subscription_id}
+     * @return The name of the subscription. Structured like: projects/{project_number}/locations/{location}/subscriptions/{subscription_id}
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The name of the topic this subscription is attached to. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
+     * @return The name of the topic this subscription is attached to. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
      * 
-    */
+     */
     public String topic() {
         return this.topic;
     }

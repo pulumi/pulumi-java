@@ -19,6 +19,10 @@ public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatusRespo
     @Import(name="lastRunStartTime", required=true)
     private String lastRunStartTime;
 
+    /**
+     * @return The last time the schedule successfully ran. The timestamp is an RFC3339 string.
+     * 
+     */
     public String lastRunStartTime() {
         return this.lastRunStartTime;
     }
@@ -30,6 +34,10 @@ public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatusRespo
     @Import(name="nextRunStartTime", required=true)
     private String nextRunStartTime;
 
+    /**
+     * @return The next time the schedule is planned to run. The actual time might be slightly different. The timestamp is an RFC3339 string.
+     * 
+     */
     public String nextRunStartTime() {
         return this.nextRunStartTime;
     }
@@ -59,11 +67,23 @@ public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatusRespo
             $ = new ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastRunStartTime The last time the schedule successfully ran. The timestamp is an RFC3339 string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRunStartTime(String lastRunStartTime) {
             $.lastRunStartTime = lastRunStartTime;
             return this;
         }
 
+        /**
+         * @param nextRunStartTime The next time the schedule is planned to run. The actual time might be slightly different. The timestamp is an RFC3339 string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextRunStartTime(String nextRunStartTime) {
             $.nextRunStartTime = nextRunStartTime;
             return this;

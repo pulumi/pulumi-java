@@ -12,26 +12,26 @@ import java.util.Objects;
 
 @CustomType
 public final class GetResponsePolicyResult {
-    /**
-     * User-provided description for this Response Policy.
-     * 
-     */
+        /**
+         * @return User-provided description for this Response Policy.
+         * 
+         */
     private final String description;
-    /**
-     * The list of Google Kubernetes Engine clusters to which this response policy is applied.
-     * 
-     */
+        /**
+         * @return The list of Google Kubernetes Engine clusters to which this response policy is applied.
+         * 
+         */
     private final List<ResponsePolicyGKEClusterResponse> gkeClusters;
     private final String kind;
-    /**
-     * List of network names specifying networks to which this policy is applied.
-     * 
-     */
+        /**
+         * @return List of network names specifying networks to which this policy is applied.
+         * 
+         */
     private final List<ResponsePolicyNetworkResponse> networks;
-    /**
-     * User assigned name for this Response Policy.
-     * 
-     */
+        /**
+         * @return User assigned name for this Response Policy.
+         * 
+         */
     private final String responsePolicyName;
 
     @CustomType.Constructor
@@ -49,16 +49,16 @@ public final class GetResponsePolicyResult {
     }
 
     /**
-     * User-provided description for this Response Policy.
+     * @return User-provided description for this Response Policy.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The list of Google Kubernetes Engine clusters to which this response policy is applied.
+     * @return The list of Google Kubernetes Engine clusters to which this response policy is applied.
      * 
-    */
+     */
     public List<ResponsePolicyGKEClusterResponse> gkeClusters() {
         return this.gkeClusters;
     }
@@ -66,16 +66,16 @@ public final class GetResponsePolicyResult {
         return this.kind;
     }
     /**
-     * List of network names specifying networks to which this policy is applied.
+     * @return List of network names specifying networks to which this policy is applied.
      * 
-    */
+     */
     public List<ResponsePolicyNetworkResponse> networks() {
         return this.networks;
     }
     /**
-     * User assigned name for this Response Policy.
+     * @return User assigned name for this Response Policy.
      * 
-    */
+     */
     public String responsePolicyName() {
         return this.responsePolicyName;
     }

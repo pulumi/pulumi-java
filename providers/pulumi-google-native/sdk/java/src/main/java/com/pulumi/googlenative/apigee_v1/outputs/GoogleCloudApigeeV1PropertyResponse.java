@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudApigeeV1PropertyResponse {
-    /**
-     * The property key
-     * 
-     */
+        /**
+         * @return The property key
+         * 
+         */
     private final String name;
-    /**
-     * The property value
-     * 
-     */
+        /**
+         * @return The property value
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GoogleCloudApigeeV1PropertyResponse {
     }
 
     /**
-     * The property key
+     * @return The property key
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The property value
+     * @return The property value
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

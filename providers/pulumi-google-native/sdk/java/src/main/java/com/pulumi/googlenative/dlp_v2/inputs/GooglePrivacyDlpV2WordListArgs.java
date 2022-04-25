@@ -27,6 +27,10 @@ public final class GooglePrivacyDlpV2WordListArgs extends com.pulumi.resources.R
     @Import(name="words")
     private @Nullable Output<List<String>> words;
 
+    /**
+     * @return Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits. [required]
+     * 
+     */
     public Optional<Output<List<String>>> words() {
         return Optional.ofNullable(this.words);
     }
@@ -55,15 +59,33 @@ public final class GooglePrivacyDlpV2WordListArgs extends com.pulumi.resources.R
             $ = new GooglePrivacyDlpV2WordListArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param words Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits. [required]
+         * 
+         * @return builder
+         * 
+         */
         public Builder words(@Nullable Output<List<String>> words) {
             $.words = words;
             return this;
         }
 
+        /**
+         * @param words Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits. [required]
+         * 
+         * @return builder
+         * 
+         */
         public Builder words(List<String> words) {
             return words(Output.of(words));
         }
 
+        /**
+         * @param words Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits. [required]
+         * 
+         * @return builder
+         * 
+         */
         public Builder words(String... words) {
             return words(List.of(words));
         }

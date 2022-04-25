@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class AndroidAttributesResponse {
-    /**
-     * Whether applications from unknown sources can be installed on device.
-     * 
-     */
+        /**
+         * @return Whether applications from unknown sources can be installed on device.
+         * 
+         */
     private final Boolean enabledUnknownSources;
-    /**
-     * Whether this account is on an owner/primary profile. For phones, only true for owner profiles. Android 4+ devices can have secondary or restricted user profiles.
-     * 
-     */
+        /**
+         * @return Whether this account is on an owner/primary profile. For phones, only true for owner profiles. Android 4+ devices can have secondary or restricted user profiles.
+         * 
+         */
     private final Boolean ownerProfileAccount;
-    /**
-     * Ownership privileges on device.
-     * 
-     */
+        /**
+         * @return Ownership privileges on device.
+         * 
+         */
     private final String ownershipPrivilege;
-    /**
-     * Whether device supports Android work profiles. If false, this service will not block access to corp data even if an administrator turns on the &#34;Enforce Work Profile&#34; policy.
-     * 
-     */
+        /**
+         * @return Whether device supports Android work profiles. If false, this service will not block access to corp data even if an administrator turns on the &#34;Enforce Work Profile&#34; policy.
+         * 
+         */
     private final Boolean supportsWorkProfile;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class AndroidAttributesResponse {
     }
 
     /**
-     * Whether applications from unknown sources can be installed on device.
+     * @return Whether applications from unknown sources can be installed on device.
      * 
-    */
+     */
     public Boolean enabledUnknownSources() {
         return this.enabledUnknownSources;
     }
     /**
-     * Whether this account is on an owner/primary profile. For phones, only true for owner profiles. Android 4+ devices can have secondary or restricted user profiles.
+     * @return Whether this account is on an owner/primary profile. For phones, only true for owner profiles. Android 4+ devices can have secondary or restricted user profiles.
      * 
-    */
+     */
     public Boolean ownerProfileAccount() {
         return this.ownerProfileAccount;
     }
     /**
-     * Ownership privileges on device.
+     * @return Ownership privileges on device.
      * 
-    */
+     */
     public String ownershipPrivilege() {
         return this.ownershipPrivilege;
     }
     /**
-     * Whether device supports Android work profiles. If false, this service will not block access to corp data even if an administrator turns on the &#34;Enforce Work Profile&#34; policy.
+     * @return Whether device supports Android work profiles. If false, this service will not block access to corp data even if an administrator turns on the &#34;Enforce Work Profile&#34; policy.
      * 
-    */
+     */
     public Boolean supportsWorkProfile() {
         return this.supportsWorkProfile;
     }

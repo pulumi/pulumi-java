@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class NodeInfoResponse {
-    /**
-     * Location of the node.
-     * 
-     */
+        /**
+         * @return Location of the node.
+         * 
+         */
     private final String zone;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class NodeInfoResponse {
     }
 
     /**
-     * Location of the node.
+     * @return Location of the node.
      * 
-    */
+     */
     public String zone() {
         return this.zone;
     }

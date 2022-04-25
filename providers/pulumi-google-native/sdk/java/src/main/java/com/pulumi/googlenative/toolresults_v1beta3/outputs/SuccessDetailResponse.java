@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class SuccessDetailResponse {
-    /**
-     * If a native process other than the app crashed.
-     * 
-     */
+        /**
+         * @return If a native process other than the app crashed.
+         * 
+         */
     private final Boolean otherNativeCrash;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class SuccessDetailResponse {
     }
 
     /**
-     * If a native process other than the app crashed.
+     * @return If a native process other than the app crashed.
      * 
-    */
+     */
     public Boolean otherNativeCrash() {
         return this.otherNativeCrash;
     }

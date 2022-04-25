@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class MetadataResponse {
-    /**
-     * Services that this ruleset has declarations for (e.g., &#34;cloud.firestore&#34;). There may be 0+ of these.
-     * 
-     */
+        /**
+         * @return Services that this ruleset has declarations for (e.g., &#34;cloud.firestore&#34;). There may be 0+ of these.
+         * 
+         */
     private final List<String> services;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class MetadataResponse {
     }
 
     /**
-     * Services that this ruleset has declarations for (e.g., &#34;cloud.firestore&#34;). There may be 0+ of these.
+     * @return Services that this ruleset has declarations for (e.g., &#34;cloud.firestore&#34;). There may be 0+ of these.
      * 
-    */
+     */
     public List<String> services() {
         return this.services;
     }

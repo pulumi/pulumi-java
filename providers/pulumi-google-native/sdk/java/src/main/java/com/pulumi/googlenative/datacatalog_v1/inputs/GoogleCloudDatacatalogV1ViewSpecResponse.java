@@ -23,6 +23,10 @@ public final class GoogleCloudDatacatalogV1ViewSpecResponse extends com.pulumi.r
     @Import(name="viewQuery", required=true)
     private String viewQuery;
 
+    /**
+     * @return The query that defines the table view.
+     * 
+     */
     public String viewQuery() {
         return this.viewQuery;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudDatacatalogV1ViewSpecResponse extends com.pulumi.r
             $ = new GoogleCloudDatacatalogV1ViewSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param viewQuery The query that defines the table view.
+         * 
+         * @return builder
+         * 
+         */
         public Builder viewQuery(String viewQuery) {
             $.viewQuery = viewQuery;
             return this;

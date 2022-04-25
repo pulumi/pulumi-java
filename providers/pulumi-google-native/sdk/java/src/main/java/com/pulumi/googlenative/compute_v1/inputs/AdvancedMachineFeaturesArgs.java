@@ -27,6 +27,10 @@ public final class AdvancedMachineFeaturesArgs extends com.pulumi.resources.Reso
     @Import(name="enableNestedVirtualization")
     private @Nullable Output<Boolean> enableNestedVirtualization;
 
+    /**
+     * @return Whether to enable nested virtualization or not (default is false).
+     * 
+     */
     public Optional<Output<Boolean>> enableNestedVirtualization() {
         return Optional.ofNullable(this.enableNestedVirtualization);
     }
@@ -38,6 +42,10 @@ public final class AdvancedMachineFeaturesArgs extends com.pulumi.resources.Reso
     @Import(name="enableUefiNetworking")
     private @Nullable Output<Boolean> enableUefiNetworking;
 
+    /**
+     * @return Whether to enable UEFI networking for instance creation.
+     * 
+     */
     public Optional<Output<Boolean>> enableUefiNetworking() {
         return Optional.ofNullable(this.enableUefiNetworking);
     }
@@ -49,6 +57,10 @@ public final class AdvancedMachineFeaturesArgs extends com.pulumi.resources.Reso
     @Import(name="threadsPerCore")
     private @Nullable Output<Integer> threadsPerCore;
 
+    /**
+     * @return The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
+     * 
+     */
     public Optional<Output<Integer>> threadsPerCore() {
         return Optional.ofNullable(this.threadsPerCore);
     }
@@ -79,29 +91,65 @@ public final class AdvancedMachineFeaturesArgs extends com.pulumi.resources.Reso
             $ = new AdvancedMachineFeaturesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableNestedVirtualization Whether to enable nested virtualization or not (default is false).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNestedVirtualization(@Nullable Output<Boolean> enableNestedVirtualization) {
             $.enableNestedVirtualization = enableNestedVirtualization;
             return this;
         }
 
+        /**
+         * @param enableNestedVirtualization Whether to enable nested virtualization or not (default is false).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNestedVirtualization(Boolean enableNestedVirtualization) {
             return enableNestedVirtualization(Output.of(enableNestedVirtualization));
         }
 
+        /**
+         * @param enableUefiNetworking Whether to enable UEFI networking for instance creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableUefiNetworking(@Nullable Output<Boolean> enableUefiNetworking) {
             $.enableUefiNetworking = enableUefiNetworking;
             return this;
         }
 
+        /**
+         * @param enableUefiNetworking Whether to enable UEFI networking for instance creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableUefiNetworking(Boolean enableUefiNetworking) {
             return enableUefiNetworking(Output.of(enableUefiNetworking));
         }
 
+        /**
+         * @param threadsPerCore The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threadsPerCore(@Nullable Output<Integer> threadsPerCore) {
             $.threadsPerCore = threadsPerCore;
             return this;
         }
 
+        /**
+         * @param threadsPerCore The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threadsPerCore(Integer threadsPerCore) {
             return threadsPerCore(Output.of(threadsPerCore));
         }

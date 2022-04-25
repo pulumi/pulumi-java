@@ -26,6 +26,10 @@ public final class ShieldedInstanceIntegrityPolicyArgs extends com.pulumi.resour
     @Import(name="updateAutoLearnPolicy")
     private @Nullable Output<Boolean> updateAutoLearnPolicy;
 
+    /**
+     * @return Updates the integrity policy baseline using the measurements from the VM instance&#39;s most recent boot.
+     * 
+     */
     public Optional<Output<Boolean>> updateAutoLearnPolicy() {
         return Optional.ofNullable(this.updateAutoLearnPolicy);
     }
@@ -54,11 +58,23 @@ public final class ShieldedInstanceIntegrityPolicyArgs extends com.pulumi.resour
             $ = new ShieldedInstanceIntegrityPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param updateAutoLearnPolicy Updates the integrity policy baseline using the measurements from the VM instance&#39;s most recent boot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateAutoLearnPolicy(@Nullable Output<Boolean> updateAutoLearnPolicy) {
             $.updateAutoLearnPolicy = updateAutoLearnPolicy;
             return this;
         }
 
+        /**
+         * @param updateAutoLearnPolicy Updates the integrity policy baseline using the measurements from the VM instance&#39;s most recent boot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateAutoLearnPolicy(Boolean updateAutoLearnPolicy) {
             return updateAutoLearnPolicy(Output.of(updateAutoLearnPolicy));
         }

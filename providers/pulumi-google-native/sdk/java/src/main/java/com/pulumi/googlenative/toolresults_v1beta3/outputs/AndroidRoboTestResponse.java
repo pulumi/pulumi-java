@@ -10,30 +10,30 @@ import java.util.Objects;
 
 @CustomType
 public final class AndroidRoboTestResponse {
-    /**
-     * The initial activity that should be used to start the app. Optional
-     * 
-     */
+        /**
+         * @return The initial activity that should be used to start the app. Optional
+         * 
+         */
     private final String appInitialActivity;
-    /**
-     * The java package for the bootstrap. Optional
-     * 
-     */
+        /**
+         * @return The java package for the bootstrap. Optional
+         * 
+         */
     private final String bootstrapPackageId;
-    /**
-     * The runner class for the bootstrap. Optional
-     * 
-     */
+        /**
+         * @return The runner class for the bootstrap. Optional
+         * 
+         */
     private final String bootstrapRunnerClass;
-    /**
-     * The max depth of the traversal stack Robo can explore. Optional
-     * 
-     */
+        /**
+         * @return The max depth of the traversal stack Robo can explore. Optional
+         * 
+         */
     private final Integer maxDepth;
-    /**
-     * The max number of steps/actions Robo can execute. Default is no limit (0). Optional
-     * 
-     */
+        /**
+         * @return The max number of steps/actions Robo can execute. Default is no limit (0). Optional
+         * 
+         */
     private final Integer maxSteps;
 
     @CustomType.Constructor
@@ -51,37 +51,37 @@ public final class AndroidRoboTestResponse {
     }
 
     /**
-     * The initial activity that should be used to start the app. Optional
+     * @return The initial activity that should be used to start the app. Optional
      * 
-    */
+     */
     public String appInitialActivity() {
         return this.appInitialActivity;
     }
     /**
-     * The java package for the bootstrap. Optional
+     * @return The java package for the bootstrap. Optional
      * 
-    */
+     */
     public String bootstrapPackageId() {
         return this.bootstrapPackageId;
     }
     /**
-     * The runner class for the bootstrap. Optional
+     * @return The runner class for the bootstrap. Optional
      * 
-    */
+     */
     public String bootstrapRunnerClass() {
         return this.bootstrapRunnerClass;
     }
     /**
-     * The max depth of the traversal stack Robo can explore. Optional
+     * @return The max depth of the traversal stack Robo can explore. Optional
      * 
-    */
+     */
     public Integer maxDepth() {
         return this.maxDepth;
     }
     /**
-     * The max number of steps/actions Robo can execute. Default is no limit (0). Optional
+     * @return The max number of steps/actions Robo can execute. Default is no limit (0). Optional
      * 
-    */
+     */
     public Integer maxSteps() {
         return this.maxSteps;
     }

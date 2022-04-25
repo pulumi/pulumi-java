@@ -23,6 +23,10 @@ public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse exte
     @Import(name="bigqueryConnectionSpec", required=true)
     private GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse bigqueryConnectionSpec;
 
+    /**
+     * @return Fields specific to BigQuery connections.
+     * 
+     */
     public GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse bigqueryConnectionSpec() {
         return this.bigqueryConnectionSpec;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse exte
             $ = new GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bigqueryConnectionSpec Fields specific to BigQuery connections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigqueryConnectionSpec(GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse bigqueryConnectionSpec) {
             $.bigqueryConnectionSpec = bigqueryConnectionSpec;
             return this;

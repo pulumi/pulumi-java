@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class Oauth2JwtBearerResponse {
-    /**
-     * Secret version reference containing a PKCS#8 PEM-encoded private key associated with the Client Certificate. This private key will be used to sign JWTs used for the jwt-bearer authorization grant. Specified in the form as: `projects/*{@literal /}secrets/*{@literal /}versions/*`.
-     * 
-     */
+        /**
+         * @return Secret version reference containing a PKCS#8 PEM-encoded private key associated with the Client Certificate. This private key will be used to sign JWTs used for the jwt-bearer authorization grant. Specified in the form as: `projects/*{@literal /}secrets/*{@literal /}versions/*`.
+         * 
+         */
     private final SecretResponse clientKey;
-    /**
-     * JwtClaims providers fields to generate the token.
-     * 
-     */
+        /**
+         * @return JwtClaims providers fields to generate the token.
+         * 
+         */
     private final JwtClaimsResponse jwtClaims;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class Oauth2JwtBearerResponse {
     }
 
     /**
-     * Secret version reference containing a PKCS#8 PEM-encoded private key associated with the Client Certificate. This private key will be used to sign JWTs used for the jwt-bearer authorization grant. Specified in the form as: `projects/*{@literal /}secrets/*{@literal /}versions/*`.
+     * @return Secret version reference containing a PKCS#8 PEM-encoded private key associated with the Client Certificate. This private key will be used to sign JWTs used for the jwt-bearer authorization grant. Specified in the form as: `projects/*{@literal /}secrets/*{@literal /}versions/*`.
      * 
-    */
+     */
     public SecretResponse clientKey() {
         return this.clientKey;
     }
     /**
-     * JwtClaims providers fields to generate the token.
+     * @return JwtClaims providers fields to generate the token.
      * 
-    */
+     */
     public JwtClaimsResponse jwtClaims() {
         return this.jwtClaims;
     }

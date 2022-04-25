@@ -28,6 +28,10 @@ public final class GoogleCloudDialogflowCxV3NluSettingsArgs extends com.pulumi.r
     @Import(name="classificationThreshold")
     private @Nullable Output<Double> classificationThreshold;
 
+    /**
+     * @return To filter out false positive results and still get variety in matched natural language inputs for your agent, you can tune the machine learning classification threshold. If the returned score value is less than the threshold value, then a no-match event will be triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the default of 0.3 is used.
+     * 
+     */
     public Optional<Output<Double>> classificationThreshold() {
         return Optional.ofNullable(this.classificationThreshold);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudDialogflowCxV3NluSettingsArgs extends com.pulumi.r
     @Import(name="modelTrainingMode")
     private @Nullable Output<GoogleCloudDialogflowCxV3NluSettingsModelTrainingMode> modelTrainingMode;
 
+    /**
+     * @return Indicates NLU model training mode.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3NluSettingsModelTrainingMode>> modelTrainingMode() {
         return Optional.ofNullable(this.modelTrainingMode);
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudDialogflowCxV3NluSettingsArgs extends com.pulumi.r
     @Import(name="modelType")
     private @Nullable Output<GoogleCloudDialogflowCxV3NluSettingsModelType> modelType;
 
+    /**
+     * @return Indicates the type of NLU model.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3NluSettingsModelType>> modelType() {
         return Optional.ofNullable(this.modelType);
     }
@@ -80,29 +92,65 @@ public final class GoogleCloudDialogflowCxV3NluSettingsArgs extends com.pulumi.r
             $ = new GoogleCloudDialogflowCxV3NluSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param classificationThreshold To filter out false positive results and still get variety in matched natural language inputs for your agent, you can tune the machine learning classification threshold. If the returned score value is less than the threshold value, then a no-match event will be triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the default of 0.3 is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder classificationThreshold(@Nullable Output<Double> classificationThreshold) {
             $.classificationThreshold = classificationThreshold;
             return this;
         }
 
+        /**
+         * @param classificationThreshold To filter out false positive results and still get variety in matched natural language inputs for your agent, you can tune the machine learning classification threshold. If the returned score value is less than the threshold value, then a no-match event will be triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the default of 0.3 is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder classificationThreshold(Double classificationThreshold) {
             return classificationThreshold(Output.of(classificationThreshold));
         }
 
+        /**
+         * @param modelTrainingMode Indicates NLU model training mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelTrainingMode(@Nullable Output<GoogleCloudDialogflowCxV3NluSettingsModelTrainingMode> modelTrainingMode) {
             $.modelTrainingMode = modelTrainingMode;
             return this;
         }
 
+        /**
+         * @param modelTrainingMode Indicates NLU model training mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelTrainingMode(GoogleCloudDialogflowCxV3NluSettingsModelTrainingMode modelTrainingMode) {
             return modelTrainingMode(Output.of(modelTrainingMode));
         }
 
+        /**
+         * @param modelType Indicates the type of NLU model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelType(@Nullable Output<GoogleCloudDialogflowCxV3NluSettingsModelType> modelType) {
             $.modelType = modelType;
             return this;
         }
 
+        /**
+         * @param modelType Indicates the type of NLU model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelType(GoogleCloudDialogflowCxV3NluSettingsModelType modelType) {
             return modelType(Output.of(modelType));
         }

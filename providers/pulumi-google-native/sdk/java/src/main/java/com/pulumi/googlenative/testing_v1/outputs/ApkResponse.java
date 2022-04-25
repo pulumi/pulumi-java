@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ApkResponse {
-    /**
-     * The path to an APK to be installed on the device before the test begins.
-     * 
-     */
+        /**
+         * @return The path to an APK to be installed on the device before the test begins.
+         * 
+         */
     private final FileReferenceResponse location;
-    /**
-     * The java package for the APK to be installed. Value is determined by examining the application&#39;s manifest.
-     * 
-     */
+        /**
+         * @return The java package for the APK to be installed. Value is determined by examining the application&#39;s manifest.
+         * 
+         */
     private final String packageName;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class ApkResponse {
     }
 
     /**
-     * The path to an APK to be installed on the device before the test begins.
+     * @return The path to an APK to be installed on the device before the test begins.
      * 
-    */
+     */
     public FileReferenceResponse location() {
         return this.location;
     }
     /**
-     * The java package for the APK to be installed. Value is determined by examining the application&#39;s manifest.
+     * @return The java package for the APK to be installed. Value is determined by examining the application&#39;s manifest.
      * 
-    */
+     */
     public String packageName() {
         return this.packageName;
     }

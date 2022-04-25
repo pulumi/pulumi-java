@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSessionEntityTypeResult {
-    /**
-     * The collection of entities to override or supplement the custom entity type.
-     * 
-     */
+        /**
+         * @return The collection of entities to override or supplement the custom entity type.
+         * 
+         */
     private final List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse> entities;
-    /**
-     * Indicates whether the additional data should override or supplement the custom entity type definition.
-     * 
-     */
+        /**
+         * @return Indicates whether the additional data should override or supplement the custom entity type definition.
+         * 
+         */
     private final String entityOverrideMode;
-    /**
-     * The unique identifier of the session entity type. Format: `projects//locations//agents//sessions//entityTypes/` or `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID` is not specified, we assume default &#39;draft&#39; environment.
-     * 
-     */
+        /**
+         * @return The unique identifier of the session entity type. Format: `projects//locations//agents//sessions//entityTypes/` or `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID` is not specified, we assume default &#39;draft&#39; environment.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class GetSessionEntityTypeResult {
     }
 
     /**
-     * The collection of entities to override or supplement the custom entity type.
+     * @return The collection of entities to override or supplement the custom entity type.
      * 
-    */
+     */
     public List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse> entities() {
         return this.entities;
     }
     /**
-     * Indicates whether the additional data should override or supplement the custom entity type definition.
+     * @return Indicates whether the additional data should override or supplement the custom entity type definition.
      * 
-    */
+     */
     public String entityOverrideMode() {
         return this.entityOverrideMode;
     }
     /**
-     * The unique identifier of the session entity type. Format: `projects//locations//agents//sessions//entityTypes/` or `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID` is not specified, we assume default &#39;draft&#39; environment.
+     * @return The unique identifier of the session entity type. Format: `projects//locations//agents//sessions//entityTypes/` or `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID` is not specified, we assume default &#39;draft&#39; environment.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

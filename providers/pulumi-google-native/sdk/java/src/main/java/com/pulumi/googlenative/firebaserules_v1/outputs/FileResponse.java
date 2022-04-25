@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class FileResponse {
-    /**
-     * Textual Content.
-     * 
-     */
+        /**
+         * @return Textual Content.
+         * 
+         */
     private final String content;
-    /**
-     * Fingerprint (e.g. github sha) associated with the `File`.
-     * 
-     */
+        /**
+         * @return Fingerprint (e.g. github sha) associated with the `File`.
+         * 
+         */
     private final String fingerprint;
-    /**
-     * File name.
-     * 
-     */
+        /**
+         * @return File name.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class FileResponse {
     }
 
     /**
-     * Textual Content.
+     * @return Textual Content.
      * 
-    */
+     */
     public String content() {
         return this.content;
     }
     /**
-     * Fingerprint (e.g. github sha) associated with the `File`.
+     * @return Fingerprint (e.g. github sha) associated with the `File`.
      * 
-    */
+     */
     public String fingerprint() {
         return this.fingerprint;
     }
     /**
-     * File name.
+     * @return File name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class UpgradeSettingsResponse {
-    /**
-     * The maximum number of nodes that can be created beyond the current size of the node pool during the upgrade process.
-     * 
-     */
+        /**
+         * @return The maximum number of nodes that can be created beyond the current size of the node pool during the upgrade process.
+         * 
+         */
     private final Integer maxSurge;
-    /**
-     * The maximum number of nodes that can be simultaneously unavailable during the upgrade process. A node is considered available if its status is Ready.
-     * 
-     */
+        /**
+         * @return The maximum number of nodes that can be simultaneously unavailable during the upgrade process. A node is considered available if its status is Ready.
+         * 
+         */
     private final Integer maxUnavailable;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class UpgradeSettingsResponse {
     }
 
     /**
-     * The maximum number of nodes that can be created beyond the current size of the node pool during the upgrade process.
+     * @return The maximum number of nodes that can be created beyond the current size of the node pool during the upgrade process.
      * 
-    */
+     */
     public Integer maxSurge() {
         return this.maxSurge;
     }
     /**
-     * The maximum number of nodes that can be simultaneously unavailable during the upgrade process. A node is considered available if its status is Ready.
+     * @return The maximum number of nodes that can be simultaneously unavailable during the upgrade process. A node is considered available if its status is Ready.
      * 
-    */
+     */
     public Integer maxUnavailable() {
         return this.maxUnavailable;
     }

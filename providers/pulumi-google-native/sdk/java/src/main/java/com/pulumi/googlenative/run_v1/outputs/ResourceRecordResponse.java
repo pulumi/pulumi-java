@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class ResourceRecordResponse {
-    /**
-     * Relative name of the object affected by this record. Only applicable for `CNAME` records. Example: &#39;www&#39;.
-     * 
-     */
+        /**
+         * @return Relative name of the object affected by this record. Only applicable for `CNAME` records. Example: &#39;www&#39;.
+         * 
+         */
     private final String name;
-    /**
-     * Data for this record. Values vary by record type, as defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1).
-     * 
-     */
+        /**
+         * @return Data for this record. Values vary by record type, as defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1).
+         * 
+         */
     private final String rrdata;
-    /**
-     * Resource record type. Example: `AAAA`.
-     * 
-     */
+        /**
+         * @return Resource record type. Example: `AAAA`.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class ResourceRecordResponse {
     }
 
     /**
-     * Relative name of the object affected by this record. Only applicable for `CNAME` records. Example: &#39;www&#39;.
+     * @return Relative name of the object affected by this record. Only applicable for `CNAME` records. Example: &#39;www&#39;.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Data for this record. Values vary by record type, as defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1).
+     * @return Data for this record. Values vary by record type, as defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1).
      * 
-    */
+     */
     public String rrdata() {
         return this.rrdata;
     }
     /**
-     * Resource record type. Example: `AAAA`.
+     * @return Resource record type. Example: `AAAA`.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

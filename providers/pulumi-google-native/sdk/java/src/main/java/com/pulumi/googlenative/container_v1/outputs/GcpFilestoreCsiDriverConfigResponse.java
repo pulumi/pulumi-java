@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GcpFilestoreCsiDriverConfigResponse {
-    /**
-     * Whether the GCP Filestore CSI driver is enabled for this cluster.
-     * 
-     */
+        /**
+         * @return Whether the GCP Filestore CSI driver is enabled for this cluster.
+         * 
+         */
     private final Boolean enabled;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GcpFilestoreCsiDriverConfigResponse {
     }
 
     /**
-     * Whether the GCP Filestore CSI driver is enabled for this cluster.
+     * @return Whether the GCP Filestore CSI driver is enabled for this cluster.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }

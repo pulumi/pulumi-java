@@ -20,65 +20,65 @@ import java.util.Objects;
 
 @CustomType
 public final class GooglePrivacyDlpV2PrimitiveTransformationResponse {
-    /**
-     * Bucketing
-     * 
-     */
+        /**
+         * @return Bucketing
+         * 
+         */
     private final GooglePrivacyDlpV2BucketingConfigResponse bucketingConfig;
-    /**
-     * Mask
-     * 
-     */
+        /**
+         * @return Mask
+         * 
+         */
     private final GooglePrivacyDlpV2CharacterMaskConfigResponse characterMaskConfig;
-    /**
-     * Deterministic Crypto
-     * 
-     */
+        /**
+         * @return Deterministic Crypto
+         * 
+         */
     private final GooglePrivacyDlpV2CryptoDeterministicConfigResponse cryptoDeterministicConfig;
-    /**
-     * Crypto
-     * 
-     */
+        /**
+         * @return Crypto
+         * 
+         */
     private final GooglePrivacyDlpV2CryptoHashConfigResponse cryptoHashConfig;
-    /**
-     * Ffx-Fpe
-     * 
-     */
+        /**
+         * @return Ffx-Fpe
+         * 
+         */
     private final GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse cryptoReplaceFfxFpeConfig;
-    /**
-     * Date Shift
-     * 
-     */
+        /**
+         * @return Date Shift
+         * 
+         */
     private final GooglePrivacyDlpV2DateShiftConfigResponse dateShiftConfig;
-    /**
-     * Fixed size bucketing
-     * 
-     */
+        /**
+         * @return Fixed size bucketing
+         * 
+         */
     private final GooglePrivacyDlpV2FixedSizeBucketingConfigResponse fixedSizeBucketingConfig;
-    /**
-     * Redact
-     * 
-     */
+        /**
+         * @return Redact
+         * 
+         */
     private final GooglePrivacyDlpV2RedactConfigResponse redactConfig;
-    /**
-     * Replace with a specified value.
-     * 
-     */
+        /**
+         * @return Replace with a specified value.
+         * 
+         */
     private final GooglePrivacyDlpV2ReplaceValueConfigResponse replaceConfig;
-    /**
-     * Replace with a value randomly drawn (with replacement) from a dictionary.
-     * 
-     */
+        /**
+         * @return Replace with a value randomly drawn (with replacement) from a dictionary.
+         * 
+         */
     private final GooglePrivacyDlpV2ReplaceDictionaryConfigResponse replaceDictionaryConfig;
-    /**
-     * Replace with infotype
-     * 
-     */
+        /**
+         * @return Replace with infotype
+         * 
+         */
     private final GooglePrivacyDlpV2ReplaceWithInfoTypeConfigResponse replaceWithInfoTypeConfig;
-    /**
-     * Time extraction
-     * 
-     */
+        /**
+         * @return Time extraction
+         * 
+         */
     private final GooglePrivacyDlpV2TimePartConfigResponse timePartConfig;
 
     @CustomType.Constructor
@@ -110,86 +110,86 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse {
     }
 
     /**
-     * Bucketing
+     * @return Bucketing
      * 
-    */
+     */
     public GooglePrivacyDlpV2BucketingConfigResponse bucketingConfig() {
         return this.bucketingConfig;
     }
     /**
-     * Mask
+     * @return Mask
      * 
-    */
+     */
     public GooglePrivacyDlpV2CharacterMaskConfigResponse characterMaskConfig() {
         return this.characterMaskConfig;
     }
     /**
-     * Deterministic Crypto
+     * @return Deterministic Crypto
      * 
-    */
+     */
     public GooglePrivacyDlpV2CryptoDeterministicConfigResponse cryptoDeterministicConfig() {
         return this.cryptoDeterministicConfig;
     }
     /**
-     * Crypto
+     * @return Crypto
      * 
-    */
+     */
     public GooglePrivacyDlpV2CryptoHashConfigResponse cryptoHashConfig() {
         return this.cryptoHashConfig;
     }
     /**
-     * Ffx-Fpe
+     * @return Ffx-Fpe
      * 
-    */
+     */
     public GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse cryptoReplaceFfxFpeConfig() {
         return this.cryptoReplaceFfxFpeConfig;
     }
     /**
-     * Date Shift
+     * @return Date Shift
      * 
-    */
+     */
     public GooglePrivacyDlpV2DateShiftConfigResponse dateShiftConfig() {
         return this.dateShiftConfig;
     }
     /**
-     * Fixed size bucketing
+     * @return Fixed size bucketing
      * 
-    */
+     */
     public GooglePrivacyDlpV2FixedSizeBucketingConfigResponse fixedSizeBucketingConfig() {
         return this.fixedSizeBucketingConfig;
     }
     /**
-     * Redact
+     * @return Redact
      * 
-    */
+     */
     public GooglePrivacyDlpV2RedactConfigResponse redactConfig() {
         return this.redactConfig;
     }
     /**
-     * Replace with a specified value.
+     * @return Replace with a specified value.
      * 
-    */
+     */
     public GooglePrivacyDlpV2ReplaceValueConfigResponse replaceConfig() {
         return this.replaceConfig;
     }
     /**
-     * Replace with a value randomly drawn (with replacement) from a dictionary.
+     * @return Replace with a value randomly drawn (with replacement) from a dictionary.
      * 
-    */
+     */
     public GooglePrivacyDlpV2ReplaceDictionaryConfigResponse replaceDictionaryConfig() {
         return this.replaceDictionaryConfig;
     }
     /**
-     * Replace with infotype
+     * @return Replace with infotype
      * 
-    */
+     */
     public GooglePrivacyDlpV2ReplaceWithInfoTypeConfigResponse replaceWithInfoTypeConfig() {
         return this.replaceWithInfoTypeConfig;
     }
     /**
-     * Time extraction
+     * @return Time extraction
      * 
-    */
+     */
     public GooglePrivacyDlpV2TimePartConfigResponse timePartConfig() {
         return this.timePartConfig;
     }

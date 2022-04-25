@@ -28,6 +28,10 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationArgs extends com.pulu
     @Import(name="infoTypes")
     private @Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
 
+    /**
+     * @return InfoTypes to apply the transformation to. An empty list will cause this transformation to apply to all findings that correspond to infoTypes that were requested in `InspectConfig`.
+     * 
+     */
     public Optional<Output<List<GooglePrivacyDlpV2InfoTypeArgs>>> infoTypes() {
         return Optional.ofNullable(this.infoTypes);
     }
@@ -39,6 +43,10 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationArgs extends com.pulu
     @Import(name="primitiveTransformation", required=true)
     private Output<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation;
 
+    /**
+     * @return Primitive transformation to apply to the infoType.
+     * 
+     */
     public Output<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation() {
         return this.primitiveTransformation;
     }
@@ -68,24 +76,54 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationArgs extends com.pulu
             $ = new GooglePrivacyDlpV2InfoTypeTransformationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param infoTypes InfoTypes to apply the transformation to. An empty list will cause this transformation to apply to all findings that correspond to infoTypes that were requested in `InspectConfig`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypes(@Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes) {
             $.infoTypes = infoTypes;
             return this;
         }
 
+        /**
+         * @param infoTypes InfoTypes to apply the transformation to. An empty list will cause this transformation to apply to all findings that correspond to infoTypes that were requested in `InspectConfig`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypes(List<GooglePrivacyDlpV2InfoTypeArgs> infoTypes) {
             return infoTypes(Output.of(infoTypes));
         }
 
+        /**
+         * @param infoTypes InfoTypes to apply the transformation to. An empty list will cause this transformation to apply to all findings that correspond to infoTypes that were requested in `InspectConfig`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypes(GooglePrivacyDlpV2InfoTypeArgs... infoTypes) {
             return infoTypes(List.of(infoTypes));
         }
 
+        /**
+         * @param primitiveTransformation Primitive transformation to apply to the infoType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primitiveTransformation(Output<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation) {
             $.primitiveTransformation = primitiveTransformation;
             return this;
         }
 
+        /**
+         * @param primitiveTransformation Primitive transformation to apply to the infoType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primitiveTransformation(GooglePrivacyDlpV2PrimitiveTransformationArgs primitiveTransformation) {
             return primitiveTransformation(Output.of(primitiveTransformation));
         }

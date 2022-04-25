@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class V2ServerKeyRestrictionsResponse {
-    /**
-     * A list of the caller IP addresses that are allowed to make API calls with this key.
-     * 
-     */
+        /**
+         * @return A list of the caller IP addresses that are allowed to make API calls with this key.
+         * 
+         */
     private final List<String> allowedIps;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class V2ServerKeyRestrictionsResponse {
     }
 
     /**
-     * A list of the caller IP addresses that are allowed to make API calls with this key.
+     * @return A list of the caller IP addresses that are allowed to make API calls with this key.
      * 
-    */
+     */
     public List<String> allowedIps() {
         return this.allowedIps;
     }

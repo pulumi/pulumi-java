@@ -29,6 +29,10 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="epoch")
     private @Nullable Output<Integer> epoch;
 
+    /**
+     * @return Used to correct mistakes in the version numbering scheme.
+     * 
+     */
     public Optional<Output<Integer>> epoch() {
         return Optional.ofNullable(this.epoch);
     }
@@ -40,6 +44,10 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inclusive")
     private @Nullable Output<Boolean> inclusive;
 
+    /**
+     * @return Whether this version is vulnerable, when defining the version bounds. For example, if the minimum version is 2.0, inclusive=true would say 2.0 is vulnerable, while inclusive=false would say it&#39;s not
+     * 
+     */
     public Optional<Output<Boolean>> inclusive() {
         return Optional.ofNullable(this.inclusive);
     }
@@ -51,6 +59,10 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<VersionKind> kind;
 
+    /**
+     * @return Distinguish between sentinel MIN/MAX versions and normal versions. If kind is not NORMAL, then the other fields are ignored.
+     * 
+     */
     public Optional<Output<VersionKind>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -62,6 +74,10 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The main part of the version name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -73,6 +89,10 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="revision")
     private @Nullable Output<String> revision;
 
+    /**
+     * @return The iteration of the package build from the above version.
+     * 
+     */
     public Optional<Output<String>> revision() {
         return Optional.ofNullable(this.revision);
     }
@@ -105,47 +125,107 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param epoch Used to correct mistakes in the version numbering scheme.
+         * 
+         * @return builder
+         * 
+         */
         public Builder epoch(@Nullable Output<Integer> epoch) {
             $.epoch = epoch;
             return this;
         }
 
+        /**
+         * @param epoch Used to correct mistakes in the version numbering scheme.
+         * 
+         * @return builder
+         * 
+         */
         public Builder epoch(Integer epoch) {
             return epoch(Output.of(epoch));
         }
 
+        /**
+         * @param inclusive Whether this version is vulnerable, when defining the version bounds. For example, if the minimum version is 2.0, inclusive=true would say 2.0 is vulnerable, while inclusive=false would say it&#39;s not
+         * 
+         * @return builder
+         * 
+         */
         public Builder inclusive(@Nullable Output<Boolean> inclusive) {
             $.inclusive = inclusive;
             return this;
         }
 
+        /**
+         * @param inclusive Whether this version is vulnerable, when defining the version bounds. For example, if the minimum version is 2.0, inclusive=true would say 2.0 is vulnerable, while inclusive=false would say it&#39;s not
+         * 
+         * @return builder
+         * 
+         */
         public Builder inclusive(Boolean inclusive) {
             return inclusive(Output.of(inclusive));
         }
 
+        /**
+         * @param kind Distinguish between sentinel MIN/MAX versions and normal versions. If kind is not NORMAL, then the other fields are ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<VersionKind> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Distinguish between sentinel MIN/MAX versions and normal versions. If kind is not NORMAL, then the other fields are ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(VersionKind kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param name The main part of the version name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The main part of the version name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param revision The iteration of the package build from the above version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(@Nullable Output<String> revision) {
             $.revision = revision;
             return this;
         }
 
+        /**
+         * @param revision The iteration of the package build from the above version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(String revision) {
             return revision(Output.of(revision));
         }

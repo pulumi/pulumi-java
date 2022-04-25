@@ -26,6 +26,10 @@ public final class PushConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pushEndpoint")
     private @Nullable Output<String> pushEndpoint;
 
+    /**
+     * @return A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint might use &#34;https://example.com/push&#34;.
+     * 
+     */
     public Optional<Output<String>> pushEndpoint() {
         return Optional.ofNullable(this.pushEndpoint);
     }
@@ -54,11 +58,23 @@ public final class PushConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PushConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pushEndpoint A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint might use &#34;https://example.com/push&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pushEndpoint(@Nullable Output<String> pushEndpoint) {
             $.pushEndpoint = pushEndpoint;
             return this;
         }
 
+        /**
+         * @param pushEndpoint A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint might use &#34;https://example.com/push&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pushEndpoint(String pushEndpoint) {
             return pushEndpoint(Output.of(pushEndpoint));
         }

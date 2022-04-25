@@ -12,65 +12,65 @@ import java.util.Objects;
 
 @CustomType
 public final class DetailResponse {
-    /**
-     * The CPE URI in [cpe format](https://cpe.mitre.org/specification/) in which the vulnerability manifests. Examples include distro or storage location for vulnerable jar.
-     * 
-     */
+        /**
+         * @return The CPE URI in [cpe format](https://cpe.mitre.org/specification/) in which the vulnerability manifests. Examples include distro or storage location for vulnerable jar.
+         * 
+         */
     private final String cpeUri;
-    /**
-     * A vendor-specific description of this note.
-     * 
-     */
+        /**
+         * @return A vendor-specific description of this note.
+         * 
+         */
     private final String description;
-    /**
-     * The fix for this specific package version.
-     * 
-     */
+        /**
+         * @return The fix for this specific package version.
+         * 
+         */
     private final VulnerabilityLocationResponse fixedLocation;
-    /**
-     * Whether this detail is obsolete. Occurrences are expected not to point to obsolete details.
-     * 
-     */
+        /**
+         * @return Whether this detail is obsolete. Occurrences are expected not to point to obsolete details.
+         * 
+         */
     private final Boolean isObsolete;
-    /**
-     * The max version of the package in which the vulnerability exists.
-     * 
-     */
+        /**
+         * @return The max version of the package in which the vulnerability exists.
+         * 
+         */
     private final VersionResponse maxAffectedVersion;
-    /**
-     * The min version of the package in which the vulnerability exists.
-     * 
-     */
+        /**
+         * @return The min version of the package in which the vulnerability exists.
+         * 
+         */
     private final VersionResponse minAffectedVersion;
-    /**
-     * The name of the package where the vulnerability was found.
-     * 
-     */
+        /**
+         * @return The name of the package where the vulnerability was found.
+         * 
+         */
     private final String package_;
-    /**
-     * The type of package; whether native or non native(ruby gems, node.js packages etc).
-     * 
-     */
+        /**
+         * @return The type of package; whether native or non native(ruby gems, node.js packages etc).
+         * 
+         */
     private final String packageType;
-    /**
-     * The severity (eg: distro assigned severity) for this vulnerability.
-     * 
-     */
+        /**
+         * @return The severity (eg: distro assigned severity) for this vulnerability.
+         * 
+         */
     private final String severityName;
-    /**
-     * The source from which the information in this Detail was obtained.
-     * 
-     */
+        /**
+         * @return The source from which the information in this Detail was obtained.
+         * 
+         */
     private final String source;
-    /**
-     * The time this information was last changed at the source. This is an upstream timestamp from the underlying information source - e.g. Ubuntu security tracker.
-     * 
-     */
+        /**
+         * @return The time this information was last changed at the source. This is an upstream timestamp from the underlying information source - e.g. Ubuntu security tracker.
+         * 
+         */
     private final String sourceUpdateTime;
-    /**
-     * The name of the vendor of the product.
-     * 
-     */
+        /**
+         * @return The name of the vendor of the product.
+         * 
+         */
     private final String vendor;
 
     @CustomType.Constructor
@@ -102,86 +102,86 @@ public final class DetailResponse {
     }
 
     /**
-     * The CPE URI in [cpe format](https://cpe.mitre.org/specification/) in which the vulnerability manifests. Examples include distro or storage location for vulnerable jar.
+     * @return The CPE URI in [cpe format](https://cpe.mitre.org/specification/) in which the vulnerability manifests. Examples include distro or storage location for vulnerable jar.
      * 
-    */
+     */
     public String cpeUri() {
         return this.cpeUri;
     }
     /**
-     * A vendor-specific description of this note.
+     * @return A vendor-specific description of this note.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The fix for this specific package version.
+     * @return The fix for this specific package version.
      * 
-    */
+     */
     public VulnerabilityLocationResponse fixedLocation() {
         return this.fixedLocation;
     }
     /**
-     * Whether this detail is obsolete. Occurrences are expected not to point to obsolete details.
+     * @return Whether this detail is obsolete. Occurrences are expected not to point to obsolete details.
      * 
-    */
+     */
     public Boolean isObsolete() {
         return this.isObsolete;
     }
     /**
-     * The max version of the package in which the vulnerability exists.
+     * @return The max version of the package in which the vulnerability exists.
      * 
-    */
+     */
     public VersionResponse maxAffectedVersion() {
         return this.maxAffectedVersion;
     }
     /**
-     * The min version of the package in which the vulnerability exists.
+     * @return The min version of the package in which the vulnerability exists.
      * 
-    */
+     */
     public VersionResponse minAffectedVersion() {
         return this.minAffectedVersion;
     }
     /**
-     * The name of the package where the vulnerability was found.
+     * @return The name of the package where the vulnerability was found.
      * 
-    */
+     */
     public String package_() {
         return this.package_;
     }
     /**
-     * The type of package; whether native or non native(ruby gems, node.js packages etc).
+     * @return The type of package; whether native or non native(ruby gems, node.js packages etc).
      * 
-    */
+     */
     public String packageType() {
         return this.packageType;
     }
     /**
-     * The severity (eg: distro assigned severity) for this vulnerability.
+     * @return The severity (eg: distro assigned severity) for this vulnerability.
      * 
-    */
+     */
     public String severityName() {
         return this.severityName;
     }
     /**
-     * The source from which the information in this Detail was obtained.
+     * @return The source from which the information in this Detail was obtained.
      * 
-    */
+     */
     public String source() {
         return this.source;
     }
     /**
-     * The time this information was last changed at the source. This is an upstream timestamp from the underlying information source - e.g. Ubuntu security tracker.
+     * @return The time this information was last changed at the source. This is an upstream timestamp from the underlying information source - e.g. Ubuntu security tracker.
      * 
-    */
+     */
     public String sourceUpdateTime() {
         return this.sourceUpdateTime;
     }
     /**
-     * The name of the vendor of the product.
+     * @return The name of the vendor of the product.
      * 
-    */
+     */
     public String vendor() {
         return this.vendor;
     }

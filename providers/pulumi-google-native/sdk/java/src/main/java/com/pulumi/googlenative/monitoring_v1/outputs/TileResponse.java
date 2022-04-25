@@ -10,30 +10,30 @@ import java.util.Objects;
 
 @CustomType
 public final class TileResponse {
-    /**
-     * The height of the tile, measured in grid blocks. Tiles must have a minimum height of 1.
-     * 
-     */
+        /**
+         * @return The height of the tile, measured in grid blocks. Tiles must have a minimum height of 1.
+         * 
+         */
     private final Integer height;
-    /**
-     * The informational widget contained in the tile. For example an XyChart.
-     * 
-     */
+        /**
+         * @return The informational widget contained in the tile. For example an XyChart.
+         * 
+         */
     private final WidgetResponse widget;
-    /**
-     * The width of the tile, measured in grid blocks. Tiles must have a minimum width of 1.
-     * 
-     */
+        /**
+         * @return The width of the tile, measured in grid blocks. Tiles must have a minimum width of 1.
+         * 
+         */
     private final Integer width;
-    /**
-     * The zero-indexed position of the tile in grid blocks relative to the left edge of the grid. Tiles must be contained within the specified number of columns. x_pos cannot be negative.
-     * 
-     */
+        /**
+         * @return The zero-indexed position of the tile in grid blocks relative to the left edge of the grid. Tiles must be contained within the specified number of columns. x_pos cannot be negative.
+         * 
+         */
     private final Integer xPos;
-    /**
-     * The zero-indexed position of the tile in grid blocks relative to the top edge of the grid. y_pos cannot be negative.
-     * 
-     */
+        /**
+         * @return The zero-indexed position of the tile in grid blocks relative to the top edge of the grid. y_pos cannot be negative.
+         * 
+         */
     private final Integer yPos;
 
     @CustomType.Constructor
@@ -51,37 +51,37 @@ public final class TileResponse {
     }
 
     /**
-     * The height of the tile, measured in grid blocks. Tiles must have a minimum height of 1.
+     * @return The height of the tile, measured in grid blocks. Tiles must have a minimum height of 1.
      * 
-    */
+     */
     public Integer height() {
         return this.height;
     }
     /**
-     * The informational widget contained in the tile. For example an XyChart.
+     * @return The informational widget contained in the tile. For example an XyChart.
      * 
-    */
+     */
     public WidgetResponse widget() {
         return this.widget;
     }
     /**
-     * The width of the tile, measured in grid blocks. Tiles must have a minimum width of 1.
+     * @return The width of the tile, measured in grid blocks. Tiles must have a minimum width of 1.
      * 
-    */
+     */
     public Integer width() {
         return this.width;
     }
     /**
-     * The zero-indexed position of the tile in grid blocks relative to the left edge of the grid. Tiles must be contained within the specified number of columns. x_pos cannot be negative.
+     * @return The zero-indexed position of the tile in grid blocks relative to the left edge of the grid. Tiles must be contained within the specified number of columns. x_pos cannot be negative.
      * 
-    */
+     */
     public Integer xPos() {
         return this.xPos;
     }
     /**
-     * The zero-indexed position of the tile in grid blocks relative to the top edge of the grid. y_pos cannot be negative.
+     * @return The zero-indexed position of the tile in grid blocks relative to the top edge of the grid. y_pos cannot be negative.
      * 
-    */
+     */
     public Integer yPos() {
         return this.yPos;
     }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse {
-    /**
-     * The optimization goal of the metric.
-     * 
-     */
+        /**
+         * @return The optimization goal of the metric.
+         * 
+         */
     private final String goal;
-    /**
-     * The name of the metric.
-     * 
-     */
+        /**
+         * @return The name of the metric.
+         * 
+         */
     private final String metric;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse {
     }
 
     /**
-     * The optimization goal of the metric.
+     * @return The optimization goal of the metric.
      * 
-    */
+     */
     public String goal() {
         return this.goal;
     }
     /**
-     * The name of the metric.
+     * @return The name of the metric.
      * 
-    */
+     */
     public String metric() {
         return this.metric;
     }
