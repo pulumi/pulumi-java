@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class TriggerMatchingCriteria {
-    /**
-     * Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the &#39;type&#39; attribute.
-     * 
-     */
+        /**
+         * @return Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the &#39;type&#39; attribute.
+         * 
+         */
     private final String attribute;
-    /**
-     * Required. The value for the attribute.
-     * 
-     */
+        /**
+         * @return Required. The value for the attribute.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class TriggerMatchingCriteria {
     }
 
     /**
-     * Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the &#39;type&#39; attribute.
+     * @return Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the &#39;type&#39; attribute.
      * 
-    */
+     */
     public String attribute() {
         return this.attribute;
     }
     /**
-     * Required. The value for the attribute.
+     * @return Required. The value for the attribute.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

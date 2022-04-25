@@ -11,21 +11,21 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NodeTemplateNodeTypeFlexibility {
-    /**
-     * Number of virtual CPUs to use.
-     * 
-     */
+        /**
+         * @return Number of virtual CPUs to use.
+         * 
+         */
     private final @Nullable String cpus;
-    /**
-     * - 
-     * Use local SSD
-     * 
-     */
+        /**
+         * @return -
+         * Use local SSD
+         * 
+         */
     private final @Nullable String localSsd;
-    /**
-     * Physical memory available to the node, defined in MB.
-     * 
-     */
+        /**
+         * @return Physical memory available to the node, defined in MB.
+         * 
+         */
     private final @Nullable String memory;
 
     @CustomType.Constructor
@@ -39,24 +39,24 @@ public final class NodeTemplateNodeTypeFlexibility {
     }
 
     /**
-     * Number of virtual CPUs to use.
+     * @return Number of virtual CPUs to use.
      * 
-    */
+     */
     public Optional<String> cpus() {
         return Optional.ofNullable(this.cpus);
     }
     /**
-     * - 
+     * @return -
      * Use local SSD
      * 
-    */
+     */
     public Optional<String> localSsd() {
         return Optional.ofNullable(this.localSsd);
     }
     /**
-     * Physical memory available to the node, defined in MB.
+     * @return Physical memory available to the node, defined in MB.
      * 
-    */
+     */
     public Optional<String> memory() {
         return Optional.ofNullable(this.memory);
     }

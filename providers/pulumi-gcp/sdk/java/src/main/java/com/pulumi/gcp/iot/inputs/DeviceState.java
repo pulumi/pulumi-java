@@ -30,6 +30,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="blocked")
     private @Nullable Output<Boolean> blocked;
 
+    /**
+     * @return If a device is blocked, connections or requests from this device will fail.
+     * 
+     */
     public Optional<Output<Boolean>> blocked() {
         return Optional.ofNullable(this.blocked);
     }
@@ -41,6 +45,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="configs")
     private @Nullable Output<List<DeviceConfigGetArgs>> configs;
 
+    /**
+     * @return The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
+     * 
+     */
     public Optional<Output<List<DeviceConfigGetArgs>>> configs() {
         return Optional.ofNullable(this.configs);
     }
@@ -53,6 +61,11 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="credentials")
     private @Nullable Output<List<DeviceCredentialGetArgs>> credentials;
 
+    /**
+     * @return The credentials used to authenticate this device.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<DeviceCredentialGetArgs>>> credentials() {
         return Optional.ofNullable(this.credentials);
     }
@@ -65,6 +78,11 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayConfig")
     private @Nullable Output<DeviceGatewayConfigGetArgs> gatewayConfig;
 
+    /**
+     * @return Gateway-related configuration and state.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<DeviceGatewayConfigGetArgs>> gatewayConfig() {
         return Optional.ofNullable(this.gatewayConfig);
     }
@@ -76,6 +94,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastConfigAckTime")
     private @Nullable Output<String> lastConfigAckTime;
 
+    /**
+     * @return The last time a cloud-to-device config version acknowledgment was received from the device.
+     * 
+     */
     public Optional<Output<String>> lastConfigAckTime() {
         return Optional.ofNullable(this.lastConfigAckTime);
     }
@@ -87,6 +109,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastConfigSendTime")
     private @Nullable Output<String> lastConfigSendTime;
 
+    /**
+     * @return The last time a cloud-to-device config version was sent to the device.
+     * 
+     */
     public Optional<Output<String>> lastConfigSendTime() {
         return Optional.ofNullable(this.lastConfigSendTime);
     }
@@ -98,6 +124,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastErrorStatuses")
     private @Nullable Output<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses;
 
+    /**
+     * @return The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
+     * 
+     */
     public Optional<Output<List<DeviceLastErrorStatusGetArgs>>> lastErrorStatuses() {
         return Optional.ofNullable(this.lastErrorStatuses);
     }
@@ -109,6 +139,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastErrorTime")
     private @Nullable Output<String> lastErrorTime;
 
+    /**
+     * @return The time the most recent error occurred, such as a failure to publish to Cloud Pub/Sub.
+     * 
+     */
     public Optional<Output<String>> lastErrorTime() {
         return Optional.ofNullable(this.lastErrorTime);
     }
@@ -120,6 +154,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastEventTime")
     private @Nullable Output<String> lastEventTime;
 
+    /**
+     * @return The last time a telemetry event was received.
+     * 
+     */
     public Optional<Output<String>> lastEventTime() {
         return Optional.ofNullable(this.lastEventTime);
     }
@@ -131,6 +169,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastHeartbeatTime")
     private @Nullable Output<String> lastHeartbeatTime;
 
+    /**
+     * @return The last time an MQTT PINGREQ was received.
+     * 
+     */
     public Optional<Output<String>> lastHeartbeatTime() {
         return Optional.ofNullable(this.lastHeartbeatTime);
     }
@@ -142,6 +184,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastStateTime")
     private @Nullable Output<String> lastStateTime;
 
+    /**
+     * @return The last time a state event was received.
+     * 
+     */
     public Optional<Output<String>> lastStateTime() {
         return Optional.ofNullable(this.lastStateTime);
     }
@@ -154,6 +200,11 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="logLevel")
     private @Nullable Output<String> logLevel;
 
+    /**
+     * @return The logging verbosity for device activity.
+     * Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
+     * 
+     */
     public Optional<Output<String>> logLevel() {
         return Optional.ofNullable(this.logLevel);
     }
@@ -165,6 +216,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
     private @Nullable Output<Map<String,String>> metadata;
 
+    /**
+     * @return The metadata key-value pairs assigned to the device.
+     * 
+     */
     public Optional<Output<Map<String,String>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -176,6 +231,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A unique name for the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -188,6 +247,11 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="numId")
     private @Nullable Output<String> numId;
 
+    /**
+     * @return A server-defined unique numeric ID for the device. This is a more compact way to identify devices, and it is globally
+     * unique.
+     * 
+     */
     public Optional<Output<String>> numId() {
         return Optional.ofNullable(this.numId);
     }
@@ -199,6 +263,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="registry")
     private @Nullable Output<String> registry;
 
+    /**
+     * @return The name of the device registry where this device should be created.
+     * 
+     */
     public Optional<Output<String>> registry() {
         return Optional.ofNullable(this.registry);
     }
@@ -210,6 +278,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="states")
     private @Nullable Output<List<DeviceStateGetArgs>> states;
 
+    /**
+     * @return The state most recently received from the device.
+     * 
+     */
     public Optional<Output<List<DeviceStateGetArgs>>> states() {
         return Optional.ofNullable(this.states);
     }
@@ -254,171 +326,408 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
             $ = new DeviceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blocked If a device is blocked, connections or requests from this device will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blocked(@Nullable Output<Boolean> blocked) {
             $.blocked = blocked;
             return this;
         }
 
+        /**
+         * @param blocked If a device is blocked, connections or requests from this device will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blocked(Boolean blocked) {
             return blocked(Output.of(blocked));
         }
 
+        /**
+         * @param configs The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configs(@Nullable Output<List<DeviceConfigGetArgs>> configs) {
             $.configs = configs;
             return this;
         }
 
+        /**
+         * @param configs The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configs(List<DeviceConfigGetArgs> configs) {
             return configs(Output.of(configs));
         }
 
+        /**
+         * @param configs The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configs(DeviceConfigGetArgs... configs) {
             return configs(List.of(configs));
         }
 
+        /**
+         * @param credentials The credentials used to authenticate this device.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(@Nullable Output<List<DeviceCredentialGetArgs>> credentials) {
             $.credentials = credentials;
             return this;
         }
 
+        /**
+         * @param credentials The credentials used to authenticate this device.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(List<DeviceCredentialGetArgs> credentials) {
             return credentials(Output.of(credentials));
         }
 
+        /**
+         * @param credentials The credentials used to authenticate this device.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(DeviceCredentialGetArgs... credentials) {
             return credentials(List.of(credentials));
         }
 
+        /**
+         * @param gatewayConfig Gateway-related configuration and state.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayConfig(@Nullable Output<DeviceGatewayConfigGetArgs> gatewayConfig) {
             $.gatewayConfig = gatewayConfig;
             return this;
         }
 
+        /**
+         * @param gatewayConfig Gateway-related configuration and state.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayConfig(DeviceGatewayConfigGetArgs gatewayConfig) {
             return gatewayConfig(Output.of(gatewayConfig));
         }
 
+        /**
+         * @param lastConfigAckTime The last time a cloud-to-device config version acknowledgment was received from the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastConfigAckTime(@Nullable Output<String> lastConfigAckTime) {
             $.lastConfigAckTime = lastConfigAckTime;
             return this;
         }
 
+        /**
+         * @param lastConfigAckTime The last time a cloud-to-device config version acknowledgment was received from the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastConfigAckTime(String lastConfigAckTime) {
             return lastConfigAckTime(Output.of(lastConfigAckTime));
         }
 
+        /**
+         * @param lastConfigSendTime The last time a cloud-to-device config version was sent to the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastConfigSendTime(@Nullable Output<String> lastConfigSendTime) {
             $.lastConfigSendTime = lastConfigSendTime;
             return this;
         }
 
+        /**
+         * @param lastConfigSendTime The last time a cloud-to-device config version was sent to the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastConfigSendTime(String lastConfigSendTime) {
             return lastConfigSendTime(Output.of(lastConfigSendTime));
         }
 
+        /**
+         * @param lastErrorStatuses The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastErrorStatuses(@Nullable Output<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses) {
             $.lastErrorStatuses = lastErrorStatuses;
             return this;
         }
 
+        /**
+         * @param lastErrorStatuses The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastErrorStatuses(List<DeviceLastErrorStatusGetArgs> lastErrorStatuses) {
             return lastErrorStatuses(Output.of(lastErrorStatuses));
         }
 
+        /**
+         * @param lastErrorStatuses The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastErrorStatuses(DeviceLastErrorStatusGetArgs... lastErrorStatuses) {
             return lastErrorStatuses(List.of(lastErrorStatuses));
         }
 
+        /**
+         * @param lastErrorTime The time the most recent error occurred, such as a failure to publish to Cloud Pub/Sub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastErrorTime(@Nullable Output<String> lastErrorTime) {
             $.lastErrorTime = lastErrorTime;
             return this;
         }
 
+        /**
+         * @param lastErrorTime The time the most recent error occurred, such as a failure to publish to Cloud Pub/Sub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastErrorTime(String lastErrorTime) {
             return lastErrorTime(Output.of(lastErrorTime));
         }
 
+        /**
+         * @param lastEventTime The last time a telemetry event was received.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastEventTime(@Nullable Output<String> lastEventTime) {
             $.lastEventTime = lastEventTime;
             return this;
         }
 
+        /**
+         * @param lastEventTime The last time a telemetry event was received.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastEventTime(String lastEventTime) {
             return lastEventTime(Output.of(lastEventTime));
         }
 
+        /**
+         * @param lastHeartbeatTime The last time an MQTT PINGREQ was received.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastHeartbeatTime(@Nullable Output<String> lastHeartbeatTime) {
             $.lastHeartbeatTime = lastHeartbeatTime;
             return this;
         }
 
+        /**
+         * @param lastHeartbeatTime The last time an MQTT PINGREQ was received.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastHeartbeatTime(String lastHeartbeatTime) {
             return lastHeartbeatTime(Output.of(lastHeartbeatTime));
         }
 
+        /**
+         * @param lastStateTime The last time a state event was received.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastStateTime(@Nullable Output<String> lastStateTime) {
             $.lastStateTime = lastStateTime;
             return this;
         }
 
+        /**
+         * @param lastStateTime The last time a state event was received.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastStateTime(String lastStateTime) {
             return lastStateTime(Output.of(lastStateTime));
         }
 
+        /**
+         * @param logLevel The logging verbosity for device activity.
+         * Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLevel(@Nullable Output<String> logLevel) {
             $.logLevel = logLevel;
             return this;
         }
 
+        /**
+         * @param logLevel The logging verbosity for device activity.
+         * Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLevel(String logLevel) {
             return logLevel(Output.of(logLevel));
         }
 
+        /**
+         * @param metadata The metadata key-value pairs assigned to the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata The metadata key-value pairs assigned to the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param name A unique name for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A unique name for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param numId A server-defined unique numeric ID for the device. This is a more compact way to identify devices, and it is globally
+         * unique.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numId(@Nullable Output<String> numId) {
             $.numId = numId;
             return this;
         }
 
+        /**
+         * @param numId A server-defined unique numeric ID for the device. This is a more compact way to identify devices, and it is globally
+         * unique.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numId(String numId) {
             return numId(Output.of(numId));
         }
 
+        /**
+         * @param registry The name of the device registry where this device should be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registry(@Nullable Output<String> registry) {
             $.registry = registry;
             return this;
         }
 
+        /**
+         * @param registry The name of the device registry where this device should be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registry(String registry) {
             return registry(Output.of(registry));
         }
 
+        /**
+         * @param states The state most recently received from the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder states(@Nullable Output<List<DeviceStateGetArgs>> states) {
             $.states = states;
             return this;
         }
 
+        /**
+         * @param states The state most recently received from the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder states(List<DeviceStateGetArgs> states) {
             return states(Output.of(states));
         }
 
+        /**
+         * @param states The state most recently received from the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder states(DeviceStateGetArgs... states) {
             return states(List.of(states));
         }

@@ -9,19 +9,19 @@ import java.util.Objects;
 
 @CustomType
 public final class TriggerBuildStepVolume {
-    /**
-     * Name of the volume to mount.
-     * Volume names must be unique per build step and must be valid names for Docker volumes.
-     * Each named volume must be used by at least two build steps.
-     * 
-     */
+        /**
+         * @return Name of the volume to mount.
+         * Volume names must be unique per build step and must be valid names for Docker volumes.
+         * Each named volume must be used by at least two build steps.
+         * 
+         */
     private final String name;
-    /**
-     * Path at which to mount the volume.
-     * Paths must be absolute and cannot conflict with other volume paths on the same
-     * build step or with certain reserved volume paths.
-     * 
-     */
+        /**
+         * @return Path at which to mount the volume.
+         * Paths must be absolute and cannot conflict with other volume paths on the same
+         * build step or with certain reserved volume paths.
+         * 
+         */
     private final String path;
 
     @CustomType.Constructor
@@ -33,20 +33,20 @@ public final class TriggerBuildStepVolume {
     }
 
     /**
-     * Name of the volume to mount.
+     * @return Name of the volume to mount.
      * Volume names must be unique per build step and must be valid names for Docker volumes.
      * Each named volume must be used by at least two build steps.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Path at which to mount the volume.
+     * @return Path at which to mount the volume.
      * Paths must be absolute and cannot conflict with other volume paths on the same
      * build step or with certain reserved volume paths.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }

@@ -13,53 +13,53 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class InstanceBootDisk {
-    /**
-     * Whether the disk will be auto-deleted when the instance
-     * is deleted. Defaults to true.
-     * 
-     */
+        /**
+         * @return Whether the disk will be auto-deleted when the instance
+         * is deleted. Defaults to true.
+         * 
+         */
     private final @Nullable Boolean autoDelete;
-    /**
-     * Name with which the attached disk will be accessible
-     * under `/dev/disk/by-id/google-*`
-     * 
-     */
+        /**
+         * @return Name with which the attached disk will be accessible
+         * under `/dev/disk/by-id/google-*`
+         * 
+         */
     private final @Nullable String deviceName;
-    /**
-     * A 256-bit [customer-supplied encryption key]
-     * (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption),
-     * encoded in [RFC 4648 base64](https://tools.ietf.org/html/rfc4648#section-4)
-     * to encrypt this disk. Only one of `kms_key_self_link` and `disk_encryption_key_raw` may be set.
-     * 
-     */
+        /**
+         * @return A 256-bit [customer-supplied encryption key]
+         * (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption),
+         * encoded in [RFC 4648 base64](https://tools.ietf.org/html/rfc4648#section-4)
+         * to encrypt this disk. Only one of `kms_key_self_link` and `disk_encryption_key_raw` may be set.
+         * 
+         */
     private final @Nullable String diskEncryptionKeyRaw;
     private final @Nullable String diskEncryptionKeySha256;
-    /**
-     * Parameters for a new disk that will be created
-     * alongside the new instance. Either `initialize_params` or `source` must be set.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Parameters for a new disk that will be created
+         * alongside the new instance. Either `initialize_params` or `source` must be set.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable InstanceBootDiskInitializeParams initializeParams;
-    /**
-     * The self_link of the encryption key that is
-     * stored in Google Cloud KMS to encrypt this disk. Only one of `kms_key_self_link`
-     * and `disk_encryption_key_raw` may be set.
-     * 
-     */
+        /**
+         * @return The self_link of the encryption key that is
+         * stored in Google Cloud KMS to encrypt this disk. Only one of `kms_key_self_link`
+         * and `disk_encryption_key_raw` may be set.
+         * 
+         */
     private final @Nullable String kmsKeySelfLink;
-    /**
-     * Either &#34;READ_ONLY&#34; or &#34;READ_WRITE&#34;, defaults to &#34;READ_WRITE&#34;
-     * If you have a persistent disk with data that you want to share
-     * between multiple instances, detach it from any read-write instances and
-     * attach it to one or more instances in read-only mode.
-     * 
-     */
+        /**
+         * @return Either &#34;READ_ONLY&#34; or &#34;READ_WRITE&#34;, defaults to &#34;READ_WRITE&#34;
+         * If you have a persistent disk with data that you want to share
+         * between multiple instances, detach it from any read-write instances and
+         * attach it to one or more instances in read-only mode.
+         * 
+         */
     private final @Nullable String mode;
-    /**
-     * The name or self_link of the disk to attach to this instance.
-     * 
-     */
+        /**
+         * @return The name or self_link of the disk to attach to this instance.
+         * 
+         */
     private final @Nullable String source;
 
     @CustomType.Constructor
@@ -83,28 +83,28 @@ public final class InstanceBootDisk {
     }
 
     /**
-     * Whether the disk will be auto-deleted when the instance
+     * @return Whether the disk will be auto-deleted when the instance
      * is deleted. Defaults to true.
      * 
-    */
+     */
     public Optional<Boolean> autoDelete() {
         return Optional.ofNullable(this.autoDelete);
     }
     /**
-     * Name with which the attached disk will be accessible
+     * @return Name with which the attached disk will be accessible
      * under `/dev/disk/by-id/google-*`
      * 
-    */
+     */
     public Optional<String> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
     /**
-     * A 256-bit [customer-supplied encryption key]
+     * @return A 256-bit [customer-supplied encryption key]
      * (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption),
      * encoded in [RFC 4648 base64](https://tools.ietf.org/html/rfc4648#section-4)
      * to encrypt this disk. Only one of `kms_key_self_link` and `disk_encryption_key_raw` may be set.
      * 
-    */
+     */
     public Optional<String> diskEncryptionKeyRaw() {
         return Optional.ofNullable(this.diskEncryptionKeyRaw);
     }
@@ -112,37 +112,37 @@ public final class InstanceBootDisk {
         return Optional.ofNullable(this.diskEncryptionKeySha256);
     }
     /**
-     * Parameters for a new disk that will be created
+     * @return Parameters for a new disk that will be created
      * alongside the new instance. Either `initialize_params` or `source` must be set.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<InstanceBootDiskInitializeParams> initializeParams() {
         return Optional.ofNullable(this.initializeParams);
     }
     /**
-     * The self_link of the encryption key that is
+     * @return The self_link of the encryption key that is
      * stored in Google Cloud KMS to encrypt this disk. Only one of `kms_key_self_link`
      * and `disk_encryption_key_raw` may be set.
      * 
-    */
+     */
     public Optional<String> kmsKeySelfLink() {
         return Optional.ofNullable(this.kmsKeySelfLink);
     }
     /**
-     * Either &#34;READ_ONLY&#34; or &#34;READ_WRITE&#34;, defaults to &#34;READ_WRITE&#34;
+     * @return Either &#34;READ_ONLY&#34; or &#34;READ_WRITE&#34;, defaults to &#34;READ_WRITE&#34;
      * If you have a persistent disk with data that you want to share
      * between multiple instances, detach it from any read-write instances and
      * attach it to one or more instances in read-only mode.
      * 
-    */
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
-     * The name or self_link of the disk to attach to this instance.
+     * @return The name or self_link of the disk to attach to this instance.
      * 
-    */
+     */
     public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }

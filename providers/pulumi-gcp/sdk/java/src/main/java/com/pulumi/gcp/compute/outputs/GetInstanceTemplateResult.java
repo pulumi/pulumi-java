@@ -26,162 +26,162 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetInstanceTemplateResult {
     private final List<GetInstanceTemplateAdvancedMachineFeature> advancedMachineFeatures;
-    /**
-     * Whether to allow sending and receiving of
-     * packets with non-matching source or destination IPs. This defaults to false.
-     * 
-     */
+        /**
+         * @return Whether to allow sending and receiving of
+         * packets with non-matching source or destination IPs. This defaults to false.
+         * 
+         */
     private final Boolean canIpForward;
-    /**
-     * Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
-     * 
-     */
+        /**
+         * @return Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
+         * 
+         */
     private final List<GetInstanceTemplateConfidentialInstanceConfig> confidentialInstanceConfigs;
-    /**
-     * A brief description of this resource.
-     * 
-     */
+        /**
+         * @return A brief description of this resource.
+         * 
+         */
     private final String description;
-    /**
-     * Disks to attach to instances created from this template.
-     * This can be specified multiple times for multiple disks. Structure is
-     * documented below.
-     * 
-     */
+        /**
+         * @return Disks to attach to instances created from this template.
+         * This can be specified multiple times for multiple disks. Structure is
+         * documented below.
+         * 
+         */
     private final List<GetInstanceTemplateDisk> disks;
-    /**
-     * Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
-     * **Note**: `allow_stopping_for_update` must be set to true in order to update this field.
-     * 
-     */
+        /**
+         * @return Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
+         * **Note**: `allow_stopping_for_update` must be set to true in order to update this field.
+         * 
+         */
     private final Boolean enableDisplay;
     private final @Nullable String filter;
-    /**
-     * List of the type and count of accelerator cards attached to the instance. Structure documented below.
-     * 
-     */
+        /**
+         * @return List of the type and count of accelerator cards attached to the instance. Structure documented below.
+         * 
+         */
     private final List<GetInstanceTemplateGuestAccelerator> guestAccelerators;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * A brief description to use for instances
-     * created from this template.
-     * 
-     */
+        /**
+         * @return A brief description to use for instances
+         * created from this template.
+         * 
+         */
     private final String instanceDescription;
-    /**
-     * (Optional) A set of ket/value label pairs to assign to disk created from
-     * this template
-     * 
-     */
+        /**
+         * @return (Optional) A set of ket/value label pairs to assign to disk created from
+         * this template
+         * 
+         */
     private final Map<String,String> labels;
-    /**
-     * The machine type to create.
-     * 
-     */
+        /**
+         * @return The machine type to create.
+         * 
+         */
     private final String machineType;
-    /**
-     * Metadata key/value pairs to make available from
-     * within instances created from this template.
-     * 
-     */
+        /**
+         * @return Metadata key/value pairs to make available from
+         * within instances created from this template.
+         * 
+         */
     private final Map<String,Object> metadata;
-    /**
-     * The unique fingerprint of the metadata.
-     * 
-     */
+        /**
+         * @return The unique fingerprint of the metadata.
+         * 
+         */
     private final String metadataFingerprint;
-    /**
-     * An alternative to using the
-     * startup-script metadata key, mostly to match the compute_instance resource.
-     * This replaces the startup-script metadata key on the created instance and
-     * thus the two mechanisms are not allowed to be used simultaneously.
-     * 
-     */
+        /**
+         * @return An alternative to using the
+         * startup-script metadata key, mostly to match the compute_instance resource.
+         * This replaces the startup-script metadata key on the created instance and
+         * thus the two mechanisms are not allowed to be used simultaneously.
+         * 
+         */
     private final String metadataStartupScript;
-    /**
-     * Specifies a minimum CPU platform. Applicable values are the friendly names of CPU platforms, such as
-     * `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
-     * 
-     */
+        /**
+         * @return Specifies a minimum CPU platform. Applicable values are the friendly names of CPU platforms, such as
+         * `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
+         * 
+         */
     private final String minCpuPlatform;
     private final @Nullable Boolean mostRecent;
-    /**
-     * The name of the instance template. If you leave
-     * this blank, the provider will auto-generate a unique name.
-     * 
-     */
+        /**
+         * @return The name of the instance template. If you leave
+         * this blank, the provider will auto-generate a unique name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Creates a unique name beginning with the specified
-     * prefix. Conflicts with `name`.
-     * 
-     */
+        /**
+         * @return Creates a unique name beginning with the specified
+         * prefix. Conflicts with `name`.
+         * 
+         */
     private final String namePrefix;
-    /**
-     * Networks to attach to instances created from
-     * this template. This can be specified multiple times for multiple networks.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Networks to attach to instances created from
+         * this template. This can be specified multiple times for multiple networks.
+         * Structure is documented below.
+         * 
+         */
     private final List<GetInstanceTemplateNetworkInterface> networkInterfaces;
-    /**
-     * The network performance configuration setting
-     * for the instance, if set. Structure is documented below.
-     * 
-     */
+        /**
+         * @return The network performance configuration setting
+         * for the instance, if set. Structure is documented below.
+         * 
+         */
     private final List<GetInstanceTemplateNetworkPerformanceConfig> networkPerformanceConfigs;
-    /**
-     * The ID of the project in which the resource belongs. If it
-     * is not provided, the provider project is used.
-     * 
-     */
+        /**
+         * @return The ID of the project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         */
     private final String project;
-    /**
-     * An instance template is a global resource that is not
-     * bound to a zone or a region. However, you can still specify some regional
-     * resources in an instance template, which restricts the template to the
-     * region where that resource resides. For example, a custom `subnetwork`
-     * resource is tied to a specific region. Defaults to the region of the
-     * Provider if no value is given.
-     * 
-     */
+        /**
+         * @return An instance template is a global resource that is not
+         * bound to a zone or a region. However, you can still specify some regional
+         * resources in an instance template, which restricts the template to the
+         * region where that resource resides. For example, a custom `subnetwork`
+         * resource is tied to a specific region. Defaults to the region of the
+         * Provider if no value is given.
+         * 
+         */
     private final String region;
     private final List<GetInstanceTemplateReservationAffinity> reservationAffinities;
-    /**
-     * The scheduling strategy to use. More details about
-     * this configuration option are detailed below.
-     * 
-     */
+        /**
+         * @return The scheduling strategy to use. More details about
+         * this configuration option are detailed below.
+         * 
+         */
     private final List<GetInstanceTemplateScheduling> schedulings;
-    /**
-     * The URI of the created resource.
-     * 
-     */
+        /**
+         * @return The URI of the created resource.
+         * 
+         */
     private final String selfLink;
-    /**
-     * Service account to attach to the instance. Structure is documented below.
-     * 
-     */
+        /**
+         * @return Service account to attach to the instance. Structure is documented below.
+         * 
+         */
     private final List<GetInstanceTemplateServiceAccount> serviceAccounts;
-    /**
-     * Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
-     * **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
-     * 
-     */
+        /**
+         * @return Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
+         * **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
+         * 
+         */
     private final List<GetInstanceTemplateShieldedInstanceConfig> shieldedInstanceConfigs;
-    /**
-     * Tags to attach to the instance.
-     * 
-     */
+        /**
+         * @return Tags to attach to the instance.
+         * 
+         */
     private final List<String> tags;
-    /**
-     * The unique fingerprint of the tags.
-     * 
-     */
+        /**
+         * @return The unique fingerprint of the tags.
+         * 
+         */
     private final String tagsFingerprint;
 
     @CustomType.Constructor
@@ -252,41 +252,41 @@ public final class GetInstanceTemplateResult {
         return this.advancedMachineFeatures;
     }
     /**
-     * Whether to allow sending and receiving of
+     * @return Whether to allow sending and receiving of
      * packets with non-matching source or destination IPs. This defaults to false.
      * 
-    */
+     */
     public Boolean canIpForward() {
         return this.canIpForward;
     }
     /**
-     * Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
+     * @return Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
      * 
-    */
+     */
     public List<GetInstanceTemplateConfidentialInstanceConfig> confidentialInstanceConfigs() {
         return this.confidentialInstanceConfigs;
     }
     /**
-     * A brief description of this resource.
+     * @return A brief description of this resource.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Disks to attach to instances created from this template.
+     * @return Disks to attach to instances created from this template.
      * This can be specified multiple times for multiple disks. Structure is
      * documented below.
      * 
-    */
+     */
     public List<GetInstanceTemplateDisk> disks() {
         return this.disks;
     }
     /**
-     * Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
+     * @return Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
      * **Note**: `allow_stopping_for_update` must be set to true in order to update this field.
      * 
-    */
+     */
     public Boolean enableDisplay() {
         return this.enableDisplay;
     }
@@ -294,72 +294,72 @@ public final class GetInstanceTemplateResult {
         return Optional.ofNullable(this.filter);
     }
     /**
-     * List of the type and count of accelerator cards attached to the instance. Structure documented below.
+     * @return List of the type and count of accelerator cards attached to the instance. Structure documented below.
      * 
-    */
+     */
     public List<GetInstanceTemplateGuestAccelerator> guestAccelerators() {
         return this.guestAccelerators;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * A brief description to use for instances
+     * @return A brief description to use for instances
      * created from this template.
      * 
-    */
+     */
     public String instanceDescription() {
         return this.instanceDescription;
     }
     /**
-     * (Optional) A set of ket/value label pairs to assign to disk created from
+     * @return (Optional) A set of ket/value label pairs to assign to disk created from
      * this template
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The machine type to create.
+     * @return The machine type to create.
      * 
-    */
+     */
     public String machineType() {
         return this.machineType;
     }
     /**
-     * Metadata key/value pairs to make available from
+     * @return Metadata key/value pairs to make available from
      * within instances created from this template.
      * 
-    */
+     */
     public Map<String,Object> metadata() {
         return this.metadata;
     }
     /**
-     * The unique fingerprint of the metadata.
+     * @return The unique fingerprint of the metadata.
      * 
-    */
+     */
     public String metadataFingerprint() {
         return this.metadataFingerprint;
     }
     /**
-     * An alternative to using the
+     * @return An alternative to using the
      * startup-script metadata key, mostly to match the compute_instance resource.
      * This replaces the startup-script metadata key on the created instance and
      * thus the two mechanisms are not allowed to be used simultaneously.
      * 
-    */
+     */
     public String metadataStartupScript() {
         return this.metadataStartupScript;
     }
     /**
-     * Specifies a minimum CPU platform. Applicable values are the friendly names of CPU platforms, such as
+     * @return Specifies a minimum CPU platform. Applicable values are the friendly names of CPU platforms, such as
      * `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
      * 
-    */
+     */
     public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
@@ -367,55 +367,55 @@ public final class GetInstanceTemplateResult {
         return Optional.ofNullable(this.mostRecent);
     }
     /**
-     * The name of the instance template. If you leave
+     * @return The name of the instance template. If you leave
      * this blank, the provider will auto-generate a unique name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Creates a unique name beginning with the specified
+     * @return Creates a unique name beginning with the specified
      * prefix. Conflicts with `name`.
      * 
-    */
+     */
     public String namePrefix() {
         return this.namePrefix;
     }
     /**
-     * Networks to attach to instances created from
+     * @return Networks to attach to instances created from
      * this template. This can be specified multiple times for multiple networks.
      * Structure is documented below.
      * 
-    */
+     */
     public List<GetInstanceTemplateNetworkInterface> networkInterfaces() {
         return this.networkInterfaces;
     }
     /**
-     * The network performance configuration setting
+     * @return The network performance configuration setting
      * for the instance, if set. Structure is documented below.
      * 
-    */
+     */
     public List<GetInstanceTemplateNetworkPerformanceConfig> networkPerformanceConfigs() {
         return this.networkPerformanceConfigs;
     }
     /**
-     * The ID of the project in which the resource belongs. If it
+     * @return The ID of the project in which the resource belongs. If it
      * is not provided, the provider project is used.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }
     /**
-     * An instance template is a global resource that is not
+     * @return An instance template is a global resource that is not
      * bound to a zone or a region. However, you can still specify some regional
      * resources in an instance template, which restricts the template to the
      * region where that resource resides. For example, a custom `subnetwork`
      * resource is tied to a specific region. Defaults to the region of the
      * Provider if no value is given.
      * 
-    */
+     */
     public String region() {
         return this.region;
     }
@@ -423,46 +423,46 @@ public final class GetInstanceTemplateResult {
         return this.reservationAffinities;
     }
     /**
-     * The scheduling strategy to use. More details about
+     * @return The scheduling strategy to use. More details about
      * this configuration option are detailed below.
      * 
-    */
+     */
     public List<GetInstanceTemplateScheduling> schedulings() {
         return this.schedulings;
     }
     /**
-     * The URI of the created resource.
+     * @return The URI of the created resource.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }
     /**
-     * Service account to attach to the instance. Structure is documented below.
+     * @return Service account to attach to the instance. Structure is documented below.
      * 
-    */
+     */
     public List<GetInstanceTemplateServiceAccount> serviceAccounts() {
         return this.serviceAccounts;
     }
     /**
-     * Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
+     * @return Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
      * **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
      * 
-    */
+     */
     public List<GetInstanceTemplateShieldedInstanceConfig> shieldedInstanceConfigs() {
         return this.shieldedInstanceConfigs;
     }
     /**
-     * Tags to attach to the instance.
+     * @return Tags to attach to the instance.
      * 
-    */
+     */
     public List<String> tags() {
         return this.tags;
     }
     /**
-     * The unique fingerprint of the tags.
+     * @return The unique fingerprint of the tags.
      * 
-    */
+     */
     public String tagsFingerprint() {
         return this.tagsFingerprint;
     }

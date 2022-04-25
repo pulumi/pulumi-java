@@ -9,12 +9,12 @@ import java.util.Objects;
 
 @CustomType
 public final class RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy {
-    /**
-     * The default RegionBackendService resource. Before
-     * forwarding the request to backendService, the loadbalancer applies any relevant
-     * headerActions specified as part of this backendServiceWeight.
-     * 
-     */
+        /**
+         * @return The default RegionBackendService resource. Before
+         * forwarding the request to backendService, the loadbalancer applies any relevant
+         * headerActions specified as part of this backendServiceWeight.
+         * 
+         */
     private final String backendService;
 
     @CustomType.Constructor
@@ -23,11 +23,11 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy
     }
 
     /**
-     * The default RegionBackendService resource. Before
+     * @return The default RegionBackendService resource. Before
      * forwarding the request to backendService, the loadbalancer applies any relevant
      * headerActions specified as part of this backendServiceWeight.
      * 
-    */
+     */
     public String backendService() {
         return this.backendService;
     }

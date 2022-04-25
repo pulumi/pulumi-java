@@ -9,21 +9,21 @@ import java.util.Objects;
 
 @CustomType
 public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference {
-    /**
-     * Dataset ID of the table.
-     * 
-     */
+        /**
+         * @return Dataset ID of the table.
+         * 
+         */
     private final String datasetId;
-    /**
-     * The Google Cloud Platform project ID of the project containing the table.
-     * 
-     */
+        /**
+         * @return The Google Cloud Platform project ID of the project containing the table.
+         * 
+         */
     private final String projectId;
-    /**
-     * Name of the table. If is not set a new one will be generated for you with the following format:
-     * `dlp_googleapis_yyyy_mm_dd_[dlp_job_id]`. Pacific timezone will be used for generating the date details.
-     * 
-     */
+        /**
+         * @return Name of the table. If is not set a new one will be generated for you with the following format:
+         * `dlp_googleapis_yyyy_mm_dd_[dlp_job_id]`. Pacific timezone will be used for generating the date details.
+         * 
+         */
     private final String tableId;
 
     @CustomType.Constructor
@@ -37,24 +37,24 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTab
     }
 
     /**
-     * Dataset ID of the table.
+     * @return Dataset ID of the table.
      * 
-    */
+     */
     public String datasetId() {
         return this.datasetId;
     }
     /**
-     * The Google Cloud Platform project ID of the project containing the table.
+     * @return The Google Cloud Platform project ID of the project containing the table.
      * 
-    */
+     */
     public String projectId() {
         return this.projectId;
     }
     /**
-     * Name of the table. If is not set a new one will be generated for you with the following format:
+     * @return Name of the table. If is not set a new one will be generated for you with the following format:
      * `dlp_googleapis_yyyy_mm_dd_[dlp_job_id]`. Pacific timezone will be used for generating the date details.
      * 
-    */
+     */
     public String tableId() {
         return this.tableId;
     }

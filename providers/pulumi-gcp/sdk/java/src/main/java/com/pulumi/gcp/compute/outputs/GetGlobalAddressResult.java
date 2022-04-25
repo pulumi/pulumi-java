@@ -9,27 +9,27 @@ import java.util.Objects;
 
 @CustomType
 public final class GetGlobalAddressResult {
-    /**
-     * The IP of the created resource.
-     * 
-     */
+        /**
+         * @return The IP of the created resource.
+         * 
+         */
     private final String address;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String name;
     private final String project;
-    /**
-     * The URI of the created resource.
-     * 
-     */
+        /**
+         * @return The URI of the created resource.
+         * 
+         */
     private final String selfLink;
-    /**
-     * Indicates if the address is used. Possible values are: RESERVED or IN_USE.
-     * 
-     */
+        /**
+         * @return Indicates if the address is used. Possible values are: RESERVED or IN_USE.
+         * 
+         */
     private final String status;
 
     @CustomType.Constructor
@@ -49,16 +49,16 @@ public final class GetGlobalAddressResult {
     }
 
     /**
-     * The IP of the created resource.
+     * @return The IP of the created resource.
      * 
-    */
+     */
     public String address() {
         return this.address;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -69,16 +69,16 @@ public final class GetGlobalAddressResult {
         return this.project;
     }
     /**
-     * The URI of the created resource.
+     * @return The URI of the created resource.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }
     /**
-     * Indicates if the address is used. Possible values are: RESERVED or IN_USE.
+     * @return Indicates if the address is used. Possible values are: RESERVED or IN_USE.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

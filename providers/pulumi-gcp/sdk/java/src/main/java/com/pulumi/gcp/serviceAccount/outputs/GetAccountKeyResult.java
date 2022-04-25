@@ -11,18 +11,18 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAccountKeyResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String keyAlgorithm;
     private final String name;
     private final @Nullable String project;
-    /**
-     * The public key, base64 encoded
-     * 
-     */
+        /**
+         * @return The public key, base64 encoded
+         * 
+         */
     private final String publicKey;
     private final @Nullable String publicKeyType;
 
@@ -43,9 +43,9 @@ public final class GetAccountKeyResult {
     }
 
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -59,9 +59,9 @@ public final class GetAccountKeyResult {
         return Optional.ofNullable(this.project);
     }
     /**
-     * The public key, base64 encoded
+     * @return The public key, base64 encoded
      * 
-    */
+     */
     public String publicKey() {
         return this.publicKey;
     }

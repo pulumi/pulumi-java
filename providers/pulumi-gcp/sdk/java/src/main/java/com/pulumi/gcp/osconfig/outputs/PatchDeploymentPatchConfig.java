@@ -18,53 +18,53 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PatchDeploymentPatchConfig {
-    /**
-     * Apt update settings. Use this setting to override the default apt patch rules.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Apt update settings. Use this setting to override the default apt patch rules.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable PatchDeploymentPatchConfigApt apt;
-    /**
-     * goo update settings. Use this setting to override the default goo patch rules.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return goo update settings. Use this setting to override the default goo patch rules.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable PatchDeploymentPatchConfigGoo goo;
-    /**
-     * The ExecStep to run after the patch update.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return The ExecStep to run after the patch update.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable PatchDeploymentPatchConfigPostStep postStep;
-    /**
-     * The ExecStep to run before the patch update.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return The ExecStep to run before the patch update.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable PatchDeploymentPatchConfigPreStep preStep;
-    /**
-     * Post-patch reboot settings.
-     * Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
-     * 
-     */
+        /**
+         * @return Post-patch reboot settings.
+         * Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
+         * 
+         */
     private final @Nullable String rebootConfig;
-    /**
-     * Windows update settings. Use this setting to override the default Windows patch rules.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Windows update settings. Use this setting to override the default Windows patch rules.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable PatchDeploymentPatchConfigWindowsUpdate windowsUpdate;
-    /**
-     * Yum update settings. Use this setting to override the default yum patch rules.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Yum update settings. Use this setting to override the default yum patch rules.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable PatchDeploymentPatchConfigYum yum;
-    /**
-     * zypper update settings. Use this setting to override the default zypper patch rules.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return zypper update settings. Use this setting to override the default zypper patch rules.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable PatchDeploymentPatchConfigZypper zypper;
 
     @CustomType.Constructor
@@ -88,66 +88,66 @@ public final class PatchDeploymentPatchConfig {
     }
 
     /**
-     * Apt update settings. Use this setting to override the default apt patch rules.
+     * @return Apt update settings. Use this setting to override the default apt patch rules.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PatchDeploymentPatchConfigApt> apt() {
         return Optional.ofNullable(this.apt);
     }
     /**
-     * goo update settings. Use this setting to override the default goo patch rules.
+     * @return goo update settings. Use this setting to override the default goo patch rules.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PatchDeploymentPatchConfigGoo> goo() {
         return Optional.ofNullable(this.goo);
     }
     /**
-     * The ExecStep to run after the patch update.
+     * @return The ExecStep to run after the patch update.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PatchDeploymentPatchConfigPostStep> postStep() {
         return Optional.ofNullable(this.postStep);
     }
     /**
-     * The ExecStep to run before the patch update.
+     * @return The ExecStep to run before the patch update.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PatchDeploymentPatchConfigPreStep> preStep() {
         return Optional.ofNullable(this.preStep);
     }
     /**
-     * Post-patch reboot settings.
+     * @return Post-patch reboot settings.
      * Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
      * 
-    */
+     */
     public Optional<String> rebootConfig() {
         return Optional.ofNullable(this.rebootConfig);
     }
     /**
-     * Windows update settings. Use this setting to override the default Windows patch rules.
+     * @return Windows update settings. Use this setting to override the default Windows patch rules.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PatchDeploymentPatchConfigWindowsUpdate> windowsUpdate() {
         return Optional.ofNullable(this.windowsUpdate);
     }
     /**
-     * Yum update settings. Use this setting to override the default yum patch rules.
+     * @return Yum update settings. Use this setting to override the default yum patch rules.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PatchDeploymentPatchConfigYum> yum() {
         return Optional.ofNullable(this.yum);
     }
     /**
-     * zypper update settings. Use this setting to override the default zypper patch rules.
+     * @return zypper update settings. Use this setting to override the default zypper patch rules.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PatchDeploymentPatchConfigZypper> zypper() {
         return Optional.ofNullable(this.zypper);
     }

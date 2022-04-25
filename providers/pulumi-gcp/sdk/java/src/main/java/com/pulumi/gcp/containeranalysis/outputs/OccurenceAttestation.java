@@ -11,21 +11,21 @@ import java.util.Objects;
 
 @CustomType
 public final class OccurenceAttestation {
-    /**
-     * The serialized payload that is verified by one or
-     * more signatures. A base64-encoded string.
-     * 
-     */
+        /**
+         * @return The serialized payload that is verified by one or
+         * more signatures. A base64-encoded string.
+         * 
+         */
     private final String serializedPayload;
-    /**
-     * One or more signatures over serializedPayload.
-     * Verifier implementations should consider this attestation
-     * message verified if at least one signature verifies
-     * serializedPayload. See Signature in common.proto for more
-     * details on signature structure and verification.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return One or more signatures over serializedPayload.
+         * Verifier implementations should consider this attestation
+         * message verified if at least one signature verifies
+         * serializedPayload. See Signature in common.proto for more
+         * details on signature structure and verification.
+         * Structure is documented below.
+         * 
+         */
     private final List<OccurenceAttestationSignature> signatures;
 
     @CustomType.Constructor
@@ -37,22 +37,22 @@ public final class OccurenceAttestation {
     }
 
     /**
-     * The serialized payload that is verified by one or
+     * @return The serialized payload that is verified by one or
      * more signatures. A base64-encoded string.
      * 
-    */
+     */
     public String serializedPayload() {
         return this.serializedPayload;
     }
     /**
-     * One or more signatures over serializedPayload.
+     * @return One or more signatures over serializedPayload.
      * Verifier implementations should consider this attestation
      * message verified if at least one signature verifies
      * serializedPayload. See Signature in common.proto for more
      * details on signature structure and verification.
      * Structure is documented below.
      * 
-    */
+     */
     public List<OccurenceAttestationSignature> signatures() {
         return this.signatures;
     }

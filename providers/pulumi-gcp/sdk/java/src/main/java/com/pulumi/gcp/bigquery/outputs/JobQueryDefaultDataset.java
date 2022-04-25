@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class JobQueryDefaultDataset {
-    /**
-     * The ID of the dataset containing this model.
-     * 
-     */
+        /**
+         * @return The ID of the dataset containing this model.
+         * 
+         */
     private final String datasetId;
-    /**
-     * The ID of the project containing this model.
-     * 
-     */
+        /**
+         * @return The ID of the project containing this model.
+         * 
+         */
     private final @Nullable String projectId;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class JobQueryDefaultDataset {
     }
 
     /**
-     * The ID of the dataset containing this model.
+     * @return The ID of the dataset containing this model.
      * 
-    */
+     */
     public String datasetId() {
         return this.datasetId;
     }
     /**
-     * The ID of the project containing this model.
+     * @return The ID of the project containing this model.
      * 
-    */
+     */
     public Optional<String> projectId() {
         return Optional.ofNullable(this.projectId);
     }

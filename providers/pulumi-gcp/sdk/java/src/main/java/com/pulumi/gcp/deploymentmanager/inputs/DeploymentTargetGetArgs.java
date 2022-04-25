@@ -25,6 +25,11 @@ public final class DeploymentTargetGetArgs extends com.pulumi.resources.Resource
     @Import(name="config", required=true)
     private Output<DeploymentTargetConfigGetArgs> config;
 
+    /**
+     * @return The root configuration file to use for this deployment.
+     * Structure is documented below.
+     * 
+     */
     public Output<DeploymentTargetConfigGetArgs> config() {
         return this.config;
     }
@@ -39,6 +44,13 @@ public final class DeploymentTargetGetArgs extends com.pulumi.resources.Resource
     @Import(name="imports")
     private @Nullable Output<List<DeploymentTargetImportGetArgs>> imports;
 
+    /**
+     * @return Specifies import files for this configuration. This can be
+     * used to import templates or other files. For example, you might
+     * import a text file in order to use the file in a template.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<DeploymentTargetImportGetArgs>>> imports() {
         return Optional.ofNullable(this.imports);
     }
@@ -68,24 +80,65 @@ public final class DeploymentTargetGetArgs extends com.pulumi.resources.Resource
             $ = new DeploymentTargetGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param config The root configuration file to use for this deployment.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(Output<DeploymentTargetConfigGetArgs> config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param config The root configuration file to use for this deployment.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(DeploymentTargetConfigGetArgs config) {
             return config(Output.of(config));
         }
 
+        /**
+         * @param imports Specifies import files for this configuration. This can be
+         * used to import templates or other files. For example, you might
+         * import a text file in order to use the file in a template.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imports(@Nullable Output<List<DeploymentTargetImportGetArgs>> imports) {
             $.imports = imports;
             return this;
         }
 
+        /**
+         * @param imports Specifies import files for this configuration. This can be
+         * used to import templates or other files. For example, you might
+         * import a text file in order to use the file in a template.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imports(List<DeploymentTargetImportGetArgs> imports) {
             return imports(Output.of(imports));
         }
 
+        /**
+         * @param imports Specifies import files for this configuration. This can be
+         * used to import templates or other files. For example, you might
+         * import a text file in order to use the file in a template.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imports(DeploymentTargetImportGetArgs... imports) {
             return imports(List.of(imports));
         }

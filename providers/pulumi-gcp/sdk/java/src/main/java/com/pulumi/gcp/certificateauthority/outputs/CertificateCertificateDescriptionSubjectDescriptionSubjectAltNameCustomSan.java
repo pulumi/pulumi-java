@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSan {
-    /**
-     * Indicates whether or not this extension is critical (i.e., if the client does not know how to
-     * handle this extension, the client should consider this to be an error).
-     * 
-     */
+        /**
+         * @return Indicates whether or not this extension is critical (i.e., if the client does not know how to
+         * handle this extension, the client should consider this to be an error).
+         * 
+         */
     private final @Nullable Boolean critical;
     private final @Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectId> obectIds;
-    /**
-     * The value of this X.509 extension. A base64-encoded string.
-     * 
-     */
+        /**
+         * @return The value of this X.509 extension. A base64-encoded string.
+         * 
+         */
     private final @Nullable String value;
 
     @CustomType.Constructor
@@ -38,10 +38,10 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
     }
 
     /**
-     * Indicates whether or not this extension is critical (i.e., if the client does not know how to
+     * @return Indicates whether or not this extension is critical (i.e., if the client does not know how to
      * handle this extension, the client should consider this to be an error).
      * 
-    */
+     */
     public Optional<Boolean> critical() {
         return Optional.ofNullable(this.critical);
     }
@@ -49,9 +49,9 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
         return this.obectIds == null ? List.of() : this.obectIds;
     }
     /**
-     * The value of this X.509 extension. A base64-encoded string.
+     * @return The value of this X.509 extension. A base64-encoded string.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

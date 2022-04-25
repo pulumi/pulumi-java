@@ -14,15 +14,15 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAccountIdTokenResult {
     private final @Nullable List<String> delegates;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * The `id_token` representing the new generated identity.
-     * 
-     */
+        /**
+         * @return The `id_token` representing the new generated identity.
+         * 
+         */
     private final String idToken;
     private final @Nullable Boolean includeEmail;
     private final String targetAudience;
@@ -48,16 +48,16 @@ public final class GetAccountIdTokenResult {
         return this.delegates == null ? List.of() : this.delegates;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The `id_token` representing the new generated identity.
+     * @return The `id_token` representing the new generated identity.
      * 
-    */
+     */
     public String idToken() {
         return this.idToken;
     }

@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetUptimeCheckIPsResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * A list of uptime check IPs used by Stackdriver Monitoring. Each `uptime_check_ip` contains:
-     * 
-     */
+        /**
+         * @return A list of uptime check IPs used by Stackdriver Monitoring. Each `uptime_check_ip` contains:
+         * 
+         */
     private final List<GetUptimeCheckIPsUptimeCheckIp> uptimeCheckIps;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class GetUptimeCheckIPsResult {
     }
 
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * A list of uptime check IPs used by Stackdriver Monitoring. Each `uptime_check_ip` contains:
+     * @return A list of uptime check IPs used by Stackdriver Monitoring. Each `uptime_check_ip` contains:
      * 
-    */
+     */
     public List<GetUptimeCheckIPsUptimeCheckIp> uptimeCheckIps() {
         return this.uptimeCheckIps;
     }

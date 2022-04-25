@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ServicePerimeterSpecVpcAccessibleServices {
-    /**
-     * The list of APIs usable within the Service Perimeter.
-     * Must be empty unless `enableRestriction` is True.
-     * 
-     */
+        /**
+         * @return The list of APIs usable within the Service Perimeter.
+         * Must be empty unless `enableRestriction` is True.
+         * 
+         */
     private final @Nullable List<String> allowedServices;
-    /**
-     * Whether to restrict API calls within the Service Perimeter to the
-     * list of APIs specified in &#39;allowedServices&#39;.
-     * 
-     */
+        /**
+         * @return Whether to restrict API calls within the Service Perimeter to the
+         * list of APIs specified in &#39;allowedServices&#39;.
+         * 
+         */
     private final @Nullable Boolean enableRestriction;
 
     @CustomType.Constructor
@@ -35,18 +35,18 @@ public final class ServicePerimeterSpecVpcAccessibleServices {
     }
 
     /**
-     * The list of APIs usable within the Service Perimeter.
+     * @return The list of APIs usable within the Service Perimeter.
      * Must be empty unless `enableRestriction` is True.
      * 
-    */
+     */
     public List<String> allowedServices() {
         return this.allowedServices == null ? List.of() : this.allowedServices;
     }
     /**
-     * Whether to restrict API calls within the Service Perimeter to the
+     * @return Whether to restrict API calls within the Service Perimeter to the
      * list of APIs specified in &#39;allowedServices&#39;.
      * 
-    */
+     */
     public Optional<Boolean> enableRestriction() {
         return Optional.ofNullable(this.enableRestriction);
     }

@@ -15,25 +15,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetResourcePolicyResult {
-    /**
-     * Description of this Resource Policy.
-     * 
-     */
+        /**
+         * @return Description of this Resource Policy.
+         * 
+         */
     private final String description;
     private final List<GetResourcePolicyGroupPlacementPolicy> groupPlacementPolicies;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final List<GetResourcePolicyInstanceSchedulePolicy> instanceSchedulePolicies;
     private final String name;
     private final @Nullable String project;
     private final @Nullable String region;
-    /**
-     * The URI of the resource.
-     * 
-     */
+        /**
+         * @return The URI of the resource.
+         * 
+         */
     private final String selfLink;
     private final List<GetResourcePolicySnapshotSchedulePolicy> snapshotSchedulePolicies;
 
@@ -60,9 +60,9 @@ public final class GetResourcePolicyResult {
     }
 
     /**
-     * Description of this Resource Policy.
+     * @return Description of this Resource Policy.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
@@ -70,9 +70,9 @@ public final class GetResourcePolicyResult {
         return this.groupPlacementPolicies;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -89,9 +89,9 @@ public final class GetResourcePolicyResult {
         return Optional.ofNullable(this.region);
     }
     /**
-     * The URI of the resource.
+     * @return The URI of the resource.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }

@@ -19,6 +19,10 @@ public final class GetFunctionEventTriggerFailurePolicy extends com.pulumi.resou
     @Import(name="retry", required=true)
     private Boolean retry;
 
+    /**
+     * @return Whether the function should be retried on failure.
+     * 
+     */
     public Boolean retry() {
         return this.retry;
     }
@@ -47,6 +51,12 @@ public final class GetFunctionEventTriggerFailurePolicy extends com.pulumi.resou
             $ = new GetFunctionEventTriggerFailurePolicy(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param retry Whether the function should be retried on failure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retry(Boolean retry) {
             $.retry = retry;
             return this;

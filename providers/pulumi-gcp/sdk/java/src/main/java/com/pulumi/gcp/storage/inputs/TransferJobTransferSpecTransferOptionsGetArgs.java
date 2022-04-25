@@ -22,6 +22,10 @@ public final class TransferJobTransferSpecTransferOptionsGetArgs extends com.pul
     @Import(name="deleteObjectsFromSourceAfterTransfer")
     private @Nullable Output<Boolean> deleteObjectsFromSourceAfterTransfer;
 
+    /**
+     * @return Whether objects should be deleted from the source after they are transferred to the sink. Note that this option and `delete_objects_unique_in_sink` are mutually exclusive.
+     * 
+     */
     public Optional<Output<Boolean>> deleteObjectsFromSourceAfterTransfer() {
         return Optional.ofNullable(this.deleteObjectsFromSourceAfterTransfer);
     }
@@ -34,6 +38,11 @@ public final class TransferJobTransferSpecTransferOptionsGetArgs extends com.pul
     @Import(name="deleteObjectsUniqueInSink")
     private @Nullable Output<Boolean> deleteObjectsUniqueInSink;
 
+    /**
+     * @return Whether objects that exist only in the sink should be deleted. Note that this option and
+     * `delete_objects_from_source_after_transfer` are mutually exclusive.
+     * 
+     */
     public Optional<Output<Boolean>> deleteObjectsUniqueInSink() {
         return Optional.ofNullable(this.deleteObjectsUniqueInSink);
     }
@@ -45,6 +54,10 @@ public final class TransferJobTransferSpecTransferOptionsGetArgs extends com.pul
     @Import(name="overwriteObjectsAlreadyExistingInSink")
     private @Nullable Output<Boolean> overwriteObjectsAlreadyExistingInSink;
 
+    /**
+     * @return Whether overwriting objects that already exist in the sink is allowed.
+     * 
+     */
     public Optional<Output<Boolean>> overwriteObjectsAlreadyExistingInSink() {
         return Optional.ofNullable(this.overwriteObjectsAlreadyExistingInSink);
     }
@@ -75,29 +88,67 @@ public final class TransferJobTransferSpecTransferOptionsGetArgs extends com.pul
             $ = new TransferJobTransferSpecTransferOptionsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deleteObjectsFromSourceAfterTransfer Whether objects should be deleted from the source after they are transferred to the sink. Note that this option and `delete_objects_unique_in_sink` are mutually exclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteObjectsFromSourceAfterTransfer(@Nullable Output<Boolean> deleteObjectsFromSourceAfterTransfer) {
             $.deleteObjectsFromSourceAfterTransfer = deleteObjectsFromSourceAfterTransfer;
             return this;
         }
 
+        /**
+         * @param deleteObjectsFromSourceAfterTransfer Whether objects should be deleted from the source after they are transferred to the sink. Note that this option and `delete_objects_unique_in_sink` are mutually exclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteObjectsFromSourceAfterTransfer(Boolean deleteObjectsFromSourceAfterTransfer) {
             return deleteObjectsFromSourceAfterTransfer(Output.of(deleteObjectsFromSourceAfterTransfer));
         }
 
+        /**
+         * @param deleteObjectsUniqueInSink Whether objects that exist only in the sink should be deleted. Note that this option and
+         * `delete_objects_from_source_after_transfer` are mutually exclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteObjectsUniqueInSink(@Nullable Output<Boolean> deleteObjectsUniqueInSink) {
             $.deleteObjectsUniqueInSink = deleteObjectsUniqueInSink;
             return this;
         }
 
+        /**
+         * @param deleteObjectsUniqueInSink Whether objects that exist only in the sink should be deleted. Note that this option and
+         * `delete_objects_from_source_after_transfer` are mutually exclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteObjectsUniqueInSink(Boolean deleteObjectsUniqueInSink) {
             return deleteObjectsUniqueInSink(Output.of(deleteObjectsUniqueInSink));
         }
 
+        /**
+         * @param overwriteObjectsAlreadyExistingInSink Whether overwriting objects that already exist in the sink is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overwriteObjectsAlreadyExistingInSink(@Nullable Output<Boolean> overwriteObjectsAlreadyExistingInSink) {
             $.overwriteObjectsAlreadyExistingInSink = overwriteObjectsAlreadyExistingInSink;
             return this;
         }
 
+        /**
+         * @param overwriteObjectsAlreadyExistingInSink Whether overwriting objects that already exist in the sink is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overwriteObjectsAlreadyExistingInSink(Boolean overwriteObjectsAlreadyExistingInSink) {
             return overwriteObjectsAlreadyExistingInSink(Output.of(overwriteObjectsAlreadyExistingInSink));
         }

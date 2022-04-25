@@ -15,53 +15,53 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RegionUrlMapPathMatcher {
-    /**
-     * A reference to a RegionBackendService resource. This will be used if
-     * none of the pathRules defined by this PathMatcher is matched by
-     * the URL&#39;s path portion.
-     * 
-     */
+        /**
+         * @return A reference to a RegionBackendService resource. This will be used if
+         * none of the pathRules defined by this PathMatcher is matched by
+         * the URL&#39;s path portion.
+         * 
+         */
     private final @Nullable String defaultService;
-    /**
-     * When none of the specified hostRules match, the request is redirected to a URL specified
-     * by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
-     * defaultRouteAction must not be set.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return When none of the specified hostRules match, the request is redirected to a URL specified
+         * by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+         * defaultRouteAction must not be set.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable RegionUrlMapPathMatcherDefaultUrlRedirect defaultUrlRedirect;
-    /**
-     * Description of this test case.
-     * 
-     */
+        /**
+         * @return Description of this test case.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The name of the query parameter to match. The query parameter must exist in the
-     * request, in the absence of which the request match fails.
-     * 
-     */
+        /**
+         * @return The name of the query parameter to match. The query parameter must exist in the
+         * request, in the absence of which the request match fails.
+         * 
+         */
     private final String name;
-    /**
-     * The list of path rules. Use this list instead of routeRules when routing based
-     * on simple path matching is all that&#39;s required. The order by which path rules
-     * are specified does not matter. Matches are always done on the longest-path-first
-     * basis. For example: a pathRule with a path /a/b/c/* will match before /a/b/*
-     * irrespective of the order in which those paths appear in this list. Within a
-     * given pathMatcher, only one of pathRules or routeRules must be set.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return The list of path rules. Use this list instead of routeRules when routing based
+         * on simple path matching is all that&#39;s required. The order by which path rules
+         * are specified does not matter. Matches are always done on the longest-path-first
+         * basis. For example: a pathRule with a path /a/b/c/* will match before /a/b/*
+         * irrespective of the order in which those paths appear in this list. Within a
+         * given pathMatcher, only one of pathRules or routeRules must be set.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<RegionUrlMapPathMatcherPathRule> pathRules;
-    /**
-     * The list of ordered HTTP route rules. Use this list instead of pathRules when
-     * advanced route matching and routing actions are desired. The order of specifying
-     * routeRules matters: the first rule that matches will cause its specified routing
-     * action to take effect. Within a given pathMatcher, only one of pathRules or
-     * routeRules must be set. routeRules are not supported in UrlMaps intended for
-     * External load balancers.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return The list of ordered HTTP route rules. Use this list instead of pathRules when
+         * advanced route matching and routing actions are desired. The order of specifying
+         * routeRules matters: the first rule that matches will cause its specified routing
+         * action to take effect. Within a given pathMatcher, only one of pathRules or
+         * routeRules must be set. routeRules are not supported in UrlMaps intended for
+         * External load balancers.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<RegionUrlMapPathMatcherRouteRule> routeRules;
 
     @CustomType.Constructor
@@ -81,41 +81,41 @@ public final class RegionUrlMapPathMatcher {
     }
 
     /**
-     * A reference to a RegionBackendService resource. This will be used if
+     * @return A reference to a RegionBackendService resource. This will be used if
      * none of the pathRules defined by this PathMatcher is matched by
      * the URL&#39;s path portion.
      * 
-    */
+     */
     public Optional<String> defaultService() {
         return Optional.ofNullable(this.defaultService);
     }
     /**
-     * When none of the specified hostRules match, the request is redirected to a URL specified
+     * @return When none of the specified hostRules match, the request is redirected to a URL specified
      * by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
      * defaultRouteAction must not be set.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<RegionUrlMapPathMatcherDefaultUrlRedirect> defaultUrlRedirect() {
         return Optional.ofNullable(this.defaultUrlRedirect);
     }
     /**
-     * Description of this test case.
+     * @return Description of this test case.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The name of the query parameter to match. The query parameter must exist in the
+     * @return The name of the query parameter to match. The query parameter must exist in the
      * request, in the absence of which the request match fails.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The list of path rules. Use this list instead of routeRules when routing based
+     * @return The list of path rules. Use this list instead of routeRules when routing based
      * on simple path matching is all that&#39;s required. The order by which path rules
      * are specified does not matter. Matches are always done on the longest-path-first
      * basis. For example: a pathRule with a path /a/b/c/* will match before /a/b/*
@@ -123,12 +123,12 @@ public final class RegionUrlMapPathMatcher {
      * given pathMatcher, only one of pathRules or routeRules must be set.
      * Structure is documented below.
      * 
-    */
+     */
     public List<RegionUrlMapPathMatcherPathRule> pathRules() {
         return this.pathRules == null ? List.of() : this.pathRules;
     }
     /**
-     * The list of ordered HTTP route rules. Use this list instead of pathRules when
+     * @return The list of ordered HTTP route rules. Use this list instead of pathRules when
      * advanced route matching and routing actions are desired. The order of specifying
      * routeRules matters: the first rule that matches will cause its specified routing
      * action to take effect. Within a given pathMatcher, only one of pathRules or
@@ -136,7 +136,7 @@ public final class RegionUrlMapPathMatcher {
      * External load balancers.
      * Structure is documented below.
      * 
-    */
+     */
     public List<RegionUrlMapPathMatcherRouteRule> routeRules() {
         return this.routeRules == null ? List.of() : this.routeRules;
     }

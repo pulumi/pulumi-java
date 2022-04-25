@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetNodeTypesResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * A list of node types available in the given zone and project.
-     * 
-     */
+        /**
+         * @return A list of node types available in the given zone and project.
+         * 
+         */
     private final List<String> names;
     private final String project;
     private final String zone;
@@ -36,16 +36,16 @@ public final class GetNodeTypesResult {
     }
 
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * A list of node types available in the given zone and project.
+     * @return A list of node types available in the given zone and project.
      * 
-    */
+     */
     public List<String> names() {
         return this.names;
     }

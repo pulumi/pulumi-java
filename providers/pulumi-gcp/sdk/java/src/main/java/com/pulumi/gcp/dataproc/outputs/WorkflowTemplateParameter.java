@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WorkflowTemplateParameter {
-    /**
-     * Optional. Brief description of the parameter. Must not exceed 1024 characters.
-     * 
-     */
+        /**
+         * @return Optional. Brief description of the parameter. Must not exceed 1024 characters.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Required. Paths to all fields that the parameter replaces. A field is allowed to appear in at most one parameter&#39;s list of field paths. A field path is similar in syntax to a .sparkJob.args
-     * 
-     */
+        /**
+         * @return Required. Paths to all fields that the parameter replaces. A field is allowed to appear in at most one parameter&#39;s list of field paths. A field path is similar in syntax to a .sparkJob.args
+         * 
+         */
     private final List<String> fields;
-    /**
-     * Required. Parameter name. The parameter name is used as the key, and paired with the parameter value, which are passed to the template when the template is instantiated. The name must contain only capital letters (A-Z), numbers (0-9), and underscores (_), and must not start with a number. The maximum length is 40 characters.
-     * 
-     */
+        /**
+         * @return Required. Parameter name. The parameter name is used as the key, and paired with the parameter value, which are passed to the template when the template is instantiated. The name must contain only capital letters (A-Z), numbers (0-9), and underscores (_), and must not start with a number. The maximum length is 40 characters.
+         * 
+         */
     private final String name;
-    /**
-     * Optional. Validation rules to be applied to this parameter&#39;s value.
-     * 
-     */
+        /**
+         * @return Optional. Validation rules to be applied to this parameter&#39;s value.
+         * 
+         */
     private final @Nullable WorkflowTemplateParameterValidation validation;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class WorkflowTemplateParameter {
     }
 
     /**
-     * Optional. Brief description of the parameter. Must not exceed 1024 characters.
+     * @return Optional. Brief description of the parameter. Must not exceed 1024 characters.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Required. Paths to all fields that the parameter replaces. A field is allowed to appear in at most one parameter&#39;s list of field paths. A field path is similar in syntax to a .sparkJob.args
+     * @return Required. Paths to all fields that the parameter replaces. A field is allowed to appear in at most one parameter&#39;s list of field paths. A field path is similar in syntax to a .sparkJob.args
      * 
-    */
+     */
     public List<String> fields() {
         return this.fields;
     }
     /**
-     * Required. Parameter name. The parameter name is used as the key, and paired with the parameter value, which are passed to the template when the template is instantiated. The name must contain only capital letters (A-Z), numbers (0-9), and underscores (_), and must not start with a number. The maximum length is 40 characters.
+     * @return Required. Parameter name. The parameter name is used as the key, and paired with the parameter value, which are passed to the template when the template is instantiated. The name must contain only capital letters (A-Z), numbers (0-9), and underscores (_), and must not start with a number. The maximum length is 40 characters.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Optional. Validation rules to be applied to this parameter&#39;s value.
+     * @return Optional. Validation rules to be applied to this parameter&#39;s value.
      * 
-    */
+     */
     public Optional<WorkflowTemplateParameterValidation> validation() {
         return Optional.ofNullable(this.validation);
     }

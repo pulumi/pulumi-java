@@ -19,55 +19,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureClusterControlPlane {
-    /**
-     * Optional. Configuration related to application-layer secrets encryption.
-     * 
-     */
+        /**
+         * @return Optional. Configuration related to application-layer secrets encryption.
+         * 
+         */
     private final @Nullable AzureClusterControlPlaneDatabaseEncryption databaseEncryption;
-    /**
-     * Optional. Configuration related to the main volume provisioned for each control plane replica. The main volume is in charge of storing all of the cluster&#39;s etcd state. When unspecified, it defaults to a 8-GiB Azure Disk.
-     * 
-     */
+        /**
+         * @return Optional. Configuration related to the main volume provisioned for each control plane replica. The main volume is in charge of storing all of the cluster&#39;s etcd state. When unspecified, it defaults to a 8-GiB Azure Disk.
+         * 
+         */
     private final @Nullable AzureClusterControlPlaneMainVolume mainVolume;
-    /**
-     * Proxy configuration for outbound HTTP(S) traffic.
-     * 
-     */
+        /**
+         * @return Proxy configuration for outbound HTTP(S) traffic.
+         * 
+         */
     private final @Nullable AzureClusterControlPlaneProxyConfig proxyConfig;
-    /**
-     * Configuration for where to place the control plane replicas. Up to three replica placement instances can be specified. If replica_placements is set, the replica placement instances will be applied to the three control plane replicas as evenly as possible.
-     * 
-     */
+        /**
+         * @return Configuration for where to place the control plane replicas. Up to three replica placement instances can be specified. If replica_placements is set, the replica placement instances will be applied to the three control plane replicas as evenly as possible.
+         * 
+         */
     private final @Nullable List<AzureClusterControlPlaneReplicaPlacement> replicaPlacements;
-    /**
-     * Optional. Configuration related to the root volume provisioned for each control plane replica. When unspecified, it defaults to 32-GiB Azure Disk.
-     * 
-     */
+        /**
+         * @return Optional. Configuration related to the root volume provisioned for each control plane replica. When unspecified, it defaults to 32-GiB Azure Disk.
+         * 
+         */
     private final @Nullable AzureClusterControlPlaneRootVolume rootVolume;
-    /**
-     * Required. SSH configuration for how to access the underlying control plane machines.
-     * 
-     */
+        /**
+         * @return Required. SSH configuration for how to access the underlying control plane machines.
+         * 
+         */
     private final AzureClusterControlPlaneSshConfig sshConfig;
-    /**
-     * For a given replica, the ARM ID of the subnet where the control plane VM is deployed. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
-     * 
-     */
+        /**
+         * @return For a given replica, the ARM ID of the subnet where the control plane VM is deployed. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
+         * 
+         */
     private final String subnetId;
-    /**
-     * Optional. A set of tags to apply to all underlying control plane Azure resources.
-     * 
-     */
+        /**
+         * @return Optional. A set of tags to apply to all underlying control plane Azure resources.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Required. The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAzureServerConfig.
-     * 
-     */
+        /**
+         * @return Required. The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAzureServerConfig.
+         * 
+         */
     private final String version;
-    /**
-     * Optional. The Azure VM size name. Example: `Standard_DS2_v2`. For available VM sizes, see https://docs.microsoft.com/en-us/azure/virtual-machines/vm-naming-conventions. When unspecified, it defaults to `Standard_DS2_v2`.
-     * 
-     */
+        /**
+         * @return Optional. The Azure VM size name. Example: `Standard_DS2_v2`. For available VM sizes, see https://docs.microsoft.com/en-us/azure/virtual-machines/vm-naming-conventions. When unspecified, it defaults to `Standard_DS2_v2`.
+         * 
+         */
     private final @Nullable String vmSize;
 
     @CustomType.Constructor
@@ -95,72 +95,72 @@ public final class AzureClusterControlPlane {
     }
 
     /**
-     * Optional. Configuration related to application-layer secrets encryption.
+     * @return Optional. Configuration related to application-layer secrets encryption.
      * 
-    */
+     */
     public Optional<AzureClusterControlPlaneDatabaseEncryption> databaseEncryption() {
         return Optional.ofNullable(this.databaseEncryption);
     }
     /**
-     * Optional. Configuration related to the main volume provisioned for each control plane replica. The main volume is in charge of storing all of the cluster&#39;s etcd state. When unspecified, it defaults to a 8-GiB Azure Disk.
+     * @return Optional. Configuration related to the main volume provisioned for each control plane replica. The main volume is in charge of storing all of the cluster&#39;s etcd state. When unspecified, it defaults to a 8-GiB Azure Disk.
      * 
-    */
+     */
     public Optional<AzureClusterControlPlaneMainVolume> mainVolume() {
         return Optional.ofNullable(this.mainVolume);
     }
     /**
-     * Proxy configuration for outbound HTTP(S) traffic.
+     * @return Proxy configuration for outbound HTTP(S) traffic.
      * 
-    */
+     */
     public Optional<AzureClusterControlPlaneProxyConfig> proxyConfig() {
         return Optional.ofNullable(this.proxyConfig);
     }
     /**
-     * Configuration for where to place the control plane replicas. Up to three replica placement instances can be specified. If replica_placements is set, the replica placement instances will be applied to the three control plane replicas as evenly as possible.
+     * @return Configuration for where to place the control plane replicas. Up to three replica placement instances can be specified. If replica_placements is set, the replica placement instances will be applied to the three control plane replicas as evenly as possible.
      * 
-    */
+     */
     public List<AzureClusterControlPlaneReplicaPlacement> replicaPlacements() {
         return this.replicaPlacements == null ? List.of() : this.replicaPlacements;
     }
     /**
-     * Optional. Configuration related to the root volume provisioned for each control plane replica. When unspecified, it defaults to 32-GiB Azure Disk.
+     * @return Optional. Configuration related to the root volume provisioned for each control plane replica. When unspecified, it defaults to 32-GiB Azure Disk.
      * 
-    */
+     */
     public Optional<AzureClusterControlPlaneRootVolume> rootVolume() {
         return Optional.ofNullable(this.rootVolume);
     }
     /**
-     * Required. SSH configuration for how to access the underlying control plane machines.
+     * @return Required. SSH configuration for how to access the underlying control plane machines.
      * 
-    */
+     */
     public AzureClusterControlPlaneSshConfig sshConfig() {
         return this.sshConfig;
     }
     /**
-     * For a given replica, the ARM ID of the subnet where the control plane VM is deployed. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
+     * @return For a given replica, the ARM ID of the subnet where the control plane VM is deployed. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
      * 
-    */
+     */
     public String subnetId() {
         return this.subnetId;
     }
     /**
-     * Optional. A set of tags to apply to all underlying control plane Azure resources.
+     * @return Optional. A set of tags to apply to all underlying control plane Azure resources.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Required. The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAzureServerConfig.
+     * @return Required. The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAzureServerConfig.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }
     /**
-     * Optional. The Azure VM size name. Example: `Standard_DS2_v2`. For available VM sizes, see https://docs.microsoft.com/en-us/azure/virtual-machines/vm-naming-conventions. When unspecified, it defaults to `Standard_DS2_v2`.
+     * @return Optional. The Azure VM size name. Example: `Standard_DS2_v2`. For available VM sizes, see https://docs.microsoft.com/en-us/azure/virtual-machines/vm-naming-conventions. When unspecified, it defaults to `Standard_DS2_v2`.
      * 
-    */
+     */
     public Optional<String> vmSize() {
         return Optional.ofNullable(this.vmSize);
     }

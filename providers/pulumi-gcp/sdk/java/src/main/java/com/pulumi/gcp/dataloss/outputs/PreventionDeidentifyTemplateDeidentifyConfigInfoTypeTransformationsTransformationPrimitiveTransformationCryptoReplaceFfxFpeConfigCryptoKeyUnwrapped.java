@@ -9,11 +9,11 @@ import java.util.Objects;
 
 @CustomType
 public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped {
-    /**
-     * A 128/192/256 bit key.
-     * A base64-encoded string.
-     * 
-     */
+        /**
+         * @return A 128/192/256 bit key.
+         * A base64-encoded string.
+         * 
+         */
     private final String key;
 
     @CustomType.Constructor
@@ -22,10 +22,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     }
 
     /**
-     * A 128/192/256 bit key.
+     * @return A 128/192/256 bit key.
      * A base64-encoded string.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }

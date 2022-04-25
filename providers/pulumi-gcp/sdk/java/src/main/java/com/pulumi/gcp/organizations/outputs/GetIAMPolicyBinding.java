@@ -13,29 +13,29 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetIAMPolicyBinding {
-    /**
-     * An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding. Structure is documented below.
-     * 
-     */
+        /**
+         * @return An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding. Structure is documented below.
+         * 
+         */
     private final @Nullable GetIAMPolicyBindingCondition condition;
-    /**
-     * An array of identities that will be granted the privilege in the `role`. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
-     * Each entry can have one of the following values:
-     * * **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account. Some resources **don&#39;t** support this identity.
-     * * **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account. Some resources **don&#39;t** support this identity.
-     * * **user:{emailid}**: An email address that represents a specific Google account. For example, alice@gmail.com.
-     * * **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
-     * * **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
-     * * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
-     * 
-     */
+        /**
+         * @return An array of identities that will be granted the privilege in the `role`. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
+         * Each entry can have one of the following values:
+         * * **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account. Some resources **don&#39;t** support this identity.
+         * * **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account. Some resources **don&#39;t** support this identity.
+         * * **user:{emailid}**: An email address that represents a specific Google account. For example, alice@gmail.com.
+         * * **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
+         * * **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
+         * * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
+         * 
+         */
     private final List<String> members;
-    /**
-     * The role/permission that will be granted to the members.
-     * See the [IAM Roles](https://cloud.google.com/compute/docs/access/iam) documentation for a complete list of roles.
-     * Note that custom roles must be of the format `[projects|organizations]/{parent-name}/roles/{role-name}`.
-     * 
-     */
+        /**
+         * @return The role/permission that will be granted to the members.
+         * See the [IAM Roles](https://cloud.google.com/compute/docs/access/iam) documentation for a complete list of roles.
+         * Note that custom roles must be of the format `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         */
     private final String role;
 
     @CustomType.Constructor
@@ -49,14 +49,14 @@ public final class GetIAMPolicyBinding {
     }
 
     /**
-     * An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding. Structure is documented below.
+     * @return An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding. Structure is documented below.
      * 
-    */
+     */
     public Optional<GetIAMPolicyBindingCondition> condition() {
         return Optional.ofNullable(this.condition);
     }
     /**
-     * An array of identities that will be granted the privilege in the `role`. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
+     * @return An array of identities that will be granted the privilege in the `role`. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
      * Each entry can have one of the following values:
      * * **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account. Some resources **don&#39;t** support this identity.
      * * **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account. Some resources **don&#39;t** support this identity.
@@ -65,16 +65,16 @@ public final class GetIAMPolicyBinding {
      * * **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
      * * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
      * 
-    */
+     */
     public List<String> members() {
         return this.members;
     }
     /**
-     * The role/permission that will be granted to the members.
+     * @return The role/permission that will be granted to the members.
      * See the [IAM Roles](https://cloud.google.com/compute/docs/access/iam) documentation for a complete list of roles.
      * Note that custom roles must be of the format `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
-    */
+     */
     public String role() {
         return this.role;
     }

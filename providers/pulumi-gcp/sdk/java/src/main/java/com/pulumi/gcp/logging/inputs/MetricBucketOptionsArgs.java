@@ -25,6 +25,11 @@ public final class MetricBucketOptionsArgs extends com.pulumi.resources.Resource
     @Import(name="explicitBuckets")
     private @Nullable Output<MetricBucketOptionsExplicitBucketsArgs> explicitBuckets;
 
+    /**
+     * @return Specifies a set of buckets with arbitrary widths.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<MetricBucketOptionsExplicitBucketsArgs>> explicitBuckets() {
         return Optional.ofNullable(this.explicitBuckets);
     }
@@ -38,6 +43,12 @@ public final class MetricBucketOptionsArgs extends com.pulumi.resources.Resource
     @Import(name="exponentialBuckets")
     private @Nullable Output<MetricBucketOptionsExponentialBucketsArgs> exponentialBuckets;
 
+    /**
+     * @return Specifies an exponential sequence of buckets that have a width that is proportional to the value of
+     * the lower bound. Each bucket represents a constant relative uncertainty on a specific value in the bucket.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<MetricBucketOptionsExponentialBucketsArgs>> exponentialBuckets() {
         return Optional.ofNullable(this.exponentialBuckets);
     }
@@ -51,6 +62,12 @@ public final class MetricBucketOptionsArgs extends com.pulumi.resources.Resource
     @Import(name="linearBuckets")
     private @Nullable Output<MetricBucketOptionsLinearBucketsArgs> linearBuckets;
 
+    /**
+     * @return Specifies a linear sequence of buckets that all have the same width (except overflow and underflow).
+     * Each bucket represents a constant absolute uncertainty on the specific value in the bucket.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<MetricBucketOptionsLinearBucketsArgs>> linearBuckets() {
         return Optional.ofNullable(this.linearBuckets);
     }
@@ -81,29 +98,75 @@ public final class MetricBucketOptionsArgs extends com.pulumi.resources.Resource
             $ = new MetricBucketOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param explicitBuckets Specifies a set of buckets with arbitrary widths.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder explicitBuckets(@Nullable Output<MetricBucketOptionsExplicitBucketsArgs> explicitBuckets) {
             $.explicitBuckets = explicitBuckets;
             return this;
         }
 
+        /**
+         * @param explicitBuckets Specifies a set of buckets with arbitrary widths.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder explicitBuckets(MetricBucketOptionsExplicitBucketsArgs explicitBuckets) {
             return explicitBuckets(Output.of(explicitBuckets));
         }
 
+        /**
+         * @param exponentialBuckets Specifies an exponential sequence of buckets that have a width that is proportional to the value of
+         * the lower bound. Each bucket represents a constant relative uncertainty on a specific value in the bucket.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exponentialBuckets(@Nullable Output<MetricBucketOptionsExponentialBucketsArgs> exponentialBuckets) {
             $.exponentialBuckets = exponentialBuckets;
             return this;
         }
 
+        /**
+         * @param exponentialBuckets Specifies an exponential sequence of buckets that have a width that is proportional to the value of
+         * the lower bound. Each bucket represents a constant relative uncertainty on a specific value in the bucket.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exponentialBuckets(MetricBucketOptionsExponentialBucketsArgs exponentialBuckets) {
             return exponentialBuckets(Output.of(exponentialBuckets));
         }
 
+        /**
+         * @param linearBuckets Specifies a linear sequence of buckets that all have the same width (except overflow and underflow).
+         * Each bucket represents a constant absolute uncertainty on the specific value in the bucket.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linearBuckets(@Nullable Output<MetricBucketOptionsLinearBucketsArgs> linearBuckets) {
             $.linearBuckets = linearBuckets;
             return this;
         }
 
+        /**
+         * @param linearBuckets Specifies a linear sequence of buckets that all have the same width (except overflow and underflow).
+         * Each bucket represents a constant absolute uncertainty on the specific value in the bucket.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linearBuckets(MetricBucketOptionsLinearBucketsArgs linearBuckets) {
             return linearBuckets(Output.of(linearBuckets));
         }

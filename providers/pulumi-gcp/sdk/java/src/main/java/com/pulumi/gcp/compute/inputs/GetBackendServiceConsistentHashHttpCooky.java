@@ -21,6 +21,10 @@ public final class GetBackendServiceConsistentHashHttpCooky extends com.pulumi.r
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the Backend Service.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -65,6 +69,12 @@ public final class GetBackendServiceConsistentHashHttpCooky extends com.pulumi.r
             $ = new GetBackendServiceConsistentHashHttpCooky(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the Backend Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

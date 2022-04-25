@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepository {
-    /**
-     * An Apt Repository.
-     * 
-     */
+        /**
+         * @return An Apt Repository.
+         * 
+         */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryApt apt;
-    /**
-     * A Goo Repository.
-     * 
-     */
+        /**
+         * @return A Goo Repository.
+         * 
+         */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo goo;
-    /**
-     * A Yum Repository.
-     * 
-     */
+        /**
+         * @return A Yum Repository.
+         * 
+         */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYum yum;
-    /**
-     * A Zypper Repository.
-     * 
-     */
+        /**
+         * @return A Zypper Repository.
+         * 
+         */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypper zypper;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepository {
     }
 
     /**
-     * An Apt Repository.
+     * @return An Apt Repository.
      * 
-    */
+     */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryApt> apt() {
         return Optional.ofNullable(this.apt);
     }
     /**
-     * A Goo Repository.
+     * @return A Goo Repository.
      * 
-    */
+     */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo> goo() {
         return Optional.ofNullable(this.goo);
     }
     /**
-     * A Yum Repository.
+     * @return A Yum Repository.
      * 
-    */
+     */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYum> yum() {
         return Optional.ofNullable(this.yum);
     }
     /**
-     * A Zypper Repository.
+     * @return A Zypper Repository.
      * 
-    */
+     */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypper> zypper() {
         return Optional.ofNullable(this.zypper);
     }

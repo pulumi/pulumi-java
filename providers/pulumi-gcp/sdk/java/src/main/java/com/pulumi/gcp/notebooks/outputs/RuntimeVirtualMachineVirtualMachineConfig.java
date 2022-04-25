@@ -19,121 +19,121 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RuntimeVirtualMachineVirtualMachineConfig {
-    /**
-     * The Compute Engine accelerator configuration for this runtime.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return The Compute Engine accelerator configuration for this runtime.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig acceleratorConfig;
-    /**
-     * Use a list of container images to start the notebook instance.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Use a list of container images to start the notebook instance.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<RuntimeVirtualMachineVirtualMachineConfigContainerImage> containerImages;
-    /**
-     * Data disk option configuration settings.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Data disk option configuration settings.
+         * Structure is documented below.
+         * 
+         */
     private final RuntimeVirtualMachineVirtualMachineConfigDataDisk dataDisk;
-    /**
-     * Encryption settings for virtual machine data disk.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Encryption settings for virtual machine data disk.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig encryptionConfig;
-    /**
-     * - 
-     * The Compute Engine guest attributes. (see [Project and instance
-     * guest attributes](https://cloud.google.com/compute/docs/
-     * storing-retrieving-metadata#guest_attributes)).
-     * 
-     */
+        /**
+         * @return -
+         * The Compute Engine guest attributes. (see [Project and instance
+         * guest attributes](https://cloud.google.com/compute/docs/
+         * storing-retrieving-metadata#guest_attributes)).
+         * 
+         */
     private final @Nullable Map<String,String> guestAttributes;
-    /**
-     * If true, runtime will only have internal IP addresses. By default,
-     * runtimes are not restricted to internal IP addresses, and will
-     * have ephemeral external IP addresses assigned to each vm. This
-     * `internal_ip_only` restriction can only be enabled for subnetwork
-     * enabled networks, and all dependencies must be configured to be
-     * accessible without external IP addresses.
-     * 
-     */
+        /**
+         * @return If true, runtime will only have internal IP addresses. By default,
+         * runtimes are not restricted to internal IP addresses, and will
+         * have ephemeral external IP addresses assigned to each vm. This
+         * `internal_ip_only` restriction can only be enabled for subnetwork
+         * enabled networks, and all dependencies must be configured to be
+         * accessible without external IP addresses.
+         * 
+         */
     private final @Nullable Boolean internalIpOnly;
-    /**
-     * Labels to apply to this disk. These can be later modified
-     * by the disks.setLabels method. This field is only
-     * applicable for persistent disks.
-     * 
-     */
+        /**
+         * @return Labels to apply to this disk. These can be later modified
+         * by the disks.setLabels method. This field is only
+         * applicable for persistent disks.
+         * 
+         */
     private final @Nullable Map<String,String> labels;
-    /**
-     * The Compute Engine machine type used for runtimes.
-     * 
-     */
+        /**
+         * @return The Compute Engine machine type used for runtimes.
+         * 
+         */
     private final String machineType;
-    /**
-     * The Compute Engine metadata entries to add to virtual machine.
-     * (see [Project and instance metadata](https://cloud.google.com
-     * /compute/docs/storing-retrieving-metadata#project_and_instance
-     * _metadata)).
-     * 
-     */
+        /**
+         * @return The Compute Engine metadata entries to add to virtual machine.
+         * (see [Project and instance metadata](https://cloud.google.com
+         * /compute/docs/storing-retrieving-metadata#project_and_instance
+         * _metadata)).
+         * 
+         */
     private final @Nullable Map<String,String> metadata;
-    /**
-     * The Compute Engine network to be used for machine communications.
-     * Cannot be specified with subnetwork. If neither `network` nor
-     * `subnet` is specified, the &#34;default&#34; network of the project is
-     * used, if it exists. A full URL or partial URI. Examples:
-     * * `https://www.googleapis.com/compute/v1/projects/[project_id]/
-     *   regions/global/default`
-     * * `projects/[project_id]/regions/global/default`
-     *   Runtimes are managed resources inside Google Infrastructure.
-     *   Runtimes support the following network configurations:
-     * * Google Managed Network (Network &amp; subnet are empty)
-     * * Consumer Project VPC (network &amp; subnet are required). Requires
-     *   configuring Private Service Access.
-     * * Shared VPC (network &amp; subnet are required). Requires
-     *   configuring Private Service Access.
-     * 
-     */
+        /**
+         * @return The Compute Engine network to be used for machine communications.
+         * Cannot be specified with subnetwork. If neither `network` nor
+         * `subnet` is specified, the &#34;default&#34; network of the project is
+         * used, if it exists. A full URL or partial URI. Examples:
+         * * `https://www.googleapis.com/compute/v1/projects/[project_id]/
+         *   regions/global/default`
+         * * `projects/[project_id]/regions/global/default`
+         *   Runtimes are managed resources inside Google Infrastructure.
+         *   Runtimes support the following network configurations:
+         * * Google Managed Network (Network &amp; subnet are empty)
+         * * Consumer Project VPC (network &amp; subnet are required). Requires
+         *   configuring Private Service Access.
+         * * Shared VPC (network &amp; subnet are required). Requires
+         *   configuring Private Service Access.
+         * 
+         */
     private final @Nullable String network;
-    /**
-     * The type of vNIC to be used on this interface. This may be gVNIC
-     * or VirtioNet.
-     * Possible values are `UNSPECIFIED_NIC_TYPE`, `VIRTIO_NET`, and `GVNIC`.
-     * 
-     */
+        /**
+         * @return The type of vNIC to be used on this interface. This may be gVNIC
+         * or VirtioNet.
+         * Possible values are `UNSPECIFIED_NIC_TYPE`, `VIRTIO_NET`, and `GVNIC`.
+         * 
+         */
     private final @Nullable String nicType;
-    /**
-     * Shielded VM Instance configuration settings.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Shielded VM Instance configuration settings.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfig shieldedInstanceConfig;
-    /**
-     * The Compute Engine subnetwork to be used for machine
-     * communications. Cannot be specified with network. A full URL or
-     * partial URI are valid. Examples:
-     * * `https://www.googleapis.com/compute/v1/projects/[project_id]/
-     *   regions/us-east1/subnetworks/sub0`
-     * * `projects/[project_id]/regions/us-east1/subnetworks/sub0`
-     * 
-     */
+        /**
+         * @return The Compute Engine subnetwork to be used for machine
+         * communications. Cannot be specified with network. A full URL or
+         * partial URI are valid. Examples:
+         * * `https://www.googleapis.com/compute/v1/projects/[project_id]/
+         *   regions/us-east1/subnetworks/sub0`
+         * * `projects/[project_id]/regions/us-east1/subnetworks/sub0`
+         * 
+         */
     private final @Nullable String subnet;
-    /**
-     * The Compute Engine tags to add to runtime (see [Tagging instances]
-     * (https://cloud.google.com/compute/docs/
-     * label-or-tag-resources#tags)).
-     * 
-     */
+        /**
+         * @return The Compute Engine tags to add to runtime (see [Tagging instances]
+         * (https://cloud.google.com/compute/docs/
+         * label-or-tag-resources#tags)).
+         * 
+         */
     private final @Nullable List<String> tags;
-    /**
-     * - 
-     * The zone where the virtual machine is located.
-     * 
-     */
+        /**
+         * @return -
+         * The zone where the virtual machine is located.
+         * 
+         */
     private final @Nullable String zone;
 
     @CustomType.Constructor
@@ -171,87 +171,87 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
     }
 
     /**
-     * The Compute Engine accelerator configuration for this runtime.
+     * @return The Compute Engine accelerator configuration for this runtime.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig> acceleratorConfig() {
         return Optional.ofNullable(this.acceleratorConfig);
     }
     /**
-     * Use a list of container images to start the notebook instance.
+     * @return Use a list of container images to start the notebook instance.
      * Structure is documented below.
      * 
-    */
+     */
     public List<RuntimeVirtualMachineVirtualMachineConfigContainerImage> containerImages() {
         return this.containerImages == null ? List.of() : this.containerImages;
     }
     /**
-     * Data disk option configuration settings.
+     * @return Data disk option configuration settings.
      * Structure is documented below.
      * 
-    */
+     */
     public RuntimeVirtualMachineVirtualMachineConfigDataDisk dataDisk() {
         return this.dataDisk;
     }
     /**
-     * Encryption settings for virtual machine data disk.
+     * @return Encryption settings for virtual machine data disk.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig> encryptionConfig() {
         return Optional.ofNullable(this.encryptionConfig);
     }
     /**
-     * - 
+     * @return -
      * The Compute Engine guest attributes. (see [Project and instance
      * guest attributes](https://cloud.google.com/compute/docs/
      * storing-retrieving-metadata#guest_attributes)).
      * 
-    */
+     */
     public Map<String,String> guestAttributes() {
         return this.guestAttributes == null ? Map.of() : this.guestAttributes;
     }
     /**
-     * If true, runtime will only have internal IP addresses. By default,
+     * @return If true, runtime will only have internal IP addresses. By default,
      * runtimes are not restricted to internal IP addresses, and will
      * have ephemeral external IP addresses assigned to each vm. This
      * `internal_ip_only` restriction can only be enabled for subnetwork
      * enabled networks, and all dependencies must be configured to be
      * accessible without external IP addresses.
      * 
-    */
+     */
     public Optional<Boolean> internalIpOnly() {
         return Optional.ofNullable(this.internalIpOnly);
     }
     /**
-     * Labels to apply to this disk. These can be later modified
+     * @return Labels to apply to this disk. These can be later modified
      * by the disks.setLabels method. This field is only
      * applicable for persistent disks.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels == null ? Map.of() : this.labels;
     }
     /**
-     * The Compute Engine machine type used for runtimes.
+     * @return The Compute Engine machine type used for runtimes.
      * 
-    */
+     */
     public String machineType() {
         return this.machineType;
     }
     /**
-     * The Compute Engine metadata entries to add to virtual machine.
+     * @return The Compute Engine metadata entries to add to virtual machine.
      * (see [Project and instance metadata](https://cloud.google.com
      * /compute/docs/storing-retrieving-metadata#project_and_instance
      * _metadata)).
      * 
-    */
+     */
     public Map<String,String> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
-     * The Compute Engine network to be used for machine communications.
+     * @return The Compute Engine network to be used for machine communications.
      * Cannot be specified with subnetwork. If neither `network` nor
      * `subnet` is specified, the &#34;default&#34; network of the project is
      * used, if it exists. A full URL or partial URI. Examples:
@@ -266,53 +266,53 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      * * Shared VPC (network &amp; subnet are required). Requires
      *   configuring Private Service Access.
      * 
-    */
+     */
     public Optional<String> network() {
         return Optional.ofNullable(this.network);
     }
     /**
-     * The type of vNIC to be used on this interface. This may be gVNIC
+     * @return The type of vNIC to be used on this interface. This may be gVNIC
      * or VirtioNet.
      * Possible values are `UNSPECIFIED_NIC_TYPE`, `VIRTIO_NET`, and `GVNIC`.
      * 
-    */
+     */
     public Optional<String> nicType() {
         return Optional.ofNullable(this.nicType);
     }
     /**
-     * Shielded VM Instance configuration settings.
+     * @return Shielded VM Instance configuration settings.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfig> shieldedInstanceConfig() {
         return Optional.ofNullable(this.shieldedInstanceConfig);
     }
     /**
-     * The Compute Engine subnetwork to be used for machine
+     * @return The Compute Engine subnetwork to be used for machine
      * communications. Cannot be specified with network. A full URL or
      * partial URI are valid. Examples:
      * * `https://www.googleapis.com/compute/v1/projects/[project_id]/
      *   regions/us-east1/subnetworks/sub0`
      * * `projects/[project_id]/regions/us-east1/subnetworks/sub0`
      * 
-    */
+     */
     public Optional<String> subnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
-     * The Compute Engine tags to add to runtime (see [Tagging instances]
+     * @return The Compute Engine tags to add to runtime (see [Tagging instances]
      * (https://cloud.google.com/compute/docs/
      * label-or-tag-resources#tags)).
      * 
-    */
+     */
     public List<String> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * - 
+     * @return -
      * The zone where the virtual machine is located.
      * 
-    */
+     */
     public Optional<String> zone() {
         return Optional.ofNullable(this.zone);
     }

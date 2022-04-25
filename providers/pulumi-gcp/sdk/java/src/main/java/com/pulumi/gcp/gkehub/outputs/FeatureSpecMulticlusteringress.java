@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class FeatureSpecMulticlusteringress {
-    /**
-     * Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`
-     * 
-     */
+        /**
+         * @return Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`
+         * 
+         */
     private final String configMembership;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class FeatureSpecMulticlusteringress {
     }
 
     /**
-     * Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`
+     * @return Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`
      * 
-    */
+     */
     public String configMembership() {
         return this.configMembership;
     }

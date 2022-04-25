@@ -13,58 +13,58 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BudgetBudgetFilter {
-    /**
-     * A set of subaccounts of the form billingAccounts/{account_id},
-     * specifying that usage from only this set of subaccounts should
-     * be included in the budget. If a subaccount is set to the name of
-     * the parent account, usage from the parent account will be included.
-     * If the field is omitted, the report will include usage from the parent
-     * account and all subaccounts, if they exist.
-     * 
-     */
+        /**
+         * @return A set of subaccounts of the form billingAccounts/{account_id},
+         * specifying that usage from only this set of subaccounts should
+         * be included in the budget. If a subaccount is set to the name of
+         * the parent account, usage from the parent account will be included.
+         * If the field is omitted, the report will include usage from the parent
+         * account and all subaccounts, if they exist.
+         * 
+         */
     private final @Nullable List<String> creditTypes;
-    /**
-     * Specifies how credits should be treated when determining spend
-     * for threshold calculations.
-     * Default value is `INCLUDE_ALL_CREDITS`.
-     * Possible values are `INCLUDE_ALL_CREDITS`, `EXCLUDE_ALL_CREDITS`, and `INCLUDE_SPECIFIED_CREDITS`.
-     * 
-     */
+        /**
+         * @return Specifies how credits should be treated when determining spend
+         * for threshold calculations.
+         * Default value is `INCLUDE_ALL_CREDITS`.
+         * Possible values are `INCLUDE_ALL_CREDITS`, `EXCLUDE_ALL_CREDITS`, and `INCLUDE_SPECIFIED_CREDITS`.
+         * 
+         */
     private final @Nullable String creditTypesTreatment;
-    /**
-     * A single label and value pair specifying that usage from only
-     * this set of labeled resources should be included in the budget.
-     * 
-     */
+        /**
+         * @return A single label and value pair specifying that usage from only
+         * this set of labeled resources should be included in the budget.
+         * 
+         */
     private final @Nullable Map<String,String> labels;
-    /**
-     * A set of projects of the form projects/{project_number},
-     * specifying that usage from only this set of projects should be
-     * included in the budget. If omitted, the report will include
-     * all usage for the billing account, regardless of which project
-     * the usage occurred on.
-     * 
-     */
+        /**
+         * @return A set of projects of the form projects/{project_number},
+         * specifying that usage from only this set of projects should be
+         * included in the budget. If omitted, the report will include
+         * all usage for the billing account, regardless of which project
+         * the usage occurred on.
+         * 
+         */
     private final @Nullable List<String> projects;
-    /**
-     * A set of services of the form services/{service_id},
-     * specifying that usage from only this set of services should be
-     * included in the budget. If omitted, the report will include
-     * usage for all the services. The service names are available
-     * through the Catalog API:
-     * https://cloud.google.com/billing/v1/how-tos/catalog-api.
-     * 
-     */
+        /**
+         * @return A set of services of the form services/{service_id},
+         * specifying that usage from only this set of services should be
+         * included in the budget. If omitted, the report will include
+         * usage for all the services. The service names are available
+         * through the Catalog API:
+         * https://cloud.google.com/billing/v1/how-tos/catalog-api.
+         * 
+         */
     private final @Nullable List<String> services;
-    /**
-     * A set of subaccounts of the form billingAccounts/{account_id},
-     * specifying that usage from only this set of subaccounts should
-     * be included in the budget. If a subaccount is set to the name of
-     * the parent account, usage from the parent account will be included.
-     * If the field is omitted, the report will include usage from the parent
-     * account and all subaccounts, if they exist.
-     * 
-     */
+        /**
+         * @return A set of subaccounts of the form billingAccounts/{account_id},
+         * specifying that usage from only this set of subaccounts should
+         * be included in the budget. If a subaccount is set to the name of
+         * the parent account, usage from the parent account will be included.
+         * If the field is omitted, the report will include usage from the parent
+         * account and all subaccounts, if they exist.
+         * 
+         */
     private final @Nullable List<String> subaccounts;
 
     @CustomType.Constructor
@@ -84,67 +84,67 @@ public final class BudgetBudgetFilter {
     }
 
     /**
-     * A set of subaccounts of the form billingAccounts/{account_id},
+     * @return A set of subaccounts of the form billingAccounts/{account_id},
      * specifying that usage from only this set of subaccounts should
      * be included in the budget. If a subaccount is set to the name of
      * the parent account, usage from the parent account will be included.
      * If the field is omitted, the report will include usage from the parent
      * account and all subaccounts, if they exist.
      * 
-    */
+     */
     public List<String> creditTypes() {
         return this.creditTypes == null ? List.of() : this.creditTypes;
     }
     /**
-     * Specifies how credits should be treated when determining spend
+     * @return Specifies how credits should be treated when determining spend
      * for threshold calculations.
      * Default value is `INCLUDE_ALL_CREDITS`.
      * Possible values are `INCLUDE_ALL_CREDITS`, `EXCLUDE_ALL_CREDITS`, and `INCLUDE_SPECIFIED_CREDITS`.
      * 
-    */
+     */
     public Optional<String> creditTypesTreatment() {
         return Optional.ofNullable(this.creditTypesTreatment);
     }
     /**
-     * A single label and value pair specifying that usage from only
+     * @return A single label and value pair specifying that usage from only
      * this set of labeled resources should be included in the budget.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels == null ? Map.of() : this.labels;
     }
     /**
-     * A set of projects of the form projects/{project_number},
+     * @return A set of projects of the form projects/{project_number},
      * specifying that usage from only this set of projects should be
      * included in the budget. If omitted, the report will include
      * all usage for the billing account, regardless of which project
      * the usage occurred on.
      * 
-    */
+     */
     public List<String> projects() {
         return this.projects == null ? List.of() : this.projects;
     }
     /**
-     * A set of services of the form services/{service_id},
+     * @return A set of services of the form services/{service_id},
      * specifying that usage from only this set of services should be
      * included in the budget. If omitted, the report will include
      * usage for all the services. The service names are available
      * through the Catalog API:
      * https://cloud.google.com/billing/v1/how-tos/catalog-api.
      * 
-    */
+     */
     public List<String> services() {
         return this.services == null ? List.of() : this.services;
     }
     /**
-     * A set of subaccounts of the form billingAccounts/{account_id},
+     * @return A set of subaccounts of the form billingAccounts/{account_id},
      * specifying that usage from only this set of subaccounts should
      * be included in the budget. If a subaccount is set to the name of
      * the parent account, usage from the parent account will be included.
      * If the field is omitted, the report will include usage from the parent
      * account and all subaccounts, if they exist.
      * 
-    */
+     */
     public List<String> subaccounts() {
         return this.subaccounts == null ? List.of() : this.subaccounts;
     }

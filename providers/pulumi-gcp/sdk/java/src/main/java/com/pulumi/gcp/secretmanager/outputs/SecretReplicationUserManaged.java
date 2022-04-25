@@ -10,11 +10,11 @@ import java.util.Objects;
 
 @CustomType
 public final class SecretReplicationUserManaged {
-    /**
-     * The list of Replicas for this Secret. Cannot be empty.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return The list of Replicas for this Secret. Cannot be empty.
+         * Structure is documented below.
+         * 
+         */
     private final List<SecretReplicationUserManagedReplica> replicas;
 
     @CustomType.Constructor
@@ -23,10 +23,10 @@ public final class SecretReplicationUserManaged {
     }
 
     /**
-     * The list of Replicas for this Secret. Cannot be empty.
+     * @return The list of Replicas for this Secret. Cannot be empty.
      * Structure is documented below.
      * 
-    */
+     */
     public List<SecretReplicationUserManagedReplica> replicas() {
         return this.replicas;
     }

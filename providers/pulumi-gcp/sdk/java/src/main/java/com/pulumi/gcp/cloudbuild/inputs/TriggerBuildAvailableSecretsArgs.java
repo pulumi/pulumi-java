@@ -22,6 +22,11 @@ public final class TriggerBuildAvailableSecretsArgs extends com.pulumi.resources
     @Import(name="secretManagers", required=true)
     private Output<List<TriggerBuildAvailableSecretsSecretManagerArgs>> secretManagers;
 
+    /**
+     * @return Pairs a secret environment variable with a SecretVersion in Secret Manager.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<TriggerBuildAvailableSecretsSecretManagerArgs>> secretManagers() {
         return this.secretManagers;
     }
@@ -50,15 +55,36 @@ public final class TriggerBuildAvailableSecretsArgs extends com.pulumi.resources
             $ = new TriggerBuildAvailableSecretsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param secretManagers Pairs a secret environment variable with a SecretVersion in Secret Manager.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretManagers(Output<List<TriggerBuildAvailableSecretsSecretManagerArgs>> secretManagers) {
             $.secretManagers = secretManagers;
             return this;
         }
 
+        /**
+         * @param secretManagers Pairs a secret environment variable with a SecretVersion in Secret Manager.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretManagers(List<TriggerBuildAvailableSecretsSecretManagerArgs> secretManagers) {
             return secretManagers(Output.of(secretManagers));
         }
 
+        /**
+         * @param secretManagers Pairs a secret environment variable with a SecretVersion in Secret Manager.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretManagers(TriggerBuildAvailableSecretsSecretManagerArgs... secretManagers) {
             return secretManagers(List.of(secretManagers));
         }

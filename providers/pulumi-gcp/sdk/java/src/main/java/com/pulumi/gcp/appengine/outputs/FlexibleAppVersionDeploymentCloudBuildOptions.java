@@ -11,16 +11,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FlexibleAppVersionDeploymentCloudBuildOptions {
-    /**
-     * Path to the yaml file used in deployment, used to determine runtime configuration details.
-     * 
-     */
+        /**
+         * @return Path to the yaml file used in deployment, used to determine runtime configuration details.
+         * 
+         */
     private final String appYamlPath;
-    /**
-     * The Cloud Build timeout used as part of any dependent builds performed by version creation. Defaults to 10 minutes.
-     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
-     * 
-     */
+        /**
+         * @return The Cloud Build timeout used as part of any dependent builds performed by version creation. Defaults to 10 minutes.
+         * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         */
     private final @Nullable String cloudBuildTimeout;
 
     @CustomType.Constructor
@@ -32,17 +32,17 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptions {
     }
 
     /**
-     * Path to the yaml file used in deployment, used to determine runtime configuration details.
+     * @return Path to the yaml file used in deployment, used to determine runtime configuration details.
      * 
-    */
+     */
     public String appYamlPath() {
         return this.appYamlPath;
     }
     /**
-     * The Cloud Build timeout used as part of any dependent builds performed by version creation. Defaults to 10 minutes.
+     * @return The Cloud Build timeout used as part of any dependent builds performed by version creation. Defaults to 10 minutes.
      * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
-    */
+     */
     public Optional<String> cloudBuildTimeout() {
         return Optional.ofNullable(this.cloudBuildTimeout);
     }

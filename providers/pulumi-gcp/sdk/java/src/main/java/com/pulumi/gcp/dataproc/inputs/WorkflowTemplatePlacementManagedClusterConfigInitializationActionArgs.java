@@ -22,6 +22,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigInitializationAc
     @Import(name="executableFile")
     private @Nullable Output<String> executableFile;
 
+    /**
+     * @return Required. Cloud Storage URI of executable file.
+     * 
+     */
     public Optional<Output<String>> executableFile() {
         return Optional.ofNullable(this.executableFile);
     }
@@ -33,6 +37,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigInitializationAc
     @Import(name="executionTimeout")
     private @Nullable Output<String> executionTimeout;
 
+    /**
+     * @return Optional. Amount of time executable has to complete. Default is 10 minutes (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json)). Cluster creation fails with an explanatory error message (the name of the executable that caused the error and the exceeded timeout period) if the executable is not completed at end of the timeout period.
+     * 
+     */
     public Optional<Output<String>> executionTimeout() {
         return Optional.ofNullable(this.executionTimeout);
     }
@@ -62,20 +70,44 @@ public final class WorkflowTemplatePlacementManagedClusterConfigInitializationAc
             $ = new WorkflowTemplatePlacementManagedClusterConfigInitializationActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param executableFile Required. Cloud Storage URI of executable file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executableFile(@Nullable Output<String> executableFile) {
             $.executableFile = executableFile;
             return this;
         }
 
+        /**
+         * @param executableFile Required. Cloud Storage URI of executable file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executableFile(String executableFile) {
             return executableFile(Output.of(executableFile));
         }
 
+        /**
+         * @param executionTimeout Optional. Amount of time executable has to complete. Default is 10 minutes (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json)). Cluster creation fails with an explanatory error message (the name of the executable that caused the error and the exceeded timeout period) if the executable is not completed at end of the timeout period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionTimeout(@Nullable Output<String> executionTimeout) {
             $.executionTimeout = executionTimeout;
             return this;
         }
 
+        /**
+         * @param executionTimeout Optional. Amount of time executable has to complete. Default is 10 minutes (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json)). Cluster creation fails with an explanatory error message (the name of the executable that caused the error and the exceeded timeout period) if the executable is not completed at end of the timeout period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionTimeout(String executionTimeout) {
             return executionTimeout(Output.of(executionTimeout));
         }

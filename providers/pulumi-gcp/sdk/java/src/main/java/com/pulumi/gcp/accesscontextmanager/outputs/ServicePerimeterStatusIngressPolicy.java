@@ -12,19 +12,19 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ServicePerimeterStatusIngressPolicy {
-    /**
-     * Defines the conditions on the source of a request causing this `IngressPolicy`
-     * to apply.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Defines the conditions on the source of a request causing this `IngressPolicy`
+         * to apply.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable ServicePerimeterStatusIngressPolicyIngressFrom ingressFrom;
-    /**
-     * Defines the conditions on the `ApiOperation` and request destination that cause
-     * this `IngressPolicy` to apply.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Defines the conditions on the `ApiOperation` and request destination that cause
+         * this `IngressPolicy` to apply.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable ServicePerimeterStatusIngressPolicyIngressTo ingressTo;
 
     @CustomType.Constructor
@@ -36,20 +36,20 @@ public final class ServicePerimeterStatusIngressPolicy {
     }
 
     /**
-     * Defines the conditions on the source of a request causing this `IngressPolicy`
+     * @return Defines the conditions on the source of a request causing this `IngressPolicy`
      * to apply.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<ServicePerimeterStatusIngressPolicyIngressFrom> ingressFrom() {
         return Optional.ofNullable(this.ingressFrom);
     }
     /**
-     * Defines the conditions on the `ApiOperation` and request destination that cause
+     * @return Defines the conditions on the `ApiOperation` and request destination that cause
      * this `IngressPolicy` to apply.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<ServicePerimeterStatusIngressPolicyIngressTo> ingressTo() {
         return Optional.ofNullable(this.ingressTo);
     }

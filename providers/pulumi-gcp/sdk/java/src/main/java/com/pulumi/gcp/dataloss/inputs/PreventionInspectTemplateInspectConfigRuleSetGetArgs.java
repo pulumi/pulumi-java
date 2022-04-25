@@ -23,6 +23,11 @@ public final class PreventionInspectTemplateInspectConfigRuleSetGetArgs extends 
     @Import(name="infoTypes", required=true)
     private Output<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeGetArgs>> infoTypes;
 
+    /**
+     * @return If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeGetArgs>> infoTypes() {
         return this.infoTypes;
     }
@@ -35,6 +40,11 @@ public final class PreventionInspectTemplateInspectConfigRuleSetGetArgs extends 
     @Import(name="rules", required=true)
     private Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs>> rules;
 
+    /**
+     * @return Set of rules to be applied to infoTypes. The rules are applied in order.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs>> rules() {
         return this.rules;
     }
@@ -64,28 +74,70 @@ public final class PreventionInspectTemplateInspectConfigRuleSetGetArgs extends 
             $ = new PreventionInspectTemplateInspectConfigRuleSetGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param infoTypes If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypes(Output<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeGetArgs>> infoTypes) {
             $.infoTypes = infoTypes;
             return this;
         }
 
+        /**
+         * @param infoTypes If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypes(List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeGetArgs> infoTypes) {
             return infoTypes(Output.of(infoTypes));
         }
 
+        /**
+         * @param infoTypes If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypes(PreventionInspectTemplateInspectConfigRuleSetInfoTypeGetArgs... infoTypes) {
             return infoTypes(List.of(infoTypes));
         }
 
+        /**
+         * @param rules Set of rules to be applied to infoTypes. The rules are applied in order.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules Set of rules to be applied to infoTypes. The rules are applied in order.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules Set of rules to be applied to infoTypes. The rules are applied in order.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs... rules) {
             return rules(List.of(rules));
         }

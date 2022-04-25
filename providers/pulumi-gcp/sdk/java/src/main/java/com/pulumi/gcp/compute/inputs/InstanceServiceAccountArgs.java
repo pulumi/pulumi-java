@@ -25,6 +25,12 @@ public final class InstanceServiceAccountArgs extends com.pulumi.resources.Resou
     @Import(name="email")
     private @Nullable Output<String> email;
 
+    /**
+     * @return The service account e-mail address. If not given, the
+     * default Google Compute Engine service account is used.
+     * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+     * 
+     */
     public Optional<Output<String>> email() {
         return Optional.ofNullable(this.email);
     }
@@ -39,6 +45,13 @@ public final class InstanceServiceAccountArgs extends com.pulumi.resources.Resou
     @Import(name="scopes", required=true)
     private Output<List<String>> scopes;
 
+    /**
+     * @return A list of service scopes. Both OAuth2 URLs and gcloud
+     * short names are supported. To allow full access to all Cloud APIs, use the
+     * `cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
+     * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+     * 
+     */
     public Output<List<String>> scopes() {
         return this.scopes;
     }
@@ -68,24 +81,67 @@ public final class InstanceServiceAccountArgs extends com.pulumi.resources.Resou
             $ = new InstanceServiceAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email The service account e-mail address. If not given, the
+         * default Google Compute Engine service account is used.
+         * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(@Nullable Output<String> email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param email The service account e-mail address. If not given, the
+         * default Google Compute Engine service account is used.
+         * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             return email(Output.of(email));
         }
 
+        /**
+         * @param scopes A list of service scopes. Both OAuth2 URLs and gcloud
+         * short names are supported. To allow full access to all Cloud APIs, use the
+         * `cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
+         * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(Output<List<String>> scopes) {
             $.scopes = scopes;
             return this;
         }
 
+        /**
+         * @param scopes A list of service scopes. Both OAuth2 URLs and gcloud
+         * short names are supported. To allow full access to all Cloud APIs, use the
+         * `cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
+         * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(List<String> scopes) {
             return scopes(Output.of(scopes));
         }
 
+        /**
+         * @param scopes A list of service scopes. Both OAuth2 URLs and gcloud
+         * short names are supported. To allow full access to all Cloud APIs, use the
+         * `cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
+         * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(String... scopes) {
             return scopes(List.of(scopes));
         }

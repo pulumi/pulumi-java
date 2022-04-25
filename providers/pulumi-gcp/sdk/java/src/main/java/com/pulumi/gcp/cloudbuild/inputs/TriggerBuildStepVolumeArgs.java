@@ -22,6 +22,12 @@ public final class TriggerBuildStepVolumeArgs extends com.pulumi.resources.Resou
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the volume to mount.
+     * Volume names must be unique per build step and must be valid names for Docker volumes.
+     * Each named volume must be used by at least two build steps.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -35,6 +41,12 @@ public final class TriggerBuildStepVolumeArgs extends com.pulumi.resources.Resou
     @Import(name="path", required=true)
     private Output<String> path;
 
+    /**
+     * @return Path at which to mount the volume.
+     * Paths must be absolute and cannot conflict with other volume paths on the same
+     * build step or with certain reserved volume paths.
+     * 
+     */
     public Output<String> path() {
         return this.path;
     }
@@ -64,20 +76,52 @@ public final class TriggerBuildStepVolumeArgs extends com.pulumi.resources.Resou
             $ = new TriggerBuildStepVolumeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the volume to mount.
+         * Volume names must be unique per build step and must be valid names for Docker volumes.
+         * Each named volume must be used by at least two build steps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the volume to mount.
+         * Volume names must be unique per build step and must be valid names for Docker volumes.
+         * Each named volume must be used by at least two build steps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param path Path at which to mount the volume.
+         * Paths must be absolute and cannot conflict with other volume paths on the same
+         * build step or with certain reserved volume paths.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path Path at which to mount the volume.
+         * Paths must be absolute and cannot conflict with other volume paths on the same
+         * build step or with certain reserved volume paths.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }

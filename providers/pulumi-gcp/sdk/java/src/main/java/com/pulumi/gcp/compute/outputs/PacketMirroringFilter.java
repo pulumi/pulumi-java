@@ -12,24 +12,24 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PacketMirroringFilter {
-    /**
-     * IP CIDR ranges that apply as a filter on the source (ingress) or
-     * destination (egress) IP in the IP header. Only IPv4 is supported.
-     * 
-     */
+        /**
+         * @return IP CIDR ranges that apply as a filter on the source (ingress) or
+         * destination (egress) IP in the IP header. Only IPv4 is supported.
+         * 
+         */
     private final @Nullable List<String> cidrRanges;
-    /**
-     * Direction of traffic to mirror.
-     * Default value is `BOTH`.
-     * Possible values are `INGRESS`, `EGRESS`, and `BOTH`.
-     * 
-     */
+        /**
+         * @return Direction of traffic to mirror.
+         * Default value is `BOTH`.
+         * Possible values are `INGRESS`, `EGRESS`, and `BOTH`.
+         * 
+         */
     private final @Nullable String direction;
-    /**
-     * Protocols that apply as a filter on mirrored traffic.
-     * Each value may be one of `tcp`, `udp`, and `icmp`.
-     * 
-     */
+        /**
+         * @return Protocols that apply as a filter on mirrored traffic.
+         * Each value may be one of `tcp`, `udp`, and `icmp`.
+         * 
+         */
     private final @Nullable List<String> ipProtocols;
 
     @CustomType.Constructor
@@ -43,27 +43,27 @@ public final class PacketMirroringFilter {
     }
 
     /**
-     * IP CIDR ranges that apply as a filter on the source (ingress) or
+     * @return IP CIDR ranges that apply as a filter on the source (ingress) or
      * destination (egress) IP in the IP header. Only IPv4 is supported.
      * 
-    */
+     */
     public List<String> cidrRanges() {
         return this.cidrRanges == null ? List.of() : this.cidrRanges;
     }
     /**
-     * Direction of traffic to mirror.
+     * @return Direction of traffic to mirror.
      * Default value is `BOTH`.
      * Possible values are `INGRESS`, `EGRESS`, and `BOTH`.
      * 
-    */
+     */
     public Optional<String> direction() {
         return Optional.ofNullable(this.direction);
     }
     /**
-     * Protocols that apply as a filter on mirrored traffic.
+     * @return Protocols that apply as a filter on mirrored traffic.
      * Each value may be one of `tcp`, `udp`, and `icmp`.
      * 
-    */
+     */
     public List<String> ipProtocols() {
         return this.ipProtocols == null ? List.of() : this.ipProtocols;
     }

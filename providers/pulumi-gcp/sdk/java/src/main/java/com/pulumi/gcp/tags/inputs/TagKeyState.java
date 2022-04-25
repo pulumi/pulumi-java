@@ -23,6 +23,11 @@ public final class TagKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
     private @Nullable Output<String> createTime;
 
+    /**
+     * @return Output only. Creation time. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine
+     * fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
+     * 
+     */
     public Optional<Output<String>> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -34,6 +39,10 @@ public final class TagKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return User-assigned description of the TagKey. Must not exceed 256 characters.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -45,6 +54,10 @@ public final class TagKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The generated numeric id for the TagKey.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -56,6 +69,10 @@ public final class TagKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="namespacedName")
     private @Nullable Output<String> namespacedName;
 
+    /**
+     * @return Output only. Namespaced name of the TagKey.
+     * 
+     */
     public Optional<Output<String>> namespacedName() {
         return Optional.ofNullable(this.namespacedName);
     }
@@ -67,6 +84,10 @@ public final class TagKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="parent")
     private @Nullable Output<String> parent;
 
+    /**
+     * @return Input only. The resource name of the new TagKey&#39;s parent. Must be of the form organizations/{org_id}.
+     * 
+     */
     public Optional<Output<String>> parent() {
         return Optional.ofNullable(this.parent);
     }
@@ -79,6 +100,11 @@ public final class TagKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="shortName")
     private @Nullable Output<String> shortName;
 
+    /**
+     * @return Input only. The user friendly name for a TagKey. The short name should be unique for TagKeys within the same tag namespace.
+     * The short name must be 1-63 characters, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
+     * 
+     */
     public Optional<Output<String>> shortName() {
         return Optional.ofNullable(this.shortName);
     }
@@ -91,6 +117,11 @@ public final class TagKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="updateTime")
     private @Nullable Output<String> updateTime;
 
+    /**
+     * @return Output only. Update time. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine fractional
+     * digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
+     * 
+     */
     public Optional<Output<String>> updateTime() {
         return Optional.ofNullable(this.updateTime);
     }
@@ -125,65 +156,155 @@ public final class TagKeyState extends com.pulumi.resources.ResourceArgs {
             $ = new TagKeyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createTime Output only. Creation time. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine
+         * fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(@Nullable Output<String> createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param createTime Output only. Creation time. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine
+         * fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
         }
 
+        /**
+         * @param description User-assigned description of the TagKey. Must not exceed 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description User-assigned description of the TagKey. Must not exceed 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The generated numeric id for the TagKey.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The generated numeric id for the TagKey.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namespacedName Output only. Namespaced name of the TagKey.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespacedName(@Nullable Output<String> namespacedName) {
             $.namespacedName = namespacedName;
             return this;
         }
 
+        /**
+         * @param namespacedName Output only. Namespaced name of the TagKey.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespacedName(String namespacedName) {
             return namespacedName(Output.of(namespacedName));
         }
 
+        /**
+         * @param parent Input only. The resource name of the new TagKey&#39;s parent. Must be of the form organizations/{org_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(@Nullable Output<String> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent Input only. The resource name of the new TagKey&#39;s parent. Must be of the form organizations/{org_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             return parent(Output.of(parent));
         }
 
+        /**
+         * @param shortName Input only. The user friendly name for a TagKey. The short name should be unique for TagKeys within the same tag namespace.
+         * The short name must be 1-63 characters, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shortName(@Nullable Output<String> shortName) {
             $.shortName = shortName;
             return this;
         }
 
+        /**
+         * @param shortName Input only. The user friendly name for a TagKey. The short name should be unique for TagKeys within the same tag namespace.
+         * The short name must be 1-63 characters, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shortName(String shortName) {
             return shortName(Output.of(shortName));
         }
 
+        /**
+         * @param updateTime Output only. Update time. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine fractional
+         * digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(@Nullable Output<String> updateTime) {
             $.updateTime = updateTime;
             return this;
         }
 
+        /**
+         * @param updateTime Output only. Update time. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine fractional
+         * digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             return updateTime(Output.of(updateTime));
         }

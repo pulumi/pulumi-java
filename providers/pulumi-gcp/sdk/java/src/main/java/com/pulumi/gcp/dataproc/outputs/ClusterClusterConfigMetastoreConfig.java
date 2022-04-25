@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ClusterClusterConfigMetastoreConfig {
-    /**
-     * Resource name of an existing Dataproc Metastore service.
-     * 
-     */
+        /**
+         * @return Resource name of an existing Dataproc Metastore service.
+         * 
+         */
     private final String dataprocMetastoreService;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ClusterClusterConfigMetastoreConfig {
     }
 
     /**
-     * Resource name of an existing Dataproc Metastore service.
+     * @return Resource name of an existing Dataproc Metastore service.
      * 
-    */
+     */
     public String dataprocMetastoreService() {
         return this.dataprocMetastoreService;
     }

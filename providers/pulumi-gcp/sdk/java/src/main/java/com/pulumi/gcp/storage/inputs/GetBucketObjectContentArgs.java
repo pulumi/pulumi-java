@@ -21,6 +21,10 @@ public final class GetBucketObjectContentArgs extends com.pulumi.resources.Invok
     @Import(name="bucket", required=true)
     private String bucket;
 
+    /**
+     * @return The name of the containing bucket.
+     * 
+     */
     public String bucket() {
         return this.bucket;
     }
@@ -32,6 +36,10 @@ public final class GetBucketObjectContentArgs extends com.pulumi.resources.Invok
     @Import(name="content")
     private @Nullable String content;
 
+    /**
+     * @return (Computed) [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object content.
+     * 
+     */
     public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
@@ -43,6 +51,10 @@ public final class GetBucketObjectContentArgs extends com.pulumi.resources.Invok
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the object.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -73,16 +85,34 @@ public final class GetBucketObjectContentArgs extends com.pulumi.resources.Invok
             $ = new GetBucketObjectContentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket The name of the containing bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param content (Computed) [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable String content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param name The name of the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

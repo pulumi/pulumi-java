@@ -12,21 +12,21 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetKMSSecretAsymmetricResult {
     private final String ciphertext;
-    /**
-     * Contains the crc32 checksum of the provided ciphertext.
-     * 
-     */
+        /**
+         * @return Contains the crc32 checksum of the provided ciphertext.
+         * 
+         */
     private final @Nullable String crc32;
     private final String cryptoKeyVersion;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * Contains the result of decrypting the provided ciphertext.
-     * 
-     */
+        /**
+         * @return Contains the result of decrypting the provided ciphertext.
+         * 
+         */
     private final String plaintext;
 
     @CustomType.Constructor
@@ -47,9 +47,9 @@ public final class GetKMSSecretAsymmetricResult {
         return this.ciphertext;
     }
     /**
-     * Contains the crc32 checksum of the provided ciphertext.
+     * @return Contains the crc32 checksum of the provided ciphertext.
      * 
-    */
+     */
     public Optional<String> crc32() {
         return Optional.ofNullable(this.crc32);
     }
@@ -57,16 +57,16 @@ public final class GetKMSSecretAsymmetricResult {
         return this.cryptoKeyVersion;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Contains the result of decrypting the provided ciphertext.
+     * @return Contains the result of decrypting the provided ciphertext.
      * 
-    */
+     */
     public String plaintext() {
         return this.plaintext;
     }

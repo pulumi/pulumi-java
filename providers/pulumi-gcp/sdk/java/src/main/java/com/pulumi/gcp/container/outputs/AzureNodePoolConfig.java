@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureNodePoolConfig {
-    /**
-     * Optional. Configuration related to the root volume provisioned for each node pool machine. When unspecified, it defaults to a 32-GiB Azure Disk.
-     * 
-     */
+        /**
+         * @return Optional. Configuration related to the root volume provisioned for each node pool machine. When unspecified, it defaults to a 32-GiB Azure Disk.
+         * 
+         */
     private final @Nullable AzureNodePoolConfigRootVolume rootVolume;
-    /**
-     * Required. SSH configuration for how to access the node pool machines.
-     * 
-     */
+        /**
+         * @return Required. SSH configuration for how to access the node pool machines.
+         * 
+         */
     private final AzureNodePoolConfigSshConfig sshConfig;
-    /**
-     * Optional. A set of tags to apply to all underlying Azure resources for this node pool. This currently only includes Virtual Machine Scale Sets. Specify at most 50 pairs containing alphanumerics, spaces, and symbols (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to 255 Unicode characters.
-     * 
-     */
+        /**
+         * @return Optional. A set of tags to apply to all underlying Azure resources for this node pool. This currently only includes Virtual Machine Scale Sets. Specify at most 50 pairs containing alphanumerics, spaces, and symbols (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to 255 Unicode characters.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Optional. The Azure VM size name. Example: `Standard_DS2_v2`. See (/anthos/clusters/docs/azure/reference/supported-vms) for options. When unspecified, it defaults to `Standard_DS2_v2`.
-     * 
-     */
+        /**
+         * @return Optional. The Azure VM size name. Example: `Standard_DS2_v2`. See (/anthos/clusters/docs/azure/reference/supported-vms) for options. When unspecified, it defaults to `Standard_DS2_v2`.
+         * 
+         */
     private final @Nullable String vmSize;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class AzureNodePoolConfig {
     }
 
     /**
-     * Optional. Configuration related to the root volume provisioned for each node pool machine. When unspecified, it defaults to a 32-GiB Azure Disk.
+     * @return Optional. Configuration related to the root volume provisioned for each node pool machine. When unspecified, it defaults to a 32-GiB Azure Disk.
      * 
-    */
+     */
     public Optional<AzureNodePoolConfigRootVolume> rootVolume() {
         return Optional.ofNullable(this.rootVolume);
     }
     /**
-     * Required. SSH configuration for how to access the node pool machines.
+     * @return Required. SSH configuration for how to access the node pool machines.
      * 
-    */
+     */
     public AzureNodePoolConfigSshConfig sshConfig() {
         return this.sshConfig;
     }
     /**
-     * Optional. A set of tags to apply to all underlying Azure resources for this node pool. This currently only includes Virtual Machine Scale Sets. Specify at most 50 pairs containing alphanumerics, spaces, and symbols (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to 255 Unicode characters.
+     * @return Optional. A set of tags to apply to all underlying Azure resources for this node pool. This currently only includes Virtual Machine Scale Sets. Specify at most 50 pairs containing alphanumerics, spaces, and symbols (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to 255 Unicode characters.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Optional. The Azure VM size name. Example: `Standard_DS2_v2`. See (/anthos/clusters/docs/azure/reference/supported-vms) for options. When unspecified, it defaults to `Standard_DS2_v2`.
+     * @return Optional. The Azure VM size name. Example: `Standard_DS2_v2`. See (/anthos/clusters/docs/azure/reference/supported-vms) for options. When unspecified, it defaults to `Standard_DS2_v2`.
      * 
-    */
+     */
     public Optional<String> vmSize() {
         return Optional.ofNullable(this.vmSize);
     }

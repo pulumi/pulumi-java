@@ -13,24 +13,24 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PreventionStoredInfoTypeLargeCustomDictionary {
-    /**
-     * Field in a BigQuery table where each cell represents a dictionary phrase.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Field in a BigQuery table where each cell represents a dictionary phrase.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField bigQueryField;
-    /**
-     * Set of files containing newline-delimited lists of dictionary phrases.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Set of files containing newline-delimited lists of dictionary phrases.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet cloudStorageFileSet;
-    /**
-     * Location to store dictionary artifacts in Google Cloud Storage. These files will only be accessible by project owners and the DLP API.
-     * If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Location to store dictionary artifacts in Google Cloud Storage. These files will only be accessible by project owners and the DLP API.
+         * If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.
+         * Structure is documented below.
+         * 
+         */
     private final PreventionStoredInfoTypeLargeCustomDictionaryOutputPath outputPath;
 
     @CustomType.Constructor
@@ -44,27 +44,27 @@ public final class PreventionStoredInfoTypeLargeCustomDictionary {
     }
 
     /**
-     * Field in a BigQuery table where each cell represents a dictionary phrase.
+     * @return Field in a BigQuery table where each cell represents a dictionary phrase.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField> bigQueryField() {
         return Optional.ofNullable(this.bigQueryField);
     }
     /**
-     * Set of files containing newline-delimited lists of dictionary phrases.
+     * @return Set of files containing newline-delimited lists of dictionary phrases.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet> cloudStorageFileSet() {
         return Optional.ofNullable(this.cloudStorageFileSet);
     }
     /**
-     * Location to store dictionary artifacts in Google Cloud Storage. These files will only be accessible by project owners and the DLP API.
+     * @return Location to store dictionary artifacts in Google Cloud Storage. These files will only be accessible by project owners and the DLP API.
      * If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.
      * Structure is documented below.
      * 
-    */
+     */
     public PreventionStoredInfoTypeLargeCustomDictionaryOutputPath outputPath() {
         return this.outputPath;
     }

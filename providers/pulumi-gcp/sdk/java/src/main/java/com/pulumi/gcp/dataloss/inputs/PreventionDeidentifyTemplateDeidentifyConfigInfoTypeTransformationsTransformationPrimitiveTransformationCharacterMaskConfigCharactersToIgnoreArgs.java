@@ -22,6 +22,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="charactersToSkip")
     private @Nullable Output<String> charactersToSkip;
 
+    /**
+     * @return Characters to not transform when masking.
+     * 
+     */
     public Optional<Output<String>> charactersToSkip() {
         return Optional.ofNullable(this.charactersToSkip);
     }
@@ -34,6 +38,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="commonCharactersToIgnore")
     private @Nullable Output<String> commonCharactersToIgnore;
 
+    /**
+     * @return Common characters to not transform when masking. Useful to avoid removing punctuation.
+     * Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUATION`, and `WHITESPACE`.
+     * 
+     */
     public Optional<Output<String>> commonCharactersToIgnore() {
         return Optional.ofNullable(this.commonCharactersToIgnore);
     }
@@ -63,20 +72,46 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             $ = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param charactersToSkip Characters to not transform when masking.
+         * 
+         * @return builder
+         * 
+         */
         public Builder charactersToSkip(@Nullable Output<String> charactersToSkip) {
             $.charactersToSkip = charactersToSkip;
             return this;
         }
 
+        /**
+         * @param charactersToSkip Characters to not transform when masking.
+         * 
+         * @return builder
+         * 
+         */
         public Builder charactersToSkip(String charactersToSkip) {
             return charactersToSkip(Output.of(charactersToSkip));
         }
 
+        /**
+         * @param commonCharactersToIgnore Common characters to not transform when masking. Useful to avoid removing punctuation.
+         * Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUATION`, and `WHITESPACE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonCharactersToIgnore(@Nullable Output<String> commonCharactersToIgnore) {
             $.commonCharactersToIgnore = commonCharactersToIgnore;
             return this;
         }
 
+        /**
+         * @param commonCharactersToIgnore Common characters to not transform when masking. Useful to avoid removing punctuation.
+         * Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUATION`, and `WHITESPACE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonCharactersToIgnore(String commonCharactersToIgnore) {
             return commonCharactersToIgnore(Output.of(commonCharactersToIgnore));
         }

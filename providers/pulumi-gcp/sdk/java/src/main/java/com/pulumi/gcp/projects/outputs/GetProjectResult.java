@@ -12,15 +12,15 @@ import java.util.Objects;
 @CustomType
 public final class GetProjectResult {
     private final String filter;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * A list of projects matching the provided filter. Structure is defined below.
-     * 
-     */
+        /**
+         * @return A list of projects matching the provided filter. Structure is defined below.
+         * 
+         */
     private final List<GetProjectProject> projects;
 
     @CustomType.Constructor
@@ -37,16 +37,16 @@ public final class GetProjectResult {
         return this.filter;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * A list of projects matching the provided filter. Structure is defined below.
+     * @return A list of projects matching the provided filter. Structure is defined below.
      * 
-    */
+     */
     public List<GetProjectProject> projects() {
         return this.projects;
     }

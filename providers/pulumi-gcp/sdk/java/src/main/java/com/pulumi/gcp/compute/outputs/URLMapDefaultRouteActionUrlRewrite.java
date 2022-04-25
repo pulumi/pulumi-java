@@ -11,19 +11,19 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class URLMapDefaultRouteActionUrlRewrite {
-    /**
-     * Prior to forwarding the request to the selected service, the request&#39;s host header is replaced
-     * with contents of hostRewrite.
-     * The value must be between 1 and 255 characters.
-     * 
-     */
+        /**
+         * @return Prior to forwarding the request to the selected service, the request&#39;s host header is replaced
+         * with contents of hostRewrite.
+         * The value must be between 1 and 255 characters.
+         * 
+         */
     private final @Nullable String hostRewrite;
-    /**
-     * Prior to forwarding the request to the selected backend service, the matching portion of the
-     * request&#39;s path is replaced by pathPrefixRewrite.
-     * The value must be between 1 and 1024 characters.
-     * 
-     */
+        /**
+         * @return Prior to forwarding the request to the selected backend service, the matching portion of the
+         * request&#39;s path is replaced by pathPrefixRewrite.
+         * The value must be between 1 and 1024 characters.
+         * 
+         */
     private final @Nullable String pathPrefixRewrite;
 
     @CustomType.Constructor
@@ -35,20 +35,20 @@ public final class URLMapDefaultRouteActionUrlRewrite {
     }
 
     /**
-     * Prior to forwarding the request to the selected service, the request&#39;s host header is replaced
+     * @return Prior to forwarding the request to the selected service, the request&#39;s host header is replaced
      * with contents of hostRewrite.
      * The value must be between 1 and 255 characters.
      * 
-    */
+     */
     public Optional<String> hostRewrite() {
         return Optional.ofNullable(this.hostRewrite);
     }
     /**
-     * Prior to forwarding the request to the selected backend service, the matching portion of the
+     * @return Prior to forwarding the request to the selected backend service, the matching portion of the
      * request&#39;s path is replaced by pathPrefixRewrite.
      * The value must be between 1 and 1024 characters.
      * 
-    */
+     */
     public Optional<String> pathPrefixRewrite() {
         return Optional.ofNullable(this.pathPrefixRewrite);
     }

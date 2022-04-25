@@ -29,6 +29,12 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends com.pulumi.
     @Import(name="coolDownPeriod")
     private @Nullable Output<String> coolDownPeriod;
 
+    /**
+     * @return The time period that the Autoscaler should wait before it starts collecting information from a new instance.
+     * This prevents the autoscaler from collecting information when the instance is initializing,
+     * during which the collected usage would not be reliable. Default: 120s
+     * 
+     */
     public Optional<Output<String>> coolDownPeriod() {
         return Optional.ofNullable(this.coolDownPeriod);
     }
@@ -41,6 +47,11 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends com.pulumi.
     @Import(name="cpuUtilization", required=true)
     private Output<FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs> cpuUtilization;
 
+    /**
+     * @return Target scaling by CPU usage.
+     * Structure is documented below.
+     * 
+     */
     public Output<FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs> cpuUtilization() {
         return this.cpuUtilization;
     }
@@ -53,6 +64,11 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends com.pulumi.
     @Import(name="diskUtilization")
     private @Nullable Output<FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs> diskUtilization;
 
+    /**
+     * @return Target scaling by disk usage.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs>> diskUtilization() {
         return Optional.ofNullable(this.diskUtilization);
     }
@@ -65,6 +81,11 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends com.pulumi.
     @Import(name="maxConcurrentRequests")
     private @Nullable Output<Integer> maxConcurrentRequests;
 
+    /**
+     * @return Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
+     * Defaults to a runtime-specific value.
+     * 
+     */
     public Optional<Output<Integer>> maxConcurrentRequests() {
         return Optional.ofNullable(this.maxConcurrentRequests);
     }
@@ -76,6 +97,10 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends com.pulumi.
     @Import(name="maxIdleInstances")
     private @Nullable Output<Integer> maxIdleInstances;
 
+    /**
+     * @return Maximum number of idle instances that should be maintained for this version.
+     * 
+     */
     public Optional<Output<Integer>> maxIdleInstances() {
         return Optional.ofNullable(this.maxIdleInstances);
     }
@@ -87,6 +112,10 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends com.pulumi.
     @Import(name="maxPendingLatency")
     private @Nullable Output<String> maxPendingLatency;
 
+    /**
+     * @return Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
+     * 
+     */
     public Optional<Output<String>> maxPendingLatency() {
         return Optional.ofNullable(this.maxPendingLatency);
     }
@@ -98,6 +127,10 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends com.pulumi.
     @Import(name="maxTotalInstances")
     private @Nullable Output<Integer> maxTotalInstances;
 
+    /**
+     * @return Maximum number of instances that should be started to handle requests for this version. Default: 20
+     * 
+     */
     public Optional<Output<Integer>> maxTotalInstances() {
         return Optional.ofNullable(this.maxTotalInstances);
     }
@@ -109,6 +142,10 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends com.pulumi.
     @Import(name="minIdleInstances")
     private @Nullable Output<Integer> minIdleInstances;
 
+    /**
+     * @return Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
+     * 
+     */
     public Optional<Output<Integer>> minIdleInstances() {
         return Optional.ofNullable(this.minIdleInstances);
     }
@@ -120,6 +157,10 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends com.pulumi.
     @Import(name="minPendingLatency")
     private @Nullable Output<String> minPendingLatency;
 
+    /**
+     * @return Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
+     * 
+     */
     public Optional<Output<String>> minPendingLatency() {
         return Optional.ofNullable(this.minPendingLatency);
     }
@@ -131,6 +172,10 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends com.pulumi.
     @Import(name="minTotalInstances")
     private @Nullable Output<Integer> minTotalInstances;
 
+    /**
+     * @return Minimum number of running instances that should be maintained for this version. Default: 2
+     * 
+     */
     public Optional<Output<Integer>> minTotalInstances() {
         return Optional.ofNullable(this.minTotalInstances);
     }
@@ -143,6 +188,11 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends com.pulumi.
     @Import(name="networkUtilization")
     private @Nullable Output<FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs> networkUtilization;
 
+    /**
+     * @return Target scaling by network usage.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs>> networkUtilization() {
         return Optional.ofNullable(this.networkUtilization);
     }
@@ -155,6 +205,11 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends com.pulumi.
     @Import(name="requestUtilization")
     private @Nullable Output<FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs> requestUtilization;
 
+    /**
+     * @return Target scaling by request utilization.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs>> requestUtilization() {
         return Optional.ofNullable(this.requestUtilization);
     }
@@ -194,110 +249,268 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends com.pulumi.
             $ = new FlexibleAppVersionAutomaticScalingGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param coolDownPeriod The time period that the Autoscaler should wait before it starts collecting information from a new instance.
+         * This prevents the autoscaler from collecting information when the instance is initializing,
+         * during which the collected usage would not be reliable. Default: 120s
+         * 
+         * @return builder
+         * 
+         */
         public Builder coolDownPeriod(@Nullable Output<String> coolDownPeriod) {
             $.coolDownPeriod = coolDownPeriod;
             return this;
         }
 
+        /**
+         * @param coolDownPeriod The time period that the Autoscaler should wait before it starts collecting information from a new instance.
+         * This prevents the autoscaler from collecting information when the instance is initializing,
+         * during which the collected usage would not be reliable. Default: 120s
+         * 
+         * @return builder
+         * 
+         */
         public Builder coolDownPeriod(String coolDownPeriod) {
             return coolDownPeriod(Output.of(coolDownPeriod));
         }
 
+        /**
+         * @param cpuUtilization Target scaling by CPU usage.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuUtilization(Output<FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs> cpuUtilization) {
             $.cpuUtilization = cpuUtilization;
             return this;
         }
 
+        /**
+         * @param cpuUtilization Target scaling by CPU usage.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuUtilization(FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs cpuUtilization) {
             return cpuUtilization(Output.of(cpuUtilization));
         }
 
+        /**
+         * @param diskUtilization Target scaling by disk usage.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskUtilization(@Nullable Output<FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs> diskUtilization) {
             $.diskUtilization = diskUtilization;
             return this;
         }
 
+        /**
+         * @param diskUtilization Target scaling by disk usage.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskUtilization(FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs diskUtilization) {
             return diskUtilization(Output.of(diskUtilization));
         }
 
+        /**
+         * @param maxConcurrentRequests Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
+         * Defaults to a runtime-specific value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentRequests(@Nullable Output<Integer> maxConcurrentRequests) {
             $.maxConcurrentRequests = maxConcurrentRequests;
             return this;
         }
 
+        /**
+         * @param maxConcurrentRequests Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
+         * Defaults to a runtime-specific value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentRequests(Integer maxConcurrentRequests) {
             return maxConcurrentRequests(Output.of(maxConcurrentRequests));
         }
 
+        /**
+         * @param maxIdleInstances Maximum number of idle instances that should be maintained for this version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxIdleInstances(@Nullable Output<Integer> maxIdleInstances) {
             $.maxIdleInstances = maxIdleInstances;
             return this;
         }
 
+        /**
+         * @param maxIdleInstances Maximum number of idle instances that should be maintained for this version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxIdleInstances(Integer maxIdleInstances) {
             return maxIdleInstances(Output.of(maxIdleInstances));
         }
 
+        /**
+         * @param maxPendingLatency Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPendingLatency(@Nullable Output<String> maxPendingLatency) {
             $.maxPendingLatency = maxPendingLatency;
             return this;
         }
 
+        /**
+         * @param maxPendingLatency Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPendingLatency(String maxPendingLatency) {
             return maxPendingLatency(Output.of(maxPendingLatency));
         }
 
+        /**
+         * @param maxTotalInstances Maximum number of instances that should be started to handle requests for this version. Default: 20
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxTotalInstances(@Nullable Output<Integer> maxTotalInstances) {
             $.maxTotalInstances = maxTotalInstances;
             return this;
         }
 
+        /**
+         * @param maxTotalInstances Maximum number of instances that should be started to handle requests for this version. Default: 20
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxTotalInstances(Integer maxTotalInstances) {
             return maxTotalInstances(Output.of(maxTotalInstances));
         }
 
+        /**
+         * @param minIdleInstances Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minIdleInstances(@Nullable Output<Integer> minIdleInstances) {
             $.minIdleInstances = minIdleInstances;
             return this;
         }
 
+        /**
+         * @param minIdleInstances Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minIdleInstances(Integer minIdleInstances) {
             return minIdleInstances(Output.of(minIdleInstances));
         }
 
+        /**
+         * @param minPendingLatency Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minPendingLatency(@Nullable Output<String> minPendingLatency) {
             $.minPendingLatency = minPendingLatency;
             return this;
         }
 
+        /**
+         * @param minPendingLatency Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minPendingLatency(String minPendingLatency) {
             return minPendingLatency(Output.of(minPendingLatency));
         }
 
+        /**
+         * @param minTotalInstances Minimum number of running instances that should be maintained for this version. Default: 2
+         * 
+         * @return builder
+         * 
+         */
         public Builder minTotalInstances(@Nullable Output<Integer> minTotalInstances) {
             $.minTotalInstances = minTotalInstances;
             return this;
         }
 
+        /**
+         * @param minTotalInstances Minimum number of running instances that should be maintained for this version. Default: 2
+         * 
+         * @return builder
+         * 
+         */
         public Builder minTotalInstances(Integer minTotalInstances) {
             return minTotalInstances(Output.of(minTotalInstances));
         }
 
+        /**
+         * @param networkUtilization Target scaling by network usage.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkUtilization(@Nullable Output<FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs> networkUtilization) {
             $.networkUtilization = networkUtilization;
             return this;
         }
 
+        /**
+         * @param networkUtilization Target scaling by network usage.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkUtilization(FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs networkUtilization) {
             return networkUtilization(Output.of(networkUtilization));
         }
 
+        /**
+         * @param requestUtilization Target scaling by request utilization.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestUtilization(@Nullable Output<FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs> requestUtilization) {
             $.requestUtilization = requestUtilization;
             return this;
         }
 
+        /**
+         * @param requestUtilization Target scaling by request utilization.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestUtilization(FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs requestUtilization) {
             return requestUtilization(Output.of(requestUtilization));
         }

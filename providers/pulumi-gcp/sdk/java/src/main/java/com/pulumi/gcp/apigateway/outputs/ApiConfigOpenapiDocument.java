@@ -9,11 +9,11 @@ import java.util.Objects;
 
 @CustomType
 public final class ApiConfigOpenapiDocument {
-    /**
-     * The OpenAPI Specification document file.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return The OpenAPI Specification document file.
+         * Structure is documented below.
+         * 
+         */
     private final ApiConfigOpenapiDocumentDocument document;
 
     @CustomType.Constructor
@@ -22,10 +22,10 @@ public final class ApiConfigOpenapiDocument {
     }
 
     /**
-     * The OpenAPI Specification document file.
+     * @return The OpenAPI Specification document file.
      * Structure is documented below.
      * 
-    */
+     */
     public ApiConfigOpenapiDocumentDocument document() {
         return this.document;
     }

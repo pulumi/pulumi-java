@@ -27,6 +27,17 @@ public final class GameServerClusterConnectionInfoGkeClusterReferenceArgs extend
     @Import(name="cluster", required=true)
     private Output<String> cluster;
 
+    /**
+     * @return The full or partial name of a GKE cluster, using one of the following
+     * forms:
+     * * `projects/{project_id}/locations/{location}/clusters/{cluster_id}`
+     * * `locations/{location}/clusters/{cluster_id}`
+     * * `{cluster_id}`
+     *   If project and location are not specified, the project and location of the
+     *   GameServerCluster resource are used to generate the full name of the
+     *   GKE cluster.
+     * 
+     */
     public Output<String> cluster() {
         return this.cluster;
     }
@@ -55,11 +66,37 @@ public final class GameServerClusterConnectionInfoGkeClusterReferenceArgs extend
             $ = new GameServerClusterConnectionInfoGkeClusterReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cluster The full or partial name of a GKE cluster, using one of the following
+         * forms:
+         * * `projects/{project_id}/locations/{location}/clusters/{cluster_id}`
+         * * `locations/{location}/clusters/{cluster_id}`
+         * * `{cluster_id}`
+         *   If project and location are not specified, the project and location of the
+         *   GameServerCluster resource are used to generate the full name of the
+         *   GKE cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(Output<String> cluster) {
             $.cluster = cluster;
             return this;
         }
 
+        /**
+         * @param cluster The full or partial name of a GKE cluster, using one of the following
+         * forms:
+         * * `projects/{project_id}/locations/{location}/clusters/{cluster_id}`
+         * * `locations/{location}/clusters/{cluster_id}`
+         * * `{cluster_id}`
+         *   If project and location are not specified, the project and location of the
+         *   GameServerCluster resource are used to generate the full name of the
+         *   GKE cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(String cluster) {
             return cluster(Output.of(cluster));
         }

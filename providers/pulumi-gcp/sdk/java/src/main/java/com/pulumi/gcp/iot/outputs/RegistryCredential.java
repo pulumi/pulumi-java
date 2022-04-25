@@ -11,10 +11,10 @@ import java.util.Objects;
 
 @CustomType
 public final class RegistryCredential {
-    /**
-     * A public key certificate format and data.
-     * 
-     */
+        /**
+         * @return A public key certificate format and data.
+         * 
+         */
     private final Map<String,Object> publicKeyCertificate;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class RegistryCredential {
     }
 
     /**
-     * A public key certificate format and data.
+     * @return A public key certificate format and data.
      * 
-    */
+     */
     public Map<String,Object> publicKeyCertificate() {
         return this.publicKeyCertificate;
     }

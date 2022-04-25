@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClusterClusterConfigPreemptibleWorkerConfigDiskConfig {
-    /**
-     * Size of the primary disk attached to each preemptible worker node, specified
-     * in GB. The smallest allowed disk size is 10GB. GCP will default to a predetermined
-     * computed value if not set (currently 500GB). Note: If SSDs are not
-     * attached, it also contains the HDFS data blocks and Hadoop working directories.
-     * 
-     */
+        /**
+         * @return Size of the primary disk attached to each preemptible worker node, specified
+         * in GB. The smallest allowed disk size is 10GB. GCP will default to a predetermined
+         * computed value if not set (currently 500GB). Note: If SSDs are not
+         * attached, it also contains the HDFS data blocks and Hadoop working directories.
+         * 
+         */
     private final @Nullable Integer bootDiskSizeGb;
-    /**
-     * The disk type of the primary disk attached to each preemptible worker node.
-     * One of `&#34;pd-ssd&#34;` or `&#34;pd-standard&#34;`. Defaults to `&#34;pd-standard&#34;`.
-     * 
-     */
+        /**
+         * @return The disk type of the primary disk attached to each preemptible worker node.
+         * One of `&#34;pd-ssd&#34;` or `&#34;pd-standard&#34;`. Defaults to `&#34;pd-standard&#34;`.
+         * 
+         */
     private final @Nullable String bootDiskType;
-    /**
-     * The amount of local SSD disks that will be
-     * attached to each preemptible worker node. Defaults to 0.
-     * 
-     */
+        /**
+         * @return The amount of local SSD disks that will be
+         * attached to each preemptible worker node. Defaults to 0.
+         * 
+         */
     private final @Nullable Integer numLocalSsds;
 
     @CustomType.Constructor
@@ -44,28 +44,28 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigDiskConfig {
     }
 
     /**
-     * Size of the primary disk attached to each preemptible worker node, specified
+     * @return Size of the primary disk attached to each preemptible worker node, specified
      * in GB. The smallest allowed disk size is 10GB. GCP will default to a predetermined
      * computed value if not set (currently 500GB). Note: If SSDs are not
      * attached, it also contains the HDFS data blocks and Hadoop working directories.
      * 
-    */
+     */
     public Optional<Integer> bootDiskSizeGb() {
         return Optional.ofNullable(this.bootDiskSizeGb);
     }
     /**
-     * The disk type of the primary disk attached to each preemptible worker node.
+     * @return The disk type of the primary disk attached to each preemptible worker node.
      * One of `&#34;pd-ssd&#34;` or `&#34;pd-standard&#34;`. Defaults to `&#34;pd-standard&#34;`.
      * 
-    */
+     */
     public Optional<String> bootDiskType() {
         return Optional.ofNullable(this.bootDiskType);
     }
     /**
-     * The amount of local SSD disks that will be
+     * @return The amount of local SSD disks that will be
      * attached to each preemptible worker node. Defaults to 0.
      * 
-    */
+     */
     public Optional<Integer> numLocalSsds() {
         return Optional.ofNullable(this.numLocalSsds);
     }

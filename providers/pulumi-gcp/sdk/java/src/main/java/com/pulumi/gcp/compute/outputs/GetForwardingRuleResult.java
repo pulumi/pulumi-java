@@ -19,10 +19,10 @@ public final class GetForwardingRuleResult {
     private final String backendService;
     private final String creationTimestamp;
     private final String description;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String ipAddress;
     private final String ipProtocol;
@@ -111,9 +111,9 @@ public final class GetForwardingRuleResult {
         return this.description;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

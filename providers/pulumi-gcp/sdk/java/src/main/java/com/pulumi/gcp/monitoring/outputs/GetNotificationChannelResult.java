@@ -18,10 +18,10 @@ public final class GetNotificationChannelResult {
     private final String description;
     private final @Nullable String displayName;
     private final Boolean enabled;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final @Nullable Map<String,String> labels;
     private final String name;
@@ -67,9 +67,9 @@ public final class GetNotificationChannelResult {
         return this.enabled;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

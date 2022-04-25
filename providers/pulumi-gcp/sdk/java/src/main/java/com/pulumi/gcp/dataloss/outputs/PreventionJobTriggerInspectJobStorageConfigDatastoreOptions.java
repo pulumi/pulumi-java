@@ -10,18 +10,18 @@ import java.util.Objects;
 
 @CustomType
 public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptions {
-    /**
-     * A representation of a Datastore kind.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return A representation of a Datastore kind.
+         * Structure is documented below.
+         * 
+         */
     private final PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind kind;
-    /**
-     * Datastore partition ID. A partition ID identifies a grouping of entities. The grouping
-     * is always by project and namespace, however the namespace ID may be empty.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Datastore partition ID. A partition ID identifies a grouping of entities. The grouping
+         * is always by project and namespace, however the namespace ID may be empty.
+         * Structure is documented below.
+         * 
+         */
     private final PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId partitionId;
 
     @CustomType.Constructor
@@ -33,19 +33,19 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptions {
     }
 
     /**
-     * A representation of a Datastore kind.
+     * @return A representation of a Datastore kind.
      * Structure is documented below.
      * 
-    */
+     */
     public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind kind() {
         return this.kind;
     }
     /**
-     * Datastore partition ID. A partition ID identifies a grouping of entities. The grouping
+     * @return Datastore partition ID. A partition ID identifies a grouping of entities. The grouping
      * is always by project and namespace, however the namespace ID may be empty.
      * Structure is documented below.
      * 
-    */
+     */
     public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId partitionId() {
         return this.partitionId;
     }

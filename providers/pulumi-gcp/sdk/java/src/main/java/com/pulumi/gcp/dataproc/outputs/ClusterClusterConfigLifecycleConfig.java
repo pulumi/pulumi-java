@@ -11,18 +11,18 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClusterClusterConfigLifecycleConfig {
-    /**
-     * The time when cluster will be auto-deleted.
-     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds.
-     * Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
-     * 
-     */
+        /**
+         * @return The time when cluster will be auto-deleted.
+         * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds.
+         * Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         */
     private final @Nullable String autoDeleteTime;
-    /**
-     * The duration to keep the cluster alive while idling
-     * (no jobs running). After this TTL, the cluster will be deleted. Valid range: [10m, 14d].
-     * 
-     */
+        /**
+         * @return The duration to keep the cluster alive while idling
+         * (no jobs running). After this TTL, the cluster will be deleted. Valid range: [10m, 14d].
+         * 
+         */
     private final @Nullable String idleDeleteTtl;
     private final @Nullable String idleStartTime;
 
@@ -37,19 +37,19 @@ public final class ClusterClusterConfigLifecycleConfig {
     }
 
     /**
-     * The time when cluster will be auto-deleted.
+     * @return The time when cluster will be auto-deleted.
      * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds.
      * Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
-    */
+     */
     public Optional<String> autoDeleteTime() {
         return Optional.ofNullable(this.autoDeleteTime);
     }
     /**
-     * The duration to keep the cluster alive while idling
+     * @return The duration to keep the cluster alive while idling
      * (no jobs running). After this TTL, the cluster will be deleted. Valid range: [10m, 14d].
      * 
-    */
+     */
     public Optional<String> idleDeleteTtl() {
         return Optional.ofNullable(this.idleDeleteTtl);
     }

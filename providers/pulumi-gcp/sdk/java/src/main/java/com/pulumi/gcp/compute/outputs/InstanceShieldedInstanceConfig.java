@@ -11,23 +11,23 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class InstanceShieldedInstanceConfig {
-    /**
-     * -- Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.
-     * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
-     * 
-     */
+        /**
+         * @return -- Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.
+         * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+         * 
+         */
     private final @Nullable Boolean enableIntegrityMonitoring;
-    /**
-     * -- Verify the digital signature of all boot components, and halt the boot process if signature verification fails. Defaults to false.
-     * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
-     * 
-     */
+        /**
+         * @return -- Verify the digital signature of all boot components, and halt the boot process if signature verification fails. Defaults to false.
+         * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+         * 
+         */
     private final @Nullable Boolean enableSecureBoot;
-    /**
-     * -- Use a virtualized trusted platform module, which is a specialized computer chip you can use to encrypt objects like keys and certificates. Defaults to true.
-     * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
-     * 
-     */
+        /**
+         * @return -- Use a virtualized trusted platform module, which is a specialized computer chip you can use to encrypt objects like keys and certificates. Defaults to true.
+         * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+         * 
+         */
     private final @Nullable Boolean enableVtpm;
 
     @CustomType.Constructor
@@ -41,26 +41,26 @@ public final class InstanceShieldedInstanceConfig {
     }
 
     /**
-     * -- Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.
+     * @return -- Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.
      * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
      * 
-    */
+     */
     public Optional<Boolean> enableIntegrityMonitoring() {
         return Optional.ofNullable(this.enableIntegrityMonitoring);
     }
     /**
-     * -- Verify the digital signature of all boot components, and halt the boot process if signature verification fails. Defaults to false.
+     * @return -- Verify the digital signature of all boot components, and halt the boot process if signature verification fails. Defaults to false.
      * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
      * 
-    */
+     */
     public Optional<Boolean> enableSecureBoot() {
         return Optional.ofNullable(this.enableSecureBoot);
     }
     /**
-     * -- Use a virtualized trusted platform module, which is a specialized computer chip you can use to encrypt objects like keys and certificates. Defaults to true.
+     * @return -- Use a virtualized trusted platform module, which is a specialized computer chip you can use to encrypt objects like keys and certificates. Defaults to true.
      * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
      * 
-    */
+     */
     public Optional<Boolean> enableVtpm() {
         return Optional.ofNullable(this.enableVtpm);
     }

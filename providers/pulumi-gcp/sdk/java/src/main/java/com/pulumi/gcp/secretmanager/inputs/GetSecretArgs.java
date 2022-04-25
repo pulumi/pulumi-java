@@ -21,6 +21,10 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -32,6 +36,10 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="secretId", required=true)
     private String secretId;
 
+    /**
+     * @return The name of the secret.
+     * 
+     */
     public String secretId() {
         return this.secretId;
     }
@@ -61,11 +69,23 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSecretArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param secretId The name of the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretId(String secretId) {
             $.secretId = secretId;
             return this;

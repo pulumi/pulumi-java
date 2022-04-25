@@ -11,14 +11,14 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig {
-    /**
-     * The Cloud KMS resource identifier of the customer-managed
-     * encryption key used to protect a resource, such as a disks.
-     * It has the following format:
-     * `projects/{PROJECT_ID}/locations/{REGION}/keyRings/
-     * {KEY_RING_NAME}/cryptoKeys/{KEY_NAME}`
-     * 
-     */
+        /**
+         * @return The Cloud KMS resource identifier of the customer-managed
+         * encryption key used to protect a resource, such as a disks.
+         * It has the following format:
+         * `projects/{PROJECT_ID}/locations/{REGION}/keyRings/
+         * {KEY_RING_NAME}/cryptoKeys/{KEY_NAME}`
+         * 
+         */
     private final @Nullable String kmsKey;
 
     @CustomType.Constructor
@@ -27,13 +27,13 @@ public final class RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig {
     }
 
     /**
-     * The Cloud KMS resource identifier of the customer-managed
+     * @return The Cloud KMS resource identifier of the customer-managed
      * encryption key used to protect a resource, such as a disks.
      * It has the following format:
      * `projects/{PROJECT_ID}/locations/{REGION}/keyRings/
      * {KEY_RING_NAME}/cryptoKeys/{KEY_NAME}`
      * 
-    */
+     */
     public Optional<String> kmsKey() {
         return Optional.ofNullable(this.kmsKey);
     }

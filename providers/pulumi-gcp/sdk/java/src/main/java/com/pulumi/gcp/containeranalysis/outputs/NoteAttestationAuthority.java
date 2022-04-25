@@ -9,8 +9,27 @@ import java.util.Objects;
 
 @CustomType
 public final class NoteAttestationAuthority {
+        /**
+         * @return This submessage provides human-readable hints about the purpose of
+         * the AttestationAuthority. Because the name of a Note acts as its
+         * resource reference, it is important to disambiguate the canonical
+         * name of the Note (which might be a UUID for security purposes)
+         * from &#34;readable&#34; names more suitable for debug output. Note that
+         * these hints should NOT be used to look up AttestationAuthorities
+         * in security sensitive contexts, such as when looking up
+         * Attestations to verify.
+         * Structure is documented below.
+         * 
+         */
+    private final NoteAttestationAuthorityHint hint;
+
+    @CustomType.Constructor
+    private NoteAttestationAuthority(@CustomType.Parameter("hint") NoteAttestationAuthorityHint hint) {
+        this.hint = hint;
+    }
+
     /**
-     * This submessage provides human-readable hints about the purpose of
+     * @return This submessage provides human-readable hints about the purpose of
      * the AttestationAuthority. Because the name of a Note acts as its
      * resource reference, it is important to disambiguate the canonical
      * name of the Note (which might be a UUID for security purposes)
@@ -21,25 +40,6 @@ public final class NoteAttestationAuthority {
      * Structure is documented below.
      * 
      */
-    private final NoteAttestationAuthorityHint hint;
-
-    @CustomType.Constructor
-    private NoteAttestationAuthority(@CustomType.Parameter("hint") NoteAttestationAuthorityHint hint) {
-        this.hint = hint;
-    }
-
-    /**
-     * This submessage provides human-readable hints about the purpose of
-     * the AttestationAuthority. Because the name of a Note acts as its
-     * resource reference, it is important to disambiguate the canonical
-     * name of the Note (which might be a UUID for security purposes)
-     * from &#34;readable&#34; names more suitable for debug output. Note that
-     * these hints should NOT be used to look up AttestationAuthorities
-     * in security sensitive contexts, such as when looking up
-     * Attestations to verify.
-     * Structure is documented below.
-     * 
-    */
     public NoteAttestationAuthorityHint hint() {
         return this.hint;
     }

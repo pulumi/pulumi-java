@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EnterpriseKeyAndroidSettings {
-    /**
-     * If set to true, it means allowed_package_names will not be enforced.
-     * 
-     */
+        /**
+         * @return If set to true, it means allowed_package_names will not be enforced.
+         * 
+         */
     private final @Nullable Boolean allowAllPackageNames;
-    /**
-     * Android package names of apps allowed to use the key. Example: &#39;com.companyname.appname&#39;
-     * 
-     */
+        /**
+         * @return Android package names of apps allowed to use the key. Example: &#39;com.companyname.appname&#39;
+         * 
+         */
     private final @Nullable List<String> allowedPackageNames;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class EnterpriseKeyAndroidSettings {
     }
 
     /**
-     * If set to true, it means allowed_package_names will not be enforced.
+     * @return If set to true, it means allowed_package_names will not be enforced.
      * 
-    */
+     */
     public Optional<Boolean> allowAllPackageNames() {
         return Optional.ofNullable(this.allowAllPackageNames);
     }
     /**
-     * Android package names of apps allowed to use the key. Example: &#39;com.companyname.appname&#39;
+     * @return Android package names of apps allowed to use the key. Example: &#39;com.companyname.appname&#39;
      * 
-    */
+     */
     public List<String> allowedPackageNames() {
         return this.allowedPackageNames == null ? List.of() : this.allowedPackageNames;
     }

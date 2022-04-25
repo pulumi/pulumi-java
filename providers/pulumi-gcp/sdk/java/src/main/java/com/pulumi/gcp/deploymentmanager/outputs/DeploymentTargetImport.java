@@ -11,16 +11,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DeploymentTargetImport {
-    /**
-     * The full contents of the template that you want to import.
-     * 
-     */
+        /**
+         * @return The full contents of the template that you want to import.
+         * 
+         */
     private final @Nullable String content;
-    /**
-     * The name of the template to import, as declared in the YAML
-     * configuration.
-     * 
-     */
+        /**
+         * @return The name of the template to import, as declared in the YAML
+         * configuration.
+         * 
+         */
     private final @Nullable String name;
 
     @CustomType.Constructor
@@ -32,17 +32,17 @@ public final class DeploymentTargetImport {
     }
 
     /**
-     * The full contents of the template that you want to import.
+     * @return The full contents of the template that you want to import.
      * 
-    */
+     */
     public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
     /**
-     * The name of the template to import, as declared in the YAML
+     * @return The name of the template to import, as declared in the YAML
      * configuration.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

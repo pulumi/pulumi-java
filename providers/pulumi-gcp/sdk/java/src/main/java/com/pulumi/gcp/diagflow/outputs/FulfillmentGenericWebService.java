@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FulfillmentGenericWebService {
-    /**
-     * The password for HTTP Basic authentication.
-     * 
-     */
+        /**
+         * @return The password for HTTP Basic authentication.
+         * 
+         */
     private final @Nullable String password;
-    /**
-     * The HTTP request headers to send together with fulfillment requests.
-     * 
-     */
+        /**
+         * @return The HTTP request headers to send together with fulfillment requests.
+         * 
+         */
     private final @Nullable Map<String,String> requestHeaders;
-    /**
-     * The fulfillment URI for receiving POST requests. It must use https protocol.
-     * 
-     */
+        /**
+         * @return The fulfillment URI for receiving POST requests. It must use https protocol.
+         * 
+         */
     private final String uri;
-    /**
-     * The user name for HTTP Basic authentication.
-     * 
-     */
+        /**
+         * @return The user name for HTTP Basic authentication.
+         * 
+         */
     private final @Nullable String username;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class FulfillmentGenericWebService {
     }
 
     /**
-     * The password for HTTP Basic authentication.
+     * @return The password for HTTP Basic authentication.
      * 
-    */
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * The HTTP request headers to send together with fulfillment requests.
+     * @return The HTTP request headers to send together with fulfillment requests.
      * 
-    */
+     */
     public Map<String,String> requestHeaders() {
         return this.requestHeaders == null ? Map.of() : this.requestHeaders;
     }
     /**
-     * The fulfillment URI for receiving POST requests. It must use https protocol.
+     * @return The fulfillment URI for receiving POST requests. It must use https protocol.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }
     /**
-     * The user name for HTTP Basic authentication.
+     * @return The user name for HTTP Basic authentication.
      * 
-    */
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }

@@ -23,6 +23,10 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiId")
     private @Nullable Output<String> apiId;
 
+    /**
+     * @return Identifier to assign to the API. Must be unique within scope of the parent resource(project)
+     * 
+     */
     public Optional<Output<String>> apiId() {
         return Optional.ofNullable(this.apiId);
     }
@@ -34,6 +38,10 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
     private @Nullable Output<String> createTime;
 
+    /**
+     * @return Creation timestamp in RFC3339 text format.
+     * 
+     */
     public Optional<Output<String>> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -45,6 +53,10 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return A user-visible name for the API.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -56,6 +68,10 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Resource labels to represent user-provided metadata.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -68,6 +84,11 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedService")
     private @Nullable Output<String> managedService;
 
+    /**
+     * @return Immutable. The name of a Google Managed Service ( https://cloud.google.com/service-infrastructure/docs/glossary#managed).
+     * If not specified, a new Service will automatically be created in the same project as this API.
+     * 
+     */
     public Optional<Output<String>> managedService() {
         return Optional.ofNullable(this.managedService);
     }
@@ -79,6 +100,10 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name of the API. Format &#39;projects/{{project}}/locations/global/apis/{{apiId}}&#39;
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -91,6 +116,11 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -125,65 +155,153 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
             $ = new ApiState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiId Identifier to assign to the API. Must be unique within scope of the parent resource(project)
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(@Nullable Output<String> apiId) {
             $.apiId = apiId;
             return this;
         }
 
+        /**
+         * @param apiId Identifier to assign to the API. Must be unique within scope of the parent resource(project)
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(String apiId) {
             return apiId(Output.of(apiId));
         }
 
+        /**
+         * @param createTime Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(@Nullable Output<String> createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param createTime Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
         }
 
+        /**
+         * @param displayName A user-visible name for the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName A user-visible name for the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param labels Resource labels to represent user-provided metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Resource labels to represent user-provided metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param managedService Immutable. The name of a Google Managed Service ( https://cloud.google.com/service-infrastructure/docs/glossary#managed).
+         * If not specified, a new Service will automatically be created in the same project as this API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedService(@Nullable Output<String> managedService) {
             $.managedService = managedService;
             return this;
         }
 
+        /**
+         * @param managedService Immutable. The name of a Google Managed Service ( https://cloud.google.com/service-infrastructure/docs/glossary#managed).
+         * If not specified, a new Service will automatically be created in the same project as this API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedService(String managedService) {
             return managedService(Output.of(managedService));
         }
 
+        /**
+         * @param name The resource name of the API. Format &#39;projects/{{project}}/locations/global/apis/{{apiId}}&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name of the API. Format &#39;projects/{{project}}/locations/global/apis/{{apiId}}&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

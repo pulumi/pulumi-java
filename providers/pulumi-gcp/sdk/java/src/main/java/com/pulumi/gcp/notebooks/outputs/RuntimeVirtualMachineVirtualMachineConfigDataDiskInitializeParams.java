@@ -13,41 +13,41 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams {
-    /**
-     * Provide this property when creating the disk.
-     * 
-     */
+        /**
+         * @return Provide this property when creating the disk.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Specifies the disk name. If not specified, the default is
-     * to use the name of the instance. If the disk with the
-     * instance name exists already in the given zone/region, a
-     * new name will be automatically generated.
-     * 
-     */
+        /**
+         * @return Specifies the disk name. If not specified, the default is
+         * to use the name of the instance. If the disk with the
+         * instance name exists already in the given zone/region, a
+         * new name will be automatically generated.
+         * 
+         */
     private final @Nullable String diskName;
-    /**
-     * Specifies the size of the disk in base-2 GB. If not
-     * specified, the disk will be the same size as the image
-     * (usually 10GB). If specified, the size must be equal to
-     * or larger than 10GB. Default 100 GB.
-     * 
-     */
+        /**
+         * @return Specifies the size of the disk in base-2 GB. If not
+         * specified, the disk will be the same size as the image
+         * (usually 10GB). If specified, the size must be equal to
+         * or larger than 10GB. Default 100 GB.
+         * 
+         */
     private final @Nullable Integer diskSizeGb;
-    /**
-     * The type of the boot disk attached to this runtime,
-     * defaults to standard persistent disk. For valid values,
-     * see `https://cloud.google.com/vertex-ai/docs/workbench/
-     * reference/rest/v1/projects.locations.runtimes#disktype`
-     * 
-     */
+        /**
+         * @return The type of the boot disk attached to this runtime,
+         * defaults to standard persistent disk. For valid values,
+         * see `https://cloud.google.com/vertex-ai/docs/workbench/
+         * reference/rest/v1/projects.locations.runtimes#disktype`
+         * 
+         */
     private final @Nullable String diskType;
-    /**
-     * Labels to apply to this disk. These can be later modified
-     * by the disks.setLabels method. This field is only
-     * applicable for persistent disks.
-     * 
-     */
+        /**
+         * @return Labels to apply to this disk. These can be later modified
+         * by the disks.setLabels method. This field is only
+         * applicable for persistent disks.
+         * 
+         */
     private final @Nullable Map<String,String> labels;
 
     @CustomType.Constructor
@@ -65,48 +65,48 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
     }
 
     /**
-     * Provide this property when creating the disk.
+     * @return Provide this property when creating the disk.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Specifies the disk name. If not specified, the default is
+     * @return Specifies the disk name. If not specified, the default is
      * to use the name of the instance. If the disk with the
      * instance name exists already in the given zone/region, a
      * new name will be automatically generated.
      * 
-    */
+     */
     public Optional<String> diskName() {
         return Optional.ofNullable(this.diskName);
     }
     /**
-     * Specifies the size of the disk in base-2 GB. If not
+     * @return Specifies the size of the disk in base-2 GB. If not
      * specified, the disk will be the same size as the image
      * (usually 10GB). If specified, the size must be equal to
      * or larger than 10GB. Default 100 GB.
      * 
-    */
+     */
     public Optional<Integer> diskSizeGb() {
         return Optional.ofNullable(this.diskSizeGb);
     }
     /**
-     * The type of the boot disk attached to this runtime,
+     * @return The type of the boot disk attached to this runtime,
      * defaults to standard persistent disk. For valid values,
      * see `https://cloud.google.com/vertex-ai/docs/workbench/
      * reference/rest/v1/projects.locations.runtimes#disktype`
      * 
-    */
+     */
     public Optional<String> diskType() {
         return Optional.ofNullable(this.diskType);
     }
     /**
-     * Labels to apply to this disk. These can be later modified
+     * @return Labels to apply to this disk. These can be later modified
      * by the disks.setLabels method. This field is only
      * applicable for persistent disks.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels == null ? Map.of() : this.labels;
     }

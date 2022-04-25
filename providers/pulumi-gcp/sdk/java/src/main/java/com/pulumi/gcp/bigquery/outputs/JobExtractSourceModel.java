@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class JobExtractSourceModel {
-    /**
-     * The ID of the dataset containing this model.
-     * 
-     */
+        /**
+         * @return The ID of the dataset containing this model.
+         * 
+         */
     private final String datasetId;
-    /**
-     * The ID of the model.
-     * 
-     */
+        /**
+         * @return The ID of the model.
+         * 
+         */
     private final String modelId;
-    /**
-     * The ID of the project containing this model.
-     * 
-     */
+        /**
+         * @return The ID of the project containing this model.
+         * 
+         */
     private final String projectId;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class JobExtractSourceModel {
     }
 
     /**
-     * The ID of the dataset containing this model.
+     * @return The ID of the dataset containing this model.
      * 
-    */
+     */
     public String datasetId() {
         return this.datasetId;
     }
     /**
-     * The ID of the model.
+     * @return The ID of the model.
      * 
-    */
+     */
     public String modelId() {
         return this.modelId;
     }
     /**
-     * The ID of the project containing this model.
+     * @return The ID of the project containing this model.
      * 
-    */
+     */
     public String projectId() {
         return this.projectId;
     }

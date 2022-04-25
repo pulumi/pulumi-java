@@ -13,34 +13,34 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FlexibleAppVersionNetwork {
-    /**
-     * List of ports, or port pairs, to forward from the virtual machine to the application container.
-     * 
-     */
+        /**
+         * @return List of ports, or port pairs, to forward from the virtual machine to the application container.
+         * 
+         */
     private final @Nullable List<String> forwardedPorts;
-    /**
-     * Tag to apply to the instance during creation.
-     * 
-     */
+        /**
+         * @return Tag to apply to the instance during creation.
+         * 
+         */
     private final @Nullable String instanceTag;
-    /**
-     * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
-     * 
-     */
+        /**
+         * @return Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+         * 
+         */
     private final String name;
-    /**
-     * Enable session affinity.
-     * 
-     */
+        /**
+         * @return Enable session affinity.
+         * 
+         */
     private final @Nullable Boolean sessionAffinity;
-    /**
-     * Google Cloud Platform sub-network where the virtual machines are created. Specify the short name, not the resource path.
-     * If the network that the instance is being created in is a Legacy network, then the IP address is allocated from the IPv4Range.
-     * If the network that the instance is being created in is an auto Subnet Mode Network, then only network name should be specified (not the subnetworkName) and the IP address is created from the IPCidrRange of the subnetwork that exists in that zone for that network.
-     * If the network that the instance is being created in is a custom Subnet Mode Network, then the subnetworkName must be specified and the IP address is created from the IPCidrRange of the subnetwork.
-     * If specified, the subnetwork must exist in the same region as the App Engine flexible environment application.
-     * 
-     */
+        /**
+         * @return Google Cloud Platform sub-network where the virtual machines are created. Specify the short name, not the resource path.
+         * If the network that the instance is being created in is a Legacy network, then the IP address is allocated from the IPv4Range.
+         * If the network that the instance is being created in is an auto Subnet Mode Network, then only network name should be specified (not the subnetworkName) and the IP address is created from the IPCidrRange of the subnetwork that exists in that zone for that network.
+         * If the network that the instance is being created in is a custom Subnet Mode Network, then the subnetworkName must be specified and the IP address is created from the IPCidrRange of the subnetwork.
+         * If specified, the subnetwork must exist in the same region as the App Engine flexible environment application.
+         * 
+         */
     private final @Nullable String subnetwork;
 
     @CustomType.Constructor
@@ -58,41 +58,41 @@ public final class FlexibleAppVersionNetwork {
     }
 
     /**
-     * List of ports, or port pairs, to forward from the virtual machine to the application container.
+     * @return List of ports, or port pairs, to forward from the virtual machine to the application container.
      * 
-    */
+     */
     public List<String> forwardedPorts() {
         return this.forwardedPorts == null ? List.of() : this.forwardedPorts;
     }
     /**
-     * Tag to apply to the instance during creation.
+     * @return Tag to apply to the instance during creation.
      * 
-    */
+     */
     public Optional<String> instanceTag() {
         return Optional.ofNullable(this.instanceTag);
     }
     /**
-     * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * @return Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Enable session affinity.
+     * @return Enable session affinity.
      * 
-    */
+     */
     public Optional<Boolean> sessionAffinity() {
         return Optional.ofNullable(this.sessionAffinity);
     }
     /**
-     * Google Cloud Platform sub-network where the virtual machines are created. Specify the short name, not the resource path.
+     * @return Google Cloud Platform sub-network where the virtual machines are created. Specify the short name, not the resource path.
      * If the network that the instance is being created in is a Legacy network, then the IP address is allocated from the IPv4Range.
      * If the network that the instance is being created in is an auto Subnet Mode Network, then only network name should be specified (not the subnetworkName) and the IP address is created from the IPCidrRange of the subnetwork that exists in that zone for that network.
      * If the network that the instance is being created in is a custom Subnet Mode Network, then the subnetworkName must be specified and the IP address is created from the IPCidrRange of the subnetwork.
      * If specified, the subnetwork must exist in the same region as the App Engine flexible environment application.
      * 
-    */
+     */
     public Optional<String> subnetwork() {
         return Optional.ofNullable(this.subnetwork);
     }

@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TransferJobTransferSpecAzureBlobStorageDataSource {
-    /**
-     * Credentials used to authenticate API requests to Azure block.
-     * 
-     */
+        /**
+         * @return Credentials used to authenticate API requests to Azure block.
+         * 
+         */
     private final TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials azureCredentials;
-    /**
-     * The container to transfer from the Azure Storage account.`
-     * 
-     */
+        /**
+         * @return The container to transfer from the Azure Storage account.`
+         * 
+         */
     private final String container;
-    /**
-     * Root path to transfer objects. Must be an empty string or full path name that ends with a &#39;/&#39;. This field is treated as an object prefix. As such, it should generally not begin with a &#39;/&#39;.
-     * 
-     */
+        /**
+         * @return Root path to transfer objects. Must be an empty string or full path name that ends with a &#39;/&#39;. This field is treated as an object prefix. As such, it should generally not begin with a &#39;/&#39;.
+         * 
+         */
     private final @Nullable String path;
-    /**
-     * The name of the Azure Storage account.
-     * 
-     */
+        /**
+         * @return The name of the Azure Storage account.
+         * 
+         */
     private final String storageAccount;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSource {
     }
 
     /**
-     * Credentials used to authenticate API requests to Azure block.
+     * @return Credentials used to authenticate API requests to Azure block.
      * 
-    */
+     */
     public TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials azureCredentials() {
         return this.azureCredentials;
     }
     /**
-     * The container to transfer from the Azure Storage account.`
+     * @return The container to transfer from the Azure Storage account.`
      * 
-    */
+     */
     public String container() {
         return this.container;
     }
     /**
-     * Root path to transfer objects. Must be an empty string or full path name that ends with a &#39;/&#39;. This field is treated as an object prefix. As such, it should generally not begin with a &#39;/&#39;.
+     * @return Root path to transfer objects. Must be an empty string or full path name that ends with a &#39;/&#39;. This field is treated as an object prefix. As such, it should generally not begin with a &#39;/&#39;.
      * 
-    */
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
-     * The name of the Azure Storage account.
+     * @return The name of the Azure Storage account.
      * 
-    */
+     */
     public String storageAccount() {
         return this.storageAccount;
     }

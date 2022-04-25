@@ -20,6 +20,10 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFile
     @Import(name="url", required=true)
     private Output<String> url;
 
+    /**
+     * @return The url, in the format `gs://&lt;bucket&gt;/&lt;path&gt;`. Trailing wildcard in the path is allowed.
+     * 
+     */
     public Output<String> url() {
         return this.url;
     }
@@ -48,11 +52,23 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFile
             $ = new PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param url The url, in the format `gs://&lt;bucket&gt;/&lt;path&gt;`. Trailing wildcard in the path is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url The url, in the format `gs://&lt;bucket&gt;/&lt;path&gt;`. Trailing wildcard in the path is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

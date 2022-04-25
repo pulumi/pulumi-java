@@ -9,22 +9,22 @@ import java.util.Objects;
 
 @CustomType
 public final class DatasetAccessView {
-    /**
-     * The ID of the dataset containing this table.
-     * 
-     */
+        /**
+         * @return The ID of the dataset containing this table.
+         * 
+         */
     private final String datasetId;
-    /**
-     * The ID of the project containing this table.
-     * 
-     */
+        /**
+         * @return The ID of the project containing this table.
+         * 
+         */
     private final String projectId;
-    /**
-     * The ID of the table. The ID must contain only letters (a-z,
-     * A-Z), numbers (0-9), or underscores (_). The maximum length
-     * is 1,024 characters.
-     * 
-     */
+        /**
+         * @return The ID of the table. The ID must contain only letters (a-z,
+         * A-Z), numbers (0-9), or underscores (_). The maximum length
+         * is 1,024 characters.
+         * 
+         */
     private final String tableId;
 
     @CustomType.Constructor
@@ -38,25 +38,25 @@ public final class DatasetAccessView {
     }
 
     /**
-     * The ID of the dataset containing this table.
+     * @return The ID of the dataset containing this table.
      * 
-    */
+     */
     public String datasetId() {
         return this.datasetId;
     }
     /**
-     * The ID of the project containing this table.
+     * @return The ID of the project containing this table.
      * 
-    */
+     */
     public String projectId() {
         return this.projectId;
     }
     /**
-     * The ID of the table. The ID must contain only letters (a-z,
+     * @return The ID of the table. The ID must contain only letters (a-z,
      * A-Z), numbers (0-9), or underscores (_). The maximum length
      * is 1,024 characters.
      * 
-    */
+     */
     public String tableId() {
         return this.tableId;
     }

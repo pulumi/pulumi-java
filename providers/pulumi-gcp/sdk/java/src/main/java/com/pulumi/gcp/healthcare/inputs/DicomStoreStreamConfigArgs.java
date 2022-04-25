@@ -21,6 +21,11 @@ public final class DicomStoreStreamConfigArgs extends com.pulumi.resources.Resou
     @Import(name="bigqueryDestination", required=true)
     private Output<DicomStoreStreamConfigBigqueryDestinationArgs> bigqueryDestination;
 
+    /**
+     * @return BigQueryDestination to include a fully qualified BigQuery table URI where DICOM instance metadata will be streamed.
+     * Structure is documented below.
+     * 
+     */
     public Output<DicomStoreStreamConfigBigqueryDestinationArgs> bigqueryDestination() {
         return this.bigqueryDestination;
     }
@@ -49,11 +54,25 @@ public final class DicomStoreStreamConfigArgs extends com.pulumi.resources.Resou
             $ = new DicomStoreStreamConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bigqueryDestination BigQueryDestination to include a fully qualified BigQuery table URI where DICOM instance metadata will be streamed.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigqueryDestination(Output<DicomStoreStreamConfigBigqueryDestinationArgs> bigqueryDestination) {
             $.bigqueryDestination = bigqueryDestination;
             return this;
         }
 
+        /**
+         * @param bigqueryDestination BigQueryDestination to include a fully qualified BigQuery table URI where DICOM instance metadata will be streamed.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigqueryDestination(DicomStoreStreamConfigBigqueryDestinationArgs bigqueryDestination) {
             return bigqueryDestination(Output.of(bigqueryDestination));
         }

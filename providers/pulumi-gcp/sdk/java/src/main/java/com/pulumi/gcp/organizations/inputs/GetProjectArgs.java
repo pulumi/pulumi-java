@@ -21,6 +21,10 @@ public final class GetProjectArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="projectId")
     private @Nullable String projectId;
 
+    /**
+     * @return The project ID. If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<String> projectId() {
         return Optional.ofNullable(this.projectId);
     }
@@ -49,6 +53,12 @@ public final class GetProjectArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetProjectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param projectId The project ID. If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(@Nullable String projectId) {
             $.projectId = projectId;
             return this;

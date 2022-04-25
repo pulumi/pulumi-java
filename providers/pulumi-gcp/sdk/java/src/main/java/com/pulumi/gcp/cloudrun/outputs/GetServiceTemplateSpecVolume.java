@@ -11,10 +11,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GetServiceTemplateSpecVolume {
-    /**
-     * The name of the Cloud Run Service.
-     * 
-     */
+        /**
+         * @return The name of the Cloud Run Service.
+         * 
+         */
     private final String name;
     private final List<GetServiceTemplateSpecVolumeSecret> secrets;
 
@@ -27,9 +27,9 @@ public final class GetServiceTemplateSpecVolume {
     }
 
     /**
-     * The name of the Cloud Run Service.
+     * @return The name of the Cloud Run Service.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

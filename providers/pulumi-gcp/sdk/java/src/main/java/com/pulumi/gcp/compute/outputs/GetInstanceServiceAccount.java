@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetInstanceServiceAccount {
-    /**
-     * The service account e-mail address.
-     * 
-     */
+        /**
+         * @return The service account e-mail address.
+         * 
+         */
     private final String email;
-    /**
-     * A list of service scopes.
-     * 
-     */
+        /**
+         * @return A list of service scopes.
+         * 
+         */
     private final List<String> scopes;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GetInstanceServiceAccount {
     }
 
     /**
-     * The service account e-mail address.
+     * @return The service account e-mail address.
      * 
-    */
+     */
     public String email() {
         return this.email;
     }
     /**
-     * A list of service scopes.
+     * @return A list of service scopes.
      * 
-    */
+     */
     public List<String> scopes() {
         return this.scopes;
     }

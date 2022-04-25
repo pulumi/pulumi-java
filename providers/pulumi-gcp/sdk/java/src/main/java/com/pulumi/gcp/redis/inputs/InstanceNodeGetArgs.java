@@ -22,6 +22,10 @@ public final class InstanceNodeGetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return an identifier for the resource with format `projects/{{project}}/locations/{{region}}/instances/{{name}}`
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -58,11 +62,23 @@ public final class InstanceNodeGetArgs extends com.pulumi.resources.ResourceArgs
             $ = new InstanceNodeGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id an identifier for the resource with format `projects/{{project}}/locations/{{region}}/instances/{{name}}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id an identifier for the resource with format `projects/{{project}}/locations/{{region}}/instances/{{name}}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

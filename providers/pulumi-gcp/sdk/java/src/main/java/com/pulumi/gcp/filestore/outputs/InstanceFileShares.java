@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class InstanceFileShares {
-    /**
-     * File share capacity in GiB. This must be at least 1024 GiB
-     * for the standard tier, or 2560 GiB for the premium tier.
-     * 
-     */
+        /**
+         * @return File share capacity in GiB. This must be at least 1024 GiB
+         * for the standard tier, or 2560 GiB for the premium tier.
+         * 
+         */
     private final Integer capacityGb;
-    /**
-     * The name of the fileshare (16 characters or less)
-     * 
-     */
+        /**
+         * @return The name of the fileshare (16 characters or less)
+         * 
+         */
     private final String name;
-    /**
-     * Nfs Export Options. There is a limit of 10 export options per file share.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Nfs Export Options. There is a limit of 10 export options per file share.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<InstanceFileSharesNfsExportOption> nfsExportOptions;
 
     @CustomType.Constructor
@@ -42,25 +42,25 @@ public final class InstanceFileShares {
     }
 
     /**
-     * File share capacity in GiB. This must be at least 1024 GiB
+     * @return File share capacity in GiB. This must be at least 1024 GiB
      * for the standard tier, or 2560 GiB for the premium tier.
      * 
-    */
+     */
     public Integer capacityGb() {
         return this.capacityGb;
     }
     /**
-     * The name of the fileshare (16 characters or less)
+     * @return The name of the fileshare (16 characters or less)
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Nfs Export Options. There is a limit of 10 export options per file share.
+     * @return Nfs Export Options. There is a limit of 10 export options per file share.
      * Structure is documented below.
      * 
-    */
+     */
     public List<InstanceFileSharesNfsExportOption> nfsExportOptions() {
         return this.nfsExportOptions == null ? List.of() : this.nfsExportOptions;
     }

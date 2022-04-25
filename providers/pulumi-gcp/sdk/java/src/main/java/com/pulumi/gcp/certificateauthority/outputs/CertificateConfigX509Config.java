@@ -16,35 +16,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CertificateConfigX509Config {
-    /**
-     * Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<CertificateConfigX509ConfigAdditionalExtension> additionalExtensions;
-    /**
-     * Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the
-     * &#34;Authority Information Access&#34; extension in the certificate.
-     * 
-     */
+        /**
+         * @return Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the
+         * &#34;Authority Information Access&#34; extension in the certificate.
+         * 
+         */
     private final @Nullable List<String> aiaOcspServers;
-    /**
-     * Describes values that are relevant in a CA certificate.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Describes values that are relevant in a CA certificate.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable CertificateConfigX509ConfigCaOptions caOptions;
-    /**
-     * Indicates the intended use for keys that correspond to a certificate.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Indicates the intended use for keys that correspond to a certificate.
+         * Structure is documented below.
+         * 
+         */
     private final CertificateConfigX509ConfigKeyUsage keyUsage;
-    /**
-     * Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<CertificateConfigX509ConfigPolicyId> policyIds;
 
     @CustomType.Constructor
@@ -62,42 +62,42 @@ public final class CertificateConfigX509Config {
     }
 
     /**
-     * Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs.
+     * @return Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs.
      * Structure is documented below.
      * 
-    */
+     */
     public List<CertificateConfigX509ConfigAdditionalExtension> additionalExtensions() {
         return this.additionalExtensions == null ? List.of() : this.additionalExtensions;
     }
     /**
-     * Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the
+     * @return Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the
      * &#34;Authority Information Access&#34; extension in the certificate.
      * 
-    */
+     */
     public List<String> aiaOcspServers() {
         return this.aiaOcspServers == null ? List.of() : this.aiaOcspServers;
     }
     /**
-     * Describes values that are relevant in a CA certificate.
+     * @return Describes values that are relevant in a CA certificate.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<CertificateConfigX509ConfigCaOptions> caOptions() {
         return Optional.ofNullable(this.caOptions);
     }
     /**
-     * Indicates the intended use for keys that correspond to a certificate.
+     * @return Indicates the intended use for keys that correspond to a certificate.
      * Structure is documented below.
      * 
-    */
+     */
     public CertificateConfigX509ConfigKeyUsage keyUsage() {
         return this.keyUsage;
     }
     /**
-     * Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+     * @return Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
      * Structure is documented below.
      * 
-    */
+     */
     public List<CertificateConfigX509ConfigPolicyId> policyIds() {
         return this.policyIds == null ? List.of() : this.policyIds;
     }

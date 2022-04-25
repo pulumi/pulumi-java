@@ -23,6 +23,10 @@ public final class TransferJobTransferSpecObjectConditionsArgs extends com.pulum
     @Import(name="excludePrefixes")
     private @Nullable Output<List<String>> excludePrefixes;
 
+    /**
+     * @return `exclude_prefixes` must follow the requirements described for `include_prefixes`. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
+     * 
+     */
     public Optional<Output<List<String>>> excludePrefixes() {
         return Optional.ofNullable(this.excludePrefixes);
     }
@@ -34,6 +38,10 @@ public final class TransferJobTransferSpecObjectConditionsArgs extends com.pulum
     @Import(name="includePrefixes")
     private @Nullable Output<List<String>> includePrefixes;
 
+    /**
+     * @return If `include_prefixes` is specified, objects that satisfy the object conditions must have names that start with one of the `include_prefixes` and that do not start with any of the `exclude_prefixes`. If `include_prefixes` is not specified, all objects except those that have names starting with one of the `exclude_prefixes` must satisfy the object conditions. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
+     * 
+     */
     public Optional<Output<List<String>>> includePrefixes() {
         return Optional.ofNullable(this.includePrefixes);
     }
@@ -45,6 +53,10 @@ public final class TransferJobTransferSpecObjectConditionsArgs extends com.pulum
     @Import(name="maxTimeElapsedSinceLastModification")
     private @Nullable Output<String> maxTimeElapsedSinceLastModification;
 
+    /**
+     * @return A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+     * 
+     */
     public Optional<Output<String>> maxTimeElapsedSinceLastModification() {
         return Optional.ofNullable(this.maxTimeElapsedSinceLastModification);
     }
@@ -56,6 +68,10 @@ public final class TransferJobTransferSpecObjectConditionsArgs extends com.pulum
     @Import(name="minTimeElapsedSinceLastModification")
     private @Nullable Output<String> minTimeElapsedSinceLastModification;
 
+    /**
+     * @return A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+     * 
+     */
     public Optional<Output<String>> minTimeElapsedSinceLastModification() {
         return Optional.ofNullable(this.minTimeElapsedSinceLastModification);
     }
@@ -87,46 +103,106 @@ public final class TransferJobTransferSpecObjectConditionsArgs extends com.pulum
             $ = new TransferJobTransferSpecObjectConditionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param excludePrefixes `exclude_prefixes` must follow the requirements described for `include_prefixes`. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludePrefixes(@Nullable Output<List<String>> excludePrefixes) {
             $.excludePrefixes = excludePrefixes;
             return this;
         }
 
+        /**
+         * @param excludePrefixes `exclude_prefixes` must follow the requirements described for `include_prefixes`. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludePrefixes(List<String> excludePrefixes) {
             return excludePrefixes(Output.of(excludePrefixes));
         }
 
+        /**
+         * @param excludePrefixes `exclude_prefixes` must follow the requirements described for `include_prefixes`. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludePrefixes(String... excludePrefixes) {
             return excludePrefixes(List.of(excludePrefixes));
         }
 
+        /**
+         * @param includePrefixes If `include_prefixes` is specified, objects that satisfy the object conditions must have names that start with one of the `include_prefixes` and that do not start with any of the `exclude_prefixes`. If `include_prefixes` is not specified, all objects except those that have names starting with one of the `exclude_prefixes` must satisfy the object conditions. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
+         * 
+         * @return builder
+         * 
+         */
         public Builder includePrefixes(@Nullable Output<List<String>> includePrefixes) {
             $.includePrefixes = includePrefixes;
             return this;
         }
 
+        /**
+         * @param includePrefixes If `include_prefixes` is specified, objects that satisfy the object conditions must have names that start with one of the `include_prefixes` and that do not start with any of the `exclude_prefixes`. If `include_prefixes` is not specified, all objects except those that have names starting with one of the `exclude_prefixes` must satisfy the object conditions. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
+         * 
+         * @return builder
+         * 
+         */
         public Builder includePrefixes(List<String> includePrefixes) {
             return includePrefixes(Output.of(includePrefixes));
         }
 
+        /**
+         * @param includePrefixes If `include_prefixes` is specified, objects that satisfy the object conditions must have names that start with one of the `include_prefixes` and that do not start with any of the `exclude_prefixes`. If `include_prefixes` is not specified, all objects except those that have names starting with one of the `exclude_prefixes` must satisfy the object conditions. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
+         * 
+         * @return builder
+         * 
+         */
         public Builder includePrefixes(String... includePrefixes) {
             return includePrefixes(List.of(includePrefixes));
         }
 
+        /**
+         * @param maxTimeElapsedSinceLastModification A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxTimeElapsedSinceLastModification(@Nullable Output<String> maxTimeElapsedSinceLastModification) {
             $.maxTimeElapsedSinceLastModification = maxTimeElapsedSinceLastModification;
             return this;
         }
 
+        /**
+         * @param maxTimeElapsedSinceLastModification A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxTimeElapsedSinceLastModification(String maxTimeElapsedSinceLastModification) {
             return maxTimeElapsedSinceLastModification(Output.of(maxTimeElapsedSinceLastModification));
         }
 
+        /**
+         * @param minTimeElapsedSinceLastModification A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minTimeElapsedSinceLastModification(@Nullable Output<String> minTimeElapsedSinceLastModification) {
             $.minTimeElapsedSinceLastModification = minTimeElapsedSinceLastModification;
             return this;
         }
 
+        /**
+         * @param minTimeElapsedSinceLastModification A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minTimeElapsedSinceLastModification(String minTimeElapsedSinceLastModification) {
             return minTimeElapsedSinceLastModification(Output.of(minTimeElapsedSinceLastModification));
         }

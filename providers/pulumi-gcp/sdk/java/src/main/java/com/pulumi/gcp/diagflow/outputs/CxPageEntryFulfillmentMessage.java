@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CxPageEntryFulfillmentMessage {
-    /**
-     * A collection of text responses.
-     * 
-     */
+        /**
+         * @return A collection of text responses.
+         * 
+         */
     private final @Nullable CxPageEntryFulfillmentMessageText text;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class CxPageEntryFulfillmentMessage {
     }
 
     /**
-     * A collection of text responses.
+     * @return A collection of text responses.
      * 
-    */
+     */
     public Optional<CxPageEntryFulfillmentMessageText> text() {
         return Optional.ofNullable(this.text);
     }

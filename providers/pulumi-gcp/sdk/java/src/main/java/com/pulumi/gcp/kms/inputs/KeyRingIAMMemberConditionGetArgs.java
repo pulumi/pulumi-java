@@ -22,6 +22,10 @@ public final class KeyRingIAMMemberConditionGetArgs extends com.pulumi.resources
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -33,6 +37,10 @@ public final class KeyRingIAMMemberConditionGetArgs extends com.pulumi.resources
     @Import(name="expression", required=true)
     private Output<String> expression;
 
+    /**
+     * @return Textual representation of an expression in Common Expression Language syntax.
+     * 
+     */
     public Output<String> expression() {
         return this.expression;
     }
@@ -44,6 +52,10 @@ public final class KeyRingIAMMemberConditionGetArgs extends com.pulumi.resources
     @Import(name="title", required=true)
     private Output<String> title;
 
+    /**
+     * @return A title for the expression, i.e. a short string describing its purpose.
+     * 
+     */
     public Output<String> title() {
         return this.title;
     }
@@ -74,29 +86,65 @@ public final class KeyRingIAMMemberConditionGetArgs extends com.pulumi.resources
             $ = new KeyRingIAMMemberConditionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param expression Textual representation of an expression in Common Expression Language syntax.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(Output<String> expression) {
             $.expression = expression;
             return this;
         }
 
+        /**
+         * @param expression Textual representation of an expression in Common Expression Language syntax.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(String expression) {
             return expression(Output.of(expression));
         }
 
+        /**
+         * @param title A title for the expression, i.e. a short string describing its purpose.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title A title for the expression, i.e. a short string describing its purpose.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

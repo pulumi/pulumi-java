@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class TransferJobTransferSpecAwsS3DataSourceAwsAccessKey {
-    /**
-     * AWS Key ID.
-     * 
-     */
+        /**
+         * @return AWS Key ID.
+         * 
+         */
     private final String accessKeyId;
-    /**
-     * AWS Secret Access Key.
-     * 
-     */
+        /**
+         * @return AWS Secret Access Key.
+         * 
+         */
     private final String secretAccessKey;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class TransferJobTransferSpecAwsS3DataSourceAwsAccessKey {
     }
 
     /**
-     * AWS Key ID.
+     * @return AWS Key ID.
      * 
-    */
+     */
     public String accessKeyId() {
         return this.accessKeyId;
     }
     /**
-     * AWS Secret Access Key.
+     * @return AWS Secret Access Key.
      * 
-    */
+     */
     public String secretAccessKey() {
         return this.secretAccessKey;
     }

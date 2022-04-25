@@ -22,6 +22,10 @@ public final class SpokeLinkedRouterApplianceInstancesGetArgs extends com.pulumi
     @Import(name="instances", required=true)
     private Output<List<SpokeLinkedRouterApplianceInstancesInstanceGetArgs>> instances;
 
+    /**
+     * @return The list of router appliance instances
+     * 
+     */
     public Output<List<SpokeLinkedRouterApplianceInstancesInstanceGetArgs>> instances() {
         return this.instances;
     }
@@ -33,6 +37,10 @@ public final class SpokeLinkedRouterApplianceInstancesGetArgs extends com.pulumi
     @Import(name="siteToSiteDataTransfer", required=true)
     private Output<Boolean> siteToSiteDataTransfer;
 
+    /**
+     * @return A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
+     * 
+     */
     public Output<Boolean> siteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer;
     }
@@ -62,24 +70,54 @@ public final class SpokeLinkedRouterApplianceInstancesGetArgs extends com.pulumi
             $ = new SpokeLinkedRouterApplianceInstancesGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instances The list of router appliance instances
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(Output<List<SpokeLinkedRouterApplianceInstancesInstanceGetArgs>> instances) {
             $.instances = instances;
             return this;
         }
 
+        /**
+         * @param instances The list of router appliance instances
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(List<SpokeLinkedRouterApplianceInstancesInstanceGetArgs> instances) {
             return instances(Output.of(instances));
         }
 
+        /**
+         * @param instances The list of router appliance instances
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(SpokeLinkedRouterApplianceInstancesInstanceGetArgs... instances) {
             return instances(List.of(instances));
         }
 
+        /**
+         * @param siteToSiteDataTransfer A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteToSiteDataTransfer(Output<Boolean> siteToSiteDataTransfer) {
             $.siteToSiteDataTransfer = siteToSiteDataTransfer;
             return this;
         }
 
+        /**
+         * @param siteToSiteDataTransfer A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
             return siteToSiteDataTransfer(Output.of(siteToSiteDataTransfer));
         }

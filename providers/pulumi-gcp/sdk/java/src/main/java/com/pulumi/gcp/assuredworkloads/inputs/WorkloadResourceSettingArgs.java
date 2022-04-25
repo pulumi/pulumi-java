@@ -22,6 +22,10 @@ public final class WorkloadResourceSettingArgs extends com.pulumi.resources.Reso
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return Resource identifier. For a project this represents project_number. If the project is already taken, the workload creation will fail.
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -33,6 +37,10 @@ public final class WorkloadResourceSettingArgs extends com.pulumi.resources.Reso
     @Import(name="resourceType")
     private @Nullable Output<String> resourceType;
 
+    /**
+     * @return Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT) Possible values: RESOURCE_TYPE_UNSPECIFIED, CONSUMER_PROJECT, ENCRYPTION_KEYS_PROJECT, KEYRING, CONSUMER_FOLDER
+     * 
+     */
     public Optional<Output<String>> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
@@ -62,20 +70,44 @@ public final class WorkloadResourceSettingArgs extends com.pulumi.resources.Reso
             $ = new WorkloadResourceSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceId Resource identifier. For a project this represents project_number. If the project is already taken, the workload creation will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId Resource identifier. For a project this represents project_number. If the project is already taken, the workload creation will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param resourceType Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT) Possible values: RESOURCE_TYPE_UNSPECIFIED, CONSUMER_PROJECT, ENCRYPTION_KEYS_PROJECT, KEYRING, CONSUMER_FOLDER
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(@Nullable Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT) Possible values: RESOURCE_TYPE_UNSPECIFIED, CONSUMER_PROJECT, ENCRYPTION_KEYS_PROJECT, KEYRING, CONSUMER_FOLDER
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Output.of(resourceType));
         }

@@ -18,10 +18,10 @@ public final class GetOrganizationPolicyResult {
     private final String constraint;
     private final String etag;
     private final String folder;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final List<GetOrganizationPolicyListPolicy> listPolicies;
     private final List<GetOrganizationPolicyRestorePolicy> restorePolicies;
@@ -63,9 +63,9 @@ public final class GetOrganizationPolicyResult {
         return this.folder;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

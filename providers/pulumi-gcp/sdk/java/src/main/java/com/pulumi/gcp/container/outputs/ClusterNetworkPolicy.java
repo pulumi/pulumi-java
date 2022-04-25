@@ -12,16 +12,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClusterNetworkPolicy {
-    /**
-     * Enable the PodSecurityPolicy controller for this cluster.
-     * If enabled, pods must be valid under a PodSecurityPolicy to be created.
-     * 
-     */
+        /**
+         * @return Enable the PodSecurityPolicy controller for this cluster.
+         * If enabled, pods must be valid under a PodSecurityPolicy to be created.
+         * 
+         */
     private final Boolean enabled;
-    /**
-     * The selected network policy provider. Defaults to PROVIDER_UNSPECIFIED.
-     * 
-     */
+        /**
+         * @return The selected network policy provider. Defaults to PROVIDER_UNSPECIFIED.
+         * 
+         */
     private final @Nullable String provider;
 
     @CustomType.Constructor
@@ -33,17 +33,17 @@ public final class ClusterNetworkPolicy {
     }
 
     /**
-     * Enable the PodSecurityPolicy controller for this cluster.
+     * @return Enable the PodSecurityPolicy controller for this cluster.
      * If enabled, pods must be valid under a PodSecurityPolicy to be created.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * The selected network policy provider. Defaults to PROVIDER_UNSPECIFIED.
+     * @return The selected network policy provider. Defaults to PROVIDER_UNSPECIFIED.
      * 
-    */
+     */
     public Optional<String> provider() {
         return Optional.ofNullable(this.provider);
     }

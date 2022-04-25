@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class InstanceNodeConfig {
-    /**
-     * Number of CPUs per node.
-     * 
-     */
+        /**
+         * @return Number of CPUs per node.
+         * 
+         */
     private final Integer cpuCount;
-    /**
-     * Memory size in Mebibytes for each memcache node.
-     * 
-     */
+        /**
+         * @return Memory size in Mebibytes for each memcache node.
+         * 
+         */
     private final Integer memorySizeMb;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class InstanceNodeConfig {
     }
 
     /**
-     * Number of CPUs per node.
+     * @return Number of CPUs per node.
      * 
-    */
+     */
     public Integer cpuCount() {
         return this.cpuCount;
     }
     /**
-     * Memory size in Mebibytes for each memcache node.
+     * @return Memory size in Mebibytes for each memcache node.
      * 
-    */
+     */
     public Integer memorySizeMb() {
         return this.memorySizeMb;
     }

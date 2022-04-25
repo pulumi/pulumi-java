@@ -23,6 +23,10 @@ public final class TransferJobTransferSpecAwsS3DataSourceArgs extends com.pulumi
     @Import(name="awsAccessKey")
     private @Nullable Output<TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyArgs> awsAccessKey;
 
+    /**
+     * @return AWS credentials block.
+     * 
+     */
     public Optional<Output<TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyArgs>> awsAccessKey() {
         return Optional.ofNullable(this.awsAccessKey);
     }
@@ -34,6 +38,10 @@ public final class TransferJobTransferSpecAwsS3DataSourceArgs extends com.pulumi
     @Import(name="bucketName", required=true)
     private Output<String> bucketName;
 
+    /**
+     * @return S3 Bucket name.
+     * 
+     */
     public Output<String> bucketName() {
         return this.bucketName;
     }
@@ -45,6 +53,10 @@ public final class TransferJobTransferSpecAwsS3DataSourceArgs extends com.pulumi
     @Import(name="roleArn")
     private @Nullable Output<String> roleArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the role to support temporary credentials via &#39;AssumeRoleWithWebIdentity&#39;. For more information about ARNs, see [IAM ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns). When a role ARN is provided, Transfer Service fetches temporary credentials for the session using a &#39;AssumeRoleWithWebIdentity&#39; call for the provided role using the [GoogleServiceAccount][] for this project.
+     * 
+     */
     public Optional<Output<String>> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
@@ -75,29 +87,65 @@ public final class TransferJobTransferSpecAwsS3DataSourceArgs extends com.pulumi
             $ = new TransferJobTransferSpecAwsS3DataSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param awsAccessKey AWS credentials block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsAccessKey(@Nullable Output<TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyArgs> awsAccessKey) {
             $.awsAccessKey = awsAccessKey;
             return this;
         }
 
+        /**
+         * @param awsAccessKey AWS credentials block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsAccessKey(TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyArgs awsAccessKey) {
             return awsAccessKey(Output.of(awsAccessKey));
         }
 
+        /**
+         * @param bucketName S3 Bucket name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(Output<String> bucketName) {
             $.bucketName = bucketName;
             return this;
         }
 
+        /**
+         * @param bucketName S3 Bucket name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(String bucketName) {
             return bucketName(Output.of(bucketName));
         }
 
+        /**
+         * @param roleArn The Amazon Resource Name (ARN) of the role to support temporary credentials via &#39;AssumeRoleWithWebIdentity&#39;. For more information about ARNs, see [IAM ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns). When a role ARN is provided, Transfer Service fetches temporary credentials for the session using a &#39;AssumeRoleWithWebIdentity&#39; call for the provided role using the [GoogleServiceAccount][] for this project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(@Nullable Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn The Amazon Resource Name (ARN) of the role to support temporary credentials via &#39;AssumeRoleWithWebIdentity&#39;. For more information about ARNs, see [IAM ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns). When a role ARN is provided, Transfer Service fetches temporary credentials for the session using a &#39;AssumeRoleWithWebIdentity&#39; call for the provided role using the [GoogleServiceAccount][] for this project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }

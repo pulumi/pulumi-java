@@ -22,6 +22,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
     @Import(name="namespacedGkeDeploymentTarget")
     private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget;
 
+    /**
+     * @return Optional. A target for the deployment.
+     * 
+     */
     public Optional<Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs>> namespacedGkeDeploymentTarget() {
         return Optional.ofNullable(this.namespacedGkeDeploymentTarget);
     }
@@ -50,11 +54,23 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
             $ = new WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param namespacedGkeDeploymentTarget Optional. A target for the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespacedGkeDeploymentTarget(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget) {
             $.namespacedGkeDeploymentTarget = namespacedGkeDeploymentTarget;
             return this;
         }
 
+        /**
+         * @param namespacedGkeDeploymentTarget Optional. A target for the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespacedGkeDeploymentTarget(WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs namespacedGkeDeploymentTarget) {
             return namespacedGkeDeploymentTarget(Output.of(namespacedGkeDeploymentTarget));
         }

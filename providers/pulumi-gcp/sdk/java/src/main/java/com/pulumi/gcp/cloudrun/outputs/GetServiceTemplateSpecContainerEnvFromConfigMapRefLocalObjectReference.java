@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference {
-    /**
-     * The name of the Cloud Run Service.
-     * 
-     */
+        /**
+         * @return The name of the Cloud Run Service.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObject
     }
 
     /**
-     * The name of the Cloud Run Service.
+     * @return The name of the Cloud Run Service.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

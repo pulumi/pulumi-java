@@ -22,6 +22,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="collection", required=true)
     private Output<String> collection;
 
+    /**
+     * @return The collection ID, relative to database. For example: chatrooms or chatrooms/my-document/private-messages.
+     * 
+     */
     public Output<String> collection() {
         return this.collection;
     }
@@ -33,6 +37,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="database")
     private @Nullable Output<String> database;
 
+    /**
+     * @return The Firestore database id. Defaults to `&#34;(default)&#34;`.
+     * 
+     */
     public Optional<Output<String>> database() {
         return Optional.ofNullable(this.database);
     }
@@ -44,6 +52,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="documentId", required=true)
     private Output<String> documentId;
 
+    /**
+     * @return The client-assigned document ID to use for this document during creation.
+     * 
+     */
     public Output<String> documentId() {
         return this.documentId;
     }
@@ -55,6 +67,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fields", required=true)
     private Output<String> fields;
 
+    /**
+     * @return The document&#39;s [fields](https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.documents) formated as a json string.
+     * 
+     */
     public Output<String> fields() {
         return this.fields;
     }
@@ -67,6 +83,11 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -99,47 +120,109 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DocumentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param collection The collection ID, relative to database. For example: chatrooms or chatrooms/my-document/private-messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collection(Output<String> collection) {
             $.collection = collection;
             return this;
         }
 
+        /**
+         * @param collection The collection ID, relative to database. For example: chatrooms or chatrooms/my-document/private-messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collection(String collection) {
             return collection(Output.of(collection));
         }
 
+        /**
+         * @param database The Firestore database id. Defaults to `&#34;(default)&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(@Nullable Output<String> database) {
             $.database = database;
             return this;
         }
 
+        /**
+         * @param database The Firestore database id. Defaults to `&#34;(default)&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(String database) {
             return database(Output.of(database));
         }
 
+        /**
+         * @param documentId The client-assigned document ID to use for this document during creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentId(Output<String> documentId) {
             $.documentId = documentId;
             return this;
         }
 
+        /**
+         * @param documentId The client-assigned document ID to use for this document during creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentId(String documentId) {
             return documentId(Output.of(documentId));
         }
 
+        /**
+         * @param fields The document&#39;s [fields](https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.documents) formated as a json string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(Output<String> fields) {
             $.fields = fields;
             return this;
         }
 
+        /**
+         * @param fields The document&#39;s [fields](https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.documents) formated as a json string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(String fields) {
             return fields(Output.of(fields));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

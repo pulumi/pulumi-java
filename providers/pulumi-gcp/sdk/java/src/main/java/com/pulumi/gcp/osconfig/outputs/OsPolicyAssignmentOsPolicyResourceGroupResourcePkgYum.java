@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum {
-    /**
-     * Required. The name of the repository.
-     * 
-     */
+        /**
+         * @return Required. The name of the repository.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum {
     }
 
     /**
-     * Required. The name of the repository.
+     * @return Required. The name of the repository.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

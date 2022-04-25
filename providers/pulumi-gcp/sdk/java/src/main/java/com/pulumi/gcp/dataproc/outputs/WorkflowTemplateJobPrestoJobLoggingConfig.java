@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WorkflowTemplateJobPrestoJobLoggingConfig {
-    /**
-     * The per-package log levels for the driver. This may include &#34;root&#34; package name to configure rootLogger. Examples: &#39;com.google = FATAL&#39;, &#39;root = INFO&#39;, &#39;org.apache = DEBUG&#39;
-     * 
-     */
+        /**
+         * @return The per-package log levels for the driver. This may include &#34;root&#34; package name to configure rootLogger. Examples: &#39;com.google = FATAL&#39;, &#39;root = INFO&#39;, &#39;org.apache = DEBUG&#39;
+         * 
+         */
     private final @Nullable Map<String,String> driverLogLevels;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class WorkflowTemplateJobPrestoJobLoggingConfig {
     }
 
     /**
-     * The per-package log levels for the driver. This may include &#34;root&#34; package name to configure rootLogger. Examples: &#39;com.google = FATAL&#39;, &#39;root = INFO&#39;, &#39;org.apache = DEBUG&#39;
+     * @return The per-package log levels for the driver. This may include &#34;root&#34; package name to configure rootLogger. Examples: &#39;com.google = FATAL&#39;, &#39;root = INFO&#39;, &#39;org.apache = DEBUG&#39;
      * 
-    */
+     */
     public Map<String,String> driverLogLevels() {
         return this.driverLogLevels == null ? Map.of() : this.driverLogLevels;
     }

@@ -12,16 +12,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class StandardAppVersionBasicScaling {
-    /**
-     * Duration of time after the last request that an instance must wait before the instance is shut down.
-     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. Defaults to 900s.
-     * 
-     */
+        /**
+         * @return Duration of time after the last request that an instance must wait before the instance is shut down.
+         * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. Defaults to 900s.
+         * 
+         */
     private final @Nullable String idleTimeout;
-    /**
-     * Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
-     * 
-     */
+        /**
+         * @return Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
+         * 
+         */
     private final Integer maxInstances;
 
     @CustomType.Constructor
@@ -33,17 +33,17 @@ public final class StandardAppVersionBasicScaling {
     }
 
     /**
-     * Duration of time after the last request that an instance must wait before the instance is shut down.
+     * @return Duration of time after the last request that an instance must wait before the instance is shut down.
      * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. Defaults to 900s.
      * 
-    */
+     */
     public Optional<String> idleTimeout() {
         return Optional.ofNullable(this.idleTimeout);
     }
     /**
-     * Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
+     * @return Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
      * 
-    */
+     */
     public Integer maxInstances() {
         return this.maxInstances;
     }

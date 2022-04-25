@@ -15,10 +15,10 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetGlobalForwardingRuleResult {
     private final String description;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String ipAddress;
     private final String ipProtocol;
@@ -72,9 +72,9 @@ public final class GetGlobalForwardingRuleResult {
         return this.description;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

@@ -20,6 +20,10 @@ public final class ClusterClusterConfigAutoscalingConfigArgs extends com.pulumi.
     @Import(name="policyUri", required=true)
     private Output<String> policyUri;
 
+    /**
+     * @return The autoscaling policy used by the cluster.
+     * 
+     */
     public Output<String> policyUri() {
         return this.policyUri;
     }
@@ -48,11 +52,23 @@ public final class ClusterClusterConfigAutoscalingConfigArgs extends com.pulumi.
             $ = new ClusterClusterConfigAutoscalingConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policyUri The autoscaling policy used by the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyUri(Output<String> policyUri) {
             $.policyUri = policyUri;
             return this;
         }
 
+        /**
+         * @param policyUri The autoscaling policy used by the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyUri(String policyUri) {
             return policyUri(Output.of(policyUri));
         }

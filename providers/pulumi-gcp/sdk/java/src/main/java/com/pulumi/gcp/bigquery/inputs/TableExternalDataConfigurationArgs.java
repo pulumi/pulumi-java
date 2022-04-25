@@ -29,6 +29,11 @@ public final class TableExternalDataConfigurationArgs extends com.pulumi.resourc
     @Import(name="autodetect", required=true)
     private Output<Boolean> autodetect;
 
+    /**
+     * @return - Let BigQuery try to autodetect the schema
+     * and format of the table.
+     * 
+     */
     public Output<Boolean> autodetect() {
         return this.autodetect;
     }
@@ -41,6 +46,11 @@ public final class TableExternalDataConfigurationArgs extends com.pulumi.resourc
     @Import(name="compression")
     private @Nullable Output<String> compression;
 
+    /**
+     * @return The compression type of the data source.
+     * Valid values are &#34;NONE&#34; or &#34;GZIP&#34;.
+     * 
+     */
     public Optional<Output<String>> compression() {
         return Optional.ofNullable(this.compression);
     }
@@ -53,6 +63,11 @@ public final class TableExternalDataConfigurationArgs extends com.pulumi.resourc
     @Import(name="csvOptions")
     private @Nullable Output<TableExternalDataConfigurationCsvOptionsArgs> csvOptions;
 
+    /**
+     * @return Additional properties to set if
+     * `source_format` is set to &#34;CSV&#34;. Structure is documented below.
+     * 
+     */
     public Optional<Output<TableExternalDataConfigurationCsvOptionsArgs>> csvOptions() {
         return Optional.ofNullable(this.csvOptions);
     }
@@ -66,6 +81,12 @@ public final class TableExternalDataConfigurationArgs extends com.pulumi.resourc
     @Import(name="googleSheetsOptions")
     private @Nullable Output<TableExternalDataConfigurationGoogleSheetsOptionsArgs> googleSheetsOptions;
 
+    /**
+     * @return Additional options if
+     * `source_format` is set to &#34;GOOGLE_SHEETS&#34;. Structure is
+     * documented below.
+     * 
+     */
     public Optional<Output<TableExternalDataConfigurationGoogleSheetsOptionsArgs>> googleSheetsOptions() {
         return Optional.ofNullable(this.googleSheetsOptions);
     }
@@ -80,6 +101,13 @@ public final class TableExternalDataConfigurationArgs extends com.pulumi.resourc
     @Import(name="hivePartitioningOptions")
     private @Nullable Output<TableExternalDataConfigurationHivePartitioningOptionsArgs> hivePartitioningOptions;
 
+    /**
+     * @return When set, configures hive partitioning
+     * support. Not all storage formats support hive partitioning -- requesting hive
+     * partitioning on an unsupported format will lead to an error, as will providing
+     * an invalid specification. Structure is documented below.
+     * 
+     */
     public Optional<Output<TableExternalDataConfigurationHivePartitioningOptionsArgs>> hivePartitioningOptions() {
         return Optional.ofNullable(this.hivePartitioningOptions);
     }
@@ -96,6 +124,15 @@ public final class TableExternalDataConfigurationArgs extends com.pulumi.resourc
     @Import(name="ignoreUnknownValues")
     private @Nullable Output<Boolean> ignoreUnknownValues;
 
+    /**
+     * @return Indicates if BigQuery should
+     * allow extra values that are not represented in the table schema.
+     * If true, the extra values are ignored. If false, records with
+     * extra columns are treated as bad records, and if there are too
+     * many bad records, an invalid error is returned in the job result.
+     * The default value is false.
+     * 
+     */
     public Optional<Output<Boolean>> ignoreUnknownValues() {
         return Optional.ofNullable(this.ignoreUnknownValues);
     }
@@ -108,6 +145,11 @@ public final class TableExternalDataConfigurationArgs extends com.pulumi.resourc
     @Import(name="maxBadRecords")
     private @Nullable Output<Integer> maxBadRecords;
 
+    /**
+     * @return The maximum number of bad records that
+     * BigQuery can ignore when reading data.
+     * 
+     */
     public Optional<Output<Integer>> maxBadRecords() {
         return Optional.ofNullable(this.maxBadRecords);
     }
@@ -129,6 +171,20 @@ public final class TableExternalDataConfigurationArgs extends com.pulumi.resourc
     @Import(name="schema")
     private @Nullable Output<String> schema;
 
+    /**
+     * @return A JSON schema for the external table. Schema is required
+     * for CSV and JSON formats if autodetect is not on. Schema is disallowed
+     * for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and Parquet formats.
+     * ~&gt;**NOTE:** Because this field expects a JSON string, any changes to the
+     * string will create a diff, even if the JSON itself hasn&#39;t changed.
+     * Furthermore drift for this field cannot not be detected because BigQuery
+     * only uses this schema to compute the effective schema for the table, therefore
+     * any changes on the configured value will force the table to be recreated.
+     * This schema is effectively only applied when creating a table from an external
+     * datasource, after creation the computed schema will be stored in
+     * `google_bigquery_table.schema`
+     * 
+     */
     public Optional<Output<String>> schema() {
         return Optional.ofNullable(this.schema);
     }
@@ -144,6 +200,14 @@ public final class TableExternalDataConfigurationArgs extends com.pulumi.resourc
     @Import(name="sourceFormat", required=true)
     private Output<String> sourceFormat;
 
+    /**
+     * @return The data format. Supported values are:
+     * &#34;CSV&#34;, &#34;GOOGLE_SHEETS&#34;, &#34;NEWLINE_DELIMITED_JSON&#34;, &#34;AVRO&#34;, &#34;PARQUET&#34;, &#34;ORC&#34;,
+     * &#34;DATSTORE_BACKUP&#34;, and &#34;BIGTABLE&#34;. To use &#34;GOOGLE_SHEETS&#34;
+     * the `scopes` must include
+     * &#34;https://www.googleapis.com/auth/drive.readonly&#34;.
+     * 
+     */
     public Output<String> sourceFormat() {
         return this.sourceFormat;
     }
@@ -156,6 +220,11 @@ public final class TableExternalDataConfigurationArgs extends com.pulumi.resourc
     @Import(name="sourceUris", required=true)
     private Output<List<String>> sourceUris;
 
+    /**
+     * @return A list of the fully-qualified URIs that point to
+     * your data in Google Cloud.
+     * 
+     */
     public Output<List<String>> sourceUris() {
         return this.sourceUris;
     }
@@ -193,96 +262,281 @@ public final class TableExternalDataConfigurationArgs extends com.pulumi.resourc
             $ = new TableExternalDataConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autodetect - Let BigQuery try to autodetect the schema
+         * and format of the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autodetect(Output<Boolean> autodetect) {
             $.autodetect = autodetect;
             return this;
         }
 
+        /**
+         * @param autodetect - Let BigQuery try to autodetect the schema
+         * and format of the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autodetect(Boolean autodetect) {
             return autodetect(Output.of(autodetect));
         }
 
+        /**
+         * @param compression The compression type of the data source.
+         * Valid values are &#34;NONE&#34; or &#34;GZIP&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compression(@Nullable Output<String> compression) {
             $.compression = compression;
             return this;
         }
 
+        /**
+         * @param compression The compression type of the data source.
+         * Valid values are &#34;NONE&#34; or &#34;GZIP&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compression(String compression) {
             return compression(Output.of(compression));
         }
 
+        /**
+         * @param csvOptions Additional properties to set if
+         * `source_format` is set to &#34;CSV&#34;. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder csvOptions(@Nullable Output<TableExternalDataConfigurationCsvOptionsArgs> csvOptions) {
             $.csvOptions = csvOptions;
             return this;
         }
 
+        /**
+         * @param csvOptions Additional properties to set if
+         * `source_format` is set to &#34;CSV&#34;. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder csvOptions(TableExternalDataConfigurationCsvOptionsArgs csvOptions) {
             return csvOptions(Output.of(csvOptions));
         }
 
+        /**
+         * @param googleSheetsOptions Additional options if
+         * `source_format` is set to &#34;GOOGLE_SHEETS&#34;. Structure is
+         * documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder googleSheetsOptions(@Nullable Output<TableExternalDataConfigurationGoogleSheetsOptionsArgs> googleSheetsOptions) {
             $.googleSheetsOptions = googleSheetsOptions;
             return this;
         }
 
+        /**
+         * @param googleSheetsOptions Additional options if
+         * `source_format` is set to &#34;GOOGLE_SHEETS&#34;. Structure is
+         * documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder googleSheetsOptions(TableExternalDataConfigurationGoogleSheetsOptionsArgs googleSheetsOptions) {
             return googleSheetsOptions(Output.of(googleSheetsOptions));
         }
 
+        /**
+         * @param hivePartitioningOptions When set, configures hive partitioning
+         * support. Not all storage formats support hive partitioning -- requesting hive
+         * partitioning on an unsupported format will lead to an error, as will providing
+         * an invalid specification. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hivePartitioningOptions(@Nullable Output<TableExternalDataConfigurationHivePartitioningOptionsArgs> hivePartitioningOptions) {
             $.hivePartitioningOptions = hivePartitioningOptions;
             return this;
         }
 
+        /**
+         * @param hivePartitioningOptions When set, configures hive partitioning
+         * support. Not all storage formats support hive partitioning -- requesting hive
+         * partitioning on an unsupported format will lead to an error, as will providing
+         * an invalid specification. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hivePartitioningOptions(TableExternalDataConfigurationHivePartitioningOptionsArgs hivePartitioningOptions) {
             return hivePartitioningOptions(Output.of(hivePartitioningOptions));
         }
 
+        /**
+         * @param ignoreUnknownValues Indicates if BigQuery should
+         * allow extra values that are not represented in the table schema.
+         * If true, the extra values are ignored. If false, records with
+         * extra columns are treated as bad records, and if there are too
+         * many bad records, an invalid error is returned in the job result.
+         * The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreUnknownValues(@Nullable Output<Boolean> ignoreUnknownValues) {
             $.ignoreUnknownValues = ignoreUnknownValues;
             return this;
         }
 
+        /**
+         * @param ignoreUnknownValues Indicates if BigQuery should
+         * allow extra values that are not represented in the table schema.
+         * If true, the extra values are ignored. If false, records with
+         * extra columns are treated as bad records, and if there are too
+         * many bad records, an invalid error is returned in the job result.
+         * The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreUnknownValues(Boolean ignoreUnknownValues) {
             return ignoreUnknownValues(Output.of(ignoreUnknownValues));
         }
 
+        /**
+         * @param maxBadRecords The maximum number of bad records that
+         * BigQuery can ignore when reading data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxBadRecords(@Nullable Output<Integer> maxBadRecords) {
             $.maxBadRecords = maxBadRecords;
             return this;
         }
 
+        /**
+         * @param maxBadRecords The maximum number of bad records that
+         * BigQuery can ignore when reading data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxBadRecords(Integer maxBadRecords) {
             return maxBadRecords(Output.of(maxBadRecords));
         }
 
+        /**
+         * @param schema A JSON schema for the external table. Schema is required
+         * for CSV and JSON formats if autodetect is not on. Schema is disallowed
+         * for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and Parquet formats.
+         * ~&gt;**NOTE:** Because this field expects a JSON string, any changes to the
+         * string will create a diff, even if the JSON itself hasn&#39;t changed.
+         * Furthermore drift for this field cannot not be detected because BigQuery
+         * only uses this schema to compute the effective schema for the table, therefore
+         * any changes on the configured value will force the table to be recreated.
+         * This schema is effectively only applied when creating a table from an external
+         * datasource, after creation the computed schema will be stored in
+         * `google_bigquery_table.schema`
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(@Nullable Output<String> schema) {
             $.schema = schema;
             return this;
         }
 
+        /**
+         * @param schema A JSON schema for the external table. Schema is required
+         * for CSV and JSON formats if autodetect is not on. Schema is disallowed
+         * for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and Parquet formats.
+         * ~&gt;**NOTE:** Because this field expects a JSON string, any changes to the
+         * string will create a diff, even if the JSON itself hasn&#39;t changed.
+         * Furthermore drift for this field cannot not be detected because BigQuery
+         * only uses this schema to compute the effective schema for the table, therefore
+         * any changes on the configured value will force the table to be recreated.
+         * This schema is effectively only applied when creating a table from an external
+         * datasource, after creation the computed schema will be stored in
+         * `google_bigquery_table.schema`
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(String schema) {
             return schema(Output.of(schema));
         }
 
+        /**
+         * @param sourceFormat The data format. Supported values are:
+         * &#34;CSV&#34;, &#34;GOOGLE_SHEETS&#34;, &#34;NEWLINE_DELIMITED_JSON&#34;, &#34;AVRO&#34;, &#34;PARQUET&#34;, &#34;ORC&#34;,
+         * &#34;DATSTORE_BACKUP&#34;, and &#34;BIGTABLE&#34;. To use &#34;GOOGLE_SHEETS&#34;
+         * the `scopes` must include
+         * &#34;https://www.googleapis.com/auth/drive.readonly&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceFormat(Output<String> sourceFormat) {
             $.sourceFormat = sourceFormat;
             return this;
         }
 
+        /**
+         * @param sourceFormat The data format. Supported values are:
+         * &#34;CSV&#34;, &#34;GOOGLE_SHEETS&#34;, &#34;NEWLINE_DELIMITED_JSON&#34;, &#34;AVRO&#34;, &#34;PARQUET&#34;, &#34;ORC&#34;,
+         * &#34;DATSTORE_BACKUP&#34;, and &#34;BIGTABLE&#34;. To use &#34;GOOGLE_SHEETS&#34;
+         * the `scopes` must include
+         * &#34;https://www.googleapis.com/auth/drive.readonly&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceFormat(String sourceFormat) {
             return sourceFormat(Output.of(sourceFormat));
         }
 
+        /**
+         * @param sourceUris A list of the fully-qualified URIs that point to
+         * your data in Google Cloud.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUris(Output<List<String>> sourceUris) {
             $.sourceUris = sourceUris;
             return this;
         }
 
+        /**
+         * @param sourceUris A list of the fully-qualified URIs that point to
+         * your data in Google Cloud.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUris(List<String> sourceUris) {
             return sourceUris(Output.of(sourceUris));
         }
 
+        /**
+         * @param sourceUris A list of the fully-qualified URIs that point to
+         * your data in Google Cloud.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUris(String... sourceUris) {
             return sourceUris(List.of(sourceUris));
         }

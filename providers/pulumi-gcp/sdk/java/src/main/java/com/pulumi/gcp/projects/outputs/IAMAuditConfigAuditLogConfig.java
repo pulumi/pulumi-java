@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class IAMAuditConfigAuditLogConfig {
-    /**
-     * Identities that do not cause logging for this type of permission.  The format is the same as that for `members`.
-     * 
-     */
+        /**
+         * @return Identities that do not cause logging for this type of permission.  The format is the same as that for `members`.
+         * 
+         */
     private final @Nullable List<String> exemptedMembers;
-    /**
-     * Permission type for which logging is to be configured.  Must be one of `DATA_READ`, `DATA_WRITE`, or `ADMIN_READ`.
-     * 
-     */
+        /**
+         * @return Permission type for which logging is to be configured.  Must be one of `DATA_READ`, `DATA_WRITE`, or `ADMIN_READ`.
+         * 
+         */
     private final String logType;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class IAMAuditConfigAuditLogConfig {
     }
 
     /**
-     * Identities that do not cause logging for this type of permission.  The format is the same as that for `members`.
+     * @return Identities that do not cause logging for this type of permission.  The format is the same as that for `members`.
      * 
-    */
+     */
     public List<String> exemptedMembers() {
         return this.exemptedMembers == null ? List.of() : this.exemptedMembers;
     }
     /**
-     * Permission type for which logging is to be configured.  Must be one of `DATA_READ`, `DATA_WRITE`, or `ADMIN_READ`.
+     * @return Permission type for which logging is to be configured.  Must be one of `DATA_READ`, `DATA_WRITE`, or `ADMIN_READ`.
      * 
-    */
+     */
     public String logType() {
         return this.logType;
     }

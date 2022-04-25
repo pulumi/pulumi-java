@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class InstanceGroupManagerStatusStatefulPerInstanceConfig {
-    /**
-     * A bit indicating if all of the group&#39;s per-instance configs (listed in the output of a listPerInstanceConfigs API call) have status `EFFECTIVE` or there are no per-instance-configs.
-     * 
-     */
+        /**
+         * @return A bit indicating if all of the group&#39;s per-instance configs (listed in the output of a listPerInstanceConfigs API call) have status `EFFECTIVE` or there are no per-instance-configs.
+         * 
+         */
     private final @Nullable Boolean allEffective;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class InstanceGroupManagerStatusStatefulPerInstanceConfig {
     }
 
     /**
-     * A bit indicating if all of the group&#39;s per-instance configs (listed in the output of a listPerInstanceConfigs API call) have status `EFFECTIVE` or there are no per-instance-configs.
+     * @return A bit indicating if all of the group&#39;s per-instance configs (listed in the output of a listPerInstanceConfigs API call) have status `EFFECTIVE` or there are no per-instance-configs.
      * 
-    */
+     */
     public Optional<Boolean> allEffective() {
         return Optional.ofNullable(this.allEffective);
     }

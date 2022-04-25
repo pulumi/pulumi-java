@@ -25,6 +25,10 @@ public final class EntityTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The name of this entity type to be displayed on the console.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -36,6 +40,10 @@ public final class EntityTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableFuzzyExtraction")
     private @Nullable Output<Boolean> enableFuzzyExtraction;
 
+    /**
+     * @return Enables fuzzy entity extraction during classification.
+     * 
+     */
     public Optional<Output<Boolean>> enableFuzzyExtraction() {
         return Optional.ofNullable(this.enableFuzzyExtraction);
     }
@@ -48,6 +56,11 @@ public final class EntityTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="entities")
     private @Nullable Output<List<EntityTypeEntityGetArgs>> entities;
 
+    /**
+     * @return The collection of entity entries associated with the entity type.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<EntityTypeEntityGetArgs>>> entities() {
         return Optional.ofNullable(this.entities);
     }
@@ -64,6 +77,15 @@ public final class EntityTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Indicates the kind of entity type.
+     * * KIND_MAP: Map entity types allow mapping of a group of synonyms to a reference value.
+     * * KIND_LIST: List entity types contain a set of entries that do not map to reference values. However, list entity
+     *   types can contain references to other entity types (with or without aliases).
+     * * KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values.
+     *   Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -75,6 +97,10 @@ public final class EntityTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The unique identifier of the entity type. Format: projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity type ID&gt;.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -87,6 +113,11 @@ public final class EntityTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -120,60 +151,153 @@ public final class EntityTypeState extends com.pulumi.resources.ResourceArgs {
             $ = new EntityTypeState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The name of this entity type to be displayed on the console.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The name of this entity type to be displayed on the console.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param enableFuzzyExtraction Enables fuzzy entity extraction during classification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableFuzzyExtraction(@Nullable Output<Boolean> enableFuzzyExtraction) {
             $.enableFuzzyExtraction = enableFuzzyExtraction;
             return this;
         }
 
+        /**
+         * @param enableFuzzyExtraction Enables fuzzy entity extraction during classification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableFuzzyExtraction(Boolean enableFuzzyExtraction) {
             return enableFuzzyExtraction(Output.of(enableFuzzyExtraction));
         }
 
+        /**
+         * @param entities The collection of entity entries associated with the entity type.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entities(@Nullable Output<List<EntityTypeEntityGetArgs>> entities) {
             $.entities = entities;
             return this;
         }
 
+        /**
+         * @param entities The collection of entity entries associated with the entity type.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entities(List<EntityTypeEntityGetArgs> entities) {
             return entities(Output.of(entities));
         }
 
+        /**
+         * @param entities The collection of entity entries associated with the entity type.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entities(EntityTypeEntityGetArgs... entities) {
             return entities(List.of(entities));
         }
 
+        /**
+         * @param kind Indicates the kind of entity type.
+         * * KIND_MAP: Map entity types allow mapping of a group of synonyms to a reference value.
+         * * KIND_LIST: List entity types contain a set of entries that do not map to reference values. However, list entity
+         *   types can contain references to other entity types (with or without aliases).
+         * * KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values.
+         *   Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Indicates the kind of entity type.
+         * * KIND_MAP: Map entity types allow mapping of a group of synonyms to a reference value.
+         * * KIND_LIST: List entity types contain a set of entries that do not map to reference values. However, list entity
+         *   types can contain references to other entity types (with or without aliases).
+         * * KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values.
+         *   Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param name The unique identifier of the entity type. Format: projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity type ID&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The unique identifier of the entity type. Format: projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity type ID&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

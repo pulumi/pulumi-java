@@ -19,81 +19,81 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AutoscalerAutoscalingPolicy {
-    /**
-     * The number of seconds that the autoscaler should wait before it
-     * starts collecting information from a new instance. This prevents
-     * the autoscaler from collecting information when the instance is
-     * initializing, during which the collected usage would not be
-     * reliable. The default time autoscaler waits is 60 seconds.
-     * Virtual machine initialization times might vary because of
-     * numerous factors. We recommend that you test how long an
-     * instance may take to initialize. To do this, create an instance
-     * and time the startup process.
-     * 
-     */
+        /**
+         * @return The number of seconds that the autoscaler should wait before it
+         * starts collecting information from a new instance. This prevents
+         * the autoscaler from collecting information when the instance is
+         * initializing, during which the collected usage would not be
+         * reliable. The default time autoscaler waits is 60 seconds.
+         * Virtual machine initialization times might vary because of
+         * numerous factors. We recommend that you test how long an
+         * instance may take to initialize. To do this, create an instance
+         * and time the startup process.
+         * 
+         */
     private final @Nullable Integer cooldownPeriod;
-    /**
-     * Defines the CPU utilization policy that allows the autoscaler to
-     * scale based on the average CPU utilization of a managed instance
-     * group.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Defines the CPU utilization policy that allows the autoscaler to
+         * scale based on the average CPU utilization of a managed instance
+         * group.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable AutoscalerAutoscalingPolicyCpuUtilization cpuUtilization;
-    /**
-     * Configuration parameters of autoscaling based on a load balancer.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Configuration parameters of autoscaling based on a load balancer.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable AutoscalerAutoscalingPolicyLoadBalancingUtilization loadBalancingUtilization;
-    /**
-     * The maximum number of instances that the autoscaler can scale up
-     * to. This is required when creating or updating an autoscaler. The
-     * maximum number of replicas should not be lower than minimal number
-     * of replicas.
-     * 
-     */
+        /**
+         * @return The maximum number of instances that the autoscaler can scale up
+         * to. This is required when creating or updating an autoscaler. The
+         * maximum number of replicas should not be lower than minimal number
+         * of replicas.
+         * 
+         */
     private final Integer maxReplicas;
-    /**
-     * Configuration parameters of autoscaling based on a custom metric.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Configuration parameters of autoscaling based on a custom metric.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<AutoscalerAutoscalingPolicyMetric> metrics;
-    /**
-     * The minimum number of replicas that the autoscaler can scale down
-     * to. This cannot be less than 0. If not provided, autoscaler will
-     * choose a default value depending on maximum number of instances
-     * allowed.
-     * 
-     */
+        /**
+         * @return The minimum number of replicas that the autoscaler can scale down
+         * to. This cannot be less than 0. If not provided, autoscaler will
+         * choose a default value depending on maximum number of instances
+         * allowed.
+         * 
+         */
     private final Integer minReplicas;
-    /**
-     * Defines operating mode for this policy.
-     * Default value is `ON`.
-     * Possible values are `OFF`, `ONLY_UP`, and `ON`.
-     * 
-     */
+        /**
+         * @return Defines operating mode for this policy.
+         * Default value is `ON`.
+         * Possible values are `OFF`, `ONLY_UP`, and `ON`.
+         * 
+         */
     private final @Nullable String mode;
-    /**
-     * Defines scale down controls to reduce the risk of response latency
-     * and outages due to abrupt scale-in events
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Defines scale down controls to reduce the risk of response latency
+         * and outages due to abrupt scale-in events
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable AutoscalerAutoscalingPolicyScaleDownControl scaleDownControl;
-    /**
-     * Defines scale in controls to reduce the risk of response latency
-     * and outages due to abrupt scale-in events
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Defines scale in controls to reduce the risk of response latency
+         * and outages due to abrupt scale-in events
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable AutoscalerAutoscalingPolicyScaleInControl scaleInControl;
-    /**
-     * Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler and they can overlap.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler and they can overlap.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<AutoscalerAutoscalingPolicyScalingSchedule> scalingSchedules;
 
     @CustomType.Constructor
@@ -121,7 +121,7 @@ public final class AutoscalerAutoscalingPolicy {
     }
 
     /**
-     * The number of seconds that the autoscaler should wait before it
+     * @return The number of seconds that the autoscaler should wait before it
      * starts collecting information from a new instance. This prevents
      * the autoscaler from collecting information when the instance is
      * initializing, during which the collected usage would not be
@@ -131,88 +131,88 @@ public final class AutoscalerAutoscalingPolicy {
      * instance may take to initialize. To do this, create an instance
      * and time the startup process.
      * 
-    */
+     */
     public Optional<Integer> cooldownPeriod() {
         return Optional.ofNullable(this.cooldownPeriod);
     }
     /**
-     * Defines the CPU utilization policy that allows the autoscaler to
+     * @return Defines the CPU utilization policy that allows the autoscaler to
      * scale based on the average CPU utilization of a managed instance
      * group.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<AutoscalerAutoscalingPolicyCpuUtilization> cpuUtilization() {
         return Optional.ofNullable(this.cpuUtilization);
     }
     /**
-     * Configuration parameters of autoscaling based on a load balancer.
+     * @return Configuration parameters of autoscaling based on a load balancer.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<AutoscalerAutoscalingPolicyLoadBalancingUtilization> loadBalancingUtilization() {
         return Optional.ofNullable(this.loadBalancingUtilization);
     }
     /**
-     * The maximum number of instances that the autoscaler can scale up
+     * @return The maximum number of instances that the autoscaler can scale up
      * to. This is required when creating or updating an autoscaler. The
      * maximum number of replicas should not be lower than minimal number
      * of replicas.
      * 
-    */
+     */
     public Integer maxReplicas() {
         return this.maxReplicas;
     }
     /**
-     * Configuration parameters of autoscaling based on a custom metric.
+     * @return Configuration parameters of autoscaling based on a custom metric.
      * Structure is documented below.
      * 
-    */
+     */
     public List<AutoscalerAutoscalingPolicyMetric> metrics() {
         return this.metrics == null ? List.of() : this.metrics;
     }
     /**
-     * The minimum number of replicas that the autoscaler can scale down
+     * @return The minimum number of replicas that the autoscaler can scale down
      * to. This cannot be less than 0. If not provided, autoscaler will
      * choose a default value depending on maximum number of instances
      * allowed.
      * 
-    */
+     */
     public Integer minReplicas() {
         return this.minReplicas;
     }
     /**
-     * Defines operating mode for this policy.
+     * @return Defines operating mode for this policy.
      * Default value is `ON`.
      * Possible values are `OFF`, `ONLY_UP`, and `ON`.
      * 
-    */
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
-     * Defines scale down controls to reduce the risk of response latency
+     * @return Defines scale down controls to reduce the risk of response latency
      * and outages due to abrupt scale-in events
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<AutoscalerAutoscalingPolicyScaleDownControl> scaleDownControl() {
         return Optional.ofNullable(this.scaleDownControl);
     }
     /**
-     * Defines scale in controls to reduce the risk of response latency
+     * @return Defines scale in controls to reduce the risk of response latency
      * and outages due to abrupt scale-in events
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<AutoscalerAutoscalingPolicyScaleInControl> scaleInControl() {
         return Optional.ofNullable(this.scaleInControl);
     }
     /**
-     * Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler and they can overlap.
+     * @return Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler and they can overlap.
      * Structure is documented below.
      * 
-    */
+     */
     public List<AutoscalerAutoscalingPolicyScalingSchedule> scalingSchedules() {
         return this.scalingSchedules == null ? List.of() : this.scalingSchedules;
     }

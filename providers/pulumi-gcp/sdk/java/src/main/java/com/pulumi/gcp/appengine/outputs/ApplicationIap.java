@@ -12,27 +12,27 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApplicationIap {
-    /**
-     * (Optional) Whether the serving infrastructure will authenticate and authorize all incoming requests.
-     * (default is false)
-     * 
-     */
+        /**
+         * @return (Optional) Whether the serving infrastructure will authenticate and authorize all incoming requests.
+         * (default is false)
+         * 
+         */
     private final @Nullable Boolean enabled;
-    /**
-     * OAuth2 client ID to use for the authentication flow.
-     * 
-     */
+        /**
+         * @return OAuth2 client ID to use for the authentication flow.
+         * 
+         */
     private final String oauth2ClientId;
-    /**
-     * OAuth2 client secret to use for the authentication flow.
-     * The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
-     * 
-     */
+        /**
+         * @return OAuth2 client secret to use for the authentication flow.
+         * The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
+         * 
+         */
     private final String oauth2ClientSecret;
-    /**
-     * Hex-encoded SHA-256 hash of the client secret.
-     * 
-     */
+        /**
+         * @return Hex-encoded SHA-256 hash of the client secret.
+         * 
+         */
     private final @Nullable String oauth2ClientSecretSha256;
 
     @CustomType.Constructor
@@ -48,32 +48,32 @@ public final class ApplicationIap {
     }
 
     /**
-     * (Optional) Whether the serving infrastructure will authenticate and authorize all incoming requests.
+     * @return (Optional) Whether the serving infrastructure will authenticate and authorize all incoming requests.
      * (default is false)
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * OAuth2 client ID to use for the authentication flow.
+     * @return OAuth2 client ID to use for the authentication flow.
      * 
-    */
+     */
     public String oauth2ClientId() {
         return this.oauth2ClientId;
     }
     /**
-     * OAuth2 client secret to use for the authentication flow.
+     * @return OAuth2 client secret to use for the authentication flow.
      * The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
      * 
-    */
+     */
     public String oauth2ClientSecret() {
         return this.oauth2ClientSecret;
     }
     /**
-     * Hex-encoded SHA-256 hash of the client secret.
+     * @return Hex-encoded SHA-256 hash of the client secret.
      * 
-    */
+     */
     public Optional<String> oauth2ClientSecretSha256() {
         return Optional.ofNullable(this.oauth2ClientSecretSha256);
     }

@@ -22,6 +22,10 @@ public final class SharedVPCServiceProjectState extends com.pulumi.resources.Res
     @Import(name="hostProject")
     private @Nullable Output<String> hostProject;
 
+    /**
+     * @return The ID of a host project to associate.
+     * 
+     */
     public Optional<Output<String>> hostProject() {
         return Optional.ofNullable(this.hostProject);
     }
@@ -33,6 +37,10 @@ public final class SharedVPCServiceProjectState extends com.pulumi.resources.Res
     @Import(name="serviceProject")
     private @Nullable Output<String> serviceProject;
 
+    /**
+     * @return The ID of the project that will serve as a Shared VPC service project.
+     * 
+     */
     public Optional<Output<String>> serviceProject() {
         return Optional.ofNullable(this.serviceProject);
     }
@@ -62,20 +70,44 @@ public final class SharedVPCServiceProjectState extends com.pulumi.resources.Res
             $ = new SharedVPCServiceProjectState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostProject The ID of a host project to associate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostProject(@Nullable Output<String> hostProject) {
             $.hostProject = hostProject;
             return this;
         }
 
+        /**
+         * @param hostProject The ID of a host project to associate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostProject(String hostProject) {
             return hostProject(Output.of(hostProject));
         }
 
+        /**
+         * @param serviceProject The ID of the project that will serve as a Shared VPC service project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceProject(@Nullable Output<String> serviceProject) {
             $.serviceProject = serviceProject;
             return this;
         }
 
+        /**
+         * @param serviceProject The ID of the project that will serve as a Shared VPC service project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceProject(String serviceProject) {
             return serviceProject(Output.of(serviceProject));
         }

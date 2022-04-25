@@ -12,28 +12,28 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ServiceTemplateSpecContainerEnv {
-    /**
-     * Volume&#39;s name.
-     * 
-     */
+        /**
+         * @return Volume&#39;s name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Variable references $(VAR_NAME) are expanded
-     * using the previous defined environment variables in the container and
-     * any route environment variables. If a variable cannot be resolved,
-     * the reference in the input string will be unchanged. The $(VAR_NAME)
-     * syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped
-     * references will never be expanded, regardless of whether the variable
-     * exists or not.
-     * Defaults to &#34;&#34;.
-     * 
-     */
+        /**
+         * @return Variable references $(VAR_NAME) are expanded
+         * using the previous defined environment variables in the container and
+         * any route environment variables. If a variable cannot be resolved,
+         * the reference in the input string will be unchanged. The $(VAR_NAME)
+         * syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped
+         * references will never be expanded, regardless of whether the variable
+         * exists or not.
+         * Defaults to &#34;&#34;.
+         * 
+         */
     private final @Nullable String value;
-    /**
-     * Source for the environment variable&#39;s value. Only supports secret_key_ref.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Source for the environment variable&#39;s value. Only supports secret_key_ref.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable ServiceTemplateSpecContainerEnvValueFrom valueFrom;
 
     @CustomType.Constructor
@@ -47,14 +47,14 @@ public final class ServiceTemplateSpecContainerEnv {
     }
 
     /**
-     * Volume&#39;s name.
+     * @return Volume&#39;s name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Variable references $(VAR_NAME) are expanded
+     * @return Variable references $(VAR_NAME) are expanded
      * using the previous defined environment variables in the container and
      * any route environment variables. If a variable cannot be resolved,
      * the reference in the input string will be unchanged. The $(VAR_NAME)
@@ -63,15 +63,15 @@ public final class ServiceTemplateSpecContainerEnv {
      * exists or not.
      * Defaults to &#34;&#34;.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
     /**
-     * Source for the environment variable&#39;s value. Only supports secret_key_ref.
+     * @return Source for the environment variable&#39;s value. Only supports secret_key_ref.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<ServiceTemplateSpecContainerEnvValueFrom> valueFrom() {
         return Optional.ofNullable(this.valueFrom);
     }

@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class ClusterNodeConfigTaint {
-    /**
-     * Effect for taint. Accepted values are `NO_SCHEDULE`, `PREFER_NO_SCHEDULE`, and `NO_EXECUTE`.
-     * 
-     */
+        /**
+         * @return Effect for taint. Accepted values are `NO_SCHEDULE`, `PREFER_NO_SCHEDULE`, and `NO_EXECUTE`.
+         * 
+         */
     private final String effect;
-    /**
-     * Key for taint.
-     * 
-     */
+        /**
+         * @return Key for taint.
+         * 
+         */
     private final String key;
-    /**
-     * Value for taint.
-     * 
-     */
+        /**
+         * @return Value for taint.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class ClusterNodeConfigTaint {
     }
 
     /**
-     * Effect for taint. Accepted values are `NO_SCHEDULE`, `PREFER_NO_SCHEDULE`, and `NO_EXECUTE`.
+     * @return Effect for taint. Accepted values are `NO_SCHEDULE`, `PREFER_NO_SCHEDULE`, and `NO_EXECUTE`.
      * 
-    */
+     */
     public String effect() {
         return this.effect;
     }
     /**
-     * Key for taint.
+     * @return Key for taint.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Value for taint.
+     * @return Value for taint.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

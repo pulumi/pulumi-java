@@ -13,46 +13,46 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy {
-    /**
-     * In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
-     * This translates to the Access-Control-Allow-Credentials response header.
-     * 
-     */
+        /**
+         * @return In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+         * This translates to the Access-Control-Allow-Credentials response header.
+         * 
+         */
     private final @Nullable Boolean allowCredentials;
-    /**
-     * Specifies the content for the Access-Control-Allow-Headers response header.
-     * 
-     */
+        /**
+         * @return Specifies the content for the Access-Control-Allow-Headers response header.
+         * 
+         */
     private final @Nullable List<String> allowHeaders;
-    /**
-     * Specifies the content for the Access-Control-Allow-Methods response header.
-     * 
-     */
+        /**
+         * @return Specifies the content for the Access-Control-Allow-Methods response header.
+         * 
+         */
     private final @Nullable List<String> allowMethods;
-    /**
-     * Specifies the list of origins that will be allowed to do CORS requests.
-     * This translates to the Access-Control-Allow-Origin response header.
-     * 
-     */
+        /**
+         * @return Specifies the list of origins that will be allowed to do CORS requests.
+         * This translates to the Access-Control-Allow-Origin response header.
+         * 
+         */
     private final @Nullable List<String> allowOrigins;
-    /**
-     * If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
-     * 
-     */
+        /**
+         * @return If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
+         * 
+         */
     private final @Nullable Boolean disabled;
-    /**
-     * Specifies the content for the Access-Control-Allow-Headers response header.
-     * 
-     */
+        /**
+         * @return Specifies the content for the Access-Control-Allow-Headers response header.
+         * 
+         */
     private final @Nullable List<String> exposeHeaders;
-    /**
-     * Specifies how long results of a preflight request can be cached by a client in seconds. Note that many browser clients enforce a maximum TTL of 600s (10 minutes).
-     * - Setting the value to -1 forces a pre-flight check for all requests (not recommended)
-     * - A maximum TTL of 86400s can be set, but note that (as above) some clients may force pre-flight checks at a more regular interval.
-     * - This translates to the Access-Control-Max-Age header.
-     *   A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
-     * 
-     */
+        /**
+         * @return Specifies how long results of a preflight request can be cached by a client in seconds. Note that many browser clients enforce a maximum TTL of 600s (10 minutes).
+         * - Setting the value to -1 forces a pre-flight check for all requests (not recommended)
+         * - A maximum TTL of 86400s can be set, but note that (as above) some clients may force pre-flight checks at a more regular interval.
+         * - This translates to the Access-Control-Max-Age header.
+         *   A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         */
     private final String maxAge;
 
     @CustomType.Constructor
@@ -74,57 +74,57 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
     }
 
     /**
-     * In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+     * @return In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
      * This translates to the Access-Control-Allow-Credentials response header.
      * 
-    */
+     */
     public Optional<Boolean> allowCredentials() {
         return Optional.ofNullable(this.allowCredentials);
     }
     /**
-     * Specifies the content for the Access-Control-Allow-Headers response header.
+     * @return Specifies the content for the Access-Control-Allow-Headers response header.
      * 
-    */
+     */
     public List<String> allowHeaders() {
         return this.allowHeaders == null ? List.of() : this.allowHeaders;
     }
     /**
-     * Specifies the content for the Access-Control-Allow-Methods response header.
+     * @return Specifies the content for the Access-Control-Allow-Methods response header.
      * 
-    */
+     */
     public List<String> allowMethods() {
         return this.allowMethods == null ? List.of() : this.allowMethods;
     }
     /**
-     * Specifies the list of origins that will be allowed to do CORS requests.
+     * @return Specifies the list of origins that will be allowed to do CORS requests.
      * This translates to the Access-Control-Allow-Origin response header.
      * 
-    */
+     */
     public List<String> allowOrigins() {
         return this.allowOrigins == null ? List.of() : this.allowOrigins;
     }
     /**
-     * If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
+     * @return If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
      * 
-    */
+     */
     public Optional<Boolean> disabled() {
         return Optional.ofNullable(this.disabled);
     }
     /**
-     * Specifies the content for the Access-Control-Allow-Headers response header.
+     * @return Specifies the content for the Access-Control-Allow-Headers response header.
      * 
-    */
+     */
     public List<String> exposeHeaders() {
         return this.exposeHeaders == null ? List.of() : this.exposeHeaders;
     }
     /**
-     * Specifies how long results of a preflight request can be cached by a client in seconds. Note that many browser clients enforce a maximum TTL of 600s (10 minutes).
+     * @return Specifies how long results of a preflight request can be cached by a client in seconds. Note that many browser clients enforce a maximum TTL of 600s (10 minutes).
      * - Setting the value to -1 forces a pre-flight check for all requests (not recommended)
      * - A maximum TTL of 86400s can be set, but note that (as above) some clients may force pre-flight checks at a more regular interval.
      * - This translates to the Access-Control-Max-Age header.
      *   A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
-    */
+     */
     public String maxAge() {
         return this.maxAge;
     }

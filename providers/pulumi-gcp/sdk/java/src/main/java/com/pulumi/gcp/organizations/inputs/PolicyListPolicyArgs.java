@@ -25,6 +25,10 @@ public final class PolicyListPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="allow")
     private @Nullable Output<PolicyListPolicyAllowArgs> allow;
 
+    /**
+     * @return or `deny` - (Optional) One or the other must be set.
+     * 
+     */
     public Optional<Output<PolicyListPolicyAllowArgs>> allow() {
         return Optional.ofNullable(this.allow);
     }
@@ -44,6 +48,11 @@ public final class PolicyListPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="inheritFromParent")
     private @Nullable Output<Boolean> inheritFromParent;
 
+    /**
+     * @return If set to true, the values from the effective Policy of the parent resource
+     * are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
+     * 
+     */
     public Optional<Output<Boolean>> inheritFromParent() {
         return Optional.ofNullable(this.inheritFromParent);
     }
@@ -55,6 +64,10 @@ public final class PolicyListPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="suggestedValue")
     private @Nullable Output<String> suggestedValue;
 
+    /**
+     * @return The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
+     * 
+     */
     public Optional<Output<String>> suggestedValue() {
         return Optional.ofNullable(this.suggestedValue);
     }
@@ -86,11 +99,23 @@ public final class PolicyListPolicyArgs extends com.pulumi.resources.ResourceArg
             $ = new PolicyListPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allow or `deny` - (Optional) One or the other must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allow(@Nullable Output<PolicyListPolicyAllowArgs> allow) {
             $.allow = allow;
             return this;
         }
 
+        /**
+         * @param allow or `deny` - (Optional) One or the other must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allow(PolicyListPolicyAllowArgs allow) {
             return allow(Output.of(allow));
         }
@@ -104,20 +129,46 @@ public final class PolicyListPolicyArgs extends com.pulumi.resources.ResourceArg
             return deny(Output.of(deny));
         }
 
+        /**
+         * @param inheritFromParent If set to true, the values from the effective Policy of the parent resource
+         * are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inheritFromParent(@Nullable Output<Boolean> inheritFromParent) {
             $.inheritFromParent = inheritFromParent;
             return this;
         }
 
+        /**
+         * @param inheritFromParent If set to true, the values from the effective Policy of the parent resource
+         * are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inheritFromParent(Boolean inheritFromParent) {
             return inheritFromParent(Output.of(inheritFromParent));
         }
 
+        /**
+         * @param suggestedValue The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suggestedValue(@Nullable Output<String> suggestedValue) {
             $.suggestedValue = suggestedValue;
             return this;
         }
 
+        /**
+         * @param suggestedValue The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suggestedValue(String suggestedValue) {
             return suggestedValue(Output.of(suggestedValue));
         }

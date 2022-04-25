@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GetGlobalForwardingRuleMetadataFilterFilterLabel {
-    /**
-     * The name of the global forwarding rule.
-     * 
-     */
+        /**
+         * @return The name of the global forwarding rule.
+         * 
+         */
     private final String name;
     private final String value;
 
@@ -25,9 +25,9 @@ public final class GetGlobalForwardingRuleMetadataFilterFilterLabel {
     }
 
     /**
-     * The name of the global forwarding rule.
+     * @return The name of the global forwarding rule.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

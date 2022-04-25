@@ -16,77 +16,77 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class InstanceTemplateNetworkInterface {
-    /**
-     * Access configurations, i.e. IPs via which this
-     * instance can be accessed via the Internet. Omit to ensure that the instance
-     * is not accessible from the Internet (this means that ssh provisioners will
-     * not work unless you can send traffic to the instance&#39;s
-     * network (e.g. via tunnel or because it is running on another cloud instance
-     * on that network). This block can be repeated multiple times. Structure documented below.
-     * 
-     */
+        /**
+         * @return Access configurations, i.e. IPs via which this
+         * instance can be accessed via the Internet. Omit to ensure that the instance
+         * is not accessible from the Internet (this means that ssh provisioners will
+         * not work unless you can send traffic to the instance&#39;s
+         * network (e.g. via tunnel or because it is running on another cloud instance
+         * on that network). This block can be repeated multiple times. Structure documented below.
+         * 
+         */
     private final @Nullable List<InstanceTemplateNetworkInterfaceAccessConfig> accessConfigs;
-    /**
-     * An
-     * array of alias IP ranges for this network interface. Can only be specified for network
-     * interfaces on subnet-mode networks. Structure documented below.
-     * 
-     */
+        /**
+         * @return An
+         * array of alias IP ranges for this network interface. Can only be specified for network
+         * interfaces on subnet-mode networks. Structure documented below.
+         * 
+         */
     private final @Nullable List<InstanceTemplateNetworkInterfaceAliasIpRange> aliasIpRanges;
-    /**
-     * An array of IPv6 access configurations for this interface.
-     * Currently, only one IPv6 access config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig
-     * specified, then this instance will have no external IPv6 Internet access. Structure documented below.
-     * 
-     */
+        /**
+         * @return An array of IPv6 access configurations for this interface.
+         * Currently, only one IPv6 access config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig
+         * specified, then this instance will have no external IPv6 Internet access. Structure documented below.
+         * 
+         */
     private final @Nullable List<InstanceTemplateNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs;
     private final @Nullable String ipv6AccessType;
-    /**
-     * The name of the instance template. If you leave
-     * this blank, the provider will auto-generate a unique name.
-     * 
-     */
+        /**
+         * @return The name of the instance template. If you leave
+         * this blank, the provider will auto-generate a unique name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The name or self_link of the network to attach this interface to.
-     * Use `network` attribute for Legacy or Auto subnetted networks and
-     * `subnetwork` for custom subnetted networks.
-     * 
-     */
+        /**
+         * @return The name or self_link of the network to attach this interface to.
+         * Use `network` attribute for Legacy or Auto subnetted networks and
+         * `subnetwork` for custom subnetted networks.
+         * 
+         */
     private final @Nullable String network;
-    /**
-     * The private IP address to assign to the instance. If
-     * empty, the address will be automatically assigned.
-     * 
-     */
+        /**
+         * @return The private IP address to assign to the instance. If
+         * empty, the address will be automatically assigned.
+         * 
+         */
     private final @Nullable String networkIp;
-    /**
-     * The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.
-     * 
-     */
+        /**
+         * @return The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.
+         * 
+         */
     private final @Nullable String nicType;
-    /**
-     * The networking queue count that&#39;s specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
-     * 
-     */
+        /**
+         * @return The networking queue count that&#39;s specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
+         * 
+         */
     private final @Nullable Integer queueCount;
-    /**
-     * The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6 or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
-     * 
-     */
+        /**
+         * @return The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6 or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
+         * 
+         */
     private final @Nullable String stackType;
-    /**
-     * the name of the subnetwork to attach this interface
-     * to. The subnetwork must exist in the same `region` this instance will be
-     * created in. Either `network` or `subnetwork` must be provided.
-     * 
-     */
+        /**
+         * @return the name of the subnetwork to attach this interface
+         * to. The subnetwork must exist in the same `region` this instance will be
+         * created in. Either `network` or `subnetwork` must be provided.
+         * 
+         */
     private final @Nullable String subnetwork;
-    /**
-     * The ID of the project in which the subnetwork belongs.
-     * If it is not provided, the provider project is used.
-     * 
-     */
+        /**
+         * @return The ID of the project in which the subnetwork belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         */
     private final @Nullable String subnetworkProject;
 
     @CustomType.Constructor
@@ -118,32 +118,32 @@ public final class InstanceTemplateNetworkInterface {
     }
 
     /**
-     * Access configurations, i.e. IPs via which this
+     * @return Access configurations, i.e. IPs via which this
      * instance can be accessed via the Internet. Omit to ensure that the instance
      * is not accessible from the Internet (this means that ssh provisioners will
      * not work unless you can send traffic to the instance&#39;s
      * network (e.g. via tunnel or because it is running on another cloud instance
      * on that network). This block can be repeated multiple times. Structure documented below.
      * 
-    */
+     */
     public List<InstanceTemplateNetworkInterfaceAccessConfig> accessConfigs() {
         return this.accessConfigs == null ? List.of() : this.accessConfigs;
     }
     /**
-     * An
+     * @return An
      * array of alias IP ranges for this network interface. Can only be specified for network
      * interfaces on subnet-mode networks. Structure documented below.
      * 
-    */
+     */
     public List<InstanceTemplateNetworkInterfaceAliasIpRange> aliasIpRanges() {
         return this.aliasIpRanges == null ? List.of() : this.aliasIpRanges;
     }
     /**
-     * An array of IPv6 access configurations for this interface.
+     * @return An array of IPv6 access configurations for this interface.
      * Currently, only one IPv6 access config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig
      * specified, then this instance will have no external IPv6 Internet access. Structure documented below.
      * 
-    */
+     */
     public List<InstanceTemplateNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs() {
         return this.ipv6AccessConfigs == null ? List.of() : this.ipv6AccessConfigs;
     }
@@ -151,65 +151,65 @@ public final class InstanceTemplateNetworkInterface {
         return Optional.ofNullable(this.ipv6AccessType);
     }
     /**
-     * The name of the instance template. If you leave
+     * @return The name of the instance template. If you leave
      * this blank, the provider will auto-generate a unique name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The name or self_link of the network to attach this interface to.
+     * @return The name or self_link of the network to attach this interface to.
      * Use `network` attribute for Legacy or Auto subnetted networks and
      * `subnetwork` for custom subnetted networks.
      * 
-    */
+     */
     public Optional<String> network() {
         return Optional.ofNullable(this.network);
     }
     /**
-     * The private IP address to assign to the instance. If
+     * @return The private IP address to assign to the instance. If
      * empty, the address will be automatically assigned.
      * 
-    */
+     */
     public Optional<String> networkIp() {
         return Optional.ofNullable(this.networkIp);
     }
     /**
-     * The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.
+     * @return The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.
      * 
-    */
+     */
     public Optional<String> nicType() {
         return Optional.ofNullable(this.nicType);
     }
     /**
-     * The networking queue count that&#39;s specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
+     * @return The networking queue count that&#39;s specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
      * 
-    */
+     */
     public Optional<Integer> queueCount() {
         return Optional.ofNullable(this.queueCount);
     }
     /**
-     * The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6 or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
+     * @return The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6 or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
      * 
-    */
+     */
     public Optional<String> stackType() {
         return Optional.ofNullable(this.stackType);
     }
     /**
-     * the name of the subnetwork to attach this interface
+     * @return the name of the subnetwork to attach this interface
      * to. The subnetwork must exist in the same `region` this instance will be
      * created in. Either `network` or `subnetwork` must be provided.
      * 
-    */
+     */
     public Optional<String> subnetwork() {
         return Optional.ofNullable(this.subnetwork);
     }
     /**
-     * The ID of the project in which the subnetwork belongs.
+     * @return The ID of the project in which the subnetwork belongs.
      * If it is not provided, the provider project is used.
      * 
-    */
+     */
     public Optional<String> subnetworkProject() {
         return Optional.ofNullable(this.subnetworkProject);
     }

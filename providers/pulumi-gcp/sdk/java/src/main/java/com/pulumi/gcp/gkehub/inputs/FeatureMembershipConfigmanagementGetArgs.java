@@ -26,6 +26,10 @@ public final class FeatureMembershipConfigmanagementGetArgs extends com.pulumi.r
     @Import(name="binauthz")
     private @Nullable Output<FeatureMembershipConfigmanagementBinauthzGetArgs> binauthz;
 
+    /**
+     * @return Binauthz configuration for the cluster. Structure is documented below.
+     * 
+     */
     public Optional<Output<FeatureMembershipConfigmanagementBinauthzGetArgs>> binauthz() {
         return Optional.ofNullable(this.binauthz);
     }
@@ -37,6 +41,10 @@ public final class FeatureMembershipConfigmanagementGetArgs extends com.pulumi.r
     @Import(name="configSync")
     private @Nullable Output<FeatureMembershipConfigmanagementConfigSyncGetArgs> configSync;
 
+    /**
+     * @return Config Sync configuration for the cluster. Structure is documented below.
+     * 
+     */
     public Optional<Output<FeatureMembershipConfigmanagementConfigSyncGetArgs>> configSync() {
         return Optional.ofNullable(this.configSync);
     }
@@ -48,6 +56,10 @@ public final class FeatureMembershipConfigmanagementGetArgs extends com.pulumi.r
     @Import(name="hierarchyController")
     private @Nullable Output<FeatureMembershipConfigmanagementHierarchyControllerGetArgs> hierarchyController;
 
+    /**
+     * @return Hierarchy Controller configuration for the cluster. Structure is documented below.
+     * 
+     */
     public Optional<Output<FeatureMembershipConfigmanagementHierarchyControllerGetArgs>> hierarchyController() {
         return Optional.ofNullable(this.hierarchyController);
     }
@@ -59,6 +71,10 @@ public final class FeatureMembershipConfigmanagementGetArgs extends com.pulumi.r
     @Import(name="policyController")
     private @Nullable Output<FeatureMembershipConfigmanagementPolicyControllerGetArgs> policyController;
 
+    /**
+     * @return Policy Controller configuration for the cluster. Structure is documented below.
+     * 
+     */
     public Optional<Output<FeatureMembershipConfigmanagementPolicyControllerGetArgs>> policyController() {
         return Optional.ofNullable(this.policyController);
     }
@@ -70,6 +86,10 @@ public final class FeatureMembershipConfigmanagementGetArgs extends com.pulumi.r
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return Version of ACM installed.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -102,47 +122,107 @@ public final class FeatureMembershipConfigmanagementGetArgs extends com.pulumi.r
             $ = new FeatureMembershipConfigmanagementGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param binauthz Binauthz configuration for the cluster. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder binauthz(@Nullable Output<FeatureMembershipConfigmanagementBinauthzGetArgs> binauthz) {
             $.binauthz = binauthz;
             return this;
         }
 
+        /**
+         * @param binauthz Binauthz configuration for the cluster. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder binauthz(FeatureMembershipConfigmanagementBinauthzGetArgs binauthz) {
             return binauthz(Output.of(binauthz));
         }
 
+        /**
+         * @param configSync Config Sync configuration for the cluster. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configSync(@Nullable Output<FeatureMembershipConfigmanagementConfigSyncGetArgs> configSync) {
             $.configSync = configSync;
             return this;
         }
 
+        /**
+         * @param configSync Config Sync configuration for the cluster. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configSync(FeatureMembershipConfigmanagementConfigSyncGetArgs configSync) {
             return configSync(Output.of(configSync));
         }
 
+        /**
+         * @param hierarchyController Hierarchy Controller configuration for the cluster. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hierarchyController(@Nullable Output<FeatureMembershipConfigmanagementHierarchyControllerGetArgs> hierarchyController) {
             $.hierarchyController = hierarchyController;
             return this;
         }
 
+        /**
+         * @param hierarchyController Hierarchy Controller configuration for the cluster. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hierarchyController(FeatureMembershipConfigmanagementHierarchyControllerGetArgs hierarchyController) {
             return hierarchyController(Output.of(hierarchyController));
         }
 
+        /**
+         * @param policyController Policy Controller configuration for the cluster. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyController(@Nullable Output<FeatureMembershipConfigmanagementPolicyControllerGetArgs> policyController) {
             $.policyController = policyController;
             return this;
         }
 
+        /**
+         * @param policyController Policy Controller configuration for the cluster. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyController(FeatureMembershipConfigmanagementPolicyControllerGetArgs policyController) {
             return policyController(Output.of(policyController));
         }
 
+        /**
+         * @param version Version of ACM installed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Version of ACM installed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

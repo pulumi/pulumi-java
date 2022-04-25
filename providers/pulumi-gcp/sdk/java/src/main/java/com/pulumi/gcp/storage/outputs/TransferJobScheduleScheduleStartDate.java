@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class TransferJobScheduleScheduleStartDate {
-    /**
-     * Day of month. Must be from 1 to 31 and valid for the year and month.
-     * 
-     */
+        /**
+         * @return Day of month. Must be from 1 to 31 and valid for the year and month.
+         * 
+         */
     private final Integer day;
-    /**
-     * Month of year. Must be from 1 to 12.
-     * 
-     */
+        /**
+         * @return Month of year. Must be from 1 to 12.
+         * 
+         */
     private final Integer month;
-    /**
-     * Year of date. Must be from 1 to 9999.
-     * 
-     */
+        /**
+         * @return Year of date. Must be from 1 to 9999.
+         * 
+         */
     private final Integer year;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class TransferJobScheduleScheduleStartDate {
     }
 
     /**
-     * Day of month. Must be from 1 to 31 and valid for the year and month.
+     * @return Day of month. Must be from 1 to 31 and valid for the year and month.
      * 
-    */
+     */
     public Integer day() {
         return this.day;
     }
     /**
-     * Month of year. Must be from 1 to 12.
+     * @return Month of year. Must be from 1 to 12.
      * 
-    */
+     */
     public Integer month() {
         return this.month;
     }
     /**
-     * Year of date. Must be from 1 to 9999.
+     * @return Year of date. Must be from 1 to 9999.
      * 
-    */
+     */
     public Integer year() {
         return this.year;
     }

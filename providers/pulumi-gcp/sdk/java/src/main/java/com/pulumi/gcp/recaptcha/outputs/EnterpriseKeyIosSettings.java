@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EnterpriseKeyIosSettings {
-    /**
-     * If set to true, it means allowed_bundle_ids will not be enforced.
-     * 
-     */
+        /**
+         * @return If set to true, it means allowed_bundle_ids will not be enforced.
+         * 
+         */
     private final @Nullable Boolean allowAllBundleIds;
-    /**
-     * iOS bundle ids of apps allowed to use the key. Example: &#39;com.companyname.productname.appname&#39;
-     * 
-     */
+        /**
+         * @return iOS bundle ids of apps allowed to use the key. Example: &#39;com.companyname.productname.appname&#39;
+         * 
+         */
     private final @Nullable List<String> allowedBundleIds;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class EnterpriseKeyIosSettings {
     }
 
     /**
-     * If set to true, it means allowed_bundle_ids will not be enforced.
+     * @return If set to true, it means allowed_bundle_ids will not be enforced.
      * 
-    */
+     */
     public Optional<Boolean> allowAllBundleIds() {
         return Optional.ofNullable(this.allowAllBundleIds);
     }
     /**
-     * iOS bundle ids of apps allowed to use the key. Example: &#39;com.companyname.productname.appname&#39;
+     * @return iOS bundle ids of apps allowed to use the key. Example: &#39;com.companyname.productname.appname&#39;
      * 
-    */
+     */
     public List<String> allowedBundleIds() {
         return this.allowedBundleIds == null ? List.of() : this.allowedBundleIds;
     }

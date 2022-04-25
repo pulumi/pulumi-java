@@ -20,6 +20,11 @@ public final class GetInstanceNetworkInterfaceAccessConfig extends com.pulumi.re
     @Import(name="natIp", required=true)
     private String natIp;
 
+    /**
+     * @return The IP address that is be 1:1 mapped to the instance&#39;s
+     * network ip.
+     * 
+     */
     public String natIp() {
         return this.natIp;
     }
@@ -31,6 +36,10 @@ public final class GetInstanceNetworkInterfaceAccessConfig extends com.pulumi.re
     @Import(name="networkTier", required=true)
     private String networkTier;
 
+    /**
+     * @return The [networking tier][network-tier] used for configuring this instance. One of `PREMIUM` or `STANDARD`.
+     * 
+     */
     public String networkTier() {
         return this.networkTier;
     }
@@ -42,6 +51,10 @@ public final class GetInstanceNetworkInterfaceAccessConfig extends com.pulumi.re
     @Import(name="publicPtrDomainName", required=true)
     private String publicPtrDomainName;
 
+    /**
+     * @return The DNS domain name for the public PTR record.
+     * 
+     */
     public String publicPtrDomainName() {
         return this.publicPtrDomainName;
     }
@@ -72,16 +85,35 @@ public final class GetInstanceNetworkInterfaceAccessConfig extends com.pulumi.re
             $ = new GetInstanceNetworkInterfaceAccessConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param natIp The IP address that is be 1:1 mapped to the instance&#39;s
+         * network ip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natIp(String natIp) {
             $.natIp = natIp;
             return this;
         }
 
+        /**
+         * @param networkTier The [networking tier][network-tier] used for configuring this instance. One of `PREMIUM` or `STANDARD`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkTier(String networkTier) {
             $.networkTier = networkTier;
             return this;
         }
 
+        /**
+         * @param publicPtrDomainName The DNS domain name for the public PTR record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicPtrDomainName(String publicPtrDomainName) {
             $.publicPtrDomainName = publicPtrDomainName;
             return this;

@@ -9,11 +9,11 @@ import java.util.Objects;
 
 @CustomType
 public final class FirewallLogConfig {
-    /**
-     * This field denotes whether to include or exclude metadata for firewall logs.
-     * Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
-     * 
-     */
+        /**
+         * @return This field denotes whether to include or exclude metadata for firewall logs.
+         * Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
+         * 
+         */
     private final String metadata;
 
     @CustomType.Constructor
@@ -22,10 +22,10 @@ public final class FirewallLogConfig {
     }
 
     /**
-     * This field denotes whether to include or exclude metadata for firewall logs.
+     * @return This field denotes whether to include or exclude metadata for firewall logs.
      * Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
      * 
-    */
+     */
     public String metadata() {
         return this.metadata;
     }

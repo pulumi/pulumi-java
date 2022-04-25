@@ -26,6 +26,13 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
     private @Nullable Output<Map<String,String>> metadata;
 
+    /**
+     * @return Metadata for the service. This data can be consumed
+     * by service clients. The entire metadata dictionary may contain
+     * up to 2000 characters, spread across all key-value pairs.
+     * Metadata that goes beyond any these limits will be rejected.
+     * 
+     */
     public Optional<Output<Map<String,String>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -37,6 +44,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name for the service in the format &#39;projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*&#39;.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +59,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="namespace")
     private @Nullable Output<String> namespace;
 
+    /**
+     * @return The resource name of the namespace this service will belong to.
+     * 
+     */
     public Optional<Output<String>> namespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -60,6 +75,11 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceId")
     private @Nullable Output<String> serviceId;
 
+    /**
+     * @return The Resource ID must be 1-63 characters long, including digits,
+     * lowercase letters or the hyphen character.
+     * 
+     */
     public Optional<Output<String>> serviceId() {
         return Optional.ofNullable(this.serviceId);
     }
@@ -91,38 +111,94 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
             $ = new ServiceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metadata Metadata for the service. This data can be consumed
+         * by service clients. The entire metadata dictionary may contain
+         * up to 2000 characters, spread across all key-value pairs.
+         * Metadata that goes beyond any these limits will be rejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata Metadata for the service. This data can be consumed
+         * by service clients. The entire metadata dictionary may contain
+         * up to 2000 characters, spread across all key-value pairs.
+         * Metadata that goes beyond any these limits will be rejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param name The resource name for the service in the format &#39;projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name for the service in the format &#39;projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namespace The resource name of the namespace this service will belong to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(@Nullable Output<String> namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param namespace The resource name of the namespace this service will belong to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             return namespace(Output.of(namespace));
         }
 
+        /**
+         * @param serviceId The Resource ID must be 1-63 characters long, including digits,
+         * lowercase letters or the hyphen character.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceId(@Nullable Output<String> serviceId) {
             $.serviceId = serviceId;
             return this;
         }
 
+        /**
+         * @param serviceId The Resource ID must be 1-63 characters long, including digits,
+         * lowercase letters or the hyphen character.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceId(String serviceId) {
             return serviceId(Output.of(serviceId));
         }

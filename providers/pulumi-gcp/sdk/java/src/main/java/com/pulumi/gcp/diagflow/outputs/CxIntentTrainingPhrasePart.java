@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CxIntentTrainingPhrasePart {
-    /**
-     * The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.
-     * 
-     */
+        /**
+         * @return The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.
+         * 
+         */
     private final @Nullable String parameterId;
-    /**
-     * The text for this part.
-     * 
-     */
+        /**
+         * @return The text for this part.
+         * 
+         */
     private final String text;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class CxIntentTrainingPhrasePart {
     }
 
     /**
-     * The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.
+     * @return The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.
      * 
-    */
+     */
     public Optional<String> parameterId() {
         return Optional.ofNullable(this.parameterId);
     }
     /**
-     * The text for this part.
+     * @return The text for this part.
      * 
-    */
+     */
     public String text() {
         return this.text;
     }

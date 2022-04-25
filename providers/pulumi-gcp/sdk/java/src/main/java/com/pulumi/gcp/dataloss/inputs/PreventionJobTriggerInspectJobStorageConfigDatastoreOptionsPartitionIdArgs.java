@@ -22,6 +22,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
     @Import(name="namespaceId")
     private @Nullable Output<String> namespaceId;
 
+    /**
+     * @return If not empty, the ID of the namespace to which the entities belong.
+     * 
+     */
     public Optional<Output<String>> namespaceId() {
         return Optional.ofNullable(this.namespaceId);
     }
@@ -33,6 +37,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
     @Import(name="projectId", required=true)
     private Output<String> projectId;
 
+    /**
+     * @return The Google Cloud Platform project ID of the project containing the table.
+     * 
+     */
     public Output<String> projectId() {
         return this.projectId;
     }
@@ -62,20 +70,44 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
             $ = new PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param namespaceId If not empty, the ID of the namespace to which the entities belong.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceId(@Nullable Output<String> namespaceId) {
             $.namespaceId = namespaceId;
             return this;
         }
 
+        /**
+         * @param namespaceId If not empty, the ID of the namespace to which the entities belong.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceId(String namespaceId) {
             return namespaceId(Output.of(namespaceId));
         }
 
+        /**
+         * @param projectId The Google Cloud Platform project ID of the project containing the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(Output<String> projectId) {
             $.projectId = projectId;
             return this;
         }
 
+        /**
+         * @param projectId The Google Cloud Platform project ID of the project containing the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(String projectId) {
             return projectId(Output.of(projectId));
         }

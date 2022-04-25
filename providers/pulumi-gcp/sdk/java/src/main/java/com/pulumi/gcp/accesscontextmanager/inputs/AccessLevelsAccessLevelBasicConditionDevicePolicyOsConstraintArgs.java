@@ -24,6 +24,12 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraint
     @Import(name="minimumVersion")
     private @Nullable Output<String> minimumVersion;
 
+    /**
+     * @return The minimum allowed OS version. If not set, any version
+     * of this OS satisfies the constraint.
+     * Format: &#34;major.minor.patch&#34; such as &#34;10.5.301&#34;, &#34;9.2.1&#34;.
+     * 
+     */
     public Optional<Output<String>> minimumVersion() {
         return Optional.ofNullable(this.minimumVersion);
     }
@@ -36,6 +42,11 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraint
     @Import(name="osType", required=true)
     private Output<String> osType;
 
+    /**
+     * @return The operating system type of the device.
+     * Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP_LINUX`, `DESKTOP_CHROME_OS`, `ANDROID`, and `IOS`.
+     * 
+     */
     public Output<String> osType() {
         return this.osType;
     }
@@ -65,20 +76,50 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraint
             $ = new AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraintArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param minimumVersion The minimum allowed OS version. If not set, any version
+         * of this OS satisfies the constraint.
+         * Format: &#34;major.minor.patch&#34; such as &#34;10.5.301&#34;, &#34;9.2.1&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumVersion(@Nullable Output<String> minimumVersion) {
             $.minimumVersion = minimumVersion;
             return this;
         }
 
+        /**
+         * @param minimumVersion The minimum allowed OS version. If not set, any version
+         * of this OS satisfies the constraint.
+         * Format: &#34;major.minor.patch&#34; such as &#34;10.5.301&#34;, &#34;9.2.1&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumVersion(String minimumVersion) {
             return minimumVersion(Output.of(minimumVersion));
         }
 
+        /**
+         * @param osType The operating system type of the device.
+         * Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP_LINUX`, `DESKTOP_CHROME_OS`, `ANDROID`, and `IOS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(Output<String> osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param osType The operating system type of the device.
+         * Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP_LINUX`, `DESKTOP_CHROME_OS`, `ANDROID`, and `IOS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(String osType) {
             return osType(Output.of(osType));
         }

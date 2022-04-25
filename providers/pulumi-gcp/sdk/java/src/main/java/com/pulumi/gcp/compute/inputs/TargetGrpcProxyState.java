@@ -23,6 +23,10 @@ public final class TargetGrpcProxyState extends com.pulumi.resources.ResourceArg
     @Import(name="creationTimestamp")
     private @Nullable Output<String> creationTimestamp;
 
+    /**
+     * @return Creation timestamp in RFC3339 text format.
+     * 
+     */
     public Optional<Output<String>> creationTimestamp() {
         return Optional.ofNullable(this.creationTimestamp);
     }
@@ -34,6 +38,10 @@ public final class TargetGrpcProxyState extends com.pulumi.resources.ResourceArg
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -48,6 +56,13 @@ public final class TargetGrpcProxyState extends com.pulumi.resources.ResourceArg
     @Import(name="fingerprint")
     private @Nullable Output<String> fingerprint;
 
+    /**
+     * @return Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
+     * This field will be ignored when inserting a TargetGrpcProxy. An up-to-date fingerprint must be provided in order to
+     * patch/update the TargetGrpcProxy; otherwise, the request will fail with error 412 conditionNotMet. To see the latest
+     * fingerprint, make a get() request to retrieve the TargetGrpcProxy. A base64-encoded string.
+     * 
+     */
     public Optional<Output<String>> fingerprint() {
         return Optional.ofNullable(this.fingerprint);
     }
@@ -65,6 +80,16 @@ public final class TargetGrpcProxyState extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource
+     * is created. The name must be 1-63 characters long, and comply
+     * with RFC1035. Specifically, the name must be 1-63 characters long
+     * and match the regular expression `a-z?` which
+     * means the first character must be a lowercase letter, and all
+     * following characters must be a dash, lowercase letter, or digit,
+     * except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -77,6 +102,11 @@ public final class TargetGrpcProxyState extends com.pulumi.resources.ResourceArg
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -88,6 +118,10 @@ public final class TargetGrpcProxyState extends com.pulumi.resources.ResourceArg
     @Import(name="selfLink")
     private @Nullable Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Optional<Output<String>> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -99,6 +133,10 @@ public final class TargetGrpcProxyState extends com.pulumi.resources.ResourceArg
     @Import(name="selfLinkWithId")
     private @Nullable Output<String> selfLinkWithId;
 
+    /**
+     * @return Server-defined URL with id for the resource.
+     * 
+     */
     public Optional<Output<String>> selfLinkWithId() {
         return Optional.ofNullable(this.selfLinkWithId);
     }
@@ -112,6 +150,12 @@ public final class TargetGrpcProxyState extends com.pulumi.resources.ResourceArg
     @Import(name="urlMap")
     private @Nullable Output<String> urlMap;
 
+    /**
+     * @return URL to the UrlMap resource that defines the mapping from URL to
+     * the BackendService. The protocol field in the BackendService
+     * must be set to GRPC.
+     * 
+     */
     public Optional<Output<String>> urlMap() {
         return Optional.ofNullable(this.urlMap);
     }
@@ -132,6 +176,19 @@ public final class TargetGrpcProxyState extends com.pulumi.resources.ResourceArg
     @Import(name="validateForProxyless")
     private @Nullable Output<Boolean> validateForProxyless;
 
+    /**
+     * @return If true, indicates that the BackendServices referenced by
+     * the urlMap may be accessed by gRPC applications without using
+     * a sidecar proxy. This will enable configuration checks on urlMap
+     * and its referenced BackendServices to not allow unsupported features.
+     * A gRPC application must use &#34;xds:///&#34; scheme in the target URI
+     * of the service it is connecting to. If false, indicates that the
+     * BackendServices referenced by the urlMap will be accessed by gRPC
+     * applications via a sidecar proxy. In this case, a gRPC application
+     * must not use &#34;xds:///&#34; scheme in the target URI of the service
+     * it is connecting to
+     * 
+     */
     public Optional<Output<Boolean>> validateForProxyless() {
         return Optional.ofNullable(this.validateForProxyless);
     }
@@ -168,83 +225,233 @@ public final class TargetGrpcProxyState extends com.pulumi.resources.ResourceArg
             $ = new TargetGrpcProxyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param creationTimestamp Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             $.creationTimestamp = creationTimestamp;
             return this;
         }
 
+        /**
+         * @param creationTimestamp Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimestamp(String creationTimestamp) {
             return creationTimestamp(Output.of(creationTimestamp));
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param fingerprint Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
+         * This field will be ignored when inserting a TargetGrpcProxy. An up-to-date fingerprint must be provided in order to
+         * patch/update the TargetGrpcProxy; otherwise, the request will fail with error 412 conditionNotMet. To see the latest
+         * fingerprint, make a get() request to retrieve the TargetGrpcProxy. A base64-encoded string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
             $.fingerprint = fingerprint;
             return this;
         }
 
+        /**
+         * @param fingerprint Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
+         * This field will be ignored when inserting a TargetGrpcProxy. An up-to-date fingerprint must be provided in order to
+         * patch/update the TargetGrpcProxy; otherwise, the request will fail with error 412 conditionNotMet. To see the latest
+         * fingerprint, make a get() request to retrieve the TargetGrpcProxy. A base64-encoded string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fingerprint(String fingerprint) {
             return fingerprint(Output.of(fingerprint));
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource
+         * is created. The name must be 1-63 characters long, and comply
+         * with RFC1035. Specifically, the name must be 1-63 characters long
+         * and match the regular expression `a-z?` which
+         * means the first character must be a lowercase letter, and all
+         * following characters must be a dash, lowercase letter, or digit,
+         * except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource
+         * is created. The name must be 1-63 characters long, and comply
+         * with RFC1035. Specifically, the name must be 1-63 characters long
+         * and match the regular expression `a-z?` which
+         * means the first character must be a lowercase letter, and all
+         * following characters must be a dash, lowercase letter, or digit,
+         * except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(@Nullable Output<String> selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
         }
 
+        /**
+         * @param selfLinkWithId Server-defined URL with id for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLinkWithId(@Nullable Output<String> selfLinkWithId) {
             $.selfLinkWithId = selfLinkWithId;
             return this;
         }
 
+        /**
+         * @param selfLinkWithId Server-defined URL with id for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLinkWithId(String selfLinkWithId) {
             return selfLinkWithId(Output.of(selfLinkWithId));
         }
 
+        /**
+         * @param urlMap URL to the UrlMap resource that defines the mapping from URL to
+         * the BackendService. The protocol field in the BackendService
+         * must be set to GRPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlMap(@Nullable Output<String> urlMap) {
             $.urlMap = urlMap;
             return this;
         }
 
+        /**
+         * @param urlMap URL to the UrlMap resource that defines the mapping from URL to
+         * the BackendService. The protocol field in the BackendService
+         * must be set to GRPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlMap(String urlMap) {
             return urlMap(Output.of(urlMap));
         }
 
+        /**
+         * @param validateForProxyless If true, indicates that the BackendServices referenced by
+         * the urlMap may be accessed by gRPC applications without using
+         * a sidecar proxy. This will enable configuration checks on urlMap
+         * and its referenced BackendServices to not allow unsupported features.
+         * A gRPC application must use &#34;xds:///&#34; scheme in the target URI
+         * of the service it is connecting to. If false, indicates that the
+         * BackendServices referenced by the urlMap will be accessed by gRPC
+         * applications via a sidecar proxy. In this case, a gRPC application
+         * must not use &#34;xds:///&#34; scheme in the target URI of the service
+         * it is connecting to
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateForProxyless(@Nullable Output<Boolean> validateForProxyless) {
             $.validateForProxyless = validateForProxyless;
             return this;
         }
 
+        /**
+         * @param validateForProxyless If true, indicates that the BackendServices referenced by
+         * the urlMap may be accessed by gRPC applications without using
+         * a sidecar proxy. This will enable configuration checks on urlMap
+         * and its referenced BackendServices to not allow unsupported features.
+         * A gRPC application must use &#34;xds:///&#34; scheme in the target URI
+         * of the service it is connecting to. If false, indicates that the
+         * BackendServices referenced by the urlMap will be accessed by gRPC
+         * applications via a sidecar proxy. In this case, a gRPC application
+         * must not use &#34;xds:///&#34; scheme in the target URI of the service
+         * it is connecting to
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateForProxyless(Boolean validateForProxyless) {
             return validateForProxyless(Output.of(validateForProxyless));
         }

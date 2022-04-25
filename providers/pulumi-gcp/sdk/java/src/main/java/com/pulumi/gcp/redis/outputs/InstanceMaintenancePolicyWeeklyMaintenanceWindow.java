@@ -12,36 +12,36 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class InstanceMaintenancePolicyWeeklyMaintenanceWindow {
-    /**
-     * Required. The day of week that maintenance updates occur.
-     * - DAY_OF_WEEK_UNSPECIFIED: The day of the week is unspecified.
-     * - MONDAY: Monday
-     * - TUESDAY: Tuesday
-     * - WEDNESDAY: Wednesday
-     * - THURSDAY: Thursday
-     * - FRIDAY: Friday
-     * - SATURDAY: Saturday
-     * - SUNDAY: Sunday
-     *   Possible values are `DAY_OF_WEEK_UNSPECIFIED`, `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
-     * 
-     */
+        /**
+         * @return Required. The day of week that maintenance updates occur.
+         * - DAY_OF_WEEK_UNSPECIFIED: The day of the week is unspecified.
+         * - MONDAY: Monday
+         * - TUESDAY: Tuesday
+         * - WEDNESDAY: Wednesday
+         * - THURSDAY: Thursday
+         * - FRIDAY: Friday
+         * - SATURDAY: Saturday
+         * - SUNDAY: Sunday
+         *   Possible values are `DAY_OF_WEEK_UNSPECIFIED`, `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+         * 
+         */
     private final String day;
-    /**
-     * - 
-     * Output only. Duration of the maintenance window.
-     * The current window is fixed at 1 hour.
-     * A duration in seconds with up to nine fractional digits,
-     * terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
-     * 
-     */
+        /**
+         * @return -
+         * Output only. Duration of the maintenance window.
+         * The current window is fixed at 1 hour.
+         * A duration in seconds with up to nine fractional digits,
+         * terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         */
     private final @Nullable String duration;
-    /**
-     * - 
-     * Output only. The start time of any upcoming scheduled maintenance for this instance.
-     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
-     * resolution and up to nine fractional digits.
-     * 
-     */
+        /**
+         * @return -
+         * Output only. The start time of any upcoming scheduled maintenance for this instance.
+         * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
+         * resolution and up to nine fractional digits.
+         * 
+         */
     private final InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime startTime;
 
     @CustomType.Constructor
@@ -55,7 +55,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindow {
     }
 
     /**
-     * Required. The day of week that maintenance updates occur.
+     * @return Required. The day of week that maintenance updates occur.
      * - DAY_OF_WEEK_UNSPECIFIED: The day of the week is unspecified.
      * - MONDAY: Monday
      * - TUESDAY: Tuesday
@@ -66,28 +66,28 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindow {
      * - SUNDAY: Sunday
      *   Possible values are `DAY_OF_WEEK_UNSPECIFIED`, `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
      * 
-    */
+     */
     public String day() {
         return this.day;
     }
     /**
-     * - 
+     * @return -
      * Output only. Duration of the maintenance window.
      * The current window is fixed at 1 hour.
      * A duration in seconds with up to nine fractional digits,
      * terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
-    */
+     */
     public Optional<String> duration() {
         return Optional.ofNullable(this.duration);
     }
     /**
-     * - 
+     * @return -
      * Output only. The start time of any upcoming scheduled maintenance for this instance.
      * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
      * resolution and up to nine fractional digits.
      * 
-    */
+     */
     public InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime startTime() {
         return this.startTime;
     }

@@ -27,6 +27,12 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="cpuOvercommitType")
     private @Nullable Output<String> cpuOvercommitType;
 
+    /**
+     * @return CPU overcommit.
+     * Default value is `NONE`.
+     * Possible values are `ENABLED` and `NONE`.
+     * 
+     */
     public Optional<Output<String>> cpuOvercommitType() {
         return Optional.ofNullable(this.cpuOvercommitType);
     }
@@ -38,6 +44,10 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="creationTimestamp")
     private @Nullable Output<String> creationTimestamp;
 
+    /**
+     * @return Creation timestamp in RFC3339 text format.
+     * 
+     */
     public Optional<Output<String>> creationTimestamp() {
         return Optional.ofNullable(this.creationTimestamp);
     }
@@ -49,6 +59,10 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional textual description of the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -60,6 +74,10 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -72,6 +90,11 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeAffinityLabels")
     private @Nullable Output<Map<String,String>> nodeAffinityLabels;
 
+    /**
+     * @return Labels to use for node affinity, which will be used in
+     * instance scheduling.
+     * 
+     */
     public Optional<Output<Map<String,String>>> nodeAffinityLabels() {
         return Optional.ofNullable(this.nodeAffinityLabels);
     }
@@ -84,6 +107,11 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeType")
     private @Nullable Output<String> nodeType;
 
+    /**
+     * @return Node type to use for nodes group that are created from this template.
+     * Only one of nodeTypeFlexibility and nodeType can be specified.
+     * 
+     */
     public Optional<Output<String>> nodeType() {
         return Optional.ofNullable(this.nodeType);
     }
@@ -99,6 +127,14 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeTypeFlexibility")
     private @Nullable Output<NodeTemplateNodeTypeFlexibilityGetArgs> nodeTypeFlexibility;
 
+    /**
+     * @return Flexible properties for the desired node type. Node groups that
+     * use this node template will create nodes of a type that matches
+     * these properties. Only one of nodeTypeFlexibility and nodeType can
+     * be specified.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<NodeTemplateNodeTypeFlexibilityGetArgs>> nodeTypeFlexibility() {
         return Optional.ofNullable(this.nodeTypeFlexibility);
     }
@@ -111,6 +147,11 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -123,6 +164,11 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return Region where nodes using the node template will be created.
+     * If it is not provided, the provider region is used.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -134,6 +180,10 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
     private @Nullable Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Optional<Output<String>> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -147,6 +197,12 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverBinding")
     private @Nullable Output<NodeTemplateServerBindingGetArgs> serverBinding;
 
+    /**
+     * @return The server binding policy for nodes using this template. Determines
+     * where the nodes should restart following a maintenance event.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<NodeTemplateServerBindingGetArgs>> serverBinding() {
         return Optional.ofNullable(this.serverBinding);
     }
@@ -185,101 +241,257 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
             $ = new NodeTemplateState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpuOvercommitType CPU overcommit.
+         * Default value is `NONE`.
+         * Possible values are `ENABLED` and `NONE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuOvercommitType(@Nullable Output<String> cpuOvercommitType) {
             $.cpuOvercommitType = cpuOvercommitType;
             return this;
         }
 
+        /**
+         * @param cpuOvercommitType CPU overcommit.
+         * Default value is `NONE`.
+         * Possible values are `ENABLED` and `NONE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuOvercommitType(String cpuOvercommitType) {
             return cpuOvercommitType(Output.of(cpuOvercommitType));
         }
 
+        /**
+         * @param creationTimestamp Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             $.creationTimestamp = creationTimestamp;
             return this;
         }
 
+        /**
+         * @param creationTimestamp Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimestamp(String creationTimestamp) {
             return creationTimestamp(Output.of(creationTimestamp));
         }
 
+        /**
+         * @param description An optional textual description of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional textual description of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name Name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param nodeAffinityLabels Labels to use for node affinity, which will be used in
+         * instance scheduling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeAffinityLabels(@Nullable Output<Map<String,String>> nodeAffinityLabels) {
             $.nodeAffinityLabels = nodeAffinityLabels;
             return this;
         }
 
+        /**
+         * @param nodeAffinityLabels Labels to use for node affinity, which will be used in
+         * instance scheduling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeAffinityLabels(Map<String,String> nodeAffinityLabels) {
             return nodeAffinityLabels(Output.of(nodeAffinityLabels));
         }
 
+        /**
+         * @param nodeType Node type to use for nodes group that are created from this template.
+         * Only one of nodeTypeFlexibility and nodeType can be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeType(@Nullable Output<String> nodeType) {
             $.nodeType = nodeType;
             return this;
         }
 
+        /**
+         * @param nodeType Node type to use for nodes group that are created from this template.
+         * Only one of nodeTypeFlexibility and nodeType can be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeType(String nodeType) {
             return nodeType(Output.of(nodeType));
         }
 
+        /**
+         * @param nodeTypeFlexibility Flexible properties for the desired node type. Node groups that
+         * use this node template will create nodes of a type that matches
+         * these properties. Only one of nodeTypeFlexibility and nodeType can
+         * be specified.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeTypeFlexibility(@Nullable Output<NodeTemplateNodeTypeFlexibilityGetArgs> nodeTypeFlexibility) {
             $.nodeTypeFlexibility = nodeTypeFlexibility;
             return this;
         }
 
+        /**
+         * @param nodeTypeFlexibility Flexible properties for the desired node type. Node groups that
+         * use this node template will create nodes of a type that matches
+         * these properties. Only one of nodeTypeFlexibility and nodeType can
+         * be specified.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeTypeFlexibility(NodeTemplateNodeTypeFlexibilityGetArgs nodeTypeFlexibility) {
             return nodeTypeFlexibility(Output.of(nodeTypeFlexibility));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region Region where nodes using the node template will be created.
+         * If it is not provided, the provider region is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region Region where nodes using the node template will be created.
+         * If it is not provided, the provider region is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(@Nullable Output<String> selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
         }
 
+        /**
+         * @param serverBinding The server binding policy for nodes using this template. Determines
+         * where the nodes should restart following a maintenance event.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverBinding(@Nullable Output<NodeTemplateServerBindingGetArgs> serverBinding) {
             $.serverBinding = serverBinding;
             return this;
         }
 
+        /**
+         * @param serverBinding The server binding policy for nodes using this template. Determines
+         * where the nodes should restart following a maintenance event.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverBinding(NodeTemplateServerBindingGetArgs serverBinding) {
             return serverBinding(Output.of(serverBinding));
         }

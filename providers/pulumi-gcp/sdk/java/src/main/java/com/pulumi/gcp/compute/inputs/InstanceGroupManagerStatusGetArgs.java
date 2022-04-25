@@ -25,6 +25,10 @@ public final class InstanceGroupManagerStatusGetArgs extends com.pulumi.resource
     @Import(name="isStable")
     private @Nullable Output<Boolean> isStable;
 
+    /**
+     * @return A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.
+     * 
+     */
     public Optional<Output<Boolean>> isStable() {
         return Optional.ofNullable(this.isStable);
     }
@@ -36,6 +40,10 @@ public final class InstanceGroupManagerStatusGetArgs extends com.pulumi.resource
     @Import(name="statefuls")
     private @Nullable Output<List<InstanceGroupManagerStatusStatefulGetArgs>> statefuls;
 
+    /**
+     * @return Stateful status of the given Instance Group Manager.
+     * 
+     */
     public Optional<Output<List<InstanceGroupManagerStatusStatefulGetArgs>>> statefuls() {
         return Optional.ofNullable(this.statefuls);
     }
@@ -47,6 +55,10 @@ public final class InstanceGroupManagerStatusGetArgs extends com.pulumi.resource
     @Import(name="versionTargets")
     private @Nullable Output<List<InstanceGroupManagerStatusVersionTargetGetArgs>> versionTargets;
 
+    /**
+     * @return A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances&#39; target version are specified by version field on Instance Group Manager.
+     * 
+     */
     public Optional<Output<List<InstanceGroupManagerStatusVersionTargetGetArgs>>> versionTargets() {
         return Optional.ofNullable(this.versionTargets);
     }
@@ -77,37 +89,85 @@ public final class InstanceGroupManagerStatusGetArgs extends com.pulumi.resource
             $ = new InstanceGroupManagerStatusGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isStable A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isStable(@Nullable Output<Boolean> isStable) {
             $.isStable = isStable;
             return this;
         }
 
+        /**
+         * @param isStable A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isStable(Boolean isStable) {
             return isStable(Output.of(isStable));
         }
 
+        /**
+         * @param statefuls Stateful status of the given Instance Group Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statefuls(@Nullable Output<List<InstanceGroupManagerStatusStatefulGetArgs>> statefuls) {
             $.statefuls = statefuls;
             return this;
         }
 
+        /**
+         * @param statefuls Stateful status of the given Instance Group Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statefuls(List<InstanceGroupManagerStatusStatefulGetArgs> statefuls) {
             return statefuls(Output.of(statefuls));
         }
 
+        /**
+         * @param statefuls Stateful status of the given Instance Group Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statefuls(InstanceGroupManagerStatusStatefulGetArgs... statefuls) {
             return statefuls(List.of(statefuls));
         }
 
+        /**
+         * @param versionTargets A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances&#39; target version are specified by version field on Instance Group Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionTargets(@Nullable Output<List<InstanceGroupManagerStatusVersionTargetGetArgs>> versionTargets) {
             $.versionTargets = versionTargets;
             return this;
         }
 
+        /**
+         * @param versionTargets A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances&#39; target version are specified by version field on Instance Group Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionTargets(List<InstanceGroupManagerStatusVersionTargetGetArgs> versionTargets) {
             return versionTargets(Output.of(versionTargets));
         }
 
+        /**
+         * @param versionTargets A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances&#39; target version are specified by version field on Instance Group Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionTargets(InstanceGroupManagerStatusVersionTargetGetArgs... versionTargets) {
             return versionTargets(List.of(versionTargets));
         }

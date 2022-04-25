@@ -10,19 +10,19 @@ import java.util.Objects;
 
 @CustomType
 public final class PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType {
-    /**
-     * CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing
-     * infoTypes and that infoType is specified in `info_types` field. Specifying the latter adds findings to the
-     * one detected by the system. If built-in info type is not specified in `info_types` list then the name is
-     * treated as a custom info type.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing
+         * infoTypes and that infoType is specified in `info_types` field. Specifying the latter adds findings to the
+         * one detected by the system. If built-in info type is not specified in `info_types` list then the name is
+         * treated as a custom info type.
+         * Structure is documented below.
+         * 
+         */
     private final PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType infoType;
-    /**
-     * Max findings limit for the given infoType.
-     * 
-     */
+        /**
+         * @return Max findings limit for the given infoType.
+         * 
+         */
     private final Integer maxFindings;
 
     @CustomType.Constructor
@@ -34,20 +34,20 @@ public final class PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInf
     }
 
     /**
-     * CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing
+     * @return CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing
      * infoTypes and that infoType is specified in `info_types` field. Specifying the latter adds findings to the
      * one detected by the system. If built-in info type is not specified in `info_types` list then the name is
      * treated as a custom info type.
      * Structure is documented below.
      * 
-    */
+     */
     public PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType infoType() {
         return this.infoType;
     }
     /**
-     * Max findings limit for the given infoType.
+     * @return Max findings limit for the given infoType.
      * 
-    */
+     */
     public Integer maxFindings() {
         return this.maxFindings;
     }

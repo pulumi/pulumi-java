@@ -11,24 +11,24 @@ import java.util.Objects;
 
 @CustomType
 public final class URLMapPathMatcherRouteRuleMatchRuleMetadataFilter {
-    /**
-     * The list of label value pairs that must match labels in the provided metadata
-     * based on filterMatchCriteria  This list must not be empty and can have at the
-     * most 64 entries.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return The list of label value pairs that must match labels in the provided metadata
+         * based on filterMatchCriteria  This list must not be empty and can have at the
+         * most 64 entries.
+         * Structure is documented below.
+         * 
+         */
     private final List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel> filterLabels;
-    /**
-     * Specifies how individual filterLabel matches within the list of filterLabels
-     * contribute towards the overall metadataFilter match. Supported values are:
-     * - MATCH_ANY: At least one of the filterLabels must have a matching label in the
-     *   provided metadata.
-     * - MATCH_ALL: All filterLabels must have matching labels in
-     *   the provided metadata.
-     *   Possible values are `MATCH_ALL` and `MATCH_ANY`.
-     * 
-     */
+        /**
+         * @return Specifies how individual filterLabel matches within the list of filterLabels
+         * contribute towards the overall metadataFilter match. Supported values are:
+         * - MATCH_ANY: At least one of the filterLabels must have a matching label in the
+         *   provided metadata.
+         * - MATCH_ALL: All filterLabels must have matching labels in
+         *   the provided metadata.
+         *   Possible values are `MATCH_ALL` and `MATCH_ANY`.
+         * 
+         */
     private final String filterMatchCriteria;
 
     @CustomType.Constructor
@@ -40,17 +40,17 @@ public final class URLMapPathMatcherRouteRuleMatchRuleMetadataFilter {
     }
 
     /**
-     * The list of label value pairs that must match labels in the provided metadata
+     * @return The list of label value pairs that must match labels in the provided metadata
      * based on filterMatchCriteria  This list must not be empty and can have at the
      * most 64 entries.
      * Structure is documented below.
      * 
-    */
+     */
     public List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel> filterLabels() {
         return this.filterLabels;
     }
     /**
-     * Specifies how individual filterLabel matches within the list of filterLabels
+     * @return Specifies how individual filterLabel matches within the list of filterLabels
      * contribute towards the overall metadataFilter match. Supported values are:
      * - MATCH_ANY: At least one of the filterLabels must have a matching label in the
      *   provided metadata.
@@ -58,7 +58,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleMetadataFilter {
      *   the provided metadata.
      *   Possible values are `MATCH_ALL` and `MATCH_ANY`.
      * 
-    */
+     */
     public String filterMatchCriteria() {
         return this.filterMatchCriteria;
     }

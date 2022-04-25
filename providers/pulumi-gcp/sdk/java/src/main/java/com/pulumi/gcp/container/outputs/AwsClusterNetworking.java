@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class AwsClusterNetworking {
-    /**
-     * Required. All pods in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
-     * 
-     */
+        /**
+         * @return Required. All pods in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+         * 
+         */
     private final List<String> podAddressCidrBlocks;
-    /**
-     * Required. All services in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
-     * 
-     */
+        /**
+         * @return Required. All services in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+         * 
+         */
     private final List<String> serviceAddressCidrBlocks;
-    /**
-     * Required. The VPC associated with the cluster. All component clusters (i.e. control plane and node pools) run on a single VPC. This field cannot be changed after creation.
-     * 
-     */
+        /**
+         * @return Required. The VPC associated with the cluster. All component clusters (i.e. control plane and node pools) run on a single VPC. This field cannot be changed after creation.
+         * 
+         */
     private final String vpcId;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class AwsClusterNetworking {
     }
 
     /**
-     * Required. All pods in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+     * @return Required. All pods in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
      * 
-    */
+     */
     public List<String> podAddressCidrBlocks() {
         return this.podAddressCidrBlocks;
     }
     /**
-     * Required. All services in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+     * @return Required. All services in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
      * 
-    */
+     */
     public List<String> serviceAddressCidrBlocks() {
         return this.serviceAddressCidrBlocks;
     }
     /**
-     * Required. The VPC associated with the cluster. All component clusters (i.e. control plane and node pools) run on a single VPC. This field cannot be changed after creation.
+     * @return Required. The VPC associated with the cluster. All component clusters (i.e. control plane and node pools) run on a single VPC. This field cannot be changed after creation.
      * 
-    */
+     */
     public String vpcId() {
         return this.vpcId;
     }

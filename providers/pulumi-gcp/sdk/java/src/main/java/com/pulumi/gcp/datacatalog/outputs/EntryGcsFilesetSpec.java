@@ -12,27 +12,27 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EntryGcsFilesetSpec {
-    /**
-     * Patterns to identify a set of files in Google Cloud Storage.
-     * See [Cloud Storage documentation](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames)
-     * for more information. Note that bucket wildcards are currently not supported. Examples of valid filePatterns:
-     * * gs://bucket_name/dir/*: matches all files within bucket_name/dir directory.
-     * * gs://bucket_name/dir/**: matches all files in bucket_name/dir spanning all subdirectories.
-     * * gs://bucket_name/file*: matches files prefixed by file in bucket_name
-     * * gs://bucket_name/??.txt: matches files with two characters followed by .txt in bucket_name
-     * * gs://bucket_name/[aeiou].txt: matches files that contain a single vowel character followed by .txt in bucket_name
-     * * gs://bucket_name/[a-m].txt: matches files that contain a, b, ... or m followed by .txt in bucket_name
-     * * gs://bucket_name/a/*{@literal /}b: matches all files in bucket_name that match a/*{@literal /}b pattern, such as a/c/b, a/d/b
-     * * gs://another_bucket/a.txt: matches gs://another_bucket/a.txt
-     * 
-     */
+        /**
+         * @return Patterns to identify a set of files in Google Cloud Storage.
+         * See [Cloud Storage documentation](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames)
+         * for more information. Note that bucket wildcards are currently not supported. Examples of valid filePatterns:
+         * * gs://bucket_name/dir/*: matches all files within bucket_name/dir directory.
+         * * gs://bucket_name/dir/**: matches all files in bucket_name/dir spanning all subdirectories.
+         * * gs://bucket_name/file*: matches files prefixed by file in bucket_name
+         * * gs://bucket_name/??.txt: matches files with two characters followed by .txt in bucket_name
+         * * gs://bucket_name/[aeiou].txt: matches files that contain a single vowel character followed by .txt in bucket_name
+         * * gs://bucket_name/[a-m].txt: matches files that contain a, b, ... or m followed by .txt in bucket_name
+         * * gs://bucket_name/a/*{@literal /}b: matches all files in bucket_name that match a/*{@literal /}b pattern, such as a/c/b, a/d/b
+         * * gs://another_bucket/a.txt: matches gs://another_bucket/a.txt
+         * 
+         */
     private final List<String> filePatterns;
-    /**
-     * - 
-     * Sample files contained in this fileset, not all files contained in this fileset are represented here.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return -
+         * Sample files contained in this fileset, not all files contained in this fileset are represented here.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<EntryGcsFilesetSpecSampleGcsFileSpec> sampleGcsFileSpecs;
 
     @CustomType.Constructor
@@ -44,7 +44,7 @@ public final class EntryGcsFilesetSpec {
     }
 
     /**
-     * Patterns to identify a set of files in Google Cloud Storage.
+     * @return Patterns to identify a set of files in Google Cloud Storage.
      * See [Cloud Storage documentation](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames)
      * for more information. Note that bucket wildcards are currently not supported. Examples of valid filePatterns:
      * * gs://bucket_name/dir/*: matches all files within bucket_name/dir directory.
@@ -56,16 +56,16 @@ public final class EntryGcsFilesetSpec {
      * * gs://bucket_name/a/*{@literal /}b: matches all files in bucket_name that match a/*{@literal /}b pattern, such as a/c/b, a/d/b
      * * gs://another_bucket/a.txt: matches gs://another_bucket/a.txt
      * 
-    */
+     */
     public List<String> filePatterns() {
         return this.filePatterns;
     }
     /**
-     * - 
+     * @return -
      * Sample files contained in this fileset, not all files contained in this fileset are represented here.
      * Structure is documented below.
      * 
-    */
+     */
     public List<EntryGcsFilesetSpecSampleGcsFileSpec> sampleGcsFileSpecs() {
         return this.sampleGcsFileSpecs == null ? List.of() : this.sampleGcsFileSpecs;
     }

@@ -11,24 +11,24 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RuntimeAccessConfig {
-    /**
-     * The type of access mode this instance. For valid values, see
-     * `https://cloud.google.com/vertex-ai/docs/workbench/reference/
-     * rest/v1/projects.locations.runtimes#RuntimeAccessType`.
-     * 
-     */
+        /**
+         * @return The type of access mode this instance. For valid values, see
+         * `https://cloud.google.com/vertex-ai/docs/workbench/reference/
+         * rest/v1/projects.locations.runtimes#RuntimeAccessType`.
+         * 
+         */
     private final @Nullable String accessType;
-    /**
-     * - 
-     * The proxy endpoint that is used to access the runtime.
-     * 
-     */
+        /**
+         * @return -
+         * The proxy endpoint that is used to access the runtime.
+         * 
+         */
     private final @Nullable String proxyUri;
-    /**
-     * The owner of this runtime after creation. Format: `alias@example.com`.
-     * Currently supports one owner only.
-     * 
-     */
+        /**
+         * @return The owner of this runtime after creation. Format: `alias@example.com`.
+         * Currently supports one owner only.
+         * 
+         */
     private final @Nullable String runtimeOwner;
 
     @CustomType.Constructor
@@ -42,27 +42,27 @@ public final class RuntimeAccessConfig {
     }
 
     /**
-     * The type of access mode this instance. For valid values, see
+     * @return The type of access mode this instance. For valid values, see
      * `https://cloud.google.com/vertex-ai/docs/workbench/reference/
      * rest/v1/projects.locations.runtimes#RuntimeAccessType`.
      * 
-    */
+     */
     public Optional<String> accessType() {
         return Optional.ofNullable(this.accessType);
     }
     /**
-     * - 
+     * @return -
      * The proxy endpoint that is used to access the runtime.
      * 
-    */
+     */
     public Optional<String> proxyUri() {
         return Optional.ofNullable(this.proxyUri);
     }
     /**
-     * The owner of this runtime after creation. Format: `alias@example.com`.
+     * @return The owner of this runtime after creation. Format: `alias@example.com`.
      * Currently supports one owner only.
      * 
-    */
+     */
     public Optional<String> runtimeOwner() {
         return Optional.ofNullable(this.runtimeOwner);
     }

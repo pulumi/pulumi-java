@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class PatchDeploymentPatchConfigGoo {
-    /**
-     * goo update settings. Use this setting to override the default goo patch rules.
-     * 
-     */
+        /**
+         * @return goo update settings. Use this setting to override the default goo patch rules.
+         * 
+         */
     private final Boolean enabled;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class PatchDeploymentPatchConfigGoo {
     }
 
     /**
-     * goo update settings. Use this setting to override the default goo patch rules.
+     * @return goo update settings. Use this setting to override the default goo patch rules.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }

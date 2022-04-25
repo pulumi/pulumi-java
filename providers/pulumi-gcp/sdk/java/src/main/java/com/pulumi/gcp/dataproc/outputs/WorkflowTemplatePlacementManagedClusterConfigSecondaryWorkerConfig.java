@@ -17,58 +17,58 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig {
-    /**
-     * Optional. The Compute Engine accelerator configuration for these instances.
-     * 
-     */
+        /**
+         * @return Optional. The Compute Engine accelerator configuration for these instances.
+         * 
+         */
     private final @Nullable List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerator> accelerators;
-    /**
-     * Optional. Disk option config settings.
-     * 
-     */
+        /**
+         * @return Optional. Disk option config settings.
+         * 
+         */
     private final @Nullable WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig diskConfig;
-    /**
-     * Optional. The Compute Engine image resource used for cluster instances. The URI can represent an image or image family. Image examples: * `https://www.googleapis.com/compute/beta/projects/` If the URI is unspecified, it will be inferred from `SoftwareConfig.image_version` or the system default.
-     * 
-     */
+        /**
+         * @return Optional. The Compute Engine image resource used for cluster instances. The URI can represent an image or image family. Image examples: * `https://www.googleapis.com/compute/beta/projects/` If the URI is unspecified, it will be inferred from `SoftwareConfig.image_version` or the system default.
+         * 
+         */
     private final @Nullable String image;
-    /**
-     * - 
-     * Output only. The list of instance names. Dataproc derives the names from `cluster_name`, `num_instances`, and the instance group.
-     * 
-     */
+        /**
+         * @return -
+         * Output only. The list of instance names. Dataproc derives the names from `cluster_name`, `num_instances`, and the instance group.
+         * 
+         */
     private final @Nullable List<String> instanceNames;
-    /**
-     * - 
-     * Output only. Specifies that this instance group contains preemptible instances.
-     * 
-     */
+        /**
+         * @return -
+         * Output only. Specifies that this instance group contains preemptible instances.
+         * 
+         */
     private final @Nullable Boolean isPreemptible;
-    /**
-     * Optional. The Compute Engine machine type used for cluster instances. A full URL, partial URI, or short name are valid. Examples: * ` https://www.googleapis.com/compute/v1/projects/(https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example,  `n1-standard-2`.
-     * 
-     */
+        /**
+         * @return Optional. The Compute Engine machine type used for cluster instances. A full URL, partial URI, or short name are valid. Examples: * ` https://www.googleapis.com/compute/v1/projects/(https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example,  `n1-standard-2`.
+         * 
+         */
     private final @Nullable String machineType;
-    /**
-     * - 
-     * Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
-     * 
-     */
+        /**
+         * @return -
+         * Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
+         * 
+         */
     private final @Nullable List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfig> managedGroupConfigs;
-    /**
-     * Optional. Specifies the minimum cpu platform for the Instance Group. See (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
-     * 
-     */
+        /**
+         * @return Optional. Specifies the minimum cpu platform for the Instance Group. See (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
+         * 
+         */
     private final @Nullable String minCpuPlatform;
-    /**
-     * Optional. The number of VM instances in the instance group. For master instance groups, must be set to 1.
-     * 
-     */
+        /**
+         * @return Optional. The number of VM instances in the instance group. For master instance groups, must be set to 1.
+         * 
+         */
     private final @Nullable Integer numInstances;
-    /**
-     * Optional. Specifies the preemptibility of the instance group. The default value for master and worker groups is `NON_PREEMPTIBLE`. This default cannot be changed. The default value for secondary instances is `PREEMPTIBLE`. Possible values: PREEMPTIBILITY_UNSPECIFIED, NON_PREEMPTIBLE, PREEMPTIBLE
-     * 
-     */
+        /**
+         * @return Optional. Specifies the preemptibility of the instance group. The default value for master and worker groups is `NON_PREEMPTIBLE`. This default cannot be changed. The default value for secondary instances is `PREEMPTIBLE`. Possible values: PREEMPTIBILITY_UNSPECIFIED, NON_PREEMPTIBLE, PREEMPTIBLE
+         * 
+         */
     private final @Nullable String preemptibility;
 
     @CustomType.Constructor
@@ -96,75 +96,75 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
     }
 
     /**
-     * Optional. The Compute Engine accelerator configuration for these instances.
+     * @return Optional. The Compute Engine accelerator configuration for these instances.
      * 
-    */
+     */
     public List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerator> accelerators() {
         return this.accelerators == null ? List.of() : this.accelerators;
     }
     /**
-     * Optional. Disk option config settings.
+     * @return Optional. Disk option config settings.
      * 
-    */
+     */
     public Optional<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig> diskConfig() {
         return Optional.ofNullable(this.diskConfig);
     }
     /**
-     * Optional. The Compute Engine image resource used for cluster instances. The URI can represent an image or image family. Image examples: * `https://www.googleapis.com/compute/beta/projects/` If the URI is unspecified, it will be inferred from `SoftwareConfig.image_version` or the system default.
+     * @return Optional. The Compute Engine image resource used for cluster instances. The URI can represent an image or image family. Image examples: * `https://www.googleapis.com/compute/beta/projects/` If the URI is unspecified, it will be inferred from `SoftwareConfig.image_version` or the system default.
      * 
-    */
+     */
     public Optional<String> image() {
         return Optional.ofNullable(this.image);
     }
     /**
-     * - 
+     * @return -
      * Output only. The list of instance names. Dataproc derives the names from `cluster_name`, `num_instances`, and the instance group.
      * 
-    */
+     */
     public List<String> instanceNames() {
         return this.instanceNames == null ? List.of() : this.instanceNames;
     }
     /**
-     * - 
+     * @return -
      * Output only. Specifies that this instance group contains preemptible instances.
      * 
-    */
+     */
     public Optional<Boolean> isPreemptible() {
         return Optional.ofNullable(this.isPreemptible);
     }
     /**
-     * Optional. The Compute Engine machine type used for cluster instances. A full URL, partial URI, or short name are valid. Examples: * ` https://www.googleapis.com/compute/v1/projects/(https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example,  `n1-standard-2`.
+     * @return Optional. The Compute Engine machine type used for cluster instances. A full URL, partial URI, or short name are valid. Examples: * ` https://www.googleapis.com/compute/v1/projects/(https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example,  `n1-standard-2`.
      * 
-    */
+     */
     public Optional<String> machineType() {
         return Optional.ofNullable(this.machineType);
     }
     /**
-     * - 
+     * @return -
      * Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
      * 
-    */
+     */
     public List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfig> managedGroupConfigs() {
         return this.managedGroupConfigs == null ? List.of() : this.managedGroupConfigs;
     }
     /**
-     * Optional. Specifies the minimum cpu platform for the Instance Group. See (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
+     * @return Optional. Specifies the minimum cpu platform for the Instance Group. See (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
      * 
-    */
+     */
     public Optional<String> minCpuPlatform() {
         return Optional.ofNullable(this.minCpuPlatform);
     }
     /**
-     * Optional. The number of VM instances in the instance group. For master instance groups, must be set to 1.
+     * @return Optional. The number of VM instances in the instance group. For master instance groups, must be set to 1.
      * 
-    */
+     */
     public Optional<Integer> numInstances() {
         return Optional.ofNullable(this.numInstances);
     }
     /**
-     * Optional. Specifies the preemptibility of the instance group. The default value for master and worker groups is `NON_PREEMPTIBLE`. This default cannot be changed. The default value for secondary instances is `PREEMPTIBLE`. Possible values: PREEMPTIBILITY_UNSPECIFIED, NON_PREEMPTIBLE, PREEMPTIBLE
+     * @return Optional. Specifies the preemptibility of the instance group. The default value for master and worker groups is `NON_PREEMPTIBLE`. This default cannot be changed. The default value for secondary instances is `PREEMPTIBLE`. Possible values: PREEMPTIBILITY_UNSPECIFIED, NON_PREEMPTIBLE, PREEMPTIBLE
      * 
-    */
+     */
     public Optional<String> preemptibility() {
         return Optional.ofNullable(this.preemptibility);
     }

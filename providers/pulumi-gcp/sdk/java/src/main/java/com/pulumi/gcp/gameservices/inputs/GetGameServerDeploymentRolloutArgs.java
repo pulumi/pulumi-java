@@ -19,6 +19,10 @@ public final class GetGameServerDeploymentRolloutArgs extends com.pulumi.resourc
     @Import(name="deploymentId", required=true)
     private String deploymentId;
 
+    /**
+     * @return The deployment to get the rollout state from. Only 1 rollout must be associated with each deployment.
+     * 
+     */
     public String deploymentId() {
         return this.deploymentId;
     }
@@ -47,6 +51,12 @@ public final class GetGameServerDeploymentRolloutArgs extends com.pulumi.resourc
             $ = new GetGameServerDeploymentRolloutArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deploymentId The deployment to get the rollout state from. Only 1 rollout must be associated with each deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentId(String deploymentId) {
             $.deploymentId = deploymentId;
             return this;

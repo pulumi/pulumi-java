@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CertificateConfigSubjectConfig {
-    /**
-     * Contains distinguished name fields such as the location and organization.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Contains distinguished name fields such as the location and organization.
+         * Structure is documented below.
+         * 
+         */
     private final CertificateConfigSubjectConfigSubject subject;
-    /**
-     * The subject alternative name fields.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return The subject alternative name fields.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable CertificateConfigSubjectConfigSubjectAltName subjectAltName;
 
     @CustomType.Constructor
@@ -34,18 +34,18 @@ public final class CertificateConfigSubjectConfig {
     }
 
     /**
-     * Contains distinguished name fields such as the location and organization.
+     * @return Contains distinguished name fields such as the location and organization.
      * Structure is documented below.
      * 
-    */
+     */
     public CertificateConfigSubjectConfigSubject subject() {
         return this.subject;
     }
     /**
-     * The subject alternative name fields.
+     * @return The subject alternative name fields.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<CertificateConfigSubjectConfigSubjectAltName> subjectAltName() {
         return Optional.ofNullable(this.subjectAltName);
     }

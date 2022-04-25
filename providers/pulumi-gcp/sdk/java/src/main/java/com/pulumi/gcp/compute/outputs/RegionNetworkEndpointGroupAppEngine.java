@@ -11,29 +11,29 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RegionNetworkEndpointGroupAppEngine {
-    /**
-     * Optional serving service.
-     * The service name must be 1-63 characters long, and comply with RFC1035.
-     * Example value: &#34;default&#34;, &#34;my-service&#34;.
-     * 
-     */
+        /**
+         * @return Optional serving service.
+         * The service name must be 1-63 characters long, and comply with RFC1035.
+         * Example value: &#34;default&#34;, &#34;my-service&#34;.
+         * 
+         */
     private final @Nullable String service;
-    /**
-     * A template to parse function field from a request URL. URL mask allows
-     * for routing to multiple Cloud Functions without having to create
-     * multiple Network Endpoint Groups and backend services.
-     * For example, request URLs &#34;mydomain.com/function1&#34; and &#34;mydomain.com/function2&#34;
-     * can be backed by the same Serverless NEG with URL mask &#34;/&#34;. The URL mask
-     * will parse them to { function = &#34;function1&#34; } and { function = &#34;function2&#34; } respectively.
-     * 
-     */
+        /**
+         * @return A template to parse function field from a request URL. URL mask allows
+         * for routing to multiple Cloud Functions without having to create
+         * multiple Network Endpoint Groups and backend services.
+         * For example, request URLs &#34;mydomain.com/function1&#34; and &#34;mydomain.com/function2&#34;
+         * can be backed by the same Serverless NEG with URL mask &#34;/&#34;. The URL mask
+         * will parse them to { function = &#34;function1&#34; } and { function = &#34;function2&#34; } respectively.
+         * 
+         */
     private final @Nullable String urlMask;
-    /**
-     * Optional serving version.
-     * The version must be 1-63 characters long, and comply with RFC1035.
-     * Example value: &#34;v1&#34;, &#34;v2&#34;.
-     * 
-     */
+        /**
+         * @return Optional serving version.
+         * The version must be 1-63 characters long, and comply with RFC1035.
+         * Example value: &#34;v1&#34;, &#34;v2&#34;.
+         * 
+         */
     private final @Nullable String version;
 
     @CustomType.Constructor
@@ -47,32 +47,32 @@ public final class RegionNetworkEndpointGroupAppEngine {
     }
 
     /**
-     * Optional serving service.
+     * @return Optional serving service.
      * The service name must be 1-63 characters long, and comply with RFC1035.
      * Example value: &#34;default&#34;, &#34;my-service&#34;.
      * 
-    */
+     */
     public Optional<String> service() {
         return Optional.ofNullable(this.service);
     }
     /**
-     * A template to parse function field from a request URL. URL mask allows
+     * @return A template to parse function field from a request URL. URL mask allows
      * for routing to multiple Cloud Functions without having to create
      * multiple Network Endpoint Groups and backend services.
      * For example, request URLs &#34;mydomain.com/function1&#34; and &#34;mydomain.com/function2&#34;
      * can be backed by the same Serverless NEG with URL mask &#34;/&#34;. The URL mask
      * will parse them to { function = &#34;function1&#34; } and { function = &#34;function2&#34; } respectively.
      * 
-    */
+     */
     public Optional<String> urlMask() {
         return Optional.ofNullable(this.urlMask);
     }
     /**
-     * Optional serving version.
+     * @return Optional serving version.
      * The version must be 1-63 characters long, and comply with RFC1035.
      * Example value: &#34;v1&#34;, &#34;v2&#34;.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

@@ -11,23 +11,23 @@ import java.util.Objects;
 
 @CustomType
 public final class CertificateConfig {
-    /**
-     * A PublicKey describes a public key.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return A PublicKey describes a public key.
+         * Structure is documented below.
+         * 
+         */
     private final CertificateConfigPublicKey publicKey;
-    /**
-     * Specifies some of the values in a certificate that are related to the subject.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Specifies some of the values in a certificate that are related to the subject.
+         * Structure is documented below.
+         * 
+         */
     private final CertificateConfigSubjectConfig subjectConfig;
-    /**
-     * Describes how some of the technical X.509 fields in a certificate should be populated.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Describes how some of the technical X.509 fields in a certificate should be populated.
+         * Structure is documented below.
+         * 
+         */
     private final CertificateConfigX509Config x509Config;
 
     @CustomType.Constructor
@@ -41,26 +41,26 @@ public final class CertificateConfig {
     }
 
     /**
-     * A PublicKey describes a public key.
+     * @return A PublicKey describes a public key.
      * Structure is documented below.
      * 
-    */
+     */
     public CertificateConfigPublicKey publicKey() {
         return this.publicKey;
     }
     /**
-     * Specifies some of the values in a certificate that are related to the subject.
+     * @return Specifies some of the values in a certificate that are related to the subject.
      * Structure is documented below.
      * 
-    */
+     */
     public CertificateConfigSubjectConfig subjectConfig() {
         return this.subjectConfig;
     }
     /**
-     * Describes how some of the technical X.509 fields in a certificate should be populated.
+     * @return Describes how some of the technical X.509 fields in a certificate should be populated.
      * Structure is documented below.
      * 
-    */
+     */
     public CertificateConfigX509Config x509Config() {
         return this.x509Config;
     }

@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class FlexibleAppVersionResourcesVolume {
-    /**
-     * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
-     * 
-     */
+        /**
+         * @return Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+         * 
+         */
     private final String name;
-    /**
-     * Volume size in gigabytes.
-     * 
-     */
+        /**
+         * @return Volume size in gigabytes.
+         * 
+         */
     private final Integer sizeGb;
-    /**
-     * Underlying volume type, e.g. &#39;tmpfs&#39;.
-     * 
-     */
+        /**
+         * @return Underlying volume type, e.g. &#39;tmpfs&#39;.
+         * 
+         */
     private final String volumeType;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class FlexibleAppVersionResourcesVolume {
     }
 
     /**
-     * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * @return Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Volume size in gigabytes.
+     * @return Volume size in gigabytes.
      * 
-    */
+     */
     public Integer sizeGb() {
         return this.sizeGb;
     }
     /**
-     * Underlying volume type, e.g. &#39;tmpfs&#39;.
+     * @return Underlying volume type, e.g. &#39;tmpfs&#39;.
      * 
-    */
+     */
     public String volumeType() {
         return this.volumeType;
     }

@@ -24,6 +24,11 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRefGetArgs extend
     @Import(name="localObjectReference")
     private @Nullable Output<ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceGetArgs> localObjectReference;
 
+    /**
+     * @return The Secret to select from.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceGetArgs>> localObjectReference() {
         return Optional.ofNullable(this.localObjectReference);
     }
@@ -35,6 +40,10 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRefGetArgs extend
     @Import(name="optional")
     private @Nullable Output<Boolean> optional;
 
+    /**
+     * @return Specify whether the Secret must be defined
+     * 
+     */
     public Optional<Output<Boolean>> optional() {
         return Optional.ofNullable(this.optional);
     }
@@ -64,20 +73,46 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRefGetArgs extend
             $ = new ServiceTemplateSpecContainerEnvFromConfigMapRefGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param localObjectReference The Secret to select from.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localObjectReference(@Nullable Output<ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceGetArgs> localObjectReference) {
             $.localObjectReference = localObjectReference;
             return this;
         }
 
+        /**
+         * @param localObjectReference The Secret to select from.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localObjectReference(ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceGetArgs localObjectReference) {
             return localObjectReference(Output.of(localObjectReference));
         }
 
+        /**
+         * @param optional Specify whether the Secret must be defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder optional(@Nullable Output<Boolean> optional) {
             $.optional = optional;
             return this;
         }
 
+        /**
+         * @param optional Specify whether the Secret must be defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder optional(Boolean optional) {
             return optional(Output.of(optional));
         }

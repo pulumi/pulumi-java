@@ -24,6 +24,11 @@ public final class StandardAppVersionBasicScalingGetArgs extends com.pulumi.reso
     @Import(name="idleTimeout")
     private @Nullable Output<String> idleTimeout;
 
+    /**
+     * @return Duration of time after the last request that an instance must wait before the instance is shut down.
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. Defaults to 900s.
+     * 
+     */
     public Optional<Output<String>> idleTimeout() {
         return Optional.ofNullable(this.idleTimeout);
     }
@@ -35,6 +40,10 @@ public final class StandardAppVersionBasicScalingGetArgs extends com.pulumi.reso
     @Import(name="maxInstances", required=true)
     private Output<Integer> maxInstances;
 
+    /**
+     * @return Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
+     * 
+     */
     public Output<Integer> maxInstances() {
         return this.maxInstances;
     }
@@ -64,20 +73,46 @@ public final class StandardAppVersionBasicScalingGetArgs extends com.pulumi.reso
             $ = new StandardAppVersionBasicScalingGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param idleTimeout Duration of time after the last request that an instance must wait before the instance is shut down.
+         * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. Defaults to 900s.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleTimeout(@Nullable Output<String> idleTimeout) {
             $.idleTimeout = idleTimeout;
             return this;
         }
 
+        /**
+         * @param idleTimeout Duration of time after the last request that an instance must wait before the instance is shut down.
+         * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. Defaults to 900s.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleTimeout(String idleTimeout) {
             return idleTimeout(Output.of(idleTimeout));
         }
 
+        /**
+         * @param maxInstances Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxInstances(Output<Integer> maxInstances) {
             $.maxInstances = maxInstances;
             return this;
         }
 
+        /**
+         * @param maxInstances Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxInstances(Integer maxInstances) {
             return maxInstances(Output.of(maxInstances));
         }

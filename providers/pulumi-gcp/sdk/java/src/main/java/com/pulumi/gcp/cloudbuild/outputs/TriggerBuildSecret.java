@@ -11,17 +11,17 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TriggerBuildSecret {
-    /**
-     * Cloud KMS key name to use to decrypt these envs.
-     * 
-     */
+        /**
+         * @return Cloud KMS key name to use to decrypt these envs.
+         * 
+         */
     private final String kmsKeyName;
-    /**
-     * A list of global environment variables, which are encrypted using a Cloud Key Management
-     * Service crypto key. These values must be specified in the build&#39;s Secret. These variables
-     * will be available to all build steps in this build.
-     * 
-     */
+        /**
+         * @return A list of global environment variables, which are encrypted using a Cloud Key Management
+         * Service crypto key. These values must be specified in the build&#39;s Secret. These variables
+         * will be available to all build steps in this build.
+         * 
+         */
     private final @Nullable Map<String,String> secretEnv;
 
     @CustomType.Constructor
@@ -33,18 +33,18 @@ public final class TriggerBuildSecret {
     }
 
     /**
-     * Cloud KMS key name to use to decrypt these envs.
+     * @return Cloud KMS key name to use to decrypt these envs.
      * 
-    */
+     */
     public String kmsKeyName() {
         return this.kmsKeyName;
     }
     /**
-     * A list of global environment variables, which are encrypted using a Cloud Key Management
+     * @return A list of global environment variables, which are encrypted using a Cloud Key Management
      * Service crypto key. These values must be specified in the build&#39;s Secret. These variables
      * will be available to all build steps in this build.
      * 
-    */
+     */
     public Map<String,String> secretEnv() {
         return this.secretEnv == null ? Map.of() : this.secretEnv;
     }

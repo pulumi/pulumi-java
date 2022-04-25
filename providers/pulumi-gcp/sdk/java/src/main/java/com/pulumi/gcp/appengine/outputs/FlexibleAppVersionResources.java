@@ -14,26 +14,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FlexibleAppVersionResources {
-    /**
-     * Number of CPU cores needed.
-     * 
-     */
+        /**
+         * @return Number of CPU cores needed.
+         * 
+         */
     private final @Nullable Integer cpu;
-    /**
-     * Disk size (GB) needed.
-     * 
-     */
+        /**
+         * @return Disk size (GB) needed.
+         * 
+         */
     private final @Nullable Integer diskGb;
-    /**
-     * Memory (GB) needed.
-     * 
-     */
+        /**
+         * @return Memory (GB) needed.
+         * 
+         */
     private final @Nullable Double memoryGb;
-    /**
-     * List of ports, or port pairs, to forward from the virtual machine to the application container.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return List of ports, or port pairs, to forward from the virtual machine to the application container.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<FlexibleAppVersionResourcesVolume> volumes;
 
     @CustomType.Constructor
@@ -49,31 +49,31 @@ public final class FlexibleAppVersionResources {
     }
 
     /**
-     * Number of CPU cores needed.
+     * @return Number of CPU cores needed.
      * 
-    */
+     */
     public Optional<Integer> cpu() {
         return Optional.ofNullable(this.cpu);
     }
     /**
-     * Disk size (GB) needed.
+     * @return Disk size (GB) needed.
      * 
-    */
+     */
     public Optional<Integer> diskGb() {
         return Optional.ofNullable(this.diskGb);
     }
     /**
-     * Memory (GB) needed.
+     * @return Memory (GB) needed.
      * 
-    */
+     */
     public Optional<Double> memoryGb() {
         return Optional.ofNullable(this.memoryGb);
     }
     /**
-     * List of ports, or port pairs, to forward from the virtual machine to the application container.
+     * @return List of ports, or port pairs, to forward from the virtual machine to the application container.
      * Structure is documented below.
      * 
-    */
+     */
     public List<FlexibleAppVersionResourcesVolume> volumes() {
         return this.volumes == null ? List.of() : this.volumes;
     }

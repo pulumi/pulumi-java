@@ -11,11 +11,11 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CxPageFormParameterFillBehavior {
-    /**
-     * The fulfillment to provide the initial prompt that the agent can present to the user in order to fill the parameter.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return The fulfillment to provide the initial prompt that the agent can present to the user in order to fill the parameter.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable CxPageFormParameterFillBehaviorInitialPromptFulfillment initialPromptFulfillment;
 
     @CustomType.Constructor
@@ -24,10 +24,10 @@ public final class CxPageFormParameterFillBehavior {
     }
 
     /**
-     * The fulfillment to provide the initial prompt that the agent can present to the user in order to fill the parameter.
+     * @return The fulfillment to provide the initial prompt that the agent can present to the user in order to fill the parameter.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<CxPageFormParameterFillBehaviorInitialPromptFulfillment> initialPromptFulfillment() {
         return Optional.ofNullable(this.initialPromptFulfillment);
     }

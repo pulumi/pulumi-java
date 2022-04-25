@@ -26,6 +26,11 @@ public final class CryptoKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="destroyScheduledDuration")
     private @Nullable Output<String> destroyScheduledDuration;
 
+    /**
+     * @return The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED.
+     * If not specified at creation time, the default duration is 24 hours.
+     * 
+     */
     public Optional<Output<String>> destroyScheduledDuration() {
         return Optional.ofNullable(this.destroyScheduledDuration);
     }
@@ -37,6 +42,10 @@ public final class CryptoKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="importOnly")
     private @Nullable Output<Boolean> importOnly;
 
+    /**
+     * @return Whether this key may contain imported versions only.
+     * 
+     */
     public Optional<Output<Boolean>> importOnly() {
         return Optional.ofNullable(this.importOnly);
     }
@@ -49,6 +58,11 @@ public final class CryptoKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyRing")
     private @Nullable Output<String> keyRing;
 
+    /**
+     * @return The KeyRing that this key belongs to.
+     * Format: `&#39;projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}&#39;`.
+     * 
+     */
     public Optional<Output<String>> keyRing() {
         return Optional.ofNullable(this.keyRing);
     }
@@ -60,6 +74,10 @@ public final class CryptoKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels with user-defined metadata to apply to this resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -71,6 +89,10 @@ public final class CryptoKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name for the CryptoKey.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -86,6 +108,14 @@ public final class CryptoKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="purpose")
     private @Nullable Output<String> purpose;
 
+    /**
+     * @return The immutable purpose of this CryptoKey. See the
+     * [purpose reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
+     * for possible inputs.
+     * Default value is `ENCRYPT_DECRYPT`.
+     * Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYPT`.
+     * 
+     */
     public Optional<Output<String>> purpose() {
         return Optional.ofNullable(this.purpose);
     }
@@ -100,6 +130,13 @@ public final class CryptoKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="rotationPeriod")
     private @Nullable Output<String> rotationPeriod;
 
+    /**
+     * @return Every time this period passes, generate a new CryptoKeyVersion and set it as the primary.
+     * The first rotation will take place after the specified period. The rotation period has
+     * the format of a decimal number with up to 9 fractional digits, followed by the
+     * letter `s` (seconds). It must be greater than a day (ie, 86400).
+     * 
+     */
     public Optional<Output<String>> rotationPeriod() {
         return Optional.ofNullable(this.rotationPeriod);
     }
@@ -112,6 +149,11 @@ public final class CryptoKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="skipInitialVersionCreation")
     private @Nullable Output<Boolean> skipInitialVersionCreation;
 
+    /**
+     * @return If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
+     * You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
+     * 
+     */
     public Optional<Output<Boolean>> skipInitialVersionCreation() {
         return Optional.ofNullable(this.skipInitialVersionCreation);
     }
@@ -124,6 +166,11 @@ public final class CryptoKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="versionTemplate")
     private @Nullable Output<CryptoKeyVersionTemplateGetArgs> versionTemplate;
 
+    /**
+     * @return A template describing settings for new crypto key versions.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<CryptoKeyVersionTemplateGetArgs>> versionTemplate() {
         return Optional.ofNullable(this.versionTemplate);
     }
@@ -160,83 +207,213 @@ public final class CryptoKeyState extends com.pulumi.resources.ResourceArgs {
             $ = new CryptoKeyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destroyScheduledDuration The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED.
+         * If not specified at creation time, the default duration is 24 hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destroyScheduledDuration(@Nullable Output<String> destroyScheduledDuration) {
             $.destroyScheduledDuration = destroyScheduledDuration;
             return this;
         }
 
+        /**
+         * @param destroyScheduledDuration The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED.
+         * If not specified at creation time, the default duration is 24 hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destroyScheduledDuration(String destroyScheduledDuration) {
             return destroyScheduledDuration(Output.of(destroyScheduledDuration));
         }
 
+        /**
+         * @param importOnly Whether this key may contain imported versions only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importOnly(@Nullable Output<Boolean> importOnly) {
             $.importOnly = importOnly;
             return this;
         }
 
+        /**
+         * @param importOnly Whether this key may contain imported versions only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importOnly(Boolean importOnly) {
             return importOnly(Output.of(importOnly));
         }
 
+        /**
+         * @param keyRing The KeyRing that this key belongs to.
+         * Format: `&#39;projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}&#39;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyRing(@Nullable Output<String> keyRing) {
             $.keyRing = keyRing;
             return this;
         }
 
+        /**
+         * @param keyRing The KeyRing that this key belongs to.
+         * Format: `&#39;projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}&#39;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyRing(String keyRing) {
             return keyRing(Output.of(keyRing));
         }
 
+        /**
+         * @param labels Labels with user-defined metadata to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels with user-defined metadata to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param name The resource name for the CryptoKey.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name for the CryptoKey.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param purpose The immutable purpose of this CryptoKey. See the
+         * [purpose reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
+         * for possible inputs.
+         * Default value is `ENCRYPT_DECRYPT`.
+         * Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYPT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder purpose(@Nullable Output<String> purpose) {
             $.purpose = purpose;
             return this;
         }
 
+        /**
+         * @param purpose The immutable purpose of this CryptoKey. See the
+         * [purpose reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
+         * for possible inputs.
+         * Default value is `ENCRYPT_DECRYPT`.
+         * Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYPT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder purpose(String purpose) {
             return purpose(Output.of(purpose));
         }
 
+        /**
+         * @param rotationPeriod Every time this period passes, generate a new CryptoKeyVersion and set it as the primary.
+         * The first rotation will take place after the specified period. The rotation period has
+         * the format of a decimal number with up to 9 fractional digits, followed by the
+         * letter `s` (seconds). It must be greater than a day (ie, 86400).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rotationPeriod(@Nullable Output<String> rotationPeriod) {
             $.rotationPeriod = rotationPeriod;
             return this;
         }
 
+        /**
+         * @param rotationPeriod Every time this period passes, generate a new CryptoKeyVersion and set it as the primary.
+         * The first rotation will take place after the specified period. The rotation period has
+         * the format of a decimal number with up to 9 fractional digits, followed by the
+         * letter `s` (seconds). It must be greater than a day (ie, 86400).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rotationPeriod(String rotationPeriod) {
             return rotationPeriod(Output.of(rotationPeriod));
         }
 
+        /**
+         * @param skipInitialVersionCreation If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
+         * You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipInitialVersionCreation(@Nullable Output<Boolean> skipInitialVersionCreation) {
             $.skipInitialVersionCreation = skipInitialVersionCreation;
             return this;
         }
 
+        /**
+         * @param skipInitialVersionCreation If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
+         * You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipInitialVersionCreation(Boolean skipInitialVersionCreation) {
             return skipInitialVersionCreation(Output.of(skipInitialVersionCreation));
         }
 
+        /**
+         * @param versionTemplate A template describing settings for new crypto key versions.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionTemplate(@Nullable Output<CryptoKeyVersionTemplateGetArgs> versionTemplate) {
             $.versionTemplate = versionTemplate;
             return this;
         }
 
+        /**
+         * @param versionTemplate A template describing settings for new crypto key versions.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionTemplate(CryptoKeyVersionTemplateGetArgs versionTemplate) {
             return versionTemplate(Output.of(versionTemplate));
         }

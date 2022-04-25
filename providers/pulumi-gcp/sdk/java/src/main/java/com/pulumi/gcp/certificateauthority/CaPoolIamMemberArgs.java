@@ -23,6 +23,10 @@ public final class CaPoolIamMemberArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="caPool", required=true)
     private Output<String> caPool;
 
+    /**
+     * @return Used to find the parent resource to bind the IAM policy to
+     * 
+     */
     public Output<String> caPool() {
         return this.caPool;
     }
@@ -43,6 +47,12 @@ public final class CaPoolIamMemberArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Location of the CaPool. A full list of valid locations can be found by
+     * running `gcloud privateca locations list`.
+     * Used to find the parent resource to bind the IAM policy to
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -62,6 +72,11 @@ public final class CaPoolIamMemberArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -75,6 +90,12 @@ public final class CaPoolIamMemberArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="role", required=true)
     private Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.certificateauthority.CaPoolIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     public Output<String> role() {
         return this.role;
     }
@@ -108,11 +129,23 @@ public final class CaPoolIamMemberArgs extends com.pulumi.resources.ResourceArgs
             $ = new CaPoolIamMemberArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param caPool Used to find the parent resource to bind the IAM policy to
+         * 
+         * @return builder
+         * 
+         */
         public Builder caPool(Output<String> caPool) {
             $.caPool = caPool;
             return this;
         }
 
+        /**
+         * @param caPool Used to find the parent resource to bind the IAM policy to
+         * 
+         * @return builder
+         * 
+         */
         public Builder caPool(String caPool) {
             return caPool(Output.of(caPool));
         }
@@ -126,11 +159,27 @@ public final class CaPoolIamMemberArgs extends com.pulumi.resources.ResourceArgs
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param location Location of the CaPool. A full list of valid locations can be found by
+         * running `gcloud privateca locations list`.
+         * Used to find the parent resource to bind the IAM policy to
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Location of the CaPool. A full list of valid locations can be found by
+         * running `gcloud privateca locations list`.
+         * Used to find the parent resource to bind the IAM policy to
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
@@ -144,20 +193,50 @@ public final class CaPoolIamMemberArgs extends com.pulumi.resources.ResourceArgs
             return member(Output.of(member));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.certificateauthority.CaPoolIamBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.certificateauthority.CaPoolIamBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }

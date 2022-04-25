@@ -13,24 +13,24 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SloWindowsBasedSliGoodTotalRatioThreshold {
-    /**
-     * Basic SLI to evaluate to judge window quality.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Basic SLI to evaluate to judge window quality.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance basicSliPerformance;
-    /**
-     * Request-based SLI to evaluate to judge window quality.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Request-based SLI to evaluate to judge window quality.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformance performance;
-    /**
-     * A duration string, e.g. 10s.
-     * Good service is defined to be the count of requests made to
-     * this service that return in no more than threshold.
-     * 
-     */
+        /**
+         * @return A duration string, e.g. 10s.
+         * Good service is defined to be the count of requests made to
+         * this service that return in no more than threshold.
+         * 
+         */
     private final @Nullable Double threshold;
 
     @CustomType.Constructor
@@ -44,27 +44,27 @@ public final class SloWindowsBasedSliGoodTotalRatioThreshold {
     }
 
     /**
-     * Basic SLI to evaluate to judge window quality.
+     * @return Basic SLI to evaluate to judge window quality.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance> basicSliPerformance() {
         return Optional.ofNullable(this.basicSliPerformance);
     }
     /**
-     * Request-based SLI to evaluate to judge window quality.
+     * @return Request-based SLI to evaluate to judge window quality.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<SloWindowsBasedSliGoodTotalRatioThresholdPerformance> performance() {
         return Optional.ofNullable(this.performance);
     }
     /**
-     * A duration string, e.g. 10s.
+     * @return A duration string, e.g. 10s.
      * Good service is defined to be the count of requests made to
      * this service that return in no more than threshold.
      * 
-    */
+     */
     public Optional<Double> threshold() {
         return Optional.ofNullable(this.threshold);
     }

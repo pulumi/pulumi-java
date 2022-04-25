@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AccessLevelsAccessLevelBasic {
-    /**
-     * How the conditions list should be combined to determine if a request
-     * is granted this AccessLevel. If AND is used, each Condition in
-     * conditions must be satisfied for the AccessLevel to be applied. If
-     * OR is used, at least one Condition in conditions must be satisfied
-     * for the AccessLevel to be applied.
-     * Default value is `AND`.
-     * Possible values are `AND` and `OR`.
-     * 
-     */
+        /**
+         * @return How the conditions list should be combined to determine if a request
+         * is granted this AccessLevel. If AND is used, each Condition in
+         * conditions must be satisfied for the AccessLevel to be applied. If
+         * OR is used, at least one Condition in conditions must be satisfied
+         * for the AccessLevel to be applied.
+         * Default value is `AND`.
+         * Possible values are `AND` and `OR`.
+         * 
+         */
     private final @Nullable String combiningFunction;
-    /**
-     * A set of requirements for the AccessLevel to be granted.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return A set of requirements for the AccessLevel to be granted.
+         * Structure is documented below.
+         * 
+         */
     private final List<AccessLevelsAccessLevelBasicCondition> conditions;
 
     @CustomType.Constructor
@@ -40,7 +40,7 @@ public final class AccessLevelsAccessLevelBasic {
     }
 
     /**
-     * How the conditions list should be combined to determine if a request
+     * @return How the conditions list should be combined to determine if a request
      * is granted this AccessLevel. If AND is used, each Condition in
      * conditions must be satisfied for the AccessLevel to be applied. If
      * OR is used, at least one Condition in conditions must be satisfied
@@ -48,15 +48,15 @@ public final class AccessLevelsAccessLevelBasic {
      * Default value is `AND`.
      * Possible values are `AND` and `OR`.
      * 
-    */
+     */
     public Optional<String> combiningFunction() {
         return Optional.ofNullable(this.combiningFunction);
     }
     /**
-     * A set of requirements for the AccessLevel to be granted.
+     * @return A set of requirements for the AccessLevel to be granted.
      * Structure is documented below.
      * 
-    */
+     */
     public List<AccessLevelsAccessLevelBasicCondition> conditions() {
         return this.conditions;
     }

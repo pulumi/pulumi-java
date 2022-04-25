@@ -27,6 +27,11 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends com.pulumi.re
     @Import(name="endTime")
     private @Nullable Output<String> endTime;
 
+    /**
+     * @return The end time at which a recurring patch deployment schedule is no longer active.
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+     * 
+     */
     public Optional<Output<String>> endTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -40,6 +45,12 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends com.pulumi.re
     @Import(name="lastExecuteTime")
     private @Nullable Output<String> lastExecuteTime;
 
+    /**
+     * @return -
+     * The time the last patch job ran successfully.
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+     * 
+     */
     public Optional<Output<String>> lastExecuteTime() {
         return Optional.ofNullable(this.lastExecuteTime);
     }
@@ -52,6 +63,11 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends com.pulumi.re
     @Import(name="monthly")
     private @Nullable Output<PatchDeploymentRecurringScheduleMonthlyGetArgs> monthly;
 
+    /**
+     * @return Schedule with monthly executions.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PatchDeploymentRecurringScheduleMonthlyGetArgs>> monthly() {
         return Optional.ofNullable(this.monthly);
     }
@@ -65,6 +81,12 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends com.pulumi.re
     @Import(name="nextExecuteTime")
     private @Nullable Output<String> nextExecuteTime;
 
+    /**
+     * @return -
+     * The time the next patch job is scheduled to run.
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+     * 
+     */
     public Optional<Output<String>> nextExecuteTime() {
         return Optional.ofNullable(this.nextExecuteTime);
     }
@@ -77,6 +99,11 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends com.pulumi.re
     @Import(name="startTime")
     private @Nullable Output<String> startTime;
 
+    /**
+     * @return The time that the recurring schedule becomes effective. Defaults to createTime of the patch deployment.
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+     * 
+     */
     public Optional<Output<String>> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -89,6 +116,11 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends com.pulumi.re
     @Import(name="timeOfDay", required=true)
     private Output<PatchDeploymentRecurringScheduleTimeOfDayGetArgs> timeOfDay;
 
+    /**
+     * @return Time of the day to run a recurring deployment.
+     * Structure is documented below.
+     * 
+     */
     public Output<PatchDeploymentRecurringScheduleTimeOfDayGetArgs> timeOfDay() {
         return this.timeOfDay;
     }
@@ -102,6 +134,12 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends com.pulumi.re
     @Import(name="timeZone", required=true)
     private Output<PatchDeploymentRecurringScheduleTimeZoneGetArgs> timeZone;
 
+    /**
+     * @return Defines the time zone that timeOfDay is relative to. The rules for daylight saving time are
+     * determined by the chosen time zone.
+     * Structure is documented below.
+     * 
+     */
     public Output<PatchDeploymentRecurringScheduleTimeZoneGetArgs> timeZone() {
         return this.timeZone;
     }
@@ -114,6 +152,11 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends com.pulumi.re
     @Import(name="weekly")
     private @Nullable Output<PatchDeploymentRecurringScheduleWeeklyGetArgs> weekly;
 
+    /**
+     * @return Schedule with weekly executions.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PatchDeploymentRecurringScheduleWeeklyGetArgs>> weekly() {
         return Optional.ofNullable(this.weekly);
     }
@@ -149,74 +192,192 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends com.pulumi.re
             $ = new PatchDeploymentRecurringScheduleGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endTime The end time at which a recurring patch deployment schedule is no longer active.
+         * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(@Nullable Output<String> endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param endTime The end time at which a recurring patch deployment schedule is no longer active.
+         * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             return endTime(Output.of(endTime));
         }
 
+        /**
+         * @param lastExecuteTime -
+         * The time the last patch job ran successfully.
+         * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastExecuteTime(@Nullable Output<String> lastExecuteTime) {
             $.lastExecuteTime = lastExecuteTime;
             return this;
         }
 
+        /**
+         * @param lastExecuteTime -
+         * The time the last patch job ran successfully.
+         * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastExecuteTime(String lastExecuteTime) {
             return lastExecuteTime(Output.of(lastExecuteTime));
         }
 
+        /**
+         * @param monthly Schedule with monthly executions.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthly(@Nullable Output<PatchDeploymentRecurringScheduleMonthlyGetArgs> monthly) {
             $.monthly = monthly;
             return this;
         }
 
+        /**
+         * @param monthly Schedule with monthly executions.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthly(PatchDeploymentRecurringScheduleMonthlyGetArgs monthly) {
             return monthly(Output.of(monthly));
         }
 
+        /**
+         * @param nextExecuteTime -
+         * The time the next patch job is scheduled to run.
+         * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextExecuteTime(@Nullable Output<String> nextExecuteTime) {
             $.nextExecuteTime = nextExecuteTime;
             return this;
         }
 
+        /**
+         * @param nextExecuteTime -
+         * The time the next patch job is scheduled to run.
+         * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextExecuteTime(String nextExecuteTime) {
             return nextExecuteTime(Output.of(nextExecuteTime));
         }
 
+        /**
+         * @param startTime The time that the recurring schedule becomes effective. Defaults to createTime of the patch deployment.
+         * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime The time that the recurring schedule becomes effective. Defaults to createTime of the patch deployment.
+         * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }
 
+        /**
+         * @param timeOfDay Time of the day to run a recurring deployment.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeOfDay(Output<PatchDeploymentRecurringScheduleTimeOfDayGetArgs> timeOfDay) {
             $.timeOfDay = timeOfDay;
             return this;
         }
 
+        /**
+         * @param timeOfDay Time of the day to run a recurring deployment.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeOfDay(PatchDeploymentRecurringScheduleTimeOfDayGetArgs timeOfDay) {
             return timeOfDay(Output.of(timeOfDay));
         }
 
+        /**
+         * @param timeZone Defines the time zone that timeOfDay is relative to. The rules for daylight saving time are
+         * determined by the chosen time zone.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(Output<PatchDeploymentRecurringScheduleTimeZoneGetArgs> timeZone) {
             $.timeZone = timeZone;
             return this;
         }
 
+        /**
+         * @param timeZone Defines the time zone that timeOfDay is relative to. The rules for daylight saving time are
+         * determined by the chosen time zone.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(PatchDeploymentRecurringScheduleTimeZoneGetArgs timeZone) {
             return timeZone(Output.of(timeZone));
         }
 
+        /**
+         * @param weekly Schedule with weekly executions.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weekly(@Nullable Output<PatchDeploymentRecurringScheduleWeeklyGetArgs> weekly) {
             $.weekly = weekly;
             return this;
         }
 
+        /**
+         * @param weekly Schedule with weekly executions.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weekly(PatchDeploymentRecurringScheduleWeeklyGetArgs weekly) {
             return weekly(Output.of(weekly));
         }

@@ -12,31 +12,31 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFile {
-    /**
-     * A a file with this content. The size of the content is limited to 1024 characters.
-     * 
-     */
+        /**
+         * @return A a file with this content. The size of the content is limited to 1024 characters.
+         * 
+         */
     private final @Nullable String content;
-    /**
-     * A remote or local source.
-     * 
-     */
+        /**
+         * @return A remote or local source.
+         * 
+         */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFile file;
-    /**
-     * Required. The absolute path of the file within the VM.
-     * 
-     */
+        /**
+         * @return Required. The absolute path of the file within the VM.
+         * 
+         */
     private final String path;
-    /**
-     * - 
-     * Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit number with the 4 bit corresponding to the read permissions, the 2 bit corresponds to the write bit, and the one bit corresponds to the execute permission. Default behavior is 755. Below are some examples of permissions and their associated values: read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
-     * 
-     */
+        /**
+         * @return -
+         * Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit number with the 4 bit corresponding to the read permissions, the 2 bit corresponds to the write bit, and the one bit corresponds to the execute permission. Default behavior is 755. Below are some examples of permissions and their associated values: read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
+         * 
+         */
     private final @Nullable String permissions;
-    /**
-     * Required. Desired state of the file. Possible values: OS_POLICY_COMPLIANCE_STATE_UNSPECIFIED, COMPLIANT, NON_COMPLIANT, UNKNOWN, NO_OS_POLICIES_APPLICABLE
-     * 
-     */
+        /**
+         * @return Required. Desired state of the file. Possible values: OS_POLICY_COMPLIANCE_STATE_UNSPECIFIED, COMPLIANT, NON_COMPLIANT, UNKNOWN, NO_OS_POLICIES_APPLICABLE
+         * 
+         */
     private final String state;
 
     @CustomType.Constructor
@@ -54,38 +54,38 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFile {
     }
 
     /**
-     * A a file with this content. The size of the content is limited to 1024 characters.
+     * @return A a file with this content. The size of the content is limited to 1024 characters.
      * 
-    */
+     */
     public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
     /**
-     * A remote or local source.
+     * @return A remote or local source.
      * 
-    */
+     */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFile> file() {
         return Optional.ofNullable(this.file);
     }
     /**
-     * Required. The absolute path of the file within the VM.
+     * @return Required. The absolute path of the file within the VM.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }
     /**
-     * - 
+     * @return -
      * Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit number with the 4 bit corresponding to the read permissions, the 2 bit corresponds to the write bit, and the one bit corresponds to the execute permission. Default behavior is 755. Below are some examples of permissions and their associated values: read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
      * 
-    */
+     */
     public Optional<String> permissions() {
         return Optional.ofNullable(this.permissions);
     }
     /**
-     * Required. Desired state of the file. Possible values: OS_POLICY_COMPLIANCE_STATE_UNSPECIFIED, COMPLIANT, NON_COMPLIANT, UNKNOWN, NO_OS_POLICIES_APPLICABLE
+     * @return Required. Desired state of the file. Possible values: OS_POLICY_COMPLIANCE_STATE_UNSPECIFIED, COMPLIANT, NON_COMPLIANT, UNKNOWN, NO_OS_POLICIES_APPLICABLE
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

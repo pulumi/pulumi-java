@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbort {
-    /**
-     * The HTTP status code used to abort the request.
-     * The value must be between 200 and 599 inclusive.
-     * 
-     */
+        /**
+         * @return The HTTP status code used to abort the request.
+         * The value must be between 200 and 599 inclusive.
+         * 
+         */
     private final @Nullable Integer httpStatus;
-    /**
-     * The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
-     * The value must be between 0.0 and 100.0 inclusive.
-     * 
-     */
+        /**
+         * @return The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+         * The value must be between 0.0 and 100.0 inclusive.
+         * 
+         */
     private final @Nullable Double percentage;
 
     @CustomType.Constructor
@@ -34,18 +34,18 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbor
     }
 
     /**
-     * The HTTP status code used to abort the request.
+     * @return The HTTP status code used to abort the request.
      * The value must be between 200 and 599 inclusive.
      * 
-    */
+     */
     public Optional<Integer> httpStatus() {
         return Optional.ofNullable(this.httpStatus);
     }
     /**
-     * The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+     * @return The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
      * The value must be between 0.0 and 100.0 inclusive.
      * 
-    */
+     */
     public Optional<Double> percentage() {
         return Optional.ofNullable(this.percentage);
     }

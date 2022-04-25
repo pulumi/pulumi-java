@@ -10,27 +10,27 @@ import java.util.Objects;
 
 @CustomType
 public final class ConnectionCloudSql {
-    /**
-     * Cloud SQL properties.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Cloud SQL properties.
+         * Structure is documented below.
+         * 
+         */
     private final ConnectionCloudSqlCredential credential;
-    /**
-     * Database name.
-     * 
-     */
+        /**
+         * @return Database name.
+         * 
+         */
     private final String database;
-    /**
-     * Cloud SQL instance ID in the form project:location:instance.
-     * 
-     */
+        /**
+         * @return Cloud SQL instance ID in the form project:location:instance.
+         * 
+         */
     private final String instanceId;
-    /**
-     * Type of the Cloud SQL database.
-     * Possible values are `DATABASE_TYPE_UNSPECIFIED`, `POSTGRES`, and `MYSQL`.
-     * 
-     */
+        /**
+         * @return Type of the Cloud SQL database.
+         * Possible values are `DATABASE_TYPE_UNSPECIFIED`, `POSTGRES`, and `MYSQL`.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -46,32 +46,32 @@ public final class ConnectionCloudSql {
     }
 
     /**
-     * Cloud SQL properties.
+     * @return Cloud SQL properties.
      * Structure is documented below.
      * 
-    */
+     */
     public ConnectionCloudSqlCredential credential() {
         return this.credential;
     }
     /**
-     * Database name.
+     * @return Database name.
      * 
-    */
+     */
     public String database() {
         return this.database;
     }
     /**
-     * Cloud SQL instance ID in the form project:location:instance.
+     * @return Cloud SQL instance ID in the form project:location:instance.
      * 
-    */
+     */
     public String instanceId() {
         return this.instanceId;
     }
     /**
-     * Type of the Cloud SQL database.
+     * @return Type of the Cloud SQL database.
      * Possible values are `DATABASE_TYPE_UNSPECIFIED`, `POSTGRES`, and `MYSQL`.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

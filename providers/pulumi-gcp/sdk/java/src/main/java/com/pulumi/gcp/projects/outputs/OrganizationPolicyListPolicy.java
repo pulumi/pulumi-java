@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class OrganizationPolicyListPolicy {
-    /**
-     * or `deny` - (Optional) One or the other must be set.
-     * 
-     */
+        /**
+         * @return or `deny` - (Optional) One or the other must be set.
+         * 
+         */
     private final @Nullable OrganizationPolicyListPolicyAllow allow;
     private final @Nullable OrganizationPolicyListPolicyDeny deny;
-    /**
-     * If set to true, the values from the effective Policy of the parent resource
-     * are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
-     * 
-     */
+        /**
+         * @return If set to true, the values from the effective Policy of the parent resource
+         * are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
+         * 
+         */
     private final @Nullable Boolean inheritFromParent;
-    /**
-     * The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
-     * 
-     */
+        /**
+         * @return The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
+         * 
+         */
     private final @Nullable String suggestedValue;
 
     @CustomType.Constructor
@@ -45,9 +45,9 @@ public final class OrganizationPolicyListPolicy {
     }
 
     /**
-     * or `deny` - (Optional) One or the other must be set.
+     * @return or `deny` - (Optional) One or the other must be set.
      * 
-    */
+     */
     public Optional<OrganizationPolicyListPolicyAllow> allow() {
         return Optional.ofNullable(this.allow);
     }
@@ -55,17 +55,17 @@ public final class OrganizationPolicyListPolicy {
         return Optional.ofNullable(this.deny);
     }
     /**
-     * If set to true, the values from the effective Policy of the parent resource
+     * @return If set to true, the values from the effective Policy of the parent resource
      * are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
      * 
-    */
+     */
     public Optional<Boolean> inheritFromParent() {
         return Optional.ofNullable(this.inheritFromParent);
     }
     /**
-     * The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
+     * @return The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
      * 
-    */
+     */
     public Optional<String> suggestedValue() {
         return Optional.ofNullable(this.suggestedValue);
     }

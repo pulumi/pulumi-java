@@ -20,6 +20,10 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTab
     @Import(name="datasetId", required=true)
     private Output<String> datasetId;
 
+    /**
+     * @return The dataset ID of the table.
+     * 
+     */
     public Output<String> datasetId() {
         return this.datasetId;
     }
@@ -31,6 +35,10 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTab
     @Import(name="projectId", required=true)
     private Output<String> projectId;
 
+    /**
+     * @return The Google Cloud Platform project ID of the project containing the table.
+     * 
+     */
     public Output<String> projectId() {
         return this.projectId;
     }
@@ -42,6 +50,10 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTab
     @Import(name="tableId", required=true)
     private Output<String> tableId;
 
+    /**
+     * @return The name of the table.
+     * 
+     */
     public Output<String> tableId() {
         return this.tableId;
     }
@@ -72,29 +84,65 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTab
             $ = new PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetId The dataset ID of the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(Output<String> datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
+        /**
+         * @param datasetId The dataset ID of the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(String datasetId) {
             return datasetId(Output.of(datasetId));
         }
 
+        /**
+         * @param projectId The Google Cloud Platform project ID of the project containing the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(Output<String> projectId) {
             $.projectId = projectId;
             return this;
         }
 
+        /**
+         * @param projectId The Google Cloud Platform project ID of the project containing the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(String projectId) {
             return projectId(Output.of(projectId));
         }
 
+        /**
+         * @param tableId The name of the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableId(Output<String> tableId) {
             $.tableId = tableId;
             return this;
         }
 
+        /**
+         * @param tableId The name of the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableId(String tableId) {
             return tableId(Output.of(tableId));
         }

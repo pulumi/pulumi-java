@@ -23,6 +23,10 @@ public final class RegionBackendServiceConsistentHashHttpCookieGetArgs extends c
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the cookie.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -34,6 +38,10 @@ public final class RegionBackendServiceConsistentHashHttpCookieGetArgs extends c
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return Path to set for the cookie.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -46,6 +54,11 @@ public final class RegionBackendServiceConsistentHashHttpCookieGetArgs extends c
     @Import(name="ttl")
     private @Nullable Output<RegionBackendServiceConsistentHashHttpCookieTtlGetArgs> ttl;
 
+    /**
+     * @return The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+     * (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+     * 
+     */
     public Optional<Output<RegionBackendServiceConsistentHashHttpCookieTtlGetArgs>> ttl() {
         return Optional.ofNullable(this.ttl);
     }
@@ -76,29 +89,67 @@ public final class RegionBackendServiceConsistentHashHttpCookieGetArgs extends c
             $ = new RegionBackendServiceConsistentHashHttpCookieGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the cookie.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the cookie.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param path Path to set for the cookie.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path Path to set for the cookie.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param ttl The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+         * (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(@Nullable Output<RegionBackendServiceConsistentHashHttpCookieTtlGetArgs> ttl) {
             $.ttl = ttl;
             return this;
         }
 
+        /**
+         * @param ttl The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+         * (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(RegionBackendServiceConsistentHashHttpCookieTtlGetArgs ttl) {
             return ttl(Output.of(ttl));
         }

@@ -24,6 +24,11 @@ public final class ClusterMasterAuthorizedNetworksConfigGetArgs extends com.pulu
     @Import(name="cidrBlocks")
     private @Nullable Output<List<ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs>> cidrBlocks;
 
+    /**
+     * @return External networks that can access the
+     * Kubernetes cluster master through HTTPS.
+     * 
+     */
     public Optional<Output<List<ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs>>> cidrBlocks() {
         return Optional.ofNullable(this.cidrBlocks);
     }
@@ -52,15 +57,36 @@ public final class ClusterMasterAuthorizedNetworksConfigGetArgs extends com.pulu
             $ = new ClusterMasterAuthorizedNetworksConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cidrBlocks External networks that can access the
+         * Kubernetes cluster master through HTTPS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlocks(@Nullable Output<List<ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs>> cidrBlocks) {
             $.cidrBlocks = cidrBlocks;
             return this;
         }
 
+        /**
+         * @param cidrBlocks External networks that can access the
+         * Kubernetes cluster master through HTTPS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlocks(List<ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs> cidrBlocks) {
             return cidrBlocks(Output.of(cidrBlocks));
         }
 
+        /**
+         * @param cidrBlocks External networks that can access the
+         * Kubernetes cluster master through HTTPS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlocks(ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs... cidrBlocks) {
             return cidrBlocks(List.of(cidrBlocks));
         }

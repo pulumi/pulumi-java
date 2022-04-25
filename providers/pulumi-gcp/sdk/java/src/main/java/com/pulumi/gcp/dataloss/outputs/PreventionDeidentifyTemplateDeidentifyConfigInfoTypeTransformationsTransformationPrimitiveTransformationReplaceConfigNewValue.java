@@ -16,49 +16,49 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValue {
-    /**
-     * A boolean value.
-     * 
-     */
+        /**
+         * @return A boolean value.
+         * 
+         */
     private final @Nullable Boolean booleanValue;
-    /**
-     * Represents a whole or partial calendar date.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Represents a whole or partial calendar date.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValue dateValue;
-    /**
-     * Represents a day of the week.
-     * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
-     * 
-     */
+        /**
+         * @return Represents a day of the week.
+         * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+         * 
+         */
     private final @Nullable String dayOfWeekValue;
-    /**
-     * A float value.
-     * 
-     */
+        /**
+         * @return A float value.
+         * 
+         */
     private final @Nullable Double floatValue;
-    /**
-     * An integer value.
-     * 
-     */
+        /**
+         * @return An integer value.
+         * 
+         */
     private final @Nullable Integer integerValue;
-    /**
-     * A string value.
-     * 
-     */
+        /**
+         * @return A string value.
+         * 
+         */
     private final @Nullable String stringValue;
-    /**
-     * Represents a time of day.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Represents a time of day.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValue timeValue;
-    /**
-     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine fractional digits.
-     * Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
-     * 
-     */
+        /**
+         * @return A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine fractional digits.
+         * Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         */
     private final @Nullable String timestampValue;
 
     @CustomType.Constructor
@@ -82,62 +82,62 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     }
 
     /**
-     * A boolean value.
+     * @return A boolean value.
      * 
-    */
+     */
     public Optional<Boolean> booleanValue() {
         return Optional.ofNullable(this.booleanValue);
     }
     /**
-     * Represents a whole or partial calendar date.
+     * @return Represents a whole or partial calendar date.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValue> dateValue() {
         return Optional.ofNullable(this.dateValue);
     }
     /**
-     * Represents a day of the week.
+     * @return Represents a day of the week.
      * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
      * 
-    */
+     */
     public Optional<String> dayOfWeekValue() {
         return Optional.ofNullable(this.dayOfWeekValue);
     }
     /**
-     * A float value.
+     * @return A float value.
      * 
-    */
+     */
     public Optional<Double> floatValue() {
         return Optional.ofNullable(this.floatValue);
     }
     /**
-     * An integer value.
+     * @return An integer value.
      * 
-    */
+     */
     public Optional<Integer> integerValue() {
         return Optional.ofNullable(this.integerValue);
     }
     /**
-     * A string value.
+     * @return A string value.
      * 
-    */
+     */
     public Optional<String> stringValue() {
         return Optional.ofNullable(this.stringValue);
     }
     /**
-     * Represents a time of day.
+     * @return Represents a time of day.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValue> timeValue() {
         return Optional.ofNullable(this.timeValue);
     }
     /**
-     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine fractional digits.
+     * @return A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine fractional digits.
      * Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
-    */
+     */
     public Optional<String> timestampValue() {
         return Optional.ofNullable(this.timestampValue);
     }

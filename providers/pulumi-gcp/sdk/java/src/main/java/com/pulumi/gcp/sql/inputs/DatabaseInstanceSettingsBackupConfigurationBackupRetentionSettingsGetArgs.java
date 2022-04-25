@@ -24,6 +24,11 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
     @Import(name="retainedBackups", required=true)
     private Output<Integer> retainedBackups;
 
+    /**
+     * @return Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit
+     * is &#39;COUNT&#39;, we will retain this many backups.
+     * 
+     */
     public Output<Integer> retainedBackups() {
         return this.retainedBackups;
     }
@@ -35,6 +40,10 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
     @Import(name="retentionUnit")
     private @Nullable Output<String> retentionUnit;
 
+    /**
+     * @return The unit that &#39;retained_backups&#39; represents. Defaults to `COUNT`.
+     * 
+     */
     public Optional<Output<String>> retentionUnit() {
         return Optional.ofNullable(this.retentionUnit);
     }
@@ -64,20 +73,46 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
             $ = new DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param retainedBackups Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit
+         * is &#39;COUNT&#39;, we will retain this many backups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retainedBackups(Output<Integer> retainedBackups) {
             $.retainedBackups = retainedBackups;
             return this;
         }
 
+        /**
+         * @param retainedBackups Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit
+         * is &#39;COUNT&#39;, we will retain this many backups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retainedBackups(Integer retainedBackups) {
             return retainedBackups(Output.of(retainedBackups));
         }
 
+        /**
+         * @param retentionUnit The unit that &#39;retained_backups&#39; represents. Defaults to `COUNT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionUnit(@Nullable Output<String> retentionUnit) {
             $.retentionUnit = retentionUnit;
             return this;
         }
 
+        /**
+         * @param retentionUnit The unit that &#39;retained_backups&#39; represents. Defaults to `COUNT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionUnit(String retentionUnit) {
             return retentionUnit(Output.of(retentionUnit));
         }

@@ -22,6 +22,10 @@ public final class FlexibleAppVersionDeploymentFileArgs extends com.pulumi.resou
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -33,6 +37,10 @@ public final class FlexibleAppVersionDeploymentFileArgs extends com.pulumi.resou
     @Import(name="sha1Sum")
     private @Nullable Output<String> sha1Sum;
 
+    /**
+     * @return SHA1 checksum of the file
+     * 
+     */
     public Optional<Output<String>> sha1Sum() {
         return Optional.ofNullable(this.sha1Sum);
     }
@@ -44,6 +52,10 @@ public final class FlexibleAppVersionDeploymentFileArgs extends com.pulumi.resou
     @Import(name="sourceUrl", required=true)
     private Output<String> sourceUrl;
 
+    /**
+     * @return Source URL
+     * 
+     */
     public Output<String> sourceUrl() {
         return this.sourceUrl;
     }
@@ -74,29 +86,65 @@ public final class FlexibleAppVersionDeploymentFileArgs extends com.pulumi.resou
             $ = new FlexibleAppVersionDeploymentFileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param sha1Sum SHA1 checksum of the file
+         * 
+         * @return builder
+         * 
+         */
         public Builder sha1Sum(@Nullable Output<String> sha1Sum) {
             $.sha1Sum = sha1Sum;
             return this;
         }
 
+        /**
+         * @param sha1Sum SHA1 checksum of the file
+         * 
+         * @return builder
+         * 
+         */
         public Builder sha1Sum(String sha1Sum) {
             return sha1Sum(Output.of(sha1Sum));
         }
 
+        /**
+         * @param sourceUrl Source URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUrl(Output<String> sourceUrl) {
             $.sourceUrl = sourceUrl;
             return this;
         }
 
+        /**
+         * @param sourceUrl Source URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUrl(String sourceUrl) {
             return sourceUrl(Output.of(sourceUrl));
         }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetClientOpenIdUserInfoResult {
-    /**
-     * The email of the account used by the provider to authenticate with GCP.
-     * 
-     */
+        /**
+         * @return The email of the account used by the provider to authenticate with GCP.
+         * 
+         */
     private final String email;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GetClientOpenIdUserInfoResult {
     }
 
     /**
-     * The email of the account used by the provider to authenticate with GCP.
+     * @return The email of the account used by the provider to authenticate with GCP.
      * 
-    */
+     */
     public String email() {
         return this.email;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

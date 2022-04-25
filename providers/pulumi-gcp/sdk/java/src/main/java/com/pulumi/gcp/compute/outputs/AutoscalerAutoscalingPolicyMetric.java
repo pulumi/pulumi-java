@@ -12,73 +12,73 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AutoscalerAutoscalingPolicyMetric {
-    /**
-     * A filter string to be used as the filter string for
-     * a Stackdriver Monitoring TimeSeries.list API call.
-     * This filter is used to select a specific TimeSeries for
-     * the purpose of autoscaling and to determine whether the metric
-     * is exporting per-instance or per-group data.
-     * You can only use the AND operator for joining selectors.
-     * You can only use direct equality comparison operator (=) without
-     * any functions for each selector.
-     * You can specify the metric in both the filter string and in the
-     * metric field. However, if specified in both places, the metric must
-     * be identical.
-     * The monitored resource type determines what kind of values are
-     * expected for the metric. If it is a gce_instance, the autoscaler
-     * expects the metric to include a separate TimeSeries for each
-     * instance in a group. In such a case, you cannot filter on resource
-     * labels.
-     * If the resource type is any other value, the autoscaler expects
-     * this metric to contain values that apply to the entire autoscaled
-     * instance group and resource label filtering can be performed to
-     * point autoscaler at the correct TimeSeries to scale upon.
-     * This is called a per-group metric for the purpose of autoscaling.
-     * If not specified, the type defaults to gce_instance.
-     * You should provide a filter that is selective enough to pick just
-     * one TimeSeries for the autoscaled group or for each of the instances
-     * (if you are using gce_instance resource type). If multiple
-     * TimeSeries are returned upon the query execution, the autoscaler
-     * will sum their respective values to obtain its scaling value.
-     * 
-     */
+        /**
+         * @return A filter string to be used as the filter string for
+         * a Stackdriver Monitoring TimeSeries.list API call.
+         * This filter is used to select a specific TimeSeries for
+         * the purpose of autoscaling and to determine whether the metric
+         * is exporting per-instance or per-group data.
+         * You can only use the AND operator for joining selectors.
+         * You can only use direct equality comparison operator (=) without
+         * any functions for each selector.
+         * You can specify the metric in both the filter string and in the
+         * metric field. However, if specified in both places, the metric must
+         * be identical.
+         * The monitored resource type determines what kind of values are
+         * expected for the metric. If it is a gce_instance, the autoscaler
+         * expects the metric to include a separate TimeSeries for each
+         * instance in a group. In such a case, you cannot filter on resource
+         * labels.
+         * If the resource type is any other value, the autoscaler expects
+         * this metric to contain values that apply to the entire autoscaled
+         * instance group and resource label filtering can be performed to
+         * point autoscaler at the correct TimeSeries to scale upon.
+         * This is called a per-group metric for the purpose of autoscaling.
+         * If not specified, the type defaults to gce_instance.
+         * You should provide a filter that is selective enough to pick just
+         * one TimeSeries for the autoscaled group or for each of the instances
+         * (if you are using gce_instance resource type). If multiple
+         * TimeSeries are returned upon the query execution, the autoscaler
+         * will sum their respective values to obtain its scaling value.
+         * 
+         */
     private final @Nullable String filter;
-    /**
-     * The identifier for this object. Format specified above.
-     * 
-     */
+        /**
+         * @return The identifier for this object. Format specified above.
+         * 
+         */
     private final String name;
-    /**
-     * If scaling is based on a per-group metric value that represents the
-     * total amount of work to be done or resource usage, set this value to
-     * an amount assigned for a single instance of the scaled group.
-     * The autoscaler will keep the number of instances proportional to the
-     * value of this metric, the metric itself should not change value due
-     * to group resizing.
-     * For example, a good metric to use with the target is
-     * `pubsub.googleapis.com/subscription/num_undelivered_messages`
-     * or a custom metric exporting the total number of requests coming to
-     * your instances.
-     * A bad example would be a metric exporting an average or median
-     * latency, since this value can&#39;t include a chunk assignable to a
-     * single instance, it could be better used with utilization_target
-     * instead.
-     * 
-     */
+        /**
+         * @return If scaling is based on a per-group metric value that represents the
+         * total amount of work to be done or resource usage, set this value to
+         * an amount assigned for a single instance of the scaled group.
+         * The autoscaler will keep the number of instances proportional to the
+         * value of this metric, the metric itself should not change value due
+         * to group resizing.
+         * For example, a good metric to use with the target is
+         * `pubsub.googleapis.com/subscription/num_undelivered_messages`
+         * or a custom metric exporting the total number of requests coming to
+         * your instances.
+         * A bad example would be a metric exporting an average or median
+         * latency, since this value can&#39;t include a chunk assignable to a
+         * single instance, it could be better used with utilization_target
+         * instead.
+         * 
+         */
     private final @Nullable Double singleInstanceAssignment;
-    /**
-     * Fraction of backend capacity utilization (set in HTTP(s) load
-     * balancing configuration) that autoscaler should maintain. Must
-     * be a positive float value. If not defined, the default is 0.8.
-     * 
-     */
+        /**
+         * @return Fraction of backend capacity utilization (set in HTTP(s) load
+         * balancing configuration) that autoscaler should maintain. Must
+         * be a positive float value. If not defined, the default is 0.8.
+         * 
+         */
     private final @Nullable Double target;
-    /**
-     * Defines how target utilization value is expressed for a
-     * Stackdriver Monitoring metric.
-     * Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
-     * 
-     */
+        /**
+         * @return Defines how target utilization value is expressed for a
+         * Stackdriver Monitoring metric.
+         * Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -96,7 +96,7 @@ public final class AutoscalerAutoscalingPolicyMetric {
     }
 
     /**
-     * A filter string to be used as the filter string for
+     * @return A filter string to be used as the filter string for
      * a Stackdriver Monitoring TimeSeries.list API call.
      * This filter is used to select a specific TimeSeries for
      * the purpose of autoscaling and to determine whether the metric
@@ -124,19 +124,19 @@ public final class AutoscalerAutoscalingPolicyMetric {
      * TimeSeries are returned upon the query execution, the autoscaler
      * will sum their respective values to obtain its scaling value.
      * 
-    */
+     */
     public Optional<String> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
-     * The identifier for this object. Format specified above.
+     * @return The identifier for this object. Format specified above.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * If scaling is based on a per-group metric value that represents the
+     * @return If scaling is based on a per-group metric value that represents the
      * total amount of work to be done or resource usage, set this value to
      * an amount assigned for a single instance of the scaled group.
      * The autoscaler will keep the number of instances proportional to the
@@ -151,25 +151,25 @@ public final class AutoscalerAutoscalingPolicyMetric {
      * single instance, it could be better used with utilization_target
      * instead.
      * 
-    */
+     */
     public Optional<Double> singleInstanceAssignment() {
         return Optional.ofNullable(this.singleInstanceAssignment);
     }
     /**
-     * Fraction of backend capacity utilization (set in HTTP(s) load
+     * @return Fraction of backend capacity utilization (set in HTTP(s) load
      * balancing configuration) that autoscaler should maintain. Must
      * be a positive float value. If not defined, the default is 0.8.
      * 
-    */
+     */
     public Optional<Double> target() {
         return Optional.ofNullable(this.target);
     }
     /**
-     * Defines how target utilization value is expressed for a
+     * @return Defines how target utilization value is expressed for a
      * Stackdriver Monitoring metric.
      * Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

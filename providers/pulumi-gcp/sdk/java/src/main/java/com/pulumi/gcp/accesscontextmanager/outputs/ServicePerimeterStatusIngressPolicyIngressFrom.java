@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ServicePerimeterStatusIngressPolicyIngressFrom {
-    /**
-     * A list of identities that are allowed access through this `EgressPolicy`.
-     * Should be in the format of email address. The email address should
-     * represent individual user or service account only.
-     * 
-     */
+        /**
+         * @return A list of identities that are allowed access through this `EgressPolicy`.
+         * Should be in the format of email address. The email address should
+         * represent individual user or service account only.
+         * 
+         */
     private final @Nullable List<String> identities;
-    /**
-     * Specifies the type of identities that are allowed access to outside the
-     * perimeter. If left unspecified, then members of `identities` field will
-     * be allowed access.
-     * Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
-     * 
-     */
+        /**
+         * @return Specifies the type of identities that are allowed access to outside the
+         * perimeter. If left unspecified, then members of `identities` field will
+         * be allowed access.
+         * Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
+         * 
+         */
     private final @Nullable String identityType;
-    /**
-     * Sources that this `IngressPolicy` authorizes access from.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Sources that this `IngressPolicy` authorizes access from.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<ServicePerimeterStatusIngressPolicyIngressFromSource> sources;
 
     @CustomType.Constructor
@@ -46,29 +46,29 @@ public final class ServicePerimeterStatusIngressPolicyIngressFrom {
     }
 
     /**
-     * A list of identities that are allowed access through this `EgressPolicy`.
+     * @return A list of identities that are allowed access through this `EgressPolicy`.
      * Should be in the format of email address. The email address should
      * represent individual user or service account only.
      * 
-    */
+     */
     public List<String> identities() {
         return this.identities == null ? List.of() : this.identities;
     }
     /**
-     * Specifies the type of identities that are allowed access to outside the
+     * @return Specifies the type of identities that are allowed access to outside the
      * perimeter. If left unspecified, then members of `identities` field will
      * be allowed access.
      * Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
      * 
-    */
+     */
     public Optional<String> identityType() {
         return Optional.ofNullable(this.identityType);
     }
     /**
-     * Sources that this `IngressPolicy` authorizes access from.
+     * @return Sources that this `IngressPolicy` authorizes access from.
      * Structure is documented below.
      * 
-    */
+     */
     public List<ServicePerimeterStatusIngressPolicyIngressFromSource> sources() {
         return this.sources == null ? List.of() : this.sources;
     }

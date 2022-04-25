@@ -22,10 +22,10 @@ public final class GetClusterNodePool {
     private final List<String> managedInstanceGroupUrls;
     private final List<GetClusterNodePoolManagement> managements;
     private final Integer maxPodsPerNode;
-    /**
-     * The name of the cluster.
-     * 
-     */
+        /**
+         * @return The name of the cluster.
+         * 
+         */
     private final String name;
     private final String namePrefix;
     private final List<GetClusterNodePoolNetworkConfig> networkConfigs;
@@ -86,9 +86,9 @@ public final class GetClusterNodePool {
         return this.maxPodsPerNode;
     }
     /**
-     * The name of the cluster.
+     * @return The name of the cluster.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

@@ -24,6 +24,11 @@ public final class DatasetAccessArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domain")
     private @Nullable Output<String> domain;
 
+    /**
+     * @return A domain to grant access to. Any users signed in with the
+     * domain specified will be granted the specified access
+     * 
+     */
     public Optional<Output<String>> domain() {
         return Optional.ofNullable(this.domain);
     }
@@ -35,6 +40,10 @@ public final class DatasetAccessArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="groupByEmail")
     private @Nullable Output<String> groupByEmail;
 
+    /**
+     * @return An email address of a Google Group to grant access to.
+     * 
+     */
     public Optional<Output<String>> groupByEmail() {
         return Optional.ofNullable(this.groupByEmail);
     }
@@ -50,6 +59,14 @@ public final class DatasetAccessArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="role")
     private @Nullable Output<String> role;
 
+    /**
+     * @return Describes the rights granted to the user specified by the other
+     * member of the access object. Basic, predefined, and custom roles
+     * are supported. Predefined roles that have equivalent basic roles
+     * are swapped by the API to their basic counterparts. See
+     * [official docs](https://cloud.google.com/bigquery/docs/access-control).
+     * 
+     */
     public Optional<Output<String>> role() {
         return Optional.ofNullable(this.role);
     }
@@ -61,6 +78,10 @@ public final class DatasetAccessArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="specialGroup")
     private @Nullable Output<String> specialGroup;
 
+    /**
+     * @return A special group to grant access to. Possible values include:
+     * 
+     */
     public Optional<Output<String>> specialGroup() {
         return Optional.ofNullable(this.specialGroup);
     }
@@ -73,6 +94,11 @@ public final class DatasetAccessArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userByEmail")
     private @Nullable Output<String> userByEmail;
 
+    /**
+     * @return An email address of a user to grant access to. For example:
+     * fred@example.com
+     * 
+     */
     public Optional<Output<String>> userByEmail() {
         return Optional.ofNullable(this.userByEmail);
     }
@@ -89,6 +115,15 @@ public final class DatasetAccessArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="view")
     private @Nullable Output<DatasetAccessViewArgs> view;
 
+    /**
+     * @return A view from a different dataset to grant access to. Queries
+     * executed against that view will have read access to tables in
+     * this dataset. The role field is not required when this field is
+     * set. If that view is updated by any user, access to the view
+     * needs to be granted again via an update operation.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<DatasetAccessViewArgs>> view() {
         return Optional.ofNullable(this.view);
     }
@@ -122,56 +157,150 @@ public final class DatasetAccessArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DatasetAccessArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domain A domain to grant access to. Any users signed in with the
+         * domain specified will be granted the specified access
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(@Nullable Output<String> domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param domain A domain to grant access to. Any users signed in with the
+         * domain specified will be granted the specified access
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(String domain) {
             return domain(Output.of(domain));
         }
 
+        /**
+         * @param groupByEmail An email address of a Google Group to grant access to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupByEmail(@Nullable Output<String> groupByEmail) {
             $.groupByEmail = groupByEmail;
             return this;
         }
 
+        /**
+         * @param groupByEmail An email address of a Google Group to grant access to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupByEmail(String groupByEmail) {
             return groupByEmail(Output.of(groupByEmail));
         }
 
+        /**
+         * @param role Describes the rights granted to the user specified by the other
+         * member of the access object. Basic, predefined, and custom roles
+         * are supported. Predefined roles that have equivalent basic roles
+         * are swapped by the API to their basic counterparts. See
+         * [official docs](https://cloud.google.com/bigquery/docs/access-control).
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(@Nullable Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role Describes the rights granted to the user specified by the other
+         * member of the access object. Basic, predefined, and custom roles
+         * are supported. Predefined roles that have equivalent basic roles
+         * are swapped by the API to their basic counterparts. See
+         * [official docs](https://cloud.google.com/bigquery/docs/access-control).
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }
 
+        /**
+         * @param specialGroup A special group to grant access to. Possible values include:
+         * 
+         * @return builder
+         * 
+         */
         public Builder specialGroup(@Nullable Output<String> specialGroup) {
             $.specialGroup = specialGroup;
             return this;
         }
 
+        /**
+         * @param specialGroup A special group to grant access to. Possible values include:
+         * 
+         * @return builder
+         * 
+         */
         public Builder specialGroup(String specialGroup) {
             return specialGroup(Output.of(specialGroup));
         }
 
+        /**
+         * @param userByEmail An email address of a user to grant access to. For example:
+         * fred@example.com
+         * 
+         * @return builder
+         * 
+         */
         public Builder userByEmail(@Nullable Output<String> userByEmail) {
             $.userByEmail = userByEmail;
             return this;
         }
 
+        /**
+         * @param userByEmail An email address of a user to grant access to. For example:
+         * fred@example.com
+         * 
+         * @return builder
+         * 
+         */
         public Builder userByEmail(String userByEmail) {
             return userByEmail(Output.of(userByEmail));
         }
 
+        /**
+         * @param view A view from a different dataset to grant access to. Queries
+         * executed against that view will have read access to tables in
+         * this dataset. The role field is not required when this field is
+         * set. If that view is updated by any user, access to the view
+         * needs to be granted again via an update operation.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder view(@Nullable Output<DatasetAccessViewArgs> view) {
             $.view = view;
             return this;
         }
 
+        /**
+         * @param view A view from a different dataset to grant access to. Queries
+         * executed against that view will have read access to tables in
+         * this dataset. The role field is not required when this field is
+         * set. If that view is updated by any user, access to the view
+         * needs to be granted again via an update operation.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder view(DatasetAccessViewArgs view) {
             return view(Output.of(view));
         }

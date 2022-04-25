@@ -20,6 +20,10 @@ public final class AiFeatureStoreOnlineServingConfigArgs extends com.pulumi.reso
     @Import(name="fixedNodeCount", required=true)
     private Output<Integer> fixedNodeCount;
 
+    /**
+     * @return The number of nodes for each cluster. The number of nodes will not scale automatically but can be scaled manually by providing different values when updating.
+     * 
+     */
     public Output<Integer> fixedNodeCount() {
         return this.fixedNodeCount;
     }
@@ -48,11 +52,23 @@ public final class AiFeatureStoreOnlineServingConfigArgs extends com.pulumi.reso
             $ = new AiFeatureStoreOnlineServingConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fixedNodeCount The number of nodes for each cluster. The number of nodes will not scale automatically but can be scaled manually by providing different values when updating.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedNodeCount(Output<Integer> fixedNodeCount) {
             $.fixedNodeCount = fixedNodeCount;
             return this;
         }
 
+        /**
+         * @param fixedNodeCount The number of nodes for each cluster. The number of nodes will not scale automatically but can be scaled manually by providing different values when updating.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedNodeCount(Integer fixedNodeCount) {
             return fixedNodeCount(Output.of(fixedNodeCount));
         }

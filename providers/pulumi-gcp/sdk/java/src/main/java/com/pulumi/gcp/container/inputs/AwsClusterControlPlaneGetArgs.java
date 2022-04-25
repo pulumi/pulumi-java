@@ -31,6 +31,10 @@ public final class AwsClusterControlPlaneGetArgs extends com.pulumi.resources.Re
     @Import(name="awsServicesAuthentication", required=true)
     private Output<AwsClusterControlPlaneAwsServicesAuthenticationGetArgs> awsServicesAuthentication;
 
+    /**
+     * @return Required. Authentication configuration for management of AWS resources.
+     * 
+     */
     public Output<AwsClusterControlPlaneAwsServicesAuthenticationGetArgs> awsServicesAuthentication() {
         return this.awsServicesAuthentication;
     }
@@ -42,6 +46,10 @@ public final class AwsClusterControlPlaneGetArgs extends com.pulumi.resources.Re
     @Import(name="configEncryption", required=true)
     private Output<AwsClusterControlPlaneConfigEncryptionGetArgs> configEncryption;
 
+    /**
+     * @return Required. The ARN of the AWS KMS key used to encrypt cluster configuration.
+     * 
+     */
     public Output<AwsClusterControlPlaneConfigEncryptionGetArgs> configEncryption() {
         return this.configEncryption;
     }
@@ -53,6 +61,10 @@ public final class AwsClusterControlPlaneGetArgs extends com.pulumi.resources.Re
     @Import(name="databaseEncryption", required=true)
     private Output<AwsClusterControlPlaneDatabaseEncryptionGetArgs> databaseEncryption;
 
+    /**
+     * @return Required. The ARN of the AWS KMS key used to encrypt cluster secrets.
+     * 
+     */
     public Output<AwsClusterControlPlaneDatabaseEncryptionGetArgs> databaseEncryption() {
         return this.databaseEncryption;
     }
@@ -64,6 +76,10 @@ public final class AwsClusterControlPlaneGetArgs extends com.pulumi.resources.Re
     @Import(name="iamInstanceProfile", required=true)
     private Output<String> iamInstanceProfile;
 
+    /**
+     * @return Required. The name of the AWS IAM instance pofile to assign to each control plane replica.
+     * 
+     */
     public Output<String> iamInstanceProfile() {
         return this.iamInstanceProfile;
     }
@@ -75,6 +91,10 @@ public final class AwsClusterControlPlaneGetArgs extends com.pulumi.resources.Re
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
+    /**
+     * @return Optional. The AWS instance type. When unspecified, it defaults to `t3.medium`.
+     * 
+     */
     public Optional<Output<String>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -86,6 +106,10 @@ public final class AwsClusterControlPlaneGetArgs extends com.pulumi.resources.Re
     @Import(name="mainVolume")
     private @Nullable Output<AwsClusterControlPlaneMainVolumeGetArgs> mainVolume;
 
+    /**
+     * @return Optional. Configuration related to the main volume provisioned for each control plane replica. The main volume is in charge of storing all of the cluster&#39;s etcd state. Volumes will be provisioned in the availability zone associated with the corresponding subnet. When unspecified, it defaults to 8 GiB with the GP2 volume type.
+     * 
+     */
     public Optional<Output<AwsClusterControlPlaneMainVolumeGetArgs>> mainVolume() {
         return Optional.ofNullable(this.mainVolume);
     }
@@ -97,6 +121,10 @@ public final class AwsClusterControlPlaneGetArgs extends com.pulumi.resources.Re
     @Import(name="proxyConfig")
     private @Nullable Output<AwsClusterControlPlaneProxyConfigGetArgs> proxyConfig;
 
+    /**
+     * @return Proxy configuration for outbound HTTP(S) traffic.
+     * 
+     */
     public Optional<Output<AwsClusterControlPlaneProxyConfigGetArgs>> proxyConfig() {
         return Optional.ofNullable(this.proxyConfig);
     }
@@ -108,6 +136,10 @@ public final class AwsClusterControlPlaneGetArgs extends com.pulumi.resources.Re
     @Import(name="rootVolume")
     private @Nullable Output<AwsClusterControlPlaneRootVolumeGetArgs> rootVolume;
 
+    /**
+     * @return Optional. Configuration related to the root volume provisioned for each control plane replica. Volumes will be provisioned in the availability zone associated with the corresponding subnet. When unspecified, it defaults to 32 GiB with the GP2 volume type.
+     * 
+     */
     public Optional<Output<AwsClusterControlPlaneRootVolumeGetArgs>> rootVolume() {
         return Optional.ofNullable(this.rootVolume);
     }
@@ -119,6 +151,10 @@ public final class AwsClusterControlPlaneGetArgs extends com.pulumi.resources.Re
     @Import(name="securityGroupIds")
     private @Nullable Output<List<String>> securityGroupIds;
 
+    /**
+     * @return Optional. The IDs of additional security groups to add to control plane replicas. The Anthos Multi-Cloud API will automatically create and manage security groups with the minimum rules needed for a functioning cluster.
+     * 
+     */
     public Optional<Output<List<String>>> securityGroupIds() {
         return Optional.ofNullable(this.securityGroupIds);
     }
@@ -130,6 +166,10 @@ public final class AwsClusterControlPlaneGetArgs extends com.pulumi.resources.Re
     @Import(name="sshConfig")
     private @Nullable Output<AwsClusterControlPlaneSshConfigGetArgs> sshConfig;
 
+    /**
+     * @return Optional. SSH configuration for how to access the underlying control plane machines.
+     * 
+     */
     public Optional<Output<AwsClusterControlPlaneSshConfigGetArgs>> sshConfig() {
         return Optional.ofNullable(this.sshConfig);
     }
@@ -141,6 +181,10 @@ public final class AwsClusterControlPlaneGetArgs extends com.pulumi.resources.Re
     @Import(name="subnetIds", required=true)
     private Output<List<String>> subnetIds;
 
+    /**
+     * @return Required. The list of subnets where control plane replicas will run. A replica will be provisioned on each subnet and up to three values can be provided. Each subnet must be in a different AWS Availability Zone (AZ).
+     * 
+     */
     public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
@@ -152,6 +196,10 @@ public final class AwsClusterControlPlaneGetArgs extends com.pulumi.resources.Re
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Optional. A set of AWS resource tags to propagate to all underlying managed AWS resources. Specify at most 50 pairs containing alphanumerics, spaces, and symbols (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to 255 Unicode characters.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -163,6 +211,10 @@ public final class AwsClusterControlPlaneGetArgs extends com.pulumi.resources.Re
     @Import(name="version", required=true)
     private Output<String> version;
 
+    /**
+     * @return Required. The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling .
+     * 
+     */
     public Output<String> version() {
         return this.version;
     }
@@ -203,127 +255,295 @@ public final class AwsClusterControlPlaneGetArgs extends com.pulumi.resources.Re
             $ = new AwsClusterControlPlaneGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param awsServicesAuthentication Required. Authentication configuration for management of AWS resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsServicesAuthentication(Output<AwsClusterControlPlaneAwsServicesAuthenticationGetArgs> awsServicesAuthentication) {
             $.awsServicesAuthentication = awsServicesAuthentication;
             return this;
         }
 
+        /**
+         * @param awsServicesAuthentication Required. Authentication configuration for management of AWS resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsServicesAuthentication(AwsClusterControlPlaneAwsServicesAuthenticationGetArgs awsServicesAuthentication) {
             return awsServicesAuthentication(Output.of(awsServicesAuthentication));
         }
 
+        /**
+         * @param configEncryption Required. The ARN of the AWS KMS key used to encrypt cluster configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configEncryption(Output<AwsClusterControlPlaneConfigEncryptionGetArgs> configEncryption) {
             $.configEncryption = configEncryption;
             return this;
         }
 
+        /**
+         * @param configEncryption Required. The ARN of the AWS KMS key used to encrypt cluster configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configEncryption(AwsClusterControlPlaneConfigEncryptionGetArgs configEncryption) {
             return configEncryption(Output.of(configEncryption));
         }
 
+        /**
+         * @param databaseEncryption Required. The ARN of the AWS KMS key used to encrypt cluster secrets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseEncryption(Output<AwsClusterControlPlaneDatabaseEncryptionGetArgs> databaseEncryption) {
             $.databaseEncryption = databaseEncryption;
             return this;
         }
 
+        /**
+         * @param databaseEncryption Required. The ARN of the AWS KMS key used to encrypt cluster secrets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseEncryption(AwsClusterControlPlaneDatabaseEncryptionGetArgs databaseEncryption) {
             return databaseEncryption(Output.of(databaseEncryption));
         }
 
+        /**
+         * @param iamInstanceProfile Required. The name of the AWS IAM instance pofile to assign to each control plane replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamInstanceProfile(Output<String> iamInstanceProfile) {
             $.iamInstanceProfile = iamInstanceProfile;
             return this;
         }
 
+        /**
+         * @param iamInstanceProfile Required. The name of the AWS IAM instance pofile to assign to each control plane replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamInstanceProfile(String iamInstanceProfile) {
             return iamInstanceProfile(Output.of(iamInstanceProfile));
         }
 
+        /**
+         * @param instanceType Optional. The AWS instance type. When unspecified, it defaults to `t3.medium`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType Optional. The AWS instance type. When unspecified, it defaults to `t3.medium`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
+        /**
+         * @param mainVolume Optional. Configuration related to the main volume provisioned for each control plane replica. The main volume is in charge of storing all of the cluster&#39;s etcd state. Volumes will be provisioned in the availability zone associated with the corresponding subnet. When unspecified, it defaults to 8 GiB with the GP2 volume type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mainVolume(@Nullable Output<AwsClusterControlPlaneMainVolumeGetArgs> mainVolume) {
             $.mainVolume = mainVolume;
             return this;
         }
 
+        /**
+         * @param mainVolume Optional. Configuration related to the main volume provisioned for each control plane replica. The main volume is in charge of storing all of the cluster&#39;s etcd state. Volumes will be provisioned in the availability zone associated with the corresponding subnet. When unspecified, it defaults to 8 GiB with the GP2 volume type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mainVolume(AwsClusterControlPlaneMainVolumeGetArgs mainVolume) {
             return mainVolume(Output.of(mainVolume));
         }
 
+        /**
+         * @param proxyConfig Proxy configuration for outbound HTTP(S) traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyConfig(@Nullable Output<AwsClusterControlPlaneProxyConfigGetArgs> proxyConfig) {
             $.proxyConfig = proxyConfig;
             return this;
         }
 
+        /**
+         * @param proxyConfig Proxy configuration for outbound HTTP(S) traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyConfig(AwsClusterControlPlaneProxyConfigGetArgs proxyConfig) {
             return proxyConfig(Output.of(proxyConfig));
         }
 
+        /**
+         * @param rootVolume Optional. Configuration related to the root volume provisioned for each control plane replica. Volumes will be provisioned in the availability zone associated with the corresponding subnet. When unspecified, it defaults to 32 GiB with the GP2 volume type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootVolume(@Nullable Output<AwsClusterControlPlaneRootVolumeGetArgs> rootVolume) {
             $.rootVolume = rootVolume;
             return this;
         }
 
+        /**
+         * @param rootVolume Optional. Configuration related to the root volume provisioned for each control plane replica. Volumes will be provisioned in the availability zone associated with the corresponding subnet. When unspecified, it defaults to 32 GiB with the GP2 volume type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootVolume(AwsClusterControlPlaneRootVolumeGetArgs rootVolume) {
             return rootVolume(Output.of(rootVolume));
         }
 
+        /**
+         * @param securityGroupIds Optional. The IDs of additional security groups to add to control plane replicas. The Anthos Multi-Cloud API will automatically create and manage security groups with the minimum rules needed for a functioning cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             $.securityGroupIds = securityGroupIds;
             return this;
         }
 
+        /**
+         * @param securityGroupIds Optional. The IDs of additional security groups to add to control plane replicas. The Anthos Multi-Cloud API will automatically create and manage security groups with the minimum rules needed for a functioning cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(List<String> securityGroupIds) {
             return securityGroupIds(Output.of(securityGroupIds));
         }
 
+        /**
+         * @param securityGroupIds Optional. The IDs of additional security groups to add to control plane replicas. The Anthos Multi-Cloud API will automatically create and manage security groups with the minimum rules needed for a functioning cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
 
+        /**
+         * @param sshConfig Optional. SSH configuration for how to access the underlying control plane machines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshConfig(@Nullable Output<AwsClusterControlPlaneSshConfigGetArgs> sshConfig) {
             $.sshConfig = sshConfig;
             return this;
         }
 
+        /**
+         * @param sshConfig Optional. SSH configuration for how to access the underlying control plane machines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshConfig(AwsClusterControlPlaneSshConfigGetArgs sshConfig) {
             return sshConfig(Output.of(sshConfig));
         }
 
+        /**
+         * @param subnetIds Required. The list of subnets where control plane replicas will run. A replica will be provisioned on each subnet and up to three values can be provided. Each subnet must be in a different AWS Availability Zone (AZ).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(Output<List<String>> subnetIds) {
             $.subnetIds = subnetIds;
             return this;
         }
 
+        /**
+         * @param subnetIds Required. The list of subnets where control plane replicas will run. A replica will be provisioned on each subnet and up to three values can be provided. Each subnet must be in a different AWS Availability Zone (AZ).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(List<String> subnetIds) {
             return subnetIds(Output.of(subnetIds));
         }
 
+        /**
+         * @param subnetIds Required. The list of subnets where control plane replicas will run. A replica will be provisioned on each subnet and up to three values can be provided. Each subnet must be in a different AWS Availability Zone (AZ).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
 
+        /**
+         * @param tags Optional. A set of AWS resource tags to propagate to all underlying managed AWS resources. Specify at most 50 pairs containing alphanumerics, spaces, and symbols (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to 255 Unicode characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Optional. A set of AWS resource tags to propagate to all underlying managed AWS resources. Specify at most 50 pairs containing alphanumerics, spaces, and symbols (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to 255 Unicode characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param version Required. The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling .
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Required. The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling .
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

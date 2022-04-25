@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity {
-    /**
-     * Optional. Type of reservation to consume Possible values: TYPE_UNSPECIFIED, NO_RESERVATION, ANY_RESERVATION, SPECIFIC_RESERVATION
-     * 
-     */
+        /**
+         * @return Optional. Type of reservation to consume Possible values: TYPE_UNSPECIFIED, NO_RESERVATION, ANY_RESERVATION, SPECIFIC_RESERVATION
+         * 
+         */
     private final @Nullable String consumeReservationType;
-    /**
-     * Optional. Corresponds to the label key of reservation resource.
-     * 
-     */
+        /**
+         * @return Optional. Corresponds to the label key of reservation resource.
+         * 
+         */
     private final @Nullable String key;
-    /**
-     * Optional. Corresponds to the label values of reservation resource.
-     * 
-     */
+        /**
+         * @return Optional. Corresponds to the label values of reservation resource.
+         * 
+         */
     private final @Nullable List<String> values;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     }
 
     /**
-     * Optional. Type of reservation to consume Possible values: TYPE_UNSPECIFIED, NO_RESERVATION, ANY_RESERVATION, SPECIFIC_RESERVATION
+     * @return Optional. Type of reservation to consume Possible values: TYPE_UNSPECIFIED, NO_RESERVATION, ANY_RESERVATION, SPECIFIC_RESERVATION
      * 
-    */
+     */
     public Optional<String> consumeReservationType() {
         return Optional.ofNullable(this.consumeReservationType);
     }
     /**
-     * Optional. Corresponds to the label key of reservation resource.
+     * @return Optional. Corresponds to the label key of reservation resource.
      * 
-    */
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
-     * Optional. Corresponds to the label values of reservation resource.
+     * @return Optional. Corresponds to the label values of reservation resource.
      * 
-    */
+     */
     public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }

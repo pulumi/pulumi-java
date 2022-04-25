@@ -25,6 +25,11 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends com.pulu
     @Import(name="allowJaggedRows")
     private @Nullable Output<Boolean> allowJaggedRows;
 
+    /**
+     * @return Indicates if BigQuery should accept rows
+     * that are missing trailing optional columns.
+     * 
+     */
     public Optional<Output<Boolean>> allowJaggedRows() {
         return Optional.ofNullable(this.allowJaggedRows);
     }
@@ -38,6 +43,12 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends com.pulu
     @Import(name="allowQuotedNewlines")
     private @Nullable Output<Boolean> allowQuotedNewlines;
 
+    /**
+     * @return Indicates if BigQuery should allow
+     * quoted data sections that contain newline characters in a CSV file.
+     * The default value is false.
+     * 
+     */
     public Optional<Output<Boolean>> allowQuotedNewlines() {
         return Optional.ofNullable(this.allowQuotedNewlines);
     }
@@ -50,6 +61,11 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends com.pulu
     @Import(name="encoding")
     private @Nullable Output<String> encoding;
 
+    /**
+     * @return The character encoding of the data. The supported
+     * values are UTF-8 or ISO-8859-1.
+     * 
+     */
     public Optional<Output<String>> encoding() {
         return Optional.ofNullable(this.encoding);
     }
@@ -61,6 +77,10 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends com.pulu
     @Import(name="fieldDelimiter")
     private @Nullable Output<String> fieldDelimiter;
 
+    /**
+     * @return The separator for fields in a CSV file.
+     * 
+     */
     public Optional<Output<String>> fieldDelimiter() {
         return Optional.ofNullable(this.fieldDelimiter);
     }
@@ -78,6 +98,16 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends com.pulu
     @Import(name="quote", required=true)
     private Output<String> quote;
 
+    /**
+     * @return The value that is used to quote data sections in a
+     * CSV file. If your data does not contain quoted sections, set the
+     * property value to an empty string. If your data contains quoted newline
+     * characters, you must also set the `allow_quoted_newlines` property to true.
+     * The API-side default is `&#34;`, specified in the provider escaped as `\&#34;`. Due to
+     * limitations with default values, this value is required to be
+     * explicitly set.
+     * 
+     */
     public Output<String> quote() {
         return this.quote;
     }
@@ -91,6 +121,12 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends com.pulu
     @Import(name="skipLeadingRows")
     private @Nullable Output<Integer> skipLeadingRows;
 
+    /**
+     * @return The number of rows at the top of the sheet
+     * that BigQuery will skip when reading the data. At least one of `range` or
+     * `skip_leading_rows` must be set.
+     * 
+     */
     public Optional<Output<Integer>> skipLeadingRows() {
         return Optional.ofNullable(this.skipLeadingRows);
     }
@@ -124,56 +160,152 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends com.pulu
             $ = new TableExternalDataConfigurationCsvOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowJaggedRows Indicates if BigQuery should accept rows
+         * that are missing trailing optional columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowJaggedRows(@Nullable Output<Boolean> allowJaggedRows) {
             $.allowJaggedRows = allowJaggedRows;
             return this;
         }
 
+        /**
+         * @param allowJaggedRows Indicates if BigQuery should accept rows
+         * that are missing trailing optional columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowJaggedRows(Boolean allowJaggedRows) {
             return allowJaggedRows(Output.of(allowJaggedRows));
         }
 
+        /**
+         * @param allowQuotedNewlines Indicates if BigQuery should allow
+         * quoted data sections that contain newline characters in a CSV file.
+         * The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowQuotedNewlines(@Nullable Output<Boolean> allowQuotedNewlines) {
             $.allowQuotedNewlines = allowQuotedNewlines;
             return this;
         }
 
+        /**
+         * @param allowQuotedNewlines Indicates if BigQuery should allow
+         * quoted data sections that contain newline characters in a CSV file.
+         * The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowQuotedNewlines(Boolean allowQuotedNewlines) {
             return allowQuotedNewlines(Output.of(allowQuotedNewlines));
         }
 
+        /**
+         * @param encoding The character encoding of the data. The supported
+         * values are UTF-8 or ISO-8859-1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encoding(@Nullable Output<String> encoding) {
             $.encoding = encoding;
             return this;
         }
 
+        /**
+         * @param encoding The character encoding of the data. The supported
+         * values are UTF-8 or ISO-8859-1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encoding(String encoding) {
             return encoding(Output.of(encoding));
         }
 
+        /**
+         * @param fieldDelimiter The separator for fields in a CSV file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldDelimiter(@Nullable Output<String> fieldDelimiter) {
             $.fieldDelimiter = fieldDelimiter;
             return this;
         }
 
+        /**
+         * @param fieldDelimiter The separator for fields in a CSV file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldDelimiter(String fieldDelimiter) {
             return fieldDelimiter(Output.of(fieldDelimiter));
         }
 
+        /**
+         * @param quote The value that is used to quote data sections in a
+         * CSV file. If your data does not contain quoted sections, set the
+         * property value to an empty string. If your data contains quoted newline
+         * characters, you must also set the `allow_quoted_newlines` property to true.
+         * The API-side default is `&#34;`, specified in the provider escaped as `\&#34;`. Due to
+         * limitations with default values, this value is required to be
+         * explicitly set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quote(Output<String> quote) {
             $.quote = quote;
             return this;
         }
 
+        /**
+         * @param quote The value that is used to quote data sections in a
+         * CSV file. If your data does not contain quoted sections, set the
+         * property value to an empty string. If your data contains quoted newline
+         * characters, you must also set the `allow_quoted_newlines` property to true.
+         * The API-side default is `&#34;`, specified in the provider escaped as `\&#34;`. Due to
+         * limitations with default values, this value is required to be
+         * explicitly set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quote(String quote) {
             return quote(Output.of(quote));
         }
 
+        /**
+         * @param skipLeadingRows The number of rows at the top of the sheet
+         * that BigQuery will skip when reading the data. At least one of `range` or
+         * `skip_leading_rows` must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipLeadingRows(@Nullable Output<Integer> skipLeadingRows) {
             $.skipLeadingRows = skipLeadingRows;
             return this;
         }
 
+        /**
+         * @param skipLeadingRows The number of rows at the top of the sheet
+         * that BigQuery will skip when reading the data. At least one of `range` or
+         * `skip_leading_rows` must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipLeadingRows(Integer skipLeadingRows) {
             return skipLeadingRows(Output.of(skipLeadingRows));
         }

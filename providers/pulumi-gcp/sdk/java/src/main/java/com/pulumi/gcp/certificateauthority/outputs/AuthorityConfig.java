@@ -10,17 +10,17 @@ import java.util.Objects;
 
 @CustomType
 public final class AuthorityConfig {
-    /**
-     * Specifies some of the values in a certificate that are related to the subject.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Specifies some of the values in a certificate that are related to the subject.
+         * Structure is documented below.
+         * 
+         */
     private final AuthorityConfigSubjectConfig subjectConfig;
-    /**
-     * Describes how some of the technical X.509 fields in a certificate should be populated.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Describes how some of the technical X.509 fields in a certificate should be populated.
+         * Structure is documented below.
+         * 
+         */
     private final AuthorityConfigX509Config x509Config;
 
     @CustomType.Constructor
@@ -32,18 +32,18 @@ public final class AuthorityConfig {
     }
 
     /**
-     * Specifies some of the values in a certificate that are related to the subject.
+     * @return Specifies some of the values in a certificate that are related to the subject.
      * Structure is documented below.
      * 
-    */
+     */
     public AuthorityConfigSubjectConfig subjectConfig() {
         return this.subjectConfig;
     }
     /**
-     * Describes how some of the technical X.509 fields in a certificate should be populated.
+     * @return Describes how some of the technical X.509 fields in a certificate should be populated.
      * Structure is documented below.
      * 
-    */
+     */
     public AuthorityConfigX509Config x509Config() {
         return this.x509Config;
     }

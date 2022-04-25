@@ -22,6 +22,10 @@ public final class SshPublicKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="expirationTimeUsec")
     private @Nullable Output<String> expirationTimeUsec;
 
+    /**
+     * @return An expiration time in microseconds since epoch.
+     * 
+     */
     public Optional<Output<String>> expirationTimeUsec() {
         return Optional.ofNullable(this.expirationTimeUsec);
     }
@@ -33,6 +37,10 @@ public final class SshPublicKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="fingerprint")
     private @Nullable Output<String> fingerprint;
 
+    /**
+     * @return The SHA-256 fingerprint of the SSH public key.
+     * 
+     */
     public Optional<Output<String>> fingerprint() {
         return Optional.ofNullable(this.fingerprint);
     }
@@ -44,6 +52,10 @@ public final class SshPublicKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return Public key text in SSH format, defined by RFC4253 section 6.6.
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -55,6 +67,10 @@ public final class SshPublicKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The project ID of the Google Cloud Platform project.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -66,6 +82,10 @@ public final class SshPublicKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="user")
     private @Nullable Output<String> user;
 
+    /**
+     * @return The user email.
+     * 
+     */
     public Optional<Output<String>> user() {
         return Optional.ofNullable(this.user);
     }
@@ -98,47 +118,107 @@ public final class SshPublicKeyState extends com.pulumi.resources.ResourceArgs {
             $ = new SshPublicKeyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expirationTimeUsec An expiration time in microseconds since epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTimeUsec(@Nullable Output<String> expirationTimeUsec) {
             $.expirationTimeUsec = expirationTimeUsec;
             return this;
         }
 
+        /**
+         * @param expirationTimeUsec An expiration time in microseconds since epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTimeUsec(String expirationTimeUsec) {
             return expirationTimeUsec(Output.of(expirationTimeUsec));
         }
 
+        /**
+         * @param fingerprint The SHA-256 fingerprint of the SSH public key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
             $.fingerprint = fingerprint;
             return this;
         }
 
+        /**
+         * @param fingerprint The SHA-256 fingerprint of the SSH public key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fingerprint(String fingerprint) {
             return fingerprint(Output.of(fingerprint));
         }
 
+        /**
+         * @param key Public key text in SSH format, defined by RFC4253 section 6.6.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key Public key text in SSH format, defined by RFC4253 section 6.6.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param project The project ID of the Google Cloud Platform project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The project ID of the Google Cloud Platform project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param user The user email.
+         * 
+         * @return builder
+         * 
+         */
         public Builder user(@Nullable Output<String> user) {
             $.user = user;
             return this;
         }
 
+        /**
+         * @param user The user email.
+         * 
+         * @return builder
+         * 
+         */
         public Builder user(String user) {
             return user(Output.of(user));
         }

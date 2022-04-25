@@ -41,6 +41,15 @@ public final class ClusterNodePoolGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="initialNodeCount")
     private @Nullable Output<Integer> initialNodeCount;
 
+    /**
+     * @return The number of nodes to create in this
+     * cluster&#39;s default node pool. In regional or multi-zonal clusters, this is the
+     * number of nodes per zone. Must be set if `node_pool` is not set. If you&#39;re using
+     * `gcp.container.NodePool` objects with no default node pool, you&#39;ll need to
+     * set this to a value of at least `1`, alongside setting
+     * `remove_default_node_pool` to `true`.
+     * 
+     */
     public Optional<Output<Integer>> initialNodeCount() {
         return Optional.ofNullable(this.initialNodeCount);
     }
@@ -81,6 +90,11 @@ public final class ClusterNodePoolGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the cluster, unique within the project and
+     * location.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -100,6 +114,11 @@ public final class ClusterNodePoolGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="networkConfig")
     private @Nullable Output<ClusterNodePoolNetworkConfigGetArgs> networkConfig;
 
+    /**
+     * @return Configuration for
+     * [Adding Pod IP address ranges](https://cloud.google.com/kubernetes-engine/docs/how-to/multi-pod-cidr)) to the node pool. Structure is documented below
+     * 
+     */
     public Optional<Output<ClusterNodePoolNetworkConfigGetArgs>> networkConfig() {
         return Optional.ofNullable(this.networkConfig);
     }
@@ -115,6 +134,14 @@ public final class ClusterNodePoolGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="nodeConfig")
     private @Nullable Output<ClusterNodePoolNodeConfigGetArgs> nodeConfig;
 
+    /**
+     * @return Parameters used in creating the default node pool.
+     * Generally, this field should not be used at the same time as a
+     * `gcp.container.NodePool` or a `node_pool` block; this configuration
+     * manages the default node pool, which isn&#39;t recommended to be used.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ClusterNodePoolNodeConfigGetArgs>> nodeConfig() {
         return Optional.ofNullable(this.nodeConfig);
     }
@@ -136,6 +163,13 @@ public final class ClusterNodePoolGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="nodeLocations")
     private @Nullable Output<List<String>> nodeLocations;
 
+    /**
+     * @return The list of zones in which the cluster&#39;s nodes
+     * are located. Nodes must be in the region of their regional cluster or in the
+     * same region as their cluster&#39;s zone for zonal clusters. If this is specified for
+     * a zonal cluster, omit the cluster&#39;s zone.
+     * 
+     */
     public Optional<Output<List<String>>> nodeLocations() {
         return Optional.ofNullable(this.nodeLocations);
     }
@@ -200,11 +234,33 @@ public final class ClusterNodePoolGetArgs extends com.pulumi.resources.ResourceA
             return autoscaling(Output.of(autoscaling));
         }
 
+        /**
+         * @param initialNodeCount The number of nodes to create in this
+         * cluster&#39;s default node pool. In regional or multi-zonal clusters, this is the
+         * number of nodes per zone. Must be set if `node_pool` is not set. If you&#39;re using
+         * `gcp.container.NodePool` objects with no default node pool, you&#39;ll need to
+         * set this to a value of at least `1`, alongside setting
+         * `remove_default_node_pool` to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialNodeCount(@Nullable Output<Integer> initialNodeCount) {
             $.initialNodeCount = initialNodeCount;
             return this;
         }
 
+        /**
+         * @param initialNodeCount The number of nodes to create in this
+         * cluster&#39;s default node pool. In regional or multi-zonal clusters, this is the
+         * number of nodes per zone. Must be set if `node_pool` is not set. If you&#39;re using
+         * `gcp.container.NodePool` objects with no default node pool, you&#39;ll need to
+         * set this to a value of at least `1`, alongside setting
+         * `remove_default_node_pool` to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialNodeCount(Integer initialNodeCount) {
             return initialNodeCount(Output.of(initialNodeCount));
         }
@@ -253,11 +309,25 @@ public final class ClusterNodePoolGetArgs extends com.pulumi.resources.ResourceA
             return maxPodsPerNode(Output.of(maxPodsPerNode));
         }
 
+        /**
+         * @param name The name of the cluster, unique within the project and
+         * location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the cluster, unique within the project and
+         * location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -271,20 +341,54 @@ public final class ClusterNodePoolGetArgs extends com.pulumi.resources.ResourceA
             return namePrefix(Output.of(namePrefix));
         }
 
+        /**
+         * @param networkConfig Configuration for
+         * [Adding Pod IP address ranges](https://cloud.google.com/kubernetes-engine/docs/how-to/multi-pod-cidr)) to the node pool. Structure is documented below
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfig(@Nullable Output<ClusterNodePoolNetworkConfigGetArgs> networkConfig) {
             $.networkConfig = networkConfig;
             return this;
         }
 
+        /**
+         * @param networkConfig Configuration for
+         * [Adding Pod IP address ranges](https://cloud.google.com/kubernetes-engine/docs/how-to/multi-pod-cidr)) to the node pool. Structure is documented below
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfig(ClusterNodePoolNetworkConfigGetArgs networkConfig) {
             return networkConfig(Output.of(networkConfig));
         }
 
+        /**
+         * @param nodeConfig Parameters used in creating the default node pool.
+         * Generally, this field should not be used at the same time as a
+         * `gcp.container.NodePool` or a `node_pool` block; this configuration
+         * manages the default node pool, which isn&#39;t recommended to be used.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeConfig(@Nullable Output<ClusterNodePoolNodeConfigGetArgs> nodeConfig) {
             $.nodeConfig = nodeConfig;
             return this;
         }
 
+        /**
+         * @param nodeConfig Parameters used in creating the default node pool.
+         * Generally, this field should not be used at the same time as a
+         * `gcp.container.NodePool` or a `node_pool` block; this configuration
+         * manages the default node pool, which isn&#39;t recommended to be used.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeConfig(ClusterNodePoolNodeConfigGetArgs nodeConfig) {
             return nodeConfig(Output.of(nodeConfig));
         }
@@ -298,15 +402,42 @@ public final class ClusterNodePoolGetArgs extends com.pulumi.resources.ResourceA
             return nodeCount(Output.of(nodeCount));
         }
 
+        /**
+         * @param nodeLocations The list of zones in which the cluster&#39;s nodes
+         * are located. Nodes must be in the region of their regional cluster or in the
+         * same region as their cluster&#39;s zone for zonal clusters. If this is specified for
+         * a zonal cluster, omit the cluster&#39;s zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeLocations(@Nullable Output<List<String>> nodeLocations) {
             $.nodeLocations = nodeLocations;
             return this;
         }
 
+        /**
+         * @param nodeLocations The list of zones in which the cluster&#39;s nodes
+         * are located. Nodes must be in the region of their regional cluster or in the
+         * same region as their cluster&#39;s zone for zonal clusters. If this is specified for
+         * a zonal cluster, omit the cluster&#39;s zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeLocations(List<String> nodeLocations) {
             return nodeLocations(Output.of(nodeLocations));
         }
 
+        /**
+         * @param nodeLocations The list of zones in which the cluster&#39;s nodes
+         * are located. Nodes must be in the region of their regional cluster or in the
+         * same region as their cluster&#39;s zone for zonal clusters. If this is specified for
+         * a zonal cluster, omit the cluster&#39;s zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeLocations(String... nodeLocations) {
             return nodeLocations(List.of(nodeLocations));
         }

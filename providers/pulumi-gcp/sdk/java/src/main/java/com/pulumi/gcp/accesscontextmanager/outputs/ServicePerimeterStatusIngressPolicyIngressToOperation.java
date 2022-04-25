@@ -13,21 +13,21 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ServicePerimeterStatusIngressPolicyIngressToOperation {
-    /**
-     * API methods or permissions to allow. Method or permission must belong
-     * to the service specified by `serviceName` field. A single MethodSelector
-     * entry with `*` specified for the `method` field will allow all methods
-     * AND permissions for the service specified in `serviceName`.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return API methods or permissions to allow. Method or permission must belong
+         * to the service specified by `serviceName` field. A single MethodSelector
+         * entry with `*` specified for the `method` field will allow all methods
+         * AND permissions for the service specified in `serviceName`.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<ServicePerimeterStatusIngressPolicyIngressToOperationMethodSelector> methodSelectors;
-    /**
-     * The name of the API whose methods or permissions the `IngressPolicy` or
-     * `EgressPolicy` want to allow. A single `ApiOperation` with serviceName
-     * field set to `*` will allow all methods AND permissions for all services.
-     * 
-     */
+        /**
+         * @return The name of the API whose methods or permissions the `IngressPolicy` or
+         * `EgressPolicy` want to allow. A single `ApiOperation` with serviceName
+         * field set to `*` will allow all methods AND permissions for all services.
+         * 
+         */
     private final @Nullable String serviceName;
 
     @CustomType.Constructor
@@ -39,22 +39,22 @@ public final class ServicePerimeterStatusIngressPolicyIngressToOperation {
     }
 
     /**
-     * API methods or permissions to allow. Method or permission must belong
+     * @return API methods or permissions to allow. Method or permission must belong
      * to the service specified by `serviceName` field. A single MethodSelector
      * entry with `*` specified for the `method` field will allow all methods
      * AND permissions for the service specified in `serviceName`.
      * Structure is documented below.
      * 
-    */
+     */
     public List<ServicePerimeterStatusIngressPolicyIngressToOperationMethodSelector> methodSelectors() {
         return this.methodSelectors == null ? List.of() : this.methodSelectors;
     }
     /**
-     * The name of the API whose methods or permissions the `IngressPolicy` or
+     * @return The name of the API whose methods or permissions the `IngressPolicy` or
      * `EgressPolicy` want to allow. A single `ApiOperation` with serviceName
      * field set to `*` will allow all methods AND permissions for all services.
      * 
-    */
+     */
     public Optional<String> serviceName() {
         return Optional.ofNullable(this.serviceName);
     }

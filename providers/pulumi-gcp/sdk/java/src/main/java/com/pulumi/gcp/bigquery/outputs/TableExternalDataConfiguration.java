@@ -17,84 +17,84 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TableExternalDataConfiguration {
-    /**
-     * - Let BigQuery try to autodetect the schema
-     *   and format of the table.
-     * 
-     */
+        /**
+         * @return - Let BigQuery try to autodetect the schema
+         * and format of the table.
+         * 
+         */
     private final Boolean autodetect;
-    /**
-     * The compression type of the data source.
-     * Valid values are &#34;NONE&#34; or &#34;GZIP&#34;.
-     * 
-     */
+        /**
+         * @return The compression type of the data source.
+         * Valid values are &#34;NONE&#34; or &#34;GZIP&#34;.
+         * 
+         */
     private final @Nullable String compression;
-    /**
-     * Additional properties to set if
-     * `source_format` is set to &#34;CSV&#34;. Structure is documented below.
-     * 
-     */
+        /**
+         * @return Additional properties to set if
+         * `source_format` is set to &#34;CSV&#34;. Structure is documented below.
+         * 
+         */
     private final @Nullable TableExternalDataConfigurationCsvOptions csvOptions;
-    /**
-     * Additional options if
-     * `source_format` is set to &#34;GOOGLE_SHEETS&#34;. Structure is
-     * documented below.
-     * 
-     */
+        /**
+         * @return Additional options if
+         * `source_format` is set to &#34;GOOGLE_SHEETS&#34;. Structure is
+         * documented below.
+         * 
+         */
     private final @Nullable TableExternalDataConfigurationGoogleSheetsOptions googleSheetsOptions;
-    /**
-     * When set, configures hive partitioning
-     * support. Not all storage formats support hive partitioning -- requesting hive
-     * partitioning on an unsupported format will lead to an error, as will providing
-     * an invalid specification. Structure is documented below.
-     * 
-     */
+        /**
+         * @return When set, configures hive partitioning
+         * support. Not all storage formats support hive partitioning -- requesting hive
+         * partitioning on an unsupported format will lead to an error, as will providing
+         * an invalid specification. Structure is documented below.
+         * 
+         */
     private final @Nullable TableExternalDataConfigurationHivePartitioningOptions hivePartitioningOptions;
-    /**
-     * Indicates if BigQuery should
-     * allow extra values that are not represented in the table schema.
-     * If true, the extra values are ignored. If false, records with
-     * extra columns are treated as bad records, and if there are too
-     * many bad records, an invalid error is returned in the job result.
-     * The default value is false.
-     * 
-     */
+        /**
+         * @return Indicates if BigQuery should
+         * allow extra values that are not represented in the table schema.
+         * If true, the extra values are ignored. If false, records with
+         * extra columns are treated as bad records, and if there are too
+         * many bad records, an invalid error is returned in the job result.
+         * The default value is false.
+         * 
+         */
     private final @Nullable Boolean ignoreUnknownValues;
-    /**
-     * The maximum number of bad records that
-     * BigQuery can ignore when reading data.
-     * 
-     */
+        /**
+         * @return The maximum number of bad records that
+         * BigQuery can ignore when reading data.
+         * 
+         */
     private final @Nullable Integer maxBadRecords;
-    /**
-     * A JSON schema for the external table. Schema is required
-     * for CSV and JSON formats if autodetect is not on. Schema is disallowed
-     * for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and Parquet formats.
-     * ~&gt;**NOTE:** Because this field expects a JSON string, any changes to the
-     * string will create a diff, even if the JSON itself hasn&#39;t changed.
-     * Furthermore drift for this field cannot not be detected because BigQuery
-     * only uses this schema to compute the effective schema for the table, therefore
-     * any changes on the configured value will force the table to be recreated.
-     * This schema is effectively only applied when creating a table from an external
-     * datasource, after creation the computed schema will be stored in
-     * `google_bigquery_table.schema`
-     * 
-     */
+        /**
+         * @return A JSON schema for the external table. Schema is required
+         * for CSV and JSON formats if autodetect is not on. Schema is disallowed
+         * for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and Parquet formats.
+         * ~&gt;**NOTE:** Because this field expects a JSON string, any changes to the
+         * string will create a diff, even if the JSON itself hasn&#39;t changed.
+         * Furthermore drift for this field cannot not be detected because BigQuery
+         * only uses this schema to compute the effective schema for the table, therefore
+         * any changes on the configured value will force the table to be recreated.
+         * This schema is effectively only applied when creating a table from an external
+         * datasource, after creation the computed schema will be stored in
+         * `google_bigquery_table.schema`
+         * 
+         */
     private final @Nullable String schema;
-    /**
-     * The data format. Supported values are:
-     * &#34;CSV&#34;, &#34;GOOGLE_SHEETS&#34;, &#34;NEWLINE_DELIMITED_JSON&#34;, &#34;AVRO&#34;, &#34;PARQUET&#34;, &#34;ORC&#34;,
-     * &#34;DATSTORE_BACKUP&#34;, and &#34;BIGTABLE&#34;. To use &#34;GOOGLE_SHEETS&#34;
-     * the `scopes` must include
-     * &#34;https://www.googleapis.com/auth/drive.readonly&#34;.
-     * 
-     */
+        /**
+         * @return The data format. Supported values are:
+         * &#34;CSV&#34;, &#34;GOOGLE_SHEETS&#34;, &#34;NEWLINE_DELIMITED_JSON&#34;, &#34;AVRO&#34;, &#34;PARQUET&#34;, &#34;ORC&#34;,
+         * &#34;DATSTORE_BACKUP&#34;, and &#34;BIGTABLE&#34;. To use &#34;GOOGLE_SHEETS&#34;
+         * the `scopes` must include
+         * &#34;https://www.googleapis.com/auth/drive.readonly&#34;.
+         * 
+         */
     private final String sourceFormat;
-    /**
-     * A list of the fully-qualified URIs that point to
-     * your data in Google Cloud.
-     * 
-     */
+        /**
+         * @return A list of the fully-qualified URIs that point to
+         * your data in Google Cloud.
+         * 
+         */
     private final List<String> sourceUris;
 
     @CustomType.Constructor
@@ -122,70 +122,70 @@ public final class TableExternalDataConfiguration {
     }
 
     /**
-     * - Let BigQuery try to autodetect the schema
-     *   and format of the table.
+     * @return - Let BigQuery try to autodetect the schema
+     * and format of the table.
      * 
-    */
+     */
     public Boolean autodetect() {
         return this.autodetect;
     }
     /**
-     * The compression type of the data source.
+     * @return The compression type of the data source.
      * Valid values are &#34;NONE&#34; or &#34;GZIP&#34;.
      * 
-    */
+     */
     public Optional<String> compression() {
         return Optional.ofNullable(this.compression);
     }
     /**
-     * Additional properties to set if
+     * @return Additional properties to set if
      * `source_format` is set to &#34;CSV&#34;. Structure is documented below.
      * 
-    */
+     */
     public Optional<TableExternalDataConfigurationCsvOptions> csvOptions() {
         return Optional.ofNullable(this.csvOptions);
     }
     /**
-     * Additional options if
+     * @return Additional options if
      * `source_format` is set to &#34;GOOGLE_SHEETS&#34;. Structure is
      * documented below.
      * 
-    */
+     */
     public Optional<TableExternalDataConfigurationGoogleSheetsOptions> googleSheetsOptions() {
         return Optional.ofNullable(this.googleSheetsOptions);
     }
     /**
-     * When set, configures hive partitioning
+     * @return When set, configures hive partitioning
      * support. Not all storage formats support hive partitioning -- requesting hive
      * partitioning on an unsupported format will lead to an error, as will providing
      * an invalid specification. Structure is documented below.
      * 
-    */
+     */
     public Optional<TableExternalDataConfigurationHivePartitioningOptions> hivePartitioningOptions() {
         return Optional.ofNullable(this.hivePartitioningOptions);
     }
     /**
-     * Indicates if BigQuery should
+     * @return Indicates if BigQuery should
      * allow extra values that are not represented in the table schema.
      * If true, the extra values are ignored. If false, records with
      * extra columns are treated as bad records, and if there are too
      * many bad records, an invalid error is returned in the job result.
      * The default value is false.
      * 
-    */
+     */
     public Optional<Boolean> ignoreUnknownValues() {
         return Optional.ofNullable(this.ignoreUnknownValues);
     }
     /**
-     * The maximum number of bad records that
+     * @return The maximum number of bad records that
      * BigQuery can ignore when reading data.
      * 
-    */
+     */
     public Optional<Integer> maxBadRecords() {
         return Optional.ofNullable(this.maxBadRecords);
     }
     /**
-     * A JSON schema for the external table. Schema is required
+     * @return A JSON schema for the external table. Schema is required
      * for CSV and JSON formats if autodetect is not on. Schema is disallowed
      * for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and Parquet formats.
      * ~&gt;**NOTE:** Because this field expects a JSON string, any changes to the
@@ -197,26 +197,26 @@ public final class TableExternalDataConfiguration {
      * datasource, after creation the computed schema will be stored in
      * `google_bigquery_table.schema`
      * 
-    */
+     */
     public Optional<String> schema() {
         return Optional.ofNullable(this.schema);
     }
     /**
-     * The data format. Supported values are:
+     * @return The data format. Supported values are:
      * &#34;CSV&#34;, &#34;GOOGLE_SHEETS&#34;, &#34;NEWLINE_DELIMITED_JSON&#34;, &#34;AVRO&#34;, &#34;PARQUET&#34;, &#34;ORC&#34;,
      * &#34;DATSTORE_BACKUP&#34;, and &#34;BIGTABLE&#34;. To use &#34;GOOGLE_SHEETS&#34;
      * the `scopes` must include
      * &#34;https://www.googleapis.com/auth/drive.readonly&#34;.
      * 
-    */
+     */
     public String sourceFormat() {
         return this.sourceFormat;
     }
     /**
-     * A list of the fully-qualified URIs that point to
+     * @return A list of the fully-qualified URIs that point to
      * your data in Google Cloud.
      * 
-    */
+     */
     public List<String> sourceUris() {
         return this.sourceUris;
     }

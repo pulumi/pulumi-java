@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference {
-    /**
-     * Volume&#39;s name.
-     * 
-     */
+        /**
+         * @return Volume&#39;s name.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectRef
     }
 
     /**
-     * Volume&#39;s name.
+     * @return Volume&#39;s name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class CxEnvironmentVersionConfig {
-    /**
-     * Format: projects/{{project}}/locations/{{location}}/agents/{{agent}}/flows/{{flow}}/versions/{{version}}.
-     * 
-     */
+        /**
+         * @return Format: projects/{{project}}/locations/{{location}}/agents/{{agent}}/flows/{{flow}}/versions/{{version}}.
+         * 
+         */
     private final String version;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class CxEnvironmentVersionConfig {
     }
 
     /**
-     * Format: projects/{{project}}/locations/{{location}}/agents/{{agent}}/flows/{{flow}}/versions/{{version}}.
+     * @return Format: projects/{{project}}/locations/{{location}}/agents/{{agent}}/flows/{{flow}}/versions/{{version}}.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

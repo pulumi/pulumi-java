@@ -12,33 +12,33 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAccountResult {
     private final String accountId;
-    /**
-     * The display name for the service account.
-     * 
-     */
+        /**
+         * @return The display name for the service account.
+         * 
+         */
     private final String displayName;
-    /**
-     * The e-mail address of the service account. This value
-     * should be referenced from any `gcp.organizations.getIAMPolicy` data sources
-     * that would grant the service account privileges.
-     * 
-     */
+        /**
+         * @return The e-mail address of the service account. This value
+         * should be referenced from any `gcp.organizations.getIAMPolicy` data sources
+         * that would grant the service account privileges.
+         * 
+         */
     private final String email;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * The fully-qualified name of the service account.
-     * 
-     */
+        /**
+         * @return The fully-qualified name of the service account.
+         * 
+         */
     private final String name;
     private final @Nullable String project;
-    /**
-     * The unique id of the service account.
-     * 
-     */
+        /**
+         * @return The unique id of the service account.
+         * 
+         */
     private final String uniqueId;
 
     @CustomType.Constructor
@@ -63,32 +63,32 @@ public final class GetAccountResult {
         return this.accountId;
     }
     /**
-     * The display name for the service account.
+     * @return The display name for the service account.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The e-mail address of the service account. This value
+     * @return The e-mail address of the service account. This value
      * should be referenced from any `gcp.organizations.getIAMPolicy` data sources
      * that would grant the service account privileges.
      * 
-    */
+     */
     public String email() {
         return this.email;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The fully-qualified name of the service account.
+     * @return The fully-qualified name of the service account.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
@@ -96,9 +96,9 @@ public final class GetAccountResult {
         return Optional.ofNullable(this.project);
     }
     /**
-     * The unique id of the service account.
+     * @return The unique id of the service account.
      * 
-    */
+     */
     public String uniqueId() {
         return this.uniqueId;
     }

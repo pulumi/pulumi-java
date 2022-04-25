@@ -22,6 +22,10 @@ public final class UptimeCheckConfigResourceGroupArgs extends com.pulumi.resourc
     @Import(name="groupId")
     private @Nullable Output<String> groupId;
 
+    /**
+     * @return The group of resources being monitored. Should be the `name` of a group
+     * 
+     */
     public Optional<Output<String>> groupId() {
         return Optional.ofNullable(this.groupId);
     }
@@ -34,6 +38,11 @@ public final class UptimeCheckConfigResourceGroupArgs extends com.pulumi.resourc
     @Import(name="resourceType")
     private @Nullable Output<String> resourceType;
 
+    /**
+     * @return The resource type of the group members.
+     * Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_BALANCER`.
+     * 
+     */
     public Optional<Output<String>> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
@@ -63,20 +72,46 @@ public final class UptimeCheckConfigResourceGroupArgs extends com.pulumi.resourc
             $ = new UptimeCheckConfigResourceGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupId The group of resources being monitored. Should be the `name` of a group
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(@Nullable Output<String> groupId) {
             $.groupId = groupId;
             return this;
         }
 
+        /**
+         * @param groupId The group of resources being monitored. Should be the `name` of a group
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(String groupId) {
             return groupId(Output.of(groupId));
         }
 
+        /**
+         * @param resourceType The resource type of the group members.
+         * Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_BALANCER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(@Nullable Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType The resource type of the group members.
+         * Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_BALANCER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Output.of(resourceType));
         }

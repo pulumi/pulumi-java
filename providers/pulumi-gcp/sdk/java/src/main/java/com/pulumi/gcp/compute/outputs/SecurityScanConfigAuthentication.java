@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SecurityScanConfigAuthentication {
-    /**
-     * Describes authentication configuration that uses a custom account.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Describes authentication configuration that uses a custom account.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable SecurityScanConfigAuthenticationCustomAccount customAccount;
-    /**
-     * Describes authentication configuration that uses a Google account.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Describes authentication configuration that uses a Google account.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable SecurityScanConfigAuthenticationGoogleAccount googleAccount;
 
     @CustomType.Constructor
@@ -34,18 +34,18 @@ public final class SecurityScanConfigAuthentication {
     }
 
     /**
-     * Describes authentication configuration that uses a custom account.
+     * @return Describes authentication configuration that uses a custom account.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<SecurityScanConfigAuthenticationCustomAccount> customAccount() {
         return Optional.ofNullable(this.customAccount);
     }
     /**
-     * Describes authentication configuration that uses a Google account.
+     * @return Describes authentication configuration that uses a Google account.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<SecurityScanConfigAuthenticationGoogleAccount> googleAccount() {
         return Optional.ofNullable(this.googleAccount);
     }

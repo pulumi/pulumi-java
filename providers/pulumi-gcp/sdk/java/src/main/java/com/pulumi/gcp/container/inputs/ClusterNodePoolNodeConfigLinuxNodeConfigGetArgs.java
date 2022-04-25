@@ -23,6 +23,12 @@ public final class ClusterNodePoolNodeConfigLinuxNodeConfigGetArgs extends com.p
     @Import(name="sysctls", required=true)
     private Output<Map<String,String>> sysctls;
 
+    /**
+     * @return The Linux kernel parameters to be applied to the nodes
+     * and all pods running on the nodes. Specified as a map from the key, such as
+     * `net.core.wmem_max`, to a string value.
+     * 
+     */
     public Output<Map<String,String>> sysctls() {
         return this.sysctls;
     }
@@ -51,11 +57,27 @@ public final class ClusterNodePoolNodeConfigLinuxNodeConfigGetArgs extends com.p
             $ = new ClusterNodePoolNodeConfigLinuxNodeConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sysctls The Linux kernel parameters to be applied to the nodes
+         * and all pods running on the nodes. Specified as a map from the key, such as
+         * `net.core.wmem_max`, to a string value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sysctls(Output<Map<String,String>> sysctls) {
             $.sysctls = sysctls;
             return this;
         }
 
+        /**
+         * @param sysctls The Linux kernel parameters to be applied to the nodes
+         * and all pods running on the nodes. Specified as a map from the key, such as
+         * `net.core.wmem_max`, to a string value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sysctls(Map<String,String> sysctls) {
             return sysctls(Output.of(sysctls));
         }

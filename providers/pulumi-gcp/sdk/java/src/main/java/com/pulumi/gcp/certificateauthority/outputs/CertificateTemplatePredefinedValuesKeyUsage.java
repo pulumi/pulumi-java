@@ -14,20 +14,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CertificateTemplatePredefinedValuesKeyUsage {
-    /**
-     * Describes high-level ways in which a key may be used.
-     * 
-     */
+        /**
+         * @return Describes high-level ways in which a key may be used.
+         * 
+         */
     private final @Nullable CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsage baseKeyUsage;
-    /**
-     * Detailed scenarios in which a key may be used.
-     * 
-     */
+        /**
+         * @return Detailed scenarios in which a key may be used.
+         * 
+         */
     private final @Nullable CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsage extendedKeyUsage;
-    /**
-     * Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
-     * 
-     */
+        /**
+         * @return Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
+         * 
+         */
     private final @Nullable List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages;
 
     @CustomType.Constructor
@@ -41,23 +41,23 @@ public final class CertificateTemplatePredefinedValuesKeyUsage {
     }
 
     /**
-     * Describes high-level ways in which a key may be used.
+     * @return Describes high-level ways in which a key may be used.
      * 
-    */
+     */
     public Optional<CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsage> baseKeyUsage() {
         return Optional.ofNullable(this.baseKeyUsage);
     }
     /**
-     * Detailed scenarios in which a key may be used.
+     * @return Detailed scenarios in which a key may be used.
      * 
-    */
+     */
     public Optional<CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsage> extendedKeyUsage() {
         return Optional.ofNullable(this.extendedKeyUsage);
     }
     /**
-     * Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
+     * @return Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
      * 
-    */
+     */
     public List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages == null ? List.of() : this.unknownExtendedKeyUsages;
     }

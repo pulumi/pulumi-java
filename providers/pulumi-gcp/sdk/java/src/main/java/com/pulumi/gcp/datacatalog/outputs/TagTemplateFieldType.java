@@ -12,19 +12,19 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TagTemplateFieldType {
-    /**
-     * Represents an enum type.
-     * Exactly one of `primitive_type` or `enum_type` must be set
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Represents an enum type.
+         * Exactly one of `primitive_type` or `enum_type` must be set
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable TagTemplateFieldTypeEnumType enumType;
-    /**
-     * Represents primitive types - string, bool etc.
-     * Exactly one of `primitive_type` or `enum_type` must be set
-     * Possible values are `DOUBLE`, `STRING`, `BOOL`, and `TIMESTAMP`.
-     * 
-     */
+        /**
+         * @return Represents primitive types - string, bool etc.
+         * Exactly one of `primitive_type` or `enum_type` must be set
+         * Possible values are `DOUBLE`, `STRING`, `BOOL`, and `TIMESTAMP`.
+         * 
+         */
     private final @Nullable String primitiveType;
 
     @CustomType.Constructor
@@ -36,20 +36,20 @@ public final class TagTemplateFieldType {
     }
 
     /**
-     * Represents an enum type.
+     * @return Represents an enum type.
      * Exactly one of `primitive_type` or `enum_type` must be set
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<TagTemplateFieldTypeEnumType> enumType() {
         return Optional.ofNullable(this.enumType);
     }
     /**
-     * Represents primitive types - string, bool etc.
+     * @return Represents primitive types - string, bool etc.
      * Exactly one of `primitive_type` or `enum_type` must be set
      * Possible values are `DOUBLE`, `STRING`, `BOOL`, and `TIMESTAMP`.
      * 
-    */
+     */
     public Optional<String> primitiveType() {
         return Optional.ofNullable(this.primitiveType);
     }

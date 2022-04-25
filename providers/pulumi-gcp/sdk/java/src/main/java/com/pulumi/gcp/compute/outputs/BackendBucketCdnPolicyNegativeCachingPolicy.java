@@ -11,17 +11,17 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BackendBucketCdnPolicyNegativeCachingPolicy {
-    /**
-     * The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501
-     * can be specified as values, and you cannot specify a status code more than once.
-     * 
-     */
+        /**
+         * @return The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501
+         * can be specified as values, and you cannot specify a status code more than once.
+         * 
+         */
     private final @Nullable Integer code;
-    /**
-     * The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
-     * (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
-     * 
-     */
+        /**
+         * @return The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+         * (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+         * 
+         */
     private final @Nullable Integer ttl;
 
     @CustomType.Constructor
@@ -33,18 +33,18 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicy {
     }
 
     /**
-     * The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501
+     * @return The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501
      * can be specified as values, and you cannot specify a status code more than once.
      * 
-    */
+     */
     public Optional<Integer> code() {
         return Optional.ofNullable(this.code);
     }
     /**
-     * The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+     * @return The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
      * (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
      * 
-    */
+     */
     public Optional<Integer> ttl() {
         return Optional.ofNullable(this.ttl);
     }

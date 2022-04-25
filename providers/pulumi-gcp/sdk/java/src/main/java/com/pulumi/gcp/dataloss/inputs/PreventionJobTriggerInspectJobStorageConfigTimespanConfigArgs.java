@@ -26,6 +26,12 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs
     @Import(name="enableAutoPopulationOfTimespanConfig")
     private @Nullable Output<Boolean> enableAutoPopulationOfTimespanConfig;
 
+    /**
+     * @return When the job is started by a JobTrigger we will automatically figure out a valid startTime to avoid
+     * scanning files that have not been modified since the last time the JobTrigger executed. This will
+     * be based on the time of the execution of the last run of the JobTrigger.
+     * 
+     */
     public Optional<Output<Boolean>> enableAutoPopulationOfTimespanConfig() {
         return Optional.ofNullable(this.enableAutoPopulationOfTimespanConfig);
     }
@@ -37,6 +43,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs
     @Import(name="endTime")
     private @Nullable Output<String> endTime;
 
+    /**
+     * @return Exclude files or rows newer than this value. If set to zero, no upper time limit is applied.
+     * 
+     */
     public Optional<Output<String>> endTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -48,6 +58,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs
     @Import(name="startTime")
     private @Nullable Output<String> startTime;
 
+    /**
+     * @return Exclude files or rows older than this value.
+     * 
+     */
     public Optional<Output<String>> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -60,6 +74,11 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs
     @Import(name="timestampField", required=true)
     private Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs> timestampField;
 
+    /**
+     * @return Information on where to inspect
+     * Structure is documented below.
+     * 
+     */
     public Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs> timestampField() {
         return this.timestampField;
     }
@@ -91,38 +110,92 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs
             $ = new PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableAutoPopulationOfTimespanConfig When the job is started by a JobTrigger we will automatically figure out a valid startTime to avoid
+         * scanning files that have not been modified since the last time the JobTrigger executed. This will
+         * be based on the time of the execution of the last run of the JobTrigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAutoPopulationOfTimespanConfig(@Nullable Output<Boolean> enableAutoPopulationOfTimespanConfig) {
             $.enableAutoPopulationOfTimespanConfig = enableAutoPopulationOfTimespanConfig;
             return this;
         }
 
+        /**
+         * @param enableAutoPopulationOfTimespanConfig When the job is started by a JobTrigger we will automatically figure out a valid startTime to avoid
+         * scanning files that have not been modified since the last time the JobTrigger executed. This will
+         * be based on the time of the execution of the last run of the JobTrigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAutoPopulationOfTimespanConfig(Boolean enableAutoPopulationOfTimespanConfig) {
             return enableAutoPopulationOfTimespanConfig(Output.of(enableAutoPopulationOfTimespanConfig));
         }
 
+        /**
+         * @param endTime Exclude files or rows newer than this value. If set to zero, no upper time limit is applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(@Nullable Output<String> endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param endTime Exclude files or rows newer than this value. If set to zero, no upper time limit is applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             return endTime(Output.of(endTime));
         }
 
+        /**
+         * @param startTime Exclude files or rows older than this value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime Exclude files or rows older than this value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }
 
+        /**
+         * @param timestampField Information on where to inspect
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timestampField(Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs> timestampField) {
             $.timestampField = timestampField;
             return this;
         }
 
+        /**
+         * @param timestampField Information on where to inspect
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timestampField(PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs timestampField) {
             return timestampField(Output.of(timestampField));
         }

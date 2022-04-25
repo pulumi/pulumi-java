@@ -25,6 +25,10 @@ public final class PreventionStoredInfoTypeState extends com.pulumi.resources.Re
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the info type.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,11 @@ public final class PreventionStoredInfoTypeState extends com.pulumi.resources.Re
     @Import(name="dictionary")
     private @Nullable Output<PreventionStoredInfoTypeDictionaryGetArgs> dictionary;
 
+    /**
+     * @return Dictionary which defines the rule.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PreventionStoredInfoTypeDictionaryGetArgs>> dictionary() {
         return Optional.ofNullable(this.dictionary);
     }
@@ -48,6 +57,10 @@ public final class PreventionStoredInfoTypeState extends com.pulumi.resources.Re
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return User set display name of the info type.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -60,6 +73,11 @@ public final class PreventionStoredInfoTypeState extends com.pulumi.resources.Re
     @Import(name="largeCustomDictionary")
     private @Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs> largeCustomDictionary;
 
+    /**
+     * @return Dictionary which defines the rule.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs>> largeCustomDictionary() {
         return Optional.ofNullable(this.largeCustomDictionary);
     }
@@ -71,6 +89,10 @@ public final class PreventionStoredInfoTypeState extends com.pulumi.resources.Re
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name describing the field.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -86,6 +108,14 @@ public final class PreventionStoredInfoTypeState extends com.pulumi.resources.Re
     @Import(name="parent")
     private @Nullable Output<String> parent;
 
+    /**
+     * @return The parent of the info type in any of the following formats:
+     * * `projects/{{project}}`
+     * * `projects/{{project}}/locations/{{location}}`
+     * * `organizations/{{organization_id}}`
+     * * `organizations/{{organization_id}}/locations/{{location}}`
+     * 
+     */
     public Optional<Output<String>> parent() {
         return Optional.ofNullable(this.parent);
     }
@@ -98,6 +128,11 @@ public final class PreventionStoredInfoTypeState extends com.pulumi.resources.Re
     @Import(name="regex")
     private @Nullable Output<PreventionStoredInfoTypeRegexGetArgs> regex;
 
+    /**
+     * @return Regular expression which defines the rule.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PreventionStoredInfoTypeRegexGetArgs>> regex() {
         return Optional.ofNullable(this.regex);
     }
@@ -132,65 +167,163 @@ public final class PreventionStoredInfoTypeState extends com.pulumi.resources.Re
             $ = new PreventionStoredInfoTypeState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A description of the info type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the info type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param dictionary Dictionary which defines the rule.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dictionary(@Nullable Output<PreventionStoredInfoTypeDictionaryGetArgs> dictionary) {
             $.dictionary = dictionary;
             return this;
         }
 
+        /**
+         * @param dictionary Dictionary which defines the rule.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dictionary(PreventionStoredInfoTypeDictionaryGetArgs dictionary) {
             return dictionary(Output.of(dictionary));
         }
 
+        /**
+         * @param displayName User set display name of the info type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName User set display name of the info type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param largeCustomDictionary Dictionary which defines the rule.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder largeCustomDictionary(@Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs> largeCustomDictionary) {
             $.largeCustomDictionary = largeCustomDictionary;
             return this;
         }
 
+        /**
+         * @param largeCustomDictionary Dictionary which defines the rule.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder largeCustomDictionary(PreventionStoredInfoTypeLargeCustomDictionaryGetArgs largeCustomDictionary) {
             return largeCustomDictionary(Output.of(largeCustomDictionary));
         }
 
+        /**
+         * @param name Name describing the field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name describing the field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parent The parent of the info type in any of the following formats:
+         * * `projects/{{project}}`
+         * * `projects/{{project}}/locations/{{location}}`
+         * * `organizations/{{organization_id}}`
+         * * `organizations/{{organization_id}}/locations/{{location}}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(@Nullable Output<String> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent The parent of the info type in any of the following formats:
+         * * `projects/{{project}}`
+         * * `projects/{{project}}/locations/{{location}}`
+         * * `organizations/{{organization_id}}`
+         * * `organizations/{{organization_id}}/locations/{{location}}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             return parent(Output.of(parent));
         }
 
+        /**
+         * @param regex Regular expression which defines the rule.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(@Nullable Output<PreventionStoredInfoTypeRegexGetArgs> regex) {
             $.regex = regex;
             return this;
         }
 
+        /**
+         * @param regex Regular expression which defines the rule.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(PreventionStoredInfoTypeRegexGetArgs regex) {
             return regex(Output.of(regex));
         }

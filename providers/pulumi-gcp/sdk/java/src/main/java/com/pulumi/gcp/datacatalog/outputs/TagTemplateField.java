@@ -14,44 +14,44 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TagTemplateField {
-    /**
-     * A description for this field.
-     * 
-     */
+        /**
+         * @return A description for this field.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The display name for this template.
-     * 
-     */
+        /**
+         * @return The display name for this template.
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * The identifier for this object. Format specified above.
-     * 
-     */
+        /**
+         * @return The identifier for this object. Format specified above.
+         * 
+         */
     private final String fieldId;
-    /**
-     * Whether this is a required field. Defaults to false.
-     * 
-     */
+        /**
+         * @return Whether this is a required field. Defaults to false.
+         * 
+         */
     private final @Nullable Boolean isRequired;
-    /**
-     * - 
-     * The resource name of the tag template field in URL format. Example: projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}/fields/{field}
-     * 
-     */
+        /**
+         * @return -
+         * The resource name of the tag template field in URL format. Example: projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}/fields/{field}
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The order of this field with respect to other fields in this tag template.
-     * A higher value indicates a more important field. The value can be negative.
-     * Multiple fields can have the same order, and field orders within a tag do not have to be sequential.
-     * 
-     */
+        /**
+         * @return The order of this field with respect to other fields in this tag template.
+         * A higher value indicates a more important field. The value can be negative.
+         * Multiple fields can have the same order, and field orders within a tag do not have to be sequential.
+         * 
+         */
     private final @Nullable Integer order;
-    /**
-     * The type of value this tag field can contain.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return The type of value this tag field can contain.
+         * Structure is documented below.
+         * 
+         */
     private final TagTemplateFieldType type;
 
     @CustomType.Constructor
@@ -73,55 +73,55 @@ public final class TagTemplateField {
     }
 
     /**
-     * A description for this field.
+     * @return A description for this field.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The display name for this template.
+     * @return The display name for this template.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * The identifier for this object. Format specified above.
+     * @return The identifier for this object. Format specified above.
      * 
-    */
+     */
     public String fieldId() {
         return this.fieldId;
     }
     /**
-     * Whether this is a required field. Defaults to false.
+     * @return Whether this is a required field. Defaults to false.
      * 
-    */
+     */
     public Optional<Boolean> isRequired() {
         return Optional.ofNullable(this.isRequired);
     }
     /**
-     * - 
+     * @return -
      * The resource name of the tag template field in URL format. Example: projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}/fields/{field}
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The order of this field with respect to other fields in this tag template.
+     * @return The order of this field with respect to other fields in this tag template.
      * A higher value indicates a more important field. The value can be negative.
      * Multiple fields can have the same order, and field orders within a tag do not have to be sequential.
      * 
-    */
+     */
     public Optional<Integer> order() {
         return Optional.ofNullable(this.order);
     }
     /**
-     * The type of value this tag field can contain.
+     * @return The type of value this tag field can contain.
      * Structure is documented below.
      * 
-    */
+     */
     public TagTemplateFieldType type() {
         return this.type;
     }

@@ -9,8 +9,26 @@ import java.util.Objects;
 
 @CustomType
 public final class GameServerClusterConnectionInfoGkeClusterReference {
+        /**
+         * @return The full or partial name of a GKE cluster, using one of the following
+         * forms:
+         * * `projects/{project_id}/locations/{location}/clusters/{cluster_id}`
+         * * `locations/{location}/clusters/{cluster_id}`
+         * * `{cluster_id}`
+         *   If project and location are not specified, the project and location of the
+         *   GameServerCluster resource are used to generate the full name of the
+         *   GKE cluster.
+         * 
+         */
+    private final String cluster;
+
+    @CustomType.Constructor
+    private GameServerClusterConnectionInfoGkeClusterReference(@CustomType.Parameter("cluster") String cluster) {
+        this.cluster = cluster;
+    }
+
     /**
-     * The full or partial name of a GKE cluster, using one of the following
+     * @return The full or partial name of a GKE cluster, using one of the following
      * forms:
      * * `projects/{project_id}/locations/{location}/clusters/{cluster_id}`
      * * `locations/{location}/clusters/{cluster_id}`
@@ -20,24 +38,6 @@ public final class GameServerClusterConnectionInfoGkeClusterReference {
      *   GKE cluster.
      * 
      */
-    private final String cluster;
-
-    @CustomType.Constructor
-    private GameServerClusterConnectionInfoGkeClusterReference(@CustomType.Parameter("cluster") String cluster) {
-        this.cluster = cluster;
-    }
-
-    /**
-     * The full or partial name of a GKE cluster, using one of the following
-     * forms:
-     * * `projects/{project_id}/locations/{location}/clusters/{cluster_id}`
-     * * `locations/{location}/clusters/{cluster_id}`
-     * * `{cluster_id}`
-     *   If project and location are not specified, the project and location of the
-     *   GameServerCluster resource are used to generate the full name of the
-     *   GKE cluster.
-     * 
-    */
     public String cluster() {
         return this.cluster;
     }

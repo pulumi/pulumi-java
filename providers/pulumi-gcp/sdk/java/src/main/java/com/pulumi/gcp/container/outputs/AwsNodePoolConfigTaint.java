@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class AwsNodePoolConfigTaint {
-    /**
-     * Required. The taint effect. Possible values: EFFECT_UNSPECIFIED, NO_SCHEDULE, PREFER_NO_SCHEDULE, NO_EXECUTE
-     * 
-     */
+        /**
+         * @return Required. The taint effect. Possible values: EFFECT_UNSPECIFIED, NO_SCHEDULE, PREFER_NO_SCHEDULE, NO_EXECUTE
+         * 
+         */
     private final String effect;
-    /**
-     * Required. Key for the taint.
-     * 
-     */
+        /**
+         * @return Required. Key for the taint.
+         * 
+         */
     private final String key;
-    /**
-     * Required. Value for the taint.
-     * 
-     */
+        /**
+         * @return Required. Value for the taint.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class AwsNodePoolConfigTaint {
     }
 
     /**
-     * Required. The taint effect. Possible values: EFFECT_UNSPECIFIED, NO_SCHEDULE, PREFER_NO_SCHEDULE, NO_EXECUTE
+     * @return Required. The taint effect. Possible values: EFFECT_UNSPECIFIED, NO_SCHEDULE, PREFER_NO_SCHEDULE, NO_EXECUTE
      * 
-    */
+     */
     public String effect() {
         return this.effect;
     }
     /**
-     * Required. Key for the taint.
+     * @return Required. Key for the taint.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Required. Value for the taint.
+     * @return Required. Value for the taint.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

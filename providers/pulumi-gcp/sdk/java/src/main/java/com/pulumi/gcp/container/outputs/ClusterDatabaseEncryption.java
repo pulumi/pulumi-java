@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClusterDatabaseEncryption {
-    /**
-     * the key to use to encrypt/decrypt secrets.  See the [DatabaseEncryption definition](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#Cluster.DatabaseEncryption) for more information.
-     * 
-     */
+        /**
+         * @return the key to use to encrypt/decrypt secrets.  See the [DatabaseEncryption definition](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#Cluster.DatabaseEncryption) for more information.
+         * 
+         */
     private final @Nullable String keyName;
-    /**
-     * `ENCRYPTED` or `DECRYPTED`
-     * 
-     */
+        /**
+         * @return `ENCRYPTED` or `DECRYPTED`
+         * 
+         */
     private final String state;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ClusterDatabaseEncryption {
     }
 
     /**
-     * the key to use to encrypt/decrypt secrets.  See the [DatabaseEncryption definition](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#Cluster.DatabaseEncryption) for more information.
+     * @return the key to use to encrypt/decrypt secrets.  See the [DatabaseEncryption definition](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#Cluster.DatabaseEncryption) for more information.
      * 
-    */
+     */
     public Optional<String> keyName() {
         return Optional.ofNullable(this.keyName);
     }
     /**
-     * `ENCRYPTED` or `DECRYPTED`
+     * @return `ENCRYPTED` or `DECRYPTED`
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

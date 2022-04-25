@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class AzureNodePoolMaxPodsConstraint {
-    /**
-     * Required. The maximum number of pods to schedule on a single node.
-     * 
-     */
+        /**
+         * @return Required. The maximum number of pods to schedule on a single node.
+         * 
+         */
     private final Integer maxPodsPerNode;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class AzureNodePoolMaxPodsConstraint {
     }
 
     /**
-     * Required. The maximum number of pods to schedule on a single node.
+     * @return Required. The maximum number of pods to schedule on a single node.
      * 
-    */
+     */
     public Integer maxPodsPerNode() {
         return this.maxPodsPerNode;
     }

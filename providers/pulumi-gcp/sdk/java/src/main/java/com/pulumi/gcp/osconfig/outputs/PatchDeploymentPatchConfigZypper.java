@@ -13,36 +13,36 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PatchDeploymentPatchConfigZypper {
-    /**
-     * Install only patches with these categories. Common categories include security, recommended, and feature.
-     * 
-     */
+        /**
+         * @return Install only patches with these categories. Common categories include security, recommended, and feature.
+         * 
+         */
     private final @Nullable List<String> categories;
-    /**
-     * List of KBs to exclude from update.
-     * 
-     */
+        /**
+         * @return List of KBs to exclude from update.
+         * 
+         */
     private final @Nullable List<String> excludes;
-    /**
-     * An exclusive list of kbs to be updated. These are the only patches that will be updated.
-     * This field must not be used with other patch configurations.
-     * 
-     */
+        /**
+         * @return An exclusive list of kbs to be updated. These are the only patches that will be updated.
+         * This field must not be used with other patch configurations.
+         * 
+         */
     private final @Nullable List<String> exclusivePatches;
-    /**
-     * Install only patches with these severities. Common severities include critical, important, moderate, and low.
-     * 
-     */
+        /**
+         * @return Install only patches with these severities. Common severities include critical, important, moderate, and low.
+         * 
+         */
     private final @Nullable List<String> severities;
-    /**
-     * Adds the --with-optional flag to zypper patch.
-     * 
-     */
+        /**
+         * @return Adds the --with-optional flag to zypper patch.
+         * 
+         */
     private final @Nullable Boolean withOptional;
-    /**
-     * Adds the --with-update flag, to zypper patch.
-     * 
-     */
+        /**
+         * @return Adds the --with-update flag, to zypper patch.
+         * 
+         */
     private final @Nullable Boolean withUpdate;
 
     @CustomType.Constructor
@@ -62,45 +62,45 @@ public final class PatchDeploymentPatchConfigZypper {
     }
 
     /**
-     * Install only patches with these categories. Common categories include security, recommended, and feature.
+     * @return Install only patches with these categories. Common categories include security, recommended, and feature.
      * 
-    */
+     */
     public List<String> categories() {
         return this.categories == null ? List.of() : this.categories;
     }
     /**
-     * List of KBs to exclude from update.
+     * @return List of KBs to exclude from update.
      * 
-    */
+     */
     public List<String> excludes() {
         return this.excludes == null ? List.of() : this.excludes;
     }
     /**
-     * An exclusive list of kbs to be updated. These are the only patches that will be updated.
+     * @return An exclusive list of kbs to be updated. These are the only patches that will be updated.
      * This field must not be used with other patch configurations.
      * 
-    */
+     */
     public List<String> exclusivePatches() {
         return this.exclusivePatches == null ? List.of() : this.exclusivePatches;
     }
     /**
-     * Install only patches with these severities. Common severities include critical, important, moderate, and low.
+     * @return Install only patches with these severities. Common severities include critical, important, moderate, and low.
      * 
-    */
+     */
     public List<String> severities() {
         return this.severities == null ? List.of() : this.severities;
     }
     /**
-     * Adds the --with-optional flag to zypper patch.
+     * @return Adds the --with-optional flag to zypper patch.
      * 
-    */
+     */
     public Optional<Boolean> withOptional() {
         return Optional.ofNullable(this.withOptional);
     }
     /**
-     * Adds the --with-update flag, to zypper patch.
+     * @return Adds the --with-update flag, to zypper patch.
      * 
-    */
+     */
     public Optional<Boolean> withUpdate() {
         return Optional.ofNullable(this.withUpdate);
     }

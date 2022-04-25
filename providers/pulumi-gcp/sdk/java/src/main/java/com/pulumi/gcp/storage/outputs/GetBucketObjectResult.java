@@ -16,72 +16,72 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetBucketObjectResult {
     private final @Nullable String bucket;
-    /**
-     * (Computed) [Cache-Control](https://tools.ietf.org/html/rfc7234#section-5.2)
-     * directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600
-     * 
-     */
+        /**
+         * @return (Computed) [Cache-Control](https://tools.ietf.org/html/rfc7234#section-5.2)
+         * directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600
+         * 
+         */
     private final String cacheControl;
     private final String content;
-    /**
-     * (Computed) [Content-Disposition](https://tools.ietf.org/html/rfc6266) of the object data.
-     * 
-     */
+        /**
+         * @return (Computed) [Content-Disposition](https://tools.ietf.org/html/rfc6266) of the object data.
+         * 
+         */
     private final String contentDisposition;
-    /**
-     * (Computed) [Content-Encoding](https://tools.ietf.org/html/rfc7231#section-3.1.2.2) of the object data.
-     * 
-     */
+        /**
+         * @return (Computed) [Content-Encoding](https://tools.ietf.org/html/rfc7231#section-3.1.2.2) of the object data.
+         * 
+         */
     private final String contentEncoding;
-    /**
-     * (Computed) [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object data.
-     * 
-     */
+        /**
+         * @return (Computed) [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object data.
+         * 
+         */
     private final String contentLanguage;
-    /**
-     * (Computed) [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to &#34;application/octet-stream&#34; or &#34;text/plain; charset=utf-8&#34;.
-     * 
-     */
+        /**
+         * @return (Computed) [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to &#34;application/octet-stream&#34; or &#34;text/plain; charset=utf-8&#34;.
+         * 
+         */
     private final String contentType;
-    /**
-     * (Computed) Base 64 CRC32 hash of the uploaded data.
-     * 
-     */
+        /**
+         * @return (Computed) Base 64 CRC32 hash of the uploaded data.
+         * 
+         */
     private final String crc32c;
     private final List<GetBucketObjectCustomerEncryption> customerEncryptions;
     private final String detectMd5hash;
     private final Boolean eventBasedHold;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String kmsKeyName;
-    /**
-     * (Computed) Base 64 MD5 hash of the uploaded data.
-     * 
-     */
+        /**
+         * @return (Computed) Base 64 MD5 hash of the uploaded data.
+         * 
+         */
     private final String md5hash;
-    /**
-     * (Computed) A url reference to download this object.
-     * 
-     */
+        /**
+         * @return (Computed) A url reference to download this object.
+         * 
+         */
     private final String mediaLink;
     private final Map<String,String> metadata;
     private final @Nullable String name;
     private final String outputName;
-    /**
-     * (Computed) A url reference to this object.
-     * 
-     */
+        /**
+         * @return (Computed) A url reference to this object.
+         * 
+         */
     private final String selfLink;
     private final String source;
-    /**
-     * (Computed) The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
-     * Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket&#39;s default
-     * storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
-     * 
-     */
+        /**
+         * @return (Computed) The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
+         * Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket&#39;s default
+         * storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
+         * 
+         */
     private final String storageClass;
     private final Boolean temporaryHold;
 
@@ -137,10 +137,10 @@ public final class GetBucketObjectResult {
         return Optional.ofNullable(this.bucket);
     }
     /**
-     * (Computed) [Cache-Control](https://tools.ietf.org/html/rfc7234#section-5.2)
+     * @return (Computed) [Cache-Control](https://tools.ietf.org/html/rfc7234#section-5.2)
      * directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600
      * 
-    */
+     */
     public String cacheControl() {
         return this.cacheControl;
     }
@@ -148,37 +148,37 @@ public final class GetBucketObjectResult {
         return this.content;
     }
     /**
-     * (Computed) [Content-Disposition](https://tools.ietf.org/html/rfc6266) of the object data.
+     * @return (Computed) [Content-Disposition](https://tools.ietf.org/html/rfc6266) of the object data.
      * 
-    */
+     */
     public String contentDisposition() {
         return this.contentDisposition;
     }
     /**
-     * (Computed) [Content-Encoding](https://tools.ietf.org/html/rfc7231#section-3.1.2.2) of the object data.
+     * @return (Computed) [Content-Encoding](https://tools.ietf.org/html/rfc7231#section-3.1.2.2) of the object data.
      * 
-    */
+     */
     public String contentEncoding() {
         return this.contentEncoding;
     }
     /**
-     * (Computed) [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object data.
+     * @return (Computed) [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object data.
      * 
-    */
+     */
     public String contentLanguage() {
         return this.contentLanguage;
     }
     /**
-     * (Computed) [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to &#34;application/octet-stream&#34; or &#34;text/plain; charset=utf-8&#34;.
+     * @return (Computed) [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to &#34;application/octet-stream&#34; or &#34;text/plain; charset=utf-8&#34;.
      * 
-    */
+     */
     public String contentType() {
         return this.contentType;
     }
     /**
-     * (Computed) Base 64 CRC32 hash of the uploaded data.
+     * @return (Computed) Base 64 CRC32 hash of the uploaded data.
      * 
-    */
+     */
     public String crc32c() {
         return this.crc32c;
     }
@@ -192,9 +192,9 @@ public final class GetBucketObjectResult {
         return this.eventBasedHold;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -202,16 +202,16 @@ public final class GetBucketObjectResult {
         return this.kmsKeyName;
     }
     /**
-     * (Computed) Base 64 MD5 hash of the uploaded data.
+     * @return (Computed) Base 64 MD5 hash of the uploaded data.
      * 
-    */
+     */
     public String md5hash() {
         return this.md5hash;
     }
     /**
-     * (Computed) A url reference to download this object.
+     * @return (Computed) A url reference to download this object.
      * 
-    */
+     */
     public String mediaLink() {
         return this.mediaLink;
     }
@@ -225,9 +225,9 @@ public final class GetBucketObjectResult {
         return this.outputName;
     }
     /**
-     * (Computed) A url reference to this object.
+     * @return (Computed) A url reference to this object.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }
@@ -235,11 +235,11 @@ public final class GetBucketObjectResult {
         return this.source;
     }
     /**
-     * (Computed) The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
+     * @return (Computed) The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
      * Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket&#39;s default
      * storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
      * 
-    */
+     */
     public String storageClass() {
         return this.storageClass;
     }

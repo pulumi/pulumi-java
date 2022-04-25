@@ -9,18 +9,18 @@ import java.util.Objects;
 
 @CustomType
 public final class GuestPoliciesPackageRepositoryGoo {
-    /**
-     * Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
-     * Names are also used to identify resources which helps to determine whether guest policies have conflicts.
-     * This means that requests to create multiple recipes with the same name and version are rejected since they
-     * could potentially have conflicting assignments.
-     * 
-     */
+        /**
+         * @return Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
+         * Names are also used to identify resources which helps to determine whether guest policies have conflicts.
+         * This means that requests to create multiple recipes with the same name and version are rejected since they
+         * could potentially have conflicting assignments.
+         * 
+         */
     private final String name;
-    /**
-     * The url of the repository.
-     * 
-     */
+        /**
+         * @return The url of the repository.
+         * 
+         */
     private final String url;
 
     @CustomType.Constructor
@@ -32,19 +32,19 @@ public final class GuestPoliciesPackageRepositoryGoo {
     }
 
     /**
-     * Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
+     * @return Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
      * Names are also used to identify resources which helps to determine whether guest policies have conflicts.
      * This means that requests to create multiple recipes with the same name and version are rejected since they
      * could potentially have conflicting assignments.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The url of the repository.
+     * @return The url of the repository.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

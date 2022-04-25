@@ -29,6 +29,16 @@ public final class WorkloadIdentityPoolProviderOidcGetArgs extends com.pulumi.re
     @Import(name="allowedAudiences")
     private @Nullable Output<List<String>> allowedAudiences;
 
+    /**
+     * @return Acceptable values for the `aud` field (audience) in the OIDC token. Token exchange
+     * requests are rejected if the token audience does not match one of the configured
+     * values. Each audience may be at most 256 characters. A maximum of 10 audiences may
+     * be configured.
+     * If this list is empty, the OIDC token audience must be equal to the full canonical
+     * resource name of the WorkloadIdentityPoolProvider, with or without the HTTPS prefix.
+     * For example:
+     * 
+     */
     public Optional<Output<List<String>>> allowedAudiences() {
         return Optional.ofNullable(this.allowedAudiences);
     }
@@ -40,6 +50,10 @@ public final class WorkloadIdentityPoolProviderOidcGetArgs extends com.pulumi.re
     @Import(name="issuerUri", required=true)
     private Output<String> issuerUri;
 
+    /**
+     * @return The OIDC issuer URL.
+     * 
+     */
     public Output<String> issuerUri() {
         return this.issuerUri;
     }
@@ -69,24 +83,72 @@ public final class WorkloadIdentityPoolProviderOidcGetArgs extends com.pulumi.re
             $ = new WorkloadIdentityPoolProviderOidcGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedAudiences Acceptable values for the `aud` field (audience) in the OIDC token. Token exchange
+         * requests are rejected if the token audience does not match one of the configured
+         * values. Each audience may be at most 256 characters. A maximum of 10 audiences may
+         * be configured.
+         * If this list is empty, the OIDC token audience must be equal to the full canonical
+         * resource name of the WorkloadIdentityPoolProvider, with or without the HTTPS prefix.
+         * For example:
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedAudiences(@Nullable Output<List<String>> allowedAudiences) {
             $.allowedAudiences = allowedAudiences;
             return this;
         }
 
+        /**
+         * @param allowedAudiences Acceptable values for the `aud` field (audience) in the OIDC token. Token exchange
+         * requests are rejected if the token audience does not match one of the configured
+         * values. Each audience may be at most 256 characters. A maximum of 10 audiences may
+         * be configured.
+         * If this list is empty, the OIDC token audience must be equal to the full canonical
+         * resource name of the WorkloadIdentityPoolProvider, with or without the HTTPS prefix.
+         * For example:
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedAudiences(List<String> allowedAudiences) {
             return allowedAudiences(Output.of(allowedAudiences));
         }
 
+        /**
+         * @param allowedAudiences Acceptable values for the `aud` field (audience) in the OIDC token. Token exchange
+         * requests are rejected if the token audience does not match one of the configured
+         * values. Each audience may be at most 256 characters. A maximum of 10 audiences may
+         * be configured.
+         * If this list is empty, the OIDC token audience must be equal to the full canonical
+         * resource name of the WorkloadIdentityPoolProvider, with or without the HTTPS prefix.
+         * For example:
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedAudiences(String... allowedAudiences) {
             return allowedAudiences(List.of(allowedAudiences));
         }
 
+        /**
+         * @param issuerUri The OIDC issuer URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuerUri(Output<String> issuerUri) {
             $.issuerUri = issuerUri;
             return this;
         }
 
+        /**
+         * @param issuerUri The OIDC issuer URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuerUri(String issuerUri) {
             return issuerUri(Output.of(issuerUri));
         }

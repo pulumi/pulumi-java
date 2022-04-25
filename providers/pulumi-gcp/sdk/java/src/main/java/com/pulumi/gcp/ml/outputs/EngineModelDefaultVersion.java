@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class EngineModelDefaultVersion {
-    /**
-     * The name specified for the version when it was created.
-     * 
-     */
+        /**
+         * @return The name specified for the version when it was created.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class EngineModelDefaultVersion {
     }
 
     /**
-     * The name specified for the version when it was created.
+     * @return The name specified for the version when it was created.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

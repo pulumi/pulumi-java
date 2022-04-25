@@ -13,39 +13,39 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class JobAppEngineHttpTarget {
-    /**
-     * App Engine Routing setting for the job.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return App Engine Routing setting for the job.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable JobAppEngineHttpTargetAppEngineRouting appEngineRouting;
-    /**
-     * HTTP request body.
-     * A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
-     * It is an error to set body on a job with an incompatible HttpMethod.
-     * A base64-encoded string.
-     * 
-     */
+        /**
+         * @return HTTP request body.
+         * A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
+         * It is an error to set body on a job with an incompatible HttpMethod.
+         * A base64-encoded string.
+         * 
+         */
     private final @Nullable String body;
-    /**
-     * This map contains the header field names and values.
-     * Repeated headers are not supported, but a header value can contain commas.
-     * 
-     */
+        /**
+         * @return This map contains the header field names and values.
+         * Repeated headers are not supported, but a header value can contain commas.
+         * 
+         */
     private final @Nullable Map<String,String> headers;
-    /**
-     * Which HTTP method to use for the request.
-     * 
-     */
+        /**
+         * @return Which HTTP method to use for the request.
+         * 
+         */
     private final @Nullable String httpMethod;
-    /**
-     * The relative URI.
-     * The relative URL must begin with &#34;/&#34; and must be a valid HTTP relative URL.
-     * It can contain a path, query string arguments, and \# fragments.
-     * If the relative URL is empty, then the root path &#34;/&#34; will be used.
-     * No spaces are allowed, and the maximum length allowed is 2083 characters
-     * 
-     */
+        /**
+         * @return The relative URI.
+         * The relative URL must begin with &#34;/&#34; and must be a valid HTTP relative URL.
+         * It can contain a path, query string arguments, and \# fragments.
+         * If the relative URL is empty, then the root path &#34;/&#34; will be used.
+         * No spaces are allowed, and the maximum length allowed is 2083 characters
+         * 
+         */
     private final String relativeUri;
 
     @CustomType.Constructor
@@ -63,46 +63,46 @@ public final class JobAppEngineHttpTarget {
     }
 
     /**
-     * App Engine Routing setting for the job.
+     * @return App Engine Routing setting for the job.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<JobAppEngineHttpTargetAppEngineRouting> appEngineRouting() {
         return Optional.ofNullable(this.appEngineRouting);
     }
     /**
-     * HTTP request body.
+     * @return HTTP request body.
      * A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
      * It is an error to set body on a job with an incompatible HttpMethod.
      * A base64-encoded string.
      * 
-    */
+     */
     public Optional<String> body() {
         return Optional.ofNullable(this.body);
     }
     /**
-     * This map contains the header field names and values.
+     * @return This map contains the header field names and values.
      * Repeated headers are not supported, but a header value can contain commas.
      * 
-    */
+     */
     public Map<String,String> headers() {
         return this.headers == null ? Map.of() : this.headers;
     }
     /**
-     * Which HTTP method to use for the request.
+     * @return Which HTTP method to use for the request.
      * 
-    */
+     */
     public Optional<String> httpMethod() {
         return Optional.ofNullable(this.httpMethod);
     }
     /**
-     * The relative URI.
+     * @return The relative URI.
      * The relative URL must begin with &#34;/&#34; and must be a valid HTTP relative URL.
      * It can contain a path, query string arguments, and \# fragments.
      * If the relative URL is empty, then the root path &#34;/&#34; will be used.
      * No spaces are allowed, and the maximum length allowed is 2083 characters
      * 
-    */
+     */
     public String relativeUri() {
         return this.relativeUri;
     }

@@ -11,10 +11,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GetBackendServiceConsistentHashHttpCooky {
-    /**
-     * The name of the Backend Service.
-     * 
-     */
+        /**
+         * @return The name of the Backend Service.
+         * 
+         */
     private final String name;
     private final String path;
     private final List<GetBackendServiceConsistentHashHttpCookyTtl> ttls;
@@ -30,9 +30,9 @@ public final class GetBackendServiceConsistentHashHttpCooky {
     }
 
     /**
-     * The name of the Backend Service.
+     * @return The name of the Backend Service.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

@@ -12,16 +12,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TableView {
-    /**
-     * A query whose result is persisted.
-     * 
-     */
+        /**
+         * @return A query whose result is persisted.
+         * 
+         */
     private final String query;
-    /**
-     * Specifies whether to use BigQuery&#39;s legacy SQL for this view.
-     * The default value is true. If set to false, the view will use BigQuery&#39;s standard SQL.
-     * 
-     */
+        /**
+         * @return Specifies whether to use BigQuery&#39;s legacy SQL for this view.
+         * The default value is true. If set to false, the view will use BigQuery&#39;s standard SQL.
+         * 
+         */
     private final @Nullable Boolean useLegacySql;
 
     @CustomType.Constructor
@@ -33,17 +33,17 @@ public final class TableView {
     }
 
     /**
-     * A query whose result is persisted.
+     * @return A query whose result is persisted.
      * 
-    */
+     */
     public String query() {
         return this.query;
     }
     /**
-     * Specifies whether to use BigQuery&#39;s legacy SQL for this view.
+     * @return Specifies whether to use BigQuery&#39;s legacy SQL for this view.
      * The default value is true. If set to false, the view will use BigQuery&#39;s standard SQL.
      * 
-    */
+     */
     public Optional<Boolean> useLegacySql() {
         return Optional.ofNullable(this.useLegacySql);
     }

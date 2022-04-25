@@ -13,23 +13,23 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ResourcePolicySnapshotSchedulePolicySchedule {
-    /**
-     * The policy will execute every nth day at the specified time.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return The policy will execute every nth day at the specified time.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule dailySchedule;
-    /**
-     * The policy will execute every nth hour starting at the specified time.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return The policy will execute every nth hour starting at the specified time.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule hourlySchedule;
-    /**
-     * Allows specifying a snapshot time for each day of the week.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Allows specifying a snapshot time for each day of the week.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule weeklySchedule;
 
     @CustomType.Constructor
@@ -43,26 +43,26 @@ public final class ResourcePolicySnapshotSchedulePolicySchedule {
     }
 
     /**
-     * The policy will execute every nth day at the specified time.
+     * @return The policy will execute every nth day at the specified time.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule> dailySchedule() {
         return Optional.ofNullable(this.dailySchedule);
     }
     /**
-     * The policy will execute every nth hour starting at the specified time.
+     * @return The policy will execute every nth hour starting at the specified time.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule> hourlySchedule() {
         return Optional.ofNullable(this.hourlySchedule);
     }
     /**
-     * Allows specifying a snapshot time for each day of the week.
+     * @return Allows specifying a snapshot time for each day of the week.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule> weeklySchedule() {
         return Optional.ofNullable(this.weeklySchedule);
     }

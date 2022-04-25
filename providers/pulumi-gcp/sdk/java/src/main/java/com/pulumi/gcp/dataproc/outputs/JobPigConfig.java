@@ -15,38 +15,38 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class JobPigConfig {
-    /**
-     * Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.
-     * 
-     */
+        /**
+         * @return Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.
+         * 
+         */
     private final @Nullable Boolean continueOnFailure;
-    /**
-     * HCFS URIs of jar files to be added to the Spark CLASSPATH.
-     * 
-     */
+        /**
+         * @return HCFS URIs of jar files to be added to the Spark CLASSPATH.
+         * 
+         */
     private final @Nullable List<String> jarFileUris;
     private final @Nullable JobPigConfigLoggingConfig loggingConfig;
-    /**
-     * A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
-     * 
-     */
+        /**
+         * @return A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
+         * 
+         */
     private final @Nullable Map<String,String> properties;
-    /**
-     * The HCFS URI of the script that contains SQL queries.
-     * Conflicts with `query_list`
-     * 
-     */
+        /**
+         * @return The HCFS URI of the script that contains SQL queries.
+         * Conflicts with `query_list`
+         * 
+         */
     private final @Nullable String queryFileUri;
-    /**
-     * The list of SQL queries or statements to execute as part of the job.
-     * Conflicts with `query_file_uri`
-     * 
-     */
+        /**
+         * @return The list of SQL queries or statements to execute as part of the job.
+         * Conflicts with `query_file_uri`
+         * 
+         */
     private final @Nullable List<String> queryLists;
-    /**
-     * Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name=&#34;value&#34;;`).
-     * 
-     */
+        /**
+         * @return Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name=&#34;value&#34;;`).
+         * 
+         */
     private final @Nullable Map<String,String> scriptVariables;
 
     @CustomType.Constructor
@@ -68,16 +68,16 @@ public final class JobPigConfig {
     }
 
     /**
-     * Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.
+     * @return Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.
      * 
-    */
+     */
     public Optional<Boolean> continueOnFailure() {
         return Optional.ofNullable(this.continueOnFailure);
     }
     /**
-     * HCFS URIs of jar files to be added to the Spark CLASSPATH.
+     * @return HCFS URIs of jar files to be added to the Spark CLASSPATH.
      * 
-    */
+     */
     public List<String> jarFileUris() {
         return this.jarFileUris == null ? List.of() : this.jarFileUris;
     }
@@ -85,32 +85,32 @@ public final class JobPigConfig {
         return Optional.ofNullable(this.loggingConfig);
     }
     /**
-     * A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
+     * @return A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
      * 
-    */
+     */
     public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
-     * The HCFS URI of the script that contains SQL queries.
+     * @return The HCFS URI of the script that contains SQL queries.
      * Conflicts with `query_list`
      * 
-    */
+     */
     public Optional<String> queryFileUri() {
         return Optional.ofNullable(this.queryFileUri);
     }
     /**
-     * The list of SQL queries or statements to execute as part of the job.
+     * @return The list of SQL queries or statements to execute as part of the job.
      * Conflicts with `query_file_uri`
      * 
-    */
+     */
     public List<String> queryLists() {
         return this.queryLists == null ? List.of() : this.queryLists;
     }
     /**
-     * Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name=&#34;value&#34;;`).
+     * @return Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name=&#34;value&#34;;`).
      * 
-    */
+     */
     public Map<String,String> scriptVariables() {
         return this.scriptVariables == null ? Map.of() : this.scriptVariables;
     }

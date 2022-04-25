@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class WorkflowTemplateParameterValidationRegex {
-    /**
-     * Required. RE2 regular expressions used to validate the parameter&#39;s value. The value must match the regex in its entirety (substring matches are not sufficient).
-     * 
-     */
+        /**
+         * @return Required. RE2 regular expressions used to validate the parameter&#39;s value. The value must match the regex in its entirety (substring matches are not sufficient).
+         * 
+         */
     private final List<String> regexes;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class WorkflowTemplateParameterValidationRegex {
     }
 
     /**
-     * Required. RE2 regular expressions used to validate the parameter&#39;s value. The value must match the regex in its entirety (substring matches are not sufficient).
+     * @return Required. RE2 regular expressions used to validate the parameter&#39;s value. The value must match the regex in its entirety (substring matches are not sufficient).
      * 
-    */
+     */
     public List<String> regexes() {
         return this.regexes;
     }

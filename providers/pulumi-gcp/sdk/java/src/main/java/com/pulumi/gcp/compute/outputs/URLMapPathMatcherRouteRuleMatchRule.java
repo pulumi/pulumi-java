@@ -16,65 +16,65 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class URLMapPathMatcherRouteRuleMatchRule {
-    /**
-     * For satisfying the matchRule condition, the path of the request must exactly
-     * match the value specified in fullPathMatch after removing any query parameters
-     * and anchor that may be part of the original URL. FullPathMatch must be between 1
-     * and 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must
-     * be specified.
-     * 
-     */
+        /**
+         * @return For satisfying the matchRule condition, the path of the request must exactly
+         * match the value specified in fullPathMatch after removing any query parameters
+         * and anchor that may be part of the original URL. FullPathMatch must be between 1
+         * and 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must
+         * be specified.
+         * 
+         */
     private final @Nullable String fullPathMatch;
-    /**
-     * Specifies a list of header match criteria, all of which must match corresponding
-     * headers in the request.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Specifies a list of header match criteria, all of which must match corresponding
+         * headers in the request.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatch> headerMatches;
-    /**
-     * Specifies that prefixMatch and fullPathMatch matches are case sensitive.
-     * Defaults to false.
-     * 
-     */
+        /**
+         * @return Specifies that prefixMatch and fullPathMatch matches are case sensitive.
+         * Defaults to false.
+         * 
+         */
     private final @Nullable Boolean ignoreCase;
-    /**
-     * Opaque filter criteria used by Loadbalancer to restrict routing configuration to
-     * a limited set xDS compliant clients. In their xDS requests to Loadbalancer, xDS
-     * clients present node metadata. If a match takes place, the relevant routing
-     * configuration is made available to those proxies. For each metadataFilter in
-     * this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the
-     * filterLabels must match the corresponding label provided in the metadata. If its
-     * filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match
-     * with corresponding labels in the provided metadata. metadataFilters specified
-     * here can be overrides those specified in ForwardingRule that refers to this
-     * UrlMap. metadataFilters only applies to Loadbalancers that have their
-     * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Opaque filter criteria used by Loadbalancer to restrict routing configuration to
+         * a limited set xDS compliant clients. In their xDS requests to Loadbalancer, xDS
+         * clients present node metadata. If a match takes place, the relevant routing
+         * configuration is made available to those proxies. For each metadataFilter in
+         * this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the
+         * filterLabels must match the corresponding label provided in the metadata. If its
+         * filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match
+         * with corresponding labels in the provided metadata. metadataFilters specified
+         * here can be overrides those specified in ForwardingRule that refers to this
+         * UrlMap. metadataFilters only applies to Loadbalancers that have their
+         * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilter> metadataFilters;
-    /**
-     * The value of the header must start with the contents of prefixMatch. Only one of
-     * exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
-     * must be set.
-     * 
-     */
+        /**
+         * @return The value of the header must start with the contents of prefixMatch. Only one of
+         * exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
+         * must be set.
+         * 
+         */
     private final @Nullable String prefixMatch;
-    /**
-     * Specifies a list of query parameter match criteria, all of which must match
-     * corresponding query parameters in the request.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Specifies a list of query parameter match criteria, all of which must match
+         * corresponding query parameters in the request.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatch> queryParameterMatches;
-    /**
-     * The queryParameterMatch matches if the value of the parameter matches the
-     * regular expression specified by regexMatch. For the regular expression grammar,
-     * please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
-     * exactMatch and regexMatch must be set.
-     * 
-     */
+        /**
+         * @return The queryParameterMatch matches if the value of the parameter matches the
+         * regular expression specified by regexMatch. For the regular expression grammar,
+         * please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
+         * exactMatch and regexMatch must be set.
+         * 
+         */
     private final @Nullable String regexMatch;
 
     @CustomType.Constructor
@@ -96,35 +96,35 @@ public final class URLMapPathMatcherRouteRuleMatchRule {
     }
 
     /**
-     * For satisfying the matchRule condition, the path of the request must exactly
+     * @return For satisfying the matchRule condition, the path of the request must exactly
      * match the value specified in fullPathMatch after removing any query parameters
      * and anchor that may be part of the original URL. FullPathMatch must be between 1
      * and 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must
      * be specified.
      * 
-    */
+     */
     public Optional<String> fullPathMatch() {
         return Optional.ofNullable(this.fullPathMatch);
     }
     /**
-     * Specifies a list of header match criteria, all of which must match corresponding
+     * @return Specifies a list of header match criteria, all of which must match corresponding
      * headers in the request.
      * Structure is documented below.
      * 
-    */
+     */
     public List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatch> headerMatches() {
         return this.headerMatches == null ? List.of() : this.headerMatches;
     }
     /**
-     * Specifies that prefixMatch and fullPathMatch matches are case sensitive.
+     * @return Specifies that prefixMatch and fullPathMatch matches are case sensitive.
      * Defaults to false.
      * 
-    */
+     */
     public Optional<Boolean> ignoreCase() {
         return Optional.ofNullable(this.ignoreCase);
     }
     /**
-     * Opaque filter criteria used by Loadbalancer to restrict routing configuration to
+     * @return Opaque filter criteria used by Loadbalancer to restrict routing configuration to
      * a limited set xDS compliant clients. In their xDS requests to Loadbalancer, xDS
      * clients present node metadata. If a match takes place, the relevant routing
      * configuration is made available to those proxies. For each metadataFilter in
@@ -137,35 +137,35 @@ public final class URLMapPathMatcherRouteRuleMatchRule {
      * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
      * Structure is documented below.
      * 
-    */
+     */
     public List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilter> metadataFilters() {
         return this.metadataFilters == null ? List.of() : this.metadataFilters;
     }
     /**
-     * The value of the header must start with the contents of prefixMatch. Only one of
+     * @return The value of the header must start with the contents of prefixMatch. Only one of
      * exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
      * must be set.
      * 
-    */
+     */
     public Optional<String> prefixMatch() {
         return Optional.ofNullable(this.prefixMatch);
     }
     /**
-     * Specifies a list of query parameter match criteria, all of which must match
+     * @return Specifies a list of query parameter match criteria, all of which must match
      * corresponding query parameters in the request.
      * Structure is documented below.
      * 
-    */
+     */
     public List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatch> queryParameterMatches() {
         return this.queryParameterMatches == null ? List.of() : this.queryParameterMatches;
     }
     /**
-     * The queryParameterMatch matches if the value of the parameter matches the
+     * @return The queryParameterMatch matches if the value of the parameter matches the
      * regular expression specified by regexMatch. For the regular expression grammar,
      * please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
      * exactMatch and regexMatch must be set.
      * 
-    */
+     */
     public Optional<String> regexMatch() {
         return Optional.ofNullable(this.regexMatch);
     }

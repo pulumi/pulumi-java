@@ -13,24 +13,24 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TriggerBuildArtifactsObjects {
-    /**
-     * Cloud Storage bucket and optional object path, in the form &#34;gs://bucket/path/to/somewhere/&#34;.
-     * Files in the workspace matching any path pattern will be uploaded to Cloud Storage with
-     * this location as a prefix.
-     * 
-     */
+        /**
+         * @return Cloud Storage bucket and optional object path, in the form &#34;gs://bucket/path/to/somewhere/&#34;.
+         * Files in the workspace matching any path pattern will be uploaded to Cloud Storage with
+         * this location as a prefix.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Path globs used to match files in the build&#39;s workspace.
-     * 
-     */
+        /**
+         * @return Path globs used to match files in the build&#39;s workspace.
+         * 
+         */
     private final @Nullable List<String> paths;
-    /**
-     * - 
-     * Output only. Stores timing information for pushing all artifact objects.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return -
+         * Output only. Stores timing information for pushing all artifact objects.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<TriggerBuildArtifactsObjectsTiming> timings;
 
     @CustomType.Constructor
@@ -44,27 +44,27 @@ public final class TriggerBuildArtifactsObjects {
     }
 
     /**
-     * Cloud Storage bucket and optional object path, in the form &#34;gs://bucket/path/to/somewhere/&#34;.
+     * @return Cloud Storage bucket and optional object path, in the form &#34;gs://bucket/path/to/somewhere/&#34;.
      * Files in the workspace matching any path pattern will be uploaded to Cloud Storage with
      * this location as a prefix.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Path globs used to match files in the build&#39;s workspace.
+     * @return Path globs used to match files in the build&#39;s workspace.
      * 
-    */
+     */
     public List<String> paths() {
         return this.paths == null ? List.of() : this.paths;
     }
     /**
-     * - 
+     * @return -
      * Output only. Stores timing information for pushing all artifact objects.
      * Structure is documented below.
      * 
-    */
+     */
     public List<TriggerBuildArtifactsObjectsTiming> timings() {
         return this.timings == null ? List.of() : this.timings;
     }

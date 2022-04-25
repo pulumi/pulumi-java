@@ -10,16 +10,16 @@ import java.util.Objects;
 
 @CustomType
 public final class InstanceAcceleratorConfig {
-    /**
-     * Count of cores of this accelerator.
-     * 
-     */
+        /**
+         * @return Count of cores of this accelerator.
+         * 
+         */
     private final Integer coreCount;
-    /**
-     * Type of this accelerator.
-     * Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_TESLA_P100`, `NVIDIA_TESLA_V100`, `NVIDIA_TESLA_P4`, `NVIDIA_TESLA_T4`, `NVIDIA_TESLA_T4_VWS`, `NVIDIA_TESLA_P100_VWS`, `NVIDIA_TESLA_P4_VWS`, `NVIDIA_TESLA_A100`, `TPU_V2`, and `TPU_V3`.
-     * 
-     */
+        /**
+         * @return Type of this accelerator.
+         * Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_TESLA_P100`, `NVIDIA_TESLA_V100`, `NVIDIA_TESLA_P4`, `NVIDIA_TESLA_T4`, `NVIDIA_TESLA_T4_VWS`, `NVIDIA_TESLA_P100_VWS`, `NVIDIA_TESLA_P4_VWS`, `NVIDIA_TESLA_A100`, `TPU_V2`, and `TPU_V3`.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -31,17 +31,17 @@ public final class InstanceAcceleratorConfig {
     }
 
     /**
-     * Count of cores of this accelerator.
+     * @return Count of cores of this accelerator.
      * 
-    */
+     */
     public Integer coreCount() {
         return this.coreCount;
     }
     /**
-     * Type of this accelerator.
+     * @return Type of this accelerator.
      * Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_TESLA_P100`, `NVIDIA_TESLA_V100`, `NVIDIA_TESLA_P4`, `NVIDIA_TESLA_T4`, `NVIDIA_TESLA_T4_VWS`, `NVIDIA_TESLA_P100_VWS`, `NVIDIA_TESLA_P4_VWS`, `NVIDIA_TESLA_A100`, `TPU_V2`, and `TPU_V3`.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

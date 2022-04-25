@@ -12,16 +12,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GameServerDeploymentRolloutGameServerConfigOverride {
-    /**
-     * Version of the configuration.
-     * 
-     */
+        /**
+         * @return Version of the configuration.
+         * 
+         */
     private final @Nullable String configVersion;
-    /**
-     * Selection by realms.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Selection by realms.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector realmsSelector;
 
     @CustomType.Constructor
@@ -33,17 +33,17 @@ public final class GameServerDeploymentRolloutGameServerConfigOverride {
     }
 
     /**
-     * Version of the configuration.
+     * @return Version of the configuration.
      * 
-    */
+     */
     public Optional<String> configVersion() {
         return Optional.ofNullable(this.configVersion);
     }
     /**
-     * Selection by realms.
+     * @return Selection by realms.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector> realmsSelector() {
         return Optional.ofNullable(this.realmsSelector);
     }

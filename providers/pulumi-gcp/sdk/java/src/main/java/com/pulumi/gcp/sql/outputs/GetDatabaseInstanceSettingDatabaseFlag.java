@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GetDatabaseInstanceSettingDatabaseFlag {
-    /**
-     * The name of the instance.
-     * 
-     */
+        /**
+         * @return The name of the instance.
+         * 
+         */
     private final String name;
     private final String value;
 
@@ -25,9 +25,9 @@ public final class GetDatabaseInstanceSettingDatabaseFlag {
     }
 
     /**
-     * The name of the instance.
+     * @return The name of the instance.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

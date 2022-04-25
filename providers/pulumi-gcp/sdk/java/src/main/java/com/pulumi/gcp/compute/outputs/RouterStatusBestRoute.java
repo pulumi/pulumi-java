@@ -13,16 +13,16 @@ import java.util.Objects;
 public final class RouterStatusBestRoute {
     private final String description;
     private final String destRange;
-    /**
-     * The name of the router.
-     * 
-     */
+        /**
+         * @return The name of the router.
+         * 
+         */
     private final String name;
-    /**
-     * The network name or resource link to the parent
-     * network of this subnetwork.
-     * 
-     */
+        /**
+         * @return The network name or resource link to the parent
+         * network of this subnetwork.
+         * 
+         */
     private final String network;
     private final String nextHopGateway;
     private final String nextHopIlb;
@@ -32,11 +32,11 @@ public final class RouterStatusBestRoute {
     private final String nextHopNetwork;
     private final String nextHopVpnTunnel;
     private final Integer priority;
-    /**
-     * The ID of the project in which the resource
-     * belongs. If it is not provided, the provider project is used.
-     * 
-     */
+        /**
+         * @return The ID of the project in which the resource
+         * belongs. If it is not provided, the provider project is used.
+         * 
+         */
     private final String project;
     private final String selfLink;
     private final List<String> tags;
@@ -82,17 +82,17 @@ public final class RouterStatusBestRoute {
         return this.destRange;
     }
     /**
-     * The name of the router.
+     * @return The name of the router.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The network name or resource link to the parent
+     * @return The network name or resource link to the parent
      * network of this subnetwork.
      * 
-    */
+     */
     public String network() {
         return this.network;
     }
@@ -121,10 +121,10 @@ public final class RouterStatusBestRoute {
         return this.priority;
     }
     /**
-     * The ID of the project in which the resource
+     * @return The ID of the project in which the resource
      * belongs. If it is not provided, the provider project is used.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }

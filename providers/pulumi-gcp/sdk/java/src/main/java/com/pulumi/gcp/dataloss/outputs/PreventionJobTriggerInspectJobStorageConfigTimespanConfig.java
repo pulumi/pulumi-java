@@ -13,28 +13,28 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfig {
-    /**
-     * When the job is started by a JobTrigger we will automatically figure out a valid startTime to avoid
-     * scanning files that have not been modified since the last time the JobTrigger executed. This will
-     * be based on the time of the execution of the last run of the JobTrigger.
-     * 
-     */
+        /**
+         * @return When the job is started by a JobTrigger we will automatically figure out a valid startTime to avoid
+         * scanning files that have not been modified since the last time the JobTrigger executed. This will
+         * be based on the time of the execution of the last run of the JobTrigger.
+         * 
+         */
     private final @Nullable Boolean enableAutoPopulationOfTimespanConfig;
-    /**
-     * Exclude files or rows newer than this value. If set to zero, no upper time limit is applied.
-     * 
-     */
+        /**
+         * @return Exclude files or rows newer than this value. If set to zero, no upper time limit is applied.
+         * 
+         */
     private final @Nullable String endTime;
-    /**
-     * Exclude files or rows older than this value.
-     * 
-     */
+        /**
+         * @return Exclude files or rows older than this value.
+         * 
+         */
     private final @Nullable String startTime;
-    /**
-     * Information on where to inspect
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Information on where to inspect
+         * Structure is documented below.
+         * 
+         */
     private final PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField timestampField;
 
     @CustomType.Constructor
@@ -50,33 +50,33 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfig {
     }
 
     /**
-     * When the job is started by a JobTrigger we will automatically figure out a valid startTime to avoid
+     * @return When the job is started by a JobTrigger we will automatically figure out a valid startTime to avoid
      * scanning files that have not been modified since the last time the JobTrigger executed. This will
      * be based on the time of the execution of the last run of the JobTrigger.
      * 
-    */
+     */
     public Optional<Boolean> enableAutoPopulationOfTimespanConfig() {
         return Optional.ofNullable(this.enableAutoPopulationOfTimespanConfig);
     }
     /**
-     * Exclude files or rows newer than this value. If set to zero, no upper time limit is applied.
+     * @return Exclude files or rows newer than this value. If set to zero, no upper time limit is applied.
      * 
-    */
+     */
     public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
-     * Exclude files or rows older than this value.
+     * @return Exclude files or rows older than this value.
      * 
-    */
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
-     * Information on where to inspect
+     * @return Information on where to inspect
      * Structure is documented below.
      * 
-    */
+     */
     public PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField timestampField() {
         return this.timestampField;
     }

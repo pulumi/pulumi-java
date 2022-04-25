@@ -23,6 +23,10 @@ public final class CertificateTemplatePredefinedValuesCaOptionsGetArgs extends c
     @Import(name="isCa")
     private @Nullable Output<Boolean> isCa;
 
+    /**
+     * @return Optional. Refers to the &#34;CA&#34; X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.
+     * 
+     */
     public Optional<Output<Boolean>> isCa() {
         return Optional.ofNullable(this.isCa);
     }
@@ -34,6 +38,10 @@ public final class CertificateTemplatePredefinedValuesCaOptionsGetArgs extends c
     @Import(name="maxIssuerPathLength")
     private @Nullable Output<Integer> maxIssuerPathLength;
 
+    /**
+     * @return Optional. Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this value is missing, the max path length will be omitted from the CA certificate.
+     * 
+     */
     public Optional<Output<Integer>> maxIssuerPathLength() {
         return Optional.ofNullable(this.maxIssuerPathLength);
     }
@@ -63,20 +71,44 @@ public final class CertificateTemplatePredefinedValuesCaOptionsGetArgs extends c
             $ = new CertificateTemplatePredefinedValuesCaOptionsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isCa Optional. Refers to the &#34;CA&#34; X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isCa(@Nullable Output<Boolean> isCa) {
             $.isCa = isCa;
             return this;
         }
 
+        /**
+         * @param isCa Optional. Refers to the &#34;CA&#34; X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isCa(Boolean isCa) {
             return isCa(Output.of(isCa));
         }
 
+        /**
+         * @param maxIssuerPathLength Optional. Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this value is missing, the max path length will be omitted from the CA certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxIssuerPathLength(@Nullable Output<Integer> maxIssuerPathLength) {
             $.maxIssuerPathLength = maxIssuerPathLength;
             return this;
         }
 
+        /**
+         * @param maxIssuerPathLength Optional. Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this value is missing, the max path length will be omitted from the CA certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxIssuerPathLength(Integer maxIssuerPathLength) {
             return maxIssuerPathLength(Output.of(maxIssuerPathLength));
         }

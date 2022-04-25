@@ -26,6 +26,10 @@ public final class GameServerConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="configId", required=true)
     private Output<String> configId;
 
+    /**
+     * @return A unique id for the deployment config.
+     * 
+     */
     public Output<String> configId() {
         return this.configId;
     }
@@ -37,6 +41,10 @@ public final class GameServerConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="deploymentId", required=true)
     private Output<String> deploymentId;
 
+    /**
+     * @return A unique id for the deployment.
+     * 
+     */
     public Output<String> deploymentId() {
         return this.deploymentId;
     }
@@ -48,6 +56,10 @@ public final class GameServerConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the game server config.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -61,6 +73,12 @@ public final class GameServerConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="fleetConfigs", required=true)
     private Output<List<GameServerConfigFleetConfigArgs>> fleetConfigs;
 
+    /**
+     * @return The fleet config contains list of fleet specs. In the Single Cloud, there
+     * will be only one.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<GameServerConfigFleetConfigArgs>> fleetConfigs() {
         return this.fleetConfigs;
     }
@@ -72,6 +90,10 @@ public final class GameServerConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Set of labels to group by.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -83,6 +105,10 @@ public final class GameServerConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Location of the Deployment.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -95,6 +121,11 @@ public final class GameServerConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -107,6 +138,11 @@ public final class GameServerConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="scalingConfigs")
     private @Nullable Output<List<GameServerConfigScalingConfigArgs>> scalingConfigs;
 
+    /**
+     * @return Optional. This contains the autoscaling settings.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<GameServerConfigScalingConfigArgs>>> scalingConfigs() {
         return Optional.ofNullable(this.scalingConfigs);
     }
@@ -142,82 +178,201 @@ public final class GameServerConfigArgs extends com.pulumi.resources.ResourceArg
             $ = new GameServerConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configId A unique id for the deployment config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configId(Output<String> configId) {
             $.configId = configId;
             return this;
         }
 
+        /**
+         * @param configId A unique id for the deployment config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configId(String configId) {
             return configId(Output.of(configId));
         }
 
+        /**
+         * @param deploymentId A unique id for the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentId(Output<String> deploymentId) {
             $.deploymentId = deploymentId;
             return this;
         }
 
+        /**
+         * @param deploymentId A unique id for the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentId(String deploymentId) {
             return deploymentId(Output.of(deploymentId));
         }
 
+        /**
+         * @param description The description of the game server config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the game server config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param fleetConfigs The fleet config contains list of fleet specs. In the Single Cloud, there
+         * will be only one.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fleetConfigs(Output<List<GameServerConfigFleetConfigArgs>> fleetConfigs) {
             $.fleetConfigs = fleetConfigs;
             return this;
         }
 
+        /**
+         * @param fleetConfigs The fleet config contains list of fleet specs. In the Single Cloud, there
+         * will be only one.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fleetConfigs(List<GameServerConfigFleetConfigArgs> fleetConfigs) {
             return fleetConfigs(Output.of(fleetConfigs));
         }
 
+        /**
+         * @param fleetConfigs The fleet config contains list of fleet specs. In the Single Cloud, there
+         * will be only one.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fleetConfigs(GameServerConfigFleetConfigArgs... fleetConfigs) {
             return fleetConfigs(List.of(fleetConfigs));
         }
 
+        /**
+         * @param labels Set of labels to group by.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Set of labels to group by.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param location Location of the Deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Location of the Deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param scalingConfigs Optional. This contains the autoscaling settings.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalingConfigs(@Nullable Output<List<GameServerConfigScalingConfigArgs>> scalingConfigs) {
             $.scalingConfigs = scalingConfigs;
             return this;
         }
 
+        /**
+         * @param scalingConfigs Optional. This contains the autoscaling settings.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalingConfigs(List<GameServerConfigScalingConfigArgs> scalingConfigs) {
             return scalingConfigs(Output.of(scalingConfigs));
         }
 
+        /**
+         * @param scalingConfigs Optional. This contains the autoscaling settings.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalingConfigs(GameServerConfigScalingConfigArgs... scalingConfigs) {
             return scalingConfigs(List.of(scalingConfigs));
         }

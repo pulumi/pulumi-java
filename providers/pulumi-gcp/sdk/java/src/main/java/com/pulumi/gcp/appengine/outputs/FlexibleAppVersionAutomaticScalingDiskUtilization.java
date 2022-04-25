@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FlexibleAppVersionAutomaticScalingDiskUtilization {
-    /**
-     * Target bytes read per second.
-     * 
-     */
+        /**
+         * @return Target bytes read per second.
+         * 
+         */
     private final @Nullable Integer targetReadBytesPerSecond;
-    /**
-     * Target ops read per seconds.
-     * 
-     */
+        /**
+         * @return Target ops read per seconds.
+         * 
+         */
     private final @Nullable Integer targetReadOpsPerSecond;
-    /**
-     * Target bytes written per second.
-     * 
-     */
+        /**
+         * @return Target bytes written per second.
+         * 
+         */
     private final @Nullable Integer targetWriteBytesPerSecond;
-    /**
-     * Target ops written per second.
-     * 
-     */
+        /**
+         * @return Target ops written per second.
+         * 
+         */
     private final @Nullable Integer targetWriteOpsPerSecond;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class FlexibleAppVersionAutomaticScalingDiskUtilization {
     }
 
     /**
-     * Target bytes read per second.
+     * @return Target bytes read per second.
      * 
-    */
+     */
     public Optional<Integer> targetReadBytesPerSecond() {
         return Optional.ofNullable(this.targetReadBytesPerSecond);
     }
     /**
-     * Target ops read per seconds.
+     * @return Target ops read per seconds.
      * 
-    */
+     */
     public Optional<Integer> targetReadOpsPerSecond() {
         return Optional.ofNullable(this.targetReadOpsPerSecond);
     }
     /**
-     * Target bytes written per second.
+     * @return Target bytes written per second.
      * 
-    */
+     */
     public Optional<Integer> targetWriteBytesPerSecond() {
         return Optional.ofNullable(this.targetWriteBytesPerSecond);
     }
     /**
-     * Target ops written per second.
+     * @return Target ops written per second.
      * 
-    */
+     */
     public Optional<Integer> targetWriteOpsPerSecond() {
         return Optional.ofNullable(this.targetWriteOpsPerSecond);
     }

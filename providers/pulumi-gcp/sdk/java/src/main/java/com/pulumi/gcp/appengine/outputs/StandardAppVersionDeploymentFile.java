@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class StandardAppVersionDeploymentFile {
-    /**
-     * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
-     * 
-     */
+        /**
+         * @return Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+         * 
+         */
     private final String name;
-    /**
-     * SHA1 checksum of the file
-     * 
-     */
+        /**
+         * @return SHA1 checksum of the file
+         * 
+         */
     private final @Nullable String sha1Sum;
-    /**
-     * Source URL
-     * 
-     */
+        /**
+         * @return Source URL
+         * 
+         */
     private final String sourceUrl;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class StandardAppVersionDeploymentFile {
     }
 
     /**
-     * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * @return Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * SHA1 checksum of the file
+     * @return SHA1 checksum of the file
      * 
-    */
+     */
     public Optional<String> sha1Sum() {
         return Optional.ofNullable(this.sha1Sum);
     }
     /**
-     * Source URL
+     * @return Source URL
      * 
-    */
+     */
     public String sourceUrl() {
         return this.sourceUrl;
     }

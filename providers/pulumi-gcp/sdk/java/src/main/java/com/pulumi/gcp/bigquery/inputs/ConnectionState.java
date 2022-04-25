@@ -25,6 +25,11 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudSql")
     private @Nullable Output<ConnectionCloudSqlGetArgs> cloudSql;
 
+    /**
+     * @return Cloud SQL properties.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ConnectionCloudSqlGetArgs>> cloudSql() {
         return Optional.ofNullable(this.cloudSql);
     }
@@ -36,6 +41,10 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectionId")
     private @Nullable Output<String> connectionId;
 
+    /**
+     * @return Optional connection id that should be assigned to the created connection.
+     * 
+     */
     public Optional<Output<String>> connectionId() {
         return Optional.ofNullable(this.connectionId);
     }
@@ -47,6 +56,10 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A descriptive description for the connection
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -58,6 +71,10 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
     private @Nullable Output<String> friendlyName;
 
+    /**
+     * @return A descriptive name for the connection
+     * 
+     */
     public Optional<Output<String>> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -69,6 +86,10 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="hasCredential")
     private @Nullable Output<Boolean> hasCredential;
 
+    /**
+     * @return True if the connection has credential assigned.
+     * 
+     */
     public Optional<Output<Boolean>> hasCredential() {
         return Optional.ofNullable(this.hasCredential);
     }
@@ -83,6 +104,13 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geographic location where the connection should reside.
+     * Cloud SQL instance must be in the same location as the connection
+     * with following exceptions: Cloud SQL us-central1 maps to BigQuery US, Cloud SQL europe-west1 maps to BigQuery EU.
+     * Examples: US, EU, asia-northeast1, us-central1, europe-west1. The default value is US.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -95,6 +123,11 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name of the connection in the form of:
+     * &#34;projects/{project_id}/locations/{location_id}/connections/{connectionId}&#34;
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -107,6 +140,11 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -142,74 +180,182 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
             $ = new ConnectionState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudSql Cloud SQL properties.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudSql(@Nullable Output<ConnectionCloudSqlGetArgs> cloudSql) {
             $.cloudSql = cloudSql;
             return this;
         }
 
+        /**
+         * @param cloudSql Cloud SQL properties.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudSql(ConnectionCloudSqlGetArgs cloudSql) {
             return cloudSql(Output.of(cloudSql));
         }
 
+        /**
+         * @param connectionId Optional connection id that should be assigned to the created connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionId(@Nullable Output<String> connectionId) {
             $.connectionId = connectionId;
             return this;
         }
 
+        /**
+         * @param connectionId Optional connection id that should be assigned to the created connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionId(String connectionId) {
             return connectionId(Output.of(connectionId));
         }
 
+        /**
+         * @param description A descriptive description for the connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A descriptive description for the connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param friendlyName A descriptive name for the connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param friendlyName A descriptive name for the connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(String friendlyName) {
             return friendlyName(Output.of(friendlyName));
         }
 
+        /**
+         * @param hasCredential True if the connection has credential assigned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasCredential(@Nullable Output<Boolean> hasCredential) {
             $.hasCredential = hasCredential;
             return this;
         }
 
+        /**
+         * @param hasCredential True if the connection has credential assigned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasCredential(Boolean hasCredential) {
             return hasCredential(Output.of(hasCredential));
         }
 
+        /**
+         * @param location The geographic location where the connection should reside.
+         * Cloud SQL instance must be in the same location as the connection
+         * with following exceptions: Cloud SQL us-central1 maps to BigQuery US, Cloud SQL europe-west1 maps to BigQuery EU.
+         * Examples: US, EU, asia-northeast1, us-central1, europe-west1. The default value is US.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geographic location where the connection should reside.
+         * Cloud SQL instance must be in the same location as the connection
+         * with following exceptions: Cloud SQL us-central1 maps to BigQuery US, Cloud SQL europe-west1 maps to BigQuery EU.
+         * Examples: US, EU, asia-northeast1, us-central1, europe-west1. The default value is US.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The resource name of the connection in the form of:
+         * &#34;projects/{project_id}/locations/{location_id}/connections/{connectionId}&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name of the connection in the form of:
+         * &#34;projects/{project_id}/locations/{location_id}/connections/{connectionId}&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

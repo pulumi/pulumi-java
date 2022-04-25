@@ -26,6 +26,11 @@ public final class RegionPerInstanceConfigPreservedStateArgs extends com.pulumi.
     @Import(name="disks")
     private @Nullable Output<List<RegionPerInstanceConfigPreservedStateDiskArgs>> disks;
 
+    /**
+     * @return Stateful disks for the instance.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<RegionPerInstanceConfigPreservedStateDiskArgs>>> disks() {
         return Optional.ofNullable(this.disks);
     }
@@ -37,6 +42,10 @@ public final class RegionPerInstanceConfigPreservedStateArgs extends com.pulumi.
     @Import(name="metadata")
     private @Nullable Output<Map<String,String>> metadata;
 
+    /**
+     * @return Preserved metadata defined for this instance. This is a list of key-&gt;value pairs.
+     * 
+     */
     public Optional<Output<Map<String,String>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -66,24 +75,57 @@ public final class RegionPerInstanceConfigPreservedStateArgs extends com.pulumi.
             $ = new RegionPerInstanceConfigPreservedStateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disks Stateful disks for the instance.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(@Nullable Output<List<RegionPerInstanceConfigPreservedStateDiskArgs>> disks) {
             $.disks = disks;
             return this;
         }
 
+        /**
+         * @param disks Stateful disks for the instance.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(List<RegionPerInstanceConfigPreservedStateDiskArgs> disks) {
             return disks(Output.of(disks));
         }
 
+        /**
+         * @param disks Stateful disks for the instance.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(RegionPerInstanceConfigPreservedStateDiskArgs... disks) {
             return disks(List.of(disks));
         }
 
+        /**
+         * @param metadata Preserved metadata defined for this instance. This is a list of key-&gt;value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata Preserved metadata defined for this instance. This is a list of key-&gt;value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             return metadata(Output.of(metadata));
         }

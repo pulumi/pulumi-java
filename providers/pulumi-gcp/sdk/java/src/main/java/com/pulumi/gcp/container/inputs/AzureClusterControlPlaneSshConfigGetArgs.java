@@ -20,6 +20,10 @@ public final class AzureClusterControlPlaneSshConfigGetArgs extends com.pulumi.r
     @Import(name="authorizedKey", required=true)
     private Output<String> authorizedKey;
 
+    /**
+     * @return Required. The SSH public key data for VMs managed by Anthos. This accepts the authorized_keys file format used in OpenSSH according to the sshd(8) manual page.
+     * 
+     */
     public Output<String> authorizedKey() {
         return this.authorizedKey;
     }
@@ -48,11 +52,23 @@ public final class AzureClusterControlPlaneSshConfigGetArgs extends com.pulumi.r
             $ = new AzureClusterControlPlaneSshConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizedKey Required. The SSH public key data for VMs managed by Anthos. This accepts the authorized_keys file format used in OpenSSH according to the sshd(8) manual page.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedKey(Output<String> authorizedKey) {
             $.authorizedKey = authorizedKey;
             return this;
         }
 
+        /**
+         * @param authorizedKey Required. The SSH public key data for VMs managed by Anthos. This accepts the authorized_keys file format used in OpenSSH according to the sshd(8) manual page.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedKey(String authorizedKey) {
             return authorizedKey(Output.of(authorizedKey));
         }

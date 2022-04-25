@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceRemote {
-    /**
-     * SHA256 checksum of the remote file.
-     * 
-     */
+        /**
+         * @return SHA256 checksum of the remote file.
+         * 
+         */
     private final @Nullable String sha256Checksum;
-    /**
-     * Required. URI for this repository.
-     * 
-     */
+        /**
+         * @return Required. URI for this repository.
+         * 
+         */
     private final String uri;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceRe
     }
 
     /**
-     * SHA256 checksum of the remote file.
+     * @return SHA256 checksum of the remote file.
      * 
-    */
+     */
     public Optional<String> sha256Checksum() {
         return Optional.ofNullable(this.sha256Checksum);
     }
     /**
-     * Required. URI for this repository.
+     * @return Required. URI for this repository.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

@@ -12,16 +12,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAccountAccessTokenResult {
-    /**
-     * The `access_token` representing the new generated identity.
-     * 
-     */
+        /**
+         * @return The `access_token` representing the new generated identity.
+         * 
+         */
     private final String accessToken;
     private final @Nullable List<String> delegates;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final @Nullable String lifetime;
     private final List<String> scopes;
@@ -44,9 +44,9 @@ public final class GetAccountAccessTokenResult {
     }
 
     /**
-     * The `access_token` representing the new generated identity.
+     * @return The `access_token` representing the new generated identity.
      * 
-    */
+     */
     public String accessToken() {
         return this.accessToken;
     }
@@ -54,9 +54,9 @@ public final class GetAccountAccessTokenResult {
         return this.delegates == null ? List.of() : this.delegates;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

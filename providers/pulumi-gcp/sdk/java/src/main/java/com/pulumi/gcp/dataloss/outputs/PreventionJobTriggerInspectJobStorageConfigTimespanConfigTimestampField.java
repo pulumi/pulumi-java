@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField {
-    /**
-     * The name of the Datastore kind.
-     * 
-     */
+        /**
+         * @return The name of the Datastore kind.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigTime
     }
 
     /**
-     * The name of the Datastore kind.
+     * @return The name of the Datastore kind.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

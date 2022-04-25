@@ -19,123 +19,123 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class JobQuery {
-    /**
-     * If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance.
-     * Requires destinationTable to be set. For standard SQL queries, this flag is ignored and large results are always allowed.
-     * However, you must still set destinationTable when result size exceeds the allowed maximum response size.
-     * 
-     */
+        /**
+         * @return If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance.
+         * Requires destinationTable to be set. For standard SQL queries, this flag is ignored and large results are always allowed.
+         * However, you must still set destinationTable when result size exceeds the allowed maximum response size.
+         * 
+         */
     private final @Nullable Boolean allowLargeResults;
-    /**
-     * Specifies whether the job is allowed to create new tables. The following values are supported:
-     * CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
-     * CREATE_NEVER: The table must already exist. If it does not, a &#39;notFound&#39; error is returned in the job result.
-     * Creation, truncation and append actions occur as one atomic update upon job completion
-     * Default value is `CREATE_IF_NEEDED`.
-     * Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
-     * 
-     */
+        /**
+         * @return Specifies whether the job is allowed to create new tables. The following values are supported:
+         * CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
+         * CREATE_NEVER: The table must already exist. If it does not, a &#39;notFound&#39; error is returned in the job result.
+         * Creation, truncation and append actions occur as one atomic update upon job completion
+         * Default value is `CREATE_IF_NEEDED`.
+         * Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
+         * 
+         */
     private final @Nullable String createDisposition;
-    /**
-     * Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable JobQueryDefaultDataset defaultDataset;
-    /**
-     * Custom encryption configuration (e.g., Cloud KMS keys)
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Custom encryption configuration (e.g., Cloud KMS keys)
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable JobQueryDestinationEncryptionConfiguration destinationEncryptionConfiguration;
-    /**
-     * The destination table.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return The destination table.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable JobQueryDestinationTable destinationTable;
-    /**
-     * If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results.
-     * allowLargeResults must be true if this is set to false. For standard SQL queries, this flag is ignored and results are never flattened.
-     * 
-     */
+        /**
+         * @return If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results.
+         * allowLargeResults must be true if this is set to false. For standard SQL queries, this flag is ignored and results are never flattened.
+         * 
+         */
     private final @Nullable Boolean flattenResults;
-    /**
-     * Limits the billing tier for this job. Queries that have resource usage beyond this tier will fail (without incurring a charge).
-     * If unspecified, this will be set to your project default.
-     * 
-     */
+        /**
+         * @return Limits the billing tier for this job. Queries that have resource usage beyond this tier will fail (without incurring a charge).
+         * If unspecified, this will be set to your project default.
+         * 
+         */
     private final @Nullable Integer maximumBillingTier;
-    /**
-     * Limits the bytes billed for this job. Queries that will have bytes billed beyond this limit will fail (without incurring a charge).
-     * If unspecified, this will be set to your project default.
-     * 
-     */
+        /**
+         * @return Limits the bytes billed for this job. Queries that will have bytes billed beyond this limit will fail (without incurring a charge).
+         * If unspecified, this will be set to your project default.
+         * 
+         */
     private final @Nullable String maximumBytesBilled;
-    /**
-     * Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (@myparam) query parameters in this query.
-     * 
-     */
+        /**
+         * @return Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (@myparam) query parameters in this query.
+         * 
+         */
     private final @Nullable String parameterMode;
-    /**
-     * Specifies a priority for the query.
-     * Default value is `INTERACTIVE`.
-     * Possible values are `INTERACTIVE` and `BATCH`.
-     * 
-     */
+        /**
+         * @return Specifies a priority for the query.
+         * Default value is `INTERACTIVE`.
+         * Possible values are `INTERACTIVE` and `BATCH`.
+         * 
+         */
     private final @Nullable String priority;
-    /**
-     * Configures a query job.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Configures a query job.
+         * Structure is documented below.
+         * 
+         */
     private final String query;
-    /**
-     * Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
-     * supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
-     * when writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table, specified by partition decorators.
-     * For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more of the following values are specified:
-     * ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema.
-     * ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
-     * 
-     */
+        /**
+         * @return Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
+         * supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
+         * when writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table, specified by partition decorators.
+         * For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more of the following values are specified:
+         * ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema.
+         * ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
+         * 
+         */
     private final @Nullable List<String> schemaUpdateOptions;
-    /**
-     * Options controlling the execution of scripts.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Options controlling the execution of scripts.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable JobQueryScriptOptions scriptOptions;
-    /**
-     * Specifies whether to use BigQuery&#39;s legacy SQL dialect for this query. The default value is true.
-     * If set to false, the query will use BigQuery&#39;s standard SQL.
-     * 
-     */
+        /**
+         * @return Specifies whether to use BigQuery&#39;s legacy SQL dialect for this query. The default value is true.
+         * If set to false, the query will use BigQuery&#39;s standard SQL.
+         * 
+         */
     private final @Nullable Boolean useLegacySql;
-    /**
-     * Whether to look for the result in the query cache. The query cache is a best-effort cache that will be flushed whenever
-     * tables in the query are modified. Moreover, the query cache is only available when a query does not have a destination table specified.
-     * The default value is true.
-     * 
-     */
+        /**
+         * @return Whether to look for the result in the query cache. The query cache is a best-effort cache that will be flushed whenever
+         * tables in the query are modified. Moreover, the query cache is only available when a query does not have a destination table specified.
+         * The default value is true.
+         * 
+         */
     private final @Nullable Boolean useQueryCache;
-    /**
-     * Describes user-defined function resources used in the query.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Describes user-defined function resources used in the query.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<JobQueryUserDefinedFunctionResource> userDefinedFunctionResources;
-    /**
-     * Specifies the action that occurs if the destination table already exists. The following values are supported:
-     * WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
-     * WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
-     * WRITE_EMPTY: If the table already exists and contains data, a &#39;duplicate&#39; error is returned in the job result.
-     * Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
-     * Creation, truncation and append actions occur as one atomic update upon job completion.
-     * Default value is `WRITE_EMPTY`.
-     * Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
-     * 
-     */
+        /**
+         * @return Specifies the action that occurs if the destination table already exists. The following values are supported:
+         * WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
+         * WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
+         * WRITE_EMPTY: If the table already exists and contains data, a &#39;duplicate&#39; error is returned in the job result.
+         * Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+         * Creation, truncation and append actions occur as one atomic update upon job completion.
+         * Default value is `WRITE_EMPTY`.
+         * Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
+         * 
+         */
     private final @Nullable String writeDisposition;
 
     @CustomType.Constructor
@@ -177,145 +177,145 @@ public final class JobQuery {
     }
 
     /**
-     * If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance.
+     * @return If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance.
      * Requires destinationTable to be set. For standard SQL queries, this flag is ignored and large results are always allowed.
      * However, you must still set destinationTable when result size exceeds the allowed maximum response size.
      * 
-    */
+     */
     public Optional<Boolean> allowLargeResults() {
         return Optional.ofNullable(this.allowLargeResults);
     }
     /**
-     * Specifies whether the job is allowed to create new tables. The following values are supported:
+     * @return Specifies whether the job is allowed to create new tables. The following values are supported:
      * CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
      * CREATE_NEVER: The table must already exist. If it does not, a &#39;notFound&#39; error is returned in the job result.
      * Creation, truncation and append actions occur as one atomic update upon job completion
      * Default value is `CREATE_IF_NEEDED`.
      * Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
      * 
-    */
+     */
     public Optional<String> createDisposition() {
         return Optional.ofNullable(this.createDisposition);
     }
     /**
-     * Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.
+     * @return Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<JobQueryDefaultDataset> defaultDataset() {
         return Optional.ofNullable(this.defaultDataset);
     }
     /**
-     * Custom encryption configuration (e.g., Cloud KMS keys)
+     * @return Custom encryption configuration (e.g., Cloud KMS keys)
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<JobQueryDestinationEncryptionConfiguration> destinationEncryptionConfiguration() {
         return Optional.ofNullable(this.destinationEncryptionConfiguration);
     }
     /**
-     * The destination table.
+     * @return The destination table.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<JobQueryDestinationTable> destinationTable() {
         return Optional.ofNullable(this.destinationTable);
     }
     /**
-     * If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results.
+     * @return If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results.
      * allowLargeResults must be true if this is set to false. For standard SQL queries, this flag is ignored and results are never flattened.
      * 
-    */
+     */
     public Optional<Boolean> flattenResults() {
         return Optional.ofNullable(this.flattenResults);
     }
     /**
-     * Limits the billing tier for this job. Queries that have resource usage beyond this tier will fail (without incurring a charge).
+     * @return Limits the billing tier for this job. Queries that have resource usage beyond this tier will fail (without incurring a charge).
      * If unspecified, this will be set to your project default.
      * 
-    */
+     */
     public Optional<Integer> maximumBillingTier() {
         return Optional.ofNullable(this.maximumBillingTier);
     }
     /**
-     * Limits the bytes billed for this job. Queries that will have bytes billed beyond this limit will fail (without incurring a charge).
+     * @return Limits the bytes billed for this job. Queries that will have bytes billed beyond this limit will fail (without incurring a charge).
      * If unspecified, this will be set to your project default.
      * 
-    */
+     */
     public Optional<String> maximumBytesBilled() {
         return Optional.ofNullable(this.maximumBytesBilled);
     }
     /**
-     * Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (@myparam) query parameters in this query.
+     * @return Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (@myparam) query parameters in this query.
      * 
-    */
+     */
     public Optional<String> parameterMode() {
         return Optional.ofNullable(this.parameterMode);
     }
     /**
-     * Specifies a priority for the query.
+     * @return Specifies a priority for the query.
      * Default value is `INTERACTIVE`.
      * Possible values are `INTERACTIVE` and `BATCH`.
      * 
-    */
+     */
     public Optional<String> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
-     * Configures a query job.
+     * @return Configures a query job.
      * Structure is documented below.
      * 
-    */
+     */
     public String query() {
         return this.query;
     }
     /**
-     * Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
+     * @return Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
      * supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
      * when writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table, specified by partition decorators.
      * For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more of the following values are specified:
      * ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema.
      * ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
      * 
-    */
+     */
     public List<String> schemaUpdateOptions() {
         return this.schemaUpdateOptions == null ? List.of() : this.schemaUpdateOptions;
     }
     /**
-     * Options controlling the execution of scripts.
+     * @return Options controlling the execution of scripts.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<JobQueryScriptOptions> scriptOptions() {
         return Optional.ofNullable(this.scriptOptions);
     }
     /**
-     * Specifies whether to use BigQuery&#39;s legacy SQL dialect for this query. The default value is true.
+     * @return Specifies whether to use BigQuery&#39;s legacy SQL dialect for this query. The default value is true.
      * If set to false, the query will use BigQuery&#39;s standard SQL.
      * 
-    */
+     */
     public Optional<Boolean> useLegacySql() {
         return Optional.ofNullable(this.useLegacySql);
     }
     /**
-     * Whether to look for the result in the query cache. The query cache is a best-effort cache that will be flushed whenever
+     * @return Whether to look for the result in the query cache. The query cache is a best-effort cache that will be flushed whenever
      * tables in the query are modified. Moreover, the query cache is only available when a query does not have a destination table specified.
      * The default value is true.
      * 
-    */
+     */
     public Optional<Boolean> useQueryCache() {
         return Optional.ofNullable(this.useQueryCache);
     }
     /**
-     * Describes user-defined function resources used in the query.
+     * @return Describes user-defined function resources used in the query.
      * Structure is documented below.
      * 
-    */
+     */
     public List<JobQueryUserDefinedFunctionResource> userDefinedFunctionResources() {
         return this.userDefinedFunctionResources == null ? List.of() : this.userDefinedFunctionResources;
     }
     /**
-     * Specifies the action that occurs if the destination table already exists. The following values are supported:
+     * @return Specifies the action that occurs if the destination table already exists. The following values are supported:
      * WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
      * WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
      * WRITE_EMPTY: If the table already exists and contains data, a &#39;duplicate&#39; error is returned in the job result.
@@ -324,7 +324,7 @@ public final class JobQuery {
      * Default value is `WRITE_EMPTY`.
      * Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
      * 
-    */
+     */
     public Optional<String> writeDisposition() {
         return Optional.ofNullable(this.writeDisposition);
     }

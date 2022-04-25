@@ -11,23 +11,23 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class InstanceNetworkInterfaceAccessConfig {
-    /**
-     * The IP address that will be 1:1 mapped to the instance&#39;s
-     * network ip. If not given, one will be generated.
-     * 
-     */
+        /**
+         * @return The IP address that will be 1:1 mapped to the instance&#39;s
+         * network ip. If not given, one will be generated.
+         * 
+         */
     private final @Nullable String natIp;
-    /**
-     * The service-level to be provided for IPv6 traffic when the
-     * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
-     * 
-     */
+        /**
+         * @return The service-level to be provided for IPv6 traffic when the
+         * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+         * 
+         */
     private final @Nullable String networkTier;
-    /**
-     * The domain name to be used when creating DNSv6
-     * records for the external IPv6 ranges..
-     * 
-     */
+        /**
+         * @return The domain name to be used when creating DNSv6
+         * records for the external IPv6 ranges..
+         * 
+         */
     private final @Nullable String publicPtrDomainName;
 
     @CustomType.Constructor
@@ -41,26 +41,26 @@ public final class InstanceNetworkInterfaceAccessConfig {
     }
 
     /**
-     * The IP address that will be 1:1 mapped to the instance&#39;s
+     * @return The IP address that will be 1:1 mapped to the instance&#39;s
      * network ip. If not given, one will be generated.
      * 
-    */
+     */
     public Optional<String> natIp() {
         return Optional.ofNullable(this.natIp);
     }
     /**
-     * The service-level to be provided for IPv6 traffic when the
+     * @return The service-level to be provided for IPv6 traffic when the
      * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
      * 
-    */
+     */
     public Optional<String> networkTier() {
         return Optional.ofNullable(this.networkTier);
     }
     /**
-     * The domain name to be used when creating DNSv6
+     * @return The domain name to be used when creating DNSv6
      * records for the external IPv6 ranges..
      * 
-    */
+     */
     public Optional<String> publicPtrDomainName() {
         return Optional.ofNullable(this.publicPtrDomainName);
     }

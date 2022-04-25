@@ -12,23 +12,23 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RuntimeVirtualMachine {
-    /**
-     * - 
-     * The unique identifier of the Managed Compute Engine instance.
-     * 
-     */
+        /**
+         * @return -
+         * The unique identifier of the Managed Compute Engine instance.
+         * 
+         */
     private final @Nullable String instanceId;
-    /**
-     * - 
-     * The user-friendly name of the Managed Compute Engine instance.
-     * 
-     */
+        /**
+         * @return -
+         * The user-friendly name of the Managed Compute Engine instance.
+         * 
+         */
     private final @Nullable String instanceName;
-    /**
-     * Virtual Machine configuration settings.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Virtual Machine configuration settings.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable RuntimeVirtualMachineVirtualMachineConfig virtualMachineConfig;
 
     @CustomType.Constructor
@@ -42,26 +42,26 @@ public final class RuntimeVirtualMachine {
     }
 
     /**
-     * - 
+     * @return -
      * The unique identifier of the Managed Compute Engine instance.
      * 
-    */
+     */
     public Optional<String> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
     /**
-     * - 
+     * @return -
      * The user-friendly name of the Managed Compute Engine instance.
      * 
-    */
+     */
     public Optional<String> instanceName() {
         return Optional.ofNullable(this.instanceName);
     }
     /**
-     * Virtual Machine configuration settings.
+     * @return Virtual Machine configuration settings.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<RuntimeVirtualMachineVirtualMachineConfig> virtualMachineConfig() {
         return Optional.ofNullable(this.virtualMachineConfig);
     }

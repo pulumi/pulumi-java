@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class AwsClusterAuthorizationAdminUser {
-    /**
-     * Required. The name of the user, e.g. `my-gcp-id@gmail.com`.
-     * 
-     */
+        /**
+         * @return Required. The name of the user, e.g. `my-gcp-id@gmail.com`.
+         * 
+         */
     private final String username;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class AwsClusterAuthorizationAdminUser {
     }
 
     /**
-     * Required. The name of the user, e.g. `my-gcp-id@gmail.com`.
+     * @return Required. The name of the user, e.g. `my-gcp-id@gmail.com`.
      * 
-    */
+     */
     public String username() {
         return this.username;
     }

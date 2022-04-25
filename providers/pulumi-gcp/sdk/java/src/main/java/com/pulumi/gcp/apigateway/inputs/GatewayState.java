@@ -24,6 +24,11 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiConfig")
     private @Nullable Output<String> apiConfig;
 
+    /**
+     * @return Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}.
+     * When changing api configs please ensure the new config is a new resource and the lifecycle rule `create_before_destroy` is set.
+     * 
+     */
     public Optional<Output<String>> apiConfig() {
         return Optional.ofNullable(this.apiConfig);
     }
@@ -35,6 +40,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultHostname")
     private @Nullable Output<String> defaultHostname;
 
+    /**
+     * @return The default API Gateway host name of the form {gatewayId}-{hash}.{region_code}.gateway.dev.
+     * 
+     */
     public Optional<Output<String>> defaultHostname() {
         return Optional.ofNullable(this.defaultHostname);
     }
@@ -46,6 +55,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return A user-visible name for the API.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -57,6 +70,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayId")
     private @Nullable Output<String> gatewayId;
 
+    /**
+     * @return Identifier to assign to the Gateway. Must be unique within scope of the parent resource(project).
+     * 
+     */
     public Optional<Output<String>> gatewayId() {
         return Optional.ofNullable(this.gatewayId);
     }
@@ -68,6 +85,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Resource labels to represent user-provided metadata.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -79,6 +100,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name of the Gateway. Format: projects/{project}/locations/{region}/gateways/{gateway}
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -91,6 +116,11 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -102,6 +132,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return The region of the gateway for the API.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -137,74 +171,174 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
             $ = new GatewayState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiConfig Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}.
+         * When changing api configs please ensure the new config is a new resource and the lifecycle rule `create_before_destroy` is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiConfig(@Nullable Output<String> apiConfig) {
             $.apiConfig = apiConfig;
             return this;
         }
 
+        /**
+         * @param apiConfig Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}.
+         * When changing api configs please ensure the new config is a new resource and the lifecycle rule `create_before_destroy` is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiConfig(String apiConfig) {
             return apiConfig(Output.of(apiConfig));
         }
 
+        /**
+         * @param defaultHostname The default API Gateway host name of the form {gatewayId}-{hash}.{region_code}.gateway.dev.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultHostname(@Nullable Output<String> defaultHostname) {
             $.defaultHostname = defaultHostname;
             return this;
         }
 
+        /**
+         * @param defaultHostname The default API Gateway host name of the form {gatewayId}-{hash}.{region_code}.gateway.dev.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultHostname(String defaultHostname) {
             return defaultHostname(Output.of(defaultHostname));
         }
 
+        /**
+         * @param displayName A user-visible name for the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName A user-visible name for the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param gatewayId Identifier to assign to the Gateway. Must be unique within scope of the parent resource(project).
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayId(@Nullable Output<String> gatewayId) {
             $.gatewayId = gatewayId;
             return this;
         }
 
+        /**
+         * @param gatewayId Identifier to assign to the Gateway. Must be unique within scope of the parent resource(project).
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayId(String gatewayId) {
             return gatewayId(Output.of(gatewayId));
         }
 
+        /**
+         * @param labels Resource labels to represent user-provided metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Resource labels to represent user-provided metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param name Resource name of the Gateway. Format: projects/{project}/locations/{region}/gateways/{gateway}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name of the Gateway. Format: projects/{project}/locations/{region}/gateways/{gateway}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region The region of the gateway for the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region The region of the gateway for the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }

@@ -16,49 +16,49 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EdgeCacheServiceRoutingPathMatcherRouteRule {
-    /**
-     * A human-readable description of the resource.
-     * 
-     */
+        /**
+         * @return A human-readable description of the resource.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The header actions, including adding &amp; removing headers, for requests that match this route.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return The header actions, including adding &amp; removing headers, for requests that match this route.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction headerAction;
-    /**
-     * The list of criteria for matching attributes of a request to this routeRule. This list has OR semantics: the request matches this routeRule when any of the matchRules are satisfied. However predicates
-     * within a given matchRule have AND semantics. All predicates within a matchRule must match for the request to match the rule.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return The list of criteria for matching attributes of a request to this routeRule. This list has OR semantics: the request matches this routeRule when any of the matchRules are satisfied. However predicates
+         * within a given matchRule have AND semantics. All predicates within a matchRule must match for the request to match the rule.
+         * Structure is documented below.
+         * 
+         */
     private final List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule> matchRules;
-    /**
-     * The Origin resource that requests to this route should fetch from when a matching response is not in cache. Origins can be defined as short names (&#34;my-origin&#34;) or fully-qualified resource URLs - e.g. &#34;networkservices.googleapis.com/projects/my-project/global/edgecacheorigins/my-origin&#34;
-     * Only one of origin or urlRedirect can be set.
-     * 
-     */
+        /**
+         * @return The Origin resource that requests to this route should fetch from when a matching response is not in cache. Origins can be defined as short names (&#34;my-origin&#34;) or fully-qualified resource URLs - e.g. &#34;networkservices.googleapis.com/projects/my-project/global/edgecacheorigins/my-origin&#34;
+         * Only one of origin or urlRedirect can be set.
+         * 
+         */
     private final @Nullable String origin;
-    /**
-     * The priority of this route rule, where 1 is the highest priority.
-     * You cannot configure two or more routeRules with the same priority. Priority for each rule must be set to a number between 1 and 999 inclusive.
-     * Priority numbers can have gaps, which enable you to add or remove rules in the future without affecting the rest of the rules. For example, 1, 2, 3, 4, 5, 9, 12, 16 is a valid series of priority numbers
-     * to which you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the future without any impact on existing rules.
-     * 
-     */
+        /**
+         * @return The priority of this route rule, where 1 is the highest priority.
+         * You cannot configure two or more routeRules with the same priority. Priority for each rule must be set to a number between 1 and 999 inclusive.
+         * Priority numbers can have gaps, which enable you to add or remove rules in the future without affecting the rest of the rules. For example, 1, 2, 3, 4, 5, 9, 12, 16 is a valid series of priority numbers
+         * to which you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the future without any impact on existing rules.
+         * 
+         */
     private final String priority;
-    /**
-     * In response to a matching path, the routeAction performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected origin.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return In response to a matching path, the routeAction performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected origin.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction routeAction;
-    /**
-     * The URL redirect configuration for requests that match this route.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return The URL redirect configuration for requests that match this route.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect urlRedirect;
 
     @CustomType.Constructor
@@ -80,60 +80,60 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRule {
     }
 
     /**
-     * A human-readable description of the resource.
+     * @return A human-readable description of the resource.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The header actions, including adding &amp; removing headers, for requests that match this route.
+     * @return The header actions, including adding &amp; removing headers, for requests that match this route.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction> headerAction() {
         return Optional.ofNullable(this.headerAction);
     }
     /**
-     * The list of criteria for matching attributes of a request to this routeRule. This list has OR semantics: the request matches this routeRule when any of the matchRules are satisfied. However predicates
+     * @return The list of criteria for matching attributes of a request to this routeRule. This list has OR semantics: the request matches this routeRule when any of the matchRules are satisfied. However predicates
      * within a given matchRule have AND semantics. All predicates within a matchRule must match for the request to match the rule.
      * Structure is documented below.
      * 
-    */
+     */
     public List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule> matchRules() {
         return this.matchRules;
     }
     /**
-     * The Origin resource that requests to this route should fetch from when a matching response is not in cache. Origins can be defined as short names (&#34;my-origin&#34;) or fully-qualified resource URLs - e.g. &#34;networkservices.googleapis.com/projects/my-project/global/edgecacheorigins/my-origin&#34;
+     * @return The Origin resource that requests to this route should fetch from when a matching response is not in cache. Origins can be defined as short names (&#34;my-origin&#34;) or fully-qualified resource URLs - e.g. &#34;networkservices.googleapis.com/projects/my-project/global/edgecacheorigins/my-origin&#34;
      * Only one of origin or urlRedirect can be set.
      * 
-    */
+     */
     public Optional<String> origin() {
         return Optional.ofNullable(this.origin);
     }
     /**
-     * The priority of this route rule, where 1 is the highest priority.
+     * @return The priority of this route rule, where 1 is the highest priority.
      * You cannot configure two or more routeRules with the same priority. Priority for each rule must be set to a number between 1 and 999 inclusive.
      * Priority numbers can have gaps, which enable you to add or remove rules in the future without affecting the rest of the rules. For example, 1, 2, 3, 4, 5, 9, 12, 16 is a valid series of priority numbers
      * to which you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the future without any impact on existing rules.
      * 
-    */
+     */
     public String priority() {
         return this.priority;
     }
     /**
-     * In response to a matching path, the routeAction performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected origin.
+     * @return In response to a matching path, the routeAction performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected origin.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction> routeAction() {
         return Optional.ofNullable(this.routeAction);
     }
     /**
-     * The URL redirect configuration for requests that match this route.
+     * @return The URL redirect configuration for requests that match this route.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect> urlRedirect() {
         return Optional.ofNullable(this.urlRedirect);
     }

@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class WorkloadIdentityPoolProviderAws {
-    /**
-     * The AWS account ID.
-     * 
-     */
+        /**
+         * @return The AWS account ID.
+         * 
+         */
     private final String accountId;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class WorkloadIdentityPoolProviderAws {
     }
 
     /**
-     * The AWS account ID.
+     * @return The AWS account ID.
      * 
-    */
+     */
     public String accountId() {
         return this.accountId;
     }

@@ -10,10 +10,10 @@ import java.util.Objects;
 @CustomType
 public final class GetServiceTemplateSpecContainerVolumeMount {
     private final String mountPath;
-    /**
-     * The name of the Cloud Run Service.
-     * 
-     */
+        /**
+         * @return The name of the Cloud Run Service.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -28,9 +28,9 @@ public final class GetServiceTemplateSpecContainerVolumeMount {
         return this.mountPath;
     }
     /**
-     * The name of the Cloud Run Service.
+     * @return The name of the Cloud Run Service.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

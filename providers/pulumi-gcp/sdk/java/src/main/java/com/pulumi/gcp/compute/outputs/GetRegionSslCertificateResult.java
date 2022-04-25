@@ -16,10 +16,10 @@ public final class GetRegionSslCertificateResult {
     private final Integer certificateId;
     private final String creationTimestamp;
     private final String description;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String name;
     private final String namePrefix;
@@ -67,9 +67,9 @@ public final class GetRegionSslCertificateResult {
         return this.description;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

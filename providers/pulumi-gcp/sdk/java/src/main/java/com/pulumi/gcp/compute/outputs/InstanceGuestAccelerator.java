@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class InstanceGuestAccelerator {
-    /**
-     * The number of the guest accelerator cards exposed to this instance.
-     * 
-     */
+        /**
+         * @return The number of the guest accelerator cards exposed to this instance.
+         * 
+         */
     private final Integer count;
-    /**
-     * The type of reservation from which this instance can consume resources.
-     * 
-     */
+        /**
+         * @return The type of reservation from which this instance can consume resources.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class InstanceGuestAccelerator {
     }
 
     /**
-     * The number of the guest accelerator cards exposed to this instance.
+     * @return The number of the guest accelerator cards exposed to this instance.
      * 
-    */
+     */
     public Integer count() {
         return this.count;
     }
     /**
-     * The type of reservation from which this instance can consume resources.
+     * @return The type of reservation from which this instance can consume resources.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -20,6 +20,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTab
     @Import(name="datasetId", required=true)
     private Output<String> datasetId;
 
+    /**
+     * @return Dataset ID of the table.
+     * 
+     */
     public Output<String> datasetId() {
         return this.datasetId;
     }
@@ -31,6 +35,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTab
     @Import(name="projectId", required=true)
     private Output<String> projectId;
 
+    /**
+     * @return The Google Cloud Platform project ID of the project containing the table.
+     * 
+     */
     public Output<String> projectId() {
         return this.projectId;
     }
@@ -43,6 +51,11 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTab
     @Import(name="tableId", required=true)
     private Output<String> tableId;
 
+    /**
+     * @return Name of the table. If is not set a new one will be generated for you with the following format:
+     * `dlp_googleapis_yyyy_mm_dd_[dlp_job_id]`. Pacific timezone will be used for generating the date details.
+     * 
+     */
     public Output<String> tableId() {
         return this.tableId;
     }
@@ -73,29 +86,67 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTab
             $ = new PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetId Dataset ID of the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(Output<String> datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
+        /**
+         * @param datasetId Dataset ID of the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(String datasetId) {
             return datasetId(Output.of(datasetId));
         }
 
+        /**
+         * @param projectId The Google Cloud Platform project ID of the project containing the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(Output<String> projectId) {
             $.projectId = projectId;
             return this;
         }
 
+        /**
+         * @param projectId The Google Cloud Platform project ID of the project containing the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(String projectId) {
             return projectId(Output.of(projectId));
         }
 
+        /**
+         * @param tableId Name of the table. If is not set a new one will be generated for you with the following format:
+         * `dlp_googleapis_yyyy_mm_dd_[dlp_job_id]`. Pacific timezone will be used for generating the date details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableId(Output<String> tableId) {
             $.tableId = tableId;
             return this;
         }
 
+        /**
+         * @param tableId Name of the table. If is not set a new one will be generated for you with the following format:
+         * `dlp_googleapis_yyyy_mm_dd_[dlp_job_id]`. Pacific timezone will be used for generating the date details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableId(String tableId) {
             return tableId(Output.of(tableId));
         }

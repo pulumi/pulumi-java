@@ -23,6 +23,10 @@ public final class ObjectACLArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bucket", required=true)
     private Output<String> bucket;
 
+    /**
+     * @return The name of the bucket the object is stored in.
+     * 
+     */
     public Output<String> bucket() {
         return this.bucket;
     }
@@ -34,6 +38,10 @@ public final class ObjectACLArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="object", required=true)
     private Output<String> object;
 
+    /**
+     * @return The name of the object to apply the acl to.
+     * 
+     */
     public Output<String> object() {
         return this.object;
     }
@@ -45,6 +53,10 @@ public final class ObjectACLArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="predefinedAcl")
     private @Nullable Output<String> predefinedAcl;
 
+    /**
+     * @return The &#34;canned&#34; [predefined ACL](https://cloud.google.com/storage/docs/access-control#predefined-acl) to apply. Must be set if `role_entity` is not.
+     * 
+     */
     public Optional<Output<String>> predefinedAcl() {
         return Optional.ofNullable(this.predefinedAcl);
     }
@@ -57,6 +69,11 @@ public final class ObjectACLArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleEntities")
     private @Nullable Output<List<String>> roleEntities;
 
+    /**
+     * @return List of role/entity pairs in the form `ROLE:entity`. See [GCS Object ACL documentation](https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls) for more details.
+     * Must be set if `predefined_acl` is not.
+     * 
+     */
     public Optional<Output<List<String>>> roleEntities() {
         return Optional.ofNullable(this.roleEntities);
     }
@@ -88,42 +105,99 @@ public final class ObjectACLArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ObjectACLArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket The name of the bucket the object is stored in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket The name of the bucket the object is stored in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param object The name of the object to apply the acl to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder object(Output<String> object) {
             $.object = object;
             return this;
         }
 
+        /**
+         * @param object The name of the object to apply the acl to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder object(String object) {
             return object(Output.of(object));
         }
 
+        /**
+         * @param predefinedAcl The &#34;canned&#34; [predefined ACL](https://cloud.google.com/storage/docs/access-control#predefined-acl) to apply. Must be set if `role_entity` is not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedAcl(@Nullable Output<String> predefinedAcl) {
             $.predefinedAcl = predefinedAcl;
             return this;
         }
 
+        /**
+         * @param predefinedAcl The &#34;canned&#34; [predefined ACL](https://cloud.google.com/storage/docs/access-control#predefined-acl) to apply. Must be set if `role_entity` is not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedAcl(String predefinedAcl) {
             return predefinedAcl(Output.of(predefinedAcl));
         }
 
+        /**
+         * @param roleEntities List of role/entity pairs in the form `ROLE:entity`. See [GCS Object ACL documentation](https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls) for more details.
+         * Must be set if `predefined_acl` is not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleEntities(@Nullable Output<List<String>> roleEntities) {
             $.roleEntities = roleEntities;
             return this;
         }
 
+        /**
+         * @param roleEntities List of role/entity pairs in the form `ROLE:entity`. See [GCS Object ACL documentation](https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls) for more details.
+         * Must be set if `predefined_acl` is not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleEntities(List<String> roleEntities) {
             return roleEntities(Output.of(roleEntities));
         }
 
+        /**
+         * @param roleEntities List of role/entity pairs in the form `ROLE:entity`. See [GCS Object ACL documentation](https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls) for more details.
+         * Must be set if `predefined_acl` is not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleEntities(String... roleEntities) {
             return roleEntities(List.of(roleEntities));
         }

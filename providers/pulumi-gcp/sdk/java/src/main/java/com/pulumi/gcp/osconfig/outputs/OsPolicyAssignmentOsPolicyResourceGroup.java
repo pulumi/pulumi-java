@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroup {
-    /**
-     * List of inventory filters for the resource group. The resources in this resource group are applied to the target VM if it satisfies at least one of the following inventory filters. For example, to apply this resource group to VMs running either `RHEL` or `CentOS` operating systems, specify 2 items for the list with following values: inventory_filters[0].os_short_name=&#39;rhel&#39; and inventory_filters[1].os_short_name=&#39;centos&#39; If the list is empty, this resource group will be applied to the target VM unconditionally.
-     * 
-     */
+        /**
+         * @return List of inventory filters for the resource group. The resources in this resource group are applied to the target VM if it satisfies at least one of the following inventory filters. For example, to apply this resource group to VMs running either `RHEL` or `CentOS` operating systems, specify 2 items for the list with following values: inventory_filters[0].os_short_name=&#39;rhel&#39; and inventory_filters[1].os_short_name=&#39;centos&#39; If the list is empty, this resource group will be applied to the target VM unconditionally.
+         * 
+         */
     private final @Nullable List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter> inventoryFilters;
-    /**
-     * Required. List of resources configured for this resource group. The resources are executed in the exact order specified here.
-     * 
-     */
+        /**
+         * @return Required. List of resources configured for this resource group. The resources are executed in the exact order specified here.
+         * 
+         */
     private final List<OsPolicyAssignmentOsPolicyResourceGroupResource> resources;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class OsPolicyAssignmentOsPolicyResourceGroup {
     }
 
     /**
-     * List of inventory filters for the resource group. The resources in this resource group are applied to the target VM if it satisfies at least one of the following inventory filters. For example, to apply this resource group to VMs running either `RHEL` or `CentOS` operating systems, specify 2 items for the list with following values: inventory_filters[0].os_short_name=&#39;rhel&#39; and inventory_filters[1].os_short_name=&#39;centos&#39; If the list is empty, this resource group will be applied to the target VM unconditionally.
+     * @return List of inventory filters for the resource group. The resources in this resource group are applied to the target VM if it satisfies at least one of the following inventory filters. For example, to apply this resource group to VMs running either `RHEL` or `CentOS` operating systems, specify 2 items for the list with following values: inventory_filters[0].os_short_name=&#39;rhel&#39; and inventory_filters[1].os_short_name=&#39;centos&#39; If the list is empty, this resource group will be applied to the target VM unconditionally.
      * 
-    */
+     */
     public List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter> inventoryFilters() {
         return this.inventoryFilters == null ? List.of() : this.inventoryFilters;
     }
     /**
-     * Required. List of resources configured for this resource group. The resources are executed in the exact order specified here.
+     * @return Required. List of resources configured for this resource group. The resources are executed in the exact order specified here.
      * 
-    */
+     */
     public List<OsPolicyAssignmentOsPolicyResourceGroupResource> resources() {
         return this.resources;
     }

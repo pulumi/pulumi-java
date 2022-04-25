@@ -24,6 +24,11 @@ public final class GuestPoliciesRecipeArtifactGcsArgs extends com.pulumi.resourc
     @Import(name="bucket")
     private @Nullable Output<String> bucket;
 
+    /**
+     * @return Bucket of the Google Cloud Storage object. Given an example URL: https://storage.googleapis.com/my-bucket/foo/bar#1234567
+     * this value would be my-bucket.
+     * 
+     */
     public Optional<Output<String>> bucket() {
         return Optional.ofNullable(this.bucket);
     }
@@ -36,6 +41,11 @@ public final class GuestPoliciesRecipeArtifactGcsArgs extends com.pulumi.resourc
     @Import(name="generation")
     private @Nullable Output<Integer> generation;
 
+    /**
+     * @return Must be provided if allowInsecure is false. Generation number of the Google Cloud Storage object.
+     * https://storage.googleapis.com/my-bucket/foo/bar#1234567 this value would be 1234567.
+     * 
+     */
     public Optional<Output<Integer>> generation() {
         return Optional.ofNullable(this.generation);
     }
@@ -48,6 +58,11 @@ public final class GuestPoliciesRecipeArtifactGcsArgs extends com.pulumi.resourc
     @Import(name="object")
     private @Nullable Output<String> object;
 
+    /**
+     * @return Name of the Google Cloud Storage object. Given an example URL: https://storage.googleapis.com/my-bucket/foo/bar#1234567
+     * this value would be foo/bar.
+     * 
+     */
     public Optional<Output<String>> object() {
         return Optional.ofNullable(this.object);
     }
@@ -78,29 +93,71 @@ public final class GuestPoliciesRecipeArtifactGcsArgs extends com.pulumi.resourc
             $ = new GuestPoliciesRecipeArtifactGcsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket Bucket of the Google Cloud Storage object. Given an example URL: https://storage.googleapis.com/my-bucket/foo/bar#1234567
+         * this value would be my-bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(@Nullable Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket Bucket of the Google Cloud Storage object. Given an example URL: https://storage.googleapis.com/my-bucket/foo/bar#1234567
+         * this value would be my-bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param generation Must be provided if allowInsecure is false. Generation number of the Google Cloud Storage object.
+         * https://storage.googleapis.com/my-bucket/foo/bar#1234567 this value would be 1234567.
+         * 
+         * @return builder
+         * 
+         */
         public Builder generation(@Nullable Output<Integer> generation) {
             $.generation = generation;
             return this;
         }
 
+        /**
+         * @param generation Must be provided if allowInsecure is false. Generation number of the Google Cloud Storage object.
+         * https://storage.googleapis.com/my-bucket/foo/bar#1234567 this value would be 1234567.
+         * 
+         * @return builder
+         * 
+         */
         public Builder generation(Integer generation) {
             return generation(Output.of(generation));
         }
 
+        /**
+         * @param object Name of the Google Cloud Storage object. Given an example URL: https://storage.googleapis.com/my-bucket/foo/bar#1234567
+         * this value would be foo/bar.
+         * 
+         * @return builder
+         * 
+         */
         public Builder object(@Nullable Output<String> object) {
             $.object = object;
             return this;
         }
 
+        /**
+         * @param object Name of the Google Cloud Storage object. Given an example URL: https://storage.googleapis.com/my-bucket/foo/bar#1234567
+         * this value would be foo/bar.
+         * 
+         * @return builder
+         * 
+         */
         public Builder object(String object) {
             return object(Output.of(object));
         }

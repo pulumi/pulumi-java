@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DomainMappingSpec {
-    /**
-     * The mode of the certificate.
-     * Default value is `AUTOMATIC`.
-     * Possible values are `NONE` and `AUTOMATIC`.
-     * 
-     */
+        /**
+         * @return The mode of the certificate.
+         * Default value is `AUTOMATIC`.
+         * Possible values are `NONE` and `AUTOMATIC`.
+         * 
+         */
     private final @Nullable String certificateMode;
-    /**
-     * If set, the mapping will override any mapping set before this spec was set.
-     * It is recommended that the user leaves this empty to receive an error
-     * warning about a potential conflict and only set it once the respective UI
-     * has given such a warning.
-     * 
-     */
+        /**
+         * @return If set, the mapping will override any mapping set before this spec was set.
+         * It is recommended that the user leaves this empty to receive an error
+         * warning about a potential conflict and only set it once the respective UI
+         * has given such a warning.
+         * 
+         */
     private final @Nullable Boolean forceOverride;
-    /**
-     * The name of the Cloud Run Service that this DomainMapping applies to.
-     * The route must exist.
-     * 
-     */
+        /**
+         * @return The name of the Cloud Run Service that this DomainMapping applies to.
+         * The route must exist.
+         * 
+         */
     private final String routeName;
 
     @CustomType.Constructor
@@ -45,29 +45,29 @@ public final class DomainMappingSpec {
     }
 
     /**
-     * The mode of the certificate.
+     * @return The mode of the certificate.
      * Default value is `AUTOMATIC`.
      * Possible values are `NONE` and `AUTOMATIC`.
      * 
-    */
+     */
     public Optional<String> certificateMode() {
         return Optional.ofNullable(this.certificateMode);
     }
     /**
-     * If set, the mapping will override any mapping set before this spec was set.
+     * @return If set, the mapping will override any mapping set before this spec was set.
      * It is recommended that the user leaves this empty to receive an error
      * warning about a potential conflict and only set it once the respective UI
      * has given such a warning.
      * 
-    */
+     */
     public Optional<Boolean> forceOverride() {
         return Optional.ofNullable(this.forceOverride);
     }
     /**
-     * The name of the Cloud Run Service that this DomainMapping applies to.
+     * @return The name of the Cloud Run Service that this DomainMapping applies to.
      * The route must exist.
      * 
-    */
+     */
     public String routeName() {
         return this.routeName;
     }

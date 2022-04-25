@@ -25,6 +25,11 @@ public final class InstanceIAMBindingArgs extends com.pulumi.resources.ResourceA
     @Import(name="condition")
     private @Nullable Output<InstanceIAMBindingConditionArgs> condition;
 
+    /**
+     * @return ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<InstanceIAMBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
@@ -36,6 +41,10 @@ public final class InstanceIAMBindingArgs extends com.pulumi.resources.ResourceA
     @Import(name="instanceName", required=true)
     private Output<String> instanceName;
 
+    /**
+     * @return Used to find the parent resource to bind the IAM policy to
+     * 
+     */
     public Output<String> instanceName() {
         return this.instanceName;
     }
@@ -55,6 +64,11 @@ public final class InstanceIAMBindingArgs extends com.pulumi.resources.ResourceA
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -68,6 +82,12 @@ public final class InstanceIAMBindingArgs extends com.pulumi.resources.ResourceA
     @Import(name="role", required=true)
     private Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.compute.InstanceIAMBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     public Output<String> role() {
         return this.role;
     }
@@ -81,6 +101,12 @@ public final class InstanceIAMBindingArgs extends com.pulumi.resources.ResourceA
     @Import(name="zone")
     private @Nullable Output<String> zone;
 
+    /**
+     * @return A reference to the zone where the machine resides. Used to find the parent resource to bind the IAM policy to. If not specified,
+     * the value will be parsed from the identifier of the parent resource. If no zone is provided in the parent identifier and no
+     * zone is specified, it is taken from the provider configuration.
+     * 
+     */
     public Optional<Output<String>> zone() {
         return Optional.ofNullable(this.zone);
     }
@@ -114,20 +140,46 @@ public final class InstanceIAMBindingArgs extends com.pulumi.resources.ResourceA
             $ = new InstanceIAMBindingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param condition ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(@Nullable Output<InstanceIAMBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param condition ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(InstanceIAMBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param instanceName Used to find the parent resource to bind the IAM policy to
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceName(Output<String> instanceName) {
             $.instanceName = instanceName;
             return this;
         }
 
+        /**
+         * @param instanceName Used to find the parent resource to bind the IAM policy to
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceName(String instanceName) {
             return instanceName(Output.of(instanceName));
         }
@@ -145,29 +197,75 @@ public final class InstanceIAMBindingArgs extends com.pulumi.resources.ResourceA
             return members(List.of(members));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.compute.InstanceIAMBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.compute.InstanceIAMBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }
 
+        /**
+         * @param zone A reference to the zone where the machine resides. Used to find the parent resource to bind the IAM policy to. If not specified,
+         * the value will be parsed from the identifier of the parent resource. If no zone is provided in the parent identifier and no
+         * zone is specified, it is taken from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
 
+        /**
+         * @param zone A reference to the zone where the machine resides. Used to find the parent resource to bind the IAM policy to. If not specified,
+         * the value will be parsed from the identifier of the parent resource. If no zone is provided in the parent identifier and no
+         * zone is specified, it is taken from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             return zone(Output.of(zone));
         }

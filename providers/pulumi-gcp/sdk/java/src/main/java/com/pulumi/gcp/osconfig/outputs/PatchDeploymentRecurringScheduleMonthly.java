@@ -12,18 +12,18 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PatchDeploymentRecurringScheduleMonthly {
-    /**
-     * One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month.
-     * Months without the target day will be skipped. For example, a schedule to run &#34;every month on the 31st&#34;
-     * will not run in February, April, June, etc.
-     * 
-     */
+        /**
+         * @return One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month.
+         * Months without the target day will be skipped. For example, a schedule to run &#34;every month on the 31st&#34;
+         * will not run in February, April, June, etc.
+         * 
+         */
     private final @Nullable Integer monthDay;
-    /**
-     * Week day in a month.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Week day in a month.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth weekDayOfMonth;
 
     @CustomType.Constructor
@@ -35,19 +35,19 @@ public final class PatchDeploymentRecurringScheduleMonthly {
     }
 
     /**
-     * One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month.
+     * @return One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month.
      * Months without the target day will be skipped. For example, a schedule to run &#34;every month on the 31st&#34;
      * will not run in February, April, June, etc.
      * 
-    */
+     */
     public Optional<Integer> monthDay() {
         return Optional.ofNullable(this.monthDay);
     }
     /**
-     * Week day in a month.
+     * @return Week day in a month.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth> weekDayOfMonth() {
         return Optional.ofNullable(this.weekDayOfMonth);
     }

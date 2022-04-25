@@ -22,10 +22,10 @@ public final class GetWorkloadIdentityPoolProviderResult {
     private final String description;
     private final Boolean disabled;
     private final String displayName;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String name;
     private final List<GetWorkloadIdentityPoolProviderOidc> oidcs;
@@ -83,9 +83,9 @@ public final class GetWorkloadIdentityPoolProviderResult {
         return this.displayName;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

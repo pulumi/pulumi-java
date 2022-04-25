@@ -22,6 +22,10 @@ public final class PeeredDnsDomainArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="dnsSuffix", required=true)
     private Output<String> dnsSuffix;
 
+    /**
+     * @return The DNS domain suffix of the peered DNS domain. Make sure to suffix with a `.` (dot).
+     * 
+     */
     public Output<String> dnsSuffix() {
         return this.dnsSuffix;
     }
@@ -33,6 +37,10 @@ public final class PeeredDnsDomainArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Internal name used for the peered DNS domain.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -44,6 +52,10 @@ public final class PeeredDnsDomainArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="network", required=true)
     private Output<String> network;
 
+    /**
+     * @return The network in the consumer project.
+     * 
+     */
     public Output<String> network() {
         return this.network;
     }
@@ -55,6 +67,10 @@ public final class PeeredDnsDomainArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The producer project number. If not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -66,6 +82,10 @@ public final class PeeredDnsDomainArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="service")
     private @Nullable Output<String> service;
 
+    /**
+     * @return Private service connection between service and consumer network, defaults to `servicenetworking.googleapis.com`
+     * 
+     */
     public Optional<Output<String>> service() {
         return Optional.ofNullable(this.service);
     }
@@ -98,47 +118,107 @@ public final class PeeredDnsDomainArgs extends com.pulumi.resources.ResourceArgs
             $ = new PeeredDnsDomainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dnsSuffix The DNS domain suffix of the peered DNS domain. Make sure to suffix with a `.` (dot).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsSuffix(Output<String> dnsSuffix) {
             $.dnsSuffix = dnsSuffix;
             return this;
         }
 
+        /**
+         * @param dnsSuffix The DNS domain suffix of the peered DNS domain. Make sure to suffix with a `.` (dot).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsSuffix(String dnsSuffix) {
             return dnsSuffix(Output.of(dnsSuffix));
         }
 
+        /**
+         * @param name Internal name used for the peered DNS domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Internal name used for the peered DNS domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param network The network in the consumer project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network The network in the consumer project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }
 
+        /**
+         * @param project The producer project number. If not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The producer project number. If not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param service Private service connection between service and consumer network, defaults to `servicenetworking.googleapis.com`
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service Private service connection between service and consumer network, defaults to `servicenetworking.googleapis.com`
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }

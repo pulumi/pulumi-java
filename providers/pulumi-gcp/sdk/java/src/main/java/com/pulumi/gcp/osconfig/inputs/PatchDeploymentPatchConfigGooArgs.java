@@ -20,6 +20,10 @@ public final class PatchDeploymentPatchConfigGooArgs extends com.pulumi.resource
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return goo update settings. Use this setting to override the default goo patch rules.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -48,11 +52,23 @@ public final class PatchDeploymentPatchConfigGooArgs extends com.pulumi.resource
             $ = new PatchDeploymentPatchConfigGooArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled goo update settings. Use this setting to override the default goo patch rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled goo update settings. Use this setting to override the default goo patch rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

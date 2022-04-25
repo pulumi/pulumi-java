@@ -24,6 +24,11 @@ public final class LiteSubscriptionState extends com.pulumi.resources.ResourceAr
     @Import(name="deliveryConfig")
     private @Nullable Output<LiteSubscriptionDeliveryConfigGetArgs> deliveryConfig;
 
+    /**
+     * @return The settings for this subscription&#39;s message delivery.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<LiteSubscriptionDeliveryConfigGetArgs>> deliveryConfig() {
         return Optional.ofNullable(this.deliveryConfig);
     }
@@ -35,6 +40,10 @@ public final class LiteSubscriptionState extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the subscription.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -47,6 +56,11 @@ public final class LiteSubscriptionState extends com.pulumi.resources.ResourceAr
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -58,6 +72,10 @@ public final class LiteSubscriptionState extends com.pulumi.resources.ResourceAr
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return The region of the pubsub lite topic.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -69,6 +87,10 @@ public final class LiteSubscriptionState extends com.pulumi.resources.ResourceAr
     @Import(name="topic")
     private @Nullable Output<String> topic;
 
+    /**
+     * @return A reference to a Topic resource.
+     * 
+     */
     public Optional<Output<String>> topic() {
         return Optional.ofNullable(this.topic);
     }
@@ -80,6 +102,10 @@ public final class LiteSubscriptionState extends com.pulumi.resources.ResourceAr
     @Import(name="zone")
     private @Nullable Output<String> zone;
 
+    /**
+     * @return The zone of the pubsub lite topic.
+     * 
+     */
     public Optional<Output<String>> zone() {
         return Optional.ofNullable(this.zone);
     }
@@ -113,56 +139,132 @@ public final class LiteSubscriptionState extends com.pulumi.resources.ResourceAr
             $ = new LiteSubscriptionState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deliveryConfig The settings for this subscription&#39;s message delivery.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryConfig(@Nullable Output<LiteSubscriptionDeliveryConfigGetArgs> deliveryConfig) {
             $.deliveryConfig = deliveryConfig;
             return this;
         }
 
+        /**
+         * @param deliveryConfig The settings for this subscription&#39;s message delivery.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryConfig(LiteSubscriptionDeliveryConfigGetArgs deliveryConfig) {
             return deliveryConfig(Output.of(deliveryConfig));
         }
 
+        /**
+         * @param name Name of the subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region The region of the pubsub lite topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region The region of the pubsub lite topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param topic A reference to a Topic resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(@Nullable Output<String> topic) {
             $.topic = topic;
             return this;
         }
 
+        /**
+         * @param topic A reference to a Topic resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(String topic) {
             return topic(Output.of(topic));
         }
 
+        /**
+         * @param zone The zone of the pubsub lite topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
 
+        /**
+         * @param zone The zone of the pubsub lite topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             return zone(Output.of(zone));
         }

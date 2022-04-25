@@ -11,11 +11,11 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CertificateCertificateDescriptionConfigValue {
-    /**
-     * Indicates the intended use for keys that correspond to a certificate.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Indicates the intended use for keys that correspond to a certificate.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsage> keyUsages;
 
     @CustomType.Constructor
@@ -24,10 +24,10 @@ public final class CertificateCertificateDescriptionConfigValue {
     }
 
     /**
-     * Indicates the intended use for keys that correspond to a certificate.
+     * @return Indicates the intended use for keys that correspond to a certificate.
      * Structure is documented below.
      * 
-    */
+     */
     public List<CertificateCertificateDescriptionConfigValueKeyUsage> keyUsages() {
         return this.keyUsages == null ? List.of() : this.keyUsages;
     }

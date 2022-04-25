@@ -23,6 +23,13 @@ public final class PolicyAdmissionWhitelistPatternGetArgs extends com.pulumi.res
     @Import(name="namePattern", required=true)
     private Output<String> namePattern;
 
+    /**
+     * @return An image name pattern to whitelist, in the form
+     * `registry/path/to/image`. This supports a trailing * as a
+     * wildcard, but this is allowed only in text after the registry/
+     * part.
+     * 
+     */
     public Output<String> namePattern() {
         return this.namePattern;
     }
@@ -51,11 +58,29 @@ public final class PolicyAdmissionWhitelistPatternGetArgs extends com.pulumi.res
             $ = new PolicyAdmissionWhitelistPatternGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param namePattern An image name pattern to whitelist, in the form
+         * `registry/path/to/image`. This supports a trailing * as a
+         * wildcard, but this is allowed only in text after the registry/
+         * part.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePattern(Output<String> namePattern) {
             $.namePattern = namePattern;
             return this;
         }
 
+        /**
+         * @param namePattern An image name pattern to whitelist, in the form
+         * `registry/path/to/image`. This supports a trailing * as a
+         * wildcard, but this is allowed only in text after the registry/
+         * part.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePattern(String namePattern) {
             return namePattern(Output.of(namePattern));
         }

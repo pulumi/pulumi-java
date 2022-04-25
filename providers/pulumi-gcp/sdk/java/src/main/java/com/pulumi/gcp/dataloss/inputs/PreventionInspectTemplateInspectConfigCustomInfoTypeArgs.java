@@ -27,6 +27,11 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
     @Import(name="dictionary")
     private @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs> dictionary;
 
+    /**
+     * @return Dictionary which defines the rule.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs>> dictionary() {
         return Optional.ofNullable(this.dictionary);
     }
@@ -39,6 +44,11 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
     @Import(name="exclusionType")
     private @Nullable Output<String> exclusionType;
 
+    /**
+     * @return If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.
+     * Possible values are `EXCLUSION_TYPE_EXCLUDE`.
+     * 
+     */
     public Optional<Output<String>> exclusionType() {
         return Optional.ofNullable(this.exclusionType);
     }
@@ -54,6 +64,14 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
     @Import(name="infoType", required=true)
     private Output<PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs> infoType;
 
+    /**
+     * @return CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing
+     * infoTypes and that infoType is specified in `info_types` field. Specifying the latter adds findings to the
+     * one detected by the system. If built-in info type is not specified in `info_types` list then the name is
+     * treated as a custom info type.
+     * Structure is documented below.
+     * 
+     */
     public Output<PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs> infoType() {
         return this.infoType;
     }
@@ -68,6 +86,13 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
     @Import(name="likelihood")
     private @Nullable Output<String> likelihood;
 
+    /**
+     * @return Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria
+     * specified by the rule.
+     * Default value is `VERY_LIKELY`.
+     * Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
+     * 
+     */
     public Optional<Output<String>> likelihood() {
         return Optional.ofNullable(this.likelihood);
     }
@@ -80,6 +105,11 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
     @Import(name="regex")
     private @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs> regex;
 
+    /**
+     * @return Regular expression which defines the rule.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs>> regex() {
         return Optional.ofNullable(this.regex);
     }
@@ -92,6 +122,11 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
     @Import(name="storedType")
     private @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs> storedType;
 
+    /**
+     * @return A reference to a StoredInfoType to use with scanning.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs>> storedType() {
         return Optional.ofNullable(this.storedType);
     }
@@ -125,56 +160,150 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
             $ = new PreventionInspectTemplateInspectConfigCustomInfoTypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dictionary Dictionary which defines the rule.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dictionary(@Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs> dictionary) {
             $.dictionary = dictionary;
             return this;
         }
 
+        /**
+         * @param dictionary Dictionary which defines the rule.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dictionary(PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs dictionary) {
             return dictionary(Output.of(dictionary));
         }
 
+        /**
+         * @param exclusionType If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.
+         * Possible values are `EXCLUSION_TYPE_EXCLUDE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusionType(@Nullable Output<String> exclusionType) {
             $.exclusionType = exclusionType;
             return this;
         }
 
+        /**
+         * @param exclusionType If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.
+         * Possible values are `EXCLUSION_TYPE_EXCLUDE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusionType(String exclusionType) {
             return exclusionType(Output.of(exclusionType));
         }
 
+        /**
+         * @param infoType CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing
+         * infoTypes and that infoType is specified in `info_types` field. Specifying the latter adds findings to the
+         * one detected by the system. If built-in info type is not specified in `info_types` list then the name is
+         * treated as a custom info type.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoType(Output<PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs> infoType) {
             $.infoType = infoType;
             return this;
         }
 
+        /**
+         * @param infoType CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing
+         * infoTypes and that infoType is specified in `info_types` field. Specifying the latter adds findings to the
+         * one detected by the system. If built-in info type is not specified in `info_types` list then the name is
+         * treated as a custom info type.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoType(PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs infoType) {
             return infoType(Output.of(infoType));
         }
 
+        /**
+         * @param likelihood Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria
+         * specified by the rule.
+         * Default value is `VERY_LIKELY`.
+         * Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder likelihood(@Nullable Output<String> likelihood) {
             $.likelihood = likelihood;
             return this;
         }
 
+        /**
+         * @param likelihood Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria
+         * specified by the rule.
+         * Default value is `VERY_LIKELY`.
+         * Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder likelihood(String likelihood) {
             return likelihood(Output.of(likelihood));
         }
 
+        /**
+         * @param regex Regular expression which defines the rule.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(@Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs> regex) {
             $.regex = regex;
             return this;
         }
 
+        /**
+         * @param regex Regular expression which defines the rule.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs regex) {
             return regex(Output.of(regex));
         }
 
+        /**
+         * @param storedType A reference to a StoredInfoType to use with scanning.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storedType(@Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs> storedType) {
             $.storedType = storedType;
             return this;
         }
 
+        /**
+         * @param storedType A reference to a StoredInfoType to use with scanning.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storedType(PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs storedType) {
             return storedType(Output.of(storedType));
         }

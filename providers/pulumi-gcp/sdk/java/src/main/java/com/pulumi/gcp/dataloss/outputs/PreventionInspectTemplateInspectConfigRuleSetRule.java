@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PreventionInspectTemplateInspectConfigRuleSetRule {
-    /**
-     * The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule exclusionRule;
-    /**
-     * Hotword-based detection rule.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Hotword-based detection rule.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule hotwordRule;
 
     @CustomType.Constructor
@@ -34,18 +34,18 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRule {
     }
 
     /**
-     * The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results.
+     * @return The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule> exclusionRule() {
         return Optional.ofNullable(this.exclusionRule);
     }
     /**
-     * Hotword-based detection rule.
+     * @return Hotword-based detection rule.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule> hotwordRule() {
         return Optional.ofNullable(this.hotwordRule);
     }

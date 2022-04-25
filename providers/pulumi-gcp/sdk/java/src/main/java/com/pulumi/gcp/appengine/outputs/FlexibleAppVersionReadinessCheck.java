@@ -12,42 +12,42 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FlexibleAppVersionReadinessCheck {
-    /**
-     * A maximum time limit on application initialization, measured from moment the application successfully
-     * replies to a healthcheck until it is ready to serve traffic. Default: &#34;300s&#34;
-     * 
-     */
+        /**
+         * @return A maximum time limit on application initialization, measured from moment the application successfully
+         * replies to a healthcheck until it is ready to serve traffic. Default: &#34;300s&#34;
+         * 
+         */
     private final @Nullable String appStartTimeout;
-    /**
-     * Interval between health checks.
-     * 
-     */
+        /**
+         * @return Interval between health checks.
+         * 
+         */
     private final @Nullable String checkInterval;
-    /**
-     * Number of consecutive failed checks required before considering the VM unhealthy. Default: 4.
-     * 
-     */
+        /**
+         * @return Number of consecutive failed checks required before considering the VM unhealthy. Default: 4.
+         * 
+         */
     private final @Nullable Double failureThreshold;
-    /**
-     * Host header to send when performing a HTTP Readiness check. Example: &#34;myapp.appspot.com&#34;
-     * 
-     */
+        /**
+         * @return Host header to send when performing a HTTP Readiness check. Example: &#34;myapp.appspot.com&#34;
+         * 
+         */
     private final @Nullable String host;
-    /**
-     * Path to the static files matched by the URL pattern, from the application root directory.
-     * The path can refer to text matched in groupings in the URL pattern.
-     * 
-     */
+        /**
+         * @return Path to the static files matched by the URL pattern, from the application root directory.
+         * The path can refer to text matched in groupings in the URL pattern.
+         * 
+         */
     private final String path;
-    /**
-     * Number of consecutive successful checks required before considering the VM healthy. Default: 2.
-     * 
-     */
+        /**
+         * @return Number of consecutive successful checks required before considering the VM healthy. Default: 2.
+         * 
+         */
     private final @Nullable Double successThreshold;
-    /**
-     * Time before the check is considered failed. Default: &#34;4s&#34;
-     * 
-     */
+        /**
+         * @return Time before the check is considered failed. Default: &#34;4s&#34;
+         * 
+         */
     private final @Nullable String timeout;
 
     @CustomType.Constructor
@@ -69,53 +69,53 @@ public final class FlexibleAppVersionReadinessCheck {
     }
 
     /**
-     * A maximum time limit on application initialization, measured from moment the application successfully
+     * @return A maximum time limit on application initialization, measured from moment the application successfully
      * replies to a healthcheck until it is ready to serve traffic. Default: &#34;300s&#34;
      * 
-    */
+     */
     public Optional<String> appStartTimeout() {
         return Optional.ofNullable(this.appStartTimeout);
     }
     /**
-     * Interval between health checks.
+     * @return Interval between health checks.
      * 
-    */
+     */
     public Optional<String> checkInterval() {
         return Optional.ofNullable(this.checkInterval);
     }
     /**
-     * Number of consecutive failed checks required before considering the VM unhealthy. Default: 4.
+     * @return Number of consecutive failed checks required before considering the VM unhealthy. Default: 4.
      * 
-    */
+     */
     public Optional<Double> failureThreshold() {
         return Optional.ofNullable(this.failureThreshold);
     }
     /**
-     * Host header to send when performing a HTTP Readiness check. Example: &#34;myapp.appspot.com&#34;
+     * @return Host header to send when performing a HTTP Readiness check. Example: &#34;myapp.appspot.com&#34;
      * 
-    */
+     */
     public Optional<String> host() {
         return Optional.ofNullable(this.host);
     }
     /**
-     * Path to the static files matched by the URL pattern, from the application root directory.
+     * @return Path to the static files matched by the URL pattern, from the application root directory.
      * The path can refer to text matched in groupings in the URL pattern.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }
     /**
-     * Number of consecutive successful checks required before considering the VM healthy. Default: 2.
+     * @return Number of consecutive successful checks required before considering the VM healthy. Default: 2.
      * 
-    */
+     */
     public Optional<Double> successThreshold() {
         return Optional.ofNullable(this.successThreshold);
     }
     /**
-     * Time before the check is considered failed. Default: &#34;4s&#34;
+     * @return Time before the check is considered failed. Default: &#34;4s&#34;
      * 
-    */
+     */
     public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }

@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TriggerTransport {
-    /**
-     * The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
-     * 
-     */
+        /**
+         * @return The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
+         * 
+         */
     private final @Nullable List<TriggerTransportPubsub> pubsubs;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class TriggerTransport {
     }
 
     /**
-     * The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
+     * @return The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
      * 
-    */
+     */
     public List<TriggerTransportPubsub> pubsubs() {
         return this.pubsubs == null ? List.of() : this.pubsubs;
     }

@@ -20,6 +20,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     @Import(name="nodeGroup", required=true)
     private Output<String> nodeGroup;
 
+    /**
+     * @return Required. The URI of a sole-tenant /zones/us-central1-a/nodeGroups/node-group-1`*`node-group-1`
+     * 
+     */
     public Output<String> nodeGroup() {
         return this.nodeGroup;
     }
@@ -48,11 +52,23 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
             $ = new WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nodeGroup Required. The URI of a sole-tenant /zones/us-central1-a/nodeGroups/node-group-1`*`node-group-1`
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeGroup(Output<String> nodeGroup) {
             $.nodeGroup = nodeGroup;
             return this;
         }
 
+        /**
+         * @param nodeGroup Required. The URI of a sole-tenant /zones/us-central1-a/nodeGroups/node-group-1`*`node-group-1`
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeGroup(String nodeGroup) {
             return nodeGroup(Output.of(nodeGroup));
         }

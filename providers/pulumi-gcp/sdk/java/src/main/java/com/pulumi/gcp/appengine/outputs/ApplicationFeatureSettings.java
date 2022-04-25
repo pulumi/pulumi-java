@@ -9,11 +9,11 @@ import java.util.Objects;
 
 @CustomType
 public final class ApplicationFeatureSettings {
-    /**
-     * Set to false to use the legacy health check instead of the readiness
-     * and liveness checks.
-     * 
-     */
+        /**
+         * @return Set to false to use the legacy health check instead of the readiness
+         * and liveness checks.
+         * 
+         */
     private final Boolean splitHealthChecks;
 
     @CustomType.Constructor
@@ -22,10 +22,10 @@ public final class ApplicationFeatureSettings {
     }
 
     /**
-     * Set to false to use the legacy health check instead of the readiness
+     * @return Set to false to use the legacy health check instead of the readiness
      * and liveness checks.
      * 
-    */
+     */
     public Boolean splitHealthChecks() {
         return this.splitHealthChecks;
     }

@@ -14,42 +14,42 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DatabaseInstanceSettingsBackupConfiguration {
-    /**
-     * Backup retention settings. The configuration is detailed below.
-     * 
-     */
+        /**
+         * @return Backup retention settings. The configuration is detailed below.
+         * 
+         */
     private final @Nullable DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings backupRetentionSettings;
-    /**
-     * True if binary logging is enabled.
-     * Cannot be used with Postgres.
-     * 
-     */
+        /**
+         * @return True if binary logging is enabled.
+         * Cannot be used with Postgres.
+         * 
+         */
     private final @Nullable Boolean binaryLogEnabled;
-    /**
-     * True if backup configuration is enabled.
-     * 
-     */
+        /**
+         * @return True if backup configuration is enabled.
+         * 
+         */
     private final @Nullable Boolean enabled;
-    /**
-     * The region where the backup will be stored
-     * 
-     */
+        /**
+         * @return The region where the backup will be stored
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * True if Point-in-time recovery is enabled. Will restart database if enabled after instance creation. Valid only for PostgreSQL instances.
-     * 
-     */
+        /**
+         * @return True if Point-in-time recovery is enabled. Will restart database if enabled after instance creation. Valid only for PostgreSQL instances.
+         * 
+         */
     private final @Nullable Boolean pointInTimeRecoveryEnabled;
-    /**
-     * `HH:MM` format time indicating when backup
-     * configuration starts.
-     * 
-     */
+        /**
+         * @return `HH:MM` format time indicating when backup
+         * configuration starts.
+         * 
+         */
     private final @Nullable String startTime;
-    /**
-     * The number of days of transaction logs we retain for point in time restore, from 1-7.
-     * 
-     */
+        /**
+         * @return The number of days of transaction logs we retain for point in time restore, from 1-7.
+         * 
+         */
     private final @Nullable Integer transactionLogRetentionDays;
 
     @CustomType.Constructor
@@ -71,53 +71,53 @@ public final class DatabaseInstanceSettingsBackupConfiguration {
     }
 
     /**
-     * Backup retention settings. The configuration is detailed below.
+     * @return Backup retention settings. The configuration is detailed below.
      * 
-    */
+     */
     public Optional<DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings> backupRetentionSettings() {
         return Optional.ofNullable(this.backupRetentionSettings);
     }
     /**
-     * True if binary logging is enabled.
+     * @return True if binary logging is enabled.
      * Cannot be used with Postgres.
      * 
-    */
+     */
     public Optional<Boolean> binaryLogEnabled() {
         return Optional.ofNullable(this.binaryLogEnabled);
     }
     /**
-     * True if backup configuration is enabled.
+     * @return True if backup configuration is enabled.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * The region where the backup will be stored
+     * @return The region where the backup will be stored
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * True if Point-in-time recovery is enabled. Will restart database if enabled after instance creation. Valid only for PostgreSQL instances.
+     * @return True if Point-in-time recovery is enabled. Will restart database if enabled after instance creation. Valid only for PostgreSQL instances.
      * 
-    */
+     */
     public Optional<Boolean> pointInTimeRecoveryEnabled() {
         return Optional.ofNullable(this.pointInTimeRecoveryEnabled);
     }
     /**
-     * `HH:MM` format time indicating when backup
+     * @return `HH:MM` format time indicating when backup
      * configuration starts.
      * 
-    */
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
-     * The number of days of transaction logs we retain for point in time restore, from 1-7.
+     * @return The number of days of transaction logs we retain for point in time restore, from 1-7.
      * 
-    */
+     */
     public Optional<Integer> transactionLogRetentionDays() {
         return Optional.ofNullable(this.transactionLogRetentionDays);
     }

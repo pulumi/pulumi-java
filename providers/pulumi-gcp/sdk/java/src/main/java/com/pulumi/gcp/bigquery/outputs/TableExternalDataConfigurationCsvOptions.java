@@ -13,47 +13,47 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TableExternalDataConfigurationCsvOptions {
-    /**
-     * Indicates if BigQuery should accept rows
-     * that are missing trailing optional columns.
-     * 
-     */
+        /**
+         * @return Indicates if BigQuery should accept rows
+         * that are missing trailing optional columns.
+         * 
+         */
     private final @Nullable Boolean allowJaggedRows;
-    /**
-     * Indicates if BigQuery should allow
-     * quoted data sections that contain newline characters in a CSV file.
-     * The default value is false.
-     * 
-     */
+        /**
+         * @return Indicates if BigQuery should allow
+         * quoted data sections that contain newline characters in a CSV file.
+         * The default value is false.
+         * 
+         */
     private final @Nullable Boolean allowQuotedNewlines;
-    /**
-     * The character encoding of the data. The supported
-     * values are UTF-8 or ISO-8859-1.
-     * 
-     */
+        /**
+         * @return The character encoding of the data. The supported
+         * values are UTF-8 or ISO-8859-1.
+         * 
+         */
     private final @Nullable String encoding;
-    /**
-     * The separator for fields in a CSV file.
-     * 
-     */
+        /**
+         * @return The separator for fields in a CSV file.
+         * 
+         */
     private final @Nullable String fieldDelimiter;
-    /**
-     * The value that is used to quote data sections in a
-     * CSV file. If your data does not contain quoted sections, set the
-     * property value to an empty string. If your data contains quoted newline
-     * characters, you must also set the `allow_quoted_newlines` property to true.
-     * The API-side default is `&#34;`, specified in the provider escaped as `\&#34;`. Due to
-     * limitations with default values, this value is required to be
-     * explicitly set.
-     * 
-     */
+        /**
+         * @return The value that is used to quote data sections in a
+         * CSV file. If your data does not contain quoted sections, set the
+         * property value to an empty string. If your data contains quoted newline
+         * characters, you must also set the `allow_quoted_newlines` property to true.
+         * The API-side default is `&#34;`, specified in the provider escaped as `\&#34;`. Due to
+         * limitations with default values, this value is required to be
+         * explicitly set.
+         * 
+         */
     private final String quote;
-    /**
-     * The number of rows at the top of the sheet
-     * that BigQuery will skip when reading the data. At least one of `range` or
-     * `skip_leading_rows` must be set.
-     * 
-     */
+        /**
+         * @return The number of rows at the top of the sheet
+         * that BigQuery will skip when reading the data. At least one of `range` or
+         * `skip_leading_rows` must be set.
+         * 
+         */
     private final @Nullable Integer skipLeadingRows;
 
     @CustomType.Constructor
@@ -73,39 +73,39 @@ public final class TableExternalDataConfigurationCsvOptions {
     }
 
     /**
-     * Indicates if BigQuery should accept rows
+     * @return Indicates if BigQuery should accept rows
      * that are missing trailing optional columns.
      * 
-    */
+     */
     public Optional<Boolean> allowJaggedRows() {
         return Optional.ofNullable(this.allowJaggedRows);
     }
     /**
-     * Indicates if BigQuery should allow
+     * @return Indicates if BigQuery should allow
      * quoted data sections that contain newline characters in a CSV file.
      * The default value is false.
      * 
-    */
+     */
     public Optional<Boolean> allowQuotedNewlines() {
         return Optional.ofNullable(this.allowQuotedNewlines);
     }
     /**
-     * The character encoding of the data. The supported
+     * @return The character encoding of the data. The supported
      * values are UTF-8 or ISO-8859-1.
      * 
-    */
+     */
     public Optional<String> encoding() {
         return Optional.ofNullable(this.encoding);
     }
     /**
-     * The separator for fields in a CSV file.
+     * @return The separator for fields in a CSV file.
      * 
-    */
+     */
     public Optional<String> fieldDelimiter() {
         return Optional.ofNullable(this.fieldDelimiter);
     }
     /**
-     * The value that is used to quote data sections in a
+     * @return The value that is used to quote data sections in a
      * CSV file. If your data does not contain quoted sections, set the
      * property value to an empty string. If your data contains quoted newline
      * characters, you must also set the `allow_quoted_newlines` property to true.
@@ -113,16 +113,16 @@ public final class TableExternalDataConfigurationCsvOptions {
      * limitations with default values, this value is required to be
      * explicitly set.
      * 
-    */
+     */
     public String quote() {
         return this.quote;
     }
     /**
-     * The number of rows at the top of the sheet
+     * @return The number of rows at the top of the sheet
      * that BigQuery will skip when reading the data. At least one of `range` or
      * `skip_leading_rows` must be set.
      * 
-    */
+     */
     public Optional<Integer> skipLeadingRows() {
         return Optional.ofNullable(this.skipLeadingRows);
     }

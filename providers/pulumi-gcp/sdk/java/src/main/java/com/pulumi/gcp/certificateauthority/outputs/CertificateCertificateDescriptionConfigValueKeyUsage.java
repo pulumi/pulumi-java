@@ -13,23 +13,23 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CertificateCertificateDescriptionConfigValueKeyUsage {
-    /**
-     * Describes high-level ways in which a key may be used.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Describes high-level ways in which a key may be used.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsage> baseKeyUsages;
-    /**
-     * Describes high-level ways in which a key may be used.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Describes high-level ways in which a key may be used.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsage> extendedKeyUsages;
-    /**
-     * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages;
 
     @CustomType.Constructor
@@ -43,26 +43,26 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsage {
     }
 
     /**
-     * Describes high-level ways in which a key may be used.
+     * @return Describes high-level ways in which a key may be used.
      * Structure is documented below.
      * 
-    */
+     */
     public List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsage> baseKeyUsages() {
         return this.baseKeyUsages == null ? List.of() : this.baseKeyUsages;
     }
     /**
-     * Describes high-level ways in which a key may be used.
+     * @return Describes high-level ways in which a key may be used.
      * Structure is documented below.
      * 
-    */
+     */
     public List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsage> extendedKeyUsages() {
         return this.extendedKeyUsages == null ? List.of() : this.extendedKeyUsages;
     }
     /**
-     * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+     * @return An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
      * Structure is documented below.
      * 
-    */
+     */
     public List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages == null ? List.of() : this.unknownExtendedKeyUsages;
     }

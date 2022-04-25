@@ -12,19 +12,19 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy {
-    /**
-     * The specification for how client requests are aborted as part of fault
-     * injection.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return The specification for how client requests are aborted as part of fault
+         * injection.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort abort;
-    /**
-     * The specification for how client requests are delayed as part of fault
-     * injection, before being sent to a backend service.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return The specification for how client requests are delayed as part of fault
+         * injection, before being sent to a backend service.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay delay;
 
     @CustomType.Constructor
@@ -36,20 +36,20 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
     }
 
     /**
-     * The specification for how client requests are aborted as part of fault
+     * @return The specification for how client requests are aborted as part of fault
      * injection.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort> abort() {
         return Optional.ofNullable(this.abort);
     }
     /**
-     * The specification for how client requests are delayed as part of fault
+     * @return The specification for how client requests are delayed as part of fault
      * injection, before being sent to a backend service.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay> delay() {
         return Optional.ofNullable(this.delay);
     }

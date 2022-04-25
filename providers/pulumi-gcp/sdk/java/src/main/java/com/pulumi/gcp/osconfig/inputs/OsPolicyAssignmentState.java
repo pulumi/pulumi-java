@@ -29,6 +29,12 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
     @Import(name="baseline")
     private @Nullable Output<Boolean> baseline;
 
+    /**
+     * @return Output only. Indicates that this revision has been successfully rolled out in this zone and new VMs will be assigned OS
+     * policies from this revision. For a given OS policy assignment, there is only one revision with a value of `true` for
+     * this field.
+     * 
+     */
     public Optional<Output<Boolean>> baseline() {
         return Optional.ofNullable(this.baseline);
     }
@@ -40,6 +46,10 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
     @Import(name="deleted")
     private @Nullable Output<Boolean> deleted;
 
+    /**
+     * @return Output only. Indicates that this revision deletes the OS policy assignment.
+     * 
+     */
     public Optional<Output<Boolean>> deleted() {
         return Optional.ofNullable(this.deleted);
     }
@@ -51,6 +61,10 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return OS policy assignment description. Length of the description is limited to 1024 characters.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -62,6 +76,10 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return The etag for this OS policy assignment. If this is provided on update, it must match the server&#39;s etag.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -73,6 +91,10 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
     @Import(name="instanceFilter")
     private @Nullable Output<OsPolicyAssignmentInstanceFilterGetArgs> instanceFilter;
 
+    /**
+     * @return Required. Filter to select VMs.
+     * 
+     */
     public Optional<Output<OsPolicyAssignmentInstanceFilterGetArgs>> instanceFilter() {
         return Optional.ofNullable(this.instanceFilter);
     }
@@ -84,6 +106,10 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location for the resource
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -95,6 +121,10 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Required. The name of the repository.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -106,6 +136,10 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
     @Import(name="osPolicies")
     private @Nullable Output<List<OsPolicyAssignmentOsPolicyGetArgs>> osPolicies;
 
+    /**
+     * @return Required. List of OS policies to be applied to the VMs.
+     * 
+     */
     public Optional<Output<List<OsPolicyAssignmentOsPolicyGetArgs>>> osPolicies() {
         return Optional.ofNullable(this.osPolicies);
     }
@@ -117,6 +151,10 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The project for the resource
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -129,6 +167,11 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
     @Import(name="reconciling")
     private @Nullable Output<Boolean> reconciling;
 
+    /**
+     * @return Output only. Indicates that reconciliation is in progress for the revision. This value is `true` when the
+     * `rollout_state` is one of: * IN_PROGRESS * CANCELLING
+     * 
+     */
     public Optional<Output<Boolean>> reconciling() {
         return Optional.ofNullable(this.reconciling);
     }
@@ -140,6 +183,10 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
     @Import(name="revisionCreateTime")
     private @Nullable Output<String> revisionCreateTime;
 
+    /**
+     * @return Output only. The timestamp that the revision was created.
+     * 
+     */
     public Optional<Output<String>> revisionCreateTime() {
         return Optional.ofNullable(this.revisionCreateTime);
     }
@@ -152,6 +199,11 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
     @Import(name="revisionId")
     private @Nullable Output<String> revisionId;
 
+    /**
+     * @return Output only. The assignment revision ID A new revision is committed whenever a rollout is triggered for a OS policy
+     * assignment
+     * 
+     */
     public Optional<Output<String>> revisionId() {
         return Optional.ofNullable(this.revisionId);
     }
@@ -163,6 +215,10 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
     @Import(name="rollout")
     private @Nullable Output<OsPolicyAssignmentRolloutGetArgs> rollout;
 
+    /**
+     * @return Required. Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted.
+     * 
+     */
     public Optional<Output<OsPolicyAssignmentRolloutGetArgs>> rollout() {
         return Optional.ofNullable(this.rollout);
     }
@@ -175,6 +231,11 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
     @Import(name="rolloutState")
     private @Nullable Output<String> rolloutState;
 
+    /**
+     * @return Output only. OS policy assignment rollout state Possible values: ROLLOUT_STATE_UNSPECIFIED, IN_PROGRESS, CANCELLING,
+     * CANCELLED, SUCCEEDED
+     * 
+     */
     public Optional<Output<String>> rolloutState() {
         return Optional.ofNullable(this.rolloutState);
     }
@@ -186,6 +247,10 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
     @Import(name="uid")
     private @Nullable Output<String> uid;
 
+    /**
+     * @return Output only. Server generated unique id for the OS policy assignment resource.
+     * 
+     */
     public Optional<Output<String>> uid() {
         return Optional.ofNullable(this.uid);
     }
@@ -228,141 +293,337 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
             $ = new OsPolicyAssignmentState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baseline Output only. Indicates that this revision has been successfully rolled out in this zone and new VMs will be assigned OS
+         * policies from this revision. For a given OS policy assignment, there is only one revision with a value of `true` for
+         * this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseline(@Nullable Output<Boolean> baseline) {
             $.baseline = baseline;
             return this;
         }
 
+        /**
+         * @param baseline Output only. Indicates that this revision has been successfully rolled out in this zone and new VMs will be assigned OS
+         * policies from this revision. For a given OS policy assignment, there is only one revision with a value of `true` for
+         * this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseline(Boolean baseline) {
             return baseline(Output.of(baseline));
         }
 
+        /**
+         * @param deleted Output only. Indicates that this revision deletes the OS policy assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleted(@Nullable Output<Boolean> deleted) {
             $.deleted = deleted;
             return this;
         }
 
+        /**
+         * @param deleted Output only. Indicates that this revision deletes the OS policy assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleted(Boolean deleted) {
             return deleted(Output.of(deleted));
         }
 
+        /**
+         * @param description OS policy assignment description. Length of the description is limited to 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description OS policy assignment description. Length of the description is limited to 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param etag The etag for this OS policy assignment. If this is provided on update, it must match the server&#39;s etag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag The etag for this OS policy assignment. If this is provided on update, it must match the server&#39;s etag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param instanceFilter Required. Filter to select VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceFilter(@Nullable Output<OsPolicyAssignmentInstanceFilterGetArgs> instanceFilter) {
             $.instanceFilter = instanceFilter;
             return this;
         }
 
+        /**
+         * @param instanceFilter Required. Filter to select VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceFilter(OsPolicyAssignmentInstanceFilterGetArgs instanceFilter) {
             return instanceFilter(Output.of(instanceFilter));
         }
 
+        /**
+         * @param location The location for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Required. The name of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Required. The name of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param osPolicies Required. List of OS policies to be applied to the VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osPolicies(@Nullable Output<List<OsPolicyAssignmentOsPolicyGetArgs>> osPolicies) {
             $.osPolicies = osPolicies;
             return this;
         }
 
+        /**
+         * @param osPolicies Required. List of OS policies to be applied to the VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osPolicies(List<OsPolicyAssignmentOsPolicyGetArgs> osPolicies) {
             return osPolicies(Output.of(osPolicies));
         }
 
+        /**
+         * @param osPolicies Required. List of OS policies to be applied to the VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osPolicies(OsPolicyAssignmentOsPolicyGetArgs... osPolicies) {
             return osPolicies(List.of(osPolicies));
         }
 
+        /**
+         * @param project The project for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The project for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param reconciling Output only. Indicates that reconciliation is in progress for the revision. This value is `true` when the
+         * `rollout_state` is one of: * IN_PROGRESS * CANCELLING
+         * 
+         * @return builder
+         * 
+         */
         public Builder reconciling(@Nullable Output<Boolean> reconciling) {
             $.reconciling = reconciling;
             return this;
         }
 
+        /**
+         * @param reconciling Output only. Indicates that reconciliation is in progress for the revision. This value is `true` when the
+         * `rollout_state` is one of: * IN_PROGRESS * CANCELLING
+         * 
+         * @return builder
+         * 
+         */
         public Builder reconciling(Boolean reconciling) {
             return reconciling(Output.of(reconciling));
         }
 
+        /**
+         * @param revisionCreateTime Output only. The timestamp that the revision was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revisionCreateTime(@Nullable Output<String> revisionCreateTime) {
             $.revisionCreateTime = revisionCreateTime;
             return this;
         }
 
+        /**
+         * @param revisionCreateTime Output only. The timestamp that the revision was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revisionCreateTime(String revisionCreateTime) {
             return revisionCreateTime(Output.of(revisionCreateTime));
         }
 
+        /**
+         * @param revisionId Output only. The assignment revision ID A new revision is committed whenever a rollout is triggered for a OS policy
+         * assignment
+         * 
+         * @return builder
+         * 
+         */
         public Builder revisionId(@Nullable Output<String> revisionId) {
             $.revisionId = revisionId;
             return this;
         }
 
+        /**
+         * @param revisionId Output only. The assignment revision ID A new revision is committed whenever a rollout is triggered for a OS policy
+         * assignment
+         * 
+         * @return builder
+         * 
+         */
         public Builder revisionId(String revisionId) {
             return revisionId(Output.of(revisionId));
         }
 
+        /**
+         * @param rollout Required. Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollout(@Nullable Output<OsPolicyAssignmentRolloutGetArgs> rollout) {
             $.rollout = rollout;
             return this;
         }
 
+        /**
+         * @param rollout Required. Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollout(OsPolicyAssignmentRolloutGetArgs rollout) {
             return rollout(Output.of(rollout));
         }
 
+        /**
+         * @param rolloutState Output only. OS policy assignment rollout state Possible values: ROLLOUT_STATE_UNSPECIFIED, IN_PROGRESS, CANCELLING,
+         * CANCELLED, SUCCEEDED
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloutState(@Nullable Output<String> rolloutState) {
             $.rolloutState = rolloutState;
             return this;
         }
 
+        /**
+         * @param rolloutState Output only. OS policy assignment rollout state Possible values: ROLLOUT_STATE_UNSPECIFIED, IN_PROGRESS, CANCELLING,
+         * CANCELLED, SUCCEEDED
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloutState(String rolloutState) {
             return rolloutState(Output.of(rolloutState));
         }
 
+        /**
+         * @param uid Output only. Server generated unique id for the OS policy assignment resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(@Nullable Output<String> uid) {
             $.uid = uid;
             return this;
         }
 
+        /**
+         * @param uid Output only. Server generated unique id for the OS policy assignment resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(String uid) {
             return uid(Output.of(uid));
         }

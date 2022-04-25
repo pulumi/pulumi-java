@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch {
-    /**
-     * The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.
-     * 
-     */
+        /**
+         * @return The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.
+         * 
+         */
     private final @Nullable String exactMatch;
-    /**
-     * The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
-     * 
-     */
+        /**
+         * @return The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
+         * 
+         */
     private final String name;
-    /**
-     * Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.
-     * 
-     */
+        /**
+         * @return Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.
+         * 
+         */
     private final @Nullable Boolean presentMatch;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
     }
 
     /**
-     * The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.
+     * @return The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.
      * 
-    */
+     */
     public Optional<String> exactMatch() {
         return Optional.ofNullable(this.exactMatch);
     }
     /**
-     * The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
+     * @return The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.
+     * @return Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.
      * 
-    */
+     */
     public Optional<Boolean> presentMatch() {
         return Optional.ofNullable(this.presentMatch);
     }

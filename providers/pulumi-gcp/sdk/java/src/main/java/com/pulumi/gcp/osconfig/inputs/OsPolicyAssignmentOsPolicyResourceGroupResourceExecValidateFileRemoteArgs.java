@@ -22,6 +22,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFi
     @Import(name="sha256Checksum")
     private @Nullable Output<String> sha256Checksum;
 
+    /**
+     * @return SHA256 checksum of the remote file.
+     * 
+     */
     public Optional<Output<String>> sha256Checksum() {
         return Optional.ofNullable(this.sha256Checksum);
     }
@@ -33,6 +37,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFi
     @Import(name="uri", required=true)
     private Output<String> uri;
 
+    /**
+     * @return Required. URI for this repository.
+     * 
+     */
     public Output<String> uri() {
         return this.uri;
     }
@@ -62,20 +70,44 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFi
             $ = new OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileRemoteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sha256Checksum SHA256 checksum of the remote file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sha256Checksum(@Nullable Output<String> sha256Checksum) {
             $.sha256Checksum = sha256Checksum;
             return this;
         }
 
+        /**
+         * @param sha256Checksum SHA256 checksum of the remote file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sha256Checksum(String sha256Checksum) {
             return sha256Checksum(Output.of(sha256Checksum));
         }
 
+        /**
+         * @param uri Required. URI for this repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri Required. URI for this repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

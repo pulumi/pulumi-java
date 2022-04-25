@@ -23,6 +23,10 @@ public final class DefaultObjectACLArgs extends com.pulumi.resources.ResourceArg
     @Import(name="bucket", required=true)
     private Output<String> bucket;
 
+    /**
+     * @return The name of the bucket it applies to.
+     * 
+     */
     public Output<String> bucket() {
         return this.bucket;
     }
@@ -36,6 +40,12 @@ public final class DefaultObjectACLArgs extends com.pulumi.resources.ResourceArg
     @Import(name="roleEntities")
     private @Nullable Output<List<String>> roleEntities;
 
+    /**
+     * @return List of role/entity pairs in the form `ROLE:entity`.
+     * See [GCS Object ACL documentation](https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls) for more details.
+     * Omitting the field is the same as providing an empty list.
+     * 
+     */
     public Optional<Output<List<String>>> roleEntities() {
         return Optional.ofNullable(this.roleEntities);
     }
@@ -65,24 +75,60 @@ public final class DefaultObjectACLArgs extends com.pulumi.resources.ResourceArg
             $ = new DefaultObjectACLArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket The name of the bucket it applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket The name of the bucket it applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param roleEntities List of role/entity pairs in the form `ROLE:entity`.
+         * See [GCS Object ACL documentation](https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls) for more details.
+         * Omitting the field is the same as providing an empty list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleEntities(@Nullable Output<List<String>> roleEntities) {
             $.roleEntities = roleEntities;
             return this;
         }
 
+        /**
+         * @param roleEntities List of role/entity pairs in the form `ROLE:entity`.
+         * See [GCS Object ACL documentation](https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls) for more details.
+         * Omitting the field is the same as providing an empty list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleEntities(List<String> roleEntities) {
             return roleEntities(Output.of(roleEntities));
         }
 
+        /**
+         * @param roleEntities List of role/entity pairs in the form `ROLE:entity`.
+         * See [GCS Object ACL documentation](https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls) for more details.
+         * Omitting the field is the same as providing an empty list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleEntities(String... roleEntities) {
             return roleEntities(List.of(roleEntities));
         }

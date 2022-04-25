@@ -68,6 +68,10 @@ public final class GetClusterNodePool extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the cluster.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -204,6 +208,12 @@ public final class GetClusterNodePool extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param name The name of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GetGroupMembershipsMembershipRole {
-    /**
-     * The name of the MembershipRole. One of OWNER, MANAGER, MEMBER.
-     * 
-     */
+        /**
+         * @return The name of the MembershipRole. One of OWNER, MANAGER, MEMBER.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GetGroupMembershipsMembershipRole {
     }
 
     /**
-     * The name of the MembershipRole. One of OWNER, MANAGER, MEMBER.
+     * @return The name of the MembershipRole. One of OWNER, MANAGER, MEMBER.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

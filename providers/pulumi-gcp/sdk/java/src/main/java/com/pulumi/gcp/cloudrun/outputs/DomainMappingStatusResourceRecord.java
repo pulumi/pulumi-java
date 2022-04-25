@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DomainMappingStatusResourceRecord {
-    /**
-     * Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain
-     * 
-     */
+        /**
+         * @return Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain
+         * 
+         */
     private final @Nullable String name;
     private final @Nullable String rrdata;
     private final @Nullable String type;
@@ -30,9 +30,9 @@ public final class DomainMappingStatusResourceRecord {
     }
 
     /**
-     * Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain
+     * @return Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

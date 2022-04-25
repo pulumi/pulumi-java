@@ -31,6 +31,19 @@ public final class OccurenceAttestationSignatureArgs extends com.pulumi.resource
     @Import(name="publicKeyId", required=true)
     private Output<String> publicKeyId;
 
+    /**
+     * @return The identifier for the public key that verifies this
+     * signature. MUST be an RFC3986 conformant
+     * URI. * When possible, the key id should be an
+     * immutable reference, such as a cryptographic digest.
+     * Examples of valid values:
+     * * OpenPGP V4 public key fingerprint. See https://www.iana.org/assignments/uri-schemes/prov/openpgp4fpr
+     *   for more details on this scheme.
+     * * `openpgp4fpr:74FAF3B861BDA0870C7B6DEF607E48D2A663AEEA`
+     * * RFC6920 digest-named SubjectPublicKeyInfo (digest of the DER serialization):
+     * * &#34;ni:///sha-256;cD9o9Cq6LG3jD0iKXqEi_vdjJGecm_iXkbqVoScViaU&#34;
+     * 
+     */
     public Output<String> publicKeyId() {
         return this.publicKeyId;
     }
@@ -48,6 +61,16 @@ public final class OccurenceAttestationSignatureArgs extends com.pulumi.resource
     @Import(name="signature")
     private @Nullable Output<String> signature;
 
+    /**
+     * @return The content of the signature, an opaque bytestring.
+     * The payload that this signature verifies MUST be
+     * unambiguously provided with the Signature during
+     * verification. A wrapper message might provide the
+     * payload explicitly. Alternatively, a message might
+     * have a canonical serialization that can always be
+     * unambiguously computed to derive the payload.
+     * 
+     */
     public Optional<Output<String>> signature() {
         return Optional.ofNullable(this.signature);
     }
@@ -77,20 +100,74 @@ public final class OccurenceAttestationSignatureArgs extends com.pulumi.resource
             $ = new OccurenceAttestationSignatureArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publicKeyId The identifier for the public key that verifies this
+         * signature. MUST be an RFC3986 conformant
+         * URI. * When possible, the key id should be an
+         * immutable reference, such as a cryptographic digest.
+         * Examples of valid values:
+         * * OpenPGP V4 public key fingerprint. See https://www.iana.org/assignments/uri-schemes/prov/openpgp4fpr
+         *   for more details on this scheme.
+         * * `openpgp4fpr:74FAF3B861BDA0870C7B6DEF607E48D2A663AEEA`
+         * * RFC6920 digest-named SubjectPublicKeyInfo (digest of the DER serialization):
+         * * &#34;ni:///sha-256;cD9o9Cq6LG3jD0iKXqEi_vdjJGecm_iXkbqVoScViaU&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeyId(Output<String> publicKeyId) {
             $.publicKeyId = publicKeyId;
             return this;
         }
 
+        /**
+         * @param publicKeyId The identifier for the public key that verifies this
+         * signature. MUST be an RFC3986 conformant
+         * URI. * When possible, the key id should be an
+         * immutable reference, such as a cryptographic digest.
+         * Examples of valid values:
+         * * OpenPGP V4 public key fingerprint. See https://www.iana.org/assignments/uri-schemes/prov/openpgp4fpr
+         *   for more details on this scheme.
+         * * `openpgp4fpr:74FAF3B861BDA0870C7B6DEF607E48D2A663AEEA`
+         * * RFC6920 digest-named SubjectPublicKeyInfo (digest of the DER serialization):
+         * * &#34;ni:///sha-256;cD9o9Cq6LG3jD0iKXqEi_vdjJGecm_iXkbqVoScViaU&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeyId(String publicKeyId) {
             return publicKeyId(Output.of(publicKeyId));
         }
 
+        /**
+         * @param signature The content of the signature, an opaque bytestring.
+         * The payload that this signature verifies MUST be
+         * unambiguously provided with the Signature during
+         * verification. A wrapper message might provide the
+         * payload explicitly. Alternatively, a message might
+         * have a canonical serialization that can always be
+         * unambiguously computed to derive the payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signature(@Nullable Output<String> signature) {
             $.signature = signature;
             return this;
         }
 
+        /**
+         * @param signature The content of the signature, an opaque bytestring.
+         * The payload that this signature verifies MUST be
+         * unambiguously provided with the Signature during
+         * verification. A wrapper message might provide the
+         * payload explicitly. Alternatively, a message might
+         * have a canonical serialization that can always be
+         * unambiguously computed to derive the payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signature(String signature) {
             return signature(Output.of(signature));
         }

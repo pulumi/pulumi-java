@@ -13,47 +13,47 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FlexibleAppVersionHandlerStaticFiles {
-    /**
-     * Whether files should also be uploaded as code data. By default, files declared in static file handlers are
-     * uploaded as static data and are only served to end users; they cannot be read by the application. If enabled,
-     * uploads are charged against both your code and static data storage resource quotas.
-     * 
-     */
+        /**
+         * @return Whether files should also be uploaded as code data. By default, files declared in static file handlers are
+         * uploaded as static data and are only served to end users; they cannot be read by the application. If enabled,
+         * uploads are charged against both your code and static data storage resource quotas.
+         * 
+         */
     private final @Nullable Boolean applicationReadable;
-    /**
-     * Time a static file served by this handler should be cached by web proxies and browsers.
-     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example &#34;3.5s&#34;.
-     * Default is &#39;0s&#39;
-     * 
-     */
+        /**
+         * @return Time a static file served by this handler should be cached by web proxies and browsers.
+         * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example &#34;3.5s&#34;.
+         * Default is &#39;0s&#39;
+         * 
+         */
     private final @Nullable String expiration;
-    /**
-     * HTTP headers to use for all responses from these URLs.
-     * An object containing a list of &#34;key:value&#34; value pairs.&#34;.
-     * 
-     */
+        /**
+         * @return HTTP headers to use for all responses from these URLs.
+         * An object containing a list of &#34;key:value&#34; value pairs.&#34;.
+         * 
+         */
     private final @Nullable Map<String,String> httpHeaders;
-    /**
-     * MIME type used to serve all files served by this handler.
-     * Defaults to file-specific MIME types, which are derived from each file&#39;s filename extension.
-     * 
-     */
+        /**
+         * @return MIME type used to serve all files served by this handler.
+         * Defaults to file-specific MIME types, which are derived from each file&#39;s filename extension.
+         * 
+         */
     private final @Nullable String mimeType;
-    /**
-     * Path to the static files matched by the URL pattern, from the application root directory.
-     * The path can refer to text matched in groupings in the URL pattern.
-     * 
-     */
+        /**
+         * @return Path to the static files matched by the URL pattern, from the application root directory.
+         * The path can refer to text matched in groupings in the URL pattern.
+         * 
+         */
     private final @Nullable String path;
-    /**
-     * Whether this handler should match the request if the file referenced by the handler does not exist.
-     * 
-     */
+        /**
+         * @return Whether this handler should match the request if the file referenced by the handler does not exist.
+         * 
+         */
     private final @Nullable Boolean requireMatchingFile;
-    /**
-     * Regular expression that matches the file paths for all files that should be referenced by this handler.
-     * 
-     */
+        /**
+         * @return Regular expression that matches the file paths for all files that should be referenced by this handler.
+         * 
+         */
     private final @Nullable String uploadPathRegex;
 
     @CustomType.Constructor
@@ -75,58 +75,58 @@ public final class FlexibleAppVersionHandlerStaticFiles {
     }
 
     /**
-     * Whether files should also be uploaded as code data. By default, files declared in static file handlers are
+     * @return Whether files should also be uploaded as code data. By default, files declared in static file handlers are
      * uploaded as static data and are only served to end users; they cannot be read by the application. If enabled,
      * uploads are charged against both your code and static data storage resource quotas.
      * 
-    */
+     */
     public Optional<Boolean> applicationReadable() {
         return Optional.ofNullable(this.applicationReadable);
     }
     /**
-     * Time a static file served by this handler should be cached by web proxies and browsers.
+     * @return Time a static file served by this handler should be cached by web proxies and browsers.
      * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example &#34;3.5s&#34;.
      * Default is &#39;0s&#39;
      * 
-    */
+     */
     public Optional<String> expiration() {
         return Optional.ofNullable(this.expiration);
     }
     /**
-     * HTTP headers to use for all responses from these URLs.
+     * @return HTTP headers to use for all responses from these URLs.
      * An object containing a list of &#34;key:value&#34; value pairs.&#34;.
      * 
-    */
+     */
     public Map<String,String> httpHeaders() {
         return this.httpHeaders == null ? Map.of() : this.httpHeaders;
     }
     /**
-     * MIME type used to serve all files served by this handler.
+     * @return MIME type used to serve all files served by this handler.
      * Defaults to file-specific MIME types, which are derived from each file&#39;s filename extension.
      * 
-    */
+     */
     public Optional<String> mimeType() {
         return Optional.ofNullable(this.mimeType);
     }
     /**
-     * Path to the static files matched by the URL pattern, from the application root directory.
+     * @return Path to the static files matched by the URL pattern, from the application root directory.
      * The path can refer to text matched in groupings in the URL pattern.
      * 
-    */
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
-     * Whether this handler should match the request if the file referenced by the handler does not exist.
+     * @return Whether this handler should match the request if the file referenced by the handler does not exist.
      * 
-    */
+     */
     public Optional<Boolean> requireMatchingFile() {
         return Optional.ofNullable(this.requireMatchingFile);
     }
     /**
-     * Regular expression that matches the file paths for all files that should be referenced by this handler.
+     * @return Regular expression that matches the file paths for all files that should be referenced by this handler.
      * 
-    */
+     */
     public Optional<String> uploadPathRegex() {
         return Optional.ofNullable(this.uploadPathRegex);
     }

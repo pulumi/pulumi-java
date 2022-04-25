@@ -31,6 +31,15 @@ public final class JobCopyGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createDisposition")
     private @Nullable Output<String> createDisposition;
 
+    /**
+     * @return Specifies whether the job is allowed to create new tables. The following values are supported:
+     * CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
+     * CREATE_NEVER: The table must already exist. If it does not, a &#39;notFound&#39; error is returned in the job result.
+     * Creation, truncation and append actions occur as one atomic update upon job completion
+     * Default value is `CREATE_IF_NEEDED`.
+     * Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
+     * 
+     */
     public Optional<Output<String>> createDisposition() {
         return Optional.ofNullable(this.createDisposition);
     }
@@ -43,6 +52,11 @@ public final class JobCopyGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationEncryptionConfiguration")
     private @Nullable Output<JobCopyDestinationEncryptionConfigurationGetArgs> destinationEncryptionConfiguration;
 
+    /**
+     * @return Custom encryption configuration (e.g., Cloud KMS keys)
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<JobCopyDestinationEncryptionConfigurationGetArgs>> destinationEncryptionConfiguration() {
         return Optional.ofNullable(this.destinationEncryptionConfiguration);
     }
@@ -55,6 +69,11 @@ public final class JobCopyGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationTable")
     private @Nullable Output<JobCopyDestinationTableGetArgs> destinationTable;
 
+    /**
+     * @return The destination table.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<JobCopyDestinationTableGetArgs>> destinationTable() {
         return Optional.ofNullable(this.destinationTable);
     }
@@ -67,6 +86,11 @@ public final class JobCopyGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceTables", required=true)
     private Output<List<JobCopySourceTableGetArgs>> sourceTables;
 
+    /**
+     * @return Source tables to copy.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<JobCopySourceTableGetArgs>> sourceTables() {
         return this.sourceTables;
     }
@@ -85,6 +109,17 @@ public final class JobCopyGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="writeDisposition")
     private @Nullable Output<String> writeDisposition;
 
+    /**
+     * @return Specifies the action that occurs if the destination table already exists. The following values are supported:
+     * WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
+     * WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
+     * WRITE_EMPTY: If the table already exists and contains data, a &#39;duplicate&#39; error is returned in the job result.
+     * Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+     * Creation, truncation and append actions occur as one atomic update upon job completion.
+     * Default value is `WRITE_EMPTY`.
+     * Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
+     * 
+     */
     public Optional<Output<String>> writeDisposition() {
         return Optional.ofNullable(this.writeDisposition);
     }
@@ -117,51 +152,148 @@ public final class JobCopyGetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobCopyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createDisposition Specifies whether the job is allowed to create new tables. The following values are supported:
+         * CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
+         * CREATE_NEVER: The table must already exist. If it does not, a &#39;notFound&#39; error is returned in the job result.
+         * Creation, truncation and append actions occur as one atomic update upon job completion
+         * Default value is `CREATE_IF_NEEDED`.
+         * Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createDisposition(@Nullable Output<String> createDisposition) {
             $.createDisposition = createDisposition;
             return this;
         }
 
+        /**
+         * @param createDisposition Specifies whether the job is allowed to create new tables. The following values are supported:
+         * CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
+         * CREATE_NEVER: The table must already exist. If it does not, a &#39;notFound&#39; error is returned in the job result.
+         * Creation, truncation and append actions occur as one atomic update upon job completion
+         * Default value is `CREATE_IF_NEEDED`.
+         * Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createDisposition(String createDisposition) {
             return createDisposition(Output.of(createDisposition));
         }
 
+        /**
+         * @param destinationEncryptionConfiguration Custom encryption configuration (e.g., Cloud KMS keys)
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationEncryptionConfiguration(@Nullable Output<JobCopyDestinationEncryptionConfigurationGetArgs> destinationEncryptionConfiguration) {
             $.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
             return this;
         }
 
+        /**
+         * @param destinationEncryptionConfiguration Custom encryption configuration (e.g., Cloud KMS keys)
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationEncryptionConfiguration(JobCopyDestinationEncryptionConfigurationGetArgs destinationEncryptionConfiguration) {
             return destinationEncryptionConfiguration(Output.of(destinationEncryptionConfiguration));
         }
 
+        /**
+         * @param destinationTable The destination table.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationTable(@Nullable Output<JobCopyDestinationTableGetArgs> destinationTable) {
             $.destinationTable = destinationTable;
             return this;
         }
 
+        /**
+         * @param destinationTable The destination table.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationTable(JobCopyDestinationTableGetArgs destinationTable) {
             return destinationTable(Output.of(destinationTable));
         }
 
+        /**
+         * @param sourceTables Source tables to copy.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTables(Output<List<JobCopySourceTableGetArgs>> sourceTables) {
             $.sourceTables = sourceTables;
             return this;
         }
 
+        /**
+         * @param sourceTables Source tables to copy.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTables(List<JobCopySourceTableGetArgs> sourceTables) {
             return sourceTables(Output.of(sourceTables));
         }
 
+        /**
+         * @param sourceTables Source tables to copy.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTables(JobCopySourceTableGetArgs... sourceTables) {
             return sourceTables(List.of(sourceTables));
         }
 
+        /**
+         * @param writeDisposition Specifies the action that occurs if the destination table already exists. The following values are supported:
+         * WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
+         * WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
+         * WRITE_EMPTY: If the table already exists and contains data, a &#39;duplicate&#39; error is returned in the job result.
+         * Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+         * Creation, truncation and append actions occur as one atomic update upon job completion.
+         * Default value is `WRITE_EMPTY`.
+         * Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeDisposition(@Nullable Output<String> writeDisposition) {
             $.writeDisposition = writeDisposition;
             return this;
         }
 
+        /**
+         * @param writeDisposition Specifies the action that occurs if the destination table already exists. The following values are supported:
+         * WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
+         * WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
+         * WRITE_EMPTY: If the table already exists and contains data, a &#39;duplicate&#39; error is returned in the job result.
+         * Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+         * Creation, truncation and append actions occur as one atomic update upon job completion.
+         * Default value is `WRITE_EMPTY`.
+         * Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeDisposition(String writeDisposition) {
             return writeDisposition(Output.of(writeDisposition));
         }

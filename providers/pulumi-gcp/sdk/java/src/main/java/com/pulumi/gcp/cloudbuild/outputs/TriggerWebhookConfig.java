@@ -11,18 +11,18 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TriggerWebhookConfig {
-    /**
-     * Secrets to decrypt using Cloud Key Management Service.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Secrets to decrypt using Cloud Key Management Service.
+         * Structure is documented below.
+         * 
+         */
     private final String secret;
-    /**
-     * - 
-     * Potential issues with the underlying Pub/Sub subscription configuration.
-     * Only populated on get requests.
-     * 
-     */
+        /**
+         * @return -
+         * Potential issues with the underlying Pub/Sub subscription configuration.
+         * Only populated on get requests.
+         * 
+         */
     private final @Nullable String state;
 
     @CustomType.Constructor
@@ -34,19 +34,19 @@ public final class TriggerWebhookConfig {
     }
 
     /**
-     * Secrets to decrypt using Cloud Key Management Service.
+     * @return Secrets to decrypt using Cloud Key Management Service.
      * Structure is documented below.
      * 
-    */
+     */
     public String secret() {
         return this.secret;
     }
     /**
-     * - 
+     * @return -
      * Potential issues with the underlying Pub/Sub subscription configuration.
      * Only populated on get requests.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }

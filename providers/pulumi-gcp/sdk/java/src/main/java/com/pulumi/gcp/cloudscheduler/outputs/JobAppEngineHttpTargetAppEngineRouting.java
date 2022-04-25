@@ -11,23 +11,23 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class JobAppEngineHttpTargetAppEngineRouting {
-    /**
-     * App instance.
-     * By default, the job is sent to an instance which is available when the job is attempted.
-     * 
-     */
+        /**
+         * @return App instance.
+         * By default, the job is sent to an instance which is available when the job is attempted.
+         * 
+         */
     private final @Nullable String instance;
-    /**
-     * App service.
-     * By default, the job is sent to the service which is the default service when the job is attempted.
-     * 
-     */
+        /**
+         * @return App service.
+         * By default, the job is sent to the service which is the default service when the job is attempted.
+         * 
+         */
     private final @Nullable String service;
-    /**
-     * App version.
-     * By default, the job is sent to the version which is the default version when the job is attempted.
-     * 
-     */
+        /**
+         * @return App version.
+         * By default, the job is sent to the version which is the default version when the job is attempted.
+         * 
+         */
     private final @Nullable String version;
 
     @CustomType.Constructor
@@ -41,26 +41,26 @@ public final class JobAppEngineHttpTargetAppEngineRouting {
     }
 
     /**
-     * App instance.
+     * @return App instance.
      * By default, the job is sent to an instance which is available when the job is attempted.
      * 
-    */
+     */
     public Optional<String> instance() {
         return Optional.ofNullable(this.instance);
     }
     /**
-     * App service.
+     * @return App service.
      * By default, the job is sent to the service which is the default service when the job is attempted.
      * 
-    */
+     */
     public Optional<String> service() {
         return Optional.ofNullable(this.service);
     }
     /**
-     * App version.
+     * @return App version.
      * By default, the job is sent to the version which is the default version when the job is attempted.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

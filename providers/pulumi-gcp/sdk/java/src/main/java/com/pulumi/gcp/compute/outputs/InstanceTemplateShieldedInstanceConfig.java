@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class InstanceTemplateShieldedInstanceConfig {
-    /**
-     * -- Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.
-     * 
-     */
+        /**
+         * @return -- Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.
+         * 
+         */
     private final @Nullable Boolean enableIntegrityMonitoring;
-    /**
-     * -- Verify the digital signature of all boot components, and halt the boot process if signature verification fails. Defaults to false.
-     * 
-     */
+        /**
+         * @return -- Verify the digital signature of all boot components, and halt the boot process if signature verification fails. Defaults to false.
+         * 
+         */
     private final @Nullable Boolean enableSecureBoot;
-    /**
-     * -- Use a virtualized trusted platform module, which is a specialized computer chip you can use to encrypt objects like keys and certificates. Defaults to true.
-     * 
-     */
+        /**
+         * @return -- Use a virtualized trusted platform module, which is a specialized computer chip you can use to encrypt objects like keys and certificates. Defaults to true.
+         * 
+         */
     private final @Nullable Boolean enableVtpm;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class InstanceTemplateShieldedInstanceConfig {
     }
 
     /**
-     * -- Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.
+     * @return -- Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.
      * 
-    */
+     */
     public Optional<Boolean> enableIntegrityMonitoring() {
         return Optional.ofNullable(this.enableIntegrityMonitoring);
     }
     /**
-     * -- Verify the digital signature of all boot components, and halt the boot process if signature verification fails. Defaults to false.
+     * @return -- Verify the digital signature of all boot components, and halt the boot process if signature verification fails. Defaults to false.
      * 
-    */
+     */
     public Optional<Boolean> enableSecureBoot() {
         return Optional.ofNullable(this.enableSecureBoot);
     }
     /**
-     * -- Use a virtualized trusted platform module, which is a specialized computer chip you can use to encrypt objects like keys and certificates. Defaults to true.
+     * @return -- Use a virtualized trusted platform module, which is a specialized computer chip you can use to encrypt objects like keys and certificates. Defaults to true.
      * 
-    */
+     */
     public Optional<Boolean> enableVtpm() {
         return Optional.ofNullable(this.enableVtpm);
     }

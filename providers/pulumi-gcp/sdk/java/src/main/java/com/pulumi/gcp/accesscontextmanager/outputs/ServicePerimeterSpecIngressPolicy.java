@@ -12,19 +12,19 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ServicePerimeterSpecIngressPolicy {
-    /**
-     * Defines the conditions on the source of a request causing this `IngressPolicy`
-     * to apply.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Defines the conditions on the source of a request causing this `IngressPolicy`
+         * to apply.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable ServicePerimeterSpecIngressPolicyIngressFrom ingressFrom;
-    /**
-     * Defines the conditions on the `ApiOperation` and request destination that cause
-     * this `IngressPolicy` to apply.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Defines the conditions on the `ApiOperation` and request destination that cause
+         * this `IngressPolicy` to apply.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable ServicePerimeterSpecIngressPolicyIngressTo ingressTo;
 
     @CustomType.Constructor
@@ -36,20 +36,20 @@ public final class ServicePerimeterSpecIngressPolicy {
     }
 
     /**
-     * Defines the conditions on the source of a request causing this `IngressPolicy`
+     * @return Defines the conditions on the source of a request causing this `IngressPolicy`
      * to apply.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<ServicePerimeterSpecIngressPolicyIngressFrom> ingressFrom() {
         return Optional.ofNullable(this.ingressFrom);
     }
     /**
-     * Defines the conditions on the `ApiOperation` and request destination that cause
+     * @return Defines the conditions on the `ApiOperation` and request destination that cause
      * this `IngressPolicy` to apply.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<ServicePerimeterSpecIngressPolicyIngressTo> ingressTo() {
         return Optional.ofNullable(this.ingressTo);
     }

@@ -12,16 +12,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PreventionStoredInfoTypeRegex {
-    /**
-     * The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
-     * 
-     */
+        /**
+         * @return The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
+         * 
+         */
     private final @Nullable List<Integer> groupIndexes;
-    /**
-     * Pattern defining the regular expression.
-     * Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
-     * 
-     */
+        /**
+         * @return Pattern defining the regular expression.
+         * Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
+         * 
+         */
     private final String pattern;
 
     @CustomType.Constructor
@@ -33,17 +33,17 @@ public final class PreventionStoredInfoTypeRegex {
     }
 
     /**
-     * The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
+     * @return The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
      * 
-    */
+     */
     public List<Integer> groupIndexes() {
         return this.groupIndexes == null ? List.of() : this.groupIndexes;
     }
     /**
-     * Pattern defining the regular expression.
+     * @return Pattern defining the regular expression.
      * Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
      * 
-    */
+     */
     public String pattern() {
         return this.pattern;
     }

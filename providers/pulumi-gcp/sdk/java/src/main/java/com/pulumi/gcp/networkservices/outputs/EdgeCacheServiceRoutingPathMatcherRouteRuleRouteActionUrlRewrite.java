@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite {
-    /**
-     * Prior to forwarding the request to the selected origin, the request&#39;s host header is replaced with contents of hostRewrite.
-     * 
-     */
+        /**
+         * @return Prior to forwarding the request to the selected origin, the request&#39;s host header is replaced with contents of hostRewrite.
+         * 
+         */
     private final @Nullable String hostRewrite;
-    /**
-     * Prior to forwarding the request to the selected origin, the matching portion of the request&#39;s path is replaced by pathPrefixRewrite.
-     * 
-     */
+        /**
+         * @return Prior to forwarding the request to the selected origin, the matching portion of the request&#39;s path is replaced by pathPrefixRewrite.
+         * 
+         */
     private final @Nullable String pathPrefixRewrite;
-    /**
-     * Prior to forwarding the request to the selected origin, if the
-     * request matched a pathTemplateMatch, the matching portion of the
-     * request&#39;s path is replaced re-written using the pattern specified
-     * by pathTemplateRewrite.
-     * pathTemplateRewrite must be between 1 and 255 characters
-     * (inclusive), must start with a &#39;/&#39;, and must only use variables
-     * captured by the route&#39;s pathTemplate matchers.
-     * pathTemplateRewrite may only be used when all of a route&#39;s
-     * MatchRules specify pathTemplate.
-     * Only one of pathPrefixRewrite and pathTemplateRewrite may be
-     * specified.
-     * 
-     */
+        /**
+         * @return Prior to forwarding the request to the selected origin, if the
+         * request matched a pathTemplateMatch, the matching portion of the
+         * request&#39;s path is replaced re-written using the pattern specified
+         * by pathTemplateRewrite.
+         * pathTemplateRewrite must be between 1 and 255 characters
+         * (inclusive), must start with a &#39;/&#39;, and must only use variables
+         * captured by the route&#39;s pathTemplate matchers.
+         * pathTemplateRewrite may only be used when all of a route&#39;s
+         * MatchRules specify pathTemplate.
+         * Only one of pathPrefixRewrite and pathTemplateRewrite may be
+         * specified.
+         * 
+         */
     private final @Nullable String pathTemplateRewrite;
 
     @CustomType.Constructor
@@ -48,21 +48,21 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
     }
 
     /**
-     * Prior to forwarding the request to the selected origin, the request&#39;s host header is replaced with contents of hostRewrite.
+     * @return Prior to forwarding the request to the selected origin, the request&#39;s host header is replaced with contents of hostRewrite.
      * 
-    */
+     */
     public Optional<String> hostRewrite() {
         return Optional.ofNullable(this.hostRewrite);
     }
     /**
-     * Prior to forwarding the request to the selected origin, the matching portion of the request&#39;s path is replaced by pathPrefixRewrite.
+     * @return Prior to forwarding the request to the selected origin, the matching portion of the request&#39;s path is replaced by pathPrefixRewrite.
      * 
-    */
+     */
     public Optional<String> pathPrefixRewrite() {
         return Optional.ofNullable(this.pathPrefixRewrite);
     }
     /**
-     * Prior to forwarding the request to the selected origin, if the
+     * @return Prior to forwarding the request to the selected origin, if the
      * request matched a pathTemplateMatch, the matching portion of the
      * request&#39;s path is replaced re-written using the pattern specified
      * by pathTemplateRewrite.
@@ -74,7 +74,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
      * Only one of pathPrefixRewrite and pathTemplateRewrite may be
      * specified.
      * 
-    */
+     */
     public Optional<String> pathTemplateRewrite() {
         return Optional.ofNullable(this.pathTemplateRewrite);
     }

@@ -22,6 +22,10 @@ public final class CxPageEventHandlerTriggerFulfillmentMessageArgs extends com.p
     @Import(name="text")
     private @Nullable Output<CxPageEventHandlerTriggerFulfillmentMessageTextArgs> text;
 
+    /**
+     * @return A collection of text responses.
+     * 
+     */
     public Optional<Output<CxPageEventHandlerTriggerFulfillmentMessageTextArgs>> text() {
         return Optional.ofNullable(this.text);
     }
@@ -50,11 +54,23 @@ public final class CxPageEventHandlerTriggerFulfillmentMessageArgs extends com.p
             $ = new CxPageEventHandlerTriggerFulfillmentMessageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param text A collection of text responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(@Nullable Output<CxPageEventHandlerTriggerFulfillmentMessageTextArgs> text) {
             $.text = text;
             return this;
         }
 
+        /**
+         * @param text A collection of text responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(CxPageEventHandlerTriggerFulfillmentMessageTextArgs text) {
             return text(Output.of(text));
         }

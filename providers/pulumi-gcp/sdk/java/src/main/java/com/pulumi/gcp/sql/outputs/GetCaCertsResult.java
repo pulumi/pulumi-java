@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GetCaCertsResult {
-    /**
-     * SHA1 fingerprint of the currently active CA certificate.
-     * 
-     */
+        /**
+         * @return SHA1 fingerprint of the currently active CA certificate.
+         * 
+         */
     private final String activeVersion;
-    /**
-     * A list of server CA certificates for the instance. Each contains:
-     * 
-     */
+        /**
+         * @return A list of server CA certificates for the instance. Each contains:
+         * 
+         */
     private final List<GetCaCertsCert> certs;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String instance;
     private final String project;
@@ -44,23 +44,23 @@ public final class GetCaCertsResult {
     }
 
     /**
-     * SHA1 fingerprint of the currently active CA certificate.
+     * @return SHA1 fingerprint of the currently active CA certificate.
      * 
-    */
+     */
     public String activeVersion() {
         return this.activeVersion;
     }
     /**
-     * A list of server CA certificates for the instance. Each contains:
+     * @return A list of server CA certificates for the instance. Each contains:
      * 
-    */
+     */
     public List<GetCaCertsCert> certs() {
         return this.certs;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

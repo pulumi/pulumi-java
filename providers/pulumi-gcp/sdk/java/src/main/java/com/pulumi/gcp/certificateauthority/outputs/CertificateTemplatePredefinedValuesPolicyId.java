@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class CertificateTemplatePredefinedValuesPolicyId {
-    /**
-     * Required. The parts of an OID path. The most significant parts of the path come first.
-     * 
-     */
+        /**
+         * @return Required. The parts of an OID path. The most significant parts of the path come first.
+         * 
+         */
     private final List<Integer> objectIdPaths;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class CertificateTemplatePredefinedValuesPolicyId {
     }
 
     /**
-     * Required. The parts of an OID path. The most significant parts of the path come first.
+     * @return Required. The parts of an OID path. The most significant parts of the path come first.
      * 
-    */
+     */
     public List<Integer> objectIdPaths() {
         return this.objectIdPaths;
     }

@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ResourcePolicySnapshotSchedulePolicy {
-    /**
-     * Retention policy applied to snapshots created by this resource policy.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Retention policy applied to snapshots created by this resource policy.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable ResourcePolicySnapshotSchedulePolicyRetentionPolicy retentionPolicy;
-    /**
-     * Specifies the frequency for the operation, using the unix-cron format.
-     * 
-     */
+        /**
+         * @return Specifies the frequency for the operation, using the unix-cron format.
+         * 
+         */
     private final ResourcePolicySnapshotSchedulePolicySchedule schedule;
-    /**
-     * Properties with which the snapshots are created, such as labels.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Properties with which the snapshots are created, such as labels.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable ResourcePolicySnapshotSchedulePolicySnapshotProperties snapshotProperties;
 
     @CustomType.Constructor
@@ -42,25 +42,25 @@ public final class ResourcePolicySnapshotSchedulePolicy {
     }
 
     /**
-     * Retention policy applied to snapshots created by this resource policy.
+     * @return Retention policy applied to snapshots created by this resource policy.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<ResourcePolicySnapshotSchedulePolicyRetentionPolicy> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
     /**
-     * Specifies the frequency for the operation, using the unix-cron format.
+     * @return Specifies the frequency for the operation, using the unix-cron format.
      * 
-    */
+     */
     public ResourcePolicySnapshotSchedulePolicySchedule schedule() {
         return this.schedule;
     }
     /**
-     * Properties with which the snapshots are created, such as labels.
+     * @return Properties with which the snapshots are created, such as labels.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<ResourcePolicySnapshotSchedulePolicySnapshotProperties> snapshotProperties() {
         return Optional.ofNullable(this.snapshotProperties);
     }

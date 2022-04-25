@@ -11,17 +11,17 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DatabaseInstanceSettingsLocationPreference {
-    /**
-     * A GAE application whose zone to remain
-     * in. Must be in the same region as this instance.
-     * 
-     */
+        /**
+         * @return A GAE application whose zone to remain
+         * in. Must be in the same region as this instance.
+         * 
+         */
     private final @Nullable String followGaeApplication;
-    /**
-     * The preferred compute engine
-     * [zone](https://cloud.google.com/compute/docs/zones?hl=en).
-     * 
-     */
+        /**
+         * @return The preferred compute engine
+         * [zone](https://cloud.google.com/compute/docs/zones?hl=en).
+         * 
+         */
     private final @Nullable String zone;
 
     @CustomType.Constructor
@@ -33,18 +33,18 @@ public final class DatabaseInstanceSettingsLocationPreference {
     }
 
     /**
-     * A GAE application whose zone to remain
+     * @return A GAE application whose zone to remain
      * in. Must be in the same region as this instance.
      * 
-    */
+     */
     public Optional<String> followGaeApplication() {
         return Optional.ofNullable(this.followGaeApplication);
     }
     /**
-     * The preferred compute engine
+     * @return The preferred compute engine
      * [zone](https://cloud.google.com/compute/docs/zones?hl=en).
      * 
-    */
+     */
     public Optional<String> zone() {
         return Optional.ofNullable(this.zone);
     }

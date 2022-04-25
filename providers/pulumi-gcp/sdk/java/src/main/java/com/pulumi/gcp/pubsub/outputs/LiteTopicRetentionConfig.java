@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LiteTopicRetentionConfig {
-    /**
-     * The provisioned storage, in bytes, per partition. If the number of bytes stored
-     * in any of the topic&#39;s partitions grows beyond this value, older messages will be
-     * dropped to make room for newer ones, regardless of the value of period.
-     * 
-     */
+        /**
+         * @return The provisioned storage, in bytes, per partition. If the number of bytes stored
+         * in any of the topic&#39;s partitions grows beyond this value, older messages will be
+         * dropped to make room for newer ones, regardless of the value of period.
+         * 
+         */
     private final String perPartitionBytes;
-    /**
-     * How long a published message is retained. If unset, messages will be retained as
-     * long as the bytes retained for each partition is below perPartitionBytes. A
-     * duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;.
-     * Example: &#34;3.5s&#34;.
-     * 
-     */
+        /**
+         * @return How long a published message is retained. If unset, messages will be retained as
+         * long as the bytes retained for each partition is below perPartitionBytes. A
+         * duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;.
+         * Example: &#34;3.5s&#34;.
+         * 
+         */
     private final @Nullable String period;
 
     @CustomType.Constructor
@@ -36,21 +36,21 @@ public final class LiteTopicRetentionConfig {
     }
 
     /**
-     * The provisioned storage, in bytes, per partition. If the number of bytes stored
+     * @return The provisioned storage, in bytes, per partition. If the number of bytes stored
      * in any of the topic&#39;s partitions grows beyond this value, older messages will be
      * dropped to make room for newer ones, regardless of the value of period.
      * 
-    */
+     */
     public String perPartitionBytes() {
         return this.perPartitionBytes;
     }
     /**
-     * How long a published message is retained. If unset, messages will be retained as
+     * @return How long a published message is retained. If unset, messages will be retained as
      * long as the bytes retained for each partition is below perPartitionBytes. A
      * duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;.
      * Example: &#34;3.5s&#34;.
      * 
-    */
+     */
     public Optional<String> period() {
         return Optional.ofNullable(this.period);
     }

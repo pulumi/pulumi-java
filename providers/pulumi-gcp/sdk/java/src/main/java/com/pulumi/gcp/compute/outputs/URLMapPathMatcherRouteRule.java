@@ -17,61 +17,61 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class URLMapPathMatcherRouteRule {
-    /**
-     * Specifies changes to request and response headers that need to take effect for
-     * the selected backendService.
-     * headerAction specified here take effect before headerAction in the enclosing
-     * HttpRouteRule, PathMatcher and UrlMap.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Specifies changes to request and response headers that need to take effect for
+         * the selected backendService.
+         * headerAction specified here take effect before headerAction in the enclosing
+         * HttpRouteRule, PathMatcher and UrlMap.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable URLMapPathMatcherRouteRuleHeaderAction headerAction;
-    /**
-     * The rules for determining a match.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return The rules for determining a match.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<URLMapPathMatcherRouteRuleMatchRule> matchRules;
-    /**
-     * For routeRules within a given pathMatcher, priority determines the order
-     * in which load balancer will interpret routeRules. RouteRules are evaluated
-     * in order of priority, from the lowest to highest number. The priority of
-     * a rule decreases as its number increases (1, 2, 3, N+1). The first rule
-     * that matches the request is applied.
-     * You cannot configure two or more routeRules with the same priority.
-     * Priority for each rule must be set to a number between 0 and
-     * 2147483647 inclusive.
-     * Priority numbers can have gaps, which enable you to add or remove rules
-     * in the future without affecting the rest of the rules. For example,
-     * 1, 2, 3, 4, 5, 9, 12, 16 is a valid series of priority numbers to which
-     * you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the
-     * future without any impact on existing rules.
-     * 
-     */
+        /**
+         * @return For routeRules within a given pathMatcher, priority determines the order
+         * in which load balancer will interpret routeRules. RouteRules are evaluated
+         * in order of priority, from the lowest to highest number. The priority of
+         * a rule decreases as its number increases (1, 2, 3, N+1). The first rule
+         * that matches the request is applied.
+         * You cannot configure two or more routeRules with the same priority.
+         * Priority for each rule must be set to a number between 0 and
+         * 2147483647 inclusive.
+         * Priority numbers can have gaps, which enable you to add or remove rules
+         * in the future without affecting the rest of the rules. For example,
+         * 1, 2, 3, 4, 5, 9, 12, 16 is a valid series of priority numbers to which
+         * you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the
+         * future without any impact on existing rules.
+         * 
+         */
     private final Integer priority;
-    /**
-     * In response to a matching matchRule, the load balancer performs advanced routing
-     * actions like URL rewrites, header transformations, etc. prior to forwarding the
-     * request to the selected backend. If  routeAction specifies any
-     * weightedBackendServices, service must not be set. Conversely if service is set,
-     * routeAction cannot contain any  weightedBackendServices. Only one of routeAction
-     * or urlRedirect must be set.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return In response to a matching matchRule, the load balancer performs advanced routing
+         * actions like URL rewrites, header transformations, etc. prior to forwarding the
+         * request to the selected backend. If  routeAction specifies any
+         * weightedBackendServices, service must not be set. Conversely if service is set,
+         * routeAction cannot contain any  weightedBackendServices. Only one of routeAction
+         * or urlRedirect must be set.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable URLMapPathMatcherRouteRuleRouteAction routeAction;
-    /**
-     * The backend service or backend bucket link that should be matched by this test.
-     * 
-     */
+        /**
+         * @return The backend service or backend bucket link that should be matched by this test.
+         * 
+         */
     private final @Nullable String service;
-    /**
-     * When this rule is matched, the request is redirected to a URL specified by
-     * urlRedirect. If urlRedirect is specified, service or routeAction must not be
-     * set.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return When this rule is matched, the request is redirected to a URL specified by
+         * urlRedirect. If urlRedirect is specified, service or routeAction must not be
+         * set.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable URLMapPathMatcherRouteRuleUrlRedirect urlRedirect;
 
     @CustomType.Constructor
@@ -91,26 +91,26 @@ public final class URLMapPathMatcherRouteRule {
     }
 
     /**
-     * Specifies changes to request and response headers that need to take effect for
+     * @return Specifies changes to request and response headers that need to take effect for
      * the selected backendService.
      * headerAction specified here take effect before headerAction in the enclosing
      * HttpRouteRule, PathMatcher and UrlMap.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<URLMapPathMatcherRouteRuleHeaderAction> headerAction() {
         return Optional.ofNullable(this.headerAction);
     }
     /**
-     * The rules for determining a match.
+     * @return The rules for determining a match.
      * Structure is documented below.
      * 
-    */
+     */
     public List<URLMapPathMatcherRouteRuleMatchRule> matchRules() {
         return this.matchRules == null ? List.of() : this.matchRules;
     }
     /**
-     * For routeRules within a given pathMatcher, priority determines the order
+     * @return For routeRules within a given pathMatcher, priority determines the order
      * in which load balancer will interpret routeRules. RouteRules are evaluated
      * in order of priority, from the lowest to highest number. The priority of
      * a rule decreases as its number increases (1, 2, 3, N+1). The first rule
@@ -124,12 +124,12 @@ public final class URLMapPathMatcherRouteRule {
      * you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the
      * future without any impact on existing rules.
      * 
-    */
+     */
     public Integer priority() {
         return this.priority;
     }
     /**
-     * In response to a matching matchRule, the load balancer performs advanced routing
+     * @return In response to a matching matchRule, the load balancer performs advanced routing
      * actions like URL rewrites, header transformations, etc. prior to forwarding the
      * request to the selected backend. If  routeAction specifies any
      * weightedBackendServices, service must not be set. Conversely if service is set,
@@ -137,24 +137,24 @@ public final class URLMapPathMatcherRouteRule {
      * or urlRedirect must be set.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<URLMapPathMatcherRouteRuleRouteAction> routeAction() {
         return Optional.ofNullable(this.routeAction);
     }
     /**
-     * The backend service or backend bucket link that should be matched by this test.
+     * @return The backend service or backend bucket link that should be matched by this test.
      * 
-    */
+     */
     public Optional<String> service() {
         return Optional.ofNullable(this.service);
     }
     /**
-     * When this rule is matched, the request is redirected to a URL specified by
+     * @return When this rule is matched, the request is redirected to a URL specified by
      * urlRedirect. If urlRedirect is specified, service or routeAction must not be
      * set.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<URLMapPathMatcherRouteRuleUrlRedirect> urlRedirect() {
         return Optional.ofNullable(this.urlRedirect);
     }

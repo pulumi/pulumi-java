@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AlertPolicyAlertStrategy {
-    /**
-     * If an alert policy that was active has no data for this long, any open incidents will close.
-     * 
-     */
+        /**
+         * @return If an alert policy that was active has no data for this long, any open incidents will close.
+         * 
+         */
     private final @Nullable String autoClose;
-    /**
-     * Required for alert policies with a LogMatch condition.
-     * This limit is not implemented for alert policies that are not log-based.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Required for alert policies with a LogMatch condition.
+         * This limit is not implemented for alert policies that are not log-based.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable AlertPolicyAlertStrategyNotificationRateLimit notificationRateLimit;
 
     @CustomType.Constructor
@@ -34,18 +34,18 @@ public final class AlertPolicyAlertStrategy {
     }
 
     /**
-     * If an alert policy that was active has no data for this long, any open incidents will close.
+     * @return If an alert policy that was active has no data for this long, any open incidents will close.
      * 
-    */
+     */
     public Optional<String> autoClose() {
         return Optional.ofNullable(this.autoClose);
     }
     /**
-     * Required for alert policies with a LogMatch condition.
+     * @return Required for alert policies with a LogMatch condition.
      * This limit is not implemented for alert policies that are not log-based.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<AlertPolicyAlertStrategyNotificationRateLimit> notificationRateLimit() {
         return Optional.ofNullable(this.notificationRateLimit);
     }

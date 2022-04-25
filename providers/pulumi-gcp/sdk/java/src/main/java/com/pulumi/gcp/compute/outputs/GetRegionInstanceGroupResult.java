@@ -12,28 +12,28 @@ import java.util.Objects;
 
 @CustomType
 public final class GetRegionInstanceGroupResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * List of instances in the group, as a list of resources, each containing:
-     * 
-     */
+        /**
+         * @return List of instances in the group, as a list of resources, each containing:
+         * 
+         */
     private final List<GetRegionInstanceGroupInstance> instances;
-    /**
-     * String port name
-     * 
-     */
+        /**
+         * @return String port name
+         * 
+         */
     private final String name;
     private final String project;
     private final String region;
     private final String selfLink;
-    /**
-     * The number of instances in the group.
-     * 
-     */
+        /**
+         * @return The number of instances in the group.
+         * 
+         */
     private final Integer size;
 
     @CustomType.Constructor
@@ -55,23 +55,23 @@ public final class GetRegionInstanceGroupResult {
     }
 
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * List of instances in the group, as a list of resources, each containing:
+     * @return List of instances in the group, as a list of resources, each containing:
      * 
-    */
+     */
     public List<GetRegionInstanceGroupInstance> instances() {
         return this.instances;
     }
     /**
-     * String port name
+     * @return String port name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
@@ -85,9 +85,9 @@ public final class GetRegionInstanceGroupResult {
         return this.selfLink;
     }
     /**
-     * The number of instances in the group.
+     * @return The number of instances in the group.
      * 
-    */
+     */
     public Integer size() {
         return this.size;
     }

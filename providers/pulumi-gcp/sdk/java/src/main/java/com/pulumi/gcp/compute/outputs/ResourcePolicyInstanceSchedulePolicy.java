@@ -13,33 +13,33 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ResourcePolicyInstanceSchedulePolicy {
-    /**
-     * The expiration time of the schedule. The timestamp is an RFC3339 string.
-     * 
-     */
+        /**
+         * @return The expiration time of the schedule. The timestamp is an RFC3339 string.
+         * 
+         */
     private final @Nullable String expirationTime;
-    /**
-     * The start time of the schedule. The timestamp is an RFC3339 string.
-     * 
-     */
+        /**
+         * @return The start time of the schedule. The timestamp is an RFC3339 string.
+         * 
+         */
     private final @Nullable String startTime;
-    /**
-     * Specifies the time zone to be used in interpreting the schedule. The value of this field must be a time zone name
-     * from the tz database: http://en.wikipedia.org/wiki/Tz_database.
-     * 
-     */
+        /**
+         * @return Specifies the time zone to be used in interpreting the schedule. The value of this field must be a time zone name
+         * from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+         * 
+         */
     private final String timeZone;
-    /**
-     * Specifies the schedule for starting instances.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Specifies the schedule for starting instances.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable ResourcePolicyInstanceSchedulePolicyVmStartSchedule vmStartSchedule;
-    /**
-     * Specifies the schedule for stopping instances.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Specifies the schedule for stopping instances.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable ResourcePolicyInstanceSchedulePolicyVmStopSchedule vmStopSchedule;
 
     @CustomType.Constructor
@@ -57,40 +57,40 @@ public final class ResourcePolicyInstanceSchedulePolicy {
     }
 
     /**
-     * The expiration time of the schedule. The timestamp is an RFC3339 string.
+     * @return The expiration time of the schedule. The timestamp is an RFC3339 string.
      * 
-    */
+     */
     public Optional<String> expirationTime() {
         return Optional.ofNullable(this.expirationTime);
     }
     /**
-     * The start time of the schedule. The timestamp is an RFC3339 string.
+     * @return The start time of the schedule. The timestamp is an RFC3339 string.
      * 
-    */
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
-     * Specifies the time zone to be used in interpreting the schedule. The value of this field must be a time zone name
+     * @return Specifies the time zone to be used in interpreting the schedule. The value of this field must be a time zone name
      * from the tz database: http://en.wikipedia.org/wiki/Tz_database.
      * 
-    */
+     */
     public String timeZone() {
         return this.timeZone;
     }
     /**
-     * Specifies the schedule for starting instances.
+     * @return Specifies the schedule for starting instances.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<ResourcePolicyInstanceSchedulePolicyVmStartSchedule> vmStartSchedule() {
         return Optional.ofNullable(this.vmStartSchedule);
     }
     /**
-     * Specifies the schedule for stopping instances.
+     * @return Specifies the schedule for stopping instances.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<ResourcePolicyInstanceSchedulePolicyVmStopSchedule> vmStopSchedule() {
         return Optional.ofNullable(this.vmStopSchedule);
     }

@@ -9,16 +9,16 @@ import java.util.Objects;
 
 @CustomType
 public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek {
-    /**
-     * The day of the week to create the snapshot. e.g. MONDAY
-     * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
-     * 
-     */
+        /**
+         * @return The day of the week to create the snapshot. e.g. MONDAY
+         * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+         * 
+         */
     private final String day;
-    /**
-     * The start time of the schedule. The timestamp is an RFC3339 string.
-     * 
-     */
+        /**
+         * @return The start time of the schedule. The timestamp is an RFC3339 string.
+         * 
+         */
     private final String startTime;
 
     @CustomType.Constructor
@@ -30,17 +30,17 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
     }
 
     /**
-     * The day of the week to create the snapshot. e.g. MONDAY
+     * @return The day of the week to create the snapshot. e.g. MONDAY
      * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
      * 
-    */
+     */
     public String day() {
         return this.day;
     }
     /**
-     * The start time of the schedule. The timestamp is an RFC3339 string.
+     * @return The start time of the schedule. The timestamp is an RFC3339 string.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }

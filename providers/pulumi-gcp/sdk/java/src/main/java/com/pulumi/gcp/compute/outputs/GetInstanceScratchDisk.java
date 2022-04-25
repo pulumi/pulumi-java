@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GetInstanceScratchDisk {
-    /**
-     * The disk interface used for attaching this disk. One of `SCSI` or `NVME`.
-     * 
-     */
+        /**
+         * @return The disk interface used for attaching this disk. One of `SCSI` or `NVME`.
+         * 
+         */
     private final String interface_;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GetInstanceScratchDisk {
     }
 
     /**
-     * The disk interface used for attaching this disk. One of `SCSI` or `NVME`.
+     * @return The disk interface used for attaching this disk. One of `SCSI` or `NVME`.
      * 
-    */
+     */
     public String interface_() {
         return this.interface_;
     }

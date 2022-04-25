@@ -22,6 +22,10 @@ public final class SharedVPCHostProjectState extends com.pulumi.resources.Resour
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project that will serve as a Shared VPC host project
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -50,11 +54,23 @@ public final class SharedVPCHostProjectState extends com.pulumi.resources.Resour
             $ = new SharedVPCHostProjectState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param project The ID of the project that will serve as a Shared VPC host project
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project that will serve as a Shared VPC host project
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

@@ -13,97 +13,97 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TriggerBuildStep {
-    /**
-     * A list of arguments that will be presented to the step when it is started.
-     * If the image used to run the step&#39;s container has an entrypoint, the args
-     * are used as arguments to that entrypoint. If the image does not define an
-     * entrypoint, the first element in args is used as the entrypoint, and the
-     * remainder will be used as arguments.
-     * 
-     */
+        /**
+         * @return A list of arguments that will be presented to the step when it is started.
+         * If the image used to run the step&#39;s container has an entrypoint, the args
+         * are used as arguments to that entrypoint. If the image does not define an
+         * entrypoint, the first element in args is used as the entrypoint, and the
+         * remainder will be used as arguments.
+         * 
+         */
     private final @Nullable List<String> args;
-    /**
-     * Working directory to use when running this step&#39;s container.
-     * If this value is a relative path, it is relative to the build&#39;s working
-     * directory. If this value is absolute, it may be outside the build&#39;s working
-     * directory, in which case the contents of the path may not be persisted
-     * across build step executions, unless a `volume` for that path is specified.
-     * If the build specifies a `RepoSource` with `dir` and a step with a
-     * `dir`,
-     * which specifies an absolute path, the `RepoSource` `dir` is ignored
-     * for the step&#39;s execution.
-     * 
-     */
+        /**
+         * @return Working directory to use when running this step&#39;s container.
+         * If this value is a relative path, it is relative to the build&#39;s working
+         * directory. If this value is absolute, it may be outside the build&#39;s working
+         * directory, in which case the contents of the path may not be persisted
+         * across build step executions, unless a `volume` for that path is specified.
+         * If the build specifies a `RepoSource` with `dir` and a step with a
+         * `dir`,
+         * which specifies an absolute path, the `RepoSource` `dir` is ignored
+         * for the step&#39;s execution.
+         * 
+         */
     private final @Nullable String dir;
-    /**
-     * Entrypoint to be used instead of the build step image&#39;s
-     * default entrypoint.
-     * If unset, the image&#39;s default entrypoint is used
-     * 
-     */
+        /**
+         * @return Entrypoint to be used instead of the build step image&#39;s
+         * default entrypoint.
+         * If unset, the image&#39;s default entrypoint is used
+         * 
+         */
     private final @Nullable String entrypoint;
-    /**
-     * A list of global environment variable definitions that will exist for all build steps
-     * in this build. If a variable is defined in both globally and in a build step,
-     * the variable will use the build step value.
-     * The elements are of the form &#34;KEY=VALUE&#34; for the environment variable &#34;KEY&#34; being given the value &#34;VALUE&#34;.
-     * 
-     */
+        /**
+         * @return A list of global environment variable definitions that will exist for all build steps
+         * in this build. If a variable is defined in both globally and in a build step,
+         * the variable will use the build step value.
+         * The elements are of the form &#34;KEY=VALUE&#34; for the environment variable &#34;KEY&#34; being given the value &#34;VALUE&#34;.
+         * 
+         */
     private final @Nullable List<String> envs;
-    /**
-     * Unique identifier for this build step, used in `wait_for` to
-     * reference this build step as a dependency.
-     * 
-     */
+        /**
+         * @return Unique identifier for this build step, used in `wait_for` to
+         * reference this build step as a dependency.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * Name of the volume to mount.
-     * Volume names must be unique per build step and must be valid names for Docker volumes.
-     * Each named volume must be used by at least two build steps.
-     * 
-     */
+        /**
+         * @return Name of the volume to mount.
+         * Volume names must be unique per build step and must be valid names for Docker volumes.
+         * Each named volume must be used by at least two build steps.
+         * 
+         */
     private final String name;
-    /**
-     * A list of global environment variables, which are encrypted using a Cloud Key Management
-     * Service crypto key. These values must be specified in the build&#39;s Secret. These variables
-     * will be available to all build steps in this build.
-     * 
-     */
+        /**
+         * @return A list of global environment variables, which are encrypted using a Cloud Key Management
+         * Service crypto key. These values must be specified in the build&#39;s Secret. These variables
+         * will be available to all build steps in this build.
+         * 
+         */
     private final @Nullable List<String> secretEnvs;
-    /**
-     * Time limit for executing this build step. If not defined,
-     * the step has no
-     * time limit and will be allowed to continue to run until either it
-     * completes or the build itself times out.
-     * 
-     */
+        /**
+         * @return Time limit for executing this build step. If not defined,
+         * the step has no
+         * time limit and will be allowed to continue to run until either it
+         * completes or the build itself times out.
+         * 
+         */
     private final @Nullable String timeout;
-    /**
-     * - 
-     * Output only. Stores timing information for pushing all artifact objects.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return -
+         * Output only. Stores timing information for pushing all artifact objects.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable String timing;
-    /**
-     * Global list of volumes to mount for ALL build steps
-     * Each volume is created as an empty volume prior to starting the build process.
-     * Upon completion of the build, volumes and their contents are discarded. Global
-     * volume names and paths cannot conflict with the volumes defined a build step.
-     * Using a global volume in a build with only one step is not valid as it is indicative
-     * of a build request with an incorrect configuration.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Global list of volumes to mount for ALL build steps
+         * Each volume is created as an empty volume prior to starting the build process.
+         * Upon completion of the build, volumes and their contents are discarded. Global
+         * volume names and paths cannot conflict with the volumes defined a build step.
+         * Using a global volume in a build with only one step is not valid as it is indicative
+         * of a build request with an incorrect configuration.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<TriggerBuildStepVolume> volumes;
-    /**
-     * The ID(s) of the step(s) that this build step depends on.
-     * This build step will not start until all the build steps in `wait_for`
-     * have completed successfully. If `wait_for` is empty, this build step
-     * will start when all previous build steps in the `Build.Steps` list
-     * have completed successfully.
-     * 
-     */
+        /**
+         * @return The ID(s) of the step(s) that this build step depends on.
+         * This build step will not start until all the build steps in `wait_for`
+         * have completed successfully. If `wait_for` is empty, this build step
+         * will start when all previous build steps in the `Build.Steps` list
+         * have completed successfully.
+         * 
+         */
     private final @Nullable List<String> waitFors;
 
     @CustomType.Constructor
@@ -133,18 +133,18 @@ public final class TriggerBuildStep {
     }
 
     /**
-     * A list of arguments that will be presented to the step when it is started.
+     * @return A list of arguments that will be presented to the step when it is started.
      * If the image used to run the step&#39;s container has an entrypoint, the args
      * are used as arguments to that entrypoint. If the image does not define an
      * entrypoint, the first element in args is used as the entrypoint, and the
      * remainder will be used as arguments.
      * 
-    */
+     */
     public List<String> args() {
         return this.args == null ? List.of() : this.args;
     }
     /**
-     * Working directory to use when running this step&#39;s container.
+     * @return Working directory to use when running this step&#39;s container.
      * If this value is a relative path, it is relative to the build&#39;s working
      * directory. If this value is absolute, it may be outside the build&#39;s working
      * directory, in which case the contents of the path may not be persisted
@@ -154,76 +154,76 @@ public final class TriggerBuildStep {
      * which specifies an absolute path, the `RepoSource` `dir` is ignored
      * for the step&#39;s execution.
      * 
-    */
+     */
     public Optional<String> dir() {
         return Optional.ofNullable(this.dir);
     }
     /**
-     * Entrypoint to be used instead of the build step image&#39;s
+     * @return Entrypoint to be used instead of the build step image&#39;s
      * default entrypoint.
      * If unset, the image&#39;s default entrypoint is used
      * 
-    */
+     */
     public Optional<String> entrypoint() {
         return Optional.ofNullable(this.entrypoint);
     }
     /**
-     * A list of global environment variable definitions that will exist for all build steps
+     * @return A list of global environment variable definitions that will exist for all build steps
      * in this build. If a variable is defined in both globally and in a build step,
      * the variable will use the build step value.
      * The elements are of the form &#34;KEY=VALUE&#34; for the environment variable &#34;KEY&#34; being given the value &#34;VALUE&#34;.
      * 
-    */
+     */
     public List<String> envs() {
         return this.envs == null ? List.of() : this.envs;
     }
     /**
-     * Unique identifier for this build step, used in `wait_for` to
+     * @return Unique identifier for this build step, used in `wait_for` to
      * reference this build step as a dependency.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Name of the volume to mount.
+     * @return Name of the volume to mount.
      * Volume names must be unique per build step and must be valid names for Docker volumes.
      * Each named volume must be used by at least two build steps.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A list of global environment variables, which are encrypted using a Cloud Key Management
+     * @return A list of global environment variables, which are encrypted using a Cloud Key Management
      * Service crypto key. These values must be specified in the build&#39;s Secret. These variables
      * will be available to all build steps in this build.
      * 
-    */
+     */
     public List<String> secretEnvs() {
         return this.secretEnvs == null ? List.of() : this.secretEnvs;
     }
     /**
-     * Time limit for executing this build step. If not defined,
+     * @return Time limit for executing this build step. If not defined,
      * the step has no
      * time limit and will be allowed to continue to run until either it
      * completes or the build itself times out.
      * 
-    */
+     */
     public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
-     * - 
+     * @return -
      * Output only. Stores timing information for pushing all artifact objects.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<String> timing() {
         return Optional.ofNullable(this.timing);
     }
     /**
-     * Global list of volumes to mount for ALL build steps
+     * @return Global list of volumes to mount for ALL build steps
      * Each volume is created as an empty volume prior to starting the build process.
      * Upon completion of the build, volumes and their contents are discarded. Global
      * volume names and paths cannot conflict with the volumes defined a build step.
@@ -231,18 +231,18 @@ public final class TriggerBuildStep {
      * of a build request with an incorrect configuration.
      * Structure is documented below.
      * 
-    */
+     */
     public List<TriggerBuildStepVolume> volumes() {
         return this.volumes == null ? List.of() : this.volumes;
     }
     /**
-     * The ID(s) of the step(s) that this build step depends on.
+     * @return The ID(s) of the step(s) that this build step depends on.
      * This build step will not start until all the build steps in `wait_for`
      * have completed successfully. If `wait_for` is empty, this build step
      * will start when all previous build steps in the `Build.Steps` list
      * have completed successfully.
      * 
-    */
+     */
     public List<String> waitFors() {
         return this.waitFors == null ? List.of() : this.waitFors;
     }

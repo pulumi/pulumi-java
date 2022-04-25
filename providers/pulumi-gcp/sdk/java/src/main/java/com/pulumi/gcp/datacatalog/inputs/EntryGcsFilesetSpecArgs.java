@@ -34,6 +34,20 @@ public final class EntryGcsFilesetSpecArgs extends com.pulumi.resources.Resource
     @Import(name="filePatterns", required=true)
     private Output<List<String>> filePatterns;
 
+    /**
+     * @return Patterns to identify a set of files in Google Cloud Storage.
+     * See [Cloud Storage documentation](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames)
+     * for more information. Note that bucket wildcards are currently not supported. Examples of valid filePatterns:
+     * * gs://bucket_name/dir/*: matches all files within bucket_name/dir directory.
+     * * gs://bucket_name/dir/**: matches all files in bucket_name/dir spanning all subdirectories.
+     * * gs://bucket_name/file*: matches files prefixed by file in bucket_name
+     * * gs://bucket_name/??.txt: matches files with two characters followed by .txt in bucket_name
+     * * gs://bucket_name/[aeiou].txt: matches files that contain a single vowel character followed by .txt in bucket_name
+     * * gs://bucket_name/[a-m].txt: matches files that contain a, b, ... or m followed by .txt in bucket_name
+     * * gs://bucket_name/a/*{@literal /}b: matches all files in bucket_name that match a/*{@literal /}b pattern, such as a/c/b, a/d/b
+     * * gs://another_bucket/a.txt: matches gs://another_bucket/a.txt
+     * 
+     */
     public Output<List<String>> filePatterns() {
         return this.filePatterns;
     }
@@ -47,6 +61,12 @@ public final class EntryGcsFilesetSpecArgs extends com.pulumi.resources.Resource
     @Import(name="sampleGcsFileSpecs")
     private @Nullable Output<List<EntryGcsFilesetSpecSampleGcsFileSpecArgs>> sampleGcsFileSpecs;
 
+    /**
+     * @return -
+     * Sample files contained in this fileset, not all files contained in this fileset are represented here.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<EntryGcsFilesetSpecSampleGcsFileSpecArgs>>> sampleGcsFileSpecs() {
         return Optional.ofNullable(this.sampleGcsFileSpecs);
     }
@@ -76,28 +96,100 @@ public final class EntryGcsFilesetSpecArgs extends com.pulumi.resources.Resource
             $ = new EntryGcsFilesetSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filePatterns Patterns to identify a set of files in Google Cloud Storage.
+         * See [Cloud Storage documentation](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames)
+         * for more information. Note that bucket wildcards are currently not supported. Examples of valid filePatterns:
+         * * gs://bucket_name/dir/*: matches all files within bucket_name/dir directory.
+         * * gs://bucket_name/dir/**: matches all files in bucket_name/dir spanning all subdirectories.
+         * * gs://bucket_name/file*: matches files prefixed by file in bucket_name
+         * * gs://bucket_name/??.txt: matches files with two characters followed by .txt in bucket_name
+         * * gs://bucket_name/[aeiou].txt: matches files that contain a single vowel character followed by .txt in bucket_name
+         * * gs://bucket_name/[a-m].txt: matches files that contain a, b, ... or m followed by .txt in bucket_name
+         * * gs://bucket_name/a/*{@literal /}b: matches all files in bucket_name that match a/*{@literal /}b pattern, such as a/c/b, a/d/b
+         * * gs://another_bucket/a.txt: matches gs://another_bucket/a.txt
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePatterns(Output<List<String>> filePatterns) {
             $.filePatterns = filePatterns;
             return this;
         }
 
+        /**
+         * @param filePatterns Patterns to identify a set of files in Google Cloud Storage.
+         * See [Cloud Storage documentation](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames)
+         * for more information. Note that bucket wildcards are currently not supported. Examples of valid filePatterns:
+         * * gs://bucket_name/dir/*: matches all files within bucket_name/dir directory.
+         * * gs://bucket_name/dir/**: matches all files in bucket_name/dir spanning all subdirectories.
+         * * gs://bucket_name/file*: matches files prefixed by file in bucket_name
+         * * gs://bucket_name/??.txt: matches files with two characters followed by .txt in bucket_name
+         * * gs://bucket_name/[aeiou].txt: matches files that contain a single vowel character followed by .txt in bucket_name
+         * * gs://bucket_name/[a-m].txt: matches files that contain a, b, ... or m followed by .txt in bucket_name
+         * * gs://bucket_name/a/*{@literal /}b: matches all files in bucket_name that match a/*{@literal /}b pattern, such as a/c/b, a/d/b
+         * * gs://another_bucket/a.txt: matches gs://another_bucket/a.txt
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePatterns(List<String> filePatterns) {
             return filePatterns(Output.of(filePatterns));
         }
 
+        /**
+         * @param filePatterns Patterns to identify a set of files in Google Cloud Storage.
+         * See [Cloud Storage documentation](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames)
+         * for more information. Note that bucket wildcards are currently not supported. Examples of valid filePatterns:
+         * * gs://bucket_name/dir/*: matches all files within bucket_name/dir directory.
+         * * gs://bucket_name/dir/**: matches all files in bucket_name/dir spanning all subdirectories.
+         * * gs://bucket_name/file*: matches files prefixed by file in bucket_name
+         * * gs://bucket_name/??.txt: matches files with two characters followed by .txt in bucket_name
+         * * gs://bucket_name/[aeiou].txt: matches files that contain a single vowel character followed by .txt in bucket_name
+         * * gs://bucket_name/[a-m].txt: matches files that contain a, b, ... or m followed by .txt in bucket_name
+         * * gs://bucket_name/a/*{@literal /}b: matches all files in bucket_name that match a/*{@literal /}b pattern, such as a/c/b, a/d/b
+         * * gs://another_bucket/a.txt: matches gs://another_bucket/a.txt
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePatterns(String... filePatterns) {
             return filePatterns(List.of(filePatterns));
         }
 
+        /**
+         * @param sampleGcsFileSpecs -
+         * Sample files contained in this fileset, not all files contained in this fileset are represented here.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleGcsFileSpecs(@Nullable Output<List<EntryGcsFilesetSpecSampleGcsFileSpecArgs>> sampleGcsFileSpecs) {
             $.sampleGcsFileSpecs = sampleGcsFileSpecs;
             return this;
         }
 
+        /**
+         * @param sampleGcsFileSpecs -
+         * Sample files contained in this fileset, not all files contained in this fileset are represented here.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleGcsFileSpecs(List<EntryGcsFilesetSpecSampleGcsFileSpecArgs> sampleGcsFileSpecs) {
             return sampleGcsFileSpecs(Output.of(sampleGcsFileSpecs));
         }
 
+        /**
+         * @param sampleGcsFileSpecs -
+         * Sample files contained in this fileset, not all files contained in this fileset are represented here.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleGcsFileSpecs(EntryGcsFilesetSpecSampleGcsFileSpecArgs... sampleGcsFileSpecs) {
             return sampleGcsFileSpecs(List.of(sampleGcsFileSpecs));
         }

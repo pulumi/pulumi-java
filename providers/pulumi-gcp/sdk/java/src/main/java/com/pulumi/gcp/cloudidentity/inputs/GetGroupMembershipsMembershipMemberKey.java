@@ -21,6 +21,12 @@ public final class GetGroupMembershipsMembershipMemberKey extends com.pulumi.res
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The ID of the entity. For Google-managed entities, the id is the email address of an existing
+     * group or user. For external-identity-mapped entities, the id is a string conforming
+     * to the Identity Source&#39;s requirements.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -35,6 +41,13 @@ public final class GetGroupMembershipsMembershipMemberKey extends com.pulumi.res
     @Import(name="namespace", required=true)
     private String namespace;
 
+    /**
+     * @return The namespace in which the entity exists.
+     * If not populated, the EntityKey represents a Google-managed entity
+     * such as a Google user or a Google Group.
+     * If populated, the EntityKey represents an external-identity-mapped group.
+     * 
+     */
     public String namespace() {
         return this.namespace;
     }
@@ -64,11 +77,28 @@ public final class GetGroupMembershipsMembershipMemberKey extends com.pulumi.res
             $ = new GetGroupMembershipsMembershipMemberKey(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ID of the entity. For Google-managed entities, the id is the email address of an existing
+         * group or user. For external-identity-mapped entities, the id is a string conforming
+         * to the Identity Source&#39;s requirements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param namespace The namespace in which the entity exists.
+         * If not populated, the EntityKey represents a Google-managed entity
+         * such as a Google user or a Google Group.
+         * If populated, the EntityKey represents an external-identity-mapped group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             $.namespace = namespace;
             return this;

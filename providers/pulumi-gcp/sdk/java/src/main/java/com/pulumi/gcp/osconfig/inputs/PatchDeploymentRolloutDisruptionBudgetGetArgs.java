@@ -22,6 +22,10 @@ public final class PatchDeploymentRolloutDisruptionBudgetGetArgs extends com.pul
     @Import(name="fixed")
     private @Nullable Output<Integer> fixed;
 
+    /**
+     * @return Specifies a fixed value.
+     * 
+     */
     public Optional<Output<Integer>> fixed() {
         return Optional.ofNullable(this.fixed);
     }
@@ -33,6 +37,10 @@ public final class PatchDeploymentRolloutDisruptionBudgetGetArgs extends com.pul
     @Import(name="percentage")
     private @Nullable Output<Integer> percentage;
 
+    /**
+     * @return Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
+     * 
+     */
     public Optional<Output<Integer>> percentage() {
         return Optional.ofNullable(this.percentage);
     }
@@ -62,20 +70,44 @@ public final class PatchDeploymentRolloutDisruptionBudgetGetArgs extends com.pul
             $ = new PatchDeploymentRolloutDisruptionBudgetGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fixed Specifies a fixed value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixed(@Nullable Output<Integer> fixed) {
             $.fixed = fixed;
             return this;
         }
 
+        /**
+         * @param fixed Specifies a fixed value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixed(Integer fixed) {
             return fixed(Output.of(fixed));
         }
 
+        /**
+         * @param percentage Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentage(@Nullable Output<Integer> percentage) {
             $.percentage = percentage;
             return this;
         }
 
+        /**
+         * @param percentage Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentage(Integer percentage) {
             return percentage(Output.of(percentage));
         }

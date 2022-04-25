@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClusterClusterAutoscalingResourceLimit {
-    /**
-     * Maximum amount of the resource in the cluster.
-     * 
-     */
+        /**
+         * @return Maximum amount of the resource in the cluster.
+         * 
+         */
     private final @Nullable Integer maximum;
-    /**
-     * Minimum amount of the resource in the cluster.
-     * 
-     */
+        /**
+         * @return Minimum amount of the resource in the cluster.
+         * 
+         */
     private final @Nullable Integer minimum;
-    /**
-     * The type of the resource. For example, `cpu` and
-     * `memory`.  See the [guide to using Node Auto-Provisioning](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning)
-     * for a list of types.
-     * 
-     */
+        /**
+         * @return The type of the resource. For example, `cpu` and
+         * `memory`.  See the [guide to using Node Auto-Provisioning](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning)
+         * for a list of types.
+         * 
+         */
     private final String resourceType;
 
     @CustomType.Constructor
@@ -41,25 +41,25 @@ public final class ClusterClusterAutoscalingResourceLimit {
     }
 
     /**
-     * Maximum amount of the resource in the cluster.
+     * @return Maximum amount of the resource in the cluster.
      * 
-    */
+     */
     public Optional<Integer> maximum() {
         return Optional.ofNullable(this.maximum);
     }
     /**
-     * Minimum amount of the resource in the cluster.
+     * @return Minimum amount of the resource in the cluster.
      * 
-    */
+     */
     public Optional<Integer> minimum() {
         return Optional.ofNullable(this.minimum);
     }
     /**
-     * The type of the resource. For example, `cpu` and
+     * @return The type of the resource. For example, `cpu` and
      * `memory`.  See the [guide to using Node Auto-Provisioning](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning)
      * for a list of types.
      * 
-    */
+     */
     public String resourceType() {
         return this.resourceType;
     }

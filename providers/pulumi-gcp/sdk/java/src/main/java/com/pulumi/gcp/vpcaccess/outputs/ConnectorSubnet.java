@@ -11,16 +11,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ConnectorSubnet {
-    /**
-     * Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
-     * https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}&#34;
-     * 
-     */
+        /**
+         * @return Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
+         * https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}&#34;
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Project in which the subnet exists. If not set, this project is assumed to be the project for which the connector create request was issued.
-     * 
-     */
+        /**
+         * @return Project in which the subnet exists. If not set, this project is assumed to be the project for which the connector create request was issued.
+         * 
+         */
     private final @Nullable String projectId;
 
     @CustomType.Constructor
@@ -32,17 +32,17 @@ public final class ConnectorSubnet {
     }
 
     /**
-     * Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
+     * @return Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
      * https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}&#34;
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Project in which the subnet exists. If not set, this project is assumed to be the project for which the connector create request was issued.
+     * @return Project in which the subnet exists. If not set, this project is assumed to be the project for which the connector create request was issued.
      * 
-    */
+     */
     public Optional<String> projectId() {
         return Optional.ofNullable(this.projectId);
     }

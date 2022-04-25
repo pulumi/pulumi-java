@@ -21,6 +21,10 @@ public final class GetIAMPolicyAuditConfig extends com.pulumi.resources.InvokeAr
     @Import(name="auditLogConfigs", required=true)
     private List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs;
 
+    /**
+     * @return A nested block that defines the operations you&#39;d like to log.
+     * 
+     */
     public List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs() {
         return this.auditLogConfigs;
     }
@@ -32,6 +36,10 @@ public final class GetIAMPolicyAuditConfig extends com.pulumi.resources.InvokeAr
     @Import(name="service", required=true)
     private String service;
 
+    /**
+     * @return Defines a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
+     * 
+     */
     public String service() {
         return this.service;
     }
@@ -61,15 +69,33 @@ public final class GetIAMPolicyAuditConfig extends com.pulumi.resources.InvokeAr
             $ = new GetIAMPolicyAuditConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param auditLogConfigs A nested block that defines the operations you&#39;d like to log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auditLogConfigs(List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs) {
             $.auditLogConfigs = auditLogConfigs;
             return this;
         }
 
+        /**
+         * @param auditLogConfigs A nested block that defines the operations you&#39;d like to log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auditLogConfigs(GetIAMPolicyAuditConfigAuditLogConfig... auditLogConfigs) {
             return auditLogConfigs(List.of(auditLogConfigs));
         }
 
+        /**
+         * @param service Defines a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             $.service = service;
             return this;

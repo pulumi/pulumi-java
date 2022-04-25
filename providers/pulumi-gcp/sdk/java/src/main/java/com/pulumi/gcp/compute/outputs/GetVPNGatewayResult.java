@@ -9,32 +9,32 @@ import java.util.Objects;
 
 @CustomType
 public final class GetVPNGatewayResult {
-    /**
-     * Description of this VPN gateway.
-     * 
-     */
+        /**
+         * @return Description of this VPN gateway.
+         * 
+         */
     private final String description;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String name;
-    /**
-     * The network of this VPN gateway.
-     * 
-     */
+        /**
+         * @return The network of this VPN gateway.
+         * 
+         */
     private final String network;
     private final String project;
-    /**
-     * Region of this VPN gateway.
-     * 
-     */
+        /**
+         * @return Region of this VPN gateway.
+         * 
+         */
     private final String region;
-    /**
-     * The URI of the resource.
-     * 
-     */
+        /**
+         * @return The URI of the resource.
+         * 
+         */
     private final String selfLink;
 
     @CustomType.Constructor
@@ -56,16 +56,16 @@ public final class GetVPNGatewayResult {
     }
 
     /**
-     * Description of this VPN gateway.
+     * @return Description of this VPN gateway.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -73,9 +73,9 @@ public final class GetVPNGatewayResult {
         return this.name;
     }
     /**
-     * The network of this VPN gateway.
+     * @return The network of this VPN gateway.
      * 
-    */
+     */
     public String network() {
         return this.network;
     }
@@ -83,16 +83,16 @@ public final class GetVPNGatewayResult {
         return this.project;
     }
     /**
-     * Region of this VPN gateway.
+     * @return Region of this VPN gateway.
      * 
-    */
+     */
     public String region() {
         return this.region;
     }
     /**
-     * The URI of the resource.
+     * @return The URI of the resource.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }

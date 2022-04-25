@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfig {
-    /**
-     * The depth for all recursive structures in the output analytics schema. For example, concept in the CodeSystem
-     * resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called
-     * concept.concept but not concept.concept.concept. If not specified or set to 0, the server will use the default
-     * value 2. The maximum depth allowed is 5.
-     * 
-     */
+        /**
+         * @return The depth for all recursive structures in the output analytics schema. For example, concept in the CodeSystem
+         * resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called
+         * concept.concept but not concept.concept.concept. If not specified or set to 0, the server will use the default
+         * value 2. The maximum depth allowed is 5.
+         * 
+         */
     private final Integer recursiveStructureDepth;
-    /**
-     * Specifies the output schema type. Only ANALYTICS is supported at this time.
-     * * ANALYTICS: Analytics schema defined by the FHIR community.
-     *   See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
-     *   Default value is `ANALYTICS`.
-     *   Possible values are `ANALYTICS`.
-     * 
-     */
+        /**
+         * @return Specifies the output schema type. Only ANALYTICS is supported at this time.
+         * * ANALYTICS: Analytics schema defined by the FHIR community.
+         *   See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
+         *   Default value is `ANALYTICS`.
+         *   Possible values are `ANALYTICS`.
+         * 
+         */
     private final @Nullable String schemaType;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfig {
     }
 
     /**
-     * The depth for all recursive structures in the output analytics schema. For example, concept in the CodeSystem
+     * @return The depth for all recursive structures in the output analytics schema. For example, concept in the CodeSystem
      * resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called
      * concept.concept but not concept.concept.concept. If not specified or set to 0, the server will use the default
      * value 2. The maximum depth allowed is 5.
      * 
-    */
+     */
     public Integer recursiveStructureDepth() {
         return this.recursiveStructureDepth;
     }
     /**
-     * Specifies the output schema type. Only ANALYTICS is supported at this time.
+     * @return Specifies the output schema type. Only ANALYTICS is supported at this time.
      * * ANALYTICS: Analytics schema defined by the FHIR community.
      *   See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
      *   Default value is `ANALYTICS`.
      *   Possible values are `ANALYTICS`.
      * 
-    */
+     */
     public Optional<String> schemaType() {
         return Optional.ofNullable(this.schemaType);
     }

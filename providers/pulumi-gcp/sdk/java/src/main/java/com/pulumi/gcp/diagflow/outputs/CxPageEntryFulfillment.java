@@ -14,26 +14,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CxPageEntryFulfillment {
-    /**
-     * The list of rich message responses to present to the user.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return The list of rich message responses to present to the user.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<CxPageEntryFulfillmentMessage> messages;
-    /**
-     * Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.
-     * 
-     */
+        /**
+         * @return Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.
+         * 
+         */
     private final @Nullable Boolean returnPartialResponses;
-    /**
-     * The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified.
-     * 
-     */
+        /**
+         * @return The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified.
+         * 
+         */
     private final @Nullable String tag;
-    /**
-     * The webhook to call. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/webhooks/&lt;Webhook ID&gt;.
-     * 
-     */
+        /**
+         * @return The webhook to call. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/webhooks/&lt;Webhook ID&gt;.
+         * 
+         */
     private final @Nullable String webhook;
 
     @CustomType.Constructor
@@ -49,31 +49,31 @@ public final class CxPageEntryFulfillment {
     }
 
     /**
-     * The list of rich message responses to present to the user.
+     * @return The list of rich message responses to present to the user.
      * Structure is documented below.
      * 
-    */
+     */
     public List<CxPageEntryFulfillmentMessage> messages() {
         return this.messages == null ? List.of() : this.messages;
     }
     /**
-     * Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.
+     * @return Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.
      * 
-    */
+     */
     public Optional<Boolean> returnPartialResponses() {
         return Optional.ofNullable(this.returnPartialResponses);
     }
     /**
-     * The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified.
+     * @return The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified.
      * 
-    */
+     */
     public Optional<String> tag() {
         return Optional.ofNullable(this.tag);
     }
     /**
-     * The webhook to call. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/webhooks/&lt;Webhook ID&gt;.
+     * @return The webhook to call. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/webhooks/&lt;Webhook ID&gt;.
      * 
-    */
+     */
     public Optional<String> webhook() {
         return Optional.ofNullable(this.webhook);
     }

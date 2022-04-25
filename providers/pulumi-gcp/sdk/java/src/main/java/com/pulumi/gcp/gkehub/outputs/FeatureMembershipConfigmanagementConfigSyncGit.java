@@ -12,40 +12,40 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FeatureMembershipConfigmanagementConfigSyncGit {
     private final @Nullable String gcpServiceAccountEmail;
-    /**
-     * URL for the HTTPS proxy to be used when communicating with the Git repo.
-     * 
-     */
+        /**
+         * @return URL for the HTTPS proxy to be used when communicating with the Git repo.
+         * 
+         */
     private final @Nullable String httpsProxy;
-    /**
-     * The path within the Git repository that represents the top level of the repo to sync. Default: the root directory of the repository.
-     * 
-     */
+        /**
+         * @return The path within the Git repository that represents the top level of the repo to sync. Default: the root directory of the repository.
+         * 
+         */
     private final @Nullable String policyDir;
-    /**
-     * Type of secret configured for access to the Git repo.
-     * 
-     */
+        /**
+         * @return Type of secret configured for access to the Git repo.
+         * 
+         */
     private final @Nullable String secretType;
-    /**
-     * The branch of the repository to sync from. Default: master.
-     * 
-     */
+        /**
+         * @return The branch of the repository to sync from. Default: master.
+         * 
+         */
     private final @Nullable String syncBranch;
-    /**
-     * The URL of the Git repository to use as the source of truth.
-     * 
-     */
+        /**
+         * @return The URL of the Git repository to use as the source of truth.
+         * 
+         */
     private final @Nullable String syncRepo;
-    /**
-     * Git revision (tag or hash) to check out. Default HEAD.
-     * 
-     */
+        /**
+         * @return Git revision (tag or hash) to check out. Default HEAD.
+         * 
+         */
     private final @Nullable String syncRev;
-    /**
-     * Period in seconds between consecutive syncs. Default: 15.
-     * 
-     */
+        /**
+         * @return Period in seconds between consecutive syncs. Default: 15.
+         * 
+         */
     private final @Nullable String syncWaitSecs;
 
     @CustomType.Constructor
@@ -72,51 +72,51 @@ public final class FeatureMembershipConfigmanagementConfigSyncGit {
         return Optional.ofNullable(this.gcpServiceAccountEmail);
     }
     /**
-     * URL for the HTTPS proxy to be used when communicating with the Git repo.
+     * @return URL for the HTTPS proxy to be used when communicating with the Git repo.
      * 
-    */
+     */
     public Optional<String> httpsProxy() {
         return Optional.ofNullable(this.httpsProxy);
     }
     /**
-     * The path within the Git repository that represents the top level of the repo to sync. Default: the root directory of the repository.
+     * @return The path within the Git repository that represents the top level of the repo to sync. Default: the root directory of the repository.
      * 
-    */
+     */
     public Optional<String> policyDir() {
         return Optional.ofNullable(this.policyDir);
     }
     /**
-     * Type of secret configured for access to the Git repo.
+     * @return Type of secret configured for access to the Git repo.
      * 
-    */
+     */
     public Optional<String> secretType() {
         return Optional.ofNullable(this.secretType);
     }
     /**
-     * The branch of the repository to sync from. Default: master.
+     * @return The branch of the repository to sync from. Default: master.
      * 
-    */
+     */
     public Optional<String> syncBranch() {
         return Optional.ofNullable(this.syncBranch);
     }
     /**
-     * The URL of the Git repository to use as the source of truth.
+     * @return The URL of the Git repository to use as the source of truth.
      * 
-    */
+     */
     public Optional<String> syncRepo() {
         return Optional.ofNullable(this.syncRepo);
     }
     /**
-     * Git revision (tag or hash) to check out. Default HEAD.
+     * @return Git revision (tag or hash) to check out. Default HEAD.
      * 
-    */
+     */
     public Optional<String> syncRev() {
         return Optional.ofNullable(this.syncRev);
     }
     /**
-     * Period in seconds between consecutive syncs. Default: 15.
+     * @return Period in seconds between consecutive syncs. Default: 15.
      * 
-    */
+     */
     public Optional<String> syncWaitSecs() {
         return Optional.ofNullable(this.syncWaitSecs);
     }

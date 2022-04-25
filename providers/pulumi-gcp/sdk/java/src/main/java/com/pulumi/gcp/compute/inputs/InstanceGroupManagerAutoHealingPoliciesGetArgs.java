@@ -21,6 +21,10 @@ public final class InstanceGroupManagerAutoHealingPoliciesGetArgs extends com.pu
     @Import(name="healthCheck", required=true)
     private Output<String> healthCheck;
 
+    /**
+     * @return The health check resource that signals autohealing.
+     * 
+     */
     public Output<String> healthCheck() {
         return this.healthCheck;
     }
@@ -33,6 +37,11 @@ public final class InstanceGroupManagerAutoHealingPoliciesGetArgs extends com.pu
     @Import(name="initialDelaySec", required=true)
     private Output<Integer> initialDelaySec;
 
+    /**
+     * @return The number of seconds that the managed instance group waits before
+     * it applies autohealing policies to new instances or recently recreated instances. Between 0 and 3600.
+     * 
+     */
     public Output<Integer> initialDelaySec() {
         return this.initialDelaySec;
     }
@@ -62,20 +71,46 @@ public final class InstanceGroupManagerAutoHealingPoliciesGetArgs extends com.pu
             $ = new InstanceGroupManagerAutoHealingPoliciesGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param healthCheck The health check resource that signals autohealing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheck(Output<String> healthCheck) {
             $.healthCheck = healthCheck;
             return this;
         }
 
+        /**
+         * @param healthCheck The health check resource that signals autohealing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheck(String healthCheck) {
             return healthCheck(Output.of(healthCheck));
         }
 
+        /**
+         * @param initialDelaySec The number of seconds that the managed instance group waits before
+         * it applies autohealing policies to new instances or recently recreated instances. Between 0 and 3600.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialDelaySec(Output<Integer> initialDelaySec) {
             $.initialDelaySec = initialDelaySec;
             return this;
         }
 
+        /**
+         * @param initialDelaySec The number of seconds that the managed instance group waits before
+         * it applies autohealing policies to new instances or recently recreated instances. Between 0 and 3600.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialDelaySec(Integer initialDelaySec) {
             return initialDelaySec(Output.of(initialDelaySec));
         }

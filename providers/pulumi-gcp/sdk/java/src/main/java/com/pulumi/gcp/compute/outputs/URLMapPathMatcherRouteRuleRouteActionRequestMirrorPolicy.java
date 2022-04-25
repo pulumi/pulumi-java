@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class URLMapPathMatcherRouteRuleRouteActionRequestMirrorPolicy {
-    /**
-     * The full or partial URL to the BackendService resource being mirrored to.
-     * 
-     */
+        /**
+         * @return The full or partial URL to the BackendService resource being mirrored to.
+         * 
+         */
     private final String backendService;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class URLMapPathMatcherRouteRuleRouteActionRequestMirrorPolicy {
     }
 
     /**
-     * The full or partial URL to the BackendService resource being mirrored to.
+     * @return The full or partial URL to the BackendService resource being mirrored to.
      * 
-    */
+     */
     public String backendService() {
         return this.backendService;
     }

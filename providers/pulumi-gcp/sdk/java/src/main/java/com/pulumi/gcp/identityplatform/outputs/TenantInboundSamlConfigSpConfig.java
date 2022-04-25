@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TenantInboundSamlConfigSpConfig {
-    /**
-     * Callback URI where responses from IDP are handled. Must start with `https://`.
-     * 
-     */
+        /**
+         * @return Callback URI where responses from IDP are handled. Must start with `https://`.
+         * 
+         */
     private final String callbackUri;
-    /**
-     * - 
-     * The IDP&#39;s certificate data to verify the signature in the SAMLResponse issued by the IDP.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return -
+         * The IDP&#39;s certificate data to verify the signature in the SAMLResponse issued by the IDP.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<TenantInboundSamlConfigSpConfigSpCertificate> spCertificates;
-    /**
-     * Unique identifier for all SAML entities.
-     * 
-     */
+        /**
+         * @return Unique identifier for all SAML entities.
+         * 
+         */
     private final String spEntityId;
 
     @CustomType.Constructor
@@ -41,25 +41,25 @@ public final class TenantInboundSamlConfigSpConfig {
     }
 
     /**
-     * Callback URI where responses from IDP are handled. Must start with `https://`.
+     * @return Callback URI where responses from IDP are handled. Must start with `https://`.
      * 
-    */
+     */
     public String callbackUri() {
         return this.callbackUri;
     }
     /**
-     * - 
+     * @return -
      * The IDP&#39;s certificate data to verify the signature in the SAMLResponse issued by the IDP.
      * Structure is documented below.
      * 
-    */
+     */
     public List<TenantInboundSamlConfigSpConfigSpCertificate> spCertificates() {
         return this.spCertificates == null ? List.of() : this.spCertificates;
     }
     /**
-     * Unique identifier for all SAML entities.
+     * @return Unique identifier for all SAML entities.
      * 
-    */
+     */
     public String spEntityId() {
         return this.spEntityId;
     }

@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClusterNodeConfigGuestAccelerator {
-    /**
-     * The number of the guest accelerator cards exposed to this instance.
-     * 
-     */
+        /**
+         * @return The number of the guest accelerator cards exposed to this instance.
+         * 
+         */
     private final Integer count;
-    /**
-     * Size of partitions to create on the GPU. Valid values are described in the NVIDIA mig [user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
-     * 
-     */
+        /**
+         * @return Size of partitions to create on the GPU. Valid values are described in the NVIDIA mig [user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
+         * 
+         */
     private final @Nullable String gpuPartitionSize;
-    /**
-     * The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
-     * 
-     */
+        /**
+         * @return The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class ClusterNodeConfigGuestAccelerator {
     }
 
     /**
-     * The number of the guest accelerator cards exposed to this instance.
+     * @return The number of the guest accelerator cards exposed to this instance.
      * 
-    */
+     */
     public Integer count() {
         return this.count;
     }
     /**
-     * Size of partitions to create on the GPU. Valid values are described in the NVIDIA mig [user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
+     * @return Size of partitions to create on the GPU. Valid values are described in the NVIDIA mig [user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
      * 
-    */
+     */
     public Optional<String> gpuPartitionSize() {
         return Optional.ofNullable(this.gpuPartitionSize);
     }
     /**
-     * The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+     * @return The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

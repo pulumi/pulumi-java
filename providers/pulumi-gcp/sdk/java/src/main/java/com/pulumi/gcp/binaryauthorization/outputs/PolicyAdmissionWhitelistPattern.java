@@ -9,13 +9,13 @@ import java.util.Objects;
 
 @CustomType
 public final class PolicyAdmissionWhitelistPattern {
-    /**
-     * An image name pattern to whitelist, in the form
-     * `registry/path/to/image`. This supports a trailing * as a
-     * wildcard, but this is allowed only in text after the registry/
-     * part.
-     * 
-     */
+        /**
+         * @return An image name pattern to whitelist, in the form
+         * `registry/path/to/image`. This supports a trailing * as a
+         * wildcard, but this is allowed only in text after the registry/
+         * part.
+         * 
+         */
     private final String namePattern;
 
     @CustomType.Constructor
@@ -24,12 +24,12 @@ public final class PolicyAdmissionWhitelistPattern {
     }
 
     /**
-     * An image name pattern to whitelist, in the form
+     * @return An image name pattern to whitelist, in the form
      * `registry/path/to/image`. This supports a trailing * as a
      * wildcard, but this is allowed only in text after the registry/
      * part.
      * 
-    */
+     */
     public String namePattern() {
         return this.namePattern;
     }

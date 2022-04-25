@@ -23,6 +23,10 @@ public final class BudgetAmountSpecifiedAmountGetArgs extends com.pulumi.resourc
     @Import(name="currencyCode")
     private @Nullable Output<String> currencyCode;
 
+    /**
+     * @return The 3-letter currency code defined in ISO 4217.
+     * 
+     */
     public Optional<Output<String>> currencyCode() {
         return Optional.ofNullable(this.currencyCode);
     }
@@ -40,6 +44,16 @@ public final class BudgetAmountSpecifiedAmountGetArgs extends com.pulumi.resourc
     @Import(name="nanos")
     private @Nullable Output<Integer> nanos;
 
+    /**
+     * @return Number of nano (10^-9) units of the amount.
+     * The value must be between -999,999,999 and +999,999,999
+     * inclusive. If units is positive, nanos must be positive or
+     * zero. If units is zero, nanos can be positive, zero, or
+     * negative. If units is negative, nanos must be negative or
+     * zero. For example $-1.75 is represented as units=-1 and
+     * nanos=-750,000,000.
+     * 
+     */
     public Optional<Output<Integer>> nanos() {
         return Optional.ofNullable(this.nanos);
     }
@@ -52,6 +66,11 @@ public final class BudgetAmountSpecifiedAmountGetArgs extends com.pulumi.resourc
     @Import(name="units")
     private @Nullable Output<String> units;
 
+    /**
+     * @return The whole units of the amount. For example if currencyCode
+     * is &#34;USD&#34;, then 1 unit is one US dollar.
+     * 
+     */
     public Optional<Output<String>> units() {
         return Optional.ofNullable(this.units);
     }
@@ -82,29 +101,79 @@ public final class BudgetAmountSpecifiedAmountGetArgs extends com.pulumi.resourc
             $ = new BudgetAmountSpecifiedAmountGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param currencyCode The 3-letter currency code defined in ISO 4217.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currencyCode(@Nullable Output<String> currencyCode) {
             $.currencyCode = currencyCode;
             return this;
         }
 
+        /**
+         * @param currencyCode The 3-letter currency code defined in ISO 4217.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currencyCode(String currencyCode) {
             return currencyCode(Output.of(currencyCode));
         }
 
+        /**
+         * @param nanos Number of nano (10^-9) units of the amount.
+         * The value must be between -999,999,999 and +999,999,999
+         * inclusive. If units is positive, nanos must be positive or
+         * zero. If units is zero, nanos can be positive, zero, or
+         * negative. If units is negative, nanos must be negative or
+         * zero. For example $-1.75 is represented as units=-1 and
+         * nanos=-750,000,000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nanos(@Nullable Output<Integer> nanos) {
             $.nanos = nanos;
             return this;
         }
 
+        /**
+         * @param nanos Number of nano (10^-9) units of the amount.
+         * The value must be between -999,999,999 and +999,999,999
+         * inclusive. If units is positive, nanos must be positive or
+         * zero. If units is zero, nanos can be positive, zero, or
+         * negative. If units is negative, nanos must be negative or
+         * zero. For example $-1.75 is represented as units=-1 and
+         * nanos=-750,000,000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nanos(Integer nanos) {
             return nanos(Output.of(nanos));
         }
 
+        /**
+         * @param units The whole units of the amount. For example if currencyCode
+         * is &#34;USD&#34;, then 1 unit is one US dollar.
+         * 
+         * @return builder
+         * 
+         */
         public Builder units(@Nullable Output<String> units) {
             $.units = units;
             return this;
         }
 
+        /**
+         * @param units The whole units of the amount. For example if currencyCode
+         * is &#34;USD&#34;, then 1 unit is one US dollar.
+         * 
+         * @return builder
+         * 
+         */
         public Builder units(String units) {
             return units(Output.of(units));
         }

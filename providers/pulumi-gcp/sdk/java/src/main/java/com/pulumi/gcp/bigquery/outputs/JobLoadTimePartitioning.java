@@ -11,23 +11,23 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class JobLoadTimePartitioning {
-    /**
-     * Number of milliseconds for which to keep the storage for a partition. A wrapper is used here because 0 is an invalid value.
-     * 
-     */
+        /**
+         * @return Number of milliseconds for which to keep the storage for a partition. A wrapper is used here because 0 is an invalid value.
+         * 
+         */
     private final @Nullable String expirationMs;
-    /**
-     * If not set, the table is partitioned by pseudo column &#39;_PARTITIONTIME&#39;; if set, the table is partitioned by this field.
-     * The field must be a top-level TIMESTAMP or DATE field. Its mode must be NULLABLE or REQUIRED.
-     * A wrapper is used here because an empty string is an invalid value.
-     * 
-     */
+        /**
+         * @return If not set, the table is partitioned by pseudo column &#39;_PARTITIONTIME&#39;; if set, the table is partitioned by this field.
+         * The field must be a top-level TIMESTAMP or DATE field. Its mode must be NULLABLE or REQUIRED.
+         * A wrapper is used here because an empty string is an invalid value.
+         * 
+         */
     private final @Nullable String field;
-    /**
-     * The only type supported is DAY, which will generate one partition per day. Providing an empty string used to cause an error,
-     * but in OnePlatform the field will be treated as unset.
-     * 
-     */
+        /**
+         * @return The only type supported is DAY, which will generate one partition per day. Providing an empty string used to cause an error,
+         * but in OnePlatform the field will be treated as unset.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -41,26 +41,26 @@ public final class JobLoadTimePartitioning {
     }
 
     /**
-     * Number of milliseconds for which to keep the storage for a partition. A wrapper is used here because 0 is an invalid value.
+     * @return Number of milliseconds for which to keep the storage for a partition. A wrapper is used here because 0 is an invalid value.
      * 
-    */
+     */
     public Optional<String> expirationMs() {
         return Optional.ofNullable(this.expirationMs);
     }
     /**
-     * If not set, the table is partitioned by pseudo column &#39;_PARTITIONTIME&#39;; if set, the table is partitioned by this field.
+     * @return If not set, the table is partitioned by pseudo column &#39;_PARTITIONTIME&#39;; if set, the table is partitioned by this field.
      * The field must be a top-level TIMESTAMP or DATE field. Its mode must be NULLABLE or REQUIRED.
      * A wrapper is used here because an empty string is an invalid value.
      * 
-    */
+     */
     public Optional<String> field() {
         return Optional.ofNullable(this.field);
     }
     /**
-     * The only type supported is DAY, which will generate one partition per day. Providing an empty string used to cause an error,
+     * @return The only type supported is DAY, which will generate one partition per day. Providing an empty string used to cause an error,
      * but in OnePlatform the field will be treated as unset.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

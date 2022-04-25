@@ -13,23 +13,23 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CertificateConfigX509ConfigKeyUsage {
-    /**
-     * Describes high-level ways in which a key may be used.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Describes high-level ways in which a key may be used.
+         * Structure is documented below.
+         * 
+         */
     private final CertificateConfigX509ConfigKeyUsageBaseKeyUsage baseKeyUsage;
-    /**
-     * Describes high-level ways in which a key may be used.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Describes high-level ways in which a key may be used.
+         * Structure is documented below.
+         * 
+         */
     private final CertificateConfigX509ConfigKeyUsageExtendedKeyUsage extendedKeyUsage;
-    /**
-     * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages;
 
     @CustomType.Constructor
@@ -43,26 +43,26 @@ public final class CertificateConfigX509ConfigKeyUsage {
     }
 
     /**
-     * Describes high-level ways in which a key may be used.
+     * @return Describes high-level ways in which a key may be used.
      * Structure is documented below.
      * 
-    */
+     */
     public CertificateConfigX509ConfigKeyUsageBaseKeyUsage baseKeyUsage() {
         return this.baseKeyUsage;
     }
     /**
-     * Describes high-level ways in which a key may be used.
+     * @return Describes high-level ways in which a key may be used.
      * Structure is documented below.
      * 
-    */
+     */
     public CertificateConfigX509ConfigKeyUsageExtendedKeyUsage extendedKeyUsage() {
         return this.extendedKeyUsage;
     }
     /**
-     * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+     * @return An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
      * Structure is documented below.
      * 
-    */
+     */
     public List<CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages == null ? List.of() : this.unknownExtendedKeyUsages;
     }

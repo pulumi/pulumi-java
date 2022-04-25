@@ -11,18 +11,18 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraint {
-    /**
-     * The minimum allowed OS version. If not set, any version
-     * of this OS satisfies the constraint.
-     * Format: &#34;major.minor.patch&#34; such as &#34;10.5.301&#34;, &#34;9.2.1&#34;.
-     * 
-     */
+        /**
+         * @return The minimum allowed OS version. If not set, any version
+         * of this OS satisfies the constraint.
+         * Format: &#34;major.minor.patch&#34; such as &#34;10.5.301&#34;, &#34;9.2.1&#34;.
+         * 
+         */
     private final @Nullable String minimumVersion;
-    /**
-     * The operating system type of the device.
-     * Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP_LINUX`, `DESKTOP_CHROME_OS`, `ANDROID`, and `IOS`.
-     * 
-     */
+        /**
+         * @return The operating system type of the device.
+         * Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP_LINUX`, `DESKTOP_CHROME_OS`, `ANDROID`, and `IOS`.
+         * 
+         */
     private final String osType;
 
     @CustomType.Constructor
@@ -34,19 +34,19 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraint
     }
 
     /**
-     * The minimum allowed OS version. If not set, any version
+     * @return The minimum allowed OS version. If not set, any version
      * of this OS satisfies the constraint.
      * Format: &#34;major.minor.patch&#34; such as &#34;10.5.301&#34;, &#34;9.2.1&#34;.
      * 
-    */
+     */
     public Optional<String> minimumVersion() {
         return Optional.ofNullable(this.minimumVersion);
     }
     /**
-     * The operating system type of the device.
+     * @return The operating system type of the device.
      * Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP_LINUX`, `DESKTOP_CHROME_OS`, `ANDROID`, and `IOS`.
      * 
-    */
+     */
     public String osType() {
         return this.osType;
     }

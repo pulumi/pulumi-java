@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CxAgentSpeechToTextSettings {
-    /**
-     * Whether to use speech adaptation for speech recognition.
-     * 
-     */
+        /**
+         * @return Whether to use speech adaptation for speech recognition.
+         * 
+         */
     private final @Nullable Boolean enableSpeechAdaptation;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class CxAgentSpeechToTextSettings {
     }
 
     /**
-     * Whether to use speech adaptation for speech recognition.
+     * @return Whether to use speech adaptation for speech recognition.
      * 
-    */
+     */
     public Optional<Boolean> enableSpeechAdaptation() {
         return Optional.ofNullable(this.enableSpeechAdaptation);
     }

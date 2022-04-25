@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class TagTemplateFieldTypeEnumType {
-    /**
-     * The set of allowed values for this enum. The display names of the
-     * values must be case-insensitively unique within this set. Currently,
-     * enum values can only be added to the list of allowed values. Deletion
-     * and renaming of enum values are not supported.
-     * Can have up to 500 allowed values.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return The set of allowed values for this enum. The display names of the
+         * values must be case-insensitively unique within this set. Currently,
+         * enum values can only be added to the list of allowed values. Deletion
+         * and renaming of enum values are not supported.
+         * Can have up to 500 allowed values.
+         * Structure is documented below.
+         * 
+         */
     private final List<TagTemplateFieldTypeEnumTypeAllowedValue> allowedValues;
 
     @CustomType.Constructor
@@ -27,14 +27,14 @@ public final class TagTemplateFieldTypeEnumType {
     }
 
     /**
-     * The set of allowed values for this enum. The display names of the
+     * @return The set of allowed values for this enum. The display names of the
      * values must be case-insensitively unique within this set. Currently,
      * enum values can only be added to the list of allowed values. Deletion
      * and renaming of enum values are not supported.
      * Can have up to 500 allowed values.
      * Structure is documented below.
      * 
-    */
+     */
     public List<TagTemplateFieldTypeEnumTypeAllowedValue> allowedValues() {
         return this.allowedValues;
     }

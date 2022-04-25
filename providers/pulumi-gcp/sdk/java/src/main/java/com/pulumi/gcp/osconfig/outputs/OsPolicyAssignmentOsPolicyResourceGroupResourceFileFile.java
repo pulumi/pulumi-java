@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileFile {
-    /**
-     * Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
-     * 
-     */
+        /**
+         * @return Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
+         * 
+         */
     private final @Nullable Boolean allowInsecure;
-    /**
-     * A Cloud Storage object.
-     * 
-     */
+        /**
+         * @return A Cloud Storage object.
+         * 
+         */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcs gcs;
-    /**
-     * A local path within the VM to use.
-     * 
-     */
+        /**
+         * @return A local path within the VM to use.
+         * 
+         */
     private final @Nullable String localPath;
-    /**
-     * A generic remote file.
-     * 
-     */
+        /**
+         * @return A generic remote file.
+         * 
+         */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemote remote;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileFile {
     }
 
     /**
-     * Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
+     * @return Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
      * 
-    */
+     */
     public Optional<Boolean> allowInsecure() {
         return Optional.ofNullable(this.allowInsecure);
     }
     /**
-     * A Cloud Storage object.
+     * @return A Cloud Storage object.
      * 
-    */
+     */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcs> gcs() {
         return Optional.ofNullable(this.gcs);
     }
     /**
-     * A local path within the VM to use.
+     * @return A local path within the VM to use.
      * 
-    */
+     */
     public Optional<String> localPath() {
         return Optional.ofNullable(this.localPath);
     }
     /**
-     * A generic remote file.
+     * @return A generic remote file.
      * 
-    */
+     */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemote> remote() {
         return Optional.ofNullable(this.remote);
     }

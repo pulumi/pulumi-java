@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class FolderFeedFeedOutputConfigPubsubDestination {
-    /**
-     * Destination on Cloud Pubsub topic.
-     * 
-     */
+        /**
+         * @return Destination on Cloud Pubsub topic.
+         * 
+         */
     private final String topic;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class FolderFeedFeedOutputConfigPubsubDestination {
     }
 
     /**
-     * Destination on Cloud Pubsub topic.
+     * @return Destination on Cloud Pubsub topic.
      * 
-    */
+     */
     public String topic() {
         return this.topic;
     }

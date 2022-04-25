@@ -12,21 +12,21 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BudgetAmount {
-    /**
-     * Configures a budget amount that is automatically set to 100% of
-     * last period&#39;s spend.
-     * Boolean. Set value to true to use. Do not set to false, instead
-     * use the `specified_amount` block.
-     * 
-     */
+        /**
+         * @return Configures a budget amount that is automatically set to 100% of
+         * last period&#39;s spend.
+         * Boolean. Set value to true to use. Do not set to false, instead
+         * use the `specified_amount` block.
+         * 
+         */
     private final @Nullable Boolean lastPeriodAmount;
-    /**
-     * A specified amount to use as the budget. currencyCode is
-     * optional. If specified, it must match the currency of the
-     * billing account. The currencyCode is provided on output.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return A specified amount to use as the budget. currencyCode is
+         * optional. If specified, it must match the currency of the
+         * billing account. The currencyCode is provided on output.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable BudgetAmountSpecifiedAmount specifiedAmount;
 
     @CustomType.Constructor
@@ -38,22 +38,22 @@ public final class BudgetAmount {
     }
 
     /**
-     * Configures a budget amount that is automatically set to 100% of
+     * @return Configures a budget amount that is automatically set to 100% of
      * last period&#39;s spend.
      * Boolean. Set value to true to use. Do not set to false, instead
      * use the `specified_amount` block.
      * 
-    */
+     */
     public Optional<Boolean> lastPeriodAmount() {
         return Optional.ofNullable(this.lastPeriodAmount);
     }
     /**
-     * A specified amount to use as the budget. currencyCode is
+     * @return A specified amount to use as the budget. currencyCode is
      * optional. If specified, it must match the currency of the
      * billing account. The currencyCode is provided on output.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<BudgetAmountSpecifiedAmount> specifiedAmount() {
         return Optional.ofNullable(this.specifiedAmount);
     }

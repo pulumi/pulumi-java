@@ -23,6 +23,10 @@ public final class BillingAccountExclusionState extends com.pulumi.resources.Res
     @Import(name="billingAccount")
     private @Nullable Output<String> billingAccount;
 
+    /**
+     * @return The billing account to create the exclusion for.
+     * 
+     */
     public Optional<Output<String>> billingAccount() {
         return Optional.ofNullable(this.billingAccount);
     }
@@ -34,6 +38,10 @@ public final class BillingAccountExclusionState extends com.pulumi.resources.Res
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A human-readable description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -46,6 +54,11 @@ public final class BillingAccountExclusionState extends com.pulumi.resources.Res
     @Import(name="disabled")
     private @Nullable Output<Boolean> disabled;
 
+    /**
+     * @return Whether this exclusion rule should be disabled or not. This defaults to
+     * false.
+     * 
+     */
     public Optional<Output<Boolean>> disabled() {
         return Optional.ofNullable(this.disabled);
     }
@@ -59,6 +72,12 @@ public final class BillingAccountExclusionState extends com.pulumi.resources.Res
     @Import(name="filter")
     private @Nullable Output<String> filter;
 
+    /**
+     * @return The filter to apply when excluding logs. Only log entries that match the filter are excluded.
+     * See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced-filters) for information on how to
+     * write a filter.
+     * 
+     */
     public Optional<Output<String>> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -70,6 +89,10 @@ public final class BillingAccountExclusionState extends com.pulumi.resources.Res
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the logging exclusion.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -102,47 +125,113 @@ public final class BillingAccountExclusionState extends com.pulumi.resources.Res
             $ = new BillingAccountExclusionState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param billingAccount The billing account to create the exclusion for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingAccount(@Nullable Output<String> billingAccount) {
             $.billingAccount = billingAccount;
             return this;
         }
 
+        /**
+         * @param billingAccount The billing account to create the exclusion for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingAccount(String billingAccount) {
             return billingAccount(Output.of(billingAccount));
         }
 
+        /**
+         * @param description A human-readable description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A human-readable description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param disabled Whether this exclusion rule should be disabled or not. This defaults to
+         * false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             $.disabled = disabled;
             return this;
         }
 
+        /**
+         * @param disabled Whether this exclusion rule should be disabled or not. This defaults to
+         * false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Boolean disabled) {
             return disabled(Output.of(disabled));
         }
 
+        /**
+         * @param filter The filter to apply when excluding logs. Only log entries that match the filter are excluded.
+         * See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced-filters) for information on how to
+         * write a filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<String> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter The filter to apply when excluding logs. Only log entries that match the filter are excluded.
+         * See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced-filters) for information on how to
+         * write a filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(String filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param name The name of the logging exclusion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the logging exclusion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

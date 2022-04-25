@@ -21,6 +21,10 @@ public final class InstanceSchedulingNodeAffinityArgs extends com.pulumi.resourc
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -33,6 +37,11 @@ public final class InstanceSchedulingNodeAffinityArgs extends com.pulumi.resourc
     @Import(name="operator", required=true)
     private Output<String> operator;
 
+    /**
+     * @return The operator. Can be `IN` for node-affinities
+     * or `NOT_IN` for anti-affinities.
+     * 
+     */
     public Output<String> operator() {
         return this.operator;
     }
@@ -44,6 +53,10 @@ public final class InstanceSchedulingNodeAffinityArgs extends com.pulumi.resourc
     @Import(name="values", required=true)
     private Output<List<String>> values;
 
+    /**
+     * @return Corresponds to the label values of a reservation resource.
+     * 
+     */
     public Output<List<String>> values() {
         return this.values;
     }
@@ -74,33 +87,77 @@ public final class InstanceSchedulingNodeAffinityArgs extends com.pulumi.resourc
             $ = new InstanceSchedulingNodeAffinityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param operator The operator. Can be `IN` for node-affinities
+         * or `NOT_IN` for anti-affinities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Output<String> operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param operator The operator. Can be `IN` for node-affinities
+         * or `NOT_IN` for anti-affinities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             return operator(Output.of(operator));
         }
 
+        /**
+         * @param values Corresponds to the label values of a reservation resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(Output<List<String>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values Corresponds to the label values of a reservation resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values Corresponds to the label values of a reservation resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

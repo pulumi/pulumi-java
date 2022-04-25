@@ -9,11 +9,11 @@ import java.util.Objects;
 
 @CustomType
 public final class ApiConfigGatewayConfig {
-    /**
-     * Backend settings that are applied to all backends of the Gateway.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Backend settings that are applied to all backends of the Gateway.
+         * Structure is documented below.
+         * 
+         */
     private final ApiConfigGatewayConfigBackendConfig backendConfig;
 
     @CustomType.Constructor
@@ -22,10 +22,10 @@ public final class ApiConfigGatewayConfig {
     }
 
     /**
-     * Backend settings that are applied to all backends of the Gateway.
+     * @return Backend settings that are applied to all backends of the Gateway.
      * Structure is documented below.
      * 
-    */
+     */
     public ApiConfigGatewayConfigBackendConfig backendConfig() {
         return this.backendConfig;
     }

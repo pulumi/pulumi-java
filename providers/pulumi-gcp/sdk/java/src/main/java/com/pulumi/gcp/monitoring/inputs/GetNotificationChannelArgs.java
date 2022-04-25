@@ -22,6 +22,10 @@ public final class GetNotificationChannelArgs extends com.pulumi.resources.Invok
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return The display name for this notification channel.
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -34,6 +38,11 @@ public final class GetNotificationChannelArgs extends com.pulumi.resources.Invok
     @Import(name="labels")
     private @Nullable Map<String,String> labels;
 
+    /**
+     * @return Labels (corresponding to the
+     * NotificationChannelDescriptor schema) to filter the notification channels by.
+     * 
+     */
     public Optional<Map<String,String>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -46,6 +55,11 @@ public final class GetNotificationChannelArgs extends com.pulumi.resources.Invok
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -57,6 +71,10 @@ public final class GetNotificationChannelArgs extends com.pulumi.resources.Invok
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of the notification channel.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -68,6 +86,10 @@ public final class GetNotificationChannelArgs extends com.pulumi.resources.Invok
     @Import(name="userLabels")
     private @Nullable Map<String,String> userLabels;
 
+    /**
+     * @return User-provided key-value labels to filter by.
+     * 
+     */
     public Optional<Map<String,String>> userLabels() {
         return Optional.ofNullable(this.userLabels);
     }
@@ -100,26 +122,58 @@ public final class GetNotificationChannelArgs extends com.pulumi.resources.Invok
             $ = new GetNotificationChannelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The display name for this notification channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param labels Labels (corresponding to the
+         * NotificationChannelDescriptor schema) to filter the notification channels by.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Map<String,String> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param type The type of the notification channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userLabels User-provided key-value labels to filter by.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userLabels(@Nullable Map<String,String> userLabels) {
             $.userLabels = userLabels;
             return this;

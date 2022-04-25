@@ -12,16 +12,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LiteTopicPartitionConfig {
-    /**
-     * The capacity configuration.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return The capacity configuration.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable LiteTopicPartitionConfigCapacity capacity;
-    /**
-     * The number of partitions in the topic. Must be at least 1.
-     * 
-     */
+        /**
+         * @return The number of partitions in the topic. Must be at least 1.
+         * 
+         */
     private final Integer count;
 
     @CustomType.Constructor
@@ -33,17 +33,17 @@ public final class LiteTopicPartitionConfig {
     }
 
     /**
-     * The capacity configuration.
+     * @return The capacity configuration.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<LiteTopicPartitionConfigCapacity> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
-     * The number of partitions in the topic. Must be at least 1.
+     * @return The number of partitions in the topic. Must be at least 1.
      * 
-    */
+     */
     public Integer count() {
         return this.count;
     }

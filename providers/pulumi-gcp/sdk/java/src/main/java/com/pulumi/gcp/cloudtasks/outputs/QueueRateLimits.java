@@ -12,29 +12,29 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class QueueRateLimits {
-    /**
-     * - 
-     * The max burst size.
-     * Max burst size limits how fast tasks in queue are processed when many tasks are
-     * in the queue and the rate is high. This field allows the queue to have a high
-     * rate so processing starts shortly after a task is enqueued, but still limits
-     * resource usage when many tasks are enqueued in a short period of time.
-     * 
-     */
+        /**
+         * @return -
+         * The max burst size.
+         * Max burst size limits how fast tasks in queue are processed when many tasks are
+         * in the queue and the rate is high. This field allows the queue to have a high
+         * rate so processing starts shortly after a task is enqueued, but still limits
+         * resource usage when many tasks are enqueued in a short period of time.
+         * 
+         */
     private final @Nullable Integer maxBurstSize;
-    /**
-     * The maximum number of concurrent tasks that Cloud Tasks allows to
-     * be dispatched for this queue. After this threshold has been
-     * reached, Cloud Tasks stops dispatching tasks until the number of
-     * concurrent requests decreases.
-     * 
-     */
+        /**
+         * @return The maximum number of concurrent tasks that Cloud Tasks allows to
+         * be dispatched for this queue. After this threshold has been
+         * reached, Cloud Tasks stops dispatching tasks until the number of
+         * concurrent requests decreases.
+         * 
+         */
     private final @Nullable Integer maxConcurrentDispatches;
-    /**
-     * The maximum rate at which tasks are dispatched from this queue.
-     * If unspecified when the queue is created, Cloud Tasks will pick the default.
-     * 
-     */
+        /**
+         * @return The maximum rate at which tasks are dispatched from this queue.
+         * If unspecified when the queue is created, Cloud Tasks will pick the default.
+         * 
+         */
     private final @Nullable Double maxDispatchesPerSecond;
 
     @CustomType.Constructor
@@ -48,32 +48,32 @@ public final class QueueRateLimits {
     }
 
     /**
-     * - 
+     * @return -
      * The max burst size.
      * Max burst size limits how fast tasks in queue are processed when many tasks are
      * in the queue and the rate is high. This field allows the queue to have a high
      * rate so processing starts shortly after a task is enqueued, but still limits
      * resource usage when many tasks are enqueued in a short period of time.
      * 
-    */
+     */
     public Optional<Integer> maxBurstSize() {
         return Optional.ofNullable(this.maxBurstSize);
     }
     /**
-     * The maximum number of concurrent tasks that Cloud Tasks allows to
+     * @return The maximum number of concurrent tasks that Cloud Tasks allows to
      * be dispatched for this queue. After this threshold has been
      * reached, Cloud Tasks stops dispatching tasks until the number of
      * concurrent requests decreases.
      * 
-    */
+     */
     public Optional<Integer> maxConcurrentDispatches() {
         return Optional.ofNullable(this.maxConcurrentDispatches);
     }
     /**
-     * The maximum rate at which tasks are dispatched from this queue.
+     * @return The maximum rate at which tasks are dispatched from this queue.
      * If unspecified when the queue is created, Cloud Tasks will pick the default.
      * 
-    */
+     */
     public Optional<Double> maxDispatchesPerSecond() {
         return Optional.ofNullable(this.maxDispatchesPerSecond);
     }

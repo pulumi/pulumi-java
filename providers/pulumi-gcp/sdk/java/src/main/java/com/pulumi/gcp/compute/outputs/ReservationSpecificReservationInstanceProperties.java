@@ -14,31 +14,31 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ReservationSpecificReservationInstanceProperties {
-    /**
-     * Guest accelerator type and count.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Guest accelerator type and count.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<ReservationSpecificReservationInstancePropertiesGuestAccelerator> guestAccelerators;
-    /**
-     * The amount of local ssd to reserve with each instance. This
-     * reserves disks of type `local-ssd`.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return The amount of local ssd to reserve with each instance. This
+         * reserves disks of type `local-ssd`.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<ReservationSpecificReservationInstancePropertiesLocalSsd> localSsds;
-    /**
-     * The name of the machine type to reserve.
-     * 
-     */
+        /**
+         * @return The name of the machine type to reserve.
+         * 
+         */
     private final String machineType;
-    /**
-     * The minimum CPU platform for the reservation. For example,
-     * `&#34;Intel Skylake&#34;`. See
-     * the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
-     * for information on available CPU platforms.
-     * 
-     */
+        /**
+         * @return The minimum CPU platform for the reservation. For example,
+         * `&#34;Intel Skylake&#34;`. See
+         * the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
+         * for information on available CPU platforms.
+         * 
+         */
     private final @Nullable String minCpuPlatform;
 
     @CustomType.Constructor
@@ -54,36 +54,36 @@ public final class ReservationSpecificReservationInstanceProperties {
     }
 
     /**
-     * Guest accelerator type and count.
+     * @return Guest accelerator type and count.
      * Structure is documented below.
      * 
-    */
+     */
     public List<ReservationSpecificReservationInstancePropertiesGuestAccelerator> guestAccelerators() {
         return this.guestAccelerators == null ? List.of() : this.guestAccelerators;
     }
     /**
-     * The amount of local ssd to reserve with each instance. This
+     * @return The amount of local ssd to reserve with each instance. This
      * reserves disks of type `local-ssd`.
      * Structure is documented below.
      * 
-    */
+     */
     public List<ReservationSpecificReservationInstancePropertiesLocalSsd> localSsds() {
         return this.localSsds == null ? List.of() : this.localSsds;
     }
     /**
-     * The name of the machine type to reserve.
+     * @return The name of the machine type to reserve.
      * 
-    */
+     */
     public String machineType() {
         return this.machineType;
     }
     /**
-     * The minimum CPU platform for the reservation. For example,
+     * @return The minimum CPU platform for the reservation. For example,
      * `&#34;Intel Skylake&#34;`. See
      * the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
      * for information on available CPU platforms.
      * 
-    */
+     */
     public Optional<String> minCpuPlatform() {
         return Optional.ofNullable(this.minCpuPlatform);
     }

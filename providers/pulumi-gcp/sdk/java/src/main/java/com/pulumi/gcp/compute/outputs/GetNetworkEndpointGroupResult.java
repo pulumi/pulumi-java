@@ -12,43 +12,43 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetNetworkEndpointGroupResult {
-    /**
-     * The NEG default port.
-     * 
-     */
+        /**
+         * @return The NEG default port.
+         * 
+         */
     private final Integer defaultPort;
-    /**
-     * The NEG description.
-     * 
-     */
+        /**
+         * @return The NEG description.
+         * 
+         */
     private final String description;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final @Nullable String name;
-    /**
-     * The network to which all network endpoints in the NEG belong.
-     * 
-     */
+        /**
+         * @return The network to which all network endpoints in the NEG belong.
+         * 
+         */
     private final String network;
-    /**
-     * Type of network endpoints in this network endpoint group.
-     * 
-     */
+        /**
+         * @return Type of network endpoints in this network endpoint group.
+         * 
+         */
     private final String networkEndpointType;
     private final @Nullable String project;
     private final @Nullable String selfLink;
-    /**
-     * Number of network endpoints in the network endpoint group.
-     * 
-     */
+        /**
+         * @return Number of network endpoints in the network endpoint group.
+         * 
+         */
     private final Integer size;
-    /**
-     * subnetwork to which all network endpoints in the NEG belong.
-     * 
-     */
+        /**
+         * @return subnetwork to which all network endpoints in the NEG belong.
+         * 
+         */
     private final String subnetwork;
     private final @Nullable String zone;
 
@@ -79,23 +79,23 @@ public final class GetNetworkEndpointGroupResult {
     }
 
     /**
-     * The NEG default port.
+     * @return The NEG default port.
      * 
-    */
+     */
     public Integer defaultPort() {
         return this.defaultPort;
     }
     /**
-     * The NEG description.
+     * @return The NEG description.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -103,16 +103,16 @@ public final class GetNetworkEndpointGroupResult {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The network to which all network endpoints in the NEG belong.
+     * @return The network to which all network endpoints in the NEG belong.
      * 
-    */
+     */
     public String network() {
         return this.network;
     }
     /**
-     * Type of network endpoints in this network endpoint group.
+     * @return Type of network endpoints in this network endpoint group.
      * 
-    */
+     */
     public String networkEndpointType() {
         return this.networkEndpointType;
     }
@@ -123,16 +123,16 @@ public final class GetNetworkEndpointGroupResult {
         return Optional.ofNullable(this.selfLink);
     }
     /**
-     * Number of network endpoints in the network endpoint group.
+     * @return Number of network endpoints in the network endpoint group.
      * 
-    */
+     */
     public Integer size() {
         return this.size;
     }
     /**
-     * subnetwork to which all network endpoints in the NEG belong.
+     * @return subnetwork to which all network endpoints in the NEG belong.
      * 
-    */
+     */
     public String subnetwork() {
         return this.subnetwork;
     }

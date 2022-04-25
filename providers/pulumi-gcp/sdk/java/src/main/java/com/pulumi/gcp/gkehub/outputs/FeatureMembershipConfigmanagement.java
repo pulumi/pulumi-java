@@ -15,30 +15,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FeatureMembershipConfigmanagement {
-    /**
-     * Binauthz configuration for the cluster. Structure is documented below.
-     * 
-     */
+        /**
+         * @return Binauthz configuration for the cluster. Structure is documented below.
+         * 
+         */
     private final @Nullable FeatureMembershipConfigmanagementBinauthz binauthz;
-    /**
-     * Config Sync configuration for the cluster. Structure is documented below.
-     * 
-     */
+        /**
+         * @return Config Sync configuration for the cluster. Structure is documented below.
+         * 
+         */
     private final @Nullable FeatureMembershipConfigmanagementConfigSync configSync;
-    /**
-     * Hierarchy Controller configuration for the cluster. Structure is documented below.
-     * 
-     */
+        /**
+         * @return Hierarchy Controller configuration for the cluster. Structure is documented below.
+         * 
+         */
     private final @Nullable FeatureMembershipConfigmanagementHierarchyController hierarchyController;
-    /**
-     * Policy Controller configuration for the cluster. Structure is documented below.
-     * 
-     */
+        /**
+         * @return Policy Controller configuration for the cluster. Structure is documented below.
+         * 
+         */
     private final @Nullable FeatureMembershipConfigmanagementPolicyController policyController;
-    /**
-     * Version of ACM installed.
-     * 
-     */
+        /**
+         * @return Version of ACM installed.
+         * 
+         */
     private final @Nullable String version;
 
     @CustomType.Constructor
@@ -56,37 +56,37 @@ public final class FeatureMembershipConfigmanagement {
     }
 
     /**
-     * Binauthz configuration for the cluster. Structure is documented below.
+     * @return Binauthz configuration for the cluster. Structure is documented below.
      * 
-    */
+     */
     public Optional<FeatureMembershipConfigmanagementBinauthz> binauthz() {
         return Optional.ofNullable(this.binauthz);
     }
     /**
-     * Config Sync configuration for the cluster. Structure is documented below.
+     * @return Config Sync configuration for the cluster. Structure is documented below.
      * 
-    */
+     */
     public Optional<FeatureMembershipConfigmanagementConfigSync> configSync() {
         return Optional.ofNullable(this.configSync);
     }
     /**
-     * Hierarchy Controller configuration for the cluster. Structure is documented below.
+     * @return Hierarchy Controller configuration for the cluster. Structure is documented below.
      * 
-    */
+     */
     public Optional<FeatureMembershipConfigmanagementHierarchyController> hierarchyController() {
         return Optional.ofNullable(this.hierarchyController);
     }
     /**
-     * Policy Controller configuration for the cluster. Structure is documented below.
+     * @return Policy Controller configuration for the cluster. Structure is documented below.
      * 
-    */
+     */
     public Optional<FeatureMembershipConfigmanagementPolicyController> policyController() {
         return Optional.ofNullable(this.policyController);
     }
     /**
-     * Version of ACM installed.
+     * @return Version of ACM installed.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

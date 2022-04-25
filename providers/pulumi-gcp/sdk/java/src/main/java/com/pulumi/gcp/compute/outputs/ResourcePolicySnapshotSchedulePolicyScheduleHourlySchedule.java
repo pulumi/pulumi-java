@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule {
-    /**
-     * The number of hours between snapshots.
-     * 
-     */
+        /**
+         * @return The number of hours between snapshots.
+         * 
+         */
     private final Integer hoursInCycle;
-    /**
-     * The start time of the schedule. The timestamp is an RFC3339 string.
-     * 
-     */
+        /**
+         * @return The start time of the schedule. The timestamp is an RFC3339 string.
+         * 
+         */
     private final String startTime;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule {
     }
 
     /**
-     * The number of hours between snapshots.
+     * @return The number of hours between snapshots.
      * 
-    */
+     */
     public Integer hoursInCycle() {
         return this.hoursInCycle;
     }
     /**
-     * The start time of the schedule. The timestamp is an RFC3339 string.
+     * @return The start time of the schedule. The timestamp is an RFC3339 string.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }

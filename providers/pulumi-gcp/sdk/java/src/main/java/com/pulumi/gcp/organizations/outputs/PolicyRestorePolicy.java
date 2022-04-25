@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class PolicyRestorePolicy {
-    /**
-     * May only be set to true. If set, then the default Policy is restored.
-     * 
-     */
+        /**
+         * @return May only be set to true. If set, then the default Policy is restored.
+         * 
+         */
     private final Boolean default_;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class PolicyRestorePolicy {
     }
 
     /**
-     * May only be set to true. If set, then the default Policy is restored.
+     * @return May only be set to true. If set, then the default Policy is restored.
      * 
-    */
+     */
     public Boolean default_() {
         return this.default_;
     }

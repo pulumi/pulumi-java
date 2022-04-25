@@ -13,25 +13,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GetInstanceScheduling {
-    /**
-     * Specifies if the instance should be
-     * restarted if it was terminated by Compute Engine (not a user).
-     * 
-     */
+        /**
+         * @return Specifies if the instance should be
+         * restarted if it was terminated by Compute Engine (not a user).
+         * 
+         */
     private final Boolean automaticRestart;
     private final Integer minNodeCpus;
     private final List<GetInstanceSchedulingNodeAffinity> nodeAffinities;
-    /**
-     * Describes maintenance behavior for the
-     * instance. One of `MIGRATE` or `TERMINATE`, for more info, read
-     * [here](https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options)
-     * 
-     */
+        /**
+         * @return Describes maintenance behavior for the
+         * instance. One of `MIGRATE` or `TERMINATE`, for more info, read
+         * [here](https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options)
+         * 
+         */
     private final String onHostMaintenance;
-    /**
-     * Whether the instance is preemptible.
-     * 
-     */
+        /**
+         * @return Whether the instance is preemptible.
+         * 
+         */
     private final Boolean preemptible;
 
     @CustomType.Constructor
@@ -49,10 +49,10 @@ public final class GetInstanceScheduling {
     }
 
     /**
-     * Specifies if the instance should be
+     * @return Specifies if the instance should be
      * restarted if it was terminated by Compute Engine (not a user).
      * 
-    */
+     */
     public Boolean automaticRestart() {
         return this.automaticRestart;
     }
@@ -63,18 +63,18 @@ public final class GetInstanceScheduling {
         return this.nodeAffinities;
     }
     /**
-     * Describes maintenance behavior for the
+     * @return Describes maintenance behavior for the
      * instance. One of `MIGRATE` or `TERMINATE`, for more info, read
      * [here](https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options)
      * 
-    */
+     */
     public String onHostMaintenance() {
         return this.onHostMaintenance;
     }
     /**
-     * Whether the instance is preemptible.
+     * @return Whether the instance is preemptible.
      * 
-    */
+     */
     public Boolean preemptible() {
         return this.preemptible;
     }

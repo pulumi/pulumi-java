@@ -11,22 +11,22 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TriggerBuildSourceStorageSource {
-    /**
-     * Google Cloud Storage bucket containing the source.
-     * 
-     */
+        /**
+         * @return Google Cloud Storage bucket containing the source.
+         * 
+         */
     private final String bucket;
-    /**
-     * Google Cloud Storage generation for the object.
-     * If the generation is omitted, the latest generation will be used
-     * 
-     */
+        /**
+         * @return Google Cloud Storage generation for the object.
+         * If the generation is omitted, the latest generation will be used
+         * 
+         */
     private final @Nullable String generation;
-    /**
-     * Google Cloud Storage object containing the source.
-     * This object must be a gzipped archive file (.tar.gz) containing source to build.
-     * 
-     */
+        /**
+         * @return Google Cloud Storage object containing the source.
+         * This object must be a gzipped archive file (.tar.gz) containing source to build.
+         * 
+         */
     private final String object;
 
     @CustomType.Constructor
@@ -40,25 +40,25 @@ public final class TriggerBuildSourceStorageSource {
     }
 
     /**
-     * Google Cloud Storage bucket containing the source.
+     * @return Google Cloud Storage bucket containing the source.
      * 
-    */
+     */
     public String bucket() {
         return this.bucket;
     }
     /**
-     * Google Cloud Storage generation for the object.
+     * @return Google Cloud Storage generation for the object.
      * If the generation is omitted, the latest generation will be used
      * 
-    */
+     */
     public Optional<String> generation() {
         return Optional.ofNullable(this.generation);
     }
     /**
-     * Google Cloud Storage object containing the source.
+     * @return Google Cloud Storage object containing the source.
      * This object must be a gzipped archive file (.tar.gz) containing source to build.
      * 
-    */
+     */
     public String object() {
         return this.object;
     }

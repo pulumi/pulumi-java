@@ -10,21 +10,21 @@ import java.util.Objects;
 
 @CustomType
 public final class URLMapPathMatcherRouteRuleHeaderActionRequestHeadersToAdd {
-    /**
-     * The name of the header to add.
-     * 
-     */
+        /**
+         * @return The name of the header to add.
+         * 
+         */
     private final String headerName;
-    /**
-     * The value of the header to add.
-     * 
-     */
+        /**
+         * @return The value of the header to add.
+         * 
+         */
     private final String headerValue;
-    /**
-     * If false, headerValue is appended to any values that already exist for the header.
-     * If true, headerValue is set for the header, discarding any values that were set for that header.
-     * 
-     */
+        /**
+         * @return If false, headerValue is appended to any values that already exist for the header.
+         * If true, headerValue is set for the header, discarding any values that were set for that header.
+         * 
+         */
     private final Boolean replace;
 
     @CustomType.Constructor
@@ -38,24 +38,24 @@ public final class URLMapPathMatcherRouteRuleHeaderActionRequestHeadersToAdd {
     }
 
     /**
-     * The name of the header to add.
+     * @return The name of the header to add.
      * 
-    */
+     */
     public String headerName() {
         return this.headerName;
     }
     /**
-     * The value of the header to add.
+     * @return The value of the header to add.
      * 
-    */
+     */
     public String headerValue() {
         return this.headerValue;
     }
     /**
-     * If false, headerValue is appended to any values that already exist for the header.
+     * @return If false, headerValue is appended to any values that already exist for the header.
      * If true, headerValue is set for the header, discarding any values that were set for that header.
      * 
-    */
+     */
     public Boolean replace() {
         return this.replace;
     }

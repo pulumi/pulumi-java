@@ -9,11 +9,11 @@ import java.util.Objects;
 
 @CustomType
 public final class PreventionDeidentifyTemplateDeidentifyConfig {
-    /**
-     * Specifies free-text based transformations to be applied to the dataset.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Specifies free-text based transformations to be applied to the dataset.
+         * Structure is documented below.
+         * 
+         */
     private final PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations infoTypeTransformations;
 
     @CustomType.Constructor
@@ -22,10 +22,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfig {
     }
 
     /**
-     * Specifies free-text based transformations to be applied to the dataset.
+     * @return Specifies free-text based transformations to be applied to the dataset.
      * Structure is documented below.
      * 
-    */
+     */
     public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations infoTypeTransformations() {
         return this.infoTypeTransformations;
     }

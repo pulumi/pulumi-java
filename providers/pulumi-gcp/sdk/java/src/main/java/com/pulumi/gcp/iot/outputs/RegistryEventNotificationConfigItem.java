@@ -11,19 +11,19 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RegistryEventNotificationConfigItem {
-    /**
-     * PubSub topic name to publish device events.
-     * 
-     */
+        /**
+         * @return PubSub topic name to publish device events.
+         * 
+         */
     private final String pubsubTopicName;
-    /**
-     * If the subfolder name matches this string exactly, this
-     * configuration will be used. The string must not include the
-     * leading &#39;/&#39; character. If empty, all strings are matched. Empty
-     * value can only be used for the last `event_notification_configs`
-     * item.
-     * 
-     */
+        /**
+         * @return If the subfolder name matches this string exactly, this
+         * configuration will be used. The string must not include the
+         * leading &#39;/&#39; character. If empty, all strings are matched. Empty
+         * value can only be used for the last `event_notification_configs`
+         * item.
+         * 
+         */
     private final @Nullable String subfolderMatches;
 
     @CustomType.Constructor
@@ -35,20 +35,20 @@ public final class RegistryEventNotificationConfigItem {
     }
 
     /**
-     * PubSub topic name to publish device events.
+     * @return PubSub topic name to publish device events.
      * 
-    */
+     */
     public String pubsubTopicName() {
         return this.pubsubTopicName;
     }
     /**
-     * If the subfolder name matches this string exactly, this
+     * @return If the subfolder name matches this string exactly, this
      * configuration will be used. The string must not include the
      * leading &#39;/&#39; character. If empty, all strings are matched. Empty
      * value can only be used for the last `event_notification_configs`
      * item.
      * 
-    */
+     */
     public Optional<String> subfolderMatches() {
         return Optional.ofNullable(this.subfolderMatches);
     }

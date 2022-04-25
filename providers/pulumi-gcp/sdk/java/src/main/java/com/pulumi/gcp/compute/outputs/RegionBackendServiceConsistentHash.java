@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RegionBackendServiceConsistentHash {
-    /**
-     * Hash is based on HTTP Cookie. This field describes a HTTP cookie
-     * that will be used as the hash key for the consistent hash load
-     * balancer. If the cookie is not present, it will be generated.
-     * This field is applicable if the sessionAffinity is set to HTTP_COOKIE.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Hash is based on HTTP Cookie. This field describes a HTTP cookie
+         * that will be used as the hash key for the consistent hash load
+         * balancer. If the cookie is not present, it will be generated.
+         * This field is applicable if the sessionAffinity is set to HTTP_COOKIE.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable RegionBackendServiceConsistentHashHttpCookie httpCookie;
-    /**
-     * The hash based on the value of the specified header field.
-     * This field is applicable if the sessionAffinity is set to HEADER_FIELD.
-     * 
-     */
+        /**
+         * @return The hash based on the value of the specified header field.
+         * This field is applicable if the sessionAffinity is set to HEADER_FIELD.
+         * 
+         */
     private final @Nullable String httpHeaderName;
-    /**
-     * The minimum number of virtual nodes to use for the hash ring.
-     * Larger ring sizes result in more granular load
-     * distributions. If the number of hosts in the load balancing pool
-     * is larger than the ring size, each host will be assigned a single
-     * virtual node.
-     * Defaults to 1024.
-     * 
-     */
+        /**
+         * @return The minimum number of virtual nodes to use for the hash ring.
+         * Larger ring sizes result in more granular load
+         * distributions. If the number of hosts in the load balancing pool
+         * is larger than the ring size, each host will be assigned a single
+         * virtual node.
+         * Defaults to 1024.
+         * 
+         */
     private final @Nullable Integer minimumRingSize;
 
     @CustomType.Constructor
@@ -50,33 +50,33 @@ public final class RegionBackendServiceConsistentHash {
     }
 
     /**
-     * Hash is based on HTTP Cookie. This field describes a HTTP cookie
+     * @return Hash is based on HTTP Cookie. This field describes a HTTP cookie
      * that will be used as the hash key for the consistent hash load
      * balancer. If the cookie is not present, it will be generated.
      * This field is applicable if the sessionAffinity is set to HTTP_COOKIE.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<RegionBackendServiceConsistentHashHttpCookie> httpCookie() {
         return Optional.ofNullable(this.httpCookie);
     }
     /**
-     * The hash based on the value of the specified header field.
+     * @return The hash based on the value of the specified header field.
      * This field is applicable if the sessionAffinity is set to HEADER_FIELD.
      * 
-    */
+     */
     public Optional<String> httpHeaderName() {
         return Optional.ofNullable(this.httpHeaderName);
     }
     /**
-     * The minimum number of virtual nodes to use for the hash ring.
+     * @return The minimum number of virtual nodes to use for the hash ring.
      * Larger ring sizes result in more granular load
      * distributions. If the number of hosts in the load balancing pool
      * is larger than the ring size, each host will be assigned a single
      * virtual node.
      * Defaults to 1024.
      * 
-    */
+     */
     public Optional<Integer> minimumRingSize() {
         return Optional.ofNullable(this.minimumRingSize);
     }

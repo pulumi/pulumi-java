@@ -12,19 +12,19 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AutoscalarAutoscalingPolicyCpuUtilization {
-    /**
-     * Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
-     * - NONE (default). No predictive method is used. The autoscaler scales the group to meet current demand based on real-time metrics.
-     * - OPTIMIZE_AVAILABILITY. Predictive autoscaling improves availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated demand.
-     * 
-     */
+        /**
+         * @return Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
+         * - NONE (default). No predictive method is used. The autoscaler scales the group to meet current demand based on real-time metrics.
+         * - OPTIMIZE_AVAILABILITY. Predictive autoscaling improves availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated demand.
+         * 
+         */
     private final @Nullable String predictiveMethod;
-    /**
-     * Fraction of backend capacity utilization (set in HTTP(s) load
-     * balancing configuration) that autoscaler should maintain. Must
-     * be a positive float value. If not defined, the default is 0.8.
-     * 
-     */
+        /**
+         * @return Fraction of backend capacity utilization (set in HTTP(s) load
+         * balancing configuration) that autoscaler should maintain. Must
+         * be a positive float value. If not defined, the default is 0.8.
+         * 
+         */
     private final Double target;
 
     @CustomType.Constructor
@@ -36,20 +36,20 @@ public final class AutoscalarAutoscalingPolicyCpuUtilization {
     }
 
     /**
-     * Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
+     * @return Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
      * - NONE (default). No predictive method is used. The autoscaler scales the group to meet current demand based on real-time metrics.
      * - OPTIMIZE_AVAILABILITY. Predictive autoscaling improves availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated demand.
      * 
-    */
+     */
     public Optional<String> predictiveMethod() {
         return Optional.ofNullable(this.predictiveMethod);
     }
     /**
-     * Fraction of backend capacity utilization (set in HTTP(s) load
+     * @return Fraction of backend capacity utilization (set in HTTP(s) load
      * balancing configuration) that autoscaler should maintain. Must
      * be a positive float value. If not defined, the default is 0.8.
      * 
-    */
+     */
     public Double target() {
         return this.target;
     }

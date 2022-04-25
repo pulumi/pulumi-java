@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FirewallPolicyRuleMatch {
-    /**
-     * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.
-     * 
-     */
+        /**
+         * @return CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.
+         * 
+         */
     private final @Nullable List<String> destIpRanges;
-    /**
-     * Pairs of IP protocols and ports that the rule should match. Structure is documented below.
-     * 
-     */
+        /**
+         * @return Pairs of IP protocols and ports that the rule should match. Structure is documented below.
+         * 
+         */
     private final List<FirewallPolicyRuleMatchLayer4Config> layer4Configs;
-    /**
-     * CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.
-     * 
-     */
+        /**
+         * @return CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.
+         * 
+         */
     private final @Nullable List<String> srcIpRanges;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class FirewallPolicyRuleMatch {
     }
 
     /**
-     * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.
+     * @return CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.
      * 
-    */
+     */
     public List<String> destIpRanges() {
         return this.destIpRanges == null ? List.of() : this.destIpRanges;
     }
     /**
-     * Pairs of IP protocols and ports that the rule should match. Structure is documented below.
+     * @return Pairs of IP protocols and ports that the rule should match. Structure is documented below.
      * 
-    */
+     */
     public List<FirewallPolicyRuleMatchLayer4Config> layer4Configs() {
         return this.layer4Configs;
     }
     /**
-     * CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.
+     * @return CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.
      * 
-    */
+     */
     public List<String> srcIpRanges() {
         return this.srcIpRanges == null ? List.of() : this.srcIpRanges;
     }

@@ -24,6 +24,10 @@ public final class EdgeCacheServiceRoutingPathMatcherArgs extends com.pulumi.res
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A human-readable description of the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -35,6 +39,10 @@ public final class EdgeCacheServiceRoutingPathMatcherArgs extends com.pulumi.res
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -47,6 +55,11 @@ public final class EdgeCacheServiceRoutingPathMatcherArgs extends com.pulumi.res
     @Import(name="routeRules", required=true)
     private Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleArgs>> routeRules;
 
+    /**
+     * @return The routeRules to match against. routeRules support advanced routing behaviour, and can match on paths, headers and query parameters, as well as status codes and HTTP methods.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleArgs>> routeRules() {
         return this.routeRules;
     }
@@ -77,33 +90,78 @@ public final class EdgeCacheServiceRoutingPathMatcherArgs extends com.pulumi.res
             $ = new EdgeCacheServiceRoutingPathMatcherArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A human-readable description of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A human-readable description of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param routeRules The routeRules to match against. routeRules support advanced routing behaviour, and can match on paths, headers and query parameters, as well as status codes and HTTP methods.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeRules(Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleArgs>> routeRules) {
             $.routeRules = routeRules;
             return this;
         }
 
+        /**
+         * @param routeRules The routeRules to match against. routeRules support advanced routing behaviour, and can match on paths, headers and query parameters, as well as status codes and HTTP methods.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeRules(List<EdgeCacheServiceRoutingPathMatcherRouteRuleArgs> routeRules) {
             return routeRules(Output.of(routeRules));
         }
 
+        /**
+         * @param routeRules The routeRules to match against. routeRules support advanced routing behaviour, and can match on paths, headers and query parameters, as well as status codes and HTTP methods.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeRules(EdgeCacheServiceRoutingPathMatcherRouteRuleArgs... routeRules) {
             return routeRules(List.of(routeRules));
         }

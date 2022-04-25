@@ -23,6 +23,10 @@ public final class InstanceGroupManagerVersionArgs extends com.pulumi.resources.
     @Import(name="instanceTemplate", required=true)
     private Output<String> instanceTemplate;
 
+    /**
+     * @return - The full URL to an instance template from which all new instances of this version will be created.
+     * 
+     */
     public Output<String> instanceTemplate() {
         return this.instanceTemplate;
     }
@@ -34,6 +38,10 @@ public final class InstanceGroupManagerVersionArgs extends com.pulumi.resources.
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return - Version name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -45,6 +53,10 @@ public final class InstanceGroupManagerVersionArgs extends com.pulumi.resources.
     @Import(name="targetSize")
     private @Nullable Output<InstanceGroupManagerVersionTargetSizeArgs> targetSize;
 
+    /**
+     * @return - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
+     * 
+     */
     public Optional<Output<InstanceGroupManagerVersionTargetSizeArgs>> targetSize() {
         return Optional.ofNullable(this.targetSize);
     }
@@ -75,29 +87,65 @@ public final class InstanceGroupManagerVersionArgs extends com.pulumi.resources.
             $ = new InstanceGroupManagerVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceTemplate - The full URL to an instance template from which all new instances of this version will be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceTemplate(Output<String> instanceTemplate) {
             $.instanceTemplate = instanceTemplate;
             return this;
         }
 
+        /**
+         * @param instanceTemplate - The full URL to an instance template from which all new instances of this version will be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceTemplate(String instanceTemplate) {
             return instanceTemplate(Output.of(instanceTemplate));
         }
 
+        /**
+         * @param name - Version name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name - Version name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param targetSize - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetSize(@Nullable Output<InstanceGroupManagerVersionTargetSizeArgs> targetSize) {
             $.targetSize = targetSize;
             return this;
         }
 
+        /**
+         * @param targetSize - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetSize(InstanceGroupManagerVersionTargetSizeArgs targetSize) {
             return targetSize(Output.of(targetSize));
         }

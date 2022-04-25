@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ServiceTemplateSpecContainerEnvFrom {
-    /**
-     * The ConfigMap to select from.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return The ConfigMap to select from.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable ServiceTemplateSpecContainerEnvFromConfigMapRef configMapRef;
-    /**
-     * An optional identifier to prepend to each key in the ConfigMap.
-     * 
-     */
+        /**
+         * @return An optional identifier to prepend to each key in the ConfigMap.
+         * 
+         */
     private final @Nullable String prefix;
-    /**
-     * The Secret to select from.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return The Secret to select from.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable ServiceTemplateSpecContainerEnvFromSecretRef secretRef;
 
     @CustomType.Constructor
@@ -42,25 +42,25 @@ public final class ServiceTemplateSpecContainerEnvFrom {
     }
 
     /**
-     * The ConfigMap to select from.
+     * @return The ConfigMap to select from.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<ServiceTemplateSpecContainerEnvFromConfigMapRef> configMapRef() {
         return Optional.ofNullable(this.configMapRef);
     }
     /**
-     * An optional identifier to prepend to each key in the ConfigMap.
+     * @return An optional identifier to prepend to each key in the ConfigMap.
      * 
-    */
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
-     * The Secret to select from.
+     * @return The Secret to select from.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<ServiceTemplateSpecContainerEnvFromSecretRef> secretRef() {
         return Optional.ofNullable(this.secretRef);
     }

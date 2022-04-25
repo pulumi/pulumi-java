@@ -11,39 +11,39 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AccessApprovalSettingsEnrolledService {
-    /**
-     * The product for which Access Approval will be enrolled. Allowed values are listed (case-sensitive):
-     * * all
-     * * App Engine
-     * * BigQuery
-     * * Cloud Bigtable
-     * * Cloud Key Management Service
-     * * Compute Engine
-     * * Cloud Dataflow
-     * * Cloud Identity and Access Management
-     * * Cloud Pub/Sub
-     * * Cloud Storage
-     * * Persistent Disk
-     *   Note: These values are supported as input, but considered a legacy format:
-     * * all
-     * * appengine.googleapis.com
-     * * bigquery.googleapis.com
-     * * bigtable.googleapis.com
-     * * cloudkms.googleapis.com
-     * * compute.googleapis.com
-     * * dataflow.googleapis.com
-     * * iam.googleapis.com
-     * * pubsub.googleapis.com
-     * * storage.googleapis.com
-     * 
-     */
+        /**
+         * @return The product for which Access Approval will be enrolled. Allowed values are listed (case-sensitive):
+         * * all
+         * * App Engine
+         * * BigQuery
+         * * Cloud Bigtable
+         * * Cloud Key Management Service
+         * * Compute Engine
+         * * Cloud Dataflow
+         * * Cloud Identity and Access Management
+         * * Cloud Pub/Sub
+         * * Cloud Storage
+         * * Persistent Disk
+         *   Note: These values are supported as input, but considered a legacy format:
+         * * all
+         * * appengine.googleapis.com
+         * * bigquery.googleapis.com
+         * * bigtable.googleapis.com
+         * * cloudkms.googleapis.com
+         * * compute.googleapis.com
+         * * dataflow.googleapis.com
+         * * iam.googleapis.com
+         * * pubsub.googleapis.com
+         * * storage.googleapis.com
+         * 
+         */
     private final String cloudProduct;
-    /**
-     * The enrollment level of the service.
-     * Default value is `BLOCK_ALL`.
-     * Possible values are `BLOCK_ALL`.
-     * 
-     */
+        /**
+         * @return The enrollment level of the service.
+         * Default value is `BLOCK_ALL`.
+         * Possible values are `BLOCK_ALL`.
+         * 
+         */
     private final @Nullable String enrollmentLevel;
 
     @CustomType.Constructor
@@ -55,7 +55,7 @@ public final class AccessApprovalSettingsEnrolledService {
     }
 
     /**
-     * The product for which Access Approval will be enrolled. Allowed values are listed (case-sensitive):
+     * @return The product for which Access Approval will be enrolled. Allowed values are listed (case-sensitive):
      * * all
      * * App Engine
      * * BigQuery
@@ -79,16 +79,16 @@ public final class AccessApprovalSettingsEnrolledService {
      * * pubsub.googleapis.com
      * * storage.googleapis.com
      * 
-    */
+     */
     public String cloudProduct() {
         return this.cloudProduct;
     }
     /**
-     * The enrollment level of the service.
+     * @return The enrollment level of the service.
      * Default value is `BLOCK_ALL`.
      * Possible values are `BLOCK_ALL`.
      * 
-    */
+     */
     public Optional<String> enrollmentLevel() {
         return Optional.ofNullable(this.enrollmentLevel);
     }

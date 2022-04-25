@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetKeysZoneSigningKeyDigest {
-    /**
-     * The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
-     * 
-     */
+        /**
+         * @return The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
+         * 
+         */
     private final @Nullable String digest;
-    /**
-     * Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
-     * 
-     */
+        /**
+         * @return Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class GetKeysZoneSigningKeyDigest {
     }
 
     /**
-     * The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
+     * @return The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
      * 
-    */
+     */
     public Optional<String> digest() {
         return Optional.ofNullable(this.digest);
     }
     /**
-     * Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
+     * @return Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

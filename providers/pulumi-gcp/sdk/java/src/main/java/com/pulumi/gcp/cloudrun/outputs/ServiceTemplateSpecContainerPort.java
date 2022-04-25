@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ServiceTemplateSpecContainerPort {
-    /**
-     * Port number.
-     * 
-     */
+        /**
+         * @return Port number.
+         * 
+         */
     private final Integer containerPort;
-    /**
-     * Volume&#39;s name.
-     * 
-     */
+        /**
+         * @return Volume&#39;s name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Protocol used on port. Defaults to TCP.
-     * 
-     */
+        /**
+         * @return Protocol used on port. Defaults to TCP.
+         * 
+         */
     private final @Nullable String protocol;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class ServiceTemplateSpecContainerPort {
     }
 
     /**
-     * Port number.
+     * @return Port number.
      * 
-    */
+     */
     public Integer containerPort() {
         return this.containerPort;
     }
     /**
-     * Volume&#39;s name.
+     * @return Volume&#39;s name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Protocol used on port. Defaults to TCP.
+     * @return Protocol used on port. Defaults to TCP.
      * 
-    */
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }

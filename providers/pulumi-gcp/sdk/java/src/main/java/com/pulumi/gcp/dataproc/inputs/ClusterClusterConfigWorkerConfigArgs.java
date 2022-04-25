@@ -26,6 +26,10 @@ public final class ClusterClusterConfigWorkerConfigArgs extends com.pulumi.resou
     @Import(name="accelerators")
     private @Nullable Output<List<ClusterClusterConfigWorkerConfigAcceleratorArgs>> accelerators;
 
+    /**
+     * @return The Compute Engine accelerator configuration for these instances. Can be specified multiple times.
+     * 
+     */
     public Optional<Output<List<ClusterClusterConfigWorkerConfigAcceleratorArgs>>> accelerators() {
         return Optional.ofNullable(this.accelerators);
     }
@@ -37,6 +41,10 @@ public final class ClusterClusterConfigWorkerConfigArgs extends com.pulumi.resou
     @Import(name="diskConfig")
     private @Nullable Output<ClusterClusterConfigWorkerConfigDiskConfigArgs> diskConfig;
 
+    /**
+     * @return Disk Config
+     * 
+     */
     public Optional<Output<ClusterClusterConfigWorkerConfigDiskConfigArgs>> diskConfig() {
         return Optional.ofNullable(this.diskConfig);
     }
@@ -49,6 +57,11 @@ public final class ClusterClusterConfigWorkerConfigArgs extends com.pulumi.resou
     @Import(name="imageUri")
     private @Nullable Output<String> imageUri;
 
+    /**
+     * @return The URI for the image to use for this worker.  See [the guide](https://cloud.google.com/dataproc/docs/guides/dataproc-images)
+     * for more information.
+     * 
+     */
     public Optional<Output<String>> imageUri() {
         return Optional.ofNullable(this.imageUri);
     }
@@ -69,6 +82,12 @@ public final class ClusterClusterConfigWorkerConfigArgs extends com.pulumi.resou
     @Import(name="machineType")
     private @Nullable Output<String> machineType;
 
+    /**
+     * @return The name of a Google Compute Engine machine type
+     * to create for the worker nodes. If not specified, GCP will default to a predetermined
+     * computed value (currently `n1-standard-4`).
+     * 
+     */
     public Optional<Output<String>> machineType() {
         return Optional.ofNullable(this.machineType);
     }
@@ -83,6 +102,13 @@ public final class ClusterClusterConfigWorkerConfigArgs extends com.pulumi.resou
     @Import(name="minCpuPlatform")
     private @Nullable Output<String> minCpuPlatform;
 
+    /**
+     * @return The name of a minimum generation of CPU family
+     * for the master. If not specified, GCP will default to a predetermined computed value
+     * for each zone. See [the guide](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
+     * for details about which CPU families are available (and defaulted) for each zone.
+     * 
+     */
     public Optional<Output<String>> minCpuPlatform() {
         return Optional.ofNullable(this.minCpuPlatform);
     }
@@ -95,6 +121,11 @@ public final class ClusterClusterConfigWorkerConfigArgs extends com.pulumi.resou
     @Import(name="numInstances")
     private @Nullable Output<Integer> numInstances;
 
+    /**
+     * @return Specifies the number of preemptible nodes to create.
+     * Defaults to 0.
+     * 
+     */
     public Optional<Output<Integer>> numInstances() {
         return Optional.ofNullable(this.numInstances);
     }
@@ -129,33 +160,77 @@ public final class ClusterClusterConfigWorkerConfigArgs extends com.pulumi.resou
             $ = new ClusterClusterConfigWorkerConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accelerators The Compute Engine accelerator configuration for these instances. Can be specified multiple times.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accelerators(@Nullable Output<List<ClusterClusterConfigWorkerConfigAcceleratorArgs>> accelerators) {
             $.accelerators = accelerators;
             return this;
         }
 
+        /**
+         * @param accelerators The Compute Engine accelerator configuration for these instances. Can be specified multiple times.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accelerators(List<ClusterClusterConfigWorkerConfigAcceleratorArgs> accelerators) {
             return accelerators(Output.of(accelerators));
         }
 
+        /**
+         * @param accelerators The Compute Engine accelerator configuration for these instances. Can be specified multiple times.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accelerators(ClusterClusterConfigWorkerConfigAcceleratorArgs... accelerators) {
             return accelerators(List.of(accelerators));
         }
 
+        /**
+         * @param diskConfig Disk Config
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskConfig(@Nullable Output<ClusterClusterConfigWorkerConfigDiskConfigArgs> diskConfig) {
             $.diskConfig = diskConfig;
             return this;
         }
 
+        /**
+         * @param diskConfig Disk Config
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskConfig(ClusterClusterConfigWorkerConfigDiskConfigArgs diskConfig) {
             return diskConfig(Output.of(diskConfig));
         }
 
+        /**
+         * @param imageUri The URI for the image to use for this worker.  See [the guide](https://cloud.google.com/dataproc/docs/guides/dataproc-images)
+         * for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageUri(@Nullable Output<String> imageUri) {
             $.imageUri = imageUri;
             return this;
         }
 
+        /**
+         * @param imageUri The URI for the image to use for this worker.  See [the guide](https://cloud.google.com/dataproc/docs/guides/dataproc-images)
+         * for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageUri(String imageUri) {
             return imageUri(Output.of(imageUri));
         }
@@ -173,29 +248,77 @@ public final class ClusterClusterConfigWorkerConfigArgs extends com.pulumi.resou
             return instanceNames(List.of(instanceNames));
         }
 
+        /**
+         * @param machineType The name of a Google Compute Engine machine type
+         * to create for the worker nodes. If not specified, GCP will default to a predetermined
+         * computed value (currently `n1-standard-4`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(@Nullable Output<String> machineType) {
             $.machineType = machineType;
             return this;
         }
 
+        /**
+         * @param machineType The name of a Google Compute Engine machine type
+         * to create for the worker nodes. If not specified, GCP will default to a predetermined
+         * computed value (currently `n1-standard-4`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(String machineType) {
             return machineType(Output.of(machineType));
         }
 
+        /**
+         * @param minCpuPlatform The name of a minimum generation of CPU family
+         * for the master. If not specified, GCP will default to a predetermined computed value
+         * for each zone. See [the guide](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
+         * for details about which CPU families are available (and defaulted) for each zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             $.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
+        /**
+         * @param minCpuPlatform The name of a minimum generation of CPU family
+         * for the master. If not specified, GCP will default to a predetermined computed value
+         * for each zone. See [the guide](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
+         * for details about which CPU families are available (and defaulted) for each zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCpuPlatform(String minCpuPlatform) {
             return minCpuPlatform(Output.of(minCpuPlatform));
         }
 
+        /**
+         * @param numInstances Specifies the number of preemptible nodes to create.
+         * Defaults to 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numInstances(@Nullable Output<Integer> numInstances) {
             $.numInstances = numInstances;
             return this;
         }
 
+        /**
+         * @param numInstances Specifies the number of preemptible nodes to create.
+         * Defaults to 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numInstances(Integer numInstances) {
             return numInstances(Output.of(numInstances));
         }

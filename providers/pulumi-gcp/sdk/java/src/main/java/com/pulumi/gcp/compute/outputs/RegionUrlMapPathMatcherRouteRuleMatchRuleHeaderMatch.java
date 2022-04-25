@@ -13,67 +13,67 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch {
-    /**
-     * The queryParameterMatch matches if the value of the parameter exactly matches
-     * the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
-     * must be set.
-     * 
-     */
+        /**
+         * @return The queryParameterMatch matches if the value of the parameter exactly matches
+         * the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
+         * must be set.
+         * 
+         */
     private final @Nullable String exactMatch;
-    /**
-     * The name of the header.
-     * 
-     */
+        /**
+         * @return The name of the header.
+         * 
+         */
     private final String headerName;
-    /**
-     * If set to false, the headerMatch is considered a match if the match criteria
-     * above are met. If set to true, the headerMatch is considered a match if the
-     * match criteria above are NOT met. Defaults to false.
-     * 
-     */
+        /**
+         * @return If set to false, the headerMatch is considered a match if the match criteria
+         * above are met. If set to true, the headerMatch is considered a match if the
+         * match criteria above are NOT met. Defaults to false.
+         * 
+         */
     private final @Nullable Boolean invertMatch;
-    /**
-     * The value of the header must start with the contents of prefixMatch. Only one of
-     * exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
-     * must be set.
-     * 
-     */
+        /**
+         * @return The value of the header must start with the contents of prefixMatch. Only one of
+         * exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
+         * must be set.
+         * 
+         */
     private final @Nullable String prefixMatch;
-    /**
-     * Specifies that the queryParameterMatch matches if the request contains the query
-     * parameter, irrespective of whether the parameter has a value or not. Only one of
-     * presentMatch, exactMatch and regexMatch must be set.
-     * 
-     */
+        /**
+         * @return Specifies that the queryParameterMatch matches if the request contains the query
+         * parameter, irrespective of whether the parameter has a value or not. Only one of
+         * presentMatch, exactMatch and regexMatch must be set.
+         * 
+         */
     private final @Nullable Boolean presentMatch;
-    /**
-     * The header value must be an integer and its value must be in the range specified
-     * in rangeMatch. If the header does not contain an integer, number or is empty,
-     * the match fails. For example for a range [-5, 0]
-     * * -3 will match
-     * * 0 will not match
-     * * 0.25 will not match
-     * * -3someString will not match.
-     *   Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or
-     *   rangeMatch must be set.
-     *   Structure is documented below.
-     * 
-     */
+        /**
+         * @return The header value must be an integer and its value must be in the range specified
+         * in rangeMatch. If the header does not contain an integer, number or is empty,
+         * the match fails. For example for a range [-5, 0]
+         * * -3 will match
+         * * 0 will not match
+         * * 0.25 will not match
+         * * -3someString will not match.
+         *   Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or
+         *   rangeMatch must be set.
+         *   Structure is documented below.
+         * 
+         */
     private final @Nullable RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch rangeMatch;
-    /**
-     * The queryParameterMatch matches if the value of the parameter matches the
-     * regular expression specified by regexMatch. For the regular expression grammar,
-     * please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
-     * exactMatch and regexMatch must be set.
-     * 
-     */
+        /**
+         * @return The queryParameterMatch matches if the value of the parameter matches the
+         * regular expression specified by regexMatch. For the regular expression grammar,
+         * please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
+         * exactMatch and regexMatch must be set.
+         * 
+         */
     private final @Nullable String regexMatch;
-    /**
-     * The value of the header must end with the contents of suffixMatch. Only one of
-     * exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
-     * must be set.
-     * 
-     */
+        /**
+         * @return The value of the header must end with the contents of suffixMatch. Only one of
+         * exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
+         * must be set.
+         * 
+         */
     private final @Nullable String suffixMatch;
 
     @CustomType.Constructor
@@ -97,50 +97,50 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch {
     }
 
     /**
-     * The queryParameterMatch matches if the value of the parameter exactly matches
+     * @return The queryParameterMatch matches if the value of the parameter exactly matches
      * the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
      * must be set.
      * 
-    */
+     */
     public Optional<String> exactMatch() {
         return Optional.ofNullable(this.exactMatch);
     }
     /**
-     * The name of the header.
+     * @return The name of the header.
      * 
-    */
+     */
     public String headerName() {
         return this.headerName;
     }
     /**
-     * If set to false, the headerMatch is considered a match if the match criteria
+     * @return If set to false, the headerMatch is considered a match if the match criteria
      * above are met. If set to true, the headerMatch is considered a match if the
      * match criteria above are NOT met. Defaults to false.
      * 
-    */
+     */
     public Optional<Boolean> invertMatch() {
         return Optional.ofNullable(this.invertMatch);
     }
     /**
-     * The value of the header must start with the contents of prefixMatch. Only one of
+     * @return The value of the header must start with the contents of prefixMatch. Only one of
      * exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
      * must be set.
      * 
-    */
+     */
     public Optional<String> prefixMatch() {
         return Optional.ofNullable(this.prefixMatch);
     }
     /**
-     * Specifies that the queryParameterMatch matches if the request contains the query
+     * @return Specifies that the queryParameterMatch matches if the request contains the query
      * parameter, irrespective of whether the parameter has a value or not. Only one of
      * presentMatch, exactMatch and regexMatch must be set.
      * 
-    */
+     */
     public Optional<Boolean> presentMatch() {
         return Optional.ofNullable(this.presentMatch);
     }
     /**
-     * The header value must be an integer and its value must be in the range specified
+     * @return The header value must be an integer and its value must be in the range specified
      * in rangeMatch. If the header does not contain an integer, number or is empty,
      * the match fails. For example for a range [-5, 0]
      * * -3 will match
@@ -151,26 +151,26 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch {
      *   rangeMatch must be set.
      *   Structure is documented below.
      * 
-    */
+     */
     public Optional<RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch> rangeMatch() {
         return Optional.ofNullable(this.rangeMatch);
     }
     /**
-     * The queryParameterMatch matches if the value of the parameter matches the
+     * @return The queryParameterMatch matches if the value of the parameter matches the
      * regular expression specified by regexMatch. For the regular expression grammar,
      * please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
      * exactMatch and regexMatch must be set.
      * 
-    */
+     */
     public Optional<String> regexMatch() {
         return Optional.ofNullable(this.regexMatch);
     }
     /**
-     * The value of the header must end with the contents of suffixMatch. Only one of
+     * @return The value of the header must end with the contents of suffixMatch. Only one of
      * exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
      * must be set.
      * 
-    */
+     */
     public Optional<String> suffixMatch() {
         return Optional.ofNullable(this.suffixMatch);
     }

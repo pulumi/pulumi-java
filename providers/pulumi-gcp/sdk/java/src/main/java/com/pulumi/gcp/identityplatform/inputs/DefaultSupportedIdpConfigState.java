@@ -23,6 +23,10 @@ public final class DefaultSupportedIdpConfigState extends com.pulumi.resources.R
     @Import(name="clientId")
     private @Nullable Output<String> clientId;
 
+    /**
+     * @return OAuth client ID
+     * 
+     */
     public Optional<Output<String>> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -34,6 +38,10 @@ public final class DefaultSupportedIdpConfigState extends com.pulumi.resources.R
     @Import(name="clientSecret")
     private @Nullable Output<String> clientSecret;
 
+    /**
+     * @return OAuth client secret
+     * 
+     */
     public Optional<Output<String>> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
@@ -45,6 +53,10 @@ public final class DefaultSupportedIdpConfigState extends com.pulumi.resources.R
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return If this IDP allows the user to sign in
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -66,6 +78,20 @@ public final class DefaultSupportedIdpConfigState extends com.pulumi.resources.R
     @Import(name="idpId")
     private @Nullable Output<String> idpId;
 
+    /**
+     * @return ID of the IDP. Possible values include:
+     * * `apple.com`
+     * * `facebook.com`
+     * * `gc.apple.com`
+     * * `github.com`
+     * * `google.com`
+     * * `linkedin.com`
+     * * `microsoft.com`
+     * * `playgames.google.com`
+     * * `twitter.com`
+     * * `yahoo.com`
+     * 
+     */
     public Optional<Output<String>> idpId() {
         return Optional.ofNullable(this.idpId);
     }
@@ -77,6 +103,10 @@ public final class DefaultSupportedIdpConfigState extends com.pulumi.resources.R
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the DefaultSupportedIdpConfig resource
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -89,6 +119,11 @@ public final class DefaultSupportedIdpConfigState extends com.pulumi.resources.R
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -122,56 +157,150 @@ public final class DefaultSupportedIdpConfigState extends com.pulumi.resources.R
             $ = new DefaultSupportedIdpConfigState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId OAuth client ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId OAuth client ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param clientSecret OAuth client secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
             $.clientSecret = clientSecret;
             return this;
         }
 
+        /**
+         * @param clientSecret OAuth client secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(String clientSecret) {
             return clientSecret(Output.of(clientSecret));
         }
 
+        /**
+         * @param enabled If this IDP allows the user to sign in
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled If this IDP allows the user to sign in
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param idpId ID of the IDP. Possible values include:
+         * * `apple.com`
+         * * `facebook.com`
+         * * `gc.apple.com`
+         * * `github.com`
+         * * `google.com`
+         * * `linkedin.com`
+         * * `microsoft.com`
+         * * `playgames.google.com`
+         * * `twitter.com`
+         * * `yahoo.com`
+         * 
+         * @return builder
+         * 
+         */
         public Builder idpId(@Nullable Output<String> idpId) {
             $.idpId = idpId;
             return this;
         }
 
+        /**
+         * @param idpId ID of the IDP. Possible values include:
+         * * `apple.com`
+         * * `facebook.com`
+         * * `gc.apple.com`
+         * * `github.com`
+         * * `google.com`
+         * * `linkedin.com`
+         * * `microsoft.com`
+         * * `playgames.google.com`
+         * * `twitter.com`
+         * * `yahoo.com`
+         * 
+         * @return builder
+         * 
+         */
         public Builder idpId(String idpId) {
             return idpId(Output.of(idpId));
         }
 
+        /**
+         * @param name The name of the DefaultSupportedIdpConfig resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the DefaultSupportedIdpConfig resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

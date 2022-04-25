@@ -23,6 +23,10 @@ public final class SecretVersionState extends com.pulumi.resources.ResourceArgs 
     @Import(name="createTime")
     private @Nullable Output<String> createTime;
 
+    /**
+     * @return The time at which the Secret was created.
+     * 
+     */
     public Optional<Output<String>> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -34,6 +38,10 @@ public final class SecretVersionState extends com.pulumi.resources.ResourceArgs 
     @Import(name="destroyTime")
     private @Nullable Output<String> destroyTime;
 
+    /**
+     * @return The time at which the Secret was destroyed. Only present if state is DESTROYED.
+     * 
+     */
     public Optional<Output<String>> destroyTime() {
         return Optional.ofNullable(this.destroyTime);
     }
@@ -45,6 +53,10 @@ public final class SecretVersionState extends com.pulumi.resources.ResourceArgs 
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return The current state of the SecretVersion.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -56,6 +68,10 @@ public final class SecretVersionState extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name of the SecretVersion. Format: &#39;projects/{{project}}/secrets/{{secret_id}}/versions/{{version}}&#39;
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -67,6 +83,10 @@ public final class SecretVersionState extends com.pulumi.resources.ResourceArgs 
     @Import(name="secret")
     private @Nullable Output<String> secret;
 
+    /**
+     * @return Secret Manager secret resource
+     * 
+     */
     public Optional<Output<String>> secret() {
         return Optional.ofNullable(this.secret);
     }
@@ -79,6 +99,11 @@ public final class SecretVersionState extends com.pulumi.resources.ResourceArgs 
     @Import(name="secretData")
     private @Nullable Output<String> secretData;
 
+    /**
+     * @return The secret data. Must be no larger than 64KiB.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public Optional<Output<String>> secretData() {
         return Optional.ofNullable(this.secretData);
     }
@@ -112,56 +137,130 @@ public final class SecretVersionState extends com.pulumi.resources.ResourceArgs 
             $ = new SecretVersionState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createTime The time at which the Secret was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(@Nullable Output<String> createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param createTime The time at which the Secret was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
         }
 
+        /**
+         * @param destroyTime The time at which the Secret was destroyed. Only present if state is DESTROYED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destroyTime(@Nullable Output<String> destroyTime) {
             $.destroyTime = destroyTime;
             return this;
         }
 
+        /**
+         * @param destroyTime The time at which the Secret was destroyed. Only present if state is DESTROYED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destroyTime(String destroyTime) {
             return destroyTime(Output.of(destroyTime));
         }
 
+        /**
+         * @param enabled The current state of the SecretVersion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled The current state of the SecretVersion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param name The resource name of the SecretVersion. Format: &#39;projects/{{project}}/secrets/{{secret_id}}/versions/{{version}}&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name of the SecretVersion. Format: &#39;projects/{{project}}/secrets/{{secret_id}}/versions/{{version}}&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param secret Secret Manager secret resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(@Nullable Output<String> secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param secret Secret Manager secret resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(String secret) {
             return secret(Output.of(secret));
         }
 
+        /**
+         * @param secretData The secret data. Must be no larger than 64KiB.
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretData(@Nullable Output<String> secretData) {
             $.secretData = secretData;
             return this;
         }
 
+        /**
+         * @param secretData The secret data. Must be no larger than 64KiB.
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretData(String secretData) {
             return secretData(Output.of(secretData));
         }

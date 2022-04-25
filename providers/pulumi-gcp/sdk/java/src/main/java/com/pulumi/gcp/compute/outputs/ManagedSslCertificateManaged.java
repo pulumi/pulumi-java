@@ -10,11 +10,11 @@ import java.util.Objects;
 
 @CustomType
 public final class ManagedSslCertificateManaged {
-    /**
-     * Domains for which a managed SSL certificate will be valid.  Currently,
-     * there can be up to 100 domains in this list.
-     * 
-     */
+        /**
+         * @return Domains for which a managed SSL certificate will be valid.  Currently,
+         * there can be up to 100 domains in this list.
+         * 
+         */
     private final List<String> domains;
 
     @CustomType.Constructor
@@ -23,10 +23,10 @@ public final class ManagedSslCertificateManaged {
     }
 
     /**
-     * Domains for which a managed SSL certificate will be valid.  Currently,
+     * @return Domains for which a managed SSL certificate will be valid.  Currently,
      * there can be up to 100 domains in this list.
      * 
-    */
+     */
     public List<String> domains() {
         return this.domains;
     }

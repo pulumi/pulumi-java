@@ -19,16 +19,16 @@ public final class GetObjectSignedUrlResult {
     private final @Nullable String duration;
     private final @Nullable Map<String,String> extensionHeaders;
     private final @Nullable String httpMethod;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String path;
-    /**
-     * The signed URL that can be used to access the storage object without authentication.
-     * 
-     */
+        /**
+         * @return The signed URL that can be used to access the storage object without authentication.
+         * 
+         */
     private final String signedUrl;
 
     @CustomType.Constructor
@@ -77,9 +77,9 @@ public final class GetObjectSignedUrlResult {
         return Optional.ofNullable(this.httpMethod);
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -87,9 +87,9 @@ public final class GetObjectSignedUrlResult {
         return this.path;
     }
     /**
-     * The signed URL that can be used to access the storage object without authentication.
+     * @return The signed URL that can be used to access the storage object without authentication.
      * 
-    */
+     */
     public String signedUrl() {
         return this.signedUrl;
     }

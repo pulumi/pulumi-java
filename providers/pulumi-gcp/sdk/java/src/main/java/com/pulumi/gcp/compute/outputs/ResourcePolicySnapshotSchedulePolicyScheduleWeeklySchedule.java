@@ -10,11 +10,11 @@ import java.util.Objects;
 
 @CustomType
 public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule {
-    /**
-     * May contain up to seven (one for each day of the week) snapshot times.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return May contain up to seven (one for each day of the week) snapshot times.
+         * Structure is documented below.
+         * 
+         */
     private final List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> dayOfWeeks;
 
     @CustomType.Constructor
@@ -23,10 +23,10 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule {
     }
 
     /**
-     * May contain up to seven (one for each day of the week) snapshot times.
+     * @return May contain up to seven (one for each day of the week) snapshot times.
      * Structure is documented below.
      * 
-    */
+     */
     public List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> dayOfWeeks() {
         return this.dayOfWeeks;
     }

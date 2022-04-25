@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EnterpriseKeyTestingOptions {
-    /**
-     * For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if UNSOLVABLE_CHALLENGE. Possible values: TESTING_CHALLENGE_UNSPECIFIED, NOCAPTCHA, UNSOLVABLE_CHALLENGE
-     * 
-     */
+        /**
+         * @return For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if UNSOLVABLE_CHALLENGE. Possible values: TESTING_CHALLENGE_UNSPECIFIED, NOCAPTCHA, UNSOLVABLE_CHALLENGE
+         * 
+         */
     private final @Nullable String testingChallenge;
-    /**
-     * All assessments for this Key will return this score. Must be between 0 (likely not legitimate) and 1 (likely legitimate) inclusive.
-     * 
-     */
+        /**
+         * @return All assessments for this Key will return this score. Must be between 0 (likely not legitimate) and 1 (likely legitimate) inclusive.
+         * 
+         */
     private final @Nullable Double testingScore;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class EnterpriseKeyTestingOptions {
     }
 
     /**
-     * For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if UNSOLVABLE_CHALLENGE. Possible values: TESTING_CHALLENGE_UNSPECIFIED, NOCAPTCHA, UNSOLVABLE_CHALLENGE
+     * @return For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if UNSOLVABLE_CHALLENGE. Possible values: TESTING_CHALLENGE_UNSPECIFIED, NOCAPTCHA, UNSOLVABLE_CHALLENGE
      * 
-    */
+     */
     public Optional<String> testingChallenge() {
         return Optional.ofNullable(this.testingChallenge);
     }
     /**
-     * All assessments for this Key will return this score. Must be between 0 (likely not legitimate) and 1 (likely legitimate) inclusive.
+     * @return All assessments for this Key will return this score. Must be between 0 (likely not legitimate) and 1 (likely legitimate) inclusive.
      * 
-    */
+     */
     public Optional<Double> testingScore() {
         return Optional.ofNullable(this.testingScore);
     }

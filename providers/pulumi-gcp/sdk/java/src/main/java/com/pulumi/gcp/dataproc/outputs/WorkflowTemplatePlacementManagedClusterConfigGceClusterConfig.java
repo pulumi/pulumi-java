@@ -16,60 +16,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig {
-    /**
-     * Optional. If true, all instances in the cluster will only have internal IP addresses. By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. This `internal_ip_only` restriction can only be enabled for subnetwork enabled networks, and all off-cluster dependencies must be configured to be accessible without external IP addresses.
-     * 
-     */
+        /**
+         * @return Optional. If true, all instances in the cluster will only have internal IP addresses. By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. This `internal_ip_only` restriction can only be enabled for subnetwork enabled networks, and all off-cluster dependencies must be configured to be accessible without external IP addresses.
+         * 
+         */
     private final @Nullable Boolean internalIpOnly;
-    /**
-     * The Compute Engine metadata entries to add to all instances (see (https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
-     * 
-     */
+        /**
+         * @return The Compute Engine metadata entries to add to all instances (see (https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
+         * 
+         */
     private final @Nullable Map<String,String> metadata;
-    /**
-     * Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork_uri. If neither `network_uri` nor `subnetwork_uri` is specified, the &#34;default&#34; network of the project is used, if it exists. Cannot be a &#34;Custom Subnet Network&#34; (see /regions/global/default`*`default`
-     * 
-     */
+        /**
+         * @return Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork_uri. If neither `network_uri` nor `subnetwork_uri` is specified, the &#34;default&#34; network of the project is used, if it exists. Cannot be a &#34;Custom Subnet Network&#34; (see /regions/global/default`*`default`
+         * 
+         */
     private final @Nullable String network;
-    /**
-     * Optional. Node Group Affinity for sole-tenant clusters.
-     * 
-     */
+        /**
+         * @return Optional. Node Group Affinity for sole-tenant clusters.
+         * 
+         */
     private final @Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity nodeGroupAffinity;
-    /**
-     * Optional. The type of IPv6 access for a cluster. Possible values: PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED, INHERIT_FROM_SUBNETWORK, OUTBOUND, BIDIRECTIONAL
-     * 
-     */
+        /**
+         * @return Optional. The type of IPv6 access for a cluster. Possible values: PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED, INHERIT_FROM_SUBNETWORK, OUTBOUND, BIDIRECTIONAL
+         * 
+         */
     private final @Nullable String privateIpv6GoogleAccess;
-    /**
-     * Optional. Reservation Affinity for consuming Zonal reservation.
-     * 
-     */
+        /**
+         * @return Optional. Reservation Affinity for consuming Zonal reservation.
+         * 
+         */
     private final @Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity reservationAffinity;
-    /**
-     * Optional. The (https://cloud.google.com/compute/docs/access/service-accounts#default_service_account) is used.
-     * 
-     */
+        /**
+         * @return Optional. The (https://cloud.google.com/compute/docs/access/service-accounts#default_service_account) is used.
+         * 
+         */
     private final @Nullable String serviceAccount;
-    /**
-     * Optional. The URIs of service account scopes to be included in Compute Engine instances. The following base set of scopes is always included: * https://www.googleapis.com/auth/cloud.useraccounts.readonly * https://www.googleapis.com/auth/devstorage.read_write * https://www.googleapis.com/auth/logging.write If no scopes are specified, the following defaults are also provided: * https://www.googleapis.com/auth/bigquery * https://www.googleapis.com/auth/bigtable.admin.table * https://www.googleapis.com/auth/bigtable.data * https://www.googleapis.com/auth/devstorage.full_control
-     * 
-     */
+        /**
+         * @return Optional. The URIs of service account scopes to be included in Compute Engine instances. The following base set of scopes is always included: * https://www.googleapis.com/auth/cloud.useraccounts.readonly * https://www.googleapis.com/auth/devstorage.read_write * https://www.googleapis.com/auth/logging.write If no scopes are specified, the following defaults are also provided: * https://www.googleapis.com/auth/bigquery * https://www.googleapis.com/auth/bigtable.admin.table * https://www.googleapis.com/auth/bigtable.data * https://www.googleapis.com/auth/devstorage.full_control
+         * 
+         */
     private final @Nullable List<String> serviceAccountScopes;
-    /**
-     * Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be specified with network_uri. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects//regions/us-east1/subnetworks/sub0` * `sub0`
-     * 
-     */
+        /**
+         * @return Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be specified with network_uri. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects//regions/us-east1/subnetworks/sub0` * `sub0`
+         * 
+         */
     private final @Nullable String subnetwork;
-    /**
-     * The Compute Engine tags to add to all instances (see (https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
-     * 
-     */
+        /**
+         * @return The Compute Engine tags to add to all instances (see (https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+         * 
+         */
     private final @Nullable List<String> tags;
-    /**
-     * Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the &#34;global&#34; region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` * `us-central1-f`
-     * 
-     */
+        /**
+         * @return Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the &#34;global&#34; region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` * `us-central1-f`
+         * 
+         */
     private final @Nullable String zone;
 
     @CustomType.Constructor
@@ -99,79 +99,79 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     }
 
     /**
-     * Optional. If true, all instances in the cluster will only have internal IP addresses. By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. This `internal_ip_only` restriction can only be enabled for subnetwork enabled networks, and all off-cluster dependencies must be configured to be accessible without external IP addresses.
+     * @return Optional. If true, all instances in the cluster will only have internal IP addresses. By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. This `internal_ip_only` restriction can only be enabled for subnetwork enabled networks, and all off-cluster dependencies must be configured to be accessible without external IP addresses.
      * 
-    */
+     */
     public Optional<Boolean> internalIpOnly() {
         return Optional.ofNullable(this.internalIpOnly);
     }
     /**
-     * The Compute Engine metadata entries to add to all instances (see (https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
+     * @return The Compute Engine metadata entries to add to all instances (see (https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
      * 
-    */
+     */
     public Map<String,String> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
-     * Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork_uri. If neither `network_uri` nor `subnetwork_uri` is specified, the &#34;default&#34; network of the project is used, if it exists. Cannot be a &#34;Custom Subnet Network&#34; (see /regions/global/default`*`default`
+     * @return Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork_uri. If neither `network_uri` nor `subnetwork_uri` is specified, the &#34;default&#34; network of the project is used, if it exists. Cannot be a &#34;Custom Subnet Network&#34; (see /regions/global/default`*`default`
      * 
-    */
+     */
     public Optional<String> network() {
         return Optional.ofNullable(this.network);
     }
     /**
-     * Optional. Node Group Affinity for sole-tenant clusters.
+     * @return Optional. Node Group Affinity for sole-tenant clusters.
      * 
-    */
+     */
     public Optional<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity> nodeGroupAffinity() {
         return Optional.ofNullable(this.nodeGroupAffinity);
     }
     /**
-     * Optional. The type of IPv6 access for a cluster. Possible values: PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED, INHERIT_FROM_SUBNETWORK, OUTBOUND, BIDIRECTIONAL
+     * @return Optional. The type of IPv6 access for a cluster. Possible values: PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED, INHERIT_FROM_SUBNETWORK, OUTBOUND, BIDIRECTIONAL
      * 
-    */
+     */
     public Optional<String> privateIpv6GoogleAccess() {
         return Optional.ofNullable(this.privateIpv6GoogleAccess);
     }
     /**
-     * Optional. Reservation Affinity for consuming Zonal reservation.
+     * @return Optional. Reservation Affinity for consuming Zonal reservation.
      * 
-    */
+     */
     public Optional<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity> reservationAffinity() {
         return Optional.ofNullable(this.reservationAffinity);
     }
     /**
-     * Optional. The (https://cloud.google.com/compute/docs/access/service-accounts#default_service_account) is used.
+     * @return Optional. The (https://cloud.google.com/compute/docs/access/service-accounts#default_service_account) is used.
      * 
-    */
+     */
     public Optional<String> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
     /**
-     * Optional. The URIs of service account scopes to be included in Compute Engine instances. The following base set of scopes is always included: * https://www.googleapis.com/auth/cloud.useraccounts.readonly * https://www.googleapis.com/auth/devstorage.read_write * https://www.googleapis.com/auth/logging.write If no scopes are specified, the following defaults are also provided: * https://www.googleapis.com/auth/bigquery * https://www.googleapis.com/auth/bigtable.admin.table * https://www.googleapis.com/auth/bigtable.data * https://www.googleapis.com/auth/devstorage.full_control
+     * @return Optional. The URIs of service account scopes to be included in Compute Engine instances. The following base set of scopes is always included: * https://www.googleapis.com/auth/cloud.useraccounts.readonly * https://www.googleapis.com/auth/devstorage.read_write * https://www.googleapis.com/auth/logging.write If no scopes are specified, the following defaults are also provided: * https://www.googleapis.com/auth/bigquery * https://www.googleapis.com/auth/bigtable.admin.table * https://www.googleapis.com/auth/bigtable.data * https://www.googleapis.com/auth/devstorage.full_control
      * 
-    */
+     */
     public List<String> serviceAccountScopes() {
         return this.serviceAccountScopes == null ? List.of() : this.serviceAccountScopes;
     }
     /**
-     * Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be specified with network_uri. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects//regions/us-east1/subnetworks/sub0` * `sub0`
+     * @return Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be specified with network_uri. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects//regions/us-east1/subnetworks/sub0` * `sub0`
      * 
-    */
+     */
     public Optional<String> subnetwork() {
         return Optional.ofNullable(this.subnetwork);
     }
     /**
-     * The Compute Engine tags to add to all instances (see (https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+     * @return The Compute Engine tags to add to all instances (see (https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
      * 
-    */
+     */
     public List<String> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the &#34;global&#34; region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` * `us-central1-f`
+     * @return Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the &#34;global&#34; region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` * `us-central1-f`
      * 
-    */
+     */
     public Optional<String> zone() {
         return Optional.ofNullable(this.zone);
     }

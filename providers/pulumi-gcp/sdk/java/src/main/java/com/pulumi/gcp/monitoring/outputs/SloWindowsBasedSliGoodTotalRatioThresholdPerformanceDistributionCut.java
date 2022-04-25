@@ -10,24 +10,24 @@ import java.util.Objects;
 
 @CustomType
 public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut {
-    /**
-     * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-     * aggregating values to quantify the good service provided.
-     * Must have ValueType = DISTRIBUTION and
-     * MetricKind = DELTA or MetricKind = CUMULATIVE.
-     * 
-     */
+        /**
+         * @return A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+         * aggregating values to quantify the good service provided.
+         * Must have ValueType = DISTRIBUTION and
+         * MetricKind = DELTA or MetricKind = CUMULATIVE.
+         * 
+         */
     private final String distributionFilter;
-    /**
-     * Range of numerical values. The computed good_service
-     * will be the count of values x in the Distribution such
-     * that range.min &lt;= x &lt;= range.max. inclusive of min and
-     * max. Open ranges can be defined by setting
-     * just one of min or max. Summed value `X` should satisfy
-     * `range.min &lt;= X &lt;= range.max` for a good window.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Range of numerical values. The computed good_service
+         * will be the count of values x in the Distribution such
+         * that range.min &lt;= x &lt;= range.max. inclusive of min and
+         * max. Open ranges can be defined by setting
+         * just one of min or max. Summed value `X` should satisfy
+         * `range.min &lt;= X &lt;= range.max` for a good window.
+         * Structure is documented below.
+         * 
+         */
     private final SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange range;
 
     @CustomType.Constructor
@@ -39,17 +39,17 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
     }
 
     /**
-     * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+     * @return A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
      * aggregating values to quantify the good service provided.
      * Must have ValueType = DISTRIBUTION and
      * MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
-    */
+     */
     public String distributionFilter() {
         return this.distributionFilter;
     }
     /**
-     * Range of numerical values. The computed good_service
+     * @return Range of numerical values. The computed good_service
      * will be the count of values x in the Distribution such
      * that range.min &lt;= x &lt;= range.max. inclusive of min and
      * max. Open ranges can be defined by setting
@@ -57,7 +57,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
      * `range.min &lt;= X &lt;= range.max` for a good window.
      * Structure is documented below.
      * 
-    */
+     */
     public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange range() {
         return this.range;
     }

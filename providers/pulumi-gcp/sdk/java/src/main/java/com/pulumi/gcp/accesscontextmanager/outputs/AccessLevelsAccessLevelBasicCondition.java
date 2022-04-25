@@ -14,61 +14,61 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AccessLevelsAccessLevelBasicCondition {
-    /**
-     * Device specific restrictions, all restrictions must hold for
-     * the Condition to be true. If not specified, all devices are
-     * allowed.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Device specific restrictions, all restrictions must hold for
+         * the Condition to be true. If not specified, all devices are
+         * allowed.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable AccessLevelsAccessLevelBasicConditionDevicePolicy devicePolicy;
-    /**
-     * A list of CIDR block IP subnetwork specification. May be IPv4
-     * or IPv6.
-     * Note that for a CIDR IP address block, the specified IP address
-     * portion must be properly truncated (i.e. all the host bits must
-     * be zero) or the input is considered malformed. For example,
-     * &#34;192.0.2.0/24&#34; is accepted but &#34;192.0.2.1/24&#34; is not. Similarly,
-     * for IPv6, &#34;2001:db8::/32&#34; is accepted whereas &#34;2001:db8::1/32&#34;
-     * is not. The originating IP of a request must be in one of the
-     * listed subnets in order for this Condition to be true.
-     * If empty, all IP addresses are allowed.
-     * 
-     */
+        /**
+         * @return A list of CIDR block IP subnetwork specification. May be IPv4
+         * or IPv6.
+         * Note that for a CIDR IP address block, the specified IP address
+         * portion must be properly truncated (i.e. all the host bits must
+         * be zero) or the input is considered malformed. For example,
+         * &#34;192.0.2.0/24&#34; is accepted but &#34;192.0.2.1/24&#34; is not. Similarly,
+         * for IPv6, &#34;2001:db8::/32&#34; is accepted whereas &#34;2001:db8::1/32&#34;
+         * is not. The originating IP of a request must be in one of the
+         * listed subnets in order for this Condition to be true.
+         * If empty, all IP addresses are allowed.
+         * 
+         */
     private final @Nullable List<String> ipSubnetworks;
-    /**
-     * An allowed list of members (users, service accounts).
-     * Using groups is not supported yet.
-     * The signed-in user originating the request must be a part of one
-     * of the provided members. If not specified, a request may come
-     * from any user (logged in/not logged in, not present in any
-     * groups, etc.).
-     * Formats: `user:{emailid}`, `serviceAccount:{emailid}`
-     * 
-     */
+        /**
+         * @return An allowed list of members (users, service accounts).
+         * Using groups is not supported yet.
+         * The signed-in user originating the request must be a part of one
+         * of the provided members. If not specified, a request may come
+         * from any user (logged in/not logged in, not present in any
+         * groups, etc.).
+         * Formats: `user:{emailid}`, `serviceAccount:{emailid}`
+         * 
+         */
     private final @Nullable List<String> members;
-    /**
-     * Whether to negate the Condition. If true, the Condition becomes
-     * a NAND over its non-empty fields, each field must be false for
-     * the Condition overall to be satisfied. Defaults to false.
-     * 
-     */
+        /**
+         * @return Whether to negate the Condition. If true, the Condition becomes
+         * a NAND over its non-empty fields, each field must be false for
+         * the Condition overall to be satisfied. Defaults to false.
+         * 
+         */
     private final @Nullable Boolean negate;
-    /**
-     * The request must originate from one of the provided
-     * countries/regions.
-     * Format: A valid ISO 3166-1 alpha-2 code.
-     * 
-     */
+        /**
+         * @return The request must originate from one of the provided
+         * countries/regions.
+         * Format: A valid ISO 3166-1 alpha-2 code.
+         * 
+         */
     private final @Nullable List<String> regions;
-    /**
-     * A list of other access levels defined in the same Policy,
-     * referenced by resource name. Referencing an AccessLevel which
-     * does not exist is an error. All access levels listed must be
-     * granted for the Condition to be true.
-     * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
-     * 
-     */
+        /**
+         * @return A list of other access levels defined in the same Policy,
+         * referenced by resource name. Referencing an AccessLevel which
+         * does not exist is an error. All access levels listed must be
+         * granted for the Condition to be true.
+         * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
+         * 
+         */
     private final @Nullable List<String> requiredAccessLevels;
 
     @CustomType.Constructor
@@ -88,17 +88,17 @@ public final class AccessLevelsAccessLevelBasicCondition {
     }
 
     /**
-     * Device specific restrictions, all restrictions must hold for
+     * @return Device specific restrictions, all restrictions must hold for
      * the Condition to be true. If not specified, all devices are
      * allowed.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<AccessLevelsAccessLevelBasicConditionDevicePolicy> devicePolicy() {
         return Optional.ofNullable(this.devicePolicy);
     }
     /**
-     * A list of CIDR block IP subnetwork specification. May be IPv4
+     * @return A list of CIDR block IP subnetwork specification. May be IPv4
      * or IPv6.
      * Note that for a CIDR IP address block, the specified IP address
      * portion must be properly truncated (i.e. all the host bits must
@@ -109,12 +109,12 @@ public final class AccessLevelsAccessLevelBasicCondition {
      * listed subnets in order for this Condition to be true.
      * If empty, all IP addresses are allowed.
      * 
-    */
+     */
     public List<String> ipSubnetworks() {
         return this.ipSubnetworks == null ? List.of() : this.ipSubnetworks;
     }
     /**
-     * An allowed list of members (users, service accounts).
+     * @return An allowed list of members (users, service accounts).
      * Using groups is not supported yet.
      * The signed-in user originating the request must be a part of one
      * of the provided members. If not specified, a request may come
@@ -122,36 +122,36 @@ public final class AccessLevelsAccessLevelBasicCondition {
      * groups, etc.).
      * Formats: `user:{emailid}`, `serviceAccount:{emailid}`
      * 
-    */
+     */
     public List<String> members() {
         return this.members == null ? List.of() : this.members;
     }
     /**
-     * Whether to negate the Condition. If true, the Condition becomes
+     * @return Whether to negate the Condition. If true, the Condition becomes
      * a NAND over its non-empty fields, each field must be false for
      * the Condition overall to be satisfied. Defaults to false.
      * 
-    */
+     */
     public Optional<Boolean> negate() {
         return Optional.ofNullable(this.negate);
     }
     /**
-     * The request must originate from one of the provided
+     * @return The request must originate from one of the provided
      * countries/regions.
      * Format: A valid ISO 3166-1 alpha-2 code.
      * 
-    */
+     */
     public List<String> regions() {
         return this.regions == null ? List.of() : this.regions;
     }
     /**
-     * A list of other access levels defined in the same Policy,
+     * @return A list of other access levels defined in the same Policy,
      * referenced by resource name. Referencing an AccessLevel which
      * does not exist is an error. All access levels listed must be
      * granted for the Condition to be true.
      * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
      * 
-    */
+     */
     public List<String> requiredAccessLevels() {
         return this.requiredAccessLevels == null ? List.of() : this.requiredAccessLevels;
     }

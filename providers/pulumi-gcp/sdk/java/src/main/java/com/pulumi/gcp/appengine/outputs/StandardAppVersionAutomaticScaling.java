@@ -13,39 +13,39 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class StandardAppVersionAutomaticScaling {
-    /**
-     * Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
-     * Defaults to a runtime-specific value.
-     * 
-     */
+        /**
+         * @return Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
+         * Defaults to a runtime-specific value.
+         * 
+         */
     private final @Nullable Integer maxConcurrentRequests;
-    /**
-     * Maximum number of idle instances that should be maintained for this version.
-     * 
-     */
+        /**
+         * @return Maximum number of idle instances that should be maintained for this version.
+         * 
+         */
     private final @Nullable Integer maxIdleInstances;
-    /**
-     * Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
-     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
-     * 
-     */
+        /**
+         * @return Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
+         * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         */
     private final @Nullable String maxPendingLatency;
-    /**
-     * Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
-     * 
-     */
+        /**
+         * @return Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
+         * 
+         */
     private final @Nullable Integer minIdleInstances;
-    /**
-     * Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
-     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
-     * 
-     */
+        /**
+         * @return Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
+         * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         */
     private final @Nullable String minPendingLatency;
-    /**
-     * Scheduler settings for standard environment.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Scheduler settings for standard environment.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable StandardAppVersionAutomaticScalingStandardSchedulerSettings standardSchedulerSettings;
 
     @CustomType.Constructor
@@ -65,48 +65,48 @@ public final class StandardAppVersionAutomaticScaling {
     }
 
     /**
-     * Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
+     * @return Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
      * Defaults to a runtime-specific value.
      * 
-    */
+     */
     public Optional<Integer> maxConcurrentRequests() {
         return Optional.ofNullable(this.maxConcurrentRequests);
     }
     /**
-     * Maximum number of idle instances that should be maintained for this version.
+     * @return Maximum number of idle instances that should be maintained for this version.
      * 
-    */
+     */
     public Optional<Integer> maxIdleInstances() {
         return Optional.ofNullable(this.maxIdleInstances);
     }
     /**
-     * Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
+     * @return Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
      * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
-    */
+     */
     public Optional<String> maxPendingLatency() {
         return Optional.ofNullable(this.maxPendingLatency);
     }
     /**
-     * Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
+     * @return Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
      * 
-    */
+     */
     public Optional<Integer> minIdleInstances() {
         return Optional.ofNullable(this.minIdleInstances);
     }
     /**
-     * Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
+     * @return Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
      * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
-    */
+     */
     public Optional<String> minPendingLatency() {
         return Optional.ofNullable(this.minPendingLatency);
     }
     /**
-     * Scheduler settings for standard environment.
+     * @return Scheduler settings for standard environment.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<StandardAppVersionAutomaticScalingStandardSchedulerSettings> standardSchedulerSettings() {
         return Optional.ofNullable(this.standardSchedulerSettings);
     }

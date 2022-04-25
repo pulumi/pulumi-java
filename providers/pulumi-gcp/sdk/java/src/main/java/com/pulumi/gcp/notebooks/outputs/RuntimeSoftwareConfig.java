@@ -13,46 +13,46 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RuntimeSoftwareConfig {
-    /**
-     * Specify a custom Cloud Storage path where the GPU driver is stored.
-     * If not specified, we&#39;ll automatically choose from official GPU drivers.
-     * 
-     */
+        /**
+         * @return Specify a custom Cloud Storage path where the GPU driver is stored.
+         * If not specified, we&#39;ll automatically choose from official GPU drivers.
+         * 
+         */
     private final @Nullable String customGpuDriverPath;
-    /**
-     * Verifies core internal services are running. Default: True.
-     * 
-     */
+        /**
+         * @return Verifies core internal services are running. Default: True.
+         * 
+         */
     private final @Nullable Boolean enableHealthMonitoring;
-    /**
-     * Runtime will automatically shutdown after idle_shutdown_time.
-     * Default: True
-     * 
-     */
+        /**
+         * @return Runtime will automatically shutdown after idle_shutdown_time.
+         * Default: True
+         * 
+         */
     private final @Nullable Boolean idleShutdown;
-    /**
-     * Time in minutes to wait before shuting down runtime.
-     * Default: 180 minutes
-     * 
-     */
+        /**
+         * @return Time in minutes to wait before shuting down runtime.
+         * Default: 180 minutes
+         * 
+         */
     private final @Nullable Integer idleShutdownTimeout;
-    /**
-     * Install Nvidia Driver automatically.
-     * 
-     */
+        /**
+         * @return Install Nvidia Driver automatically.
+         * 
+         */
     private final @Nullable Boolean installGpuDriver;
-    /**
-     * Cron expression in UTC timezone for schedule instance auto upgrade.
-     * Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).
-     * 
-     */
+        /**
+         * @return Cron expression in UTC timezone for schedule instance auto upgrade.
+         * Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).
+         * 
+         */
     private final @Nullable String notebookUpgradeSchedule;
-    /**
-     * Path to a Bash script that automatically runs after a notebook instance
-     * fully boots up. The path must be a URL or
-     * Cloud Storage path (gs://path-to-file/file-name).
-     * 
-     */
+        /**
+         * @return Path to a Bash script that automatically runs after a notebook instance
+         * fully boots up. The path must be a URL or
+         * Cloud Storage path (gs://path-to-file/file-name).
+         * 
+         */
     private final @Nullable String postStartupScript;
 
     @CustomType.Constructor
@@ -74,57 +74,57 @@ public final class RuntimeSoftwareConfig {
     }
 
     /**
-     * Specify a custom Cloud Storage path where the GPU driver is stored.
+     * @return Specify a custom Cloud Storage path where the GPU driver is stored.
      * If not specified, we&#39;ll automatically choose from official GPU drivers.
      * 
-    */
+     */
     public Optional<String> customGpuDriverPath() {
         return Optional.ofNullable(this.customGpuDriverPath);
     }
     /**
-     * Verifies core internal services are running. Default: True.
+     * @return Verifies core internal services are running. Default: True.
      * 
-    */
+     */
     public Optional<Boolean> enableHealthMonitoring() {
         return Optional.ofNullable(this.enableHealthMonitoring);
     }
     /**
-     * Runtime will automatically shutdown after idle_shutdown_time.
+     * @return Runtime will automatically shutdown after idle_shutdown_time.
      * Default: True
      * 
-    */
+     */
     public Optional<Boolean> idleShutdown() {
         return Optional.ofNullable(this.idleShutdown);
     }
     /**
-     * Time in minutes to wait before shuting down runtime.
+     * @return Time in minutes to wait before shuting down runtime.
      * Default: 180 minutes
      * 
-    */
+     */
     public Optional<Integer> idleShutdownTimeout() {
         return Optional.ofNullable(this.idleShutdownTimeout);
     }
     /**
-     * Install Nvidia Driver automatically.
+     * @return Install Nvidia Driver automatically.
      * 
-    */
+     */
     public Optional<Boolean> installGpuDriver() {
         return Optional.ofNullable(this.installGpuDriver);
     }
     /**
-     * Cron expression in UTC timezone for schedule instance auto upgrade.
+     * @return Cron expression in UTC timezone for schedule instance auto upgrade.
      * Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).
      * 
-    */
+     */
     public Optional<String> notebookUpgradeSchedule() {
         return Optional.ofNullable(this.notebookUpgradeSchedule);
     }
     /**
-     * Path to a Bash script that automatically runs after a notebook instance
+     * @return Path to a Bash script that automatically runs after a notebook instance
      * fully boots up. The path must be a URL or
      * Cloud Storage path (gs://path-to-file/file-name).
      * 
-    */
+     */
     public Optional<String> postStartupScript() {
         return Optional.ofNullable(this.postStartupScript);
     }

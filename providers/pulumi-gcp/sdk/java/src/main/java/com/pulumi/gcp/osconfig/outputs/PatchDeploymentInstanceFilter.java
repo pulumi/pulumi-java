@@ -14,34 +14,34 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PatchDeploymentInstanceFilter {
-    /**
-     * Target all VM instances in the project. If true, no other criteria is permitted.
-     * 
-     */
+        /**
+         * @return Target all VM instances in the project. If true, no other criteria is permitted.
+         * 
+         */
     private final @Nullable Boolean all;
-    /**
-     * Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<PatchDeploymentInstanceFilterGroupLabel> groupLabels;
-    /**
-     * Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group
-     * VMs when targeting configs, for example prefix=&#34;prod-&#34;.
-     * 
-     */
+        /**
+         * @return Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group
+         * VMs when targeting configs, for example prefix=&#34;prod-&#34;.
+         * 
+         */
     private final @Nullable List<String> instanceNamePrefixes;
-    /**
-     * Targets any of the VM instances specified. Instances are specified by their URI in the `form zones/{{zone}}/instances/{{instance_name}}`,
-     * `projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`, or
-     * `https://www.googleapis.com/compute/v1/projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`
-     * 
-     */
+        /**
+         * @return Targets any of the VM instances specified. Instances are specified by their URI in the `form zones/{{zone}}/instances/{{instance_name}}`,
+         * `projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`, or
+         * `https://www.googleapis.com/compute/v1/projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`
+         * 
+         */
     private final @Nullable List<String> instances;
-    /**
-     * Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.
-     * 
-     */
+        /**
+         * @return Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.
+         * 
+         */
     private final @Nullable List<String> zones;
 
     @CustomType.Constructor
@@ -59,41 +59,41 @@ public final class PatchDeploymentInstanceFilter {
     }
 
     /**
-     * Target all VM instances in the project. If true, no other criteria is permitted.
+     * @return Target all VM instances in the project. If true, no other criteria is permitted.
      * 
-    */
+     */
     public Optional<Boolean> all() {
         return Optional.ofNullable(this.all);
     }
     /**
-     * Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances.
+     * @return Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances.
      * Structure is documented below.
      * 
-    */
+     */
     public List<PatchDeploymentInstanceFilterGroupLabel> groupLabels() {
         return this.groupLabels == null ? List.of() : this.groupLabels;
     }
     /**
-     * Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group
+     * @return Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group
      * VMs when targeting configs, for example prefix=&#34;prod-&#34;.
      * 
-    */
+     */
     public List<String> instanceNamePrefixes() {
         return this.instanceNamePrefixes == null ? List.of() : this.instanceNamePrefixes;
     }
     /**
-     * Targets any of the VM instances specified. Instances are specified by their URI in the `form zones/{{zone}}/instances/{{instance_name}}`,
+     * @return Targets any of the VM instances specified. Instances are specified by their URI in the `form zones/{{zone}}/instances/{{instance_name}}`,
      * `projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`, or
      * `https://www.googleapis.com/compute/v1/projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`
      * 
-    */
+     */
     public List<String> instances() {
         return this.instances == null ? List.of() : this.instances;
     }
     /**
-     * Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.
+     * @return Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.
      * 
-    */
+     */
     public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }

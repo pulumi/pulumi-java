@@ -11,22 +11,22 @@ import java.util.Objects;
 
 @CustomType
 public final class AuthorityConfigX509ConfigAdditionalExtension {
-    /**
-     * Indicates whether or not this extension is critical (i.e., if the client does not know how to
-     * handle this extension, the client should consider this to be an error).
-     * 
-     */
+        /**
+         * @return Indicates whether or not this extension is critical (i.e., if the client does not know how to
+         * handle this extension, the client should consider this to be an error).
+         * 
+         */
     private final Boolean critical;
-    /**
-     * Describes values that are relevant in a CA certificate.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Describes values that are relevant in a CA certificate.
+         * Structure is documented below.
+         * 
+         */
     private final AuthorityConfigX509ConfigAdditionalExtensionObjectId objectId;
-    /**
-     * The value of this X.509 extension. A base64-encoded string.
-     * 
-     */
+        /**
+         * @return The value of this X.509 extension. A base64-encoded string.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -40,25 +40,25 @@ public final class AuthorityConfigX509ConfigAdditionalExtension {
     }
 
     /**
-     * Indicates whether or not this extension is critical (i.e., if the client does not know how to
+     * @return Indicates whether or not this extension is critical (i.e., if the client does not know how to
      * handle this extension, the client should consider this to be an error).
      * 
-    */
+     */
     public Boolean critical() {
         return this.critical;
     }
     /**
-     * Describes values that are relevant in a CA certificate.
+     * @return Describes values that are relevant in a CA certificate.
      * Structure is documented below.
      * 
-    */
+     */
     public AuthorityConfigX509ConfigAdditionalExtensionObjectId objectId() {
         return this.objectId;
     }
     /**
-     * The value of this X.509 extension. A base64-encoded string.
+     * @return The value of this X.509 extension. A base64-encoded string.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

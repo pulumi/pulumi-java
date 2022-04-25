@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ClusterClusterConfigAutoscalingConfig {
-    /**
-     * The autoscaling policy used by the cluster.
-     * 
-     */
+        /**
+         * @return The autoscaling policy used by the cluster.
+         * 
+         */
     private final String policyUri;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ClusterClusterConfigAutoscalingConfig {
     }
 
     /**
-     * The autoscaling policy used by the cluster.
+     * @return The autoscaling policy used by the cluster.
      * 
-    */
+     */
     public String policyUri() {
         return this.policyUri;
     }

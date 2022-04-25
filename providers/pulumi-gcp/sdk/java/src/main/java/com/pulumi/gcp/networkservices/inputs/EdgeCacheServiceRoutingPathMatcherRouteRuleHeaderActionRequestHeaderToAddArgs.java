@@ -24,6 +24,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
     @Import(name="headerName", required=true)
     private Output<String> headerName;
 
+    /**
+     * @return Headers to remove from the response prior to sending it back to the client.
+     * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
+     * 
+     */
     public Output<String> headerName() {
         return this.headerName;
     }
@@ -35,6 +40,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
     @Import(name="headerValue", required=true)
     private Output<String> headerValue;
 
+    /**
+     * @return The value of the header to add.
+     * 
+     */
     public Output<String> headerValue() {
         return this.headerValue;
     }
@@ -46,6 +55,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
     @Import(name="replace")
     private @Nullable Output<Boolean> replace;
 
+    /**
+     * @return Whether to replace all existing headers with the same name.
+     * 
+     */
     public Optional<Output<Boolean>> replace() {
         return Optional.ofNullable(this.replace);
     }
@@ -76,29 +89,67 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
             $ = new EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param headerName Headers to remove from the response prior to sending it back to the client.
+         * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerName(Output<String> headerName) {
             $.headerName = headerName;
             return this;
         }
 
+        /**
+         * @param headerName Headers to remove from the response prior to sending it back to the client.
+         * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerName(String headerName) {
             return headerName(Output.of(headerName));
         }
 
+        /**
+         * @param headerValue The value of the header to add.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerValue(Output<String> headerValue) {
             $.headerValue = headerValue;
             return this;
         }
 
+        /**
+         * @param headerValue The value of the header to add.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerValue(String headerValue) {
             return headerValue(Output.of(headerValue));
         }
 
+        /**
+         * @param replace Whether to replace all existing headers with the same name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replace(@Nullable Output<Boolean> replace) {
             $.replace = replace;
             return this;
         }
 
+        /**
+         * @param replace Whether to replace all existing headers with the same name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replace(Boolean replace) {
             return replace(Output.of(replace));
         }

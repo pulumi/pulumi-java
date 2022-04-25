@@ -21,6 +21,10 @@ public final class RegionInstanceGroupManagerNamedPortArgs extends com.pulumi.re
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return - Version name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -33,6 +37,11 @@ public final class RegionInstanceGroupManagerNamedPortArgs extends com.pulumi.re
     @Import(name="port", required=true)
     private Output<Integer> port;
 
+    /**
+     * @return The port number.
+     * ***
+     * 
+     */
     public Output<Integer> port() {
         return this.port;
     }
@@ -62,20 +71,46 @@ public final class RegionInstanceGroupManagerNamedPortArgs extends com.pulumi.re
             $ = new RegionInstanceGroupManagerNamedPortArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name - Version name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name - Version name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param port The port number.
+         * ***
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The port number.
+         * ***
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }

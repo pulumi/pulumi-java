@@ -24,6 +24,11 @@ public final class CryptoKeyIAMMemberArgs extends com.pulumi.resources.ResourceA
     @Import(name="condition")
     private @Nullable Output<CryptoKeyIAMMemberConditionArgs> condition;
 
+    /**
+     * @return ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<CryptoKeyIAMMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
@@ -38,6 +43,13 @@ public final class CryptoKeyIAMMemberArgs extends com.pulumi.resources.ResourceA
     @Import(name="cryptoKeyId", required=true)
     private Output<String> cryptoKeyId;
 
+    /**
+     * @return The crypto key ID, in the form
+     * `{project_id}/{location_name}/{key_ring_name}/{crypto_key_name}` or
+     * `{location_name}/{key_ring_name}/{crypto_key_name}`. In the second form,
+     * the provider&#39;s project setting will be used as a fallback.
+     * 
+     */
     public Output<String> cryptoKeyId() {
         return this.cryptoKeyId;
     }
@@ -57,6 +69,11 @@ public final class CryptoKeyIAMMemberArgs extends com.pulumi.resources.ResourceA
     @Import(name="role", required=true)
     private Output<String> role;
 
+    /**
+     * @return The role that should be applied. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     public Output<String> role() {
         return this.role;
     }
@@ -88,20 +105,52 @@ public final class CryptoKeyIAMMemberArgs extends com.pulumi.resources.ResourceA
             $ = new CryptoKeyIAMMemberArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param condition ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(@Nullable Output<CryptoKeyIAMMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param condition ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(CryptoKeyIAMMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param cryptoKeyId The crypto key ID, in the form
+         * `{project_id}/{location_name}/{key_ring_name}/{crypto_key_name}` or
+         * `{location_name}/{key_ring_name}/{crypto_key_name}`. In the second form,
+         * the provider&#39;s project setting will be used as a fallback.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoKeyId(Output<String> cryptoKeyId) {
             $.cryptoKeyId = cryptoKeyId;
             return this;
         }
 
+        /**
+         * @param cryptoKeyId The crypto key ID, in the form
+         * `{project_id}/{location_name}/{key_ring_name}/{crypto_key_name}` or
+         * `{location_name}/{key_ring_name}/{crypto_key_name}`. In the second form,
+         * the provider&#39;s project setting will be used as a fallback.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoKeyId(String cryptoKeyId) {
             return cryptoKeyId(Output.of(cryptoKeyId));
         }
@@ -115,11 +164,25 @@ public final class CryptoKeyIAMMemberArgs extends com.pulumi.resources.ResourceA
             return member(Output.of(member));
         }
 
+        /**
+         * @param role The role that should be applied. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role that should be applied. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }

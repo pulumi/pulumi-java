@@ -12,16 +12,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings {
-    /**
-     * Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit
-     * is &#39;COUNT&#39;, we will retain this many backups.
-     * 
-     */
+        /**
+         * @return Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit
+         * is &#39;COUNT&#39;, we will retain this many backups.
+         * 
+         */
     private final Integer retainedBackups;
-    /**
-     * The unit that &#39;retained_backups&#39; represents. Defaults to `COUNT`.
-     * 
-     */
+        /**
+         * @return The unit that &#39;retained_backups&#39; represents. Defaults to `COUNT`.
+         * 
+         */
     private final @Nullable String retentionUnit;
 
     @CustomType.Constructor
@@ -33,17 +33,17 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
     }
 
     /**
-     * Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit
+     * @return Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit
      * is &#39;COUNT&#39;, we will retain this many backups.
      * 
-    */
+     */
     public Integer retainedBackups() {
         return this.retainedBackups;
     }
     /**
-     * The unit that &#39;retained_backups&#39; represents. Defaults to `COUNT`.
+     * @return The unit that &#39;retained_backups&#39; represents. Defaults to `COUNT`.
      * 
-    */
+     */
     public Optional<String> retentionUnit() {
         return Optional.ofNullable(this.retentionUnit);
     }

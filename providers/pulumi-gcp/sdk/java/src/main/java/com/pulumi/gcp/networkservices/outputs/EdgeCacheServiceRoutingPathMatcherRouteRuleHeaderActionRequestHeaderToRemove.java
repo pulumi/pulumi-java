@@ -9,11 +9,11 @@ import java.util.Objects;
 
 @CustomType
 public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove {
-    /**
-     * Headers to remove from the response prior to sending it back to the client.
-     * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
-     * 
-     */
+        /**
+         * @return Headers to remove from the response prior to sending it back to the client.
+         * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
+         * 
+         */
     private final String headerName;
 
     @CustomType.Constructor
@@ -22,10 +22,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
     }
 
     /**
-     * Headers to remove from the response prior to sending it back to the client.
+     * @return Headers to remove from the response prior to sending it back to the client.
      * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
      * 
-    */
+     */
     public String headerName() {
         return this.headerName;
     }

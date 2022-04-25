@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DatabaseInstanceSettingsInsightsConfig {
-    /**
-     * True if Query Insights feature is enabled.
-     * 
-     */
+        /**
+         * @return True if Query Insights feature is enabled.
+         * 
+         */
     private final @Nullable Boolean queryInsightsEnabled;
-    /**
-     * Maximum query length stored in bytes. Between 256 and 4500. Default to 1024.
-     * 
-     */
+        /**
+         * @return Maximum query length stored in bytes. Between 256 and 4500. Default to 1024.
+         * 
+         */
     private final @Nullable Integer queryStringLength;
-    /**
-     * True if Query Insights will record application tags from query when enabled.
-     * 
-     */
+        /**
+         * @return True if Query Insights will record application tags from query when enabled.
+         * 
+         */
     private final @Nullable Boolean recordApplicationTags;
-    /**
-     * True if Query Insights will record client address when enabled.
-     * 
-     */
+        /**
+         * @return True if Query Insights will record client address when enabled.
+         * 
+         */
     private final @Nullable Boolean recordClientAddress;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class DatabaseInstanceSettingsInsightsConfig {
     }
 
     /**
-     * True if Query Insights feature is enabled.
+     * @return True if Query Insights feature is enabled.
      * 
-    */
+     */
     public Optional<Boolean> queryInsightsEnabled() {
         return Optional.ofNullable(this.queryInsightsEnabled);
     }
     /**
-     * Maximum query length stored in bytes. Between 256 and 4500. Default to 1024.
+     * @return Maximum query length stored in bytes. Between 256 and 4500. Default to 1024.
      * 
-    */
+     */
     public Optional<Integer> queryStringLength() {
         return Optional.ofNullable(this.queryStringLength);
     }
     /**
-     * True if Query Insights will record application tags from query when enabled.
+     * @return True if Query Insights will record application tags from query when enabled.
      * 
-    */
+     */
     public Optional<Boolean> recordApplicationTags() {
         return Optional.ofNullable(this.recordApplicationTags);
     }
     /**
-     * True if Query Insights will record client address when enabled.
+     * @return True if Query Insights will record client address when enabled.
      * 
-    */
+     */
     public Optional<Boolean> recordClientAddress() {
         return Optional.ofNullable(this.recordClientAddress);
     }

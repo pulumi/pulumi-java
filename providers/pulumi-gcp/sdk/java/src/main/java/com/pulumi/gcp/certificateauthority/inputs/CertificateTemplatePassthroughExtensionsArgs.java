@@ -24,6 +24,10 @@ public final class CertificateTemplatePassthroughExtensionsArgs extends com.pulu
     @Import(name="additionalExtensions")
     private @Nullable Output<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs>> additionalExtensions;
 
+    /**
+     * @return Optional. Describes custom X.509 extensions.
+     * 
+     */
     public Optional<Output<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs>>> additionalExtensions() {
         return Optional.ofNullable(this.additionalExtensions);
     }
@@ -35,6 +39,10 @@ public final class CertificateTemplatePassthroughExtensionsArgs extends com.pulu
     @Import(name="knownExtensions")
     private @Nullable Output<List<String>> knownExtensions;
 
+    /**
+     * @return Optional. A set of named X.509 extensions. Will be combined with additional_extensions to determine the full set of X.509 extensions.
+     * 
+     */
     public Optional<Output<List<String>>> knownExtensions() {
         return Optional.ofNullable(this.knownExtensions);
     }
@@ -64,28 +72,64 @@ public final class CertificateTemplatePassthroughExtensionsArgs extends com.pulu
             $ = new CertificateTemplatePassthroughExtensionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalExtensions Optional. Describes custom X.509 extensions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalExtensions(@Nullable Output<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs>> additionalExtensions) {
             $.additionalExtensions = additionalExtensions;
             return this;
         }
 
+        /**
+         * @param additionalExtensions Optional. Describes custom X.509 extensions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalExtensions(List<CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs> additionalExtensions) {
             return additionalExtensions(Output.of(additionalExtensions));
         }
 
+        /**
+         * @param additionalExtensions Optional. Describes custom X.509 extensions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalExtensions(CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs... additionalExtensions) {
             return additionalExtensions(List.of(additionalExtensions));
         }
 
+        /**
+         * @param knownExtensions Optional. A set of named X.509 extensions. Will be combined with additional_extensions to determine the full set of X.509 extensions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder knownExtensions(@Nullable Output<List<String>> knownExtensions) {
             $.knownExtensions = knownExtensions;
             return this;
         }
 
+        /**
+         * @param knownExtensions Optional. A set of named X.509 extensions. Will be combined with additional_extensions to determine the full set of X.509 extensions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder knownExtensions(List<String> knownExtensions) {
             return knownExtensions(Output.of(knownExtensions));
         }
 
+        /**
+         * @param knownExtensions Optional. A set of named X.509 extensions. Will be combined with additional_extensions to determine the full set of X.509 extensions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder knownExtensions(String... knownExtensions) {
             return knownExtensions(List.of(knownExtensions));
         }

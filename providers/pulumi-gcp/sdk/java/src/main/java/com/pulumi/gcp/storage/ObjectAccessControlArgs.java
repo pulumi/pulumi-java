@@ -20,6 +20,10 @@ public final class ObjectAccessControlArgs extends com.pulumi.resources.Resource
     @Import(name="bucket", required=true)
     private Output<String> bucket;
 
+    /**
+     * @return The name of the bucket.
+     * 
+     */
     public Output<String> bucket() {
         return this.bucket;
     }
@@ -39,6 +43,18 @@ public final class ObjectAccessControlArgs extends com.pulumi.resources.Resource
     @Import(name="entity", required=true)
     private Output<String> entity;
 
+    /**
+     * @return The entity holding the permission, in one of the following forms:
+     * * user-{{userId}}
+     * * user-{{email}} (such as &#34;user-liz@example.com&#34;)
+     * * group-{{groupId}}
+     * * group-{{email}} (such as &#34;group-example@googlegroups.com&#34;)
+     * * domain-{{domain}} (such as &#34;domain-example.com&#34;)
+     * * project-team-{{projectId}}
+     * * allUsers
+     * * allAuthenticatedUsers
+     * 
+     */
     public Output<String> entity() {
         return this.entity;
     }
@@ -50,6 +66,10 @@ public final class ObjectAccessControlArgs extends com.pulumi.resources.Resource
     @Import(name="object", required=true)
     private Output<String> object;
 
+    /**
+     * @return The name of the object to apply the access control to.
+     * 
+     */
     public Output<String> object() {
         return this.object;
     }
@@ -62,6 +82,11 @@ public final class ObjectAccessControlArgs extends com.pulumi.resources.Resource
     @Import(name="role", required=true)
     private Output<String> role;
 
+    /**
+     * @return The access permission for the entity.
+     * Possible values are `OWNER` and `READER`.
+     * 
+     */
     public Output<String> role() {
         return this.role;
     }
@@ -93,38 +118,104 @@ public final class ObjectAccessControlArgs extends com.pulumi.resources.Resource
             $ = new ObjectAccessControlArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket The name of the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket The name of the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param entity The entity holding the permission, in one of the following forms:
+         * * user-{{userId}}
+         * * user-{{email}} (such as &#34;user-liz@example.com&#34;)
+         * * group-{{groupId}}
+         * * group-{{email}} (such as &#34;group-example@googlegroups.com&#34;)
+         * * domain-{{domain}} (such as &#34;domain-example.com&#34;)
+         * * project-team-{{projectId}}
+         * * allUsers
+         * * allAuthenticatedUsers
+         * 
+         * @return builder
+         * 
+         */
         public Builder entity(Output<String> entity) {
             $.entity = entity;
             return this;
         }
 
+        /**
+         * @param entity The entity holding the permission, in one of the following forms:
+         * * user-{{userId}}
+         * * user-{{email}} (such as &#34;user-liz@example.com&#34;)
+         * * group-{{groupId}}
+         * * group-{{email}} (such as &#34;group-example@googlegroups.com&#34;)
+         * * domain-{{domain}} (such as &#34;domain-example.com&#34;)
+         * * project-team-{{projectId}}
+         * * allUsers
+         * * allAuthenticatedUsers
+         * 
+         * @return builder
+         * 
+         */
         public Builder entity(String entity) {
             return entity(Output.of(entity));
         }
 
+        /**
+         * @param object The name of the object to apply the access control to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder object(Output<String> object) {
             $.object = object;
             return this;
         }
 
+        /**
+         * @param object The name of the object to apply the access control to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder object(String object) {
             return object(Output.of(object));
         }
 
+        /**
+         * @param role The access permission for the entity.
+         * Possible values are `OWNER` and `READER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The access permission for the entity.
+         * Possible values are `OWNER` and `READER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }

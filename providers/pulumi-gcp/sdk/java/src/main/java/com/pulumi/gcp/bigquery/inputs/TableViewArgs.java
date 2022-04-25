@@ -23,6 +23,10 @@ public final class TableViewArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="query", required=true)
     private Output<String> query;
 
+    /**
+     * @return A query whose result is persisted.
+     * 
+     */
     public Output<String> query() {
         return this.query;
     }
@@ -35,6 +39,11 @@ public final class TableViewArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="useLegacySql")
     private @Nullable Output<Boolean> useLegacySql;
 
+    /**
+     * @return Specifies whether to use BigQuery&#39;s legacy SQL for this view.
+     * The default value is true. If set to false, the view will use BigQuery&#39;s standard SQL.
+     * 
+     */
     public Optional<Output<Boolean>> useLegacySql() {
         return Optional.ofNullable(this.useLegacySql);
     }
@@ -64,20 +73,46 @@ public final class TableViewArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TableViewArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param query A query whose result is persisted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(Output<String> query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param query A query whose result is persisted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(String query) {
             return query(Output.of(query));
         }
 
+        /**
+         * @param useLegacySql Specifies whether to use BigQuery&#39;s legacy SQL for this view.
+         * The default value is true. If set to false, the view will use BigQuery&#39;s standard SQL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useLegacySql(@Nullable Output<Boolean> useLegacySql) {
             $.useLegacySql = useLegacySql;
             return this;
         }
 
+        /**
+         * @param useLegacySql Specifies whether to use BigQuery&#39;s legacy SQL for this view.
+         * The default value is true. If set to false, the view will use BigQuery&#39;s standard SQL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useLegacySql(Boolean useLegacySql) {
             return useLegacySql(Output.of(useLegacySql));
         }

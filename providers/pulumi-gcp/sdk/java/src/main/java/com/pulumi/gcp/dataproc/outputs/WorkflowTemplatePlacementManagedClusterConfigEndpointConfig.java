@@ -13,16 +13,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WorkflowTemplatePlacementManagedClusterConfigEndpointConfig {
-    /**
-     * Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.
-     * 
-     */
+        /**
+         * @return Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.
+         * 
+         */
     private final @Nullable Boolean enableHttpPortAccess;
-    /**
-     * - 
-     * Output only. The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.
-     * 
-     */
+        /**
+         * @return -
+         * Output only. The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.
+         * 
+         */
     private final @Nullable Map<String,String> httpPorts;
 
     @CustomType.Constructor
@@ -34,17 +34,17 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEndpointConfig {
     }
 
     /**
-     * Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.
+     * @return Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.
      * 
-    */
+     */
     public Optional<Boolean> enableHttpPortAccess() {
         return Optional.ofNullable(this.enableHttpPortAccess);
     }
     /**
-     * - 
+     * @return -
      * Output only. The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.
      * 
-    */
+     */
     public Map<String,String> httpPorts() {
         return this.httpPorts == null ? Map.of() : this.httpPorts;
     }

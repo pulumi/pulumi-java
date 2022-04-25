@@ -13,23 +13,23 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CaPoolIssuancePolicyBaselineValuesKeyUsage {
-    /**
-     * Describes high-level ways in which a key may be used.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Describes high-level ways in which a key may be used.
+         * Structure is documented below.
+         * 
+         */
     private final CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage baseKeyUsage;
-    /**
-     * Describes high-level ways in which a key may be used.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Describes high-level ways in which a key may be used.
+         * Structure is documented below.
+         * 
+         */
     private final CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage extendedKeyUsage;
-    /**
-     * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages;
 
     @CustomType.Constructor
@@ -43,26 +43,26 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsage {
     }
 
     /**
-     * Describes high-level ways in which a key may be used.
+     * @return Describes high-level ways in which a key may be used.
      * Structure is documented below.
      * 
-    */
+     */
     public CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage baseKeyUsage() {
         return this.baseKeyUsage;
     }
     /**
-     * Describes high-level ways in which a key may be used.
+     * @return Describes high-level ways in which a key may be used.
      * Structure is documented below.
      * 
-    */
+     */
     public CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage extendedKeyUsage() {
         return this.extendedKeyUsage;
     }
     /**
-     * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+     * @return An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
      * Structure is documented below.
      * 
-    */
+     */
     public List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages == null ? List.of() : this.unknownExtendedKeyUsages;
     }

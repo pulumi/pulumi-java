@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class JobPubsubTarget {
-    /**
-     * Attributes for PubsubMessage.
-     * Pubsub message must contain either non-empty data, or at least one attribute.
-     * 
-     */
+        /**
+         * @return Attributes for PubsubMessage.
+         * Pubsub message must contain either non-empty data, or at least one attribute.
+         * 
+         */
     private final @Nullable Map<String,String> attributes;
-    /**
-     * The message payload for PubsubMessage.
-     * Pubsub message must contain either non-empty data, or at least one attribute.
-     * A base64-encoded string.
-     * 
-     */
+        /**
+         * @return The message payload for PubsubMessage.
+         * Pubsub message must contain either non-empty data, or at least one attribute.
+         * A base64-encoded string.
+         * 
+         */
     private final @Nullable String data;
-    /**
-     * The full resource name for the Cloud Pub/Sub topic to which
-     * messages will be published when a job is delivered. ~&gt;**NOTE:**
-     * The topic name must be in the same format as required by PubSub&#39;s
-     * PublishRequest.name, e.g. `projects/my-project/topics/my-topic`.
-     * 
-     */
+        /**
+         * @return The full resource name for the Cloud Pub/Sub topic to which
+         * messages will be published when a job is delivered. ~&gt;**NOTE:**
+         * The topic name must be in the same format as required by PubSub&#39;s
+         * PublishRequest.name, e.g. `projects/my-project/topics/my-topic`.
+         * 
+         */
     private final String topicName;
 
     @CustomType.Constructor
@@ -45,29 +45,29 @@ public final class JobPubsubTarget {
     }
 
     /**
-     * Attributes for PubsubMessage.
+     * @return Attributes for PubsubMessage.
      * Pubsub message must contain either non-empty data, or at least one attribute.
      * 
-    */
+     */
     public Map<String,String> attributes() {
         return this.attributes == null ? Map.of() : this.attributes;
     }
     /**
-     * The message payload for PubsubMessage.
+     * @return The message payload for PubsubMessage.
      * Pubsub message must contain either non-empty data, or at least one attribute.
      * A base64-encoded string.
      * 
-    */
+     */
     public Optional<String> data() {
         return Optional.ofNullable(this.data);
     }
     /**
-     * The full resource name for the Cloud Pub/Sub topic to which
+     * @return The full resource name for the Cloud Pub/Sub topic to which
      * messages will be published when a job is delivered. ~&gt;**NOTE:**
      * The topic name must be in the same format as required by PubSub&#39;s
      * PublishRequest.name, e.g. `projects/my-project/topics/my-topic`.
      * 
-    */
+     */
     public String topicName() {
         return this.topicName;
     }

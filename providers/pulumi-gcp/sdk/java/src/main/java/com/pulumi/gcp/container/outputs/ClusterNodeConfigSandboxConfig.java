@@ -9,11 +9,11 @@ import java.util.Objects;
 
 @CustomType
 public final class ClusterNodeConfigSandboxConfig {
-    /**
-     * Which sandbox to use for pods in the node pool.
-     * Accepted values are:
-     * 
-     */
+        /**
+         * @return Which sandbox to use for pods in the node pool.
+         * Accepted values are:
+         * 
+         */
     private final String sandboxType;
 
     @CustomType.Constructor
@@ -22,10 +22,10 @@ public final class ClusterNodeConfigSandboxConfig {
     }
 
     /**
-     * Which sandbox to use for pods in the node pool.
+     * @return Which sandbox to use for pods in the node pool.
      * Accepted values are:
      * 
-    */
+     */
     public String sandboxType() {
         return this.sandboxType;
     }

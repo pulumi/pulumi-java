@@ -12,18 +12,18 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicy {
-    /**
-     * Maximum age of the snapshot that is allowed to be kept.
-     * 
-     */
+        /**
+         * @return Maximum age of the snapshot that is allowed to be kept.
+         * 
+         */
     private final Integer maxRetentionDays;
-    /**
-     * Specifies the behavior to apply to scheduled snapshots when
-     * the source disk is deleted.
-     * Default value is `KEEP_AUTO_SNAPSHOTS`.
-     * Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
-     * 
-     */
+        /**
+         * @return Specifies the behavior to apply to scheduled snapshots when
+         * the source disk is deleted.
+         * Default value is `KEEP_AUTO_SNAPSHOTS`.
+         * Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
+         * 
+         */
     private final @Nullable String onSourceDiskDelete;
 
     @CustomType.Constructor
@@ -35,19 +35,19 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicy {
     }
 
     /**
-     * Maximum age of the snapshot that is allowed to be kept.
+     * @return Maximum age of the snapshot that is allowed to be kept.
      * 
-    */
+     */
     public Integer maxRetentionDays() {
         return this.maxRetentionDays;
     }
     /**
-     * Specifies the behavior to apply to scheduled snapshots when
+     * @return Specifies the behavior to apply to scheduled snapshots when
      * the source disk is deleted.
      * Default value is `KEEP_AUTO_SNAPSHOTS`.
      * Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
      * 
-    */
+     */
     public Optional<String> onSourceDiskDelete() {
         return Optional.ofNullable(this.onSourceDiskDelete);
     }

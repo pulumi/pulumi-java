@@ -14,10 +14,10 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAppEngineServiceResult {
     private final String displayName;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String moduleId;
     private final String name;
@@ -47,9 +47,9 @@ public final class GetAppEngineServiceResult {
         return this.displayName;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

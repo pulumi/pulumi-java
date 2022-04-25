@@ -26,6 +26,10 @@ public final class FulfillmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The human-readable name of the fulfillment, unique within the agent.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -37,6 +41,10 @@ public final class FulfillmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Whether fulfillment is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -49,6 +57,11 @@ public final class FulfillmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="features")
     private @Nullable Output<List<FulfillmentFeatureArgs>> features;
 
+    /**
+     * @return The field defines whether the fulfillment is enabled for certain features.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<FulfillmentFeatureArgs>>> features() {
         return Optional.ofNullable(this.features);
     }
@@ -61,6 +74,11 @@ public final class FulfillmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="genericWebService")
     private @Nullable Output<FulfillmentGenericWebServiceArgs> genericWebService;
 
+    /**
+     * @return Represents configuration for a generic web service. Dialogflow supports two mechanisms for authentications: - Basic authentication with username and password. - Authentication with additional authentication headers.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<FulfillmentGenericWebServiceArgs>> genericWebService() {
         return Optional.ofNullable(this.genericWebService);
     }
@@ -73,6 +91,11 @@ public final class FulfillmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -105,51 +128,124 @@ public final class FulfillmentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FulfillmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The human-readable name of the fulfillment, unique within the agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The human-readable name of the fulfillment, unique within the agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param enabled Whether fulfillment is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether fulfillment is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param features The field defines whether the fulfillment is enabled for certain features.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder features(@Nullable Output<List<FulfillmentFeatureArgs>> features) {
             $.features = features;
             return this;
         }
 
+        /**
+         * @param features The field defines whether the fulfillment is enabled for certain features.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder features(List<FulfillmentFeatureArgs> features) {
             return features(Output.of(features));
         }
 
+        /**
+         * @param features The field defines whether the fulfillment is enabled for certain features.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder features(FulfillmentFeatureArgs... features) {
             return features(List.of(features));
         }
 
+        /**
+         * @param genericWebService Represents configuration for a generic web service. Dialogflow supports two mechanisms for authentications: - Basic authentication with username and password. - Authentication with additional authentication headers.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder genericWebService(@Nullable Output<FulfillmentGenericWebServiceArgs> genericWebService) {
             $.genericWebService = genericWebService;
             return this;
         }
 
+        /**
+         * @param genericWebService Represents configuration for a generic web service. Dialogflow supports two mechanisms for authentications: - Basic authentication with username and password. - Authentication with additional authentication headers.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder genericWebService(FulfillmentGenericWebServiceArgs genericWebService) {
             return genericWebService(Output.of(genericWebService));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

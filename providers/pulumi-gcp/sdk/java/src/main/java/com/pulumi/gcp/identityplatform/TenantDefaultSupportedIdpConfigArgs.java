@@ -23,6 +23,10 @@ public final class TenantDefaultSupportedIdpConfigArgs extends com.pulumi.resour
     @Import(name="clientId", required=true)
     private Output<String> clientId;
 
+    /**
+     * @return OAuth client ID
+     * 
+     */
     public Output<String> clientId() {
         return this.clientId;
     }
@@ -34,6 +38,10 @@ public final class TenantDefaultSupportedIdpConfigArgs extends com.pulumi.resour
     @Import(name="clientSecret", required=true)
     private Output<String> clientSecret;
 
+    /**
+     * @return OAuth client secret
+     * 
+     */
     public Output<String> clientSecret() {
         return this.clientSecret;
     }
@@ -45,6 +53,10 @@ public final class TenantDefaultSupportedIdpConfigArgs extends com.pulumi.resour
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return If this IDP allows the user to sign in
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -66,6 +78,20 @@ public final class TenantDefaultSupportedIdpConfigArgs extends com.pulumi.resour
     @Import(name="idpId", required=true)
     private Output<String> idpId;
 
+    /**
+     * @return ID of the IDP. Possible values include:
+     * * `apple.com`
+     * * `facebook.com`
+     * * `gc.apple.com`
+     * * `github.com`
+     * * `google.com`
+     * * `linkedin.com`
+     * * `microsoft.com`
+     * * `playgames.google.com`
+     * * `twitter.com`
+     * * `yahoo.com`
+     * 
+     */
     public Output<String> idpId() {
         return this.idpId;
     }
@@ -78,6 +104,11 @@ public final class TenantDefaultSupportedIdpConfigArgs extends com.pulumi.resour
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -89,6 +120,10 @@ public final class TenantDefaultSupportedIdpConfigArgs extends com.pulumi.resour
     @Import(name="tenant", required=true)
     private Output<String> tenant;
 
+    /**
+     * @return The name of the tenant where this DefaultSupportedIdpConfig resource exists
+     * 
+     */
     public Output<String> tenant() {
         return this.tenant;
     }
@@ -122,56 +157,150 @@ public final class TenantDefaultSupportedIdpConfigArgs extends com.pulumi.resour
             $ = new TenantDefaultSupportedIdpConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId OAuth client ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId OAuth client ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param clientSecret OAuth client secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(Output<String> clientSecret) {
             $.clientSecret = clientSecret;
             return this;
         }
 
+        /**
+         * @param clientSecret OAuth client secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(String clientSecret) {
             return clientSecret(Output.of(clientSecret));
         }
 
+        /**
+         * @param enabled If this IDP allows the user to sign in
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled If this IDP allows the user to sign in
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param idpId ID of the IDP. Possible values include:
+         * * `apple.com`
+         * * `facebook.com`
+         * * `gc.apple.com`
+         * * `github.com`
+         * * `google.com`
+         * * `linkedin.com`
+         * * `microsoft.com`
+         * * `playgames.google.com`
+         * * `twitter.com`
+         * * `yahoo.com`
+         * 
+         * @return builder
+         * 
+         */
         public Builder idpId(Output<String> idpId) {
             $.idpId = idpId;
             return this;
         }
 
+        /**
+         * @param idpId ID of the IDP. Possible values include:
+         * * `apple.com`
+         * * `facebook.com`
+         * * `gc.apple.com`
+         * * `github.com`
+         * * `google.com`
+         * * `linkedin.com`
+         * * `microsoft.com`
+         * * `playgames.google.com`
+         * * `twitter.com`
+         * * `yahoo.com`
+         * 
+         * @return builder
+         * 
+         */
         public Builder idpId(String idpId) {
             return idpId(Output.of(idpId));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param tenant The name of the tenant where this DefaultSupportedIdpConfig resource exists
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenant(Output<String> tenant) {
             $.tenant = tenant;
             return this;
         }
 
+        /**
+         * @param tenant The name of the tenant where this DefaultSupportedIdpConfig resource exists
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenant(String tenant) {
             return tenant(Output.of(tenant));
         }

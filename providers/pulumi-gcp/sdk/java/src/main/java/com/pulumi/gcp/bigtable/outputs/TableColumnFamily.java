@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class TableColumnFamily {
-    /**
-     * The name of the column family.
-     * 
-     */
+        /**
+         * @return The name of the column family.
+         * 
+         */
     private final String family;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class TableColumnFamily {
     }
 
     /**
-     * The name of the column family.
+     * @return The name of the column family.
      * 
-    */
+     */
     public String family() {
         return this.family;
     }

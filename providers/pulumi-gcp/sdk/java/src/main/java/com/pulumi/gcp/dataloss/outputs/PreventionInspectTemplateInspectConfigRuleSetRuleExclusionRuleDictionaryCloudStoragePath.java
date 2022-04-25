@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePath {
-    /**
-     * A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
-     * 
-     */
+        /**
+         * @return A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
+         * 
+         */
     private final String path;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     }
 
     /**
-     * A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
+     * @return A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
      * 
-    */
+     */
     public String path() {
         return this.path;
     }

@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BucketCor {
-    /**
-     * The value, in seconds, to return in the [Access-Control-Max-Age header](https://www.w3.org/TR/cors/#access-control-max-age-response-header) used in preflight responses.
-     * 
-     */
+        /**
+         * @return The value, in seconds, to return in the [Access-Control-Max-Age header](https://www.w3.org/TR/cors/#access-control-max-age-response-header) used in preflight responses.
+         * 
+         */
     private final @Nullable Integer maxAgeSeconds;
-    /**
-     * The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: &#34;*&#34; is permitted in the list of methods, and means &#34;any method&#34;.
-     * 
-     */
+        /**
+         * @return The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: &#34;*&#34; is permitted in the list of methods, and means &#34;any method&#34;.
+         * 
+         */
     private final @Nullable List<String> methods;
-    /**
-     * The list of [Origins](https://tools.ietf.org/html/rfc6454) eligible to receive CORS response headers. Note: &#34;*&#34; is permitted in the list of origins, and means &#34;any Origin&#34;.
-     * 
-     */
+        /**
+         * @return The list of [Origins](https://tools.ietf.org/html/rfc6454) eligible to receive CORS response headers. Note: &#34;*&#34; is permitted in the list of origins, and means &#34;any Origin&#34;.
+         * 
+         */
     private final @Nullable List<String> origins;
-    /**
-     * The list of HTTP headers other than the [simple response headers](https://www.w3.org/TR/cors/#simple-response-header) to give permission for the user-agent to share across domains.
-     * 
-     */
+        /**
+         * @return The list of HTTP headers other than the [simple response headers](https://www.w3.org/TR/cors/#simple-response-header) to give permission for the user-agent to share across domains.
+         * 
+         */
     private final @Nullable List<String> responseHeaders;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class BucketCor {
     }
 
     /**
-     * The value, in seconds, to return in the [Access-Control-Max-Age header](https://www.w3.org/TR/cors/#access-control-max-age-response-header) used in preflight responses.
+     * @return The value, in seconds, to return in the [Access-Control-Max-Age header](https://www.w3.org/TR/cors/#access-control-max-age-response-header) used in preflight responses.
      * 
-    */
+     */
     public Optional<Integer> maxAgeSeconds() {
         return Optional.ofNullable(this.maxAgeSeconds);
     }
     /**
-     * The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: &#34;*&#34; is permitted in the list of methods, and means &#34;any method&#34;.
+     * @return The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: &#34;*&#34; is permitted in the list of methods, and means &#34;any method&#34;.
      * 
-    */
+     */
     public List<String> methods() {
         return this.methods == null ? List.of() : this.methods;
     }
     /**
-     * The list of [Origins](https://tools.ietf.org/html/rfc6454) eligible to receive CORS response headers. Note: &#34;*&#34; is permitted in the list of origins, and means &#34;any Origin&#34;.
+     * @return The list of [Origins](https://tools.ietf.org/html/rfc6454) eligible to receive CORS response headers. Note: &#34;*&#34; is permitted in the list of origins, and means &#34;any Origin&#34;.
      * 
-    */
+     */
     public List<String> origins() {
         return this.origins == null ? List.of() : this.origins;
     }
     /**
-     * The list of HTTP headers other than the [simple response headers](https://www.w3.org/TR/cors/#simple-response-header) to give permission for the user-agent to share across domains.
+     * @return The list of HTTP headers other than the [simple response headers](https://www.w3.org/TR/cors/#simple-response-header) to give permission for the user-agent to share across domains.
      * 
-    */
+     */
     public List<String> responseHeaders() {
         return this.responseHeaders == null ? List.of() : this.responseHeaders;
     }

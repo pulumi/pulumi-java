@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class StandardAppVersionHandlerScript {
-    /**
-     * Path to the script from the application root directory.
-     * 
-     */
+        /**
+         * @return Path to the script from the application root directory.
+         * 
+         */
     private final String scriptPath;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class StandardAppVersionHandlerScript {
     }
 
     /**
-     * Path to the script from the application root directory.
+     * @return Path to the script from the application root directory.
      * 
-    */
+     */
     public String scriptPath() {
         return this.scriptPath;
     }

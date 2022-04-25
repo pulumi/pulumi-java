@@ -21,6 +21,10 @@ public final class GetDatabaseInstanceArgs extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the instance.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -32,6 +36,10 @@ public final class GetDatabaseInstanceArgs extends com.pulumi.resources.InvokeAr
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -61,11 +69,23 @@ public final class GetDatabaseInstanceArgs extends com.pulumi.resources.InvokeAr
             $ = new GetDatabaseInstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;

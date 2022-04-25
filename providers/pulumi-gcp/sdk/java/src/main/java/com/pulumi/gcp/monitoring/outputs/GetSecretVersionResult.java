@@ -13,10 +13,10 @@ public final class GetSecretVersionResult {
     private final String createTime;
     private final String destroyTime;
     private final Boolean enabled;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String name;
     private final String project;
@@ -56,9 +56,9 @@ public final class GetSecretVersionResult {
         return this.enabled;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

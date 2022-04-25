@@ -24,6 +24,12 @@ public final class SloWindowsBasedSliMetricSumInRangeRangeGetArgs extends com.pu
     @Import(name="max")
     private @Nullable Output<Double> max;
 
+    /**
+     * @return max value for the range (inclusive). If not given,
+     * will be set to &#34;infinity&#34;, defining an open range
+     * &#34;&gt;= range.min&#34;
+     * 
+     */
     public Optional<Output<Double>> max() {
         return Optional.ofNullable(this.max);
     }
@@ -37,6 +43,12 @@ public final class SloWindowsBasedSliMetricSumInRangeRangeGetArgs extends com.pu
     @Import(name="min")
     private @Nullable Output<Double> min;
 
+    /**
+     * @return Min value for the range (inclusive). If not given,
+     * will be set to &#34;-infinity&#34;, defining an open range
+     * &#34;&lt; range.max&#34;
+     * 
+     */
     public Optional<Output<Double>> min() {
         return Optional.ofNullable(this.min);
     }
@@ -66,20 +78,52 @@ public final class SloWindowsBasedSliMetricSumInRangeRangeGetArgs extends com.pu
             $ = new SloWindowsBasedSliMetricSumInRangeRangeGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param max max value for the range (inclusive). If not given,
+         * will be set to &#34;infinity&#34;, defining an open range
+         * &#34;&gt;= range.min&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder max(@Nullable Output<Double> max) {
             $.max = max;
             return this;
         }
 
+        /**
+         * @param max max value for the range (inclusive). If not given,
+         * will be set to &#34;infinity&#34;, defining an open range
+         * &#34;&gt;= range.min&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder max(Double max) {
             return max(Output.of(max));
         }
 
+        /**
+         * @param min Min value for the range (inclusive). If not given,
+         * will be set to &#34;-infinity&#34;, defining an open range
+         * &#34;&lt; range.max&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder min(@Nullable Output<Double> min) {
             $.min = min;
             return this;
         }
 
+        /**
+         * @param min Min value for the range (inclusive). If not given,
+         * will be set to &#34;-infinity&#34;, defining an open range
+         * &#34;&lt; range.max&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder min(Double min) {
             return min(Output.of(min));
         }

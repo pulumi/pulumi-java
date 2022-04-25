@@ -13,40 +13,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AutoscalerAutoscalingPolicyScalingSchedule {
-    /**
-     * An optional description of this resource.
-     * 
-     */
+        /**
+         * @return An optional description of this resource.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. If set to true, then a scaling schedule has no effect.
-     * 
-     */
+        /**
+         * @return A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. If set to true, then a scaling schedule has no effect.
+         * 
+         */
     private final @Nullable Boolean disabled;
-    /**
-     * The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300.
-     * 
-     */
+        /**
+         * @return The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300.
+         * 
+         */
     private final Integer durationSec;
-    /**
-     * Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule.
-     * 
-     */
+        /**
+         * @return Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule.
+         * 
+         */
     private final Integer minRequiredReplicas;
-    /**
-     * The identifier for this object. Format specified above.
-     * 
-     */
+        /**
+         * @return The identifier for this object. Format specified above.
+         * 
+         */
     private final String name;
-    /**
-     * The start timestamps of time intervals when this scaling schedule should provide a scaling signal. This field uses the extended cron format (with an optional year field).
-     * 
-     */
+        /**
+         * @return The start timestamps of time intervals when this scaling schedule should provide a scaling signal. This field uses the extended cron format (with an optional year field).
+         * 
+         */
     private final String schedule;
-    /**
-     * The time zone to be used when interpreting the schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
-     * 
-     */
+        /**
+         * @return The time zone to be used when interpreting the schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+         * 
+         */
     private final @Nullable String timeZone;
 
     @CustomType.Constructor
@@ -68,51 +68,51 @@ public final class AutoscalerAutoscalingPolicyScalingSchedule {
     }
 
     /**
-     * An optional description of this resource.
+     * @return An optional description of this resource.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. If set to true, then a scaling schedule has no effect.
+     * @return A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. If set to true, then a scaling schedule has no effect.
      * 
-    */
+     */
     public Optional<Boolean> disabled() {
         return Optional.ofNullable(this.disabled);
     }
     /**
-     * The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300.
+     * @return The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300.
      * 
-    */
+     */
     public Integer durationSec() {
         return this.durationSec;
     }
     /**
-     * Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule.
+     * @return Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule.
      * 
-    */
+     */
     public Integer minRequiredReplicas() {
         return this.minRequiredReplicas;
     }
     /**
-     * The identifier for this object. Format specified above.
+     * @return The identifier for this object. Format specified above.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The start timestamps of time intervals when this scaling schedule should provide a scaling signal. This field uses the extended cron format (with an optional year field).
+     * @return The start timestamps of time intervals when this scaling schedule should provide a scaling signal. This field uses the extended cron format (with an optional year field).
      * 
-    */
+     */
     public String schedule() {
         return this.schedule;
     }
     /**
-     * The time zone to be used when interpreting the schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+     * @return The time zone to be used when interpreting the schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
      * 
-    */
+     */
     public Optional<String> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }

@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYum {
-    /**
-     * Required. The location of the repository directory.
-     * 
-     */
+        /**
+         * @return Required. The location of the repository directory.
+         * 
+         */
     private final String baseUrl;
-    /**
-     * The display name of the repository.
-     * 
-     */
+        /**
+         * @return The display name of the repository.
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * URIs of GPG keys.
-     * 
-     */
+        /**
+         * @return URIs of GPG keys.
+         * 
+         */
     private final @Nullable List<String> gpgKeys;
-    /**
-     * Required. A one word, unique name for this repository. This is the `repo id` in the zypper config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for GuestPolicy conflicts.
-     * 
-     */
+        /**
+         * @return Required. A one word, unique name for this repository. This is the `repo id` in the zypper config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for GuestPolicy conflicts.
+         * 
+         */
     private final String id;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYum 
     }
 
     /**
-     * Required. The location of the repository directory.
+     * @return Required. The location of the repository directory.
      * 
-    */
+     */
     public String baseUrl() {
         return this.baseUrl;
     }
     /**
-     * The display name of the repository.
+     * @return The display name of the repository.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * URIs of GPG keys.
+     * @return URIs of GPG keys.
      * 
-    */
+     */
     public List<String> gpgKeys() {
         return this.gpgKeys == null ? List.of() : this.gpgKeys;
     }
     /**
-     * Required. A one word, unique name for this repository. This is the `repo id` in the zypper config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for GuestPolicy conflicts.
+     * @return Required. A one word, unique name for this repository. This is the `repo id` in the zypper config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for GuestPolicy conflicts.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

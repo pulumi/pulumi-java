@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TransferJobSchedule {
-    /**
-     * The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
-     * 
-     */
+        /**
+         * @return The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
+         * 
+         */
     private final @Nullable TransferJobScheduleScheduleEndDate scheduleEndDate;
-    /**
-     * The first day the recurring transfer is scheduled to run. If `schedule_start_date` is in the past, the transfer will run for the first time on the following day. Structure documented below.
-     * 
-     */
+        /**
+         * @return The first day the recurring transfer is scheduled to run. If `schedule_start_date` is in the past, the transfer will run for the first time on the following day. Structure documented below.
+         * 
+         */
     private final TransferJobScheduleScheduleStartDate scheduleStartDate;
-    /**
-     * The time in UTC at which the transfer will be scheduled to start in a day. Transfers may start later than this time. If not specified, recurring and one-time transfers that are scheduled to run today will run immediately; recurring transfers that are scheduled to run on a future date will start at approximately midnight UTC on that date. Note that when configuring a transfer with the Cloud Platform Console, the transfer&#39;s start time in a day is specified in your local timezone. Structure documented below.
-     * 
-     */
+        /**
+         * @return The time in UTC at which the transfer will be scheduled to start in a day. Transfers may start later than this time. If not specified, recurring and one-time transfers that are scheduled to run today will run immediately; recurring transfers that are scheduled to run on a future date will start at approximately midnight UTC on that date. Note that when configuring a transfer with the Cloud Platform Console, the transfer&#39;s start time in a day is specified in your local timezone. Structure documented below.
+         * 
+         */
     private final @Nullable TransferJobScheduleStartTimeOfDay startTimeOfDay;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class TransferJobSchedule {
     }
 
     /**
-     * The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
+     * @return The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
      * 
-    */
+     */
     public Optional<TransferJobScheduleScheduleEndDate> scheduleEndDate() {
         return Optional.ofNullable(this.scheduleEndDate);
     }
     /**
-     * The first day the recurring transfer is scheduled to run. If `schedule_start_date` is in the past, the transfer will run for the first time on the following day. Structure documented below.
+     * @return The first day the recurring transfer is scheduled to run. If `schedule_start_date` is in the past, the transfer will run for the first time on the following day. Structure documented below.
      * 
-    */
+     */
     public TransferJobScheduleScheduleStartDate scheduleStartDate() {
         return this.scheduleStartDate;
     }
     /**
-     * The time in UTC at which the transfer will be scheduled to start in a day. Transfers may start later than this time. If not specified, recurring and one-time transfers that are scheduled to run today will run immediately; recurring transfers that are scheduled to run on a future date will start at approximately midnight UTC on that date. Note that when configuring a transfer with the Cloud Platform Console, the transfer&#39;s start time in a day is specified in your local timezone. Structure documented below.
+     * @return The time in UTC at which the transfer will be scheduled to start in a day. Transfers may start later than this time. If not specified, recurring and one-time transfers that are scheduled to run today will run immediately; recurring transfers that are scheduled to run on a future date will start at approximately midnight UTC on that date. Note that when configuring a transfer with the Cloud Platform Console, the transfer&#39;s start time in a day is specified in your local timezone. Structure documented below.
      * 
-    */
+     */
     public Optional<TransferJobScheduleStartTimeOfDay> startTimeOfDay() {
         return Optional.ofNullable(this.startTimeOfDay);
     }

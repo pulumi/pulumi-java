@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SecurityPolicyAdaptiveProtectionConfig {
-    /**
-     * Configuration for [Google Cloud Armor Adaptive Protection Layer 7 DDoS Defense](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
-     * 
-     */
+        /**
+         * @return Configuration for [Google Cloud Armor Adaptive Protection Layer 7 DDoS Defense](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+         * 
+         */
     private final @Nullable SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig layer7DdosDefenseConfig;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class SecurityPolicyAdaptiveProtectionConfig {
     }
 
     /**
-     * Configuration for [Google Cloud Armor Adaptive Protection Layer 7 DDoS Defense](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+     * @return Configuration for [Google Cloud Armor Adaptive Protection Layer 7 DDoS Defense](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
      * 
-    */
+     */
     public Optional<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig> layer7DdosDefenseConfig() {
         return Optional.ofNullable(this.layer7DdosDefenseConfig);
     }

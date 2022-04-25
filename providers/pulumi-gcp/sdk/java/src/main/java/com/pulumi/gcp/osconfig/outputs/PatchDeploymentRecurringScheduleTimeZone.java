@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PatchDeploymentRecurringScheduleTimeZone {
-    /**
-     * IANA Time Zone Database time zone, e.g. &#34;America/New_York&#34;.
-     * 
-     */
+        /**
+         * @return IANA Time Zone Database time zone, e.g. &#34;America/New_York&#34;.
+         * 
+         */
     private final String id;
-    /**
-     * IANA Time Zone Database version number, e.g. &#34;2019a&#34;.
-     * 
-     */
+        /**
+         * @return IANA Time Zone Database version number, e.g. &#34;2019a&#34;.
+         * 
+         */
     private final @Nullable String version;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class PatchDeploymentRecurringScheduleTimeZone {
     }
 
     /**
-     * IANA Time Zone Database time zone, e.g. &#34;America/New_York&#34;.
+     * @return IANA Time Zone Database time zone, e.g. &#34;America/New_York&#34;.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * IANA Time Zone Database version number, e.g. &#34;2019a&#34;.
+     * @return IANA Time Zone Database version number, e.g. &#34;2019a&#34;.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class FunctionEventTriggerFailurePolicy {
-    /**
-     * Whether the function should be retried on failure. Defaults to `false`.
-     * 
-     */
+        /**
+         * @return Whether the function should be retried on failure. Defaults to `false`.
+         * 
+         */
     private final Boolean retry;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class FunctionEventTriggerFailurePolicy {
     }
 
     /**
-     * Whether the function should be retried on failure. Defaults to `false`.
+     * @return Whether the function should be retried on failure. Defaults to `false`.
      * 
-    */
+     */
     public Boolean retry() {
         return this.retry;
     }

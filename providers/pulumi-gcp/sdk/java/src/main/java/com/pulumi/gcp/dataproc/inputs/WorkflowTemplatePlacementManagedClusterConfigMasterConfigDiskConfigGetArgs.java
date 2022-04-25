@@ -23,6 +23,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigDisk
     @Import(name="bootDiskSizeGb")
     private @Nullable Output<Integer> bootDiskSizeGb;
 
+    /**
+     * @return Optional. Size in GB of the boot disk (default is 500GB).
+     * 
+     */
     public Optional<Output<Integer>> bootDiskSizeGb() {
         return Optional.ofNullable(this.bootDiskSizeGb);
     }
@@ -34,6 +38,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigDisk
     @Import(name="bootDiskType")
     private @Nullable Output<String> bootDiskType;
 
+    /**
+     * @return Optional. Type of the boot disk (default is &#34;pd-standard&#34;). Valid values: &#34;pd-ssd&#34; (Persistent Disk Solid State Drive) or &#34;pd-standard&#34; (Persistent Disk Hard Disk Drive).
+     * 
+     */
     public Optional<Output<String>> bootDiskType() {
         return Optional.ofNullable(this.bootDiskType);
     }
@@ -45,6 +53,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigDisk
     @Import(name="numLocalSsds")
     private @Nullable Output<Integer> numLocalSsds;
 
+    /**
+     * @return Optional. Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
+     * 
+     */
     public Optional<Output<Integer>> numLocalSsds() {
         return Optional.ofNullable(this.numLocalSsds);
     }
@@ -75,29 +87,65 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigDisk
             $ = new WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bootDiskSizeGb Optional. Size in GB of the boot disk (default is 500GB).
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootDiskSizeGb(@Nullable Output<Integer> bootDiskSizeGb) {
             $.bootDiskSizeGb = bootDiskSizeGb;
             return this;
         }
 
+        /**
+         * @param bootDiskSizeGb Optional. Size in GB of the boot disk (default is 500GB).
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootDiskSizeGb(Integer bootDiskSizeGb) {
             return bootDiskSizeGb(Output.of(bootDiskSizeGb));
         }
 
+        /**
+         * @param bootDiskType Optional. Type of the boot disk (default is &#34;pd-standard&#34;). Valid values: &#34;pd-ssd&#34; (Persistent Disk Solid State Drive) or &#34;pd-standard&#34; (Persistent Disk Hard Disk Drive).
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootDiskType(@Nullable Output<String> bootDiskType) {
             $.bootDiskType = bootDiskType;
             return this;
         }
 
+        /**
+         * @param bootDiskType Optional. Type of the boot disk (default is &#34;pd-standard&#34;). Valid values: &#34;pd-ssd&#34; (Persistent Disk Solid State Drive) or &#34;pd-standard&#34; (Persistent Disk Hard Disk Drive).
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootDiskType(String bootDiskType) {
             return bootDiskType(Output.of(bootDiskType));
         }
 
+        /**
+         * @param numLocalSsds Optional. Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numLocalSsds(@Nullable Output<Integer> numLocalSsds) {
             $.numLocalSsds = numLocalSsds;
             return this;
         }
 
+        /**
+         * @param numLocalSsds Optional. Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numLocalSsds(Integer numLocalSsds) {
             return numLocalSsds(Output.of(numLocalSsds));
         }

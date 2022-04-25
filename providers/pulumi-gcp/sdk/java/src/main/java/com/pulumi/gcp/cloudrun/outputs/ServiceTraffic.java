@@ -13,23 +13,23 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ServiceTraffic {
-    /**
-     * LatestRevision may be optionally provided to indicate that the latest ready
-     * Revision of the Configuration should be used for this traffic target. When
-     * provided LatestRevision must be true if RevisionName is empty; it must be
-     * false when RevisionName is non-empty.
-     * 
-     */
+        /**
+         * @return LatestRevision may be optionally provided to indicate that the latest ready
+         * Revision of the Configuration should be used for this traffic target. When
+         * provided LatestRevision must be true if RevisionName is empty; it must be
+         * false when RevisionName is non-empty.
+         * 
+         */
     private final @Nullable Boolean latestRevision;
-    /**
-     * Percent specifies percent of the traffic to this Revision or Configuration.
-     * 
-     */
+        /**
+         * @return Percent specifies percent of the traffic to this Revision or Configuration.
+         * 
+         */
     private final Integer percent;
-    /**
-     * RevisionName of a specific revision to which to send this portion of traffic.
-     * 
-     */
+        /**
+         * @return RevisionName of a specific revision to which to send this portion of traffic.
+         * 
+         */
     private final @Nullable String revisionName;
 
     @CustomType.Constructor
@@ -43,26 +43,26 @@ public final class ServiceTraffic {
     }
 
     /**
-     * LatestRevision may be optionally provided to indicate that the latest ready
+     * @return LatestRevision may be optionally provided to indicate that the latest ready
      * Revision of the Configuration should be used for this traffic target. When
      * provided LatestRevision must be true if RevisionName is empty; it must be
      * false when RevisionName is non-empty.
      * 
-    */
+     */
     public Optional<Boolean> latestRevision() {
         return Optional.ofNullable(this.latestRevision);
     }
     /**
-     * Percent specifies percent of the traffic to this Revision or Configuration.
+     * @return Percent specifies percent of the traffic to this Revision or Configuration.
      * 
-    */
+     */
     public Integer percent() {
         return this.percent;
     }
     /**
-     * RevisionName of a specific revision to which to send this portion of traffic.
+     * @return RevisionName of a specific revision to which to send this portion of traffic.
      * 
-    */
+     */
     public Optional<String> revisionName() {
         return Optional.ofNullable(this.revisionName);
     }

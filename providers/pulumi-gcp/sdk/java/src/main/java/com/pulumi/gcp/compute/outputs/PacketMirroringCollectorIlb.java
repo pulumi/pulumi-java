@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class PacketMirroringCollectorIlb {
-    /**
-     * The URL of the instances where this rule should be active.
-     * 
-     */
+        /**
+         * @return The URL of the instances where this rule should be active.
+         * 
+         */
     private final String url;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class PacketMirroringCollectorIlb {
     }
 
     /**
-     * The URL of the instances where this rule should be active.
+     * @return The URL of the instances where this rule should be active.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

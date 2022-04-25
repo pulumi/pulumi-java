@@ -10,16 +10,16 @@ import java.util.Objects;
 
 @CustomType
 public final class RegionInstanceGroupManagerNamedPort {
-    /**
-     * - Version name.
-     * 
-     */
+        /**
+         * @return - Version name.
+         * 
+         */
     private final String name;
-    /**
-     * The port number.
-     * ***
-     * 
-     */
+        /**
+         * @return The port number.
+         * ***
+         * 
+         */
     private final Integer port;
 
     @CustomType.Constructor
@@ -31,17 +31,17 @@ public final class RegionInstanceGroupManagerNamedPort {
     }
 
     /**
-     * - Version name.
+     * @return - Version name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The port number.
+     * @return The port number.
      * ***
      * 
-    */
+     */
     public Integer port() {
         return this.port;
     }

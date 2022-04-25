@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DeploymentLabel {
-    /**
-     * Key for label.
-     * 
-     */
+        /**
+         * @return Key for label.
+         * 
+         */
     private final @Nullable String key;
-    /**
-     * Value of label.
-     * 
-     */
+        /**
+         * @return Value of label.
+         * 
+         */
     private final @Nullable String value;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class DeploymentLabel {
     }
 
     /**
-     * Key for label.
+     * @return Key for label.
      * 
-    */
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
-     * Value of label.
+     * @return Value of label.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

@@ -61,10 +61,10 @@ public final class GetClusterResult {
     private final Boolean enableShieldedNodes;
     private final Boolean enableTpu;
     private final String endpoint;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final List<GetClusterIdentityServiceConfig> identityServiceConfigs;
     private final Integer initialNodeCount;
@@ -293,9 +293,9 @@ public final class GetClusterResult {
         return this.endpoint;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

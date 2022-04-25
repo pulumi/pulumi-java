@@ -9,11 +9,11 @@ import java.util.Objects;
 
 @CustomType
 public final class PreventionJobTriggerInspectJobAction {
-    /**
-     * Schedule for triggered jobs
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Schedule for triggered jobs
+         * Structure is documented below.
+         * 
+         */
     private final PreventionJobTriggerInspectJobActionSaveFindings saveFindings;
 
     @CustomType.Constructor
@@ -22,10 +22,10 @@ public final class PreventionJobTriggerInspectJobAction {
     }
 
     /**
-     * Schedule for triggered jobs
+     * @return Schedule for triggered jobs
      * Structure is documented below.
      * 
-    */
+     */
     public PreventionJobTriggerInspectJobActionSaveFindings saveFindings() {
         return this.saveFindings;
     }

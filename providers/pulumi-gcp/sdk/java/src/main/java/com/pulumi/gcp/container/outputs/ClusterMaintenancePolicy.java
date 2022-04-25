@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClusterMaintenancePolicy {
-    /**
-     * Time window specified for daily maintenance operations.
-     * Specify `start_time` in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format &#34;HH:MM”,
-     * where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
-     * 
-     */
+        /**
+         * @return Time window specified for daily maintenance operations.
+         * Specify `start_time` in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format &#34;HH:MM”,
+         * where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
+         * 
+         */
     private final @Nullable ClusterMaintenancePolicyDailyMaintenanceWindow dailyMaintenanceWindow;
-    /**
-     * Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows. A cluster can have up to three maintenance exclusions at a time [Maintenance Window and Exclusions](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions)
-     * 
-     */
+        /**
+         * @return Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows. A cluster can have up to three maintenance exclusions at a time [Maintenance Window and Exclusions](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions)
+         * 
+         */
     private final @Nullable List<ClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions;
-    /**
-     * Time window for recurring maintenance operations.
-     * 
-     */
+        /**
+         * @return Time window for recurring maintenance operations.
+         * 
+         */
     private final @Nullable ClusterMaintenancePolicyRecurringWindow recurringWindow;
 
     @CustomType.Constructor
@@ -43,25 +43,25 @@ public final class ClusterMaintenancePolicy {
     }
 
     /**
-     * Time window specified for daily maintenance operations.
+     * @return Time window specified for daily maintenance operations.
      * Specify `start_time` in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format &#34;HH:MM”,
      * where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
      * 
-    */
+     */
     public Optional<ClusterMaintenancePolicyDailyMaintenanceWindow> dailyMaintenanceWindow() {
         return Optional.ofNullable(this.dailyMaintenanceWindow);
     }
     /**
-     * Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows. A cluster can have up to three maintenance exclusions at a time [Maintenance Window and Exclusions](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions)
+     * @return Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows. A cluster can have up to three maintenance exclusions at a time [Maintenance Window and Exclusions](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions)
      * 
-    */
+     */
     public List<ClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions() {
         return this.maintenanceExclusions == null ? List.of() : this.maintenanceExclusions;
     }
     /**
-     * Time window for recurring maintenance operations.
+     * @return Time window for recurring maintenance operations.
      * 
-    */
+     */
     public Optional<ClusterMaintenancePolicyRecurringWindow> recurringWindow() {
         return Optional.ofNullable(this.recurringWindow);
     }

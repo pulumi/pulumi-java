@@ -14,15 +14,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetEnvironmentResult {
-    /**
-     * Configuration parameters for the environment.
-     * 
-     */
+        /**
+         * @return Configuration parameters for the environment.
+         * 
+         */
     private final List<GetEnvironmentConfig> configs;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final Map<String,String> labels;
     private final String name;
@@ -46,16 +46,16 @@ public final class GetEnvironmentResult {
     }
 
     /**
-     * Configuration parameters for the environment.
+     * @return Configuration parameters for the environment.
      * 
-    */
+     */
     public List<GetEnvironmentConfig> configs() {
         return this.configs;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

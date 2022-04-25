@@ -12,19 +12,19 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ServicePerimetersServicePerimeterSpecIngressPolicy {
-    /**
-     * Defines the conditions on the source of a request causing this `IngressPolicy`
-     * to apply.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Defines the conditions on the source of a request causing this `IngressPolicy`
+         * to apply.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable ServicePerimetersServicePerimeterSpecIngressPolicyIngressFrom ingressFrom;
-    /**
-     * Defines the conditions on the `ApiOperation` and request destination that cause
-     * this `IngressPolicy` to apply.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Defines the conditions on the `ApiOperation` and request destination that cause
+         * this `IngressPolicy` to apply.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable ServicePerimetersServicePerimeterSpecIngressPolicyIngressTo ingressTo;
 
     @CustomType.Constructor
@@ -36,20 +36,20 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicy {
     }
 
     /**
-     * Defines the conditions on the source of a request causing this `IngressPolicy`
+     * @return Defines the conditions on the source of a request causing this `IngressPolicy`
      * to apply.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<ServicePerimetersServicePerimeterSpecIngressPolicyIngressFrom> ingressFrom() {
         return Optional.ofNullable(this.ingressFrom);
     }
     /**
-     * Defines the conditions on the `ApiOperation` and request destination that cause
+     * @return Defines the conditions on the `ApiOperation` and request destination that cause
      * this `IngressPolicy` to apply.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<ServicePerimetersServicePerimeterSpecIngressPolicyIngressTo> ingressTo() {
         return Optional.ofNullable(this.ingressTo);
     }

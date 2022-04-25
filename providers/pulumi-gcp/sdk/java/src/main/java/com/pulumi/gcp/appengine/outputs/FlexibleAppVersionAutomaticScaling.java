@@ -16,72 +16,72 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FlexibleAppVersionAutomaticScaling {
-    /**
-     * The time period that the Autoscaler should wait before it starts collecting information from a new instance.
-     * This prevents the autoscaler from collecting information when the instance is initializing,
-     * during which the collected usage would not be reliable. Default: 120s
-     * 
-     */
+        /**
+         * @return The time period that the Autoscaler should wait before it starts collecting information from a new instance.
+         * This prevents the autoscaler from collecting information when the instance is initializing,
+         * during which the collected usage would not be reliable. Default: 120s
+         * 
+         */
     private final @Nullable String coolDownPeriod;
-    /**
-     * Target scaling by CPU usage.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Target scaling by CPU usage.
+         * Structure is documented below.
+         * 
+         */
     private final FlexibleAppVersionAutomaticScalingCpuUtilization cpuUtilization;
-    /**
-     * Target scaling by disk usage.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Target scaling by disk usage.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable FlexibleAppVersionAutomaticScalingDiskUtilization diskUtilization;
-    /**
-     * Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
-     * Defaults to a runtime-specific value.
-     * 
-     */
+        /**
+         * @return Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
+         * Defaults to a runtime-specific value.
+         * 
+         */
     private final @Nullable Integer maxConcurrentRequests;
-    /**
-     * Maximum number of idle instances that should be maintained for this version.
-     * 
-     */
+        /**
+         * @return Maximum number of idle instances that should be maintained for this version.
+         * 
+         */
     private final @Nullable Integer maxIdleInstances;
-    /**
-     * Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
-     * 
-     */
+        /**
+         * @return Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
+         * 
+         */
     private final @Nullable String maxPendingLatency;
-    /**
-     * Maximum number of instances that should be started to handle requests for this version. Default: 20
-     * 
-     */
+        /**
+         * @return Maximum number of instances that should be started to handle requests for this version. Default: 20
+         * 
+         */
     private final @Nullable Integer maxTotalInstances;
-    /**
-     * Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
-     * 
-     */
+        /**
+         * @return Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
+         * 
+         */
     private final @Nullable Integer minIdleInstances;
-    /**
-     * Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
-     * 
-     */
+        /**
+         * @return Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
+         * 
+         */
     private final @Nullable String minPendingLatency;
-    /**
-     * Minimum number of running instances that should be maintained for this version. Default: 2
-     * 
-     */
+        /**
+         * @return Minimum number of running instances that should be maintained for this version. Default: 2
+         * 
+         */
     private final @Nullable Integer minTotalInstances;
-    /**
-     * Target scaling by network usage.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Target scaling by network usage.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable FlexibleAppVersionAutomaticScalingNetworkUtilization networkUtilization;
-    /**
-     * Target scaling by request utilization.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Target scaling by request utilization.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable FlexibleAppVersionAutomaticScalingRequestUtilization requestUtilization;
 
     @CustomType.Constructor
@@ -113,93 +113,93 @@ public final class FlexibleAppVersionAutomaticScaling {
     }
 
     /**
-     * The time period that the Autoscaler should wait before it starts collecting information from a new instance.
+     * @return The time period that the Autoscaler should wait before it starts collecting information from a new instance.
      * This prevents the autoscaler from collecting information when the instance is initializing,
      * during which the collected usage would not be reliable. Default: 120s
      * 
-    */
+     */
     public Optional<String> coolDownPeriod() {
         return Optional.ofNullable(this.coolDownPeriod);
     }
     /**
-     * Target scaling by CPU usage.
+     * @return Target scaling by CPU usage.
      * Structure is documented below.
      * 
-    */
+     */
     public FlexibleAppVersionAutomaticScalingCpuUtilization cpuUtilization() {
         return this.cpuUtilization;
     }
     /**
-     * Target scaling by disk usage.
+     * @return Target scaling by disk usage.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<FlexibleAppVersionAutomaticScalingDiskUtilization> diskUtilization() {
         return Optional.ofNullable(this.diskUtilization);
     }
     /**
-     * Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
+     * @return Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
      * Defaults to a runtime-specific value.
      * 
-    */
+     */
     public Optional<Integer> maxConcurrentRequests() {
         return Optional.ofNullable(this.maxConcurrentRequests);
     }
     /**
-     * Maximum number of idle instances that should be maintained for this version.
+     * @return Maximum number of idle instances that should be maintained for this version.
      * 
-    */
+     */
     public Optional<Integer> maxIdleInstances() {
         return Optional.ofNullable(this.maxIdleInstances);
     }
     /**
-     * Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
+     * @return Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
      * 
-    */
+     */
     public Optional<String> maxPendingLatency() {
         return Optional.ofNullable(this.maxPendingLatency);
     }
     /**
-     * Maximum number of instances that should be started to handle requests for this version. Default: 20
+     * @return Maximum number of instances that should be started to handle requests for this version. Default: 20
      * 
-    */
+     */
     public Optional<Integer> maxTotalInstances() {
         return Optional.ofNullable(this.maxTotalInstances);
     }
     /**
-     * Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
+     * @return Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
      * 
-    */
+     */
     public Optional<Integer> minIdleInstances() {
         return Optional.ofNullable(this.minIdleInstances);
     }
     /**
-     * Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
+     * @return Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
      * 
-    */
+     */
     public Optional<String> minPendingLatency() {
         return Optional.ofNullable(this.minPendingLatency);
     }
     /**
-     * Minimum number of running instances that should be maintained for this version. Default: 2
+     * @return Minimum number of running instances that should be maintained for this version. Default: 2
      * 
-    */
+     */
     public Optional<Integer> minTotalInstances() {
         return Optional.ofNullable(this.minTotalInstances);
     }
     /**
-     * Target scaling by network usage.
+     * @return Target scaling by network usage.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<FlexibleAppVersionAutomaticScalingNetworkUtilization> networkUtilization() {
         return Optional.ofNullable(this.networkUtilization);
     }
     /**
-     * Target scaling by request utilization.
+     * @return Target scaling by request utilization.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<FlexibleAppVersionAutomaticScalingRequestUtilization> requestUtilization() {
         return Optional.ofNullable(this.requestUtilization);
     }

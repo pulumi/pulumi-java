@@ -12,16 +12,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClusterNotificationConfigPubsub {
-    /**
-     * Enable the PodSecurityPolicy controller for this cluster.
-     * If enabled, pods must be valid under a PodSecurityPolicy to be created.
-     * 
-     */
+        /**
+         * @return Enable the PodSecurityPolicy controller for this cluster.
+         * If enabled, pods must be valid under a PodSecurityPolicy to be created.
+         * 
+         */
     private final Boolean enabled;
-    /**
-     * The pubsub topic to push upgrade notifications to. Must be in the same project as the cluster. Must be in the format: `projects/{project}/topics/{topic}`.
-     * 
-     */
+        /**
+         * @return The pubsub topic to push upgrade notifications to. Must be in the same project as the cluster. Must be in the format: `projects/{project}/topics/{topic}`.
+         * 
+         */
     private final @Nullable String topic;
 
     @CustomType.Constructor
@@ -33,17 +33,17 @@ public final class ClusterNotificationConfigPubsub {
     }
 
     /**
-     * Enable the PodSecurityPolicy controller for this cluster.
+     * @return Enable the PodSecurityPolicy controller for this cluster.
      * If enabled, pods must be valid under a PodSecurityPolicy to be created.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * The pubsub topic to push upgrade notifications to. Must be in the same project as the cluster. Must be in the format: `projects/{project}/topics/{topic}`.
+     * @return The pubsub topic to push upgrade notifications to. Must be in the same project as the cluster. Must be in the format: `projects/{project}/topics/{topic}`.
      * 
-    */
+     */
     public Optional<String> topic() {
         return Optional.ofNullable(this.topic);
     }

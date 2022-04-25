@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionary {
-    /**
-     * Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePath cloudStoragePath;
-    /**
-     * List of words or phrases to search for.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return List of words or phrases to search for.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordList wordList;
 
     @CustomType.Constructor
@@ -34,18 +34,18 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     }
 
     /**
-     * Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
+     * @return Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePath> cloudStoragePath() {
         return Optional.ofNullable(this.cloudStoragePath);
     }
     /**
-     * List of words or phrases to search for.
+     * @return List of words or phrases to search for.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordList> wordList() {
         return Optional.ofNullable(this.wordList);
     }

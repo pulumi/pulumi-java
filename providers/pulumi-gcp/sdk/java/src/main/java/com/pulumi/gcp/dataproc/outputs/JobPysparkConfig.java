@@ -14,41 +14,41 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class JobPysparkConfig {
-    /**
-     * HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
-     * 
-     */
+        /**
+         * @return HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
+         * 
+         */
     private final @Nullable List<String> archiveUris;
-    /**
-     * The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
-     * 
-     */
+        /**
+         * @return The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
+         * 
+         */
     private final @Nullable List<String> args;
-    /**
-     * HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
-     * 
-     */
+        /**
+         * @return HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
+         * 
+         */
     private final @Nullable List<String> fileUris;
-    /**
-     * HCFS URIs of jar files to be added to the Spark CLASSPATH.
-     * 
-     */
+        /**
+         * @return HCFS URIs of jar files to be added to the Spark CLASSPATH.
+         * 
+         */
     private final @Nullable List<String> jarFileUris;
     private final @Nullable JobPysparkConfigLoggingConfig loggingConfig;
-    /**
-     * The HCFS URI of the main Python file to use as the driver. Must be a .py file.
-     * 
-     */
+        /**
+         * @return The HCFS URI of the main Python file to use as the driver. Must be a .py file.
+         * 
+         */
     private final String mainPythonFileUri;
-    /**
-     * A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
-     * 
-     */
+        /**
+         * @return A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
+         * 
+         */
     private final @Nullable Map<String,String> properties;
-    /**
-     * HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
-     * 
-     */
+        /**
+         * @return HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
+         * 
+         */
     private final @Nullable List<String> pythonFileUris;
 
     @CustomType.Constructor
@@ -72,30 +72,30 @@ public final class JobPysparkConfig {
     }
 
     /**
-     * HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
+     * @return HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
      * 
-    */
+     */
     public List<String> archiveUris() {
         return this.archiveUris == null ? List.of() : this.archiveUris;
     }
     /**
-     * The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
+     * @return The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
      * 
-    */
+     */
     public List<String> args() {
         return this.args == null ? List.of() : this.args;
     }
     /**
-     * HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
+     * @return HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
      * 
-    */
+     */
     public List<String> fileUris() {
         return this.fileUris == null ? List.of() : this.fileUris;
     }
     /**
-     * HCFS URIs of jar files to be added to the Spark CLASSPATH.
+     * @return HCFS URIs of jar files to be added to the Spark CLASSPATH.
      * 
-    */
+     */
     public List<String> jarFileUris() {
         return this.jarFileUris == null ? List.of() : this.jarFileUris;
     }
@@ -103,23 +103,23 @@ public final class JobPysparkConfig {
         return Optional.ofNullable(this.loggingConfig);
     }
     /**
-     * The HCFS URI of the main Python file to use as the driver. Must be a .py file.
+     * @return The HCFS URI of the main Python file to use as the driver. Must be a .py file.
      * 
-    */
+     */
     public String mainPythonFileUri() {
         return this.mainPythonFileUri;
     }
     /**
-     * A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
+     * @return A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
      * 
-    */
+     */
     public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
-     * HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
+     * @return HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
      * 
-    */
+     */
     public List<String> pythonFileUris() {
         return this.pythonFileUris == null ? List.of() : this.pythonFileUris;
     }

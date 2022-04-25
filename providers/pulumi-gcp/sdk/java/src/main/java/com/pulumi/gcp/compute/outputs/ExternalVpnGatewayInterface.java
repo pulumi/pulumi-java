@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ExternalVpnGatewayInterface {
-    /**
-     * The numeric ID for this interface. Allowed values are based on the redundancy type
-     * of this external VPN gateway
-     * * `0 - SINGLE_IP_INTERNALLY_REDUNDANT`
-     * * `0, 1 - TWO_IPS_REDUNDANCY`
-     * * `0, 1, 2, 3 - FOUR_IPS_REDUNDANCY`
-     * 
-     */
+        /**
+         * @return The numeric ID for this interface. Allowed values are based on the redundancy type
+         * of this external VPN gateway
+         * * `0 - SINGLE_IP_INTERNALLY_REDUNDANT`
+         * * `0, 1 - TWO_IPS_REDUNDANCY`
+         * * `0, 1, 2, 3 - FOUR_IPS_REDUNDANCY`
+         * 
+         */
     private final @Nullable Integer id;
-    /**
-     * IP address of the interface in the external VPN gateway.
-     * Only IPv4 is supported. This IP address can be either from
-     * your on-premise gateway or another Cloud provider&#39;s VPN gateway,
-     * it cannot be an IP address from Google Compute Engine.
-     * 
-     */
+        /**
+         * @return IP address of the interface in the external VPN gateway.
+         * Only IPv4 is supported. This IP address can be either from
+         * your on-premise gateway or another Cloud provider&#39;s VPN gateway,
+         * it cannot be an IP address from Google Compute Engine.
+         * 
+         */
     private final @Nullable String ipAddress;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class ExternalVpnGatewayInterface {
     }
 
     /**
-     * The numeric ID for this interface. Allowed values are based on the redundancy type
+     * @return The numeric ID for this interface. Allowed values are based on the redundancy type
      * of this external VPN gateway
      * * `0 - SINGLE_IP_INTERNALLY_REDUNDANT`
      * * `0, 1 - TWO_IPS_REDUNDANCY`
      * * `0, 1, 2, 3 - FOUR_IPS_REDUNDANCY`
      * 
-    */
+     */
     public Optional<Integer> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * IP address of the interface in the external VPN gateway.
+     * @return IP address of the interface in the external VPN gateway.
      * Only IPv4 is supported. This IP address can be either from
      * your on-premise gateway or another Cloud provider&#39;s VPN gateway,
      * it cannot be an IP address from Google Compute Engine.
      * 
-    */
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }

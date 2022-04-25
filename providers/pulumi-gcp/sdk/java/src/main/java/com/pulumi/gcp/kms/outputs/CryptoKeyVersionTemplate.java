@@ -11,16 +11,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CryptoKeyVersionTemplate {
-    /**
-     * The algorithm to use when creating a version based on this template.
-     * See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v1/CryptoKeyVersionAlgorithm) for possible inputs.
-     * 
-     */
+        /**
+         * @return The algorithm to use when creating a version based on this template.
+         * See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v1/CryptoKeyVersionAlgorithm) for possible inputs.
+         * 
+         */
     private final String algorithm;
-    /**
-     * The protection level to use when creating a version based on this template. Possible values include &#34;SOFTWARE&#34;, &#34;HSM&#34;, &#34;EXTERNAL&#34;. Defaults to &#34;SOFTWARE&#34;.
-     * 
-     */
+        /**
+         * @return The protection level to use when creating a version based on this template. Possible values include &#34;SOFTWARE&#34;, &#34;HSM&#34;, &#34;EXTERNAL&#34;. Defaults to &#34;SOFTWARE&#34;.
+         * 
+         */
     private final @Nullable String protectionLevel;
 
     @CustomType.Constructor
@@ -32,17 +32,17 @@ public final class CryptoKeyVersionTemplate {
     }
 
     /**
-     * The algorithm to use when creating a version based on this template.
+     * @return The algorithm to use when creating a version based on this template.
      * See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v1/CryptoKeyVersionAlgorithm) for possible inputs.
      * 
-    */
+     */
     public String algorithm() {
         return this.algorithm;
     }
     /**
-     * The protection level to use when creating a version based on this template. Possible values include &#34;SOFTWARE&#34;, &#34;HSM&#34;, &#34;EXTERNAL&#34;. Defaults to &#34;SOFTWARE&#34;.
+     * @return The protection level to use when creating a version based on this template. Possible values include &#34;SOFTWARE&#34;, &#34;HSM&#34;, &#34;EXTERNAL&#34;. Defaults to &#34;SOFTWARE&#34;.
      * 
-    */
+     */
     public Optional<String> protectionLevel() {
         return Optional.ofNullable(this.protectionLevel);
     }

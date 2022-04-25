@@ -14,85 +14,85 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ServicePerimetersServicePerimeter {
-    /**
-     * - 
-     * Time the AccessPolicy was created in UTC.
-     * 
-     */
+        /**
+         * @return -
+         * Time the AccessPolicy was created in UTC.
+         * 
+         */
     private final @Nullable String createTime;
-    /**
-     * Description of the ServicePerimeter and its use. Does not affect
-     * behavior.
-     * 
-     */
+        /**
+         * @return Description of the ServicePerimeter and its use. Does not affect
+         * behavior.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Resource name for the ServicePerimeter. The short_name component must
-     * begin with a letter and only include alphanumeric and &#39;_&#39;.
-     * Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
-     * 
-     */
+        /**
+         * @return Resource name for the ServicePerimeter. The short_name component must
+         * begin with a letter and only include alphanumeric and &#39;_&#39;.
+         * Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
+         * 
+         */
     private final String name;
-    /**
-     * Specifies the type of the Perimeter. There are two types: regular and
-     * bridge. Regular Service Perimeter contains resources, access levels,
-     * and restricted services. Every resource can be in at most
-     * ONE regular Service Perimeter.
-     * In addition to being in a regular service perimeter, a resource can also
-     * be in zero or more perimeter bridges. A perimeter bridge only contains
-     * resources. Cross project operations are permitted if all effected
-     * resources share some perimeter (whether bridge or regular). Perimeter
-     * Bridge does not contain access levels or services: those are governed
-     * entirely by the regular perimeter that resource is in.
-     * Perimeter Bridges are typically useful when building more complex
-     * topologies with many independent perimeters that need to share some data
-     * with a common perimeter, but should not be able to share data among
-     * themselves.
-     * Default value is `PERIMETER_TYPE_REGULAR`.
-     * Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
-     * 
-     */
+        /**
+         * @return Specifies the type of the Perimeter. There are two types: regular and
+         * bridge. Regular Service Perimeter contains resources, access levels,
+         * and restricted services. Every resource can be in at most
+         * ONE regular Service Perimeter.
+         * In addition to being in a regular service perimeter, a resource can also
+         * be in zero or more perimeter bridges. A perimeter bridge only contains
+         * resources. Cross project operations are permitted if all effected
+         * resources share some perimeter (whether bridge or regular). Perimeter
+         * Bridge does not contain access levels or services: those are governed
+         * entirely by the regular perimeter that resource is in.
+         * Perimeter Bridges are typically useful when building more complex
+         * topologies with many independent perimeters that need to share some data
+         * with a common perimeter, but should not be able to share data among
+         * themselves.
+         * Default value is `PERIMETER_TYPE_REGULAR`.
+         * Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
+         * 
+         */
     private final @Nullable String perimeterType;
-    /**
-     * Proposed (or dry run) ServicePerimeter configuration.
-     * This configuration allows to specify and test ServicePerimeter configuration
-     * without enforcing actual access restrictions. Only allowed to be set when
-     * the `useExplicitDryRunSpec` flag is set.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Proposed (or dry run) ServicePerimeter configuration.
+         * This configuration allows to specify and test ServicePerimeter configuration
+         * without enforcing actual access restrictions. Only allowed to be set when
+         * the `useExplicitDryRunSpec` flag is set.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable ServicePerimetersServicePerimeterSpec spec;
-    /**
-     * ServicePerimeter configuration. Specifies sets of resources,
-     * restricted services and access levels that determine
-     * perimeter content and boundaries.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return ServicePerimeter configuration. Specifies sets of resources,
+         * restricted services and access levels that determine
+         * perimeter content and boundaries.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable ServicePerimetersServicePerimeterStatus status;
-    /**
-     * Human readable title. Must be unique within the Policy.
-     * 
-     */
+        /**
+         * @return Human readable title. Must be unique within the Policy.
+         * 
+         */
     private final String title;
-    /**
-     * - 
-     * Time the AccessPolicy was updated in UTC.
-     * 
-     */
+        /**
+         * @return -
+         * Time the AccessPolicy was updated in UTC.
+         * 
+         */
     private final @Nullable String updateTime;
-    /**
-     * Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
-     * for all Service Perimeters, and that spec is identical to the status for those
-     * Service Perimeters. When this flag is set, it inhibits the generation of the
-     * implicit spec, thereby allowing the user to explicitly provide a
-     * configuration (&#34;spec&#34;) to use in a dry-run version of the Service Perimeter.
-     * This allows the user to test changes to the enforced config (&#34;status&#34;) without
-     * actually enforcing them. This testing is done through analyzing the differences
-     * between currently enforced and suggested restrictions. useExplicitDryRunSpec must
-     * bet set to True if any of the fields in the spec are set to non-default values.
-     * 
-     */
+        /**
+         * @return Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
+         * for all Service Perimeters, and that spec is identical to the status for those
+         * Service Perimeters. When this flag is set, it inhibits the generation of the
+         * implicit spec, thereby allowing the user to explicitly provide a
+         * configuration (&#34;spec&#34;) to use in a dry-run version of the Service Perimeter.
+         * This allows the user to test changes to the enforced config (&#34;status&#34;) without
+         * actually enforcing them. This testing is done through analyzing the differences
+         * between currently enforced and suggested restrictions. useExplicitDryRunSpec must
+         * bet set to True if any of the fields in the spec are set to non-default values.
+         * 
+         */
     private final @Nullable Boolean useExplicitDryRunSpec;
 
     @CustomType.Constructor
@@ -118,32 +118,32 @@ public final class ServicePerimetersServicePerimeter {
     }
 
     /**
-     * - 
+     * @return -
      * Time the AccessPolicy was created in UTC.
      * 
-    */
+     */
     public Optional<String> createTime() {
         return Optional.ofNullable(this.createTime);
     }
     /**
-     * Description of the ServicePerimeter and its use. Does not affect
+     * @return Description of the ServicePerimeter and its use. Does not affect
      * behavior.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Resource name for the ServicePerimeter. The short_name component must
+     * @return Resource name for the ServicePerimeter. The short_name component must
      * begin with a letter and only include alphanumeric and &#39;_&#39;.
      * Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Specifies the type of the Perimeter. There are two types: regular and
+     * @return Specifies the type of the Perimeter. There are two types: regular and
      * bridge. Regular Service Perimeter contains resources, access levels,
      * and restricted services. Every resource can be in at most
      * ONE regular Service Perimeter.
@@ -160,48 +160,48 @@ public final class ServicePerimetersServicePerimeter {
      * Default value is `PERIMETER_TYPE_REGULAR`.
      * Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
      * 
-    */
+     */
     public Optional<String> perimeterType() {
         return Optional.ofNullable(this.perimeterType);
     }
     /**
-     * Proposed (or dry run) ServicePerimeter configuration.
+     * @return Proposed (or dry run) ServicePerimeter configuration.
      * This configuration allows to specify and test ServicePerimeter configuration
      * without enforcing actual access restrictions. Only allowed to be set when
      * the `useExplicitDryRunSpec` flag is set.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<ServicePerimetersServicePerimeterSpec> spec() {
         return Optional.ofNullable(this.spec);
     }
     /**
-     * ServicePerimeter configuration. Specifies sets of resources,
+     * @return ServicePerimeter configuration. Specifies sets of resources,
      * restricted services and access levels that determine
      * perimeter content and boundaries.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<ServicePerimetersServicePerimeterStatus> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * Human readable title. Must be unique within the Policy.
+     * @return Human readable title. Must be unique within the Policy.
      * 
-    */
+     */
     public String title() {
         return this.title;
     }
     /**
-     * - 
+     * @return -
      * Time the AccessPolicy was updated in UTC.
      * 
-    */
+     */
     public Optional<String> updateTime() {
         return Optional.ofNullable(this.updateTime);
     }
     /**
-     * Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
+     * @return Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
      * for all Service Perimeters, and that spec is identical to the status for those
      * Service Perimeters. When this flag is set, it inhibits the generation of the
      * implicit spec, thereby allowing the user to explicitly provide a
@@ -211,7 +211,7 @@ public final class ServicePerimetersServicePerimeter {
      * between currently enforced and suggested restrictions. useExplicitDryRunSpec must
      * bet set to True if any of the fields in the spec are set to non-default values.
      * 
-    */
+     */
     public Optional<Boolean> useExplicitDryRunSpec() {
         return Optional.ofNullable(this.useExplicitDryRunSpec);
     }

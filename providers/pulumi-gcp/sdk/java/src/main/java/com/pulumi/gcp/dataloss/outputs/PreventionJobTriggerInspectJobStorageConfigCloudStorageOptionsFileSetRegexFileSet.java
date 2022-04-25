@@ -11,24 +11,24 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet {
-    /**
-     * The name of a Cloud Storage bucket.
-     * 
-     */
+        /**
+         * @return The name of a Cloud Storage bucket.
+         * 
+         */
     private final String bucketName;
-    /**
-     * A list of regular expressions matching file paths to exclude. All files in the bucket that match at
-     * least one of these regular expressions will be excluded from the scan.
-     * 
-     */
+        /**
+         * @return A list of regular expressions matching file paths to exclude. All files in the bucket that match at
+         * least one of these regular expressions will be excluded from the scan.
+         * 
+         */
     private final @Nullable List<String> excludeRegexes;
-    /**
-     * A list of regular expressions matching file paths to include. All files in the bucket
-     * that match at least one of these regular expressions will be included in the set of files,
-     * except for those that also match an item in excludeRegex. Leaving this field empty will
-     * match all files by default (this is equivalent to including .* in the list)
-     * 
-     */
+        /**
+         * @return A list of regular expressions matching file paths to include. All files in the bucket
+         * that match at least one of these regular expressions will be included in the set of files,
+         * except for those that also match an item in excludeRegex. Leaving this field empty will
+         * match all files by default (this is equivalent to including .* in the list)
+         * 
+         */
     private final @Nullable List<String> includeRegexes;
 
     @CustomType.Constructor
@@ -42,27 +42,27 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     }
 
     /**
-     * The name of a Cloud Storage bucket.
+     * @return The name of a Cloud Storage bucket.
      * 
-    */
+     */
     public String bucketName() {
         return this.bucketName;
     }
     /**
-     * A list of regular expressions matching file paths to exclude. All files in the bucket that match at
+     * @return A list of regular expressions matching file paths to exclude. All files in the bucket that match at
      * least one of these regular expressions will be excluded from the scan.
      * 
-    */
+     */
     public List<String> excludeRegexes() {
         return this.excludeRegexes == null ? List.of() : this.excludeRegexes;
     }
     /**
-     * A list of regular expressions matching file paths to include. All files in the bucket
+     * @return A list of regular expressions matching file paths to include. All files in the bucket
      * that match at least one of these regular expressions will be included in the set of files,
      * except for those that also match an item in excludeRegex. Leaving this field empty will
      * match all files by default (this is equivalent to including .* in the list)
      * 
-    */
+     */
     public List<String> includeRegexes() {
         return this.includeRegexes == null ? List.of() : this.includeRegexes;
     }

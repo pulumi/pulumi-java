@@ -56,6 +56,11 @@ public final class InstanceFromTemplateNetworkInterfaceArgs extends com.pulumi.r
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A unique name for the resource, required by GCE.
+     * Changing this forces a new resource to be created.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -192,11 +197,25 @@ public final class InstanceFromTemplateNetworkInterfaceArgs extends com.pulumi.r
             return ipv6AccessType(Output.of(ipv6AccessType));
         }
 
+        /**
+         * @param name A unique name for the resource, required by GCE.
+         * Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A unique name for the resource, required by GCE.
+         * Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

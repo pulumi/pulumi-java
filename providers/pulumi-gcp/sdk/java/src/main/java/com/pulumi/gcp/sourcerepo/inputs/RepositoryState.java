@@ -26,6 +26,11 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name of the repository, of the form `{{repo}}`.
+     * The repo name may contain slashes. eg, `name/with/slash`
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -38,6 +43,11 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -51,6 +61,12 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="pubsubConfigs")
     private @Nullable Output<List<RepositoryPubsubConfigGetArgs>> pubsubConfigs;
 
+    /**
+     * @return How this repository publishes a change in the repository through Cloud Pub/Sub.
+     * Keyed by the topic names.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<RepositoryPubsubConfigGetArgs>>> pubsubConfigs() {
         return Optional.ofNullable(this.pubsubConfigs);
     }
@@ -62,6 +78,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="size")
     private @Nullable Output<Integer> size;
 
+    /**
+     * @return The disk usage of the repo, in bytes.
+     * 
+     */
     public Optional<Output<Integer>> size() {
         return Optional.ofNullable(this.size);
     }
@@ -73,6 +93,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="url")
     private @Nullable Output<String> url;
 
+    /**
+     * @return URL to clone the repository from Google Cloud Source Repositories.
+     * 
+     */
     public Optional<Output<String>> url() {
         return Optional.ofNullable(this.url);
     }
@@ -105,51 +129,127 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
             $ = new RepositoryState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Resource name of the repository, of the form `{{repo}}`.
+         * The repo name may contain slashes. eg, `name/with/slash`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name of the repository, of the form `{{repo}}`.
+         * The repo name may contain slashes. eg, `name/with/slash`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param pubsubConfigs How this repository publishes a change in the repository through Cloud Pub/Sub.
+         * Keyed by the topic names.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubConfigs(@Nullable Output<List<RepositoryPubsubConfigGetArgs>> pubsubConfigs) {
             $.pubsubConfigs = pubsubConfigs;
             return this;
         }
 
+        /**
+         * @param pubsubConfigs How this repository publishes a change in the repository through Cloud Pub/Sub.
+         * Keyed by the topic names.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubConfigs(List<RepositoryPubsubConfigGetArgs> pubsubConfigs) {
             return pubsubConfigs(Output.of(pubsubConfigs));
         }
 
+        /**
+         * @param pubsubConfigs How this repository publishes a change in the repository through Cloud Pub/Sub.
+         * Keyed by the topic names.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubConfigs(RepositoryPubsubConfigGetArgs... pubsubConfigs) {
             return pubsubConfigs(List.of(pubsubConfigs));
         }
 
+        /**
+         * @param size The disk usage of the repo, in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(@Nullable Output<Integer> size) {
             $.size = size;
             return this;
         }
 
+        /**
+         * @param size The disk usage of the repo, in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(Integer size) {
             return size(Output.of(size));
         }
 
+        /**
+         * @param url URL to clone the repository from Google Cloud Source Repositories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url URL to clone the repository from Google Cloud Source Repositories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

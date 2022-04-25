@@ -22,6 +22,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfi
     @Import(name="policy")
     private @Nullable Output<String> policy;
 
+    /**
+     * @return Optional. The autoscaling policy used by the cluster. Only resource names including projectid and location (region) are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` Note that the policy must be in the same project and Dataproc region.
+     * 
+     */
     public Optional<Output<String>> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -50,11 +54,23 @@ public final class WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfi
             $ = new WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policy Optional. The autoscaling policy used by the cluster. Only resource names including projectid and location (region) are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` Note that the policy must be in the same project and Dataproc region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable Output<String> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy Optional. The autoscaling policy used by the cluster. Only resource names including projectid and location (region) are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` Note that the policy must be in the same project and Dataproc region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(String policy) {
             return policy(Output.of(policy));
         }

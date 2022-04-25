@@ -11,28 +11,28 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TriggerPubsubConfig {
-    /**
-     * Service account that will make the push request.
-     * 
-     */
+        /**
+         * @return Service account that will make the push request.
+         * 
+         */
     private final @Nullable String serviceAccountEmail;
-    /**
-     * - 
-     * Potential issues with the underlying Pub/Sub subscription configuration.
-     * Only populated on get requests.
-     * 
-     */
+        /**
+         * @return -
+         * Potential issues with the underlying Pub/Sub subscription configuration.
+         * Only populated on get requests.
+         * 
+         */
     private final @Nullable String state;
-    /**
-     * - 
-     * Output only. Name of the subscription.
-     * 
-     */
+        /**
+         * @return -
+         * Output only. Name of the subscription.
+         * 
+         */
     private final @Nullable String subscription;
-    /**
-     * The name of the topic from which this subscription is receiving messages.
-     * 
-     */
+        /**
+         * @return The name of the topic from which this subscription is receiving messages.
+         * 
+         */
     private final String topic;
 
     @CustomType.Constructor
@@ -48,33 +48,33 @@ public final class TriggerPubsubConfig {
     }
 
     /**
-     * Service account that will make the push request.
+     * @return Service account that will make the push request.
      * 
-    */
+     */
     public Optional<String> serviceAccountEmail() {
         return Optional.ofNullable(this.serviceAccountEmail);
     }
     /**
-     * - 
+     * @return -
      * Potential issues with the underlying Pub/Sub subscription configuration.
      * Only populated on get requests.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
-     * - 
+     * @return -
      * Output only. Name of the subscription.
      * 
-    */
+     */
     public Optional<String> subscription() {
         return Optional.ofNullable(this.subscription);
     }
     /**
-     * The name of the topic from which this subscription is receiving messages.
+     * @return The name of the topic from which this subscription is receiving messages.
      * 
-    */
+     */
     public String topic() {
         return this.topic;
     }

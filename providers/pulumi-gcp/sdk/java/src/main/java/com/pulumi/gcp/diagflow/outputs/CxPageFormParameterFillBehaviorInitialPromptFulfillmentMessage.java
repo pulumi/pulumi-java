@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessage {
-    /**
-     * A collection of text responses.
-     * 
-     */
+        /**
+         * @return A collection of text responses.
+         * 
+         */
     private final @Nullable CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageText text;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
     }
 
     /**
-     * A collection of text responses.
+     * @return A collection of text responses.
      * 
-    */
+     */
     public Optional<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageText> text() {
         return Optional.ofNullable(this.text);
     }

@@ -27,6 +27,13 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoCreateNetwork")
     private @Nullable Output<Boolean> autoCreateNetwork;
 
+    /**
+     * @return Create the &#39;default&#39; network automatically.  Default `true`.
+     * If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
+     * will still need to have 1 network slot available to create the project successfully, even if
+     * you set `auto_create_network` to `false`, since the network will exist momentarily.
+     * 
+     */
     public Optional<Output<Boolean>> autoCreateNetwork() {
         return Optional.ofNullable(this.autoCreateNetwork);
     }
@@ -42,6 +49,14 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="billingAccount")
     private @Nullable Output<String> billingAccount;
 
+    /**
+     * @return The alphanumeric ID of the billing account this project
+     * belongs to. The user or service account performing this operation with the provider
+     * must have at mininum Billing Account User privileges (`roles/billing.user`) on the billing account.
+     * See [Google Cloud Billing API Access Control](https://cloud.google.com/billing/docs/how-to/billing-access)
+     * for more details.
+     * 
+     */
     public Optional<Output<String>> billingAccount() {
         return Optional.ofNullable(this.billingAccount);
     }
@@ -57,6 +72,14 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="folderId")
     private @Nullable Output<String> folderId;
 
+    /**
+     * @return The numeric ID of the folder this project should be
+     * created under. Only one of `org_id` or `folder_id` may be
+     * specified. If the `folder_id` is specified, then the project is
+     * created under the specified folder. Changing this forces the
+     * project to be migrated to the newly specified folder.
+     * 
+     */
     public Optional<Output<String>> folderId() {
         return Optional.ofNullable(this.folderId);
     }
@@ -68,6 +91,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return A set of key/value label pairs to assign to the project.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -79,6 +106,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The display name of the project.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -95,6 +126,15 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="orgId")
     private @Nullable Output<String> orgId;
 
+    /**
+     * @return The numeric ID of the organization this project belongs to.
+     * Changing this forces a new project to be created.  Only one of
+     * `org_id` or `folder_id` may be specified. If the `org_id` is
+     * specified then the project is created at the top level. Changing
+     * this forces the project to be migrated to the newly specified
+     * organization.
+     * 
+     */
     public Optional<Output<String>> orgId() {
         return Optional.ofNullable(this.orgId);
     }
@@ -106,6 +146,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectId", required=true)
     private Output<String> projectId;
 
+    /**
+     * @return The project ID. Changing this forces a new project to be created.
+     * 
+     */
     public Output<String> projectId() {
         return this.projectId;
     }
@@ -118,6 +162,11 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="skipDelete")
     private @Nullable Output<Boolean> skipDelete;
 
+    /**
+     * @return If true, the resource can be deleted
+     * without deleting the Project via the Google API.
+     * 
+     */
     public Optional<Output<Boolean>> skipDelete() {
         return Optional.ofNullable(this.skipDelete);
     }
@@ -153,74 +202,204 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ProjectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoCreateNetwork Create the &#39;default&#39; network automatically.  Default `true`.
+         * If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
+         * will still need to have 1 network slot available to create the project successfully, even if
+         * you set `auto_create_network` to `false`, since the network will exist momentarily.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoCreateNetwork(@Nullable Output<Boolean> autoCreateNetwork) {
             $.autoCreateNetwork = autoCreateNetwork;
             return this;
         }
 
+        /**
+         * @param autoCreateNetwork Create the &#39;default&#39; network automatically.  Default `true`.
+         * If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
+         * will still need to have 1 network slot available to create the project successfully, even if
+         * you set `auto_create_network` to `false`, since the network will exist momentarily.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoCreateNetwork(Boolean autoCreateNetwork) {
             return autoCreateNetwork(Output.of(autoCreateNetwork));
         }
 
+        /**
+         * @param billingAccount The alphanumeric ID of the billing account this project
+         * belongs to. The user or service account performing this operation with the provider
+         * must have at mininum Billing Account User privileges (`roles/billing.user`) on the billing account.
+         * See [Google Cloud Billing API Access Control](https://cloud.google.com/billing/docs/how-to/billing-access)
+         * for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingAccount(@Nullable Output<String> billingAccount) {
             $.billingAccount = billingAccount;
             return this;
         }
 
+        /**
+         * @param billingAccount The alphanumeric ID of the billing account this project
+         * belongs to. The user or service account performing this operation with the provider
+         * must have at mininum Billing Account User privileges (`roles/billing.user`) on the billing account.
+         * See [Google Cloud Billing API Access Control](https://cloud.google.com/billing/docs/how-to/billing-access)
+         * for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingAccount(String billingAccount) {
             return billingAccount(Output.of(billingAccount));
         }
 
+        /**
+         * @param folderId The numeric ID of the folder this project should be
+         * created under. Only one of `org_id` or `folder_id` may be
+         * specified. If the `folder_id` is specified, then the project is
+         * created under the specified folder. Changing this forces the
+         * project to be migrated to the newly specified folder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderId(@Nullable Output<String> folderId) {
             $.folderId = folderId;
             return this;
         }
 
+        /**
+         * @param folderId The numeric ID of the folder this project should be
+         * created under. Only one of `org_id` or `folder_id` may be
+         * specified. If the `folder_id` is specified, then the project is
+         * created under the specified folder. Changing this forces the
+         * project to be migrated to the newly specified folder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderId(String folderId) {
             return folderId(Output.of(folderId));
         }
 
+        /**
+         * @param labels A set of key/value label pairs to assign to the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels A set of key/value label pairs to assign to the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param name The display name of the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The display name of the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param orgId The numeric ID of the organization this project belongs to.
+         * Changing this forces a new project to be created.  Only one of
+         * `org_id` or `folder_id` may be specified. If the `org_id` is
+         * specified then the project is created at the top level. Changing
+         * this forces the project to be migrated to the newly specified
+         * organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orgId(@Nullable Output<String> orgId) {
             $.orgId = orgId;
             return this;
         }
 
+        /**
+         * @param orgId The numeric ID of the organization this project belongs to.
+         * Changing this forces a new project to be created.  Only one of
+         * `org_id` or `folder_id` may be specified. If the `org_id` is
+         * specified then the project is created at the top level. Changing
+         * this forces the project to be migrated to the newly specified
+         * organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orgId(String orgId) {
             return orgId(Output.of(orgId));
         }
 
+        /**
+         * @param projectId The project ID. Changing this forces a new project to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(Output<String> projectId) {
             $.projectId = projectId;
             return this;
         }
 
+        /**
+         * @param projectId The project ID. Changing this forces a new project to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(String projectId) {
             return projectId(Output.of(projectId));
         }
 
+        /**
+         * @param skipDelete If true, the resource can be deleted
+         * without deleting the Project via the Google API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipDelete(@Nullable Output<Boolean> skipDelete) {
             $.skipDelete = skipDelete;
             return this;
         }
 
+        /**
+         * @param skipDelete If true, the resource can be deleted
+         * without deleting the Project via the Google API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipDelete(Boolean skipDelete) {
             return skipDelete(Output.of(skipDelete));
         }

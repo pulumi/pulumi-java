@@ -12,21 +12,21 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BackendServiceConsistentHashHttpCookie {
-    /**
-     * Name of the cookie.
-     * 
-     */
+        /**
+         * @return Name of the cookie.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Path to set for the cookie.
-     * 
-     */
+        /**
+         * @return Path to set for the cookie.
+         * 
+         */
     private final @Nullable String path;
-    /**
-     * The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
-     * (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
-     * 
-     */
+        /**
+         * @return The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+         * (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+         * 
+         */
     private final @Nullable BackendServiceConsistentHashHttpCookieTtl ttl;
 
     @CustomType.Constructor
@@ -40,24 +40,24 @@ public final class BackendServiceConsistentHashHttpCookie {
     }
 
     /**
-     * Name of the cookie.
+     * @return Name of the cookie.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Path to set for the cookie.
+     * @return Path to set for the cookie.
      * 
-    */
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
-     * The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+     * @return The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
      * (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
      * 
-    */
+     */
     public Optional<BackendServiceConsistentHashHttpCookieTtl> ttl() {
         return Optional.ofNullable(this.ttl);
     }

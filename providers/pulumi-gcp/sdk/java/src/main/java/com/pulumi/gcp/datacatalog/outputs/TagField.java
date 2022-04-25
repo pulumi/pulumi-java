@@ -14,50 +14,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TagField {
-    /**
-     * Holds the value for a tag field with boolean type.
-     * 
-     */
+        /**
+         * @return Holds the value for a tag field with boolean type.
+         * 
+         */
     private final @Nullable Boolean boolValue;
-    /**
-     * - 
-     * The display name of this field
-     * 
-     */
+        /**
+         * @return -
+         * The display name of this field
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * Holds the value for a tag field with double type.
-     * 
-     */
+        /**
+         * @return Holds the value for a tag field with double type.
+         * 
+         */
     private final @Nullable Double doubleValue;
-    /**
-     * Holds the value for a tag field with enum type. This value must be one of the allowed values in the definition of this enum.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Holds the value for a tag field with enum type. This value must be one of the allowed values in the definition of this enum.
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable String enumValue;
-    /**
-     * The identifier for this object. Format specified above.
-     * 
-     */
+        /**
+         * @return The identifier for this object. Format specified above.
+         * 
+         */
     private final String fieldName;
-    /**
-     * - 
-     * The order of this field with respect to other fields in this tag. For example, a higher value can indicate
-     * a more important field. The value can be negative. Multiple fields can have the same order, and field orders
-     * within a tag do not have to be sequential.
-     * 
-     */
+        /**
+         * @return -
+         * The order of this field with respect to other fields in this tag. For example, a higher value can indicate
+         * a more important field. The value can be negative. Multiple fields can have the same order, and field orders
+         * within a tag do not have to be sequential.
+         * 
+         */
     private final @Nullable Integer order;
-    /**
-     * Holds the value for a tag field with string type.
-     * 
-     */
+        /**
+         * @return Holds the value for a tag field with string type.
+         * 
+         */
     private final @Nullable String stringValue;
-    /**
-     * Holds the value for a tag field with timestamp type.
-     * 
-     */
+        /**
+         * @return Holds the value for a tag field with timestamp type.
+         * 
+         */
     private final @Nullable String timestampValue;
 
     @CustomType.Constructor
@@ -81,63 +81,63 @@ public final class TagField {
     }
 
     /**
-     * Holds the value for a tag field with boolean type.
+     * @return Holds the value for a tag field with boolean type.
      * 
-    */
+     */
     public Optional<Boolean> boolValue() {
         return Optional.ofNullable(this.boolValue);
     }
     /**
-     * - 
+     * @return -
      * The display name of this field
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * Holds the value for a tag field with double type.
+     * @return Holds the value for a tag field with double type.
      * 
-    */
+     */
     public Optional<Double> doubleValue() {
         return Optional.ofNullable(this.doubleValue);
     }
     /**
-     * Holds the value for a tag field with enum type. This value must be one of the allowed values in the definition of this enum.
+     * @return Holds the value for a tag field with enum type. This value must be one of the allowed values in the definition of this enum.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<String> enumValue() {
         return Optional.ofNullable(this.enumValue);
     }
     /**
-     * The identifier for this object. Format specified above.
+     * @return The identifier for this object. Format specified above.
      * 
-    */
+     */
     public String fieldName() {
         return this.fieldName;
     }
     /**
-     * - 
+     * @return -
      * The order of this field with respect to other fields in this tag. For example, a higher value can indicate
      * a more important field. The value can be negative. Multiple fields can have the same order, and field orders
      * within a tag do not have to be sequential.
      * 
-    */
+     */
     public Optional<Integer> order() {
         return Optional.ofNullable(this.order);
     }
     /**
-     * Holds the value for a tag field with string type.
+     * @return Holds the value for a tag field with string type.
      * 
-    */
+     */
     public Optional<String> stringValue() {
         return Optional.ofNullable(this.stringValue);
     }
     /**
-     * Holds the value for a tag field with timestamp type.
+     * @return Holds the value for a tag field with timestamp type.
      * 
-    */
+     */
     public Optional<String> timestampValue() {
         return Optional.ofNullable(this.timestampValue);
     }

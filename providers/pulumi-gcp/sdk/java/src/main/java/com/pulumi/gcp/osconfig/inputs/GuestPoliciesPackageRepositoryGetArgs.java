@@ -26,6 +26,11 @@ public final class GuestPoliciesPackageRepositoryGetArgs extends com.pulumi.reso
     @Import(name="apt")
     private @Nullable Output<GuestPoliciesPackageRepositoryAptGetArgs> apt;
 
+    /**
+     * @return An Apt Repository.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<GuestPoliciesPackageRepositoryAptGetArgs>> apt() {
         return Optional.ofNullable(this.apt);
     }
@@ -38,6 +43,11 @@ public final class GuestPoliciesPackageRepositoryGetArgs extends com.pulumi.reso
     @Import(name="goo")
     private @Nullable Output<GuestPoliciesPackageRepositoryGooGetArgs> goo;
 
+    /**
+     * @return A Goo Repository.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<GuestPoliciesPackageRepositoryGooGetArgs>> goo() {
         return Optional.ofNullable(this.goo);
     }
@@ -50,6 +60,11 @@ public final class GuestPoliciesPackageRepositoryGetArgs extends com.pulumi.reso
     @Import(name="yum")
     private @Nullable Output<GuestPoliciesPackageRepositoryYumGetArgs> yum;
 
+    /**
+     * @return A Yum Repository.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<GuestPoliciesPackageRepositoryYumGetArgs>> yum() {
         return Optional.ofNullable(this.yum);
     }
@@ -62,6 +77,11 @@ public final class GuestPoliciesPackageRepositoryGetArgs extends com.pulumi.reso
     @Import(name="zypper")
     private @Nullable Output<GuestPoliciesPackageRepositoryZypperGetArgs> zypper;
 
+    /**
+     * @return A Zypper Repository.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<GuestPoliciesPackageRepositoryZypperGetArgs>> zypper() {
         return Optional.ofNullable(this.zypper);
     }
@@ -93,38 +113,94 @@ public final class GuestPoliciesPackageRepositoryGetArgs extends com.pulumi.reso
             $ = new GuestPoliciesPackageRepositoryGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apt An Apt Repository.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apt(@Nullable Output<GuestPoliciesPackageRepositoryAptGetArgs> apt) {
             $.apt = apt;
             return this;
         }
 
+        /**
+         * @param apt An Apt Repository.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apt(GuestPoliciesPackageRepositoryAptGetArgs apt) {
             return apt(Output.of(apt));
         }
 
+        /**
+         * @param goo A Goo Repository.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goo(@Nullable Output<GuestPoliciesPackageRepositoryGooGetArgs> goo) {
             $.goo = goo;
             return this;
         }
 
+        /**
+         * @param goo A Goo Repository.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goo(GuestPoliciesPackageRepositoryGooGetArgs goo) {
             return goo(Output.of(goo));
         }
 
+        /**
+         * @param yum A Yum Repository.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yum(@Nullable Output<GuestPoliciesPackageRepositoryYumGetArgs> yum) {
             $.yum = yum;
             return this;
         }
 
+        /**
+         * @param yum A Yum Repository.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yum(GuestPoliciesPackageRepositoryYumGetArgs yum) {
             return yum(Output.of(yum));
         }
 
+        /**
+         * @param zypper A Zypper Repository.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zypper(@Nullable Output<GuestPoliciesPackageRepositoryZypperGetArgs> zypper) {
             $.zypper = zypper;
             return this;
         }
 
+        /**
+         * @param zypper A Zypper Repository.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zypper(GuestPoliciesPackageRepositoryZypperGetArgs zypper) {
             return zypper(Output.of(zypper));
         }

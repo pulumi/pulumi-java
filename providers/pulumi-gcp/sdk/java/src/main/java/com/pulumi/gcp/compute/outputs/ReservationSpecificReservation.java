@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ReservationSpecificReservation {
-    /**
-     * The number of resources that are allocated.
-     * 
-     */
+        /**
+         * @return The number of resources that are allocated.
+         * 
+         */
     private final Integer count;
-    /**
-     * - 
-     * How many instances are in use.
-     * 
-     */
+        /**
+         * @return -
+         * How many instances are in use.
+         * 
+         */
     private final @Nullable Integer inUseCount;
-    /**
-     * The instance properties for the reservation.
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return The instance properties for the reservation.
+         * Structure is documented below.
+         * 
+         */
     private final ReservationSpecificReservationInstanceProperties instanceProperties;
 
     @CustomType.Constructor
@@ -41,25 +41,25 @@ public final class ReservationSpecificReservation {
     }
 
     /**
-     * The number of resources that are allocated.
+     * @return The number of resources that are allocated.
      * 
-    */
+     */
     public Integer count() {
         return this.count;
     }
     /**
-     * - 
+     * @return -
      * How many instances are in use.
      * 
-    */
+     */
     public Optional<Integer> inUseCount() {
         return Optional.ofNullable(this.inUseCount);
     }
     /**
-     * The instance properties for the reservation.
+     * @return The instance properties for the reservation.
      * Structure is documented below.
      * 
-    */
+     */
     public ReservationSpecificReservationInstanceProperties instanceProperties() {
         return this.instanceProperties;
     }

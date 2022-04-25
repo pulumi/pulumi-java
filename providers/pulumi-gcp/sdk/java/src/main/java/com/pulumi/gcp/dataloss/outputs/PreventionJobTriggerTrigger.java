@@ -11,11 +11,11 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PreventionJobTriggerTrigger {
-    /**
-     * Schedule for triggered jobs
-     * Structure is documented below.
-     * 
-     */
+        /**
+         * @return Schedule for triggered jobs
+         * Structure is documented below.
+         * 
+         */
     private final @Nullable PreventionJobTriggerTriggerSchedule schedule;
 
     @CustomType.Constructor
@@ -24,10 +24,10 @@ public final class PreventionJobTriggerTrigger {
     }
 
     /**
-     * Schedule for triggered jobs
+     * @return Schedule for triggered jobs
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PreventionJobTriggerTriggerSchedule> schedule() {
         return Optional.ofNullable(this.schedule);
     }
