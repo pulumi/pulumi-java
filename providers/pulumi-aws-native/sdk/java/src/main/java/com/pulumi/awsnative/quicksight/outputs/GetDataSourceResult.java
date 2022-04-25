@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDataSourceResult {
     /**
-     * &lt;p&gt;A set of alternate data source parameters that you want to share for the credentials
+     * @return &lt;p&gt;A set of alternate data source parameters that you want to share for the credentials
      *             stored with this data source. The credentials are applied in tandem with the data source
      *             parameters when you copy a data source by using a create or update request. The API
      *             operation compares the &lt;code&gt;DataSourceParameters&lt;/code&gt; structure that&#39;s in the request
@@ -33,36 +33,36 @@ public final class GetDataSourceResult {
      */
     private final @Nullable List<DataSourceParameters> alternateDataSourceParameters;
     /**
-     * &lt;p&gt;The Amazon Resource Name (ARN) of the data source.&lt;/p&gt;
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the data source.&lt;/p&gt;
      * 
      */
     private final @Nullable String arn;
     /**
-     * &lt;p&gt;The time that this data source was created.&lt;/p&gt;
+     * @return &lt;p&gt;The time that this data source was created.&lt;/p&gt;
      * 
      */
     private final @Nullable String createdTime;
     private final @Nullable DataSourceParameters dataSourceParameters;
     private final @Nullable DataSourceErrorInfo errorInfo;
     /**
-     * &lt;p&gt;The last time that this data source was updated.&lt;/p&gt;
+     * @return &lt;p&gt;The last time that this data source was updated.&lt;/p&gt;
      * 
      */
     private final @Nullable String lastUpdatedTime;
     /**
-     * &lt;p&gt;A display name for the data source.&lt;/p&gt;
+     * @return &lt;p&gt;A display name for the data source.&lt;/p&gt;
      * 
      */
     private final @Nullable String name;
     /**
-     * &lt;p&gt;A list of resource permissions on the data source.&lt;/p&gt;
+     * @return &lt;p&gt;A list of resource permissions on the data source.&lt;/p&gt;
      * 
      */
     private final @Nullable List<DataSourceResourcePermission> permissions;
     private final @Nullable DataSourceSslProperties sslProperties;
     private final @Nullable DataSourceResourceStatus status;
     /**
-     * &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the data source.&lt;/p&gt;
+     * @return &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the data source.&lt;/p&gt;
      * 
      */
     private final @Nullable List<DataSourceTag> tags;
@@ -97,7 +97,7 @@ public final class GetDataSourceResult {
     }
 
     /**
-     * &lt;p&gt;A set of alternate data source parameters that you want to share for the credentials
+     * @return &lt;p&gt;A set of alternate data source parameters that you want to share for the credentials
      *             stored with this data source. The credentials are applied in tandem with the data source
      *             parameters when you copy a data source by using a create or update request. The API
      *             operation compares the &lt;code&gt;DataSourceParameters&lt;/code&gt; structure that&#39;s in the request
@@ -107,21 +107,21 @@ public final class GetDataSourceResult {
      *             the &lt;code&gt;Credentials&lt;/code&gt; originally used with this &lt;code&gt;DataSourceParameters&lt;/code&gt;
      *             are automatically allowed.&lt;/p&gt;
      * 
-    */
+     */
     public List<DataSourceParameters> alternateDataSourceParameters() {
         return this.alternateDataSourceParameters == null ? List.of() : this.alternateDataSourceParameters;
     }
     /**
-     * &lt;p&gt;The Amazon Resource Name (ARN) of the data source.&lt;/p&gt;
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the data source.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * &lt;p&gt;The time that this data source was created.&lt;/p&gt;
+     * @return &lt;p&gt;The time that this data source was created.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
@@ -132,23 +132,23 @@ public final class GetDataSourceResult {
         return Optional.ofNullable(this.errorInfo);
     }
     /**
-     * &lt;p&gt;The last time that this data source was updated.&lt;/p&gt;
+     * @return &lt;p&gt;The last time that this data source was updated.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
-     * &lt;p&gt;A display name for the data source.&lt;/p&gt;
+     * @return &lt;p&gt;A display name for the data source.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * &lt;p&gt;A list of resource permissions on the data source.&lt;/p&gt;
+     * @return &lt;p&gt;A list of resource permissions on the data source.&lt;/p&gt;
      * 
-    */
+     */
     public List<DataSourceResourcePermission> permissions() {
         return this.permissions == null ? List.of() : this.permissions;
     }
@@ -159,9 +159,9 @@ public final class GetDataSourceResult {
         return Optional.ofNullable(this.status);
     }
     /**
-     * &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the data source.&lt;/p&gt;
+     * @return &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the data source.&lt;/p&gt;
      * 
-    */
+     */
     public List<DataSourceTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

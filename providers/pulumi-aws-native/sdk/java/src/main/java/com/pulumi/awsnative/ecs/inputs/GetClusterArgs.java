@@ -19,6 +19,10 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterName", required=true)
     private String clusterName;
 
+    /**
+     * @return A user-generated string that you use to identify your cluster. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID for the name.
+     * 
+     */
     public String clusterName() {
         return this.clusterName;
     }
@@ -47,6 +51,12 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName A user-generated string that you use to identify your cluster. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID for the name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             $.clusterName = clusterName;
             return this;

@@ -18,37 +18,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetPackagingConfigurationResult {
     /**
-     * The ARN of the PackagingConfiguration.
+     * @return The ARN of the PackagingConfiguration.
      * 
      */
     private final @Nullable String arn;
     /**
-     * A CMAF packaging configuration.
+     * @return A CMAF packaging configuration.
      * 
      */
     private final @Nullable PackagingConfigurationCmafPackage cmafPackage;
     /**
-     * A Dynamic Adaptive Streaming over HTTP (DASH) packaging configuration.
+     * @return A Dynamic Adaptive Streaming over HTTP (DASH) packaging configuration.
      * 
      */
     private final @Nullable PackagingConfigurationDashPackage dashPackage;
     /**
-     * An HTTP Live Streaming (HLS) packaging configuration.
+     * @return An HTTP Live Streaming (HLS) packaging configuration.
      * 
      */
     private final @Nullable PackagingConfigurationHlsPackage hlsPackage;
     /**
-     * A Microsoft Smooth Streaming (MSS) PackagingConfiguration.
+     * @return A Microsoft Smooth Streaming (MSS) PackagingConfiguration.
      * 
      */
     private final @Nullable PackagingConfigurationMssPackage mssPackage;
     /**
-     * The ID of a PackagingGroup.
+     * @return The ID of a PackagingGroup.
      * 
      */
     private final @Nullable String packagingGroupId;
     /**
-     * A collection of tags associated with a resource
+     * @return A collection of tags associated with a resource
      * 
      */
     private final @Nullable List<PackagingConfigurationTag> tags;
@@ -72,51 +72,51 @@ public final class GetPackagingConfigurationResult {
     }
 
     /**
-     * The ARN of the PackagingConfiguration.
+     * @return The ARN of the PackagingConfiguration.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * A CMAF packaging configuration.
+     * @return A CMAF packaging configuration.
      * 
-    */
+     */
     public Optional<PackagingConfigurationCmafPackage> cmafPackage() {
         return Optional.ofNullable(this.cmafPackage);
     }
     /**
-     * A Dynamic Adaptive Streaming over HTTP (DASH) packaging configuration.
+     * @return A Dynamic Adaptive Streaming over HTTP (DASH) packaging configuration.
      * 
-    */
+     */
     public Optional<PackagingConfigurationDashPackage> dashPackage() {
         return Optional.ofNullable(this.dashPackage);
     }
     /**
-     * An HTTP Live Streaming (HLS) packaging configuration.
+     * @return An HTTP Live Streaming (HLS) packaging configuration.
      * 
-    */
+     */
     public Optional<PackagingConfigurationHlsPackage> hlsPackage() {
         return Optional.ofNullable(this.hlsPackage);
     }
     /**
-     * A Microsoft Smooth Streaming (MSS) PackagingConfiguration.
+     * @return A Microsoft Smooth Streaming (MSS) PackagingConfiguration.
      * 
-    */
+     */
     public Optional<PackagingConfigurationMssPackage> mssPackage() {
         return Optional.ofNullable(this.mssPackage);
     }
     /**
-     * The ID of a PackagingGroup.
+     * @return The ID of a PackagingGroup.
      * 
-    */
+     */
     public Optional<String> packagingGroupId() {
         return Optional.ofNullable(this.packagingGroupId);
     }
     /**
-     * A collection of tags associated with a resource
+     * @return A collection of tags associated with a resource
      * 
-    */
+     */
     public List<PackagingConfigurationTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

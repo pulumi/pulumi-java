@@ -33,6 +33,10 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assetModelId", required=true)
     private Output<String> assetModelId;
 
+    /**
+     * @return The ID of the asset model from which to create the asset.
+     * 
+     */
     public Output<String> assetModelId() {
         return this.assetModelId;
     }
@@ -44,6 +48,10 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assetName")
     private @Nullable Output<String> assetName;
 
+    /**
+     * @return A unique, friendly name for the asset.
+     * 
+     */
     public Optional<Output<String>> assetName() {
         return Optional.ofNullable(this.assetName);
     }
@@ -62,6 +70,10 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<AssetTagArgs>> tags;
 
+    /**
+     * @return A list of key-value pairs that contain metadata for the asset.
+     * 
+     */
     public Optional<Output<List<AssetTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -107,20 +119,44 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
             return assetHierarchies(List.of(assetHierarchies));
         }
 
+        /**
+         * @param assetModelId The ID of the asset model from which to create the asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetModelId(Output<String> assetModelId) {
             $.assetModelId = assetModelId;
             return this;
         }
 
+        /**
+         * @param assetModelId The ID of the asset model from which to create the asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetModelId(String assetModelId) {
             return assetModelId(Output.of(assetModelId));
         }
 
+        /**
+         * @param assetName A unique, friendly name for the asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetName(@Nullable Output<String> assetName) {
             $.assetName = assetName;
             return this;
         }
 
+        /**
+         * @param assetName A unique, friendly name for the asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetName(String assetName) {
             return assetName(Output.of(assetName));
         }
@@ -138,15 +174,33 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
             return assetProperties(List.of(assetProperties));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<AssetTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<AssetTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(AssetTagArgs... tags) {
             return tags(List.of(tags));
         }

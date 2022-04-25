@@ -19,6 +19,10 @@ public final class GetGameServerGroupArgs extends com.pulumi.resources.InvokeArg
     @Import(name="gameServerGroupArn", required=true)
     private String gameServerGroupArn;
 
+    /**
+     * @return A generated unique ID for the game server group.
+     * 
+     */
     public String gameServerGroupArn() {
         return this.gameServerGroupArn;
     }
@@ -47,6 +51,12 @@ public final class GetGameServerGroupArgs extends com.pulumi.resources.InvokeArg
             $ = new GetGameServerGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gameServerGroupArn A generated unique ID for the game server group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gameServerGroupArn(String gameServerGroupArn) {
             $.gameServerGroupArn = gameServerGroupArn;
             return this;

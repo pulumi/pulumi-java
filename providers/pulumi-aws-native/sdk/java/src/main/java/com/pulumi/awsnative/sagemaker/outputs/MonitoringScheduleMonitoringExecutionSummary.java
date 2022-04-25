@@ -13,34 +13,34 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MonitoringScheduleMonitoringExecutionSummary {
     /**
-     * The time at which the monitoring job was created.
+     * @return The time at which the monitoring job was created.
      * 
      */
     private final String creationTime;
     private final @Nullable String endpointName;
     /**
-     * Contains the reason a monitoring job failed, if it failed.
+     * @return Contains the reason a monitoring job failed, if it failed.
      * 
      */
     private final @Nullable String failureReason;
     /**
-     * A timestamp that indicates the last time the monitoring job was modified.
+     * @return A timestamp that indicates the last time the monitoring job was modified.
      * 
      */
     private final String lastModifiedTime;
     /**
-     * The status of the monitoring job.
+     * @return The status of the monitoring job.
      * 
      */
     private final MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus;
     private final String monitoringScheduleName;
     /**
-     * The Amazon Resource Name (ARN) of the monitoring job.
+     * @return The Amazon Resource Name (ARN) of the monitoring job.
      * 
      */
     private final @Nullable String processingJobArn;
     /**
-     * The time the monitoring job was scheduled.
+     * @return The time the monitoring job was scheduled.
      * 
      */
     private final String scheduledTime;
@@ -66,9 +66,9 @@ public final class MonitoringScheduleMonitoringExecutionSummary {
     }
 
     /**
-     * The time at which the monitoring job was created.
+     * @return The time at which the monitoring job was created.
      * 
-    */
+     */
     public String creationTime() {
         return this.creationTime;
     }
@@ -76,23 +76,23 @@ public final class MonitoringScheduleMonitoringExecutionSummary {
         return Optional.ofNullable(this.endpointName);
     }
     /**
-     * Contains the reason a monitoring job failed, if it failed.
+     * @return Contains the reason a monitoring job failed, if it failed.
      * 
-    */
+     */
     public Optional<String> failureReason() {
         return Optional.ofNullable(this.failureReason);
     }
     /**
-     * A timestamp that indicates the last time the monitoring job was modified.
+     * @return A timestamp that indicates the last time the monitoring job was modified.
      * 
-    */
+     */
     public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
-     * The status of the monitoring job.
+     * @return The status of the monitoring job.
      * 
-    */
+     */
     public MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus() {
         return this.monitoringExecutionStatus;
     }
@@ -100,16 +100,16 @@ public final class MonitoringScheduleMonitoringExecutionSummary {
         return this.monitoringScheduleName;
     }
     /**
-     * The Amazon Resource Name (ARN) of the monitoring job.
+     * @return The Amazon Resource Name (ARN) of the monitoring job.
      * 
-    */
+     */
     public Optional<String> processingJobArn() {
         return Optional.ofNullable(this.processingJobArn);
     }
     /**
-     * The time the monitoring job was scheduled.
+     * @return The time the monitoring job was scheduled.
      * 
-    */
+     */
     public String scheduledTime() {
         return this.scheduledTime;
     }

@@ -35,6 +35,10 @@ public final class PackagingConfigurationMssPackage extends com.pulumi.resources
     @Import(name="mssManifests", required=true)
     private List<PackagingConfigurationMssManifest> mssManifests;
 
+    /**
+     * @return A list of MSS manifest configurations.
+     * 
+     */
     public List<PackagingConfigurationMssManifest> mssManifests() {
         return this.mssManifests;
     }
@@ -77,11 +81,23 @@ public final class PackagingConfigurationMssPackage extends com.pulumi.resources
             return this;
         }
 
+        /**
+         * @param mssManifests A list of MSS manifest configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mssManifests(List<PackagingConfigurationMssManifest> mssManifests) {
             $.mssManifests = mssManifests;
             return this;
         }
 
+        /**
+         * @param mssManifests A list of MSS manifest configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mssManifests(PackagingConfigurationMssManifest... mssManifests) {
             return mssManifests(List.of(mssManifests));
         }

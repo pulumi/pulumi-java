@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EventSourceMappingFilter {
     /**
-     * The filter pattern that defines which events should be passed for invocations.
+     * @return The filter pattern that defines which events should be passed for invocations.
      * 
      */
     private final @Nullable String pattern;
@@ -23,9 +23,9 @@ public final class EventSourceMappingFilter {
     }
 
     /**
-     * The filter pattern that defines which events should be passed for invocations.
+     * @return The filter pattern that defines which events should be passed for invocations.
      * 
-    */
+     */
     public Optional<String> pattern() {
         return Optional.ofNullable(this.pattern);
     }

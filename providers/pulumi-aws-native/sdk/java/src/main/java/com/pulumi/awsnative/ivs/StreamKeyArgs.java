@@ -24,6 +24,10 @@ public final class StreamKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="channelArn", required=true)
     private Output<String> channelArn;
 
+    /**
+     * @return Channel ARN for the stream.
+     * 
+     */
     public Output<String> channelArn() {
         return this.channelArn;
     }
@@ -35,6 +39,10 @@ public final class StreamKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<StreamKeyTagArgs>> tags;
 
+    /**
+     * @return A list of key-value pairs that contain metadata for the asset model.
+     * 
+     */
     public Optional<Output<List<StreamKeyTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -64,24 +72,54 @@ public final class StreamKeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new StreamKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param channelArn Channel ARN for the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelArn(Output<String> channelArn) {
             $.channelArn = channelArn;
             return this;
         }
 
+        /**
+         * @param channelArn Channel ARN for the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelArn(String channelArn) {
             return channelArn(Output.of(channelArn));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<StreamKeyTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<StreamKeyTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(StreamKeyTagArgs... tags) {
             return tags(List.of(tags));
         }

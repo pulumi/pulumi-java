@@ -26,6 +26,10 @@ public final class RulesetColumnSelectorArgs extends com.pulumi.resources.Resour
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of a column from a dataset
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class RulesetColumnSelectorArgs extends com.pulumi.resources.Resour
     @Import(name="regex")
     private @Nullable Output<String> regex;
 
+    /**
+     * @return A regular expression for selecting a column from a dataset
+     * 
+     */
     public Optional<Output<String>> regex() {
         return Optional.ofNullable(this.regex);
     }
@@ -66,20 +74,44 @@ public final class RulesetColumnSelectorArgs extends com.pulumi.resources.Resour
             $ = new RulesetColumnSelectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of a column from a dataset
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of a column from a dataset
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param regex A regular expression for selecting a column from a dataset
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(@Nullable Output<String> regex) {
             $.regex = regex;
             return this;
         }
 
+        /**
+         * @param regex A regular expression for selecting a column from a dataset
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(String regex) {
             return regex(Output.of(regex));
         }

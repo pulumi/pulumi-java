@@ -22,6 +22,10 @@ public final class DomainResourceSpec extends com.pulumi.resources.InvokeArgs {
     @Import(name="instanceType")
     private @Nullable DomainResourceSpecInstanceType instanceType;
 
+    /**
+     * @return The instance type that the image version runs on.
+     * 
+     */
     public Optional<DomainResourceSpecInstanceType> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -33,6 +37,10 @@ public final class DomainResourceSpec extends com.pulumi.resources.InvokeArgs {
     @Import(name="sageMakerImageArn")
     private @Nullable String sageMakerImageArn;
 
+    /**
+     * @return The ARN of the SageMaker image that the image version belongs to.
+     * 
+     */
     public Optional<String> sageMakerImageArn() {
         return Optional.ofNullable(this.sageMakerImageArn);
     }
@@ -44,6 +52,10 @@ public final class DomainResourceSpec extends com.pulumi.resources.InvokeArgs {
     @Import(name="sageMakerImageVersionArn")
     private @Nullable String sageMakerImageVersionArn;
 
+    /**
+     * @return The ARN of the image version created on the instance.
+     * 
+     */
     public Optional<String> sageMakerImageVersionArn() {
         return Optional.ofNullable(this.sageMakerImageVersionArn);
     }
@@ -74,16 +86,34 @@ public final class DomainResourceSpec extends com.pulumi.resources.InvokeArgs {
             $ = new DomainResourceSpec(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceType The instance type that the image version runs on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable DomainResourceSpecInstanceType instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param sageMakerImageArn The ARN of the SageMaker image that the image version belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sageMakerImageArn(@Nullable String sageMakerImageArn) {
             $.sageMakerImageArn = sageMakerImageArn;
             return this;
         }
 
+        /**
+         * @param sageMakerImageVersionArn The ARN of the image version created on the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sageMakerImageVersionArn(@Nullable String sageMakerImageVersionArn) {
             $.sageMakerImageVersionArn = sageMakerImageVersionArn;
             return this;

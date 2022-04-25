@@ -24,6 +24,10 @@ public final class DataSourceAmazonOpenSearchParametersArgs extends com.pulumi.r
     @Import(name="domain", required=true)
     private Output<String> domain;
 
+    /**
+     * @return &lt;p&gt;The Amazon OpenSearch Service domain.&lt;/p&gt;
+     * 
+     */
     public Output<String> domain() {
         return this.domain;
     }
@@ -52,11 +56,23 @@ public final class DataSourceAmazonOpenSearchParametersArgs extends com.pulumi.r
             $ = new DataSourceAmazonOpenSearchParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domain &lt;p&gt;The Amazon OpenSearch Service domain.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(Output<String> domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param domain &lt;p&gt;The Amazon OpenSearch Service domain.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(String domain) {
             return domain(Output.of(domain));
         }

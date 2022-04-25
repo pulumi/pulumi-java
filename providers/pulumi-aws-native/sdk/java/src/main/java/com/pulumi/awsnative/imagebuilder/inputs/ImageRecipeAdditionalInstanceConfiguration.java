@@ -26,6 +26,10 @@ public final class ImageRecipeAdditionalInstanceConfiguration extends com.pulumi
     @Import(name="systemsManagerAgent")
     private @Nullable ImageRecipeSystemsManagerAgent systemsManagerAgent;
 
+    /**
+     * @return Contains settings for the SSM agent on your build instance.
+     * 
+     */
     public Optional<ImageRecipeSystemsManagerAgent> systemsManagerAgent() {
         return Optional.ofNullable(this.systemsManagerAgent);
     }
@@ -37,6 +41,10 @@ public final class ImageRecipeAdditionalInstanceConfiguration extends com.pulumi
     @Import(name="userDataOverride")
     private @Nullable String userDataOverride;
 
+    /**
+     * @return Use this property to provide commands or a command script to run when you launch your build instance.
+     * 
+     */
     public Optional<String> userDataOverride() {
         return Optional.ofNullable(this.userDataOverride);
     }
@@ -66,11 +74,23 @@ public final class ImageRecipeAdditionalInstanceConfiguration extends com.pulumi
             $ = new ImageRecipeAdditionalInstanceConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param systemsManagerAgent Contains settings for the SSM agent on your build instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemsManagerAgent(@Nullable ImageRecipeSystemsManagerAgent systemsManagerAgent) {
             $.systemsManagerAgent = systemsManagerAgent;
             return this;
         }
 
+        /**
+         * @param userDataOverride Use this property to provide commands or a command script to run when you launch your build instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userDataOverride(@Nullable String userDataOverride) {
             $.userDataOverride = userDataOverride;
             return this;

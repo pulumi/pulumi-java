@@ -27,6 +27,10 @@ public final class ApplicationComponentMonitoringSetting extends com.pulumi.reso
     @Import(name="componentARN")
     private @Nullable String componentARN;
 
+    /**
+     * @return The ARN of the compnonent.
+     * 
+     */
     public Optional<String> componentARN() {
         return Optional.ofNullable(this.componentARN);
     }
@@ -38,6 +42,10 @@ public final class ApplicationComponentMonitoringSetting extends com.pulumi.reso
     @Import(name="componentConfigurationMode", required=true)
     private ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode;
 
+    /**
+     * @return The component monitoring configuration mode.
+     * 
+     */
     public ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode() {
         return this.componentConfigurationMode;
     }
@@ -49,6 +57,10 @@ public final class ApplicationComponentMonitoringSetting extends com.pulumi.reso
     @Import(name="componentName")
     private @Nullable String componentName;
 
+    /**
+     * @return The name of the component.
+     * 
+     */
     public Optional<String> componentName() {
         return Optional.ofNullable(this.componentName);
     }
@@ -60,6 +72,10 @@ public final class ApplicationComponentMonitoringSetting extends com.pulumi.reso
     @Import(name="customComponentConfiguration")
     private @Nullable ApplicationComponentConfiguration customComponentConfiguration;
 
+    /**
+     * @return The monitoring configuration of the component.
+     * 
+     */
     public Optional<ApplicationComponentConfiguration> customComponentConfiguration() {
         return Optional.ofNullable(this.customComponentConfiguration);
     }
@@ -71,6 +87,10 @@ public final class ApplicationComponentMonitoringSetting extends com.pulumi.reso
     @Import(name="defaultOverwriteComponentConfiguration")
     private @Nullable ApplicationComponentConfiguration defaultOverwriteComponentConfiguration;
 
+    /**
+     * @return The overwritten settings on default component monitoring configuration.
+     * 
+     */
     public Optional<ApplicationComponentConfiguration> defaultOverwriteComponentConfiguration() {
         return Optional.ofNullable(this.defaultOverwriteComponentConfiguration);
     }
@@ -82,6 +102,10 @@ public final class ApplicationComponentMonitoringSetting extends com.pulumi.reso
     @Import(name="tier", required=true)
     private String tier;
 
+    /**
+     * @return The tier of the application component.
+     * 
+     */
     public String tier() {
         return this.tier;
     }
@@ -115,31 +139,67 @@ public final class ApplicationComponentMonitoringSetting extends com.pulumi.reso
             $ = new ApplicationComponentMonitoringSetting(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param componentARN The ARN of the compnonent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentARN(@Nullable String componentARN) {
             $.componentARN = componentARN;
             return this;
         }
 
+        /**
+         * @param componentConfigurationMode The component monitoring configuration mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentConfigurationMode(ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode) {
             $.componentConfigurationMode = componentConfigurationMode;
             return this;
         }
 
+        /**
+         * @param componentName The name of the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentName(@Nullable String componentName) {
             $.componentName = componentName;
             return this;
         }
 
+        /**
+         * @param customComponentConfiguration The monitoring configuration of the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customComponentConfiguration(@Nullable ApplicationComponentConfiguration customComponentConfiguration) {
             $.customComponentConfiguration = customComponentConfiguration;
             return this;
         }
 
+        /**
+         * @param defaultOverwriteComponentConfiguration The overwritten settings on default component monitoring configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultOverwriteComponentConfiguration(@Nullable ApplicationComponentConfiguration defaultOverwriteComponentConfiguration) {
             $.defaultOverwriteComponentConfiguration = defaultOverwriteComponentConfiguration;
             return this;
         }
 
+        /**
+         * @param tier The tier of the application component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             $.tier = tier;
             return this;

@@ -24,6 +24,10 @@ public final class RobotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="architecture", required=true)
     private Output<RobotArchitecture> architecture;
 
+    /**
+     * @return The target architecture of the robot.
+     * 
+     */
     public Output<RobotArchitecture> architecture() {
         return this.architecture;
     }
@@ -35,6 +39,10 @@ public final class RobotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fleet")
     private @Nullable Output<String> fleet;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the fleet.
+     * 
+     */
     public Optional<Output<String>> fleet() {
         return Optional.ofNullable(this.fleet);
     }
@@ -46,6 +54,10 @@ public final class RobotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="greengrassGroupId", required=true)
     private Output<String> greengrassGroupId;
 
+    /**
+     * @return The Greengrass group id.
+     * 
+     */
     public Output<String> greengrassGroupId() {
         return this.greengrassGroupId;
     }
@@ -57,6 +69,10 @@ public final class RobotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name for the robot.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -96,38 +112,86 @@ public final class RobotArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RobotArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param architecture The target architecture of the robot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder architecture(Output<RobotArchitecture> architecture) {
             $.architecture = architecture;
             return this;
         }
 
+        /**
+         * @param architecture The target architecture of the robot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder architecture(RobotArchitecture architecture) {
             return architecture(Output.of(architecture));
         }
 
+        /**
+         * @param fleet The Amazon Resource Name (ARN) of the fleet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fleet(@Nullable Output<String> fleet) {
             $.fleet = fleet;
             return this;
         }
 
+        /**
+         * @param fleet The Amazon Resource Name (ARN) of the fleet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fleet(String fleet) {
             return fleet(Output.of(fleet));
         }
 
+        /**
+         * @param greengrassGroupId The Greengrass group id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder greengrassGroupId(Output<String> greengrassGroupId) {
             $.greengrassGroupId = greengrassGroupId;
             return this;
         }
 
+        /**
+         * @param greengrassGroupId The Greengrass group id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder greengrassGroupId(String greengrassGroupId) {
             return greengrassGroupId(Output.of(greengrassGroupId));
         }
 
+        /**
+         * @param name The name for the robot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name for the robot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

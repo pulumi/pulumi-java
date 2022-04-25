@@ -27,6 +27,10 @@ public final class DataSetRowLevelPermissionDataSet extends com.pulumi.resources
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the permission dataset.&lt;/p&gt;
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -45,6 +49,10 @@ public final class DataSetRowLevelPermissionDataSet extends com.pulumi.resources
     @Import(name="namespace")
     private @Nullable String namespace;
 
+    /**
+     * @return &lt;p&gt;The namespace associated with the row-level permissions dataset.&lt;/p&gt;
+     * 
+     */
     public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -83,6 +91,12 @@ public final class DataSetRowLevelPermissionDataSet extends com.pulumi.resources
             $ = new DataSetRowLevelPermissionDataSet(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn &lt;p&gt;The Amazon Resource Name (ARN) of the permission dataset.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;
@@ -93,6 +107,12 @@ public final class DataSetRowLevelPermissionDataSet extends com.pulumi.resources
             return this;
         }
 
+        /**
+         * @param namespace &lt;p&gt;The namespace associated with the row-level permissions dataset.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(@Nullable String namespace) {
             $.namespace = namespace;
             return this;

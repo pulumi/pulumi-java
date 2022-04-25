@@ -26,6 +26,10 @@ public final class StudioComponentLicenseServiceConfigurationArgs extends com.pu
     @Import(name="endpoint")
     private @Nullable Output<String> endpoint;
 
+    /**
+     * @return &lt;p&gt;The endpoint of the license service that is accessed by the studio component resource.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
@@ -54,11 +58,23 @@ public final class StudioComponentLicenseServiceConfigurationArgs extends com.pu
             $ = new StudioComponentLicenseServiceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpoint &lt;p&gt;The endpoint of the license service that is accessed by the studio component resource.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(@Nullable Output<String> endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param endpoint &lt;p&gt;The endpoint of the license service that is accessed by the studio component resource.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(String endpoint) {
             return endpoint(Output.of(endpoint));
         }

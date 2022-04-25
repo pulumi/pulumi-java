@@ -23,6 +23,10 @@ public final class RequestValidatorArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the request validator.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -34,6 +38,10 @@ public final class RequestValidatorArgs extends com.pulumi.resources.ResourceArg
     @Import(name="restApiId", required=true)
     private Output<String> restApiId;
 
+    /**
+     * @return The identifier of the targeted API entity.
+     * 
+     */
     public Output<String> restApiId() {
         return this.restApiId;
     }
@@ -45,6 +53,10 @@ public final class RequestValidatorArgs extends com.pulumi.resources.ResourceArg
     @Import(name="validateRequestBody")
     private @Nullable Output<Boolean> validateRequestBody;
 
+    /**
+     * @return Indicates whether to validate the request body according to the configured schema for the targeted API and method.
+     * 
+     */
     public Optional<Output<Boolean>> validateRequestBody() {
         return Optional.ofNullable(this.validateRequestBody);
     }
@@ -56,6 +68,10 @@ public final class RequestValidatorArgs extends com.pulumi.resources.ResourceArg
     @Import(name="validateRequestParameters")
     private @Nullable Output<Boolean> validateRequestParameters;
 
+    /**
+     * @return Indicates whether to validate request parameters.
+     * 
+     */
     public Optional<Output<Boolean>> validateRequestParameters() {
         return Optional.ofNullable(this.validateRequestParameters);
     }
@@ -87,38 +103,86 @@ public final class RequestValidatorArgs extends com.pulumi.resources.ResourceArg
             $ = new RequestValidatorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the request validator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the request validator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param restApiId The identifier of the targeted API entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(Output<String> restApiId) {
             $.restApiId = restApiId;
             return this;
         }
 
+        /**
+         * @param restApiId The identifier of the targeted API entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(String restApiId) {
             return restApiId(Output.of(restApiId));
         }
 
+        /**
+         * @param validateRequestBody Indicates whether to validate the request body according to the configured schema for the targeted API and method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateRequestBody(@Nullable Output<Boolean> validateRequestBody) {
             $.validateRequestBody = validateRequestBody;
             return this;
         }
 
+        /**
+         * @param validateRequestBody Indicates whether to validate the request body according to the configured schema for the targeted API and method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateRequestBody(Boolean validateRequestBody) {
             return validateRequestBody(Output.of(validateRequestBody));
         }
 
+        /**
+         * @param validateRequestParameters Indicates whether to validate request parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateRequestParameters(@Nullable Output<Boolean> validateRequestParameters) {
             $.validateRequestParameters = validateRequestParameters;
             return this;
         }
 
+        /**
+         * @param validateRequestParameters Indicates whether to validate request parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateRequestParameters(Boolean validateRequestParameters) {
             return validateRequestParameters(Output.of(validateRequestParameters));
         }

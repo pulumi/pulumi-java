@@ -28,6 +28,10 @@ public final class WorkflowStepTagStepDetailsPropertiesArgs extends com.pulumi.r
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the step, used as an identifier.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -39,6 +43,10 @@ public final class WorkflowStepTagStepDetailsPropertiesArgs extends com.pulumi.r
     @Import(name="tags")
     private @Nullable Output<List<WorkflowS3TagArgs>> tags;
 
+    /**
+     * @return Array that contains from 1 to 10 key/value pairs.
+     * 
+     */
     public Optional<Output<List<WorkflowS3TagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -68,24 +76,54 @@ public final class WorkflowStepTagStepDetailsPropertiesArgs extends com.pulumi.r
             $ = new WorkflowStepTagStepDetailsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the step, used as an identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the step, used as an identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags Array that contains from 1 to 10 key/value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<WorkflowS3TagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Array that contains from 1 to 10 key/value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<WorkflowS3TagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Array that contains from 1 to 10 key/value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(WorkflowS3TagArgs... tags) {
             return tags(List.of(tags));
         }

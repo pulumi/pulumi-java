@@ -19,6 +19,10 @@ public final class GetResourceSetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceSetName", required=true)
     private String resourceSetName;
 
+    /**
+     * @return The name of the resource set to create.
+     * 
+     */
     public String resourceSetName() {
         return this.resourceSetName;
     }
@@ -47,6 +51,12 @@ public final class GetResourceSetArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetResourceSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceSetName The name of the resource set to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSetName(String resourceSetName) {
             $.resourceSetName = resourceSetName;
             return this;

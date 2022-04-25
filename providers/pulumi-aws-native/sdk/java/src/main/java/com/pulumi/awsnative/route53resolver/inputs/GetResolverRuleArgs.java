@@ -19,6 +19,10 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resolverRuleId", required=true)
     private String resolverRuleId;
 
+    /**
+     * @return The ID of the endpoint that the rule is associated with.
+     * 
+     */
     public String resolverRuleId() {
         return this.resolverRuleId;
     }
@@ -47,6 +51,12 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetResolverRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resolverRuleId The ID of the endpoint that the rule is associated with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resolverRuleId(String resolverRuleId) {
             $.resolverRuleId = resolverRuleId;
             return this;

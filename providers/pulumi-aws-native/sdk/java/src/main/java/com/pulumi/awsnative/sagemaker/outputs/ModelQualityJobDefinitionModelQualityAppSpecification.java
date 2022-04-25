@@ -15,33 +15,33 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ModelQualityJobDefinitionModelQualityAppSpecification {
     /**
-     * An array of arguments for the container used to run the monitoring job.
+     * @return An array of arguments for the container used to run the monitoring job.
      * 
      */
     private final @Nullable List<String> containerArguments;
     /**
-     * Specifies the entrypoint for a container used to run the monitoring job.
+     * @return Specifies the entrypoint for a container used to run the monitoring job.
      * 
      */
     private final @Nullable List<String> containerEntrypoint;
     /**
-     * Sets the environment variables in the Docker container
+     * @return Sets the environment variables in the Docker container
      * 
      */
     private final @Nullable Object environment;
     /**
-     * The container image to be run by the monitoring job.
+     * @return The container image to be run by the monitoring job.
      * 
      */
     private final String imageUri;
     /**
-     * An Amazon S3 URI to a script that is called after analysis has been performed. Applicable only for the built-in (first party) containers.
+     * @return An Amazon S3 URI to a script that is called after analysis has been performed. Applicable only for the built-in (first party) containers.
      * 
      */
     private final @Nullable String postAnalyticsProcessorSourceUri;
     private final ModelQualityJobDefinitionProblemType problemType;
     /**
-     * An Amazon S3 URI to a script that is called per row prior to running analysis. It can base64 decode the payload and convert it into a flatted json so that the built-in container can use the converted data. Applicable only for the built-in (first party) containers
+     * @return An Amazon S3 URI to a script that is called per row prior to running analysis. It can base64 decode the payload and convert it into a flatted json so that the built-in container can use the converted data. Applicable only for the built-in (first party) containers
      * 
      */
     private final @Nullable String recordPreprocessorSourceUri;
@@ -65,37 +65,37 @@ public final class ModelQualityJobDefinitionModelQualityAppSpecification {
     }
 
     /**
-     * An array of arguments for the container used to run the monitoring job.
+     * @return An array of arguments for the container used to run the monitoring job.
      * 
-    */
+     */
     public List<String> containerArguments() {
         return this.containerArguments == null ? List.of() : this.containerArguments;
     }
     /**
-     * Specifies the entrypoint for a container used to run the monitoring job.
+     * @return Specifies the entrypoint for a container used to run the monitoring job.
      * 
-    */
+     */
     public List<String> containerEntrypoint() {
         return this.containerEntrypoint == null ? List.of() : this.containerEntrypoint;
     }
     /**
-     * Sets the environment variables in the Docker container
+     * @return Sets the environment variables in the Docker container
      * 
-    */
+     */
     public Optional<Object> environment() {
         return Optional.ofNullable(this.environment);
     }
     /**
-     * The container image to be run by the monitoring job.
+     * @return The container image to be run by the monitoring job.
      * 
-    */
+     */
     public String imageUri() {
         return this.imageUri;
     }
     /**
-     * An Amazon S3 URI to a script that is called after analysis has been performed. Applicable only for the built-in (first party) containers.
+     * @return An Amazon S3 URI to a script that is called after analysis has been performed. Applicable only for the built-in (first party) containers.
      * 
-    */
+     */
     public Optional<String> postAnalyticsProcessorSourceUri() {
         return Optional.ofNullable(this.postAnalyticsProcessorSourceUri);
     }
@@ -103,9 +103,9 @@ public final class ModelQualityJobDefinitionModelQualityAppSpecification {
         return this.problemType;
     }
     /**
-     * An Amazon S3 URI to a script that is called per row prior to running analysis. It can base64 decode the payload and convert it into a flatted json so that the built-in container can use the converted data. Applicable only for the built-in (first party) containers
+     * @return An Amazon S3 URI to a script that is called per row prior to running analysis. It can base64 decode the payload and convert it into a flatted json so that the built-in container can use the converted data. Applicable only for the built-in (first party) containers
      * 
-    */
+     */
     public Optional<String> recordPreprocessorSourceUri() {
         return Optional.ofNullable(this.recordPreprocessorSourceUri);
     }

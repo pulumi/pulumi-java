@@ -25,6 +25,10 @@ public final class DimensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A unique identifier for the dimension.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class DimensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stringValues", required=true)
     private Output<List<String>> stringValues;
 
+    /**
+     * @return Specifies the value or list of values for the dimension.
+     * 
+     */
     public Output<List<String>> stringValues() {
         return this.stringValues;
     }
@@ -47,6 +55,10 @@ public final class DimensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<DimensionTagArgs>> tags;
 
+    /**
+     * @return Metadata that can be used to manage the dimension.
+     * 
+     */
     public Optional<Output<List<DimensionTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -58,6 +70,10 @@ public final class DimensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<DimensionType> type;
 
+    /**
+     * @return Specifies the type of the dimension.
+     * 
+     */
     public Output<DimensionType> type() {
         return this.type;
     }
@@ -89,46 +105,106 @@ public final class DimensionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DimensionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name A unique identifier for the dimension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A unique identifier for the dimension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param stringValues Specifies the value or list of values for the dimension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stringValues(Output<List<String>> stringValues) {
             $.stringValues = stringValues;
             return this;
         }
 
+        /**
+         * @param stringValues Specifies the value or list of values for the dimension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stringValues(List<String> stringValues) {
             return stringValues(Output.of(stringValues));
         }
 
+        /**
+         * @param stringValues Specifies the value or list of values for the dimension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stringValues(String... stringValues) {
             return stringValues(List.of(stringValues));
         }
 
+        /**
+         * @param tags Metadata that can be used to manage the dimension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<DimensionTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Metadata that can be used to manage the dimension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<DimensionTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Metadata that can be used to manage the dimension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(DimensionTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param type Specifies the type of the dimension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<DimensionType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Specifies the type of the dimension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(DimensionType type) {
             return type(Output.of(type));
         }

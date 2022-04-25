@@ -23,6 +23,10 @@ public final class ResourceVersionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="executionRoleArn")
     private @Nullable Output<String> executionRoleArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the IAM execution role to use to register the type. If your resource type calls AWS APIs in any of its handlers, you must create an IAM execution role that includes the necessary permissions to call those AWS APIs, and provision that execution role in your account. CloudFormation then assumes that execution role to provide your resource type with the appropriate credentials.
+     * 
+     */
     public Optional<Output<String>> executionRoleArn() {
         return Optional.ofNullable(this.executionRoleArn);
     }
@@ -34,6 +38,10 @@ public final class ResourceVersionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="loggingConfig")
     private @Nullable Output<ResourceVersionLoggingConfigArgs> loggingConfig;
 
+    /**
+     * @return Specifies logging configuration information for a type.
+     * 
+     */
     public Optional<Output<ResourceVersionLoggingConfigArgs>> loggingConfig() {
         return Optional.ofNullable(this.loggingConfig);
     }
@@ -47,6 +55,12 @@ public final class ResourceVersionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="schemaHandlerPackage", required=true)
     private Output<String> schemaHandlerPackage;
 
+    /**
+     * @return A url to the S3 bucket containing the schema handler package that contains the schema, event handlers, and associated files for the type you want to register.
+     * 
+     * For information on generating a schema handler package for the type you want to register, see submit in the CloudFormation CLI User Guide.
+     * 
+     */
     public Output<String> schemaHandlerPackage() {
         return this.schemaHandlerPackage;
     }
@@ -60,6 +74,12 @@ public final class ResourceVersionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="typeName", required=true)
     private Output<String> typeName;
 
+    /**
+     * @return The name of the type being registered.
+     * 
+     * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
+     * 
+     */
     public Output<String> typeName() {
         return this.typeName;
     }
@@ -91,38 +111,94 @@ public final class ResourceVersionArgs extends com.pulumi.resources.ResourceArgs
             $ = new ResourceVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param executionRoleArn The Amazon Resource Name (ARN) of the IAM execution role to use to register the type. If your resource type calls AWS APIs in any of its handlers, you must create an IAM execution role that includes the necessary permissions to call those AWS APIs, and provision that execution role in your account. CloudFormation then assumes that execution role to provide your resource type with the appropriate credentials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionRoleArn(@Nullable Output<String> executionRoleArn) {
             $.executionRoleArn = executionRoleArn;
             return this;
         }
 
+        /**
+         * @param executionRoleArn The Amazon Resource Name (ARN) of the IAM execution role to use to register the type. If your resource type calls AWS APIs in any of its handlers, you must create an IAM execution role that includes the necessary permissions to call those AWS APIs, and provision that execution role in your account. CloudFormation then assumes that execution role to provide your resource type with the appropriate credentials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionRoleArn(String executionRoleArn) {
             return executionRoleArn(Output.of(executionRoleArn));
         }
 
+        /**
+         * @param loggingConfig Specifies logging configuration information for a type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingConfig(@Nullable Output<ResourceVersionLoggingConfigArgs> loggingConfig) {
             $.loggingConfig = loggingConfig;
             return this;
         }
 
+        /**
+         * @param loggingConfig Specifies logging configuration information for a type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingConfig(ResourceVersionLoggingConfigArgs loggingConfig) {
             return loggingConfig(Output.of(loggingConfig));
         }
 
+        /**
+         * @param schemaHandlerPackage A url to the S3 bucket containing the schema handler package that contains the schema, event handlers, and associated files for the type you want to register.
+         * 
+         * For information on generating a schema handler package for the type you want to register, see submit in the CloudFormation CLI User Guide.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaHandlerPackage(Output<String> schemaHandlerPackage) {
             $.schemaHandlerPackage = schemaHandlerPackage;
             return this;
         }
 
+        /**
+         * @param schemaHandlerPackage A url to the S3 bucket containing the schema handler package that contains the schema, event handlers, and associated files for the type you want to register.
+         * 
+         * For information on generating a schema handler package for the type you want to register, see submit in the CloudFormation CLI User Guide.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaHandlerPackage(String schemaHandlerPackage) {
             return schemaHandlerPackage(Output.of(schemaHandlerPackage));
         }
 
+        /**
+         * @param typeName The name of the type being registered.
+         * 
+         * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeName(Output<String> typeName) {
             $.typeName = typeName;
             return this;
         }
 
+        /**
+         * @param typeName The name of the type being registered.
+         * 
+         * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeName(String typeName) {
             return typeName(Output.of(typeName));
         }

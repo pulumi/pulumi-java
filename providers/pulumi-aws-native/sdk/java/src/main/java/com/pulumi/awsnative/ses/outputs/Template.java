@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class Template {
     /**
-     * The HTML body of the email.
+     * @return The HTML body of the email.
      * 
      */
     private final @Nullable String htmlPart;
     /**
-     * The subject line of the email.
+     * @return The subject line of the email.
      * 
      */
     private final String subjectPart;
     /**
-     * The name of the template.
+     * @return The name of the template.
      * 
      */
     private final @Nullable String templateName;
     /**
-     * The email body that is visible to recipients whose email clients do not display HTML content.
+     * @return The email body that is visible to recipients whose email clients do not display HTML content.
      * 
      */
     private final @Nullable String textPart;
@@ -45,30 +45,30 @@ public final class Template {
     }
 
     /**
-     * The HTML body of the email.
+     * @return The HTML body of the email.
      * 
-    */
+     */
     public Optional<String> htmlPart() {
         return Optional.ofNullable(this.htmlPart);
     }
     /**
-     * The subject line of the email.
+     * @return The subject line of the email.
      * 
-    */
+     */
     public String subjectPart() {
         return this.subjectPart;
     }
     /**
-     * The name of the template.
+     * @return The name of the template.
      * 
-    */
+     */
     public Optional<String> templateName() {
         return Optional.ofNullable(this.templateName);
     }
     /**
-     * The email body that is visible to recipients whose email clients do not display HTML content.
+     * @return The email body that is visible to recipients whose email clients do not display HTML content.
      * 
-    */
+     */
     public Optional<String> textPart() {
         return Optional.ofNullable(this.textPart);
     }

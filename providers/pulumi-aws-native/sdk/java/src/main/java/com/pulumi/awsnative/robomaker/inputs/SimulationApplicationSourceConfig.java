@@ -24,6 +24,10 @@ public final class SimulationApplicationSourceConfig extends com.pulumi.resource
     @Import(name="architecture", required=true)
     private SimulationApplicationSourceConfigArchitecture architecture;
 
+    /**
+     * @return The target processor architecture for the application.
+     * 
+     */
     public SimulationApplicationSourceConfigArchitecture architecture() {
         return this.architecture;
     }
@@ -35,6 +39,10 @@ public final class SimulationApplicationSourceConfig extends com.pulumi.resource
     @Import(name="s3Bucket", required=true)
     private String s3Bucket;
 
+    /**
+     * @return The Amazon S3 bucket name.
+     * 
+     */
     public String s3Bucket() {
         return this.s3Bucket;
     }
@@ -46,6 +54,10 @@ public final class SimulationApplicationSourceConfig extends com.pulumi.resource
     @Import(name="s3Key", required=true)
     private String s3Key;
 
+    /**
+     * @return The s3 object key.
+     * 
+     */
     public String s3Key() {
         return this.s3Key;
     }
@@ -76,16 +88,34 @@ public final class SimulationApplicationSourceConfig extends com.pulumi.resource
             $ = new SimulationApplicationSourceConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param architecture The target processor architecture for the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder architecture(SimulationApplicationSourceConfigArchitecture architecture) {
             $.architecture = architecture;
             return this;
         }
 
+        /**
+         * @param s3Bucket The Amazon S3 bucket name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Bucket(String s3Bucket) {
             $.s3Bucket = s3Bucket;
             return this;
         }
 
+        /**
+         * @param s3Key The s3 object key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Key(String s3Key) {
             $.s3Key = s3Key;
             return this;

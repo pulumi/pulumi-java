@@ -24,6 +24,10 @@ public final class KeyspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyspaceName")
     private @Nullable Output<String> keyspaceName;
 
+    /**
+     * @return Name for Cassandra keyspace
+     * 
+     */
     public Optional<Output<String>> keyspaceName() {
         return Optional.ofNullable(this.keyspaceName);
     }
@@ -60,11 +64,23 @@ public final class KeyspaceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new KeyspaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyspaceName Name for Cassandra keyspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyspaceName(@Nullable Output<String> keyspaceName) {
             $.keyspaceName = keyspaceName;
             return this;
         }
 
+        /**
+         * @param keyspaceName Name for Cassandra keyspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyspaceName(String keyspaceName) {
             return keyspaceName(Output.of(keyspaceName));
         }

@@ -49,6 +49,10 @@ public final class ServiceCatalogProvisioningDetailsPropertiesArgs extends com.p
     @Import(name="provisioningParameters")
     private @Nullable Output<List<ProjectProvisioningParameterArgs>> provisioningParameters;
 
+    /**
+     * @return Parameters specified by the administrator that are required for provisioning the product.
+     * 
+     */
     public Optional<Output<List<ProjectProvisioningParameterArgs>>> provisioningParameters() {
         return Optional.ofNullable(this.provisioningParameters);
     }
@@ -107,15 +111,33 @@ public final class ServiceCatalogProvisioningDetailsPropertiesArgs extends com.p
             return provisioningArtifactId(Output.of(provisioningArtifactId));
         }
 
+        /**
+         * @param provisioningParameters Parameters specified by the administrator that are required for provisioning the product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningParameters(@Nullable Output<List<ProjectProvisioningParameterArgs>> provisioningParameters) {
             $.provisioningParameters = provisioningParameters;
             return this;
         }
 
+        /**
+         * @param provisioningParameters Parameters specified by the administrator that are required for provisioning the product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningParameters(List<ProjectProvisioningParameterArgs> provisioningParameters) {
             return provisioningParameters(Output.of(provisioningParameters));
         }
 
+        /**
+         * @param provisioningParameters Parameters specified by the administrator that are required for provisioning the product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningParameters(ProjectProvisioningParameterArgs... provisioningParameters) {
             return provisioningParameters(List.of(provisioningParameters));
         }

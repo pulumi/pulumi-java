@@ -60,6 +60,10 @@ public final class RuleGroupRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="ruleLabels")
     private @Nullable List<RuleGroupLabel> ruleLabels;
 
+    /**
+     * @return Collection of Rule Labels.
+     * 
+     */
     public Optional<List<RuleGroupLabel>> ruleLabels() {
         return Optional.ofNullable(this.ruleLabels);
     }
@@ -128,11 +132,23 @@ public final class RuleGroupRule extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param ruleLabels Collection of Rule Labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleLabels(@Nullable List<RuleGroupLabel> ruleLabels) {
             $.ruleLabels = ruleLabels;
             return this;
         }
 
+        /**
+         * @param ruleLabels Collection of Rule Labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleLabels(RuleGroupLabel... ruleLabels) {
             return ruleLabels(List.of(ruleLabels));
         }

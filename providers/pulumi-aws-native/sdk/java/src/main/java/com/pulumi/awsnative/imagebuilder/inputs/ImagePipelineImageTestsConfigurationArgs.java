@@ -27,6 +27,10 @@ public final class ImagePipelineImageTestsConfigurationArgs extends com.pulumi.r
     @Import(name="imageTestsEnabled")
     private @Nullable Output<Boolean> imageTestsEnabled;
 
+    /**
+     * @return Defines if tests should be executed when building this image.
+     * 
+     */
     public Optional<Output<Boolean>> imageTestsEnabled() {
         return Optional.ofNullable(this.imageTestsEnabled);
     }
@@ -38,6 +42,10 @@ public final class ImagePipelineImageTestsConfigurationArgs extends com.pulumi.r
     @Import(name="timeoutMinutes")
     private @Nullable Output<Integer> timeoutMinutes;
 
+    /**
+     * @return The maximum time in minutes that tests are permitted to run.
+     * 
+     */
     public Optional<Output<Integer>> timeoutMinutes() {
         return Optional.ofNullable(this.timeoutMinutes);
     }
@@ -67,20 +75,44 @@ public final class ImagePipelineImageTestsConfigurationArgs extends com.pulumi.r
             $ = new ImagePipelineImageTestsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param imageTestsEnabled Defines if tests should be executed when building this image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageTestsEnabled(@Nullable Output<Boolean> imageTestsEnabled) {
             $.imageTestsEnabled = imageTestsEnabled;
             return this;
         }
 
+        /**
+         * @param imageTestsEnabled Defines if tests should be executed when building this image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageTestsEnabled(Boolean imageTestsEnabled) {
             return imageTestsEnabled(Output.of(imageTestsEnabled));
         }
 
+        /**
+         * @param timeoutMinutes The maximum time in minutes that tests are permitted to run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutMinutes(@Nullable Output<Integer> timeoutMinutes) {
             $.timeoutMinutes = timeoutMinutes;
             return this;
         }
 
+        /**
+         * @param timeoutMinutes The maximum time in minutes that tests are permitted to run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutMinutes(Integer timeoutMinutes) {
             return timeoutMinutes(Output.of(timeoutMinutes));
         }

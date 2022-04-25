@@ -15,12 +15,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BotFulfillmentStartResponseSpecification {
     /**
-     * Determines whether the user can interrupt the start message while it is playing.
+     * @return Determines whether the user can interrupt the start message while it is playing.
      * 
      */
     private final @Nullable Boolean allowInterrupt;
     /**
-     * The delay between when the Lambda fulfillment function starts running and the start message is played. If the Lambda function returns before the delay is over, the start message isn&#39;t played.
+     * @return The delay between when the Lambda fulfillment function starts running and the start message is played. If the Lambda function returns before the delay is over, the start message isn&#39;t played.
      * 
      */
     private final Integer delayInSeconds;
@@ -37,16 +37,16 @@ public final class BotFulfillmentStartResponseSpecification {
     }
 
     /**
-     * Determines whether the user can interrupt the start message while it is playing.
+     * @return Determines whether the user can interrupt the start message while it is playing.
      * 
-    */
+     */
     public Optional<Boolean> allowInterrupt() {
         return Optional.ofNullable(this.allowInterrupt);
     }
     /**
-     * The delay between when the Lambda fulfillment function starts running and the start message is played. If the Lambda function returns before the delay is over, the start message isn&#39;t played.
+     * @return The delay between when the Lambda fulfillment function starts running and the start message is played. If the Lambda function returns before the delay is over, the start message isn&#39;t played.
      * 
-    */
+     */
     public Integer delayInSeconds() {
         return this.delayInSeconds;
     }

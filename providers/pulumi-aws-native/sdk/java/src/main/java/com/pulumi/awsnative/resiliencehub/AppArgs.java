@@ -25,6 +25,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appTemplateBody", required=true)
     private Output<String> appTemplateBody;
 
+    /**
+     * @return A string containing full ResilienceHub app template body.
+     * 
+     */
     public Output<String> appTemplateBody() {
         return this.appTemplateBody;
     }
@@ -36,6 +40,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return App description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the app.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -58,6 +70,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resiliencyPolicyArn")
     private @Nullable Output<String> resiliencyPolicyArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the Resiliency Policy.
+     * 
+     */
     public Optional<Output<String>> resiliencyPolicyArn() {
         return Optional.ofNullable(this.resiliencyPolicyArn);
     }
@@ -69,6 +85,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceMappings", required=true)
     private Output<List<AppResourceMappingArgs>> resourceMappings;
 
+    /**
+     * @return An array of ResourceMapping objects.
+     * 
+     */
     public Output<List<AppResourceMappingArgs>> resourceMappings() {
         return this.resourceMappings;
     }
@@ -109,51 +129,117 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AppArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appTemplateBody A string containing full ResilienceHub app template body.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appTemplateBody(Output<String> appTemplateBody) {
             $.appTemplateBody = appTemplateBody;
             return this;
         }
 
+        /**
+         * @param appTemplateBody A string containing full ResilienceHub app template body.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appTemplateBody(String appTemplateBody) {
             return appTemplateBody(Output.of(appTemplateBody));
         }
 
+        /**
+         * @param description App description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description App description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name Name of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resiliencyPolicyArn Amazon Resource Name (ARN) of the Resiliency Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resiliencyPolicyArn(@Nullable Output<String> resiliencyPolicyArn) {
             $.resiliencyPolicyArn = resiliencyPolicyArn;
             return this;
         }
 
+        /**
+         * @param resiliencyPolicyArn Amazon Resource Name (ARN) of the Resiliency Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resiliencyPolicyArn(String resiliencyPolicyArn) {
             return resiliencyPolicyArn(Output.of(resiliencyPolicyArn));
         }
 
+        /**
+         * @param resourceMappings An array of ResourceMapping objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceMappings(Output<List<AppResourceMappingArgs>> resourceMappings) {
             $.resourceMappings = resourceMappings;
             return this;
         }
 
+        /**
+         * @param resourceMappings An array of ResourceMapping objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceMappings(List<AppResourceMappingArgs> resourceMappings) {
             return resourceMappings(Output.of(resourceMappings));
         }
 
+        /**
+         * @param resourceMappings An array of ResourceMapping objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceMappings(AppResourceMappingArgs... resourceMappings) {
             return resourceMappings(List.of(resourceMappings));
         }

@@ -27,6 +27,10 @@ public final class ModelQualityJobDefinitionS3OutputArgs extends com.pulumi.reso
     @Import(name="localPath", required=true)
     private Output<String> localPath;
 
+    /**
+     * @return The local path to the Amazon S3 storage location where Amazon SageMaker saves the results of a monitoring job. LocalPath is an absolute path for the output data.
+     * 
+     */
     public Output<String> localPath() {
         return this.localPath;
     }
@@ -38,6 +42,10 @@ public final class ModelQualityJobDefinitionS3OutputArgs extends com.pulumi.reso
     @Import(name="s3UploadMode")
     private @Nullable Output<ModelQualityJobDefinitionS3OutputS3UploadMode> s3UploadMode;
 
+    /**
+     * @return Whether to upload the results of the monitoring job continuously or after the job completes.
+     * 
+     */
     public Optional<Output<ModelQualityJobDefinitionS3OutputS3UploadMode>> s3UploadMode() {
         return Optional.ofNullable(this.s3UploadMode);
     }
@@ -49,6 +57,10 @@ public final class ModelQualityJobDefinitionS3OutputArgs extends com.pulumi.reso
     @Import(name="s3Uri", required=true)
     private Output<String> s3Uri;
 
+    /**
+     * @return A URI that identifies the Amazon S3 storage location where Amazon SageMaker saves the results of a monitoring job.
+     * 
+     */
     public Output<String> s3Uri() {
         return this.s3Uri;
     }
@@ -79,29 +91,65 @@ public final class ModelQualityJobDefinitionS3OutputArgs extends com.pulumi.reso
             $ = new ModelQualityJobDefinitionS3OutputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param localPath The local path to the Amazon S3 storage location where Amazon SageMaker saves the results of a monitoring job. LocalPath is an absolute path for the output data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localPath(Output<String> localPath) {
             $.localPath = localPath;
             return this;
         }
 
+        /**
+         * @param localPath The local path to the Amazon S3 storage location where Amazon SageMaker saves the results of a monitoring job. LocalPath is an absolute path for the output data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localPath(String localPath) {
             return localPath(Output.of(localPath));
         }
 
+        /**
+         * @param s3UploadMode Whether to upload the results of the monitoring job continuously or after the job completes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3UploadMode(@Nullable Output<ModelQualityJobDefinitionS3OutputS3UploadMode> s3UploadMode) {
             $.s3UploadMode = s3UploadMode;
             return this;
         }
 
+        /**
+         * @param s3UploadMode Whether to upload the results of the monitoring job continuously or after the job completes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3UploadMode(ModelQualityJobDefinitionS3OutputS3UploadMode s3UploadMode) {
             return s3UploadMode(Output.of(s3UploadMode));
         }
 
+        /**
+         * @param s3Uri A URI that identifies the Amazon S3 storage location where Amazon SageMaker saves the results of a monitoring job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Uri(Output<String> s3Uri) {
             $.s3Uri = s3Uri;
             return this;
         }
 
+        /**
+         * @param s3Uri A URI that identifies the Amazon S3 storage location where Amazon SageMaker saves the results of a monitoring job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Uri(String s3Uri) {
             return s3Uri(Output.of(s3Uri));
         }

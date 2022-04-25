@@ -25,6 +25,10 @@ public final class Device extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Description of the device
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class Device extends com.pulumi.resources.InvokeArgs {
     @Import(name="deviceName", required=true)
     private String deviceName;
 
+    /**
+     * @return The name of the device
+     * 
+     */
     public String deviceName() {
         return this.deviceName;
     }
@@ -47,6 +55,10 @@ public final class Device extends com.pulumi.resources.InvokeArgs {
     @Import(name="iotThingName")
     private @Nullable String iotThingName;
 
+    /**
+     * @return AWS Internet of Things (IoT) object name.
+     * 
+     */
     public Optional<String> iotThingName() {
         return Optional.ofNullable(this.iotThingName);
     }
@@ -77,16 +89,34 @@ public final class Device extends com.pulumi.resources.InvokeArgs {
             $ = new Device(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of the device
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param deviceName The name of the device
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param iotThingName AWS Internet of Things (IoT) object name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iotThingName(@Nullable String iotThingName) {
             $.iotThingName = iotThingName;
             return this;

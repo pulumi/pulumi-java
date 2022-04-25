@@ -27,6 +27,10 @@ public final class BucketTopicConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="event", required=true)
     private Output<String> event;
 
+    /**
+     * @return The Amazon S3 bucket event about which to send notifications.
+     * 
+     */
     public Output<String> event() {
         return this.event;
     }
@@ -38,6 +42,10 @@ public final class BucketTopicConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="filter")
     private @Nullable Output<BucketNotificationFilterArgs> filter;
 
+    /**
+     * @return The filtering rules that determine for which objects to send notifications.
+     * 
+     */
     public Optional<Output<BucketNotificationFilterArgs>> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -49,6 +57,10 @@ public final class BucketTopicConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="topic", required=true)
     private Output<String> topic;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the Amazon SNS topic to which Amazon S3 publishes a message when it detects events of the specified type.
+     * 
+     */
     public Output<String> topic() {
         return this.topic;
     }
@@ -79,29 +91,65 @@ public final class BucketTopicConfigurationArgs extends com.pulumi.resources.Res
             $ = new BucketTopicConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param event The Amazon S3 bucket event about which to send notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder event(Output<String> event) {
             $.event = event;
             return this;
         }
 
+        /**
+         * @param event The Amazon S3 bucket event about which to send notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder event(String event) {
             return event(Output.of(event));
         }
 
+        /**
+         * @param filter The filtering rules that determine for which objects to send notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<BucketNotificationFilterArgs> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter The filtering rules that determine for which objects to send notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(BucketNotificationFilterArgs filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param topic The Amazon Resource Name (ARN) of the Amazon SNS topic to which Amazon S3 publishes a message when it detects events of the specified type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(Output<String> topic) {
             $.topic = topic;
             return this;
         }
 
+        /**
+         * @param topic The Amazon Resource Name (ARN) of the Amazon SNS topic to which Amazon S3 publishes a message when it detects events of the specified type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(String topic) {
             return topic(Output.of(topic));
         }

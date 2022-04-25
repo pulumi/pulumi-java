@@ -19,6 +19,10 @@ public final class GetFlowArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="flowName", required=true)
     private String flowName;
 
+    /**
+     * @return Name of the flow.
+     * 
+     */
     public String flowName() {
         return this.flowName;
     }
@@ -47,6 +51,12 @@ public final class GetFlowArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFlowArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param flowName Name of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flowName(String flowName) {
             $.flowName = flowName;
             return this;

@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EndpointAccessNetworkInterface {
     /**
-     * The Availability Zone.
+     * @return The Availability Zone.
      * 
      */
     private final @Nullable String availabilityZone;
     /**
-     * The network interface identifier.
+     * @return The network interface identifier.
      * 
      */
     private final @Nullable String networkInterfaceId;
     /**
-     * The IPv4 address of the network interface within the subnet.
+     * @return The IPv4 address of the network interface within the subnet.
      * 
      */
     private final @Nullable String privateIpAddress;
     /**
-     * The subnet identifier.
+     * @return The subnet identifier.
      * 
      */
     private final @Nullable String subnetId;
@@ -45,30 +45,30 @@ public final class EndpointAccessNetworkInterface {
     }
 
     /**
-     * The Availability Zone.
+     * @return The Availability Zone.
      * 
-    */
+     */
     public Optional<String> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
     /**
-     * The network interface identifier.
+     * @return The network interface identifier.
      * 
-    */
+     */
     public Optional<String> networkInterfaceId() {
         return Optional.ofNullable(this.networkInterfaceId);
     }
     /**
-     * The IPv4 address of the network interface within the subnet.
+     * @return The IPv4 address of the network interface within the subnet.
      * 
-    */
+     */
     public Optional<String> privateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
     /**
-     * The subnet identifier.
+     * @return The subnet identifier.
      * 
-    */
+     */
     public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }

@@ -19,6 +19,10 @@ public final class GetCarrierGatewayArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="carrierGatewayId", required=true)
     private String carrierGatewayId;
 
+    /**
+     * @return The ID of the carrier gateway.
+     * 
+     */
     public String carrierGatewayId() {
         return this.carrierGatewayId;
     }
@@ -47,6 +51,12 @@ public final class GetCarrierGatewayArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetCarrierGatewayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param carrierGatewayId The ID of the carrier gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder carrierGatewayId(String carrierGatewayId) {
             $.carrierGatewayId = carrierGatewayId;
             return this;

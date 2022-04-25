@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SimulationApplicationSimulationSoftwareSuite {
     /**
-     * The name of the simulation software suite.
+     * @return The name of the simulation software suite.
      * 
      */
     private final SimulationApplicationSimulationSoftwareSuiteName name;
     /**
-     * The version of the simulation software suite.
+     * @return The version of the simulation software suite.
      * 
      */
     private final @Nullable SimulationApplicationSimulationSoftwareSuiteVersion version;
@@ -32,16 +32,16 @@ public final class SimulationApplicationSimulationSoftwareSuite {
     }
 
     /**
-     * The name of the simulation software suite.
+     * @return The name of the simulation software suite.
      * 
-    */
+     */
     public SimulationApplicationSimulationSoftwareSuiteName name() {
         return this.name;
     }
     /**
-     * The version of the simulation software suite.
+     * @return The version of the simulation software suite.
      * 
-    */
+     */
     public Optional<SimulationApplicationSimulationSoftwareSuiteVersion> version() {
         return Optional.ofNullable(this.version);
     }

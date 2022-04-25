@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class HoursOfOperationConfig {
     /**
-     * The day that the hours of operation applies to.
+     * @return The day that the hours of operation applies to.
      * 
      */
     private final HoursOfOperationConfigDay day;
     /**
-     * The end time that your contact center closes.
+     * @return The end time that your contact center closes.
      * 
      */
     private final HoursOfOperationTimeSlice endTime;
     /**
-     * The start time that your contact center opens.
+     * @return The start time that your contact center opens.
      * 
      */
     private final HoursOfOperationTimeSlice startTime;
@@ -37,23 +37,23 @@ public final class HoursOfOperationConfig {
     }
 
     /**
-     * The day that the hours of operation applies to.
+     * @return The day that the hours of operation applies to.
      * 
-    */
+     */
     public HoursOfOperationConfigDay day() {
         return this.day;
     }
     /**
-     * The end time that your contact center closes.
+     * @return The end time that your contact center closes.
      * 
-    */
+     */
     public HoursOfOperationTimeSlice endTime() {
         return this.endTime;
     }
     /**
-     * The start time that your contact center opens.
+     * @return The start time that your contact center opens.
      * 
-    */
+     */
     public HoursOfOperationTimeSlice startTime() {
         return this.startTime;
     }

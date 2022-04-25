@@ -22,6 +22,10 @@ public final class AliasRoutingStrategy extends com.pulumi.resources.InvokeArgs 
     @Import(name="fleetId")
     private @Nullable String fleetId;
 
+    /**
+     * @return A unique identifier for a fleet that the alias points to. If you specify SIMPLE for the Type property, you must specify this property.
+     * 
+     */
     public Optional<String> fleetId() {
         return Optional.ofNullable(this.fleetId);
     }
@@ -33,6 +37,10 @@ public final class AliasRoutingStrategy extends com.pulumi.resources.InvokeArgs 
     @Import(name="message")
     private @Nullable String message;
 
+    /**
+     * @return The message text to be used with a terminal routing strategy. If you specify TERMINAL for the Type property, you must specify this property.
+     * 
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -44,6 +52,10 @@ public final class AliasRoutingStrategy extends com.pulumi.resources.InvokeArgs 
     @Import(name="type", required=true)
     private AliasRoutingStrategyType type;
 
+    /**
+     * @return Simple routing strategy. The alias resolves to one specific fleet. Use this type when routing to active fleets.
+     * 
+     */
     public AliasRoutingStrategyType type() {
         return this.type;
     }
@@ -74,16 +86,34 @@ public final class AliasRoutingStrategy extends com.pulumi.resources.InvokeArgs 
             $ = new AliasRoutingStrategy(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fleetId A unique identifier for a fleet that the alias points to. If you specify SIMPLE for the Type property, you must specify this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fleetId(@Nullable String fleetId) {
             $.fleetId = fleetId;
             return this;
         }
 
+        /**
+         * @param message The message text to be used with a terminal routing strategy. If you specify TERMINAL for the Type property, you must specify this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param type Simple routing strategy. The alias resolves to one specific fleet. Use this type when routing to active fleets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(AliasRoutingStrategyType type) {
             $.type = type;
             return this;

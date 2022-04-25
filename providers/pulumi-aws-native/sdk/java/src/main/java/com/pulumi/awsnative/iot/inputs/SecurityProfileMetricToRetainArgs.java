@@ -27,6 +27,10 @@ public final class SecurityProfileMetricToRetainArgs extends com.pulumi.resource
     @Import(name="metric", required=true)
     private Output<String> metric;
 
+    /**
+     * @return What is measured by the behavior.
+     * 
+     */
     public Output<String> metric() {
         return this.metric;
     }
@@ -63,11 +67,23 @@ public final class SecurityProfileMetricToRetainArgs extends com.pulumi.resource
             $ = new SecurityProfileMetricToRetainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metric What is measured by the behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(Output<String> metric) {
             $.metric = metric;
             return this;
         }
 
+        /**
+         * @param metric What is measured by the behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(String metric) {
             return metric(Output.of(metric));
         }

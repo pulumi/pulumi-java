@@ -22,6 +22,10 @@ public final class ResolverQueryLoggingConfigArgs extends com.pulumi.resources.R
     @Import(name="destinationArn")
     private @Nullable Output<String> destinationArn;
 
+    /**
+     * @return destination arn
+     * 
+     */
     public Optional<Output<String>> destinationArn() {
         return Optional.ofNullable(this.destinationArn);
     }
@@ -33,6 +37,10 @@ public final class ResolverQueryLoggingConfigArgs extends com.pulumi.resources.R
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return ResolverQueryLogConfigName
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -62,20 +70,44 @@ public final class ResolverQueryLoggingConfigArgs extends com.pulumi.resources.R
             $ = new ResolverQueryLoggingConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationArn destination arn
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationArn(@Nullable Output<String> destinationArn) {
             $.destinationArn = destinationArn;
             return this;
         }
 
+        /**
+         * @param destinationArn destination arn
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationArn(String destinationArn) {
             return destinationArn(Output.of(destinationArn));
         }
 
+        /**
+         * @param name ResolverQueryLogConfigName
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name ResolverQueryLogConfigName
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

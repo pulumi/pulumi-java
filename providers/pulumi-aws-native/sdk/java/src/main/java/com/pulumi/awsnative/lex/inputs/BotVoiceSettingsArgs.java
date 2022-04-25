@@ -24,6 +24,10 @@ public final class BotVoiceSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="voiceId", required=true)
     private Output<String> voiceId;
 
+    /**
+     * @return The Amazon Polly voice ID that Amazon Lex uses for voice interaction with the user.
+     * 
+     */
     public Output<String> voiceId() {
         return this.voiceId;
     }
@@ -52,11 +56,23 @@ public final class BotVoiceSettingsArgs extends com.pulumi.resources.ResourceArg
             $ = new BotVoiceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param voiceId The Amazon Polly voice ID that Amazon Lex uses for voice interaction with the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder voiceId(Output<String> voiceId) {
             $.voiceId = voiceId;
             return this;
         }
 
+        /**
+         * @param voiceId The Amazon Polly voice ID that Amazon Lex uses for voice interaction with the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder voiceId(String voiceId) {
             return voiceId(Output.of(voiceId));
         }

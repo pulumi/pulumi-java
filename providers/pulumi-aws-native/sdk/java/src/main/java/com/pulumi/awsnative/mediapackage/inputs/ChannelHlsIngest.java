@@ -26,6 +26,10 @@ public final class ChannelHlsIngest extends com.pulumi.resources.InvokeArgs {
     @Import(name="ingestEndpoints")
     private @Nullable List<ChannelIngestEndpoint> ingestEndpoints;
 
+    /**
+     * @return A list of endpoints to which the source stream should be sent.
+     * 
+     */
     public Optional<List<ChannelIngestEndpoint>> ingestEndpoints() {
         return Optional.ofNullable(this.ingestEndpoints);
     }
@@ -54,11 +58,23 @@ public final class ChannelHlsIngest extends com.pulumi.resources.InvokeArgs {
             $ = new ChannelHlsIngest(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ingestEndpoints A list of endpoints to which the source stream should be sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingestEndpoints(@Nullable List<ChannelIngestEndpoint> ingestEndpoints) {
             $.ingestEndpoints = ingestEndpoints;
             return this;
         }
 
+        /**
+         * @param ingestEndpoints A list of endpoints to which the source stream should be sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingestEndpoints(ChannelIngestEndpoint... ingestEndpoints) {
             return ingestEndpoints(List.of(ingestEndpoints));
         }

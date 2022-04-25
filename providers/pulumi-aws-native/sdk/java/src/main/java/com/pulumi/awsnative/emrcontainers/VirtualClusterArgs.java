@@ -25,6 +25,10 @@ public final class VirtualClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="containerProvider", required=true)
     private Output<VirtualClusterContainerProviderArgs> containerProvider;
 
+    /**
+     * @return Container provider of the virtual cluster.
+     * 
+     */
     public Output<VirtualClusterContainerProviderArgs> containerProvider() {
         return this.containerProvider;
     }
@@ -36,6 +40,10 @@ public final class VirtualClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the virtual cluster.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -47,6 +55,10 @@ public final class VirtualClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<List<VirtualClusterTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this virtual cluster.
+     * 
+     */
     public Optional<Output<List<VirtualClusterTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -77,33 +89,75 @@ public final class VirtualClusterArgs extends com.pulumi.resources.ResourceArgs 
             $ = new VirtualClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerProvider Container provider of the virtual cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerProvider(Output<VirtualClusterContainerProviderArgs> containerProvider) {
             $.containerProvider = containerProvider;
             return this;
         }
 
+        /**
+         * @param containerProvider Container provider of the virtual cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerProvider(VirtualClusterContainerProviderArgs containerProvider) {
             return containerProvider(Output.of(containerProvider));
         }
 
+        /**
+         * @param name Name of the virtual cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the virtual cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this virtual cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<VirtualClusterTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this virtual cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<VirtualClusterTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this virtual cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(VirtualClusterTagArgs... tags) {
             return tags(List.of(tags));
         }

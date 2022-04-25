@@ -25,6 +25,10 @@ public final class ParameterGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the parameter group.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class ParameterGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="family", required=true)
     private Output<String> family;
 
+    /**
+     * @return The name of the parameter group family that this parameter group is compatible with.
+     * 
+     */
     public Output<String> family() {
         return this.family;
     }
@@ -47,6 +55,10 @@ public final class ParameterGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="parameterGroupName")
     private @Nullable Output<String> parameterGroupName;
 
+    /**
+     * @return The name of the parameter group.
+     * 
+     */
     public Optional<Output<String>> parameterGroupName() {
         return Optional.ofNullable(this.parameterGroupName);
     }
@@ -58,6 +70,10 @@ public final class ParameterGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="parameters")
     private @Nullable Output<Object> parameters;
 
+    /**
+     * @return An map of parameter names and values for the parameter update. You must supply at least one parameter name and value; subsequent arguments are optional.
+     * 
+     */
     public Optional<Output<Object>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -69,6 +85,10 @@ public final class ParameterGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<List<ParameterGroupTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this parameter group.
+     * 
+     */
     public Optional<Output<List<ParameterGroupTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -101,51 +121,117 @@ public final class ParameterGroupArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ParameterGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A description of the parameter group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the parameter group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param family The name of the parameter group family that this parameter group is compatible with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(Output<String> family) {
             $.family = family;
             return this;
         }
 
+        /**
+         * @param family The name of the parameter group family that this parameter group is compatible with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(String family) {
             return family(Output.of(family));
         }
 
+        /**
+         * @param parameterGroupName The name of the parameter group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterGroupName(@Nullable Output<String> parameterGroupName) {
             $.parameterGroupName = parameterGroupName;
             return this;
         }
 
+        /**
+         * @param parameterGroupName The name of the parameter group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterGroupName(String parameterGroupName) {
             return parameterGroupName(Output.of(parameterGroupName));
         }
 
+        /**
+         * @param parameters An map of parameter names and values for the parameter update. You must supply at least one parameter name and value; subsequent arguments are optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Object> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters An map of parameter names and values for the parameter update. You must supply at least one parameter name and value; subsequent arguments are optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Object parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this parameter group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<ParameterGroupTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this parameter group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<ParameterGroupTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this parameter group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(ParameterGroupTagArgs... tags) {
             return tags(List.of(tags));
         }

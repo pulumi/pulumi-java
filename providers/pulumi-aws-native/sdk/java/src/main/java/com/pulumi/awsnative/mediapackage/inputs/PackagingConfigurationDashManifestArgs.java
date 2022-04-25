@@ -30,6 +30,10 @@ public final class PackagingConfigurationDashManifestArgs extends com.pulumi.res
     @Import(name="manifestLayout")
     private @Nullable Output<PackagingConfigurationDashManifestManifestLayout> manifestLayout;
 
+    /**
+     * @return Determines the position of some tags in the Media Presentation Description (MPD). When set to FULL, elements like SegmentTemplate and ContentProtection are included in each Representation. When set to COMPACT, duplicate elements are combined and presented at the AdaptationSet level.
+     * 
+     */
     public Optional<Output<PackagingConfigurationDashManifestManifestLayout>> manifestLayout() {
         return Optional.ofNullable(this.manifestLayout);
     }
@@ -48,6 +52,10 @@ public final class PackagingConfigurationDashManifestArgs extends com.pulumi.res
     @Import(name="minBufferTimeSeconds")
     private @Nullable Output<Integer> minBufferTimeSeconds;
 
+    /**
+     * @return Minimum duration (in seconds) that a player will buffer media before starting the presentation.
+     * 
+     */
     public Optional<Output<Integer>> minBufferTimeSeconds() {
         return Optional.ofNullable(this.minBufferTimeSeconds);
     }
@@ -59,6 +67,10 @@ public final class PackagingConfigurationDashManifestArgs extends com.pulumi.res
     @Import(name="profile")
     private @Nullable Output<PackagingConfigurationDashManifestProfile> profile;
 
+    /**
+     * @return The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to &#34;HBBTV_1_5&#34;, HbbTV 1.5 compliant output is enabled.
+     * 
+     */
     public Optional<Output<PackagingConfigurationDashManifestProfile>> profile() {
         return Optional.ofNullable(this.profile);
     }
@@ -98,11 +110,23 @@ public final class PackagingConfigurationDashManifestArgs extends com.pulumi.res
             $ = new PackagingConfigurationDashManifestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param manifestLayout Determines the position of some tags in the Media Presentation Description (MPD). When set to FULL, elements like SegmentTemplate and ContentProtection are included in each Representation. When set to COMPACT, duplicate elements are combined and presented at the AdaptationSet level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifestLayout(@Nullable Output<PackagingConfigurationDashManifestManifestLayout> manifestLayout) {
             $.manifestLayout = manifestLayout;
             return this;
         }
 
+        /**
+         * @param manifestLayout Determines the position of some tags in the Media Presentation Description (MPD). When set to FULL, elements like SegmentTemplate and ContentProtection are included in each Representation. When set to COMPACT, duplicate elements are combined and presented at the AdaptationSet level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifestLayout(PackagingConfigurationDashManifestManifestLayout manifestLayout) {
             return manifestLayout(Output.of(manifestLayout));
         }
@@ -116,20 +140,44 @@ public final class PackagingConfigurationDashManifestArgs extends com.pulumi.res
             return manifestName(Output.of(manifestName));
         }
 
+        /**
+         * @param minBufferTimeSeconds Minimum duration (in seconds) that a player will buffer media before starting the presentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minBufferTimeSeconds(@Nullable Output<Integer> minBufferTimeSeconds) {
             $.minBufferTimeSeconds = minBufferTimeSeconds;
             return this;
         }
 
+        /**
+         * @param minBufferTimeSeconds Minimum duration (in seconds) that a player will buffer media before starting the presentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minBufferTimeSeconds(Integer minBufferTimeSeconds) {
             return minBufferTimeSeconds(Output.of(minBufferTimeSeconds));
         }
 
+        /**
+         * @param profile The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to &#34;HBBTV_1_5&#34;, HbbTV 1.5 compliant output is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profile(@Nullable Output<PackagingConfigurationDashManifestProfile> profile) {
             $.profile = profile;
             return this;
         }
 
+        /**
+         * @param profile The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to &#34;HBBTV_1_5&#34;, HbbTV 1.5 compliant output is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profile(PackagingConfigurationDashManifestProfile profile) {
             return profile(Output.of(profile));
         }

@@ -19,6 +19,10 @@ public final class GetSchemaVersionMetadataArgs extends com.pulumi.resources.Inv
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return Metadata key
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -30,6 +34,10 @@ public final class GetSchemaVersionMetadataArgs extends com.pulumi.resources.Inv
     @Import(name="schemaVersionId", required=true)
     private String schemaVersionId;
 
+    /**
+     * @return Represents the version ID associated with the schema version.
+     * 
+     */
     public String schemaVersionId() {
         return this.schemaVersionId;
     }
@@ -41,6 +49,10 @@ public final class GetSchemaVersionMetadataArgs extends com.pulumi.resources.Inv
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return Metadata value
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -71,16 +83,34 @@ public final class GetSchemaVersionMetadataArgs extends com.pulumi.resources.Inv
             $ = new GetSchemaVersionMetadataArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key Metadata key
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param schemaVersionId Represents the version ID associated with the schema version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaVersionId(String schemaVersionId) {
             $.schemaVersionId = schemaVersionId;
             return this;
         }
 
+        /**
+         * @param value Metadata value
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

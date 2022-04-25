@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class UserProfileKernelGatewayAppSettings {
     /**
-     * A list of custom SageMaker images that are configured to run as a KernelGateway app.
+     * @return A list of custom SageMaker images that are configured to run as a KernelGateway app.
      * 
      */
     private final @Nullable List<UserProfileCustomImage> customImages;
     /**
-     * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image used by the KernelGateway app.
+     * @return The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image used by the KernelGateway app.
      * 
      */
     private final @Nullable UserProfileResourceSpec defaultResourceSpec;
@@ -33,16 +33,16 @@ public final class UserProfileKernelGatewayAppSettings {
     }
 
     /**
-     * A list of custom SageMaker images that are configured to run as a KernelGateway app.
+     * @return A list of custom SageMaker images that are configured to run as a KernelGateway app.
      * 
-    */
+     */
     public List<UserProfileCustomImage> customImages() {
         return this.customImages == null ? List.of() : this.customImages;
     }
     /**
-     * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image used by the KernelGateway app.
+     * @return The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image used by the KernelGateway app.
      * 
-    */
+     */
     public Optional<UserProfileResourceSpec> defaultResourceSpec() {
         return Optional.ofNullable(this.defaultResourceSpec);
     }

@@ -23,6 +23,10 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return True if notifications to the target are enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -34,6 +38,10 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
     @Import(name="roleArn")
     private @Nullable Output<String> roleArn;
 
+    /**
+     * @return The ARN of the role that grants permission to send notifications to the target.
+     * 
+     */
     public Optional<Output<String>> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
@@ -45,6 +53,10 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
     @Import(name="targetArn")
     private @Nullable Output<String> targetArn;
 
+    /**
+     * @return The ARN of the target (SNS topic) to which audit notifications are sent.
+     * 
+     */
     public Optional<Output<String>> targetArn() {
         return Optional.ofNullable(this.targetArn);
     }
@@ -75,29 +87,65 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
             $ = new AccountAuditConfigurationAuditNotificationTargetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled True if notifications to the target are enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled True if notifications to the target are enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param roleArn The ARN of the role that grants permission to send notifications to the target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(@Nullable Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn The ARN of the role that grants permission to send notifications to the target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param targetArn The ARN of the target (SNS topic) to which audit notifications are sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetArn(@Nullable Output<String> targetArn) {
             $.targetArn = targetArn;
             return this;
         }
 
+        /**
+         * @param targetArn The ARN of the target (SNS topic) to which audit notifications are sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetArn(String targetArn) {
             return targetArn(Output.of(targetArn));
         }

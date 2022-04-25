@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetWorkflowResult {
     /**
-     * Specifies the unique Amazon Resource Name (ARN) for the workflow.
+     * @return Specifies the unique Amazon Resource Name (ARN) for the workflow.
      * 
      */
     private final @Nullable String arn;
     /**
-     * Key-value pairs that can be used to group and search for workflows. Tags are metadata attached to workflows for any purpose.
+     * @return Key-value pairs that can be used to group and search for workflows. Tags are metadata attached to workflows for any purpose.
      * 
      */
     private final @Nullable List<WorkflowTag> tags;
     /**
-     * A unique identifier for the workflow.
+     * @return A unique identifier for the workflow.
      * 
      */
     private final @Nullable String workflowId;
@@ -40,23 +40,23 @@ public final class GetWorkflowResult {
     }
 
     /**
-     * Specifies the unique Amazon Resource Name (ARN) for the workflow.
+     * @return Specifies the unique Amazon Resource Name (ARN) for the workflow.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Key-value pairs that can be used to group and search for workflows. Tags are metadata attached to workflows for any purpose.
+     * @return Key-value pairs that can be used to group and search for workflows. Tags are metadata attached to workflows for any purpose.
      * 
-    */
+     */
     public List<WorkflowTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * A unique identifier for the workflow.
+     * @return A unique identifier for the workflow.
      * 
-    */
+     */
     public Optional<String> workflowId() {
         return Optional.ofNullable(this.workflowId);
     }

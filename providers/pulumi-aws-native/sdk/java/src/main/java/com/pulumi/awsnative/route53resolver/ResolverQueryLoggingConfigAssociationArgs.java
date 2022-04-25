@@ -22,6 +22,10 @@ public final class ResolverQueryLoggingConfigAssociationArgs extends com.pulumi.
     @Import(name="resolverQueryLogConfigId")
     private @Nullable Output<String> resolverQueryLogConfigId;
 
+    /**
+     * @return ResolverQueryLogConfigId
+     * 
+     */
     public Optional<Output<String>> resolverQueryLogConfigId() {
         return Optional.ofNullable(this.resolverQueryLogConfigId);
     }
@@ -33,6 +37,10 @@ public final class ResolverQueryLoggingConfigAssociationArgs extends com.pulumi.
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return ResourceId
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -62,20 +70,44 @@ public final class ResolverQueryLoggingConfigAssociationArgs extends com.pulumi.
             $ = new ResolverQueryLoggingConfigAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resolverQueryLogConfigId ResolverQueryLogConfigId
+         * 
+         * @return builder
+         * 
+         */
         public Builder resolverQueryLogConfigId(@Nullable Output<String> resolverQueryLogConfigId) {
             $.resolverQueryLogConfigId = resolverQueryLogConfigId;
             return this;
         }
 
+        /**
+         * @param resolverQueryLogConfigId ResolverQueryLogConfigId
+         * 
+         * @return builder
+         * 
+         */
         public Builder resolverQueryLogConfigId(String resolverQueryLogConfigId) {
             return resolverQueryLogConfigId(Output.of(resolverQueryLogConfigId));
         }
 
+        /**
+         * @param resourceId ResourceId
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId ResourceId
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }

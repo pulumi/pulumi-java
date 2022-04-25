@@ -20,6 +20,10 @@ public final class GetRegexPatternSetArgs extends com.pulumi.resources.InvokeArg
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Id of the RegexPatternSet
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -31,6 +35,10 @@ public final class GetRegexPatternSetArgs extends com.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the RegexPatternSet.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -42,6 +50,10 @@ public final class GetRegexPatternSetArgs extends com.pulumi.resources.InvokeArg
     @Import(name="scope", required=true)
     private RegexPatternSetScope scope;
 
+    /**
+     * @return Use CLOUDFRONT for CloudFront RegexPatternSet, use REGIONAL for Application Load Balancer and API Gateway.
+     * 
+     */
     public RegexPatternSetScope scope() {
         return this.scope;
     }
@@ -72,16 +84,34 @@ public final class GetRegexPatternSetArgs extends com.pulumi.resources.InvokeArg
             $ = new GetRegexPatternSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Id of the RegexPatternSet
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Name of the RegexPatternSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param scope Use CLOUDFRONT for CloudFront RegexPatternSet, use REGIONAL for Application Load Balancer and API Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(RegexPatternSetScope scope) {
             $.scope = scope;
             return this;

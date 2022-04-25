@@ -37,6 +37,10 @@ public final class OriginEndpointCmafPackage extends com.pulumi.resources.Invoke
     @Import(name="hlsManifests")
     private @Nullable List<OriginEndpointHlsManifest> hlsManifests;
 
+    /**
+     * @return A list of HLS manifest configurations
+     * 
+     */
     public Optional<List<OriginEndpointHlsManifest>> hlsManifests() {
         return Optional.ofNullable(this.hlsManifests);
     }
@@ -48,6 +52,10 @@ public final class OriginEndpointCmafPackage extends com.pulumi.resources.Invoke
     @Import(name="segmentDurationSeconds")
     private @Nullable Integer segmentDurationSeconds;
 
+    /**
+     * @return Duration (in seconds) of each segment. Actual segments will be rounded to the nearest multiple of the source segment duration.
+     * 
+     */
     public Optional<Integer> segmentDurationSeconds() {
         return Optional.ofNullable(this.segmentDurationSeconds);
     }
@@ -59,6 +67,10 @@ public final class OriginEndpointCmafPackage extends com.pulumi.resources.Invoke
     @Import(name="segmentPrefix")
     private @Nullable String segmentPrefix;
 
+    /**
+     * @return An optional custom string that is prepended to the name of each segment. If not specified, it defaults to the ChannelId.
+     * 
+     */
     public Optional<String> segmentPrefix() {
         return Optional.ofNullable(this.segmentPrefix);
     }
@@ -103,20 +115,44 @@ public final class OriginEndpointCmafPackage extends com.pulumi.resources.Invoke
             return this;
         }
 
+        /**
+         * @param hlsManifests A list of HLS manifest configurations
+         * 
+         * @return builder
+         * 
+         */
         public Builder hlsManifests(@Nullable List<OriginEndpointHlsManifest> hlsManifests) {
             $.hlsManifests = hlsManifests;
             return this;
         }
 
+        /**
+         * @param hlsManifests A list of HLS manifest configurations
+         * 
+         * @return builder
+         * 
+         */
         public Builder hlsManifests(OriginEndpointHlsManifest... hlsManifests) {
             return hlsManifests(List.of(hlsManifests));
         }
 
+        /**
+         * @param segmentDurationSeconds Duration (in seconds) of each segment. Actual segments will be rounded to the nearest multiple of the source segment duration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             $.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
 
+        /**
+         * @param segmentPrefix An optional custom string that is prepended to the name of each segment. If not specified, it defaults to the ChannelId.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentPrefix(@Nullable String segmentPrefix) {
             $.segmentPrefix = segmentPrefix;
             return this;

@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class WorkflowS3Tag {
     /**
-     * The name assigned to the tag that you create.
+     * @return The name assigned to the tag that you create.
      * 
      */
     private final String key;
     /**
-     * The value that corresponds to the key.
+     * @return The value that corresponds to the key.
      * 
      */
     private final String value;
@@ -29,16 +29,16 @@ public final class WorkflowS3Tag {
     }
 
     /**
-     * The name assigned to the tag that you create.
+     * @return The name assigned to the tag that you create.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * The value that corresponds to the key.
+     * @return The value that corresponds to the key.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

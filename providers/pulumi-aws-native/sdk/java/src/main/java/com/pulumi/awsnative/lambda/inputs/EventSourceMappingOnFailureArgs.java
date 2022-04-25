@@ -26,6 +26,10 @@ public final class EventSourceMappingOnFailureArgs extends com.pulumi.resources.
     @Import(name="destination")
     private @Nullable Output<String> destination;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the destination resource.
+     * 
+     */
     public Optional<Output<String>> destination() {
         return Optional.ofNullable(this.destination);
     }
@@ -54,11 +58,23 @@ public final class EventSourceMappingOnFailureArgs extends com.pulumi.resources.
             $ = new EventSourceMappingOnFailureArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destination The Amazon Resource Name (ARN) of the destination resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(@Nullable Output<String> destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param destination The Amazon Resource Name (ARN) of the destination resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(String destination) {
             return destination(Output.of(destination));
         }

@@ -19,6 +19,10 @@ public final class GetOrganizationConformancePackArgs extends com.pulumi.resourc
     @Import(name="organizationConformancePackName", required=true)
     private String organizationConformancePackName;
 
+    /**
+     * @return The name of the organization conformance pack.
+     * 
+     */
     public String organizationConformancePackName() {
         return this.organizationConformancePackName;
     }
@@ -47,6 +51,12 @@ public final class GetOrganizationConformancePackArgs extends com.pulumi.resourc
             $ = new GetOrganizationConformancePackArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param organizationConformancePackName The name of the organization conformance pack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationConformancePackName(String organizationConformancePackName) {
             $.organizationConformancePackName = organizationConformancePackName;
             return this;

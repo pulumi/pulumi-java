@@ -26,6 +26,10 @@ public final class DistributionConfigurationLaunchTemplateConfiguration extends 
     @Import(name="accountId")
     private @Nullable String accountId;
 
+    /**
+     * @return The account ID that this configuration applies to.
+     * 
+     */
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
@@ -37,6 +41,10 @@ public final class DistributionConfigurationLaunchTemplateConfiguration extends 
     @Import(name="launchTemplateId")
     private @Nullable String launchTemplateId;
 
+    /**
+     * @return Identifies the EC2 launch template to use.
+     * 
+     */
     public Optional<String> launchTemplateId() {
         return Optional.ofNullable(this.launchTemplateId);
     }
@@ -48,6 +56,10 @@ public final class DistributionConfigurationLaunchTemplateConfiguration extends 
     @Import(name="setDefaultVersion")
     private @Nullable Boolean setDefaultVersion;
 
+    /**
+     * @return Set the specified EC2 launch template as the default launch template for the specified account.
+     * 
+     */
     public Optional<Boolean> setDefaultVersion() {
         return Optional.ofNullable(this.setDefaultVersion);
     }
@@ -78,16 +90,34 @@ public final class DistributionConfigurationLaunchTemplateConfiguration extends 
             $ = new DistributionConfigurationLaunchTemplateConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId The account ID that this configuration applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(@Nullable String accountId) {
             $.accountId = accountId;
             return this;
         }
 
+        /**
+         * @param launchTemplateId Identifies the EC2 launch template to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchTemplateId(@Nullable String launchTemplateId) {
             $.launchTemplateId = launchTemplateId;
             return this;
         }
 
+        /**
+         * @param setDefaultVersion Set the specified EC2 launch template as the default launch template for the specified account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder setDefaultVersion(@Nullable Boolean setDefaultVersion) {
             $.setDefaultVersion = setDefaultVersion;
             return this;

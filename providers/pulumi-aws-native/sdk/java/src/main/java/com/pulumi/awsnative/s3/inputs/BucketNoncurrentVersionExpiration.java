@@ -25,6 +25,10 @@ public final class BucketNoncurrentVersionExpiration extends com.pulumi.resource
     @Import(name="newerNoncurrentVersions")
     private @Nullable Integer newerNoncurrentVersions;
 
+    /**
+     * @return Specified the number of newer noncurrent and current versions that must exists before performing the associated action
+     * 
+     */
     public Optional<Integer> newerNoncurrentVersions() {
         return Optional.ofNullable(this.newerNoncurrentVersions);
     }
@@ -36,6 +40,10 @@ public final class BucketNoncurrentVersionExpiration extends com.pulumi.resource
     @Import(name="noncurrentDays", required=true)
     private Integer noncurrentDays;
 
+    /**
+     * @return Specified the number of days an object is noncurrent before Amazon S3 can perform the associated action
+     * 
+     */
     public Integer noncurrentDays() {
         return this.noncurrentDays;
     }
@@ -65,11 +73,23 @@ public final class BucketNoncurrentVersionExpiration extends com.pulumi.resource
             $ = new BucketNoncurrentVersionExpiration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param newerNoncurrentVersions Specified the number of newer noncurrent and current versions that must exists before performing the associated action
+         * 
+         * @return builder
+         * 
+         */
         public Builder newerNoncurrentVersions(@Nullable Integer newerNoncurrentVersions) {
             $.newerNoncurrentVersions = newerNoncurrentVersions;
             return this;
         }
 
+        /**
+         * @param noncurrentDays Specified the number of days an object is noncurrent before Amazon S3 can perform the associated action
+         * 
+         * @return builder
+         * 
+         */
         public Builder noncurrentDays(Integer noncurrentDays) {
             $.noncurrentDays = noncurrentDays;
             return this;

@@ -32,6 +32,10 @@ public final class LocationEFSArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="efsFilesystemArn", required=true)
     private Output<String> efsFilesystemArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the Amazon EFS file system.
+     * 
+     */
     public Output<String> efsFilesystemArn() {
         return this.efsFilesystemArn;
     }
@@ -43,6 +47,10 @@ public final class LocationEFSArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subdirectory")
     private @Nullable Output<String> subdirectory;
 
+    /**
+     * @return A subdirectory in the location&#39;s path. This subdirectory in the EFS file system is used to read data from the EFS source location or write data to the EFS destination.
+     * 
+     */
     public Optional<Output<String>> subdirectory() {
         return Optional.ofNullable(this.subdirectory);
     }
@@ -54,6 +62,10 @@ public final class LocationEFSArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<LocationEFSTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<LocationEFSTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -94,33 +106,75 @@ public final class LocationEFSArgs extends com.pulumi.resources.ResourceArgs {
             return ec2Config(Output.of(ec2Config));
         }
 
+        /**
+         * @param efsFilesystemArn The Amazon Resource Name (ARN) for the Amazon EFS file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder efsFilesystemArn(Output<String> efsFilesystemArn) {
             $.efsFilesystemArn = efsFilesystemArn;
             return this;
         }
 
+        /**
+         * @param efsFilesystemArn The Amazon Resource Name (ARN) for the Amazon EFS file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder efsFilesystemArn(String efsFilesystemArn) {
             return efsFilesystemArn(Output.of(efsFilesystemArn));
         }
 
+        /**
+         * @param subdirectory A subdirectory in the location&#39;s path. This subdirectory in the EFS file system is used to read data from the EFS source location or write data to the EFS destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
             $.subdirectory = subdirectory;
             return this;
         }
 
+        /**
+         * @param subdirectory A subdirectory in the location&#39;s path. This subdirectory in the EFS file system is used to read data from the EFS source location or write data to the EFS destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdirectory(String subdirectory) {
             return subdirectory(Output.of(subdirectory));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<LocationEFSTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<LocationEFSTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(LocationEFSTagArgs... tags) {
             return tags(List.of(tags));
         }

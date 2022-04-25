@@ -27,6 +27,10 @@ public final class FrameworkControlControlScopeProperties extends com.pulumi.res
     @Import(name="complianceResourceIds")
     private @Nullable List<String> complianceResourceIds;
 
+    /**
+     * @return The ID of the only AWS resource that you want your control scope to contain.
+     * 
+     */
     public Optional<List<String>> complianceResourceIds() {
         return Optional.ofNullable(this.complianceResourceIds);
     }
@@ -38,6 +42,10 @@ public final class FrameworkControlControlScopeProperties extends com.pulumi.res
     @Import(name="complianceResourceTypes")
     private @Nullable List<String> complianceResourceTypes;
 
+    /**
+     * @return Describes whether the control scope includes one or more types of resources, such as `EFS` or `RDS`.
+     * 
+     */
     public Optional<List<String>> complianceResourceTypes() {
         return Optional.ofNullable(this.complianceResourceTypes);
     }
@@ -49,6 +57,10 @@ public final class FrameworkControlControlScopeProperties extends com.pulumi.res
     @Import(name="tags")
     private @Nullable List<FrameworkTag> tags;
 
+    /**
+     * @return Describes whether the control scope includes resources with one or more tags. Each tag is a key-value pair.
+     * 
+     */
     public Optional<List<FrameworkTag>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -79,29 +91,65 @@ public final class FrameworkControlControlScopeProperties extends com.pulumi.res
             $ = new FrameworkControlControlScopeProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param complianceResourceIds The ID of the only AWS resource that you want your control scope to contain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder complianceResourceIds(@Nullable List<String> complianceResourceIds) {
             $.complianceResourceIds = complianceResourceIds;
             return this;
         }
 
+        /**
+         * @param complianceResourceIds The ID of the only AWS resource that you want your control scope to contain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder complianceResourceIds(String... complianceResourceIds) {
             return complianceResourceIds(List.of(complianceResourceIds));
         }
 
+        /**
+         * @param complianceResourceTypes Describes whether the control scope includes one or more types of resources, such as `EFS` or `RDS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder complianceResourceTypes(@Nullable List<String> complianceResourceTypes) {
             $.complianceResourceTypes = complianceResourceTypes;
             return this;
         }
 
+        /**
+         * @param complianceResourceTypes Describes whether the control scope includes one or more types of resources, such as `EFS` or `RDS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder complianceResourceTypes(String... complianceResourceTypes) {
             return complianceResourceTypes(List.of(complianceResourceTypes));
         }
 
+        /**
+         * @param tags Describes whether the control scope includes resources with one or more tags. Each tag is a key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable List<FrameworkTag> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Describes whether the control scope includes resources with one or more tags. Each tag is a key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(FrameworkTag... tags) {
             return tags(List.of(tags));
         }

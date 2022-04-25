@@ -19,6 +19,10 @@ public final class GetFlowEntitlementArgs extends com.pulumi.resources.InvokeArg
     @Import(name="entitlementArn", required=true)
     private String entitlementArn;
 
+    /**
+     * @return The ARN of the entitlement.
+     * 
+     */
     public String entitlementArn() {
         return this.entitlementArn;
     }
@@ -47,6 +51,12 @@ public final class GetFlowEntitlementArgs extends com.pulumi.resources.InvokeArg
             $ = new GetFlowEntitlementArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param entitlementArn The ARN of the entitlement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entitlementArn(String entitlementArn) {
             $.entitlementArn = entitlementArn;
             return this;

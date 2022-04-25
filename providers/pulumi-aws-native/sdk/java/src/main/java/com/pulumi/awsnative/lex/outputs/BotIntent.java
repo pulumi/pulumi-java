@@ -35,7 +35,7 @@ public final class BotIntent {
     private final @Nullable List<BotSampleUtterance> sampleUtterances;
     private final @Nullable List<BotSlotPriority> slotPriorities;
     /**
-     * List of slots
+     * @return List of slots
      * 
      */
     private final @Nullable List<BotSlot> slots;
@@ -107,9 +107,9 @@ public final class BotIntent {
         return this.slotPriorities == null ? List.of() : this.slotPriorities;
     }
     /**
-     * List of slots
+     * @return List of slots
      * 
-    */
+     */
     public List<BotSlot> slots() {
         return this.slots == null ? List.of() : this.slots;
     }

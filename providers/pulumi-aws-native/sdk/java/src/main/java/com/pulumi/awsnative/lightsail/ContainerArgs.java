@@ -28,6 +28,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containerServiceDeployment")
     private @Nullable Output<ContainerServiceDeploymentArgs> containerServiceDeployment;
 
+    /**
+     * @return Describes a container deployment configuration of an Amazon Lightsail container service.
+     * 
+     */
     public Optional<Output<ContainerServiceDeploymentArgs>> containerServiceDeployment() {
         return Optional.ofNullable(this.containerServiceDeployment);
     }
@@ -39,6 +43,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isDisabled")
     private @Nullable Output<Boolean> isDisabled;
 
+    /**
+     * @return A Boolean value to indicate whether the container service is disabled.
+     * 
+     */
     public Optional<Output<Boolean>> isDisabled() {
         return Optional.ofNullable(this.isDisabled);
     }
@@ -50,6 +58,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="power", required=true)
     private Output<String> power;
 
+    /**
+     * @return The power specification for the container service.
+     * 
+     */
     public Output<String> power() {
         return this.power;
     }
@@ -61,6 +73,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicDomainNames")
     private @Nullable Output<List<ContainerPublicDomainNameArgs>> publicDomainNames;
 
+    /**
+     * @return The public domain names to use with the container service, such as example.com and www.example.com.
+     * 
+     */
     public Optional<Output<List<ContainerPublicDomainNameArgs>>> publicDomainNames() {
         return Optional.ofNullable(this.publicDomainNames);
     }
@@ -72,6 +88,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scale", required=true)
     private Output<Integer> scale;
 
+    /**
+     * @return The scale specification for the container service.
+     * 
+     */
     public Output<Integer> scale() {
         return this.scale;
     }
@@ -83,6 +103,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name for the container service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -94,6 +118,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<ContainerTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<ContainerTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -128,73 +156,169 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ContainerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerServiceDeployment Describes a container deployment configuration of an Amazon Lightsail container service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerServiceDeployment(@Nullable Output<ContainerServiceDeploymentArgs> containerServiceDeployment) {
             $.containerServiceDeployment = containerServiceDeployment;
             return this;
         }
 
+        /**
+         * @param containerServiceDeployment Describes a container deployment configuration of an Amazon Lightsail container service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerServiceDeployment(ContainerServiceDeploymentArgs containerServiceDeployment) {
             return containerServiceDeployment(Output.of(containerServiceDeployment));
         }
 
+        /**
+         * @param isDisabled A Boolean value to indicate whether the container service is disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDisabled(@Nullable Output<Boolean> isDisabled) {
             $.isDisabled = isDisabled;
             return this;
         }
 
+        /**
+         * @param isDisabled A Boolean value to indicate whether the container service is disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDisabled(Boolean isDisabled) {
             return isDisabled(Output.of(isDisabled));
         }
 
+        /**
+         * @param power The power specification for the container service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder power(Output<String> power) {
             $.power = power;
             return this;
         }
 
+        /**
+         * @param power The power specification for the container service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder power(String power) {
             return power(Output.of(power));
         }
 
+        /**
+         * @param publicDomainNames The public domain names to use with the container service, such as example.com and www.example.com.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicDomainNames(@Nullable Output<List<ContainerPublicDomainNameArgs>> publicDomainNames) {
             $.publicDomainNames = publicDomainNames;
             return this;
         }
 
+        /**
+         * @param publicDomainNames The public domain names to use with the container service, such as example.com and www.example.com.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicDomainNames(List<ContainerPublicDomainNameArgs> publicDomainNames) {
             return publicDomainNames(Output.of(publicDomainNames));
         }
 
+        /**
+         * @param publicDomainNames The public domain names to use with the container service, such as example.com and www.example.com.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicDomainNames(ContainerPublicDomainNameArgs... publicDomainNames) {
             return publicDomainNames(List.of(publicDomainNames));
         }
 
+        /**
+         * @param scale The scale specification for the container service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scale(Output<Integer> scale) {
             $.scale = scale;
             return this;
         }
 
+        /**
+         * @param scale The scale specification for the container service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scale(Integer scale) {
             return scale(Output.of(scale));
         }
 
+        /**
+         * @param serviceName The name for the container service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name for the container service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<ContainerTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<ContainerTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(ContainerTagArgs... tags) {
             return tags(List.of(tags));
         }

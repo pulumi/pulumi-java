@@ -19,6 +19,10 @@ public final class GetAccessPolicyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accessPolicyId", required=true)
     private String accessPolicyId;
 
+    /**
+     * @return The ID of the access policy.
+     * 
+     */
     public String accessPolicyId() {
         return this.accessPolicyId;
     }
@@ -47,6 +51,12 @@ public final class GetAccessPolicyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAccessPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessPolicyId The ID of the access policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPolicyId(String accessPolicyId) {
             $.accessPolicyId = accessPolicyId;
             return this;

@@ -19,6 +19,10 @@ public final class GetDetectorModelArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="detectorModelName", required=true)
     private String detectorModelName;
 
+    /**
+     * @return The name of the detector model.
+     * 
+     */
     public String detectorModelName() {
         return this.detectorModelName;
     }
@@ -47,6 +51,12 @@ public final class GetDetectorModelArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetDetectorModelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param detectorModelName The name of the detector model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detectorModelName(String detectorModelName) {
             $.detectorModelName = detectorModelName;
             return this;

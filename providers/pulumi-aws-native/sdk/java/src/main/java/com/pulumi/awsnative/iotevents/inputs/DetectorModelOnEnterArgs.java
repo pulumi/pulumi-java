@@ -27,6 +27,10 @@ public final class DetectorModelOnEnterArgs extends com.pulumi.resources.Resourc
     @Import(name="events")
     private @Nullable Output<List<DetectorModelEventArgs>> events;
 
+    /**
+     * @return Specifies the `actions` that are performed when the state is entered and the `condition` is `TRUE`.
+     * 
+     */
     public Optional<Output<List<DetectorModelEventArgs>>> events() {
         return Optional.ofNullable(this.events);
     }
@@ -55,15 +59,33 @@ public final class DetectorModelOnEnterArgs extends com.pulumi.resources.Resourc
             $ = new DetectorModelOnEnterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param events Specifies the `actions` that are performed when the state is entered and the `condition` is `TRUE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(@Nullable Output<List<DetectorModelEventArgs>> events) {
             $.events = events;
             return this;
         }
 
+        /**
+         * @param events Specifies the `actions` that are performed when the state is entered and the `condition` is `TRUE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(List<DetectorModelEventArgs> events) {
             return events(Output.of(events));
         }
 
+        /**
+         * @param events Specifies the `actions` that are performed when the state is entered and the `condition` is `TRUE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(DetectorModelEventArgs... events) {
             return events(List.of(events));
         }

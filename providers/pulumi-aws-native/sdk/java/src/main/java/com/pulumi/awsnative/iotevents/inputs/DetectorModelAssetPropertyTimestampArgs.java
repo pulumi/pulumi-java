@@ -26,6 +26,10 @@ public final class DetectorModelAssetPropertyTimestampArgs extends com.pulumi.re
     @Import(name="offsetInNanos")
     private @Nullable Output<String> offsetInNanos;
 
+    /**
+     * @return The timestamp, in seconds, in the Unix epoch format. The valid range is between `1-31556889864403199`. You can also specify an expression.
+     * 
+     */
     public Optional<Output<String>> offsetInNanos() {
         return Optional.ofNullable(this.offsetInNanos);
     }
@@ -37,6 +41,10 @@ public final class DetectorModelAssetPropertyTimestampArgs extends com.pulumi.re
     @Import(name="timeInSeconds", required=true)
     private Output<String> timeInSeconds;
 
+    /**
+     * @return The nanosecond offset converted from `timeInSeconds`. The valid range is between `0-999999999`. You can also specify an expression.
+     * 
+     */
     public Output<String> timeInSeconds() {
         return this.timeInSeconds;
     }
@@ -66,20 +74,44 @@ public final class DetectorModelAssetPropertyTimestampArgs extends com.pulumi.re
             $ = new DetectorModelAssetPropertyTimestampArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param offsetInNanos The timestamp, in seconds, in the Unix epoch format. The valid range is between `1-31556889864403199`. You can also specify an expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offsetInNanos(@Nullable Output<String> offsetInNanos) {
             $.offsetInNanos = offsetInNanos;
             return this;
         }
 
+        /**
+         * @param offsetInNanos The timestamp, in seconds, in the Unix epoch format. The valid range is between `1-31556889864403199`. You can also specify an expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offsetInNanos(String offsetInNanos) {
             return offsetInNanos(Output.of(offsetInNanos));
         }
 
+        /**
+         * @param timeInSeconds The nanosecond offset converted from `timeInSeconds`. The valid range is between `0-999999999`. You can also specify an expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeInSeconds(Output<String> timeInSeconds) {
             $.timeInSeconds = timeInSeconds;
             return this;
         }
 
+        /**
+         * @param timeInSeconds The nanosecond offset converted from `timeInSeconds`. The valid range is between `0-999999999`. You can also specify an expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeInSeconds(String timeInSeconds) {
             return timeInSeconds(Output.of(timeInSeconds));
         }

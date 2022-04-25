@@ -24,6 +24,10 @@ public final class DataSourceSparkParameters extends com.pulumi.resources.Invoke
     @Import(name="host", required=true)
     private String host;
 
+    /**
+     * @return &lt;p&gt;Host.&lt;/p&gt;
+     * 
+     */
     public String host() {
         return this.host;
     }
@@ -35,6 +39,10 @@ public final class DataSourceSparkParameters extends com.pulumi.resources.Invoke
     @Import(name="port", required=true)
     private Double port;
 
+    /**
+     * @return &lt;p&gt;Port.&lt;/p&gt;
+     * 
+     */
     public Double port() {
         return this.port;
     }
@@ -64,11 +72,23 @@ public final class DataSourceSparkParameters extends com.pulumi.resources.Invoke
             $ = new DataSourceSparkParameters(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param host &lt;p&gt;Host.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param port &lt;p&gt;Port.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Double port) {
             $.port = port;
             return this;

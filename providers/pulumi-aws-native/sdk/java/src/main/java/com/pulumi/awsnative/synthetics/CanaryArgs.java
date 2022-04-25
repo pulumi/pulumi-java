@@ -32,6 +32,10 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="artifactConfig")
     private @Nullable Output<CanaryArtifactConfigArgs> artifactConfig;
 
+    /**
+     * @return Provide artifact configuration
+     * 
+     */
     public Optional<Output<CanaryArtifactConfigArgs>> artifactConfig() {
         return Optional.ofNullable(this.artifactConfig);
     }
@@ -43,6 +47,10 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="artifactS3Location", required=true)
     private Output<String> artifactS3Location;
 
+    /**
+     * @return Provide the s3 bucket output location for test results
+     * 
+     */
     public Output<String> artifactS3Location() {
         return this.artifactS3Location;
     }
@@ -54,6 +62,10 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="code", required=true)
     private Output<CanaryCodeArgs> code;
 
+    /**
+     * @return Provide the canary script source
+     * 
+     */
     public Output<CanaryCodeArgs> code() {
         return this.code;
     }
@@ -65,6 +77,10 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="executionRoleArn", required=true)
     private Output<String> executionRoleArn;
 
+    /**
+     * @return Lambda Execution role used to run your canaries
+     * 
+     */
     public Output<String> executionRoleArn() {
         return this.executionRoleArn;
     }
@@ -76,6 +92,10 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="failureRetentionPeriod")
     private @Nullable Output<Integer> failureRetentionPeriod;
 
+    /**
+     * @return Retention period of failed canary runs represented in number of days
+     * 
+     */
     public Optional<Output<Integer>> failureRetentionPeriod() {
         return Optional.ofNullable(this.failureRetentionPeriod);
     }
@@ -87,6 +107,10 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the canary.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -98,6 +122,10 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runConfig")
     private @Nullable Output<CanaryRunConfigArgs> runConfig;
 
+    /**
+     * @return Provide canary run configuration
+     * 
+     */
     public Optional<Output<CanaryRunConfigArgs>> runConfig() {
         return Optional.ofNullable(this.runConfig);
     }
@@ -109,6 +137,10 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runtimeVersion", required=true)
     private Output<String> runtimeVersion;
 
+    /**
+     * @return Runtime version of Synthetics Library
+     * 
+     */
     public Output<String> runtimeVersion() {
         return this.runtimeVersion;
     }
@@ -120,6 +152,10 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedule", required=true)
     private Output<CanaryScheduleArgs> schedule;
 
+    /**
+     * @return Frequency to run your canaries
+     * 
+     */
     public Output<CanaryScheduleArgs> schedule() {
         return this.schedule;
     }
@@ -131,6 +167,10 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startCanaryAfterCreation", required=true)
     private Output<Boolean> startCanaryAfterCreation;
 
+    /**
+     * @return Runs canary if set to True. Default is False
+     * 
+     */
     public Output<Boolean> startCanaryAfterCreation() {
         return this.startCanaryAfterCreation;
     }
@@ -142,6 +182,10 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="successRetentionPeriod")
     private @Nullable Output<Integer> successRetentionPeriod;
 
+    /**
+     * @return Retention period of successful canary runs represented in number of days
+     * 
+     */
     public Optional<Output<Integer>> successRetentionPeriod() {
         return Optional.ofNullable(this.successRetentionPeriod);
     }
@@ -160,6 +204,10 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vPCConfig")
     private @Nullable Output<CanaryVPCConfigArgs> vPCConfig;
 
+    /**
+     * @return Provide VPC Configuration if enabled.
+     * 
+     */
     public Optional<Output<CanaryVPCConfigArgs>> vPCConfig() {
         return Optional.ofNullable(this.vPCConfig);
     }
@@ -171,6 +219,10 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="visualReference")
     private @Nullable Output<CanaryVisualReferenceArgs> visualReference;
 
+    /**
+     * @return Visual reference configuration for visual testing
+     * 
+     */
     public Optional<Output<CanaryVisualReferenceArgs>> visualReference() {
         return Optional.ofNullable(this.visualReference);
     }
@@ -212,101 +264,233 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CanaryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifactConfig Provide artifact configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactConfig(@Nullable Output<CanaryArtifactConfigArgs> artifactConfig) {
             $.artifactConfig = artifactConfig;
             return this;
         }
 
+        /**
+         * @param artifactConfig Provide artifact configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactConfig(CanaryArtifactConfigArgs artifactConfig) {
             return artifactConfig(Output.of(artifactConfig));
         }
 
+        /**
+         * @param artifactS3Location Provide the s3 bucket output location for test results
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactS3Location(Output<String> artifactS3Location) {
             $.artifactS3Location = artifactS3Location;
             return this;
         }
 
+        /**
+         * @param artifactS3Location Provide the s3 bucket output location for test results
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactS3Location(String artifactS3Location) {
             return artifactS3Location(Output.of(artifactS3Location));
         }
 
+        /**
+         * @param code Provide the canary script source
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(Output<CanaryCodeArgs> code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param code Provide the canary script source
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(CanaryCodeArgs code) {
             return code(Output.of(code));
         }
 
+        /**
+         * @param executionRoleArn Lambda Execution role used to run your canaries
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionRoleArn(Output<String> executionRoleArn) {
             $.executionRoleArn = executionRoleArn;
             return this;
         }
 
+        /**
+         * @param executionRoleArn Lambda Execution role used to run your canaries
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionRoleArn(String executionRoleArn) {
             return executionRoleArn(Output.of(executionRoleArn));
         }
 
+        /**
+         * @param failureRetentionPeriod Retention period of failed canary runs represented in number of days
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureRetentionPeriod(@Nullable Output<Integer> failureRetentionPeriod) {
             $.failureRetentionPeriod = failureRetentionPeriod;
             return this;
         }
 
+        /**
+         * @param failureRetentionPeriod Retention period of failed canary runs represented in number of days
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureRetentionPeriod(Integer failureRetentionPeriod) {
             return failureRetentionPeriod(Output.of(failureRetentionPeriod));
         }
 
+        /**
+         * @param name Name of the canary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the canary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param runConfig Provide canary run configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder runConfig(@Nullable Output<CanaryRunConfigArgs> runConfig) {
             $.runConfig = runConfig;
             return this;
         }
 
+        /**
+         * @param runConfig Provide canary run configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder runConfig(CanaryRunConfigArgs runConfig) {
             return runConfig(Output.of(runConfig));
         }
 
+        /**
+         * @param runtimeVersion Runtime version of Synthetics Library
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeVersion(Output<String> runtimeVersion) {
             $.runtimeVersion = runtimeVersion;
             return this;
         }
 
+        /**
+         * @param runtimeVersion Runtime version of Synthetics Library
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeVersion(String runtimeVersion) {
             return runtimeVersion(Output.of(runtimeVersion));
         }
 
+        /**
+         * @param schedule Frequency to run your canaries
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(Output<CanaryScheduleArgs> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule Frequency to run your canaries
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(CanaryScheduleArgs schedule) {
             return schedule(Output.of(schedule));
         }
 
+        /**
+         * @param startCanaryAfterCreation Runs canary if set to True. Default is False
+         * 
+         * @return builder
+         * 
+         */
         public Builder startCanaryAfterCreation(Output<Boolean> startCanaryAfterCreation) {
             $.startCanaryAfterCreation = startCanaryAfterCreation;
             return this;
         }
 
+        /**
+         * @param startCanaryAfterCreation Runs canary if set to True. Default is False
+         * 
+         * @return builder
+         * 
+         */
         public Builder startCanaryAfterCreation(Boolean startCanaryAfterCreation) {
             return startCanaryAfterCreation(Output.of(startCanaryAfterCreation));
         }
 
+        /**
+         * @param successRetentionPeriod Retention period of successful canary runs represented in number of days
+         * 
+         * @return builder
+         * 
+         */
         public Builder successRetentionPeriod(@Nullable Output<Integer> successRetentionPeriod) {
             $.successRetentionPeriod = successRetentionPeriod;
             return this;
         }
 
+        /**
+         * @param successRetentionPeriod Retention period of successful canary runs represented in number of days
+         * 
+         * @return builder
+         * 
+         */
         public Builder successRetentionPeriod(Integer successRetentionPeriod) {
             return successRetentionPeriod(Output.of(successRetentionPeriod));
         }
@@ -324,20 +508,44 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param vPCConfig Provide VPC Configuration if enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vPCConfig(@Nullable Output<CanaryVPCConfigArgs> vPCConfig) {
             $.vPCConfig = vPCConfig;
             return this;
         }
 
+        /**
+         * @param vPCConfig Provide VPC Configuration if enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vPCConfig(CanaryVPCConfigArgs vPCConfig) {
             return vPCConfig(Output.of(vPCConfig));
         }
 
+        /**
+         * @param visualReference Visual reference configuration for visual testing
+         * 
+         * @return builder
+         * 
+         */
         public Builder visualReference(@Nullable Output<CanaryVisualReferenceArgs> visualReference) {
             $.visualReference = visualReference;
             return this;
         }
 
+        /**
+         * @param visualReference Visual reference configuration for visual testing
+         * 
+         * @return builder
+         * 
+         */
         public Builder visualReference(CanaryVisualReferenceArgs visualReference) {
             return visualReference(Output.of(visualReference));
         }

@@ -19,6 +19,10 @@ public final class GetDatasetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Dataset name
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +51,12 @@ public final class GetDatasetArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDatasetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Dataset name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

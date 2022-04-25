@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetScheduleResult {
     /**
-     * Schedule cron
+     * @return Schedule cron
      * 
      */
     private final @Nullable String cronExpression;
@@ -28,9 +28,9 @@ public final class GetScheduleResult {
     }
 
     /**
-     * Schedule cron
+     * @return Schedule cron
      * 
-    */
+     */
     public Optional<String> cronExpression() {
         return Optional.ofNullable(this.cronExpression);
     }

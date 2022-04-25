@@ -21,6 +21,10 @@ public final class DocumentTag extends com.pulumi.resources.InvokeArgs {
     @Import(name="key")
     private @Nullable String key;
 
+    /**
+     * @return The name of the tag.
+     * 
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
@@ -32,6 +36,10 @@ public final class DocumentTag extends com.pulumi.resources.InvokeArgs {
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return The value of the tag.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -61,11 +69,23 @@ public final class DocumentTag extends com.pulumi.resources.InvokeArgs {
             $ = new DocumentTag(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The name of the tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param value The value of the tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FlowOutputEncryption {
     /**
-     * The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).
+     * @return The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).
      * 
      */
     private final @Nullable FlowOutputEncryptionAlgorithm algorithm;
     /**
-     * The type of key that is used for the encryption. If no keyType is provided, the service will use the default setting (static-key).
+     * @return The type of key that is used for the encryption. If no keyType is provided, the service will use the default setting (static-key).
      * 
      */
     private final @Nullable FlowOutputEncryptionKeyType keyType;
     /**
-     * The ARN of the role that you created during setup (when you set up AWS Elemental MediaConnect as a trusted entity).
+     * @return The ARN of the role that you created during setup (when you set up AWS Elemental MediaConnect as a trusted entity).
      * 
      */
     private final String roleArn;
     /**
-     *  The ARN of the secret that you created in AWS Secrets Manager to store the encryption key. This parameter is required for static key encryption and is not valid for SPEKE encryption.
+     * @return  The ARN of the secret that you created in AWS Secrets Manager to store the encryption key. This parameter is required for static key encryption and is not valid for SPEKE encryption.
      * 
      */
     private final String secretArn;
@@ -47,30 +47,30 @@ public final class FlowOutputEncryption {
     }
 
     /**
-     * The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).
+     * @return The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).
      * 
-    */
+     */
     public Optional<FlowOutputEncryptionAlgorithm> algorithm() {
         return Optional.ofNullable(this.algorithm);
     }
     /**
-     * The type of key that is used for the encryption. If no keyType is provided, the service will use the default setting (static-key).
+     * @return The type of key that is used for the encryption. If no keyType is provided, the service will use the default setting (static-key).
      * 
-    */
+     */
     public Optional<FlowOutputEncryptionKeyType> keyType() {
         return Optional.ofNullable(this.keyType);
     }
     /**
-     * The ARN of the role that you created during setup (when you set up AWS Elemental MediaConnect as a trusted entity).
+     * @return The ARN of the role that you created during setup (when you set up AWS Elemental MediaConnect as a trusted entity).
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }
     /**
-     *  The ARN of the secret that you created in AWS Secrets Manager to store the encryption key. This parameter is required for static key encryption and is not valid for SPEKE encryption.
+     * @return  The ARN of the secret that you created in AWS Secrets Manager to store the encryption key. This parameter is required for static key encryption and is not valid for SPEKE encryption.
      * 
-    */
+     */
     public String secretArn() {
         return this.secretArn;
     }

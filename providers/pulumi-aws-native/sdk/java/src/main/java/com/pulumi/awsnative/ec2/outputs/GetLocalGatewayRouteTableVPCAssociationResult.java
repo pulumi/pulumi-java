@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetLocalGatewayRouteTableVPCAssociationResult {
     /**
-     * The ID of the local gateway.
+     * @return The ID of the local gateway.
      * 
      */
     private final @Nullable String localGatewayId;
     /**
-     * The ID of the association.
+     * @return The ID of the association.
      * 
      */
     private final @Nullable String localGatewayRouteTableVpcAssociationId;
     /**
-     * The state of the association.
+     * @return The state of the association.
      * 
      */
     private final @Nullable String state;
     /**
-     * The tags for the association.
+     * @return The tags for the association.
      * 
      */
     private final @Nullable List<LocalGatewayRouteTableVPCAssociationTag> tags;
@@ -47,30 +47,30 @@ public final class GetLocalGatewayRouteTableVPCAssociationResult {
     }
 
     /**
-     * The ID of the local gateway.
+     * @return The ID of the local gateway.
      * 
-    */
+     */
     public Optional<String> localGatewayId() {
         return Optional.ofNullable(this.localGatewayId);
     }
     /**
-     * The ID of the association.
+     * @return The ID of the association.
      * 
-    */
+     */
     public Optional<String> localGatewayRouteTableVpcAssociationId() {
         return Optional.ofNullable(this.localGatewayRouteTableVpcAssociationId);
     }
     /**
-     * The state of the association.
+     * @return The state of the association.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
-     * The tags for the association.
+     * @return The tags for the association.
      * 
-    */
+     */
     public List<LocalGatewayRouteTableVPCAssociationTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

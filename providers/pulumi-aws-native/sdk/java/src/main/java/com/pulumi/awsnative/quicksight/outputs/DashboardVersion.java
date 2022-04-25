@@ -17,49 +17,49 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DashboardVersion {
     /**
-     * &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
      * 
      */
     private final @Nullable String arn;
     /**
-     * &lt;p&gt;The time that this dashboard version was created.&lt;/p&gt;
+     * @return &lt;p&gt;The time that this dashboard version was created.&lt;/p&gt;
      * 
      */
     private final @Nullable String createdTime;
     /**
-     * &lt;p&gt;The Amazon Resource Numbers (ARNs) for the datasets that are associated with this
+     * @return &lt;p&gt;The Amazon Resource Numbers (ARNs) for the datasets that are associated with this
      *             version of the dashboard.&lt;/p&gt;
      * 
      */
     private final @Nullable List<String> dataSetArns;
     /**
-     * &lt;p&gt;Description.&lt;/p&gt;
+     * @return &lt;p&gt;Description.&lt;/p&gt;
      * 
      */
     private final @Nullable String description;
     /**
-     * &lt;p&gt;Errors associated with this dashboard version.&lt;/p&gt;
+     * @return &lt;p&gt;Errors associated with this dashboard version.&lt;/p&gt;
      * 
      */
     private final @Nullable List<DashboardError> errors;
     /**
-     * &lt;p&gt;A list of the associated sheets with the unique identifier and name of each sheet.&lt;/p&gt;
+     * @return &lt;p&gt;A list of the associated sheets with the unique identifier and name of each sheet.&lt;/p&gt;
      * 
      */
     private final @Nullable List<DashboardSheet> sheets;
     /**
-     * &lt;p&gt;Source entity ARN.&lt;/p&gt;
+     * @return &lt;p&gt;Source entity ARN.&lt;/p&gt;
      * 
      */
     private final @Nullable String sourceEntityArn;
     private final @Nullable DashboardResourceStatus status;
     /**
-     * &lt;p&gt;The ARN of the theme associated with a version of the dashboard.&lt;/p&gt;
+     * @return &lt;p&gt;The ARN of the theme associated with a version of the dashboard.&lt;/p&gt;
      * 
      */
     private final @Nullable String themeArn;
     /**
-     * &lt;p&gt;Version number for this version of the dashboard.&lt;/p&gt;
+     * @return &lt;p&gt;Version number for this version of the dashboard.&lt;/p&gt;
      * 
      */
     private final @Nullable Double versionNumber;
@@ -89,52 +89,52 @@ public final class DashboardVersion {
     }
 
     /**
-     * &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * &lt;p&gt;The time that this dashboard version was created.&lt;/p&gt;
+     * @return &lt;p&gt;The time that this dashboard version was created.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
-     * &lt;p&gt;The Amazon Resource Numbers (ARNs) for the datasets that are associated with this
+     * @return &lt;p&gt;The Amazon Resource Numbers (ARNs) for the datasets that are associated with this
      *             version of the dashboard.&lt;/p&gt;
      * 
-    */
+     */
     public List<String> dataSetArns() {
         return this.dataSetArns == null ? List.of() : this.dataSetArns;
     }
     /**
-     * &lt;p&gt;Description.&lt;/p&gt;
+     * @return &lt;p&gt;Description.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * &lt;p&gt;Errors associated with this dashboard version.&lt;/p&gt;
+     * @return &lt;p&gt;Errors associated with this dashboard version.&lt;/p&gt;
      * 
-    */
+     */
     public List<DashboardError> errors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
-     * &lt;p&gt;A list of the associated sheets with the unique identifier and name of each sheet.&lt;/p&gt;
+     * @return &lt;p&gt;A list of the associated sheets with the unique identifier and name of each sheet.&lt;/p&gt;
      * 
-    */
+     */
     public List<DashboardSheet> sheets() {
         return this.sheets == null ? List.of() : this.sheets;
     }
     /**
-     * &lt;p&gt;Source entity ARN.&lt;/p&gt;
+     * @return &lt;p&gt;Source entity ARN.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> sourceEntityArn() {
         return Optional.ofNullable(this.sourceEntityArn);
     }
@@ -142,16 +142,16 @@ public final class DashboardVersion {
         return Optional.ofNullable(this.status);
     }
     /**
-     * &lt;p&gt;The ARN of the theme associated with a version of the dashboard.&lt;/p&gt;
+     * @return &lt;p&gt;The ARN of the theme associated with a version of the dashboard.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> themeArn() {
         return Optional.ofNullable(this.themeArn);
     }
     /**
-     * &lt;p&gt;Version number for this version of the dashboard.&lt;/p&gt;
+     * @return &lt;p&gt;Version number for this version of the dashboard.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<Double> versionNumber() {
         return Optional.ofNullable(this.versionNumber);
     }

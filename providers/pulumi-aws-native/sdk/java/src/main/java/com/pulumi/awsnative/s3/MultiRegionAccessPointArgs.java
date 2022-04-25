@@ -25,6 +25,10 @@ public final class MultiRegionAccessPointArgs extends com.pulumi.resources.Resou
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name you want to assign to this Multi Region Access Point.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class MultiRegionAccessPointArgs extends com.pulumi.resources.Resou
     @Import(name="publicAccessBlockConfiguration")
     private @Nullable Output<MultiRegionAccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration;
 
+    /**
+     * @return The PublicAccessBlock configuration that you want to apply to this Multi Region Access Point. You can enable the configuration options in any combination. For more information about when Amazon S3 considers a bucket or object public, see https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status &#39;The Meaning of Public&#39; in the Amazon Simple Storage Service Developer Guide.
+     * 
+     */
     public Optional<Output<MultiRegionAccessPointPublicAccessBlockConfigurationArgs>> publicAccessBlockConfiguration() {
         return Optional.ofNullable(this.publicAccessBlockConfiguration);
     }
@@ -47,6 +55,10 @@ public final class MultiRegionAccessPointArgs extends com.pulumi.resources.Resou
     @Import(name="regions", required=true)
     private Output<List<MultiRegionAccessPointRegionArgs>> regions;
 
+    /**
+     * @return The list of buckets that you want to associate this Multi Region Access Point with.
+     * 
+     */
     public Output<List<MultiRegionAccessPointRegionArgs>> regions() {
         return this.regions;
     }
@@ -77,33 +89,75 @@ public final class MultiRegionAccessPointArgs extends com.pulumi.resources.Resou
             $ = new MultiRegionAccessPointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name you want to assign to this Multi Region Access Point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name you want to assign to this Multi Region Access Point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param publicAccessBlockConfiguration The PublicAccessBlock configuration that you want to apply to this Multi Region Access Point. You can enable the configuration options in any combination. For more information about when Amazon S3 considers a bucket or object public, see https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status &#39;The Meaning of Public&#39; in the Amazon Simple Storage Service Developer Guide.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicAccessBlockConfiguration(@Nullable Output<MultiRegionAccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration) {
             $.publicAccessBlockConfiguration = publicAccessBlockConfiguration;
             return this;
         }
 
+        /**
+         * @param publicAccessBlockConfiguration The PublicAccessBlock configuration that you want to apply to this Multi Region Access Point. You can enable the configuration options in any combination. For more information about when Amazon S3 considers a bucket or object public, see https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status &#39;The Meaning of Public&#39; in the Amazon Simple Storage Service Developer Guide.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicAccessBlockConfiguration(MultiRegionAccessPointPublicAccessBlockConfigurationArgs publicAccessBlockConfiguration) {
             return publicAccessBlockConfiguration(Output.of(publicAccessBlockConfiguration));
         }
 
+        /**
+         * @param regions The list of buckets that you want to associate this Multi Region Access Point with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regions(Output<List<MultiRegionAccessPointRegionArgs>> regions) {
             $.regions = regions;
             return this;
         }
 
+        /**
+         * @param regions The list of buckets that you want to associate this Multi Region Access Point with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regions(List<MultiRegionAccessPointRegionArgs> regions) {
             return regions(Output.of(regions));
         }
 
+        /**
+         * @param regions The list of buckets that you want to associate this Multi Region Access Point with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regions(MultiRegionAccessPointRegionArgs... regions) {
             return regions(List.of(regions));
         }

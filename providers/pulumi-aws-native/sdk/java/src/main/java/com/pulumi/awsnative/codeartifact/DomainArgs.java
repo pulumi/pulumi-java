@@ -25,6 +25,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
     private @Nullable Output<String> domainName;
 
+    /**
+     * @return The name of the domain.
+     * 
+     */
     public Optional<Output<String>> domainName() {
         return Optional.ofNullable(this.domainName);
     }
@@ -36,6 +40,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="permissionsPolicyDocument")
     private @Nullable Output<Object> permissionsPolicyDocument;
 
+    /**
+     * @return The access control resource policy on the provided domain.
+     * 
+     */
     public Optional<Output<Object>> permissionsPolicyDocument() {
         return Optional.ofNullable(this.permissionsPolicyDocument);
     }
@@ -47,6 +55,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<DomainTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<DomainTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -77,33 +89,75 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DomainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainName The name of the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(@Nullable Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName The name of the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param permissionsPolicyDocument The access control resource policy on the provided domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissionsPolicyDocument(@Nullable Output<Object> permissionsPolicyDocument) {
             $.permissionsPolicyDocument = permissionsPolicyDocument;
             return this;
         }
 
+        /**
+         * @param permissionsPolicyDocument The access control resource policy on the provided domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissionsPolicyDocument(Object permissionsPolicyDocument) {
             return permissionsPolicyDocument(Output.of(permissionsPolicyDocument));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<DomainTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<DomainTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(DomainTagArgs... tags) {
             return tags(List.of(tags));
         }

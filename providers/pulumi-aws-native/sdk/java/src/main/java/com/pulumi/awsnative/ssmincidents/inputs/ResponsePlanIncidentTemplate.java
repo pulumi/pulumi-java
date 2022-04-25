@@ -28,6 +28,10 @@ public final class ResponsePlanIncidentTemplate extends com.pulumi.resources.Inv
     @Import(name="dedupeString")
     private @Nullable String dedupeString;
 
+    /**
+     * @return The deduplication string.
+     * 
+     */
     public Optional<String> dedupeString() {
         return Optional.ofNullable(this.dedupeString);
     }
@@ -39,6 +43,10 @@ public final class ResponsePlanIncidentTemplate extends com.pulumi.resources.Inv
     @Import(name="impact", required=true)
     private Integer impact;
 
+    /**
+     * @return The impact value.
+     * 
+     */
     public Integer impact() {
         return this.impact;
     }
@@ -50,6 +58,10 @@ public final class ResponsePlanIncidentTemplate extends com.pulumi.resources.Inv
     @Import(name="notificationTargets")
     private @Nullable List<ResponsePlanNotificationTargetItem> notificationTargets;
 
+    /**
+     * @return The list of notification targets.
+     * 
+     */
     public Optional<List<ResponsePlanNotificationTargetItem>> notificationTargets() {
         return Optional.ofNullable(this.notificationTargets);
     }
@@ -61,6 +73,10 @@ public final class ResponsePlanIncidentTemplate extends com.pulumi.resources.Inv
     @Import(name="summary")
     private @Nullable String summary;
 
+    /**
+     * @return The summary string.
+     * 
+     */
     public Optional<String> summary() {
         return Optional.ofNullable(this.summary);
     }
@@ -72,6 +88,10 @@ public final class ResponsePlanIncidentTemplate extends com.pulumi.resources.Inv
     @Import(name="title", required=true)
     private String title;
 
+    /**
+     * @return The title string.
+     * 
+     */
     public String title() {
         return this.title;
     }
@@ -104,30 +124,66 @@ public final class ResponsePlanIncidentTemplate extends com.pulumi.resources.Inv
             $ = new ResponsePlanIncidentTemplate(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dedupeString The deduplication string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dedupeString(@Nullable String dedupeString) {
             $.dedupeString = dedupeString;
             return this;
         }
 
+        /**
+         * @param impact The impact value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder impact(Integer impact) {
             $.impact = impact;
             return this;
         }
 
+        /**
+         * @param notificationTargets The list of notification targets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationTargets(@Nullable List<ResponsePlanNotificationTargetItem> notificationTargets) {
             $.notificationTargets = notificationTargets;
             return this;
         }
 
+        /**
+         * @param notificationTargets The list of notification targets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationTargets(ResponsePlanNotificationTargetItem... notificationTargets) {
             return notificationTargets(List.of(notificationTargets));
         }
 
+        /**
+         * @param summary The summary string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder summary(@Nullable String summary) {
             $.summary = summary;
             return this;
         }
 
+        /**
+         * @param title The title string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             $.title = title;
             return this;

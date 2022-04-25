@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ConnectorProfileSlackConnectorProfileProperties {
     /**
-     * The location of the Slack resource
+     * @return The location of the Slack resource
      * 
      */
     private final String instanceUrl;
@@ -21,9 +21,9 @@ public final class ConnectorProfileSlackConnectorProfileProperties {
     }
 
     /**
-     * The location of the Slack resource
+     * @return The location of the Slack resource
      * 
-    */
+     */
     public String instanceUrl() {
         return this.instanceUrl;
     }

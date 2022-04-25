@@ -26,6 +26,10 @@ public final class DetectorModelIotEvents extends com.pulumi.resources.InvokeArg
     @Import(name="inputName", required=true)
     private String inputName;
 
+    /**
+     * @return The name of the AWS IoT Events input where the data is sent.
+     * 
+     */
     public String inputName() {
         return this.inputName;
     }
@@ -62,6 +66,12 @@ public final class DetectorModelIotEvents extends com.pulumi.resources.InvokeArg
             $ = new DetectorModelIotEvents(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inputName The name of the AWS IoT Events input where the data is sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputName(String inputName) {
             $.inputName = inputName;
             return this;

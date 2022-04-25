@@ -17,27 +17,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BotSlotValueElicitationSetting {
     /**
-     * A list of default values for a slot.
+     * @return A list of default values for a slot.
      * 
      */
     private final @Nullable BotSlotDefaultValueSpecification defaultValueSpecification;
     /**
-     * The prompt that Amazon Lex uses to elicit the slot value from the user.
+     * @return The prompt that Amazon Lex uses to elicit the slot value from the user.
      * 
      */
     private final @Nullable BotPromptSpecification promptSpecification;
     /**
-     * If you know a specific pattern that users might respond to an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy.
+     * @return If you know a specific pattern that users might respond to an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy.
      * 
      */
     private final @Nullable List<BotSampleUtterance> sampleUtterances;
     /**
-     * Specifies whether the slot is required or optional.
+     * @return Specifies whether the slot is required or optional.
      * 
      */
     private final BotSlotConstraint slotConstraint;
     /**
-     * Specifies the prompts that Amazon Lex uses while a bot is waiting for customer input.
+     * @return Specifies the prompts that Amazon Lex uses while a bot is waiting for customer input.
      * 
      */
     private final @Nullable BotWaitAndContinueSpecification waitAndContinueSpecification;
@@ -57,37 +57,37 @@ public final class BotSlotValueElicitationSetting {
     }
 
     /**
-     * A list of default values for a slot.
+     * @return A list of default values for a slot.
      * 
-    */
+     */
     public Optional<BotSlotDefaultValueSpecification> defaultValueSpecification() {
         return Optional.ofNullable(this.defaultValueSpecification);
     }
     /**
-     * The prompt that Amazon Lex uses to elicit the slot value from the user.
+     * @return The prompt that Amazon Lex uses to elicit the slot value from the user.
      * 
-    */
+     */
     public Optional<BotPromptSpecification> promptSpecification() {
         return Optional.ofNullable(this.promptSpecification);
     }
     /**
-     * If you know a specific pattern that users might respond to an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy.
+     * @return If you know a specific pattern that users might respond to an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy.
      * 
-    */
+     */
     public List<BotSampleUtterance> sampleUtterances() {
         return this.sampleUtterances == null ? List.of() : this.sampleUtterances;
     }
     /**
-     * Specifies whether the slot is required or optional.
+     * @return Specifies whether the slot is required or optional.
      * 
-    */
+     */
     public BotSlotConstraint slotConstraint() {
         return this.slotConstraint;
     }
     /**
-     * Specifies the prompts that Amazon Lex uses while a bot is waiting for customer input.
+     * @return Specifies the prompts that Amazon Lex uses while a bot is waiting for customer input.
      * 
-    */
+     */
     public Optional<BotWaitAndContinueSpecification> waitAndContinueSpecification() {
         return Optional.ofNullable(this.waitAndContinueSpecification);
     }

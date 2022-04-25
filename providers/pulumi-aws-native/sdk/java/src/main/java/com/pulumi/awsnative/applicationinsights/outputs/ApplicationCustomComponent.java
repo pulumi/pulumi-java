@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class ApplicationCustomComponent {
     /**
-     * The name of the component.
+     * @return The name of the component.
      * 
      */
     private final String componentName;
     /**
-     * The list of resource ARNs that belong to the component.
+     * @return The list of resource ARNs that belong to the component.
      * 
      */
     private final List<String> resourceList;
@@ -30,16 +30,16 @@ public final class ApplicationCustomComponent {
     }
 
     /**
-     * The name of the component.
+     * @return The name of the component.
      * 
-    */
+     */
     public String componentName() {
         return this.componentName;
     }
     /**
-     * The list of resource ARNs that belong to the component.
+     * @return The list of resource ARNs that belong to the component.
      * 
-    */
+     */
     public List<String> resourceList() {
         return this.resourceList;
     }

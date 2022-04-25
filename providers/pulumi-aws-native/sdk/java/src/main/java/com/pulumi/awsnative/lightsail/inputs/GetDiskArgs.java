@@ -19,6 +19,10 @@ public final class GetDiskArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskName", required=true)
     private String diskName;
 
+    /**
+     * @return The names to use for your new Lightsail disk.
+     * 
+     */
     public String diskName() {
         return this.diskName;
     }
@@ -47,6 +51,12 @@ public final class GetDiskArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDiskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskName The names to use for your new Lightsail disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskName(String diskName) {
             $.diskName = diskName;
             return this;

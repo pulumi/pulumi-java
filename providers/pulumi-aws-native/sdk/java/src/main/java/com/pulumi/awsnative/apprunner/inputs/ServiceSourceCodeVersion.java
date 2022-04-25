@@ -24,6 +24,10 @@ public final class ServiceSourceCodeVersion extends com.pulumi.resources.InvokeA
     @Import(name="type", required=true)
     private ServiceSourceCodeVersionType type;
 
+    /**
+     * @return Source Code Version Type
+     * 
+     */
     public ServiceSourceCodeVersionType type() {
         return this.type;
     }
@@ -35,6 +39,10 @@ public final class ServiceSourceCodeVersion extends com.pulumi.resources.InvokeA
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return Source Code Version Value
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -64,11 +72,23 @@ public final class ServiceSourceCodeVersion extends com.pulumi.resources.InvokeA
             $ = new ServiceSourceCodeVersion(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Source Code Version Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ServiceSourceCodeVersionType type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param value Source Code Version Value
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

@@ -24,6 +24,10 @@ public final class DatasetFilesLimitArgs extends com.pulumi.resources.ResourceAr
     @Import(name="maxFiles", required=true)
     private Output<Integer> maxFiles;
 
+    /**
+     * @return Maximum number of files
+     * 
+     */
     public Output<Integer> maxFiles() {
         return this.maxFiles;
     }
@@ -35,6 +39,10 @@ public final class DatasetFilesLimitArgs extends com.pulumi.resources.ResourceAr
     @Import(name="order")
     private @Nullable Output<DatasetFilesLimitOrder> order;
 
+    /**
+     * @return Order
+     * 
+     */
     public Optional<Output<DatasetFilesLimitOrder>> order() {
         return Optional.ofNullable(this.order);
     }
@@ -46,6 +54,10 @@ public final class DatasetFilesLimitArgs extends com.pulumi.resources.ResourceAr
     @Import(name="orderedBy")
     private @Nullable Output<DatasetFilesLimitOrderedBy> orderedBy;
 
+    /**
+     * @return Ordered by
+     * 
+     */
     public Optional<Output<DatasetFilesLimitOrderedBy>> orderedBy() {
         return Optional.ofNullable(this.orderedBy);
     }
@@ -76,29 +88,65 @@ public final class DatasetFilesLimitArgs extends com.pulumi.resources.ResourceAr
             $ = new DatasetFilesLimitArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxFiles Maximum number of files
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxFiles(Output<Integer> maxFiles) {
             $.maxFiles = maxFiles;
             return this;
         }
 
+        /**
+         * @param maxFiles Maximum number of files
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxFiles(Integer maxFiles) {
             return maxFiles(Output.of(maxFiles));
         }
 
+        /**
+         * @param order Order
+         * 
+         * @return builder
+         * 
+         */
         public Builder order(@Nullable Output<DatasetFilesLimitOrder> order) {
             $.order = order;
             return this;
         }
 
+        /**
+         * @param order Order
+         * 
+         * @return builder
+         * 
+         */
         public Builder order(DatasetFilesLimitOrder order) {
             return order(Output.of(order));
         }
 
+        /**
+         * @param orderedBy Ordered by
+         * 
+         * @return builder
+         * 
+         */
         public Builder orderedBy(@Nullable Output<DatasetFilesLimitOrderedBy> orderedBy) {
             $.orderedBy = orderedBy;
             return this;
         }
 
+        /**
+         * @param orderedBy Ordered by
+         * 
+         * @return builder
+         * 
+         */
         public Builder orderedBy(DatasetFilesLimitOrderedBy orderedBy) {
             return orderedBy(Output.of(orderedBy));
         }

@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ContainerServiceDeployment {
     /**
-     * An object that describes the configuration for the containers of the deployment.
+     * @return An object that describes the configuration for the containers of the deployment.
      * 
      */
     private final @Nullable List<Container> containers;
     /**
-     * An object that describes the endpoint of the deployment.
+     * @return An object that describes the endpoint of the deployment.
      * 
      */
     private final @Nullable ContainerPublicEndpoint publicEndpoint;
@@ -33,16 +33,16 @@ public final class ContainerServiceDeployment {
     }
 
     /**
-     * An object that describes the configuration for the containers of the deployment.
+     * @return An object that describes the configuration for the containers of the deployment.
      * 
-    */
+     */
     public List<Container> containers() {
         return this.containers == null ? List.of() : this.containers;
     }
     /**
-     * An object that describes the endpoint of the deployment.
+     * @return An object that describes the endpoint of the deployment.
      * 
-    */
+     */
     public Optional<ContainerPublicEndpoint> publicEndpoint() {
         return Optional.ofNullable(this.publicEndpoint);
     }

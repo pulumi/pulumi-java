@@ -28,6 +28,11 @@ public final class DataSetIngestionWaitPolicyArgs extends com.pulumi.resources.R
     @Import(name="ingestionWaitTimeInHours")
     private @Nullable Output<Double> ingestionWaitTimeInHours;
 
+    /**
+     * @return &lt;p&gt;The maximum time (in hours) to wait for Ingestion to complete. Default timeout is 36 hours.
+     *  Applicable only when DataSetImportMode mode is set to SPICE and WaitForSpiceIngestion is set to true.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<Double>> ingestionWaitTimeInHours() {
         return Optional.ofNullable(this.ingestionWaitTimeInHours);
     }
@@ -40,6 +45,11 @@ public final class DataSetIngestionWaitPolicyArgs extends com.pulumi.resources.R
     @Import(name="waitForSpiceIngestion")
     private @Nullable Output<Boolean> waitForSpiceIngestion;
 
+    /**
+     * @return &lt;p&gt;Wait for SPICE ingestion to finish to mark dataset creation/update successful. Default (true).
+     *   Applicable only when DataSetImportMode mode is set to SPICE.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<Boolean>> waitForSpiceIngestion() {
         return Optional.ofNullable(this.waitForSpiceIngestion);
     }
@@ -69,20 +79,48 @@ public final class DataSetIngestionWaitPolicyArgs extends com.pulumi.resources.R
             $ = new DataSetIngestionWaitPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ingestionWaitTimeInHours &lt;p&gt;The maximum time (in hours) to wait for Ingestion to complete. Default timeout is 36 hours.
+         *  Applicable only when DataSetImportMode mode is set to SPICE and WaitForSpiceIngestion is set to true.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingestionWaitTimeInHours(@Nullable Output<Double> ingestionWaitTimeInHours) {
             $.ingestionWaitTimeInHours = ingestionWaitTimeInHours;
             return this;
         }
 
+        /**
+         * @param ingestionWaitTimeInHours &lt;p&gt;The maximum time (in hours) to wait for Ingestion to complete. Default timeout is 36 hours.
+         *  Applicable only when DataSetImportMode mode is set to SPICE and WaitForSpiceIngestion is set to true.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingestionWaitTimeInHours(Double ingestionWaitTimeInHours) {
             return ingestionWaitTimeInHours(Output.of(ingestionWaitTimeInHours));
         }
 
+        /**
+         * @param waitForSpiceIngestion &lt;p&gt;Wait for SPICE ingestion to finish to mark dataset creation/update successful. Default (true).
+         *   Applicable only when DataSetImportMode mode is set to SPICE.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitForSpiceIngestion(@Nullable Output<Boolean> waitForSpiceIngestion) {
             $.waitForSpiceIngestion = waitForSpiceIngestion;
             return this;
         }
 
+        /**
+         * @param waitForSpiceIngestion &lt;p&gt;Wait for SPICE ingestion to finish to mark dataset creation/update successful. Default (true).
+         *   Applicable only when DataSetImportMode mode is set to SPICE.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitForSpiceIngestion(Boolean waitForSpiceIngestion) {
             return waitForSpiceIngestion(Output.of(waitForSpiceIngestion));
         }

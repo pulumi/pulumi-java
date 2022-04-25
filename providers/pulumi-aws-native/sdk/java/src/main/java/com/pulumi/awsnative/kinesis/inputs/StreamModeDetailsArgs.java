@@ -24,6 +24,10 @@ public final class StreamModeDetailsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="streamMode", required=true)
     private Output<StreamModeDetailsStreamMode> streamMode;
 
+    /**
+     * @return The mode of the stream
+     * 
+     */
     public Output<StreamModeDetailsStreamMode> streamMode() {
         return this.streamMode;
     }
@@ -52,11 +56,23 @@ public final class StreamModeDetailsArgs extends com.pulumi.resources.ResourceAr
             $ = new StreamModeDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param streamMode The mode of the stream
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamMode(Output<StreamModeDetailsStreamMode> streamMode) {
             $.streamMode = streamMode;
             return this;
         }
 
+        /**
+         * @param streamMode The mode of the stream
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamMode(StreamModeDetailsStreamMode streamMode) {
             return streamMode(Output.of(streamMode));
         }

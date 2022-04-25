@@ -21,6 +21,10 @@ public final class TransitGatewayPeeringAttachmentPeeringAttachmentStatus extend
     @Import(name="code")
     private @Nullable String code;
 
+    /**
+     * @return The status code.
+     * 
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
@@ -32,6 +36,10 @@ public final class TransitGatewayPeeringAttachmentPeeringAttachmentStatus extend
     @Import(name="message")
     private @Nullable String message;
 
+    /**
+     * @return The status message, if applicable.
+     * 
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -61,11 +69,23 @@ public final class TransitGatewayPeeringAttachmentPeeringAttachmentStatus extend
             $ = new TransitGatewayPeeringAttachmentPeeringAttachmentStatus(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code The status code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param message The status message, if applicable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable String message) {
             $.message = message;
             return this;

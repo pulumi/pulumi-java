@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ModelBiasJobDefinitionStoppingCondition {
     /**
-     * The maximum runtime allowed in seconds.
+     * @return The maximum runtime allowed in seconds.
      * 
      */
     private final Integer maxRuntimeInSeconds;
@@ -21,9 +21,9 @@ public final class ModelBiasJobDefinitionStoppingCondition {
     }
 
     /**
-     * The maximum runtime allowed in seconds.
+     * @return The maximum runtime allowed in seconds.
      * 
-    */
+     */
     public Integer maxRuntimeInSeconds() {
         return this.maxRuntimeInSeconds;
     }

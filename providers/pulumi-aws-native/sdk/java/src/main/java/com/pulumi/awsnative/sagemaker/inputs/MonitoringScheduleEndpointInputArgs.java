@@ -35,6 +35,10 @@ public final class MonitoringScheduleEndpointInputArgs extends com.pulumi.resour
     @Import(name="localPath", required=true)
     private Output<String> localPath;
 
+    /**
+     * @return Path to the filesystem where the endpoint data is available to the container.
+     * 
+     */
     public Output<String> localPath() {
         return this.localPath;
     }
@@ -46,6 +50,10 @@ public final class MonitoringScheduleEndpointInputArgs extends com.pulumi.resour
     @Import(name="s3DataDistributionType")
     private @Nullable Output<MonitoringScheduleEndpointInputS3DataDistributionType> s3DataDistributionType;
 
+    /**
+     * @return Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key. Defauts to FullyReplicated
+     * 
+     */
     public Optional<Output<MonitoringScheduleEndpointInputS3DataDistributionType>> s3DataDistributionType() {
         return Optional.ofNullable(this.s3DataDistributionType);
     }
@@ -57,6 +65,10 @@ public final class MonitoringScheduleEndpointInputArgs extends com.pulumi.resour
     @Import(name="s3InputMode")
     private @Nullable Output<MonitoringScheduleEndpointInputS3InputMode> s3InputMode;
 
+    /**
+     * @return Whether the Pipe or File is used as the input mode for transfering data for the monitoring job. Pipe mode is recommended for large datasets. File mode is useful for small files that fit in memory. Defaults to File.
+     * 
+     */
     public Optional<Output<MonitoringScheduleEndpointInputS3InputMode>> s3InputMode() {
         return Optional.ofNullable(this.s3InputMode);
     }
@@ -97,29 +109,65 @@ public final class MonitoringScheduleEndpointInputArgs extends com.pulumi.resour
             return endpointName(Output.of(endpointName));
         }
 
+        /**
+         * @param localPath Path to the filesystem where the endpoint data is available to the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localPath(Output<String> localPath) {
             $.localPath = localPath;
             return this;
         }
 
+        /**
+         * @param localPath Path to the filesystem where the endpoint data is available to the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localPath(String localPath) {
             return localPath(Output.of(localPath));
         }
 
+        /**
+         * @param s3DataDistributionType Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key. Defauts to FullyReplicated
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3DataDistributionType(@Nullable Output<MonitoringScheduleEndpointInputS3DataDistributionType> s3DataDistributionType) {
             $.s3DataDistributionType = s3DataDistributionType;
             return this;
         }
 
+        /**
+         * @param s3DataDistributionType Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key. Defauts to FullyReplicated
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3DataDistributionType(MonitoringScheduleEndpointInputS3DataDistributionType s3DataDistributionType) {
             return s3DataDistributionType(Output.of(s3DataDistributionType));
         }
 
+        /**
+         * @param s3InputMode Whether the Pipe or File is used as the input mode for transfering data for the monitoring job. Pipe mode is recommended for large datasets. File mode is useful for small files that fit in memory. Defaults to File.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3InputMode(@Nullable Output<MonitoringScheduleEndpointInputS3InputMode> s3InputMode) {
             $.s3InputMode = s3InputMode;
             return this;
         }
 
+        /**
+         * @param s3InputMode Whether the Pipe or File is used as the input mode for transfering data for the monitoring job. Pipe mode is recommended for large datasets. File mode is useful for small files that fit in memory. Defaults to File.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3InputMode(MonitoringScheduleEndpointInputS3InputMode s3InputMode) {
             return s3InputMode(Output.of(s3InputMode));
         }

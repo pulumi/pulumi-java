@@ -27,6 +27,10 @@ public final class ProfilingGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="agentPermissions")
     private @Nullable Output<AgentPermissionsPropertiesArgs> agentPermissions;
 
+    /**
+     * @return The agent permissions attached to this profiling group.
+     * 
+     */
     public Optional<Output<AgentPermissionsPropertiesArgs>> agentPermissions() {
         return Optional.ofNullable(this.agentPermissions);
     }
@@ -38,6 +42,10 @@ public final class ProfilingGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="anomalyDetectionNotificationConfiguration")
     private @Nullable Output<List<ProfilingGroupChannelArgs>> anomalyDetectionNotificationConfiguration;
 
+    /**
+     * @return Configuration for Notification Channels for Anomaly Detection feature in CodeGuru Profiler which enables customers to detect anomalies in the application profile for those methods that represent the highest proportion of CPU time or latency
+     * 
+     */
     public Optional<Output<List<ProfilingGroupChannelArgs>>> anomalyDetectionNotificationConfiguration() {
         return Optional.ofNullable(this.anomalyDetectionNotificationConfiguration);
     }
@@ -49,6 +57,10 @@ public final class ProfilingGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="computePlatform")
     private @Nullable Output<ProfilingGroupComputePlatform> computePlatform;
 
+    /**
+     * @return The compute platform of the profiling group.
+     * 
+     */
     public Optional<Output<ProfilingGroupComputePlatform>> computePlatform() {
         return Optional.ofNullable(this.computePlatform);
     }
@@ -60,6 +72,10 @@ public final class ProfilingGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="profilingGroupName")
     private @Nullable Output<String> profilingGroupName;
 
+    /**
+     * @return The name of the profiling group.
+     * 
+     */
     public Optional<Output<String>> profilingGroupName() {
         return Optional.ofNullable(this.profilingGroupName);
     }
@@ -71,6 +87,10 @@ public final class ProfilingGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<List<ProfilingGroupTagArgs>> tags;
 
+    /**
+     * @return The tags associated with a profiling group.
+     * 
+     */
     public Optional<Output<List<ProfilingGroupTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -103,55 +123,127 @@ public final class ProfilingGroupArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ProfilingGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentPermissions The agent permissions attached to this profiling group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentPermissions(@Nullable Output<AgentPermissionsPropertiesArgs> agentPermissions) {
             $.agentPermissions = agentPermissions;
             return this;
         }
 
+        /**
+         * @param agentPermissions The agent permissions attached to this profiling group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentPermissions(AgentPermissionsPropertiesArgs agentPermissions) {
             return agentPermissions(Output.of(agentPermissions));
         }
 
+        /**
+         * @param anomalyDetectionNotificationConfiguration Configuration for Notification Channels for Anomaly Detection feature in CodeGuru Profiler which enables customers to detect anomalies in the application profile for those methods that represent the highest proportion of CPU time or latency
+         * 
+         * @return builder
+         * 
+         */
         public Builder anomalyDetectionNotificationConfiguration(@Nullable Output<List<ProfilingGroupChannelArgs>> anomalyDetectionNotificationConfiguration) {
             $.anomalyDetectionNotificationConfiguration = anomalyDetectionNotificationConfiguration;
             return this;
         }
 
+        /**
+         * @param anomalyDetectionNotificationConfiguration Configuration for Notification Channels for Anomaly Detection feature in CodeGuru Profiler which enables customers to detect anomalies in the application profile for those methods that represent the highest proportion of CPU time or latency
+         * 
+         * @return builder
+         * 
+         */
         public Builder anomalyDetectionNotificationConfiguration(List<ProfilingGroupChannelArgs> anomalyDetectionNotificationConfiguration) {
             return anomalyDetectionNotificationConfiguration(Output.of(anomalyDetectionNotificationConfiguration));
         }
 
+        /**
+         * @param anomalyDetectionNotificationConfiguration Configuration for Notification Channels for Anomaly Detection feature in CodeGuru Profiler which enables customers to detect anomalies in the application profile for those methods that represent the highest proportion of CPU time or latency
+         * 
+         * @return builder
+         * 
+         */
         public Builder anomalyDetectionNotificationConfiguration(ProfilingGroupChannelArgs... anomalyDetectionNotificationConfiguration) {
             return anomalyDetectionNotificationConfiguration(List.of(anomalyDetectionNotificationConfiguration));
         }
 
+        /**
+         * @param computePlatform The compute platform of the profiling group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computePlatform(@Nullable Output<ProfilingGroupComputePlatform> computePlatform) {
             $.computePlatform = computePlatform;
             return this;
         }
 
+        /**
+         * @param computePlatform The compute platform of the profiling group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computePlatform(ProfilingGroupComputePlatform computePlatform) {
             return computePlatform(Output.of(computePlatform));
         }
 
+        /**
+         * @param profilingGroupName The name of the profiling group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profilingGroupName(@Nullable Output<String> profilingGroupName) {
             $.profilingGroupName = profilingGroupName;
             return this;
         }
 
+        /**
+         * @param profilingGroupName The name of the profiling group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profilingGroupName(String profilingGroupName) {
             return profilingGroupName(Output.of(profilingGroupName));
         }
 
+        /**
+         * @param tags The tags associated with a profiling group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<ProfilingGroupTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags associated with a profiling group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<ProfilingGroupTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The tags associated with a profiling group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(ProfilingGroupTagArgs... tags) {
             return tags(List.of(tags));
         }

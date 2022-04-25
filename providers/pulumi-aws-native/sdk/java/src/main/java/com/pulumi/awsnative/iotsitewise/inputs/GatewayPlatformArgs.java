@@ -27,6 +27,10 @@ public final class GatewayPlatformArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="greengrass")
     private @Nullable Output<GatewayGreengrassArgs> greengrass;
 
+    /**
+     * @return A gateway that runs on AWS IoT Greengrass V1.
+     * 
+     */
     public Optional<Output<GatewayGreengrassArgs>> greengrass() {
         return Optional.ofNullable(this.greengrass);
     }
@@ -38,6 +42,10 @@ public final class GatewayPlatformArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="greengrassV2")
     private @Nullable Output<GatewayGreengrassV2Args> greengrassV2;
 
+    /**
+     * @return A gateway that runs on AWS IoT Greengrass V2.
+     * 
+     */
     public Optional<Output<GatewayGreengrassV2Args>> greengrassV2() {
         return Optional.ofNullable(this.greengrassV2);
     }
@@ -67,20 +75,44 @@ public final class GatewayPlatformArgs extends com.pulumi.resources.ResourceArgs
             $ = new GatewayPlatformArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param greengrass A gateway that runs on AWS IoT Greengrass V1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder greengrass(@Nullable Output<GatewayGreengrassArgs> greengrass) {
             $.greengrass = greengrass;
             return this;
         }
 
+        /**
+         * @param greengrass A gateway that runs on AWS IoT Greengrass V1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder greengrass(GatewayGreengrassArgs greengrass) {
             return greengrass(Output.of(greengrass));
         }
 
+        /**
+         * @param greengrassV2 A gateway that runs on AWS IoT Greengrass V2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder greengrassV2(@Nullable Output<GatewayGreengrassV2Args> greengrassV2) {
             $.greengrassV2 = greengrassV2;
             return this;
         }
 
+        /**
+         * @param greengrassV2 A gateway that runs on AWS IoT Greengrass V2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder greengrassV2(GatewayGreengrassV2Args greengrassV2) {
             return greengrassV2(Output.of(greengrassV2));
         }

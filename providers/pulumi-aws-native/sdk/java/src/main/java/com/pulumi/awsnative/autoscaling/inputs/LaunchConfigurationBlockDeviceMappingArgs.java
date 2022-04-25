@@ -28,6 +28,10 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends com.pulumi.
     @Import(name="deviceName", required=true)
     private Output<String> deviceName;
 
+    /**
+     * @return The device name exposed to the EC2 instance (for example, /dev/sdh or xvdh).
+     * 
+     */
     public Output<String> deviceName() {
         return this.deviceName;
     }
@@ -39,6 +43,10 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends com.pulumi.
     @Import(name="ebs")
     private @Nullable Output<LaunchConfigurationBlockDeviceArgs> ebs;
 
+    /**
+     * @return Parameters used to automatically set up EBS volumes when an instance is launched.
+     * 
+     */
     public Optional<Output<LaunchConfigurationBlockDeviceArgs>> ebs() {
         return Optional.ofNullable(this.ebs);
     }
@@ -50,6 +58,10 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends com.pulumi.
     @Import(name="noDevice")
     private @Nullable Output<Boolean> noDevice;
 
+    /**
+     * @return Setting this value to true suppresses the specified device included in the block device mapping of the AMI.
+     * 
+     */
     public Optional<Output<Boolean>> noDevice() {
         return Optional.ofNullable(this.noDevice);
     }
@@ -61,6 +73,10 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends com.pulumi.
     @Import(name="virtualName")
     private @Nullable Output<String> virtualName;
 
+    /**
+     * @return The name of the virtual device.
+     * 
+     */
     public Optional<Output<String>> virtualName() {
         return Optional.ofNullable(this.virtualName);
     }
@@ -92,38 +108,86 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends com.pulumi.
             $ = new LaunchConfigurationBlockDeviceMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceName The device name exposed to the EC2 instance (for example, /dev/sdh or xvdh).
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName The device name exposed to the EC2 instance (for example, /dev/sdh or xvdh).
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param ebs Parameters used to automatically set up EBS volumes when an instance is launched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebs(@Nullable Output<LaunchConfigurationBlockDeviceArgs> ebs) {
             $.ebs = ebs;
             return this;
         }
 
+        /**
+         * @param ebs Parameters used to automatically set up EBS volumes when an instance is launched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebs(LaunchConfigurationBlockDeviceArgs ebs) {
             return ebs(Output.of(ebs));
         }
 
+        /**
+         * @param noDevice Setting this value to true suppresses the specified device included in the block device mapping of the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noDevice(@Nullable Output<Boolean> noDevice) {
             $.noDevice = noDevice;
             return this;
         }
 
+        /**
+         * @param noDevice Setting this value to true suppresses the specified device included in the block device mapping of the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noDevice(Boolean noDevice) {
             return noDevice(Output.of(noDevice));
         }
 
+        /**
+         * @param virtualName The name of the virtual device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualName(@Nullable Output<String> virtualName) {
             $.virtualName = virtualName;
             return this;
         }
 
+        /**
+         * @param virtualName The name of the virtual device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualName(String virtualName) {
             return virtualName(Output.of(virtualName));
         }

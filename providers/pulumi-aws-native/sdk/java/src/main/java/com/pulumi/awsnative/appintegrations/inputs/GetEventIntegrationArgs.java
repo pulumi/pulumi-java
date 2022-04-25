@@ -19,6 +19,10 @@ public final class GetEventIntegrationArgs extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the event integration.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +51,12 @@ public final class GetEventIntegrationArgs extends com.pulumi.resources.InvokeAr
             $ = new GetEventIntegrationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the event integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

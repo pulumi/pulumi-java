@@ -26,6 +26,10 @@ public final class JobValidationConfiguration extends com.pulumi.resources.Invok
     @Import(name="rulesetArn", required=true)
     private String rulesetArn;
 
+    /**
+     * @return Arn of the Ruleset
+     * 
+     */
     public String rulesetArn() {
         return this.rulesetArn;
     }
@@ -62,6 +66,12 @@ public final class JobValidationConfiguration extends com.pulumi.resources.Invok
             $ = new JobValidationConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rulesetArn Arn of the Ruleset
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesetArn(String rulesetArn) {
             $.rulesetArn = rulesetArn;
             return this;

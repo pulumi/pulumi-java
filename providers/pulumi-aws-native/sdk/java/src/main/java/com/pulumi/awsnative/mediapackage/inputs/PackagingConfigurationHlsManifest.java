@@ -29,6 +29,10 @@ public final class PackagingConfigurationHlsManifest extends com.pulumi.resource
     @Import(name="adMarkers")
     private @Nullable PackagingConfigurationHlsManifestAdMarkers adMarkers;
 
+    /**
+     * @return This setting controls how ad markers are included in the packaged OriginEndpoint. &#34;NONE&#34; will omit all SCTE-35 ad markers from the output. &#34;PASSTHROUGH&#34; causes the manifest to contain a copy of the SCTE-35 ad markers (comments) taken directly from the input HTTP Live Streaming (HLS) manifest. &#34;SCTE35_ENHANCED&#34; generates ad markers and blackout tags based on SCTE-35 messages in the input source.
+     * 
+     */
     public Optional<PackagingConfigurationHlsManifestAdMarkers> adMarkers() {
         return Optional.ofNullable(this.adMarkers);
     }
@@ -40,6 +44,10 @@ public final class PackagingConfigurationHlsManifest extends com.pulumi.resource
     @Import(name="includeIframeOnlyStream")
     private @Nullable Boolean includeIframeOnlyStream;
 
+    /**
+     * @return When enabled, an I-Frame only stream will be included in the output.
+     * 
+     */
     public Optional<Boolean> includeIframeOnlyStream() {
         return Optional.ofNullable(this.includeIframeOnlyStream);
     }
@@ -58,6 +66,10 @@ public final class PackagingConfigurationHlsManifest extends com.pulumi.resource
     @Import(name="programDateTimeIntervalSeconds")
     private @Nullable Integer programDateTimeIntervalSeconds;
 
+    /**
+     * @return The interval (in seconds) between each EXT-X-PROGRAM-DATE-TIME tag inserted into manifests. Additionally, when an interval is specified ID3Timed Metadata messages will be generated every 5 seconds using the ingest time of the content. If the interval is not specified, or set to 0, then no EXT-X-PROGRAM-DATE-TIME tags will be inserted into manifests and no ID3Timed Metadata messages will be generated. Note that irrespective of this parameter, if any ID3 Timed Metadata is found in HTTP Live Streaming (HLS) input, it will be passed through to HLS output.
+     * 
+     */
     public Optional<Integer> programDateTimeIntervalSeconds() {
         return Optional.ofNullable(this.programDateTimeIntervalSeconds);
     }
@@ -69,6 +81,10 @@ public final class PackagingConfigurationHlsManifest extends com.pulumi.resource
     @Import(name="repeatExtXKey")
     private @Nullable Boolean repeatExtXKey;
 
+    /**
+     * @return When enabled, the EXT-X-KEY tag will be repeated in output manifests.
+     * 
+     */
     public Optional<Boolean> repeatExtXKey() {
         return Optional.ofNullable(this.repeatExtXKey);
     }
@@ -109,11 +125,23 @@ public final class PackagingConfigurationHlsManifest extends com.pulumi.resource
             $ = new PackagingConfigurationHlsManifest(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adMarkers This setting controls how ad markers are included in the packaged OriginEndpoint. &#34;NONE&#34; will omit all SCTE-35 ad markers from the output. &#34;PASSTHROUGH&#34; causes the manifest to contain a copy of the SCTE-35 ad markers (comments) taken directly from the input HTTP Live Streaming (HLS) manifest. &#34;SCTE35_ENHANCED&#34; generates ad markers and blackout tags based on SCTE-35 messages in the input source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adMarkers(@Nullable PackagingConfigurationHlsManifestAdMarkers adMarkers) {
             $.adMarkers = adMarkers;
             return this;
         }
 
+        /**
+         * @param includeIframeOnlyStream When enabled, an I-Frame only stream will be included in the output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeIframeOnlyStream(@Nullable Boolean includeIframeOnlyStream) {
             $.includeIframeOnlyStream = includeIframeOnlyStream;
             return this;
@@ -124,11 +152,23 @@ public final class PackagingConfigurationHlsManifest extends com.pulumi.resource
             return this;
         }
 
+        /**
+         * @param programDateTimeIntervalSeconds The interval (in seconds) between each EXT-X-PROGRAM-DATE-TIME tag inserted into manifests. Additionally, when an interval is specified ID3Timed Metadata messages will be generated every 5 seconds using the ingest time of the content. If the interval is not specified, or set to 0, then no EXT-X-PROGRAM-DATE-TIME tags will be inserted into manifests and no ID3Timed Metadata messages will be generated. Note that irrespective of this parameter, if any ID3 Timed Metadata is found in HTTP Live Streaming (HLS) input, it will be passed through to HLS output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder programDateTimeIntervalSeconds(@Nullable Integer programDateTimeIntervalSeconds) {
             $.programDateTimeIntervalSeconds = programDateTimeIntervalSeconds;
             return this;
         }
 
+        /**
+         * @param repeatExtXKey When enabled, the EXT-X-KEY tag will be repeated in output manifests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repeatExtXKey(@Nullable Boolean repeatExtXKey) {
             $.repeatExtXKey = repeatExtXKey;
             return this;

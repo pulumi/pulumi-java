@@ -24,6 +24,10 @@ public final class BotSlotDefaultValueArgs extends com.pulumi.resources.Resource
     @Import(name="defaultValue", required=true)
     private Output<String> defaultValue;
 
+    /**
+     * @return The default value to use when a user doesn&#39;t provide a value for a slot.
+     * 
+     */
     public Output<String> defaultValue() {
         return this.defaultValue;
     }
@@ -52,11 +56,23 @@ public final class BotSlotDefaultValueArgs extends com.pulumi.resources.Resource
             $ = new BotSlotDefaultValueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultValue The default value to use when a user doesn&#39;t provide a value for a slot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(Output<String> defaultValue) {
             $.defaultValue = defaultValue;
             return this;
         }
 
+        /**
+         * @param defaultValue The default value to use when a user doesn&#39;t provide a value for a slot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(String defaultValue) {
             return defaultValue(Output.of(defaultValue));
         }

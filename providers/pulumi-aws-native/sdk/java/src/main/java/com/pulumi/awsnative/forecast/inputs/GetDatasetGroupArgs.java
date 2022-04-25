@@ -19,6 +19,10 @@ public final class GetDatasetGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="datasetGroupArn", required=true)
     private String datasetGroupArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the dataset group to delete.
+     * 
+     */
     public String datasetGroupArn() {
         return this.datasetGroupArn;
     }
@@ -47,6 +51,12 @@ public final class GetDatasetGroupArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDatasetGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetGroupArn The Amazon Resource Name (ARN) of the dataset group to delete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetGroupArn(String datasetGroupArn) {
             $.datasetGroupArn = datasetGroupArn;
             return this;

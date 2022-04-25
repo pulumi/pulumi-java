@@ -25,6 +25,10 @@ public final class DetectorModelPayload extends com.pulumi.resources.InvokeArgs 
     @Import(name="contentExpression", required=true)
     private String contentExpression;
 
+    /**
+     * @return The content of the payload. You can use a string expression that includes quoted strings (`&#39;&lt;string&gt;&#39;`), variables (`$variable.&lt;variable-name&gt;`), input values (`$input.&lt;input-name&gt;.&lt;path-to-datum&gt;`), string concatenations, and quoted strings that contain `${}` as the content. The recommended maximum size of a content expression is 1 KB.
+     * 
+     */
     public String contentExpression() {
         return this.contentExpression;
     }
@@ -36,6 +40,10 @@ public final class DetectorModelPayload extends com.pulumi.resources.InvokeArgs 
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The value of the payload type can be either `STRING` or `JSON`.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -65,11 +73,23 @@ public final class DetectorModelPayload extends com.pulumi.resources.InvokeArgs 
             $ = new DetectorModelPayload(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentExpression The content of the payload. You can use a string expression that includes quoted strings (`&#39;&lt;string&gt;&#39;`), variables (`$variable.&lt;variable-name&gt;`), input values (`$input.&lt;input-name&gt;.&lt;path-to-datum&gt;`), string concatenations, and quoted strings that contain `${}` as the content. The recommended maximum size of a content expression is 1 KB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentExpression(String contentExpression) {
             $.contentExpression = contentExpression;
             return this;
         }
 
+        /**
+         * @param type The value of the payload type can be either `STRING` or `JSON`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

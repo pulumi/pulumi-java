@@ -25,6 +25,10 @@ public final class Template extends com.pulumi.resources.InvokeArgs {
     @Import(name="htmlPart")
     private @Nullable String htmlPart;
 
+    /**
+     * @return The HTML body of the email.
+     * 
+     */
     public Optional<String> htmlPart() {
         return Optional.ofNullable(this.htmlPart);
     }
@@ -36,6 +40,10 @@ public final class Template extends com.pulumi.resources.InvokeArgs {
     @Import(name="subjectPart", required=true)
     private String subjectPart;
 
+    /**
+     * @return The subject line of the email.
+     * 
+     */
     public String subjectPart() {
         return this.subjectPart;
     }
@@ -47,6 +55,10 @@ public final class Template extends com.pulumi.resources.InvokeArgs {
     @Import(name="templateName")
     private @Nullable String templateName;
 
+    /**
+     * @return The name of the template.
+     * 
+     */
     public Optional<String> templateName() {
         return Optional.ofNullable(this.templateName);
     }
@@ -58,6 +70,10 @@ public final class Template extends com.pulumi.resources.InvokeArgs {
     @Import(name="textPart")
     private @Nullable String textPart;
 
+    /**
+     * @return The email body that is visible to recipients whose email clients do not display HTML content.
+     * 
+     */
     public Optional<String> textPart() {
         return Optional.ofNullable(this.textPart);
     }
@@ -89,21 +105,45 @@ public final class Template extends com.pulumi.resources.InvokeArgs {
             $ = new Template(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param htmlPart The HTML body of the email.
+         * 
+         * @return builder
+         * 
+         */
         public Builder htmlPart(@Nullable String htmlPart) {
             $.htmlPart = htmlPart;
             return this;
         }
 
+        /**
+         * @param subjectPart The subject line of the email.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectPart(String subjectPart) {
             $.subjectPart = subjectPart;
             return this;
         }
 
+        /**
+         * @param templateName The name of the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateName(@Nullable String templateName) {
             $.templateName = templateName;
             return this;
         }
 
+        /**
+         * @param textPart The email body that is visible to recipients whose email clients do not display HTML content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textPart(@Nullable String textPart) {
             $.textPart = textPart;
             return this;

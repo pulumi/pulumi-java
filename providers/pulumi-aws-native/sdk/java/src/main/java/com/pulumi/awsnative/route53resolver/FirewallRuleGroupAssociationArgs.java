@@ -26,6 +26,10 @@ public final class FirewallRuleGroupAssociationArgs extends com.pulumi.resources
     @Import(name="firewallRuleGroupId", required=true)
     private Output<String> firewallRuleGroupId;
 
+    /**
+     * @return FirewallRuleGroupId
+     * 
+     */
     public Output<String> firewallRuleGroupId() {
         return this.firewallRuleGroupId;
     }
@@ -37,6 +41,10 @@ public final class FirewallRuleGroupAssociationArgs extends com.pulumi.resources
     @Import(name="mutationProtection")
     private @Nullable Output<FirewallRuleGroupAssociationMutationProtection> mutationProtection;
 
+    /**
+     * @return MutationProtectionStatus
+     * 
+     */
     public Optional<Output<FirewallRuleGroupAssociationMutationProtection>> mutationProtection() {
         return Optional.ofNullable(this.mutationProtection);
     }
@@ -48,6 +56,10 @@ public final class FirewallRuleGroupAssociationArgs extends com.pulumi.resources
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return FirewallRuleGroupAssociationName
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +71,10 @@ public final class FirewallRuleGroupAssociationArgs extends com.pulumi.resources
     @Import(name="priority", required=true)
     private Output<Integer> priority;
 
+    /**
+     * @return Priority
+     * 
+     */
     public Output<Integer> priority() {
         return this.priority;
     }
@@ -70,6 +86,10 @@ public final class FirewallRuleGroupAssociationArgs extends com.pulumi.resources
     @Import(name="tags")
     private @Nullable Output<List<FirewallRuleGroupAssociationTagArgs>> tags;
 
+    /**
+     * @return Tags
+     * 
+     */
     public Optional<Output<List<FirewallRuleGroupAssociationTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -81,6 +101,10 @@ public final class FirewallRuleGroupAssociationArgs extends com.pulumi.resources
     @Import(name="vpcId", required=true)
     private Output<String> vpcId;
 
+    /**
+     * @return VpcId
+     * 
+     */
     public Output<String> vpcId() {
         return this.vpcId;
     }
@@ -114,60 +138,138 @@ public final class FirewallRuleGroupAssociationArgs extends com.pulumi.resources
             $ = new FirewallRuleGroupAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param firewallRuleGroupId FirewallRuleGroupId
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRuleGroupId(Output<String> firewallRuleGroupId) {
             $.firewallRuleGroupId = firewallRuleGroupId;
             return this;
         }
 
+        /**
+         * @param firewallRuleGroupId FirewallRuleGroupId
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRuleGroupId(String firewallRuleGroupId) {
             return firewallRuleGroupId(Output.of(firewallRuleGroupId));
         }
 
+        /**
+         * @param mutationProtection MutationProtectionStatus
+         * 
+         * @return builder
+         * 
+         */
         public Builder mutationProtection(@Nullable Output<FirewallRuleGroupAssociationMutationProtection> mutationProtection) {
             $.mutationProtection = mutationProtection;
             return this;
         }
 
+        /**
+         * @param mutationProtection MutationProtectionStatus
+         * 
+         * @return builder
+         * 
+         */
         public Builder mutationProtection(FirewallRuleGroupAssociationMutationProtection mutationProtection) {
             return mutationProtection(Output.of(mutationProtection));
         }
 
+        /**
+         * @param name FirewallRuleGroupAssociationName
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name FirewallRuleGroupAssociationName
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param priority Priority
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority Priority
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param tags Tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<FirewallRuleGroupAssociationTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<FirewallRuleGroupAssociationTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(FirewallRuleGroupAssociationTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param vpcId VpcId
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(Output<String> vpcId) {
             $.vpcId = vpcId;
             return this;
         }
 
+        /**
+         * @param vpcId VpcId
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             return vpcId(Output.of(vpcId));
         }

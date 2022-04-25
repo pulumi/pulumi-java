@@ -19,6 +19,10 @@ public final class GetDNSSECArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="hostedZoneId", required=true)
     private String hostedZoneId;
 
+    /**
+     * @return The unique string (ID) used to identify a hosted zone.
+     * 
+     */
     public String hostedZoneId() {
         return this.hostedZoneId;
     }
@@ -47,6 +51,12 @@ public final class GetDNSSECArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDNSSECArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostedZoneId The unique string (ID) used to identify a hosted zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostedZoneId(String hostedZoneId) {
             $.hostedZoneId = hostedZoneId;
             return this;

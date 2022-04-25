@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class FirewallSubnetMapping {
     /**
-     * A SubnetId.
+     * @return A SubnetId.
      * 
      */
     private final String subnetId;
@@ -21,9 +21,9 @@ public final class FirewallSubnetMapping {
     }
 
     /**
-     * A SubnetId.
+     * @return A SubnetId.
      * 
-    */
+     */
     public String subnetId() {
         return this.subnetId;
     }

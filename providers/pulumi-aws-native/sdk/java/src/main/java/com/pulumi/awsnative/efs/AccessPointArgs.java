@@ -33,6 +33,10 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientToken")
     private @Nullable Output<String> clientToken;
 
+    /**
+     * @return (optional) A string of up to 64 ASCII characters that Amazon EFS uses to ensure idempotent creation.
+     * 
+     */
     public Optional<Output<String>> clientToken() {
         return Optional.ofNullable(this.clientToken);
     }
@@ -44,6 +48,10 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fileSystemId", required=true)
     private Output<String> fileSystemId;
 
+    /**
+     * @return The ID of the EFS file system that the access point provides access to.
+     * 
+     */
     public Output<String> fileSystemId() {
         return this.fileSystemId;
     }
@@ -55,6 +63,10 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="posixUser")
     private @Nullable Output<AccessPointPosixUserArgs> posixUser;
 
+    /**
+     * @return The operating system user and group applied to all file system requests made using the access point.
+     * 
+     */
     public Optional<Output<AccessPointPosixUserArgs>> posixUser() {
         return Optional.ofNullable(this.posixUser);
     }
@@ -66,6 +78,10 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rootDirectory")
     private @Nullable Output<AccessPointRootDirectoryArgs> rootDirectory;
 
+    /**
+     * @return Specifies the directory on the Amazon EFS file system that the access point exposes as the root directory of your file system to NFS clients using the access point. The clients using the access point can only access the root directory and below. If the RootDirectory&gt;Path specified does not exist, EFS creates it and applies the CreationInfo settings when a client connects to an access point. When specifying a RootDirectory, you need to provide the Path, and the CreationInfo is optional.
+     * 
+     */
     public Optional<Output<AccessPointRootDirectoryArgs>> rootDirectory() {
         return Optional.ofNullable(this.rootDirectory);
     }
@@ -111,38 +127,86 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
             return accessPointTags(List.of(accessPointTags));
         }
 
+        /**
+         * @param clientToken (optional) A string of up to 64 ASCII characters that Amazon EFS uses to ensure idempotent creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientToken(@Nullable Output<String> clientToken) {
             $.clientToken = clientToken;
             return this;
         }
 
+        /**
+         * @param clientToken (optional) A string of up to 64 ASCII characters that Amazon EFS uses to ensure idempotent creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientToken(String clientToken) {
             return clientToken(Output.of(clientToken));
         }
 
+        /**
+         * @param fileSystemId The ID of the EFS file system that the access point provides access to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemId(Output<String> fileSystemId) {
             $.fileSystemId = fileSystemId;
             return this;
         }
 
+        /**
+         * @param fileSystemId The ID of the EFS file system that the access point provides access to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemId(String fileSystemId) {
             return fileSystemId(Output.of(fileSystemId));
         }
 
+        /**
+         * @param posixUser The operating system user and group applied to all file system requests made using the access point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder posixUser(@Nullable Output<AccessPointPosixUserArgs> posixUser) {
             $.posixUser = posixUser;
             return this;
         }
 
+        /**
+         * @param posixUser The operating system user and group applied to all file system requests made using the access point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder posixUser(AccessPointPosixUserArgs posixUser) {
             return posixUser(Output.of(posixUser));
         }
 
+        /**
+         * @param rootDirectory Specifies the directory on the Amazon EFS file system that the access point exposes as the root directory of your file system to NFS clients using the access point. The clients using the access point can only access the root directory and below. If the RootDirectory&gt;Path specified does not exist, EFS creates it and applies the CreationInfo settings when a client connects to an access point. When specifying a RootDirectory, you need to provide the Path, and the CreationInfo is optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootDirectory(@Nullable Output<AccessPointRootDirectoryArgs> rootDirectory) {
             $.rootDirectory = rootDirectory;
             return this;
         }
 
+        /**
+         * @param rootDirectory Specifies the directory on the Amazon EFS file system that the access point exposes as the root directory of your file system to NFS clients using the access point. The clients using the access point can only access the root directory and below. If the RootDirectory&gt;Path specified does not exist, EFS creates it and applies the CreationInfo settings when a client connects to an access point. When specifying a RootDirectory, you need to provide the Path, and the CreationInfo is optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootDirectory(AccessPointRootDirectoryArgs rootDirectory) {
             return rootDirectory(Output.of(rootDirectory));
         }

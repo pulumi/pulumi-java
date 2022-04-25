@@ -23,6 +23,10 @@ public final class LoggingConfigurationFieldToMatchSingleHeaderProperties extend
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the query header to inspect.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -51,6 +55,12 @@ public final class LoggingConfigurationFieldToMatchSingleHeaderProperties extend
             $ = new LoggingConfigurationFieldToMatchSingleHeaderProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the query header to inspect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

@@ -35,6 +35,10 @@ public final class DetectorModelDynamoDBv2 extends com.pulumi.resources.InvokeAr
     @Import(name="tableName", required=true)
     private String tableName;
 
+    /**
+     * @return The name of the DynamoDB table.
+     * 
+     */
     public String tableName() {
         return this.tableName;
     }
@@ -69,6 +73,12 @@ public final class DetectorModelDynamoDBv2 extends com.pulumi.resources.InvokeAr
             return this;
         }
 
+        /**
+         * @param tableName The name of the DynamoDB table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(String tableName) {
             $.tableName = tableName;
             return this;

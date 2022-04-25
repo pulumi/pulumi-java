@@ -22,6 +22,10 @@ public final class PreparedStatementArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the prepared statement.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -33,6 +37,10 @@ public final class PreparedStatementArgs extends com.pulumi.resources.ResourceAr
     @Import(name="queryStatement", required=true)
     private Output<String> queryStatement;
 
+    /**
+     * @return The query string for the prepared statement.
+     * 
+     */
     public Output<String> queryStatement() {
         return this.queryStatement;
     }
@@ -44,6 +52,10 @@ public final class PreparedStatementArgs extends com.pulumi.resources.ResourceAr
     @Import(name="statementName", required=true)
     private Output<String> statementName;
 
+    /**
+     * @return The name of the prepared statement.
+     * 
+     */
     public Output<String> statementName() {
         return this.statementName;
     }
@@ -55,6 +67,10 @@ public final class PreparedStatementArgs extends com.pulumi.resources.ResourceAr
     @Import(name="workGroup", required=true)
     private Output<String> workGroup;
 
+    /**
+     * @return The name of the workgroup to which the prepared statement belongs.
+     * 
+     */
     public Output<String> workGroup() {
         return this.workGroup;
     }
@@ -86,38 +102,86 @@ public final class PreparedStatementArgs extends com.pulumi.resources.ResourceAr
             $ = new PreparedStatementArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the prepared statement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the prepared statement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param queryStatement The query string for the prepared statement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStatement(Output<String> queryStatement) {
             $.queryStatement = queryStatement;
             return this;
         }
 
+        /**
+         * @param queryStatement The query string for the prepared statement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStatement(String queryStatement) {
             return queryStatement(Output.of(queryStatement));
         }
 
+        /**
+         * @param statementName The name of the prepared statement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statementName(Output<String> statementName) {
             $.statementName = statementName;
             return this;
         }
 
+        /**
+         * @param statementName The name of the prepared statement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statementName(String statementName) {
             return statementName(Output.of(statementName));
         }
 
+        /**
+         * @param workGroup The name of the workgroup to which the prepared statement belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workGroup(Output<String> workGroup) {
             $.workGroup = workGroup;
             return this;
         }
 
+        /**
+         * @param workGroup The name of the workgroup to which the prepared statement belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workGroup(String workGroup) {
             return workGroup(Output.of(workGroup));
         }

@@ -30,6 +30,10 @@ public final class SecurityProfileBehaviorCriteriaArgs extends com.pulumi.resour
     @Import(name="comparisonOperator")
     private @Nullable Output<SecurityProfileBehaviorCriteriaComparisonOperator> comparisonOperator;
 
+    /**
+     * @return The operator that relates the thing measured (metric) to the criteria (containing a value or statisticalThreshold).
+     * 
+     */
     public Optional<Output<SecurityProfileBehaviorCriteriaComparisonOperator>> comparisonOperator() {
         return Optional.ofNullable(this.comparisonOperator);
     }
@@ -41,6 +45,10 @@ public final class SecurityProfileBehaviorCriteriaArgs extends com.pulumi.resour
     @Import(name="consecutiveDatapointsToAlarm")
     private @Nullable Output<Integer> consecutiveDatapointsToAlarm;
 
+    /**
+     * @return If a device is in violation of the behavior for the specified number of consecutive datapoints, an alarm occurs. If not specified, the default is 1.
+     * 
+     */
     public Optional<Output<Integer>> consecutiveDatapointsToAlarm() {
         return Optional.ofNullable(this.consecutiveDatapointsToAlarm);
     }
@@ -52,6 +60,10 @@ public final class SecurityProfileBehaviorCriteriaArgs extends com.pulumi.resour
     @Import(name="consecutiveDatapointsToClear")
     private @Nullable Output<Integer> consecutiveDatapointsToClear;
 
+    /**
+     * @return If an alarm has occurred and the offending device is no longer in violation of the behavior for the specified number of consecutive datapoints, the alarm is cleared. If not specified, the default is 1.
+     * 
+     */
     public Optional<Output<Integer>> consecutiveDatapointsToClear() {
         return Optional.ofNullable(this.consecutiveDatapointsToClear);
     }
@@ -63,6 +75,10 @@ public final class SecurityProfileBehaviorCriteriaArgs extends com.pulumi.resour
     @Import(name="durationSeconds")
     private @Nullable Output<Integer> durationSeconds;
 
+    /**
+     * @return Use this to specify the time duration over which the behavior is evaluated.
+     * 
+     */
     public Optional<Output<Integer>> durationSeconds() {
         return Optional.ofNullable(this.durationSeconds);
     }
@@ -118,38 +134,86 @@ public final class SecurityProfileBehaviorCriteriaArgs extends com.pulumi.resour
             $ = new SecurityProfileBehaviorCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param comparisonOperator The operator that relates the thing measured (metric) to the criteria (containing a value or statisticalThreshold).
+         * 
+         * @return builder
+         * 
+         */
         public Builder comparisonOperator(@Nullable Output<SecurityProfileBehaviorCriteriaComparisonOperator> comparisonOperator) {
             $.comparisonOperator = comparisonOperator;
             return this;
         }
 
+        /**
+         * @param comparisonOperator The operator that relates the thing measured (metric) to the criteria (containing a value or statisticalThreshold).
+         * 
+         * @return builder
+         * 
+         */
         public Builder comparisonOperator(SecurityProfileBehaviorCriteriaComparisonOperator comparisonOperator) {
             return comparisonOperator(Output.of(comparisonOperator));
         }
 
+        /**
+         * @param consecutiveDatapointsToAlarm If a device is in violation of the behavior for the specified number of consecutive datapoints, an alarm occurs. If not specified, the default is 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consecutiveDatapointsToAlarm(@Nullable Output<Integer> consecutiveDatapointsToAlarm) {
             $.consecutiveDatapointsToAlarm = consecutiveDatapointsToAlarm;
             return this;
         }
 
+        /**
+         * @param consecutiveDatapointsToAlarm If a device is in violation of the behavior for the specified number of consecutive datapoints, an alarm occurs. If not specified, the default is 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consecutiveDatapointsToAlarm(Integer consecutiveDatapointsToAlarm) {
             return consecutiveDatapointsToAlarm(Output.of(consecutiveDatapointsToAlarm));
         }
 
+        /**
+         * @param consecutiveDatapointsToClear If an alarm has occurred and the offending device is no longer in violation of the behavior for the specified number of consecutive datapoints, the alarm is cleared. If not specified, the default is 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consecutiveDatapointsToClear(@Nullable Output<Integer> consecutiveDatapointsToClear) {
             $.consecutiveDatapointsToClear = consecutiveDatapointsToClear;
             return this;
         }
 
+        /**
+         * @param consecutiveDatapointsToClear If an alarm has occurred and the offending device is no longer in violation of the behavior for the specified number of consecutive datapoints, the alarm is cleared. If not specified, the default is 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consecutiveDatapointsToClear(Integer consecutiveDatapointsToClear) {
             return consecutiveDatapointsToClear(Output.of(consecutiveDatapointsToClear));
         }
 
+        /**
+         * @param durationSeconds Use this to specify the time duration over which the behavior is evaluated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder durationSeconds(@Nullable Output<Integer> durationSeconds) {
             $.durationSeconds = durationSeconds;
             return this;
         }
 
+        /**
+         * @param durationSeconds Use this to specify the time duration over which the behavior is evaluated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder durationSeconds(Integer durationSeconds) {
             return durationSeconds(Output.of(durationSeconds));
         }

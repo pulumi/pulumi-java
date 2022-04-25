@@ -28,6 +28,10 @@ public final class ReplicationConfigurationReplicationRuleArgs extends com.pulum
     @Import(name="destinations", required=true)
     private Output<List<ReplicationConfigurationReplicationDestinationArgs>> destinations;
 
+    /**
+     * @return An array of objects representing the details of a replication destination.
+     * 
+     */
     public Output<List<ReplicationConfigurationReplicationDestinationArgs>> destinations() {
         return this.destinations;
     }
@@ -39,6 +43,10 @@ public final class ReplicationConfigurationReplicationRuleArgs extends com.pulum
     @Import(name="repositoryFilters")
     private @Nullable Output<List<ReplicationConfigurationRepositoryFilterArgs>> repositoryFilters;
 
+    /**
+     * @return An array of objects representing the details of a repository filter.
+     * 
+     */
     public Optional<Output<List<ReplicationConfigurationRepositoryFilterArgs>>> repositoryFilters() {
         return Optional.ofNullable(this.repositoryFilters);
     }
@@ -68,28 +76,64 @@ public final class ReplicationConfigurationReplicationRuleArgs extends com.pulum
             $ = new ReplicationConfigurationReplicationRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinations An array of objects representing the details of a replication destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(Output<List<ReplicationConfigurationReplicationDestinationArgs>> destinations) {
             $.destinations = destinations;
             return this;
         }
 
+        /**
+         * @param destinations An array of objects representing the details of a replication destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(List<ReplicationConfigurationReplicationDestinationArgs> destinations) {
             return destinations(Output.of(destinations));
         }
 
+        /**
+         * @param destinations An array of objects representing the details of a replication destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(ReplicationConfigurationReplicationDestinationArgs... destinations) {
             return destinations(List.of(destinations));
         }
 
+        /**
+         * @param repositoryFilters An array of objects representing the details of a repository filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryFilters(@Nullable Output<List<ReplicationConfigurationRepositoryFilterArgs>> repositoryFilters) {
             $.repositoryFilters = repositoryFilters;
             return this;
         }
 
+        /**
+         * @param repositoryFilters An array of objects representing the details of a repository filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryFilters(List<ReplicationConfigurationRepositoryFilterArgs> repositoryFilters) {
             return repositoryFilters(Output.of(repositoryFilters));
         }
 
+        /**
+         * @param repositoryFilters An array of objects representing the details of a repository filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryFilters(ReplicationConfigurationRepositoryFilterArgs... repositoryFilters) {
             return repositoryFilters(List.of(repositoryFilters));
         }

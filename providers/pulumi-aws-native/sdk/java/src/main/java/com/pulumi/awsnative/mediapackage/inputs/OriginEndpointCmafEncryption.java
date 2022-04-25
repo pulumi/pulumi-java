@@ -27,6 +27,10 @@ public final class OriginEndpointCmafEncryption extends com.pulumi.resources.Inv
     @Import(name="constantInitializationVector")
     private @Nullable String constantInitializationVector;
 
+    /**
+     * @return An optional 128-bit, 16-byte hex value represented by a 32-character string, used in conjunction with the key for encrypting blocks. If you don&#39;t specify a value, then MediaPackage creates the constant initialization vector (IV).
+     * 
+     */
     public Optional<String> constantInitializationVector() {
         return Optional.ofNullable(this.constantInitializationVector);
     }
@@ -38,6 +42,10 @@ public final class OriginEndpointCmafEncryption extends com.pulumi.resources.Inv
     @Import(name="keyRotationIntervalSeconds")
     private @Nullable Integer keyRotationIntervalSeconds;
 
+    /**
+     * @return Time (in seconds) between each encryption key rotation.
+     * 
+     */
     public Optional<Integer> keyRotationIntervalSeconds() {
         return Optional.ofNullable(this.keyRotationIntervalSeconds);
     }
@@ -75,11 +83,23 @@ public final class OriginEndpointCmafEncryption extends com.pulumi.resources.Inv
             $ = new OriginEndpointCmafEncryption(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param constantInitializationVector An optional 128-bit, 16-byte hex value represented by a 32-character string, used in conjunction with the key for encrypting blocks. If you don&#39;t specify a value, then MediaPackage creates the constant initialization vector (IV).
+         * 
+         * @return builder
+         * 
+         */
         public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
             $.constantInitializationVector = constantInitializationVector;
             return this;
         }
 
+        /**
+         * @param keyRotationIntervalSeconds Time (in seconds) between each encryption key rotation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyRotationIntervalSeconds(@Nullable Integer keyRotationIntervalSeconds) {
             $.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
             return this;

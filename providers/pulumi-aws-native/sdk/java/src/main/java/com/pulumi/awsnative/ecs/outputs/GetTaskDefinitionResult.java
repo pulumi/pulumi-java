@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 public final class GetTaskDefinitionResult {
     private final @Nullable List<TaskDefinitionTag> tags;
     /**
-     * The Amazon Resource Name (ARN) of the Amazon ECS task definition
+     * @return The Amazon Resource Name (ARN) of the Amazon ECS task definition
      * 
      */
     private final @Nullable String taskDefinitionArn;
@@ -32,9 +32,9 @@ public final class GetTaskDefinitionResult {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * The Amazon Resource Name (ARN) of the Amazon ECS task definition
+     * @return The Amazon Resource Name (ARN) of the Amazon ECS task definition
      * 
-    */
+     */
     public Optional<String> taskDefinitionArn() {
         return Optional.ofNullable(this.taskDefinitionArn);
     }

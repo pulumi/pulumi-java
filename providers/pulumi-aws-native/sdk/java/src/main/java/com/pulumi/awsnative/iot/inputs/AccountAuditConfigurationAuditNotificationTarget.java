@@ -22,6 +22,10 @@ public final class AccountAuditConfigurationAuditNotificationTarget extends com.
     @Import(name="enabled")
     private @Nullable Boolean enabled;
 
+    /**
+     * @return True if notifications to the target are enabled.
+     * 
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -33,6 +37,10 @@ public final class AccountAuditConfigurationAuditNotificationTarget extends com.
     @Import(name="roleArn")
     private @Nullable String roleArn;
 
+    /**
+     * @return The ARN of the role that grants permission to send notifications to the target.
+     * 
+     */
     public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
@@ -44,6 +52,10 @@ public final class AccountAuditConfigurationAuditNotificationTarget extends com.
     @Import(name="targetArn")
     private @Nullable String targetArn;
 
+    /**
+     * @return The ARN of the target (SNS topic) to which audit notifications are sent.
+     * 
+     */
     public Optional<String> targetArn() {
         return Optional.ofNullable(this.targetArn);
     }
@@ -74,16 +86,34 @@ public final class AccountAuditConfigurationAuditNotificationTarget extends com.
             $ = new AccountAuditConfigurationAuditNotificationTarget(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled True if notifications to the target are enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param roleArn The ARN of the role that grants permission to send notifications to the target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(@Nullable String roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param targetArn The ARN of the target (SNS topic) to which audit notifications are sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetArn(@Nullable String targetArn) {
             $.targetArn = targetArn;
             return this;

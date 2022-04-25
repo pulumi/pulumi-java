@@ -22,6 +22,10 @@ public final class ChannelLogConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="logGroupName")
     private @Nullable Output<String> logGroupName;
 
+    /**
+     * @return Sets a custom AWS CloudWatch log group name for access logs. If a log group name isn&#39;t specified, the defaults are used: /aws/MediaPackage/EgressAccessLogs for egress access logs and /aws/MediaPackage/IngressAccessLogs for ingress access logs.
+     * 
+     */
     public Optional<Output<String>> logGroupName() {
         return Optional.ofNullable(this.logGroupName);
     }
@@ -50,11 +54,23 @@ public final class ChannelLogConfigurationArgs extends com.pulumi.resources.Reso
             $ = new ChannelLogConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logGroupName Sets a custom AWS CloudWatch log group name for access logs. If a log group name isn&#39;t specified, the defaults are used: /aws/MediaPackage/EgressAccessLogs for egress access logs and /aws/MediaPackage/IngressAccessLogs for ingress access logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logGroupName(@Nullable Output<String> logGroupName) {
             $.logGroupName = logGroupName;
             return this;
         }
 
+        /**
+         * @param logGroupName Sets a custom AWS CloudWatch log group name for access logs. If a log group name isn&#39;t specified, the defaults are used: /aws/MediaPackage/EgressAccessLogs for egress access logs and /aws/MediaPackage/IngressAccessLogs for ingress access logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logGroupName(String logGroupName) {
             return logGroupName(Output.of(logGroupName));
         }

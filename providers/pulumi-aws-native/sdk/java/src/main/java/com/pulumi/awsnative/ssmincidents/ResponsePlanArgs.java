@@ -27,6 +27,10 @@ public final class ResponsePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="actions")
     private @Nullable Output<List<ResponsePlanActionArgs>> actions;
 
+    /**
+     * @return The list of actions.
+     * 
+     */
     public Optional<Output<List<ResponsePlanActionArgs>>> actions() {
         return Optional.ofNullable(this.actions);
     }
@@ -45,6 +49,10 @@ public final class ResponsePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The display name of the response plan.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -56,6 +64,10 @@ public final class ResponsePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="engagements")
     private @Nullable Output<List<String>> engagements;
 
+    /**
+     * @return The list of engagements to use.
+     * 
+     */
     public Optional<Output<List<String>>> engagements() {
         return Optional.ofNullable(this.engagements);
     }
@@ -74,6 +86,10 @@ public final class ResponsePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the response plan.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -85,6 +101,10 @@ public final class ResponsePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<ResponsePlanTagArgs>> tags;
 
+    /**
+     * @return The tags to apply to the response plan.
+     * 
+     */
     public Optional<Output<List<ResponsePlanTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -119,15 +139,33 @@ public final class ResponsePlanArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ResponsePlanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions The list of actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(@Nullable Output<List<ResponsePlanActionArgs>> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions The list of actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(List<ResponsePlanActionArgs> actions) {
             return actions(Output.of(actions));
         }
 
+        /**
+         * @param actions The list of actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(ResponsePlanActionArgs... actions) {
             return actions(List.of(actions));
         }
@@ -141,24 +179,54 @@ public final class ResponsePlanArgs extends com.pulumi.resources.ResourceArgs {
             return chatChannel(Output.of(chatChannel));
         }
 
+        /**
+         * @param displayName The display name of the response plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the response plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param engagements The list of engagements to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engagements(@Nullable Output<List<String>> engagements) {
             $.engagements = engagements;
             return this;
         }
 
+        /**
+         * @param engagements The list of engagements to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engagements(List<String> engagements) {
             return engagements(Output.of(engagements));
         }
 
+        /**
+         * @param engagements The list of engagements to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engagements(String... engagements) {
             return engagements(List.of(engagements));
         }
@@ -172,24 +240,54 @@ public final class ResponsePlanArgs extends com.pulumi.resources.ResourceArgs {
             return incidentTemplate(Output.of(incidentTemplate));
         }
 
+        /**
+         * @param name The name of the response plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the response plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags The tags to apply to the response plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<ResponsePlanTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags to apply to the response plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<ResponsePlanTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The tags to apply to the response plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(ResponsePlanTagArgs... tags) {
             return tags(List.of(tags));
         }

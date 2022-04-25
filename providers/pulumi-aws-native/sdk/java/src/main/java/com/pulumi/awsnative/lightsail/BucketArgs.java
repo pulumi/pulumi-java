@@ -33,6 +33,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bucketName")
     private @Nullable Output<String> bucketName;
 
+    /**
+     * @return The name for the bucket.
+     * 
+     */
     public Optional<Output<String>> bucketName() {
         return Optional.ofNullable(this.bucketName);
     }
@@ -44,6 +48,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bundleId", required=true)
     private Output<String> bundleId;
 
+    /**
+     * @return The ID of the bundle to use for the bucket.
+     * 
+     */
     public Output<String> bundleId() {
         return this.bundleId;
     }
@@ -55,6 +63,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="objectVersioning")
     private @Nullable Output<Boolean> objectVersioning;
 
+    /**
+     * @return Specifies whether to enable or disable versioning of objects in the bucket.
+     * 
+     */
     public Optional<Output<Boolean>> objectVersioning() {
         return Optional.ofNullable(this.objectVersioning);
     }
@@ -66,6 +78,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="readOnlyAccessAccounts")
     private @Nullable Output<List<String>> readOnlyAccessAccounts;
 
+    /**
+     * @return An array of strings to specify the AWS account IDs that can access the bucket.
+     * 
+     */
     public Optional<Output<List<String>>> readOnlyAccessAccounts() {
         return Optional.ofNullable(this.readOnlyAccessAccounts);
     }
@@ -77,6 +93,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourcesReceivingAccess")
     private @Nullable Output<List<String>> resourcesReceivingAccess;
 
+    /**
+     * @return The names of the Lightsail resources for which to set bucket access.
+     * 
+     */
     public Optional<Output<List<String>>> resourcesReceivingAccess() {
         return Optional.ofNullable(this.resourcesReceivingAccess);
     }
@@ -88,6 +108,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<BucketTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<BucketTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -131,68 +155,158 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
             return accessRules(Output.of(accessRules));
         }
 
+        /**
+         * @param bucketName The name for the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(@Nullable Output<String> bucketName) {
             $.bucketName = bucketName;
             return this;
         }
 
+        /**
+         * @param bucketName The name for the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(String bucketName) {
             return bucketName(Output.of(bucketName));
         }
 
+        /**
+         * @param bundleId The ID of the bundle to use for the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bundleId(Output<String> bundleId) {
             $.bundleId = bundleId;
             return this;
         }
 
+        /**
+         * @param bundleId The ID of the bundle to use for the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bundleId(String bundleId) {
             return bundleId(Output.of(bundleId));
         }
 
+        /**
+         * @param objectVersioning Specifies whether to enable or disable versioning of objects in the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectVersioning(@Nullable Output<Boolean> objectVersioning) {
             $.objectVersioning = objectVersioning;
             return this;
         }
 
+        /**
+         * @param objectVersioning Specifies whether to enable or disable versioning of objects in the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectVersioning(Boolean objectVersioning) {
             return objectVersioning(Output.of(objectVersioning));
         }
 
+        /**
+         * @param readOnlyAccessAccounts An array of strings to specify the AWS account IDs that can access the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnlyAccessAccounts(@Nullable Output<List<String>> readOnlyAccessAccounts) {
             $.readOnlyAccessAccounts = readOnlyAccessAccounts;
             return this;
         }
 
+        /**
+         * @param readOnlyAccessAccounts An array of strings to specify the AWS account IDs that can access the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnlyAccessAccounts(List<String> readOnlyAccessAccounts) {
             return readOnlyAccessAccounts(Output.of(readOnlyAccessAccounts));
         }
 
+        /**
+         * @param readOnlyAccessAccounts An array of strings to specify the AWS account IDs that can access the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnlyAccessAccounts(String... readOnlyAccessAccounts) {
             return readOnlyAccessAccounts(List.of(readOnlyAccessAccounts));
         }
 
+        /**
+         * @param resourcesReceivingAccess The names of the Lightsail resources for which to set bucket access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcesReceivingAccess(@Nullable Output<List<String>> resourcesReceivingAccess) {
             $.resourcesReceivingAccess = resourcesReceivingAccess;
             return this;
         }
 
+        /**
+         * @param resourcesReceivingAccess The names of the Lightsail resources for which to set bucket access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcesReceivingAccess(List<String> resourcesReceivingAccess) {
             return resourcesReceivingAccess(Output.of(resourcesReceivingAccess));
         }
 
+        /**
+         * @param resourcesReceivingAccess The names of the Lightsail resources for which to set bucket access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcesReceivingAccess(String... resourcesReceivingAccess) {
             return resourcesReceivingAccess(List.of(resourcesReceivingAccess));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<BucketTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<BucketTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(BucketTagArgs... tags) {
             return tags(List.of(tags));
         }

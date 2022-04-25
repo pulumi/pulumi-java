@@ -27,6 +27,10 @@ public final class AssetModelCompositeModel extends com.pulumi.resources.InvokeA
     @Import(name="compositeModelProperties")
     private @Nullable List<AssetModelProperty> compositeModelProperties;
 
+    /**
+     * @return The property definitions of the asset model. You can specify up to 200 properties per asset model.
+     * 
+     */
     public Optional<List<AssetModelProperty>> compositeModelProperties() {
         return Optional.ofNullable(this.compositeModelProperties);
     }
@@ -38,6 +42,10 @@ public final class AssetModelCompositeModel extends com.pulumi.resources.InvokeA
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return A description for the asset composite model.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +57,10 @@ public final class AssetModelCompositeModel extends com.pulumi.resources.InvokeA
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return A unique, friendly name for the asset composite model.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -60,6 +72,10 @@ public final class AssetModelCompositeModel extends com.pulumi.resources.InvokeA
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the composite model. For alarm composite models, this type is AWS/ALARM
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -91,25 +107,55 @@ public final class AssetModelCompositeModel extends com.pulumi.resources.InvokeA
             $ = new AssetModelCompositeModel(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param compositeModelProperties The property definitions of the asset model. You can specify up to 200 properties per asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compositeModelProperties(@Nullable List<AssetModelProperty> compositeModelProperties) {
             $.compositeModelProperties = compositeModelProperties;
             return this;
         }
 
+        /**
+         * @param compositeModelProperties The property definitions of the asset model. You can specify up to 200 properties per asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compositeModelProperties(AssetModelProperty... compositeModelProperties) {
             return compositeModelProperties(List.of(compositeModelProperties));
         }
 
+        /**
+         * @param description A description for the asset composite model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param name A unique, friendly name for the asset composite model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type The type of the composite model. For alarm composite models, this type is AWS/ALARM
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

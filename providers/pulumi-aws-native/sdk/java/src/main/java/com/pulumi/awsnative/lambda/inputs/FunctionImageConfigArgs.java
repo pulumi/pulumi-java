@@ -23,6 +23,10 @@ public final class FunctionImageConfigArgs extends com.pulumi.resources.Resource
     @Import(name="command")
     private @Nullable Output<List<String>> command;
 
+    /**
+     * @return Command.
+     * 
+     */
     public Optional<Output<List<String>>> command() {
         return Optional.ofNullable(this.command);
     }
@@ -34,6 +38,10 @@ public final class FunctionImageConfigArgs extends com.pulumi.resources.Resource
     @Import(name="entryPoint")
     private @Nullable Output<List<String>> entryPoint;
 
+    /**
+     * @return EntryPoint.
+     * 
+     */
     public Optional<Output<List<String>>> entryPoint() {
         return Optional.ofNullable(this.entryPoint);
     }
@@ -45,6 +53,10 @@ public final class FunctionImageConfigArgs extends com.pulumi.resources.Resource
     @Import(name="workingDirectory")
     private @Nullable Output<String> workingDirectory;
 
+    /**
+     * @return WorkingDirectory.
+     * 
+     */
     public Optional<Output<String>> workingDirectory() {
         return Optional.ofNullable(this.workingDirectory);
     }
@@ -75,37 +87,85 @@ public final class FunctionImageConfigArgs extends com.pulumi.resources.Resource
             $ = new FunctionImageConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param command Command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(@Nullable Output<List<String>> command) {
             $.command = command;
             return this;
         }
 
+        /**
+         * @param command Command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(List<String> command) {
             return command(Output.of(command));
         }
 
+        /**
+         * @param command Command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(String... command) {
             return command(List.of(command));
         }
 
+        /**
+         * @param entryPoint EntryPoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entryPoint(@Nullable Output<List<String>> entryPoint) {
             $.entryPoint = entryPoint;
             return this;
         }
 
+        /**
+         * @param entryPoint EntryPoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entryPoint(List<String> entryPoint) {
             return entryPoint(Output.of(entryPoint));
         }
 
+        /**
+         * @param entryPoint EntryPoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entryPoint(String... entryPoint) {
             return entryPoint(List.of(entryPoint));
         }
 
+        /**
+         * @param workingDirectory WorkingDirectory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workingDirectory(@Nullable Output<String> workingDirectory) {
             $.workingDirectory = workingDirectory;
             return this;
         }
 
+        /**
+         * @param workingDirectory WorkingDirectory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workingDirectory(String workingDirectory) {
             return workingDirectory(Output.of(workingDirectory));
         }

@@ -27,6 +27,10 @@ public final class FeatureGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description about the FeatureGroup.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,10 @@ public final class FeatureGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventTimeFeatureName", required=true)
     private Output<String> eventTimeFeatureName;
 
+    /**
+     * @return The Event Time Feature Name.
+     * 
+     */
     public Output<String> eventTimeFeatureName() {
         return this.eventTimeFeatureName;
     }
@@ -49,6 +57,10 @@ public final class FeatureGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="featureDefinitions", required=true)
     private Output<List<FeatureGroupFeatureDefinitionArgs>> featureDefinitions;
 
+    /**
+     * @return An Array of Feature Definition
+     * 
+     */
     public Output<List<FeatureGroupFeatureDefinitionArgs>> featureDefinitions() {
         return this.featureDefinitions;
     }
@@ -60,6 +72,10 @@ public final class FeatureGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="featureGroupName")
     private @Nullable Output<String> featureGroupName;
 
+    /**
+     * @return The Name of the FeatureGroup.
+     * 
+     */
     public Optional<Output<String>> featureGroupName() {
         return Optional.ofNullable(this.featureGroupName);
     }
@@ -85,6 +101,10 @@ public final class FeatureGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="recordIdentifierFeatureName", required=true)
     private Output<String> recordIdentifierFeatureName;
 
+    /**
+     * @return The Record Identifier Feature Name.
+     * 
+     */
     public Output<String> recordIdentifierFeatureName() {
         return this.recordIdentifierFeatureName;
     }
@@ -96,6 +116,10 @@ public final class FeatureGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
     private @Nullable Output<String> roleArn;
 
+    /**
+     * @return Role Arn
+     * 
+     */
     public Optional<Output<String>> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
@@ -107,6 +131,10 @@ public final class FeatureGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<FeatureGroupTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pair to apply to this resource.
+     * 
+     */
     public Optional<Output<List<FeatureGroupTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -143,42 +171,96 @@ public final class FeatureGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FeatureGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description about the FeatureGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description about the FeatureGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param eventTimeFeatureName The Event Time Feature Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventTimeFeatureName(Output<String> eventTimeFeatureName) {
             $.eventTimeFeatureName = eventTimeFeatureName;
             return this;
         }
 
+        /**
+         * @param eventTimeFeatureName The Event Time Feature Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventTimeFeatureName(String eventTimeFeatureName) {
             return eventTimeFeatureName(Output.of(eventTimeFeatureName));
         }
 
+        /**
+         * @param featureDefinitions An Array of Feature Definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder featureDefinitions(Output<List<FeatureGroupFeatureDefinitionArgs>> featureDefinitions) {
             $.featureDefinitions = featureDefinitions;
             return this;
         }
 
+        /**
+         * @param featureDefinitions An Array of Feature Definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder featureDefinitions(List<FeatureGroupFeatureDefinitionArgs> featureDefinitions) {
             return featureDefinitions(Output.of(featureDefinitions));
         }
 
+        /**
+         * @param featureDefinitions An Array of Feature Definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder featureDefinitions(FeatureGroupFeatureDefinitionArgs... featureDefinitions) {
             return featureDefinitions(List.of(featureDefinitions));
         }
 
+        /**
+         * @param featureGroupName The Name of the FeatureGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder featureGroupName(@Nullable Output<String> featureGroupName) {
             $.featureGroupName = featureGroupName;
             return this;
         }
 
+        /**
+         * @param featureGroupName The Name of the FeatureGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder featureGroupName(String featureGroupName) {
             return featureGroupName(Output.of(featureGroupName));
         }
@@ -201,33 +283,75 @@ public final class FeatureGroupArgs extends com.pulumi.resources.ResourceArgs {
             return onlineStoreConfig(Output.of(onlineStoreConfig));
         }
 
+        /**
+         * @param recordIdentifierFeatureName The Record Identifier Feature Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordIdentifierFeatureName(Output<String> recordIdentifierFeatureName) {
             $.recordIdentifierFeatureName = recordIdentifierFeatureName;
             return this;
         }
 
+        /**
+         * @param recordIdentifierFeatureName The Record Identifier Feature Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordIdentifierFeatureName(String recordIdentifierFeatureName) {
             return recordIdentifierFeatureName(Output.of(recordIdentifierFeatureName));
         }
 
+        /**
+         * @param roleArn Role Arn
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(@Nullable Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn Role Arn
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param tags An array of key-value pair to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<FeatureGroupTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pair to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<FeatureGroupTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pair to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(FeatureGroupTagArgs... tags) {
             return tags(List.of(tags));
         }

@@ -27,6 +27,10 @@ public final class JobExecutionsRolloutConfigPropertiesArgs extends com.pulumi.r
     @Import(name="exponentialRolloutRate")
     private @Nullable Output<JobTemplateExponentialRolloutRateArgs> exponentialRolloutRate;
 
+    /**
+     * @return The rate of increase for a job rollout. This parameter allows you to define an exponential rate for a job rollout.
+     * 
+     */
     public Optional<Output<JobTemplateExponentialRolloutRateArgs>> exponentialRolloutRate() {
         return Optional.ofNullable(this.exponentialRolloutRate);
     }
@@ -38,6 +42,10 @@ public final class JobExecutionsRolloutConfigPropertiesArgs extends com.pulumi.r
     @Import(name="maximumPerMinute")
     private @Nullable Output<Integer> maximumPerMinute;
 
+    /**
+     * @return The maximum number of things that will be notified of a pending job, per minute. This parameter allows you to create a staged rollout.
+     * 
+     */
     public Optional<Output<Integer>> maximumPerMinute() {
         return Optional.ofNullable(this.maximumPerMinute);
     }
@@ -67,20 +75,44 @@ public final class JobExecutionsRolloutConfigPropertiesArgs extends com.pulumi.r
             $ = new JobExecutionsRolloutConfigPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exponentialRolloutRate The rate of increase for a job rollout. This parameter allows you to define an exponential rate for a job rollout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exponentialRolloutRate(@Nullable Output<JobTemplateExponentialRolloutRateArgs> exponentialRolloutRate) {
             $.exponentialRolloutRate = exponentialRolloutRate;
             return this;
         }
 
+        /**
+         * @param exponentialRolloutRate The rate of increase for a job rollout. This parameter allows you to define an exponential rate for a job rollout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exponentialRolloutRate(JobTemplateExponentialRolloutRateArgs exponentialRolloutRate) {
             return exponentialRolloutRate(Output.of(exponentialRolloutRate));
         }
 
+        /**
+         * @param maximumPerMinute The maximum number of things that will be notified of a pending job, per minute. This parameter allows you to create a staged rollout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumPerMinute(@Nullable Output<Integer> maximumPerMinute) {
             $.maximumPerMinute = maximumPerMinute;
             return this;
         }
 
+        /**
+         * @param maximumPerMinute The maximum number of things that will be notified of a pending job, per minute. This parameter allows you to create a staged rollout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumPerMinute(Integer maximumPerMinute) {
             return maximumPerMinute(Output.of(maximumPerMinute));
         }

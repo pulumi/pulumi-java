@@ -24,6 +24,10 @@ public final class IPAMIpamOperatingRegionArgs extends com.pulumi.resources.Reso
     @Import(name="regionName", required=true)
     private Output<String> regionName;
 
+    /**
+     * @return The name of the region.
+     * 
+     */
     public Output<String> regionName() {
         return this.regionName;
     }
@@ -52,11 +56,23 @@ public final class IPAMIpamOperatingRegionArgs extends com.pulumi.resources.Reso
             $ = new IPAMIpamOperatingRegionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param regionName The name of the region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regionName(Output<String> regionName) {
             $.regionName = regionName;
             return this;
         }
 
+        /**
+         * @param regionName The name of the region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regionName(String regionName) {
             return regionName(Output.of(regionName));
         }

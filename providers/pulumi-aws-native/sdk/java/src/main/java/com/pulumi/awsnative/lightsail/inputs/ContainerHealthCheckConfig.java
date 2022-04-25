@@ -26,6 +26,10 @@ public final class ContainerHealthCheckConfig extends com.pulumi.resources.Invok
     @Import(name="healthyThreshold")
     private @Nullable Integer healthyThreshold;
 
+    /**
+     * @return The number of consecutive health checks successes required before moving the container to the Healthy state. The default value is 2.
+     * 
+     */
     public Optional<Integer> healthyThreshold() {
         return Optional.ofNullable(this.healthyThreshold);
     }
@@ -37,6 +41,10 @@ public final class ContainerHealthCheckConfig extends com.pulumi.resources.Invok
     @Import(name="intervalSeconds")
     private @Nullable Integer intervalSeconds;
 
+    /**
+     * @return The approximate interval, in seconds, between health checks of an individual container. You can specify between 5 and 300 seconds. The default value is 5.
+     * 
+     */
     public Optional<Integer> intervalSeconds() {
         return Optional.ofNullable(this.intervalSeconds);
     }
@@ -48,6 +56,10 @@ public final class ContainerHealthCheckConfig extends com.pulumi.resources.Invok
     @Import(name="path")
     private @Nullable String path;
 
+    /**
+     * @return The path on the container on which to perform the health check. The default value is /.
+     * 
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
@@ -59,6 +71,10 @@ public final class ContainerHealthCheckConfig extends com.pulumi.resources.Invok
     @Import(name="successCodes")
     private @Nullable String successCodes;
 
+    /**
+     * @return The HTTP codes to use when checking for a successful response from a container. You can specify values between 200 and 499. You can specify multiple values (for example, 200,202) or a range of values (for example, 200-299).
+     * 
+     */
     public Optional<String> successCodes() {
         return Optional.ofNullable(this.successCodes);
     }
@@ -70,6 +86,10 @@ public final class ContainerHealthCheckConfig extends com.pulumi.resources.Invok
     @Import(name="timeoutSeconds")
     private @Nullable Integer timeoutSeconds;
 
+    /**
+     * @return The amount of time, in seconds, during which no response means a failed health check. You can specify between 2 and 60 seconds. The default value is 2.
+     * 
+     */
     public Optional<Integer> timeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }
@@ -81,6 +101,10 @@ public final class ContainerHealthCheckConfig extends com.pulumi.resources.Invok
     @Import(name="unhealthyThreshold")
     private @Nullable Integer unhealthyThreshold;
 
+    /**
+     * @return The number of consecutive health check failures required before moving the container to the Unhealthy state. The default value is 2.
+     * 
+     */
     public Optional<Integer> unhealthyThreshold() {
         return Optional.ofNullable(this.unhealthyThreshold);
     }
@@ -114,31 +138,67 @@ public final class ContainerHealthCheckConfig extends com.pulumi.resources.Invok
             $ = new ContainerHealthCheckConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param healthyThreshold The number of consecutive health checks successes required before moving the container to the Healthy state. The default value is 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthyThreshold(@Nullable Integer healthyThreshold) {
             $.healthyThreshold = healthyThreshold;
             return this;
         }
 
+        /**
+         * @param intervalSeconds The approximate interval, in seconds, between health checks of an individual container. You can specify between 5 and 300 seconds. The default value is 5.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intervalSeconds(@Nullable Integer intervalSeconds) {
             $.intervalSeconds = intervalSeconds;
             return this;
         }
 
+        /**
+         * @param path The path on the container on which to perform the health check. The default value is /.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param successCodes The HTTP codes to use when checking for a successful response from a container. You can specify values between 200 and 499. You can specify multiple values (for example, 200,202) or a range of values (for example, 200-299).
+         * 
+         * @return builder
+         * 
+         */
         public Builder successCodes(@Nullable String successCodes) {
             $.successCodes = successCodes;
             return this;
         }
 
+        /**
+         * @param timeoutSeconds The amount of time, in seconds, during which no response means a failed health check. You can specify between 2 and 60 seconds. The default value is 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             $.timeoutSeconds = timeoutSeconds;
             return this;
         }
 
+        /**
+         * @param unhealthyThreshold The number of consecutive health check failures required before moving the container to the Unhealthy state. The default value is 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
             $.unhealthyThreshold = unhealthyThreshold;
             return this;

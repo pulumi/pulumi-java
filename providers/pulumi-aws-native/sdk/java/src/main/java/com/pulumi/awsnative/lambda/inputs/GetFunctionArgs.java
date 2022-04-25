@@ -19,6 +19,10 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="functionName", required=true)
     private String functionName;
 
+    /**
+     * @return The name of the Lambda function, up to 64 characters in length. If you don&#39;t specify a name, AWS CloudFormation generates one.
+     * 
+     */
     public String functionName() {
         return this.functionName;
     }
@@ -47,6 +51,12 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFunctionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param functionName The name of the Lambda function, up to 64 characters in length. If you don&#39;t specify a name, AWS CloudFormation generates one.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionName(String functionName) {
             $.functionName = functionName;
             return this;

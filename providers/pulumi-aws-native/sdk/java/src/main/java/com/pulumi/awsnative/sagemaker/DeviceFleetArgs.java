@@ -25,6 +25,10 @@ public final class DeviceFleetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description for the edge device fleet
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class DeviceFleetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceFleetName")
     private @Nullable Output<String> deviceFleetName;
 
+    /**
+     * @return The name of the edge device fleet
+     * 
+     */
     public Optional<Output<String>> deviceFleetName() {
         return Optional.ofNullable(this.deviceFleetName);
     }
@@ -47,6 +55,10 @@ public final class DeviceFleetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="outputConfig", required=true)
     private Output<DeviceFleetEdgeOutputConfigArgs> outputConfig;
 
+    /**
+     * @return S3 bucket and an ecryption key id (if available) to store outputs for the fleet
+     * 
+     */
     public Output<DeviceFleetEdgeOutputConfigArgs> outputConfig() {
         return this.outputConfig;
     }
@@ -58,6 +70,10 @@ public final class DeviceFleetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return Role associated with the device fleet
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -69,6 +85,10 @@ public final class DeviceFleetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<DeviceFleetTagArgs>> tags;
 
+    /**
+     * @return Associate tags with the resource
+     * 
+     */
     public Optional<Output<List<DeviceFleetTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -101,51 +121,117 @@ public final class DeviceFleetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DeviceFleetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description for the edge device fleet
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description for the edge device fleet
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param deviceFleetName The name of the edge device fleet
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceFleetName(@Nullable Output<String> deviceFleetName) {
             $.deviceFleetName = deviceFleetName;
             return this;
         }
 
+        /**
+         * @param deviceFleetName The name of the edge device fleet
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceFleetName(String deviceFleetName) {
             return deviceFleetName(Output.of(deviceFleetName));
         }
 
+        /**
+         * @param outputConfig S3 bucket and an ecryption key id (if available) to store outputs for the fleet
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputConfig(Output<DeviceFleetEdgeOutputConfigArgs> outputConfig) {
             $.outputConfig = outputConfig;
             return this;
         }
 
+        /**
+         * @param outputConfig S3 bucket and an ecryption key id (if available) to store outputs for the fleet
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputConfig(DeviceFleetEdgeOutputConfigArgs outputConfig) {
             return outputConfig(Output.of(outputConfig));
         }
 
+        /**
+         * @param roleArn Role associated with the device fleet
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn Role associated with the device fleet
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param tags Associate tags with the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<DeviceFleetTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Associate tags with the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<DeviceFleetTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Associate tags with the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(DeviceFleetTagArgs... tags) {
             return tags(List.of(tags));
         }

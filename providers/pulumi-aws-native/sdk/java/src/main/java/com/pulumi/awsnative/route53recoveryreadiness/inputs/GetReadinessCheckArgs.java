@@ -19,6 +19,10 @@ public final class GetReadinessCheckArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="readinessCheckName", required=true)
     private String readinessCheckName;
 
+    /**
+     * @return Name of the ReadinessCheck to create.
+     * 
+     */
     public String readinessCheckName() {
         return this.readinessCheckName;
     }
@@ -47,6 +51,12 @@ public final class GetReadinessCheckArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetReadinessCheckArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param readinessCheckName Name of the ReadinessCheck to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readinessCheckName(String readinessCheckName) {
             $.readinessCheckName = readinessCheckName;
             return this;

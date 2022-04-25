@@ -27,6 +27,10 @@ public final class ResourceSetDNSTargetResourceArgs extends com.pulumi.resources
     @Import(name="domainName")
     private @Nullable Output<String> domainName;
 
+    /**
+     * @return The domain name that acts as an ingress point to a portion of the customer application.
+     * 
+     */
     public Optional<Output<String>> domainName() {
         return Optional.ofNullable(this.domainName);
     }
@@ -38,6 +42,10 @@ public final class ResourceSetDNSTargetResourceArgs extends com.pulumi.resources
     @Import(name="hostedZoneArn")
     private @Nullable Output<String> hostedZoneArn;
 
+    /**
+     * @return The hosted zone Amazon Resource Name (ARN) that contains the DNS record with the provided name of the target resource.
+     * 
+     */
     public Optional<Output<String>> hostedZoneArn() {
         return Optional.ofNullable(this.hostedZoneArn);
     }
@@ -49,6 +57,10 @@ public final class ResourceSetDNSTargetResourceArgs extends com.pulumi.resources
     @Import(name="recordSetId")
     private @Nullable Output<String> recordSetId;
 
+    /**
+     * @return The Route 53 record set ID that will uniquely identify a DNS record, given a name and a type.
+     * 
+     */
     public Optional<Output<String>> recordSetId() {
         return Optional.ofNullable(this.recordSetId);
     }
@@ -60,6 +72,10 @@ public final class ResourceSetDNSTargetResourceArgs extends com.pulumi.resources
     @Import(name="recordType")
     private @Nullable Output<String> recordType;
 
+    /**
+     * @return The type of DNS record of the target resource.
+     * 
+     */
     public Optional<Output<String>> recordType() {
         return Optional.ofNullable(this.recordType);
     }
@@ -99,38 +115,86 @@ public final class ResourceSetDNSTargetResourceArgs extends com.pulumi.resources
             $ = new ResourceSetDNSTargetResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainName The domain name that acts as an ingress point to a portion of the customer application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(@Nullable Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName The domain name that acts as an ingress point to a portion of the customer application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param hostedZoneArn The hosted zone Amazon Resource Name (ARN) that contains the DNS record with the provided name of the target resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostedZoneArn(@Nullable Output<String> hostedZoneArn) {
             $.hostedZoneArn = hostedZoneArn;
             return this;
         }
 
+        /**
+         * @param hostedZoneArn The hosted zone Amazon Resource Name (ARN) that contains the DNS record with the provided name of the target resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostedZoneArn(String hostedZoneArn) {
             return hostedZoneArn(Output.of(hostedZoneArn));
         }
 
+        /**
+         * @param recordSetId The Route 53 record set ID that will uniquely identify a DNS record, given a name and a type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordSetId(@Nullable Output<String> recordSetId) {
             $.recordSetId = recordSetId;
             return this;
         }
 
+        /**
+         * @param recordSetId The Route 53 record set ID that will uniquely identify a DNS record, given a name and a type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordSetId(String recordSetId) {
             return recordSetId(Output.of(recordSetId));
         }
 
+        /**
+         * @param recordType The type of DNS record of the target resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordType(@Nullable Output<String> recordType) {
             $.recordType = recordType;
             return this;
         }
 
+        /**
+         * @param recordType The type of DNS record of the target resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordType(String recordType) {
             return recordType(Output.of(recordType));
         }

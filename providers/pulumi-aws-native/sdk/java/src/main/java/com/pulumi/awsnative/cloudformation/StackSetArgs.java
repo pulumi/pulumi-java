@@ -32,6 +32,10 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="administrationRoleARN")
     private @Nullable Output<String> administrationRoleARN;
 
+    /**
+     * @return The Amazon Resource Number (ARN) of the IAM role to use to create this stack set. Specify an IAM role only if you are using customized administrator roles to control which users or groups can manage specific stack sets within the same administrator account.
+     * 
+     */
     public Optional<Output<String>> administrationRoleARN() {
         return Optional.ofNullable(this.administrationRoleARN);
     }
@@ -43,6 +47,10 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoDeployment")
     private @Nullable Output<StackSetAutoDeploymentArgs> autoDeployment;
 
+    /**
+     * @return Describes whether StackSets automatically deploys to AWS Organizations accounts that are added to the target organization or organizational unit (OU). Specify only if PermissionModel is SERVICE_MANAGED.
+     * 
+     */
     public Optional<Output<StackSetAutoDeploymentArgs>> autoDeployment() {
         return Optional.ofNullable(this.autoDeployment);
     }
@@ -54,6 +62,10 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="callAs")
     private @Nullable Output<StackSetCallAs> callAs;
 
+    /**
+     * @return Specifies the AWS account that you are acting from. By default, SELF is specified. For self-managed permissions, specify SELF; for service-managed permissions, if you are signed in to the organization&#39;s management account, specify SELF. If you are signed in to a delegated administrator account, specify DELEGATED_ADMIN.
+     * 
+     */
     public Optional<Output<StackSetCallAs>> callAs() {
         return Optional.ofNullable(this.callAs);
     }
@@ -65,6 +77,10 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capabilities")
     private @Nullable Output<List<StackSetCapability>> capabilities;
 
+    /**
+     * @return In some cases, you must explicitly acknowledge that your stack set template contains certain capabilities in order for AWS CloudFormation to create the stack set and related stack instances.
+     * 
+     */
     public Optional<Output<List<StackSetCapability>>> capabilities() {
         return Optional.ofNullable(this.capabilities);
     }
@@ -76,6 +92,10 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the stack set. You can use the description to identify the stack set&#39;s purpose or other important information.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -87,6 +107,10 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="executionRoleName")
     private @Nullable Output<String> executionRoleName;
 
+    /**
+     * @return The name of the IAM execution role to use to create the stack set. If you do not specify an execution role, AWS CloudFormation uses the AWSCloudFormationStackSetExecutionRole role for the stack set operation.
+     * 
+     */
     public Optional<Output<String>> executionRoleName() {
         return Optional.ofNullable(this.executionRoleName);
     }
@@ -98,6 +122,10 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedExecution")
     private @Nullable Output<ManagedExecutionPropertiesArgs> managedExecution;
 
+    /**
+     * @return Describes whether StackSets performs non-conflicting operations concurrently and queues conflicting operations.
+     * 
+     */
     public Optional<Output<ManagedExecutionPropertiesArgs>> managedExecution() {
         return Optional.ofNullable(this.managedExecution);
     }
@@ -116,6 +144,10 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
     private @Nullable Output<List<StackSetParameterArgs>> parameters;
 
+    /**
+     * @return The input parameters for the stack set template.
+     * 
+     */
     public Optional<Output<List<StackSetParameterArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -127,6 +159,10 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="permissionModel", required=true)
     private Output<StackSetPermissionModel> permissionModel;
 
+    /**
+     * @return Describes how the IAM roles required for stack set operations are created. By default, SELF-MANAGED is specified.
+     * 
+     */
     public Output<StackSetPermissionModel> permissionModel() {
         return this.permissionModel;
     }
@@ -138,6 +174,10 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stackInstancesGroup")
     private @Nullable Output<List<StackSetStackInstancesArgs>> stackInstancesGroup;
 
+    /**
+     * @return A group of stack instances with parameters in some specific accounts and regions.
+     * 
+     */
     public Optional<Output<List<StackSetStackInstancesArgs>>> stackInstancesGroup() {
         return Optional.ofNullable(this.stackInstancesGroup);
     }
@@ -149,6 +189,10 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stackSetName")
     private @Nullable Output<String> stackSetName;
 
+    /**
+     * @return The name to associate with the stack set. The name must be unique in the Region where you create your stack set.
+     * 
+     */
     public Optional<Output<String>> stackSetName() {
         return Optional.ofNullable(this.stackSetName);
     }
@@ -160,6 +204,10 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<StackSetTagArgs>> tags;
 
+    /**
+     * @return The key-value pairs to associate with this stack set and the stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the stacks. A maximum number of 50 tags can be specified.
+     * 
+     */
     public Optional<Output<List<StackSetTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -171,6 +219,10 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="templateBody")
     private @Nullable Output<String> templateBody;
 
+    /**
+     * @return The structure that contains the template body, with a minimum length of 1 byte and a maximum length of 51,200 bytes.
+     * 
+     */
     public Optional<Output<String>> templateBody() {
         return Optional.ofNullable(this.templateBody);
     }
@@ -182,6 +234,10 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="templateURL")
     private @Nullable Output<String> templateURL;
 
+    /**
+     * @return Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes) that is located in an Amazon S3 bucket.
+     * 
+     */
     public Optional<Output<String>> templateURL() {
         return Optional.ofNullable(this.templateURL);
     }
@@ -224,69 +280,159 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new StackSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param administrationRoleARN The Amazon Resource Number (ARN) of the IAM role to use to create this stack set. Specify an IAM role only if you are using customized administrator roles to control which users or groups can manage specific stack sets within the same administrator account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder administrationRoleARN(@Nullable Output<String> administrationRoleARN) {
             $.administrationRoleARN = administrationRoleARN;
             return this;
         }
 
+        /**
+         * @param administrationRoleARN The Amazon Resource Number (ARN) of the IAM role to use to create this stack set. Specify an IAM role only if you are using customized administrator roles to control which users or groups can manage specific stack sets within the same administrator account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder administrationRoleARN(String administrationRoleARN) {
             return administrationRoleARN(Output.of(administrationRoleARN));
         }
 
+        /**
+         * @param autoDeployment Describes whether StackSets automatically deploys to AWS Organizations accounts that are added to the target organization or organizational unit (OU). Specify only if PermissionModel is SERVICE_MANAGED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoDeployment(@Nullable Output<StackSetAutoDeploymentArgs> autoDeployment) {
             $.autoDeployment = autoDeployment;
             return this;
         }
 
+        /**
+         * @param autoDeployment Describes whether StackSets automatically deploys to AWS Organizations accounts that are added to the target organization or organizational unit (OU). Specify only if PermissionModel is SERVICE_MANAGED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoDeployment(StackSetAutoDeploymentArgs autoDeployment) {
             return autoDeployment(Output.of(autoDeployment));
         }
 
+        /**
+         * @param callAs Specifies the AWS account that you are acting from. By default, SELF is specified. For self-managed permissions, specify SELF; for service-managed permissions, if you are signed in to the organization&#39;s management account, specify SELF. If you are signed in to a delegated administrator account, specify DELEGATED_ADMIN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder callAs(@Nullable Output<StackSetCallAs> callAs) {
             $.callAs = callAs;
             return this;
         }
 
+        /**
+         * @param callAs Specifies the AWS account that you are acting from. By default, SELF is specified. For self-managed permissions, specify SELF; for service-managed permissions, if you are signed in to the organization&#39;s management account, specify SELF. If you are signed in to a delegated administrator account, specify DELEGATED_ADMIN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder callAs(StackSetCallAs callAs) {
             return callAs(Output.of(callAs));
         }
 
+        /**
+         * @param capabilities In some cases, you must explicitly acknowledge that your stack set template contains certain capabilities in order for AWS CloudFormation to create the stack set and related stack instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(@Nullable Output<List<StackSetCapability>> capabilities) {
             $.capabilities = capabilities;
             return this;
         }
 
+        /**
+         * @param capabilities In some cases, you must explicitly acknowledge that your stack set template contains certain capabilities in order for AWS CloudFormation to create the stack set and related stack instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(List<StackSetCapability> capabilities) {
             return capabilities(Output.of(capabilities));
         }
 
+        /**
+         * @param capabilities In some cases, you must explicitly acknowledge that your stack set template contains certain capabilities in order for AWS CloudFormation to create the stack set and related stack instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(StackSetCapability... capabilities) {
             return capabilities(List.of(capabilities));
         }
 
+        /**
+         * @param description A description of the stack set. You can use the description to identify the stack set&#39;s purpose or other important information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the stack set. You can use the description to identify the stack set&#39;s purpose or other important information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param executionRoleName The name of the IAM execution role to use to create the stack set. If you do not specify an execution role, AWS CloudFormation uses the AWSCloudFormationStackSetExecutionRole role for the stack set operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionRoleName(@Nullable Output<String> executionRoleName) {
             $.executionRoleName = executionRoleName;
             return this;
         }
 
+        /**
+         * @param executionRoleName The name of the IAM execution role to use to create the stack set. If you do not specify an execution role, AWS CloudFormation uses the AWSCloudFormationStackSetExecutionRole role for the stack set operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionRoleName(String executionRoleName) {
             return executionRoleName(Output.of(executionRoleName));
         }
 
+        /**
+         * @param managedExecution Describes whether StackSets performs non-conflicting operations concurrently and queues conflicting operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedExecution(@Nullable Output<ManagedExecutionPropertiesArgs> managedExecution) {
             $.managedExecution = managedExecution;
             return this;
         }
 
+        /**
+         * @param managedExecution Describes whether StackSets performs non-conflicting operations concurrently and queues conflicting operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedExecution(ManagedExecutionPropertiesArgs managedExecution) {
             return managedExecution(Output.of(managedExecution));
         }
@@ -300,77 +446,179 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
             return operationPreferences(Output.of(operationPreferences));
         }
 
+        /**
+         * @param parameters The input parameters for the stack set template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<List<StackSetParameterArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The input parameters for the stack set template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<StackSetParameterArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param parameters The input parameters for the stack set template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(StackSetParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param permissionModel Describes how the IAM roles required for stack set operations are created. By default, SELF-MANAGED is specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissionModel(Output<StackSetPermissionModel> permissionModel) {
             $.permissionModel = permissionModel;
             return this;
         }
 
+        /**
+         * @param permissionModel Describes how the IAM roles required for stack set operations are created. By default, SELF-MANAGED is specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissionModel(StackSetPermissionModel permissionModel) {
             return permissionModel(Output.of(permissionModel));
         }
 
+        /**
+         * @param stackInstancesGroup A group of stack instances with parameters in some specific accounts and regions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackInstancesGroup(@Nullable Output<List<StackSetStackInstancesArgs>> stackInstancesGroup) {
             $.stackInstancesGroup = stackInstancesGroup;
             return this;
         }
 
+        /**
+         * @param stackInstancesGroup A group of stack instances with parameters in some specific accounts and regions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackInstancesGroup(List<StackSetStackInstancesArgs> stackInstancesGroup) {
             return stackInstancesGroup(Output.of(stackInstancesGroup));
         }
 
+        /**
+         * @param stackInstancesGroup A group of stack instances with parameters in some specific accounts and regions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackInstancesGroup(StackSetStackInstancesArgs... stackInstancesGroup) {
             return stackInstancesGroup(List.of(stackInstancesGroup));
         }
 
+        /**
+         * @param stackSetName The name to associate with the stack set. The name must be unique in the Region where you create your stack set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackSetName(@Nullable Output<String> stackSetName) {
             $.stackSetName = stackSetName;
             return this;
         }
 
+        /**
+         * @param stackSetName The name to associate with the stack set. The name must be unique in the Region where you create your stack set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackSetName(String stackSetName) {
             return stackSetName(Output.of(stackSetName));
         }
 
+        /**
+         * @param tags The key-value pairs to associate with this stack set and the stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the stacks. A maximum number of 50 tags can be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<StackSetTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The key-value pairs to associate with this stack set and the stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the stacks. A maximum number of 50 tags can be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<StackSetTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The key-value pairs to associate with this stack set and the stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the stacks. A maximum number of 50 tags can be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(StackSetTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param templateBody The structure that contains the template body, with a minimum length of 1 byte and a maximum length of 51,200 bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateBody(@Nullable Output<String> templateBody) {
             $.templateBody = templateBody;
             return this;
         }
 
+        /**
+         * @param templateBody The structure that contains the template body, with a minimum length of 1 byte and a maximum length of 51,200 bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateBody(String templateBody) {
             return templateBody(Output.of(templateBody));
         }
 
+        /**
+         * @param templateURL Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes) that is located in an Amazon S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateURL(@Nullable Output<String> templateURL) {
             $.templateURL = templateURL;
             return this;
         }
 
+        /**
+         * @param templateURL Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes) that is located in an Amazon S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateURL(String templateURL) {
             return templateURL(Output.of(templateURL));
         }

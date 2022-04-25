@@ -19,6 +19,10 @@ public final class GetSecurityProfileArgs extends com.pulumi.resources.InvokeArg
     @Import(name="securityProfileName", required=true)
     private String securityProfileName;
 
+    /**
+     * @return A unique identifier for the security profile.
+     * 
+     */
     public String securityProfileName() {
         return this.securityProfileName;
     }
@@ -47,6 +51,12 @@ public final class GetSecurityProfileArgs extends com.pulumi.resources.InvokeArg
             $ = new GetSecurityProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param securityProfileName A unique identifier for the security profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityProfileName(String securityProfileName) {
             $.securityProfileName = securityProfileName;
             return this;

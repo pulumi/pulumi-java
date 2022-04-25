@@ -43,6 +43,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageTagMutability")
     private @Nullable Output<RepositoryImageTagMutability> imageTagMutability;
 
+    /**
+     * @return The image tag mutability setting for the repository.
+     * 
+     */
     public Optional<Output<RepositoryImageTagMutability>> imageTagMutability() {
         return Optional.ofNullable(this.imageTagMutability);
     }
@@ -61,6 +65,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="repositoryName")
     private @Nullable Output<String> repositoryName;
 
+    /**
+     * @return The name to use for the repository. The repository name may be specified on its own (such as nginx-web-app) or it can be prepended with a namespace to group the repository into a category (such as project-a/nginx-web-app). If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the repository name. For more information, see https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html.
+     * 
+     */
     public Optional<Output<String>> repositoryName() {
         return Optional.ofNullable(this.repositoryName);
     }
@@ -72,6 +80,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="repositoryPolicyText")
     private @Nullable Output<Object> repositoryPolicyText;
 
+    /**
+     * @return The JSON repository policy text to apply to the repository. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html in the Amazon Elastic Container Registry User Guide.
+     * 
+     */
     public Optional<Output<Object>> repositoryPolicyText() {
         return Optional.ofNullable(this.repositoryPolicyText);
     }
@@ -83,6 +95,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<RepositoryTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<RepositoryTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -135,11 +151,23 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
             return imageScanningConfiguration(Output.of(imageScanningConfiguration));
         }
 
+        /**
+         * @param imageTagMutability The image tag mutability setting for the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageTagMutability(@Nullable Output<RepositoryImageTagMutability> imageTagMutability) {
             $.imageTagMutability = imageTagMutability;
             return this;
         }
 
+        /**
+         * @param imageTagMutability The image tag mutability setting for the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageTagMutability(RepositoryImageTagMutability imageTagMutability) {
             return imageTagMutability(Output.of(imageTagMutability));
         }
@@ -153,33 +181,75 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
             return lifecyclePolicy(Output.of(lifecyclePolicy));
         }
 
+        /**
+         * @param repositoryName The name to use for the repository. The repository name may be specified on its own (such as nginx-web-app) or it can be prepended with a namespace to group the repository into a category (such as project-a/nginx-web-app). If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the repository name. For more information, see https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryName(@Nullable Output<String> repositoryName) {
             $.repositoryName = repositoryName;
             return this;
         }
 
+        /**
+         * @param repositoryName The name to use for the repository. The repository name may be specified on its own (such as nginx-web-app) or it can be prepended with a namespace to group the repository into a category (such as project-a/nginx-web-app). If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the repository name. For more information, see https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryName(String repositoryName) {
             return repositoryName(Output.of(repositoryName));
         }
 
+        /**
+         * @param repositoryPolicyText The JSON repository policy text to apply to the repository. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html in the Amazon Elastic Container Registry User Guide.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryPolicyText(@Nullable Output<Object> repositoryPolicyText) {
             $.repositoryPolicyText = repositoryPolicyText;
             return this;
         }
 
+        /**
+         * @param repositoryPolicyText The JSON repository policy text to apply to the repository. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html in the Amazon Elastic Container Registry User Guide.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryPolicyText(Object repositoryPolicyText) {
             return repositoryPolicyText(Output.of(repositoryPolicyText));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<RepositoryTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<RepositoryTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(RepositoryTagArgs... tags) {
             return tags(List.of(tags));
         }

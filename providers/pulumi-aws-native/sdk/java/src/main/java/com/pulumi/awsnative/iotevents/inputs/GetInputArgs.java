@@ -19,6 +19,10 @@ public final class GetInputArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="inputName", required=true)
     private String inputName;
 
+    /**
+     * @return The name of the input.
+     * 
+     */
     public String inputName() {
         return this.inputName;
     }
@@ -47,6 +51,12 @@ public final class GetInputArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inputName The name of the input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputName(String inputName) {
             $.inputName = inputName;
             return this;

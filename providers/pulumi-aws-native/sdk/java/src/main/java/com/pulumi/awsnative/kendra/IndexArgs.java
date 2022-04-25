@@ -30,6 +30,10 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacityUnits")
     private @Nullable Output<IndexCapacityUnitsConfigurationArgs> capacityUnits;
 
+    /**
+     * @return Capacity units
+     * 
+     */
     public Optional<Output<IndexCapacityUnitsConfigurationArgs>> capacityUnits() {
         return Optional.ofNullable(this.capacityUnits);
     }
@@ -41,6 +45,10 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description for the index
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -52,6 +60,10 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="documentMetadataConfigurations")
     private @Nullable Output<List<IndexDocumentMetadataConfigurationArgs>> documentMetadataConfigurations;
 
+    /**
+     * @return Document metadata configurations
+     * 
+     */
     public Optional<Output<List<IndexDocumentMetadataConfigurationArgs>>> documentMetadataConfigurations() {
         return Optional.ofNullable(this.documentMetadataConfigurations);
     }
@@ -84,6 +96,10 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverSideEncryptionConfiguration")
     private @Nullable Output<IndexServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
 
+    /**
+     * @return Server side encryption configuration
+     * 
+     */
     public Optional<Output<IndexServerSideEncryptionConfigurationArgs>> serverSideEncryptionConfiguration() {
         return Optional.ofNullable(this.serverSideEncryptionConfiguration);
     }
@@ -95,6 +111,10 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<IndexTagArgs>> tags;
 
+    /**
+     * @return Tags for labeling the index
+     * 
+     */
     public Optional<Output<List<IndexTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -146,33 +166,75 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IndexArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacityUnits Capacity units
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityUnits(@Nullable Output<IndexCapacityUnitsConfigurationArgs> capacityUnits) {
             $.capacityUnits = capacityUnits;
             return this;
         }
 
+        /**
+         * @param capacityUnits Capacity units
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityUnits(IndexCapacityUnitsConfigurationArgs capacityUnits) {
             return capacityUnits(Output.of(capacityUnits));
         }
 
+        /**
+         * @param description A description for the index
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description for the index
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param documentMetadataConfigurations Document metadata configurations
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentMetadataConfigurations(@Nullable Output<List<IndexDocumentMetadataConfigurationArgs>> documentMetadataConfigurations) {
             $.documentMetadataConfigurations = documentMetadataConfigurations;
             return this;
         }
 
+        /**
+         * @param documentMetadataConfigurations Document metadata configurations
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentMetadataConfigurations(List<IndexDocumentMetadataConfigurationArgs> documentMetadataConfigurations) {
             return documentMetadataConfigurations(Output.of(documentMetadataConfigurations));
         }
 
+        /**
+         * @param documentMetadataConfigurations Document metadata configurations
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentMetadataConfigurations(IndexDocumentMetadataConfigurationArgs... documentMetadataConfigurations) {
             return documentMetadataConfigurations(List.of(documentMetadataConfigurations));
         }
@@ -204,24 +266,54 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param serverSideEncryptionConfiguration Server side encryption configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverSideEncryptionConfiguration(@Nullable Output<IndexServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration) {
             $.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
             return this;
         }
 
+        /**
+         * @param serverSideEncryptionConfiguration Server side encryption configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverSideEncryptionConfiguration(IndexServerSideEncryptionConfigurationArgs serverSideEncryptionConfiguration) {
             return serverSideEncryptionConfiguration(Output.of(serverSideEncryptionConfiguration));
         }
 
+        /**
+         * @param tags Tags for labeling the index
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<IndexTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags for labeling the index
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<IndexTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Tags for labeling the index
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(IndexTagArgs... tags) {
             return tags(List.of(tags));
         }

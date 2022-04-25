@@ -22,73 +22,73 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetCanaryResult {
     /**
-     * Provide artifact configuration
+     * @return Provide artifact configuration
      * 
      */
     private final @Nullable CanaryArtifactConfig artifactConfig;
     /**
-     * Provide the s3 bucket output location for test results
+     * @return Provide the s3 bucket output location for test results
      * 
      */
     private final @Nullable String artifactS3Location;
     /**
-     * Provide the canary script source
+     * @return Provide the canary script source
      * 
      */
     private final @Nullable CanaryCode code;
     /**
-     * Lambda Execution role used to run your canaries
+     * @return Lambda Execution role used to run your canaries
      * 
      */
     private final @Nullable String executionRoleArn;
     /**
-     * Retention period of failed canary runs represented in number of days
+     * @return Retention period of failed canary runs represented in number of days
      * 
      */
     private final @Nullable Integer failureRetentionPeriod;
     /**
-     * Id of the canary
+     * @return Id of the canary
      * 
      */
     private final @Nullable String id;
     /**
-     * Provide canary run configuration
+     * @return Provide canary run configuration
      * 
      */
     private final @Nullable CanaryRunConfig runConfig;
     /**
-     * Runtime version of Synthetics Library
+     * @return Runtime version of Synthetics Library
      * 
      */
     private final @Nullable String runtimeVersion;
     /**
-     * Frequency to run your canaries
+     * @return Frequency to run your canaries
      * 
      */
     private final @Nullable CanarySchedule schedule;
     /**
-     * Runs canary if set to True. Default is False
+     * @return Runs canary if set to True. Default is False
      * 
      */
     private final @Nullable Boolean startCanaryAfterCreation;
     /**
-     * State of the canary
+     * @return State of the canary
      * 
      */
     private final @Nullable String state;
     /**
-     * Retention period of successful canary runs represented in number of days
+     * @return Retention period of successful canary runs represented in number of days
      * 
      */
     private final @Nullable Integer successRetentionPeriod;
     private final @Nullable List<CanaryTag> tags;
     /**
-     * Provide VPC Configuration if enabled.
+     * @return Provide VPC Configuration if enabled.
      * 
      */
     private final @Nullable CanaryVPCConfig vPCConfig;
     /**
-     * Visual reference configuration for visual testing
+     * @return Visual reference configuration for visual testing
      * 
      */
     private final @Nullable CanaryVisualReference visualReference;
@@ -128,86 +128,86 @@ public final class GetCanaryResult {
     }
 
     /**
-     * Provide artifact configuration
+     * @return Provide artifact configuration
      * 
-    */
+     */
     public Optional<CanaryArtifactConfig> artifactConfig() {
         return Optional.ofNullable(this.artifactConfig);
     }
     /**
-     * Provide the s3 bucket output location for test results
+     * @return Provide the s3 bucket output location for test results
      * 
-    */
+     */
     public Optional<String> artifactS3Location() {
         return Optional.ofNullable(this.artifactS3Location);
     }
     /**
-     * Provide the canary script source
+     * @return Provide the canary script source
      * 
-    */
+     */
     public Optional<CanaryCode> code() {
         return Optional.ofNullable(this.code);
     }
     /**
-     * Lambda Execution role used to run your canaries
+     * @return Lambda Execution role used to run your canaries
      * 
-    */
+     */
     public Optional<String> executionRoleArn() {
         return Optional.ofNullable(this.executionRoleArn);
     }
     /**
-     * Retention period of failed canary runs represented in number of days
+     * @return Retention period of failed canary runs represented in number of days
      * 
-    */
+     */
     public Optional<Integer> failureRetentionPeriod() {
         return Optional.ofNullable(this.failureRetentionPeriod);
     }
     /**
-     * Id of the canary
+     * @return Id of the canary
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Provide canary run configuration
+     * @return Provide canary run configuration
      * 
-    */
+     */
     public Optional<CanaryRunConfig> runConfig() {
         return Optional.ofNullable(this.runConfig);
     }
     /**
-     * Runtime version of Synthetics Library
+     * @return Runtime version of Synthetics Library
      * 
-    */
+     */
     public Optional<String> runtimeVersion() {
         return Optional.ofNullable(this.runtimeVersion);
     }
     /**
-     * Frequency to run your canaries
+     * @return Frequency to run your canaries
      * 
-    */
+     */
     public Optional<CanarySchedule> schedule() {
         return Optional.ofNullable(this.schedule);
     }
     /**
-     * Runs canary if set to True. Default is False
+     * @return Runs canary if set to True. Default is False
      * 
-    */
+     */
     public Optional<Boolean> startCanaryAfterCreation() {
         return Optional.ofNullable(this.startCanaryAfterCreation);
     }
     /**
-     * State of the canary
+     * @return State of the canary
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
-     * Retention period of successful canary runs represented in number of days
+     * @return Retention period of successful canary runs represented in number of days
      * 
-    */
+     */
     public Optional<Integer> successRetentionPeriod() {
         return Optional.ofNullable(this.successRetentionPeriod);
     }
@@ -215,16 +215,16 @@ public final class GetCanaryResult {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * Provide VPC Configuration if enabled.
+     * @return Provide VPC Configuration if enabled.
      * 
-    */
+     */
     public Optional<CanaryVPCConfig> vPCConfig() {
         return Optional.ofNullable(this.vPCConfig);
     }
     /**
-     * Visual reference configuration for visual testing
+     * @return Visual reference configuration for visual testing
      * 
-    */
+     */
     public Optional<CanaryVisualReference> visualReference() {
         return Optional.ofNullable(this.visualReference);
     }

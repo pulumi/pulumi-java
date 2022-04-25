@@ -25,6 +25,10 @@ public final class ApplicationHAClusterPrometheusExporter extends com.pulumi.res
     @Import(name="prometheusPort")
     private @Nullable String prometheusPort;
 
+    /**
+     * @return Prometheus exporter port.
+     * 
+     */
     public Optional<String> prometheusPort() {
         return Optional.ofNullable(this.prometheusPort);
     }
@@ -53,6 +57,12 @@ public final class ApplicationHAClusterPrometheusExporter extends com.pulumi.res
             $ = new ApplicationHAClusterPrometheusExporter(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param prometheusPort Prometheus exporter port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prometheusPort(@Nullable String prometheusPort) {
             $.prometheusPort = prometheusPort;
             return this;

@@ -24,6 +24,10 @@ public final class MitigationActionPublishFindingToSnsParamsArgs extends com.pul
     @Import(name="topicArn", required=true)
     private Output<String> topicArn;
 
+    /**
+     * @return The ARN of the topic to which you want to publish the findings.
+     * 
+     */
     public Output<String> topicArn() {
         return this.topicArn;
     }
@@ -52,11 +56,23 @@ public final class MitigationActionPublishFindingToSnsParamsArgs extends com.pul
             $ = new MitigationActionPublishFindingToSnsParamsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param topicArn The ARN of the topic to which you want to publish the findings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicArn(Output<String> topicArn) {
             $.topicArn = topicArn;
             return this;
         }
 
+        /**
+         * @param topicArn The ARN of the topic to which you want to publish the findings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicArn(String topicArn) {
             return topicArn(Output.of(topicArn));
         }

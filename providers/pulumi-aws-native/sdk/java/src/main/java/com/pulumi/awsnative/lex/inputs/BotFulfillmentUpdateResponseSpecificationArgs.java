@@ -29,6 +29,10 @@ public final class BotFulfillmentUpdateResponseSpecificationArgs extends com.pul
     @Import(name="allowInterrupt")
     private @Nullable Output<Boolean> allowInterrupt;
 
+    /**
+     * @return Determines whether the user can interrupt an update message while it is playing.
+     * 
+     */
     public Optional<Output<Boolean>> allowInterrupt() {
         return Optional.ofNullable(this.allowInterrupt);
     }
@@ -40,6 +44,10 @@ public final class BotFulfillmentUpdateResponseSpecificationArgs extends com.pul
     @Import(name="frequencyInSeconds", required=true)
     private Output<Integer> frequencyInSeconds;
 
+    /**
+     * @return The frequency that a message is sent to the user. When the period ends, Amazon Lex chooses a message from the message groups and plays it to the user. If the fulfillment Lambda returns before the first period ends, an update message is not played to the user.
+     * 
+     */
     public Output<Integer> frequencyInSeconds() {
         return this.frequencyInSeconds;
     }
@@ -77,20 +85,44 @@ public final class BotFulfillmentUpdateResponseSpecificationArgs extends com.pul
             $ = new BotFulfillmentUpdateResponseSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowInterrupt Determines whether the user can interrupt an update message while it is playing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowInterrupt(@Nullable Output<Boolean> allowInterrupt) {
             $.allowInterrupt = allowInterrupt;
             return this;
         }
 
+        /**
+         * @param allowInterrupt Determines whether the user can interrupt an update message while it is playing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowInterrupt(Boolean allowInterrupt) {
             return allowInterrupt(Output.of(allowInterrupt));
         }
 
+        /**
+         * @param frequencyInSeconds The frequency that a message is sent to the user. When the period ends, Amazon Lex chooses a message from the message groups and plays it to the user. If the fulfillment Lambda returns before the first period ends, an update message is not played to the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequencyInSeconds(Output<Integer> frequencyInSeconds) {
             $.frequencyInSeconds = frequencyInSeconds;
             return this;
         }
 
+        /**
+         * @param frequencyInSeconds The frequency that a message is sent to the user. When the period ends, Amazon Lex chooses a message from the message groups and plays it to the user. If the fulfillment Lambda returns before the first period ends, an update message is not played to the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequencyInSeconds(Integer frequencyInSeconds) {
             return frequencyInSeconds(Output.of(frequencyInSeconds));
         }

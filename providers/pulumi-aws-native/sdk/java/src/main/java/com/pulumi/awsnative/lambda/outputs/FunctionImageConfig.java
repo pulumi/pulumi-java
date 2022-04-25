@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FunctionImageConfig {
     /**
-     * Command.
+     * @return Command.
      * 
      */
     private final @Nullable List<String> command;
     /**
-     * EntryPoint.
+     * @return EntryPoint.
      * 
      */
     private final @Nullable List<String> entryPoint;
     /**
-     * WorkingDirectory.
+     * @return WorkingDirectory.
      * 
      */
     private final @Nullable String workingDirectory;
@@ -39,23 +39,23 @@ public final class FunctionImageConfig {
     }
 
     /**
-     * Command.
+     * @return Command.
      * 
-    */
+     */
     public List<String> command() {
         return this.command == null ? List.of() : this.command;
     }
     /**
-     * EntryPoint.
+     * @return EntryPoint.
      * 
-    */
+     */
     public List<String> entryPoint() {
         return this.entryPoint == null ? List.of() : this.entryPoint;
     }
     /**
-     * WorkingDirectory.
+     * @return WorkingDirectory.
      * 
-    */
+     */
     public Optional<String> workingDirectory() {
         return Optional.ofNullable(this.workingDirectory);
     }

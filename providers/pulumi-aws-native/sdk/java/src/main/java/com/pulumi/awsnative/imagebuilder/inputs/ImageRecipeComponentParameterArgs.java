@@ -25,6 +25,10 @@ public final class ImageRecipeComponentParameterArgs extends com.pulumi.resource
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the component parameter to set.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -36,6 +40,10 @@ public final class ImageRecipeComponentParameterArgs extends com.pulumi.resource
     @Import(name="value", required=true)
     private Output<List<String>> value;
 
+    /**
+     * @return Sets the value for the named component parameter.
+     * 
+     */
     public Output<List<String>> value() {
         return this.value;
     }
@@ -65,24 +73,54 @@ public final class ImageRecipeComponentParameterArgs extends com.pulumi.resource
             $ = new ImageRecipeComponentParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the component parameter to set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the component parameter to set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param value Sets the value for the named component parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<List<String>> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Sets the value for the named component parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(List<String> value) {
             return value(Output.of(value));
         }
 
+        /**
+         * @param value Sets the value for the named component parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String... value) {
             return value(List.of(value));
         }

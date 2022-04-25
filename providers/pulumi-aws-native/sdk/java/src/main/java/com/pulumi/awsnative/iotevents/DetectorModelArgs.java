@@ -33,6 +33,10 @@ public final class DetectorModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="detectorModelDescription")
     private @Nullable Output<String> detectorModelDescription;
 
+    /**
+     * @return A brief description of the detector model.
+     * 
+     */
     public Optional<Output<String>> detectorModelDescription() {
         return Optional.ofNullable(this.detectorModelDescription);
     }
@@ -44,6 +48,10 @@ public final class DetectorModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="detectorModelName")
     private @Nullable Output<String> detectorModelName;
 
+    /**
+     * @return The name of the detector model.
+     * 
+     */
     public Optional<Output<String>> detectorModelName() {
         return Optional.ofNullable(this.detectorModelName);
     }
@@ -55,6 +63,10 @@ public final class DetectorModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="evaluationMethod")
     private @Nullable Output<DetectorModelEvaluationMethod> evaluationMethod;
 
+    /**
+     * @return Information about the order in which events are evaluated and how actions are executed.
+     * 
+     */
     public Optional<Output<DetectorModelEvaluationMethod>> evaluationMethod() {
         return Optional.ofNullable(this.evaluationMethod);
     }
@@ -68,6 +80,12 @@ public final class DetectorModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return The value used to identify a detector instance. When a device or system sends input, a new detector instance with a unique key value is created. AWS IoT Events can continue to route input to its corresponding detector instance based on this identifying information.
+     * 
+     * This parameter uses a JSON-path expression to select the attribute-value pair in the message payload that is used for identification. To route the message to the correct detector instance, the device must send a message payload that contains the same attribute-value.
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -79,6 +97,10 @@ public final class DetectorModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return The ARN of the role that grants permission to AWS IoT Events to perform its operations.
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -92,6 +114,12 @@ public final class DetectorModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<DetectorModelTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
+     * 
+     */
     public Optional<Output<List<DetectorModelTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -135,60 +163,148 @@ public final class DetectorModelArgs extends com.pulumi.resources.ResourceArgs {
             return detectorModelDefinition(Output.of(detectorModelDefinition));
         }
 
+        /**
+         * @param detectorModelDescription A brief description of the detector model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detectorModelDescription(@Nullable Output<String> detectorModelDescription) {
             $.detectorModelDescription = detectorModelDescription;
             return this;
         }
 
+        /**
+         * @param detectorModelDescription A brief description of the detector model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detectorModelDescription(String detectorModelDescription) {
             return detectorModelDescription(Output.of(detectorModelDescription));
         }
 
+        /**
+         * @param detectorModelName The name of the detector model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detectorModelName(@Nullable Output<String> detectorModelName) {
             $.detectorModelName = detectorModelName;
             return this;
         }
 
+        /**
+         * @param detectorModelName The name of the detector model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detectorModelName(String detectorModelName) {
             return detectorModelName(Output.of(detectorModelName));
         }
 
+        /**
+         * @param evaluationMethod Information about the order in which events are evaluated and how actions are executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder evaluationMethod(@Nullable Output<DetectorModelEvaluationMethod> evaluationMethod) {
             $.evaluationMethod = evaluationMethod;
             return this;
         }
 
+        /**
+         * @param evaluationMethod Information about the order in which events are evaluated and how actions are executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder evaluationMethod(DetectorModelEvaluationMethod evaluationMethod) {
             return evaluationMethod(Output.of(evaluationMethod));
         }
 
+        /**
+         * @param key The value used to identify a detector instance. When a device or system sends input, a new detector instance with a unique key value is created. AWS IoT Events can continue to route input to its corresponding detector instance based on this identifying information.
+         * 
+         * This parameter uses a JSON-path expression to select the attribute-value pair in the message payload that is used for identification. To route the message to the correct detector instance, the device must send a message payload that contains the same attribute-value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The value used to identify a detector instance. When a device or system sends input, a new detector instance with a unique key value is created. AWS IoT Events can continue to route input to its corresponding detector instance based on this identifying information.
+         * 
+         * This parameter uses a JSON-path expression to select the attribute-value pair in the message payload that is used for identification. To route the message to the correct detector instance, the device must send a message payload that contains the same attribute-value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param roleArn The ARN of the role that grants permission to AWS IoT Events to perform its operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn The ARN of the role that grants permission to AWS IoT Events to perform its operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<DetectorModelTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<DetectorModelTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(DetectorModelTagArgs... tags) {
             return tags(List.of(tags));
         }

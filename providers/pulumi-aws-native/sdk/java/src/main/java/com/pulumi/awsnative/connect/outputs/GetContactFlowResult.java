@@ -15,37 +15,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetContactFlowResult {
     /**
-     * The identifier of the contact flow (ARN).
+     * @return The identifier of the contact flow (ARN).
      * 
      */
     private final @Nullable String contactFlowArn;
     /**
-     * The content of the contact flow in JSON format.
+     * @return The content of the contact flow in JSON format.
      * 
      */
     private final @Nullable String content;
     /**
-     * The description of the contact flow.
+     * @return The description of the contact flow.
      * 
      */
     private final @Nullable String description;
     /**
-     * The identifier of the Amazon Connect instance (ARN).
+     * @return The identifier of the Amazon Connect instance (ARN).
      * 
      */
     private final @Nullable String instanceArn;
     /**
-     * The name of the contact flow.
+     * @return The name of the contact flow.
      * 
      */
     private final @Nullable String name;
     /**
-     * The state of the contact flow.
+     * @return The state of the contact flow.
      * 
      */
     private final @Nullable ContactFlowState state;
     /**
-     * One or more tags.
+     * @return One or more tags.
      * 
      */
     private final @Nullable List<ContactFlowTag> tags;
@@ -69,51 +69,51 @@ public final class GetContactFlowResult {
     }
 
     /**
-     * The identifier of the contact flow (ARN).
+     * @return The identifier of the contact flow (ARN).
      * 
-    */
+     */
     public Optional<String> contactFlowArn() {
         return Optional.ofNullable(this.contactFlowArn);
     }
     /**
-     * The content of the contact flow in JSON format.
+     * @return The content of the contact flow in JSON format.
      * 
-    */
+     */
     public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
     /**
-     * The description of the contact flow.
+     * @return The description of the contact flow.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The identifier of the Amazon Connect instance (ARN).
+     * @return The identifier of the Amazon Connect instance (ARN).
      * 
-    */
+     */
     public Optional<String> instanceArn() {
         return Optional.ofNullable(this.instanceArn);
     }
     /**
-     * The name of the contact flow.
+     * @return The name of the contact flow.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The state of the contact flow.
+     * @return The state of the contact flow.
      * 
-    */
+     */
     public Optional<ContactFlowState> state() {
         return Optional.ofNullable(this.state);
     }
     /**
-     * One or more tags.
+     * @return One or more tags.
      * 
-    */
+     */
     public List<ContactFlowTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

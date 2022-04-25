@@ -19,6 +19,10 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceArn", required=true)
     private String serviceArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the AppRunner Service.
+     * 
+     */
     public String serviceArn() {
         return this.serviceArn;
     }
@@ -47,6 +51,12 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param serviceArn The Amazon Resource Name (ARN) of the AppRunner Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceArn(String serviceArn) {
             $.serviceArn = serviceArn;
             return this;

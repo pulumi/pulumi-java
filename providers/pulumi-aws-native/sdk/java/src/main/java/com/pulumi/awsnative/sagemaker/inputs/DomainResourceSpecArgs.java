@@ -23,6 +23,10 @@ public final class DomainResourceSpecArgs extends com.pulumi.resources.ResourceA
     @Import(name="instanceType")
     private @Nullable Output<DomainResourceSpecInstanceType> instanceType;
 
+    /**
+     * @return The instance type that the image version runs on.
+     * 
+     */
     public Optional<Output<DomainResourceSpecInstanceType>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -34,6 +38,10 @@ public final class DomainResourceSpecArgs extends com.pulumi.resources.ResourceA
     @Import(name="sageMakerImageArn")
     private @Nullable Output<String> sageMakerImageArn;
 
+    /**
+     * @return The ARN of the SageMaker image that the image version belongs to.
+     * 
+     */
     public Optional<Output<String>> sageMakerImageArn() {
         return Optional.ofNullable(this.sageMakerImageArn);
     }
@@ -45,6 +53,10 @@ public final class DomainResourceSpecArgs extends com.pulumi.resources.ResourceA
     @Import(name="sageMakerImageVersionArn")
     private @Nullable Output<String> sageMakerImageVersionArn;
 
+    /**
+     * @return The ARN of the image version created on the instance.
+     * 
+     */
     public Optional<Output<String>> sageMakerImageVersionArn() {
         return Optional.ofNullable(this.sageMakerImageVersionArn);
     }
@@ -75,29 +87,65 @@ public final class DomainResourceSpecArgs extends com.pulumi.resources.ResourceA
             $ = new DomainResourceSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceType The instance type that the image version runs on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<DomainResourceSpecInstanceType> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType The instance type that the image version runs on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(DomainResourceSpecInstanceType instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
+        /**
+         * @param sageMakerImageArn The ARN of the SageMaker image that the image version belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sageMakerImageArn(@Nullable Output<String> sageMakerImageArn) {
             $.sageMakerImageArn = sageMakerImageArn;
             return this;
         }
 
+        /**
+         * @param sageMakerImageArn The ARN of the SageMaker image that the image version belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sageMakerImageArn(String sageMakerImageArn) {
             return sageMakerImageArn(Output.of(sageMakerImageArn));
         }
 
+        /**
+         * @param sageMakerImageVersionArn The ARN of the image version created on the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sageMakerImageVersionArn(@Nullable Output<String> sageMakerImageVersionArn) {
             $.sageMakerImageVersionArn = sageMakerImageVersionArn;
             return this;
         }
 
+        /**
+         * @param sageMakerImageVersionArn The ARN of the image version created on the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sageMakerImageVersionArn(String sageMakerImageVersionArn) {
             return sageMakerImageVersionArn(Output.of(sageMakerImageVersionArn));
         }

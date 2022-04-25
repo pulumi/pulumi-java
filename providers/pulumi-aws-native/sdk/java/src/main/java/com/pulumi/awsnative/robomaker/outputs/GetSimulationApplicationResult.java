@@ -19,32 +19,32 @@ import javax.annotation.Nullable;
 public final class GetSimulationApplicationResult {
     private final @Nullable String arn;
     /**
-     * The current revision id.
+     * @return The current revision id.
      * 
      */
     private final @Nullable String currentRevisionId;
     /**
-     * The URI of the Docker image for the robot application.
+     * @return The URI of the Docker image for the robot application.
      * 
      */
     private final @Nullable String environment;
     /**
-     * The rendering engine for the simulation application.
+     * @return The rendering engine for the simulation application.
      * 
      */
     private final @Nullable SimulationApplicationRenderingEngine renderingEngine;
     /**
-     * The robot software suite used by the simulation application.
+     * @return The robot software suite used by the simulation application.
      * 
      */
     private final @Nullable SimulationApplicationRobotSoftwareSuite robotSoftwareSuite;
     /**
-     * The simulation software suite used by the simulation application.
+     * @return The simulation software suite used by the simulation application.
      * 
      */
     private final @Nullable SimulationApplicationSimulationSoftwareSuite simulationSoftwareSuite;
     /**
-     * The sources of the simulation application.
+     * @return The sources of the simulation application.
      * 
      */
     private final @Nullable List<SimulationApplicationSourceConfig> sources;
@@ -74,44 +74,44 @@ public final class GetSimulationApplicationResult {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The current revision id.
+     * @return The current revision id.
      * 
-    */
+     */
     public Optional<String> currentRevisionId() {
         return Optional.ofNullable(this.currentRevisionId);
     }
     /**
-     * The URI of the Docker image for the robot application.
+     * @return The URI of the Docker image for the robot application.
      * 
-    */
+     */
     public Optional<String> environment() {
         return Optional.ofNullable(this.environment);
     }
     /**
-     * The rendering engine for the simulation application.
+     * @return The rendering engine for the simulation application.
      * 
-    */
+     */
     public Optional<SimulationApplicationRenderingEngine> renderingEngine() {
         return Optional.ofNullable(this.renderingEngine);
     }
     /**
-     * The robot software suite used by the simulation application.
+     * @return The robot software suite used by the simulation application.
      * 
-    */
+     */
     public Optional<SimulationApplicationRobotSoftwareSuite> robotSoftwareSuite() {
         return Optional.ofNullable(this.robotSoftwareSuite);
     }
     /**
-     * The simulation software suite used by the simulation application.
+     * @return The simulation software suite used by the simulation application.
      * 
-    */
+     */
     public Optional<SimulationApplicationSimulationSoftwareSuite> simulationSoftwareSuite() {
         return Optional.ofNullable(this.simulationSoftwareSuite);
     }
     /**
-     * The sources of the simulation application.
+     * @return The sources of the simulation application.
      * 
-    */
+     */
     public List<SimulationApplicationSourceConfig> sources() {
         return this.sources == null ? List.of() : this.sources;
     }

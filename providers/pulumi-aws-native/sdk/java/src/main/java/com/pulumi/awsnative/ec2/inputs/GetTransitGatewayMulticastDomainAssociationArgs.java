@@ -19,6 +19,10 @@ public final class GetTransitGatewayMulticastDomainAssociationArgs extends com.p
     @Import(name="subnetId", required=true)
     private String subnetId;
 
+    /**
+     * @return The IDs of the subnets to associate with the transit gateway multicast domain.
+     * 
+     */
     public String subnetId() {
         return this.subnetId;
     }
@@ -30,6 +34,10 @@ public final class GetTransitGatewayMulticastDomainAssociationArgs extends com.p
     @Import(name="transitGatewayAttachmentId", required=true)
     private String transitGatewayAttachmentId;
 
+    /**
+     * @return The ID of the transit gateway attachment.
+     * 
+     */
     public String transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
@@ -41,6 +49,10 @@ public final class GetTransitGatewayMulticastDomainAssociationArgs extends com.p
     @Import(name="transitGatewayMulticastDomainId", required=true)
     private String transitGatewayMulticastDomainId;
 
+    /**
+     * @return The ID of the transit gateway multicast domain.
+     * 
+     */
     public String transitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
     }
@@ -71,16 +83,34 @@ public final class GetTransitGatewayMulticastDomainAssociationArgs extends com.p
             $ = new GetTransitGatewayMulticastDomainAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subnetId The IDs of the subnets to associate with the transit gateway multicast domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param transitGatewayAttachmentId The ID of the transit gateway attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayAttachmentId(String transitGatewayAttachmentId) {
             $.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }
 
+        /**
+         * @param transitGatewayMulticastDomainId The ID of the transit gateway multicast domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
             $.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
             return this;

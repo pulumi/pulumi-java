@@ -19,6 +19,10 @@ public final class GetMulticastGroupArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Multicast group id. Returned after successful create.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +51,12 @@ public final class GetMulticastGroupArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetMulticastGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Multicast group id. Returned after successful create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

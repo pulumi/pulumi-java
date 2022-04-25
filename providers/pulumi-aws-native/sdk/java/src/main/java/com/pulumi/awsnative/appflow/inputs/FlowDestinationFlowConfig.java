@@ -27,6 +27,10 @@ public final class FlowDestinationFlowConfig extends com.pulumi.resources.Invoke
     @Import(name="connectorProfileName")
     private @Nullable String connectorProfileName;
 
+    /**
+     * @return Name of destination connector profile
+     * 
+     */
     public Optional<String> connectorProfileName() {
         return Optional.ofNullable(this.connectorProfileName);
     }
@@ -38,6 +42,10 @@ public final class FlowDestinationFlowConfig extends com.pulumi.resources.Invoke
     @Import(name="connectorType", required=true)
     private FlowConnectorType connectorType;
 
+    /**
+     * @return Destination connector type
+     * 
+     */
     public FlowConnectorType connectorType() {
         return this.connectorType;
     }
@@ -49,6 +57,10 @@ public final class FlowDestinationFlowConfig extends com.pulumi.resources.Invoke
     @Import(name="destinationConnectorProperties", required=true)
     private FlowDestinationConnectorProperties destinationConnectorProperties;
 
+    /**
+     * @return Destination connector details
+     * 
+     */
     public FlowDestinationConnectorProperties destinationConnectorProperties() {
         return this.destinationConnectorProperties;
     }
@@ -79,16 +91,34 @@ public final class FlowDestinationFlowConfig extends com.pulumi.resources.Invoke
             $ = new FlowDestinationFlowConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectorProfileName Name of destination connector profile
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorProfileName(@Nullable String connectorProfileName) {
             $.connectorProfileName = connectorProfileName;
             return this;
         }
 
+        /**
+         * @param connectorType Destination connector type
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorType(FlowConnectorType connectorType) {
             $.connectorType = connectorType;
             return this;
         }
 
+        /**
+         * @param destinationConnectorProperties Destination connector details
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationConnectorProperties(FlowDestinationConnectorProperties destinationConnectorProperties) {
             $.destinationConnectorProperties = destinationConnectorProperties;
             return this;

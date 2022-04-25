@@ -19,6 +19,10 @@ public final class GetConfigurationAggregatorArgs extends com.pulumi.resources.I
     @Import(name="configurationAggregatorName", required=true)
     private String configurationAggregatorName;
 
+    /**
+     * @return The name of the aggregator.
+     * 
+     */
     public String configurationAggregatorName() {
         return this.configurationAggregatorName;
     }
@@ -47,6 +51,12 @@ public final class GetConfigurationAggregatorArgs extends com.pulumi.resources.I
             $ = new GetConfigurationAggregatorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configurationAggregatorName The name of the aggregator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationAggregatorName(String configurationAggregatorName) {
             $.configurationAggregatorName = configurationAggregatorName;
             return this;

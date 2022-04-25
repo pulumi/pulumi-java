@@ -37,6 +37,10 @@ public final class OriginEndpointDashPackageArgs extends com.pulumi.resources.Re
     @Import(name="adTriggers")
     private @Nullable Output<List<OriginEndpointDashPackageAdTriggersItem>> adTriggers;
 
+    /**
+     * @return A list of SCTE-35 message types that are treated as ad markers in the output.  If empty, no ad markers are output.  Specify multiple items to create ad markers for all of the included message types.
+     * 
+     */
     public Optional<Output<List<OriginEndpointDashPackageAdTriggersItem>>> adTriggers() {
         return Optional.ofNullable(this.adTriggers);
     }
@@ -62,6 +66,10 @@ public final class OriginEndpointDashPackageArgs extends com.pulumi.resources.Re
     @Import(name="manifestLayout")
     private @Nullable Output<OriginEndpointDashPackageManifestLayout> manifestLayout;
 
+    /**
+     * @return Determines the position of some tags in the Media Presentation Description (MPD).  When set to FULL, elements like SegmentTemplate and ContentProtection are included in each Representation.  When set to COMPACT, duplicate elements are combined and presented at the AdaptationSet level.
+     * 
+     */
     public Optional<Output<OriginEndpointDashPackageManifestLayout>> manifestLayout() {
         return Optional.ofNullable(this.manifestLayout);
     }
@@ -73,6 +81,10 @@ public final class OriginEndpointDashPackageArgs extends com.pulumi.resources.Re
     @Import(name="manifestWindowSeconds")
     private @Nullable Output<Integer> manifestWindowSeconds;
 
+    /**
+     * @return Time window (in seconds) contained in each manifest.
+     * 
+     */
     public Optional<Output<Integer>> manifestWindowSeconds() {
         return Optional.ofNullable(this.manifestWindowSeconds);
     }
@@ -84,6 +96,10 @@ public final class OriginEndpointDashPackageArgs extends com.pulumi.resources.Re
     @Import(name="minBufferTimeSeconds")
     private @Nullable Output<Integer> minBufferTimeSeconds;
 
+    /**
+     * @return Minimum duration (in seconds) that a player will buffer media before starting the presentation.
+     * 
+     */
     public Optional<Output<Integer>> minBufferTimeSeconds() {
         return Optional.ofNullable(this.minBufferTimeSeconds);
     }
@@ -95,6 +111,10 @@ public final class OriginEndpointDashPackageArgs extends com.pulumi.resources.Re
     @Import(name="minUpdatePeriodSeconds")
     private @Nullable Output<Integer> minUpdatePeriodSeconds;
 
+    /**
+     * @return Minimum duration (in seconds) between potential changes to the Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD).
+     * 
+     */
     public Optional<Output<Integer>> minUpdatePeriodSeconds() {
         return Optional.ofNullable(this.minUpdatePeriodSeconds);
     }
@@ -106,6 +126,10 @@ public final class OriginEndpointDashPackageArgs extends com.pulumi.resources.Re
     @Import(name="periodTriggers")
     private @Nullable Output<List<OriginEndpointDashPackagePeriodTriggersItem>> periodTriggers;
 
+    /**
+     * @return A list of triggers that controls when the outgoing Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD) will be partitioned into multiple periods. If empty, the content will not be partitioned into more than one period. If the list contains &#34;ADS&#34;, new periods will be created where the Channel source contains SCTE-35 ad markers.
+     * 
+     */
     public Optional<Output<List<OriginEndpointDashPackagePeriodTriggersItem>>> periodTriggers() {
         return Optional.ofNullable(this.periodTriggers);
     }
@@ -117,6 +141,10 @@ public final class OriginEndpointDashPackageArgs extends com.pulumi.resources.Re
     @Import(name="profile")
     private @Nullable Output<OriginEndpointDashPackageProfile> profile;
 
+    /**
+     * @return The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to &#34;HBBTV_1_5&#34;, HbbTV 1.5 compliant output is enabled.
+     * 
+     */
     public Optional<Output<OriginEndpointDashPackageProfile>> profile() {
         return Optional.ofNullable(this.profile);
     }
@@ -128,6 +156,10 @@ public final class OriginEndpointDashPackageArgs extends com.pulumi.resources.Re
     @Import(name="segmentDurationSeconds")
     private @Nullable Output<Integer> segmentDurationSeconds;
 
+    /**
+     * @return Duration (in seconds) of each segment. Actual segments will be rounded to the nearest multiple of the source segment duration.
+     * 
+     */
     public Optional<Output<Integer>> segmentDurationSeconds() {
         return Optional.ofNullable(this.segmentDurationSeconds);
     }
@@ -139,6 +171,10 @@ public final class OriginEndpointDashPackageArgs extends com.pulumi.resources.Re
     @Import(name="segmentTemplateFormat")
     private @Nullable Output<OriginEndpointDashPackageSegmentTemplateFormat> segmentTemplateFormat;
 
+    /**
+     * @return Determines the type of SegmentTemplate included in the Media Presentation Description (MPD).  When set to NUMBER_WITH_TIMELINE, a full timeline is presented in each SegmentTemplate, with $Number$ media URLs.  When set to TIME_WITH_TIMELINE, a full timeline is presented in each SegmentTemplate, with $Time$ media URLs. When set to NUMBER_WITH_DURATION, only a duration is included in each SegmentTemplate, with $Number$ media URLs.
+     * 
+     */
     public Optional<Output<OriginEndpointDashPackageSegmentTemplateFormat>> segmentTemplateFormat() {
         return Optional.ofNullable(this.segmentTemplateFormat);
     }
@@ -157,6 +193,10 @@ public final class OriginEndpointDashPackageArgs extends com.pulumi.resources.Re
     @Import(name="suggestedPresentationDelaySeconds")
     private @Nullable Output<Integer> suggestedPresentationDelaySeconds;
 
+    /**
+     * @return Duration (in seconds) to delay live content before presentation.
+     * 
+     */
     public Optional<Output<Integer>> suggestedPresentationDelaySeconds() {
         return Optional.ofNullable(this.suggestedPresentationDelaySeconds);
     }
@@ -168,6 +208,10 @@ public final class OriginEndpointDashPackageArgs extends com.pulumi.resources.Re
     @Import(name="utcTiming")
     private @Nullable Output<OriginEndpointDashPackageUtcTiming> utcTiming;
 
+    /**
+     * @return Determines the type of UTCTiming included in the Media Presentation Description (MPD)
+     * 
+     */
     public Optional<Output<OriginEndpointDashPackageUtcTiming>> utcTiming() {
         return Optional.ofNullable(this.utcTiming);
     }
@@ -179,6 +223,10 @@ public final class OriginEndpointDashPackageArgs extends com.pulumi.resources.Re
     @Import(name="utcTimingUri")
     private @Nullable Output<String> utcTimingUri;
 
+    /**
+     * @return Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD
+     * 
+     */
     public Optional<Output<String>> utcTimingUri() {
         return Optional.ofNullable(this.utcTimingUri);
     }
@@ -221,15 +269,33 @@ public final class OriginEndpointDashPackageArgs extends com.pulumi.resources.Re
             $ = new OriginEndpointDashPackageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adTriggers A list of SCTE-35 message types that are treated as ad markers in the output.  If empty, no ad markers are output.  Specify multiple items to create ad markers for all of the included message types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adTriggers(@Nullable Output<List<OriginEndpointDashPackageAdTriggersItem>> adTriggers) {
             $.adTriggers = adTriggers;
             return this;
         }
 
+        /**
+         * @param adTriggers A list of SCTE-35 message types that are treated as ad markers in the output.  If empty, no ad markers are output.  Specify multiple items to create ad markers for all of the included message types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adTriggers(List<OriginEndpointDashPackageAdTriggersItem> adTriggers) {
             return adTriggers(Output.of(adTriggers));
         }
 
+        /**
+         * @param adTriggers A list of SCTE-35 message types that are treated as ad markers in the output.  If empty, no ad markers are output.  Specify multiple items to create ad markers for all of the included message types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adTriggers(OriginEndpointDashPackageAdTriggersItem... adTriggers) {
             return adTriggers(List.of(adTriggers));
         }
@@ -252,78 +318,180 @@ public final class OriginEndpointDashPackageArgs extends com.pulumi.resources.Re
             return encryption(Output.of(encryption));
         }
 
+        /**
+         * @param manifestLayout Determines the position of some tags in the Media Presentation Description (MPD).  When set to FULL, elements like SegmentTemplate and ContentProtection are included in each Representation.  When set to COMPACT, duplicate elements are combined and presented at the AdaptationSet level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifestLayout(@Nullable Output<OriginEndpointDashPackageManifestLayout> manifestLayout) {
             $.manifestLayout = manifestLayout;
             return this;
         }
 
+        /**
+         * @param manifestLayout Determines the position of some tags in the Media Presentation Description (MPD).  When set to FULL, elements like SegmentTemplate and ContentProtection are included in each Representation.  When set to COMPACT, duplicate elements are combined and presented at the AdaptationSet level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifestLayout(OriginEndpointDashPackageManifestLayout manifestLayout) {
             return manifestLayout(Output.of(manifestLayout));
         }
 
+        /**
+         * @param manifestWindowSeconds Time window (in seconds) contained in each manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifestWindowSeconds(@Nullable Output<Integer> manifestWindowSeconds) {
             $.manifestWindowSeconds = manifestWindowSeconds;
             return this;
         }
 
+        /**
+         * @param manifestWindowSeconds Time window (in seconds) contained in each manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifestWindowSeconds(Integer manifestWindowSeconds) {
             return manifestWindowSeconds(Output.of(manifestWindowSeconds));
         }
 
+        /**
+         * @param minBufferTimeSeconds Minimum duration (in seconds) that a player will buffer media before starting the presentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minBufferTimeSeconds(@Nullable Output<Integer> minBufferTimeSeconds) {
             $.minBufferTimeSeconds = minBufferTimeSeconds;
             return this;
         }
 
+        /**
+         * @param minBufferTimeSeconds Minimum duration (in seconds) that a player will buffer media before starting the presentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minBufferTimeSeconds(Integer minBufferTimeSeconds) {
             return minBufferTimeSeconds(Output.of(minBufferTimeSeconds));
         }
 
+        /**
+         * @param minUpdatePeriodSeconds Minimum duration (in seconds) between potential changes to the Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD).
+         * 
+         * @return builder
+         * 
+         */
         public Builder minUpdatePeriodSeconds(@Nullable Output<Integer> minUpdatePeriodSeconds) {
             $.minUpdatePeriodSeconds = minUpdatePeriodSeconds;
             return this;
         }
 
+        /**
+         * @param minUpdatePeriodSeconds Minimum duration (in seconds) between potential changes to the Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD).
+         * 
+         * @return builder
+         * 
+         */
         public Builder minUpdatePeriodSeconds(Integer minUpdatePeriodSeconds) {
             return minUpdatePeriodSeconds(Output.of(minUpdatePeriodSeconds));
         }
 
+        /**
+         * @param periodTriggers A list of triggers that controls when the outgoing Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD) will be partitioned into multiple periods. If empty, the content will not be partitioned into more than one period. If the list contains &#34;ADS&#34;, new periods will be created where the Channel source contains SCTE-35 ad markers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder periodTriggers(@Nullable Output<List<OriginEndpointDashPackagePeriodTriggersItem>> periodTriggers) {
             $.periodTriggers = periodTriggers;
             return this;
         }
 
+        /**
+         * @param periodTriggers A list of triggers that controls when the outgoing Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD) will be partitioned into multiple periods. If empty, the content will not be partitioned into more than one period. If the list contains &#34;ADS&#34;, new periods will be created where the Channel source contains SCTE-35 ad markers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder periodTriggers(List<OriginEndpointDashPackagePeriodTriggersItem> periodTriggers) {
             return periodTriggers(Output.of(periodTriggers));
         }
 
+        /**
+         * @param periodTriggers A list of triggers that controls when the outgoing Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD) will be partitioned into multiple periods. If empty, the content will not be partitioned into more than one period. If the list contains &#34;ADS&#34;, new periods will be created where the Channel source contains SCTE-35 ad markers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder periodTriggers(OriginEndpointDashPackagePeriodTriggersItem... periodTriggers) {
             return periodTriggers(List.of(periodTriggers));
         }
 
+        /**
+         * @param profile The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to &#34;HBBTV_1_5&#34;, HbbTV 1.5 compliant output is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profile(@Nullable Output<OriginEndpointDashPackageProfile> profile) {
             $.profile = profile;
             return this;
         }
 
+        /**
+         * @param profile The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to &#34;HBBTV_1_5&#34;, HbbTV 1.5 compliant output is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profile(OriginEndpointDashPackageProfile profile) {
             return profile(Output.of(profile));
         }
 
+        /**
+         * @param segmentDurationSeconds Duration (in seconds) of each segment. Actual segments will be rounded to the nearest multiple of the source segment duration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentDurationSeconds(@Nullable Output<Integer> segmentDurationSeconds) {
             $.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
 
+        /**
+         * @param segmentDurationSeconds Duration (in seconds) of each segment. Actual segments will be rounded to the nearest multiple of the source segment duration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentDurationSeconds(Integer segmentDurationSeconds) {
             return segmentDurationSeconds(Output.of(segmentDurationSeconds));
         }
 
+        /**
+         * @param segmentTemplateFormat Determines the type of SegmentTemplate included in the Media Presentation Description (MPD).  When set to NUMBER_WITH_TIMELINE, a full timeline is presented in each SegmentTemplate, with $Number$ media URLs.  When set to TIME_WITH_TIMELINE, a full timeline is presented in each SegmentTemplate, with $Time$ media URLs. When set to NUMBER_WITH_DURATION, only a duration is included in each SegmentTemplate, with $Number$ media URLs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentTemplateFormat(@Nullable Output<OriginEndpointDashPackageSegmentTemplateFormat> segmentTemplateFormat) {
             $.segmentTemplateFormat = segmentTemplateFormat;
             return this;
         }
 
+        /**
+         * @param segmentTemplateFormat Determines the type of SegmentTemplate included in the Media Presentation Description (MPD).  When set to NUMBER_WITH_TIMELINE, a full timeline is presented in each SegmentTemplate, with $Number$ media URLs.  When set to TIME_WITH_TIMELINE, a full timeline is presented in each SegmentTemplate, with $Time$ media URLs. When set to NUMBER_WITH_DURATION, only a duration is included in each SegmentTemplate, with $Number$ media URLs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentTemplateFormat(OriginEndpointDashPackageSegmentTemplateFormat segmentTemplateFormat) {
             return segmentTemplateFormat(Output.of(segmentTemplateFormat));
         }
@@ -337,29 +505,65 @@ public final class OriginEndpointDashPackageArgs extends com.pulumi.resources.Re
             return streamSelection(Output.of(streamSelection));
         }
 
+        /**
+         * @param suggestedPresentationDelaySeconds Duration (in seconds) to delay live content before presentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suggestedPresentationDelaySeconds(@Nullable Output<Integer> suggestedPresentationDelaySeconds) {
             $.suggestedPresentationDelaySeconds = suggestedPresentationDelaySeconds;
             return this;
         }
 
+        /**
+         * @param suggestedPresentationDelaySeconds Duration (in seconds) to delay live content before presentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suggestedPresentationDelaySeconds(Integer suggestedPresentationDelaySeconds) {
             return suggestedPresentationDelaySeconds(Output.of(suggestedPresentationDelaySeconds));
         }
 
+        /**
+         * @param utcTiming Determines the type of UTCTiming included in the Media Presentation Description (MPD)
+         * 
+         * @return builder
+         * 
+         */
         public Builder utcTiming(@Nullable Output<OriginEndpointDashPackageUtcTiming> utcTiming) {
             $.utcTiming = utcTiming;
             return this;
         }
 
+        /**
+         * @param utcTiming Determines the type of UTCTiming included in the Media Presentation Description (MPD)
+         * 
+         * @return builder
+         * 
+         */
         public Builder utcTiming(OriginEndpointDashPackageUtcTiming utcTiming) {
             return utcTiming(Output.of(utcTiming));
         }
 
+        /**
+         * @param utcTimingUri Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD
+         * 
+         * @return builder
+         * 
+         */
         public Builder utcTimingUri(@Nullable Output<String> utcTimingUri) {
             $.utcTimingUri = utcTimingUri;
             return this;
         }
 
+        /**
+         * @param utcTimingUri Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD
+         * 
+         * @return builder
+         * 
+         */
         public Builder utcTimingUri(String utcTimingUri) {
             return utcTimingUri(Output.of(utcTimingUri));
         }

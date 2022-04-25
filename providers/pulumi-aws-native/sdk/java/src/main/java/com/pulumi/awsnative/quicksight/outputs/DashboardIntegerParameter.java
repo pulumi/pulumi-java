@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class DashboardIntegerParameter {
     /**
-     * &lt;p&gt;The name of the integer parameter.&lt;/p&gt;
+     * @return &lt;p&gt;The name of the integer parameter.&lt;/p&gt;
      * 
      */
     private final String name;
     /**
-     * &lt;p&gt;The values for the integer parameter.&lt;/p&gt;
+     * @return &lt;p&gt;The values for the integer parameter.&lt;/p&gt;
      * 
      */
     private final List<Double> values;
@@ -31,16 +31,16 @@ public final class DashboardIntegerParameter {
     }
 
     /**
-     * &lt;p&gt;The name of the integer parameter.&lt;/p&gt;
+     * @return &lt;p&gt;The name of the integer parameter.&lt;/p&gt;
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * &lt;p&gt;The values for the integer parameter.&lt;/p&gt;
+     * @return &lt;p&gt;The values for the integer parameter.&lt;/p&gt;
      * 
-    */
+     */
     public List<Double> values() {
         return this.values;
     }

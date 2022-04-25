@@ -27,6 +27,10 @@ public final class JobTemplateAbortCriteriaArgs extends com.pulumi.resources.Res
     @Import(name="action", required=true)
     private Output<JobTemplateAction> action;
 
+    /**
+     * @return The type of job action to take to initiate the job abort.
+     * 
+     */
     public Output<JobTemplateAction> action() {
         return this.action;
     }
@@ -38,6 +42,10 @@ public final class JobTemplateAbortCriteriaArgs extends com.pulumi.resources.Res
     @Import(name="failureType", required=true)
     private Output<JobTemplateFailureType> failureType;
 
+    /**
+     * @return The type of job execution failures that can initiate a job abort.
+     * 
+     */
     public Output<JobTemplateFailureType> failureType() {
         return this.failureType;
     }
@@ -49,6 +57,10 @@ public final class JobTemplateAbortCriteriaArgs extends com.pulumi.resources.Res
     @Import(name="minNumberOfExecutedThings", required=true)
     private Output<Integer> minNumberOfExecutedThings;
 
+    /**
+     * @return The minimum number of things which must receive job execution notifications before the job can be aborted.
+     * 
+     */
     public Output<Integer> minNumberOfExecutedThings() {
         return this.minNumberOfExecutedThings;
     }
@@ -60,6 +72,10 @@ public final class JobTemplateAbortCriteriaArgs extends com.pulumi.resources.Res
     @Import(name="thresholdPercentage", required=true)
     private Output<Double> thresholdPercentage;
 
+    /**
+     * @return The minimum percentage of job execution failures that must occur to initiate the job abort.
+     * 
+     */
     public Output<Double> thresholdPercentage() {
         return this.thresholdPercentage;
     }
@@ -91,38 +107,86 @@ public final class JobTemplateAbortCriteriaArgs extends com.pulumi.resources.Res
             $ = new JobTemplateAbortCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The type of job action to take to initiate the job abort.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Output<JobTemplateAction> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action The type of job action to take to initiate the job abort.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(JobTemplateAction action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param failureType The type of job execution failures that can initiate a job abort.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureType(Output<JobTemplateFailureType> failureType) {
             $.failureType = failureType;
             return this;
         }
 
+        /**
+         * @param failureType The type of job execution failures that can initiate a job abort.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureType(JobTemplateFailureType failureType) {
             return failureType(Output.of(failureType));
         }
 
+        /**
+         * @param minNumberOfExecutedThings The minimum number of things which must receive job execution notifications before the job can be aborted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNumberOfExecutedThings(Output<Integer> minNumberOfExecutedThings) {
             $.minNumberOfExecutedThings = minNumberOfExecutedThings;
             return this;
         }
 
+        /**
+         * @param minNumberOfExecutedThings The minimum number of things which must receive job execution notifications before the job can be aborted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNumberOfExecutedThings(Integer minNumberOfExecutedThings) {
             return minNumberOfExecutedThings(Output.of(minNumberOfExecutedThings));
         }
 
+        /**
+         * @param thresholdPercentage The minimum percentage of job execution failures that must occur to initiate the job abort.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholdPercentage(Output<Double> thresholdPercentage) {
             $.thresholdPercentage = thresholdPercentage;
             return this;
         }
 
+        /**
+         * @param thresholdPercentage The minimum percentage of job execution failures that must occur to initiate the job abort.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholdPercentage(Double thresholdPercentage) {
             return thresholdPercentage(Output.of(thresholdPercentage));
         }

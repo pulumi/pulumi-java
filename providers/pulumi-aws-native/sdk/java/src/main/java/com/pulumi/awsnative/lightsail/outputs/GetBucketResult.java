@@ -16,39 +16,39 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetBucketResult {
     /**
-     * Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle. You can update a bucket&#39;s bundle only one time within a monthly AWS billing cycle.
+     * @return Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle. You can update a bucket&#39;s bundle only one time within a monthly AWS billing cycle.
      * 
      */
     private final @Nullable Boolean ableToUpdateBundle;
     private final @Nullable BucketAccessRules accessRules;
     private final @Nullable String bucketArn;
     /**
-     * The ID of the bundle to use for the bucket.
+     * @return The ID of the bundle to use for the bucket.
      * 
      */
     private final @Nullable String bundleId;
     /**
-     * Specifies whether to enable or disable versioning of objects in the bucket.
+     * @return Specifies whether to enable or disable versioning of objects in the bucket.
      * 
      */
     private final @Nullable Boolean objectVersioning;
     /**
-     * An array of strings to specify the AWS account IDs that can access the bucket.
+     * @return An array of strings to specify the AWS account IDs that can access the bucket.
      * 
      */
     private final @Nullable List<String> readOnlyAccessAccounts;
     /**
-     * The names of the Lightsail resources for which to set bucket access.
+     * @return The names of the Lightsail resources for which to set bucket access.
      * 
      */
     private final @Nullable List<String> resourcesReceivingAccess;
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
      */
     private final @Nullable List<BucketTag> tags;
     /**
-     * The URL of the bucket.
+     * @return The URL of the bucket.
      * 
      */
     private final @Nullable String url;
@@ -76,9 +76,9 @@ public final class GetBucketResult {
     }
 
     /**
-     * Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle. You can update a bucket&#39;s bundle only one time within a monthly AWS billing cycle.
+     * @return Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle. You can update a bucket&#39;s bundle only one time within a monthly AWS billing cycle.
      * 
-    */
+     */
     public Optional<Boolean> ableToUpdateBundle() {
         return Optional.ofNullable(this.ableToUpdateBundle);
     }
@@ -89,44 +89,44 @@ public final class GetBucketResult {
         return Optional.ofNullable(this.bucketArn);
     }
     /**
-     * The ID of the bundle to use for the bucket.
+     * @return The ID of the bundle to use for the bucket.
      * 
-    */
+     */
     public Optional<String> bundleId() {
         return Optional.ofNullable(this.bundleId);
     }
     /**
-     * Specifies whether to enable or disable versioning of objects in the bucket.
+     * @return Specifies whether to enable or disable versioning of objects in the bucket.
      * 
-    */
+     */
     public Optional<Boolean> objectVersioning() {
         return Optional.ofNullable(this.objectVersioning);
     }
     /**
-     * An array of strings to specify the AWS account IDs that can access the bucket.
+     * @return An array of strings to specify the AWS account IDs that can access the bucket.
      * 
-    */
+     */
     public List<String> readOnlyAccessAccounts() {
         return this.readOnlyAccessAccounts == null ? List.of() : this.readOnlyAccessAccounts;
     }
     /**
-     * The names of the Lightsail resources for which to set bucket access.
+     * @return The names of the Lightsail resources for which to set bucket access.
      * 
-    */
+     */
     public List<String> resourcesReceivingAccess() {
         return this.resourcesReceivingAccess == null ? List.of() : this.resourcesReceivingAccess;
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<BucketTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * The URL of the bucket.
+     * @return The URL of the bucket.
      * 
-    */
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }

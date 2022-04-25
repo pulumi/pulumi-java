@@ -23,6 +23,10 @@ public final class BucketAbortIncompleteMultipartUpload extends com.pulumi.resou
     @Import(name="daysAfterInitiation", required=true)
     private Integer daysAfterInitiation;
 
+    /**
+     * @return Specifies the number of days after which Amazon S3 aborts an incomplete multipart upload.
+     * 
+     */
     public Integer daysAfterInitiation() {
         return this.daysAfterInitiation;
     }
@@ -51,6 +55,12 @@ public final class BucketAbortIncompleteMultipartUpload extends com.pulumi.resou
             $ = new BucketAbortIncompleteMultipartUpload(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param daysAfterInitiation Specifies the number of days after which Amazon S3 aborts an incomplete multipart upload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysAfterInitiation(Integer daysAfterInitiation) {
             $.daysAfterInitiation = daysAfterInitiation;
             return this;

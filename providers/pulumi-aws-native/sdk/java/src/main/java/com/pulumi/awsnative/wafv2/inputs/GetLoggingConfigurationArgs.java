@@ -19,6 +19,10 @@ public final class GetLoggingConfigurationArgs extends com.pulumi.resources.Invo
     @Import(name="resourceArn", required=true)
     private String resourceArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the web ACL that you want to associate with LogDestinationConfigs.
+     * 
+     */
     public String resourceArn() {
         return this.resourceArn;
     }
@@ -47,6 +51,12 @@ public final class GetLoggingConfigurationArgs extends com.pulumi.resources.Invo
             $ = new GetLoggingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceArn The Amazon Resource Name (ARN) of the web ACL that you want to associate with LogDestinationConfigs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceArn(String resourceArn) {
             $.resourceArn = resourceArn;
             return this;

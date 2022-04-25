@@ -31,6 +31,10 @@ public final class ReplicationSetArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="regions", required=true)
     private Output<List<ReplicationSetReplicationRegionArgs>> regions;
 
+    /**
+     * @return The ReplicationSet configuration.
+     * 
+     */
     public Output<List<ReplicationSetReplicationRegionArgs>> regions() {
         return this.regions;
     }
@@ -69,15 +73,33 @@ public final class ReplicationSetArgs extends com.pulumi.resources.ResourceArgs 
             return deletionProtected(Output.of(deletionProtected));
         }
 
+        /**
+         * @param regions The ReplicationSet configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regions(Output<List<ReplicationSetReplicationRegionArgs>> regions) {
             $.regions = regions;
             return this;
         }
 
+        /**
+         * @param regions The ReplicationSet configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regions(List<ReplicationSetReplicationRegionArgs> regions) {
             return regions(Output.of(regions));
         }
 
+        /**
+         * @param regions The ReplicationSet configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regions(ReplicationSetReplicationRegionArgs... regions) {
             return regions(List.of(regions));
         }

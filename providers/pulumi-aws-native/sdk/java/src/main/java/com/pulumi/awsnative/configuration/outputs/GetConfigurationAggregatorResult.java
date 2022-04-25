@@ -17,13 +17,13 @@ import javax.annotation.Nullable;
 public final class GetConfigurationAggregatorResult {
     private final @Nullable List<ConfigurationAggregatorAccountAggregationSource> accountAggregationSources;
     /**
-     * The Amazon Resource Name (ARN) of the aggregator.
+     * @return The Amazon Resource Name (ARN) of the aggregator.
      * 
      */
     private final @Nullable String configurationAggregatorArn;
     private final @Nullable ConfigurationAggregatorOrganizationAggregationSource organizationAggregationSource;
     /**
-     * The tags for the configuration aggregator.
+     * @return The tags for the configuration aggregator.
      * 
      */
     private final @Nullable List<ConfigurationAggregatorTag> tags;
@@ -44,9 +44,9 @@ public final class GetConfigurationAggregatorResult {
         return this.accountAggregationSources == null ? List.of() : this.accountAggregationSources;
     }
     /**
-     * The Amazon Resource Name (ARN) of the aggregator.
+     * @return The Amazon Resource Name (ARN) of the aggregator.
      * 
-    */
+     */
     public Optional<String> configurationAggregatorArn() {
         return Optional.ofNullable(this.configurationAggregatorArn);
     }
@@ -54,9 +54,9 @@ public final class GetConfigurationAggregatorResult {
         return Optional.ofNullable(this.organizationAggregationSource);
     }
     /**
-     * The tags for the configuration aggregator.
+     * @return The tags for the configuration aggregator.
      * 
-    */
+     */
     public List<ConfigurationAggregatorTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

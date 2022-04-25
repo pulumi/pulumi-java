@@ -15,27 +15,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAppResult {
     /**
-     * Amazon Resource Name (ARN) of the App.
+     * @return Amazon Resource Name (ARN) of the App.
      * 
      */
     private final @Nullable String appArn;
     /**
-     * A string containing full ResilienceHub app template body.
+     * @return A string containing full ResilienceHub app template body.
      * 
      */
     private final @Nullable String appTemplateBody;
     /**
-     * App description.
+     * @return App description.
      * 
      */
     private final @Nullable String description;
     /**
-     * Amazon Resource Name (ARN) of the Resiliency Policy.
+     * @return Amazon Resource Name (ARN) of the Resiliency Policy.
      * 
      */
     private final @Nullable String resiliencyPolicyArn;
     /**
-     * An array of ResourceMapping objects.
+     * @return An array of ResourceMapping objects.
      * 
      */
     private final @Nullable List<AppResourceMapping> resourceMappings;
@@ -58,37 +58,37 @@ public final class GetAppResult {
     }
 
     /**
-     * Amazon Resource Name (ARN) of the App.
+     * @return Amazon Resource Name (ARN) of the App.
      * 
-    */
+     */
     public Optional<String> appArn() {
         return Optional.ofNullable(this.appArn);
     }
     /**
-     * A string containing full ResilienceHub app template body.
+     * @return A string containing full ResilienceHub app template body.
      * 
-    */
+     */
     public Optional<String> appTemplateBody() {
         return Optional.ofNullable(this.appTemplateBody);
     }
     /**
-     * App description.
+     * @return App description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Amazon Resource Name (ARN) of the Resiliency Policy.
+     * @return Amazon Resource Name (ARN) of the Resiliency Policy.
      * 
-    */
+     */
     public Optional<String> resiliencyPolicyArn() {
         return Optional.ofNullable(this.resiliencyPolicyArn);
     }
     /**
-     * An array of ResourceMapping objects.
+     * @return An array of ResourceMapping objects.
      * 
-    */
+     */
     public List<AppResourceMapping> resourceMappings() {
         return this.resourceMappings == null ? List.of() : this.resourceMappings;
     }

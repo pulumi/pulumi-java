@@ -19,6 +19,10 @@ public final class GetResourceSpecificLoggingArgs extends com.pulumi.resources.I
     @Import(name="targetId", required=true)
     private String targetId;
 
+    /**
+     * @return Unique Id for a Target (TargetType:TargetName), this will be internally built to serve as primary identifier for a log target.
+     * 
+     */
     public String targetId() {
         return this.targetId;
     }
@@ -47,6 +51,12 @@ public final class GetResourceSpecificLoggingArgs extends com.pulumi.resources.I
             $ = new GetResourceSpecificLoggingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param targetId Unique Id for a Target (TargetType:TargetName), this will be internally built to serve as primary identifier for a log target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetId(String targetId) {
             $.targetId = targetId;
             return this;

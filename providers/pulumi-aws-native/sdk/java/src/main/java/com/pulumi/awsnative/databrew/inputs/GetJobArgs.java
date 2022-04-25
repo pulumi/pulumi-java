@@ -19,6 +19,10 @@ public final class GetJobArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Job name
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +51,12 @@ public final class GetJobArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetJobArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Job name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

@@ -27,6 +27,10 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     @Import(name="containerTags")
     private @Nullable List<String> containerTags;
 
+    /**
+     * @return Tags that are attached to the container distribution configuration.
+     * 
+     */
     public Optional<List<String>> containerTags() {
         return Optional.ofNullable(this.containerTags);
     }
@@ -38,6 +42,10 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The description of the container distribution configuration.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +57,10 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     @Import(name="targetRepository")
     private @Nullable DistributionConfigurationTargetContainerRepository targetRepository;
 
+    /**
+     * @return The destination repository for the container distribution configuration.
+     * 
+     */
     public Optional<DistributionConfigurationTargetContainerRepository> targetRepository() {
         return Optional.ofNullable(this.targetRepository);
     }
@@ -79,20 +91,44 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
             $ = new DistributionConfigurationDistributionContainerDistributionConfigurationProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerTags Tags that are attached to the container distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerTags(@Nullable List<String> containerTags) {
             $.containerTags = containerTags;
             return this;
         }
 
+        /**
+         * @param containerTags Tags that are attached to the container distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerTags(String... containerTags) {
             return containerTags(List.of(containerTags));
         }
 
+        /**
+         * @param description The description of the container distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param targetRepository The destination repository for the container distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetRepository(@Nullable DistributionConfigurationTargetContainerRepository targetRepository) {
             $.targetRepository = targetRepository;
             return this;

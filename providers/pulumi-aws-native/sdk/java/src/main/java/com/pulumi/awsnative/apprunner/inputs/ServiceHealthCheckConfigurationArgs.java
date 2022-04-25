@@ -28,6 +28,10 @@ public final class ServiceHealthCheckConfigurationArgs extends com.pulumi.resour
     @Import(name="healthyThreshold")
     private @Nullable Output<Integer> healthyThreshold;
 
+    /**
+     * @return Health check Healthy Threshold
+     * 
+     */
     public Optional<Output<Integer>> healthyThreshold() {
         return Optional.ofNullable(this.healthyThreshold);
     }
@@ -39,6 +43,10 @@ public final class ServiceHealthCheckConfigurationArgs extends com.pulumi.resour
     @Import(name="interval")
     private @Nullable Output<Integer> interval;
 
+    /**
+     * @return Health check Interval
+     * 
+     */
     public Optional<Output<Integer>> interval() {
         return Optional.ofNullable(this.interval);
     }
@@ -50,6 +58,10 @@ public final class ServiceHealthCheckConfigurationArgs extends com.pulumi.resour
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return Health check Path
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -61,6 +73,10 @@ public final class ServiceHealthCheckConfigurationArgs extends com.pulumi.resour
     @Import(name="protocol")
     private @Nullable Output<ServiceHealthCheckConfigurationProtocol> protocol;
 
+    /**
+     * @return Health Check Protocol
+     * 
+     */
     public Optional<Output<ServiceHealthCheckConfigurationProtocol>> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -72,6 +88,10 @@ public final class ServiceHealthCheckConfigurationArgs extends com.pulumi.resour
     @Import(name="timeout")
     private @Nullable Output<Integer> timeout;
 
+    /**
+     * @return Health check Timeout
+     * 
+     */
     public Optional<Output<Integer>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -83,6 +103,10 @@ public final class ServiceHealthCheckConfigurationArgs extends com.pulumi.resour
     @Import(name="unhealthyThreshold")
     private @Nullable Output<Integer> unhealthyThreshold;
 
+    /**
+     * @return Health check Unhealthy Threshold
+     * 
+     */
     public Optional<Output<Integer>> unhealthyThreshold() {
         return Optional.ofNullable(this.unhealthyThreshold);
     }
@@ -116,56 +140,128 @@ public final class ServiceHealthCheckConfigurationArgs extends com.pulumi.resour
             $ = new ServiceHealthCheckConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param healthyThreshold Health check Healthy Threshold
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthyThreshold(@Nullable Output<Integer> healthyThreshold) {
             $.healthyThreshold = healthyThreshold;
             return this;
         }
 
+        /**
+         * @param healthyThreshold Health check Healthy Threshold
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthyThreshold(Integer healthyThreshold) {
             return healthyThreshold(Output.of(healthyThreshold));
         }
 
+        /**
+         * @param interval Health check Interval
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(@Nullable Output<Integer> interval) {
             $.interval = interval;
             return this;
         }
 
+        /**
+         * @param interval Health check Interval
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(Integer interval) {
             return interval(Output.of(interval));
         }
 
+        /**
+         * @param path Health check Path
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path Health check Path
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param protocol Health Check Protocol
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable Output<ServiceHealthCheckConfigurationProtocol> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol Health Check Protocol
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(ServiceHealthCheckConfigurationProtocol protocol) {
             return protocol(Output.of(protocol));
         }
 
+        /**
+         * @param timeout Health check Timeout
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<Integer> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout Health check Timeout
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(Integer timeout) {
             return timeout(Output.of(timeout));
         }
 
+        /**
+         * @param unhealthyThreshold Health check Unhealthy Threshold
+         * 
+         * @return builder
+         * 
+         */
         public Builder unhealthyThreshold(@Nullable Output<Integer> unhealthyThreshold) {
             $.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
 
+        /**
+         * @param unhealthyThreshold Health check Unhealthy Threshold
+         * 
+         * @return builder
+         * 
+         */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             return unhealthyThreshold(Output.of(unhealthyThreshold));
         }

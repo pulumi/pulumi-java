@@ -24,6 +24,10 @@ public final class RecipeAction extends com.pulumi.resources.InvokeArgs {
     @Import(name="operation", required=true)
     private String operation;
 
+    /**
+     * @return Step action operation
+     * 
+     */
     public String operation() {
         return this.operation;
     }
@@ -60,6 +64,12 @@ public final class RecipeAction extends com.pulumi.resources.InvokeArgs {
             $ = new RecipeAction(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operation Step action operation
+         * 
+         * @return builder
+         * 
+         */
         public Builder operation(String operation) {
             $.operation = operation;
             return this;

@@ -19,6 +19,10 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="groupARN", required=true)
     private String groupARN;
 
+    /**
+     * @return The ARN of the group that was generated on creation.
+     * 
+     */
     public String groupARN() {
         return this.groupARN;
     }
@@ -47,6 +51,12 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupARN The ARN of the group that was generated on creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupARN(String groupARN) {
             $.groupARN = groupARN;
             return this;

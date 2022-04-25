@@ -28,6 +28,10 @@ public final class StudioComponentInitializationScriptArgs extends com.pulumi.re
     @Import(name="launchProfileProtocolVersion")
     private @Nullable Output<String> launchProfileProtocolVersion;
 
+    /**
+     * @return &lt;p&gt;The version number of the protocol that is used by the launch profile. The only valid version is &#34;2021-03-31&#34;.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> launchProfileProtocolVersion() {
         return Optional.ofNullable(this.launchProfileProtocolVersion);
     }
@@ -53,6 +57,10 @@ public final class StudioComponentInitializationScriptArgs extends com.pulumi.re
     @Import(name="script")
     private @Nullable Output<String> script;
 
+    /**
+     * @return &lt;p&gt;The initialization script.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> script() {
         return Optional.ofNullable(this.script);
     }
@@ -84,11 +92,23 @@ public final class StudioComponentInitializationScriptArgs extends com.pulumi.re
             $ = new StudioComponentInitializationScriptArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param launchProfileProtocolVersion &lt;p&gt;The version number of the protocol that is used by the launch profile. The only valid version is &#34;2021-03-31&#34;.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchProfileProtocolVersion(@Nullable Output<String> launchProfileProtocolVersion) {
             $.launchProfileProtocolVersion = launchProfileProtocolVersion;
             return this;
         }
 
+        /**
+         * @param launchProfileProtocolVersion &lt;p&gt;The version number of the protocol that is used by the launch profile. The only valid version is &#34;2021-03-31&#34;.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchProfileProtocolVersion(String launchProfileProtocolVersion) {
             return launchProfileProtocolVersion(Output.of(launchProfileProtocolVersion));
         }
@@ -111,11 +131,23 @@ public final class StudioComponentInitializationScriptArgs extends com.pulumi.re
             return runContext(Output.of(runContext));
         }
 
+        /**
+         * @param script &lt;p&gt;The initialization script.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(@Nullable Output<String> script) {
             $.script = script;
             return this;
         }
 
+        /**
+         * @param script &lt;p&gt;The initialization script.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(String script) {
             return script(Output.of(script));
         }

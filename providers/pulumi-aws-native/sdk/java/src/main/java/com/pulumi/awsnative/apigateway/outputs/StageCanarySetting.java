@@ -15,22 +15,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StageCanarySetting {
     /**
-     * The identifier of the deployment that the stage points to.
+     * @return The identifier of the deployment that the stage points to.
      * 
      */
     private final @Nullable String deploymentId;
     /**
-     * The percentage (0-100) of traffic diverted to a canary deployment.
+     * @return The percentage (0-100) of traffic diverted to a canary deployment.
      * 
      */
     private final @Nullable Double percentTraffic;
     /**
-     * Stage variables overridden for a canary release deployment, including new stage variables introduced in the canary. These stage variables are represented as a string-to-string map between stage variable names and their values.
+     * @return Stage variables overridden for a canary release deployment, including new stage variables introduced in the canary. These stage variables are represented as a string-to-string map between stage variable names and their values.
      * 
      */
     private final @Nullable Object stageVariableOverrides;
     /**
-     * Whether the canary deployment uses the stage cache or not.
+     * @return Whether the canary deployment uses the stage cache or not.
      * 
      */
     private final @Nullable Boolean useStageCache;
@@ -48,30 +48,30 @@ public final class StageCanarySetting {
     }
 
     /**
-     * The identifier of the deployment that the stage points to.
+     * @return The identifier of the deployment that the stage points to.
      * 
-    */
+     */
     public Optional<String> deploymentId() {
         return Optional.ofNullable(this.deploymentId);
     }
     /**
-     * The percentage (0-100) of traffic diverted to a canary deployment.
+     * @return The percentage (0-100) of traffic diverted to a canary deployment.
      * 
-    */
+     */
     public Optional<Double> percentTraffic() {
         return Optional.ofNullable(this.percentTraffic);
     }
     /**
-     * Stage variables overridden for a canary release deployment, including new stage variables introduced in the canary. These stage variables are represented as a string-to-string map between stage variable names and their values.
+     * @return Stage variables overridden for a canary release deployment, including new stage variables introduced in the canary. These stage variables are represented as a string-to-string map between stage variable names and their values.
      * 
-    */
+     */
     public Optional<Object> stageVariableOverrides() {
         return Optional.ofNullable(this.stageVariableOverrides);
     }
     /**
-     * Whether the canary deployment uses the stage cache or not.
+     * @return Whether the canary deployment uses the stage cache or not.
      * 
-    */
+     */
     public Optional<Boolean> useStageCache() {
         return Optional.ofNullable(this.useStageCache);
     }

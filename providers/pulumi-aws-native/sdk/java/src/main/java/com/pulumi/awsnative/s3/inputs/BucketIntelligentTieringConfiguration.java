@@ -25,6 +25,10 @@ public final class BucketIntelligentTieringConfiguration extends com.pulumi.reso
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The ID used to identify the S3 Intelligent-Tiering configuration.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -36,6 +40,10 @@ public final class BucketIntelligentTieringConfiguration extends com.pulumi.reso
     @Import(name="prefix")
     private @Nullable String prefix;
 
+    /**
+     * @return An object key name prefix that identifies the subset of objects to which the rule applies.
+     * 
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -47,6 +55,10 @@ public final class BucketIntelligentTieringConfiguration extends com.pulumi.reso
     @Import(name="status", required=true)
     private BucketIntelligentTieringConfigurationStatus status;
 
+    /**
+     * @return Specifies the status of the configuration.
+     * 
+     */
     public BucketIntelligentTieringConfigurationStatus status() {
         return this.status;
     }
@@ -58,6 +70,10 @@ public final class BucketIntelligentTieringConfiguration extends com.pulumi.reso
     @Import(name="tagFilters")
     private @Nullable List<BucketTagFilter> tagFilters;
 
+    /**
+     * @return A container for a key-value pair.
+     * 
+     */
     public Optional<List<BucketTagFilter>> tagFilters() {
         return Optional.ofNullable(this.tagFilters);
     }
@@ -69,6 +85,10 @@ public final class BucketIntelligentTieringConfiguration extends com.pulumi.reso
     @Import(name="tierings", required=true)
     private List<BucketTiering> tierings;
 
+    /**
+     * @return Specifies a list of S3 Intelligent-Tiering storage class tiers in the configuration. At least one tier must be defined in the list. At most, you can specify two tiers in the list, one for each available AccessTier: ARCHIVE_ACCESS and DEEP_ARCHIVE_ACCESS.
+     * 
+     */
     public List<BucketTiering> tierings() {
         return this.tierings;
     }
@@ -101,35 +121,77 @@ public final class BucketIntelligentTieringConfiguration extends com.pulumi.reso
             $ = new BucketIntelligentTieringConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ID used to identify the S3 Intelligent-Tiering configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param prefix An object key name prefix that identifies the subset of objects to which the rule applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable String prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param status Specifies the status of the configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(BucketIntelligentTieringConfigurationStatus status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param tagFilters A container for a key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagFilters(@Nullable List<BucketTagFilter> tagFilters) {
             $.tagFilters = tagFilters;
             return this;
         }
 
+        /**
+         * @param tagFilters A container for a key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagFilters(BucketTagFilter... tagFilters) {
             return tagFilters(List.of(tagFilters));
         }
 
+        /**
+         * @param tierings Specifies a list of S3 Intelligent-Tiering storage class tiers in the configuration. At least one tier must be defined in the list. At most, you can specify two tiers in the list, one for each available AccessTier: ARCHIVE_ACCESS and DEEP_ARCHIVE_ACCESS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tierings(List<BucketTiering> tierings) {
             $.tierings = tierings;
             return this;
         }
 
+        /**
+         * @param tierings Specifies a list of S3 Intelligent-Tiering storage class tiers in the configuration. At least one tier must be defined in the list. At most, you can specify two tiers in the list, one for each available AccessTier: ARCHIVE_ACCESS and DEEP_ARCHIVE_ACCESS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tierings(BucketTiering... tierings) {
             return tierings(List.of(tierings));
         }

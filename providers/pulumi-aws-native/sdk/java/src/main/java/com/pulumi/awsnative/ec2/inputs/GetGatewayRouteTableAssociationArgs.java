@@ -19,6 +19,10 @@ public final class GetGatewayRouteTableAssociationArgs extends com.pulumi.resour
     @Import(name="gatewayId", required=true)
     private String gatewayId;
 
+    /**
+     * @return The ID of the gateway.
+     * 
+     */
     public String gatewayId() {
         return this.gatewayId;
     }
@@ -47,6 +51,12 @@ public final class GetGatewayRouteTableAssociationArgs extends com.pulumi.resour
             $ = new GetGatewayRouteTableAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gatewayId The ID of the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayId(String gatewayId) {
             $.gatewayId = gatewayId;
             return this;

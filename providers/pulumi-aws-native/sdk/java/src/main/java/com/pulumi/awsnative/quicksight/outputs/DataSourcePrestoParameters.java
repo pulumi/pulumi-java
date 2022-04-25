@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class DataSourcePrestoParameters {
     /**
-     * &lt;p&gt;Catalog.&lt;/p&gt;
+     * @return &lt;p&gt;Catalog.&lt;/p&gt;
      * 
      */
     private final String catalog;
     /**
-     * &lt;p&gt;Host.&lt;/p&gt;
+     * @return &lt;p&gt;Host.&lt;/p&gt;
      * 
      */
     private final String host;
     /**
-     * &lt;p&gt;Port.&lt;/p&gt;
+     * @return &lt;p&gt;Port.&lt;/p&gt;
      * 
      */
     private final Double port;
@@ -37,23 +37,23 @@ public final class DataSourcePrestoParameters {
     }
 
     /**
-     * &lt;p&gt;Catalog.&lt;/p&gt;
+     * @return &lt;p&gt;Catalog.&lt;/p&gt;
      * 
-    */
+     */
     public String catalog() {
         return this.catalog;
     }
     /**
-     * &lt;p&gt;Host.&lt;/p&gt;
+     * @return &lt;p&gt;Host.&lt;/p&gt;
      * 
-    */
+     */
     public String host() {
         return this.host;
     }
     /**
-     * &lt;p&gt;Port.&lt;/p&gt;
+     * @return &lt;p&gt;Port.&lt;/p&gt;
      * 
-    */
+     */
     public Double port() {
         return this.port;
     }

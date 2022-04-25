@@ -28,6 +28,10 @@ public final class BucketRuleFilterPropertiesArgs extends com.pulumi.resources.R
     @Import(name="andOperator")
     private @Nullable Output<BucketFilterAndOperatorArgs> andOperator;
 
+    /**
+     * @return The container for the AND condition for the lifecycle rule. A combination of Prefix and 1 or more Tags OR a minimum of 2 or more tags.
+     * 
+     */
     public Optional<Output<BucketFilterAndOperatorArgs>> andOperator() {
         return Optional.ofNullable(this.andOperator);
     }
@@ -39,6 +43,10 @@ public final class BucketRuleFilterPropertiesArgs extends com.pulumi.resources.R
     @Import(name="prefix")
     private @Nullable Output<String> prefix;
 
+    /**
+     * @return Object key prefix that identifies one or more objects to which this rule applies.
+     * 
+     */
     public Optional<Output<String>> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -50,6 +58,10 @@ public final class BucketRuleFilterPropertiesArgs extends com.pulumi.resources.R
     @Import(name="tag")
     private @Nullable Output<BucketFilterTagArgs> tag;
 
+    /**
+     * @return Specifies a tag used to identify a subset of objects for an Amazon S3Outposts bucket.
+     * 
+     */
     public Optional<Output<BucketFilterTagArgs>> tag() {
         return Optional.ofNullable(this.tag);
     }
@@ -80,29 +92,65 @@ public final class BucketRuleFilterPropertiesArgs extends com.pulumi.resources.R
             $ = new BucketRuleFilterPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param andOperator The container for the AND condition for the lifecycle rule. A combination of Prefix and 1 or more Tags OR a minimum of 2 or more tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder andOperator(@Nullable Output<BucketFilterAndOperatorArgs> andOperator) {
             $.andOperator = andOperator;
             return this;
         }
 
+        /**
+         * @param andOperator The container for the AND condition for the lifecycle rule. A combination of Prefix and 1 or more Tags OR a minimum of 2 or more tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder andOperator(BucketFilterAndOperatorArgs andOperator) {
             return andOperator(Output.of(andOperator));
         }
 
+        /**
+         * @param prefix Object key prefix that identifies one or more objects to which this rule applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable Output<String> prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param prefix Object key prefix that identifies one or more objects to which this rule applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(String prefix) {
             return prefix(Output.of(prefix));
         }
 
+        /**
+         * @param tag Specifies a tag used to identify a subset of objects for an Amazon S3Outposts bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(@Nullable Output<BucketFilterTagArgs> tag) {
             $.tag = tag;
             return this;
         }
 
+        /**
+         * @param tag Specifies a tag used to identify a subset of objects for an Amazon S3Outposts bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(BucketFilterTagArgs tag) {
             return tag(Output.of(tag));
         }

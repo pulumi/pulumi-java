@@ -25,6 +25,10 @@ public final class DataSourceAthenaParameters extends com.pulumi.resources.Invok
     @Import(name="workGroup")
     private @Nullable String workGroup;
 
+    /**
+     * @return &lt;p&gt;The workgroup that Amazon Athena uses.&lt;/p&gt;
+     * 
+     */
     public Optional<String> workGroup() {
         return Optional.ofNullable(this.workGroup);
     }
@@ -53,6 +57,12 @@ public final class DataSourceAthenaParameters extends com.pulumi.resources.Invok
             $ = new DataSourceAthenaParameters(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param workGroup &lt;p&gt;The workgroup that Amazon Athena uses.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder workGroup(@Nullable String workGroup) {
             $.workGroup = workGroup;
             return this;

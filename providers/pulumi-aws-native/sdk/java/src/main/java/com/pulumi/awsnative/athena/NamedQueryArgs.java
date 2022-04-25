@@ -22,6 +22,10 @@ public final class NamedQueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="database", required=true)
     private Output<String> database;
 
+    /**
+     * @return The database to which the query belongs.
+     * 
+     */
     public Output<String> database() {
         return this.database;
     }
@@ -33,6 +37,10 @@ public final class NamedQueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The query description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -44,6 +52,10 @@ public final class NamedQueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The query name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -55,6 +67,10 @@ public final class NamedQueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryString", required=true)
     private Output<String> queryString;
 
+    /**
+     * @return The contents of the query with all query statements.
+     * 
+     */
     public Output<String> queryString() {
         return this.queryString;
     }
@@ -66,6 +82,10 @@ public final class NamedQueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workGroup")
     private @Nullable Output<String> workGroup;
 
+    /**
+     * @return The name of the workgroup that contains the named query.
+     * 
+     */
     public Optional<Output<String>> workGroup() {
         return Optional.ofNullable(this.workGroup);
     }
@@ -98,47 +118,107 @@ public final class NamedQueryArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NamedQueryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param database The database to which the query belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(Output<String> database) {
             $.database = database;
             return this;
         }
 
+        /**
+         * @param database The database to which the query belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(String database) {
             return database(Output.of(database));
         }
 
+        /**
+         * @param description The query description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The query description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The query name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The query name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param queryString The contents of the query with all query statements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryString(Output<String> queryString) {
             $.queryString = queryString;
             return this;
         }
 
+        /**
+         * @param queryString The contents of the query with all query statements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryString(String queryString) {
             return queryString(Output.of(queryString));
         }
 
+        /**
+         * @param workGroup The name of the workgroup that contains the named query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workGroup(@Nullable Output<String> workGroup) {
             $.workGroup = workGroup;
             return this;
         }
 
+        /**
+         * @param workGroup The name of the workgroup that contains the named query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workGroup(String workGroup) {
             return workGroup(Output.of(workGroup));
         }

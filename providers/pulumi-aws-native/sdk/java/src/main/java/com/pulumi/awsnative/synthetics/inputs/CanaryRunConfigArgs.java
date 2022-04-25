@@ -24,6 +24,10 @@ public final class CanaryRunConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="activeTracing")
     private @Nullable Output<Boolean> activeTracing;
 
+    /**
+     * @return Enable active tracing if set to true
+     * 
+     */
     public Optional<Output<Boolean>> activeTracing() {
         return Optional.ofNullable(this.activeTracing);
     }
@@ -35,6 +39,10 @@ public final class CanaryRunConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="environmentVariables")
     private @Nullable Output<Object> environmentVariables;
 
+    /**
+     * @return Environment variable key-value pairs.
+     * 
+     */
     public Optional<Output<Object>> environmentVariables() {
         return Optional.ofNullable(this.environmentVariables);
     }
@@ -46,6 +54,10 @@ public final class CanaryRunConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="memoryInMB")
     private @Nullable Output<Integer> memoryInMB;
 
+    /**
+     * @return Provide maximum memory available for canary in MB
+     * 
+     */
     public Optional<Output<Integer>> memoryInMB() {
         return Optional.ofNullable(this.memoryInMB);
     }
@@ -57,6 +69,10 @@ public final class CanaryRunConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="timeoutInSeconds")
     private @Nullable Output<Integer> timeoutInSeconds;
 
+    /**
+     * @return Provide maximum canary timeout per run in seconds
+     * 
+     */
     public Optional<Output<Integer>> timeoutInSeconds() {
         return Optional.ofNullable(this.timeoutInSeconds);
     }
@@ -88,38 +104,86 @@ public final class CanaryRunConfigArgs extends com.pulumi.resources.ResourceArgs
             $ = new CanaryRunConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activeTracing Enable active tracing if set to true
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeTracing(@Nullable Output<Boolean> activeTracing) {
             $.activeTracing = activeTracing;
             return this;
         }
 
+        /**
+         * @param activeTracing Enable active tracing if set to true
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeTracing(Boolean activeTracing) {
             return activeTracing(Output.of(activeTracing));
         }
 
+        /**
+         * @param environmentVariables Environment variable key-value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(@Nullable Output<Object> environmentVariables) {
             $.environmentVariables = environmentVariables;
             return this;
         }
 
+        /**
+         * @param environmentVariables Environment variable key-value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(Object environmentVariables) {
             return environmentVariables(Output.of(environmentVariables));
         }
 
+        /**
+         * @param memoryInMB Provide maximum memory available for canary in MB
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryInMB(@Nullable Output<Integer> memoryInMB) {
             $.memoryInMB = memoryInMB;
             return this;
         }
 
+        /**
+         * @param memoryInMB Provide maximum memory available for canary in MB
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryInMB(Integer memoryInMB) {
             return memoryInMB(Output.of(memoryInMB));
         }
 
+        /**
+         * @param timeoutInSeconds Provide maximum canary timeout per run in seconds
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutInSeconds(@Nullable Output<Integer> timeoutInSeconds) {
             $.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
+        /**
+         * @param timeoutInSeconds Provide maximum canary timeout per run in seconds
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutInSeconds(Integer timeoutInSeconds) {
             return timeoutInSeconds(Output.of(timeoutInSeconds));
         }

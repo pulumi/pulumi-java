@@ -15,27 +15,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetTransitGatewayPeeringAttachmentResult {
     /**
-     * The time the transit gateway peering attachment was created.
+     * @return The time the transit gateway peering attachment was created.
      * 
      */
     private final @Nullable String creationTime;
     /**
-     * The state of the transit gateway peering attachment. Note that the initiating state has been deprecated.
+     * @return The state of the transit gateway peering attachment. Note that the initiating state has been deprecated.
      * 
      */
     private final @Nullable String state;
     /**
-     * The status of the transit gateway peering attachment.
+     * @return The status of the transit gateway peering attachment.
      * 
      */
     private final @Nullable TransitGatewayPeeringAttachmentPeeringAttachmentStatus status;
     /**
-     * The tags for the transit gateway peering attachment.
+     * @return The tags for the transit gateway peering attachment.
      * 
      */
     private final @Nullable List<TransitGatewayPeeringAttachmentTag> tags;
     /**
-     * The ID of the transit gateway peering attachment.
+     * @return The ID of the transit gateway peering attachment.
      * 
      */
     private final @Nullable String transitGatewayAttachmentId;
@@ -55,37 +55,37 @@ public final class GetTransitGatewayPeeringAttachmentResult {
     }
 
     /**
-     * The time the transit gateway peering attachment was created.
+     * @return The time the transit gateway peering attachment was created.
      * 
-    */
+     */
     public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
-     * The state of the transit gateway peering attachment. Note that the initiating state has been deprecated.
+     * @return The state of the transit gateway peering attachment. Note that the initiating state has been deprecated.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
-     * The status of the transit gateway peering attachment.
+     * @return The status of the transit gateway peering attachment.
      * 
-    */
+     */
     public Optional<TransitGatewayPeeringAttachmentPeeringAttachmentStatus> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * The tags for the transit gateway peering attachment.
+     * @return The tags for the transit gateway peering attachment.
      * 
-    */
+     */
     public List<TransitGatewayPeeringAttachmentTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * The ID of the transit gateway peering attachment.
+     * @return The ID of the transit gateway peering attachment.
      * 
-    */
+     */
     public Optional<String> transitGatewayAttachmentId() {
         return Optional.ofNullable(this.transitGatewayAttachmentId);
     }

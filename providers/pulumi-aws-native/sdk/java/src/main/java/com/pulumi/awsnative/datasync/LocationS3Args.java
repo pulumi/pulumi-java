@@ -26,6 +26,10 @@ public final class LocationS3Args extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3BucketArn", required=true)
     private Output<String> s3BucketArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the Amazon S3 bucket.
+     * 
+     */
     public Output<String> s3BucketArn() {
         return this.s3BucketArn;
     }
@@ -44,6 +48,10 @@ public final class LocationS3Args extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3StorageClass")
     private @Nullable Output<LocationS3S3StorageClass> s3StorageClass;
 
+    /**
+     * @return The Amazon S3 storage class you want to store your files in when this location is used as a task destination.
+     * 
+     */
     public Optional<Output<LocationS3S3StorageClass>> s3StorageClass() {
         return Optional.ofNullable(this.s3StorageClass);
     }
@@ -55,6 +63,10 @@ public final class LocationS3Args extends com.pulumi.resources.ResourceArgs {
     @Import(name="subdirectory")
     private @Nullable Output<String> subdirectory;
 
+    /**
+     * @return A subdirectory in the Amazon S3 bucket. This subdirectory in Amazon S3 is used to read data from the S3 source location or write data to the S3 destination.
+     * 
+     */
     public Optional<Output<String>> subdirectory() {
         return Optional.ofNullable(this.subdirectory);
     }
@@ -66,6 +78,10 @@ public final class LocationS3Args extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<LocationS3TagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<LocationS3TagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -98,11 +114,23 @@ public final class LocationS3Args extends com.pulumi.resources.ResourceArgs {
             $ = new LocationS3Args(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param s3BucketArn The Amazon Resource Name (ARN) of the Amazon S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3BucketArn(Output<String> s3BucketArn) {
             $.s3BucketArn = s3BucketArn;
             return this;
         }
 
+        /**
+         * @param s3BucketArn The Amazon Resource Name (ARN) of the Amazon S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3BucketArn(String s3BucketArn) {
             return s3BucketArn(Output.of(s3BucketArn));
         }
@@ -116,33 +144,75 @@ public final class LocationS3Args extends com.pulumi.resources.ResourceArgs {
             return s3Config(Output.of(s3Config));
         }
 
+        /**
+         * @param s3StorageClass The Amazon S3 storage class you want to store your files in when this location is used as a task destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3StorageClass(@Nullable Output<LocationS3S3StorageClass> s3StorageClass) {
             $.s3StorageClass = s3StorageClass;
             return this;
         }
 
+        /**
+         * @param s3StorageClass The Amazon S3 storage class you want to store your files in when this location is used as a task destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3StorageClass(LocationS3S3StorageClass s3StorageClass) {
             return s3StorageClass(Output.of(s3StorageClass));
         }
 
+        /**
+         * @param subdirectory A subdirectory in the Amazon S3 bucket. This subdirectory in Amazon S3 is used to read data from the S3 source location or write data to the S3 destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
             $.subdirectory = subdirectory;
             return this;
         }
 
+        /**
+         * @param subdirectory A subdirectory in the Amazon S3 bucket. This subdirectory in Amazon S3 is used to read data from the S3 source location or write data to the S3 destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdirectory(String subdirectory) {
             return subdirectory(Output.of(subdirectory));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<LocationS3TagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<LocationS3TagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(LocationS3TagArgs... tags) {
             return tags(List.of(tags));
         }

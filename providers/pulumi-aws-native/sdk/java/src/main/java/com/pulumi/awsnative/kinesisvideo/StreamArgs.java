@@ -25,6 +25,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataRetentionInHours")
     private @Nullable Output<Integer> dataRetentionInHours;
 
+    /**
+     * @return The number of hours till which Kinesis Video will retain the data in the stream
+     * 
+     */
     public Optional<Output<Integer>> dataRetentionInHours() {
         return Optional.ofNullable(this.dataRetentionInHours);
     }
@@ -36,6 +40,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceName")
     private @Nullable Output<String> deviceName;
 
+    /**
+     * @return The name of the device that is writing to the stream.
+     * 
+     */
     public Optional<Output<String>> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
@@ -47,6 +55,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
     private @Nullable Output<String> kmsKeyId;
 
+    /**
+     * @return AWS KMS key ID that Kinesis Video Streams uses to encrypt stream data.
+     * 
+     */
     public Optional<Output<String>> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
@@ -58,6 +70,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mediaType")
     private @Nullable Output<String> mediaType;
 
+    /**
+     * @return The media type of the stream. Consumers of the stream can use this information when processing the stream.
+     * 
+     */
     public Optional<Output<String>> mediaType() {
         return Optional.ofNullable(this.mediaType);
     }
@@ -69,6 +85,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the Kinesis Video stream.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -80,6 +100,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<StreamTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs associated with the Kinesis Video Stream.
+     * 
+     */
     public Optional<Output<List<StreamTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -113,60 +137,138 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
             $ = new StreamArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataRetentionInHours The number of hours till which Kinesis Video will retain the data in the stream
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataRetentionInHours(@Nullable Output<Integer> dataRetentionInHours) {
             $.dataRetentionInHours = dataRetentionInHours;
             return this;
         }
 
+        /**
+         * @param dataRetentionInHours The number of hours till which Kinesis Video will retain the data in the stream
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataRetentionInHours(Integer dataRetentionInHours) {
             return dataRetentionInHours(Output.of(dataRetentionInHours));
         }
 
+        /**
+         * @param deviceName The name of the device that is writing to the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(@Nullable Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName The name of the device that is writing to the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param kmsKeyId AWS KMS key ID that Kinesis Video Streams uses to encrypt stream data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             $.kmsKeyId = kmsKeyId;
             return this;
         }
 
+        /**
+         * @param kmsKeyId AWS KMS key ID that Kinesis Video Streams uses to encrypt stream data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(String kmsKeyId) {
             return kmsKeyId(Output.of(kmsKeyId));
         }
 
+        /**
+         * @param mediaType The media type of the stream. Consumers of the stream can use this information when processing the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaType(@Nullable Output<String> mediaType) {
             $.mediaType = mediaType;
             return this;
         }
 
+        /**
+         * @param mediaType The media type of the stream. Consumers of the stream can use this information when processing the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaType(String mediaType) {
             return mediaType(Output.of(mediaType));
         }
 
+        /**
+         * @param name The name of the Kinesis Video stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the Kinesis Video stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags An array of key-value pairs associated with the Kinesis Video Stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<StreamTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs associated with the Kinesis Video Stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<StreamTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs associated with the Kinesis Video Stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(StreamTagArgs... tags) {
             return tags(List.of(tags));
         }

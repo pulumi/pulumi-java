@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class WorkflowTag {
     /**
-     * The name assigned to the tag that you create.
+     * @return The name assigned to the tag that you create.
      * 
      */
     private final String key;
     /**
-     * Contains one or more values that you assigned to the key name you create.
+     * @return Contains one or more values that you assigned to the key name you create.
      * 
      */
     private final String value;
@@ -29,16 +29,16 @@ public final class WorkflowTag {
     }
 
     /**
-     * The name assigned to the tag that you create.
+     * @return The name assigned to the tag that you create.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Contains one or more values that you assigned to the key name you create.
+     * @return Contains one or more values that you assigned to the key name you create.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

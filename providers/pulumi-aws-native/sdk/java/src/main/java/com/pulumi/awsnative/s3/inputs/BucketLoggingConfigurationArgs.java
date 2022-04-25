@@ -22,6 +22,10 @@ public final class BucketLoggingConfigurationArgs extends com.pulumi.resources.R
     @Import(name="destinationBucketName")
     private @Nullable Output<String> destinationBucketName;
 
+    /**
+     * @return The name of an Amazon S3 bucket where Amazon S3 store server access log files. You can store log files in any bucket that you own. By default, logs are stored in the bucket where the LoggingConfiguration property is defined.
+     * 
+     */
     public Optional<Output<String>> destinationBucketName() {
         return Optional.ofNullable(this.destinationBucketName);
     }
@@ -58,11 +62,23 @@ public final class BucketLoggingConfigurationArgs extends com.pulumi.resources.R
             $ = new BucketLoggingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationBucketName The name of an Amazon S3 bucket where Amazon S3 store server access log files. You can store log files in any bucket that you own. By default, logs are stored in the bucket where the LoggingConfiguration property is defined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationBucketName(@Nullable Output<String> destinationBucketName) {
             $.destinationBucketName = destinationBucketName;
             return this;
         }
 
+        /**
+         * @param destinationBucketName The name of an Amazon S3 bucket where Amazon S3 store server access log files. You can store log files in any bucket that you own. By default, logs are stored in the bucket where the LoggingConfiguration property is defined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationBucketName(String destinationBucketName) {
             return destinationBucketName(Output.of(destinationBucketName));
         }

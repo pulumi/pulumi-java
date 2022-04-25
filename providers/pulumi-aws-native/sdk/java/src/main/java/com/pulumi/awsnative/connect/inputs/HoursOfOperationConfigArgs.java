@@ -25,6 +25,10 @@ public final class HoursOfOperationConfigArgs extends com.pulumi.resources.Resou
     @Import(name="day", required=true)
     private Output<HoursOfOperationConfigDay> day;
 
+    /**
+     * @return The day that the hours of operation applies to.
+     * 
+     */
     public Output<HoursOfOperationConfigDay> day() {
         return this.day;
     }
@@ -36,6 +40,10 @@ public final class HoursOfOperationConfigArgs extends com.pulumi.resources.Resou
     @Import(name="endTime", required=true)
     private Output<HoursOfOperationTimeSliceArgs> endTime;
 
+    /**
+     * @return The end time that your contact center closes.
+     * 
+     */
     public Output<HoursOfOperationTimeSliceArgs> endTime() {
         return this.endTime;
     }
@@ -47,6 +55,10 @@ public final class HoursOfOperationConfigArgs extends com.pulumi.resources.Resou
     @Import(name="startTime", required=true)
     private Output<HoursOfOperationTimeSliceArgs> startTime;
 
+    /**
+     * @return The start time that your contact center opens.
+     * 
+     */
     public Output<HoursOfOperationTimeSliceArgs> startTime() {
         return this.startTime;
     }
@@ -77,29 +89,65 @@ public final class HoursOfOperationConfigArgs extends com.pulumi.resources.Resou
             $ = new HoursOfOperationConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param day The day that the hours of operation applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(Output<HoursOfOperationConfigDay> day) {
             $.day = day;
             return this;
         }
 
+        /**
+         * @param day The day that the hours of operation applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(HoursOfOperationConfigDay day) {
             return day(Output.of(day));
         }
 
+        /**
+         * @param endTime The end time that your contact center closes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(Output<HoursOfOperationTimeSliceArgs> endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param endTime The end time that your contact center closes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(HoursOfOperationTimeSliceArgs endTime) {
             return endTime(Output.of(endTime));
         }
 
+        /**
+         * @param startTime The start time that your contact center opens.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(Output<HoursOfOperationTimeSliceArgs> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime The start time that your contact center opens.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(HoursOfOperationTimeSliceArgs startTime) {
             return startTime(Output.of(startTime));
         }

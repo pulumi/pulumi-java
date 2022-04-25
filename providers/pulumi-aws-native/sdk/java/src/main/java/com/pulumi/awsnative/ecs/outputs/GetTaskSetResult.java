@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetTaskSetResult {
     /**
-     * The ID of the task set.
+     * @return The ID of the task set.
      * 
      */
     private final @Nullable String id;
     /**
-     * A floating-point percentage of the desired number of tasks to place and keep running in the task set.
+     * @return A floating-point percentage of the desired number of tasks to place and keep running in the task set.
      * 
      */
     private final @Nullable TaskSetScale scale;
@@ -32,16 +32,16 @@ public final class GetTaskSetResult {
     }
 
     /**
-     * The ID of the task set.
+     * @return The ID of the task set.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * A floating-point percentage of the desired number of tasks to place and keep running in the task set.
+     * @return A floating-point percentage of the desired number of tasks to place and keep running in the task set.
      * 
-    */
+     */
     public Optional<TaskSetScale> scale() {
         return Optional.ofNullable(this.scale);
     }

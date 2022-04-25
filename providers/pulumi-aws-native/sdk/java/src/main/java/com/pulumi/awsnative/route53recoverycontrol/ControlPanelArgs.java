@@ -24,6 +24,10 @@ public final class ControlPanelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterArn")
     private @Nullable Output<String> clusterArn;
 
+    /**
+     * @return Cluster to associate with the Control Panel
+     * 
+     */
     public Optional<Output<String>> clusterArn() {
         return Optional.ofNullable(this.clusterArn);
     }
@@ -35,6 +39,10 @@ public final class ControlPanelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the control panel. You can use any non-white space character in the name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -46,6 +54,10 @@ public final class ControlPanelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<ControlPanelTagArgs>> tags;
 
+    /**
+     * @return A collection of tags associated with a resource
+     * 
+     */
     public Optional<Output<List<ControlPanelTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -76,33 +88,75 @@ public final class ControlPanelArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ControlPanelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterArn Cluster to associate with the Control Panel
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterArn(@Nullable Output<String> clusterArn) {
             $.clusterArn = clusterArn;
             return this;
         }
 
+        /**
+         * @param clusterArn Cluster to associate with the Control Panel
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterArn(String clusterArn) {
             return clusterArn(Output.of(clusterArn));
         }
 
+        /**
+         * @param name The name of the control panel. You can use any non-white space character in the name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the control panel. You can use any non-white space character in the name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags A collection of tags associated with a resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<ControlPanelTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A collection of tags associated with a resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<ControlPanelTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A collection of tags associated with a resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(ControlPanelTagArgs... tags) {
             return tags(List.of(tags));
         }

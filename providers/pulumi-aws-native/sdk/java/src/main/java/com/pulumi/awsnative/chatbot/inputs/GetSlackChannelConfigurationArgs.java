@@ -19,6 +19,10 @@ public final class GetSlackChannelConfigurationArgs extends com.pulumi.resources
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the configuration
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -47,6 +51,12 @@ public final class GetSlackChannelConfigurationArgs extends com.pulumi.resources
             $ = new GetSlackChannelConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;

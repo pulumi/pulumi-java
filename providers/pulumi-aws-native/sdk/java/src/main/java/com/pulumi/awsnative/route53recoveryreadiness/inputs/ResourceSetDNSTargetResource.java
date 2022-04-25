@@ -26,6 +26,10 @@ public final class ResourceSetDNSTargetResource extends com.pulumi.resources.Inv
     @Import(name="domainName")
     private @Nullable String domainName;
 
+    /**
+     * @return The domain name that acts as an ingress point to a portion of the customer application.
+     * 
+     */
     public Optional<String> domainName() {
         return Optional.ofNullable(this.domainName);
     }
@@ -37,6 +41,10 @@ public final class ResourceSetDNSTargetResource extends com.pulumi.resources.Inv
     @Import(name="hostedZoneArn")
     private @Nullable String hostedZoneArn;
 
+    /**
+     * @return The hosted zone Amazon Resource Name (ARN) that contains the DNS record with the provided name of the target resource.
+     * 
+     */
     public Optional<String> hostedZoneArn() {
         return Optional.ofNullable(this.hostedZoneArn);
     }
@@ -48,6 +56,10 @@ public final class ResourceSetDNSTargetResource extends com.pulumi.resources.Inv
     @Import(name="recordSetId")
     private @Nullable String recordSetId;
 
+    /**
+     * @return The Route 53 record set ID that will uniquely identify a DNS record, given a name and a type.
+     * 
+     */
     public Optional<String> recordSetId() {
         return Optional.ofNullable(this.recordSetId);
     }
@@ -59,6 +71,10 @@ public final class ResourceSetDNSTargetResource extends com.pulumi.resources.Inv
     @Import(name="recordType")
     private @Nullable String recordType;
 
+    /**
+     * @return The type of DNS record of the target resource.
+     * 
+     */
     public Optional<String> recordType() {
         return Optional.ofNullable(this.recordType);
     }
@@ -98,21 +114,45 @@ public final class ResourceSetDNSTargetResource extends com.pulumi.resources.Inv
             $ = new ResourceSetDNSTargetResource(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainName The domain name that acts as an ingress point to a portion of the customer application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(@Nullable String domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param hostedZoneArn The hosted zone Amazon Resource Name (ARN) that contains the DNS record with the provided name of the target resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostedZoneArn(@Nullable String hostedZoneArn) {
             $.hostedZoneArn = hostedZoneArn;
             return this;
         }
 
+        /**
+         * @param recordSetId The Route 53 record set ID that will uniquely identify a DNS record, given a name and a type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordSetId(@Nullable String recordSetId) {
             $.recordSetId = recordSetId;
             return this;
         }
 
+        /**
+         * @param recordType The type of DNS record of the target resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordType(@Nullable String recordType) {
             $.recordType = recordType;
             return this;

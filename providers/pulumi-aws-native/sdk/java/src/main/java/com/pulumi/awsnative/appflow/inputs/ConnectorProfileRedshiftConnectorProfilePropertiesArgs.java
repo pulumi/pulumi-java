@@ -22,6 +22,10 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
     @Import(name="bucketName", required=true)
     private Output<String> bucketName;
 
+    /**
+     * @return The name of the Amazon S3 bucket associated with Redshift.
+     * 
+     */
     public Output<String> bucketName() {
         return this.bucketName;
     }
@@ -33,6 +37,10 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
     @Import(name="bucketPrefix")
     private @Nullable Output<String> bucketPrefix;
 
+    /**
+     * @return The object key for the destination bucket in which Amazon AppFlow will place the ﬁles.
+     * 
+     */
     public Optional<Output<String>> bucketPrefix() {
         return Optional.ofNullable(this.bucketPrefix);
     }
@@ -44,6 +52,10 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
     @Import(name="databaseUrl", required=true)
     private Output<String> databaseUrl;
 
+    /**
+     * @return The JDBC URL of the Amazon Redshift cluster.
+     * 
+     */
     public Output<String> databaseUrl() {
         return this.databaseUrl;
     }
@@ -55,6 +67,10 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the IAM role.
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -86,38 +102,86 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
             $ = new ConnectorProfileRedshiftConnectorProfilePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketName The name of the Amazon S3 bucket associated with Redshift.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(Output<String> bucketName) {
             $.bucketName = bucketName;
             return this;
         }
 
+        /**
+         * @param bucketName The name of the Amazon S3 bucket associated with Redshift.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(String bucketName) {
             return bucketName(Output.of(bucketName));
         }
 
+        /**
+         * @param bucketPrefix The object key for the destination bucket in which Amazon AppFlow will place the ﬁles.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
             $.bucketPrefix = bucketPrefix;
             return this;
         }
 
+        /**
+         * @param bucketPrefix The object key for the destination bucket in which Amazon AppFlow will place the ﬁles.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketPrefix(String bucketPrefix) {
             return bucketPrefix(Output.of(bucketPrefix));
         }
 
+        /**
+         * @param databaseUrl The JDBC URL of the Amazon Redshift cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseUrl(Output<String> databaseUrl) {
             $.databaseUrl = databaseUrl;
             return this;
         }
 
+        /**
+         * @param databaseUrl The JDBC URL of the Amazon Redshift cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseUrl(String databaseUrl) {
             return databaseUrl(Output.of(databaseUrl));
         }
 
+        /**
+         * @param roleArn The Amazon Resource Name (ARN) of the IAM role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn The Amazon Resource Name (ARN) of the IAM role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }

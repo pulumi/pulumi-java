@@ -19,6 +19,10 @@ public final class GetMultiRegionAccessPointPolicyArgs extends com.pulumi.resour
     @Import(name="mrapName", required=true)
     private String mrapName;
 
+    /**
+     * @return The name of the Multi Region Access Point to apply policy
+     * 
+     */
     public String mrapName() {
         return this.mrapName;
     }
@@ -47,6 +51,12 @@ public final class GetMultiRegionAccessPointPolicyArgs extends com.pulumi.resour
             $ = new GetMultiRegionAccessPointPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mrapName The name of the Multi Region Access Point to apply policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder mrapName(String mrapName) {
             $.mrapName = mrapName;
             return this;

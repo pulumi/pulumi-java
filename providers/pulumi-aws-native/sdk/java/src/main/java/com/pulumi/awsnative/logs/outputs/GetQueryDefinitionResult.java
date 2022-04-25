@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetQueryDefinitionResult {
     /**
-     * Optionally define specific log groups as part of your query definition
+     * @return Optionally define specific log groups as part of your query definition
      * 
      */
     private final @Nullable List<String> logGroupNames;
     /**
-     * A name for the saved query definition
+     * @return A name for the saved query definition
      * 
      */
     private final @Nullable String name;
     /**
-     * Unique identifier of a query definition
+     * @return Unique identifier of a query definition
      * 
      */
     private final @Nullable String queryDefinitionId;
     /**
-     * The query string to use for this definition
+     * @return The query string to use for this definition
      * 
      */
     private final @Nullable String queryString;
@@ -46,30 +46,30 @@ public final class GetQueryDefinitionResult {
     }
 
     /**
-     * Optionally define specific log groups as part of your query definition
+     * @return Optionally define specific log groups as part of your query definition
      * 
-    */
+     */
     public List<String> logGroupNames() {
         return this.logGroupNames == null ? List.of() : this.logGroupNames;
     }
     /**
-     * A name for the saved query definition
+     * @return A name for the saved query definition
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Unique identifier of a query definition
+     * @return Unique identifier of a query definition
      * 
-    */
+     */
     public Optional<String> queryDefinitionId() {
         return Optional.ofNullable(this.queryDefinitionId);
     }
     /**
-     * The query string to use for this definition
+     * @return The query string to use for this definition
      * 
-    */
+     */
     public Optional<String> queryString() {
         return Optional.ofNullable(this.queryString);
     }

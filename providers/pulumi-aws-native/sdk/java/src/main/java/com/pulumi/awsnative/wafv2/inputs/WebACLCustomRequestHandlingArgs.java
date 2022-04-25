@@ -25,6 +25,10 @@ public final class WebACLCustomRequestHandlingArgs extends com.pulumi.resources.
     @Import(name="insertHeaders", required=true)
     private Output<List<WebACLCustomHTTPHeaderArgs>> insertHeaders;
 
+    /**
+     * @return Collection of HTTP headers.
+     * 
+     */
     public Output<List<WebACLCustomHTTPHeaderArgs>> insertHeaders() {
         return this.insertHeaders;
     }
@@ -53,15 +57,33 @@ public final class WebACLCustomRequestHandlingArgs extends com.pulumi.resources.
             $ = new WebACLCustomRequestHandlingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param insertHeaders Collection of HTTP headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insertHeaders(Output<List<WebACLCustomHTTPHeaderArgs>> insertHeaders) {
             $.insertHeaders = insertHeaders;
             return this;
         }
 
+        /**
+         * @param insertHeaders Collection of HTTP headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insertHeaders(List<WebACLCustomHTTPHeaderArgs> insertHeaders) {
             return insertHeaders(Output.of(insertHeaders));
         }
 
+        /**
+         * @param insertHeaders Collection of HTTP headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insertHeaders(WebACLCustomHTTPHeaderArgs... insertHeaders) {
             return insertHeaders(List.of(insertHeaders));
         }

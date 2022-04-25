@@ -19,6 +19,10 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyspaceName", required=true)
     private String keyspaceName;
 
+    /**
+     * @return Name for Cassandra keyspace
+     * 
+     */
     public String keyspaceName() {
         return this.keyspaceName;
     }
@@ -30,6 +34,10 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tableName", required=true)
     private String tableName;
 
+    /**
+     * @return Name for Cassandra table
+     * 
+     */
     public String tableName() {
         return this.tableName;
     }
@@ -59,11 +67,23 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetTableArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyspaceName Name for Cassandra keyspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyspaceName(String keyspaceName) {
             $.keyspaceName = keyspaceName;
             return this;
         }
 
+        /**
+         * @param tableName Name for Cassandra table
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(String tableName) {
             $.tableName = tableName;
             return this;

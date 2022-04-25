@@ -25,6 +25,10 @@ public final class LocationHDFSNameNodeArgs extends com.pulumi.resources.Resourc
     @Import(name="hostname", required=true)
     private Output<String> hostname;
 
+    /**
+     * @return The DNS name or IP address of the Name Node in the customer&#39;s on premises HDFS cluster.
+     * 
+     */
     public Output<String> hostname() {
         return this.hostname;
     }
@@ -36,6 +40,10 @@ public final class LocationHDFSNameNodeArgs extends com.pulumi.resources.Resourc
     @Import(name="port", required=true)
     private Output<Integer> port;
 
+    /**
+     * @return The port on which the Name Node is listening on for client requests.
+     * 
+     */
     public Output<Integer> port() {
         return this.port;
     }
@@ -65,20 +73,44 @@ public final class LocationHDFSNameNodeArgs extends com.pulumi.resources.Resourc
             $ = new LocationHDFSNameNodeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostname The DNS name or IP address of the Name Node in the customer&#39;s on premises HDFS cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(Output<String> hostname) {
             $.hostname = hostname;
             return this;
         }
 
+        /**
+         * @param hostname The DNS name or IP address of the Name Node in the customer&#39;s on premises HDFS cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(String hostname) {
             return hostname(Output.of(hostname));
         }
 
+        /**
+         * @param port The port on which the Name Node is listening on for client requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The port on which the Name Node is listening on for client requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }

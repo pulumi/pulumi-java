@@ -26,6 +26,10 @@ public final class InfrastructureConfigurationInstanceMetadataOptions extends co
     @Import(name="httpPutResponseHopLimit")
     private @Nullable Integer httpPutResponseHopLimit;
 
+    /**
+     * @return Limit the number of hops that an instance metadata request can traverse to reach its destination.
+     * 
+     */
     public Optional<Integer> httpPutResponseHopLimit() {
         return Optional.ofNullable(this.httpPutResponseHopLimit);
     }
@@ -37,6 +41,10 @@ public final class InfrastructureConfigurationInstanceMetadataOptions extends co
     @Import(name="httpTokens")
     private @Nullable InfrastructureConfigurationInstanceMetadataOptionsHttpTokens httpTokens;
 
+    /**
+     * @return Indicates whether a signed token header is required for instance metadata retrieval requests. The values affect the response as follows:
+     * 
+     */
     public Optional<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> httpTokens() {
         return Optional.ofNullable(this.httpTokens);
     }
@@ -66,11 +74,23 @@ public final class InfrastructureConfigurationInstanceMetadataOptions extends co
             $ = new InfrastructureConfigurationInstanceMetadataOptions(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param httpPutResponseHopLimit Limit the number of hops that an instance metadata request can traverse to reach its destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpPutResponseHopLimit(@Nullable Integer httpPutResponseHopLimit) {
             $.httpPutResponseHopLimit = httpPutResponseHopLimit;
             return this;
         }
 
+        /**
+         * @param httpTokens Indicates whether a signed token header is required for instance metadata retrieval requests. The values affect the response as follows:
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpTokens(@Nullable InfrastructureConfigurationInstanceMetadataOptionsHttpTokens httpTokens) {
             $.httpTokens = httpTokens;
             return this;

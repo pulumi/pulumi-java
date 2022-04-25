@@ -23,6 +23,10 @@ public final class BotAliasLambdaCodeHook extends com.pulumi.resources.InvokeArg
     @Import(name="codeHookInterfaceVersion", required=true)
     private String codeHookInterfaceVersion;
 
+    /**
+     * @return The version of the request-response that you want Amazon Lex to use to invoke your Lambda function.
+     * 
+     */
     public String codeHookInterfaceVersion() {
         return this.codeHookInterfaceVersion;
     }
@@ -34,6 +38,10 @@ public final class BotAliasLambdaCodeHook extends com.pulumi.resources.InvokeArg
     @Import(name="lambdaArn", required=true)
     private String lambdaArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the Lambda function.
+     * 
+     */
     public String lambdaArn() {
         return this.lambdaArn;
     }
@@ -63,11 +71,23 @@ public final class BotAliasLambdaCodeHook extends com.pulumi.resources.InvokeArg
             $ = new BotAliasLambdaCodeHook(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param codeHookInterfaceVersion The version of the request-response that you want Amazon Lex to use to invoke your Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeHookInterfaceVersion(String codeHookInterfaceVersion) {
             $.codeHookInterfaceVersion = codeHookInterfaceVersion;
             return this;
         }
 
+        /**
+         * @param lambdaArn The Amazon Resource Name (ARN) of the Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lambdaArn(String lambdaArn) {
             $.lambdaArn = lambdaArn;
             return this;

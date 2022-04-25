@@ -22,6 +22,10 @@ public final class MethodResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="responseModels")
     private @Nullable Object responseModels;
 
+    /**
+     * @return The resources used for the response&#39;s content type. Specify response models as key-value pairs (string-to-string maps), with a content type as the key and a Model resource name as the value.
+     * 
+     */
     public Optional<Object> responseModels() {
         return Optional.ofNullable(this.responseModels);
     }
@@ -33,6 +37,10 @@ public final class MethodResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="responseParameters")
     private @Nullable Object responseParameters;
 
+    /**
+     * @return Response parameters that API Gateway sends to the client that called a method. Specify response parameters as key-value pairs (string-to-Boolean maps), with a destination as the key and a Boolean as the value.
+     * 
+     */
     public Optional<Object> responseParameters() {
         return Optional.ofNullable(this.responseParameters);
     }
@@ -44,6 +52,10 @@ public final class MethodResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="statusCode", required=true)
     private String statusCode;
 
+    /**
+     * @return The method response&#39;s status code, which you map to an IntegrationResponse.
+     * 
+     */
     public String statusCode() {
         return this.statusCode;
     }
@@ -74,16 +86,34 @@ public final class MethodResponse extends com.pulumi.resources.InvokeArgs {
             $ = new MethodResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param responseModels The resources used for the response&#39;s content type. Specify response models as key-value pairs (string-to-string maps), with a content type as the key and a Model resource name as the value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseModels(@Nullable Object responseModels) {
             $.responseModels = responseModels;
             return this;
         }
 
+        /**
+         * @param responseParameters Response parameters that API Gateway sends to the client that called a method. Specify response parameters as key-value pairs (string-to-Boolean maps), with a destination as the key and a Boolean as the value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseParameters(@Nullable Object responseParameters) {
             $.responseParameters = responseParameters;
             return this;
         }
 
+        /**
+         * @param statusCode The method response&#39;s status code, which you map to an IntegrationResponse.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCode(String statusCode) {
             $.statusCode = statusCode;
             return this;

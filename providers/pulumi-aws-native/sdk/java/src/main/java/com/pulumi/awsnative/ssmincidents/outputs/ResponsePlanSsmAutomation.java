@@ -15,27 +15,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ResponsePlanSsmAutomation {
     /**
-     * The document name to use when starting the SSM automation document.
+     * @return The document name to use when starting the SSM automation document.
      * 
      */
     private final String documentName;
     /**
-     * The version of the document to use when starting the SSM automation document.
+     * @return The version of the document to use when starting the SSM automation document.
      * 
      */
     private final @Nullable String documentVersion;
     /**
-     * The parameters to set when starting the SSM automation document.
+     * @return The parameters to set when starting the SSM automation document.
      * 
      */
     private final @Nullable List<ResponsePlanSsmParameter> parameters;
     /**
-     * The role ARN to use when starting the SSM automation document.
+     * @return The role ARN to use when starting the SSM automation document.
      * 
      */
     private final String roleArn;
     /**
-     * The account type to use when starting the SSM automation document.
+     * @return The account type to use when starting the SSM automation document.
      * 
      */
     private final @Nullable ResponsePlanSsmAutomationTargetAccount targetAccount;
@@ -55,37 +55,37 @@ public final class ResponsePlanSsmAutomation {
     }
 
     /**
-     * The document name to use when starting the SSM automation document.
+     * @return The document name to use when starting the SSM automation document.
      * 
-    */
+     */
     public String documentName() {
         return this.documentName;
     }
     /**
-     * The version of the document to use when starting the SSM automation document.
+     * @return The version of the document to use when starting the SSM automation document.
      * 
-    */
+     */
     public Optional<String> documentVersion() {
         return Optional.ofNullable(this.documentVersion);
     }
     /**
-     * The parameters to set when starting the SSM automation document.
+     * @return The parameters to set when starting the SSM automation document.
      * 
-    */
+     */
     public List<ResponsePlanSsmParameter> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
-     * The role ARN to use when starting the SSM automation document.
+     * @return The role ARN to use when starting the SSM automation document.
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }
     /**
-     * The account type to use when starting the SSM automation document.
+     * @return The account type to use when starting the SSM automation document.
      * 
-    */
+     */
     public Optional<ResponsePlanSsmAutomationTargetAccount> targetAccount() {
         return Optional.ofNullable(this.targetAccount);
     }

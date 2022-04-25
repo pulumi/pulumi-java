@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AnalysisError {
     /**
-     * &lt;p&gt;The message associated with the analysis error.&lt;/p&gt;
+     * @return &lt;p&gt;The message associated with the analysis error.&lt;/p&gt;
      * 
      */
     private final @Nullable String message;
@@ -28,9 +28,9 @@ public final class AnalysisError {
     }
 
     /**
-     * &lt;p&gt;The message associated with the analysis error.&lt;/p&gt;
+     * @return &lt;p&gt;The message associated with the analysis error.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }

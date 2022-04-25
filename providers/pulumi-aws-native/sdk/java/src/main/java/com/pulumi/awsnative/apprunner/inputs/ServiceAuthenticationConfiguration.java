@@ -25,6 +25,10 @@ public final class ServiceAuthenticationConfiguration extends com.pulumi.resourc
     @Import(name="accessRoleArn")
     private @Nullable String accessRoleArn;
 
+    /**
+     * @return Access Role Arn
+     * 
+     */
     public Optional<String> accessRoleArn() {
         return Optional.ofNullable(this.accessRoleArn);
     }
@@ -36,6 +40,10 @@ public final class ServiceAuthenticationConfiguration extends com.pulumi.resourc
     @Import(name="connectionArn")
     private @Nullable String connectionArn;
 
+    /**
+     * @return Connection Arn
+     * 
+     */
     public Optional<String> connectionArn() {
         return Optional.ofNullable(this.connectionArn);
     }
@@ -65,11 +73,23 @@ public final class ServiceAuthenticationConfiguration extends com.pulumi.resourc
             $ = new ServiceAuthenticationConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessRoleArn Access Role Arn
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessRoleArn(@Nullable String accessRoleArn) {
             $.accessRoleArn = accessRoleArn;
             return this;
         }
 
+        /**
+         * @param connectionArn Connection Arn
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionArn(@Nullable String connectionArn) {
             $.connectionArn = connectionArn;
             return this;

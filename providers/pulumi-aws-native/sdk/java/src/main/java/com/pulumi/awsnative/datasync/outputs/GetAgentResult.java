@@ -15,22 +15,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAgentResult {
     /**
-     * The DataSync Agent ARN.
+     * @return The DataSync Agent ARN.
      * 
      */
     private final @Nullable String agentArn;
     /**
-     * The name configured for the agent. Text reference used to identify the agent in the console.
+     * @return The name configured for the agent. Text reference used to identify the agent in the console.
      * 
      */
     private final @Nullable String agentName;
     /**
-     * The service endpoints that the agent will connect to.
+     * @return The service endpoints that the agent will connect to.
      * 
      */
     private final @Nullable AgentEndpointType endpointType;
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
      */
     private final @Nullable List<AgentTag> tags;
@@ -48,30 +48,30 @@ public final class GetAgentResult {
     }
 
     /**
-     * The DataSync Agent ARN.
+     * @return The DataSync Agent ARN.
      * 
-    */
+     */
     public Optional<String> agentArn() {
         return Optional.ofNullable(this.agentArn);
     }
     /**
-     * The name configured for the agent. Text reference used to identify the agent in the console.
+     * @return The name configured for the agent. Text reference used to identify the agent in the console.
      * 
-    */
+     */
     public Optional<String> agentName() {
         return Optional.ofNullable(this.agentName);
     }
     /**
-     * The service endpoints that the agent will connect to.
+     * @return The service endpoints that the agent will connect to.
      * 
-    */
+     */
     public Optional<AgentEndpointType> endpointType() {
         return Optional.ofNullable(this.endpointType);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<AgentTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

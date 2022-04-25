@@ -19,6 +19,10 @@ public final class GetCustomMetricArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="metricName", required=true)
     private String metricName;
 
+    /**
+     * @return The name of the custom metric. This will be used in the metric report submitted from the device/thing. Shouldn&#39;t begin with aws: . Cannot be updated once defined.
+     * 
+     */
     public String metricName() {
         return this.metricName;
     }
@@ -47,6 +51,12 @@ public final class GetCustomMetricArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetCustomMetricArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metricName The name of the custom metric. This will be used in the metric report submitted from the device/thing. Shouldn&#39;t begin with aws: . Cannot be updated once defined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(String metricName) {
             $.metricName = metricName;
             return this;

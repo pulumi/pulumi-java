@@ -30,6 +30,10 @@ public final class OriginEndpointHlsEncryptionArgs extends com.pulumi.resources.
     @Import(name="constantInitializationVector")
     private @Nullable Output<String> constantInitializationVector;
 
+    /**
+     * @return A constant initialization vector for encryption (optional). When not specified the initialization vector will be periodically rotated.
+     * 
+     */
     public Optional<Output<String>> constantInitializationVector() {
         return Optional.ofNullable(this.constantInitializationVector);
     }
@@ -41,6 +45,10 @@ public final class OriginEndpointHlsEncryptionArgs extends com.pulumi.resources.
     @Import(name="encryptionMethod")
     private @Nullable Output<OriginEndpointHlsEncryptionEncryptionMethod> encryptionMethod;
 
+    /**
+     * @return The encryption method to use.
+     * 
+     */
     public Optional<Output<OriginEndpointHlsEncryptionEncryptionMethod>> encryptionMethod() {
         return Optional.ofNullable(this.encryptionMethod);
     }
@@ -52,6 +60,10 @@ public final class OriginEndpointHlsEncryptionArgs extends com.pulumi.resources.
     @Import(name="keyRotationIntervalSeconds")
     private @Nullable Output<Integer> keyRotationIntervalSeconds;
 
+    /**
+     * @return Interval (in seconds) between each encryption key rotation.
+     * 
+     */
     public Optional<Output<Integer>> keyRotationIntervalSeconds() {
         return Optional.ofNullable(this.keyRotationIntervalSeconds);
     }
@@ -63,6 +75,10 @@ public final class OriginEndpointHlsEncryptionArgs extends com.pulumi.resources.
     @Import(name="repeatExtXKey")
     private @Nullable Output<Boolean> repeatExtXKey;
 
+    /**
+     * @return When enabled, the EXT-X-KEY tag will be repeated in output manifests.
+     * 
+     */
     public Optional<Output<Boolean>> repeatExtXKey() {
         return Optional.ofNullable(this.repeatExtXKey);
     }
@@ -102,38 +118,86 @@ public final class OriginEndpointHlsEncryptionArgs extends com.pulumi.resources.
             $ = new OriginEndpointHlsEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param constantInitializationVector A constant initialization vector for encryption (optional). When not specified the initialization vector will be periodically rotated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder constantInitializationVector(@Nullable Output<String> constantInitializationVector) {
             $.constantInitializationVector = constantInitializationVector;
             return this;
         }
 
+        /**
+         * @param constantInitializationVector A constant initialization vector for encryption (optional). When not specified the initialization vector will be periodically rotated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder constantInitializationVector(String constantInitializationVector) {
             return constantInitializationVector(Output.of(constantInitializationVector));
         }
 
+        /**
+         * @param encryptionMethod The encryption method to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionMethod(@Nullable Output<OriginEndpointHlsEncryptionEncryptionMethod> encryptionMethod) {
             $.encryptionMethod = encryptionMethod;
             return this;
         }
 
+        /**
+         * @param encryptionMethod The encryption method to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionMethod(OriginEndpointHlsEncryptionEncryptionMethod encryptionMethod) {
             return encryptionMethod(Output.of(encryptionMethod));
         }
 
+        /**
+         * @param keyRotationIntervalSeconds Interval (in seconds) between each encryption key rotation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyRotationIntervalSeconds(@Nullable Output<Integer> keyRotationIntervalSeconds) {
             $.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
             return this;
         }
 
+        /**
+         * @param keyRotationIntervalSeconds Interval (in seconds) between each encryption key rotation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyRotationIntervalSeconds(Integer keyRotationIntervalSeconds) {
             return keyRotationIntervalSeconds(Output.of(keyRotationIntervalSeconds));
         }
 
+        /**
+         * @param repeatExtXKey When enabled, the EXT-X-KEY tag will be repeated in output manifests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repeatExtXKey(@Nullable Output<Boolean> repeatExtXKey) {
             $.repeatExtXKey = repeatExtXKey;
             return this;
         }
 
+        /**
+         * @param repeatExtXKey When enabled, the EXT-X-KEY tag will be repeated in output manifests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repeatExtXKey(Boolean repeatExtXKey) {
             return repeatExtXKey(Output.of(repeatExtXKey));
         }

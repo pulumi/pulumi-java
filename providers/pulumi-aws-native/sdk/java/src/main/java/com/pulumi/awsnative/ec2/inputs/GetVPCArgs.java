@@ -19,6 +19,10 @@ public final class GetVPCArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="vpcId", required=true)
     private String vpcId;
 
+    /**
+     * @return The Id for the model.
+     * 
+     */
     public String vpcId() {
         return this.vpcId;
     }
@@ -47,6 +51,12 @@ public final class GetVPCArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetVPCArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param vpcId The Id for the model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             $.vpcId = vpcId;
             return this;

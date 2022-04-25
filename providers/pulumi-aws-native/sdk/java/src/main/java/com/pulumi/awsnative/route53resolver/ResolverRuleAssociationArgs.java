@@ -22,6 +22,10 @@ public final class ResolverRuleAssociationArgs extends com.pulumi.resources.Reso
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of an association between a Resolver rule and a VPC.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -33,6 +37,10 @@ public final class ResolverRuleAssociationArgs extends com.pulumi.resources.Reso
     @Import(name="resolverRuleId", required=true)
     private Output<String> resolverRuleId;
 
+    /**
+     * @return The ID of the Resolver rule that you associated with the VPC that is specified by VPCId.
+     * 
+     */
     public Output<String> resolverRuleId() {
         return this.resolverRuleId;
     }
@@ -44,6 +52,10 @@ public final class ResolverRuleAssociationArgs extends com.pulumi.resources.Reso
     @Import(name="vPCId", required=true)
     private Output<String> vPCId;
 
+    /**
+     * @return The ID of the VPC that you associated the Resolver rule with.
+     * 
+     */
     public Output<String> vPCId() {
         return this.vPCId;
     }
@@ -74,29 +86,65 @@ public final class ResolverRuleAssociationArgs extends com.pulumi.resources.Reso
             $ = new ResolverRuleAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of an association between a Resolver rule and a VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of an association between a Resolver rule and a VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resolverRuleId The ID of the Resolver rule that you associated with the VPC that is specified by VPCId.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resolverRuleId(Output<String> resolverRuleId) {
             $.resolverRuleId = resolverRuleId;
             return this;
         }
 
+        /**
+         * @param resolverRuleId The ID of the Resolver rule that you associated with the VPC that is specified by VPCId.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resolverRuleId(String resolverRuleId) {
             return resolverRuleId(Output.of(resolverRuleId));
         }
 
+        /**
+         * @param vPCId The ID of the VPC that you associated the Resolver rule with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vPCId(Output<String> vPCId) {
             $.vPCId = vPCId;
             return this;
         }
 
+        /**
+         * @param vPCId The ID of the VPC that you associated the Resolver rule with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vPCId(String vPCId) {
             return vPCId(Output.of(vPCId));
         }

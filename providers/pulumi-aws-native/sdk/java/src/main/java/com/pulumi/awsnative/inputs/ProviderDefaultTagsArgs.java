@@ -27,6 +27,10 @@ public final class ProviderDefaultTagsArgs extends com.pulumi.resources.Resource
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A group of tags to set across all resources.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -55,11 +59,23 @@ public final class ProviderDefaultTagsArgs extends com.pulumi.resources.Resource
             $ = new ProviderDefaultTagsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param tags A group of tags to set across all resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A group of tags to set across all resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

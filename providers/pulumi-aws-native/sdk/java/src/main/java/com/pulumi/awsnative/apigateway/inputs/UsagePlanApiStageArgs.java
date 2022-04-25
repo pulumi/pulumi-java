@@ -23,6 +23,10 @@ public final class UsagePlanApiStageArgs extends com.pulumi.resources.ResourceAr
     @Import(name="apiId")
     private @Nullable Output<String> apiId;
 
+    /**
+     * @return The ID of an API that is in the specified Stage property that you want to associate with the usage plan.
+     * 
+     */
     public Optional<Output<String>> apiId() {
         return Optional.ofNullable(this.apiId);
     }
@@ -34,6 +38,10 @@ public final class UsagePlanApiStageArgs extends com.pulumi.resources.ResourceAr
     @Import(name="stage")
     private @Nullable Output<String> stage;
 
+    /**
+     * @return The name of the stage to associate with the usage plan.
+     * 
+     */
     public Optional<Output<String>> stage() {
         return Optional.ofNullable(this.stage);
     }
@@ -45,6 +53,10 @@ public final class UsagePlanApiStageArgs extends com.pulumi.resources.ResourceAr
     @Import(name="throttle")
     private @Nullable Output<Object> throttle;
 
+    /**
+     * @return Map containing method-level throttling information for an API stage in a usage plan. The key for the map is the path and method for which to configure custom throttling, for example, &#39;/pets/GET&#39;. Duplicates are not allowed.
+     * 
+     */
     public Optional<Output<Object>> throttle() {
         return Optional.ofNullable(this.throttle);
     }
@@ -75,29 +87,65 @@ public final class UsagePlanApiStageArgs extends com.pulumi.resources.ResourceAr
             $ = new UsagePlanApiStageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiId The ID of an API that is in the specified Stage property that you want to associate with the usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(@Nullable Output<String> apiId) {
             $.apiId = apiId;
             return this;
         }
 
+        /**
+         * @param apiId The ID of an API that is in the specified Stage property that you want to associate with the usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(String apiId) {
             return apiId(Output.of(apiId));
         }
 
+        /**
+         * @param stage The name of the stage to associate with the usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stage(@Nullable Output<String> stage) {
             $.stage = stage;
             return this;
         }
 
+        /**
+         * @param stage The name of the stage to associate with the usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stage(String stage) {
             return stage(Output.of(stage));
         }
 
+        /**
+         * @param throttle Map containing method-level throttling information for an API stage in a usage plan. The key for the map is the path and method for which to configure custom throttling, for example, &#39;/pets/GET&#39;. Duplicates are not allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throttle(@Nullable Output<Object> throttle) {
             $.throttle = throttle;
             return this;
         }
 
+        /**
+         * @param throttle Map containing method-level throttling information for an API stage in a usage plan. The key for the map is the path and method for which to configure custom throttling, for example, &#39;/pets/GET&#39;. Duplicates are not allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throttle(Object throttle) {
             return throttle(Output.of(throttle));
         }

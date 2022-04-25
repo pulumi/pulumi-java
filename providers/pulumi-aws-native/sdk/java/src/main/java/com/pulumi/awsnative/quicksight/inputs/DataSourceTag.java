@@ -24,6 +24,10 @@ public final class DataSourceTag extends com.pulumi.resources.InvokeArgs {
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return &lt;p&gt;Tag key.&lt;/p&gt;
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -35,6 +39,10 @@ public final class DataSourceTag extends com.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return &lt;p&gt;Tag value.&lt;/p&gt;
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -64,11 +72,23 @@ public final class DataSourceTag extends com.pulumi.resources.InvokeArgs {
             $ = new DataSourceTag(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key &lt;p&gt;Tag key.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param value &lt;p&gt;Tag value.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

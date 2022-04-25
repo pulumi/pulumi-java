@@ -15,37 +15,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetLinkResult {
     /**
-     * The Bandwidth for the link.
+     * @return The Bandwidth for the link.
      * 
      */
     private final @Nullable LinkBandwidth bandwidth;
     /**
-     * The description of the link.
+     * @return The description of the link.
      * 
      */
     private final @Nullable String description;
     /**
-     * The Amazon Resource Name (ARN) of the link.
+     * @return The Amazon Resource Name (ARN) of the link.
      * 
      */
     private final @Nullable String linkArn;
     /**
-     * The ID of the link.
+     * @return The ID of the link.
      * 
      */
     private final @Nullable String linkId;
     /**
-     * The provider of the link.
+     * @return The provider of the link.
      * 
      */
     private final @Nullable String provider;
     /**
-     * The tags for the link.
+     * @return The tags for the link.
      * 
      */
     private final @Nullable List<LinkTag> tags;
     /**
-     * The type of the link.
+     * @return The type of the link.
      * 
      */
     private final @Nullable String type;
@@ -69,51 +69,51 @@ public final class GetLinkResult {
     }
 
     /**
-     * The Bandwidth for the link.
+     * @return The Bandwidth for the link.
      * 
-    */
+     */
     public Optional<LinkBandwidth> bandwidth() {
         return Optional.ofNullable(this.bandwidth);
     }
     /**
-     * The description of the link.
+     * @return The description of the link.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The Amazon Resource Name (ARN) of the link.
+     * @return The Amazon Resource Name (ARN) of the link.
      * 
-    */
+     */
     public Optional<String> linkArn() {
         return Optional.ofNullable(this.linkArn);
     }
     /**
-     * The ID of the link.
+     * @return The ID of the link.
      * 
-    */
+     */
     public Optional<String> linkId() {
         return Optional.ofNullable(this.linkId);
     }
     /**
-     * The provider of the link.
+     * @return The provider of the link.
      * 
-    */
+     */
     public Optional<String> provider() {
         return Optional.ofNullable(this.provider);
     }
     /**
-     * The tags for the link.
+     * @return The tags for the link.
      * 
-    */
+     */
     public List<LinkTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * The type of the link.
+     * @return The type of the link.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

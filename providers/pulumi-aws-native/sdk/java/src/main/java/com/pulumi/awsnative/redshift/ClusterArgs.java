@@ -28,6 +28,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowVersionUpgrade")
     private @Nullable Output<Boolean> allowVersionUpgrade;
 
+    /**
+     * @return Major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default value is True
+     * 
+     */
     public Optional<Output<Boolean>> allowVersionUpgrade() {
         return Optional.ofNullable(this.allowVersionUpgrade);
     }
@@ -43,6 +47,14 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="aquaConfigurationStatus")
     private @Nullable Output<String> aquaConfigurationStatus;
 
+    /**
+     * @return The value represents how the cluster is configured to use AQUA (Advanced Query Accelerator) after the cluster is restored. Possible values include the following.
+     * 
+     * enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     * disabled - Don&#39;t use AQUA.
+     * auto - Amazon Redshift determines whether to use AQUA.
+     * 
+     */
     public Optional<Output<String>> aquaConfigurationStatus() {
         return Optional.ofNullable(this.aquaConfigurationStatus);
     }
@@ -54,6 +66,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="automatedSnapshotRetentionPeriod")
     private @Nullable Output<Integer> automatedSnapshotRetentionPeriod;
 
+    /**
+     * @return The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Default value is 1
+     * 
+     */
     public Optional<Output<Integer>> automatedSnapshotRetentionPeriod() {
         return Optional.ofNullable(this.automatedSnapshotRetentionPeriod);
     }
@@ -65,6 +81,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZone")
     private @Nullable Output<String> availabilityZone;
 
+    /**
+     * @return The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. Default: A random, system-chosen Availability Zone in the region that is specified by the endpoint
+     * 
+     */
     public Optional<Output<String>> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
@@ -76,6 +96,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZoneRelocation")
     private @Nullable Output<Boolean> availabilityZoneRelocation;
 
+    /**
+     * @return The option to enable relocation for an Amazon Redshift cluster between Availability Zones after the cluster modification is complete.
+     * 
+     */
     public Optional<Output<Boolean>> availabilityZoneRelocation() {
         return Optional.ofNullable(this.availabilityZoneRelocation);
     }
@@ -87,6 +111,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZoneRelocationStatus")
     private @Nullable Output<String> availabilityZoneRelocationStatus;
 
+    /**
+     * @return The availability zone relocation status of the cluster
+     * 
+     */
     public Optional<Output<String>> availabilityZoneRelocationStatus() {
         return Optional.ofNullable(this.availabilityZoneRelocationStatus);
     }
@@ -98,6 +126,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="classic")
     private @Nullable Output<Boolean> classic;
 
+    /**
+     * @return A boolean value indicating whether the resize operation is using the classic resize process. If you don&#39;t provide this parameter or set the value to false , the resize type is elastic.
+     * 
+     */
     public Optional<Output<Boolean>> classic() {
         return Optional.ofNullable(this.classic);
     }
@@ -109,6 +141,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterIdentifier")
     private @Nullable Output<String> clusterIdentifier;
 
+    /**
+     * @return A unique identifier for the cluster. You use this identifier to refer to the cluster for any subsequent cluster operations such as deleting or modifying. All alphabetical characters must be lower case, no hypens at the end, no two consecutive hyphens. Cluster name should be unique for all clusters within an AWS account
+     * 
+     */
     public Optional<Output<String>> clusterIdentifier() {
         return Optional.ofNullable(this.clusterIdentifier);
     }
@@ -120,6 +156,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterParameterGroupName")
     private @Nullable Output<String> clusterParameterGroupName;
 
+    /**
+     * @return The name of the parameter group to be associated with this cluster.
+     * 
+     */
     public Optional<Output<String>> clusterParameterGroupName() {
         return Optional.ofNullable(this.clusterParameterGroupName);
     }
@@ -131,6 +171,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterSecurityGroups")
     private @Nullable Output<List<String>> clusterSecurityGroups;
 
+    /**
+     * @return A list of security groups to be associated with this cluster.
+     * 
+     */
     public Optional<Output<List<String>>> clusterSecurityGroups() {
         return Optional.ofNullable(this.clusterSecurityGroups);
     }
@@ -142,6 +186,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterSubnetGroupName")
     private @Nullable Output<String> clusterSubnetGroupName;
 
+    /**
+     * @return The name of a cluster subnet group to be associated with this cluster.
+     * 
+     */
     public Optional<Output<String>> clusterSubnetGroupName() {
         return Optional.ofNullable(this.clusterSubnetGroupName);
     }
@@ -153,6 +201,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterType", required=true)
     private Output<String> clusterType;
 
+    /**
+     * @return The type of the cluster. When cluster type is specified as single-node, the NumberOfNodes parameter is not required and if multi-node, the NumberOfNodes parameter is required
+     * 
+     */
     public Output<String> clusterType() {
         return this.clusterType;
     }
@@ -164,6 +216,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterVersion")
     private @Nullable Output<String> clusterVersion;
 
+    /**
+     * @return The version of the Amazon Redshift engine software that you want to deploy on the cluster.The version selected runs on all the nodes in the cluster.
+     * 
+     */
     public Optional<Output<String>> clusterVersion() {
         return Optional.ofNullable(this.clusterVersion);
     }
@@ -175,6 +231,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dBName", required=true)
     private Output<String> dBName;
 
+    /**
+     * @return The name of the first database to be created when the cluster is created. To create additional databases after the cluster is created, connect to the cluster with a SQL client and use SQL commands to create a database.
+     * 
+     */
     public Output<String> dBName() {
         return this.dBName;
     }
@@ -186,6 +246,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deferMaintenance")
     private @Nullable Output<Boolean> deferMaintenance;
 
+    /**
+     * @return A boolean indicating whether to enable the deferred maintenance window.
+     * 
+     */
     public Optional<Output<Boolean>> deferMaintenance() {
         return Optional.ofNullable(this.deferMaintenance);
     }
@@ -197,6 +261,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deferMaintenanceDuration")
     private @Nullable Output<Integer> deferMaintenanceDuration;
 
+    /**
+     * @return An integer indicating the duration of the maintenance window in days. If you specify a duration, you can&#39;t specify an end time. The duration must be 45 days or less.
+     * 
+     */
     public Optional<Output<Integer>> deferMaintenanceDuration() {
         return Optional.ofNullable(this.deferMaintenanceDuration);
     }
@@ -208,6 +276,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deferMaintenanceEndTime")
     private @Nullable Output<String> deferMaintenanceEndTime;
 
+    /**
+     * @return A timestamp indicating end time for the deferred maintenance window. If you specify an end time, you can&#39;t specify a duration.
+     * 
+     */
     public Optional<Output<String>> deferMaintenanceEndTime() {
         return Optional.ofNullable(this.deferMaintenanceEndTime);
     }
@@ -219,6 +291,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deferMaintenanceStartTime")
     private @Nullable Output<String> deferMaintenanceStartTime;
 
+    /**
+     * @return A timestamp indicating the start time for the deferred maintenance window.
+     * 
+     */
     public Optional<Output<String>> deferMaintenanceStartTime() {
         return Optional.ofNullable(this.deferMaintenanceStartTime);
     }
@@ -230,6 +306,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationRegion")
     private @Nullable Output<String> destinationRegion;
 
+    /**
+     * @return The destination AWS Region that you want to copy snapshots to. Constraints: Must be the name of a valid AWS Region. For more information, see Regions and Endpoints in the Amazon Web Services [https://docs.aws.amazon.com/general/latest/gr/rande.html#redshift_region] General Reference
+     * 
+     */
     public Optional<Output<String>> destinationRegion() {
         return Optional.ofNullable(this.destinationRegion);
     }
@@ -241,6 +321,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="elasticIp")
     private @Nullable Output<String> elasticIp;
 
+    /**
+     * @return The Elastic IP (EIP) address for the cluster.
+     * 
+     */
     public Optional<Output<String>> elasticIp() {
         return Optional.ofNullable(this.elasticIp);
     }
@@ -252,6 +336,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encrypted")
     private @Nullable Output<Boolean> encrypted;
 
+    /**
+     * @return If true, the data in the cluster is encrypted at rest.
+     * 
+     */
     public Optional<Output<Boolean>> encrypted() {
         return Optional.ofNullable(this.encrypted);
     }
@@ -274,6 +362,14 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enhancedVpcRouting")
     private @Nullable Output<Boolean> enhancedVpcRouting;
 
+    /**
+     * @return An option that specifies whether to create the cluster with enhanced VPC routing enabled. To create a cluster that uses enhanced VPC routing, the cluster must be in a VPC. For more information, see Enhanced VPC Routing in the Amazon Redshift Cluster Management Guide.
+     * 
+     * If this option is true , enhanced VPC routing is enabled.
+     * 
+     * Default: false
+     * 
+     */
     public Optional<Output<Boolean>> enhancedVpcRouting() {
         return Optional.ofNullable(this.enhancedVpcRouting);
     }
@@ -285,6 +381,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hsmClientCertificateIdentifier")
     private @Nullable Output<String> hsmClientCertificateIdentifier;
 
+    /**
+     * @return Specifies the name of the HSM client certificate the Amazon Redshift cluster uses to retrieve the data encryption keys stored in an HSM
+     * 
+     */
     public Optional<Output<String>> hsmClientCertificateIdentifier() {
         return Optional.ofNullable(this.hsmClientCertificateIdentifier);
     }
@@ -296,6 +396,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hsmConfigurationIdentifier")
     private @Nullable Output<String> hsmConfigurationIdentifier;
 
+    /**
+     * @return Specifies the name of the HSM configuration that contains the information the Amazon Redshift cluster can use to retrieve and store keys in an HSM.
+     * 
+     */
     public Optional<Output<String>> hsmConfigurationIdentifier() {
         return Optional.ofNullable(this.hsmConfigurationIdentifier);
     }
@@ -307,6 +411,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iamRoles")
     private @Nullable Output<List<String>> iamRoles;
 
+    /**
+     * @return A list of AWS Identity and Access Management (IAM) roles that can be used by the cluster to access other AWS services. You must supply the IAM roles in their Amazon Resource Name (ARN) format. You can supply up to 10 IAM roles in a single request
+     * 
+     */
     public Optional<Output<List<String>>> iamRoles() {
         return Optional.ofNullable(this.iamRoles);
     }
@@ -318,6 +426,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
     private @Nullable Output<String> kmsKeyId;
 
+    /**
+     * @return The AWS Key Management Service (KMS) key ID of the encryption key that you want to use to encrypt data in the cluster.
+     * 
+     */
     public Optional<Output<String>> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
@@ -336,6 +448,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maintenanceTrackName")
     private @Nullable Output<String> maintenanceTrackName;
 
+    /**
+     * @return The name for the maintenance track that you want to assign for the cluster. This name change is asynchronous. The new track name stays in the PendingModifiedValues for the cluster until the next maintenance window. When the maintenance track changes, the cluster is switched to the latest cluster release available for the maintenance track. At this point, the maintenance track name is applied.
+     * 
+     */
     public Optional<Output<String>> maintenanceTrackName() {
         return Optional.ofNullable(this.maintenanceTrackName);
     }
@@ -349,6 +465,12 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="manualSnapshotRetentionPeriod")
     private @Nullable Output<Integer> manualSnapshotRetentionPeriod;
 
+    /**
+     * @return The number of days to retain newly copied snapshots in the destination AWS Region after they are copied from the source AWS Region. If the value is -1, the manual snapshot is retained indefinitely.
+     * 
+     * The value must be either -1 or an integer between 1 and 3,653.
+     * 
+     */
     public Optional<Output<Integer>> manualSnapshotRetentionPeriod() {
         return Optional.ofNullable(this.manualSnapshotRetentionPeriod);
     }
@@ -360,6 +482,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="masterUserPassword", required=true)
     private Output<String> masterUserPassword;
 
+    /**
+     * @return The password associated with the master user account for the cluster that is being created. Password must be between 8 and 64 characters in length, should have at least one uppercase letter.Must contain at least one lowercase letter.Must contain one number.Can be any printable ASCII character.
+     * 
+     */
     public Output<String> masterUserPassword() {
         return this.masterUserPassword;
     }
@@ -371,6 +497,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="masterUsername", required=true)
     private Output<String> masterUsername;
 
+    /**
+     * @return The user name associated with the master user account for the cluster that is being created. The user name can&#39;t be PUBLIC and first character must be a letter.
+     * 
+     */
     public Output<String> masterUsername() {
         return this.masterUsername;
     }
@@ -382,6 +512,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeType", required=true)
     private Output<String> nodeType;
 
+    /**
+     * @return The node type to be provisioned for the cluster.Valid Values: ds2.xlarge | ds2.8xlarge | dc1.large | dc1.8xlarge | dc2.large | dc2.8xlarge | ra3.4xlarge | ra3.16xlarge
+     * 
+     */
     public Output<String> nodeType() {
         return this.nodeType;
     }
@@ -393,6 +527,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="numberOfNodes")
     private @Nullable Output<Integer> numberOfNodes;
 
+    /**
+     * @return The number of compute nodes in the cluster. This parameter is required when the ClusterType parameter is specified as multi-node.
+     * 
+     */
     public Optional<Output<Integer>> numberOfNodes() {
         return Optional.ofNullable(this.numberOfNodes);
     }
@@ -411,6 +549,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return The port number on which the cluster accepts incoming connections. The cluster is accessible only via the JDBC and ODBC connection strings
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -422,6 +564,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="preferredMaintenanceWindow")
     private @Nullable Output<String> preferredMaintenanceWindow;
 
+    /**
+     * @return The weekly time range (in UTC) during which automated cluster maintenance can occur.
+     * 
+     */
     public Optional<Output<String>> preferredMaintenanceWindow() {
         return Optional.ofNullable(this.preferredMaintenanceWindow);
     }
@@ -433,6 +579,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publiclyAccessible")
     private @Nullable Output<Boolean> publiclyAccessible;
 
+    /**
+     * @return If true, the cluster can be accessed from a public network.
+     * 
+     */
     public Optional<Output<Boolean>> publiclyAccessible() {
         return Optional.ofNullable(this.publiclyAccessible);
     }
@@ -444,6 +594,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceAction")
     private @Nullable Output<String> resourceAction;
 
+    /**
+     * @return The Redshift operation to be performed. Resource Action supports pause-cluster, resume-cluster APIs
+     * 
+     */
     public Optional<Output<String>> resourceAction() {
         return Optional.ofNullable(this.resourceAction);
     }
@@ -455,6 +609,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="revisionTarget")
     private @Nullable Output<String> revisionTarget;
 
+    /**
+     * @return The identifier of the database revision. You can retrieve this value from the response to the DescribeClusterDbRevisions request.
+     * 
+     */
     public Optional<Output<String>> revisionTarget() {
         return Optional.ofNullable(this.revisionTarget);
     }
@@ -466,6 +624,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rotateEncryptionKey")
     private @Nullable Output<Boolean> rotateEncryptionKey;
 
+    /**
+     * @return A boolean indicating if we want to rotate Encryption Keys.
+     * 
+     */
     public Optional<Output<Boolean>> rotateEncryptionKey() {
         return Optional.ofNullable(this.rotateEncryptionKey);
     }
@@ -477,6 +639,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="snapshotClusterIdentifier")
     private @Nullable Output<String> snapshotClusterIdentifier;
 
+    /**
+     * @return The name of the cluster the source snapshot was created from. This parameter is required if your IAM user has a policy containing a snapshot resource element that specifies anything other than * for the cluster name.
+     * 
+     */
     public Optional<Output<String>> snapshotClusterIdentifier() {
         return Optional.ofNullable(this.snapshotClusterIdentifier);
     }
@@ -488,6 +654,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="snapshotCopyGrantName")
     private @Nullable Output<String> snapshotCopyGrantName;
 
+    /**
+     * @return The name of the snapshot copy grant to use when snapshots of an AWS KMS-encrypted cluster are copied to the destination region.
+     * 
+     */
     public Optional<Output<String>> snapshotCopyGrantName() {
         return Optional.ofNullable(this.snapshotCopyGrantName);
     }
@@ -499,6 +669,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="snapshotCopyManual")
     private @Nullable Output<Boolean> snapshotCopyManual;
 
+    /**
+     * @return Indicates whether to apply the snapshot retention period to newly copied manual snapshots instead of automated snapshots.
+     * 
+     */
     public Optional<Output<Boolean>> snapshotCopyManual() {
         return Optional.ofNullable(this.snapshotCopyManual);
     }
@@ -514,6 +688,14 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="snapshotCopyRetentionPeriod")
     private @Nullable Output<Integer> snapshotCopyRetentionPeriod;
 
+    /**
+     * @return The number of days to retain automated snapshots in the destination region after they are copied from the source region.
+     * 
+     *  Default is 7.
+     * 
+     *  Constraints: Must be at least 1 and no more than 35.
+     * 
+     */
     public Optional<Output<Integer>> snapshotCopyRetentionPeriod() {
         return Optional.ofNullable(this.snapshotCopyRetentionPeriod);
     }
@@ -525,6 +707,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="snapshotIdentifier")
     private @Nullable Output<String> snapshotIdentifier;
 
+    /**
+     * @return The name of the snapshot from which to create the new cluster. This parameter isn&#39;t case sensitive.
+     * 
+     */
     public Optional<Output<String>> snapshotIdentifier() {
         return Optional.ofNullable(this.snapshotIdentifier);
     }
@@ -536,6 +722,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<ClusterTagArgs>> tags;
 
+    /**
+     * @return The list of tags for the cluster parameter group.
+     * 
+     */
     public Optional<Output<List<ClusterTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -547,6 +737,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcSecurityGroupIds")
     private @Nullable Output<List<String>> vpcSecurityGroupIds;
 
+    /**
+     * @return A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.
+     * 
+     */
     public Optional<Output<List<String>>> vpcSecurityGroupIds() {
         return Optional.ofNullable(this.vpcSecurityGroupIds);
     }
@@ -622,195 +816,461 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowVersionUpgrade Major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default value is True
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowVersionUpgrade(@Nullable Output<Boolean> allowVersionUpgrade) {
             $.allowVersionUpgrade = allowVersionUpgrade;
             return this;
         }
 
+        /**
+         * @param allowVersionUpgrade Major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default value is True
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowVersionUpgrade(Boolean allowVersionUpgrade) {
             return allowVersionUpgrade(Output.of(allowVersionUpgrade));
         }
 
+        /**
+         * @param aquaConfigurationStatus The value represents how the cluster is configured to use AQUA (Advanced Query Accelerator) after the cluster is restored. Possible values include the following.
+         * 
+         * enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+         * disabled - Don&#39;t use AQUA.
+         * auto - Amazon Redshift determines whether to use AQUA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aquaConfigurationStatus(@Nullable Output<String> aquaConfigurationStatus) {
             $.aquaConfigurationStatus = aquaConfigurationStatus;
             return this;
         }
 
+        /**
+         * @param aquaConfigurationStatus The value represents how the cluster is configured to use AQUA (Advanced Query Accelerator) after the cluster is restored. Possible values include the following.
+         * 
+         * enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+         * disabled - Don&#39;t use AQUA.
+         * auto - Amazon Redshift determines whether to use AQUA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aquaConfigurationStatus(String aquaConfigurationStatus) {
             return aquaConfigurationStatus(Output.of(aquaConfigurationStatus));
         }
 
+        /**
+         * @param automatedSnapshotRetentionPeriod The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Default value is 1
+         * 
+         * @return builder
+         * 
+         */
         public Builder automatedSnapshotRetentionPeriod(@Nullable Output<Integer> automatedSnapshotRetentionPeriod) {
             $.automatedSnapshotRetentionPeriod = automatedSnapshotRetentionPeriod;
             return this;
         }
 
+        /**
+         * @param automatedSnapshotRetentionPeriod The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Default value is 1
+         * 
+         * @return builder
+         * 
+         */
         public Builder automatedSnapshotRetentionPeriod(Integer automatedSnapshotRetentionPeriod) {
             return automatedSnapshotRetentionPeriod(Output.of(automatedSnapshotRetentionPeriod));
         }
 
+        /**
+         * @param availabilityZone The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. Default: A random, system-chosen Availability Zone in the region that is specified by the endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             $.availabilityZone = availabilityZone;
             return this;
         }
 
+        /**
+         * @param availabilityZone The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. Default: A random, system-chosen Availability Zone in the region that is specified by the endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(String availabilityZone) {
             return availabilityZone(Output.of(availabilityZone));
         }
 
+        /**
+         * @param availabilityZoneRelocation The option to enable relocation for an Amazon Redshift cluster between Availability Zones after the cluster modification is complete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZoneRelocation(@Nullable Output<Boolean> availabilityZoneRelocation) {
             $.availabilityZoneRelocation = availabilityZoneRelocation;
             return this;
         }
 
+        /**
+         * @param availabilityZoneRelocation The option to enable relocation for an Amazon Redshift cluster between Availability Zones after the cluster modification is complete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZoneRelocation(Boolean availabilityZoneRelocation) {
             return availabilityZoneRelocation(Output.of(availabilityZoneRelocation));
         }
 
+        /**
+         * @param availabilityZoneRelocationStatus The availability zone relocation status of the cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZoneRelocationStatus(@Nullable Output<String> availabilityZoneRelocationStatus) {
             $.availabilityZoneRelocationStatus = availabilityZoneRelocationStatus;
             return this;
         }
 
+        /**
+         * @param availabilityZoneRelocationStatus The availability zone relocation status of the cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZoneRelocationStatus(String availabilityZoneRelocationStatus) {
             return availabilityZoneRelocationStatus(Output.of(availabilityZoneRelocationStatus));
         }
 
+        /**
+         * @param classic A boolean value indicating whether the resize operation is using the classic resize process. If you don&#39;t provide this parameter or set the value to false , the resize type is elastic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder classic(@Nullable Output<Boolean> classic) {
             $.classic = classic;
             return this;
         }
 
+        /**
+         * @param classic A boolean value indicating whether the resize operation is using the classic resize process. If you don&#39;t provide this parameter or set the value to false , the resize type is elastic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder classic(Boolean classic) {
             return classic(Output.of(classic));
         }
 
+        /**
+         * @param clusterIdentifier A unique identifier for the cluster. You use this identifier to refer to the cluster for any subsequent cluster operations such as deleting or modifying. All alphabetical characters must be lower case, no hypens at the end, no two consecutive hyphens. Cluster name should be unique for all clusters within an AWS account
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIdentifier(@Nullable Output<String> clusterIdentifier) {
             $.clusterIdentifier = clusterIdentifier;
             return this;
         }
 
+        /**
+         * @param clusterIdentifier A unique identifier for the cluster. You use this identifier to refer to the cluster for any subsequent cluster operations such as deleting or modifying. All alphabetical characters must be lower case, no hypens at the end, no two consecutive hyphens. Cluster name should be unique for all clusters within an AWS account
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIdentifier(String clusterIdentifier) {
             return clusterIdentifier(Output.of(clusterIdentifier));
         }
 
+        /**
+         * @param clusterParameterGroupName The name of the parameter group to be associated with this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterParameterGroupName(@Nullable Output<String> clusterParameterGroupName) {
             $.clusterParameterGroupName = clusterParameterGroupName;
             return this;
         }
 
+        /**
+         * @param clusterParameterGroupName The name of the parameter group to be associated with this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterParameterGroupName(String clusterParameterGroupName) {
             return clusterParameterGroupName(Output.of(clusterParameterGroupName));
         }
 
+        /**
+         * @param clusterSecurityGroups A list of security groups to be associated with this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSecurityGroups(@Nullable Output<List<String>> clusterSecurityGroups) {
             $.clusterSecurityGroups = clusterSecurityGroups;
             return this;
         }
 
+        /**
+         * @param clusterSecurityGroups A list of security groups to be associated with this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSecurityGroups(List<String> clusterSecurityGroups) {
             return clusterSecurityGroups(Output.of(clusterSecurityGroups));
         }
 
+        /**
+         * @param clusterSecurityGroups A list of security groups to be associated with this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSecurityGroups(String... clusterSecurityGroups) {
             return clusterSecurityGroups(List.of(clusterSecurityGroups));
         }
 
+        /**
+         * @param clusterSubnetGroupName The name of a cluster subnet group to be associated with this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSubnetGroupName(@Nullable Output<String> clusterSubnetGroupName) {
             $.clusterSubnetGroupName = clusterSubnetGroupName;
             return this;
         }
 
+        /**
+         * @param clusterSubnetGroupName The name of a cluster subnet group to be associated with this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSubnetGroupName(String clusterSubnetGroupName) {
             return clusterSubnetGroupName(Output.of(clusterSubnetGroupName));
         }
 
+        /**
+         * @param clusterType The type of the cluster. When cluster type is specified as single-node, the NumberOfNodes parameter is not required and if multi-node, the NumberOfNodes parameter is required
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterType(Output<String> clusterType) {
             $.clusterType = clusterType;
             return this;
         }
 
+        /**
+         * @param clusterType The type of the cluster. When cluster type is specified as single-node, the NumberOfNodes parameter is not required and if multi-node, the NumberOfNodes parameter is required
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterType(String clusterType) {
             return clusterType(Output.of(clusterType));
         }
 
+        /**
+         * @param clusterVersion The version of the Amazon Redshift engine software that you want to deploy on the cluster.The version selected runs on all the nodes in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterVersion(@Nullable Output<String> clusterVersion) {
             $.clusterVersion = clusterVersion;
             return this;
         }
 
+        /**
+         * @param clusterVersion The version of the Amazon Redshift engine software that you want to deploy on the cluster.The version selected runs on all the nodes in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterVersion(String clusterVersion) {
             return clusterVersion(Output.of(clusterVersion));
         }
 
+        /**
+         * @param dBName The name of the first database to be created when the cluster is created. To create additional databases after the cluster is created, connect to the cluster with a SQL client and use SQL commands to create a database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dBName(Output<String> dBName) {
             $.dBName = dBName;
             return this;
         }
 
+        /**
+         * @param dBName The name of the first database to be created when the cluster is created. To create additional databases after the cluster is created, connect to the cluster with a SQL client and use SQL commands to create a database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dBName(String dBName) {
             return dBName(Output.of(dBName));
         }
 
+        /**
+         * @param deferMaintenance A boolean indicating whether to enable the deferred maintenance window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deferMaintenance(@Nullable Output<Boolean> deferMaintenance) {
             $.deferMaintenance = deferMaintenance;
             return this;
         }
 
+        /**
+         * @param deferMaintenance A boolean indicating whether to enable the deferred maintenance window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deferMaintenance(Boolean deferMaintenance) {
             return deferMaintenance(Output.of(deferMaintenance));
         }
 
+        /**
+         * @param deferMaintenanceDuration An integer indicating the duration of the maintenance window in days. If you specify a duration, you can&#39;t specify an end time. The duration must be 45 days or less.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deferMaintenanceDuration(@Nullable Output<Integer> deferMaintenanceDuration) {
             $.deferMaintenanceDuration = deferMaintenanceDuration;
             return this;
         }
 
+        /**
+         * @param deferMaintenanceDuration An integer indicating the duration of the maintenance window in days. If you specify a duration, you can&#39;t specify an end time. The duration must be 45 days or less.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deferMaintenanceDuration(Integer deferMaintenanceDuration) {
             return deferMaintenanceDuration(Output.of(deferMaintenanceDuration));
         }
 
+        /**
+         * @param deferMaintenanceEndTime A timestamp indicating end time for the deferred maintenance window. If you specify an end time, you can&#39;t specify a duration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deferMaintenanceEndTime(@Nullable Output<String> deferMaintenanceEndTime) {
             $.deferMaintenanceEndTime = deferMaintenanceEndTime;
             return this;
         }
 
+        /**
+         * @param deferMaintenanceEndTime A timestamp indicating end time for the deferred maintenance window. If you specify an end time, you can&#39;t specify a duration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deferMaintenanceEndTime(String deferMaintenanceEndTime) {
             return deferMaintenanceEndTime(Output.of(deferMaintenanceEndTime));
         }
 
+        /**
+         * @param deferMaintenanceStartTime A timestamp indicating the start time for the deferred maintenance window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deferMaintenanceStartTime(@Nullable Output<String> deferMaintenanceStartTime) {
             $.deferMaintenanceStartTime = deferMaintenanceStartTime;
             return this;
         }
 
+        /**
+         * @param deferMaintenanceStartTime A timestamp indicating the start time for the deferred maintenance window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deferMaintenanceStartTime(String deferMaintenanceStartTime) {
             return deferMaintenanceStartTime(Output.of(deferMaintenanceStartTime));
         }
 
+        /**
+         * @param destinationRegion The destination AWS Region that you want to copy snapshots to. Constraints: Must be the name of a valid AWS Region. For more information, see Regions and Endpoints in the Amazon Web Services [https://docs.aws.amazon.com/general/latest/gr/rande.html#redshift_region] General Reference
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationRegion(@Nullable Output<String> destinationRegion) {
             $.destinationRegion = destinationRegion;
             return this;
         }
 
+        /**
+         * @param destinationRegion The destination AWS Region that you want to copy snapshots to. Constraints: Must be the name of a valid AWS Region. For more information, see Regions and Endpoints in the Amazon Web Services [https://docs.aws.amazon.com/general/latest/gr/rande.html#redshift_region] General Reference
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationRegion(String destinationRegion) {
             return destinationRegion(Output.of(destinationRegion));
         }
 
+        /**
+         * @param elasticIp The Elastic IP (EIP) address for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elasticIp(@Nullable Output<String> elasticIp) {
             $.elasticIp = elasticIp;
             return this;
         }
 
+        /**
+         * @param elasticIp The Elastic IP (EIP) address for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elasticIp(String elasticIp) {
             return elasticIp(Output.of(elasticIp));
         }
 
+        /**
+         * @param encrypted If true, the data in the cluster is encrypted at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
             $.encrypted = encrypted;
             return this;
         }
 
+        /**
+         * @param encrypted If true, the data in the cluster is encrypted at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encrypted(Boolean encrypted) {
             return encrypted(Output.of(encrypted));
         }
@@ -824,51 +1284,125 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
             return endpoint(Output.of(endpoint));
         }
 
+        /**
+         * @param enhancedVpcRouting An option that specifies whether to create the cluster with enhanced VPC routing enabled. To create a cluster that uses enhanced VPC routing, the cluster must be in a VPC. For more information, see Enhanced VPC Routing in the Amazon Redshift Cluster Management Guide.
+         * 
+         * If this option is true , enhanced VPC routing is enabled.
+         * 
+         * Default: false
+         * 
+         * @return builder
+         * 
+         */
         public Builder enhancedVpcRouting(@Nullable Output<Boolean> enhancedVpcRouting) {
             $.enhancedVpcRouting = enhancedVpcRouting;
             return this;
         }
 
+        /**
+         * @param enhancedVpcRouting An option that specifies whether to create the cluster with enhanced VPC routing enabled. To create a cluster that uses enhanced VPC routing, the cluster must be in a VPC. For more information, see Enhanced VPC Routing in the Amazon Redshift Cluster Management Guide.
+         * 
+         * If this option is true , enhanced VPC routing is enabled.
+         * 
+         * Default: false
+         * 
+         * @return builder
+         * 
+         */
         public Builder enhancedVpcRouting(Boolean enhancedVpcRouting) {
             return enhancedVpcRouting(Output.of(enhancedVpcRouting));
         }
 
+        /**
+         * @param hsmClientCertificateIdentifier Specifies the name of the HSM client certificate the Amazon Redshift cluster uses to retrieve the data encryption keys stored in an HSM
+         * 
+         * @return builder
+         * 
+         */
         public Builder hsmClientCertificateIdentifier(@Nullable Output<String> hsmClientCertificateIdentifier) {
             $.hsmClientCertificateIdentifier = hsmClientCertificateIdentifier;
             return this;
         }
 
+        /**
+         * @param hsmClientCertificateIdentifier Specifies the name of the HSM client certificate the Amazon Redshift cluster uses to retrieve the data encryption keys stored in an HSM
+         * 
+         * @return builder
+         * 
+         */
         public Builder hsmClientCertificateIdentifier(String hsmClientCertificateIdentifier) {
             return hsmClientCertificateIdentifier(Output.of(hsmClientCertificateIdentifier));
         }
 
+        /**
+         * @param hsmConfigurationIdentifier Specifies the name of the HSM configuration that contains the information the Amazon Redshift cluster can use to retrieve and store keys in an HSM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hsmConfigurationIdentifier(@Nullable Output<String> hsmConfigurationIdentifier) {
             $.hsmConfigurationIdentifier = hsmConfigurationIdentifier;
             return this;
         }
 
+        /**
+         * @param hsmConfigurationIdentifier Specifies the name of the HSM configuration that contains the information the Amazon Redshift cluster can use to retrieve and store keys in an HSM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hsmConfigurationIdentifier(String hsmConfigurationIdentifier) {
             return hsmConfigurationIdentifier(Output.of(hsmConfigurationIdentifier));
         }
 
+        /**
+         * @param iamRoles A list of AWS Identity and Access Management (IAM) roles that can be used by the cluster to access other AWS services. You must supply the IAM roles in their Amazon Resource Name (ARN) format. You can supply up to 10 IAM roles in a single request
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamRoles(@Nullable Output<List<String>> iamRoles) {
             $.iamRoles = iamRoles;
             return this;
         }
 
+        /**
+         * @param iamRoles A list of AWS Identity and Access Management (IAM) roles that can be used by the cluster to access other AWS services. You must supply the IAM roles in their Amazon Resource Name (ARN) format. You can supply up to 10 IAM roles in a single request
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamRoles(List<String> iamRoles) {
             return iamRoles(Output.of(iamRoles));
         }
 
+        /**
+         * @param iamRoles A list of AWS Identity and Access Management (IAM) roles that can be used by the cluster to access other AWS services. You must supply the IAM roles in their Amazon Resource Name (ARN) format. You can supply up to 10 IAM roles in a single request
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamRoles(String... iamRoles) {
             return iamRoles(List.of(iamRoles));
         }
 
+        /**
+         * @param kmsKeyId The AWS Key Management Service (KMS) key ID of the encryption key that you want to use to encrypt data in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             $.kmsKeyId = kmsKeyId;
             return this;
         }
 
+        /**
+         * @param kmsKeyId The AWS Key Management Service (KMS) key ID of the encryption key that you want to use to encrypt data in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(String kmsKeyId) {
             return kmsKeyId(Output.of(kmsKeyId));
         }
@@ -882,56 +1416,132 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
             return loggingProperties(Output.of(loggingProperties));
         }
 
+        /**
+         * @param maintenanceTrackName The name for the maintenance track that you want to assign for the cluster. This name change is asynchronous. The new track name stays in the PendingModifiedValues for the cluster until the next maintenance window. When the maintenance track changes, the cluster is switched to the latest cluster release available for the maintenance track. At this point, the maintenance track name is applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceTrackName(@Nullable Output<String> maintenanceTrackName) {
             $.maintenanceTrackName = maintenanceTrackName;
             return this;
         }
 
+        /**
+         * @param maintenanceTrackName The name for the maintenance track that you want to assign for the cluster. This name change is asynchronous. The new track name stays in the PendingModifiedValues for the cluster until the next maintenance window. When the maintenance track changes, the cluster is switched to the latest cluster release available for the maintenance track. At this point, the maintenance track name is applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceTrackName(String maintenanceTrackName) {
             return maintenanceTrackName(Output.of(maintenanceTrackName));
         }
 
+        /**
+         * @param manualSnapshotRetentionPeriod The number of days to retain newly copied snapshots in the destination AWS Region after they are copied from the source AWS Region. If the value is -1, the manual snapshot is retained indefinitely.
+         * 
+         * The value must be either -1 or an integer between 1 and 3,653.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manualSnapshotRetentionPeriod(@Nullable Output<Integer> manualSnapshotRetentionPeriod) {
             $.manualSnapshotRetentionPeriod = manualSnapshotRetentionPeriod;
             return this;
         }
 
+        /**
+         * @param manualSnapshotRetentionPeriod The number of days to retain newly copied snapshots in the destination AWS Region after they are copied from the source AWS Region. If the value is -1, the manual snapshot is retained indefinitely.
+         * 
+         * The value must be either -1 or an integer between 1 and 3,653.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manualSnapshotRetentionPeriod(Integer manualSnapshotRetentionPeriod) {
             return manualSnapshotRetentionPeriod(Output.of(manualSnapshotRetentionPeriod));
         }
 
+        /**
+         * @param masterUserPassword The password associated with the master user account for the cluster that is being created. Password must be between 8 and 64 characters in length, should have at least one uppercase letter.Must contain at least one lowercase letter.Must contain one number.Can be any printable ASCII character.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterUserPassword(Output<String> masterUserPassword) {
             $.masterUserPassword = masterUserPassword;
             return this;
         }
 
+        /**
+         * @param masterUserPassword The password associated with the master user account for the cluster that is being created. Password must be between 8 and 64 characters in length, should have at least one uppercase letter.Must contain at least one lowercase letter.Must contain one number.Can be any printable ASCII character.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterUserPassword(String masterUserPassword) {
             return masterUserPassword(Output.of(masterUserPassword));
         }
 
+        /**
+         * @param masterUsername The user name associated with the master user account for the cluster that is being created. The user name can&#39;t be PUBLIC and first character must be a letter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterUsername(Output<String> masterUsername) {
             $.masterUsername = masterUsername;
             return this;
         }
 
+        /**
+         * @param masterUsername The user name associated with the master user account for the cluster that is being created. The user name can&#39;t be PUBLIC and first character must be a letter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterUsername(String masterUsername) {
             return masterUsername(Output.of(masterUsername));
         }
 
+        /**
+         * @param nodeType The node type to be provisioned for the cluster.Valid Values: ds2.xlarge | ds2.8xlarge | dc1.large | dc1.8xlarge | dc2.large | dc2.8xlarge | ra3.4xlarge | ra3.16xlarge
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeType(Output<String> nodeType) {
             $.nodeType = nodeType;
             return this;
         }
 
+        /**
+         * @param nodeType The node type to be provisioned for the cluster.Valid Values: ds2.xlarge | ds2.8xlarge | dc1.large | dc1.8xlarge | dc2.large | dc2.8xlarge | ra3.4xlarge | ra3.16xlarge
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeType(String nodeType) {
             return nodeType(Output.of(nodeType));
         }
 
+        /**
+         * @param numberOfNodes The number of compute nodes in the cluster. This parameter is required when the ClusterType parameter is specified as multi-node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfNodes(@Nullable Output<Integer> numberOfNodes) {
             $.numberOfNodes = numberOfNodes;
             return this;
         }
 
+        /**
+         * @param numberOfNodes The number of compute nodes in the cluster. This parameter is required when the ClusterType parameter is specified as multi-node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfNodes(Integer numberOfNodes) {
             return numberOfNodes(Output.of(numberOfNodes));
         }
@@ -945,127 +1555,303 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
             return ownerAccount(Output.of(ownerAccount));
         }
 
+        /**
+         * @param port The port number on which the cluster accepts incoming connections. The cluster is accessible only via the JDBC and ODBC connection strings
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The port number on which the cluster accepts incoming connections. The cluster is accessible only via the JDBC and ODBC connection strings
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param preferredMaintenanceWindow The weekly time range (in UTC) during which automated cluster maintenance can occur.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredMaintenanceWindow(@Nullable Output<String> preferredMaintenanceWindow) {
             $.preferredMaintenanceWindow = preferredMaintenanceWindow;
             return this;
         }
 
+        /**
+         * @param preferredMaintenanceWindow The weekly time range (in UTC) during which automated cluster maintenance can occur.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredMaintenanceWindow(String preferredMaintenanceWindow) {
             return preferredMaintenanceWindow(Output.of(preferredMaintenanceWindow));
         }
 
+        /**
+         * @param publiclyAccessible If true, the cluster can be accessed from a public network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publiclyAccessible(@Nullable Output<Boolean> publiclyAccessible) {
             $.publiclyAccessible = publiclyAccessible;
             return this;
         }
 
+        /**
+         * @param publiclyAccessible If true, the cluster can be accessed from a public network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publiclyAccessible(Boolean publiclyAccessible) {
             return publiclyAccessible(Output.of(publiclyAccessible));
         }
 
+        /**
+         * @param resourceAction The Redshift operation to be performed. Resource Action supports pause-cluster, resume-cluster APIs
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAction(@Nullable Output<String> resourceAction) {
             $.resourceAction = resourceAction;
             return this;
         }
 
+        /**
+         * @param resourceAction The Redshift operation to be performed. Resource Action supports pause-cluster, resume-cluster APIs
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAction(String resourceAction) {
             return resourceAction(Output.of(resourceAction));
         }
 
+        /**
+         * @param revisionTarget The identifier of the database revision. You can retrieve this value from the response to the DescribeClusterDbRevisions request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revisionTarget(@Nullable Output<String> revisionTarget) {
             $.revisionTarget = revisionTarget;
             return this;
         }
 
+        /**
+         * @param revisionTarget The identifier of the database revision. You can retrieve this value from the response to the DescribeClusterDbRevisions request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revisionTarget(String revisionTarget) {
             return revisionTarget(Output.of(revisionTarget));
         }
 
+        /**
+         * @param rotateEncryptionKey A boolean indicating if we want to rotate Encryption Keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rotateEncryptionKey(@Nullable Output<Boolean> rotateEncryptionKey) {
             $.rotateEncryptionKey = rotateEncryptionKey;
             return this;
         }
 
+        /**
+         * @param rotateEncryptionKey A boolean indicating if we want to rotate Encryption Keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rotateEncryptionKey(Boolean rotateEncryptionKey) {
             return rotateEncryptionKey(Output.of(rotateEncryptionKey));
         }
 
+        /**
+         * @param snapshotClusterIdentifier The name of the cluster the source snapshot was created from. This parameter is required if your IAM user has a policy containing a snapshot resource element that specifies anything other than * for the cluster name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotClusterIdentifier(@Nullable Output<String> snapshotClusterIdentifier) {
             $.snapshotClusterIdentifier = snapshotClusterIdentifier;
             return this;
         }
 
+        /**
+         * @param snapshotClusterIdentifier The name of the cluster the source snapshot was created from. This parameter is required if your IAM user has a policy containing a snapshot resource element that specifies anything other than * for the cluster name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotClusterIdentifier(String snapshotClusterIdentifier) {
             return snapshotClusterIdentifier(Output.of(snapshotClusterIdentifier));
         }
 
+        /**
+         * @param snapshotCopyGrantName The name of the snapshot copy grant to use when snapshots of an AWS KMS-encrypted cluster are copied to the destination region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotCopyGrantName(@Nullable Output<String> snapshotCopyGrantName) {
             $.snapshotCopyGrantName = snapshotCopyGrantName;
             return this;
         }
 
+        /**
+         * @param snapshotCopyGrantName The name of the snapshot copy grant to use when snapshots of an AWS KMS-encrypted cluster are copied to the destination region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotCopyGrantName(String snapshotCopyGrantName) {
             return snapshotCopyGrantName(Output.of(snapshotCopyGrantName));
         }
 
+        /**
+         * @param snapshotCopyManual Indicates whether to apply the snapshot retention period to newly copied manual snapshots instead of automated snapshots.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotCopyManual(@Nullable Output<Boolean> snapshotCopyManual) {
             $.snapshotCopyManual = snapshotCopyManual;
             return this;
         }
 
+        /**
+         * @param snapshotCopyManual Indicates whether to apply the snapshot retention period to newly copied manual snapshots instead of automated snapshots.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotCopyManual(Boolean snapshotCopyManual) {
             return snapshotCopyManual(Output.of(snapshotCopyManual));
         }
 
+        /**
+         * @param snapshotCopyRetentionPeriod The number of days to retain automated snapshots in the destination region after they are copied from the source region.
+         * 
+         *  Default is 7.
+         * 
+         *  Constraints: Must be at least 1 and no more than 35.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotCopyRetentionPeriod(@Nullable Output<Integer> snapshotCopyRetentionPeriod) {
             $.snapshotCopyRetentionPeriod = snapshotCopyRetentionPeriod;
             return this;
         }
 
+        /**
+         * @param snapshotCopyRetentionPeriod The number of days to retain automated snapshots in the destination region after they are copied from the source region.
+         * 
+         *  Default is 7.
+         * 
+         *  Constraints: Must be at least 1 and no more than 35.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotCopyRetentionPeriod(Integer snapshotCopyRetentionPeriod) {
             return snapshotCopyRetentionPeriod(Output.of(snapshotCopyRetentionPeriod));
         }
 
+        /**
+         * @param snapshotIdentifier The name of the snapshot from which to create the new cluster. This parameter isn&#39;t case sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotIdentifier(@Nullable Output<String> snapshotIdentifier) {
             $.snapshotIdentifier = snapshotIdentifier;
             return this;
         }
 
+        /**
+         * @param snapshotIdentifier The name of the snapshot from which to create the new cluster. This parameter isn&#39;t case sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotIdentifier(String snapshotIdentifier) {
             return snapshotIdentifier(Output.of(snapshotIdentifier));
         }
 
+        /**
+         * @param tags The list of tags for the cluster parameter group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<ClusterTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The list of tags for the cluster parameter group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<ClusterTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The list of tags for the cluster parameter group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(ClusterTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param vpcSecurityGroupIds A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
             $.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
 
+        /**
+         * @param vpcSecurityGroupIds A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcSecurityGroupIds(List<String> vpcSecurityGroupIds) {
             return vpcSecurityGroupIds(Output.of(vpcSecurityGroupIds));
         }
 
+        /**
+         * @param vpcSecurityGroupIds A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
             return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
         }
