@@ -16,27 +16,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HTTPGetAction {
     /**
-     * Host name to connect to, defaults to the pod IP. You probably want to set &#34;Host&#34; in httpHeaders instead.
+     * @return Host name to connect to, defaults to the pod IP. You probably want to set &#34;Host&#34; in httpHeaders instead.
      * 
      */
     private final @Nullable String host;
     /**
-     * Custom headers to set in the request. HTTP allows repeated headers.
+     * @return Custom headers to set in the request. HTTP allows repeated headers.
      * 
      */
     private final @Nullable List<HTTPHeader> httpHeaders;
     /**
-     * Path to access on the HTTP server.
+     * @return Path to access on the HTTP server.
      * 
      */
     private final @Nullable String path;
     /**
-     * Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
+     * @return Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
      * 
      */
     private final Either<Integer,String> port;
     /**
-     * Scheme to use for connecting to the host. Defaults to HTTP.
+     * @return Scheme to use for connecting to the host. Defaults to HTTP.
      * 
      * Possible enum values:
      *  - `&#34;HTTP&#34;` means that the scheme used will be http://
@@ -60,41 +60,41 @@ public final class HTTPGetAction {
     }
 
     /**
-     * Host name to connect to, defaults to the pod IP. You probably want to set &#34;Host&#34; in httpHeaders instead.
+     * @return Host name to connect to, defaults to the pod IP. You probably want to set &#34;Host&#34; in httpHeaders instead.
      * 
-    */
+     */
     public Optional<String> host() {
         return Optional.ofNullable(this.host);
     }
     /**
-     * Custom headers to set in the request. HTTP allows repeated headers.
+     * @return Custom headers to set in the request. HTTP allows repeated headers.
      * 
-    */
+     */
     public List<HTTPHeader> httpHeaders() {
         return this.httpHeaders == null ? List.of() : this.httpHeaders;
     }
     /**
-     * Path to access on the HTTP server.
+     * @return Path to access on the HTTP server.
      * 
-    */
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
-     * Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
+     * @return Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
      * 
-    */
+     */
     public Either<Integer,String> port() {
         return this.port;
     }
     /**
-     * Scheme to use for connecting to the host. Defaults to HTTP.
+     * @return Scheme to use for connecting to the host. Defaults to HTTP.
      * 
      * Possible enum values:
      *  - `&#34;HTTP&#34;` means that the scheme used will be http://
      *  - `&#34;HTTPS&#34;` means that the scheme used will be https://
      * 
-    */
+     */
     public Optional<String> scheme() {
         return Optional.ofNullable(this.scheme);
     }

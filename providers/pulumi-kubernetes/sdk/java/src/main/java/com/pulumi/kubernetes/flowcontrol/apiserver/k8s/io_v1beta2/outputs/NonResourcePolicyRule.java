@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class NonResourcePolicyRule {
     /**
-     * `nonResourceURLs` is a set of url prefixes that a user should have access to and may not be empty. For example:
+     * @return `nonResourceURLs` is a set of url prefixes that a user should have access to and may not be empty. For example:
      *   - &#34;/healthz&#34; is legal
      *   - &#34;/hea*&#34; is illegal
      *   - &#34;/hea&#34; is legal but matches nothing
@@ -22,7 +22,7 @@ public final class NonResourcePolicyRule {
      */
     private final List<String> nonResourceURLs;
     /**
-     * `verbs` is a list of matching verbs and may not be empty. &#34;*&#34; matches all verbs. If it is present, it must be the only entry. Required.
+     * @return `verbs` is a list of matching verbs and may not be empty. &#34;*&#34; matches all verbs. If it is present, it must be the only entry. Required.
      * 
      */
     private final List<String> verbs;
@@ -36,7 +36,7 @@ public final class NonResourcePolicyRule {
     }
 
     /**
-     * `nonResourceURLs` is a set of url prefixes that a user should have access to and may not be empty. For example:
+     * @return `nonResourceURLs` is a set of url prefixes that a user should have access to and may not be empty. For example:
      *   - &#34;/healthz&#34; is legal
      *   - &#34;/hea*&#34; is illegal
      *   - &#34;/hea&#34; is legal but matches nothing
@@ -44,14 +44,14 @@ public final class NonResourcePolicyRule {
      *   - &#34;/healthz/*&#34; matches all per-component health checks.
      *     &#34;*&#34; matches all non-resource urls. if it is present, it must be the only entry. Required.
      * 
-    */
+     */
     public List<String> nonResourceURLs() {
         return this.nonResourceURLs;
     }
     /**
-     * `verbs` is a list of matching verbs and may not be empty. &#34;*&#34; matches all verbs. If it is present, it must be the only entry. Required.
+     * @return `verbs` is a list of matching verbs and may not be empty. &#34;*&#34; matches all verbs. If it is present, it must be the only entry. Required.
      * 
-    */
+     */
     public List<String> verbs() {
         return this.verbs;
     }

@@ -12,27 +12,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ReplicationControllerCondition {
     /**
-     * The last time the condition transitioned from one status to another.
+     * @return The last time the condition transitioned from one status to another.
      * 
      */
     private final @Nullable String lastTransitionTime;
     /**
-     * A human readable message indicating details about the transition.
+     * @return A human readable message indicating details about the transition.
      * 
      */
     private final @Nullable String message;
     /**
-     * The reason for the condition&#39;s last transition.
+     * @return The reason for the condition&#39;s last transition.
      * 
      */
     private final @Nullable String reason;
     /**
-     * Status of the condition, one of True, False, Unknown.
+     * @return Status of the condition, one of True, False, Unknown.
      * 
      */
     private final String status;
     /**
-     * Type of replication controller condition.
+     * @return Type of replication controller condition.
      * 
      */
     private final String type;
@@ -52,37 +52,37 @@ public final class ReplicationControllerCondition {
     }
 
     /**
-     * The last time the condition transitioned from one status to another.
+     * @return The last time the condition transitioned from one status to another.
      * 
-    */
+     */
     public Optional<String> lastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
-     * A human readable message indicating details about the transition.
+     * @return A human readable message indicating details about the transition.
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * The reason for the condition&#39;s last transition.
+     * @return The reason for the condition&#39;s last transition.
      * 
-    */
+     */
     public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }
     /**
-     * Status of the condition, one of True, False, Unknown.
+     * @return Status of the condition, one of True, False, Unknown.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Type of replication controller condition.
+     * @return Type of replication controller condition.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

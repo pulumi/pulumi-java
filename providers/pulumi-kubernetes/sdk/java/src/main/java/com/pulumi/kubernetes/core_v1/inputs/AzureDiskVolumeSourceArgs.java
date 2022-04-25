@@ -27,6 +27,10 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
     @Import(name="cachingMode")
     private @Nullable Output<String> cachingMode;
 
+    /**
+     * @return Host Caching mode: None, Read Only, Read Write.
+     * 
+     */
     public Optional<Output<String>> cachingMode() {
         return Optional.ofNullable(this.cachingMode);
     }
@@ -38,6 +42,10 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
     @Import(name="diskName", required=true)
     private Output<String> diskName;
 
+    /**
+     * @return The Name of the data disk in the blob storage
+     * 
+     */
     public Output<String> diskName() {
         return this.diskName;
     }
@@ -49,6 +57,10 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
     @Import(name="diskURI", required=true)
     private Output<String> diskURI;
 
+    /**
+     * @return The URI the data disk in the blob storage
+     * 
+     */
     public Output<String> diskURI() {
         return this.diskURI;
     }
@@ -60,6 +72,10 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
     @Import(name="fsType")
     private @Nullable Output<String> fsType;
 
+    /**
+     * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+     * 
+     */
     public Optional<Output<String>> fsType() {
         return Optional.ofNullable(this.fsType);
     }
@@ -71,6 +87,10 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Expected values Shared: multiple blob disks per storage account  Dedicated: single blob disk per storage account  Managed: azure managed data disk (only in managed availability set). defaults to shared
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -82,6 +102,10 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
+    /**
+     * @return Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * 
+     */
     public Optional<Output<Boolean>> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -115,56 +139,128 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
             $ = new AzureDiskVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cachingMode Host Caching mode: None, Read Only, Read Write.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cachingMode(@Nullable Output<String> cachingMode) {
             $.cachingMode = cachingMode;
             return this;
         }
 
+        /**
+         * @param cachingMode Host Caching mode: None, Read Only, Read Write.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cachingMode(String cachingMode) {
             return cachingMode(Output.of(cachingMode));
         }
 
+        /**
+         * @param diskName The Name of the data disk in the blob storage
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskName(Output<String> diskName) {
             $.diskName = diskName;
             return this;
         }
 
+        /**
+         * @param diskName The Name of the data disk in the blob storage
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskName(String diskName) {
             return diskName(Output.of(diskName));
         }
 
+        /**
+         * @param diskURI The URI the data disk in the blob storage
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskURI(Output<String> diskURI) {
             $.diskURI = diskURI;
             return this;
         }
 
+        /**
+         * @param diskURI The URI the data disk in the blob storage
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskURI(String diskURI) {
             return diskURI(Output.of(diskURI));
         }
 
+        /**
+         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsType(@Nullable Output<String> fsType) {
             $.fsType = fsType;
             return this;
         }
 
+        /**
+         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsType(String fsType) {
             return fsType(Output.of(fsType));
         }
 
+        /**
+         * @param kind Expected values Shared: multiple blob disks per storage account  Dedicated: single blob disk per storage account  Managed: azure managed data disk (only in managed availability set). defaults to shared
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Expected values Shared: multiple blob disks per storage account  Dedicated: single blob disk per storage account  Managed: azure managed data disk (only in managed availability set). defaults to shared
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             $.readOnly = readOnly;
             return this;
         }
 
+        /**
+         * @param readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(Boolean readOnly) {
             return readOnly(Output.of(readOnly));
         }

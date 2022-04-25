@@ -26,6 +26,10 @@ public final class VolumeNodeAffinityArgs extends com.pulumi.resources.ResourceA
     @Import(name="required")
     private @Nullable Output<NodeSelectorArgs> required;
 
+    /**
+     * @return Required specifies hard node constraints that must be met.
+     * 
+     */
     public Optional<Output<NodeSelectorArgs>> required() {
         return Optional.ofNullable(this.required);
     }
@@ -54,11 +58,23 @@ public final class VolumeNodeAffinityArgs extends com.pulumi.resources.ResourceA
             $ = new VolumeNodeAffinityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param required Required specifies hard node constraints that must be met.
+         * 
+         * @return builder
+         * 
+         */
         public Builder required(@Nullable Output<NodeSelectorArgs> required) {
             $.required = required;
             return this;
         }
 
+        /**
+         * @param required Required specifies hard node constraints that must be met.
+         * 
+         * @return builder
+         * 
+         */
         public Builder required(NodeSelectorArgs required) {
             return required(Output.of(required));
         }

@@ -26,6 +26,10 @@ public final class ObjectFieldSelectorArgs extends com.pulumi.resources.Resource
     @Import(name="apiVersion")
     private @Nullable Output<String> apiVersion;
 
+    /**
+     * @return Version of the schema the FieldPath is written in terms of, defaults to &#34;v1&#34;.
+     * 
+     */
     public Optional<Output<String>> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
@@ -37,6 +41,10 @@ public final class ObjectFieldSelectorArgs extends com.pulumi.resources.Resource
     @Import(name="fieldPath", required=true)
     private Output<String> fieldPath;
 
+    /**
+     * @return Path of the field to select in the specified API version.
+     * 
+     */
     public Output<String> fieldPath() {
         return this.fieldPath;
     }
@@ -66,20 +74,44 @@ public final class ObjectFieldSelectorArgs extends com.pulumi.resources.Resource
             $ = new ObjectFieldSelectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiVersion Version of the schema the FieldPath is written in terms of, defaults to &#34;v1&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
             $.apiVersion = apiVersion;
             return this;
         }
 
+        /**
+         * @param apiVersion Version of the schema the FieldPath is written in terms of, defaults to &#34;v1&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(String apiVersion) {
             return apiVersion(Output.of(apiVersion));
         }
 
+        /**
+         * @param fieldPath Path of the field to select in the specified API version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldPath(Output<String> fieldPath) {
             $.fieldPath = fieldPath;
             return this;
         }
 
+        /**
+         * @param fieldPath Path of the field to select in the specified API version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldPath(String fieldPath) {
             return fieldPath(Output.of(fieldPath));
         }

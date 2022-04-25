@@ -29,6 +29,10 @@ public final class HPAScalingRulesArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="policies")
     private @Nullable Output<List<HPAScalingPolicyArgs>> policies;
 
+    /**
+     * @return policies is a list of potential scaling polices which can be used during scaling. At least one policy must be specified, otherwise the HPAScalingRules will be discarded as invalid
+     * 
+     */
     public Optional<Output<List<HPAScalingPolicyArgs>>> policies() {
         return Optional.ofNullable(this.policies);
     }
@@ -40,6 +44,10 @@ public final class HPAScalingRulesArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="selectPolicy")
     private @Nullable Output<String> selectPolicy;
 
+    /**
+     * @return selectPolicy is used to specify which policy should be used. If not set, the default value MaxPolicySelect is used.
+     * 
+     */
     public Optional<Output<String>> selectPolicy() {
         return Optional.ofNullable(this.selectPolicy);
     }
@@ -51,6 +59,10 @@ public final class HPAScalingRulesArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="stabilizationWindowSeconds")
     private @Nullable Output<Integer> stabilizationWindowSeconds;
 
+    /**
+     * @return StabilizationWindowSeconds is the number of seconds for which past recommendations should be considered while scaling up or scaling down. StabilizationWindowSeconds must be greater than or equal to zero and less than or equal to 3600 (one hour). If not set, use the default values: - For scale up: 0 (i.e. no stabilization is done). - For scale down: 300 (i.e. the stabilization window is 300 seconds long).
+     * 
+     */
     public Optional<Output<Integer>> stabilizationWindowSeconds() {
         return Optional.ofNullable(this.stabilizationWindowSeconds);
     }
@@ -81,33 +93,75 @@ public final class HPAScalingRulesArgs extends com.pulumi.resources.ResourceArgs
             $ = new HPAScalingRulesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policies policies is a list of potential scaling polices which can be used during scaling. At least one policy must be specified, otherwise the HPAScalingRules will be discarded as invalid
+         * 
+         * @return builder
+         * 
+         */
         public Builder policies(@Nullable Output<List<HPAScalingPolicyArgs>> policies) {
             $.policies = policies;
             return this;
         }
 
+        /**
+         * @param policies policies is a list of potential scaling polices which can be used during scaling. At least one policy must be specified, otherwise the HPAScalingRules will be discarded as invalid
+         * 
+         * @return builder
+         * 
+         */
         public Builder policies(List<HPAScalingPolicyArgs> policies) {
             return policies(Output.of(policies));
         }
 
+        /**
+         * @param policies policies is a list of potential scaling polices which can be used during scaling. At least one policy must be specified, otherwise the HPAScalingRules will be discarded as invalid
+         * 
+         * @return builder
+         * 
+         */
         public Builder policies(HPAScalingPolicyArgs... policies) {
             return policies(List.of(policies));
         }
 
+        /**
+         * @param selectPolicy selectPolicy is used to specify which policy should be used. If not set, the default value MaxPolicySelect is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectPolicy(@Nullable Output<String> selectPolicy) {
             $.selectPolicy = selectPolicy;
             return this;
         }
 
+        /**
+         * @param selectPolicy selectPolicy is used to specify which policy should be used. If not set, the default value MaxPolicySelect is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectPolicy(String selectPolicy) {
             return selectPolicy(Output.of(selectPolicy));
         }
 
+        /**
+         * @param stabilizationWindowSeconds StabilizationWindowSeconds is the number of seconds for which past recommendations should be considered while scaling up or scaling down. StabilizationWindowSeconds must be greater than or equal to zero and less than or equal to 3600 (one hour). If not set, use the default values: - For scale up: 0 (i.e. no stabilization is done). - For scale down: 300 (i.e. the stabilization window is 300 seconds long).
+         * 
+         * @return builder
+         * 
+         */
         public Builder stabilizationWindowSeconds(@Nullable Output<Integer> stabilizationWindowSeconds) {
             $.stabilizationWindowSeconds = stabilizationWindowSeconds;
             return this;
         }
 
+        /**
+         * @param stabilizationWindowSeconds StabilizationWindowSeconds is the number of seconds for which past recommendations should be considered while scaling up or scaling down. StabilizationWindowSeconds must be greater than or equal to zero and less than or equal to 3600 (one hour). If not set, use the default values: - For scale up: 0 (i.e. no stabilization is done). - For scale down: 300 (i.e. the stabilization window is 300 seconds long).
+         * 
+         * @return builder
+         * 
+         */
         public Builder stabilizationWindowSeconds(Integer stabilizationWindowSeconds) {
             return stabilizationWindowSeconds(Output.of(stabilizationWindowSeconds));
         }

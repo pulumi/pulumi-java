@@ -26,6 +26,10 @@ public final class CustomResourceValidationArgs extends com.pulumi.resources.Res
     @Import(name="openAPIV3Schema")
     private @Nullable Output<JSONSchemaPropsArgs> openAPIV3Schema;
 
+    /**
+     * @return openAPIV3Schema is the OpenAPI v3 schema to use for validation and pruning.
+     * 
+     */
     public Optional<Output<JSONSchemaPropsArgs>> openAPIV3Schema() {
         return Optional.ofNullable(this.openAPIV3Schema);
     }
@@ -54,11 +58,23 @@ public final class CustomResourceValidationArgs extends com.pulumi.resources.Res
             $ = new CustomResourceValidationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param openAPIV3Schema openAPIV3Schema is the OpenAPI v3 schema to use for validation and pruning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openAPIV3Schema(@Nullable Output<JSONSchemaPropsArgs> openAPIV3Schema) {
             $.openAPIV3Schema = openAPIV3Schema;
             return this;
         }
 
+        /**
+         * @param openAPIV3Schema openAPIV3Schema is the OpenAPI v3 schema to use for validation and pruning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openAPIV3Schema(JSONSchemaPropsArgs openAPIV3Schema) {
             return openAPIV3Schema(Output.of(openAPIV3Schema));
         }

@@ -27,6 +27,10 @@ public final class TokenRequestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="audience", required=true)
     private Output<String> audience;
 
+    /**
+     * @return Audience is the intended audience of the token in &#34;TokenRequestSpec&#34;. It will default to the audiences of kube apiserver.
+     * 
+     */
     public Output<String> audience() {
         return this.audience;
     }
@@ -38,6 +42,10 @@ public final class TokenRequestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expirationSeconds")
     private @Nullable Output<Integer> expirationSeconds;
 
+    /**
+     * @return ExpirationSeconds is the duration of validity of the token in &#34;TokenRequestSpec&#34;. It has the same default value of &#34;ExpirationSeconds&#34; in &#34;TokenRequestSpec&#34;
+     * 
+     */
     public Optional<Output<Integer>> expirationSeconds() {
         return Optional.ofNullable(this.expirationSeconds);
     }
@@ -67,20 +75,44 @@ public final class TokenRequestArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TokenRequestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audience Audience is the intended audience of the token in &#34;TokenRequestSpec&#34;. It will default to the audiences of kube apiserver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audience(Output<String> audience) {
             $.audience = audience;
             return this;
         }
 
+        /**
+         * @param audience Audience is the intended audience of the token in &#34;TokenRequestSpec&#34;. It will default to the audiences of kube apiserver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audience(String audience) {
             return audience(Output.of(audience));
         }
 
+        /**
+         * @param expirationSeconds ExpirationSeconds is the duration of validity of the token in &#34;TokenRequestSpec&#34;. It has the same default value of &#34;ExpirationSeconds&#34; in &#34;TokenRequestSpec&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationSeconds(@Nullable Output<Integer> expirationSeconds) {
             $.expirationSeconds = expirationSeconds;
             return this;
         }
 
+        /**
+         * @param expirationSeconds ExpirationSeconds is the duration of validity of the token in &#34;TokenRequestSpec&#34;. It has the same default value of &#34;ExpirationSeconds&#34; in &#34;TokenRequestSpec&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationSeconds(Integer expirationSeconds) {
             return expirationSeconds(Output.of(expirationSeconds));
         }

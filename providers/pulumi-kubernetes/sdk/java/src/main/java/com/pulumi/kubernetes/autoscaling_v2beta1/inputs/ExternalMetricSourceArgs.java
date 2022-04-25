@@ -27,6 +27,10 @@ public final class ExternalMetricSourceArgs extends com.pulumi.resources.Resourc
     @Import(name="metricName", required=true)
     private Output<String> metricName;
 
+    /**
+     * @return metricName is the name of the metric in question.
+     * 
+     */
     public Output<String> metricName() {
         return this.metricName;
     }
@@ -38,6 +42,10 @@ public final class ExternalMetricSourceArgs extends com.pulumi.resources.Resourc
     @Import(name="metricSelector")
     private @Nullable Output<LabelSelectorArgs> metricSelector;
 
+    /**
+     * @return metricSelector is used to identify a specific time series within a given metric.
+     * 
+     */
     public Optional<Output<LabelSelectorArgs>> metricSelector() {
         return Optional.ofNullable(this.metricSelector);
     }
@@ -49,6 +57,10 @@ public final class ExternalMetricSourceArgs extends com.pulumi.resources.Resourc
     @Import(name="targetAverageValue")
     private @Nullable Output<String> targetAverageValue;
 
+    /**
+     * @return targetAverageValue is the target per-pod value of global metric (as a quantity). Mutually exclusive with TargetValue.
+     * 
+     */
     public Optional<Output<String>> targetAverageValue() {
         return Optional.ofNullable(this.targetAverageValue);
     }
@@ -60,6 +72,10 @@ public final class ExternalMetricSourceArgs extends com.pulumi.resources.Resourc
     @Import(name="targetValue")
     private @Nullable Output<String> targetValue;
 
+    /**
+     * @return targetValue is the target value of the metric (as a quantity). Mutually exclusive with TargetAverageValue.
+     * 
+     */
     public Optional<Output<String>> targetValue() {
         return Optional.ofNullable(this.targetValue);
     }
@@ -91,38 +107,86 @@ public final class ExternalMetricSourceArgs extends com.pulumi.resources.Resourc
             $ = new ExternalMetricSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metricName metricName is the name of the metric in question.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(Output<String> metricName) {
             $.metricName = metricName;
             return this;
         }
 
+        /**
+         * @param metricName metricName is the name of the metric in question.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(String metricName) {
             return metricName(Output.of(metricName));
         }
 
+        /**
+         * @param metricSelector metricSelector is used to identify a specific time series within a given metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricSelector(@Nullable Output<LabelSelectorArgs> metricSelector) {
             $.metricSelector = metricSelector;
             return this;
         }
 
+        /**
+         * @param metricSelector metricSelector is used to identify a specific time series within a given metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricSelector(LabelSelectorArgs metricSelector) {
             return metricSelector(Output.of(metricSelector));
         }
 
+        /**
+         * @param targetAverageValue targetAverageValue is the target per-pod value of global metric (as a quantity). Mutually exclusive with TargetValue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAverageValue(@Nullable Output<String> targetAverageValue) {
             $.targetAverageValue = targetAverageValue;
             return this;
         }
 
+        /**
+         * @param targetAverageValue targetAverageValue is the target per-pod value of global metric (as a quantity). Mutually exclusive with TargetValue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAverageValue(String targetAverageValue) {
             return targetAverageValue(Output.of(targetAverageValue));
         }
 
+        /**
+         * @param targetValue targetValue is the target value of the metric (as a quantity). Mutually exclusive with TargetAverageValue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetValue(@Nullable Output<String> targetValue) {
             $.targetValue = targetValue;
             return this;
         }
 
+        /**
+         * @param targetValue targetValue is the target value of the metric (as a quantity). Mutually exclusive with TargetAverageValue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetValue(String targetValue) {
             return targetValue(Output.of(targetValue));
         }

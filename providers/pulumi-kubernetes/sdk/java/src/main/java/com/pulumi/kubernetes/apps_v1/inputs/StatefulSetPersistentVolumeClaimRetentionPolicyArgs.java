@@ -26,6 +26,10 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends c
     @Import(name="whenDeleted")
     private @Nullable Output<String> whenDeleted;
 
+    /**
+     * @return WhenDeleted specifies what happens to PVCs created from StatefulSet VolumeClaimTemplates when the StatefulSet is deleted. The default policy of `Retain` causes PVCs to not be affected by StatefulSet deletion. The `Delete` policy causes those PVCs to be deleted.
+     * 
+     */
     public Optional<Output<String>> whenDeleted() {
         return Optional.ofNullable(this.whenDeleted);
     }
@@ -37,6 +41,10 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends c
     @Import(name="whenScaled")
     private @Nullable Output<String> whenScaled;
 
+    /**
+     * @return WhenScaled specifies what happens to PVCs created from StatefulSet VolumeClaimTemplates when the StatefulSet is scaled down. The default policy of `Retain` causes PVCs to not be affected by a scaledown. The `Delete` policy causes the associated PVCs for any excess pods above the replica count to be deleted.
+     * 
+     */
     public Optional<Output<String>> whenScaled() {
         return Optional.ofNullable(this.whenScaled);
     }
@@ -66,20 +74,44 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends c
             $ = new StatefulSetPersistentVolumeClaimRetentionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param whenDeleted WhenDeleted specifies what happens to PVCs created from StatefulSet VolumeClaimTemplates when the StatefulSet is deleted. The default policy of `Retain` causes PVCs to not be affected by StatefulSet deletion. The `Delete` policy causes those PVCs to be deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder whenDeleted(@Nullable Output<String> whenDeleted) {
             $.whenDeleted = whenDeleted;
             return this;
         }
 
+        /**
+         * @param whenDeleted WhenDeleted specifies what happens to PVCs created from StatefulSet VolumeClaimTemplates when the StatefulSet is deleted. The default policy of `Retain` causes PVCs to not be affected by StatefulSet deletion. The `Delete` policy causes those PVCs to be deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder whenDeleted(String whenDeleted) {
             return whenDeleted(Output.of(whenDeleted));
         }
 
+        /**
+         * @param whenScaled WhenScaled specifies what happens to PVCs created from StatefulSet VolumeClaimTemplates when the StatefulSet is scaled down. The default policy of `Retain` causes PVCs to not be affected by a scaledown. The `Delete` policy causes the associated PVCs for any excess pods above the replica count to be deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder whenScaled(@Nullable Output<String> whenScaled) {
             $.whenScaled = whenScaled;
             return this;
         }
 
+        /**
+         * @param whenScaled WhenScaled specifies what happens to PVCs created from StatefulSet VolumeClaimTemplates when the StatefulSet is scaled down. The default policy of `Retain` causes PVCs to not be affected by a scaledown. The `Delete` policy causes the associated PVCs for any excess pods above the replica count to be deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder whenScaled(String whenScaled) {
             return whenScaled(Output.of(whenScaled));
         }

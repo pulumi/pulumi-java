@@ -22,6 +22,10 @@ public final class SelfSubjectRulesReviewSpecArgs extends com.pulumi.resources.R
     @Import(name="namespace")
     private @Nullable Output<String> namespace;
 
+    /**
+     * @return Namespace to evaluate rules for. Required.
+     * 
+     */
     public Optional<Output<String>> namespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -50,11 +54,23 @@ public final class SelfSubjectRulesReviewSpecArgs extends com.pulumi.resources.R
             $ = new SelfSubjectRulesReviewSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param namespace Namespace to evaluate rules for. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(@Nullable Output<String> namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param namespace Namespace to evaluate rules for. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             return namespace(Output.of(namespace));
         }

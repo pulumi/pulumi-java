@@ -29,6 +29,10 @@ public final class FlexPersistentVolumeSourceArgs extends com.pulumi.resources.R
     @Import(name="driver", required=true)
     private Output<String> driver;
 
+    /**
+     * @return Driver is the name of the driver to use for this volume.
+     * 
+     */
     public Output<String> driver() {
         return this.driver;
     }
@@ -40,6 +44,10 @@ public final class FlexPersistentVolumeSourceArgs extends com.pulumi.resources.R
     @Import(name="fsType")
     private @Nullable Output<String> fsType;
 
+    /**
+     * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default filesystem depends on FlexVolume script.
+     * 
+     */
     public Optional<Output<String>> fsType() {
         return Optional.ofNullable(this.fsType);
     }
@@ -51,6 +59,10 @@ public final class FlexPersistentVolumeSourceArgs extends com.pulumi.resources.R
     @Import(name="options")
     private @Nullable Output<Map<String,String>> options;
 
+    /**
+     * @return Optional: Extra command options if any.
+     * 
+     */
     public Optional<Output<Map<String,String>>> options() {
         return Optional.ofNullable(this.options);
     }
@@ -62,6 +74,10 @@ public final class FlexPersistentVolumeSourceArgs extends com.pulumi.resources.R
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
+    /**
+     * @return Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * 
+     */
     public Optional<Output<Boolean>> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -73,6 +89,10 @@ public final class FlexPersistentVolumeSourceArgs extends com.pulumi.resources.R
     @Import(name="secretRef")
     private @Nullable Output<SecretReferenceArgs> secretRef;
 
+    /**
+     * @return Optional: SecretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.
+     * 
+     */
     public Optional<Output<SecretReferenceArgs>> secretRef() {
         return Optional.ofNullable(this.secretRef);
     }
@@ -105,47 +125,107 @@ public final class FlexPersistentVolumeSourceArgs extends com.pulumi.resources.R
             $ = new FlexPersistentVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param driver Driver is the name of the driver to use for this volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driver(Output<String> driver) {
             $.driver = driver;
             return this;
         }
 
+        /**
+         * @param driver Driver is the name of the driver to use for this volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driver(String driver) {
             return driver(Output.of(driver));
         }
 
+        /**
+         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default filesystem depends on FlexVolume script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsType(@Nullable Output<String> fsType) {
             $.fsType = fsType;
             return this;
         }
 
+        /**
+         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default filesystem depends on FlexVolume script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsType(String fsType) {
             return fsType(Output.of(fsType));
         }
 
+        /**
+         * @param options Optional: Extra command options if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(@Nullable Output<Map<String,String>> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options Optional: Extra command options if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(Map<String,String> options) {
             return options(Output.of(options));
         }
 
+        /**
+         * @param readOnly Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             $.readOnly = readOnly;
             return this;
         }
 
+        /**
+         * @param readOnly Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(Boolean readOnly) {
             return readOnly(Output.of(readOnly));
         }
 
+        /**
+         * @param secretRef Optional: SecretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretRef(@Nullable Output<SecretReferenceArgs> secretRef) {
             $.secretRef = secretRef;
             return this;
         }
 
+        /**
+         * @param secretRef Optional: SecretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretRef(SecretReferenceArgs secretRef) {
             return secretRef(Output.of(secretRef));
         }

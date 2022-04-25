@@ -27,6 +27,10 @@ public final class TopologySelectorTermArgs extends com.pulumi.resources.Resourc
     @Import(name="matchLabelExpressions")
     private @Nullable Output<List<TopologySelectorLabelRequirementArgs>> matchLabelExpressions;
 
+    /**
+     * @return A list of topology selector requirements by labels.
+     * 
+     */
     public Optional<Output<List<TopologySelectorLabelRequirementArgs>>> matchLabelExpressions() {
         return Optional.ofNullable(this.matchLabelExpressions);
     }
@@ -55,15 +59,33 @@ public final class TopologySelectorTermArgs extends com.pulumi.resources.Resourc
             $ = new TopologySelectorTermArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param matchLabelExpressions A list of topology selector requirements by labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchLabelExpressions(@Nullable Output<List<TopologySelectorLabelRequirementArgs>> matchLabelExpressions) {
             $.matchLabelExpressions = matchLabelExpressions;
             return this;
         }
 
+        /**
+         * @param matchLabelExpressions A list of topology selector requirements by labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchLabelExpressions(List<TopologySelectorLabelRequirementArgs> matchLabelExpressions) {
             return matchLabelExpressions(Output.of(matchLabelExpressions));
         }
 
+        /**
+         * @param matchLabelExpressions A list of topology selector requirements by labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchLabelExpressions(TopologySelectorLabelRequirementArgs... matchLabelExpressions) {
             return matchLabelExpressions(List.of(matchLabelExpressions));
         }

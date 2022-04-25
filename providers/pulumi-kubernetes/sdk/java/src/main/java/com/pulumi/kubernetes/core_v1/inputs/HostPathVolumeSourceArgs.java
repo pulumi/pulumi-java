@@ -26,6 +26,10 @@ public final class HostPathVolumeSourceArgs extends com.pulumi.resources.Resourc
     @Import(name="path", required=true)
     private Output<String> path;
 
+    /**
+     * @return Path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+     * 
+     */
     public Output<String> path() {
         return this.path;
     }
@@ -37,6 +41,10 @@ public final class HostPathVolumeSourceArgs extends com.pulumi.resources.Resourc
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Type for HostPath Volume Defaults to &#34;&#34; More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -66,20 +74,44 @@ public final class HostPathVolumeSourceArgs extends com.pulumi.resources.Resourc
             $ = new HostPathVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param path Path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path Path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param type Type for HostPath Volume Defaults to &#34;&#34; More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type for HostPath Volume Defaults to &#34;&#34; More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

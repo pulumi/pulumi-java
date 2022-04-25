@@ -26,6 +26,10 @@ public final class TypedLocalObjectReferenceArgs extends com.pulumi.resources.Re
     @Import(name="apiGroup")
     private @Nullable Output<String> apiGroup;
 
+    /**
+     * @return APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.
+     * 
+     */
     public Optional<Output<String>> apiGroup() {
         return Optional.ofNullable(this.apiGroup);
     }
@@ -37,6 +41,10 @@ public final class TypedLocalObjectReferenceArgs extends com.pulumi.resources.Re
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Kind is the type of resource being referenced
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -48,6 +56,10 @@ public final class TypedLocalObjectReferenceArgs extends com.pulumi.resources.Re
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name is the name of resource being referenced
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -78,29 +90,65 @@ public final class TypedLocalObjectReferenceArgs extends com.pulumi.resources.Re
             $ = new TypedLocalObjectReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiGroup APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiGroup(@Nullable Output<String> apiGroup) {
             $.apiGroup = apiGroup;
             return this;
         }
 
+        /**
+         * @param apiGroup APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiGroup(String apiGroup) {
             return apiGroup(Output.of(apiGroup));
         }
 
+        /**
+         * @param kind Kind is the type of resource being referenced
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind is the type of resource being referenced
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param name Name is the name of resource being referenced
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name is the name of resource being referenced
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

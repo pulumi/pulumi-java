@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MetricValueStatus {
     /**
-     * currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.
+     * @return currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.
      * 
      */
     private final @Nullable Integer averageUtilization;
     /**
-     * averageValue is the current value of the average of the metric across all relevant pods (as a quantity)
+     * @return averageValue is the current value of the average of the metric across all relevant pods (as a quantity)
      * 
      */
     private final @Nullable String averageValue;
     /**
-     * value is the current value of the metric (as a quantity).
+     * @return value is the current value of the metric (as a quantity).
      * 
      */
     private final @Nullable String value;
@@ -39,23 +39,23 @@ public final class MetricValueStatus {
     }
 
     /**
-     * currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.
+     * @return currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.
      * 
-    */
+     */
     public Optional<Integer> averageUtilization() {
         return Optional.ofNullable(this.averageUtilization);
     }
     /**
-     * averageValue is the current value of the average of the metric across all relevant pods (as a quantity)
+     * @return averageValue is the current value of the average of the metric across all relevant pods (as a quantity)
      * 
-    */
+     */
     public Optional<String> averageValue() {
         return Optional.ofNullable(this.averageValue);
     }
     /**
-     * value is the current value of the metric (as a quantity).
+     * @return value is the current value of the metric (as a quantity).
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

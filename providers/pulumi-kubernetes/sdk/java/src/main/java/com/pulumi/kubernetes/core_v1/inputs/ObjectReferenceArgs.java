@@ -26,6 +26,10 @@ public final class ObjectReferenceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="apiVersion")
     private @Nullable Output<String> apiVersion;
 
+    /**
+     * @return API version of the referent.
+     * 
+     */
     public Optional<Output<String>> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
@@ -37,6 +41,10 @@ public final class ObjectReferenceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="fieldPath")
     private @Nullable Output<String> fieldPath;
 
+    /**
+     * @return If referring to a piece of an object instead of an entire object, this string should contain a valid JSON/Go field access statement, such as desiredState.manifest.containers[2]. For example, if the object reference is to a container within a pod, this would take on a value like: &#34;spec.containers{name}&#34; (where &#34;name&#34; refers to the name of the container that triggered the event) or if no container name is specified &#34;spec.containers[2]&#34; (container with index 2 in this pod). This syntax is chosen only to have some well-defined way of referencing a part of an object.
+     * 
+     */
     public Optional<Output<String>> fieldPath() {
         return Optional.ofNullable(this.fieldPath);
     }
@@ -48,6 +56,10 @@ public final class ObjectReferenceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -59,6 +71,10 @@ public final class ObjectReferenceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -70,6 +86,10 @@ public final class ObjectReferenceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="namespace")
     private @Nullable Output<String> namespace;
 
+    /**
+     * @return Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
+     * 
+     */
     public Optional<Output<String>> namespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -81,6 +101,10 @@ public final class ObjectReferenceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceVersion")
     private @Nullable Output<String> resourceVersion;
 
+    /**
+     * @return Specific resourceVersion to which this reference is made, if any. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency
+     * 
+     */
     public Optional<Output<String>> resourceVersion() {
         return Optional.ofNullable(this.resourceVersion);
     }
@@ -92,6 +116,10 @@ public final class ObjectReferenceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="uid")
     private @Nullable Output<String> uid;
 
+    /**
+     * @return UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#uids
+     * 
+     */
     public Optional<Output<String>> uid() {
         return Optional.ofNullable(this.uid);
     }
@@ -126,65 +154,149 @@ public final class ObjectReferenceArgs extends com.pulumi.resources.ResourceArgs
             $ = new ObjectReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiVersion API version of the referent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
             $.apiVersion = apiVersion;
             return this;
         }
 
+        /**
+         * @param apiVersion API version of the referent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(String apiVersion) {
             return apiVersion(Output.of(apiVersion));
         }
 
+        /**
+         * @param fieldPath If referring to a piece of an object instead of an entire object, this string should contain a valid JSON/Go field access statement, such as desiredState.manifest.containers[2]. For example, if the object reference is to a container within a pod, this would take on a value like: &#34;spec.containers{name}&#34; (where &#34;name&#34; refers to the name of the container that triggered the event) or if no container name is specified &#34;spec.containers[2]&#34; (container with index 2 in this pod). This syntax is chosen only to have some well-defined way of referencing a part of an object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldPath(@Nullable Output<String> fieldPath) {
             $.fieldPath = fieldPath;
             return this;
         }
 
+        /**
+         * @param fieldPath If referring to a piece of an object instead of an entire object, this string should contain a valid JSON/Go field access statement, such as desiredState.manifest.containers[2]. For example, if the object reference is to a container within a pod, this would take on a value like: &#34;spec.containers{name}&#34; (where &#34;name&#34; refers to the name of the container that triggered the event) or if no container name is specified &#34;spec.containers[2]&#34; (container with index 2 in this pod). This syntax is chosen only to have some well-defined way of referencing a part of an object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldPath(String fieldPath) {
             return fieldPath(Output.of(fieldPath));
         }
 
+        /**
+         * @param kind Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param name Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namespace Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(@Nullable Output<String> namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param namespace Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             return namespace(Output.of(namespace));
         }
 
+        /**
+         * @param resourceVersion Specific resourceVersion to which this reference is made, if any. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceVersion(@Nullable Output<String> resourceVersion) {
             $.resourceVersion = resourceVersion;
             return this;
         }
 
+        /**
+         * @param resourceVersion Specific resourceVersion to which this reference is made, if any. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceVersion(String resourceVersion) {
             return resourceVersion(Output.of(resourceVersion));
         }
 
+        /**
+         * @param uid UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#uids
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(@Nullable Output<String> uid) {
             $.uid = uid;
             return this;
         }
 
+        /**
+         * @param uid UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#uids
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(String uid) {
             return uid(Output.of(uid));
         }

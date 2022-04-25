@@ -27,6 +27,10 @@ public final class IngressTLSArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hosts")
     private @Nullable Output<List<String>> hosts;
 
+    /**
+     * @return Hosts are a list of hosts included in the TLS certificate. The values in this list must match the name/s used in the tlsSecret. Defaults to the wildcard host setting for the loadbalancer controller fulfilling this Ingress, if left unspecified.
+     * 
+     */
     public Optional<Output<List<String>>> hosts() {
         return Optional.ofNullable(this.hosts);
     }
@@ -38,6 +42,10 @@ public final class IngressTLSArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secretName")
     private @Nullable Output<String> secretName;
 
+    /**
+     * @return SecretName is the name of the secret used to terminate TLS traffic on port 443. Field is left optional to allow TLS routing based on SNI hostname alone. If the SNI host in a listener conflicts with the &#34;Host&#34; header field used by an IngressRule, the SNI host is used for termination and value of the Host header is used for routing.
+     * 
+     */
     public Optional<Output<String>> secretName() {
         return Optional.ofNullable(this.secretName);
     }
@@ -67,24 +75,54 @@ public final class IngressTLSArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IngressTLSArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hosts Hosts are a list of hosts included in the TLS certificate. The values in this list must match the name/s used in the tlsSecret. Defaults to the wildcard host setting for the loadbalancer controller fulfilling this Ingress, if left unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hosts(@Nullable Output<List<String>> hosts) {
             $.hosts = hosts;
             return this;
         }
 
+        /**
+         * @param hosts Hosts are a list of hosts included in the TLS certificate. The values in this list must match the name/s used in the tlsSecret. Defaults to the wildcard host setting for the loadbalancer controller fulfilling this Ingress, if left unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hosts(List<String> hosts) {
             return hosts(Output.of(hosts));
         }
 
+        /**
+         * @param hosts Hosts are a list of hosts included in the TLS certificate. The values in this list must match the name/s used in the tlsSecret. Defaults to the wildcard host setting for the loadbalancer controller fulfilling this Ingress, if left unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hosts(String... hosts) {
             return hosts(List.of(hosts));
         }
 
+        /**
+         * @param secretName SecretName is the name of the secret used to terminate TLS traffic on port 443. Field is left optional to allow TLS routing based on SNI hostname alone. If the SNI host in a listener conflicts with the &#34;Host&#34; header field used by an IngressRule, the SNI host is used for termination and value of the Host header is used for routing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretName(@Nullable Output<String> secretName) {
             $.secretName = secretName;
             return this;
         }
 
+        /**
+         * @param secretName SecretName is the name of the secret used to terminate TLS traffic on port 443. Field is left optional to allow TLS routing based on SNI hostname alone. If the SNI host in a listener conflicts with the &#34;Host&#34; header field used by an IngressRule, the SNI host is used for termination and value of the Host header is used for routing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretName(String secretName) {
             return secretName(Output.of(secretName));
         }

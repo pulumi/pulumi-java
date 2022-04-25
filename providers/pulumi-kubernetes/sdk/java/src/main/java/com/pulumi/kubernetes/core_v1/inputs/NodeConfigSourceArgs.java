@@ -26,6 +26,10 @@ public final class NodeConfigSourceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="configMap")
     private @Nullable Output<ConfigMapNodeConfigSourceArgs> configMap;
 
+    /**
+     * @return ConfigMap is a reference to a Node&#39;s ConfigMap
+     * 
+     */
     public Optional<Output<ConfigMapNodeConfigSourceArgs>> configMap() {
         return Optional.ofNullable(this.configMap);
     }
@@ -54,11 +58,23 @@ public final class NodeConfigSourceArgs extends com.pulumi.resources.ResourceArg
             $ = new NodeConfigSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configMap ConfigMap is a reference to a Node&#39;s ConfigMap
+         * 
+         * @return builder
+         * 
+         */
         public Builder configMap(@Nullable Output<ConfigMapNodeConfigSourceArgs> configMap) {
             $.configMap = configMap;
             return this;
         }
 
+        /**
+         * @param configMap ConfigMap is a reference to a Node&#39;s ConfigMap
+         * 
+         * @return builder
+         * 
+         */
         public Builder configMap(ConfigMapNodeConfigSourceArgs configMap) {
             return configMap(Output.of(configMap));
         }

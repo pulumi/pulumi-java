@@ -29,6 +29,10 @@ public final class VolumeProjectionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="configMap")
     private @Nullable Output<ConfigMapProjectionArgs> configMap;
 
+    /**
+     * @return information about the configMap data to project
+     * 
+     */
     public Optional<Output<ConfigMapProjectionArgs>> configMap() {
         return Optional.ofNullable(this.configMap);
     }
@@ -40,6 +44,10 @@ public final class VolumeProjectionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="downwardAPI")
     private @Nullable Output<DownwardAPIProjectionArgs> downwardAPI;
 
+    /**
+     * @return information about the downwardAPI data to project
+     * 
+     */
     public Optional<Output<DownwardAPIProjectionArgs>> downwardAPI() {
         return Optional.ofNullable(this.downwardAPI);
     }
@@ -51,6 +59,10 @@ public final class VolumeProjectionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="secret")
     private @Nullable Output<SecretProjectionArgs> secret;
 
+    /**
+     * @return information about the secret data to project
+     * 
+     */
     public Optional<Output<SecretProjectionArgs>> secret() {
         return Optional.ofNullable(this.secret);
     }
@@ -62,6 +74,10 @@ public final class VolumeProjectionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="serviceAccountToken")
     private @Nullable Output<ServiceAccountTokenProjectionArgs> serviceAccountToken;
 
+    /**
+     * @return information about the serviceAccountToken data to project
+     * 
+     */
     public Optional<Output<ServiceAccountTokenProjectionArgs>> serviceAccountToken() {
         return Optional.ofNullable(this.serviceAccountToken);
     }
@@ -93,38 +109,86 @@ public final class VolumeProjectionArgs extends com.pulumi.resources.ResourceArg
             $ = new VolumeProjectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configMap information about the configMap data to project
+         * 
+         * @return builder
+         * 
+         */
         public Builder configMap(@Nullable Output<ConfigMapProjectionArgs> configMap) {
             $.configMap = configMap;
             return this;
         }
 
+        /**
+         * @param configMap information about the configMap data to project
+         * 
+         * @return builder
+         * 
+         */
         public Builder configMap(ConfigMapProjectionArgs configMap) {
             return configMap(Output.of(configMap));
         }
 
+        /**
+         * @param downwardAPI information about the downwardAPI data to project
+         * 
+         * @return builder
+         * 
+         */
         public Builder downwardAPI(@Nullable Output<DownwardAPIProjectionArgs> downwardAPI) {
             $.downwardAPI = downwardAPI;
             return this;
         }
 
+        /**
+         * @param downwardAPI information about the downwardAPI data to project
+         * 
+         * @return builder
+         * 
+         */
         public Builder downwardAPI(DownwardAPIProjectionArgs downwardAPI) {
             return downwardAPI(Output.of(downwardAPI));
         }
 
+        /**
+         * @param secret information about the secret data to project
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(@Nullable Output<SecretProjectionArgs> secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param secret information about the secret data to project
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(SecretProjectionArgs secret) {
             return secret(Output.of(secret));
         }
 
+        /**
+         * @param serviceAccountToken information about the serviceAccountToken data to project
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountToken(@Nullable Output<ServiceAccountTokenProjectionArgs> serviceAccountToken) {
             $.serviceAccountToken = serviceAccountToken;
             return this;
         }
 
+        /**
+         * @param serviceAccountToken information about the serviceAccountToken data to project
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountToken(ServiceAccountTokenProjectionArgs serviceAccountToken) {
             return serviceAccountToken(Output.of(serviceAccountToken));
         }

@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StatefulSetUpdateStrategy {
     /**
-     * RollingUpdate is used to communicate parameters when Type is RollingUpdateStatefulSetStrategyType.
+     * @return RollingUpdate is used to communicate parameters when Type is RollingUpdateStatefulSetStrategyType.
      * 
      */
     private final @Nullable RollingUpdateStatefulSetStrategy rollingUpdate;
     /**
-     * Type indicates the type of the StatefulSetUpdateStrategy. Default is RollingUpdate.
+     * @return Type indicates the type of the StatefulSetUpdateStrategy. Default is RollingUpdate.
      * 
      */
     private final @Nullable String type;
@@ -32,16 +32,16 @@ public final class StatefulSetUpdateStrategy {
     }
 
     /**
-     * RollingUpdate is used to communicate parameters when Type is RollingUpdateStatefulSetStrategyType.
+     * @return RollingUpdate is used to communicate parameters when Type is RollingUpdateStatefulSetStrategyType.
      * 
-    */
+     */
     public Optional<RollingUpdateStatefulSetStrategy> rollingUpdate() {
         return Optional.ofNullable(this.rollingUpdate);
     }
     /**
-     * Type indicates the type of the StatefulSetUpdateStrategy. Default is RollingUpdate.
+     * @return Type indicates the type of the StatefulSetUpdateStrategy. Default is RollingUpdate.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

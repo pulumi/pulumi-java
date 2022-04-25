@@ -31,6 +31,10 @@ public final class CustomResourceDefinitionVersionArgs extends com.pulumi.resour
     @Import(name="additionalPrinterColumns")
     private @Nullable Output<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns;
 
+    /**
+     * @return additionalPrinterColumns specifies additional columns returned in Table output. See https://kubernetes.io/docs/reference/using-api/api-concepts/#receiving-resources-as-tables for details. Top-level and per-version columns are mutually exclusive. Per-version columns must not all be set to identical values (top-level columns should be used instead). If no top-level or per-version columns are specified, a single column displaying the age of the custom resource is used.
+     * 
+     */
     public Optional<Output<List<CustomResourceColumnDefinitionArgs>>> additionalPrinterColumns() {
         return Optional.ofNullable(this.additionalPrinterColumns);
     }
@@ -42,6 +46,10 @@ public final class CustomResourceDefinitionVersionArgs extends com.pulumi.resour
     @Import(name="deprecated")
     private @Nullable Output<Boolean> deprecated;
 
+    /**
+     * @return deprecated indicates this version of the custom resource API is deprecated. When set to true, API requests to this version receive a warning header in the server response. Defaults to false.
+     * 
+     */
     public Optional<Output<Boolean>> deprecated() {
         return Optional.ofNullable(this.deprecated);
     }
@@ -53,6 +61,10 @@ public final class CustomResourceDefinitionVersionArgs extends com.pulumi.resour
     @Import(name="deprecationWarning")
     private @Nullable Output<String> deprecationWarning;
 
+    /**
+     * @return deprecationWarning overrides the default warning returned to API clients. May only be set when `deprecated` is true. The default warning indicates this version is deprecated and recommends use of the newest served version of equal or greater stability, if one exists.
+     * 
+     */
     public Optional<Output<String>> deprecationWarning() {
         return Optional.ofNullable(this.deprecationWarning);
     }
@@ -64,6 +76,10 @@ public final class CustomResourceDefinitionVersionArgs extends com.pulumi.resour
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return name is the version name, e.g. “v1”, “v2beta1”, etc. The custom resources are served under this version at `/apis/&lt;group&gt;/&lt;version&gt;/...` if `served` is true.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -75,6 +91,10 @@ public final class CustomResourceDefinitionVersionArgs extends com.pulumi.resour
     @Import(name="schema")
     private @Nullable Output<CustomResourceValidationArgs> schema;
 
+    /**
+     * @return schema describes the schema used for validation and pruning of this version of the custom resource. Top-level and per-version schemas are mutually exclusive. Per-version schemas must not all be set to identical values (top-level validation schema should be used instead).
+     * 
+     */
     public Optional<Output<CustomResourceValidationArgs>> schema() {
         return Optional.ofNullable(this.schema);
     }
@@ -86,6 +106,10 @@ public final class CustomResourceDefinitionVersionArgs extends com.pulumi.resour
     @Import(name="served", required=true)
     private Output<Boolean> served;
 
+    /**
+     * @return served is a flag enabling/disabling this version from being served via REST APIs
+     * 
+     */
     public Output<Boolean> served() {
         return this.served;
     }
@@ -97,6 +121,10 @@ public final class CustomResourceDefinitionVersionArgs extends com.pulumi.resour
     @Import(name="storage", required=true)
     private Output<Boolean> storage;
 
+    /**
+     * @return storage indicates this version should be used when persisting custom resources to storage. There must be exactly one version with storage=true.
+     * 
+     */
     public Output<Boolean> storage() {
         return this.storage;
     }
@@ -108,6 +136,10 @@ public final class CustomResourceDefinitionVersionArgs extends com.pulumi.resour
     @Import(name="subresources")
     private @Nullable Output<CustomResourceSubresourcesArgs> subresources;
 
+    /**
+     * @return subresources specify what subresources this version of the defined custom resource have. Top-level and per-version subresources are mutually exclusive. Per-version subresources must not all be set to identical values (top-level subresources should be used instead).
+     * 
+     */
     public Optional<Output<CustomResourceSubresourcesArgs>> subresources() {
         return Optional.ofNullable(this.subresources);
     }
@@ -143,78 +175,180 @@ public final class CustomResourceDefinitionVersionArgs extends com.pulumi.resour
             $ = new CustomResourceDefinitionVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalPrinterColumns additionalPrinterColumns specifies additional columns returned in Table output. See https://kubernetes.io/docs/reference/using-api/api-concepts/#receiving-resources-as-tables for details. Top-level and per-version columns are mutually exclusive. Per-version columns must not all be set to identical values (top-level columns should be used instead). If no top-level or per-version columns are specified, a single column displaying the age of the custom resource is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalPrinterColumns(@Nullable Output<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns) {
             $.additionalPrinterColumns = additionalPrinterColumns;
             return this;
         }
 
+        /**
+         * @param additionalPrinterColumns additionalPrinterColumns specifies additional columns returned in Table output. See https://kubernetes.io/docs/reference/using-api/api-concepts/#receiving-resources-as-tables for details. Top-level and per-version columns are mutually exclusive. Per-version columns must not all be set to identical values (top-level columns should be used instead). If no top-level or per-version columns are specified, a single column displaying the age of the custom resource is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalPrinterColumns(List<CustomResourceColumnDefinitionArgs> additionalPrinterColumns) {
             return additionalPrinterColumns(Output.of(additionalPrinterColumns));
         }
 
+        /**
+         * @param additionalPrinterColumns additionalPrinterColumns specifies additional columns returned in Table output. See https://kubernetes.io/docs/reference/using-api/api-concepts/#receiving-resources-as-tables for details. Top-level and per-version columns are mutually exclusive. Per-version columns must not all be set to identical values (top-level columns should be used instead). If no top-level or per-version columns are specified, a single column displaying the age of the custom resource is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalPrinterColumns(CustomResourceColumnDefinitionArgs... additionalPrinterColumns) {
             return additionalPrinterColumns(List.of(additionalPrinterColumns));
         }
 
+        /**
+         * @param deprecated deprecated indicates this version of the custom resource API is deprecated. When set to true, API requests to this version receive a warning header in the server response. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deprecated(@Nullable Output<Boolean> deprecated) {
             $.deprecated = deprecated;
             return this;
         }
 
+        /**
+         * @param deprecated deprecated indicates this version of the custom resource API is deprecated. When set to true, API requests to this version receive a warning header in the server response. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deprecated(Boolean deprecated) {
             return deprecated(Output.of(deprecated));
         }
 
+        /**
+         * @param deprecationWarning deprecationWarning overrides the default warning returned to API clients. May only be set when `deprecated` is true. The default warning indicates this version is deprecated and recommends use of the newest served version of equal or greater stability, if one exists.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deprecationWarning(@Nullable Output<String> deprecationWarning) {
             $.deprecationWarning = deprecationWarning;
             return this;
         }
 
+        /**
+         * @param deprecationWarning deprecationWarning overrides the default warning returned to API clients. May only be set when `deprecated` is true. The default warning indicates this version is deprecated and recommends use of the newest served version of equal or greater stability, if one exists.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deprecationWarning(String deprecationWarning) {
             return deprecationWarning(Output.of(deprecationWarning));
         }
 
+        /**
+         * @param name name is the version name, e.g. “v1”, “v2beta1”, etc. The custom resources are served under this version at `/apis/&lt;group&gt;/&lt;version&gt;/...` if `served` is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name name is the version name, e.g. “v1”, “v2beta1”, etc. The custom resources are served under this version at `/apis/&lt;group&gt;/&lt;version&gt;/...` if `served` is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param schema schema describes the schema used for validation and pruning of this version of the custom resource. Top-level and per-version schemas are mutually exclusive. Per-version schemas must not all be set to identical values (top-level validation schema should be used instead).
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(@Nullable Output<CustomResourceValidationArgs> schema) {
             $.schema = schema;
             return this;
         }
 
+        /**
+         * @param schema schema describes the schema used for validation and pruning of this version of the custom resource. Top-level and per-version schemas are mutually exclusive. Per-version schemas must not all be set to identical values (top-level validation schema should be used instead).
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(CustomResourceValidationArgs schema) {
             return schema(Output.of(schema));
         }
 
+        /**
+         * @param served served is a flag enabling/disabling this version from being served via REST APIs
+         * 
+         * @return builder
+         * 
+         */
         public Builder served(Output<Boolean> served) {
             $.served = served;
             return this;
         }
 
+        /**
+         * @param served served is a flag enabling/disabling this version from being served via REST APIs
+         * 
+         * @return builder
+         * 
+         */
         public Builder served(Boolean served) {
             return served(Output.of(served));
         }
 
+        /**
+         * @param storage storage indicates this version should be used when persisting custom resources to storage. There must be exactly one version with storage=true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storage(Output<Boolean> storage) {
             $.storage = storage;
             return this;
         }
 
+        /**
+         * @param storage storage indicates this version should be used when persisting custom resources to storage. There must be exactly one version with storage=true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storage(Boolean storage) {
             return storage(Output.of(storage));
         }
 
+        /**
+         * @param subresources subresources specify what subresources this version of the defined custom resource have. Top-level and per-version subresources are mutually exclusive. Per-version subresources must not all be set to identical values (top-level subresources should be used instead).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subresources(@Nullable Output<CustomResourceSubresourcesArgs> subresources) {
             $.subresources = subresources;
             return this;
         }
 
+        /**
+         * @param subresources subresources specify what subresources this version of the defined custom resource have. Top-level and per-version subresources are mutually exclusive. Per-version subresources must not all be set to identical values (top-level subresources should be used instead).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subresources(CustomResourceSubresourcesArgs subresources) {
             return subresources(Output.of(subresources));
         }

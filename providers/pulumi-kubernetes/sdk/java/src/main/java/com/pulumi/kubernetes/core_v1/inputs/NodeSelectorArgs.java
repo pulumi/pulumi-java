@@ -25,6 +25,10 @@ public final class NodeSelectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeSelectorTerms", required=true)
     private Output<List<NodeSelectorTermArgs>> nodeSelectorTerms;
 
+    /**
+     * @return Required. A list of node selector terms. The terms are ORed.
+     * 
+     */
     public Output<List<NodeSelectorTermArgs>> nodeSelectorTerms() {
         return this.nodeSelectorTerms;
     }
@@ -53,15 +57,33 @@ public final class NodeSelectorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NodeSelectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nodeSelectorTerms Required. A list of node selector terms. The terms are ORed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeSelectorTerms(Output<List<NodeSelectorTermArgs>> nodeSelectorTerms) {
             $.nodeSelectorTerms = nodeSelectorTerms;
             return this;
         }
 
+        /**
+         * @param nodeSelectorTerms Required. A list of node selector terms. The terms are ORed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeSelectorTerms(List<NodeSelectorTermArgs> nodeSelectorTerms) {
             return nodeSelectorTerms(Output.of(nodeSelectorTerms));
         }
 
+        /**
+         * @param nodeSelectorTerms Required. A list of node selector terms. The terms are ORed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeSelectorTerms(NodeSelectorTermArgs... nodeSelectorTerms) {
             return nodeSelectorTerms(List.of(nodeSelectorTerms));
         }

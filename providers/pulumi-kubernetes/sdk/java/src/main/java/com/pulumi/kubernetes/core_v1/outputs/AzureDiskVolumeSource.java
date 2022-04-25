@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureDiskVolumeSource {
     /**
-     * Host Caching mode: None, Read Only, Read Write.
+     * @return Host Caching mode: None, Read Only, Read Write.
      * 
      */
     private final @Nullable String cachingMode;
     /**
-     * The Name of the data disk in the blob storage
+     * @return The Name of the data disk in the blob storage
      * 
      */
     private final String diskName;
     /**
-     * The URI the data disk in the blob storage
+     * @return The URI the data disk in the blob storage
      * 
      */
     private final String diskURI;
     /**
-     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+     * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
      * 
      */
     private final @Nullable String fsType;
     /**
-     * Expected values Shared: multiple blob disks per storage account  Dedicated: single blob disk per storage account  Managed: azure managed data disk (only in managed availability set). defaults to shared
+     * @return Expected values Shared: multiple blob disks per storage account  Dedicated: single blob disk per storage account  Managed: azure managed data disk (only in managed availability set). defaults to shared
      * 
      */
     private final @Nullable String kind;
     /**
-     * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * @return Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     private final @Nullable Boolean readOnly;
@@ -60,44 +60,44 @@ public final class AzureDiskVolumeSource {
     }
 
     /**
-     * Host Caching mode: None, Read Only, Read Write.
+     * @return Host Caching mode: None, Read Only, Read Write.
      * 
-    */
+     */
     public Optional<String> cachingMode() {
         return Optional.ofNullable(this.cachingMode);
     }
     /**
-     * The Name of the data disk in the blob storage
+     * @return The Name of the data disk in the blob storage
      * 
-    */
+     */
     public String diskName() {
         return this.diskName;
     }
     /**
-     * The URI the data disk in the blob storage
+     * @return The URI the data disk in the blob storage
      * 
-    */
+     */
     public String diskURI() {
         return this.diskURI;
     }
     /**
-     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+     * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
      * 
-    */
+     */
     public Optional<String> fsType() {
         return Optional.ofNullable(this.fsType);
     }
     /**
-     * Expected values Shared: multiple blob disks per storage account  Dedicated: single blob disk per storage account  Managed: azure managed data disk (only in managed availability set). defaults to shared
+     * @return Expected values Shared: multiple blob disks per storage account  Dedicated: single blob disk per storage account  Managed: azure managed data disk (only in managed availability set). defaults to shared
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * @return Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
-    */
+     */
     public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }

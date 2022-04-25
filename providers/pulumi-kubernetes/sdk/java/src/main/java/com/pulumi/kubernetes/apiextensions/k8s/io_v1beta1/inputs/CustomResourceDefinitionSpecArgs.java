@@ -34,6 +34,10 @@ public final class CustomResourceDefinitionSpecArgs extends com.pulumi.resources
     @Import(name="additionalPrinterColumns")
     private @Nullable Output<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns;
 
+    /**
+     * @return additionalPrinterColumns specifies additional columns returned in Table output. See https://kubernetes.io/docs/reference/using-api/api-concepts/#receiving-resources-as-tables for details. If present, this field configures columns for all versions. Top-level and per-version columns are mutually exclusive. If no top-level or per-version columns are specified, a single column displaying the age of the custom resource is used.
+     * 
+     */
     public Optional<Output<List<CustomResourceColumnDefinitionArgs>>> additionalPrinterColumns() {
         return Optional.ofNullable(this.additionalPrinterColumns);
     }
@@ -45,6 +49,10 @@ public final class CustomResourceDefinitionSpecArgs extends com.pulumi.resources
     @Import(name="conversion")
     private @Nullable Output<CustomResourceConversionArgs> conversion;
 
+    /**
+     * @return conversion defines conversion settings for the CRD.
+     * 
+     */
     public Optional<Output<CustomResourceConversionArgs>> conversion() {
         return Optional.ofNullable(this.conversion);
     }
@@ -56,6 +64,10 @@ public final class CustomResourceDefinitionSpecArgs extends com.pulumi.resources
     @Import(name="group", required=true)
     private Output<String> group;
 
+    /**
+     * @return group is the API group of the defined custom resource. The custom resources are served under `/apis/&lt;group&gt;/...`. Must match the name of the CustomResourceDefinition (in the form `&lt;names.plural&gt;.&lt;group&gt;`).
+     * 
+     */
     public Output<String> group() {
         return this.group;
     }
@@ -67,6 +79,10 @@ public final class CustomResourceDefinitionSpecArgs extends com.pulumi.resources
     @Import(name="names", required=true)
     private Output<CustomResourceDefinitionNamesArgs> names;
 
+    /**
+     * @return names specify the resource and kind names for the custom resource.
+     * 
+     */
     public Output<CustomResourceDefinitionNamesArgs> names() {
         return this.names;
     }
@@ -78,6 +94,10 @@ public final class CustomResourceDefinitionSpecArgs extends com.pulumi.resources
     @Import(name="preserveUnknownFields")
     private @Nullable Output<Boolean> preserveUnknownFields;
 
+    /**
+     * @return preserveUnknownFields indicates that object fields which are not specified in the OpenAPI schema should be preserved when persisting to storage. apiVersion, kind, metadata and known fields inside metadata are always preserved. If false, schemas must be defined for all versions. Defaults to true in v1beta for backwards compatibility. Deprecated: will be required to be false in v1. Preservation of unknown fields can be specified in the validation schema using the `x-kubernetes-preserve-unknown-fields: true` extension. See https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/#pruning-versus-preserving-unknown-fields for details.
+     * 
+     */
     public Optional<Output<Boolean>> preserveUnknownFields() {
         return Optional.ofNullable(this.preserveUnknownFields);
     }
@@ -89,6 +109,10 @@ public final class CustomResourceDefinitionSpecArgs extends com.pulumi.resources
     @Import(name="scope", required=true)
     private Output<String> scope;
 
+    /**
+     * @return scope indicates whether the defined custom resource is cluster- or namespace-scoped. Allowed values are `Cluster` and `Namespaced`. Default is `Namespaced`.
+     * 
+     */
     public Output<String> scope() {
         return this.scope;
     }
@@ -100,6 +124,10 @@ public final class CustomResourceDefinitionSpecArgs extends com.pulumi.resources
     @Import(name="subresources")
     private @Nullable Output<CustomResourceSubresourcesArgs> subresources;
 
+    /**
+     * @return subresources specify what subresources the defined custom resource has. If present, this field configures subresources for all versions. Top-level and per-version subresources are mutually exclusive.
+     * 
+     */
     public Optional<Output<CustomResourceSubresourcesArgs>> subresources() {
         return Optional.ofNullable(this.subresources);
     }
@@ -111,6 +139,10 @@ public final class CustomResourceDefinitionSpecArgs extends com.pulumi.resources
     @Import(name="validation")
     private @Nullable Output<CustomResourceValidationArgs> validation;
 
+    /**
+     * @return validation describes the schema used for validation and pruning of the custom resource. If present, this validation schema is used to validate all versions. Top-level and per-version schemas are mutually exclusive.
+     * 
+     */
     public Optional<Output<CustomResourceValidationArgs>> validation() {
         return Optional.ofNullable(this.validation);
     }
@@ -122,6 +154,10 @@ public final class CustomResourceDefinitionSpecArgs extends com.pulumi.resources
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return version is the API version of the defined custom resource. The custom resources are served under `/apis/&lt;group&gt;/&lt;version&gt;/...`. Must match the name of the first item in the `versions` list if `version` and `versions` are both specified. Optional if `versions` is specified. Deprecated: use `versions` instead.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -133,6 +169,10 @@ public final class CustomResourceDefinitionSpecArgs extends com.pulumi.resources
     @Import(name="versions")
     private @Nullable Output<List<CustomResourceDefinitionVersionArgs>> versions;
 
+    /**
+     * @return versions is the list of all API versions of the defined custom resource. Optional if `version` is specified. The name of the first item in the `versions` list must match the `version` field if `version` and `versions` are both specified. Version names are used to compute the order in which served versions are listed in API discovery. If the version string is &#34;kube-like&#34;, it will sort above non &#34;kube-like&#34; version strings, which are ordered lexicographically. &#34;Kube-like&#34; versions start with a &#34;v&#34;, then are followed by a number (the major version), then optionally the string &#34;alpha&#34; or &#34;beta&#34; and another number (the minor version). These are sorted first by GA &gt; beta &gt; alpha (where GA is a version with no suffix such as beta or alpha), and then by comparing major version, then minor version. An example sorted list of versions: v10, v2, v1, v11beta2, v10beta3, v3beta1, v12alpha1, v11alpha2, foo1, foo10.
+     * 
+     */
     public Optional<Output<List<CustomResourceDefinitionVersionArgs>>> versions() {
         return Optional.ofNullable(this.versions);
     }
@@ -170,100 +210,232 @@ public final class CustomResourceDefinitionSpecArgs extends com.pulumi.resources
             $ = new CustomResourceDefinitionSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalPrinterColumns additionalPrinterColumns specifies additional columns returned in Table output. See https://kubernetes.io/docs/reference/using-api/api-concepts/#receiving-resources-as-tables for details. If present, this field configures columns for all versions. Top-level and per-version columns are mutually exclusive. If no top-level or per-version columns are specified, a single column displaying the age of the custom resource is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalPrinterColumns(@Nullable Output<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns) {
             $.additionalPrinterColumns = additionalPrinterColumns;
             return this;
         }
 
+        /**
+         * @param additionalPrinterColumns additionalPrinterColumns specifies additional columns returned in Table output. See https://kubernetes.io/docs/reference/using-api/api-concepts/#receiving-resources-as-tables for details. If present, this field configures columns for all versions. Top-level and per-version columns are mutually exclusive. If no top-level or per-version columns are specified, a single column displaying the age of the custom resource is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalPrinterColumns(List<CustomResourceColumnDefinitionArgs> additionalPrinterColumns) {
             return additionalPrinterColumns(Output.of(additionalPrinterColumns));
         }
 
+        /**
+         * @param additionalPrinterColumns additionalPrinterColumns specifies additional columns returned in Table output. See https://kubernetes.io/docs/reference/using-api/api-concepts/#receiving-resources-as-tables for details. If present, this field configures columns for all versions. Top-level and per-version columns are mutually exclusive. If no top-level or per-version columns are specified, a single column displaying the age of the custom resource is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalPrinterColumns(CustomResourceColumnDefinitionArgs... additionalPrinterColumns) {
             return additionalPrinterColumns(List.of(additionalPrinterColumns));
         }
 
+        /**
+         * @param conversion conversion defines conversion settings for the CRD.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conversion(@Nullable Output<CustomResourceConversionArgs> conversion) {
             $.conversion = conversion;
             return this;
         }
 
+        /**
+         * @param conversion conversion defines conversion settings for the CRD.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conversion(CustomResourceConversionArgs conversion) {
             return conversion(Output.of(conversion));
         }
 
+        /**
+         * @param group group is the API group of the defined custom resource. The custom resources are served under `/apis/&lt;group&gt;/...`. Must match the name of the CustomResourceDefinition (in the form `&lt;names.plural&gt;.&lt;group&gt;`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder group(Output<String> group) {
             $.group = group;
             return this;
         }
 
+        /**
+         * @param group group is the API group of the defined custom resource. The custom resources are served under `/apis/&lt;group&gt;/...`. Must match the name of the CustomResourceDefinition (in the form `&lt;names.plural&gt;.&lt;group&gt;`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder group(String group) {
             return group(Output.of(group));
         }
 
+        /**
+         * @param names names specify the resource and kind names for the custom resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder names(Output<CustomResourceDefinitionNamesArgs> names) {
             $.names = names;
             return this;
         }
 
+        /**
+         * @param names names specify the resource and kind names for the custom resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder names(CustomResourceDefinitionNamesArgs names) {
             return names(Output.of(names));
         }
 
+        /**
+         * @param preserveUnknownFields preserveUnknownFields indicates that object fields which are not specified in the OpenAPI schema should be preserved when persisting to storage. apiVersion, kind, metadata and known fields inside metadata are always preserved. If false, schemas must be defined for all versions. Defaults to true in v1beta for backwards compatibility. Deprecated: will be required to be false in v1. Preservation of unknown fields can be specified in the validation schema using the `x-kubernetes-preserve-unknown-fields: true` extension. See https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/#pruning-versus-preserving-unknown-fields for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preserveUnknownFields(@Nullable Output<Boolean> preserveUnknownFields) {
             $.preserveUnknownFields = preserveUnknownFields;
             return this;
         }
 
+        /**
+         * @param preserveUnknownFields preserveUnknownFields indicates that object fields which are not specified in the OpenAPI schema should be preserved when persisting to storage. apiVersion, kind, metadata and known fields inside metadata are always preserved. If false, schemas must be defined for all versions. Defaults to true in v1beta for backwards compatibility. Deprecated: will be required to be false in v1. Preservation of unknown fields can be specified in the validation schema using the `x-kubernetes-preserve-unknown-fields: true` extension. See https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/#pruning-versus-preserving-unknown-fields for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preserveUnknownFields(Boolean preserveUnknownFields) {
             return preserveUnknownFields(Output.of(preserveUnknownFields));
         }
 
+        /**
+         * @param scope scope indicates whether the defined custom resource is cluster- or namespace-scoped. Allowed values are `Cluster` and `Namespaced`. Default is `Namespaced`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope scope indicates whether the defined custom resource is cluster- or namespace-scoped. Allowed values are `Cluster` and `Namespaced`. Default is `Namespaced`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param subresources subresources specify what subresources the defined custom resource has. If present, this field configures subresources for all versions. Top-level and per-version subresources are mutually exclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subresources(@Nullable Output<CustomResourceSubresourcesArgs> subresources) {
             $.subresources = subresources;
             return this;
         }
 
+        /**
+         * @param subresources subresources specify what subresources the defined custom resource has. If present, this field configures subresources for all versions. Top-level and per-version subresources are mutually exclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subresources(CustomResourceSubresourcesArgs subresources) {
             return subresources(Output.of(subresources));
         }
 
+        /**
+         * @param validation validation describes the schema used for validation and pruning of the custom resource. If present, this validation schema is used to validate all versions. Top-level and per-version schemas are mutually exclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validation(@Nullable Output<CustomResourceValidationArgs> validation) {
             $.validation = validation;
             return this;
         }
 
+        /**
+         * @param validation validation describes the schema used for validation and pruning of the custom resource. If present, this validation schema is used to validate all versions. Top-level and per-version schemas are mutually exclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validation(CustomResourceValidationArgs validation) {
             return validation(Output.of(validation));
         }
 
+        /**
+         * @param version version is the API version of the defined custom resource. The custom resources are served under `/apis/&lt;group&gt;/&lt;version&gt;/...`. Must match the name of the first item in the `versions` list if `version` and `versions` are both specified. Optional if `versions` is specified. Deprecated: use `versions` instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version version is the API version of the defined custom resource. The custom resources are served under `/apis/&lt;group&gt;/&lt;version&gt;/...`. Must match the name of the first item in the `versions` list if `version` and `versions` are both specified. Optional if `versions` is specified. Deprecated: use `versions` instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }
 
+        /**
+         * @param versions versions is the list of all API versions of the defined custom resource. Optional if `version` is specified. The name of the first item in the `versions` list must match the `version` field if `version` and `versions` are both specified. Version names are used to compute the order in which served versions are listed in API discovery. If the version string is &#34;kube-like&#34;, it will sort above non &#34;kube-like&#34; version strings, which are ordered lexicographically. &#34;Kube-like&#34; versions start with a &#34;v&#34;, then are followed by a number (the major version), then optionally the string &#34;alpha&#34; or &#34;beta&#34; and another number (the minor version). These are sorted first by GA &gt; beta &gt; alpha (where GA is a version with no suffix such as beta or alpha), and then by comparing major version, then minor version. An example sorted list of versions: v10, v2, v1, v11beta2, v10beta3, v3beta1, v12alpha1, v11alpha2, foo1, foo10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versions(@Nullable Output<List<CustomResourceDefinitionVersionArgs>> versions) {
             $.versions = versions;
             return this;
         }
 
+        /**
+         * @param versions versions is the list of all API versions of the defined custom resource. Optional if `version` is specified. The name of the first item in the `versions` list must match the `version` field if `version` and `versions` are both specified. Version names are used to compute the order in which served versions are listed in API discovery. If the version string is &#34;kube-like&#34;, it will sort above non &#34;kube-like&#34; version strings, which are ordered lexicographically. &#34;Kube-like&#34; versions start with a &#34;v&#34;, then are followed by a number (the major version), then optionally the string &#34;alpha&#34; or &#34;beta&#34; and another number (the minor version). These are sorted first by GA &gt; beta &gt; alpha (where GA is a version with no suffix such as beta or alpha), and then by comparing major version, then minor version. An example sorted list of versions: v10, v2, v1, v11beta2, v10beta3, v3beta1, v12alpha1, v11alpha2, foo1, foo10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versions(List<CustomResourceDefinitionVersionArgs> versions) {
             return versions(Output.of(versions));
         }
 
+        /**
+         * @param versions versions is the list of all API versions of the defined custom resource. Optional if `version` is specified. The name of the first item in the `versions` list must match the `version` field if `version` and `versions` are both specified. Version names are used to compute the order in which served versions are listed in API discovery. If the version string is &#34;kube-like&#34;, it will sort above non &#34;kube-like&#34; version strings, which are ordered lexicographically. &#34;Kube-like&#34; versions start with a &#34;v&#34;, then are followed by a number (the major version), then optionally the string &#34;alpha&#34; or &#34;beta&#34; and another number (the minor version). These are sorted first by GA &gt; beta &gt; alpha (where GA is a version with no suffix such as beta or alpha), and then by comparing major version, then minor version. An example sorted list of versions: v10, v2, v1, v11beta2, v10beta3, v3beta1, v12alpha1, v11alpha2, foo1, foo10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versions(CustomResourceDefinitionVersionArgs... versions) {
             return versions(List.of(versions));
         }

@@ -26,6 +26,10 @@ public final class LifecycleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="postStart")
     private @Nullable Output<LifecycleHandlerArgs> postStart;
 
+    /**
+     * @return PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks
+     * 
+     */
     public Optional<Output<LifecycleHandlerArgs>> postStart() {
         return Optional.ofNullable(this.postStart);
     }
@@ -37,6 +41,10 @@ public final class LifecycleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="preStop")
     private @Nullable Output<LifecycleHandlerArgs> preStop;
 
+    /**
+     * @return PreStop is called immediately before a container is terminated due to an API request or management event such as liveness/startup probe failure, preemption, resource contention, etc. The handler is not called if the container crashes or exits. The Pod&#39;s termination grace period countdown begins before the PreStop hook is executed. Regardless of the outcome of the handler, the container will eventually terminate within the Pod&#39;s termination grace period (unless delayed by finalizers). Other management of the container blocks until the hook completes or until the termination grace period is reached. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks
+     * 
+     */
     public Optional<Output<LifecycleHandlerArgs>> preStop() {
         return Optional.ofNullable(this.preStop);
     }
@@ -66,20 +74,44 @@ public final class LifecycleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LifecycleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param postStart PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks
+         * 
+         * @return builder
+         * 
+         */
         public Builder postStart(@Nullable Output<LifecycleHandlerArgs> postStart) {
             $.postStart = postStart;
             return this;
         }
 
+        /**
+         * @param postStart PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks
+         * 
+         * @return builder
+         * 
+         */
         public Builder postStart(LifecycleHandlerArgs postStart) {
             return postStart(Output.of(postStart));
         }
 
+        /**
+         * @param preStop PreStop is called immediately before a container is terminated due to an API request or management event such as liveness/startup probe failure, preemption, resource contention, etc. The handler is not called if the container crashes or exits. The Pod&#39;s termination grace period countdown begins before the PreStop hook is executed. Regardless of the outcome of the handler, the container will eventually terminate within the Pod&#39;s termination grace period (unless delayed by finalizers). Other management of the container blocks until the hook completes or until the termination grace period is reached. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks
+         * 
+         * @return builder
+         * 
+         */
         public Builder preStop(@Nullable Output<LifecycleHandlerArgs> preStop) {
             $.preStop = preStop;
             return this;
         }
 
+        /**
+         * @param preStop PreStop is called immediately before a container is terminated due to an API request or management event such as liveness/startup probe failure, preemption, resource contention, etc. The handler is not called if the container crashes or exits. The Pod&#39;s termination grace period countdown begins before the PreStop hook is executed. Regardless of the outcome of the handler, the container will eventually terminate within the Pod&#39;s termination grace period (unless delayed by finalizers). Other management of the container blocks until the hook completes or until the termination grace period is reached. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks
+         * 
+         * @return builder
+         * 
+         */
         public Builder preStop(LifecycleHandlerArgs preStop) {
             return preStop(Output.of(preStop));
         }

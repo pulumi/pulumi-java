@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class AllowedFlexVolume {
     /**
-     * driver is the name of the Flexvolume driver.
+     * @return driver is the name of the Flexvolume driver.
      * 
      */
     private final String driver;
@@ -21,9 +21,9 @@ public final class AllowedFlexVolume {
     }
 
     /**
-     * driver is the name of the Flexvolume driver.
+     * @return driver is the name of the Flexvolume driver.
      * 
-    */
+     */
     public String driver() {
         return this.driver;
     }

@@ -12,27 +12,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PolicyRule {
     /**
-     * APIGroups is the name of the APIGroup that contains the resources.  If multiple API groups are specified, any action requested against one of the enumerated resources in any API group will be allowed.
+     * @return APIGroups is the name of the APIGroup that contains the resources.  If multiple API groups are specified, any action requested against one of the enumerated resources in any API group will be allowed.
      * 
      */
     private final @Nullable List<String> apiGroups;
     /**
-     * NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path Since non-resource URLs are not namespaced, this field is only applicable for ClusterRoles referenced from a ClusterRoleBinding. Rules can either apply to API resources (such as &#34;pods&#34; or &#34;secrets&#34;) or non-resource URL paths (such as &#34;/api&#34;),  but not both.
+     * @return NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path Since non-resource URLs are not namespaced, this field is only applicable for ClusterRoles referenced from a ClusterRoleBinding. Rules can either apply to API resources (such as &#34;pods&#34; or &#34;secrets&#34;) or non-resource URL paths (such as &#34;/api&#34;),  but not both.
      * 
      */
     private final @Nullable List<String> nonResourceURLs;
     /**
-     * ResourceNames is an optional white list of names that the rule applies to.  An empty set means that everything is allowed.
+     * @return ResourceNames is an optional white list of names that the rule applies to.  An empty set means that everything is allowed.
      * 
      */
     private final @Nullable List<String> resourceNames;
     /**
-     * Resources is a list of resources this rule applies to.  &#39;*&#39; represents all resources in the specified apiGroups. &#39;*{@literal /}foo&#39; represents the subresource &#39;foo&#39; for all resources in the specified apiGroups.
+     * @return Resources is a list of resources this rule applies to.  &#39;*&#39; represents all resources in the specified apiGroups. &#39;*{@literal /}foo&#39; represents the subresource &#39;foo&#39; for all resources in the specified apiGroups.
      * 
      */
     private final @Nullable List<String> resources;
     /**
-     * Verbs is a list of Verbs that apply to ALL the ResourceKinds and AttributeRestrictions contained in this rule.  VerbAll represents all kinds.
+     * @return Verbs is a list of Verbs that apply to ALL the ResourceKinds and AttributeRestrictions contained in this rule.  VerbAll represents all kinds.
      * 
      */
     private final List<String> verbs;
@@ -52,37 +52,37 @@ public final class PolicyRule {
     }
 
     /**
-     * APIGroups is the name of the APIGroup that contains the resources.  If multiple API groups are specified, any action requested against one of the enumerated resources in any API group will be allowed.
+     * @return APIGroups is the name of the APIGroup that contains the resources.  If multiple API groups are specified, any action requested against one of the enumerated resources in any API group will be allowed.
      * 
-    */
+     */
     public List<String> apiGroups() {
         return this.apiGroups == null ? List.of() : this.apiGroups;
     }
     /**
-     * NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path Since non-resource URLs are not namespaced, this field is only applicable for ClusterRoles referenced from a ClusterRoleBinding. Rules can either apply to API resources (such as &#34;pods&#34; or &#34;secrets&#34;) or non-resource URL paths (such as &#34;/api&#34;),  but not both.
+     * @return NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path Since non-resource URLs are not namespaced, this field is only applicable for ClusterRoles referenced from a ClusterRoleBinding. Rules can either apply to API resources (such as &#34;pods&#34; or &#34;secrets&#34;) or non-resource URL paths (such as &#34;/api&#34;),  but not both.
      * 
-    */
+     */
     public List<String> nonResourceURLs() {
         return this.nonResourceURLs == null ? List.of() : this.nonResourceURLs;
     }
     /**
-     * ResourceNames is an optional white list of names that the rule applies to.  An empty set means that everything is allowed.
+     * @return ResourceNames is an optional white list of names that the rule applies to.  An empty set means that everything is allowed.
      * 
-    */
+     */
     public List<String> resourceNames() {
         return this.resourceNames == null ? List.of() : this.resourceNames;
     }
     /**
-     * Resources is a list of resources this rule applies to.  &#39;*&#39; represents all resources in the specified apiGroups. &#39;*{@literal /}foo&#39; represents the subresource &#39;foo&#39; for all resources in the specified apiGroups.
+     * @return Resources is a list of resources this rule applies to.  &#39;*&#39; represents all resources in the specified apiGroups. &#39;*{@literal /}foo&#39; represents the subresource &#39;foo&#39; for all resources in the specified apiGroups.
      * 
-    */
+     */
     public List<String> resources() {
         return this.resources == null ? List.of() : this.resources;
     }
     /**
-     * Verbs is a list of Verbs that apply to ALL the ResourceKinds and AttributeRestrictions contained in this rule.  VerbAll represents all kinds.
+     * @return Verbs is a list of Verbs that apply to ALL the ResourceKinds and AttributeRestrictions contained in this rule.  VerbAll represents all kinds.
      * 
-    */
+     */
     public List<String> verbs() {
         return this.verbs;
     }

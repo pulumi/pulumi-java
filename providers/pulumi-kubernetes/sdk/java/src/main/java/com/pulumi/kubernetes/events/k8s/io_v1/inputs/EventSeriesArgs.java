@@ -25,6 +25,10 @@ public final class EventSeriesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="count", required=true)
     private Output<Integer> count;
 
+    /**
+     * @return count is the number of occurrences in this series up to the last heartbeat time.
+     * 
+     */
     public Output<Integer> count() {
         return this.count;
     }
@@ -36,6 +40,10 @@ public final class EventSeriesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastObservedTime", required=true)
     private Output<String> lastObservedTime;
 
+    /**
+     * @return lastObservedTime is the time when last Event from the series was seen before last heartbeat.
+     * 
+     */
     public Output<String> lastObservedTime() {
         return this.lastObservedTime;
     }
@@ -65,20 +73,44 @@ public final class EventSeriesArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EventSeriesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count count is the number of occurrences in this series up to the last heartbeat time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Output<Integer> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count count is the number of occurrences in this series up to the last heartbeat time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             return count(Output.of(count));
         }
 
+        /**
+         * @param lastObservedTime lastObservedTime is the time when last Event from the series was seen before last heartbeat.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastObservedTime(Output<String> lastObservedTime) {
             $.lastObservedTime = lastObservedTime;
             return this;
         }
 
+        /**
+         * @param lastObservedTime lastObservedTime is the time when last Event from the series was seen before last heartbeat.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastObservedTime(String lastObservedTime) {
             return lastObservedTime(Output.of(lastObservedTime));
         }

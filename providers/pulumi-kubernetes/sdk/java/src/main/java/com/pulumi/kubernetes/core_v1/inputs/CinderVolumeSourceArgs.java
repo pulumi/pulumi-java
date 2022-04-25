@@ -28,6 +28,10 @@ public final class CinderVolumeSourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="fsType")
     private @Nullable Output<String> fsType;
 
+    /**
+     * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+     * 
+     */
     public Optional<Output<String>> fsType() {
         return Optional.ofNullable(this.fsType);
     }
@@ -39,6 +43,10 @@ public final class CinderVolumeSourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
+    /**
+     * @return Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+     * 
+     */
     public Optional<Output<Boolean>> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -50,6 +58,10 @@ public final class CinderVolumeSourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="secretRef")
     private @Nullable Output<LocalObjectReferenceArgs> secretRef;
 
+    /**
+     * @return Optional: points to a secret object containing parameters used to connect to OpenStack.
+     * 
+     */
     public Optional<Output<LocalObjectReferenceArgs>> secretRef() {
         return Optional.ofNullable(this.secretRef);
     }
@@ -61,6 +73,10 @@ public final class CinderVolumeSourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="volumeID", required=true)
     private Output<String> volumeID;
 
+    /**
+     * @return volume id used to identify the volume in cinder. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+     * 
+     */
     public Output<String> volumeID() {
         return this.volumeID;
     }
@@ -92,38 +108,86 @@ public final class CinderVolumeSourceArgs extends com.pulumi.resources.ResourceA
             $ = new CinderVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsType(@Nullable Output<String> fsType) {
             $.fsType = fsType;
             return this;
         }
 
+        /**
+         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsType(String fsType) {
             return fsType(Output.of(fsType));
         }
 
+        /**
+         * @param readOnly Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             $.readOnly = readOnly;
             return this;
         }
 
+        /**
+         * @param readOnly Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(Boolean readOnly) {
             return readOnly(Output.of(readOnly));
         }
 
+        /**
+         * @param secretRef Optional: points to a secret object containing parameters used to connect to OpenStack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretRef(@Nullable Output<LocalObjectReferenceArgs> secretRef) {
             $.secretRef = secretRef;
             return this;
         }
 
+        /**
+         * @param secretRef Optional: points to a secret object containing parameters used to connect to OpenStack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretRef(LocalObjectReferenceArgs secretRef) {
             return secretRef(Output.of(secretRef));
         }
 
+        /**
+         * @param volumeID volume id used to identify the volume in cinder. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeID(Output<String> volumeID) {
             $.volumeID = volumeID;
             return this;
         }
 
+        /**
+         * @param volumeID volume id used to identify the volume in cinder. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeID(String volumeID) {
             return volumeID(Output.of(volumeID));
         }

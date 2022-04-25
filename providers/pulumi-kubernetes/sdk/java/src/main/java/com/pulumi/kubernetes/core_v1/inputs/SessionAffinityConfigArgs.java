@@ -26,6 +26,10 @@ public final class SessionAffinityConfigArgs extends com.pulumi.resources.Resour
     @Import(name="clientIP")
     private @Nullable Output<ClientIPConfigArgs> clientIP;
 
+    /**
+     * @return clientIP contains the configurations of Client IP based session affinity.
+     * 
+     */
     public Optional<Output<ClientIPConfigArgs>> clientIP() {
         return Optional.ofNullable(this.clientIP);
     }
@@ -54,11 +58,23 @@ public final class SessionAffinityConfigArgs extends com.pulumi.resources.Resour
             $ = new SessionAffinityConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientIP clientIP contains the configurations of Client IP based session affinity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientIP(@Nullable Output<ClientIPConfigArgs> clientIP) {
             $.clientIP = clientIP;
             return this;
         }
 
+        /**
+         * @param clientIP clientIP contains the configurations of Client IP based session affinity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientIP(ClientIPConfigArgs clientIP) {
             return clientIP(Output.of(clientIP));
         }

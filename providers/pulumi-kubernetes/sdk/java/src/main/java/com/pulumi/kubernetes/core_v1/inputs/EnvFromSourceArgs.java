@@ -28,6 +28,10 @@ public final class EnvFromSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="configMapRef")
     private @Nullable Output<ConfigMapEnvSourceArgs> configMapRef;
 
+    /**
+     * @return The ConfigMap to select from
+     * 
+     */
     public Optional<Output<ConfigMapEnvSourceArgs>> configMapRef() {
         return Optional.ofNullable(this.configMapRef);
     }
@@ -39,6 +43,10 @@ public final class EnvFromSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="prefix")
     private @Nullable Output<String> prefix;
 
+    /**
+     * @return An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.
+     * 
+     */
     public Optional<Output<String>> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -50,6 +58,10 @@ public final class EnvFromSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secretRef")
     private @Nullable Output<SecretEnvSourceArgs> secretRef;
 
+    /**
+     * @return The Secret to select from
+     * 
+     */
     public Optional<Output<SecretEnvSourceArgs>> secretRef() {
         return Optional.ofNullable(this.secretRef);
     }
@@ -80,29 +92,65 @@ public final class EnvFromSourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EnvFromSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configMapRef The ConfigMap to select from
+         * 
+         * @return builder
+         * 
+         */
         public Builder configMapRef(@Nullable Output<ConfigMapEnvSourceArgs> configMapRef) {
             $.configMapRef = configMapRef;
             return this;
         }
 
+        /**
+         * @param configMapRef The ConfigMap to select from
+         * 
+         * @return builder
+         * 
+         */
         public Builder configMapRef(ConfigMapEnvSourceArgs configMapRef) {
             return configMapRef(Output.of(configMapRef));
         }
 
+        /**
+         * @param prefix An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable Output<String> prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param prefix An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(String prefix) {
             return prefix(Output.of(prefix));
         }
 
+        /**
+         * @param secretRef The Secret to select from
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretRef(@Nullable Output<SecretEnvSourceArgs> secretRef) {
             $.secretRef = secretRef;
             return this;
         }
 
+        /**
+         * @param secretRef The Secret to select from
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretRef(SecretEnvSourceArgs secretRef) {
             return secretRef(Output.of(secretRef));
         }
