@@ -25,6 +25,10 @@ public final class RandomIdState extends com.pulumi.resources.ResourceArgs {
     @Import(name="b64Std")
     private @Nullable Output<String> b64Std;
 
+    /**
+     * @return The generated id presented in base64 without additional transformations.
+     * 
+     */
     public Optional<Output<String>> b64Std() {
         return Optional.ofNullable(this.b64Std);
     }
@@ -36,6 +40,10 @@ public final class RandomIdState extends com.pulumi.resources.ResourceArgs {
     @Import(name="b64Url")
     private @Nullable Output<String> b64Url;
 
+    /**
+     * @return The generated id presented in base64, using the URL-friendly character set: case-sensitive letters, digits and the characters `_` and `-`.
+     * 
+     */
     public Optional<Output<String>> b64Url() {
         return Optional.ofNullable(this.b64Url);
     }
@@ -47,6 +55,10 @@ public final class RandomIdState extends com.pulumi.resources.ResourceArgs {
     @Import(name="byteLength")
     private @Nullable Output<Integer> byteLength;
 
+    /**
+     * @return The number of random bytes to produce. The minimum value is 1, which produces eight bits of randomness.
+     * 
+     */
     public Optional<Output<Integer>> byteLength() {
         return Optional.ofNullable(this.byteLength);
     }
@@ -58,6 +70,10 @@ public final class RandomIdState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dec")
     private @Nullable Output<String> dec;
 
+    /**
+     * @return The generated id presented in non-padded decimal digits.
+     * 
+     */
     public Optional<Output<String>> dec() {
         return Optional.ofNullable(this.dec);
     }
@@ -69,6 +85,10 @@ public final class RandomIdState extends com.pulumi.resources.ResourceArgs {
     @Import(name="hex")
     private @Nullable Output<String> hex;
 
+    /**
+     * @return The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte length.
+     * 
+     */
     public Optional<Output<String>> hex() {
         return Optional.ofNullable(this.hex);
     }
@@ -80,6 +100,10 @@ public final class RandomIdState extends com.pulumi.resources.ResourceArgs {
     @Import(name="keepers")
     private @Nullable Output<Map<String,Object>> keepers;
 
+    /**
+     * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> keepers() {
         return Optional.ofNullable(this.keepers);
     }
@@ -91,6 +115,10 @@ public final class RandomIdState extends com.pulumi.resources.ResourceArgs {
     @Import(name="prefix")
     private @Nullable Output<String> prefix;
 
+    /**
+     * @return Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
+     * 
+     */
     public Optional<Output<String>> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -125,65 +153,149 @@ public final class RandomIdState extends com.pulumi.resources.ResourceArgs {
             $ = new RandomIdState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param b64Std The generated id presented in base64 without additional transformations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder b64Std(@Nullable Output<String> b64Std) {
             $.b64Std = b64Std;
             return this;
         }
 
+        /**
+         * @param b64Std The generated id presented in base64 without additional transformations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder b64Std(String b64Std) {
             return b64Std(Output.of(b64Std));
         }
 
+        /**
+         * @param b64Url The generated id presented in base64, using the URL-friendly character set: case-sensitive letters, digits and the characters `_` and `-`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder b64Url(@Nullable Output<String> b64Url) {
             $.b64Url = b64Url;
             return this;
         }
 
+        /**
+         * @param b64Url The generated id presented in base64, using the URL-friendly character set: case-sensitive letters, digits and the characters `_` and `-`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder b64Url(String b64Url) {
             return b64Url(Output.of(b64Url));
         }
 
+        /**
+         * @param byteLength The number of random bytes to produce. The minimum value is 1, which produces eight bits of randomness.
+         * 
+         * @return builder
+         * 
+         */
         public Builder byteLength(@Nullable Output<Integer> byteLength) {
             $.byteLength = byteLength;
             return this;
         }
 
+        /**
+         * @param byteLength The number of random bytes to produce. The minimum value is 1, which produces eight bits of randomness.
+         * 
+         * @return builder
+         * 
+         */
         public Builder byteLength(Integer byteLength) {
             return byteLength(Output.of(byteLength));
         }
 
+        /**
+         * @param dec The generated id presented in non-padded decimal digits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dec(@Nullable Output<String> dec) {
             $.dec = dec;
             return this;
         }
 
+        /**
+         * @param dec The generated id presented in non-padded decimal digits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dec(String dec) {
             return dec(Output.of(dec));
         }
 
+        /**
+         * @param hex The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hex(@Nullable Output<String> hex) {
             $.hex = hex;
             return this;
         }
 
+        /**
+         * @param hex The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hex(String hex) {
             return hex(Output.of(hex));
         }
 
+        /**
+         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keepers(@Nullable Output<Map<String,Object>> keepers) {
             $.keepers = keepers;
             return this;
         }
 
+        /**
+         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keepers(Map<String,Object> keepers) {
             return keepers(Output.of(keepers));
         }
 
+        /**
+         * @param prefix Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable Output<String> prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param prefix Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(String prefix) {
             return prefix(Output.of(prefix));
         }
