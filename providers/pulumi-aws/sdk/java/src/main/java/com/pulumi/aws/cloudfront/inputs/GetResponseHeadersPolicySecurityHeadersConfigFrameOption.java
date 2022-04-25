@@ -20,6 +20,10 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigFrameOption exte
     @Import(name="frameOption", required=true)
     private String frameOption;
 
+    /**
+     * @return The value of the X-Frame-Options HTTP response header. Valid values: `DENY` | `SAMEORIGIN`
+     * 
+     */
     public String frameOption() {
         return this.frameOption;
     }
@@ -31,6 +35,10 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigFrameOption exte
     @Import(name="override", required=true)
     private Boolean override;
 
+    /**
+     * @return A Boolean value that determines whether CloudFront overrides the X-XSS-Protection HTTP response header received from the origin with the one specified in this response headers policy.
+     * 
+     */
     public Boolean override() {
         return this.override;
     }
@@ -60,11 +68,23 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigFrameOption exte
             $ = new GetResponseHeadersPolicySecurityHeadersConfigFrameOption(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param frameOption The value of the X-Frame-Options HTTP response header. Valid values: `DENY` | `SAMEORIGIN`
+         * 
+         * @return builder
+         * 
+         */
         public Builder frameOption(String frameOption) {
             $.frameOption = frameOption;
             return this;
         }
 
+        /**
+         * @param override A Boolean value that determines whether CloudFront overrides the X-XSS-Protection HTTP response header received from the origin with the one specified in this response headers policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder override(Boolean override) {
             $.override = override;
             return this;

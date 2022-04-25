@@ -20,6 +20,10 @@ public final class MultiRegionAccessPointDetailsRegionArgs extends com.pulumi.re
     @Import(name="bucket", required=true)
     private Output<String> bucket;
 
+    /**
+     * @return The name of the associated bucket for the Region.
+     * 
+     */
     public Output<String> bucket() {
         return this.bucket;
     }
@@ -48,11 +52,23 @@ public final class MultiRegionAccessPointDetailsRegionArgs extends com.pulumi.re
             $ = new MultiRegionAccessPointDetailsRegionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket The name of the associated bucket for the Region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket The name of the associated bucket for the Region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }

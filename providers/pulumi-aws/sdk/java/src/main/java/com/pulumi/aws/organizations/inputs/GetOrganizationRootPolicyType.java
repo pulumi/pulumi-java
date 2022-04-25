@@ -19,6 +19,10 @@ public final class GetOrganizationRootPolicyType extends com.pulumi.resources.In
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The status of the policy type as it relates to the associated root
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -55,6 +59,12 @@ public final class GetOrganizationRootPolicyType extends com.pulumi.resources.In
             $ = new GetOrganizationRootPolicyType(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param status The status of the policy type as it relates to the associated root
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

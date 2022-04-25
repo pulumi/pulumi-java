@@ -15,12 +15,12 @@ import javax.annotation.Nullable;
 public final class GetEbsVolumesResult {
     private final @Nullable List<GetEbsVolumesFilter> filters;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * A set of all the EBS Volume IDs found. This data source will fail if
+     * @return A set of all the EBS Volume IDs found. This data source will fail if
      * no volumes match the provided criteria.
      * 
      */
@@ -43,17 +43,17 @@ public final class GetEbsVolumesResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * A set of all the EBS Volume IDs found. This data source will fail if
+     * @return A set of all the EBS Volume IDs found. This data source will fail if
      * no volumes match the provided criteria.
      * 
-    */
+     */
     public List<String> ids() {
         return this.ids;
     }

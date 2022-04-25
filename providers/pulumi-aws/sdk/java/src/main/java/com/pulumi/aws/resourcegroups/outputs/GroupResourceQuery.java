@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GroupResourceQuery {
     /**
-     * The resource query as a JSON string.
+     * @return The resource query as a JSON string.
      * 
      */
     private final String query;
     /**
-     * The type of the resource query. Defaults to `TAG_FILTERS_1_0`.
+     * @return The type of the resource query. Defaults to `TAG_FILTERS_1_0`.
      * 
      */
     private final @Nullable String type;
@@ -31,16 +31,16 @@ public final class GroupResourceQuery {
     }
 
     /**
-     * The resource query as a JSON string.
+     * @return The resource query as a JSON string.
      * 
-    */
+     */
     public String query() {
         return this.query;
     }
     /**
-     * The type of the resource query. Defaults to `TAG_FILTERS_1_0`.
+     * @return The type of the resource query. Defaults to `TAG_FILTERS_1_0`.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

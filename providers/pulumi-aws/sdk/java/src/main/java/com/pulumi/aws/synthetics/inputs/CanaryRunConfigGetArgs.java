@@ -23,6 +23,10 @@ public final class CanaryRunConfigGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="activeTracing")
     private @Nullable Output<Boolean> activeTracing;
 
+    /**
+     * @return Whether this canary is to use active AWS X-Ray tracing when it runs. You can enable active tracing only for canaries that use version syn-nodejs-2.0 or later for their canary runtime.
+     * 
+     */
     public Optional<Output<Boolean>> activeTracing() {
         return Optional.ofNullable(this.activeTracing);
     }
@@ -34,6 +38,10 @@ public final class CanaryRunConfigGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="memoryInMb")
     private @Nullable Output<Integer> memoryInMb;
 
+    /**
+     * @return Maximum amount of memory available to the canary while it is running, in MB. The value you specify must be a multiple of 64.
+     * 
+     */
     public Optional<Output<Integer>> memoryInMb() {
         return Optional.ofNullable(this.memoryInMb);
     }
@@ -45,6 +53,10 @@ public final class CanaryRunConfigGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="timeoutInSeconds")
     private @Nullable Output<Integer> timeoutInSeconds;
 
+    /**
+     * @return Number of seconds the canary is allowed to run before it must stop. If you omit this field, the frequency of the canary is used, up to a maximum of 840 (14 minutes).
+     * 
+     */
     public Optional<Output<Integer>> timeoutInSeconds() {
         return Optional.ofNullable(this.timeoutInSeconds);
     }
@@ -75,29 +87,65 @@ public final class CanaryRunConfigGetArgs extends com.pulumi.resources.ResourceA
             $ = new CanaryRunConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activeTracing Whether this canary is to use active AWS X-Ray tracing when it runs. You can enable active tracing only for canaries that use version syn-nodejs-2.0 or later for their canary runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeTracing(@Nullable Output<Boolean> activeTracing) {
             $.activeTracing = activeTracing;
             return this;
         }
 
+        /**
+         * @param activeTracing Whether this canary is to use active AWS X-Ray tracing when it runs. You can enable active tracing only for canaries that use version syn-nodejs-2.0 or later for their canary runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeTracing(Boolean activeTracing) {
             return activeTracing(Output.of(activeTracing));
         }
 
+        /**
+         * @param memoryInMb Maximum amount of memory available to the canary while it is running, in MB. The value you specify must be a multiple of 64.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryInMb(@Nullable Output<Integer> memoryInMb) {
             $.memoryInMb = memoryInMb;
             return this;
         }
 
+        /**
+         * @param memoryInMb Maximum amount of memory available to the canary while it is running, in MB. The value you specify must be a multiple of 64.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryInMb(Integer memoryInMb) {
             return memoryInMb(Output.of(memoryInMb));
         }
 
+        /**
+         * @param timeoutInSeconds Number of seconds the canary is allowed to run before it must stop. If you omit this field, the frequency of the canary is used, up to a maximum of 840 (14 minutes).
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutInSeconds(@Nullable Output<Integer> timeoutInSeconds) {
             $.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
+        /**
+         * @param timeoutInSeconds Number of seconds the canary is allowed to run before it must stop. If you omit this field, the frequency of the canary is used, up to a maximum of 840 (14 minutes).
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutInSeconds(Integer timeoutInSeconds) {
             return timeoutInSeconds(Output.of(timeoutInSeconds));
         }

@@ -21,6 +21,10 @@ public final class GetDomainEbsOption extends com.pulumi.resources.InvokeArgs {
     @Import(name="ebsEnabled", required=true)
     private Boolean ebsEnabled;
 
+    /**
+     * @return Whether EBS volumes are attached to data nodes in the domain.
+     * 
+     */
     public Boolean ebsEnabled() {
         return this.ebsEnabled;
     }
@@ -32,6 +36,10 @@ public final class GetDomainEbsOption extends com.pulumi.resources.InvokeArgs {
     @Import(name="iops", required=true)
     private Integer iops;
 
+    /**
+     * @return The baseline input/output (I/O) performance of EBS volumes attached to data nodes.
+     * 
+     */
     public Integer iops() {
         return this.iops;
     }
@@ -43,6 +51,10 @@ public final class GetDomainEbsOption extends com.pulumi.resources.InvokeArgs {
     @Import(name="volumeSize", required=true)
     private Integer volumeSize;
 
+    /**
+     * @return The size of EBS volumes attached to data nodes (in GB).
+     * 
+     */
     public Integer volumeSize() {
         return this.volumeSize;
     }
@@ -54,6 +66,10 @@ public final class GetDomainEbsOption extends com.pulumi.resources.InvokeArgs {
     @Import(name="volumeType", required=true)
     private String volumeType;
 
+    /**
+     * @return The type of EBS volumes attached to data nodes.
+     * 
+     */
     public String volumeType() {
         return this.volumeType;
     }
@@ -85,21 +101,45 @@ public final class GetDomainEbsOption extends com.pulumi.resources.InvokeArgs {
             $ = new GetDomainEbsOption(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ebsEnabled Whether EBS volumes are attached to data nodes in the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsEnabled(Boolean ebsEnabled) {
             $.ebsEnabled = ebsEnabled;
             return this;
         }
 
+        /**
+         * @param iops The baseline input/output (I/O) performance of EBS volumes attached to data nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iops(Integer iops) {
             $.iops = iops;
             return this;
         }
 
+        /**
+         * @param volumeSize The size of EBS volumes attached to data nodes (in GB).
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeSize(Integer volumeSize) {
             $.volumeSize = volumeSize;
             return this;
         }
 
+        /**
+         * @param volumeType The type of EBS volumes attached to data nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeType(String volumeType) {
             $.volumeType = volumeType;
             return this;

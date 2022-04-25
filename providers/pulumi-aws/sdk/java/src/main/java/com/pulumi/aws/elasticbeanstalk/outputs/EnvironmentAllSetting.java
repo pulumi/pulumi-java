@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EnvironmentAllSetting {
     /**
-     * A unique name for this Environment. This name is used
+     * @return A unique name for this Environment. This name is used
      * in the application URL
      * 
      */
@@ -34,10 +34,10 @@ public final class EnvironmentAllSetting {
     }
 
     /**
-     * A unique name for this Environment. This name is used
+     * @return A unique name for this Environment. This name is used
      * in the application URL
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

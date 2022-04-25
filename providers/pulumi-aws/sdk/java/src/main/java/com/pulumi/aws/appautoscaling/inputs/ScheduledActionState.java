@@ -23,6 +23,10 @@ public final class ScheduledActionState extends com.pulumi.resources.ResourceArg
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the scheduled action.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -34,6 +38,10 @@ public final class ScheduledActionState extends com.pulumi.resources.ResourceArg
     @Import(name="endTime")
     private @Nullable Output<String> endTime;
 
+    /**
+     * @return The date and time for the scheduled action to end in RFC 3339 format. The timezone is not affected by the setting of `timezone`.
+     * 
+     */
     public Optional<Output<String>> endTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -45,6 +53,10 @@ public final class ScheduledActionState extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the scheduled action.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -56,6 +68,10 @@ public final class ScheduledActionState extends com.pulumi.resources.ResourceArg
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return The identifier of the resource associated with the scheduled action. Documentation can be found in the parameter at: [AWS Application Auto Scaling API Reference](https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_PutScheduledAction.html#ApplicationAutoScaling-PutScheduledAction-request-ResourceId)
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -67,6 +83,10 @@ public final class ScheduledActionState extends com.pulumi.resources.ResourceArg
     @Import(name="scalableDimension")
     private @Nullable Output<String> scalableDimension;
 
+    /**
+     * @return The scalable dimension. Documentation can be found in the parameter at: [AWS Application Auto Scaling API Reference](https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_PutScheduledAction.html#ApplicationAutoScaling-PutScheduledAction-request-ScalableDimension) Example: ecs:service:DesiredCount
+     * 
+     */
     public Optional<Output<String>> scalableDimension() {
         return Optional.ofNullable(this.scalableDimension);
     }
@@ -78,6 +98,10 @@ public final class ScheduledActionState extends com.pulumi.resources.ResourceArg
     @Import(name="scalableTargetAction")
     private @Nullable Output<ScheduledActionScalableTargetActionGetArgs> scalableTargetAction;
 
+    /**
+     * @return The new minimum and maximum capacity. You can set both values or just one. See below
+     * 
+     */
     public Optional<Output<ScheduledActionScalableTargetActionGetArgs>> scalableTargetAction() {
         return Optional.ofNullable(this.scalableTargetAction);
     }
@@ -89,6 +113,10 @@ public final class ScheduledActionState extends com.pulumi.resources.ResourceArg
     @Import(name="schedule")
     private @Nullable Output<String> schedule;
 
+    /**
+     * @return The schedule for this action. The following formats are supported: At expressions - at(yyyy-mm-ddThh:mm:ss), Rate expressions - rate(valueunit), Cron expressions - cron(fields). Times for at expressions and cron expressions are evaluated using the time zone configured in `timezone`. Documentation can be found in the parameter at: [AWS Application Auto Scaling API Reference](https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_PutScheduledAction.html#ApplicationAutoScaling-PutScheduledAction-request-Schedule)
+     * 
+     */
     public Optional<Output<String>> schedule() {
         return Optional.ofNullable(this.schedule);
     }
@@ -100,6 +128,10 @@ public final class ScheduledActionState extends com.pulumi.resources.ResourceArg
     @Import(name="serviceNamespace")
     private @Nullable Output<String> serviceNamespace;
 
+    /**
+     * @return The namespace of the AWS service. Documentation can be found in the parameter at: [AWS Application Auto Scaling API Reference](https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_PutScheduledAction.html#ApplicationAutoScaling-PutScheduledAction-request-ServiceNamespace) Example: ecs
+     * 
+     */
     public Optional<Output<String>> serviceNamespace() {
         return Optional.ofNullable(this.serviceNamespace);
     }
@@ -111,6 +143,10 @@ public final class ScheduledActionState extends com.pulumi.resources.ResourceArg
     @Import(name="startTime")
     private @Nullable Output<String> startTime;
 
+    /**
+     * @return The date and time for the scheduled action to start in RFC 3339 format. The timezone is not affected by the setting of `timezone`.
+     * 
+     */
     public Optional<Output<String>> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -122,6 +158,10 @@ public final class ScheduledActionState extends com.pulumi.resources.ResourceArg
     @Import(name="timezone")
     private @Nullable Output<String> timezone;
 
+    /**
+     * @return The time zone used when setting a scheduled action by using an at or cron expression. Does not affect timezone for `start_time` and `end_time`. Valid values are the [canonical names of the IANA time zones supported by Joda-Time](https://www.joda.org/joda-time/timezones.html), such as `Etc/GMT+9` or `Pacific/Tahiti`. Default is `UTC`.
+     * 
+     */
     public Optional<Output<String>> timezone() {
         return Optional.ofNullable(this.timezone);
     }
@@ -159,92 +199,212 @@ public final class ScheduledActionState extends com.pulumi.resources.ResourceArg
             $ = new ScheduledActionState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the scheduled action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the scheduled action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param endTime The date and time for the scheduled action to end in RFC 3339 format. The timezone is not affected by the setting of `timezone`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(@Nullable Output<String> endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param endTime The date and time for the scheduled action to end in RFC 3339 format. The timezone is not affected by the setting of `timezone`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             return endTime(Output.of(endTime));
         }
 
+        /**
+         * @param name The name of the scheduled action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the scheduled action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceId The identifier of the resource associated with the scheduled action. Documentation can be found in the parameter at: [AWS Application Auto Scaling API Reference](https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_PutScheduledAction.html#ApplicationAutoScaling-PutScheduledAction-request-ResourceId)
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The identifier of the resource associated with the scheduled action. Documentation can be found in the parameter at: [AWS Application Auto Scaling API Reference](https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_PutScheduledAction.html#ApplicationAutoScaling-PutScheduledAction-request-ResourceId)
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param scalableDimension The scalable dimension. Documentation can be found in the parameter at: [AWS Application Auto Scaling API Reference](https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_PutScheduledAction.html#ApplicationAutoScaling-PutScheduledAction-request-ScalableDimension) Example: ecs:service:DesiredCount
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalableDimension(@Nullable Output<String> scalableDimension) {
             $.scalableDimension = scalableDimension;
             return this;
         }
 
+        /**
+         * @param scalableDimension The scalable dimension. Documentation can be found in the parameter at: [AWS Application Auto Scaling API Reference](https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_PutScheduledAction.html#ApplicationAutoScaling-PutScheduledAction-request-ScalableDimension) Example: ecs:service:DesiredCount
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalableDimension(String scalableDimension) {
             return scalableDimension(Output.of(scalableDimension));
         }
 
+        /**
+         * @param scalableTargetAction The new minimum and maximum capacity. You can set both values or just one. See below
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalableTargetAction(@Nullable Output<ScheduledActionScalableTargetActionGetArgs> scalableTargetAction) {
             $.scalableTargetAction = scalableTargetAction;
             return this;
         }
 
+        /**
+         * @param scalableTargetAction The new minimum and maximum capacity. You can set both values or just one. See below
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalableTargetAction(ScheduledActionScalableTargetActionGetArgs scalableTargetAction) {
             return scalableTargetAction(Output.of(scalableTargetAction));
         }
 
+        /**
+         * @param schedule The schedule for this action. The following formats are supported: At expressions - at(yyyy-mm-ddThh:mm:ss), Rate expressions - rate(valueunit), Cron expressions - cron(fields). Times for at expressions and cron expressions are evaluated using the time zone configured in `timezone`. Documentation can be found in the parameter at: [AWS Application Auto Scaling API Reference](https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_PutScheduledAction.html#ApplicationAutoScaling-PutScheduledAction-request-Schedule)
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(@Nullable Output<String> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule The schedule for this action. The following formats are supported: At expressions - at(yyyy-mm-ddThh:mm:ss), Rate expressions - rate(valueunit), Cron expressions - cron(fields). Times for at expressions and cron expressions are evaluated using the time zone configured in `timezone`. Documentation can be found in the parameter at: [AWS Application Auto Scaling API Reference](https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_PutScheduledAction.html#ApplicationAutoScaling-PutScheduledAction-request-Schedule)
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(String schedule) {
             return schedule(Output.of(schedule));
         }
 
+        /**
+         * @param serviceNamespace The namespace of the AWS service. Documentation can be found in the parameter at: [AWS Application Auto Scaling API Reference](https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_PutScheduledAction.html#ApplicationAutoScaling-PutScheduledAction-request-ServiceNamespace) Example: ecs
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceNamespace(@Nullable Output<String> serviceNamespace) {
             $.serviceNamespace = serviceNamespace;
             return this;
         }
 
+        /**
+         * @param serviceNamespace The namespace of the AWS service. Documentation can be found in the parameter at: [AWS Application Auto Scaling API Reference](https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_PutScheduledAction.html#ApplicationAutoScaling-PutScheduledAction-request-ServiceNamespace) Example: ecs
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceNamespace(String serviceNamespace) {
             return serviceNamespace(Output.of(serviceNamespace));
         }
 
+        /**
+         * @param startTime The date and time for the scheduled action to start in RFC 3339 format. The timezone is not affected by the setting of `timezone`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime The date and time for the scheduled action to start in RFC 3339 format. The timezone is not affected by the setting of `timezone`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }
 
+        /**
+         * @param timezone The time zone used when setting a scheduled action by using an at or cron expression. Does not affect timezone for `start_time` and `end_time`. Valid values are the [canonical names of the IANA time zones supported by Joda-Time](https://www.joda.org/joda-time/timezones.html), such as `Etc/GMT+9` or `Pacific/Tahiti`. Default is `UTC`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timezone(@Nullable Output<String> timezone) {
             $.timezone = timezone;
             return this;
         }
 
+        /**
+         * @param timezone The time zone used when setting a scheduled action by using an at or cron expression. Does not affect timezone for `start_time` and `end_time`. Valid values are the [canonical names of the IANA time zones supported by Joda-Time](https://www.joda.org/joda-time/timezones.html), such as `Etc/GMT+9` or `Pacific/Tahiti`. Default is `UTC`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timezone(String timezone) {
             return timezone(Output.of(timezone));
         }

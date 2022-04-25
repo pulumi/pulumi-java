@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class BucketReplicationConfigRuleDestinationMetricsEventThreshold {
     /**
-     * Time in minutes. Valid values: `15`.
+     * @return Time in minutes. Valid values: `15`.
      * 
      */
     private final Integer minutes;
@@ -21,9 +21,9 @@ public final class BucketReplicationConfigRuleDestinationMetricsEventThreshold {
     }
 
     /**
-     * Time in minutes. Valid values: `15`.
+     * @return Time in minutes. Valid values: `15`.
      * 
-    */
+     */
     public Integer minutes() {
         return this.minutes;
     }

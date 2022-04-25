@@ -27,6 +27,10 @@ public final class GetClusterCacheNode extends com.pulumi.resources.InvokeArgs {
     @Import(name="availabilityZone", required=true)
     private String availabilityZone;
 
+    /**
+     * @return The Availability Zone for the cache cluster.
+     * 
+     */
     public String availabilityZone() {
         return this.availabilityZone;
     }
@@ -46,6 +50,11 @@ public final class GetClusterCacheNode extends com.pulumi.resources.InvokeArgs {
     @Import(name="port", required=true)
     private Integer port;
 
+    /**
+     * @return The port number on which each of the cache nodes will
+     * accept connections.
+     * 
+     */
     public Integer port() {
         return this.port;
     }
@@ -82,6 +91,12 @@ public final class GetClusterCacheNode extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param availabilityZone The Availability Zone for the cache cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(String availabilityZone) {
             $.availabilityZone = availabilityZone;
             return this;
@@ -92,6 +107,13 @@ public final class GetClusterCacheNode extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param port The port number on which each of the cache nodes will
+         * accept connections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             $.port = port;
             return this;

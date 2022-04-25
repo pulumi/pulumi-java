@@ -14,24 +14,24 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSecurityGroupsResult {
     /**
-     * ARNs of the matched security groups.
+     * @return ARNs of the matched security groups.
      * 
      */
     private final List<String> arns;
     private final @Nullable List<GetSecurityGroupsFilter> filters;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * IDs of the matches security groups.
+     * @return IDs of the matches security groups.
      * 
      */
     private final List<String> ids;
     private final Map<String,String> tags;
     /**
-     * The VPC IDs of the matched security groups. The data source&#39;s tag or filter *will span VPCs* unless the `vpc-id` filter is also used.
+     * @return The VPC IDs of the matched security groups. The data source&#39;s tag or filter *will span VPCs* unless the `vpc-id` filter is also used.
      * 
      */
     private final List<String> vpcIds;
@@ -53,9 +53,9 @@ public final class GetSecurityGroupsResult {
     }
 
     /**
-     * ARNs of the matched security groups.
+     * @return ARNs of the matched security groups.
      * 
-    */
+     */
     public List<String> arns() {
         return this.arns;
     }
@@ -63,16 +63,16 @@ public final class GetSecurityGroupsResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * IDs of the matches security groups.
+     * @return IDs of the matches security groups.
      * 
-    */
+     */
     public List<String> ids() {
         return this.ids;
     }
@@ -80,9 +80,9 @@ public final class GetSecurityGroupsResult {
         return this.tags;
     }
     /**
-     * The VPC IDs of the matched security groups. The data source&#39;s tag or filter *will span VPCs* unless the `vpc-id` filter is also used.
+     * @return The VPC IDs of the matched security groups. The data source&#39;s tag or filter *will span VPCs* unless the `vpc-id` filter is also used.
      * 
-    */
+     */
     public List<String> vpcIds() {
         return this.vpcIds;
     }

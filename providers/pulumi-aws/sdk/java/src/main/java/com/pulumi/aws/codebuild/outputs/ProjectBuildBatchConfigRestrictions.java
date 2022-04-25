@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ProjectBuildBatchConfigRestrictions {
     /**
-     * An array of strings that specify the compute types that are allowed for the batch build. See [Build environment compute types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html) in the AWS CodeBuild User Guide for these values.
+     * @return An array of strings that specify the compute types that are allowed for the batch build. See [Build environment compute types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html) in the AWS CodeBuild User Guide for these values.
      * 
      */
     private final @Nullable List<String> computeTypesAlloweds;
     /**
-     * Specifies the maximum number of builds allowed.
+     * @return Specifies the maximum number of builds allowed.
      * 
      */
     private final @Nullable Integer maximumBuildsAllowed;
@@ -33,16 +33,16 @@ public final class ProjectBuildBatchConfigRestrictions {
     }
 
     /**
-     * An array of strings that specify the compute types that are allowed for the batch build. See [Build environment compute types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html) in the AWS CodeBuild User Guide for these values.
+     * @return An array of strings that specify the compute types that are allowed for the batch build. See [Build environment compute types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html) in the AWS CodeBuild User Guide for these values.
      * 
-    */
+     */
     public List<String> computeTypesAlloweds() {
         return this.computeTypesAlloweds == null ? List.of() : this.computeTypesAlloweds;
     }
     /**
-     * Specifies the maximum number of builds allowed.
+     * @return Specifies the maximum number of builds allowed.
      * 
-    */
+     */
     public Optional<Integer> maximumBuildsAllowed() {
         return Optional.ofNullable(this.maximumBuildsAllowed);
     }

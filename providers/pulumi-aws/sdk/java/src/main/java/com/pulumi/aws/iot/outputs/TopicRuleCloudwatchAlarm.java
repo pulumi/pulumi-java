@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class TopicRuleCloudwatchAlarm {
     /**
-     * The CloudWatch alarm name.
+     * @return The CloudWatch alarm name.
      * 
      */
     private final String alarmName;
     /**
-     * The IAM role ARN that allows access to the CloudWatch alarm.
+     * @return The IAM role ARN that allows access to the CloudWatch alarm.
      * 
      */
     private final String roleArn;
     /**
-     * The reason for the alarm change.
+     * @return The reason for the alarm change.
      * 
      */
     private final String stateReason;
     /**
-     * The value of the alarm state. Acceptable values are: OK, ALARM, INSUFFICIENT_DATA.
+     * @return The value of the alarm state. Acceptable values are: OK, ALARM, INSUFFICIENT_DATA.
      * 
      */
     private final String stateValue;
@@ -43,30 +43,30 @@ public final class TopicRuleCloudwatchAlarm {
     }
 
     /**
-     * The CloudWatch alarm name.
+     * @return The CloudWatch alarm name.
      * 
-    */
+     */
     public String alarmName() {
         return this.alarmName;
     }
     /**
-     * The IAM role ARN that allows access to the CloudWatch alarm.
+     * @return The IAM role ARN that allows access to the CloudWatch alarm.
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }
     /**
-     * The reason for the alarm change.
+     * @return The reason for the alarm change.
      * 
-    */
+     */
     public String stateReason() {
         return this.stateReason;
     }
     /**
-     * The value of the alarm state. Acceptable values are: OK, ALARM, INSUFFICIENT_DATA.
+     * @return The value of the alarm state. Acceptable values are: OK, ALARM, INSUFFICIENT_DATA.
      * 
-    */
+     */
     public String stateValue() {
         return this.stateValue;
     }

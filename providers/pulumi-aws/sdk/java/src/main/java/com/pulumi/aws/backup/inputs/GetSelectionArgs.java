@@ -19,6 +19,10 @@ public final class GetSelectionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="planId", required=true)
     private String planId;
 
+    /**
+     * @return The backup plan ID associated with the selection of resources.
+     * 
+     */
     public String planId() {
         return this.planId;
     }
@@ -30,6 +34,10 @@ public final class GetSelectionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="selectionId", required=true)
     private String selectionId;
 
+    /**
+     * @return The backup selection ID.
+     * 
+     */
     public String selectionId() {
         return this.selectionId;
     }
@@ -59,11 +67,23 @@ public final class GetSelectionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSelectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param planId The backup plan ID associated with the selection of resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder planId(String planId) {
             $.planId = planId;
             return this;
         }
 
+        /**
+         * @param selectionId The backup selection ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectionId(String selectionId) {
             $.selectionId = selectionId;
             return this;

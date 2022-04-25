@@ -24,6 +24,10 @@ public final class XssMatchSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the set
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -35,6 +39,10 @@ public final class XssMatchSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="xssMatchTuples")
     private @Nullable Output<List<XssMatchSetXssMatchTupleGetArgs>> xssMatchTuples;
 
+    /**
+     * @return The parts of web requests that you want to inspect for cross-site scripting attacks.
+     * 
+     */
     public Optional<Output<List<XssMatchSetXssMatchTupleGetArgs>>> xssMatchTuples() {
         return Optional.ofNullable(this.xssMatchTuples);
     }
@@ -64,24 +72,54 @@ public final class XssMatchSetState extends com.pulumi.resources.ResourceArgs {
             $ = new XssMatchSetState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the set
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the set
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param xssMatchTuples The parts of web requests that you want to inspect for cross-site scripting attacks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xssMatchTuples(@Nullable Output<List<XssMatchSetXssMatchTupleGetArgs>> xssMatchTuples) {
             $.xssMatchTuples = xssMatchTuples;
             return this;
         }
 
+        /**
+         * @param xssMatchTuples The parts of web requests that you want to inspect for cross-site scripting attacks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xssMatchTuples(List<XssMatchSetXssMatchTupleGetArgs> xssMatchTuples) {
             return xssMatchTuples(Output.of(xssMatchTuples));
         }
 
+        /**
+         * @param xssMatchTuples The parts of web requests that you want to inspect for cross-site scripting attacks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xssMatchTuples(XssMatchSetXssMatchTupleGetArgs... xssMatchTuples) {
             return xssMatchTuples(List.of(xssMatchTuples));
         }

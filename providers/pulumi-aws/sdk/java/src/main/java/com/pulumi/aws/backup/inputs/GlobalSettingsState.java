@@ -23,6 +23,10 @@ public final class GlobalSettingsState extends com.pulumi.resources.ResourceArgs
     @Import(name="globalSettings")
     private @Nullable Output<Map<String,String>> globalSettings;
 
+    /**
+     * @return A list of resources along with the opt-in preferences for the account.
+     * 
+     */
     public Optional<Output<Map<String,String>>> globalSettings() {
         return Optional.ofNullable(this.globalSettings);
     }
@@ -51,11 +55,23 @@ public final class GlobalSettingsState extends com.pulumi.resources.ResourceArgs
             $ = new GlobalSettingsState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param globalSettings A list of resources along with the opt-in preferences for the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalSettings(@Nullable Output<Map<String,String>> globalSettings) {
             $.globalSettings = globalSettings;
             return this;
         }
 
+        /**
+         * @param globalSettings A list of resources along with the opt-in preferences for the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalSettings(Map<String,String> globalSettings) {
             return globalSettings(Output.of(globalSettings));
         }

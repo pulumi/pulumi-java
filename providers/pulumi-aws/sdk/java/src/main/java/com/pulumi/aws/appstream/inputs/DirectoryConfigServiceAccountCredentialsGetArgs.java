@@ -20,6 +20,10 @@ public final class DirectoryConfigServiceAccountCredentialsGetArgs extends com.p
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return User name of the account. This account must have the following privileges: create computer objects, join computers to the domain, and change/reset the password on descendant computer objects for the organizational units specified.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -31,6 +35,10 @@ public final class DirectoryConfigServiceAccountCredentialsGetArgs extends com.p
     @Import(name="accountPassword", required=true)
     private Output<String> accountPassword;
 
+    /**
+     * @return Password for the account.
+     * 
+     */
     public Output<String> accountPassword() {
         return this.accountPassword;
     }
@@ -60,20 +68,44 @@ public final class DirectoryConfigServiceAccountCredentialsGetArgs extends com.p
             $ = new DirectoryConfigServiceAccountCredentialsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName User name of the account. This account must have the following privileges: create computer objects, join computers to the domain, and change/reset the password on descendant computer objects for the organizational units specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName User name of the account. This account must have the following privileges: create computer objects, join computers to the domain, and change/reset the password on descendant computer objects for the organizational units specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param accountPassword Password for the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountPassword(Output<String> accountPassword) {
             $.accountPassword = accountPassword;
             return this;
         }
 
+        /**
+         * @param accountPassword Password for the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountPassword(String accountPassword) {
             return accountPassword(Output.of(accountPassword));
         }

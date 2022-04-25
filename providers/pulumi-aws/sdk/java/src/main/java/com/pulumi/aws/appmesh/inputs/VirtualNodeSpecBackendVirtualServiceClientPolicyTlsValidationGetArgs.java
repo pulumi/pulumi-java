@@ -23,6 +23,10 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
     @Import(name="subjectAlternativeNames")
     private @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames;
 
+    /**
+     * @return The SANs for a TLS validation context.
+     * 
+     */
     public Optional<Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesGetArgs>> subjectAlternativeNames() {
         return Optional.ofNullable(this.subjectAlternativeNames);
     }
@@ -34,6 +38,10 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
     @Import(name="trust", required=true)
     private Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustGetArgs> trust;
 
+    /**
+     * @return The TLS validation context trust.
+     * 
+     */
     public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustGetArgs> trust() {
         return this.trust;
     }
@@ -63,20 +71,44 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
             $ = new VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subjectAlternativeNames The SANs for a TLS validation context.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAlternativeNames(@Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames) {
             $.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
 
+        /**
+         * @param subjectAlternativeNames The SANs for a TLS validation context.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAlternativeNames(VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesGetArgs subjectAlternativeNames) {
             return subjectAlternativeNames(Output.of(subjectAlternativeNames));
         }
 
+        /**
+         * @param trust The TLS validation context trust.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trust(Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustGetArgs> trust) {
             $.trust = trust;
             return this;
         }
 
+        /**
+         * @param trust The TLS validation context trust.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trust(VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustGetArgs trust) {
             return trust(Output.of(trust));
         }

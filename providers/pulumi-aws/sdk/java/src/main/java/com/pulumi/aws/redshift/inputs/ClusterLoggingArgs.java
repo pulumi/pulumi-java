@@ -24,6 +24,11 @@ public final class ClusterLoggingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="bucketName")
     private @Nullable Output<String> bucketName;
 
+    /**
+     * @return The name of an existing S3 bucket where the log files are to be stored. Must be in the same region as the cluster and the cluster must have read bucket and put object permissions.
+     * For more information on the permissions required for the bucket, please read the AWS [documentation](http://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html#db-auditing-enable-logging)
+     * 
+     */
     public Optional<Output<String>> bucketName() {
         return Optional.ofNullable(this.bucketName);
     }
@@ -35,6 +40,10 @@ public final class ClusterLoggingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="enable", required=true)
     private Output<Boolean> enable;
 
+    /**
+     * @return Enables logging information such as queries and connection attempts, for the specified Amazon Redshift cluster.
+     * 
+     */
     public Output<Boolean> enable() {
         return this.enable;
     }
@@ -46,6 +55,10 @@ public final class ClusterLoggingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="s3KeyPrefix")
     private @Nullable Output<String> s3KeyPrefix;
 
+    /**
+     * @return The prefix applied to the log file names.
+     * 
+     */
     public Optional<Output<String>> s3KeyPrefix() {
         return Optional.ofNullable(this.s3KeyPrefix);
     }
@@ -76,29 +89,67 @@ public final class ClusterLoggingArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ClusterLoggingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketName The name of an existing S3 bucket where the log files are to be stored. Must be in the same region as the cluster and the cluster must have read bucket and put object permissions.
+         * For more information on the permissions required for the bucket, please read the AWS [documentation](http://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html#db-auditing-enable-logging)
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(@Nullable Output<String> bucketName) {
             $.bucketName = bucketName;
             return this;
         }
 
+        /**
+         * @param bucketName The name of an existing S3 bucket where the log files are to be stored. Must be in the same region as the cluster and the cluster must have read bucket and put object permissions.
+         * For more information on the permissions required for the bucket, please read the AWS [documentation](http://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html#db-auditing-enable-logging)
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(String bucketName) {
             return bucketName(Output.of(bucketName));
         }
 
+        /**
+         * @param enable Enables logging information such as queries and connection attempts, for the specified Amazon Redshift cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(Output<Boolean> enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param enable Enables logging information such as queries and connection attempts, for the specified Amazon Redshift cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(Boolean enable) {
             return enable(Output.of(enable));
         }
 
+        /**
+         * @param s3KeyPrefix The prefix applied to the log file names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3KeyPrefix(@Nullable Output<String> s3KeyPrefix) {
             $.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
 
+        /**
+         * @param s3KeyPrefix The prefix applied to the log file names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3KeyPrefix(String s3KeyPrefix) {
             return s3KeyPrefix(Output.of(s3KeyPrefix));
         }

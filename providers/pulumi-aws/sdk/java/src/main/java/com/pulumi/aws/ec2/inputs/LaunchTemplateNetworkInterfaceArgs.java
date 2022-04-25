@@ -24,6 +24,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
     @Import(name="associateCarrierIpAddress")
     private @Nullable Output<String> associateCarrierIpAddress;
 
+    /**
+     * @return Associate a Carrier IP address with `eth0` for a new network interface. Use this option when you launch an instance in a Wavelength Zone and want to associate a Carrier IP address with the network interface. Boolean value.
+     * 
+     */
     public Optional<Output<String>> associateCarrierIpAddress() {
         return Optional.ofNullable(this.associateCarrierIpAddress);
     }
@@ -35,6 +39,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
     @Import(name="associatePublicIpAddress")
     private @Nullable Output<String> associatePublicIpAddress;
 
+    /**
+     * @return Associate a public ip address with the network interface.  Boolean value.
+     * 
+     */
     public Optional<Output<String>> associatePublicIpAddress() {
         return Optional.ofNullable(this.associatePublicIpAddress);
     }
@@ -46,6 +54,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
     @Import(name="deleteOnTermination")
     private @Nullable Output<String> deleteOnTermination;
 
+    /**
+     * @return Whether the network interface should be destroyed on instance termination. Defaults to `false` if not set.
+     * 
+     */
     public Optional<Output<String>> deleteOnTermination() {
         return Optional.ofNullable(this.deleteOnTermination);
     }
@@ -57,6 +69,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the network interface.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -68,6 +84,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
     @Import(name="deviceIndex")
     private @Nullable Output<Integer> deviceIndex;
 
+    /**
+     * @return The integer index of the network interface attachment.
+     * 
+     */
     public Optional<Output<Integer>> deviceIndex() {
         return Optional.ofNullable(this.deviceIndex);
     }
@@ -79,6 +99,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
     @Import(name="interfaceType")
     private @Nullable Output<String> interfaceType;
 
+    /**
+     * @return The type of network interface. To create an Elastic Fabric Adapter (EFA), specify `efa`.
+     * 
+     */
     public Optional<Output<String>> interfaceType() {
         return Optional.ofNullable(this.interfaceType);
     }
@@ -90,6 +114,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
     @Import(name="ipv4AddressCount")
     private @Nullable Output<Integer> ipv4AddressCount;
 
+    /**
+     * @return The number of secondary private IPv4 addresses to assign to a network interface. Conflicts with `ipv4_addresses`
+     * 
+     */
     public Optional<Output<Integer>> ipv4AddressCount() {
         return Optional.ofNullable(this.ipv4AddressCount);
     }
@@ -101,6 +129,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
     @Import(name="ipv4Addresses")
     private @Nullable Output<List<String>> ipv4Addresses;
 
+    /**
+     * @return One or more private IPv4 addresses to associate. Conflicts with `ipv4_address_count`
+     * 
+     */
     public Optional<Output<List<String>>> ipv4Addresses() {
         return Optional.ofNullable(this.ipv4Addresses);
     }
@@ -112,6 +144,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
     @Import(name="ipv6AddressCount")
     private @Nullable Output<Integer> ipv6AddressCount;
 
+    /**
+     * @return The number of IPv6 addresses to assign to a network interface. Conflicts with `ipv6_addresses`
+     * 
+     */
     public Optional<Output<Integer>> ipv6AddressCount() {
         return Optional.ofNullable(this.ipv6AddressCount);
     }
@@ -123,6 +159,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
     @Import(name="ipv6Addresses")
     private @Nullable Output<List<String>> ipv6Addresses;
 
+    /**
+     * @return One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. Conflicts with `ipv6_address_count`
+     * 
+     */
     public Optional<Output<List<String>>> ipv6Addresses() {
         return Optional.ofNullable(this.ipv6Addresses);
     }
@@ -134,6 +174,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
     @Import(name="networkCardIndex")
     private @Nullable Output<Integer> networkCardIndex;
 
+    /**
+     * @return The index of the network card. Some instance types support multiple network cards. The primary network interface must be assigned to network card index 0. The default is network card index 0.
+     * 
+     */
     public Optional<Output<Integer>> networkCardIndex() {
         return Optional.ofNullable(this.networkCardIndex);
     }
@@ -145,6 +189,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
     @Import(name="networkInterfaceId")
     private @Nullable Output<String> networkInterfaceId;
 
+    /**
+     * @return The ID of the network interface to attach.
+     * 
+     */
     public Optional<Output<String>> networkInterfaceId() {
         return Optional.ofNullable(this.networkInterfaceId);
     }
@@ -156,6 +204,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
     @Import(name="privateIpAddress")
     private @Nullable Output<String> privateIpAddress;
 
+    /**
+     * @return The primary private IPv4 address.
+     * 
+     */
     public Optional<Output<String>> privateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
@@ -167,6 +219,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
     @Import(name="securityGroups")
     private @Nullable Output<List<String>> securityGroups;
 
+    /**
+     * @return A list of security group IDs to associate.
+     * 
+     */
     public Optional<Output<List<String>>> securityGroups() {
         return Optional.ofNullable(this.securityGroups);
     }
@@ -178,6 +234,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
     @Import(name="subnetId")
     private @Nullable Output<String> subnetId;
 
+    /**
+     * @return The VPC Subnet ID to associate.
+     * 
+     */
     public Optional<Output<String>> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
@@ -220,149 +280,347 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
             $ = new LaunchTemplateNetworkInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param associateCarrierIpAddress Associate a Carrier IP address with `eth0` for a new network interface. Use this option when you launch an instance in a Wavelength Zone and want to associate a Carrier IP address with the network interface. Boolean value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associateCarrierIpAddress(@Nullable Output<String> associateCarrierIpAddress) {
             $.associateCarrierIpAddress = associateCarrierIpAddress;
             return this;
         }
 
+        /**
+         * @param associateCarrierIpAddress Associate a Carrier IP address with `eth0` for a new network interface. Use this option when you launch an instance in a Wavelength Zone and want to associate a Carrier IP address with the network interface. Boolean value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associateCarrierIpAddress(String associateCarrierIpAddress) {
             return associateCarrierIpAddress(Output.of(associateCarrierIpAddress));
         }
 
+        /**
+         * @param associatePublicIpAddress Associate a public ip address with the network interface.  Boolean value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associatePublicIpAddress(@Nullable Output<String> associatePublicIpAddress) {
             $.associatePublicIpAddress = associatePublicIpAddress;
             return this;
         }
 
+        /**
+         * @param associatePublicIpAddress Associate a public ip address with the network interface.  Boolean value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associatePublicIpAddress(String associatePublicIpAddress) {
             return associatePublicIpAddress(Output.of(associatePublicIpAddress));
         }
 
+        /**
+         * @param deleteOnTermination Whether the network interface should be destroyed on instance termination. Defaults to `false` if not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteOnTermination(@Nullable Output<String> deleteOnTermination) {
             $.deleteOnTermination = deleteOnTermination;
             return this;
         }
 
+        /**
+         * @param deleteOnTermination Whether the network interface should be destroyed on instance termination. Defaults to `false` if not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteOnTermination(String deleteOnTermination) {
             return deleteOnTermination(Output.of(deleteOnTermination));
         }
 
+        /**
+         * @param description Description of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param deviceIndex The integer index of the network interface attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceIndex(@Nullable Output<Integer> deviceIndex) {
             $.deviceIndex = deviceIndex;
             return this;
         }
 
+        /**
+         * @param deviceIndex The integer index of the network interface attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceIndex(Integer deviceIndex) {
             return deviceIndex(Output.of(deviceIndex));
         }
 
+        /**
+         * @param interfaceType The type of network interface. To create an Elastic Fabric Adapter (EFA), specify `efa`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interfaceType(@Nullable Output<String> interfaceType) {
             $.interfaceType = interfaceType;
             return this;
         }
 
+        /**
+         * @param interfaceType The type of network interface. To create an Elastic Fabric Adapter (EFA), specify `efa`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interfaceType(String interfaceType) {
             return interfaceType(Output.of(interfaceType));
         }
 
+        /**
+         * @param ipv4AddressCount The number of secondary private IPv4 addresses to assign to a network interface. Conflicts with `ipv4_addresses`
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4AddressCount(@Nullable Output<Integer> ipv4AddressCount) {
             $.ipv4AddressCount = ipv4AddressCount;
             return this;
         }
 
+        /**
+         * @param ipv4AddressCount The number of secondary private IPv4 addresses to assign to a network interface. Conflicts with `ipv4_addresses`
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4AddressCount(Integer ipv4AddressCount) {
             return ipv4AddressCount(Output.of(ipv4AddressCount));
         }
 
+        /**
+         * @param ipv4Addresses One or more private IPv4 addresses to associate. Conflicts with `ipv4_address_count`
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4Addresses(@Nullable Output<List<String>> ipv4Addresses) {
             $.ipv4Addresses = ipv4Addresses;
             return this;
         }
 
+        /**
+         * @param ipv4Addresses One or more private IPv4 addresses to associate. Conflicts with `ipv4_address_count`
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4Addresses(List<String> ipv4Addresses) {
             return ipv4Addresses(Output.of(ipv4Addresses));
         }
 
+        /**
+         * @param ipv4Addresses One or more private IPv4 addresses to associate. Conflicts with `ipv4_address_count`
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4Addresses(String... ipv4Addresses) {
             return ipv4Addresses(List.of(ipv4Addresses));
         }
 
+        /**
+         * @param ipv6AddressCount The number of IPv6 addresses to assign to a network interface. Conflicts with `ipv6_addresses`
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6AddressCount(@Nullable Output<Integer> ipv6AddressCount) {
             $.ipv6AddressCount = ipv6AddressCount;
             return this;
         }
 
+        /**
+         * @param ipv6AddressCount The number of IPv6 addresses to assign to a network interface. Conflicts with `ipv6_addresses`
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6AddressCount(Integer ipv6AddressCount) {
             return ipv6AddressCount(Output.of(ipv6AddressCount));
         }
 
+        /**
+         * @param ipv6Addresses One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. Conflicts with `ipv6_address_count`
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6Addresses(@Nullable Output<List<String>> ipv6Addresses) {
             $.ipv6Addresses = ipv6Addresses;
             return this;
         }
 
+        /**
+         * @param ipv6Addresses One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. Conflicts with `ipv6_address_count`
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6Addresses(List<String> ipv6Addresses) {
             return ipv6Addresses(Output.of(ipv6Addresses));
         }
 
+        /**
+         * @param ipv6Addresses One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. Conflicts with `ipv6_address_count`
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6Addresses(String... ipv6Addresses) {
             return ipv6Addresses(List.of(ipv6Addresses));
         }
 
+        /**
+         * @param networkCardIndex The index of the network card. Some instance types support multiple network cards. The primary network interface must be assigned to network card index 0. The default is network card index 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkCardIndex(@Nullable Output<Integer> networkCardIndex) {
             $.networkCardIndex = networkCardIndex;
             return this;
         }
 
+        /**
+         * @param networkCardIndex The index of the network card. Some instance types support multiple network cards. The primary network interface must be assigned to network card index 0. The default is network card index 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkCardIndex(Integer networkCardIndex) {
             return networkCardIndex(Output.of(networkCardIndex));
         }
 
+        /**
+         * @param networkInterfaceId The ID of the network interface to attach.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
             $.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
+        /**
+         * @param networkInterfaceId The ID of the network interface to attach.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceId(String networkInterfaceId) {
             return networkInterfaceId(Output.of(networkInterfaceId));
         }
 
+        /**
+         * @param privateIpAddress The primary private IPv4 address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
             $.privateIpAddress = privateIpAddress;
             return this;
         }
 
+        /**
+         * @param privateIpAddress The primary private IPv4 address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddress(String privateIpAddress) {
             return privateIpAddress(Output.of(privateIpAddress));
         }
 
+        /**
+         * @param securityGroups A list of security group IDs to associate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             $.securityGroups = securityGroups;
             return this;
         }
 
+        /**
+         * @param securityGroups A list of security group IDs to associate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(List<String> securityGroups) {
             return securityGroups(Output.of(securityGroups));
         }
 
+        /**
+         * @param securityGroups A list of security group IDs to associate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
 
+        /**
+         * @param subnetId The VPC Subnet ID to associate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(@Nullable Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param subnetId The VPC Subnet ID to associate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }

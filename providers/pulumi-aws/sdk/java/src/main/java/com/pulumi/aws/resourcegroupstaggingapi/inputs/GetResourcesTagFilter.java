@@ -22,6 +22,10 @@ public final class GetResourcesTagFilter extends com.pulumi.resources.InvokeArgs
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return One part of a key-value pair that makes up a tag.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -33,6 +37,10 @@ public final class GetResourcesTagFilter extends com.pulumi.resources.InvokeArgs
     @Import(name="values")
     private @Nullable List<String> values;
 
+    /**
+     * @return The optional part of a key-value pair that make up a tag.
+     * 
+     */
     public Optional<List<String>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -62,16 +70,34 @@ public final class GetResourcesTagFilter extends com.pulumi.resources.InvokeArgs
             $ = new GetResourcesTagFilter(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key One part of a key-value pair that makes up a tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param values The optional part of a key-value pair that make up a tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable List<String> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values The optional part of a key-value pair that make up a tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VirtualNodeSpecListenerTlsCertificate {
     /**
-     * An AWS Certificate Manager (ACM) certificate.
+     * @return An AWS Certificate Manager (ACM) certificate.
      * 
      */
     private final @Nullable VirtualNodeSpecListenerTlsCertificateAcm acm;
     /**
-     * A local file certificate.
+     * @return A local file certificate.
      * 
      */
     private final @Nullable VirtualNodeSpecListenerTlsCertificateFile file;
     /**
-     * A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+     * @return A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
      * 
      */
     private final @Nullable VirtualNodeSpecListenerTlsCertificateSds sds;
@@ -40,23 +40,23 @@ public final class VirtualNodeSpecListenerTlsCertificate {
     }
 
     /**
-     * An AWS Certificate Manager (ACM) certificate.
+     * @return An AWS Certificate Manager (ACM) certificate.
      * 
-    */
+     */
     public Optional<VirtualNodeSpecListenerTlsCertificateAcm> acm() {
         return Optional.ofNullable(this.acm);
     }
     /**
-     * A local file certificate.
+     * @return A local file certificate.
      * 
-    */
+     */
     public Optional<VirtualNodeSpecListenerTlsCertificateFile> file() {
         return Optional.ofNullable(this.file);
     }
     /**
-     * A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+     * @return A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
      * 
-    */
+     */
     public Optional<VirtualNodeSpecListenerTlsCertificateSds> sds() {
         return Optional.ofNullable(this.sds);
     }

@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterConfigurationExecuteCommandConfigurationLogConfiguration {
     /**
-     * Whether or not to enable encryption on the CloudWatch logs. If not specified, encryption will be disabled.
+     * @return Whether or not to enable encryption on the CloudWatch logs. If not specified, encryption will be disabled.
      * 
      */
     private final @Nullable Boolean cloudWatchEncryptionEnabled;
     /**
-     * The name of the CloudWatch log group to send logs to.
+     * @return The name of the CloudWatch log group to send logs to.
      * 
      */
     private final @Nullable String cloudWatchLogGroupName;
     /**
-     * Whether or not to enable encryption on the logs sent to S3. If not specified, encryption will be disabled.
+     * @return Whether or not to enable encryption on the logs sent to S3. If not specified, encryption will be disabled.
      * 
      */
     private final @Nullable Boolean s3BucketEncryptionEnabled;
     /**
-     * The name of the S3 bucket to send logs to.
+     * @return The name of the S3 bucket to send logs to.
      * 
      */
     private final @Nullable String s3BucketName;
     /**
-     * An optional folder in the S3 bucket to place logs in.
+     * @return An optional folder in the S3 bucket to place logs in.
      * 
      */
     private final @Nullable String s3KeyPrefix;
@@ -53,37 +53,37 @@ public final class ClusterConfigurationExecuteCommandConfigurationLogConfigurati
     }
 
     /**
-     * Whether or not to enable encryption on the CloudWatch logs. If not specified, encryption will be disabled.
+     * @return Whether or not to enable encryption on the CloudWatch logs. If not specified, encryption will be disabled.
      * 
-    */
+     */
     public Optional<Boolean> cloudWatchEncryptionEnabled() {
         return Optional.ofNullable(this.cloudWatchEncryptionEnabled);
     }
     /**
-     * The name of the CloudWatch log group to send logs to.
+     * @return The name of the CloudWatch log group to send logs to.
      * 
-    */
+     */
     public Optional<String> cloudWatchLogGroupName() {
         return Optional.ofNullable(this.cloudWatchLogGroupName);
     }
     /**
-     * Whether or not to enable encryption on the logs sent to S3. If not specified, encryption will be disabled.
+     * @return Whether or not to enable encryption on the logs sent to S3. If not specified, encryption will be disabled.
      * 
-    */
+     */
     public Optional<Boolean> s3BucketEncryptionEnabled() {
         return Optional.ofNullable(this.s3BucketEncryptionEnabled);
     }
     /**
-     * The name of the S3 bucket to send logs to.
+     * @return The name of the S3 bucket to send logs to.
      * 
-    */
+     */
     public Optional<String> s3BucketName() {
         return Optional.ofNullable(this.s3BucketName);
     }
     /**
-     * An optional folder in the S3 bucket to place logs in.
+     * @return An optional folder in the S3 bucket to place logs in.
      * 
-    */
+     */
     public Optional<String> s3KeyPrefix() {
         return Optional.ofNullable(this.s3KeyPrefix);
     }

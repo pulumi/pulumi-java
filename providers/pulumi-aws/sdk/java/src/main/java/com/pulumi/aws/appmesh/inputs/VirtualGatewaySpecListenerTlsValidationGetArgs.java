@@ -23,6 +23,10 @@ public final class VirtualGatewaySpecListenerTlsValidationGetArgs extends com.pu
     @Import(name="subjectAlternativeNames")
     private @Nullable Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames;
 
+    /**
+     * @return The SANs for a virtual gateway&#39;s listener&#39;s Transport Layer Security (TLS) validation context.
+     * 
+     */
     public Optional<Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesGetArgs>> subjectAlternativeNames() {
         return Optional.ofNullable(this.subjectAlternativeNames);
     }
@@ -34,6 +38,10 @@ public final class VirtualGatewaySpecListenerTlsValidationGetArgs extends com.pu
     @Import(name="trust", required=true)
     private Output<VirtualGatewaySpecListenerTlsValidationTrustGetArgs> trust;
 
+    /**
+     * @return The TLS validation context trust.
+     * 
+     */
     public Output<VirtualGatewaySpecListenerTlsValidationTrustGetArgs> trust() {
         return this.trust;
     }
@@ -63,20 +71,44 @@ public final class VirtualGatewaySpecListenerTlsValidationGetArgs extends com.pu
             $ = new VirtualGatewaySpecListenerTlsValidationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subjectAlternativeNames The SANs for a virtual gateway&#39;s listener&#39;s Transport Layer Security (TLS) validation context.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAlternativeNames(@Nullable Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames) {
             $.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
 
+        /**
+         * @param subjectAlternativeNames The SANs for a virtual gateway&#39;s listener&#39;s Transport Layer Security (TLS) validation context.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAlternativeNames(VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesGetArgs subjectAlternativeNames) {
             return subjectAlternativeNames(Output.of(subjectAlternativeNames));
         }
 
+        /**
+         * @param trust The TLS validation context trust.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trust(Output<VirtualGatewaySpecListenerTlsValidationTrustGetArgs> trust) {
             $.trust = trust;
             return this;
         }
 
+        /**
+         * @param trust The TLS validation context trust.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trust(VirtualGatewaySpecListenerTlsValidationTrustGetArgs trust) {
             return trust(Output.of(trust));
         }

@@ -22,6 +22,10 @@ public final class DeploymentConfigTrafficRoutingConfigTimeBasedCanaryGetArgs ex
     @Import(name="interval")
     private @Nullable Output<Integer> interval;
 
+    /**
+     * @return The number of minutes between the first and second traffic shifts of a `TimeBasedCanary` deployment.
+     * 
+     */
     public Optional<Output<Integer>> interval() {
         return Optional.ofNullable(this.interval);
     }
@@ -33,6 +37,10 @@ public final class DeploymentConfigTrafficRoutingConfigTimeBasedCanaryGetArgs ex
     @Import(name="percentage")
     private @Nullable Output<Integer> percentage;
 
+    /**
+     * @return The percentage of traffic to shift in the first increment of a `TimeBasedCanary` deployment.
+     * 
+     */
     public Optional<Output<Integer>> percentage() {
         return Optional.ofNullable(this.percentage);
     }
@@ -62,20 +70,44 @@ public final class DeploymentConfigTrafficRoutingConfigTimeBasedCanaryGetArgs ex
             $ = new DeploymentConfigTrafficRoutingConfigTimeBasedCanaryGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param interval The number of minutes between the first and second traffic shifts of a `TimeBasedCanary` deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(@Nullable Output<Integer> interval) {
             $.interval = interval;
             return this;
         }
 
+        /**
+         * @param interval The number of minutes between the first and second traffic shifts of a `TimeBasedCanary` deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(Integer interval) {
             return interval(Output.of(interval));
         }
 
+        /**
+         * @param percentage The percentage of traffic to shift in the first increment of a `TimeBasedCanary` deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentage(@Nullable Output<Integer> percentage) {
             $.percentage = percentage;
             return this;
         }
 
+        /**
+         * @param percentage The percentage of traffic to shift in the first increment of a `TimeBasedCanary` deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentage(Integer percentage) {
             return percentage(Output.of(percentage));
         }

@@ -19,6 +19,10 @@ public final class GetVpcEndpointDnsEntry extends com.pulumi.resources.InvokeArg
     @Import(name="dnsName", required=true)
     private String dnsName;
 
+    /**
+     * @return The DNS name.
+     * 
+     */
     public String dnsName() {
         return this.dnsName;
     }
@@ -30,6 +34,10 @@ public final class GetVpcEndpointDnsEntry extends com.pulumi.resources.InvokeArg
     @Import(name="hostedZoneId", required=true)
     private String hostedZoneId;
 
+    /**
+     * @return The ID of the private hosted zone.
+     * 
+     */
     public String hostedZoneId() {
         return this.hostedZoneId;
     }
@@ -59,11 +67,23 @@ public final class GetVpcEndpointDnsEntry extends com.pulumi.resources.InvokeArg
             $ = new GetVpcEndpointDnsEntry(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dnsName The DNS name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsName(String dnsName) {
             $.dnsName = dnsName;
             return this;
         }
 
+        /**
+         * @param hostedZoneId The ID of the private hosted zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostedZoneId(String hostedZoneId) {
             $.hostedZoneId = hostedZoneId;
             return this;

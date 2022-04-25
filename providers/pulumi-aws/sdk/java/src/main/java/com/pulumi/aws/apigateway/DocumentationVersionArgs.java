@@ -22,6 +22,10 @@ public final class DocumentationVersionArgs extends com.pulumi.resources.Resourc
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the API documentation version.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -33,6 +37,10 @@ public final class DocumentationVersionArgs extends com.pulumi.resources.Resourc
     @Import(name="restApiId", required=true)
     private Output<String> restApiId;
 
+    /**
+     * @return The ID of the associated Rest API
+     * 
+     */
     public Output<String> restApiId() {
         return this.restApiId;
     }
@@ -44,6 +52,10 @@ public final class DocumentationVersionArgs extends com.pulumi.resources.Resourc
     @Import(name="version", required=true)
     private Output<String> version;
 
+    /**
+     * @return The version identifier of the API documentation snapshot.
+     * 
+     */
     public Output<String> version() {
         return this.version;
     }
@@ -74,29 +86,65 @@ public final class DocumentationVersionArgs extends com.pulumi.resources.Resourc
             $ = new DocumentationVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the API documentation version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the API documentation version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param restApiId The ID of the associated Rest API
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(Output<String> restApiId) {
             $.restApiId = restApiId;
             return this;
         }
 
+        /**
+         * @param restApiId The ID of the associated Rest API
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(String restApiId) {
             return restApiId(Output.of(restApiId));
         }
 
+        /**
+         * @param version The version identifier of the API documentation snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The version identifier of the API documentation snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

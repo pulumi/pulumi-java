@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class EventDestinationCloudwatchDestination {
     /**
-     * The default value for the event
+     * @return The default value for the event
      * 
      */
     private final String defaultValue;
     /**
-     * The name for the dimension
+     * @return The name for the dimension
      * 
      */
     private final String dimensionName;
     /**
-     * The source for the value. May be any of `&#34;messageTag&#34;`, `&#34;emailHeader&#34;` or `&#34;linkTag&#34;`.
+     * @return The source for the value. May be any of `&#34;messageTag&#34;`, `&#34;emailHeader&#34;` or `&#34;linkTag&#34;`.
      * 
      */
     private final String valueSource;
@@ -36,23 +36,23 @@ public final class EventDestinationCloudwatchDestination {
     }
 
     /**
-     * The default value for the event
+     * @return The default value for the event
      * 
-    */
+     */
     public String defaultValue() {
         return this.defaultValue;
     }
     /**
-     * The name for the dimension
+     * @return The name for the dimension
      * 
-    */
+     */
     public String dimensionName() {
         return this.dimensionName;
     }
     /**
-     * The source for the value. May be any of `&#34;messageTag&#34;`, `&#34;emailHeader&#34;` or `&#34;linkTag&#34;`.
+     * @return The source for the value. May be any of `&#34;messageTag&#34;`, `&#34;emailHeader&#34;` or `&#34;linkTag&#34;`.
      * 
-    */
+     */
     public String valueSource() {
         return this.valueSource;
     }

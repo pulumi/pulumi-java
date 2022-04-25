@@ -23,6 +23,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="notificationArn")
     private @Nullable Output<String> notificationArn;
 
+    /**
+     * @return An Amazon Resource Name (ARN) for a Simple Notification Service (SNS) topic. Run Command pushes notifications about command status changes to this topic.
+     * 
+     */
     public Optional<Output<String>> notificationArn() {
         return Optional.ofNullable(this.notificationArn);
     }
@@ -34,6 +38,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="notificationEvents")
     private @Nullable Output<List<String>> notificationEvents;
 
+    /**
+     * @return The different events for which you can receive notifications. Valid values: `All`, `InProgress`, `Success`, `TimedOut`, `Cancelled`, and `Failed`
+     * 
+     */
     public Optional<Output<List<String>>> notificationEvents() {
         return Optional.ofNullable(this.notificationEvents);
     }
@@ -45,6 +53,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="notificationType")
     private @Nullable Output<String> notificationType;
 
+    /**
+     * @return When specified with `Command`, receive notification when the status of a command changes. When specified with `Invocation`, for commands sent to multiple instances, receive notification on a per-instance basis when the status of a command changes. Valid values: `Command` and `Invocation`
+     * 
+     */
     public Optional<Output<String>> notificationType() {
         return Optional.ofNullable(this.notificationType);
     }
@@ -75,33 +87,75 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
             $ = new MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param notificationArn An Amazon Resource Name (ARN) for a Simple Notification Service (SNS) topic. Run Command pushes notifications about command status changes to this topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationArn(@Nullable Output<String> notificationArn) {
             $.notificationArn = notificationArn;
             return this;
         }
 
+        /**
+         * @param notificationArn An Amazon Resource Name (ARN) for a Simple Notification Service (SNS) topic. Run Command pushes notifications about command status changes to this topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationArn(String notificationArn) {
             return notificationArn(Output.of(notificationArn));
         }
 
+        /**
+         * @param notificationEvents The different events for which you can receive notifications. Valid values: `All`, `InProgress`, `Success`, `TimedOut`, `Cancelled`, and `Failed`
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationEvents(@Nullable Output<List<String>> notificationEvents) {
             $.notificationEvents = notificationEvents;
             return this;
         }
 
+        /**
+         * @param notificationEvents The different events for which you can receive notifications. Valid values: `All`, `InProgress`, `Success`, `TimedOut`, `Cancelled`, and `Failed`
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationEvents(List<String> notificationEvents) {
             return notificationEvents(Output.of(notificationEvents));
         }
 
+        /**
+         * @param notificationEvents The different events for which you can receive notifications. Valid values: `All`, `InProgress`, `Success`, `TimedOut`, `Cancelled`, and `Failed`
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationEvents(String... notificationEvents) {
             return notificationEvents(List.of(notificationEvents));
         }
 
+        /**
+         * @param notificationType When specified with `Command`, receive notification when the status of a command changes. When specified with `Invocation`, for commands sent to multiple instances, receive notification on a per-instance basis when the status of a command changes. Valid values: `Command` and `Invocation`
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationType(@Nullable Output<String> notificationType) {
             $.notificationType = notificationType;
             return this;
         }
 
+        /**
+         * @param notificationType When specified with `Command`, receive notification when the status of a command changes. When specified with `Invocation`, for commands sent to multiple instances, receive notification on a per-instance basis when the status of a command changes. Valid values: `Command` and `Invocation`
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationType(String notificationType) {
             return notificationType(Output.of(notificationType));
         }

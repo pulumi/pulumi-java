@@ -20,6 +20,10 @@ public final class RolePolicyAttachmentArgs extends com.pulumi.resources.Resourc
     @Import(name="policyArn", required=true)
     private Output<String> policyArn;
 
+    /**
+     * @return The ARN of the policy you want to apply
+     * 
+     */
     public Output<String> policyArn() {
         return this.policyArn;
     }
@@ -31,6 +35,10 @@ public final class RolePolicyAttachmentArgs extends com.pulumi.resources.Resourc
     @Import(name="role", required=true)
     private Output<String> role;
 
+    /**
+     * @return The name of the IAM role to which the policy should be applied
+     * 
+     */
     public Output<String> role() {
         return this.role;
     }
@@ -60,20 +68,44 @@ public final class RolePolicyAttachmentArgs extends com.pulumi.resources.Resourc
             $ = new RolePolicyAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policyArn The ARN of the policy you want to apply
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyArn(Output<String> policyArn) {
             $.policyArn = policyArn;
             return this;
         }
 
+        /**
+         * @param policyArn The ARN of the policy you want to apply
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyArn(String policyArn) {
             return policyArn(Output.of(policyArn));
         }
 
+        /**
+         * @param role The name of the IAM role to which the policy should be applied
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The name of the IAM role to which the policy should be applied
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }

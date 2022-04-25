@@ -24,6 +24,10 @@ public final class CodeRepositoryState extends com.pulumi.resources.ResourceArgs
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) assigned by AWS to this Code Repository.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -35,6 +39,10 @@ public final class CodeRepositoryState extends com.pulumi.resources.ResourceArgs
     @Import(name="codeRepositoryName")
     private @Nullable Output<String> codeRepositoryName;
 
+    /**
+     * @return The name of the Code Repository (must be unique).
+     * 
+     */
     public Optional<Output<String>> codeRepositoryName() {
         return Optional.ofNullable(this.codeRepositoryName);
     }
@@ -46,6 +54,10 @@ public final class CodeRepositoryState extends com.pulumi.resources.ResourceArgs
     @Import(name="gitConfig")
     private @Nullable Output<CodeRepositoryGitConfigGetArgs> gitConfig;
 
+    /**
+     * @return Specifies details about the repository. see Git Config details below.
+     * 
+     */
     public Optional<Output<CodeRepositoryGitConfigGetArgs>> gitConfig() {
         return Optional.ofNullable(this.gitConfig);
     }
@@ -57,6 +69,10 @@ public final class CodeRepositoryState extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -68,6 +84,10 @@ public final class CodeRepositoryState extends com.pulumi.resources.ResourceArgs
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -100,47 +120,107 @@ public final class CodeRepositoryState extends com.pulumi.resources.ResourceArgs
             $ = new CodeRepositoryState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) assigned by AWS to this Code Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) assigned by AWS to this Code Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param codeRepositoryName The name of the Code Repository (must be unique).
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeRepositoryName(@Nullable Output<String> codeRepositoryName) {
             $.codeRepositoryName = codeRepositoryName;
             return this;
         }
 
+        /**
+         * @param codeRepositoryName The name of the Code Repository (must be unique).
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeRepositoryName(String codeRepositoryName) {
             return codeRepositoryName(Output.of(codeRepositoryName));
         }
 
+        /**
+         * @param gitConfig Specifies details about the repository. see Git Config details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gitConfig(@Nullable Output<CodeRepositoryGitConfigGetArgs> gitConfig) {
             $.gitConfig = gitConfig;
             return this;
         }
 
+        /**
+         * @param gitConfig Specifies details about the repository. see Git Config details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gitConfig(CodeRepositoryGitConfigGetArgs gitConfig) {
             return gitConfig(Output.of(gitConfig));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CanaryArtifactConfigS3Encryption {
     /**
-     * The encryption method to use for artifacts created by this canary. Valid values are: `SSE-S3` and `SSE-KMS`.
+     * @return The encryption method to use for artifacts created by this canary. Valid values are: `SSE-S3` and `SSE-KMS`.
      * 
      */
     private final @Nullable String encryptionMode;
     /**
-     * The ARN of the customer-managed KMS key to use, if you specify `SSE-KMS` for `encryption_mode`.
+     * @return The ARN of the customer-managed KMS key to use, if you specify `SSE-KMS` for `encryption_mode`.
      * 
      */
     private final @Nullable String kmsKeyArn;
@@ -31,16 +31,16 @@ public final class CanaryArtifactConfigS3Encryption {
     }
 
     /**
-     * The encryption method to use for artifacts created by this canary. Valid values are: `SSE-S3` and `SSE-KMS`.
+     * @return The encryption method to use for artifacts created by this canary. Valid values are: `SSE-S3` and `SSE-KMS`.
      * 
-    */
+     */
     public Optional<String> encryptionMode() {
         return Optional.ofNullable(this.encryptionMode);
     }
     /**
-     * The ARN of the customer-managed KMS key to use, if you specify `SSE-KMS` for `encryption_mode`.
+     * @return The ARN of the customer-managed KMS key to use, if you specify `SSE-KMS` for `encryption_mode`.
      * 
-    */
+     */
     public Optional<String> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }

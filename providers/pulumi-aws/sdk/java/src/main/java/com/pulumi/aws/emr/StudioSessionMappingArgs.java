@@ -22,6 +22,10 @@ public final class StudioSessionMappingArgs extends com.pulumi.resources.Resourc
     @Import(name="identityId")
     private @Nullable Output<String> identityId;
 
+    /**
+     * @return The globally unique identifier (GUID) of the user or group from the Amazon Web Services SSO Identity Store.
+     * 
+     */
     public Optional<Output<String>> identityId() {
         return Optional.ofNullable(this.identityId);
     }
@@ -33,6 +37,10 @@ public final class StudioSessionMappingArgs extends com.pulumi.resources.Resourc
     @Import(name="identityName")
     private @Nullable Output<String> identityName;
 
+    /**
+     * @return The name of the user or group from the Amazon Web Services SSO Identity Store.
+     * 
+     */
     public Optional<Output<String>> identityName() {
         return Optional.ofNullable(this.identityName);
     }
@@ -44,6 +52,10 @@ public final class StudioSessionMappingArgs extends com.pulumi.resources.Resourc
     @Import(name="identityType", required=true)
     private Output<String> identityType;
 
+    /**
+     * @return Specifies whether the identity to map to the Amazon EMR Studio is a `USER` or a `GROUP`.
+     * 
+     */
     public Output<String> identityType() {
         return this.identityType;
     }
@@ -55,6 +67,10 @@ public final class StudioSessionMappingArgs extends com.pulumi.resources.Resourc
     @Import(name="sessionPolicyArn", required=true)
     private Output<String> sessionPolicyArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. You should specify the ARN for the session policy that you want to apply, not the ARN of your user role.
+     * 
+     */
     public Output<String> sessionPolicyArn() {
         return this.sessionPolicyArn;
     }
@@ -66,6 +82,10 @@ public final class StudioSessionMappingArgs extends com.pulumi.resources.Resourc
     @Import(name="studioId", required=true)
     private Output<String> studioId;
 
+    /**
+     * @return The ID of the Amazon EMR Studio to which the user or group will be mapped.
+     * 
+     */
     public Output<String> studioId() {
         return this.studioId;
     }
@@ -98,47 +118,107 @@ public final class StudioSessionMappingArgs extends com.pulumi.resources.Resourc
             $ = new StudioSessionMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identityId The globally unique identifier (GUID) of the user or group from the Amazon Web Services SSO Identity Store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityId(@Nullable Output<String> identityId) {
             $.identityId = identityId;
             return this;
         }
 
+        /**
+         * @param identityId The globally unique identifier (GUID) of the user or group from the Amazon Web Services SSO Identity Store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityId(String identityId) {
             return identityId(Output.of(identityId));
         }
 
+        /**
+         * @param identityName The name of the user or group from the Amazon Web Services SSO Identity Store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityName(@Nullable Output<String> identityName) {
             $.identityName = identityName;
             return this;
         }
 
+        /**
+         * @param identityName The name of the user or group from the Amazon Web Services SSO Identity Store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityName(String identityName) {
             return identityName(Output.of(identityName));
         }
 
+        /**
+         * @param identityType Specifies whether the identity to map to the Amazon EMR Studio is a `USER` or a `GROUP`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityType(Output<String> identityType) {
             $.identityType = identityType;
             return this;
         }
 
+        /**
+         * @param identityType Specifies whether the identity to map to the Amazon EMR Studio is a `USER` or a `GROUP`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityType(String identityType) {
             return identityType(Output.of(identityType));
         }
 
+        /**
+         * @param sessionPolicyArn The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. You should specify the ARN for the session policy that you want to apply, not the ARN of your user role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionPolicyArn(Output<String> sessionPolicyArn) {
             $.sessionPolicyArn = sessionPolicyArn;
             return this;
         }
 
+        /**
+         * @param sessionPolicyArn The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. You should specify the ARN for the session policy that you want to apply, not the ARN of your user role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionPolicyArn(String sessionPolicyArn) {
             return sessionPolicyArn(Output.of(sessionPolicyArn));
         }
 
+        /**
+         * @param studioId The ID of the Amazon EMR Studio to which the user or group will be mapped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder studioId(Output<String> studioId) {
             $.studioId = studioId;
             return this;
         }
 
+        /**
+         * @param studioId The ID of the Amazon EMR Studio to which the user or group will be mapped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder studioId(String studioId) {
             return studioId(Output.of(studioId));
         }

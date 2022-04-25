@@ -21,6 +21,10 @@ public final class GetDataLakeSettingsArgs extends com.pulumi.resources.InvokeAr
     @Import(name="catalogId")
     private @Nullable String catalogId;
 
+    /**
+     * @return Identifier for the Data Catalog. By default, the account ID.
+     * 
+     */
     public Optional<String> catalogId() {
         return Optional.ofNullable(this.catalogId);
     }
@@ -49,6 +53,12 @@ public final class GetDataLakeSettingsArgs extends com.pulumi.resources.InvokeAr
             $ = new GetDataLakeSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param catalogId Identifier for the Data Catalog. By default, the account ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogId(@Nullable String catalogId) {
             $.catalogId = catalogId;
             return this;

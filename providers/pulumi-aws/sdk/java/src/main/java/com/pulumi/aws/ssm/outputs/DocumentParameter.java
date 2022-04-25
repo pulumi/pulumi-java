@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 public final class DocumentParameter {
     private final @Nullable String defaultValue;
     /**
-     * The description of the document.
+     * @return The description of the document.
      * 
      */
     private final @Nullable String description;
     /**
-     * The name of the document.
+     * @return The name of the document.
      * 
      */
     private final @Nullable String name;
@@ -40,16 +40,16 @@ public final class DocumentParameter {
         return Optional.ofNullable(this.defaultValue);
     }
     /**
-     * The description of the document.
+     * @return The description of the document.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The name of the document.
+     * @return The name of the document.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

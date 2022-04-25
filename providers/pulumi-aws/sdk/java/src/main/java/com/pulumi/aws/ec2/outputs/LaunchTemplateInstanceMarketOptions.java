@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LaunchTemplateInstanceMarketOptions {
     /**
-     * The market type. Can be `spot`.
+     * @return The market type. Can be `spot`.
      * 
      */
     private final @Nullable String marketType;
     /**
-     * The options for [Spot Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html)
+     * @return The options for [Spot Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html)
      * 
      */
     private final @Nullable LaunchTemplateInstanceMarketOptionsSpotOptions spotOptions;
@@ -32,16 +32,16 @@ public final class LaunchTemplateInstanceMarketOptions {
     }
 
     /**
-     * The market type. Can be `spot`.
+     * @return The market type. Can be `spot`.
      * 
-    */
+     */
     public Optional<String> marketType() {
         return Optional.ofNullable(this.marketType);
     }
     /**
-     * The options for [Spot Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html)
+     * @return The options for [Spot Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html)
      * 
-    */
+     */
     public Optional<LaunchTemplateInstanceMarketOptionsSpotOptions> spotOptions() {
         return Optional.ofNullable(this.spotOptions);
     }

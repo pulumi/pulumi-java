@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WebhookAuthenticationConfiguration {
     /**
-     * A valid CIDR block for `IP` filtering. Required for `IP`.
+     * @return A valid CIDR block for `IP` filtering. Required for `IP`.
      * 
      */
     private final @Nullable String allowedIpRange;
     /**
-     * The shared secret for the GitHub repository webhook. Set this as `secret` in your `github_repository_webhook`&#39;s `configuration` block. Required for `GITHUB_HMAC`.
+     * @return The shared secret for the GitHub repository webhook. Set this as `secret` in your `github_repository_webhook`&#39;s `configuration` block. Required for `GITHUB_HMAC`.
      * 
      */
     private final @Nullable String secretToken;
@@ -31,16 +31,16 @@ public final class WebhookAuthenticationConfiguration {
     }
 
     /**
-     * A valid CIDR block for `IP` filtering. Required for `IP`.
+     * @return A valid CIDR block for `IP` filtering. Required for `IP`.
      * 
-    */
+     */
     public Optional<String> allowedIpRange() {
         return Optional.ofNullable(this.allowedIpRange);
     }
     /**
-     * The shared secret for the GitHub repository webhook. Set this as `secret` in your `github_repository_webhook`&#39;s `configuration` block. Required for `GITHUB_HMAC`.
+     * @return The shared secret for the GitHub repository webhook. Set this as `secret` in your `github_repository_webhook`&#39;s `configuration` block. Required for `GITHUB_HMAC`.
      * 
-    */
+     */
     public Optional<String> secretToken() {
         return Optional.ofNullable(this.secretToken);
     }

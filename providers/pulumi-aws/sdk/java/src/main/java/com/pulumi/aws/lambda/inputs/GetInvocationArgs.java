@@ -21,6 +21,10 @@ public final class GetInvocationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="functionName", required=true)
     private String functionName;
 
+    /**
+     * @return The name of the lambda function.
+     * 
+     */
     public String functionName() {
         return this.functionName;
     }
@@ -32,6 +36,10 @@ public final class GetInvocationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="input", required=true)
     private String input;
 
+    /**
+     * @return A string in JSON format that is passed as payload to the lambda function.
+     * 
+     */
     public String input() {
         return this.input;
     }
@@ -44,6 +52,11 @@ public final class GetInvocationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="qualifier")
     private @Nullable String qualifier;
 
+    /**
+     * @return The qualifier (a.k.a version) of the lambda function. Defaults
+     * to `$LATEST`.
+     * 
+     */
     public Optional<String> qualifier() {
         return Optional.ofNullable(this.qualifier);
     }
@@ -74,16 +87,35 @@ public final class GetInvocationArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetInvocationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param functionName The name of the lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionName(String functionName) {
             $.functionName = functionName;
             return this;
         }
 
+        /**
+         * @param input A string in JSON format that is passed as payload to the lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder input(String input) {
             $.input = input;
             return this;
         }
 
+        /**
+         * @param qualifier The qualifier (a.k.a version) of the lambda function. Defaults
+         * to `$LATEST`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder qualifier(@Nullable String qualifier) {
             $.qualifier = qualifier;
             return this;

@@ -29,6 +29,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateArn")
     private @Nullable Output<String> certificateArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the certificate.
+     * 
+     */
     public Optional<Output<String>> certificateArn() {
         return Optional.ofNullable(this.certificateArn);
     }
@@ -40,6 +44,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseName")
     private @Nullable Output<String> databaseName;
 
+    /**
+     * @return The name of the endpoint database.
+     * 
+     */
     public Optional<Output<String>> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
@@ -51,6 +59,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="elasticsearchSettings")
     private @Nullable Output<EndpointElasticsearchSettingsArgs> elasticsearchSettings;
 
+    /**
+     * @return Configuration block with Elasticsearch settings. Detailed below.
+     * 
+     */
     public Optional<Output<EndpointElasticsearchSettingsArgs>> elasticsearchSettings() {
         return Optional.ofNullable(this.elasticsearchSettings);
     }
@@ -62,6 +74,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointId", required=true)
     private Output<String> endpointId;
 
+    /**
+     * @return The database endpoint identifier.
+     * 
+     */
     public Output<String> endpointId() {
         return this.endpointId;
     }
@@ -73,6 +89,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointType", required=true)
     private Output<String> endpointType;
 
+    /**
+     * @return The type of endpoint. Can be one of `source | target`.
+     * 
+     */
     public Output<String> endpointType() {
         return this.endpointType;
     }
@@ -84,6 +104,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="engineName", required=true)
     private Output<String> engineName;
 
+    /**
+     * @return The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
+     * 
+     */
     public Output<String> engineName() {
         return this.engineName;
     }
@@ -95,6 +119,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="extraConnectionAttributes")
     private @Nullable Output<String> extraConnectionAttributes;
 
+    /**
+     * @return Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.PostgreSQL.html#CHAP_Source.PostgreSQL.ConnectionAttrib).
+     * 
+     */
     public Optional<Output<String>> extraConnectionAttributes() {
         return Optional.ofNullable(this.extraConnectionAttributes);
     }
@@ -106,6 +134,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kafkaSettings")
     private @Nullable Output<EndpointKafkaSettingsArgs> kafkaSettings;
 
+    /**
+     * @return Configuration block with Kafka settings. Detailed below.
+     * 
+     */
     public Optional<Output<EndpointKafkaSettingsArgs>> kafkaSettings() {
         return Optional.ofNullable(this.kafkaSettings);
     }
@@ -117,6 +149,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kinesisSettings")
     private @Nullable Output<EndpointKinesisSettingsArgs> kinesisSettings;
 
+    /**
+     * @return Configuration block with Kinesis settings. Detailed below.
+     * 
+     */
     public Optional<Output<EndpointKinesisSettingsArgs>> kinesisSettings() {
         return Optional.ofNullable(this.kinesisSettings);
     }
@@ -128,6 +164,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyArn")
     private @Nullable Output<String> kmsKeyArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
+     * 
+     */
     public Optional<Output<String>> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
@@ -139,6 +179,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mongodbSettings")
     private @Nullable Output<EndpointMongodbSettingsArgs> mongodbSettings;
 
+    /**
+     * @return Configuration block with MongoDB settings. Detailed below.
+     * 
+     */
     public Optional<Output<EndpointMongodbSettingsArgs>> mongodbSettings() {
         return Optional.ofNullable(this.mongodbSettings);
     }
@@ -150,6 +194,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return The password to be used to login to the endpoint database.
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -161,6 +209,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return The port used by the endpoint database.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -172,6 +224,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3Settings")
     private @Nullable Output<EndpointS3SettingsArgs> s3Settings;
 
+    /**
+     * @return Configuration block with S3 settings. Detailed below.
+     * 
+     */
     public Optional<Output<EndpointS3SettingsArgs>> s3Settings() {
         return Optional.ofNullable(this.s3Settings);
     }
@@ -183,6 +239,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secretsManagerAccessRoleArn")
     private @Nullable Output<String> secretsManagerAccessRoleArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted entity and has the required permissions to access the value in SecretsManagerSecret.
+     * 
+     */
     public Optional<Output<String>> secretsManagerAccessRoleArn() {
         return Optional.ofNullable(this.secretsManagerAccessRoleArn);
     }
@@ -194,6 +254,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secretsManagerArn")
     private @Nullable Output<String> secretsManagerArn;
 
+    /**
+     * @return The full ARN, partial ARN, or friendly name of the SecretsManagerSecret that contains the endpoint connection details. Supported only for `engine_name` as `oracle` and `postgres`.
+     * 
+     */
     public Optional<Output<String>> secretsManagerArn() {
         return Optional.ofNullable(this.secretsManagerArn);
     }
@@ -205,6 +269,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverName")
     private @Nullable Output<String> serverName;
 
+    /**
+     * @return The host name of the server.
+     * 
+     */
     public Optional<Output<String>> serverName() {
         return Optional.ofNullable(this.serverName);
     }
@@ -216,6 +284,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccessRole")
     private @Nullable Output<String> serviceAccessRole;
 
+    /**
+     * @return The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
+     * 
+     */
     public Optional<Output<String>> serviceAccessRole() {
         return Optional.ofNullable(this.serviceAccessRole);
     }
@@ -227,6 +299,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sslMode")
     private @Nullable Output<String> sslMode;
 
+    /**
+     * @return The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
+     * 
+     */
     public Optional<Output<String>> sslMode() {
         return Optional.ofNullable(this.sslMode);
     }
@@ -238,6 +314,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -249,6 +329,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="username")
     private @Nullable Output<String> username;
 
+    /**
+     * @return The user name to be used to login to the endpoint database.
+     * 
+     */
     public Optional<Output<String>> username() {
         return Optional.ofNullable(this.username);
     }
@@ -297,191 +381,443 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateArn The Amazon Resource Name (ARN) for the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateArn(@Nullable Output<String> certificateArn) {
             $.certificateArn = certificateArn;
             return this;
         }
 
+        /**
+         * @param certificateArn The Amazon Resource Name (ARN) for the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateArn(String certificateArn) {
             return certificateArn(Output.of(certificateArn));
         }
 
+        /**
+         * @param databaseName The name of the endpoint database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(@Nullable Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName The name of the endpoint database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param elasticsearchSettings Configuration block with Elasticsearch settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elasticsearchSettings(@Nullable Output<EndpointElasticsearchSettingsArgs> elasticsearchSettings) {
             $.elasticsearchSettings = elasticsearchSettings;
             return this;
         }
 
+        /**
+         * @param elasticsearchSettings Configuration block with Elasticsearch settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elasticsearchSettings(EndpointElasticsearchSettingsArgs elasticsearchSettings) {
             return elasticsearchSettings(Output.of(elasticsearchSettings));
         }
 
+        /**
+         * @param endpointId The database endpoint identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointId(Output<String> endpointId) {
             $.endpointId = endpointId;
             return this;
         }
 
+        /**
+         * @param endpointId The database endpoint identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointId(String endpointId) {
             return endpointId(Output.of(endpointId));
         }
 
+        /**
+         * @param endpointType The type of endpoint. Can be one of `source | target`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(Output<String> endpointType) {
             $.endpointType = endpointType;
             return this;
         }
 
+        /**
+         * @param endpointType The type of endpoint. Can be one of `source | target`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(String endpointType) {
             return endpointType(Output.of(endpointType));
         }
 
+        /**
+         * @param engineName The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineName(Output<String> engineName) {
             $.engineName = engineName;
             return this;
         }
 
+        /**
+         * @param engineName The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineName(String engineName) {
             return engineName(Output.of(engineName));
         }
 
+        /**
+         * @param extraConnectionAttributes Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.PostgreSQL.html#CHAP_Source.PostgreSQL.ConnectionAttrib).
+         * 
+         * @return builder
+         * 
+         */
         public Builder extraConnectionAttributes(@Nullable Output<String> extraConnectionAttributes) {
             $.extraConnectionAttributes = extraConnectionAttributes;
             return this;
         }
 
+        /**
+         * @param extraConnectionAttributes Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.PostgreSQL.html#CHAP_Source.PostgreSQL.ConnectionAttrib).
+         * 
+         * @return builder
+         * 
+         */
         public Builder extraConnectionAttributes(String extraConnectionAttributes) {
             return extraConnectionAttributes(Output.of(extraConnectionAttributes));
         }
 
+        /**
+         * @param kafkaSettings Configuration block with Kafka settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kafkaSettings(@Nullable Output<EndpointKafkaSettingsArgs> kafkaSettings) {
             $.kafkaSettings = kafkaSettings;
             return this;
         }
 
+        /**
+         * @param kafkaSettings Configuration block with Kafka settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kafkaSettings(EndpointKafkaSettingsArgs kafkaSettings) {
             return kafkaSettings(Output.of(kafkaSettings));
         }
 
+        /**
+         * @param kinesisSettings Configuration block with Kinesis settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kinesisSettings(@Nullable Output<EndpointKinesisSettingsArgs> kinesisSettings) {
             $.kinesisSettings = kinesisSettings;
             return this;
         }
 
+        /**
+         * @param kinesisSettings Configuration block with Kinesis settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kinesisSettings(EndpointKinesisSettingsArgs kinesisSettings) {
             return kinesisSettings(Output.of(kinesisSettings));
         }
 
+        /**
+         * @param kmsKeyArn The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             $.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
+        /**
+         * @param kmsKeyArn The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyArn(String kmsKeyArn) {
             return kmsKeyArn(Output.of(kmsKeyArn));
         }
 
+        /**
+         * @param mongodbSettings Configuration block with MongoDB settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mongodbSettings(@Nullable Output<EndpointMongodbSettingsArgs> mongodbSettings) {
             $.mongodbSettings = mongodbSettings;
             return this;
         }
 
+        /**
+         * @param mongodbSettings Configuration block with MongoDB settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mongodbSettings(EndpointMongodbSettingsArgs mongodbSettings) {
             return mongodbSettings(Output.of(mongodbSettings));
         }
 
+        /**
+         * @param password The password to be used to login to the endpoint database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password The password to be used to login to the endpoint database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param port The port used by the endpoint database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The port used by the endpoint database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param s3Settings Configuration block with S3 settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Settings(@Nullable Output<EndpointS3SettingsArgs> s3Settings) {
             $.s3Settings = s3Settings;
             return this;
         }
 
+        /**
+         * @param s3Settings Configuration block with S3 settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Settings(EndpointS3SettingsArgs s3Settings) {
             return s3Settings(Output.of(s3Settings));
         }
 
+        /**
+         * @param secretsManagerAccessRoleArn Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted entity and has the required permissions to access the value in SecretsManagerSecret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretsManagerAccessRoleArn(@Nullable Output<String> secretsManagerAccessRoleArn) {
             $.secretsManagerAccessRoleArn = secretsManagerAccessRoleArn;
             return this;
         }
 
+        /**
+         * @param secretsManagerAccessRoleArn Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted entity and has the required permissions to access the value in SecretsManagerSecret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretsManagerAccessRoleArn(String secretsManagerAccessRoleArn) {
             return secretsManagerAccessRoleArn(Output.of(secretsManagerAccessRoleArn));
         }
 
+        /**
+         * @param secretsManagerArn The full ARN, partial ARN, or friendly name of the SecretsManagerSecret that contains the endpoint connection details. Supported only for `engine_name` as `oracle` and `postgres`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretsManagerArn(@Nullable Output<String> secretsManagerArn) {
             $.secretsManagerArn = secretsManagerArn;
             return this;
         }
 
+        /**
+         * @param secretsManagerArn The full ARN, partial ARN, or friendly name of the SecretsManagerSecret that contains the endpoint connection details. Supported only for `engine_name` as `oracle` and `postgres`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretsManagerArn(String secretsManagerArn) {
             return secretsManagerArn(Output.of(secretsManagerArn));
         }
 
+        /**
+         * @param serverName The host name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(@Nullable Output<String> serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param serverName The host name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             return serverName(Output.of(serverName));
         }
 
+        /**
+         * @param serviceAccessRole The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccessRole(@Nullable Output<String> serviceAccessRole) {
             $.serviceAccessRole = serviceAccessRole;
             return this;
         }
 
+        /**
+         * @param serviceAccessRole The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccessRole(String serviceAccessRole) {
             return serviceAccessRole(Output.of(serviceAccessRole));
         }
 
+        /**
+         * @param sslMode The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslMode(@Nullable Output<String> sslMode) {
             $.sslMode = sslMode;
             return this;
         }
 
+        /**
+         * @param sslMode The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslMode(String sslMode) {
             return sslMode(Output.of(sslMode));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param username The user name to be used to login to the endpoint database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username The user name to be used to login to the endpoint database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

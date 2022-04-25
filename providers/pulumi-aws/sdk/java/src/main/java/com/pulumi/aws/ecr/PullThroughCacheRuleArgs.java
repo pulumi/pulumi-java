@@ -20,6 +20,10 @@ public final class PullThroughCacheRuleArgs extends com.pulumi.resources.Resourc
     @Import(name="ecrRepositoryPrefix", required=true)
     private Output<String> ecrRepositoryPrefix;
 
+    /**
+     * @return The repository name prefix to use when caching images from the source registry.
+     * 
+     */
     public Output<String> ecrRepositoryPrefix() {
         return this.ecrRepositoryPrefix;
     }
@@ -31,6 +35,10 @@ public final class PullThroughCacheRuleArgs extends com.pulumi.resources.Resourc
     @Import(name="upstreamRegistryUrl", required=true)
     private Output<String> upstreamRegistryUrl;
 
+    /**
+     * @return The registry URL of the upstream public registry to use as the source.
+     * 
+     */
     public Output<String> upstreamRegistryUrl() {
         return this.upstreamRegistryUrl;
     }
@@ -60,20 +68,44 @@ public final class PullThroughCacheRuleArgs extends com.pulumi.resources.Resourc
             $ = new PullThroughCacheRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ecrRepositoryPrefix The repository name prefix to use when caching images from the source registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ecrRepositoryPrefix(Output<String> ecrRepositoryPrefix) {
             $.ecrRepositoryPrefix = ecrRepositoryPrefix;
             return this;
         }
 
+        /**
+         * @param ecrRepositoryPrefix The repository name prefix to use when caching images from the source registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ecrRepositoryPrefix(String ecrRepositoryPrefix) {
             return ecrRepositoryPrefix(Output.of(ecrRepositoryPrefix));
         }
 
+        /**
+         * @param upstreamRegistryUrl The registry URL of the upstream public registry to use as the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upstreamRegistryUrl(Output<String> upstreamRegistryUrl) {
             $.upstreamRegistryUrl = upstreamRegistryUrl;
             return this;
         }
 
+        /**
+         * @param upstreamRegistryUrl The registry URL of the upstream public registry to use as the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upstreamRegistryUrl(String upstreamRegistryUrl) {
             return upstreamRegistryUrl(Output.of(upstreamRegistryUrl));
         }

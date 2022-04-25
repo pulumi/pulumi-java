@@ -22,6 +22,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appId", required=true)
     private Output<String> appId;
 
+    /**
+     * @return The unique ID for an Amplify app.
+     * 
+     */
     public Output<String> appId() {
         return this.appId;
     }
@@ -33,6 +37,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="branchName", required=true)
     private Output<String> branchName;
 
+    /**
+     * @return The name for a branch that is part of the Amplify app.
+     * 
+     */
     public Output<String> branchName() {
         return this.branchName;
     }
@@ -44,6 +52,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description for a webhook.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -74,29 +86,65 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WebhookArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appId The unique ID for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appId(Output<String> appId) {
             $.appId = appId;
             return this;
         }
 
+        /**
+         * @param appId The unique ID for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appId(String appId) {
             return appId(Output.of(appId));
         }
 
+        /**
+         * @param branchName The name for a branch that is part of the Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branchName(Output<String> branchName) {
             $.branchName = branchName;
             return this;
         }
 
+        /**
+         * @param branchName The name for a branch that is part of the Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branchName(String branchName) {
             return branchName(Output.of(branchName));
         }
 
+        /**
+         * @param description The description for a webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description for a webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }

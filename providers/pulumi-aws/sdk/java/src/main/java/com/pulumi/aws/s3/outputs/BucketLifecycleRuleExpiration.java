@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BucketLifecycleRuleExpiration {
     /**
-     * Specifies the date after which you want the corresponding action to take effect.
+     * @return Specifies the date after which you want the corresponding action to take effect.
      * 
      */
     private final @Nullable String date;
     /**
-     * Specifies the number of days after object creation when the specific rule action takes effect.
+     * @return Specifies the number of days after object creation when the specific rule action takes effect.
      * 
      */
     private final @Nullable Integer days;
     /**
-     * On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Amazon S3 to delete expired object delete markers. This cannot be specified with Days or Date in a Lifecycle Expiration Policy.
+     * @return On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Amazon S3 to delete expired object delete markers. This cannot be specified with Days or Date in a Lifecycle Expiration Policy.
      * 
      */
     private final @Nullable Boolean expiredObjectDeleteMarker;
@@ -40,23 +40,23 @@ public final class BucketLifecycleRuleExpiration {
     }
 
     /**
-     * Specifies the date after which you want the corresponding action to take effect.
+     * @return Specifies the date after which you want the corresponding action to take effect.
      * 
-    */
+     */
     public Optional<String> date() {
         return Optional.ofNullable(this.date);
     }
     /**
-     * Specifies the number of days after object creation when the specific rule action takes effect.
+     * @return Specifies the number of days after object creation when the specific rule action takes effect.
      * 
-    */
+     */
     public Optional<Integer> days() {
         return Optional.ofNullable(this.days);
     }
     /**
-     * On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Amazon S3 to delete expired object delete markers. This cannot be specified with Days or Date in a Lifecycle Expiration Policy.
+     * @return On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Amazon S3 to delete expired object delete markers. This cannot be specified with Days or Date in a Lifecycle Expiration Policy.
      * 
-    */
+     */
     public Optional<Boolean> expiredObjectDeleteMarker() {
         return Optional.ofNullable(this.expiredObjectDeleteMarker);
     }

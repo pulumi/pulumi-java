@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ByteMatchSetByteMatchTuple {
     /**
-     * The part of a web request that you want to search, such as a specified header or a query string.
+     * @return The part of a web request that you want to search, such as a specified header or a query string.
      * 
      */
     private final ByteMatchSetByteMatchTupleFieldToMatch fieldToMatch;
     /**
-     * Within the portion of a web request that you want to search
+     * @return Within the portion of a web request that you want to search
      * (for example, in the query string, if any), specify where you want to search.
      * e.g., `CONTAINS`, `CONTAINS_WORD` or `EXACTLY`.
      * See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_ByteMatchTuple.html#WAF-Type-ByteMatchTuple-PositionalConstraint)
@@ -27,14 +27,14 @@ public final class ByteMatchSetByteMatchTuple {
      */
     private final String positionalConstraint;
     /**
-     * The value that you want to search forE.g., `HEADER`, `METHOD` or `BODY`.
+     * @return The value that you want to search forE.g., `HEADER`, `METHOD` or `BODY`.
      * See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_ByteMatchTuple.html#WAF-Type-ByteMatchTuple-TargetString)
      * for all supported values.
      * 
      */
     private final @Nullable String targetString;
     /**
-     * Text transformations used to eliminate unusual formatting that attackers use in web requests in an effort to bypass AWS WAF.
+     * @return Text transformations used to eliminate unusual formatting that attackers use in web requests in an effort to bypass AWS WAF.
      * If you specify a transformation, AWS WAF performs the transformation on `target_string` before inspecting a request for a match.
      * e.g., `CMD_LINE`, `HTML_ENTITY_DECODE` or `NONE`.
      * See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_ByteMatchTuple.html#WAF-Type-ByteMatchTuple-TextTransformation)
@@ -56,40 +56,40 @@ public final class ByteMatchSetByteMatchTuple {
     }
 
     /**
-     * The part of a web request that you want to search, such as a specified header or a query string.
+     * @return The part of a web request that you want to search, such as a specified header or a query string.
      * 
-    */
+     */
     public ByteMatchSetByteMatchTupleFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
     /**
-     * Within the portion of a web request that you want to search
+     * @return Within the portion of a web request that you want to search
      * (for example, in the query string, if any), specify where you want to search.
      * e.g., `CONTAINS`, `CONTAINS_WORD` or `EXACTLY`.
      * See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_ByteMatchTuple.html#WAF-Type-ByteMatchTuple-PositionalConstraint)
      * for all supported values.
      * 
-    */
+     */
     public String positionalConstraint() {
         return this.positionalConstraint;
     }
     /**
-     * The value that you want to search forE.g., `HEADER`, `METHOD` or `BODY`.
+     * @return The value that you want to search forE.g., `HEADER`, `METHOD` or `BODY`.
      * See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_ByteMatchTuple.html#WAF-Type-ByteMatchTuple-TargetString)
      * for all supported values.
      * 
-    */
+     */
     public Optional<String> targetString() {
         return Optional.ofNullable(this.targetString);
     }
     /**
-     * Text transformations used to eliminate unusual formatting that attackers use in web requests in an effort to bypass AWS WAF.
+     * @return Text transformations used to eliminate unusual formatting that attackers use in web requests in an effort to bypass AWS WAF.
      * If you specify a transformation, AWS WAF performs the transformation on `target_string` before inspecting a request for a match.
      * e.g., `CMD_LINE`, `HTML_ENTITY_DECODE` or `NONE`.
      * See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_ByteMatchTuple.html#WAF-Type-ByteMatchTuple-TextTransformation)
      * for all supported values.
      * 
-    */
+     */
     public String textTransformation() {
         return this.textTransformation;
     }

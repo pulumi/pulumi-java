@@ -26,6 +26,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Full ARN of the repository.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -37,6 +41,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionConfigurations")
     private @Nullable Output<List<RepositoryEncryptionConfigurationGetArgs>> encryptionConfigurations;
 
+    /**
+     * @return Encryption configuration for the repository. See below for schema.
+     * 
+     */
     public Optional<Output<List<RepositoryEncryptionConfigurationGetArgs>>> encryptionConfigurations() {
         return Optional.ofNullable(this.encryptionConfigurations);
     }
@@ -48,6 +56,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageScanningConfiguration")
     private @Nullable Output<RepositoryImageScanningConfigurationGetArgs> imageScanningConfiguration;
 
+    /**
+     * @return Configuration block that defines image scanning configuration for the repository. By default, image scanning must be manually triggered. See the [ECR User Guide](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) for more information about image scanning.
+     * 
+     */
     public Optional<Output<RepositoryImageScanningConfigurationGetArgs>> imageScanningConfiguration() {
         return Optional.ofNullable(this.imageScanningConfiguration);
     }
@@ -59,6 +71,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageTagMutability")
     private @Nullable Output<String> imageTagMutability;
 
+    /**
+     * @return The tag mutability setting for the repository. Must be one of: `MUTABLE` or `IMMUTABLE`. Defaults to `MUTABLE`.
+     * 
+     */
     public Optional<Output<String>> imageTagMutability() {
         return Optional.ofNullable(this.imageTagMutability);
     }
@@ -70,6 +86,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the repository.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -81,6 +101,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="registryId")
     private @Nullable Output<String> registryId;
 
+    /**
+     * @return The registry ID where the repository was created.
+     * 
+     */
     public Optional<Output<String>> registryId() {
         return Optional.ofNullable(this.registryId);
     }
@@ -92,6 +116,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="repositoryUrl")
     private @Nullable Output<String> repositoryUrl;
 
+    /**
+     * @return The URL of the repository (in the form `aws_account_id.dkr.ecr.region.amazonaws.com/repositoryName`).
+     * 
+     */
     public Optional<Output<String>> repositoryUrl() {
         return Optional.ofNullable(this.repositoryUrl);
     }
@@ -103,6 +131,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -114,6 +146,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -150,87 +186,201 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
             $ = new RepositoryState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Full ARN of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Full ARN of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param encryptionConfigurations Encryption configuration for the repository. See below for schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfigurations(@Nullable Output<List<RepositoryEncryptionConfigurationGetArgs>> encryptionConfigurations) {
             $.encryptionConfigurations = encryptionConfigurations;
             return this;
         }
 
+        /**
+         * @param encryptionConfigurations Encryption configuration for the repository. See below for schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfigurations(List<RepositoryEncryptionConfigurationGetArgs> encryptionConfigurations) {
             return encryptionConfigurations(Output.of(encryptionConfigurations));
         }
 
+        /**
+         * @param encryptionConfigurations Encryption configuration for the repository. See below for schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfigurations(RepositoryEncryptionConfigurationGetArgs... encryptionConfigurations) {
             return encryptionConfigurations(List.of(encryptionConfigurations));
         }
 
+        /**
+         * @param imageScanningConfiguration Configuration block that defines image scanning configuration for the repository. By default, image scanning must be manually triggered. See the [ECR User Guide](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) for more information about image scanning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageScanningConfiguration(@Nullable Output<RepositoryImageScanningConfigurationGetArgs> imageScanningConfiguration) {
             $.imageScanningConfiguration = imageScanningConfiguration;
             return this;
         }
 
+        /**
+         * @param imageScanningConfiguration Configuration block that defines image scanning configuration for the repository. By default, image scanning must be manually triggered. See the [ECR User Guide](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) for more information about image scanning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageScanningConfiguration(RepositoryImageScanningConfigurationGetArgs imageScanningConfiguration) {
             return imageScanningConfiguration(Output.of(imageScanningConfiguration));
         }
 
+        /**
+         * @param imageTagMutability The tag mutability setting for the repository. Must be one of: `MUTABLE` or `IMMUTABLE`. Defaults to `MUTABLE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageTagMutability(@Nullable Output<String> imageTagMutability) {
             $.imageTagMutability = imageTagMutability;
             return this;
         }
 
+        /**
+         * @param imageTagMutability The tag mutability setting for the repository. Must be one of: `MUTABLE` or `IMMUTABLE`. Defaults to `MUTABLE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageTagMutability(String imageTagMutability) {
             return imageTagMutability(Output.of(imageTagMutability));
         }
 
+        /**
+         * @param name Name of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param registryId The registry ID where the repository was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryId(@Nullable Output<String> registryId) {
             $.registryId = registryId;
             return this;
         }
 
+        /**
+         * @param registryId The registry ID where the repository was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryId(String registryId) {
             return registryId(Output.of(registryId));
         }
 
+        /**
+         * @param repositoryUrl The URL of the repository (in the form `aws_account_id.dkr.ecr.region.amazonaws.com/repositoryName`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryUrl(@Nullable Output<String> repositoryUrl) {
             $.repositoryUrl = repositoryUrl;
             return this;
         }
 
+        /**
+         * @param repositoryUrl The URL of the repository (in the form `aws_account_id.dkr.ecr.region.amazonaws.com/repositoryName`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryUrl(String repositoryUrl) {
             return repositoryUrl(Output.of(repositoryUrl));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

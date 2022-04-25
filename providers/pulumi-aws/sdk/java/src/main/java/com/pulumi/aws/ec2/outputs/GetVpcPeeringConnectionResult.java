@@ -17,18 +17,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetVpcPeeringConnectionResult {
     /**
-     * A configuration block that describes [VPC Peering Connection]
+     * @return A configuration block that describes [VPC Peering Connection]
      * (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the accepter VPC.
      * 
      */
     private final Map<String,Boolean> accepter;
     /**
-     * A CIDR block associated to the VPC of the specific VPC Peering Connection.
+     * @return A CIDR block associated to the VPC of the specific VPC Peering Connection.
      * 
      */
     private final String cidrBlock;
     /**
-     * List of objects with CIDR blocks of the requester VPC.
+     * @return List of objects with CIDR blocks of the requester VPC.
      * 
      */
     private final List<GetVpcPeeringConnectionCidrBlockSet> cidrBlockSets;
@@ -37,7 +37,7 @@ public final class GetVpcPeeringConnectionResult {
     private final String ownerId;
     private final String peerCidrBlock;
     /**
-     * List of objects with CIDR blocks of the accepter VPC.
+     * @return List of objects with CIDR blocks of the accepter VPC.
      * 
      */
     private final List<GetVpcPeeringConnectionPeerCidrBlockSet> peerCidrBlockSets;
@@ -46,7 +46,7 @@ public final class GetVpcPeeringConnectionResult {
     private final String peerVpcId;
     private final String region;
     /**
-     * A configuration block that describes [VPC Peering Connection]
+     * @return A configuration block that describes [VPC Peering Connection]
      * (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the requester VPC.
      * 
      */
@@ -92,24 +92,24 @@ public final class GetVpcPeeringConnectionResult {
     }
 
     /**
-     * A configuration block that describes [VPC Peering Connection]
+     * @return A configuration block that describes [VPC Peering Connection]
      * (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the accepter VPC.
      * 
-    */
+     */
     public Map<String,Boolean> accepter() {
         return this.accepter;
     }
     /**
-     * A CIDR block associated to the VPC of the specific VPC Peering Connection.
+     * @return A CIDR block associated to the VPC of the specific VPC Peering Connection.
      * 
-    */
+     */
     public String cidrBlock() {
         return this.cidrBlock;
     }
     /**
-     * List of objects with CIDR blocks of the requester VPC.
+     * @return List of objects with CIDR blocks of the requester VPC.
      * 
-    */
+     */
     public List<GetVpcPeeringConnectionCidrBlockSet> cidrBlockSets() {
         return this.cidrBlockSets;
     }
@@ -126,9 +126,9 @@ public final class GetVpcPeeringConnectionResult {
         return this.peerCidrBlock;
     }
     /**
-     * List of objects with CIDR blocks of the accepter VPC.
+     * @return List of objects with CIDR blocks of the accepter VPC.
      * 
-    */
+     */
     public List<GetVpcPeeringConnectionPeerCidrBlockSet> peerCidrBlockSets() {
         return this.peerCidrBlockSets;
     }
@@ -145,10 +145,10 @@ public final class GetVpcPeeringConnectionResult {
         return this.region;
     }
     /**
-     * A configuration block that describes [VPC Peering Connection]
+     * @return A configuration block that describes [VPC Peering Connection]
      * (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the requester VPC.
      * 
-    */
+     */
     public Map<String,Boolean> requester() {
         return this.requester;
     }

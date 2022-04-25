@@ -20,6 +20,10 @@ public final class WebhookFilterGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="jsonPath", required=true)
     private Output<String> jsonPath;
 
+    /**
+     * @return The [JSON path](https://github.com/json-path/JsonPath) to filter on.
+     * 
+     */
     public Output<String> jsonPath() {
         return this.jsonPath;
     }
@@ -31,6 +35,10 @@ public final class WebhookFilterGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="matchEquals", required=true)
     private Output<String> matchEquals;
 
+    /**
+     * @return The value to match on (e.g., `refs/heads/{Branch}`). See [AWS docs](https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_WebhookFilterRule.html) for details.
+     * 
+     */
     public Output<String> matchEquals() {
         return this.matchEquals;
     }
@@ -60,20 +68,44 @@ public final class WebhookFilterGetArgs extends com.pulumi.resources.ResourceArg
             $ = new WebhookFilterGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jsonPath The [JSON path](https://github.com/json-path/JsonPath) to filter on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jsonPath(Output<String> jsonPath) {
             $.jsonPath = jsonPath;
             return this;
         }
 
+        /**
+         * @param jsonPath The [JSON path](https://github.com/json-path/JsonPath) to filter on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jsonPath(String jsonPath) {
             return jsonPath(Output.of(jsonPath));
         }
 
+        /**
+         * @param matchEquals The value to match on (e.g., `refs/heads/{Branch}`). See [AWS docs](https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_WebhookFilterRule.html) for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchEquals(Output<String> matchEquals) {
             $.matchEquals = matchEquals;
             return this;
         }
 
+        /**
+         * @param matchEquals The value to match on (e.g., `refs/heads/{Branch}`). See [AWS docs](https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_WebhookFilterRule.html) for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchEquals(String matchEquals) {
             return matchEquals(Output.of(matchEquals));
         }

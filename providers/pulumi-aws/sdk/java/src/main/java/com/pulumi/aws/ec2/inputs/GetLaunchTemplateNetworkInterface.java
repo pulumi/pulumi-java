@@ -45,6 +45,10 @@ public final class GetLaunchTemplateNetworkInterface extends com.pulumi.resource
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Description of the launch template.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -179,6 +183,12 @@ public final class GetLaunchTemplateNetworkInterface extends com.pulumi.resource
             return this;
         }
 
+        /**
+         * @param description Description of the launch template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;

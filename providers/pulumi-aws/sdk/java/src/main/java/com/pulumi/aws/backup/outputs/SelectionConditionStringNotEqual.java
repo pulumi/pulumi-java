@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class SelectionConditionStringNotEqual {
     /**
-     * The key in a key-value pair.
+     * @return The key in a key-value pair.
      * 
      */
     private final String key;
     /**
-     * The value in a key-value pair.
+     * @return The value in a key-value pair.
      * 
      */
     private final String value;
@@ -29,16 +29,16 @@ public final class SelectionConditionStringNotEqual {
     }
 
     /**
-     * The key in a key-value pair.
+     * @return The key in a key-value pair.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * The value in a key-value pair.
+     * @return The value in a key-value pair.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

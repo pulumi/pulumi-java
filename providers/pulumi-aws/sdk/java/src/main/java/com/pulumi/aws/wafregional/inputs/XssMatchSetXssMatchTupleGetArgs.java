@@ -21,6 +21,10 @@ public final class XssMatchSetXssMatchTupleGetArgs extends com.pulumi.resources.
     @Import(name="fieldToMatch", required=true)
     private Output<XssMatchSetXssMatchTupleFieldToMatchGetArgs> fieldToMatch;
 
+    /**
+     * @return Specifies where in a web request to look for cross-site scripting attacks.
+     * 
+     */
     public Output<XssMatchSetXssMatchTupleFieldToMatchGetArgs> fieldToMatch() {
         return this.fieldToMatch;
     }
@@ -32,6 +36,10 @@ public final class XssMatchSetXssMatchTupleGetArgs extends com.pulumi.resources.
     @Import(name="textTransformation", required=true)
     private Output<String> textTransformation;
 
+    /**
+     * @return Which text transformation, if any, to perform on the web request before inspecting the request for cross-site scripting attacks.
+     * 
+     */
     public Output<String> textTransformation() {
         return this.textTransformation;
     }
@@ -61,20 +69,44 @@ public final class XssMatchSetXssMatchTupleGetArgs extends com.pulumi.resources.
             $ = new XssMatchSetXssMatchTupleGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fieldToMatch Specifies where in a web request to look for cross-site scripting attacks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldToMatch(Output<XssMatchSetXssMatchTupleFieldToMatchGetArgs> fieldToMatch) {
             $.fieldToMatch = fieldToMatch;
             return this;
         }
 
+        /**
+         * @param fieldToMatch Specifies where in a web request to look for cross-site scripting attacks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldToMatch(XssMatchSetXssMatchTupleFieldToMatchGetArgs fieldToMatch) {
             return fieldToMatch(Output.of(fieldToMatch));
         }
 
+        /**
+         * @param textTransformation Which text transformation, if any, to perform on the web request before inspecting the request for cross-site scripting attacks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textTransformation(Output<String> textTransformation) {
             $.textTransformation = textTransformation;
             return this;
         }
 
+        /**
+         * @param textTransformation Which text transformation, if any, to perform on the web request before inspecting the request for cross-site scripting attacks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textTransformation(String textTransformation) {
             return textTransformation(Output.of(textTransformation));
         }

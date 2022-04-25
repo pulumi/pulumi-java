@@ -20,6 +20,10 @@ public final class BrokerMaintenanceWindowStartTimeGetArgs extends com.pulumi.re
     @Import(name="dayOfWeek", required=true)
     private Output<String> dayOfWeek;
 
+    /**
+     * @return Day of the week, e.g., `MONDAY`, `TUESDAY`, or `WEDNESDAY`.
+     * 
+     */
     public Output<String> dayOfWeek() {
         return this.dayOfWeek;
     }
@@ -31,6 +35,10 @@ public final class BrokerMaintenanceWindowStartTimeGetArgs extends com.pulumi.re
     @Import(name="timeOfDay", required=true)
     private Output<String> timeOfDay;
 
+    /**
+     * @return Time, in 24-hour format, e.g., `02:00`.
+     * 
+     */
     public Output<String> timeOfDay() {
         return this.timeOfDay;
     }
@@ -42,6 +50,10 @@ public final class BrokerMaintenanceWindowStartTimeGetArgs extends com.pulumi.re
     @Import(name="timeZone", required=true)
     private Output<String> timeZone;
 
+    /**
+     * @return Time zone in either the Country/City format or the UTC offset format, e.g., `CET`.
+     * 
+     */
     public Output<String> timeZone() {
         return this.timeZone;
     }
@@ -72,29 +84,65 @@ public final class BrokerMaintenanceWindowStartTimeGetArgs extends com.pulumi.re
             $ = new BrokerMaintenanceWindowStartTimeGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dayOfWeek Day of the week, e.g., `MONDAY`, `TUESDAY`, or `WEDNESDAY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeek(Output<String> dayOfWeek) {
             $.dayOfWeek = dayOfWeek;
             return this;
         }
 
+        /**
+         * @param dayOfWeek Day of the week, e.g., `MONDAY`, `TUESDAY`, or `WEDNESDAY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeek(String dayOfWeek) {
             return dayOfWeek(Output.of(dayOfWeek));
         }
 
+        /**
+         * @param timeOfDay Time, in 24-hour format, e.g., `02:00`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeOfDay(Output<String> timeOfDay) {
             $.timeOfDay = timeOfDay;
             return this;
         }
 
+        /**
+         * @param timeOfDay Time, in 24-hour format, e.g., `02:00`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeOfDay(String timeOfDay) {
             return timeOfDay(Output.of(timeOfDay));
         }
 
+        /**
+         * @param timeZone Time zone in either the Country/City format or the UTC offset format, e.g., `CET`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(Output<String> timeZone) {
             $.timeZone = timeZone;
             return this;
         }
 
+        /**
+         * @param timeZone Time zone in either the Country/City format or the UTC offset format, e.g., `CET`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(String timeZone) {
             return timeZone(Output.of(timeZone));
         }

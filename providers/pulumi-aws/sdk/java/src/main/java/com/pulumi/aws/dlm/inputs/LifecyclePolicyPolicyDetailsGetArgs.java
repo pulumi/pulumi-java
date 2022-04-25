@@ -23,6 +23,10 @@ public final class LifecyclePolicyPolicyDetailsGetArgs extends com.pulumi.resour
     @Import(name="resourceTypes", required=true)
     private Output<List<String>> resourceTypes;
 
+    /**
+     * @return A list of resource types that should be targeted by the lifecycle policy. `VOLUME` is currently the only allowed value.
+     * 
+     */
     public Output<List<String>> resourceTypes() {
         return this.resourceTypes;
     }
@@ -34,6 +38,10 @@ public final class LifecyclePolicyPolicyDetailsGetArgs extends com.pulumi.resour
     @Import(name="schedules", required=true)
     private Output<List<LifecyclePolicyPolicyDetailsScheduleGetArgs>> schedules;
 
+    /**
+     * @return See the `schedule` configuration block.
+     * 
+     */
     public Output<List<LifecyclePolicyPolicyDetailsScheduleGetArgs>> schedules() {
         return this.schedules;
     }
@@ -45,6 +53,10 @@ public final class LifecyclePolicyPolicyDetailsGetArgs extends com.pulumi.resour
     @Import(name="targetTags", required=true)
     private Output<Map<String,String>> targetTags;
 
+    /**
+     * @return A map of tag keys and their values. Any resources that match the `resource_types` and are tagged with _any_ of these tags will be targeted.
+     * 
+     */
     public Output<Map<String,String>> targetTags() {
         return this.targetTags;
     }
@@ -75,37 +87,85 @@ public final class LifecyclePolicyPolicyDetailsGetArgs extends com.pulumi.resour
             $ = new LifecyclePolicyPolicyDetailsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceTypes A list of resource types that should be targeted by the lifecycle policy. `VOLUME` is currently the only allowed value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceTypes(Output<List<String>> resourceTypes) {
             $.resourceTypes = resourceTypes;
             return this;
         }
 
+        /**
+         * @param resourceTypes A list of resource types that should be targeted by the lifecycle policy. `VOLUME` is currently the only allowed value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceTypes(List<String> resourceTypes) {
             return resourceTypes(Output.of(resourceTypes));
         }
 
+        /**
+         * @param resourceTypes A list of resource types that should be targeted by the lifecycle policy. `VOLUME` is currently the only allowed value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceTypes(String... resourceTypes) {
             return resourceTypes(List.of(resourceTypes));
         }
 
+        /**
+         * @param schedules See the `schedule` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedules(Output<List<LifecyclePolicyPolicyDetailsScheduleGetArgs>> schedules) {
             $.schedules = schedules;
             return this;
         }
 
+        /**
+         * @param schedules See the `schedule` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedules(List<LifecyclePolicyPolicyDetailsScheduleGetArgs> schedules) {
             return schedules(Output.of(schedules));
         }
 
+        /**
+         * @param schedules See the `schedule` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedules(LifecyclePolicyPolicyDetailsScheduleGetArgs... schedules) {
             return schedules(List.of(schedules));
         }
 
+        /**
+         * @param targetTags A map of tag keys and their values. Any resources that match the `resource_types` and are tagged with _any_ of these tags will be targeted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetTags(Output<Map<String,String>> targetTags) {
             $.targetTags = targetTags;
             return this;
         }
 
+        /**
+         * @param targetTags A map of tag keys and their values. Any resources that match the `resource_types` and are tagged with _any_ of these tags will be targeted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetTags(Map<String,String> targetTags) {
             return targetTags(Output.of(targetTags));
         }

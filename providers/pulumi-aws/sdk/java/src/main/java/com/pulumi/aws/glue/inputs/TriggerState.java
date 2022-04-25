@@ -27,6 +27,10 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="actions")
     private @Nullable Output<List<TriggerActionGetArgs>> actions;
 
+    /**
+     * @return List of actions initiated by this trigger when it fires. See Actions Below.
+     * 
+     */
     public Optional<Output<List<TriggerActionGetArgs>>> actions() {
         return Optional.ofNullable(this.actions);
     }
@@ -38,6 +42,10 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of Glue Trigger
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -49,6 +57,10 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the new trigger.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -60,6 +72,10 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Start the trigger. Defaults to `true`.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -71,6 +87,10 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the trigger.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -82,6 +102,10 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="predicate")
     private @Nullable Output<TriggerPredicateGetArgs> predicate;
 
+    /**
+     * @return A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. See Predicate Below.
+     * 
+     */
     public Optional<Output<TriggerPredicateGetArgs>> predicate() {
         return Optional.ofNullable(this.predicate);
     }
@@ -93,6 +117,10 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
     private @Nullable Output<String> schedule;
 
+    /**
+     * @return A cron expression used to specify the schedule. [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html)
+     * 
+     */
     public Optional<Output<String>> schedule() {
         return Optional.ofNullable(this.schedule);
     }
@@ -104,6 +132,10 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="startOnCreation")
     private @Nullable Output<Boolean> startOnCreation;
 
+    /**
+     * @return Set to true to start `SCHEDULED` and `CONDITIONAL` triggers when created. True is not supported for `ON_DEMAND` triggers.
+     * 
+     */
     public Optional<Output<Boolean>> startOnCreation() {
         return Optional.ofNullable(this.startOnCreation);
     }
@@ -115,6 +147,10 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<String> state;
 
+    /**
+     * @return The condition job state. Currently, the values supported are `SUCCEEDED`, `STOPPED`, `TIMEOUT` and `FAILED`. If this is specified, `job_name` must also be specified. Conflicts with `crawler_state`.
+     * 
+     */
     public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -126,6 +162,10 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -137,6 +177,10 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -148,6 +192,10 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The type of trigger. Valid values are `CONDITIONAL`, `ON_DEMAND`, and `SCHEDULED`.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -159,6 +207,10 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="workflowName")
     private @Nullable Output<String> workflowName;
 
+    /**
+     * @return A workflow to which the trigger should be associated to. Every workflow graph (DAG) needs a starting trigger (`ON_DEMAND` or `SCHEDULED` type) and can contain multiple additional `CONDITIONAL` triggers.
+     * 
+     */
     public Optional<Output<String>> workflowName() {
         return Optional.ofNullable(this.workflowName);
     }
@@ -199,123 +251,285 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
             $ = new TriggerState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions List of actions initiated by this trigger when it fires. See Actions Below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(@Nullable Output<List<TriggerActionGetArgs>> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions List of actions initiated by this trigger when it fires. See Actions Below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(List<TriggerActionGetArgs> actions) {
             return actions(Output.of(actions));
         }
 
+        /**
+         * @param actions List of actions initiated by this trigger when it fires. See Actions Below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(TriggerActionGetArgs... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of Glue Trigger
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of Glue Trigger
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param description A description of the new trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the new trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param enabled Start the trigger. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Start the trigger. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param name The name of the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param predicate A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. See Predicate Below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predicate(@Nullable Output<TriggerPredicateGetArgs> predicate) {
             $.predicate = predicate;
             return this;
         }
 
+        /**
+         * @param predicate A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. See Predicate Below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predicate(TriggerPredicateGetArgs predicate) {
             return predicate(Output.of(predicate));
         }
 
+        /**
+         * @param schedule A cron expression used to specify the schedule. [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html)
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(@Nullable Output<String> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule A cron expression used to specify the schedule. [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html)
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(String schedule) {
             return schedule(Output.of(schedule));
         }
 
+        /**
+         * @param startOnCreation Set to true to start `SCHEDULED` and `CONDITIONAL` triggers when created. True is not supported for `ON_DEMAND` triggers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startOnCreation(@Nullable Output<Boolean> startOnCreation) {
             $.startOnCreation = startOnCreation;
             return this;
         }
 
+        /**
+         * @param startOnCreation Set to true to start `SCHEDULED` and `CONDITIONAL` triggers when created. True is not supported for `ON_DEMAND` triggers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startOnCreation(Boolean startOnCreation) {
             return startOnCreation(Output.of(startOnCreation));
         }
 
+        /**
+         * @param state The condition job state. Currently, the values supported are `SUCCEEDED`, `STOPPED`, `TIMEOUT` and `FAILED`. If this is specified, `job_name` must also be specified. Conflicts with `crawler_state`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The condition job state. Currently, the values supported are `SUCCEEDED`, `STOPPED`, `TIMEOUT` and `FAILED`. If this is specified, `job_name` must also be specified. Conflicts with `crawler_state`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param type The type of trigger. Valid values are `CONDITIONAL`, `ON_DEMAND`, and `SCHEDULED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of trigger. Valid values are `CONDITIONAL`, `ON_DEMAND`, and `SCHEDULED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param workflowName A workflow to which the trigger should be associated to. Every workflow graph (DAG) needs a starting trigger (`ON_DEMAND` or `SCHEDULED` type) and can contain multiple additional `CONDITIONAL` triggers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workflowName(@Nullable Output<String> workflowName) {
             $.workflowName = workflowName;
             return this;
         }
 
+        /**
+         * @param workflowName A workflow to which the trigger should be associated to. Every workflow graph (DAG) needs a starting trigger (`ON_DEMAND` or `SCHEDULED` type) and can contain multiple additional `CONDITIONAL` triggers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workflowName(String workflowName) {
             return workflowName(Output.of(workflowName));
         }

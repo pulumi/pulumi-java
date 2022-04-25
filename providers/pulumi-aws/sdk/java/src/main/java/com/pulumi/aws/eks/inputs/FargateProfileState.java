@@ -25,6 +25,10 @@ public final class FargateProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the EKS Fargate Profile.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -36,6 +40,10 @@ public final class FargateProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="clusterName")
     private @Nullable Output<String> clusterName;
 
+    /**
+     * @return Name of the EKS Cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
+     * 
+     */
     public Optional<Output<String>> clusterName() {
         return Optional.ofNullable(this.clusterName);
     }
@@ -47,6 +55,10 @@ public final class FargateProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="fargateProfileName")
     private @Nullable Output<String> fargateProfileName;
 
+    /**
+     * @return Name of the EKS Fargate Profile.
+     * 
+     */
     public Optional<Output<String>> fargateProfileName() {
         return Optional.ofNullable(this.fargateProfileName);
     }
@@ -58,6 +70,10 @@ public final class FargateProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="podExecutionRoleArn")
     private @Nullable Output<String> podExecutionRoleArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Fargate Profile.
+     * 
+     */
     public Optional<Output<String>> podExecutionRoleArn() {
         return Optional.ofNullable(this.podExecutionRoleArn);
     }
@@ -69,6 +85,10 @@ public final class FargateProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="selectors")
     private @Nullable Output<List<FargateProfileSelectorGetArgs>> selectors;
 
+    /**
+     * @return Configuration block(s) for selecting Kubernetes Pods to execute with this EKS Fargate Profile. Detailed below.
+     * 
+     */
     public Optional<Output<List<FargateProfileSelectorGetArgs>>> selectors() {
         return Optional.ofNullable(this.selectors);
     }
@@ -80,6 +100,10 @@ public final class FargateProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return Status of the EKS Fargate Profile.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -91,6 +115,10 @@ public final class FargateProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="subnetIds")
     private @Nullable Output<List<String>> subnetIds;
 
+    /**
+     * @return Identifiers of private EC2 Subnets to associate with the EKS Fargate Profile. These subnets must have the following resource tag: `kubernetes.io/cluster/CLUSTER_NAME` (where `CLUSTER_NAME` is replaced with the name of the EKS Cluster).
+     * 
+     */
     public Optional<Output<List<String>>> subnetIds() {
         return Optional.ofNullable(this.subnetIds);
     }
@@ -102,6 +130,10 @@ public final class FargateProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -113,6 +145,10 @@ public final class FargateProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -149,91 +185,211 @@ public final class FargateProfileState extends com.pulumi.resources.ResourceArgs
             $ = new FargateProfileState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the EKS Fargate Profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the EKS Fargate Profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param clusterName Name of the EKS Cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(@Nullable Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName Name of the EKS Cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }
 
+        /**
+         * @param fargateProfileName Name of the EKS Fargate Profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fargateProfileName(@Nullable Output<String> fargateProfileName) {
             $.fargateProfileName = fargateProfileName;
             return this;
         }
 
+        /**
+         * @param fargateProfileName Name of the EKS Fargate Profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fargateProfileName(String fargateProfileName) {
             return fargateProfileName(Output.of(fargateProfileName));
         }
 
+        /**
+         * @param podExecutionRoleArn Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Fargate Profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podExecutionRoleArn(@Nullable Output<String> podExecutionRoleArn) {
             $.podExecutionRoleArn = podExecutionRoleArn;
             return this;
         }
 
+        /**
+         * @param podExecutionRoleArn Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Fargate Profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podExecutionRoleArn(String podExecutionRoleArn) {
             return podExecutionRoleArn(Output.of(podExecutionRoleArn));
         }
 
+        /**
+         * @param selectors Configuration block(s) for selecting Kubernetes Pods to execute with this EKS Fargate Profile. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectors(@Nullable Output<List<FargateProfileSelectorGetArgs>> selectors) {
             $.selectors = selectors;
             return this;
         }
 
+        /**
+         * @param selectors Configuration block(s) for selecting Kubernetes Pods to execute with this EKS Fargate Profile. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectors(List<FargateProfileSelectorGetArgs> selectors) {
             return selectors(Output.of(selectors));
         }
 
+        /**
+         * @param selectors Configuration block(s) for selecting Kubernetes Pods to execute with this EKS Fargate Profile. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectors(FargateProfileSelectorGetArgs... selectors) {
             return selectors(List.of(selectors));
         }
 
+        /**
+         * @param status Status of the EKS Fargate Profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Status of the EKS Fargate Profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param subnetIds Identifiers of private EC2 Subnets to associate with the EKS Fargate Profile. These subnets must have the following resource tag: `kubernetes.io/cluster/CLUSTER_NAME` (where `CLUSTER_NAME` is replaced with the name of the EKS Cluster).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             $.subnetIds = subnetIds;
             return this;
         }
 
+        /**
+         * @param subnetIds Identifiers of private EC2 Subnets to associate with the EKS Fargate Profile. These subnets must have the following resource tag: `kubernetes.io/cluster/CLUSTER_NAME` (where `CLUSTER_NAME` is replaced with the name of the EKS Cluster).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(List<String> subnetIds) {
             return subnetIds(Output.of(subnetIds));
         }
 
+        /**
+         * @param subnetIds Identifiers of private EC2 Subnets to associate with the EKS Fargate Profile. These subnets must have the following resource tag: `kubernetes.io/cluster/CLUSTER_NAME` (where `CLUSTER_NAME` is replaced with the name of the EKS Cluster).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
 
+        /**
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

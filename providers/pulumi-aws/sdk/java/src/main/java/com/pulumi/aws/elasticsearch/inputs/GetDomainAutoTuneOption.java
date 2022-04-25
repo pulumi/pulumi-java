@@ -21,6 +21,10 @@ public final class GetDomainAutoTuneOption extends com.pulumi.resources.InvokeAr
     @Import(name="desiredState", required=true)
     private String desiredState;
 
+    /**
+     * @return The Auto-Tune desired state for the domain.
+     * 
+     */
     public String desiredState() {
         return this.desiredState;
     }
@@ -32,6 +36,10 @@ public final class GetDomainAutoTuneOption extends com.pulumi.resources.InvokeAr
     @Import(name="maintenanceSchedules", required=true)
     private List<GetDomainAutoTuneOptionMaintenanceSchedule> maintenanceSchedules;
 
+    /**
+     * @return A list of the nested configurations for the Auto-Tune maintenance windows of the domain.
+     * 
+     */
     public List<GetDomainAutoTuneOptionMaintenanceSchedule> maintenanceSchedules() {
         return this.maintenanceSchedules;
     }
@@ -43,6 +51,10 @@ public final class GetDomainAutoTuneOption extends com.pulumi.resources.InvokeAr
     @Import(name="rollbackOnDisable", required=true)
     private String rollbackOnDisable;
 
+    /**
+     * @return Whether the domain is set to roll back to default Auto-Tune settings when disabling Auto-Tune.
+     * 
+     */
     public String rollbackOnDisable() {
         return this.rollbackOnDisable;
     }
@@ -73,20 +85,44 @@ public final class GetDomainAutoTuneOption extends com.pulumi.resources.InvokeAr
             $ = new GetDomainAutoTuneOption(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param desiredState The Auto-Tune desired state for the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder desiredState(String desiredState) {
             $.desiredState = desiredState;
             return this;
         }
 
+        /**
+         * @param maintenanceSchedules A list of the nested configurations for the Auto-Tune maintenance windows of the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceSchedules(List<GetDomainAutoTuneOptionMaintenanceSchedule> maintenanceSchedules) {
             $.maintenanceSchedules = maintenanceSchedules;
             return this;
         }
 
+        /**
+         * @param maintenanceSchedules A list of the nested configurations for the Auto-Tune maintenance windows of the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceSchedules(GetDomainAutoTuneOptionMaintenanceSchedule... maintenanceSchedules) {
             return maintenanceSchedules(List.of(maintenanceSchedules));
         }
 
+        /**
+         * @param rollbackOnDisable Whether the domain is set to roll back to default Auto-Tune settings when disabling Auto-Tune.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollbackOnDisable(String rollbackOnDisable) {
             $.rollbackOnDisable = rollbackOnDisable;
             return this;

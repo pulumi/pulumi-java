@@ -11,22 +11,22 @@ import java.util.Objects;
 @CustomType
 public final class FleetEc2InboundPermission {
     /**
-     * Starting value for a range of allowed port numbers.
+     * @return Starting value for a range of allowed port numbers.
      * 
      */
     private final Integer fromPort;
     /**
-     * Range of allowed IP addresses expressed in CIDR notationE.g., `000.000.000.000/[subnet mask]` or `0.0.0.0/[subnet mask]`.
+     * @return Range of allowed IP addresses expressed in CIDR notationE.g., `000.000.000.000/[subnet mask]` or `0.0.0.0/[subnet mask]`.
      * 
      */
     private final String ipRange;
     /**
-     * Network communication protocol used by the fleetE.g., `TCP` or `UDP`
+     * @return Network communication protocol used by the fleetE.g., `TCP` or `UDP`
      * 
      */
     private final String protocol;
     /**
-     * Ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher than `from_port`.
+     * @return Ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher than `from_port`.
      * 
      */
     private final Integer toPort;
@@ -44,30 +44,30 @@ public final class FleetEc2InboundPermission {
     }
 
     /**
-     * Starting value for a range of allowed port numbers.
+     * @return Starting value for a range of allowed port numbers.
      * 
-    */
+     */
     public Integer fromPort() {
         return this.fromPort;
     }
     /**
-     * Range of allowed IP addresses expressed in CIDR notationE.g., `000.000.000.000/[subnet mask]` or `0.0.0.0/[subnet mask]`.
+     * @return Range of allowed IP addresses expressed in CIDR notationE.g., `000.000.000.000/[subnet mask]` or `0.0.0.0/[subnet mask]`.
      * 
-    */
+     */
     public String ipRange() {
         return this.ipRange;
     }
     /**
-     * Network communication protocol used by the fleetE.g., `TCP` or `UDP`
+     * @return Network communication protocol used by the fleetE.g., `TCP` or `UDP`
      * 
-    */
+     */
     public String protocol() {
         return this.protocol;
     }
     /**
-     * Ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher than `from_port`.
+     * @return Ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher than `from_port`.
      * 
-    */
+     */
     public Integer toPort() {
         return this.toPort;
     }

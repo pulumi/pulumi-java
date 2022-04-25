@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GetServiceResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * Code of the service.
+     * @return Code of the service.
      * 
      */
     private final String serviceCode;
@@ -32,16 +32,16 @@ public final class GetServiceResult {
     }
 
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Code of the service.
+     * @return Code of the service.
      * 
-    */
+     */
     public String serviceCode() {
         return this.serviceCode;
     }

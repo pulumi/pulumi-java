@@ -22,6 +22,10 @@ public final class GetInstanceRootBlockDevice extends com.pulumi.resources.Invok
     @Import(name="deleteOnTermination", required=true)
     private Boolean deleteOnTermination;
 
+    /**
+     * @return If the root block device will be deleted on termination.
+     * 
+     */
     public Boolean deleteOnTermination() {
         return this.deleteOnTermination;
     }
@@ -33,6 +37,10 @@ public final class GetInstanceRootBlockDevice extends com.pulumi.resources.Invok
     @Import(name="deviceName", required=true)
     private String deviceName;
 
+    /**
+     * @return The physical name of the device.
+     * 
+     */
     public String deviceName() {
         return this.deviceName;
     }
@@ -44,6 +52,10 @@ public final class GetInstanceRootBlockDevice extends com.pulumi.resources.Invok
     @Import(name="encrypted", required=true)
     private Boolean encrypted;
 
+    /**
+     * @return If the EBS volume is encrypted.
+     * 
+     */
     public Boolean encrypted() {
         return this.encrypted;
     }
@@ -55,6 +67,10 @@ public final class GetInstanceRootBlockDevice extends com.pulumi.resources.Invok
     @Import(name="iops", required=true)
     private Integer iops;
 
+    /**
+     * @return `0` If the volume is not a provisioned IOPS image, otherwise the supported IOPS count.
+     * 
+     */
     public Integer iops() {
         return this.iops;
     }
@@ -73,6 +89,10 @@ public final class GetInstanceRootBlockDevice extends com.pulumi.resources.Invok
     @Import(name="tags", required=true)
     private Map<String,String> tags;
 
+    /**
+     * @return A map of tags assigned to the Instance.
+     * 
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
@@ -84,6 +104,10 @@ public final class GetInstanceRootBlockDevice extends com.pulumi.resources.Invok
     @Import(name="throughput", required=true)
     private Integer throughput;
 
+    /**
+     * @return The throughput of the volume, in MiB/s.
+     * 
+     */
     public Integer throughput() {
         return this.throughput;
     }
@@ -102,6 +126,10 @@ public final class GetInstanceRootBlockDevice extends com.pulumi.resources.Invok
     @Import(name="volumeSize", required=true)
     private Integer volumeSize;
 
+    /**
+     * @return The size of the volume, in GiB.
+     * 
+     */
     public Integer volumeSize() {
         return this.volumeSize;
     }
@@ -113,6 +141,10 @@ public final class GetInstanceRootBlockDevice extends com.pulumi.resources.Invok
     @Import(name="volumeType", required=true)
     private String volumeType;
 
+    /**
+     * @return The type of the volume.
+     * 
+     */
     public String volumeType() {
         return this.volumeType;
     }
@@ -150,21 +182,45 @@ public final class GetInstanceRootBlockDevice extends com.pulumi.resources.Invok
             $ = new GetInstanceRootBlockDevice(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deleteOnTermination If the root block device will be deleted on termination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteOnTermination(Boolean deleteOnTermination) {
             $.deleteOnTermination = deleteOnTermination;
             return this;
         }
 
+        /**
+         * @param deviceName The physical name of the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param encrypted If the EBS volume is encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encrypted(Boolean encrypted) {
             $.encrypted = encrypted;
             return this;
         }
 
+        /**
+         * @param iops `0` If the volume is not a provisioned IOPS image, otherwise the supported IOPS count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iops(Integer iops) {
             $.iops = iops;
             return this;
@@ -175,11 +231,23 @@ public final class GetInstanceRootBlockDevice extends com.pulumi.resources.Invok
             return this;
         }
 
+        /**
+         * @param tags A map of tags assigned to the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param throughput The throughput of the volume, in MiB/s.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throughput(Integer throughput) {
             $.throughput = throughput;
             return this;
@@ -190,11 +258,23 @@ public final class GetInstanceRootBlockDevice extends com.pulumi.resources.Invok
             return this;
         }
 
+        /**
+         * @param volumeSize The size of the volume, in GiB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeSize(Integer volumeSize) {
             $.volumeSize = volumeSize;
             return this;
         }
 
+        /**
+         * @param volumeType The type of the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeType(String volumeType) {
             $.volumeType = volumeType;
             return this;

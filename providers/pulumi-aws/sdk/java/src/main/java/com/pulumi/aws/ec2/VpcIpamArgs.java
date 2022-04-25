@@ -25,6 +25,10 @@ public final class VpcIpamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description for the IPAM.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class VpcIpamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="operatingRegions", required=true)
     private Output<List<VpcIpamOperatingRegionArgs>> operatingRegions;
 
+    /**
+     * @return Determines which locales can be chosen when you create pools. Locale is the Region where you want to make an IPAM pool available for allocations. You can only create pools with locales that match the operating Regions of the IPAM. You can only create VPCs from a pool whose locale matches the VPC&#39;s Region. You specify a region using the region_name parameter. You **must** set your provider block region as an operating_region.
+     * 
+     */
     public Output<List<VpcIpamOperatingRegionArgs>> operatingRegions() {
         return this.operatingRegions;
     }
@@ -47,6 +55,10 @@ public final class VpcIpamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -77,33 +89,75 @@ public final class VpcIpamArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VpcIpamArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A description for the IPAM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description for the IPAM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param operatingRegions Determines which locales can be chosen when you create pools. Locale is the Region where you want to make an IPAM pool available for allocations. You can only create pools with locales that match the operating Regions of the IPAM. You can only create VPCs from a pool whose locale matches the VPC&#39;s Region. You specify a region using the region_name parameter. You **must** set your provider block region as an operating_region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatingRegions(Output<List<VpcIpamOperatingRegionArgs>> operatingRegions) {
             $.operatingRegions = operatingRegions;
             return this;
         }
 
+        /**
+         * @param operatingRegions Determines which locales can be chosen when you create pools. Locale is the Region where you want to make an IPAM pool available for allocations. You can only create pools with locales that match the operating Regions of the IPAM. You can only create VPCs from a pool whose locale matches the VPC&#39;s Region. You specify a region using the region_name parameter. You **must** set your provider block region as an operating_region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatingRegions(List<VpcIpamOperatingRegionArgs> operatingRegions) {
             return operatingRegions(Output.of(operatingRegions));
         }
 
+        /**
+         * @param operatingRegions Determines which locales can be chosen when you create pools. Locale is the Region where you want to make an IPAM pool available for allocations. You can only create pools with locales that match the operating Regions of the IPAM. You can only create VPCs from a pool whose locale matches the VPC&#39;s Region. You specify a region using the region_name parameter. You **must** set your provider block region as an operating_region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatingRegions(VpcIpamOperatingRegionArgs... operatingRegions) {
             return operatingRegions(List.of(operatingRegions));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

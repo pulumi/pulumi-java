@@ -20,6 +20,10 @@ public final class WorkforceCognitoConfigArgs extends com.pulumi.resources.Resou
     @Import(name="clientId", required=true)
     private Output<String> clientId;
 
+    /**
+     * @return The OIDC IdP client ID used to configure your private workforce.
+     * 
+     */
     public Output<String> clientId() {
         return this.clientId;
     }
@@ -31,6 +35,10 @@ public final class WorkforceCognitoConfigArgs extends com.pulumi.resources.Resou
     @Import(name="userPool", required=true)
     private Output<String> userPool;
 
+    /**
+     * @return The id for your Amazon Cognito user pool.
+     * 
+     */
     public Output<String> userPool() {
         return this.userPool;
     }
@@ -60,20 +68,44 @@ public final class WorkforceCognitoConfigArgs extends com.pulumi.resources.Resou
             $ = new WorkforceCognitoConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId The OIDC IdP client ID used to configure your private workforce.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId The OIDC IdP client ID used to configure your private workforce.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param userPool The id for your Amazon Cognito user pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userPool(Output<String> userPool) {
             $.userPool = userPool;
             return this;
         }
 
+        /**
+         * @param userPool The id for your Amazon Cognito user pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userPool(String userPool) {
             return userPool(Output.of(userPool));
         }

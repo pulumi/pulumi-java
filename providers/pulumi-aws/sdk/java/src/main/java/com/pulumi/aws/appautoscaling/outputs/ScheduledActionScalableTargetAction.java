@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ScheduledActionScalableTargetAction {
     /**
-     * The maximum capacity. At least one of `max_capacity` or `min_capacity` must be set.
+     * @return The maximum capacity. At least one of `max_capacity` or `min_capacity` must be set.
      * 
      */
     private final @Nullable Integer maxCapacity;
     /**
-     * The minimum capacity. At least one of `min_capacity` or `max_capacity` must be set.
+     * @return The minimum capacity. At least one of `min_capacity` or `max_capacity` must be set.
      * 
      */
     private final @Nullable Integer minCapacity;
@@ -31,16 +31,16 @@ public final class ScheduledActionScalableTargetAction {
     }
 
     /**
-     * The maximum capacity. At least one of `max_capacity` or `min_capacity` must be set.
+     * @return The maximum capacity. At least one of `max_capacity` or `min_capacity` must be set.
      * 
-    */
+     */
     public Optional<Integer> maxCapacity() {
         return Optional.ofNullable(this.maxCapacity);
     }
     /**
-     * The minimum capacity. At least one of `min_capacity` or `max_capacity` must be set.
+     * @return The minimum capacity. At least one of `min_capacity` or `max_capacity` must be set.
      * 
-    */
+     */
     public Optional<Integer> minCapacity() {
         return Optional.ofNullable(this.minCapacity);
     }

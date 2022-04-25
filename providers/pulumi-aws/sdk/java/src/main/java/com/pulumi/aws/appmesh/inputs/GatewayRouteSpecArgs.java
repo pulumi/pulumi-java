@@ -24,6 +24,10 @@ public final class GatewayRouteSpecArgs extends com.pulumi.resources.ResourceArg
     @Import(name="grpcRoute")
     private @Nullable Output<GatewayRouteSpecGrpcRouteArgs> grpcRoute;
 
+    /**
+     * @return The specification of a gRPC gateway route.
+     * 
+     */
     public Optional<Output<GatewayRouteSpecGrpcRouteArgs>> grpcRoute() {
         return Optional.ofNullable(this.grpcRoute);
     }
@@ -35,6 +39,10 @@ public final class GatewayRouteSpecArgs extends com.pulumi.resources.ResourceArg
     @Import(name="http2Route")
     private @Nullable Output<GatewayRouteSpecHttp2RouteArgs> http2Route;
 
+    /**
+     * @return The specification of an HTTP/2 gateway route.
+     * 
+     */
     public Optional<Output<GatewayRouteSpecHttp2RouteArgs>> http2Route() {
         return Optional.ofNullable(this.http2Route);
     }
@@ -46,6 +54,10 @@ public final class GatewayRouteSpecArgs extends com.pulumi.resources.ResourceArg
     @Import(name="httpRoute")
     private @Nullable Output<GatewayRouteSpecHttpRouteArgs> httpRoute;
 
+    /**
+     * @return The specification of an HTTP gateway route.
+     * 
+     */
     public Optional<Output<GatewayRouteSpecHttpRouteArgs>> httpRoute() {
         return Optional.ofNullable(this.httpRoute);
     }
@@ -76,29 +88,65 @@ public final class GatewayRouteSpecArgs extends com.pulumi.resources.ResourceArg
             $ = new GatewayRouteSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param grpcRoute The specification of a gRPC gateway route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grpcRoute(@Nullable Output<GatewayRouteSpecGrpcRouteArgs> grpcRoute) {
             $.grpcRoute = grpcRoute;
             return this;
         }
 
+        /**
+         * @param grpcRoute The specification of a gRPC gateway route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grpcRoute(GatewayRouteSpecGrpcRouteArgs grpcRoute) {
             return grpcRoute(Output.of(grpcRoute));
         }
 
+        /**
+         * @param http2Route The specification of an HTTP/2 gateway route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder http2Route(@Nullable Output<GatewayRouteSpecHttp2RouteArgs> http2Route) {
             $.http2Route = http2Route;
             return this;
         }
 
+        /**
+         * @param http2Route The specification of an HTTP/2 gateway route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder http2Route(GatewayRouteSpecHttp2RouteArgs http2Route) {
             return http2Route(Output.of(http2Route));
         }
 
+        /**
+         * @param httpRoute The specification of an HTTP gateway route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpRoute(@Nullable Output<GatewayRouteSpecHttpRouteArgs> httpRoute) {
             $.httpRoute = httpRoute;
             return this;
         }
 
+        /**
+         * @param httpRoute The specification of an HTTP gateway route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpRoute(GatewayRouteSpecHttpRouteArgs httpRoute) {
             return httpRoute(Output.of(httpRoute));
         }

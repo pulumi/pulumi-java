@@ -24,6 +24,10 @@ public final class RuleGroupRuleGroupGetArgs extends com.pulumi.resources.Resour
     @Import(name="ruleVariables")
     private @Nullable Output<RuleGroupRuleGroupRuleVariablesGetArgs> ruleVariables;
 
+    /**
+     * @return A configuration block that defines additional settings available to use in the rules defined in the rule group. Can only be specified for **stateful** rule groups. See Rule Variables below for details.
+     * 
+     */
     public Optional<Output<RuleGroupRuleGroupRuleVariablesGetArgs>> ruleVariables() {
         return Optional.ofNullable(this.ruleVariables);
     }
@@ -35,6 +39,10 @@ public final class RuleGroupRuleGroupGetArgs extends com.pulumi.resources.Resour
     @Import(name="rulesSource", required=true)
     private Output<RuleGroupRuleGroupRulesSourceGetArgs> rulesSource;
 
+    /**
+     * @return A configuration block that defines the stateful or stateless rules for the rule group. See Rules Source below for details.
+     * 
+     */
     public Output<RuleGroupRuleGroupRulesSourceGetArgs> rulesSource() {
         return this.rulesSource;
     }
@@ -46,6 +54,10 @@ public final class RuleGroupRuleGroupGetArgs extends com.pulumi.resources.Resour
     @Import(name="statefulRuleOptions")
     private @Nullable Output<RuleGroupRuleGroupStatefulRuleOptionsGetArgs> statefulRuleOptions;
 
+    /**
+     * @return A configuration block that defines stateful rule options for the rule group. See Stateful Rule Options below for details.
+     * 
+     */
     public Optional<Output<RuleGroupRuleGroupStatefulRuleOptionsGetArgs>> statefulRuleOptions() {
         return Optional.ofNullable(this.statefulRuleOptions);
     }
@@ -76,29 +88,65 @@ public final class RuleGroupRuleGroupGetArgs extends com.pulumi.resources.Resour
             $ = new RuleGroupRuleGroupGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ruleVariables A configuration block that defines additional settings available to use in the rules defined in the rule group. Can only be specified for **stateful** rule groups. See Rule Variables below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleVariables(@Nullable Output<RuleGroupRuleGroupRuleVariablesGetArgs> ruleVariables) {
             $.ruleVariables = ruleVariables;
             return this;
         }
 
+        /**
+         * @param ruleVariables A configuration block that defines additional settings available to use in the rules defined in the rule group. Can only be specified for **stateful** rule groups. See Rule Variables below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleVariables(RuleGroupRuleGroupRuleVariablesGetArgs ruleVariables) {
             return ruleVariables(Output.of(ruleVariables));
         }
 
+        /**
+         * @param rulesSource A configuration block that defines the stateful or stateless rules for the rule group. See Rules Source below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesSource(Output<RuleGroupRuleGroupRulesSourceGetArgs> rulesSource) {
             $.rulesSource = rulesSource;
             return this;
         }
 
+        /**
+         * @param rulesSource A configuration block that defines the stateful or stateless rules for the rule group. See Rules Source below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesSource(RuleGroupRuleGroupRulesSourceGetArgs rulesSource) {
             return rulesSource(Output.of(rulesSource));
         }
 
+        /**
+         * @param statefulRuleOptions A configuration block that defines stateful rule options for the rule group. See Stateful Rule Options below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statefulRuleOptions(@Nullable Output<RuleGroupRuleGroupStatefulRuleOptionsGetArgs> statefulRuleOptions) {
             $.statefulRuleOptions = statefulRuleOptions;
             return this;
         }
 
+        /**
+         * @param statefulRuleOptions A configuration block that defines stateful rule options for the rule group. See Stateful Rule Options below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statefulRuleOptions(RuleGroupRuleGroupStatefulRuleOptionsGetArgs statefulRuleOptions) {
             return statefulRuleOptions(Output.of(statefulRuleOptions));
         }

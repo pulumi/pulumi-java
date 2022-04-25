@@ -17,7 +17,7 @@ public final class GetResolverEndpointResult {
     private final String direction;
     private final @Nullable List<GetResolverEndpointFilter> filters;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -59,9 +59,9 @@ public final class GetResolverEndpointResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

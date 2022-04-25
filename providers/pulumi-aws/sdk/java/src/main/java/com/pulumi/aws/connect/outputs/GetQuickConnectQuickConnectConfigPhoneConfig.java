@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GetQuickConnectQuickConnectConfigPhoneConfig {
     /**
-     * Specifies the phone number in in E.164 format.
+     * @return Specifies the phone number in in E.164 format.
      * 
      */
     private final String phoneNumber;
@@ -21,9 +21,9 @@ public final class GetQuickConnectQuickConnectConfigPhoneConfig {
     }
 
     /**
-     * Specifies the phone number in in E.164 format.
+     * @return Specifies the phone number in in E.164 format.
      * 
-    */
+     */
     public String phoneNumber() {
         return this.phoneNumber;
     }

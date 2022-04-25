@@ -110,6 +110,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="awsAccountIds")
     private @Nullable Output<List<InsightFiltersAwsAccountIdGetArgs>> awsAccountIds;
 
+    /**
+     * @return AWS account ID that a finding is generated in. See String_Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersAwsAccountIdGetArgs>>> awsAccountIds() {
         return Optional.ofNullable(this.awsAccountIds);
     }
@@ -121,6 +125,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="companyNames")
     private @Nullable Output<List<InsightFiltersCompanyNameGetArgs>> companyNames;
 
+    /**
+     * @return The name of the findings provider (company) that owns the solution (product) that generates findings. See String_Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersCompanyNameGetArgs>>> companyNames() {
         return Optional.ofNullable(this.companyNames);
     }
@@ -132,6 +140,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="complianceStatuses")
     private @Nullable Output<List<InsightFiltersComplianceStatusGetArgs>> complianceStatuses;
 
+    /**
+     * @return Exclusive to findings that are generated as the result of a check run against a specific rule in a supported standard, such as CIS AWS Foundations. Contains security standard-related finding details. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersComplianceStatusGetArgs>>> complianceStatuses() {
         return Optional.ofNullable(this.complianceStatuses);
     }
@@ -143,6 +155,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="confidences")
     private @Nullable Output<List<InsightFiltersConfidenceGetArgs>> confidences;
 
+    /**
+     * @return A finding&#39;s confidence. Confidence is defined as the likelihood that a finding accurately identifies the behavior or issue that it was intended to identify. Confidence is scored on a 0-100 basis using a ratio scale, where 0 means zero percent confidence and 100 means 100 percent confidence. See Number Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersConfidenceGetArgs>>> confidences() {
         return Optional.ofNullable(this.confidences);
     }
@@ -154,6 +170,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="createdAts")
     private @Nullable Output<List<InsightFiltersCreatedAtGetArgs>> createdAts;
 
+    /**
+     * @return An ISO8601-formatted timestamp that indicates when the security-findings provider captured the potential security issue that a finding captured. See Date Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersCreatedAtGetArgs>>> createdAts() {
         return Optional.ofNullable(this.createdAts);
     }
@@ -165,6 +185,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="criticalities")
     private @Nullable Output<List<InsightFiltersCriticalityGetArgs>> criticalities;
 
+    /**
+     * @return The level of importance assigned to the resources associated with the finding. A score of 0 means that the underlying resources have no criticality, and a score of 100 is reserved for the most critical resources. See Number Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersCriticalityGetArgs>>> criticalities() {
         return Optional.ofNullable(this.criticalities);
     }
@@ -176,6 +200,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="descriptions")
     private @Nullable Output<List<InsightFiltersDescriptionGetArgs>> descriptions;
 
+    /**
+     * @return A finding&#39;s description. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersDescriptionGetArgs>>> descriptions() {
         return Optional.ofNullable(this.descriptions);
     }
@@ -187,6 +215,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="findingProviderFieldsConfidences")
     private @Nullable Output<List<InsightFiltersFindingProviderFieldsConfidenceGetArgs>> findingProviderFieldsConfidences;
 
+    /**
+     * @return The finding provider value for the finding confidence. Confidence is defined as the likelihood that a finding accurately identifies the behavior or issue that it was intended to identify. Confidence is scored on a 0-100 basis using a ratio scale, where 0 means zero percent confidence and 100 means 100 percent confidence. See Number Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersFindingProviderFieldsConfidenceGetArgs>>> findingProviderFieldsConfidences() {
         return Optional.ofNullable(this.findingProviderFieldsConfidences);
     }
@@ -198,6 +230,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="findingProviderFieldsCriticalities")
     private @Nullable Output<List<InsightFiltersFindingProviderFieldsCriticalityGetArgs>> findingProviderFieldsCriticalities;
 
+    /**
+     * @return The finding provider value for the level of importance assigned to the resources associated with the findings. A score of 0 means that the underlying resources have no criticality, and a score of 100 is reserved for the most critical resources. See Number Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersFindingProviderFieldsCriticalityGetArgs>>> findingProviderFieldsCriticalities() {
         return Optional.ofNullable(this.findingProviderFieldsCriticalities);
     }
@@ -209,6 +245,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="findingProviderFieldsRelatedFindingsIds")
     private @Nullable Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsIdGetArgs>> findingProviderFieldsRelatedFindingsIds;
 
+    /**
+     * @return The finding identifier of a related finding that is identified by the finding provider. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsIdGetArgs>>> findingProviderFieldsRelatedFindingsIds() {
         return Optional.ofNullable(this.findingProviderFieldsRelatedFindingsIds);
     }
@@ -220,6 +260,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="findingProviderFieldsRelatedFindingsProductArns")
     private @Nullable Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsProductArnGetArgs>> findingProviderFieldsRelatedFindingsProductArns;
 
+    /**
+     * @return The ARN of the solution that generated a related finding that is identified by the finding provider. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsProductArnGetArgs>>> findingProviderFieldsRelatedFindingsProductArns() {
         return Optional.ofNullable(this.findingProviderFieldsRelatedFindingsProductArns);
     }
@@ -231,6 +275,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="findingProviderFieldsSeverityLabels")
     private @Nullable Output<List<InsightFiltersFindingProviderFieldsSeverityLabelGetArgs>> findingProviderFieldsSeverityLabels;
 
+    /**
+     * @return The finding provider value for the severity label. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersFindingProviderFieldsSeverityLabelGetArgs>>> findingProviderFieldsSeverityLabels() {
         return Optional.ofNullable(this.findingProviderFieldsSeverityLabels);
     }
@@ -242,6 +290,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="findingProviderFieldsSeverityOriginals")
     private @Nullable Output<List<InsightFiltersFindingProviderFieldsSeverityOriginalGetArgs>> findingProviderFieldsSeverityOriginals;
 
+    /**
+     * @return The finding provider&#39;s original value for the severity. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersFindingProviderFieldsSeverityOriginalGetArgs>>> findingProviderFieldsSeverityOriginals() {
         return Optional.ofNullable(this.findingProviderFieldsSeverityOriginals);
     }
@@ -253,6 +305,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="findingProviderFieldsTypes")
     private @Nullable Output<List<InsightFiltersFindingProviderFieldsTypeGetArgs>> findingProviderFieldsTypes;
 
+    /**
+     * @return One or more finding types that the finding provider assigned to the finding. Uses the format of `namespace/category/classifier` that classify a finding. Valid namespace values include: `Software and Configuration Checks`, `TTPs`, `Effects`, `Unusual Behaviors`, and `Sensitive Data Identifications`. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersFindingProviderFieldsTypeGetArgs>>> findingProviderFieldsTypes() {
         return Optional.ofNullable(this.findingProviderFieldsTypes);
     }
@@ -264,6 +320,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="firstObservedAts")
     private @Nullable Output<List<InsightFiltersFirstObservedAtGetArgs>> firstObservedAts;
 
+    /**
+     * @return An ISO8601-formatted timestamp that indicates when the security-findings provider first observed the potential security issue that a finding captured. See Date Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersFirstObservedAtGetArgs>>> firstObservedAts() {
         return Optional.ofNullable(this.firstObservedAts);
     }
@@ -275,6 +335,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="generatorIds")
     private @Nullable Output<List<InsightFiltersGeneratorIdGetArgs>> generatorIds;
 
+    /**
+     * @return The identifier for the solution-specific component (a discrete unit of logic) that generated a finding. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersGeneratorIdGetArgs>>> generatorIds() {
         return Optional.ofNullable(this.generatorIds);
     }
@@ -286,6 +350,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="ids")
     private @Nullable Output<List<InsightFiltersIdGetArgs>> ids;
 
+    /**
+     * @return The security findings provider-specific identifier for a finding. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersIdGetArgs>>> ids() {
         return Optional.ofNullable(this.ids);
     }
@@ -297,6 +365,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="keywords")
     private @Nullable Output<List<InsightFiltersKeywordGetArgs>> keywords;
 
+    /**
+     * @return A keyword for a finding. See Keyword Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersKeywordGetArgs>>> keywords() {
         return Optional.ofNullable(this.keywords);
     }
@@ -308,6 +380,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="lastObservedAts")
     private @Nullable Output<List<InsightFiltersLastObservedAtGetArgs>> lastObservedAts;
 
+    /**
+     * @return An ISO8601-formatted timestamp that indicates when the security-findings provider most recently observed the potential security issue that a finding captured. See Date Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersLastObservedAtGetArgs>>> lastObservedAts() {
         return Optional.ofNullable(this.lastObservedAts);
     }
@@ -319,6 +395,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="malwareNames")
     private @Nullable Output<List<InsightFiltersMalwareNameGetArgs>> malwareNames;
 
+    /**
+     * @return The name of the malware that was observed. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersMalwareNameGetArgs>>> malwareNames() {
         return Optional.ofNullable(this.malwareNames);
     }
@@ -330,6 +410,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="malwarePaths")
     private @Nullable Output<List<InsightFiltersMalwarePathGetArgs>> malwarePaths;
 
+    /**
+     * @return The filesystem path of the malware that was observed. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersMalwarePathGetArgs>>> malwarePaths() {
         return Optional.ofNullable(this.malwarePaths);
     }
@@ -341,6 +425,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="malwareStates")
     private @Nullable Output<List<InsightFiltersMalwareStateGetArgs>> malwareStates;
 
+    /**
+     * @return The state of the malware that was observed. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersMalwareStateGetArgs>>> malwareStates() {
         return Optional.ofNullable(this.malwareStates);
     }
@@ -352,6 +440,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="malwareTypes")
     private @Nullable Output<List<InsightFiltersMalwareTypeGetArgs>> malwareTypes;
 
+    /**
+     * @return The type of the malware that was observed. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersMalwareTypeGetArgs>>> malwareTypes() {
         return Optional.ofNullable(this.malwareTypes);
     }
@@ -363,6 +455,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="networkDestinationDomains")
     private @Nullable Output<List<InsightFiltersNetworkDestinationDomainGetArgs>> networkDestinationDomains;
 
+    /**
+     * @return The destination domain of network-related information about a finding. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersNetworkDestinationDomainGetArgs>>> networkDestinationDomains() {
         return Optional.ofNullable(this.networkDestinationDomains);
     }
@@ -374,6 +470,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="networkDestinationIpv4s")
     private @Nullable Output<List<InsightFiltersNetworkDestinationIpv4GetArgs>> networkDestinationIpv4s;
 
+    /**
+     * @return The destination IPv4 address of network-related information about a finding. See Ip Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersNetworkDestinationIpv4GetArgs>>> networkDestinationIpv4s() {
         return Optional.ofNullable(this.networkDestinationIpv4s);
     }
@@ -385,6 +485,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="networkDestinationIpv6s")
     private @Nullable Output<List<InsightFiltersNetworkDestinationIpv6GetArgs>> networkDestinationIpv6s;
 
+    /**
+     * @return The destination IPv6 address of network-related information about a finding. See Ip Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersNetworkDestinationIpv6GetArgs>>> networkDestinationIpv6s() {
         return Optional.ofNullable(this.networkDestinationIpv6s);
     }
@@ -396,6 +500,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="networkDestinationPorts")
     private @Nullable Output<List<InsightFiltersNetworkDestinationPortGetArgs>> networkDestinationPorts;
 
+    /**
+     * @return The destination port of network-related information about a finding. See Number Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersNetworkDestinationPortGetArgs>>> networkDestinationPorts() {
         return Optional.ofNullable(this.networkDestinationPorts);
     }
@@ -407,6 +515,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="networkDirections")
     private @Nullable Output<List<InsightFiltersNetworkDirectionGetArgs>> networkDirections;
 
+    /**
+     * @return Indicates the direction of network traffic associated with a finding. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersNetworkDirectionGetArgs>>> networkDirections() {
         return Optional.ofNullable(this.networkDirections);
     }
@@ -418,6 +530,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="networkProtocols")
     private @Nullable Output<List<InsightFiltersNetworkProtocolGetArgs>> networkProtocols;
 
+    /**
+     * @return The protocol of network-related information about a finding. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersNetworkProtocolGetArgs>>> networkProtocols() {
         return Optional.ofNullable(this.networkProtocols);
     }
@@ -429,6 +545,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="networkSourceDomains")
     private @Nullable Output<List<InsightFiltersNetworkSourceDomainGetArgs>> networkSourceDomains;
 
+    /**
+     * @return The source domain of network-related information about a finding. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersNetworkSourceDomainGetArgs>>> networkSourceDomains() {
         return Optional.ofNullable(this.networkSourceDomains);
     }
@@ -440,6 +560,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="networkSourceIpv4s")
     private @Nullable Output<List<InsightFiltersNetworkSourceIpv4GetArgs>> networkSourceIpv4s;
 
+    /**
+     * @return The source IPv4 address of network-related information about a finding. See Ip Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersNetworkSourceIpv4GetArgs>>> networkSourceIpv4s() {
         return Optional.ofNullable(this.networkSourceIpv4s);
     }
@@ -451,6 +575,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="networkSourceIpv6s")
     private @Nullable Output<List<InsightFiltersNetworkSourceIpv6GetArgs>> networkSourceIpv6s;
 
+    /**
+     * @return The source IPv6 address of network-related information about a finding. See Ip Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersNetworkSourceIpv6GetArgs>>> networkSourceIpv6s() {
         return Optional.ofNullable(this.networkSourceIpv6s);
     }
@@ -462,6 +590,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="networkSourceMacs")
     private @Nullable Output<List<InsightFiltersNetworkSourceMacGetArgs>> networkSourceMacs;
 
+    /**
+     * @return The source media access control (MAC) address of network-related information about a finding. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersNetworkSourceMacGetArgs>>> networkSourceMacs() {
         return Optional.ofNullable(this.networkSourceMacs);
     }
@@ -473,6 +605,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="networkSourcePorts")
     private @Nullable Output<List<InsightFiltersNetworkSourcePortGetArgs>> networkSourcePorts;
 
+    /**
+     * @return The source port of network-related information about a finding. See Number Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersNetworkSourcePortGetArgs>>> networkSourcePorts() {
         return Optional.ofNullable(this.networkSourcePorts);
     }
@@ -484,6 +620,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="noteTexts")
     private @Nullable Output<List<InsightFiltersNoteTextGetArgs>> noteTexts;
 
+    /**
+     * @return The text of a note. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersNoteTextGetArgs>>> noteTexts() {
         return Optional.ofNullable(this.noteTexts);
     }
@@ -495,6 +635,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="noteUpdatedAts")
     private @Nullable Output<List<InsightFiltersNoteUpdatedAtGetArgs>> noteUpdatedAts;
 
+    /**
+     * @return The timestamp of when the note was updated. See Date Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersNoteUpdatedAtGetArgs>>> noteUpdatedAts() {
         return Optional.ofNullable(this.noteUpdatedAts);
     }
@@ -506,6 +650,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="noteUpdatedBies")
     private @Nullable Output<List<InsightFiltersNoteUpdatedByGetArgs>> noteUpdatedBies;
 
+    /**
+     * @return The principal that created a note. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersNoteUpdatedByGetArgs>>> noteUpdatedBies() {
         return Optional.ofNullable(this.noteUpdatedBies);
     }
@@ -517,6 +665,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="processLaunchedAts")
     private @Nullable Output<List<InsightFiltersProcessLaunchedAtGetArgs>> processLaunchedAts;
 
+    /**
+     * @return The date/time that the process was launched. See Date Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersProcessLaunchedAtGetArgs>>> processLaunchedAts() {
         return Optional.ofNullable(this.processLaunchedAts);
     }
@@ -528,6 +680,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="processNames")
     private @Nullable Output<List<InsightFiltersProcessNameGetArgs>> processNames;
 
+    /**
+     * @return The name of the process. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersProcessNameGetArgs>>> processNames() {
         return Optional.ofNullable(this.processNames);
     }
@@ -539,6 +695,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="processParentPids")
     private @Nullable Output<List<InsightFiltersProcessParentPidGetArgs>> processParentPids;
 
+    /**
+     * @return The parent process ID. See Number Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersProcessParentPidGetArgs>>> processParentPids() {
         return Optional.ofNullable(this.processParentPids);
     }
@@ -550,6 +710,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="processPaths")
     private @Nullable Output<List<InsightFiltersProcessPathGetArgs>> processPaths;
 
+    /**
+     * @return The path to the process executable. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersProcessPathGetArgs>>> processPaths() {
         return Optional.ofNullable(this.processPaths);
     }
@@ -561,6 +725,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="processPids")
     private @Nullable Output<List<InsightFiltersProcessPidGetArgs>> processPids;
 
+    /**
+     * @return The process ID. See Number Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersProcessPidGetArgs>>> processPids() {
         return Optional.ofNullable(this.processPids);
     }
@@ -572,6 +740,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="processTerminatedAts")
     private @Nullable Output<List<InsightFiltersProcessTerminatedAtGetArgs>> processTerminatedAts;
 
+    /**
+     * @return The date/time that the process was terminated. See Date Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersProcessTerminatedAtGetArgs>>> processTerminatedAts() {
         return Optional.ofNullable(this.processTerminatedAts);
     }
@@ -583,6 +755,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="productArns")
     private @Nullable Output<List<InsightFiltersProductArnGetArgs>> productArns;
 
+    /**
+     * @return The ARN generated by Security Hub that uniquely identifies a third-party company (security findings provider) after this provider&#39;s product (solution that generates findings) is registered with Security Hub. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersProductArnGetArgs>>> productArns() {
         return Optional.ofNullable(this.productArns);
     }
@@ -594,6 +770,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="productFields")
     private @Nullable Output<List<InsightFiltersProductFieldGetArgs>> productFields;
 
+    /**
+     * @return A data type where security-findings providers can include additional solution-specific details that aren&#39;t part of the defined `AwsSecurityFinding` format. See Map Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersProductFieldGetArgs>>> productFields() {
         return Optional.ofNullable(this.productFields);
     }
@@ -605,6 +785,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="productNames")
     private @Nullable Output<List<InsightFiltersProductNameGetArgs>> productNames;
 
+    /**
+     * @return The name of the solution (product) that generates findings. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersProductNameGetArgs>>> productNames() {
         return Optional.ofNullable(this.productNames);
     }
@@ -616,6 +800,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="recommendationTexts")
     private @Nullable Output<List<InsightFiltersRecommendationTextGetArgs>> recommendationTexts;
 
+    /**
+     * @return The recommendation of what to do about the issue described in a finding. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersRecommendationTextGetArgs>>> recommendationTexts() {
         return Optional.ofNullable(this.recommendationTexts);
     }
@@ -627,6 +815,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="recordStates")
     private @Nullable Output<List<InsightFiltersRecordStateGetArgs>> recordStates;
 
+    /**
+     * @return The updated record state for the finding. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersRecordStateGetArgs>>> recordStates() {
         return Optional.ofNullable(this.recordStates);
     }
@@ -638,6 +830,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="relatedFindingsIds")
     private @Nullable Output<List<InsightFiltersRelatedFindingsIdGetArgs>> relatedFindingsIds;
 
+    /**
+     * @return The solution-generated identifier for a related finding. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersRelatedFindingsIdGetArgs>>> relatedFindingsIds() {
         return Optional.ofNullable(this.relatedFindingsIds);
     }
@@ -649,6 +845,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="relatedFindingsProductArns")
     private @Nullable Output<List<InsightFiltersRelatedFindingsProductArnGetArgs>> relatedFindingsProductArns;
 
+    /**
+     * @return The ARN of the solution that generated a related finding. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersRelatedFindingsProductArnGetArgs>>> relatedFindingsProductArns() {
         return Optional.ofNullable(this.relatedFindingsProductArns);
     }
@@ -660,6 +860,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceAwsEc2InstanceIamInstanceProfileArns")
     private @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceIamInstanceProfileArnGetArgs>> resourceAwsEc2InstanceIamInstanceProfileArns;
 
+    /**
+     * @return The IAM profile ARN of the instance. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersResourceAwsEc2InstanceIamInstanceProfileArnGetArgs>>> resourceAwsEc2InstanceIamInstanceProfileArns() {
         return Optional.ofNullable(this.resourceAwsEc2InstanceIamInstanceProfileArns);
     }
@@ -671,6 +875,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceAwsEc2InstanceImageIds")
     private @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceImageIdGetArgs>> resourceAwsEc2InstanceImageIds;
 
+    /**
+     * @return The Amazon Machine Image (AMI) ID of the instance. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersResourceAwsEc2InstanceImageIdGetArgs>>> resourceAwsEc2InstanceImageIds() {
         return Optional.ofNullable(this.resourceAwsEc2InstanceImageIds);
     }
@@ -682,6 +890,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceAwsEc2InstanceIpv4Addresses")
     private @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceIpv4AddressGetArgs>> resourceAwsEc2InstanceIpv4Addresses;
 
+    /**
+     * @return The IPv4 addresses associated with the instance. See Ip Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersResourceAwsEc2InstanceIpv4AddressGetArgs>>> resourceAwsEc2InstanceIpv4Addresses() {
         return Optional.ofNullable(this.resourceAwsEc2InstanceIpv4Addresses);
     }
@@ -693,6 +905,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceAwsEc2InstanceIpv6Addresses")
     private @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceIpv6AddressGetArgs>> resourceAwsEc2InstanceIpv6Addresses;
 
+    /**
+     * @return The IPv6 addresses associated with the instance. See Ip Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersResourceAwsEc2InstanceIpv6AddressGetArgs>>> resourceAwsEc2InstanceIpv6Addresses() {
         return Optional.ofNullable(this.resourceAwsEc2InstanceIpv6Addresses);
     }
@@ -704,6 +920,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceAwsEc2InstanceKeyNames")
     private @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceKeyNameGetArgs>> resourceAwsEc2InstanceKeyNames;
 
+    /**
+     * @return The key name associated with the instance. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersResourceAwsEc2InstanceKeyNameGetArgs>>> resourceAwsEc2InstanceKeyNames() {
         return Optional.ofNullable(this.resourceAwsEc2InstanceKeyNames);
     }
@@ -715,6 +935,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceAwsEc2InstanceLaunchedAts")
     private @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceLaunchedAtGetArgs>> resourceAwsEc2InstanceLaunchedAts;
 
+    /**
+     * @return The date and time the instance was launched. See Date Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersResourceAwsEc2InstanceLaunchedAtGetArgs>>> resourceAwsEc2InstanceLaunchedAts() {
         return Optional.ofNullable(this.resourceAwsEc2InstanceLaunchedAts);
     }
@@ -726,6 +950,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceAwsEc2InstanceSubnetIds")
     private @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceSubnetIdGetArgs>> resourceAwsEc2InstanceSubnetIds;
 
+    /**
+     * @return The identifier of the subnet that the instance was launched in. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersResourceAwsEc2InstanceSubnetIdGetArgs>>> resourceAwsEc2InstanceSubnetIds() {
         return Optional.ofNullable(this.resourceAwsEc2InstanceSubnetIds);
     }
@@ -737,6 +965,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceAwsEc2InstanceTypes")
     private @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceTypeGetArgs>> resourceAwsEc2InstanceTypes;
 
+    /**
+     * @return The instance type of the instance. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersResourceAwsEc2InstanceTypeGetArgs>>> resourceAwsEc2InstanceTypes() {
         return Optional.ofNullable(this.resourceAwsEc2InstanceTypes);
     }
@@ -748,6 +980,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceAwsEc2InstanceVpcIds")
     private @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceVpcIdGetArgs>> resourceAwsEc2InstanceVpcIds;
 
+    /**
+     * @return The identifier of the VPC that the instance was launched in. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersResourceAwsEc2InstanceVpcIdGetArgs>>> resourceAwsEc2InstanceVpcIds() {
         return Optional.ofNullable(this.resourceAwsEc2InstanceVpcIds);
     }
@@ -759,6 +995,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceAwsIamAccessKeyCreatedAts")
     private @Nullable Output<List<InsightFiltersResourceAwsIamAccessKeyCreatedAtGetArgs>> resourceAwsIamAccessKeyCreatedAts;
 
+    /**
+     * @return The creation date/time of the IAM access key related to a finding. See Date Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersResourceAwsIamAccessKeyCreatedAtGetArgs>>> resourceAwsIamAccessKeyCreatedAts() {
         return Optional.ofNullable(this.resourceAwsIamAccessKeyCreatedAts);
     }
@@ -770,6 +1010,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceAwsIamAccessKeyStatuses")
     private @Nullable Output<List<InsightFiltersResourceAwsIamAccessKeyStatusGetArgs>> resourceAwsIamAccessKeyStatuses;
 
+    /**
+     * @return The status of the IAM access key related to a finding. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersResourceAwsIamAccessKeyStatusGetArgs>>> resourceAwsIamAccessKeyStatuses() {
         return Optional.ofNullable(this.resourceAwsIamAccessKeyStatuses);
     }
@@ -781,6 +1025,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceAwsIamAccessKeyUserNames")
     private @Nullable Output<List<InsightFiltersResourceAwsIamAccessKeyUserNameGetArgs>> resourceAwsIamAccessKeyUserNames;
 
+    /**
+     * @return The user associated with the IAM access key related to a finding. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersResourceAwsIamAccessKeyUserNameGetArgs>>> resourceAwsIamAccessKeyUserNames() {
         return Optional.ofNullable(this.resourceAwsIamAccessKeyUserNames);
     }
@@ -792,6 +1040,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceAwsS3BucketOwnerIds")
     private @Nullable Output<List<InsightFiltersResourceAwsS3BucketOwnerIdGetArgs>> resourceAwsS3BucketOwnerIds;
 
+    /**
+     * @return The canonical user ID of the owner of the S3 bucket. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersResourceAwsS3BucketOwnerIdGetArgs>>> resourceAwsS3BucketOwnerIds() {
         return Optional.ofNullable(this.resourceAwsS3BucketOwnerIds);
     }
@@ -803,6 +1055,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceAwsS3BucketOwnerNames")
     private @Nullable Output<List<InsightFiltersResourceAwsS3BucketOwnerNameGetArgs>> resourceAwsS3BucketOwnerNames;
 
+    /**
+     * @return The display name of the owner of the S3 bucket. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersResourceAwsS3BucketOwnerNameGetArgs>>> resourceAwsS3BucketOwnerNames() {
         return Optional.ofNullable(this.resourceAwsS3BucketOwnerNames);
     }
@@ -814,6 +1070,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceContainerImageIds")
     private @Nullable Output<List<InsightFiltersResourceContainerImageIdGetArgs>> resourceContainerImageIds;
 
+    /**
+     * @return The identifier of the image related to a finding. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersResourceContainerImageIdGetArgs>>> resourceContainerImageIds() {
         return Optional.ofNullable(this.resourceContainerImageIds);
     }
@@ -825,6 +1085,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceContainerImageNames")
     private @Nullable Output<List<InsightFiltersResourceContainerImageNameGetArgs>> resourceContainerImageNames;
 
+    /**
+     * @return The name of the image related to a finding. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersResourceContainerImageNameGetArgs>>> resourceContainerImageNames() {
         return Optional.ofNullable(this.resourceContainerImageNames);
     }
@@ -836,6 +1100,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceContainerLaunchedAts")
     private @Nullable Output<List<InsightFiltersResourceContainerLaunchedAtGetArgs>> resourceContainerLaunchedAts;
 
+    /**
+     * @return The date/time that the container was started. See Date Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersResourceContainerLaunchedAtGetArgs>>> resourceContainerLaunchedAts() {
         return Optional.ofNullable(this.resourceContainerLaunchedAts);
     }
@@ -847,6 +1115,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceContainerNames")
     private @Nullable Output<List<InsightFiltersResourceContainerNameGetArgs>> resourceContainerNames;
 
+    /**
+     * @return The name of the container related to a finding. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersResourceContainerNameGetArgs>>> resourceContainerNames() {
         return Optional.ofNullable(this.resourceContainerNames);
     }
@@ -858,6 +1130,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceDetailsOthers")
     private @Nullable Output<List<InsightFiltersResourceDetailsOtherGetArgs>> resourceDetailsOthers;
 
+    /**
+     * @return The details of a resource that doesn&#39;t have a specific subfield for the resource type defined. See Map Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersResourceDetailsOtherGetArgs>>> resourceDetailsOthers() {
         return Optional.ofNullable(this.resourceDetailsOthers);
     }
@@ -869,6 +1145,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceIds")
     private @Nullable Output<List<InsightFiltersResourceIdGetArgs>> resourceIds;
 
+    /**
+     * @return The canonical identifier for the given resource type. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersResourceIdGetArgs>>> resourceIds() {
         return Optional.ofNullable(this.resourceIds);
     }
@@ -880,6 +1160,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourcePartitions")
     private @Nullable Output<List<InsightFiltersResourcePartitionGetArgs>> resourcePartitions;
 
+    /**
+     * @return The canonical AWS partition name that the Region is assigned to. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersResourcePartitionGetArgs>>> resourcePartitions() {
         return Optional.ofNullable(this.resourcePartitions);
     }
@@ -891,6 +1175,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceRegions")
     private @Nullable Output<List<InsightFiltersResourceRegionGetArgs>> resourceRegions;
 
+    /**
+     * @return The canonical AWS external Region name where this resource is located. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersResourceRegionGetArgs>>> resourceRegions() {
         return Optional.ofNullable(this.resourceRegions);
     }
@@ -902,6 +1190,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceTags")
     private @Nullable Output<List<InsightFiltersResourceTagGetArgs>> resourceTags;
 
+    /**
+     * @return A list of AWS tags associated with a resource at the time the finding was processed. See Map Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersResourceTagGetArgs>>> resourceTags() {
         return Optional.ofNullable(this.resourceTags);
     }
@@ -913,6 +1205,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceTypes")
     private @Nullable Output<List<InsightFiltersResourceTypeGetArgs>> resourceTypes;
 
+    /**
+     * @return Specifies the type of the resource that details are provided for. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersResourceTypeGetArgs>>> resourceTypes() {
         return Optional.ofNullable(this.resourceTypes);
     }
@@ -924,6 +1220,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="severityLabels")
     private @Nullable Output<List<InsightFiltersSeverityLabelGetArgs>> severityLabels;
 
+    /**
+     * @return The label of a finding&#39;s severity. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersSeverityLabelGetArgs>>> severityLabels() {
         return Optional.ofNullable(this.severityLabels);
     }
@@ -935,6 +1235,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sourceUrls")
     private @Nullable Output<List<InsightFiltersSourceUrlGetArgs>> sourceUrls;
 
+    /**
+     * @return A URL that links to a page about the current finding in the security-findings provider&#39;s solution. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersSourceUrlGetArgs>>> sourceUrls() {
         return Optional.ofNullable(this.sourceUrls);
     }
@@ -946,6 +1250,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="threatIntelIndicatorCategories")
     private @Nullable Output<List<InsightFiltersThreatIntelIndicatorCategoryGetArgs>> threatIntelIndicatorCategories;
 
+    /**
+     * @return The category of a threat intelligence indicator. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersThreatIntelIndicatorCategoryGetArgs>>> threatIntelIndicatorCategories() {
         return Optional.ofNullable(this.threatIntelIndicatorCategories);
     }
@@ -957,6 +1265,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="threatIntelIndicatorLastObservedAts")
     private @Nullable Output<List<InsightFiltersThreatIntelIndicatorLastObservedAtGetArgs>> threatIntelIndicatorLastObservedAts;
 
+    /**
+     * @return The date/time of the last observation of a threat intelligence indicator. See Date Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersThreatIntelIndicatorLastObservedAtGetArgs>>> threatIntelIndicatorLastObservedAts() {
         return Optional.ofNullable(this.threatIntelIndicatorLastObservedAts);
     }
@@ -968,6 +1280,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="threatIntelIndicatorSourceUrls")
     private @Nullable Output<List<InsightFiltersThreatIntelIndicatorSourceUrlGetArgs>> threatIntelIndicatorSourceUrls;
 
+    /**
+     * @return The URL for more details from the source of the threat intelligence. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersThreatIntelIndicatorSourceUrlGetArgs>>> threatIntelIndicatorSourceUrls() {
         return Optional.ofNullable(this.threatIntelIndicatorSourceUrls);
     }
@@ -979,6 +1295,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="threatIntelIndicatorSources")
     private @Nullable Output<List<InsightFiltersThreatIntelIndicatorSourceGetArgs>> threatIntelIndicatorSources;
 
+    /**
+     * @return The source of the threat intelligence. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersThreatIntelIndicatorSourceGetArgs>>> threatIntelIndicatorSources() {
         return Optional.ofNullable(this.threatIntelIndicatorSources);
     }
@@ -990,6 +1310,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="threatIntelIndicatorTypes")
     private @Nullable Output<List<InsightFiltersThreatIntelIndicatorTypeGetArgs>> threatIntelIndicatorTypes;
 
+    /**
+     * @return The type of a threat intelligence indicator. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersThreatIntelIndicatorTypeGetArgs>>> threatIntelIndicatorTypes() {
         return Optional.ofNullable(this.threatIntelIndicatorTypes);
     }
@@ -1001,6 +1325,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="threatIntelIndicatorValues")
     private @Nullable Output<List<InsightFiltersThreatIntelIndicatorValueGetArgs>> threatIntelIndicatorValues;
 
+    /**
+     * @return The value of a threat intelligence indicator. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersThreatIntelIndicatorValueGetArgs>>> threatIntelIndicatorValues() {
         return Optional.ofNullable(this.threatIntelIndicatorValues);
     }
@@ -1012,6 +1340,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="titles")
     private @Nullable Output<List<InsightFiltersTitleGetArgs>> titles;
 
+    /**
+     * @return A finding&#39;s title. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersTitleGetArgs>>> titles() {
         return Optional.ofNullable(this.titles);
     }
@@ -1023,6 +1355,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="types")
     private @Nullable Output<List<InsightFiltersTypeGetArgs>> types;
 
+    /**
+     * @return A finding type in the format of `namespace/category/classifier` that classifies a finding. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersTypeGetArgs>>> types() {
         return Optional.ofNullable(this.types);
     }
@@ -1034,6 +1370,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="updatedAts")
     private @Nullable Output<List<InsightFiltersUpdatedAtGetArgs>> updatedAts;
 
+    /**
+     * @return An ISO8601-formatted timestamp that indicates when the security-findings provider last updated the finding record. See Date Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersUpdatedAtGetArgs>>> updatedAts() {
         return Optional.ofNullable(this.updatedAts);
     }
@@ -1045,6 +1385,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="userDefinedValues")
     private @Nullable Output<List<InsightFiltersUserDefinedValueGetArgs>> userDefinedValues;
 
+    /**
+     * @return A list of name/value string pairs associated with the finding. These are custom, user-defined fields added to a finding. See Map Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersUserDefinedValueGetArgs>>> userDefinedValues() {
         return Optional.ofNullable(this.userDefinedValues);
     }
@@ -1056,6 +1400,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="verificationStates")
     private @Nullable Output<List<InsightFiltersVerificationStateGetArgs>> verificationStates;
 
+    /**
+     * @return The veracity of a finding. See String Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersVerificationStateGetArgs>>> verificationStates() {
         return Optional.ofNullable(this.verificationStates);
     }
@@ -1067,6 +1415,10 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="workflowStatuses")
     private @Nullable Output<List<InsightFiltersWorkflowStatusGetArgs>> workflowStatuses;
 
+    /**
+     * @return The status of the investigation into a finding. See Workflow Status Filter below for more details.
+     * 
+     */
     public Optional<Output<List<InsightFiltersWorkflowStatusGetArgs>>> workflowStatuses() {
         return Optional.ofNullable(this.workflowStatuses);
     }
@@ -1182,1146 +1534,2730 @@ public final class InsightFiltersGetArgs extends com.pulumi.resources.ResourceAr
             $ = new InsightFiltersGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param awsAccountIds AWS account ID that a finding is generated in. See String_Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsAccountIds(@Nullable Output<List<InsightFiltersAwsAccountIdGetArgs>> awsAccountIds) {
             $.awsAccountIds = awsAccountIds;
             return this;
         }
 
+        /**
+         * @param awsAccountIds AWS account ID that a finding is generated in. See String_Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsAccountIds(List<InsightFiltersAwsAccountIdGetArgs> awsAccountIds) {
             return awsAccountIds(Output.of(awsAccountIds));
         }
 
+        /**
+         * @param awsAccountIds AWS account ID that a finding is generated in. See String_Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsAccountIds(InsightFiltersAwsAccountIdGetArgs... awsAccountIds) {
             return awsAccountIds(List.of(awsAccountIds));
         }
 
+        /**
+         * @param companyNames The name of the findings provider (company) that owns the solution (product) that generates findings. See String_Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder companyNames(@Nullable Output<List<InsightFiltersCompanyNameGetArgs>> companyNames) {
             $.companyNames = companyNames;
             return this;
         }
 
+        /**
+         * @param companyNames The name of the findings provider (company) that owns the solution (product) that generates findings. See String_Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder companyNames(List<InsightFiltersCompanyNameGetArgs> companyNames) {
             return companyNames(Output.of(companyNames));
         }
 
+        /**
+         * @param companyNames The name of the findings provider (company) that owns the solution (product) that generates findings. See String_Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder companyNames(InsightFiltersCompanyNameGetArgs... companyNames) {
             return companyNames(List.of(companyNames));
         }
 
+        /**
+         * @param complianceStatuses Exclusive to findings that are generated as the result of a check run against a specific rule in a supported standard, such as CIS AWS Foundations. Contains security standard-related finding details. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder complianceStatuses(@Nullable Output<List<InsightFiltersComplianceStatusGetArgs>> complianceStatuses) {
             $.complianceStatuses = complianceStatuses;
             return this;
         }
 
+        /**
+         * @param complianceStatuses Exclusive to findings that are generated as the result of a check run against a specific rule in a supported standard, such as CIS AWS Foundations. Contains security standard-related finding details. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder complianceStatuses(List<InsightFiltersComplianceStatusGetArgs> complianceStatuses) {
             return complianceStatuses(Output.of(complianceStatuses));
         }
 
+        /**
+         * @param complianceStatuses Exclusive to findings that are generated as the result of a check run against a specific rule in a supported standard, such as CIS AWS Foundations. Contains security standard-related finding details. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder complianceStatuses(InsightFiltersComplianceStatusGetArgs... complianceStatuses) {
             return complianceStatuses(List.of(complianceStatuses));
         }
 
+        /**
+         * @param confidences A finding&#39;s confidence. Confidence is defined as the likelihood that a finding accurately identifies the behavior or issue that it was intended to identify. Confidence is scored on a 0-100 basis using a ratio scale, where 0 means zero percent confidence and 100 means 100 percent confidence. See Number Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidences(@Nullable Output<List<InsightFiltersConfidenceGetArgs>> confidences) {
             $.confidences = confidences;
             return this;
         }
 
+        /**
+         * @param confidences A finding&#39;s confidence. Confidence is defined as the likelihood that a finding accurately identifies the behavior or issue that it was intended to identify. Confidence is scored on a 0-100 basis using a ratio scale, where 0 means zero percent confidence and 100 means 100 percent confidence. See Number Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidences(List<InsightFiltersConfidenceGetArgs> confidences) {
             return confidences(Output.of(confidences));
         }
 
+        /**
+         * @param confidences A finding&#39;s confidence. Confidence is defined as the likelihood that a finding accurately identifies the behavior or issue that it was intended to identify. Confidence is scored on a 0-100 basis using a ratio scale, where 0 means zero percent confidence and 100 means 100 percent confidence. See Number Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidences(InsightFiltersConfidenceGetArgs... confidences) {
             return confidences(List.of(confidences));
         }
 
+        /**
+         * @param createdAts An ISO8601-formatted timestamp that indicates when the security-findings provider captured the potential security issue that a finding captured. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdAts(@Nullable Output<List<InsightFiltersCreatedAtGetArgs>> createdAts) {
             $.createdAts = createdAts;
             return this;
         }
 
+        /**
+         * @param createdAts An ISO8601-formatted timestamp that indicates when the security-findings provider captured the potential security issue that a finding captured. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdAts(List<InsightFiltersCreatedAtGetArgs> createdAts) {
             return createdAts(Output.of(createdAts));
         }
 
+        /**
+         * @param createdAts An ISO8601-formatted timestamp that indicates when the security-findings provider captured the potential security issue that a finding captured. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdAts(InsightFiltersCreatedAtGetArgs... createdAts) {
             return createdAts(List.of(createdAts));
         }
 
+        /**
+         * @param criticalities The level of importance assigned to the resources associated with the finding. A score of 0 means that the underlying resources have no criticality, and a score of 100 is reserved for the most critical resources. See Number Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder criticalities(@Nullable Output<List<InsightFiltersCriticalityGetArgs>> criticalities) {
             $.criticalities = criticalities;
             return this;
         }
 
+        /**
+         * @param criticalities The level of importance assigned to the resources associated with the finding. A score of 0 means that the underlying resources have no criticality, and a score of 100 is reserved for the most critical resources. See Number Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder criticalities(List<InsightFiltersCriticalityGetArgs> criticalities) {
             return criticalities(Output.of(criticalities));
         }
 
+        /**
+         * @param criticalities The level of importance assigned to the resources associated with the finding. A score of 0 means that the underlying resources have no criticality, and a score of 100 is reserved for the most critical resources. See Number Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder criticalities(InsightFiltersCriticalityGetArgs... criticalities) {
             return criticalities(List.of(criticalities));
         }
 
+        /**
+         * @param descriptions A finding&#39;s description. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder descriptions(@Nullable Output<List<InsightFiltersDescriptionGetArgs>> descriptions) {
             $.descriptions = descriptions;
             return this;
         }
 
+        /**
+         * @param descriptions A finding&#39;s description. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder descriptions(List<InsightFiltersDescriptionGetArgs> descriptions) {
             return descriptions(Output.of(descriptions));
         }
 
+        /**
+         * @param descriptions A finding&#39;s description. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder descriptions(InsightFiltersDescriptionGetArgs... descriptions) {
             return descriptions(List.of(descriptions));
         }
 
+        /**
+         * @param findingProviderFieldsConfidences The finding provider value for the finding confidence. Confidence is defined as the likelihood that a finding accurately identifies the behavior or issue that it was intended to identify. Confidence is scored on a 0-100 basis using a ratio scale, where 0 means zero percent confidence and 100 means 100 percent confidence. See Number Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingProviderFieldsConfidences(@Nullable Output<List<InsightFiltersFindingProviderFieldsConfidenceGetArgs>> findingProviderFieldsConfidences) {
             $.findingProviderFieldsConfidences = findingProviderFieldsConfidences;
             return this;
         }
 
+        /**
+         * @param findingProviderFieldsConfidences The finding provider value for the finding confidence. Confidence is defined as the likelihood that a finding accurately identifies the behavior or issue that it was intended to identify. Confidence is scored on a 0-100 basis using a ratio scale, where 0 means zero percent confidence and 100 means 100 percent confidence. See Number Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingProviderFieldsConfidences(List<InsightFiltersFindingProviderFieldsConfidenceGetArgs> findingProviderFieldsConfidences) {
             return findingProviderFieldsConfidences(Output.of(findingProviderFieldsConfidences));
         }
 
+        /**
+         * @param findingProviderFieldsConfidences The finding provider value for the finding confidence. Confidence is defined as the likelihood that a finding accurately identifies the behavior or issue that it was intended to identify. Confidence is scored on a 0-100 basis using a ratio scale, where 0 means zero percent confidence and 100 means 100 percent confidence. See Number Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingProviderFieldsConfidences(InsightFiltersFindingProviderFieldsConfidenceGetArgs... findingProviderFieldsConfidences) {
             return findingProviderFieldsConfidences(List.of(findingProviderFieldsConfidences));
         }
 
+        /**
+         * @param findingProviderFieldsCriticalities The finding provider value for the level of importance assigned to the resources associated with the findings. A score of 0 means that the underlying resources have no criticality, and a score of 100 is reserved for the most critical resources. See Number Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingProviderFieldsCriticalities(@Nullable Output<List<InsightFiltersFindingProviderFieldsCriticalityGetArgs>> findingProviderFieldsCriticalities) {
             $.findingProviderFieldsCriticalities = findingProviderFieldsCriticalities;
             return this;
         }
 
+        /**
+         * @param findingProviderFieldsCriticalities The finding provider value for the level of importance assigned to the resources associated with the findings. A score of 0 means that the underlying resources have no criticality, and a score of 100 is reserved for the most critical resources. See Number Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingProviderFieldsCriticalities(List<InsightFiltersFindingProviderFieldsCriticalityGetArgs> findingProviderFieldsCriticalities) {
             return findingProviderFieldsCriticalities(Output.of(findingProviderFieldsCriticalities));
         }
 
+        /**
+         * @param findingProviderFieldsCriticalities The finding provider value for the level of importance assigned to the resources associated with the findings. A score of 0 means that the underlying resources have no criticality, and a score of 100 is reserved for the most critical resources. See Number Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingProviderFieldsCriticalities(InsightFiltersFindingProviderFieldsCriticalityGetArgs... findingProviderFieldsCriticalities) {
             return findingProviderFieldsCriticalities(List.of(findingProviderFieldsCriticalities));
         }
 
+        /**
+         * @param findingProviderFieldsRelatedFindingsIds The finding identifier of a related finding that is identified by the finding provider. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingProviderFieldsRelatedFindingsIds(@Nullable Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsIdGetArgs>> findingProviderFieldsRelatedFindingsIds) {
             $.findingProviderFieldsRelatedFindingsIds = findingProviderFieldsRelatedFindingsIds;
             return this;
         }
 
+        /**
+         * @param findingProviderFieldsRelatedFindingsIds The finding identifier of a related finding that is identified by the finding provider. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingProviderFieldsRelatedFindingsIds(List<InsightFiltersFindingProviderFieldsRelatedFindingsIdGetArgs> findingProviderFieldsRelatedFindingsIds) {
             return findingProviderFieldsRelatedFindingsIds(Output.of(findingProviderFieldsRelatedFindingsIds));
         }
 
+        /**
+         * @param findingProviderFieldsRelatedFindingsIds The finding identifier of a related finding that is identified by the finding provider. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingProviderFieldsRelatedFindingsIds(InsightFiltersFindingProviderFieldsRelatedFindingsIdGetArgs... findingProviderFieldsRelatedFindingsIds) {
             return findingProviderFieldsRelatedFindingsIds(List.of(findingProviderFieldsRelatedFindingsIds));
         }
 
+        /**
+         * @param findingProviderFieldsRelatedFindingsProductArns The ARN of the solution that generated a related finding that is identified by the finding provider. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingProviderFieldsRelatedFindingsProductArns(@Nullable Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsProductArnGetArgs>> findingProviderFieldsRelatedFindingsProductArns) {
             $.findingProviderFieldsRelatedFindingsProductArns = findingProviderFieldsRelatedFindingsProductArns;
             return this;
         }
 
+        /**
+         * @param findingProviderFieldsRelatedFindingsProductArns The ARN of the solution that generated a related finding that is identified by the finding provider. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingProviderFieldsRelatedFindingsProductArns(List<InsightFiltersFindingProviderFieldsRelatedFindingsProductArnGetArgs> findingProviderFieldsRelatedFindingsProductArns) {
             return findingProviderFieldsRelatedFindingsProductArns(Output.of(findingProviderFieldsRelatedFindingsProductArns));
         }
 
+        /**
+         * @param findingProviderFieldsRelatedFindingsProductArns The ARN of the solution that generated a related finding that is identified by the finding provider. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingProviderFieldsRelatedFindingsProductArns(InsightFiltersFindingProviderFieldsRelatedFindingsProductArnGetArgs... findingProviderFieldsRelatedFindingsProductArns) {
             return findingProviderFieldsRelatedFindingsProductArns(List.of(findingProviderFieldsRelatedFindingsProductArns));
         }
 
+        /**
+         * @param findingProviderFieldsSeverityLabels The finding provider value for the severity label. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingProviderFieldsSeverityLabels(@Nullable Output<List<InsightFiltersFindingProviderFieldsSeverityLabelGetArgs>> findingProviderFieldsSeverityLabels) {
             $.findingProviderFieldsSeverityLabels = findingProviderFieldsSeverityLabels;
             return this;
         }
 
+        /**
+         * @param findingProviderFieldsSeverityLabels The finding provider value for the severity label. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingProviderFieldsSeverityLabels(List<InsightFiltersFindingProviderFieldsSeverityLabelGetArgs> findingProviderFieldsSeverityLabels) {
             return findingProviderFieldsSeverityLabels(Output.of(findingProviderFieldsSeverityLabels));
         }
 
+        /**
+         * @param findingProviderFieldsSeverityLabels The finding provider value for the severity label. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingProviderFieldsSeverityLabels(InsightFiltersFindingProviderFieldsSeverityLabelGetArgs... findingProviderFieldsSeverityLabels) {
             return findingProviderFieldsSeverityLabels(List.of(findingProviderFieldsSeverityLabels));
         }
 
+        /**
+         * @param findingProviderFieldsSeverityOriginals The finding provider&#39;s original value for the severity. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingProviderFieldsSeverityOriginals(@Nullable Output<List<InsightFiltersFindingProviderFieldsSeverityOriginalGetArgs>> findingProviderFieldsSeverityOriginals) {
             $.findingProviderFieldsSeverityOriginals = findingProviderFieldsSeverityOriginals;
             return this;
         }
 
+        /**
+         * @param findingProviderFieldsSeverityOriginals The finding provider&#39;s original value for the severity. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingProviderFieldsSeverityOriginals(List<InsightFiltersFindingProviderFieldsSeverityOriginalGetArgs> findingProviderFieldsSeverityOriginals) {
             return findingProviderFieldsSeverityOriginals(Output.of(findingProviderFieldsSeverityOriginals));
         }
 
+        /**
+         * @param findingProviderFieldsSeverityOriginals The finding provider&#39;s original value for the severity. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingProviderFieldsSeverityOriginals(InsightFiltersFindingProviderFieldsSeverityOriginalGetArgs... findingProviderFieldsSeverityOriginals) {
             return findingProviderFieldsSeverityOriginals(List.of(findingProviderFieldsSeverityOriginals));
         }
 
+        /**
+         * @param findingProviderFieldsTypes One or more finding types that the finding provider assigned to the finding. Uses the format of `namespace/category/classifier` that classify a finding. Valid namespace values include: `Software and Configuration Checks`, `TTPs`, `Effects`, `Unusual Behaviors`, and `Sensitive Data Identifications`. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingProviderFieldsTypes(@Nullable Output<List<InsightFiltersFindingProviderFieldsTypeGetArgs>> findingProviderFieldsTypes) {
             $.findingProviderFieldsTypes = findingProviderFieldsTypes;
             return this;
         }
 
+        /**
+         * @param findingProviderFieldsTypes One or more finding types that the finding provider assigned to the finding. Uses the format of `namespace/category/classifier` that classify a finding. Valid namespace values include: `Software and Configuration Checks`, `TTPs`, `Effects`, `Unusual Behaviors`, and `Sensitive Data Identifications`. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingProviderFieldsTypes(List<InsightFiltersFindingProviderFieldsTypeGetArgs> findingProviderFieldsTypes) {
             return findingProviderFieldsTypes(Output.of(findingProviderFieldsTypes));
         }
 
+        /**
+         * @param findingProviderFieldsTypes One or more finding types that the finding provider assigned to the finding. Uses the format of `namespace/category/classifier` that classify a finding. Valid namespace values include: `Software and Configuration Checks`, `TTPs`, `Effects`, `Unusual Behaviors`, and `Sensitive Data Identifications`. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingProviderFieldsTypes(InsightFiltersFindingProviderFieldsTypeGetArgs... findingProviderFieldsTypes) {
             return findingProviderFieldsTypes(List.of(findingProviderFieldsTypes));
         }
 
+        /**
+         * @param firstObservedAts An ISO8601-formatted timestamp that indicates when the security-findings provider first observed the potential security issue that a finding captured. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstObservedAts(@Nullable Output<List<InsightFiltersFirstObservedAtGetArgs>> firstObservedAts) {
             $.firstObservedAts = firstObservedAts;
             return this;
         }
 
+        /**
+         * @param firstObservedAts An ISO8601-formatted timestamp that indicates when the security-findings provider first observed the potential security issue that a finding captured. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstObservedAts(List<InsightFiltersFirstObservedAtGetArgs> firstObservedAts) {
             return firstObservedAts(Output.of(firstObservedAts));
         }
 
+        /**
+         * @param firstObservedAts An ISO8601-formatted timestamp that indicates when the security-findings provider first observed the potential security issue that a finding captured. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstObservedAts(InsightFiltersFirstObservedAtGetArgs... firstObservedAts) {
             return firstObservedAts(List.of(firstObservedAts));
         }
 
+        /**
+         * @param generatorIds The identifier for the solution-specific component (a discrete unit of logic) that generated a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder generatorIds(@Nullable Output<List<InsightFiltersGeneratorIdGetArgs>> generatorIds) {
             $.generatorIds = generatorIds;
             return this;
         }
 
+        /**
+         * @param generatorIds The identifier for the solution-specific component (a discrete unit of logic) that generated a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder generatorIds(List<InsightFiltersGeneratorIdGetArgs> generatorIds) {
             return generatorIds(Output.of(generatorIds));
         }
 
+        /**
+         * @param generatorIds The identifier for the solution-specific component (a discrete unit of logic) that generated a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder generatorIds(InsightFiltersGeneratorIdGetArgs... generatorIds) {
             return generatorIds(List.of(generatorIds));
         }
 
+        /**
+         * @param ids The security findings provider-specific identifier for a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ids(@Nullable Output<List<InsightFiltersIdGetArgs>> ids) {
             $.ids = ids;
             return this;
         }
 
+        /**
+         * @param ids The security findings provider-specific identifier for a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ids(List<InsightFiltersIdGetArgs> ids) {
             return ids(Output.of(ids));
         }
 
+        /**
+         * @param ids The security findings provider-specific identifier for a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ids(InsightFiltersIdGetArgs... ids) {
             return ids(List.of(ids));
         }
 
+        /**
+         * @param keywords A keyword for a finding. See Keyword Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keywords(@Nullable Output<List<InsightFiltersKeywordGetArgs>> keywords) {
             $.keywords = keywords;
             return this;
         }
 
+        /**
+         * @param keywords A keyword for a finding. See Keyword Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keywords(List<InsightFiltersKeywordGetArgs> keywords) {
             return keywords(Output.of(keywords));
         }
 
+        /**
+         * @param keywords A keyword for a finding. See Keyword Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keywords(InsightFiltersKeywordGetArgs... keywords) {
             return keywords(List.of(keywords));
         }
 
+        /**
+         * @param lastObservedAts An ISO8601-formatted timestamp that indicates when the security-findings provider most recently observed the potential security issue that a finding captured. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastObservedAts(@Nullable Output<List<InsightFiltersLastObservedAtGetArgs>> lastObservedAts) {
             $.lastObservedAts = lastObservedAts;
             return this;
         }
 
+        /**
+         * @param lastObservedAts An ISO8601-formatted timestamp that indicates when the security-findings provider most recently observed the potential security issue that a finding captured. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastObservedAts(List<InsightFiltersLastObservedAtGetArgs> lastObservedAts) {
             return lastObservedAts(Output.of(lastObservedAts));
         }
 
+        /**
+         * @param lastObservedAts An ISO8601-formatted timestamp that indicates when the security-findings provider most recently observed the potential security issue that a finding captured. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastObservedAts(InsightFiltersLastObservedAtGetArgs... lastObservedAts) {
             return lastObservedAts(List.of(lastObservedAts));
         }
 
+        /**
+         * @param malwareNames The name of the malware that was observed. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder malwareNames(@Nullable Output<List<InsightFiltersMalwareNameGetArgs>> malwareNames) {
             $.malwareNames = malwareNames;
             return this;
         }
 
+        /**
+         * @param malwareNames The name of the malware that was observed. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder malwareNames(List<InsightFiltersMalwareNameGetArgs> malwareNames) {
             return malwareNames(Output.of(malwareNames));
         }
 
+        /**
+         * @param malwareNames The name of the malware that was observed. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder malwareNames(InsightFiltersMalwareNameGetArgs... malwareNames) {
             return malwareNames(List.of(malwareNames));
         }
 
+        /**
+         * @param malwarePaths The filesystem path of the malware that was observed. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder malwarePaths(@Nullable Output<List<InsightFiltersMalwarePathGetArgs>> malwarePaths) {
             $.malwarePaths = malwarePaths;
             return this;
         }
 
+        /**
+         * @param malwarePaths The filesystem path of the malware that was observed. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder malwarePaths(List<InsightFiltersMalwarePathGetArgs> malwarePaths) {
             return malwarePaths(Output.of(malwarePaths));
         }
 
+        /**
+         * @param malwarePaths The filesystem path of the malware that was observed. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder malwarePaths(InsightFiltersMalwarePathGetArgs... malwarePaths) {
             return malwarePaths(List.of(malwarePaths));
         }
 
+        /**
+         * @param malwareStates The state of the malware that was observed. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder malwareStates(@Nullable Output<List<InsightFiltersMalwareStateGetArgs>> malwareStates) {
             $.malwareStates = malwareStates;
             return this;
         }
 
+        /**
+         * @param malwareStates The state of the malware that was observed. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder malwareStates(List<InsightFiltersMalwareStateGetArgs> malwareStates) {
             return malwareStates(Output.of(malwareStates));
         }
 
+        /**
+         * @param malwareStates The state of the malware that was observed. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder malwareStates(InsightFiltersMalwareStateGetArgs... malwareStates) {
             return malwareStates(List.of(malwareStates));
         }
 
+        /**
+         * @param malwareTypes The type of the malware that was observed. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder malwareTypes(@Nullable Output<List<InsightFiltersMalwareTypeGetArgs>> malwareTypes) {
             $.malwareTypes = malwareTypes;
             return this;
         }
 
+        /**
+         * @param malwareTypes The type of the malware that was observed. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder malwareTypes(List<InsightFiltersMalwareTypeGetArgs> malwareTypes) {
             return malwareTypes(Output.of(malwareTypes));
         }
 
+        /**
+         * @param malwareTypes The type of the malware that was observed. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder malwareTypes(InsightFiltersMalwareTypeGetArgs... malwareTypes) {
             return malwareTypes(List.of(malwareTypes));
         }
 
+        /**
+         * @param networkDestinationDomains The destination domain of network-related information about a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkDestinationDomains(@Nullable Output<List<InsightFiltersNetworkDestinationDomainGetArgs>> networkDestinationDomains) {
             $.networkDestinationDomains = networkDestinationDomains;
             return this;
         }
 
+        /**
+         * @param networkDestinationDomains The destination domain of network-related information about a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkDestinationDomains(List<InsightFiltersNetworkDestinationDomainGetArgs> networkDestinationDomains) {
             return networkDestinationDomains(Output.of(networkDestinationDomains));
         }
 
+        /**
+         * @param networkDestinationDomains The destination domain of network-related information about a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkDestinationDomains(InsightFiltersNetworkDestinationDomainGetArgs... networkDestinationDomains) {
             return networkDestinationDomains(List.of(networkDestinationDomains));
         }
 
+        /**
+         * @param networkDestinationIpv4s The destination IPv4 address of network-related information about a finding. See Ip Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkDestinationIpv4s(@Nullable Output<List<InsightFiltersNetworkDestinationIpv4GetArgs>> networkDestinationIpv4s) {
             $.networkDestinationIpv4s = networkDestinationIpv4s;
             return this;
         }
 
+        /**
+         * @param networkDestinationIpv4s The destination IPv4 address of network-related information about a finding. See Ip Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkDestinationIpv4s(List<InsightFiltersNetworkDestinationIpv4GetArgs> networkDestinationIpv4s) {
             return networkDestinationIpv4s(Output.of(networkDestinationIpv4s));
         }
 
+        /**
+         * @param networkDestinationIpv4s The destination IPv4 address of network-related information about a finding. See Ip Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkDestinationIpv4s(InsightFiltersNetworkDestinationIpv4GetArgs... networkDestinationIpv4s) {
             return networkDestinationIpv4s(List.of(networkDestinationIpv4s));
         }
 
+        /**
+         * @param networkDestinationIpv6s The destination IPv6 address of network-related information about a finding. See Ip Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkDestinationIpv6s(@Nullable Output<List<InsightFiltersNetworkDestinationIpv6GetArgs>> networkDestinationIpv6s) {
             $.networkDestinationIpv6s = networkDestinationIpv6s;
             return this;
         }
 
+        /**
+         * @param networkDestinationIpv6s The destination IPv6 address of network-related information about a finding. See Ip Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkDestinationIpv6s(List<InsightFiltersNetworkDestinationIpv6GetArgs> networkDestinationIpv6s) {
             return networkDestinationIpv6s(Output.of(networkDestinationIpv6s));
         }
 
+        /**
+         * @param networkDestinationIpv6s The destination IPv6 address of network-related information about a finding. See Ip Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkDestinationIpv6s(InsightFiltersNetworkDestinationIpv6GetArgs... networkDestinationIpv6s) {
             return networkDestinationIpv6s(List.of(networkDestinationIpv6s));
         }
 
+        /**
+         * @param networkDestinationPorts The destination port of network-related information about a finding. See Number Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkDestinationPorts(@Nullable Output<List<InsightFiltersNetworkDestinationPortGetArgs>> networkDestinationPorts) {
             $.networkDestinationPorts = networkDestinationPorts;
             return this;
         }
 
+        /**
+         * @param networkDestinationPorts The destination port of network-related information about a finding. See Number Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkDestinationPorts(List<InsightFiltersNetworkDestinationPortGetArgs> networkDestinationPorts) {
             return networkDestinationPorts(Output.of(networkDestinationPorts));
         }
 
+        /**
+         * @param networkDestinationPorts The destination port of network-related information about a finding. See Number Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkDestinationPorts(InsightFiltersNetworkDestinationPortGetArgs... networkDestinationPorts) {
             return networkDestinationPorts(List.of(networkDestinationPorts));
         }
 
+        /**
+         * @param networkDirections Indicates the direction of network traffic associated with a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkDirections(@Nullable Output<List<InsightFiltersNetworkDirectionGetArgs>> networkDirections) {
             $.networkDirections = networkDirections;
             return this;
         }
 
+        /**
+         * @param networkDirections Indicates the direction of network traffic associated with a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkDirections(List<InsightFiltersNetworkDirectionGetArgs> networkDirections) {
             return networkDirections(Output.of(networkDirections));
         }
 
+        /**
+         * @param networkDirections Indicates the direction of network traffic associated with a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkDirections(InsightFiltersNetworkDirectionGetArgs... networkDirections) {
             return networkDirections(List.of(networkDirections));
         }
 
+        /**
+         * @param networkProtocols The protocol of network-related information about a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkProtocols(@Nullable Output<List<InsightFiltersNetworkProtocolGetArgs>> networkProtocols) {
             $.networkProtocols = networkProtocols;
             return this;
         }
 
+        /**
+         * @param networkProtocols The protocol of network-related information about a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkProtocols(List<InsightFiltersNetworkProtocolGetArgs> networkProtocols) {
             return networkProtocols(Output.of(networkProtocols));
         }
 
+        /**
+         * @param networkProtocols The protocol of network-related information about a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkProtocols(InsightFiltersNetworkProtocolGetArgs... networkProtocols) {
             return networkProtocols(List.of(networkProtocols));
         }
 
+        /**
+         * @param networkSourceDomains The source domain of network-related information about a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSourceDomains(@Nullable Output<List<InsightFiltersNetworkSourceDomainGetArgs>> networkSourceDomains) {
             $.networkSourceDomains = networkSourceDomains;
             return this;
         }
 
+        /**
+         * @param networkSourceDomains The source domain of network-related information about a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSourceDomains(List<InsightFiltersNetworkSourceDomainGetArgs> networkSourceDomains) {
             return networkSourceDomains(Output.of(networkSourceDomains));
         }
 
+        /**
+         * @param networkSourceDomains The source domain of network-related information about a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSourceDomains(InsightFiltersNetworkSourceDomainGetArgs... networkSourceDomains) {
             return networkSourceDomains(List.of(networkSourceDomains));
         }
 
+        /**
+         * @param networkSourceIpv4s The source IPv4 address of network-related information about a finding. See Ip Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSourceIpv4s(@Nullable Output<List<InsightFiltersNetworkSourceIpv4GetArgs>> networkSourceIpv4s) {
             $.networkSourceIpv4s = networkSourceIpv4s;
             return this;
         }
 
+        /**
+         * @param networkSourceIpv4s The source IPv4 address of network-related information about a finding. See Ip Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSourceIpv4s(List<InsightFiltersNetworkSourceIpv4GetArgs> networkSourceIpv4s) {
             return networkSourceIpv4s(Output.of(networkSourceIpv4s));
         }
 
+        /**
+         * @param networkSourceIpv4s The source IPv4 address of network-related information about a finding. See Ip Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSourceIpv4s(InsightFiltersNetworkSourceIpv4GetArgs... networkSourceIpv4s) {
             return networkSourceIpv4s(List.of(networkSourceIpv4s));
         }
 
+        /**
+         * @param networkSourceIpv6s The source IPv6 address of network-related information about a finding. See Ip Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSourceIpv6s(@Nullable Output<List<InsightFiltersNetworkSourceIpv6GetArgs>> networkSourceIpv6s) {
             $.networkSourceIpv6s = networkSourceIpv6s;
             return this;
         }
 
+        /**
+         * @param networkSourceIpv6s The source IPv6 address of network-related information about a finding. See Ip Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSourceIpv6s(List<InsightFiltersNetworkSourceIpv6GetArgs> networkSourceIpv6s) {
             return networkSourceIpv6s(Output.of(networkSourceIpv6s));
         }
 
+        /**
+         * @param networkSourceIpv6s The source IPv6 address of network-related information about a finding. See Ip Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSourceIpv6s(InsightFiltersNetworkSourceIpv6GetArgs... networkSourceIpv6s) {
             return networkSourceIpv6s(List.of(networkSourceIpv6s));
         }
 
+        /**
+         * @param networkSourceMacs The source media access control (MAC) address of network-related information about a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSourceMacs(@Nullable Output<List<InsightFiltersNetworkSourceMacGetArgs>> networkSourceMacs) {
             $.networkSourceMacs = networkSourceMacs;
             return this;
         }
 
+        /**
+         * @param networkSourceMacs The source media access control (MAC) address of network-related information about a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSourceMacs(List<InsightFiltersNetworkSourceMacGetArgs> networkSourceMacs) {
             return networkSourceMacs(Output.of(networkSourceMacs));
         }
 
+        /**
+         * @param networkSourceMacs The source media access control (MAC) address of network-related information about a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSourceMacs(InsightFiltersNetworkSourceMacGetArgs... networkSourceMacs) {
             return networkSourceMacs(List.of(networkSourceMacs));
         }
 
+        /**
+         * @param networkSourcePorts The source port of network-related information about a finding. See Number Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSourcePorts(@Nullable Output<List<InsightFiltersNetworkSourcePortGetArgs>> networkSourcePorts) {
             $.networkSourcePorts = networkSourcePorts;
             return this;
         }
 
+        /**
+         * @param networkSourcePorts The source port of network-related information about a finding. See Number Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSourcePorts(List<InsightFiltersNetworkSourcePortGetArgs> networkSourcePorts) {
             return networkSourcePorts(Output.of(networkSourcePorts));
         }
 
+        /**
+         * @param networkSourcePorts The source port of network-related information about a finding. See Number Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSourcePorts(InsightFiltersNetworkSourcePortGetArgs... networkSourcePorts) {
             return networkSourcePorts(List.of(networkSourcePorts));
         }
 
+        /**
+         * @param noteTexts The text of a note. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noteTexts(@Nullable Output<List<InsightFiltersNoteTextGetArgs>> noteTexts) {
             $.noteTexts = noteTexts;
             return this;
         }
 
+        /**
+         * @param noteTexts The text of a note. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noteTexts(List<InsightFiltersNoteTextGetArgs> noteTexts) {
             return noteTexts(Output.of(noteTexts));
         }
 
+        /**
+         * @param noteTexts The text of a note. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noteTexts(InsightFiltersNoteTextGetArgs... noteTexts) {
             return noteTexts(List.of(noteTexts));
         }
 
+        /**
+         * @param noteUpdatedAts The timestamp of when the note was updated. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noteUpdatedAts(@Nullable Output<List<InsightFiltersNoteUpdatedAtGetArgs>> noteUpdatedAts) {
             $.noteUpdatedAts = noteUpdatedAts;
             return this;
         }
 
+        /**
+         * @param noteUpdatedAts The timestamp of when the note was updated. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noteUpdatedAts(List<InsightFiltersNoteUpdatedAtGetArgs> noteUpdatedAts) {
             return noteUpdatedAts(Output.of(noteUpdatedAts));
         }
 
+        /**
+         * @param noteUpdatedAts The timestamp of when the note was updated. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noteUpdatedAts(InsightFiltersNoteUpdatedAtGetArgs... noteUpdatedAts) {
             return noteUpdatedAts(List.of(noteUpdatedAts));
         }
 
+        /**
+         * @param noteUpdatedBies The principal that created a note. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noteUpdatedBies(@Nullable Output<List<InsightFiltersNoteUpdatedByGetArgs>> noteUpdatedBies) {
             $.noteUpdatedBies = noteUpdatedBies;
             return this;
         }
 
+        /**
+         * @param noteUpdatedBies The principal that created a note. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noteUpdatedBies(List<InsightFiltersNoteUpdatedByGetArgs> noteUpdatedBies) {
             return noteUpdatedBies(Output.of(noteUpdatedBies));
         }
 
+        /**
+         * @param noteUpdatedBies The principal that created a note. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noteUpdatedBies(InsightFiltersNoteUpdatedByGetArgs... noteUpdatedBies) {
             return noteUpdatedBies(List.of(noteUpdatedBies));
         }
 
+        /**
+         * @param processLaunchedAts The date/time that the process was launched. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processLaunchedAts(@Nullable Output<List<InsightFiltersProcessLaunchedAtGetArgs>> processLaunchedAts) {
             $.processLaunchedAts = processLaunchedAts;
             return this;
         }
 
+        /**
+         * @param processLaunchedAts The date/time that the process was launched. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processLaunchedAts(List<InsightFiltersProcessLaunchedAtGetArgs> processLaunchedAts) {
             return processLaunchedAts(Output.of(processLaunchedAts));
         }
 
+        /**
+         * @param processLaunchedAts The date/time that the process was launched. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processLaunchedAts(InsightFiltersProcessLaunchedAtGetArgs... processLaunchedAts) {
             return processLaunchedAts(List.of(processLaunchedAts));
         }
 
+        /**
+         * @param processNames The name of the process. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processNames(@Nullable Output<List<InsightFiltersProcessNameGetArgs>> processNames) {
             $.processNames = processNames;
             return this;
         }
 
+        /**
+         * @param processNames The name of the process. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processNames(List<InsightFiltersProcessNameGetArgs> processNames) {
             return processNames(Output.of(processNames));
         }
 
+        /**
+         * @param processNames The name of the process. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processNames(InsightFiltersProcessNameGetArgs... processNames) {
             return processNames(List.of(processNames));
         }
 
+        /**
+         * @param processParentPids The parent process ID. See Number Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processParentPids(@Nullable Output<List<InsightFiltersProcessParentPidGetArgs>> processParentPids) {
             $.processParentPids = processParentPids;
             return this;
         }
 
+        /**
+         * @param processParentPids The parent process ID. See Number Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processParentPids(List<InsightFiltersProcessParentPidGetArgs> processParentPids) {
             return processParentPids(Output.of(processParentPids));
         }
 
+        /**
+         * @param processParentPids The parent process ID. See Number Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processParentPids(InsightFiltersProcessParentPidGetArgs... processParentPids) {
             return processParentPids(List.of(processParentPids));
         }
 
+        /**
+         * @param processPaths The path to the process executable. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processPaths(@Nullable Output<List<InsightFiltersProcessPathGetArgs>> processPaths) {
             $.processPaths = processPaths;
             return this;
         }
 
+        /**
+         * @param processPaths The path to the process executable. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processPaths(List<InsightFiltersProcessPathGetArgs> processPaths) {
             return processPaths(Output.of(processPaths));
         }
 
+        /**
+         * @param processPaths The path to the process executable. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processPaths(InsightFiltersProcessPathGetArgs... processPaths) {
             return processPaths(List.of(processPaths));
         }
 
+        /**
+         * @param processPids The process ID. See Number Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processPids(@Nullable Output<List<InsightFiltersProcessPidGetArgs>> processPids) {
             $.processPids = processPids;
             return this;
         }
 
+        /**
+         * @param processPids The process ID. See Number Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processPids(List<InsightFiltersProcessPidGetArgs> processPids) {
             return processPids(Output.of(processPids));
         }
 
+        /**
+         * @param processPids The process ID. See Number Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processPids(InsightFiltersProcessPidGetArgs... processPids) {
             return processPids(List.of(processPids));
         }
 
+        /**
+         * @param processTerminatedAts The date/time that the process was terminated. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processTerminatedAts(@Nullable Output<List<InsightFiltersProcessTerminatedAtGetArgs>> processTerminatedAts) {
             $.processTerminatedAts = processTerminatedAts;
             return this;
         }
 
+        /**
+         * @param processTerminatedAts The date/time that the process was terminated. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processTerminatedAts(List<InsightFiltersProcessTerminatedAtGetArgs> processTerminatedAts) {
             return processTerminatedAts(Output.of(processTerminatedAts));
         }
 
+        /**
+         * @param processTerminatedAts The date/time that the process was terminated. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processTerminatedAts(InsightFiltersProcessTerminatedAtGetArgs... processTerminatedAts) {
             return processTerminatedAts(List.of(processTerminatedAts));
         }
 
+        /**
+         * @param productArns The ARN generated by Security Hub that uniquely identifies a third-party company (security findings provider) after this provider&#39;s product (solution that generates findings) is registered with Security Hub. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productArns(@Nullable Output<List<InsightFiltersProductArnGetArgs>> productArns) {
             $.productArns = productArns;
             return this;
         }
 
+        /**
+         * @param productArns The ARN generated by Security Hub that uniquely identifies a third-party company (security findings provider) after this provider&#39;s product (solution that generates findings) is registered with Security Hub. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productArns(List<InsightFiltersProductArnGetArgs> productArns) {
             return productArns(Output.of(productArns));
         }
 
+        /**
+         * @param productArns The ARN generated by Security Hub that uniquely identifies a third-party company (security findings provider) after this provider&#39;s product (solution that generates findings) is registered with Security Hub. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productArns(InsightFiltersProductArnGetArgs... productArns) {
             return productArns(List.of(productArns));
         }
 
+        /**
+         * @param productFields A data type where security-findings providers can include additional solution-specific details that aren&#39;t part of the defined `AwsSecurityFinding` format. See Map Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productFields(@Nullable Output<List<InsightFiltersProductFieldGetArgs>> productFields) {
             $.productFields = productFields;
             return this;
         }
 
+        /**
+         * @param productFields A data type where security-findings providers can include additional solution-specific details that aren&#39;t part of the defined `AwsSecurityFinding` format. See Map Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productFields(List<InsightFiltersProductFieldGetArgs> productFields) {
             return productFields(Output.of(productFields));
         }
 
+        /**
+         * @param productFields A data type where security-findings providers can include additional solution-specific details that aren&#39;t part of the defined `AwsSecurityFinding` format. See Map Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productFields(InsightFiltersProductFieldGetArgs... productFields) {
             return productFields(List.of(productFields));
         }
 
+        /**
+         * @param productNames The name of the solution (product) that generates findings. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productNames(@Nullable Output<List<InsightFiltersProductNameGetArgs>> productNames) {
             $.productNames = productNames;
             return this;
         }
 
+        /**
+         * @param productNames The name of the solution (product) that generates findings. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productNames(List<InsightFiltersProductNameGetArgs> productNames) {
             return productNames(Output.of(productNames));
         }
 
+        /**
+         * @param productNames The name of the solution (product) that generates findings. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productNames(InsightFiltersProductNameGetArgs... productNames) {
             return productNames(List.of(productNames));
         }
 
+        /**
+         * @param recommendationTexts The recommendation of what to do about the issue described in a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendationTexts(@Nullable Output<List<InsightFiltersRecommendationTextGetArgs>> recommendationTexts) {
             $.recommendationTexts = recommendationTexts;
             return this;
         }
 
+        /**
+         * @param recommendationTexts The recommendation of what to do about the issue described in a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendationTexts(List<InsightFiltersRecommendationTextGetArgs> recommendationTexts) {
             return recommendationTexts(Output.of(recommendationTexts));
         }
 
+        /**
+         * @param recommendationTexts The recommendation of what to do about the issue described in a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendationTexts(InsightFiltersRecommendationTextGetArgs... recommendationTexts) {
             return recommendationTexts(List.of(recommendationTexts));
         }
 
+        /**
+         * @param recordStates The updated record state for the finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordStates(@Nullable Output<List<InsightFiltersRecordStateGetArgs>> recordStates) {
             $.recordStates = recordStates;
             return this;
         }
 
+        /**
+         * @param recordStates The updated record state for the finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordStates(List<InsightFiltersRecordStateGetArgs> recordStates) {
             return recordStates(Output.of(recordStates));
         }
 
+        /**
+         * @param recordStates The updated record state for the finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordStates(InsightFiltersRecordStateGetArgs... recordStates) {
             return recordStates(List.of(recordStates));
         }
 
+        /**
+         * @param relatedFindingsIds The solution-generated identifier for a related finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relatedFindingsIds(@Nullable Output<List<InsightFiltersRelatedFindingsIdGetArgs>> relatedFindingsIds) {
             $.relatedFindingsIds = relatedFindingsIds;
             return this;
         }
 
+        /**
+         * @param relatedFindingsIds The solution-generated identifier for a related finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relatedFindingsIds(List<InsightFiltersRelatedFindingsIdGetArgs> relatedFindingsIds) {
             return relatedFindingsIds(Output.of(relatedFindingsIds));
         }
 
+        /**
+         * @param relatedFindingsIds The solution-generated identifier for a related finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relatedFindingsIds(InsightFiltersRelatedFindingsIdGetArgs... relatedFindingsIds) {
             return relatedFindingsIds(List.of(relatedFindingsIds));
         }
 
+        /**
+         * @param relatedFindingsProductArns The ARN of the solution that generated a related finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relatedFindingsProductArns(@Nullable Output<List<InsightFiltersRelatedFindingsProductArnGetArgs>> relatedFindingsProductArns) {
             $.relatedFindingsProductArns = relatedFindingsProductArns;
             return this;
         }
 
+        /**
+         * @param relatedFindingsProductArns The ARN of the solution that generated a related finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relatedFindingsProductArns(List<InsightFiltersRelatedFindingsProductArnGetArgs> relatedFindingsProductArns) {
             return relatedFindingsProductArns(Output.of(relatedFindingsProductArns));
         }
 
+        /**
+         * @param relatedFindingsProductArns The ARN of the solution that generated a related finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relatedFindingsProductArns(InsightFiltersRelatedFindingsProductArnGetArgs... relatedFindingsProductArns) {
             return relatedFindingsProductArns(List.of(relatedFindingsProductArns));
         }
 
+        /**
+         * @param resourceAwsEc2InstanceIamInstanceProfileArns The IAM profile ARN of the instance. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsEc2InstanceIamInstanceProfileArns(@Nullable Output<List<InsightFiltersResourceAwsEc2InstanceIamInstanceProfileArnGetArgs>> resourceAwsEc2InstanceIamInstanceProfileArns) {
             $.resourceAwsEc2InstanceIamInstanceProfileArns = resourceAwsEc2InstanceIamInstanceProfileArns;
             return this;
         }
 
+        /**
+         * @param resourceAwsEc2InstanceIamInstanceProfileArns The IAM profile ARN of the instance. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsEc2InstanceIamInstanceProfileArns(List<InsightFiltersResourceAwsEc2InstanceIamInstanceProfileArnGetArgs> resourceAwsEc2InstanceIamInstanceProfileArns) {
             return resourceAwsEc2InstanceIamInstanceProfileArns(Output.of(resourceAwsEc2InstanceIamInstanceProfileArns));
         }
 
+        /**
+         * @param resourceAwsEc2InstanceIamInstanceProfileArns The IAM profile ARN of the instance. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsEc2InstanceIamInstanceProfileArns(InsightFiltersResourceAwsEc2InstanceIamInstanceProfileArnGetArgs... resourceAwsEc2InstanceIamInstanceProfileArns) {
             return resourceAwsEc2InstanceIamInstanceProfileArns(List.of(resourceAwsEc2InstanceIamInstanceProfileArns));
         }
 
+        /**
+         * @param resourceAwsEc2InstanceImageIds The Amazon Machine Image (AMI) ID of the instance. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsEc2InstanceImageIds(@Nullable Output<List<InsightFiltersResourceAwsEc2InstanceImageIdGetArgs>> resourceAwsEc2InstanceImageIds) {
             $.resourceAwsEc2InstanceImageIds = resourceAwsEc2InstanceImageIds;
             return this;
         }
 
+        /**
+         * @param resourceAwsEc2InstanceImageIds The Amazon Machine Image (AMI) ID of the instance. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsEc2InstanceImageIds(List<InsightFiltersResourceAwsEc2InstanceImageIdGetArgs> resourceAwsEc2InstanceImageIds) {
             return resourceAwsEc2InstanceImageIds(Output.of(resourceAwsEc2InstanceImageIds));
         }
 
+        /**
+         * @param resourceAwsEc2InstanceImageIds The Amazon Machine Image (AMI) ID of the instance. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsEc2InstanceImageIds(InsightFiltersResourceAwsEc2InstanceImageIdGetArgs... resourceAwsEc2InstanceImageIds) {
             return resourceAwsEc2InstanceImageIds(List.of(resourceAwsEc2InstanceImageIds));
         }
 
+        /**
+         * @param resourceAwsEc2InstanceIpv4Addresses The IPv4 addresses associated with the instance. See Ip Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsEc2InstanceIpv4Addresses(@Nullable Output<List<InsightFiltersResourceAwsEc2InstanceIpv4AddressGetArgs>> resourceAwsEc2InstanceIpv4Addresses) {
             $.resourceAwsEc2InstanceIpv4Addresses = resourceAwsEc2InstanceIpv4Addresses;
             return this;
         }
 
+        /**
+         * @param resourceAwsEc2InstanceIpv4Addresses The IPv4 addresses associated with the instance. See Ip Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsEc2InstanceIpv4Addresses(List<InsightFiltersResourceAwsEc2InstanceIpv4AddressGetArgs> resourceAwsEc2InstanceIpv4Addresses) {
             return resourceAwsEc2InstanceIpv4Addresses(Output.of(resourceAwsEc2InstanceIpv4Addresses));
         }
 
+        /**
+         * @param resourceAwsEc2InstanceIpv4Addresses The IPv4 addresses associated with the instance. See Ip Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsEc2InstanceIpv4Addresses(InsightFiltersResourceAwsEc2InstanceIpv4AddressGetArgs... resourceAwsEc2InstanceIpv4Addresses) {
             return resourceAwsEc2InstanceIpv4Addresses(List.of(resourceAwsEc2InstanceIpv4Addresses));
         }
 
+        /**
+         * @param resourceAwsEc2InstanceIpv6Addresses The IPv6 addresses associated with the instance. See Ip Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsEc2InstanceIpv6Addresses(@Nullable Output<List<InsightFiltersResourceAwsEc2InstanceIpv6AddressGetArgs>> resourceAwsEc2InstanceIpv6Addresses) {
             $.resourceAwsEc2InstanceIpv6Addresses = resourceAwsEc2InstanceIpv6Addresses;
             return this;
         }
 
+        /**
+         * @param resourceAwsEc2InstanceIpv6Addresses The IPv6 addresses associated with the instance. See Ip Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsEc2InstanceIpv6Addresses(List<InsightFiltersResourceAwsEc2InstanceIpv6AddressGetArgs> resourceAwsEc2InstanceIpv6Addresses) {
             return resourceAwsEc2InstanceIpv6Addresses(Output.of(resourceAwsEc2InstanceIpv6Addresses));
         }
 
+        /**
+         * @param resourceAwsEc2InstanceIpv6Addresses The IPv6 addresses associated with the instance. See Ip Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsEc2InstanceIpv6Addresses(InsightFiltersResourceAwsEc2InstanceIpv6AddressGetArgs... resourceAwsEc2InstanceIpv6Addresses) {
             return resourceAwsEc2InstanceIpv6Addresses(List.of(resourceAwsEc2InstanceIpv6Addresses));
         }
 
+        /**
+         * @param resourceAwsEc2InstanceKeyNames The key name associated with the instance. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsEc2InstanceKeyNames(@Nullable Output<List<InsightFiltersResourceAwsEc2InstanceKeyNameGetArgs>> resourceAwsEc2InstanceKeyNames) {
             $.resourceAwsEc2InstanceKeyNames = resourceAwsEc2InstanceKeyNames;
             return this;
         }
 
+        /**
+         * @param resourceAwsEc2InstanceKeyNames The key name associated with the instance. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsEc2InstanceKeyNames(List<InsightFiltersResourceAwsEc2InstanceKeyNameGetArgs> resourceAwsEc2InstanceKeyNames) {
             return resourceAwsEc2InstanceKeyNames(Output.of(resourceAwsEc2InstanceKeyNames));
         }
 
+        /**
+         * @param resourceAwsEc2InstanceKeyNames The key name associated with the instance. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsEc2InstanceKeyNames(InsightFiltersResourceAwsEc2InstanceKeyNameGetArgs... resourceAwsEc2InstanceKeyNames) {
             return resourceAwsEc2InstanceKeyNames(List.of(resourceAwsEc2InstanceKeyNames));
         }
 
+        /**
+         * @param resourceAwsEc2InstanceLaunchedAts The date and time the instance was launched. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsEc2InstanceLaunchedAts(@Nullable Output<List<InsightFiltersResourceAwsEc2InstanceLaunchedAtGetArgs>> resourceAwsEc2InstanceLaunchedAts) {
             $.resourceAwsEc2InstanceLaunchedAts = resourceAwsEc2InstanceLaunchedAts;
             return this;
         }
 
+        /**
+         * @param resourceAwsEc2InstanceLaunchedAts The date and time the instance was launched. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsEc2InstanceLaunchedAts(List<InsightFiltersResourceAwsEc2InstanceLaunchedAtGetArgs> resourceAwsEc2InstanceLaunchedAts) {
             return resourceAwsEc2InstanceLaunchedAts(Output.of(resourceAwsEc2InstanceLaunchedAts));
         }
 
+        /**
+         * @param resourceAwsEc2InstanceLaunchedAts The date and time the instance was launched. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsEc2InstanceLaunchedAts(InsightFiltersResourceAwsEc2InstanceLaunchedAtGetArgs... resourceAwsEc2InstanceLaunchedAts) {
             return resourceAwsEc2InstanceLaunchedAts(List.of(resourceAwsEc2InstanceLaunchedAts));
         }
 
+        /**
+         * @param resourceAwsEc2InstanceSubnetIds The identifier of the subnet that the instance was launched in. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsEc2InstanceSubnetIds(@Nullable Output<List<InsightFiltersResourceAwsEc2InstanceSubnetIdGetArgs>> resourceAwsEc2InstanceSubnetIds) {
             $.resourceAwsEc2InstanceSubnetIds = resourceAwsEc2InstanceSubnetIds;
             return this;
         }
 
+        /**
+         * @param resourceAwsEc2InstanceSubnetIds The identifier of the subnet that the instance was launched in. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsEc2InstanceSubnetIds(List<InsightFiltersResourceAwsEc2InstanceSubnetIdGetArgs> resourceAwsEc2InstanceSubnetIds) {
             return resourceAwsEc2InstanceSubnetIds(Output.of(resourceAwsEc2InstanceSubnetIds));
         }
 
+        /**
+         * @param resourceAwsEc2InstanceSubnetIds The identifier of the subnet that the instance was launched in. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsEc2InstanceSubnetIds(InsightFiltersResourceAwsEc2InstanceSubnetIdGetArgs... resourceAwsEc2InstanceSubnetIds) {
             return resourceAwsEc2InstanceSubnetIds(List.of(resourceAwsEc2InstanceSubnetIds));
         }
 
+        /**
+         * @param resourceAwsEc2InstanceTypes The instance type of the instance. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsEc2InstanceTypes(@Nullable Output<List<InsightFiltersResourceAwsEc2InstanceTypeGetArgs>> resourceAwsEc2InstanceTypes) {
             $.resourceAwsEc2InstanceTypes = resourceAwsEc2InstanceTypes;
             return this;
         }
 
+        /**
+         * @param resourceAwsEc2InstanceTypes The instance type of the instance. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsEc2InstanceTypes(List<InsightFiltersResourceAwsEc2InstanceTypeGetArgs> resourceAwsEc2InstanceTypes) {
             return resourceAwsEc2InstanceTypes(Output.of(resourceAwsEc2InstanceTypes));
         }
 
+        /**
+         * @param resourceAwsEc2InstanceTypes The instance type of the instance. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsEc2InstanceTypes(InsightFiltersResourceAwsEc2InstanceTypeGetArgs... resourceAwsEc2InstanceTypes) {
             return resourceAwsEc2InstanceTypes(List.of(resourceAwsEc2InstanceTypes));
         }
 
+        /**
+         * @param resourceAwsEc2InstanceVpcIds The identifier of the VPC that the instance was launched in. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsEc2InstanceVpcIds(@Nullable Output<List<InsightFiltersResourceAwsEc2InstanceVpcIdGetArgs>> resourceAwsEc2InstanceVpcIds) {
             $.resourceAwsEc2InstanceVpcIds = resourceAwsEc2InstanceVpcIds;
             return this;
         }
 
+        /**
+         * @param resourceAwsEc2InstanceVpcIds The identifier of the VPC that the instance was launched in. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsEc2InstanceVpcIds(List<InsightFiltersResourceAwsEc2InstanceVpcIdGetArgs> resourceAwsEc2InstanceVpcIds) {
             return resourceAwsEc2InstanceVpcIds(Output.of(resourceAwsEc2InstanceVpcIds));
         }
 
+        /**
+         * @param resourceAwsEc2InstanceVpcIds The identifier of the VPC that the instance was launched in. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsEc2InstanceVpcIds(InsightFiltersResourceAwsEc2InstanceVpcIdGetArgs... resourceAwsEc2InstanceVpcIds) {
             return resourceAwsEc2InstanceVpcIds(List.of(resourceAwsEc2InstanceVpcIds));
         }
 
+        /**
+         * @param resourceAwsIamAccessKeyCreatedAts The creation date/time of the IAM access key related to a finding. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsIamAccessKeyCreatedAts(@Nullable Output<List<InsightFiltersResourceAwsIamAccessKeyCreatedAtGetArgs>> resourceAwsIamAccessKeyCreatedAts) {
             $.resourceAwsIamAccessKeyCreatedAts = resourceAwsIamAccessKeyCreatedAts;
             return this;
         }
 
+        /**
+         * @param resourceAwsIamAccessKeyCreatedAts The creation date/time of the IAM access key related to a finding. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsIamAccessKeyCreatedAts(List<InsightFiltersResourceAwsIamAccessKeyCreatedAtGetArgs> resourceAwsIamAccessKeyCreatedAts) {
             return resourceAwsIamAccessKeyCreatedAts(Output.of(resourceAwsIamAccessKeyCreatedAts));
         }
 
+        /**
+         * @param resourceAwsIamAccessKeyCreatedAts The creation date/time of the IAM access key related to a finding. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsIamAccessKeyCreatedAts(InsightFiltersResourceAwsIamAccessKeyCreatedAtGetArgs... resourceAwsIamAccessKeyCreatedAts) {
             return resourceAwsIamAccessKeyCreatedAts(List.of(resourceAwsIamAccessKeyCreatedAts));
         }
 
+        /**
+         * @param resourceAwsIamAccessKeyStatuses The status of the IAM access key related to a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsIamAccessKeyStatuses(@Nullable Output<List<InsightFiltersResourceAwsIamAccessKeyStatusGetArgs>> resourceAwsIamAccessKeyStatuses) {
             $.resourceAwsIamAccessKeyStatuses = resourceAwsIamAccessKeyStatuses;
             return this;
         }
 
+        /**
+         * @param resourceAwsIamAccessKeyStatuses The status of the IAM access key related to a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsIamAccessKeyStatuses(List<InsightFiltersResourceAwsIamAccessKeyStatusGetArgs> resourceAwsIamAccessKeyStatuses) {
             return resourceAwsIamAccessKeyStatuses(Output.of(resourceAwsIamAccessKeyStatuses));
         }
 
+        /**
+         * @param resourceAwsIamAccessKeyStatuses The status of the IAM access key related to a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsIamAccessKeyStatuses(InsightFiltersResourceAwsIamAccessKeyStatusGetArgs... resourceAwsIamAccessKeyStatuses) {
             return resourceAwsIamAccessKeyStatuses(List.of(resourceAwsIamAccessKeyStatuses));
         }
 
+        /**
+         * @param resourceAwsIamAccessKeyUserNames The user associated with the IAM access key related to a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsIamAccessKeyUserNames(@Nullable Output<List<InsightFiltersResourceAwsIamAccessKeyUserNameGetArgs>> resourceAwsIamAccessKeyUserNames) {
             $.resourceAwsIamAccessKeyUserNames = resourceAwsIamAccessKeyUserNames;
             return this;
         }
 
+        /**
+         * @param resourceAwsIamAccessKeyUserNames The user associated with the IAM access key related to a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsIamAccessKeyUserNames(List<InsightFiltersResourceAwsIamAccessKeyUserNameGetArgs> resourceAwsIamAccessKeyUserNames) {
             return resourceAwsIamAccessKeyUserNames(Output.of(resourceAwsIamAccessKeyUserNames));
         }
 
+        /**
+         * @param resourceAwsIamAccessKeyUserNames The user associated with the IAM access key related to a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsIamAccessKeyUserNames(InsightFiltersResourceAwsIamAccessKeyUserNameGetArgs... resourceAwsIamAccessKeyUserNames) {
             return resourceAwsIamAccessKeyUserNames(List.of(resourceAwsIamAccessKeyUserNames));
         }
 
+        /**
+         * @param resourceAwsS3BucketOwnerIds The canonical user ID of the owner of the S3 bucket. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsS3BucketOwnerIds(@Nullable Output<List<InsightFiltersResourceAwsS3BucketOwnerIdGetArgs>> resourceAwsS3BucketOwnerIds) {
             $.resourceAwsS3BucketOwnerIds = resourceAwsS3BucketOwnerIds;
             return this;
         }
 
+        /**
+         * @param resourceAwsS3BucketOwnerIds The canonical user ID of the owner of the S3 bucket. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsS3BucketOwnerIds(List<InsightFiltersResourceAwsS3BucketOwnerIdGetArgs> resourceAwsS3BucketOwnerIds) {
             return resourceAwsS3BucketOwnerIds(Output.of(resourceAwsS3BucketOwnerIds));
         }
 
+        /**
+         * @param resourceAwsS3BucketOwnerIds The canonical user ID of the owner of the S3 bucket. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsS3BucketOwnerIds(InsightFiltersResourceAwsS3BucketOwnerIdGetArgs... resourceAwsS3BucketOwnerIds) {
             return resourceAwsS3BucketOwnerIds(List.of(resourceAwsS3BucketOwnerIds));
         }
 
+        /**
+         * @param resourceAwsS3BucketOwnerNames The display name of the owner of the S3 bucket. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsS3BucketOwnerNames(@Nullable Output<List<InsightFiltersResourceAwsS3BucketOwnerNameGetArgs>> resourceAwsS3BucketOwnerNames) {
             $.resourceAwsS3BucketOwnerNames = resourceAwsS3BucketOwnerNames;
             return this;
         }
 
+        /**
+         * @param resourceAwsS3BucketOwnerNames The display name of the owner of the S3 bucket. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsS3BucketOwnerNames(List<InsightFiltersResourceAwsS3BucketOwnerNameGetArgs> resourceAwsS3BucketOwnerNames) {
             return resourceAwsS3BucketOwnerNames(Output.of(resourceAwsS3BucketOwnerNames));
         }
 
+        /**
+         * @param resourceAwsS3BucketOwnerNames The display name of the owner of the S3 bucket. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAwsS3BucketOwnerNames(InsightFiltersResourceAwsS3BucketOwnerNameGetArgs... resourceAwsS3BucketOwnerNames) {
             return resourceAwsS3BucketOwnerNames(List.of(resourceAwsS3BucketOwnerNames));
         }
 
+        /**
+         * @param resourceContainerImageIds The identifier of the image related to a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceContainerImageIds(@Nullable Output<List<InsightFiltersResourceContainerImageIdGetArgs>> resourceContainerImageIds) {
             $.resourceContainerImageIds = resourceContainerImageIds;
             return this;
         }
 
+        /**
+         * @param resourceContainerImageIds The identifier of the image related to a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceContainerImageIds(List<InsightFiltersResourceContainerImageIdGetArgs> resourceContainerImageIds) {
             return resourceContainerImageIds(Output.of(resourceContainerImageIds));
         }
 
+        /**
+         * @param resourceContainerImageIds The identifier of the image related to a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceContainerImageIds(InsightFiltersResourceContainerImageIdGetArgs... resourceContainerImageIds) {
             return resourceContainerImageIds(List.of(resourceContainerImageIds));
         }
 
+        /**
+         * @param resourceContainerImageNames The name of the image related to a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceContainerImageNames(@Nullable Output<List<InsightFiltersResourceContainerImageNameGetArgs>> resourceContainerImageNames) {
             $.resourceContainerImageNames = resourceContainerImageNames;
             return this;
         }
 
+        /**
+         * @param resourceContainerImageNames The name of the image related to a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceContainerImageNames(List<InsightFiltersResourceContainerImageNameGetArgs> resourceContainerImageNames) {
             return resourceContainerImageNames(Output.of(resourceContainerImageNames));
         }
 
+        /**
+         * @param resourceContainerImageNames The name of the image related to a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceContainerImageNames(InsightFiltersResourceContainerImageNameGetArgs... resourceContainerImageNames) {
             return resourceContainerImageNames(List.of(resourceContainerImageNames));
         }
 
+        /**
+         * @param resourceContainerLaunchedAts The date/time that the container was started. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceContainerLaunchedAts(@Nullable Output<List<InsightFiltersResourceContainerLaunchedAtGetArgs>> resourceContainerLaunchedAts) {
             $.resourceContainerLaunchedAts = resourceContainerLaunchedAts;
             return this;
         }
 
+        /**
+         * @param resourceContainerLaunchedAts The date/time that the container was started. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceContainerLaunchedAts(List<InsightFiltersResourceContainerLaunchedAtGetArgs> resourceContainerLaunchedAts) {
             return resourceContainerLaunchedAts(Output.of(resourceContainerLaunchedAts));
         }
 
+        /**
+         * @param resourceContainerLaunchedAts The date/time that the container was started. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceContainerLaunchedAts(InsightFiltersResourceContainerLaunchedAtGetArgs... resourceContainerLaunchedAts) {
             return resourceContainerLaunchedAts(List.of(resourceContainerLaunchedAts));
         }
 
+        /**
+         * @param resourceContainerNames The name of the container related to a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceContainerNames(@Nullable Output<List<InsightFiltersResourceContainerNameGetArgs>> resourceContainerNames) {
             $.resourceContainerNames = resourceContainerNames;
             return this;
         }
 
+        /**
+         * @param resourceContainerNames The name of the container related to a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceContainerNames(List<InsightFiltersResourceContainerNameGetArgs> resourceContainerNames) {
             return resourceContainerNames(Output.of(resourceContainerNames));
         }
 
+        /**
+         * @param resourceContainerNames The name of the container related to a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceContainerNames(InsightFiltersResourceContainerNameGetArgs... resourceContainerNames) {
             return resourceContainerNames(List.of(resourceContainerNames));
         }
 
+        /**
+         * @param resourceDetailsOthers The details of a resource that doesn&#39;t have a specific subfield for the resource type defined. See Map Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceDetailsOthers(@Nullable Output<List<InsightFiltersResourceDetailsOtherGetArgs>> resourceDetailsOthers) {
             $.resourceDetailsOthers = resourceDetailsOthers;
             return this;
         }
 
+        /**
+         * @param resourceDetailsOthers The details of a resource that doesn&#39;t have a specific subfield for the resource type defined. See Map Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceDetailsOthers(List<InsightFiltersResourceDetailsOtherGetArgs> resourceDetailsOthers) {
             return resourceDetailsOthers(Output.of(resourceDetailsOthers));
         }
 
+        /**
+         * @param resourceDetailsOthers The details of a resource that doesn&#39;t have a specific subfield for the resource type defined. See Map Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceDetailsOthers(InsightFiltersResourceDetailsOtherGetArgs... resourceDetailsOthers) {
             return resourceDetailsOthers(List.of(resourceDetailsOthers));
         }
 
+        /**
+         * @param resourceIds The canonical identifier for the given resource type. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceIds(@Nullable Output<List<InsightFiltersResourceIdGetArgs>> resourceIds) {
             $.resourceIds = resourceIds;
             return this;
         }
 
+        /**
+         * @param resourceIds The canonical identifier for the given resource type. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceIds(List<InsightFiltersResourceIdGetArgs> resourceIds) {
             return resourceIds(Output.of(resourceIds));
         }
 
+        /**
+         * @param resourceIds The canonical identifier for the given resource type. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceIds(InsightFiltersResourceIdGetArgs... resourceIds) {
             return resourceIds(List.of(resourceIds));
         }
 
+        /**
+         * @param resourcePartitions The canonical AWS partition name that the Region is assigned to. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePartitions(@Nullable Output<List<InsightFiltersResourcePartitionGetArgs>> resourcePartitions) {
             $.resourcePartitions = resourcePartitions;
             return this;
         }
 
+        /**
+         * @param resourcePartitions The canonical AWS partition name that the Region is assigned to. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePartitions(List<InsightFiltersResourcePartitionGetArgs> resourcePartitions) {
             return resourcePartitions(Output.of(resourcePartitions));
         }
 
+        /**
+         * @param resourcePartitions The canonical AWS partition name that the Region is assigned to. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePartitions(InsightFiltersResourcePartitionGetArgs... resourcePartitions) {
             return resourcePartitions(List.of(resourcePartitions));
         }
 
+        /**
+         * @param resourceRegions The canonical AWS external Region name where this resource is located. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceRegions(@Nullable Output<List<InsightFiltersResourceRegionGetArgs>> resourceRegions) {
             $.resourceRegions = resourceRegions;
             return this;
         }
 
+        /**
+         * @param resourceRegions The canonical AWS external Region name where this resource is located. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceRegions(List<InsightFiltersResourceRegionGetArgs> resourceRegions) {
             return resourceRegions(Output.of(resourceRegions));
         }
 
+        /**
+         * @param resourceRegions The canonical AWS external Region name where this resource is located. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceRegions(InsightFiltersResourceRegionGetArgs... resourceRegions) {
             return resourceRegions(List.of(resourceRegions));
         }
 
+        /**
+         * @param resourceTags A list of AWS tags associated with a resource at the time the finding was processed. See Map Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceTags(@Nullable Output<List<InsightFiltersResourceTagGetArgs>> resourceTags) {
             $.resourceTags = resourceTags;
             return this;
         }
 
+        /**
+         * @param resourceTags A list of AWS tags associated with a resource at the time the finding was processed. See Map Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceTags(List<InsightFiltersResourceTagGetArgs> resourceTags) {
             return resourceTags(Output.of(resourceTags));
         }
 
+        /**
+         * @param resourceTags A list of AWS tags associated with a resource at the time the finding was processed. See Map Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceTags(InsightFiltersResourceTagGetArgs... resourceTags) {
             return resourceTags(List.of(resourceTags));
         }
 
+        /**
+         * @param resourceTypes Specifies the type of the resource that details are provided for. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceTypes(@Nullable Output<List<InsightFiltersResourceTypeGetArgs>> resourceTypes) {
             $.resourceTypes = resourceTypes;
             return this;
         }
 
+        /**
+         * @param resourceTypes Specifies the type of the resource that details are provided for. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceTypes(List<InsightFiltersResourceTypeGetArgs> resourceTypes) {
             return resourceTypes(Output.of(resourceTypes));
         }
 
+        /**
+         * @param resourceTypes Specifies the type of the resource that details are provided for. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceTypes(InsightFiltersResourceTypeGetArgs... resourceTypes) {
             return resourceTypes(List.of(resourceTypes));
         }
 
+        /**
+         * @param severityLabels The label of a finding&#39;s severity. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severityLabels(@Nullable Output<List<InsightFiltersSeverityLabelGetArgs>> severityLabels) {
             $.severityLabels = severityLabels;
             return this;
         }
 
+        /**
+         * @param severityLabels The label of a finding&#39;s severity. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severityLabels(List<InsightFiltersSeverityLabelGetArgs> severityLabels) {
             return severityLabels(Output.of(severityLabels));
         }
 
+        /**
+         * @param severityLabels The label of a finding&#39;s severity. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severityLabels(InsightFiltersSeverityLabelGetArgs... severityLabels) {
             return severityLabels(List.of(severityLabels));
         }
 
+        /**
+         * @param sourceUrls A URL that links to a page about the current finding in the security-findings provider&#39;s solution. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUrls(@Nullable Output<List<InsightFiltersSourceUrlGetArgs>> sourceUrls) {
             $.sourceUrls = sourceUrls;
             return this;
         }
 
+        /**
+         * @param sourceUrls A URL that links to a page about the current finding in the security-findings provider&#39;s solution. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUrls(List<InsightFiltersSourceUrlGetArgs> sourceUrls) {
             return sourceUrls(Output.of(sourceUrls));
         }
 
+        /**
+         * @param sourceUrls A URL that links to a page about the current finding in the security-findings provider&#39;s solution. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUrls(InsightFiltersSourceUrlGetArgs... sourceUrls) {
             return sourceUrls(List.of(sourceUrls));
         }
 
+        /**
+         * @param threatIntelIndicatorCategories The category of a threat intelligence indicator. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threatIntelIndicatorCategories(@Nullable Output<List<InsightFiltersThreatIntelIndicatorCategoryGetArgs>> threatIntelIndicatorCategories) {
             $.threatIntelIndicatorCategories = threatIntelIndicatorCategories;
             return this;
         }
 
+        /**
+         * @param threatIntelIndicatorCategories The category of a threat intelligence indicator. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threatIntelIndicatorCategories(List<InsightFiltersThreatIntelIndicatorCategoryGetArgs> threatIntelIndicatorCategories) {
             return threatIntelIndicatorCategories(Output.of(threatIntelIndicatorCategories));
         }
 
+        /**
+         * @param threatIntelIndicatorCategories The category of a threat intelligence indicator. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threatIntelIndicatorCategories(InsightFiltersThreatIntelIndicatorCategoryGetArgs... threatIntelIndicatorCategories) {
             return threatIntelIndicatorCategories(List.of(threatIntelIndicatorCategories));
         }
 
+        /**
+         * @param threatIntelIndicatorLastObservedAts The date/time of the last observation of a threat intelligence indicator. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threatIntelIndicatorLastObservedAts(@Nullable Output<List<InsightFiltersThreatIntelIndicatorLastObservedAtGetArgs>> threatIntelIndicatorLastObservedAts) {
             $.threatIntelIndicatorLastObservedAts = threatIntelIndicatorLastObservedAts;
             return this;
         }
 
+        /**
+         * @param threatIntelIndicatorLastObservedAts The date/time of the last observation of a threat intelligence indicator. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threatIntelIndicatorLastObservedAts(List<InsightFiltersThreatIntelIndicatorLastObservedAtGetArgs> threatIntelIndicatorLastObservedAts) {
             return threatIntelIndicatorLastObservedAts(Output.of(threatIntelIndicatorLastObservedAts));
         }
 
+        /**
+         * @param threatIntelIndicatorLastObservedAts The date/time of the last observation of a threat intelligence indicator. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threatIntelIndicatorLastObservedAts(InsightFiltersThreatIntelIndicatorLastObservedAtGetArgs... threatIntelIndicatorLastObservedAts) {
             return threatIntelIndicatorLastObservedAts(List.of(threatIntelIndicatorLastObservedAts));
         }
 
+        /**
+         * @param threatIntelIndicatorSourceUrls The URL for more details from the source of the threat intelligence. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threatIntelIndicatorSourceUrls(@Nullable Output<List<InsightFiltersThreatIntelIndicatorSourceUrlGetArgs>> threatIntelIndicatorSourceUrls) {
             $.threatIntelIndicatorSourceUrls = threatIntelIndicatorSourceUrls;
             return this;
         }
 
+        /**
+         * @param threatIntelIndicatorSourceUrls The URL for more details from the source of the threat intelligence. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threatIntelIndicatorSourceUrls(List<InsightFiltersThreatIntelIndicatorSourceUrlGetArgs> threatIntelIndicatorSourceUrls) {
             return threatIntelIndicatorSourceUrls(Output.of(threatIntelIndicatorSourceUrls));
         }
 
+        /**
+         * @param threatIntelIndicatorSourceUrls The URL for more details from the source of the threat intelligence. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threatIntelIndicatorSourceUrls(InsightFiltersThreatIntelIndicatorSourceUrlGetArgs... threatIntelIndicatorSourceUrls) {
             return threatIntelIndicatorSourceUrls(List.of(threatIntelIndicatorSourceUrls));
         }
 
+        /**
+         * @param threatIntelIndicatorSources The source of the threat intelligence. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threatIntelIndicatorSources(@Nullable Output<List<InsightFiltersThreatIntelIndicatorSourceGetArgs>> threatIntelIndicatorSources) {
             $.threatIntelIndicatorSources = threatIntelIndicatorSources;
             return this;
         }
 
+        /**
+         * @param threatIntelIndicatorSources The source of the threat intelligence. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threatIntelIndicatorSources(List<InsightFiltersThreatIntelIndicatorSourceGetArgs> threatIntelIndicatorSources) {
             return threatIntelIndicatorSources(Output.of(threatIntelIndicatorSources));
         }
 
+        /**
+         * @param threatIntelIndicatorSources The source of the threat intelligence. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threatIntelIndicatorSources(InsightFiltersThreatIntelIndicatorSourceGetArgs... threatIntelIndicatorSources) {
             return threatIntelIndicatorSources(List.of(threatIntelIndicatorSources));
         }
 
+        /**
+         * @param threatIntelIndicatorTypes The type of a threat intelligence indicator. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threatIntelIndicatorTypes(@Nullable Output<List<InsightFiltersThreatIntelIndicatorTypeGetArgs>> threatIntelIndicatorTypes) {
             $.threatIntelIndicatorTypes = threatIntelIndicatorTypes;
             return this;
         }
 
+        /**
+         * @param threatIntelIndicatorTypes The type of a threat intelligence indicator. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threatIntelIndicatorTypes(List<InsightFiltersThreatIntelIndicatorTypeGetArgs> threatIntelIndicatorTypes) {
             return threatIntelIndicatorTypes(Output.of(threatIntelIndicatorTypes));
         }
 
+        /**
+         * @param threatIntelIndicatorTypes The type of a threat intelligence indicator. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threatIntelIndicatorTypes(InsightFiltersThreatIntelIndicatorTypeGetArgs... threatIntelIndicatorTypes) {
             return threatIntelIndicatorTypes(List.of(threatIntelIndicatorTypes));
         }
 
+        /**
+         * @param threatIntelIndicatorValues The value of a threat intelligence indicator. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threatIntelIndicatorValues(@Nullable Output<List<InsightFiltersThreatIntelIndicatorValueGetArgs>> threatIntelIndicatorValues) {
             $.threatIntelIndicatorValues = threatIntelIndicatorValues;
             return this;
         }
 
+        /**
+         * @param threatIntelIndicatorValues The value of a threat intelligence indicator. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threatIntelIndicatorValues(List<InsightFiltersThreatIntelIndicatorValueGetArgs> threatIntelIndicatorValues) {
             return threatIntelIndicatorValues(Output.of(threatIntelIndicatorValues));
         }
 
+        /**
+         * @param threatIntelIndicatorValues The value of a threat intelligence indicator. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threatIntelIndicatorValues(InsightFiltersThreatIntelIndicatorValueGetArgs... threatIntelIndicatorValues) {
             return threatIntelIndicatorValues(List.of(threatIntelIndicatorValues));
         }
 
+        /**
+         * @param titles A finding&#39;s title. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder titles(@Nullable Output<List<InsightFiltersTitleGetArgs>> titles) {
             $.titles = titles;
             return this;
         }
 
+        /**
+         * @param titles A finding&#39;s title. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder titles(List<InsightFiltersTitleGetArgs> titles) {
             return titles(Output.of(titles));
         }
 
+        /**
+         * @param titles A finding&#39;s title. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder titles(InsightFiltersTitleGetArgs... titles) {
             return titles(List.of(titles));
         }
 
+        /**
+         * @param types A finding type in the format of `namespace/category/classifier` that classifies a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder types(@Nullable Output<List<InsightFiltersTypeGetArgs>> types) {
             $.types = types;
             return this;
         }
 
+        /**
+         * @param types A finding type in the format of `namespace/category/classifier` that classifies a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder types(List<InsightFiltersTypeGetArgs> types) {
             return types(Output.of(types));
         }
 
+        /**
+         * @param types A finding type in the format of `namespace/category/classifier` that classifies a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder types(InsightFiltersTypeGetArgs... types) {
             return types(List.of(types));
         }
 
+        /**
+         * @param updatedAts An ISO8601-formatted timestamp that indicates when the security-findings provider last updated the finding record. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updatedAts(@Nullable Output<List<InsightFiltersUpdatedAtGetArgs>> updatedAts) {
             $.updatedAts = updatedAts;
             return this;
         }
 
+        /**
+         * @param updatedAts An ISO8601-formatted timestamp that indicates when the security-findings provider last updated the finding record. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updatedAts(List<InsightFiltersUpdatedAtGetArgs> updatedAts) {
             return updatedAts(Output.of(updatedAts));
         }
 
+        /**
+         * @param updatedAts An ISO8601-formatted timestamp that indicates when the security-findings provider last updated the finding record. See Date Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updatedAts(InsightFiltersUpdatedAtGetArgs... updatedAts) {
             return updatedAts(List.of(updatedAts));
         }
 
+        /**
+         * @param userDefinedValues A list of name/value string pairs associated with the finding. These are custom, user-defined fields added to a finding. See Map Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userDefinedValues(@Nullable Output<List<InsightFiltersUserDefinedValueGetArgs>> userDefinedValues) {
             $.userDefinedValues = userDefinedValues;
             return this;
         }
 
+        /**
+         * @param userDefinedValues A list of name/value string pairs associated with the finding. These are custom, user-defined fields added to a finding. See Map Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userDefinedValues(List<InsightFiltersUserDefinedValueGetArgs> userDefinedValues) {
             return userDefinedValues(Output.of(userDefinedValues));
         }
 
+        /**
+         * @param userDefinedValues A list of name/value string pairs associated with the finding. These are custom, user-defined fields added to a finding. See Map Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userDefinedValues(InsightFiltersUserDefinedValueGetArgs... userDefinedValues) {
             return userDefinedValues(List.of(userDefinedValues));
         }
 
+        /**
+         * @param verificationStates The veracity of a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verificationStates(@Nullable Output<List<InsightFiltersVerificationStateGetArgs>> verificationStates) {
             $.verificationStates = verificationStates;
             return this;
         }
 
+        /**
+         * @param verificationStates The veracity of a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verificationStates(List<InsightFiltersVerificationStateGetArgs> verificationStates) {
             return verificationStates(Output.of(verificationStates));
         }
 
+        /**
+         * @param verificationStates The veracity of a finding. See String Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verificationStates(InsightFiltersVerificationStateGetArgs... verificationStates) {
             return verificationStates(List.of(verificationStates));
         }
 
+        /**
+         * @param workflowStatuses The status of the investigation into a finding. See Workflow Status Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workflowStatuses(@Nullable Output<List<InsightFiltersWorkflowStatusGetArgs>> workflowStatuses) {
             $.workflowStatuses = workflowStatuses;
             return this;
         }
 
+        /**
+         * @param workflowStatuses The status of the investigation into a finding. See Workflow Status Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workflowStatuses(List<InsightFiltersWorkflowStatusGetArgs> workflowStatuses) {
             return workflowStatuses(Output.of(workflowStatuses));
         }
 
+        /**
+         * @param workflowStatuses The status of the investigation into a finding. See Workflow Status Filter below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workflowStatuses(InsightFiltersWorkflowStatusGetArgs... workflowStatuses) {
             return workflowStatuses(List.of(workflowStatuses));
         }

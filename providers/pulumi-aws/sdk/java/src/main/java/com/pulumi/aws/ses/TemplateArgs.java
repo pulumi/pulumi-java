@@ -22,6 +22,10 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="html")
     private @Nullable Output<String> html;
 
+    /**
+     * @return The HTML body of the email. Must be less than 500KB in size, including both the text and HTML parts.
+     * 
+     */
     public Optional<Output<String>> html() {
         return Optional.ofNullable(this.html);
     }
@@ -33,6 +37,10 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the template. Cannot exceed 64 characters. You will refer to this name when you send email.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -44,6 +52,10 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subject")
     private @Nullable Output<String> subject;
 
+    /**
+     * @return The subject line of the email.
+     * 
+     */
     public Optional<Output<String>> subject() {
         return Optional.ofNullable(this.subject);
     }
@@ -55,6 +67,10 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="text")
     private @Nullable Output<String> text;
 
+    /**
+     * @return The email body that will be visible to recipients whose email clients do not display HTML. Must be less than 500KB in size, including both the text and HTML parts.
+     * 
+     */
     public Optional<Output<String>> text() {
         return Optional.ofNullable(this.text);
     }
@@ -86,38 +102,86 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param html The HTML body of the email. Must be less than 500KB in size, including both the text and HTML parts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder html(@Nullable Output<String> html) {
             $.html = html;
             return this;
         }
 
+        /**
+         * @param html The HTML body of the email. Must be less than 500KB in size, including both the text and HTML parts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder html(String html) {
             return html(Output.of(html));
         }
 
+        /**
+         * @param name The name of the template. Cannot exceed 64 characters. You will refer to this name when you send email.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the template. Cannot exceed 64 characters. You will refer to this name when you send email.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param subject The subject line of the email.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(@Nullable Output<String> subject) {
             $.subject = subject;
             return this;
         }
 
+        /**
+         * @param subject The subject line of the email.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(String subject) {
             return subject(Output.of(subject));
         }
 
+        /**
+         * @param text The email body that will be visible to recipients whose email clients do not display HTML. Must be less than 500KB in size, including both the text and HTML parts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(@Nullable Output<String> text) {
             $.text = text;
             return this;
         }
 
+        /**
+         * @param text The email body that will be visible to recipients whose email clients do not display HTML. Must be less than 500KB in size, including both the text and HTML parts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String text) {
             return text(Output.of(text));
         }

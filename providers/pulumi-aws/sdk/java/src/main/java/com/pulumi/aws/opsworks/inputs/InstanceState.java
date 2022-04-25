@@ -27,6 +27,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="agentVersion")
     private @Nullable Output<String> agentVersion;
 
+    /**
+     * @return The AWS OpsWorks agent to install.  Defaults to `&#34;INHERIT&#34;`.
+     * 
+     */
     public Optional<Output<String>> agentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
@@ -38,6 +42,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="amiId")
     private @Nullable Output<String> amiId;
 
+    /**
+     * @return The AMI to use for the instance.  If an AMI is specified, `os` must be `&#34;Custom&#34;`.
+     * 
+     */
     public Optional<Output<String>> amiId() {
         return Optional.ofNullable(this.amiId);
     }
@@ -49,6 +57,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="architecture")
     private @Nullable Output<String> architecture;
 
+    /**
+     * @return Machine architecture for created instances.  Can be either `&#34;x86_64&#34;` (the default) or `&#34;i386&#34;`
+     * 
+     */
     public Optional<Output<String>> architecture() {
         return Optional.ofNullable(this.architecture);
     }
@@ -60,6 +72,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoScalingType")
     private @Nullable Output<String> autoScalingType;
 
+    /**
+     * @return Creates load-based or time-based instances.  If set, can be either: `&#34;load&#34;` or `&#34;timer&#34;`.
+     * 
+     */
     public Optional<Output<String>> autoScalingType() {
         return Optional.ofNullable(this.autoScalingType);
     }
@@ -72,6 +88,11 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZone")
     private @Nullable Output<String> availabilityZone;
 
+    /**
+     * @return Name of the availability zone where instances will be created
+     * by default.
+     * 
+     */
     public Optional<Output<String>> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
@@ -105,6 +126,11 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ebsBlockDevices")
     private @Nullable Output<List<InstanceEbsBlockDeviceGetArgs>> ebsBlockDevices;
 
+    /**
+     * @return Additional EBS block devices to attach to the
+     * instance.  See Block Devices below for details.
+     * 
+     */
     public Optional<Output<List<InstanceEbsBlockDeviceGetArgs>>> ebsBlockDevices() {
         return Optional.ofNullable(this.ebsBlockDevices);
     }
@@ -116,6 +142,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ebsOptimized")
     private @Nullable Output<Boolean> ebsOptimized;
 
+    /**
+     * @return If true, the launched EC2 instance will be EBS-optimized.
+     * 
+     */
     public Optional<Output<Boolean>> ebsOptimized() {
         return Optional.ofNullable(this.ebsOptimized);
     }
@@ -127,6 +157,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ec2InstanceId")
     private @Nullable Output<String> ec2InstanceId;
 
+    /**
+     * @return EC2 instance ID
+     * 
+     */
     public Optional<Output<String>> ec2InstanceId() {
         return Optional.ofNullable(this.ec2InstanceId);
     }
@@ -153,6 +187,11 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ephemeralBlockDevices")
     private @Nullable Output<List<InstanceEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
 
+    /**
+     * @return Customize Ephemeral (also known as
+     * &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
+     * 
+     */
     public Optional<Output<List<InstanceEphemeralBlockDeviceGetArgs>>> ephemeralBlockDevices() {
         return Optional.ofNullable(this.ephemeralBlockDevices);
     }
@@ -164,6 +203,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostname")
     private @Nullable Output<String> hostname;
 
+    /**
+     * @return The instance&#39;s host name.
+     * 
+     */
     public Optional<Output<String>> hostname() {
         return Optional.ofNullable(this.hostname);
     }
@@ -182,6 +225,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="installUpdatesOnBoot")
     private @Nullable Output<Boolean> installUpdatesOnBoot;
 
+    /**
+     * @return Controls where to install OS and package updates when the instance boots.  Defaults to `true`.
+     * 
+     */
     public Optional<Output<Boolean>> installUpdatesOnBoot() {
         return Optional.ofNullable(this.installUpdatesOnBoot);
     }
@@ -200,6 +247,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
+    /**
+     * @return The type of instance to start
+     * 
+     */
     public Optional<Output<String>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -218,6 +269,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="layerIds")
     private @Nullable Output<List<String>> layerIds;
 
+    /**
+     * @return The ids of the layers the instance will belong to.
+     * 
+     */
     public Optional<Output<List<String>>> layerIds() {
         return Optional.ofNullable(this.layerIds);
     }
@@ -229,6 +284,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="os")
     private @Nullable Output<String> os;
 
+    /**
+     * @return Name of operating system that will be installed.
+     * 
+     */
     public Optional<Output<String>> os() {
         return Optional.ofNullable(this.os);
     }
@@ -249,6 +308,12 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateDns")
     private @Nullable Output<String> privateDns;
 
+    /**
+     * @return The private DNS name assigned to the instance. Can only be
+     * used inside the Amazon EC2, and only available if you&#39;ve enabled DNS hostnames
+     * for your VPC
+     * 
+     */
     public Optional<Output<String>> privateDns() {
         return Optional.ofNullable(this.privateDns);
     }
@@ -260,6 +325,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateIp")
     private @Nullable Output<String> privateIp;
 
+    /**
+     * @return The private IP address assigned to the instance
+     * 
+     */
     public Optional<Output<String>> privateIp() {
         return Optional.ofNullable(this.privateIp);
     }
@@ -272,6 +341,11 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicDns")
     private @Nullable Output<String> publicDns;
 
+    /**
+     * @return The public DNS name assigned to the instance. For EC2-VPC, this
+     * is only available if you&#39;ve enabled DNS hostnames for your VPC
+     * 
+     */
     public Optional<Output<String>> publicDns() {
         return Optional.ofNullable(this.publicDns);
     }
@@ -283,6 +357,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicIp")
     private @Nullable Output<String> publicIp;
 
+    /**
+     * @return The public IP address assigned to the instance, if applicable.
+     * 
+     */
     public Optional<Output<String>> publicIp() {
         return Optional.ofNullable(this.publicIp);
     }
@@ -330,6 +408,11 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="rootBlockDevices")
     private @Nullable Output<List<InstanceRootBlockDeviceGetArgs>> rootBlockDevices;
 
+    /**
+     * @return Customize details about the root block
+     * device of the instance. See Block Devices below for details.
+     * 
+     */
     public Optional<Output<List<InstanceRootBlockDeviceGetArgs>>> rootBlockDevices() {
         return Optional.ofNullable(this.rootBlockDevices);
     }
@@ -341,6 +424,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="rootDeviceType")
     private @Nullable Output<String> rootDeviceType;
 
+    /**
+     * @return Name of the type of root device instances will have by default.  Can be either `&#34;ebs&#34;` or `&#34;instance-store&#34;`
+     * 
+     */
     public Optional<Output<String>> rootDeviceType() {
         return Optional.ofNullable(this.rootDeviceType);
     }
@@ -359,6 +446,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityGroupIds")
     private @Nullable Output<List<String>> securityGroupIds;
 
+    /**
+     * @return The associated security groups.
+     * 
+     */
     public Optional<Output<List<String>>> securityGroupIds() {
         return Optional.ofNullable(this.securityGroupIds);
     }
@@ -384,6 +475,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sshKeyName")
     private @Nullable Output<String> sshKeyName;
 
+    /**
+     * @return Name of the SSH keypair that instances will have by default.
+     * 
+     */
     public Optional<Output<String>> sshKeyName() {
         return Optional.ofNullable(this.sshKeyName);
     }
@@ -395,6 +490,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="stackId")
     private @Nullable Output<String> stackId;
 
+    /**
+     * @return The id of the stack the instance will belong to.
+     * 
+     */
     public Optional<Output<String>> stackId() {
         return Optional.ofNullable(this.stackId);
     }
@@ -406,6 +505,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<String> state;
 
+    /**
+     * @return The desired state of the instance.  Can be either `&#34;running&#34;` or `&#34;stopped&#34;`.
+     * 
+     */
     public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -424,6 +527,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetId")
     private @Nullable Output<String> subnetId;
 
+    /**
+     * @return Subnet ID to attach to
+     * 
+     */
     public Optional<Output<String>> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
@@ -435,6 +542,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tenancy")
     private @Nullable Output<String> tenancy;
 
+    /**
+     * @return Instance tenancy to use. Can be one of `&#34;default&#34;`, `&#34;dedicated&#34;` or `&#34;host&#34;`
+     * 
+     */
     public Optional<Output<String>> tenancy() {
         return Optional.ofNullable(this.tenancy);
     }
@@ -447,6 +558,11 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualizationType")
     private @Nullable Output<String> virtualizationType;
 
+    /**
+     * @return Keyword to choose what virtualization mode created instances
+     * will use. Can be either `&#34;paravirtual&#34;` or `&#34;hvm&#34;`.
+     * 
+     */
     public Optional<Output<String>> virtualizationType() {
         return Optional.ofNullable(this.virtualizationType);
     }
@@ -519,47 +635,109 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
             $ = new InstanceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentVersion The AWS OpsWorks agent to install.  Defaults to `&#34;INHERIT&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentVersion(@Nullable Output<String> agentVersion) {
             $.agentVersion = agentVersion;
             return this;
         }
 
+        /**
+         * @param agentVersion The AWS OpsWorks agent to install.  Defaults to `&#34;INHERIT&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentVersion(String agentVersion) {
             return agentVersion(Output.of(agentVersion));
         }
 
+        /**
+         * @param amiId The AMI to use for the instance.  If an AMI is specified, `os` must be `&#34;Custom&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amiId(@Nullable Output<String> amiId) {
             $.amiId = amiId;
             return this;
         }
 
+        /**
+         * @param amiId The AMI to use for the instance.  If an AMI is specified, `os` must be `&#34;Custom&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amiId(String amiId) {
             return amiId(Output.of(amiId));
         }
 
+        /**
+         * @param architecture Machine architecture for created instances.  Can be either `&#34;x86_64&#34;` (the default) or `&#34;i386&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder architecture(@Nullable Output<String> architecture) {
             $.architecture = architecture;
             return this;
         }
 
+        /**
+         * @param architecture Machine architecture for created instances.  Can be either `&#34;x86_64&#34;` (the default) or `&#34;i386&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder architecture(String architecture) {
             return architecture(Output.of(architecture));
         }
 
+        /**
+         * @param autoScalingType Creates load-based or time-based instances.  If set, can be either: `&#34;load&#34;` or `&#34;timer&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoScalingType(@Nullable Output<String> autoScalingType) {
             $.autoScalingType = autoScalingType;
             return this;
         }
 
+        /**
+         * @param autoScalingType Creates load-based or time-based instances.  If set, can be either: `&#34;load&#34;` or `&#34;timer&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoScalingType(String autoScalingType) {
             return autoScalingType(Output.of(autoScalingType));
         }
 
+        /**
+         * @param availabilityZone Name of the availability zone where instances will be created
+         * by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             $.availabilityZone = availabilityZone;
             return this;
         }
 
+        /**
+         * @param availabilityZone Name of the availability zone where instances will be created
+         * by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(String availabilityZone) {
             return availabilityZone(Output.of(availabilityZone));
         }
@@ -591,33 +769,78 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
             return deleteEip(Output.of(deleteEip));
         }
 
+        /**
+         * @param ebsBlockDevices Additional EBS block devices to attach to the
+         * instance.  See Block Devices below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsBlockDevices(@Nullable Output<List<InstanceEbsBlockDeviceGetArgs>> ebsBlockDevices) {
             $.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
 
+        /**
+         * @param ebsBlockDevices Additional EBS block devices to attach to the
+         * instance.  See Block Devices below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsBlockDevices(List<InstanceEbsBlockDeviceGetArgs> ebsBlockDevices) {
             return ebsBlockDevices(Output.of(ebsBlockDevices));
         }
 
+        /**
+         * @param ebsBlockDevices Additional EBS block devices to attach to the
+         * instance.  See Block Devices below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsBlockDevices(InstanceEbsBlockDeviceGetArgs... ebsBlockDevices) {
             return ebsBlockDevices(List.of(ebsBlockDevices));
         }
 
+        /**
+         * @param ebsOptimized If true, the launched EC2 instance will be EBS-optimized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsOptimized(@Nullable Output<Boolean> ebsOptimized) {
             $.ebsOptimized = ebsOptimized;
             return this;
         }
 
+        /**
+         * @param ebsOptimized If true, the launched EC2 instance will be EBS-optimized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsOptimized(Boolean ebsOptimized) {
             return ebsOptimized(Output.of(ebsOptimized));
         }
 
+        /**
+         * @param ec2InstanceId EC2 instance ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder ec2InstanceId(@Nullable Output<String> ec2InstanceId) {
             $.ec2InstanceId = ec2InstanceId;
             return this;
         }
 
+        /**
+         * @param ec2InstanceId EC2 instance ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder ec2InstanceId(String ec2InstanceId) {
             return ec2InstanceId(Output.of(ec2InstanceId));
         }
@@ -640,24 +863,57 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
             return elasticIp(Output.of(elasticIp));
         }
 
+        /**
+         * @param ephemeralBlockDevices Customize Ephemeral (also known as
+         * &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ephemeralBlockDevices(@Nullable Output<List<InstanceEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices) {
             $.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
 
+        /**
+         * @param ephemeralBlockDevices Customize Ephemeral (also known as
+         * &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ephemeralBlockDevices(List<InstanceEphemeralBlockDeviceGetArgs> ephemeralBlockDevices) {
             return ephemeralBlockDevices(Output.of(ephemeralBlockDevices));
         }
 
+        /**
+         * @param ephemeralBlockDevices Customize Ephemeral (also known as
+         * &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ephemeralBlockDevices(InstanceEphemeralBlockDeviceGetArgs... ephemeralBlockDevices) {
             return ephemeralBlockDevices(List.of(ephemeralBlockDevices));
         }
 
+        /**
+         * @param hostname The instance&#39;s host name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(@Nullable Output<String> hostname) {
             $.hostname = hostname;
             return this;
         }
 
+        /**
+         * @param hostname The instance&#39;s host name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(String hostname) {
             return hostname(Output.of(hostname));
         }
@@ -671,11 +927,23 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
             return infrastructureClass(Output.of(infrastructureClass));
         }
 
+        /**
+         * @param installUpdatesOnBoot Controls where to install OS and package updates when the instance boots.  Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder installUpdatesOnBoot(@Nullable Output<Boolean> installUpdatesOnBoot) {
             $.installUpdatesOnBoot = installUpdatesOnBoot;
             return this;
         }
 
+        /**
+         * @param installUpdatesOnBoot Controls where to install OS and package updates when the instance boots.  Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder installUpdatesOnBoot(Boolean installUpdatesOnBoot) {
             return installUpdatesOnBoot(Output.of(installUpdatesOnBoot));
         }
@@ -689,11 +957,23 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
             return instanceProfileArn(Output.of(instanceProfileArn));
         }
 
+        /**
+         * @param instanceType The type of instance to start
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType The type of instance to start
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
@@ -707,24 +987,54 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
             return lastServiceErrorId(Output.of(lastServiceErrorId));
         }
 
+        /**
+         * @param layerIds The ids of the layers the instance will belong to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layerIds(@Nullable Output<List<String>> layerIds) {
             $.layerIds = layerIds;
             return this;
         }
 
+        /**
+         * @param layerIds The ids of the layers the instance will belong to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layerIds(List<String> layerIds) {
             return layerIds(Output.of(layerIds));
         }
 
+        /**
+         * @param layerIds The ids of the layers the instance will belong to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layerIds(String... layerIds) {
             return layerIds(List.of(layerIds));
         }
 
+        /**
+         * @param os Name of operating system that will be installed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder os(@Nullable Output<String> os) {
             $.os = os;
             return this;
         }
 
+        /**
+         * @param os Name of operating system that will be installed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder os(String os) {
             return os(Output.of(os));
         }
@@ -738,38 +1048,92 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
             return platform(Output.of(platform));
         }
 
+        /**
+         * @param privateDns The private DNS name assigned to the instance. Can only be
+         * used inside the Amazon EC2, and only available if you&#39;ve enabled DNS hostnames
+         * for your VPC
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateDns(@Nullable Output<String> privateDns) {
             $.privateDns = privateDns;
             return this;
         }
 
+        /**
+         * @param privateDns The private DNS name assigned to the instance. Can only be
+         * used inside the Amazon EC2, and only available if you&#39;ve enabled DNS hostnames
+         * for your VPC
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateDns(String privateDns) {
             return privateDns(Output.of(privateDns));
         }
 
+        /**
+         * @param privateIp The private IP address assigned to the instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIp(@Nullable Output<String> privateIp) {
             $.privateIp = privateIp;
             return this;
         }
 
+        /**
+         * @param privateIp The private IP address assigned to the instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIp(String privateIp) {
             return privateIp(Output.of(privateIp));
         }
 
+        /**
+         * @param publicDns The public DNS name assigned to the instance. For EC2-VPC, this
+         * is only available if you&#39;ve enabled DNS hostnames for your VPC
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicDns(@Nullable Output<String> publicDns) {
             $.publicDns = publicDns;
             return this;
         }
 
+        /**
+         * @param publicDns The public DNS name assigned to the instance. For EC2-VPC, this
+         * is only available if you&#39;ve enabled DNS hostnames for your VPC
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicDns(String publicDns) {
             return publicDns(Output.of(publicDns));
         }
 
+        /**
+         * @param publicIp The public IP address assigned to the instance, if applicable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIp(@Nullable Output<String> publicIp) {
             $.publicIp = publicIp;
             return this;
         }
 
+        /**
+         * @param publicIp The public IP address assigned to the instance, if applicable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIp(String publicIp) {
             return publicIp(Output.of(publicIp));
         }
@@ -819,24 +1183,57 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
             return reportedOsVersion(Output.of(reportedOsVersion));
         }
 
+        /**
+         * @param rootBlockDevices Customize details about the root block
+         * device of the instance. See Block Devices below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootBlockDevices(@Nullable Output<List<InstanceRootBlockDeviceGetArgs>> rootBlockDevices) {
             $.rootBlockDevices = rootBlockDevices;
             return this;
         }
 
+        /**
+         * @param rootBlockDevices Customize details about the root block
+         * device of the instance. See Block Devices below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootBlockDevices(List<InstanceRootBlockDeviceGetArgs> rootBlockDevices) {
             return rootBlockDevices(Output.of(rootBlockDevices));
         }
 
+        /**
+         * @param rootBlockDevices Customize details about the root block
+         * device of the instance. See Block Devices below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootBlockDevices(InstanceRootBlockDeviceGetArgs... rootBlockDevices) {
             return rootBlockDevices(List.of(rootBlockDevices));
         }
 
+        /**
+         * @param rootDeviceType Name of the type of root device instances will have by default.  Can be either `&#34;ebs&#34;` or `&#34;instance-store&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootDeviceType(@Nullable Output<String> rootDeviceType) {
             $.rootDeviceType = rootDeviceType;
             return this;
         }
 
+        /**
+         * @param rootDeviceType Name of the type of root device instances will have by default.  Can be either `&#34;ebs&#34;` or `&#34;instance-store&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootDeviceType(String rootDeviceType) {
             return rootDeviceType(Output.of(rootDeviceType));
         }
@@ -850,15 +1247,33 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
             return rootDeviceVolumeId(Output.of(rootDeviceVolumeId));
         }
 
+        /**
+         * @param securityGroupIds The associated security groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             $.securityGroupIds = securityGroupIds;
             return this;
         }
 
+        /**
+         * @param securityGroupIds The associated security groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(List<String> securityGroupIds) {
             return securityGroupIds(Output.of(securityGroupIds));
         }
 
+        /**
+         * @param securityGroupIds The associated security groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
@@ -881,29 +1296,65 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
             return sshHostRsaKeyFingerprint(Output.of(sshHostRsaKeyFingerprint));
         }
 
+        /**
+         * @param sshKeyName Name of the SSH keypair that instances will have by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshKeyName(@Nullable Output<String> sshKeyName) {
             $.sshKeyName = sshKeyName;
             return this;
         }
 
+        /**
+         * @param sshKeyName Name of the SSH keypair that instances will have by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshKeyName(String sshKeyName) {
             return sshKeyName(Output.of(sshKeyName));
         }
 
+        /**
+         * @param stackId The id of the stack the instance will belong to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackId(@Nullable Output<String> stackId) {
             $.stackId = stackId;
             return this;
         }
 
+        /**
+         * @param stackId The id of the stack the instance will belong to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackId(String stackId) {
             return stackId(Output.of(stackId));
         }
 
+        /**
+         * @param state The desired state of the instance.  Can be either `&#34;running&#34;` or `&#34;stopped&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The desired state of the instance.  Can be either `&#34;running&#34;` or `&#34;stopped&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Output.of(state));
         }
@@ -917,29 +1368,67 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
             return status(Output.of(status));
         }
 
+        /**
+         * @param subnetId Subnet ID to attach to
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(@Nullable Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param subnetId Subnet ID to attach to
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }
 
+        /**
+         * @param tenancy Instance tenancy to use. Can be one of `&#34;default&#34;`, `&#34;dedicated&#34;` or `&#34;host&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenancy(@Nullable Output<String> tenancy) {
             $.tenancy = tenancy;
             return this;
         }
 
+        /**
+         * @param tenancy Instance tenancy to use. Can be one of `&#34;default&#34;`, `&#34;dedicated&#34;` or `&#34;host&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenancy(String tenancy) {
             return tenancy(Output.of(tenancy));
         }
 
+        /**
+         * @param virtualizationType Keyword to choose what virtualization mode created instances
+         * will use. Can be either `&#34;paravirtual&#34;` or `&#34;hvm&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualizationType(@Nullable Output<String> virtualizationType) {
             $.virtualizationType = virtualizationType;
             return this;
         }
 
+        /**
+         * @param virtualizationType Keyword to choose what virtualization mode created instances
+         * will use. Can be either `&#34;paravirtual&#34;` or `&#34;hvm&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualizationType(String virtualizationType) {
             return virtualizationType(Output.of(virtualizationType));
         }

@@ -24,6 +24,10 @@ public final class RegexMatchSetState extends com.pulumi.resources.ResourceArgs 
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN)
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -35,6 +39,10 @@ public final class RegexMatchSetState extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name or description of the Regex Match Set.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -46,6 +54,10 @@ public final class RegexMatchSetState extends com.pulumi.resources.ResourceArgs 
     @Import(name="regexMatchTuples")
     private @Nullable Output<List<RegexMatchSetRegexMatchTupleGetArgs>> regexMatchTuples;
 
+    /**
+     * @return The regular expression pattern that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings. See below.
+     * 
+     */
     public Optional<Output<List<RegexMatchSetRegexMatchTupleGetArgs>>> regexMatchTuples() {
         return Optional.ofNullable(this.regexMatchTuples);
     }
@@ -76,33 +88,75 @@ public final class RegexMatchSetState extends com.pulumi.resources.ResourceArgs 
             $ = new RegexMatchSetState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN)
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN)
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param name The name or description of the Regex Match Set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name or description of the Regex Match Set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param regexMatchTuples The regular expression pattern that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regexMatchTuples(@Nullable Output<List<RegexMatchSetRegexMatchTupleGetArgs>> regexMatchTuples) {
             $.regexMatchTuples = regexMatchTuples;
             return this;
         }
 
+        /**
+         * @param regexMatchTuples The regular expression pattern that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regexMatchTuples(List<RegexMatchSetRegexMatchTupleGetArgs> regexMatchTuples) {
             return regexMatchTuples(Output.of(regexMatchTuples));
         }
 
+        /**
+         * @param regexMatchTuples The regular expression pattern that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regexMatchTuples(RegexMatchSetRegexMatchTupleGetArgs... regexMatchTuples) {
             return regexMatchTuples(List.of(regexMatchTuples));
         }

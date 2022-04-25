@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ScheduledActionTargetAction {
     /**
-     * An action that runs a `PauseCluster` API operation. Documented below.
+     * @return An action that runs a `PauseCluster` API operation. Documented below.
      * 
      */
     private final @Nullable ScheduledActionTargetActionPauseCluster pauseCluster;
     /**
-     * An action that runs a `ResizeCluster` API operation. Documented below.
+     * @return An action that runs a `ResizeCluster` API operation. Documented below.
      * 
      */
     private final @Nullable ScheduledActionTargetActionResizeCluster resizeCluster;
     /**
-     * An action that runs a `ResumeCluster` API operation. Documented below.
+     * @return An action that runs a `ResumeCluster` API operation. Documented below.
      * 
      */
     private final @Nullable ScheduledActionTargetActionResumeCluster resumeCluster;
@@ -40,23 +40,23 @@ public final class ScheduledActionTargetAction {
     }
 
     /**
-     * An action that runs a `PauseCluster` API operation. Documented below.
+     * @return An action that runs a `PauseCluster` API operation. Documented below.
      * 
-    */
+     */
     public Optional<ScheduledActionTargetActionPauseCluster> pauseCluster() {
         return Optional.ofNullable(this.pauseCluster);
     }
     /**
-     * An action that runs a `ResizeCluster` API operation. Documented below.
+     * @return An action that runs a `ResizeCluster` API operation. Documented below.
      * 
-    */
+     */
     public Optional<ScheduledActionTargetActionResizeCluster> resizeCluster() {
         return Optional.ofNullable(this.resizeCluster);
     }
     /**
-     * An action that runs a `ResumeCluster` API operation. Documented below.
+     * @return An action that runs a `ResumeCluster` API operation. Documented below.
      * 
-    */
+     */
     public Optional<ScheduledActionTargetActionResumeCluster> resumeCluster() {
         return Optional.ofNullable(this.resumeCluster);
     }

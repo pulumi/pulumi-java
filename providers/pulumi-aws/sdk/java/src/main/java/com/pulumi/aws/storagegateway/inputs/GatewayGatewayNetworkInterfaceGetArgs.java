@@ -22,6 +22,10 @@ public final class GatewayGatewayNetworkInterfaceGetArgs extends com.pulumi.reso
     @Import(name="ipv4Address")
     private @Nullable Output<String> ipv4Address;
 
+    /**
+     * @return The Internet Protocol version 4 (IPv4) address of the interface.
+     * 
+     */
     public Optional<Output<String>> ipv4Address() {
         return Optional.ofNullable(this.ipv4Address);
     }
@@ -50,11 +54,23 @@ public final class GatewayGatewayNetworkInterfaceGetArgs extends com.pulumi.reso
             $ = new GatewayGatewayNetworkInterfaceGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipv4Address The Internet Protocol version 4 (IPv4) address of the interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4Address(@Nullable Output<String> ipv4Address) {
             $.ipv4Address = ipv4Address;
             return this;
         }
 
+        /**
+         * @param ipv4Address The Internet Protocol version 4 (IPv4) address of the interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4Address(String ipv4Address) {
             return ipv4Address(Output.of(ipv4Address));
         }

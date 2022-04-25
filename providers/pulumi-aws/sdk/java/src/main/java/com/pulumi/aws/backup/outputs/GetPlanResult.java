@@ -11,28 +11,28 @@ import java.util.Objects;
 @CustomType
 public final class GetPlanResult {
     /**
-     * The ARN of the backup plan.
+     * @return The ARN of the backup plan.
      * 
      */
     private final String arn;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The display name of a backup plan.
+     * @return The display name of a backup plan.
      * 
      */
     private final String name;
     private final String planId;
     /**
-     * Metadata that you can assign to help organize the plans you create.
+     * @return Metadata that you can assign to help organize the plans you create.
      * 
      */
     private final Map<String,String> tags;
     /**
-     * Unique, randomly generated, Unicode, UTF-8 encoded string that serves as the version ID of the backup plan.
+     * @return Unique, randomly generated, Unicode, UTF-8 encoded string that serves as the version ID of the backup plan.
      * 
      */
     private final String version;
@@ -54,23 +54,23 @@ public final class GetPlanResult {
     }
 
     /**
-     * The ARN of the backup plan.
+     * @return The ARN of the backup plan.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The display name of a backup plan.
+     * @return The display name of a backup plan.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
@@ -78,16 +78,16 @@ public final class GetPlanResult {
         return this.planId;
     }
     /**
-     * Metadata that you can assign to help organize the plans you create.
+     * @return Metadata that you can assign to help organize the plans you create.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
     /**
-     * Unique, randomly generated, Unicode, UTF-8 encoded string that serves as the version ID of the backup plan.
+     * @return Unique, randomly generated, Unicode, UTF-8 encoded string that serves as the version ID of the backup plan.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

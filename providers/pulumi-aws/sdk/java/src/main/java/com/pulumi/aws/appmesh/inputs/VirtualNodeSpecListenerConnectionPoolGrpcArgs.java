@@ -20,6 +20,10 @@ public final class VirtualNodeSpecListenerConnectionPoolGrpcArgs extends com.pul
     @Import(name="maxRequests", required=true)
     private Output<Integer> maxRequests;
 
+    /**
+     * @return Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of `1`.
+     * 
+     */
     public Output<Integer> maxRequests() {
         return this.maxRequests;
     }
@@ -48,11 +52,23 @@ public final class VirtualNodeSpecListenerConnectionPoolGrpcArgs extends com.pul
             $ = new VirtualNodeSpecListenerConnectionPoolGrpcArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxRequests Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of `1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRequests(Output<Integer> maxRequests) {
             $.maxRequests = maxRequests;
             return this;
         }
 
+        /**
+         * @param maxRequests Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of `1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRequests(Integer maxRequests) {
             return maxRequests(Output.of(maxRequests));
         }

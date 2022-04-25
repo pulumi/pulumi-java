@@ -20,6 +20,10 @@ public final class ClassifierXmlClassifierGetArgs extends com.pulumi.resources.R
     @Import(name="classification", required=true)
     private Output<String> classification;
 
+    /**
+     * @return An identifier of the data format that the classifier matches.
+     * 
+     */
     public Output<String> classification() {
         return this.classification;
     }
@@ -31,6 +35,10 @@ public final class ClassifierXmlClassifierGetArgs extends com.pulumi.resources.R
     @Import(name="rowTag", required=true)
     private Output<String> rowTag;
 
+    /**
+     * @return The XML tag designating the element that contains each record in an XML document being parsed. Note that this cannot identify a self-closing element (closed by `/&gt;`). An empty row element that contains only attributes can be parsed as long as it ends with a closing tag (for example, `&lt;row item_a=&#34;A&#34; item_b=&#34;B&#34;&gt;&lt;/row&gt;` is okay, but `&lt;row item_a=&#34;A&#34; item_b=&#34;B&#34; /&gt;` is not).
+     * 
+     */
     public Output<String> rowTag() {
         return this.rowTag;
     }
@@ -60,20 +68,44 @@ public final class ClassifierXmlClassifierGetArgs extends com.pulumi.resources.R
             $ = new ClassifierXmlClassifierGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param classification An identifier of the data format that the classifier matches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder classification(Output<String> classification) {
             $.classification = classification;
             return this;
         }
 
+        /**
+         * @param classification An identifier of the data format that the classifier matches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder classification(String classification) {
             return classification(Output.of(classification));
         }
 
+        /**
+         * @param rowTag The XML tag designating the element that contains each record in an XML document being parsed. Note that this cannot identify a self-closing element (closed by `/&gt;`). An empty row element that contains only attributes can be parsed as long as it ends with a closing tag (for example, `&lt;row item_a=&#34;A&#34; item_b=&#34;B&#34;&gt;&lt;/row&gt;` is okay, but `&lt;row item_a=&#34;A&#34; item_b=&#34;B&#34; /&gt;` is not).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rowTag(Output<String> rowTag) {
             $.rowTag = rowTag;
             return this;
         }
 
+        /**
+         * @param rowTag The XML tag designating the element that contains each record in an XML document being parsed. Note that this cannot identify a self-closing element (closed by `/&gt;`). An empty row element that contains only attributes can be parsed as long as it ends with a closing tag (for example, `&lt;row item_a=&#34;A&#34; item_b=&#34;B&#34;&gt;&lt;/row&gt;` is okay, but `&lt;row item_a=&#34;A&#34; item_b=&#34;B&#34; /&gt;` is not).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rowTag(String rowTag) {
             return rowTag(Output.of(rowTag));
         }

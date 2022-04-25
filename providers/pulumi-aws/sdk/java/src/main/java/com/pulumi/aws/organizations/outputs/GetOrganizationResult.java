@@ -14,57 +14,57 @@ import java.util.Objects;
 @CustomType
 public final class GetOrganizationResult {
     /**
-     * List of organization accounts including the master account. For a list excluding the master account, see the `non_master_accounts` attribute. All elements have these attributes:
+     * @return List of organization accounts including the master account. For a list excluding the master account, see the `non_master_accounts` attribute. All elements have these attributes:
      * 
      */
     private final List<GetOrganizationAccount> accounts;
     /**
-     * ARN of the root
+     * @return ARN of the root
      * 
      */
     private final String arn;
     /**
-     * A list of AWS service principal names that have integration enabled with your organization. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
+     * @return A list of AWS service principal names that have integration enabled with your organization. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
      * 
      */
     private final List<String> awsServiceAccessPrincipals;
     /**
-     * A list of Organizations policy types that are enabled in the Organization Root. Organization must have `feature_set` set to `ALL`. For additional information about valid policy types (e.g., `SERVICE_CONTROL_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
+     * @return A list of Organizations policy types that are enabled in the Organization Root. Organization must have `feature_set` set to `ALL`. For additional information about valid policy types (e.g., `SERVICE_CONTROL_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
      * 
      */
     private final List<String> enabledPolicyTypes;
     /**
-     * The FeatureSet of the organization.
+     * @return The FeatureSet of the organization.
      * 
      */
     private final String featureSet;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The Amazon Resource Name (ARN) of the account that is designated as the master account for the organization.
+     * @return The Amazon Resource Name (ARN) of the account that is designated as the master account for the organization.
      * 
      */
     private final String masterAccountArn;
     /**
-     * The email address that is associated with the AWS account that is designated as the master account for the organization.
+     * @return The email address that is associated with the AWS account that is designated as the master account for the organization.
      * 
      */
     private final String masterAccountEmail;
     /**
-     * The unique identifier (ID) of the master account of an organization.
+     * @return The unique identifier (ID) of the master account of an organization.
      * 
      */
     private final String masterAccountId;
     /**
-     * List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
+     * @return List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
      * 
      */
     private final List<GetOrganizationNonMasterAccount> nonMasterAccounts;
     /**
-     * List of organization roots. All elements have these attributes:
+     * @return List of organization roots. All elements have these attributes:
      * 
      */
     private final List<GetOrganizationRoot> roots;
@@ -96,79 +96,79 @@ public final class GetOrganizationResult {
     }
 
     /**
-     * List of organization accounts including the master account. For a list excluding the master account, see the `non_master_accounts` attribute. All elements have these attributes:
+     * @return List of organization accounts including the master account. For a list excluding the master account, see the `non_master_accounts` attribute. All elements have these attributes:
      * 
-    */
+     */
     public List<GetOrganizationAccount> accounts() {
         return this.accounts;
     }
     /**
-     * ARN of the root
+     * @return ARN of the root
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * A list of AWS service principal names that have integration enabled with your organization. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
+     * @return A list of AWS service principal names that have integration enabled with your organization. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
      * 
-    */
+     */
     public List<String> awsServiceAccessPrincipals() {
         return this.awsServiceAccessPrincipals;
     }
     /**
-     * A list of Organizations policy types that are enabled in the Organization Root. Organization must have `feature_set` set to `ALL`. For additional information about valid policy types (e.g., `SERVICE_CONTROL_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
+     * @return A list of Organizations policy types that are enabled in the Organization Root. Organization must have `feature_set` set to `ALL`. For additional information about valid policy types (e.g., `SERVICE_CONTROL_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
      * 
-    */
+     */
     public List<String> enabledPolicyTypes() {
         return this.enabledPolicyTypes;
     }
     /**
-     * The FeatureSet of the organization.
+     * @return The FeatureSet of the organization.
      * 
-    */
+     */
     public String featureSet() {
         return this.featureSet;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The Amazon Resource Name (ARN) of the account that is designated as the master account for the organization.
+     * @return The Amazon Resource Name (ARN) of the account that is designated as the master account for the organization.
      * 
-    */
+     */
     public String masterAccountArn() {
         return this.masterAccountArn;
     }
     /**
-     * The email address that is associated with the AWS account that is designated as the master account for the organization.
+     * @return The email address that is associated with the AWS account that is designated as the master account for the organization.
      * 
-    */
+     */
     public String masterAccountEmail() {
         return this.masterAccountEmail;
     }
     /**
-     * The unique identifier (ID) of the master account of an organization.
+     * @return The unique identifier (ID) of the master account of an organization.
      * 
-    */
+     */
     public String masterAccountId() {
         return this.masterAccountId;
     }
     /**
-     * List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
+     * @return List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
      * 
-    */
+     */
     public List<GetOrganizationNonMasterAccount> nonMasterAccounts() {
         return this.nonMasterAccounts;
     }
     /**
-     * List of organization roots. All elements have these attributes:
+     * @return List of organization roots. All elements have these attributes:
      * 
-    */
+     */
     public List<GetOrganizationRoot> roots() {
         return this.roots;
     }

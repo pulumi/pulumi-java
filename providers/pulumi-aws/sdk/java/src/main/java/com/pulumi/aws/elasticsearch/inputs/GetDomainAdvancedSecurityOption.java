@@ -19,6 +19,10 @@ public final class GetDomainAdvancedSecurityOption extends com.pulumi.resources.
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whether node to node encryption is enabled.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -30,6 +34,10 @@ public final class GetDomainAdvancedSecurityOption extends com.pulumi.resources.
     @Import(name="internalUserDatabaseEnabled", required=true)
     private Boolean internalUserDatabaseEnabled;
 
+    /**
+     * @return Whether the internal user database is enabled.
+     * 
+     */
     public Boolean internalUserDatabaseEnabled() {
         return this.internalUserDatabaseEnabled;
     }
@@ -59,11 +67,23 @@ public final class GetDomainAdvancedSecurityOption extends com.pulumi.resources.
             $ = new GetDomainAdvancedSecurityOption(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether node to node encryption is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param internalUserDatabaseEnabled Whether the internal user database is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalUserDatabaseEnabled(Boolean internalUserDatabaseEnabled) {
             $.internalUserDatabaseEnabled = internalUserDatabaseEnabled;
             return this;

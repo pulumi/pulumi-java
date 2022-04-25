@@ -21,6 +21,10 @@ public final class GetVirtualServiceSpecProvider extends com.pulumi.resources.In
     @Import(name="virtualNodes", required=true)
     private List<GetVirtualServiceSpecProviderVirtualNode> virtualNodes;
 
+    /**
+     * @return The virtual node associated with the virtual service.
+     * 
+     */
     public List<GetVirtualServiceSpecProviderVirtualNode> virtualNodes() {
         return this.virtualNodes;
     }
@@ -32,6 +36,10 @@ public final class GetVirtualServiceSpecProvider extends com.pulumi.resources.In
     @Import(name="virtualRouters", required=true)
     private List<GetVirtualServiceSpecProviderVirtualRouter> virtualRouters;
 
+    /**
+     * @return The virtual router associated with the virtual service.
+     * 
+     */
     public List<GetVirtualServiceSpecProviderVirtualRouter> virtualRouters() {
         return this.virtualRouters;
     }
@@ -61,20 +69,44 @@ public final class GetVirtualServiceSpecProvider extends com.pulumi.resources.In
             $ = new GetVirtualServiceSpecProvider(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param virtualNodes The virtual node associated with the virtual service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNodes(List<GetVirtualServiceSpecProviderVirtualNode> virtualNodes) {
             $.virtualNodes = virtualNodes;
             return this;
         }
 
+        /**
+         * @param virtualNodes The virtual node associated with the virtual service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNodes(GetVirtualServiceSpecProviderVirtualNode... virtualNodes) {
             return virtualNodes(List.of(virtualNodes));
         }
 
+        /**
+         * @param virtualRouters The virtual router associated with the virtual service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualRouters(List<GetVirtualServiceSpecProviderVirtualRouter> virtualRouters) {
             $.virtualRouters = virtualRouters;
             return this;
         }
 
+        /**
+         * @param virtualRouters The virtual router associated with the virtual service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualRouters(GetVirtualServiceSpecProviderVirtualRouter... virtualRouters) {
             return virtualRouters(List.of(virtualRouters));
         }

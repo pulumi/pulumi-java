@@ -22,6 +22,10 @@ public final class CertificateAuthorityRevocationConfigurationArgs extends com.p
     @Import(name="crlConfiguration")
     private @Nullable Output<CertificateAuthorityRevocationConfigurationCrlConfigurationArgs> crlConfiguration;
 
+    /**
+     * @return Nested argument containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority. Defined below.
+     * 
+     */
     public Optional<Output<CertificateAuthorityRevocationConfigurationCrlConfigurationArgs>> crlConfiguration() {
         return Optional.ofNullable(this.crlConfiguration);
     }
@@ -50,11 +54,23 @@ public final class CertificateAuthorityRevocationConfigurationArgs extends com.p
             $ = new CertificateAuthorityRevocationConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param crlConfiguration Nested argument containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crlConfiguration(@Nullable Output<CertificateAuthorityRevocationConfigurationCrlConfigurationArgs> crlConfiguration) {
             $.crlConfiguration = crlConfiguration;
             return this;
         }
 
+        /**
+         * @param crlConfiguration Nested argument containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crlConfiguration(CertificateAuthorityRevocationConfigurationCrlConfigurationArgs crlConfiguration) {
             return crlConfiguration(Output.of(crlConfiguration));
         }

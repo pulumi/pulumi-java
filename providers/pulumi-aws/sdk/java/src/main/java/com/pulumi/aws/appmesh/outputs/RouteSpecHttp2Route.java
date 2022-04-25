@@ -15,22 +15,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RouteSpecHttp2Route {
     /**
-     * The action to take if a match is determined.
+     * @return The action to take if a match is determined.
      * 
      */
     private final RouteSpecHttp2RouteAction action;
     /**
-     * The criteria for determining an gRPC request match.
+     * @return The criteria for determining an gRPC request match.
      * 
      */
     private final RouteSpecHttp2RouteMatch match;
     /**
-     * The retry policy.
+     * @return The retry policy.
      * 
      */
     private final @Nullable RouteSpecHttp2RouteRetryPolicy retryPolicy;
     /**
-     * The types of timeouts.
+     * @return The types of timeouts.
      * 
      */
     private final @Nullable RouteSpecHttp2RouteTimeout timeout;
@@ -48,30 +48,30 @@ public final class RouteSpecHttp2Route {
     }
 
     /**
-     * The action to take if a match is determined.
+     * @return The action to take if a match is determined.
      * 
-    */
+     */
     public RouteSpecHttp2RouteAction action() {
         return this.action;
     }
     /**
-     * The criteria for determining an gRPC request match.
+     * @return The criteria for determining an gRPC request match.
      * 
-    */
+     */
     public RouteSpecHttp2RouteMatch match() {
         return this.match;
     }
     /**
-     * The retry policy.
+     * @return The retry policy.
      * 
-    */
+     */
     public Optional<RouteSpecHttp2RouteRetryPolicy> retryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
     /**
-     * The types of timeouts.
+     * @return The types of timeouts.
      * 
-    */
+     */
     public Optional<RouteSpecHttp2RouteTimeout> timeout() {
         return Optional.ofNullable(this.timeout);
     }

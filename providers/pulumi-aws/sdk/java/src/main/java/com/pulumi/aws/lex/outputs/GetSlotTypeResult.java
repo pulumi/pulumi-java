@@ -14,45 +14,45 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSlotTypeResult {
     /**
-     * Checksum identifying the version of the slot type that was created. The checksum is
+     * @return Checksum identifying the version of the slot type that was created. The checksum is
      * not included as an argument because the resource will add it automatically when updating the slot type.
      * 
      */
     private final String checksum;
     /**
-     * The date when the slot type version was created.
+     * @return The date when the slot type version was created.
      * 
      */
     private final String createdDate;
     /**
-     * A description of the slot type.
+     * @return A description of the slot type.
      * 
      */
     private final String description;
     /**
-     * A set of EnumerationValue objects that defines the values that
+     * @return A set of EnumerationValue objects that defines the values that
      * the slot type can take. Each value can have a set of synonyms, which are additional values that help
      * train the machine learning model about the values that it resolves for a slot.
      * 
      */
     private final List<GetSlotTypeEnumerationValue> enumerationValues;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The date when the $LATEST version of this slot type was updated.
+     * @return The date when the $LATEST version of this slot type was updated.
      * 
      */
     private final String lastUpdatedDate;
     /**
-     * The name of the slot type. The name is not case sensitive.
+     * @return The name of the slot type. The name is not case sensitive.
      * 
      */
     private final String name;
     /**
-     * Determines the slot resolution strategy that Amazon Lex
+     * @return Determines the slot resolution strategy that Amazon Lex
      * uses to return slot type values. `ORIGINAL_VALUE` returns the value entered by the user if the user
      * value is similar to the slot value. `TOP_RESOLUTION` returns the first value in the resolution list
      * if there is a resolution list for the slot, otherwise null is returned.
@@ -60,7 +60,7 @@ public final class GetSlotTypeResult {
      */
     private final String valueSelectionStrategy;
     /**
-     * The version of the slot type.
+     * @return The version of the slot type.
      * 
      */
     private final @Nullable String version;
@@ -88,71 +88,71 @@ public final class GetSlotTypeResult {
     }
 
     /**
-     * Checksum identifying the version of the slot type that was created. The checksum is
+     * @return Checksum identifying the version of the slot type that was created. The checksum is
      * not included as an argument because the resource will add it automatically when updating the slot type.
      * 
-    */
+     */
     public String checksum() {
         return this.checksum;
     }
     /**
-     * The date when the slot type version was created.
+     * @return The date when the slot type version was created.
      * 
-    */
+     */
     public String createdDate() {
         return this.createdDate;
     }
     /**
-     * A description of the slot type.
+     * @return A description of the slot type.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * A set of EnumerationValue objects that defines the values that
+     * @return A set of EnumerationValue objects that defines the values that
      * the slot type can take. Each value can have a set of synonyms, which are additional values that help
      * train the machine learning model about the values that it resolves for a slot.
      * 
-    */
+     */
     public List<GetSlotTypeEnumerationValue> enumerationValues() {
         return this.enumerationValues;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The date when the $LATEST version of this slot type was updated.
+     * @return The date when the $LATEST version of this slot type was updated.
      * 
-    */
+     */
     public String lastUpdatedDate() {
         return this.lastUpdatedDate;
     }
     /**
-     * The name of the slot type. The name is not case sensitive.
+     * @return The name of the slot type. The name is not case sensitive.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Determines the slot resolution strategy that Amazon Lex
+     * @return Determines the slot resolution strategy that Amazon Lex
      * uses to return slot type values. `ORIGINAL_VALUE` returns the value entered by the user if the user
      * value is similar to the slot value. `TOP_RESOLUTION` returns the first value in the resolution list
      * if there is a resolution list for the slot, otherwise null is returned.
      * 
-    */
+     */
     public String valueSelectionStrategy() {
         return this.valueSelectionStrategy;
     }
     /**
-     * The version of the slot type.
+     * @return The version of the slot type.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

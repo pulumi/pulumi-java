@@ -23,6 +23,10 @@ public final class ListenerRuleActionForwardTargetGroupGetArgs extends com.pulum
     @Import(name="arn", required=true)
     private Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the target group.
+     * 
+     */
     public Output<String> arn() {
         return this.arn;
     }
@@ -34,6 +38,10 @@ public final class ListenerRuleActionForwardTargetGroupGetArgs extends com.pulum
     @Import(name="weight")
     private @Nullable Output<Integer> weight;
 
+    /**
+     * @return The weight. The range is 0 to 999.
+     * 
+     */
     public Optional<Output<Integer>> weight() {
         return Optional.ofNullable(this.weight);
     }
@@ -63,20 +71,44 @@ public final class ListenerRuleActionForwardTargetGroupGetArgs extends com.pulum
             $ = new ListenerRuleActionForwardTargetGroupGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the target group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the target group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param weight The weight. The range is 0 to 999.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(@Nullable Output<Integer> weight) {
             $.weight = weight;
             return this;
         }
 
+        /**
+         * @param weight The weight. The range is 0 to 999.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(Integer weight) {
             return weight(Output.of(weight));
         }

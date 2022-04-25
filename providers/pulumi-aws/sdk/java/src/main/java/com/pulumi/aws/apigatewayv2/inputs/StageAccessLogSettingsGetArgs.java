@@ -20,6 +20,10 @@ public final class StageAccessLogSettingsGetArgs extends com.pulumi.resources.Re
     @Import(name="destinationArn", required=true)
     private Output<String> destinationArn;
 
+    /**
+     * @return The ARN of the CloudWatch Logs log group to receive access logs. Any trailing `:*` is trimmed from the ARN.
+     * 
+     */
     public Output<String> destinationArn() {
         return this.destinationArn;
     }
@@ -31,6 +35,10 @@ public final class StageAccessLogSettingsGetArgs extends com.pulumi.resources.Re
     @Import(name="format", required=true)
     private Output<String> format;
 
+    /**
+     * @return A single line [format](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#apigateway-cloudwatch-log-formats) of the access logs of data, as specified by [selected $context variables](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-logging.html).
+     * 
+     */
     public Output<String> format() {
         return this.format;
     }
@@ -60,20 +68,44 @@ public final class StageAccessLogSettingsGetArgs extends com.pulumi.resources.Re
             $ = new StageAccessLogSettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationArn The ARN of the CloudWatch Logs log group to receive access logs. Any trailing `:*` is trimmed from the ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationArn(Output<String> destinationArn) {
             $.destinationArn = destinationArn;
             return this;
         }
 
+        /**
+         * @param destinationArn The ARN of the CloudWatch Logs log group to receive access logs. Any trailing `:*` is trimmed from the ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationArn(String destinationArn) {
             return destinationArn(Output.of(destinationArn));
         }
 
+        /**
+         * @param format A single line [format](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#apigateway-cloudwatch-log-formats) of the access logs of data, as specified by [selected $context variables](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-logging.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(Output<String> format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param format A single line [format](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#apigateway-cloudwatch-log-formats) of the access logs of data, as specified by [selected $context variables](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-logging.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(String format) {
             return format(Output.of(format));
         }

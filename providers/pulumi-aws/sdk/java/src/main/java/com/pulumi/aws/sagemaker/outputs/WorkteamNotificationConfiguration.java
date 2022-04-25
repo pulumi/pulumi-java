@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WorkteamNotificationConfiguration {
     /**
-     * The ARN for the SNS topic to which notifications should be published.
+     * @return The ARN for the SNS topic to which notifications should be published.
      * 
      */
     private final @Nullable String notificationTopicArn;
@@ -23,9 +23,9 @@ public final class WorkteamNotificationConfiguration {
     }
 
     /**
-     * The ARN for the SNS topic to which notifications should be published.
+     * @return The ARN for the SNS topic to which notifications should be published.
      * 
-    */
+     */
     public Optional<String> notificationTopicArn() {
         return Optional.ofNullable(this.notificationTopicArn);
     }

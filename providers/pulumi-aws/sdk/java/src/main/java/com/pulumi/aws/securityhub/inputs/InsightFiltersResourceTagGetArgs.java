@@ -20,6 +20,10 @@ public final class InsightFiltersResourceTagGetArgs extends com.pulumi.resources
     @Import(name="comparison", required=true)
     private Output<String> comparison;
 
+    /**
+     * @return The condition to apply to a string value when querying for findings. Valid values include: `EQUALS` and `NOT_EQUALS`.
+     * 
+     */
     public Output<String> comparison() {
         return this.comparison;
     }
@@ -31,6 +35,10 @@ public final class InsightFiltersResourceTagGetArgs extends com.pulumi.resources
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return The key of the map filter. For example, for `ResourceTags`, `Key` identifies the name of the tag. For `UserDefinedFields`, `Key` is the name of the field.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -42,6 +50,10 @@ public final class InsightFiltersResourceTagGetArgs extends com.pulumi.resources
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return A date range value for the date filter, provided as an Integer.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -72,29 +84,65 @@ public final class InsightFiltersResourceTagGetArgs extends com.pulumi.resources
             $ = new InsightFiltersResourceTagGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param comparison The condition to apply to a string value when querying for findings. Valid values include: `EQUALS` and `NOT_EQUALS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder comparison(Output<String> comparison) {
             $.comparison = comparison;
             return this;
         }
 
+        /**
+         * @param comparison The condition to apply to a string value when querying for findings. Valid values include: `EQUALS` and `NOT_EQUALS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder comparison(String comparison) {
             return comparison(Output.of(comparison));
         }
 
+        /**
+         * @param key The key of the map filter. For example, for `ResourceTags`, `Key` identifies the name of the tag. For `UserDefinedFields`, `Key` is the name of the field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The key of the map filter. For example, for `ResourceTags`, `Key` identifies the name of the tag. For `UserDefinedFields`, `Key` is the name of the field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param value A date range value for the date filter, provided as an Integer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value A date range value for the date filter, provided as an Integer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

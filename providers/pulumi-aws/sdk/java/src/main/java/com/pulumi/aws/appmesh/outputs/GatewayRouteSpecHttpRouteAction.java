@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GatewayRouteSpecHttpRouteAction {
     /**
-     * The target that traffic is routed to when a request matches the gateway route.
+     * @return The target that traffic is routed to when a request matches the gateway route.
      * 
      */
     private final GatewayRouteSpecHttpRouteActionTarget target;
@@ -21,9 +21,9 @@ public final class GatewayRouteSpecHttpRouteAction {
     }
 
     /**
-     * The target that traffic is routed to when a request matches the gateway route.
+     * @return The target that traffic is routed to when a request matches the gateway route.
      * 
-    */
+     */
     public GatewayRouteSpecHttpRouteActionTarget target() {
         return this.target;
     }

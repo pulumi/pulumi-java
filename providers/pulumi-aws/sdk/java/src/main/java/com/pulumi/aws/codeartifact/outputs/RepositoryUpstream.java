@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class RepositoryUpstream {
     /**
-     * The name of an upstream repository.
+     * @return The name of an upstream repository.
      * 
      */
     private final String repositoryName;
@@ -21,9 +21,9 @@ public final class RepositoryUpstream {
     }
 
     /**
-     * The name of an upstream repository.
+     * @return The name of an upstream repository.
      * 
-    */
+     */
     public String repositoryName() {
         return this.repositoryName;
     }

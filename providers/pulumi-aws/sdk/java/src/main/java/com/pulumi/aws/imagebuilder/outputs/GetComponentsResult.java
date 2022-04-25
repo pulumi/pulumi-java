@@ -14,18 +14,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetComponentsResult {
     /**
-     * Set of ARNs of the matched Image Builder Components.
+     * @return Set of ARNs of the matched Image Builder Components.
      * 
      */
     private final List<String> arns;
     private final @Nullable List<GetComponentsFilter> filters;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * Set of names of the matched Image Builder Components.
+     * @return Set of names of the matched Image Builder Components.
      * 
      */
     private final List<String> names;
@@ -46,9 +46,9 @@ public final class GetComponentsResult {
     }
 
     /**
-     * Set of ARNs of the matched Image Builder Components.
+     * @return Set of ARNs of the matched Image Builder Components.
      * 
-    */
+     */
     public List<String> arns() {
         return this.arns;
     }
@@ -56,16 +56,16 @@ public final class GetComponentsResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Set of names of the matched Image Builder Components.
+     * @return Set of names of the matched Image Builder Components.
      * 
-    */
+     */
     public List<String> names() {
         return this.names;
     }

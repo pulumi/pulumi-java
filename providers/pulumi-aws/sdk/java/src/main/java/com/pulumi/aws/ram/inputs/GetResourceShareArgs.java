@@ -24,6 +24,10 @@ public final class GetResourceShareArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="filters")
     private @Nullable List<GetResourceShareFilter> filters;
 
+    /**
+     * @return A filter used to scope the list e.g., by tags. See [related docs] (https://docs.aws.amazon.com/ram/latest/APIReference/API_TagFilter.html).
+     * 
+     */
     public Optional<List<GetResourceShareFilter>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -35,6 +39,10 @@ public final class GetResourceShareArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the tag key to filter on.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -46,6 +54,10 @@ public final class GetResourceShareArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceOwner", required=true)
     private String resourceOwner;
 
+    /**
+     * @return The owner of the resource share. Valid values are SELF or OTHER-ACCOUNTS
+     * 
+     */
     public String resourceOwner() {
         return this.resourceOwner;
     }
@@ -57,6 +69,10 @@ public final class GetResourceShareArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return The Tags attached to the RAM share
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -88,25 +104,55 @@ public final class GetResourceShareArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetResourceShareArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filters A filter used to scope the list e.g., by tags. See [related docs] (https://docs.aws.amazon.com/ram/latest/APIReference/API_TagFilter.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable List<GetResourceShareFilter> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters A filter used to scope the list e.g., by tags. See [related docs] (https://docs.aws.amazon.com/ram/latest/APIReference/API_TagFilter.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(GetResourceShareFilter... filters) {
             return filters(List.of(filters));
         }
 
+        /**
+         * @param name The name of the tag key to filter on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceOwner The owner of the resource share. Valid values are SELF or OTHER-ACCOUNTS
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceOwner(String resourceOwner) {
             $.resourceOwner = resourceOwner;
             return this;
         }
 
+        /**
+         * @param tags The Tags attached to the RAM share
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

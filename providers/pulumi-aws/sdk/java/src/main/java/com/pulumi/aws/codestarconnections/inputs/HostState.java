@@ -23,6 +23,10 @@ public final class HostState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The CodeStar Host ARN.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -34,6 +38,10 @@ public final class HostState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the host to be created. The name must be unique in the calling AWS account.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -45,6 +53,10 @@ public final class HostState extends com.pulumi.resources.ResourceArgs {
     @Import(name="providerEndpoint")
     private @Nullable Output<String> providerEndpoint;
 
+    /**
+     * @return The endpoint of the infrastructure to be represented by the host after it is created.
+     * 
+     */
     public Optional<Output<String>> providerEndpoint() {
         return Optional.ofNullable(this.providerEndpoint);
     }
@@ -56,6 +68,10 @@ public final class HostState extends com.pulumi.resources.ResourceArgs {
     @Import(name="providerType")
     private @Nullable Output<String> providerType;
 
+    /**
+     * @return The name of the external provider where your third-party code repository is configured.
+     * 
+     */
     public Optional<Output<String>> providerType() {
         return Optional.ofNullable(this.providerType);
     }
@@ -67,6 +83,10 @@ public final class HostState extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return The CodeStar Host status. Possible values are `PENDING`, `AVAILABLE`, `VPC_CONFIG_DELETING`, `VPC_CONFIG_INITIALIZING`, and `VPC_CONFIG_FAILED_INITIALIZATION`.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -78,6 +98,10 @@ public final class HostState extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcConfiguration")
     private @Nullable Output<HostVpcConfigurationGetArgs> vpcConfiguration;
 
+    /**
+     * @return The VPC configuration to be provisioned for the host. A VPC must be configured, and the infrastructure to be represented by the host must already be connected to the VPC.
+     * 
+     */
     public Optional<Output<HostVpcConfigurationGetArgs>> vpcConfiguration() {
         return Optional.ofNullable(this.vpcConfiguration);
     }
@@ -111,56 +135,128 @@ public final class HostState extends com.pulumi.resources.ResourceArgs {
             $ = new HostState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The CodeStar Host ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The CodeStar Host ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param name The name of the host to be created. The name must be unique in the calling AWS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the host to be created. The name must be unique in the calling AWS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param providerEndpoint The endpoint of the infrastructure to be represented by the host after it is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerEndpoint(@Nullable Output<String> providerEndpoint) {
             $.providerEndpoint = providerEndpoint;
             return this;
         }
 
+        /**
+         * @param providerEndpoint The endpoint of the infrastructure to be represented by the host after it is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerEndpoint(String providerEndpoint) {
             return providerEndpoint(Output.of(providerEndpoint));
         }
 
+        /**
+         * @param providerType The name of the external provider where your third-party code repository is configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerType(@Nullable Output<String> providerType) {
             $.providerType = providerType;
             return this;
         }
 
+        /**
+         * @param providerType The name of the external provider where your third-party code repository is configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerType(String providerType) {
             return providerType(Output.of(providerType));
         }
 
+        /**
+         * @param status The CodeStar Host status. Possible values are `PENDING`, `AVAILABLE`, `VPC_CONFIG_DELETING`, `VPC_CONFIG_INITIALIZING`, and `VPC_CONFIG_FAILED_INITIALIZATION`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The CodeStar Host status. Possible values are `PENDING`, `AVAILABLE`, `VPC_CONFIG_DELETING`, `VPC_CONFIG_INITIALIZING`, and `VPC_CONFIG_FAILED_INITIALIZATION`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param vpcConfiguration The VPC configuration to be provisioned for the host. A VPC must be configured, and the infrastructure to be represented by the host must already be connected to the VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcConfiguration(@Nullable Output<HostVpcConfigurationGetArgs> vpcConfiguration) {
             $.vpcConfiguration = vpcConfiguration;
             return this;
         }
 
+        /**
+         * @param vpcConfiguration The VPC configuration to be provisioned for the host. A VPC must be configured, and the infrastructure to be represented by the host must already be connected to the VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcConfiguration(HostVpcConfigurationGetArgs vpcConfiguration) {
             return vpcConfiguration(Output.of(vpcConfiguration));
         }

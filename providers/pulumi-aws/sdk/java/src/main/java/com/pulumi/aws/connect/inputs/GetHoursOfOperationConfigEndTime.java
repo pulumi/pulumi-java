@@ -19,6 +19,10 @@ public final class GetHoursOfOperationConfigEndTime extends com.pulumi.resources
     @Import(name="hours", required=true)
     private Integer hours;
 
+    /**
+     * @return Specifies the hour of opening.
+     * 
+     */
     public Integer hours() {
         return this.hours;
     }
@@ -30,6 +34,10 @@ public final class GetHoursOfOperationConfigEndTime extends com.pulumi.resources
     @Import(name="minutes", required=true)
     private Integer minutes;
 
+    /**
+     * @return Specifies the minute of opening.
+     * 
+     */
     public Integer minutes() {
         return this.minutes;
     }
@@ -59,11 +67,23 @@ public final class GetHoursOfOperationConfigEndTime extends com.pulumi.resources
             $ = new GetHoursOfOperationConfigEndTime(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hours Specifies the hour of opening.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hours(Integer hours) {
             $.hours = hours;
             return this;
         }
 
+        /**
+         * @param minutes Specifies the minute of opening.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minutes(Integer minutes) {
             $.minutes = minutes;
             return this;

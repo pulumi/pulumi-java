@@ -13,47 +13,47 @@ import java.util.Objects;
 @CustomType
 public final class GetHoursOfOperationResult {
     /**
-     * Specifies configuration information for the hours of operation: day, start time, and end time . Config blocks are documented below. Config blocks are documented below.
+     * @return Specifies configuration information for the hours of operation: day, start time, and end time . Config blocks are documented below. Config blocks are documented below.
      * 
      */
     private final List<GetHoursOfOperationConfig> configs;
     /**
-     * Specifies the description of the Hours of Operation.
+     * @return Specifies the description of the Hours of Operation.
      * 
      */
     private final String description;
     /**
-     * The Amazon Resource Name (ARN) of the Hours of Operation.
+     * @return The Amazon Resource Name (ARN) of the Hours of Operation.
      * 
      */
     private final String hoursOfOperationArn;
     /**
-     * The identifier for the hours of operation.
+     * @return The identifier for the hours of operation.
      * 
      */
     private final String hoursOfOperationId;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * Specifies the identifier of the hosting Amazon Connect Instance.
+     * @return Specifies the identifier of the hosting Amazon Connect Instance.
      * 
      */
     private final String instanceId;
     /**
-     * Specifies the name of the Hours of Operation.
+     * @return Specifies the name of the Hours of Operation.
      * 
      */
     private final String name;
     /**
-     * A the map of tags to assign to the Hours of Operation.
+     * @return A the map of tags to assign to the Hours of Operation.
      * 
      */
     private final Map<String,String> tags;
     /**
-     * Specifies the time zone of the Hours of Operation.
+     * @return Specifies the time zone of the Hours of Operation.
      * 
      */
     private final String timeZone;
@@ -81,65 +81,65 @@ public final class GetHoursOfOperationResult {
     }
 
     /**
-     * Specifies configuration information for the hours of operation: day, start time, and end time . Config blocks are documented below. Config blocks are documented below.
+     * @return Specifies configuration information for the hours of operation: day, start time, and end time . Config blocks are documented below. Config blocks are documented below.
      * 
-    */
+     */
     public List<GetHoursOfOperationConfig> configs() {
         return this.configs;
     }
     /**
-     * Specifies the description of the Hours of Operation.
+     * @return Specifies the description of the Hours of Operation.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The Amazon Resource Name (ARN) of the Hours of Operation.
+     * @return The Amazon Resource Name (ARN) of the Hours of Operation.
      * 
-    */
+     */
     public String hoursOfOperationArn() {
         return this.hoursOfOperationArn;
     }
     /**
-     * The identifier for the hours of operation.
+     * @return The identifier for the hours of operation.
      * 
-    */
+     */
     public String hoursOfOperationId() {
         return this.hoursOfOperationId;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Specifies the identifier of the hosting Amazon Connect Instance.
+     * @return Specifies the identifier of the hosting Amazon Connect Instance.
      * 
-    */
+     */
     public String instanceId() {
         return this.instanceId;
     }
     /**
-     * Specifies the name of the Hours of Operation.
+     * @return Specifies the name of the Hours of Operation.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A the map of tags to assign to the Hours of Operation.
+     * @return A the map of tags to assign to the Hours of Operation.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
     /**
-     * Specifies the time zone of the Hours of Operation.
+     * @return Specifies the time zone of the Hours of Operation.
      * 
-    */
+     */
     public String timeZone() {
         return this.timeZone;
     }

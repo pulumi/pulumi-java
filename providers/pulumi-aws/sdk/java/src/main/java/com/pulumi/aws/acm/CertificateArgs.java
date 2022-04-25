@@ -25,6 +25,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateAuthorityArn")
     private @Nullable Output<String> certificateAuthorityArn;
 
+    /**
+     * @return ARN of an ACM PCA
+     * 
+     */
     public Optional<Output<String>> certificateAuthorityArn() {
         return Optional.ofNullable(this.certificateAuthorityArn);
     }
@@ -36,6 +40,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateBody")
     private @Nullable Output<String> certificateBody;
 
+    /**
+     * @return The certificate&#39;s PEM-formatted public key
+     * 
+     */
     public Optional<Output<String>> certificateBody() {
         return Optional.ofNullable(this.certificateBody);
     }
@@ -48,6 +56,11 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateChain")
     private @Nullable Output<String> certificateChain;
 
+    /**
+     * @return The certificate&#39;s PEM-formatted chain
+     * * Creating a private CA issued certificate
+     * 
+     */
     public Optional<Output<String>> certificateChain() {
         return Optional.ofNullable(this.certificateChain);
     }
@@ -59,6 +72,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
     private @Nullable Output<String> domainName;
 
+    /**
+     * @return A domain name for which the certificate should be issued
+     * 
+     */
     public Optional<Output<String>> domainName() {
         return Optional.ofNullable(this.domainName);
     }
@@ -71,6 +88,11 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="options")
     private @Nullable Output<CertificateOptionsArgs> options;
 
+    /**
+     * @return Configuration block used to set certificate options. Detailed below.
+     * * Importing an existing certificate
+     * 
+     */
     public Optional<Output<CertificateOptionsArgs>> options() {
         return Optional.ofNullable(this.options);
     }
@@ -82,6 +104,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateKey")
     private @Nullable Output<String> privateKey;
 
+    /**
+     * @return The certificate&#39;s PEM-formatted private key
+     * 
+     */
     public Optional<Output<String>> privateKey() {
         return Optional.ofNullable(this.privateKey);
     }
@@ -93,6 +119,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subjectAlternativeNames")
     private @Nullable Output<List<String>> subjectAlternativeNames;
 
+    /**
+     * @return Set of domains that should be SANs in the issued certificate. To remove all elements of a previously configured list, set this value equal to an empty list (`[]`).
+     * 
+     */
     public Optional<Output<List<String>>> subjectAlternativeNames() {
         return Optional.ofNullable(this.subjectAlternativeNames);
     }
@@ -104,6 +134,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource..
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -115,6 +149,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="validationMethod")
     private @Nullable Output<String> validationMethod;
 
+    /**
+     * @return Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into the provider.
+     * 
+     */
     public Optional<Output<String>> validationMethod() {
         return Optional.ofNullable(this.validationMethod);
     }
@@ -151,87 +189,205 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateAuthorityArn ARN of an ACM PCA
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthorityArn(@Nullable Output<String> certificateAuthorityArn) {
             $.certificateAuthorityArn = certificateAuthorityArn;
             return this;
         }
 
+        /**
+         * @param certificateAuthorityArn ARN of an ACM PCA
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthorityArn(String certificateAuthorityArn) {
             return certificateAuthorityArn(Output.of(certificateAuthorityArn));
         }
 
+        /**
+         * @param certificateBody The certificate&#39;s PEM-formatted public key
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateBody(@Nullable Output<String> certificateBody) {
             $.certificateBody = certificateBody;
             return this;
         }
 
+        /**
+         * @param certificateBody The certificate&#39;s PEM-formatted public key
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateBody(String certificateBody) {
             return certificateBody(Output.of(certificateBody));
         }
 
+        /**
+         * @param certificateChain The certificate&#39;s PEM-formatted chain
+         * * Creating a private CA issued certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateChain(@Nullable Output<String> certificateChain) {
             $.certificateChain = certificateChain;
             return this;
         }
 
+        /**
+         * @param certificateChain The certificate&#39;s PEM-formatted chain
+         * * Creating a private CA issued certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateChain(String certificateChain) {
             return certificateChain(Output.of(certificateChain));
         }
 
+        /**
+         * @param domainName A domain name for which the certificate should be issued
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(@Nullable Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName A domain name for which the certificate should be issued
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param options Configuration block used to set certificate options. Detailed below.
+         * * Importing an existing certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(@Nullable Output<CertificateOptionsArgs> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options Configuration block used to set certificate options. Detailed below.
+         * * Importing an existing certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(CertificateOptionsArgs options) {
             return options(Output.of(options));
         }
 
+        /**
+         * @param privateKey The certificate&#39;s PEM-formatted private key
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKey(@Nullable Output<String> privateKey) {
             $.privateKey = privateKey;
             return this;
         }
 
+        /**
+         * @param privateKey The certificate&#39;s PEM-formatted private key
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKey(String privateKey) {
             return privateKey(Output.of(privateKey));
         }
 
+        /**
+         * @param subjectAlternativeNames Set of domains that should be SANs in the issued certificate. To remove all elements of a previously configured list, set this value equal to an empty list (`[]`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAlternativeNames(@Nullable Output<List<String>> subjectAlternativeNames) {
             $.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
 
+        /**
+         * @param subjectAlternativeNames Set of domains that should be SANs in the issued certificate. To remove all elements of a previously configured list, set this value equal to an empty list (`[]`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAlternativeNames(List<String> subjectAlternativeNames) {
             return subjectAlternativeNames(Output.of(subjectAlternativeNames));
         }
 
+        /**
+         * @param subjectAlternativeNames Set of domains that should be SANs in the issued certificate. To remove all elements of a previously configured list, set this value equal to an empty list (`[]`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAlternativeNames(String... subjectAlternativeNames) {
             return subjectAlternativeNames(List.of(subjectAlternativeNames));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource..
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource..
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param validationMethod Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationMethod(@Nullable Output<String> validationMethod) {
             $.validationMethod = validationMethod;
             return this;
         }
 
+        /**
+         * @param validationMethod Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationMethod(String validationMethod) {
             return validationMethod(Output.of(validationMethod));
         }

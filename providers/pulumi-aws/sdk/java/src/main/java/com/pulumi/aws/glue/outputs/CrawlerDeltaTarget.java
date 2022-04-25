@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class CrawlerDeltaTarget {
     /**
-     * The name of the connection to use to connect to the Delta table target.
+     * @return The name of the connection to use to connect to the Delta table target.
      * 
      */
     private final String connectionName;
     /**
-     * A list of the Amazon S3 paths to the Delta tables.
+     * @return A list of the Amazon S3 paths to the Delta tables.
      * 
      */
     private final List<String> deltaTables;
     /**
-     * Specifies whether to write the manifest files to the Delta table path.
+     * @return Specifies whether to write the manifest files to the Delta table path.
      * 
      */
     private final Boolean writeManifest;
@@ -38,23 +38,23 @@ public final class CrawlerDeltaTarget {
     }
 
     /**
-     * The name of the connection to use to connect to the Delta table target.
+     * @return The name of the connection to use to connect to the Delta table target.
      * 
-    */
+     */
     public String connectionName() {
         return this.connectionName;
     }
     /**
-     * A list of the Amazon S3 paths to the Delta tables.
+     * @return A list of the Amazon S3 paths to the Delta tables.
      * 
-    */
+     */
     public List<String> deltaTables() {
         return this.deltaTables;
     }
     /**
-     * Specifies whether to write the manifest files to the Delta table path.
+     * @return Specifies whether to write the manifest files to the Delta table path.
      * 
-    */
+     */
     public Boolean writeManifest() {
         return this.writeManifest;
     }

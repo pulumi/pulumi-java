@@ -20,6 +20,10 @@ public final class GeoMatchSetGeoMatchConstraintGetArgs extends com.pulumi.resou
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of geographical area you want AWS WAF to search for. Currently Country is the only valid value.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -33,6 +37,12 @@ public final class GeoMatchSetGeoMatchConstraintGetArgs extends com.pulumi.resou
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return The country that you want AWS WAF to search for.
+     * This is the two-letter country code, e.g., `US`, `CA`, `RU`, `CN`, etc.
+     * See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchConstraint.html) for all supported values.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -62,20 +72,48 @@ public final class GeoMatchSetGeoMatchConstraintGetArgs extends com.pulumi.resou
             $ = new GeoMatchSetGeoMatchConstraintGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of geographical area you want AWS WAF to search for. Currently Country is the only valid value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of geographical area you want AWS WAF to search for. Currently Country is the only valid value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param value The country that you want AWS WAF to search for.
+         * This is the two-letter country code, e.g., `US`, `CA`, `RU`, `CN`, etc.
+         * See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchConstraint.html) for all supported values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The country that you want AWS WAF to search for.
+         * This is the two-letter country code, e.g., `US`, `CA`, `RU`, `CN`, etc.
+         * See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchConstraint.html) for all supported values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

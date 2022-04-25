@@ -20,6 +20,10 @@ public final class InfrastructureConfigurationLoggingGetArgs extends com.pulumi.
     @Import(name="s3Logs", required=true)
     private Output<InfrastructureConfigurationLoggingS3LogsGetArgs> s3Logs;
 
+    /**
+     * @return Configuration block with S3 logging settings. Detailed below.
+     * 
+     */
     public Output<InfrastructureConfigurationLoggingS3LogsGetArgs> s3Logs() {
         return this.s3Logs;
     }
@@ -48,11 +52,23 @@ public final class InfrastructureConfigurationLoggingGetArgs extends com.pulumi.
             $ = new InfrastructureConfigurationLoggingGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param s3Logs Configuration block with S3 logging settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Logs(Output<InfrastructureConfigurationLoggingS3LogsGetArgs> s3Logs) {
             $.s3Logs = s3Logs;
             return this;
         }
 
+        /**
+         * @param s3Logs Configuration block with S3 logging settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Logs(InfrastructureConfigurationLoggingS3LogsGetArgs s3Logs) {
             return s3Logs(Output.of(s3Logs));
         }

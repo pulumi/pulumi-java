@@ -27,6 +27,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="acceptLanguage")
     private @Nullable Output<String> acceptLanguage;
 
+    /**
+     * @return Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
+     * 
+     */
     public Optional<Output<String>> acceptLanguage() {
         return Optional.ofNullable(this.acceptLanguage);
     }
@@ -38,6 +42,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return ARN of the provisioned product.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -49,6 +57,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="cloudwatchDashboardNames")
     private @Nullable Output<List<String>> cloudwatchDashboardNames;
 
+    /**
+     * @return Set of CloudWatch dashboards that were created when provisioning the product.
+     * 
+     */
     public Optional<Output<List<String>>> cloudwatchDashboardNames() {
         return Optional.ofNullable(this.cloudwatchDashboardNames);
     }
@@ -60,6 +72,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="createdTime")
     private @Nullable Output<String> createdTime;
 
+    /**
+     * @return Time when the provisioned product was created.
+     * 
+     */
     public Optional<Output<String>> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
@@ -71,6 +87,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="ignoreErrors")
     private @Nullable Output<Boolean> ignoreErrors;
 
+    /**
+     * @return _Only applies to deleting._ If set to `true`, AWS Service Catalog stops managing the specified provisioned product even if it cannot delete the underlying resources. The default value is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> ignoreErrors() {
         return Optional.ofNullable(this.ignoreErrors);
     }
@@ -82,6 +102,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="lastProvisioningRecordId")
     private @Nullable Output<String> lastProvisioningRecordId;
 
+    /**
+     * @return Record identifier of the last request performed on this provisioned product of the following types: `ProvisionedProduct`, `UpdateProvisionedProduct`, `ExecuteProvisionedProductPlan`, `TerminateProvisionedProduct`.
+     * 
+     */
     public Optional<Output<String>> lastProvisioningRecordId() {
         return Optional.ofNullable(this.lastProvisioningRecordId);
     }
@@ -93,6 +117,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="lastRecordId")
     private @Nullable Output<String> lastRecordId;
 
+    /**
+     * @return Record identifier of the last request performed on this provisioned product.
+     * 
+     */
     public Optional<Output<String>> lastRecordId() {
         return Optional.ofNullable(this.lastRecordId);
     }
@@ -104,6 +132,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="lastSuccessfulProvisioningRecordId")
     private @Nullable Output<String> lastSuccessfulProvisioningRecordId;
 
+    /**
+     * @return Record identifier of the last successful request performed on this provisioned product of the following types: `ProvisionedProduct`, `UpdateProvisionedProduct`, `ExecuteProvisionedProductPlan`, `TerminateProvisionedProduct`.
+     * 
+     */
     public Optional<Output<String>> lastSuccessfulProvisioningRecordId() {
         return Optional.ofNullable(this.lastSuccessfulProvisioningRecordId);
     }
@@ -115,6 +147,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="launchRoleArn")
     private @Nullable Output<String> launchRoleArn;
 
+    /**
+     * @return ARN of the launch role associated with the provisioned product.
+     * 
+     */
     public Optional<Output<String>> launchRoleArn() {
         return Optional.ofNullable(this.launchRoleArn);
     }
@@ -126,6 +162,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return User-friendly name of the provisioned product.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -137,6 +177,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="notificationArns")
     private @Nullable Output<List<String>> notificationArns;
 
+    /**
+     * @return Passed to CloudFormation. The SNS topic ARNs to which to publish stack-related events.
+     * 
+     */
     public Optional<Output<List<String>>> notificationArns() {
         return Optional.ofNullable(this.notificationArns);
     }
@@ -148,6 +192,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="pathId")
     private @Nullable Output<String> pathId;
 
+    /**
+     * @return Path identifier of the product. This value is optional if the product has a default path, and required if the product has more than one path. To list the paths for a product, use `aws.servicecatalog.getLaunchPaths`. When required, you must provide `path_id` or `path_name`, but not both.
+     * 
+     */
     public Optional<Output<String>> pathId() {
         return Optional.ofNullable(this.pathId);
     }
@@ -159,6 +207,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="pathName")
     private @Nullable Output<String> pathName;
 
+    /**
+     * @return Name of the path. You must provide `path_id` or `path_name`, but not both.
+     * 
+     */
     public Optional<Output<String>> pathName() {
         return Optional.ofNullable(this.pathName);
     }
@@ -170,6 +222,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="productId")
     private @Nullable Output<String> productId;
 
+    /**
+     * @return Product identifier. For example, `prod-abcdzk7xy33qa`. You must provide `product_id` or `product_name`, but not both.
+     * 
+     */
     public Optional<Output<String>> productId() {
         return Optional.ofNullable(this.productId);
     }
@@ -181,6 +237,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="productName")
     private @Nullable Output<String> productName;
 
+    /**
+     * @return Name of the product. You must provide `product_id` or `product_name`, but not both.
+     * 
+     */
     public Optional<Output<String>> productName() {
         return Optional.ofNullable(this.productName);
     }
@@ -192,6 +252,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="provisioningArtifactId")
     private @Nullable Output<String> provisioningArtifactId;
 
+    /**
+     * @return Identifier of the provisioning artifact. For example, `pa-4abcdjnxjj6ne`. You must provide the `provisioning_artifact_id` or `provisioning_artifact_name`, but not both.
+     * 
+     */
     public Optional<Output<String>> provisioningArtifactId() {
         return Optional.ofNullable(this.provisioningArtifactId);
     }
@@ -203,6 +267,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="provisioningArtifactName")
     private @Nullable Output<String> provisioningArtifactName;
 
+    /**
+     * @return Name of the provisioning artifact. You must provide the `provisioning_artifact_id` or `provisioning_artifact_name`, but not both.
+     * 
+     */
     public Optional<Output<String>> provisioningArtifactName() {
         return Optional.ofNullable(this.provisioningArtifactName);
     }
@@ -214,6 +282,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="provisioningParameters")
     private @Nullable Output<List<ProvisionedProductProvisioningParameterGetArgs>> provisioningParameters;
 
+    /**
+     * @return Configuration block with parameters specified by the administrator that are required for provisioning the product. See details below.
+     * 
+     */
     public Optional<Output<List<ProvisionedProductProvisioningParameterGetArgs>>> provisioningParameters() {
         return Optional.ofNullable(this.provisioningParameters);
     }
@@ -225,6 +297,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="retainPhysicalResources")
     private @Nullable Output<Boolean> retainPhysicalResources;
 
+    /**
+     * @return _Only applies to deleting._ Whether to delete the Service Catalog provisioned product but leave the CloudFormation stack, stack set, or the underlying resources of the deleted provisioned product. The default value is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> retainPhysicalResources() {
         return Optional.ofNullable(this.retainPhysicalResources);
     }
@@ -236,6 +312,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="stackSetProvisioningPreferences")
     private @Nullable Output<ProvisionedProductStackSetProvisioningPreferencesGetArgs> stackSetProvisioningPreferences;
 
+    /**
+     * @return Configuration block with information about the provisioning preferences for a stack set. See details below.
+     * 
+     */
     public Optional<Output<ProvisionedProductStackSetProvisioningPreferencesGetArgs>> stackSetProvisioningPreferences() {
         return Optional.ofNullable(this.stackSetProvisioningPreferences);
     }
@@ -247,6 +327,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return Current status of the provisioned product. See meanings below.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -258,6 +342,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="statusMessage")
     private @Nullable Output<String> statusMessage;
 
+    /**
+     * @return Current status message of the provisioned product.
+     * 
+     */
     public Optional<Output<String>> statusMessage() {
         return Optional.ofNullable(this.statusMessage);
     }
@@ -269,6 +357,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Tags to apply to the provisioned product. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -280,6 +372,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -291,6 +387,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Type of provisioned product. Valid values are `CFN_STACK` and `CFN_STACKSET`.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -343,239 +443,557 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
             $ = new ProvisionedProductState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceptLanguage Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
             $.acceptLanguage = acceptLanguage;
             return this;
         }
 
+        /**
+         * @param acceptLanguage Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceptLanguage(String acceptLanguage) {
             return acceptLanguage(Output.of(acceptLanguage));
         }
 
+        /**
+         * @param arn ARN of the provisioned product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn ARN of the provisioned product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param cloudwatchDashboardNames Set of CloudWatch dashboards that were created when provisioning the product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudwatchDashboardNames(@Nullable Output<List<String>> cloudwatchDashboardNames) {
             $.cloudwatchDashboardNames = cloudwatchDashboardNames;
             return this;
         }
 
+        /**
+         * @param cloudwatchDashboardNames Set of CloudWatch dashboards that were created when provisioning the product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudwatchDashboardNames(List<String> cloudwatchDashboardNames) {
             return cloudwatchDashboardNames(Output.of(cloudwatchDashboardNames));
         }
 
+        /**
+         * @param cloudwatchDashboardNames Set of CloudWatch dashboards that were created when provisioning the product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudwatchDashboardNames(String... cloudwatchDashboardNames) {
             return cloudwatchDashboardNames(List.of(cloudwatchDashboardNames));
         }
 
+        /**
+         * @param createdTime Time when the provisioned product was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(@Nullable Output<String> createdTime) {
             $.createdTime = createdTime;
             return this;
         }
 
+        /**
+         * @param createdTime Time when the provisioned product was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(String createdTime) {
             return createdTime(Output.of(createdTime));
         }
 
+        /**
+         * @param ignoreErrors _Only applies to deleting._ If set to `true`, AWS Service Catalog stops managing the specified provisioned product even if it cannot delete the underlying resources. The default value is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreErrors(@Nullable Output<Boolean> ignoreErrors) {
             $.ignoreErrors = ignoreErrors;
             return this;
         }
 
+        /**
+         * @param ignoreErrors _Only applies to deleting._ If set to `true`, AWS Service Catalog stops managing the specified provisioned product even if it cannot delete the underlying resources. The default value is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreErrors(Boolean ignoreErrors) {
             return ignoreErrors(Output.of(ignoreErrors));
         }
 
+        /**
+         * @param lastProvisioningRecordId Record identifier of the last request performed on this provisioned product of the following types: `ProvisionedProduct`, `UpdateProvisionedProduct`, `ExecuteProvisionedProductPlan`, `TerminateProvisionedProduct`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastProvisioningRecordId(@Nullable Output<String> lastProvisioningRecordId) {
             $.lastProvisioningRecordId = lastProvisioningRecordId;
             return this;
         }
 
+        /**
+         * @param lastProvisioningRecordId Record identifier of the last request performed on this provisioned product of the following types: `ProvisionedProduct`, `UpdateProvisionedProduct`, `ExecuteProvisionedProductPlan`, `TerminateProvisionedProduct`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastProvisioningRecordId(String lastProvisioningRecordId) {
             return lastProvisioningRecordId(Output.of(lastProvisioningRecordId));
         }
 
+        /**
+         * @param lastRecordId Record identifier of the last request performed on this provisioned product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRecordId(@Nullable Output<String> lastRecordId) {
             $.lastRecordId = lastRecordId;
             return this;
         }
 
+        /**
+         * @param lastRecordId Record identifier of the last request performed on this provisioned product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRecordId(String lastRecordId) {
             return lastRecordId(Output.of(lastRecordId));
         }
 
+        /**
+         * @param lastSuccessfulProvisioningRecordId Record identifier of the last successful request performed on this provisioned product of the following types: `ProvisionedProduct`, `UpdateProvisionedProduct`, `ExecuteProvisionedProductPlan`, `TerminateProvisionedProduct`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastSuccessfulProvisioningRecordId(@Nullable Output<String> lastSuccessfulProvisioningRecordId) {
             $.lastSuccessfulProvisioningRecordId = lastSuccessfulProvisioningRecordId;
             return this;
         }
 
+        /**
+         * @param lastSuccessfulProvisioningRecordId Record identifier of the last successful request performed on this provisioned product of the following types: `ProvisionedProduct`, `UpdateProvisionedProduct`, `ExecuteProvisionedProductPlan`, `TerminateProvisionedProduct`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastSuccessfulProvisioningRecordId(String lastSuccessfulProvisioningRecordId) {
             return lastSuccessfulProvisioningRecordId(Output.of(lastSuccessfulProvisioningRecordId));
         }
 
+        /**
+         * @param launchRoleArn ARN of the launch role associated with the provisioned product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchRoleArn(@Nullable Output<String> launchRoleArn) {
             $.launchRoleArn = launchRoleArn;
             return this;
         }
 
+        /**
+         * @param launchRoleArn ARN of the launch role associated with the provisioned product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchRoleArn(String launchRoleArn) {
             return launchRoleArn(Output.of(launchRoleArn));
         }
 
+        /**
+         * @param name User-friendly name of the provisioned product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name User-friendly name of the provisioned product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param notificationArns Passed to CloudFormation. The SNS topic ARNs to which to publish stack-related events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationArns(@Nullable Output<List<String>> notificationArns) {
             $.notificationArns = notificationArns;
             return this;
         }
 
+        /**
+         * @param notificationArns Passed to CloudFormation. The SNS topic ARNs to which to publish stack-related events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationArns(List<String> notificationArns) {
             return notificationArns(Output.of(notificationArns));
         }
 
+        /**
+         * @param notificationArns Passed to CloudFormation. The SNS topic ARNs to which to publish stack-related events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationArns(String... notificationArns) {
             return notificationArns(List.of(notificationArns));
         }
 
+        /**
+         * @param pathId Path identifier of the product. This value is optional if the product has a default path, and required if the product has more than one path. To list the paths for a product, use `aws.servicecatalog.getLaunchPaths`. When required, you must provide `path_id` or `path_name`, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathId(@Nullable Output<String> pathId) {
             $.pathId = pathId;
             return this;
         }
 
+        /**
+         * @param pathId Path identifier of the product. This value is optional if the product has a default path, and required if the product has more than one path. To list the paths for a product, use `aws.servicecatalog.getLaunchPaths`. When required, you must provide `path_id` or `path_name`, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathId(String pathId) {
             return pathId(Output.of(pathId));
         }
 
+        /**
+         * @param pathName Name of the path. You must provide `path_id` or `path_name`, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathName(@Nullable Output<String> pathName) {
             $.pathName = pathName;
             return this;
         }
 
+        /**
+         * @param pathName Name of the path. You must provide `path_id` or `path_name`, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathName(String pathName) {
             return pathName(Output.of(pathName));
         }
 
+        /**
+         * @param productId Product identifier. For example, `prod-abcdzk7xy33qa`. You must provide `product_id` or `product_name`, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productId(@Nullable Output<String> productId) {
             $.productId = productId;
             return this;
         }
 
+        /**
+         * @param productId Product identifier. For example, `prod-abcdzk7xy33qa`. You must provide `product_id` or `product_name`, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productId(String productId) {
             return productId(Output.of(productId));
         }
 
+        /**
+         * @param productName Name of the product. You must provide `product_id` or `product_name`, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productName(@Nullable Output<String> productName) {
             $.productName = productName;
             return this;
         }
 
+        /**
+         * @param productName Name of the product. You must provide `product_id` or `product_name`, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productName(String productName) {
             return productName(Output.of(productName));
         }
 
+        /**
+         * @param provisioningArtifactId Identifier of the provisioning artifact. For example, `pa-4abcdjnxjj6ne`. You must provide the `provisioning_artifact_id` or `provisioning_artifact_name`, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningArtifactId(@Nullable Output<String> provisioningArtifactId) {
             $.provisioningArtifactId = provisioningArtifactId;
             return this;
         }
 
+        /**
+         * @param provisioningArtifactId Identifier of the provisioning artifact. For example, `pa-4abcdjnxjj6ne`. You must provide the `provisioning_artifact_id` or `provisioning_artifact_name`, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningArtifactId(String provisioningArtifactId) {
             return provisioningArtifactId(Output.of(provisioningArtifactId));
         }
 
+        /**
+         * @param provisioningArtifactName Name of the provisioning artifact. You must provide the `provisioning_artifact_id` or `provisioning_artifact_name`, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningArtifactName(@Nullable Output<String> provisioningArtifactName) {
             $.provisioningArtifactName = provisioningArtifactName;
             return this;
         }
 
+        /**
+         * @param provisioningArtifactName Name of the provisioning artifact. You must provide the `provisioning_artifact_id` or `provisioning_artifact_name`, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningArtifactName(String provisioningArtifactName) {
             return provisioningArtifactName(Output.of(provisioningArtifactName));
         }
 
+        /**
+         * @param provisioningParameters Configuration block with parameters specified by the administrator that are required for provisioning the product. See details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningParameters(@Nullable Output<List<ProvisionedProductProvisioningParameterGetArgs>> provisioningParameters) {
             $.provisioningParameters = provisioningParameters;
             return this;
         }
 
+        /**
+         * @param provisioningParameters Configuration block with parameters specified by the administrator that are required for provisioning the product. See details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningParameters(List<ProvisionedProductProvisioningParameterGetArgs> provisioningParameters) {
             return provisioningParameters(Output.of(provisioningParameters));
         }
 
+        /**
+         * @param provisioningParameters Configuration block with parameters specified by the administrator that are required for provisioning the product. See details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningParameters(ProvisionedProductProvisioningParameterGetArgs... provisioningParameters) {
             return provisioningParameters(List.of(provisioningParameters));
         }
 
+        /**
+         * @param retainPhysicalResources _Only applies to deleting._ Whether to delete the Service Catalog provisioned product but leave the CloudFormation stack, stack set, or the underlying resources of the deleted provisioned product. The default value is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retainPhysicalResources(@Nullable Output<Boolean> retainPhysicalResources) {
             $.retainPhysicalResources = retainPhysicalResources;
             return this;
         }
 
+        /**
+         * @param retainPhysicalResources _Only applies to deleting._ Whether to delete the Service Catalog provisioned product but leave the CloudFormation stack, stack set, or the underlying resources of the deleted provisioned product. The default value is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retainPhysicalResources(Boolean retainPhysicalResources) {
             return retainPhysicalResources(Output.of(retainPhysicalResources));
         }
 
+        /**
+         * @param stackSetProvisioningPreferences Configuration block with information about the provisioning preferences for a stack set. See details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackSetProvisioningPreferences(@Nullable Output<ProvisionedProductStackSetProvisioningPreferencesGetArgs> stackSetProvisioningPreferences) {
             $.stackSetProvisioningPreferences = stackSetProvisioningPreferences;
             return this;
         }
 
+        /**
+         * @param stackSetProvisioningPreferences Configuration block with information about the provisioning preferences for a stack set. See details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackSetProvisioningPreferences(ProvisionedProductStackSetProvisioningPreferencesGetArgs stackSetProvisioningPreferences) {
             return stackSetProvisioningPreferences(Output.of(stackSetProvisioningPreferences));
         }
 
+        /**
+         * @param status Current status of the provisioned product. See meanings below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Current status of the provisioned product. See meanings below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param statusMessage Current status message of the provisioned product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusMessage(@Nullable Output<String> statusMessage) {
             $.statusMessage = statusMessage;
             return this;
         }
 
+        /**
+         * @param statusMessage Current status message of the provisioned product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusMessage(String statusMessage) {
             return statusMessage(Output.of(statusMessage));
         }
 
+        /**
+         * @param tags Tags to apply to the provisioned product. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags to apply to the provisioned product. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param type Type of provisioned product. Valid values are `CFN_STACK` and `CFN_STACKSET`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of provisioned product. Valid values are `CFN_STACK` and `CFN_STACKSET`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

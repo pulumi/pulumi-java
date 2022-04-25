@@ -19,6 +19,10 @@ public final class GetDirectorySelfServicePermission extends com.pulumi.resource
     @Import(name="changeComputeType", required=true)
     private Boolean changeComputeType;
 
+    /**
+     * @return Whether WorkSpaces directory users can change the compute type (bundle) for their workspace.
+     * 
+     */
     public Boolean changeComputeType() {
         return this.changeComputeType;
     }
@@ -30,6 +34,10 @@ public final class GetDirectorySelfServicePermission extends com.pulumi.resource
     @Import(name="increaseVolumeSize", required=true)
     private Boolean increaseVolumeSize;
 
+    /**
+     * @return Whether WorkSpaces directory users can increase the volume size of the drives on their workspace.
+     * 
+     */
     public Boolean increaseVolumeSize() {
         return this.increaseVolumeSize;
     }
@@ -41,6 +49,10 @@ public final class GetDirectorySelfServicePermission extends com.pulumi.resource
     @Import(name="rebuildWorkspace", required=true)
     private Boolean rebuildWorkspace;
 
+    /**
+     * @return Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state.
+     * 
+     */
     public Boolean rebuildWorkspace() {
         return this.rebuildWorkspace;
     }
@@ -52,6 +64,10 @@ public final class GetDirectorySelfServicePermission extends com.pulumi.resource
     @Import(name="restartWorkspace", required=true)
     private Boolean restartWorkspace;
 
+    /**
+     * @return Whether WorkSpaces directory users can restart their workspace.
+     * 
+     */
     public Boolean restartWorkspace() {
         return this.restartWorkspace;
     }
@@ -63,6 +79,10 @@ public final class GetDirectorySelfServicePermission extends com.pulumi.resource
     @Import(name="switchRunningMode", required=true)
     private Boolean switchRunningMode;
 
+    /**
+     * @return Whether WorkSpaces directory users can switch the running mode of their workspace.
+     * 
+     */
     public Boolean switchRunningMode() {
         return this.switchRunningMode;
     }
@@ -95,26 +115,56 @@ public final class GetDirectorySelfServicePermission extends com.pulumi.resource
             $ = new GetDirectorySelfServicePermission(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param changeComputeType Whether WorkSpaces directory users can change the compute type (bundle) for their workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder changeComputeType(Boolean changeComputeType) {
             $.changeComputeType = changeComputeType;
             return this;
         }
 
+        /**
+         * @param increaseVolumeSize Whether WorkSpaces directory users can increase the volume size of the drives on their workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder increaseVolumeSize(Boolean increaseVolumeSize) {
             $.increaseVolumeSize = increaseVolumeSize;
             return this;
         }
 
+        /**
+         * @param rebuildWorkspace Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rebuildWorkspace(Boolean rebuildWorkspace) {
             $.rebuildWorkspace = rebuildWorkspace;
             return this;
         }
 
+        /**
+         * @param restartWorkspace Whether WorkSpaces directory users can restart their workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restartWorkspace(Boolean restartWorkspace) {
             $.restartWorkspace = restartWorkspace;
             return this;
         }
 
+        /**
+         * @param switchRunningMode Whether WorkSpaces directory users can switch the running mode of their workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder switchRunningMode(Boolean switchRunningMode) {
             $.switchRunningMode = switchRunningMode;
             return this;

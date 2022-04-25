@@ -23,6 +23,12 @@ public final class GetResourcesResourceTagMappingListComplianceDetail extends co
     @Import(name="complianceStatus", required=true)
     private Boolean complianceStatus;
 
+    /**
+     * @return Whether the resource is compliant.
+     * * ` keys_with_noncompliant_values  ` - Set of tag keys with non-compliant tag values.
+     * * ` non_compliant_keys  ` - Set of non-compliant tag keys.
+     * 
+     */
     public Boolean complianceStatus() {
         return this.complianceStatus;
     }
@@ -67,6 +73,14 @@ public final class GetResourcesResourceTagMappingListComplianceDetail extends co
             $ = new GetResourcesResourceTagMappingListComplianceDetail(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param complianceStatus Whether the resource is compliant.
+         * * ` keys_with_noncompliant_values  ` - Set of tag keys with non-compliant tag values.
+         * * ` non_compliant_keys  ` - Set of non-compliant tag keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder complianceStatus(Boolean complianceStatus) {
             $.complianceStatus = complianceStatus;
             return this;

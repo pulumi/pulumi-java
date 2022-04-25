@@ -22,6 +22,10 @@ public final class AmiCopyEphemeralBlockDeviceArgs extends com.pulumi.resources.
     @Import(name="deviceName")
     private @Nullable Output<String> deviceName;
 
+    /**
+     * @return The path at which the device is exposed to created instances.
+     * 
+     */
     public Optional<Output<String>> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
@@ -34,6 +38,11 @@ public final class AmiCopyEphemeralBlockDeviceArgs extends com.pulumi.resources.
     @Import(name="virtualName")
     private @Nullable Output<String> virtualName;
 
+    /**
+     * @return A name for the ephemeral device, of the form &#34;ephemeralN&#34; where
+     * *N* is a volume number starting from zero.
+     * 
+     */
     public Optional<Output<String>> virtualName() {
         return Optional.ofNullable(this.virtualName);
     }
@@ -63,20 +72,46 @@ public final class AmiCopyEphemeralBlockDeviceArgs extends com.pulumi.resources.
             $ = new AmiCopyEphemeralBlockDeviceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceName The path at which the device is exposed to created instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(@Nullable Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName The path at which the device is exposed to created instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param virtualName A name for the ephemeral device, of the form &#34;ephemeralN&#34; where
+         * *N* is a volume number starting from zero.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualName(@Nullable Output<String> virtualName) {
             $.virtualName = virtualName;
             return this;
         }
 
+        /**
+         * @param virtualName A name for the ephemeral device, of the form &#34;ephemeralN&#34; where
+         * *N* is a volume number starting from zero.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualName(String virtualName) {
             return virtualName(Output.of(virtualName));
         }

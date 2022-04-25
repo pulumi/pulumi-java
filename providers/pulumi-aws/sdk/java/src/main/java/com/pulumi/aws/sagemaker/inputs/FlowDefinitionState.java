@@ -27,6 +27,10 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) assigned by AWS to this Flow Definition.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -38,6 +42,10 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="flowDefinitionName")
     private @Nullable Output<String> flowDefinitionName;
 
+    /**
+     * @return The name of your flow definition.
+     * 
+     */
     public Optional<Output<String>> flowDefinitionName() {
         return Optional.ofNullable(this.flowDefinitionName);
     }
@@ -49,6 +57,10 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="humanLoopActivationConfig")
     private @Nullable Output<FlowDefinitionHumanLoopActivationConfigGetArgs> humanLoopActivationConfig;
 
+    /**
+     * @return An object containing information about the events that trigger a human workflow. See Human Loop Activation Config details below.
+     * 
+     */
     public Optional<Output<FlowDefinitionHumanLoopActivationConfigGetArgs>> humanLoopActivationConfig() {
         return Optional.ofNullable(this.humanLoopActivationConfig);
     }
@@ -60,6 +72,10 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="humanLoopConfig")
     private @Nullable Output<FlowDefinitionHumanLoopConfigGetArgs> humanLoopConfig;
 
+    /**
+     * @return An object containing information about the tasks the human reviewers will perform. See Human Loop Config details below.
+     * 
+     */
     public Optional<Output<FlowDefinitionHumanLoopConfigGetArgs>> humanLoopConfig() {
         return Optional.ofNullable(this.humanLoopConfig);
     }
@@ -71,6 +87,10 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="humanLoopRequestSource")
     private @Nullable Output<FlowDefinitionHumanLoopRequestSourceGetArgs> humanLoopRequestSource;
 
+    /**
+     * @return Container for configuring the source of human task requests. Use to specify if Amazon Rekognition or Amazon Textract is used as an integration source. See Human Loop Request Source details below.
+     * 
+     */
     public Optional<Output<FlowDefinitionHumanLoopRequestSourceGetArgs>> humanLoopRequestSource() {
         return Optional.ofNullable(this.humanLoopRequestSource);
     }
@@ -82,6 +102,10 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="outputConfig")
     private @Nullable Output<FlowDefinitionOutputConfigGetArgs> outputConfig;
 
+    /**
+     * @return An object containing information about where the human review results will be uploaded. See Output Config details below.
+     * 
+     */
     public Optional<Output<FlowDefinitionOutputConfigGetArgs>> outputConfig() {
         return Optional.ofNullable(this.outputConfig);
     }
@@ -93,6 +117,10 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="roleArn")
     private @Nullable Output<String> roleArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the role needed to call other services on your behalf.
+     * 
+     */
     public Optional<Output<String>> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
@@ -104,6 +132,10 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -115,6 +147,10 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -151,83 +187,191 @@ public final class FlowDefinitionState extends com.pulumi.resources.ResourceArgs
             $ = new FlowDefinitionState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) assigned by AWS to this Flow Definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) assigned by AWS to this Flow Definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param flowDefinitionName The name of your flow definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flowDefinitionName(@Nullable Output<String> flowDefinitionName) {
             $.flowDefinitionName = flowDefinitionName;
             return this;
         }
 
+        /**
+         * @param flowDefinitionName The name of your flow definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flowDefinitionName(String flowDefinitionName) {
             return flowDefinitionName(Output.of(flowDefinitionName));
         }
 
+        /**
+         * @param humanLoopActivationConfig An object containing information about the events that trigger a human workflow. See Human Loop Activation Config details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder humanLoopActivationConfig(@Nullable Output<FlowDefinitionHumanLoopActivationConfigGetArgs> humanLoopActivationConfig) {
             $.humanLoopActivationConfig = humanLoopActivationConfig;
             return this;
         }
 
+        /**
+         * @param humanLoopActivationConfig An object containing information about the events that trigger a human workflow. See Human Loop Activation Config details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder humanLoopActivationConfig(FlowDefinitionHumanLoopActivationConfigGetArgs humanLoopActivationConfig) {
             return humanLoopActivationConfig(Output.of(humanLoopActivationConfig));
         }
 
+        /**
+         * @param humanLoopConfig An object containing information about the tasks the human reviewers will perform. See Human Loop Config details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder humanLoopConfig(@Nullable Output<FlowDefinitionHumanLoopConfigGetArgs> humanLoopConfig) {
             $.humanLoopConfig = humanLoopConfig;
             return this;
         }
 
+        /**
+         * @param humanLoopConfig An object containing information about the tasks the human reviewers will perform. See Human Loop Config details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder humanLoopConfig(FlowDefinitionHumanLoopConfigGetArgs humanLoopConfig) {
             return humanLoopConfig(Output.of(humanLoopConfig));
         }
 
+        /**
+         * @param humanLoopRequestSource Container for configuring the source of human task requests. Use to specify if Amazon Rekognition or Amazon Textract is used as an integration source. See Human Loop Request Source details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder humanLoopRequestSource(@Nullable Output<FlowDefinitionHumanLoopRequestSourceGetArgs> humanLoopRequestSource) {
             $.humanLoopRequestSource = humanLoopRequestSource;
             return this;
         }
 
+        /**
+         * @param humanLoopRequestSource Container for configuring the source of human task requests. Use to specify if Amazon Rekognition or Amazon Textract is used as an integration source. See Human Loop Request Source details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder humanLoopRequestSource(FlowDefinitionHumanLoopRequestSourceGetArgs humanLoopRequestSource) {
             return humanLoopRequestSource(Output.of(humanLoopRequestSource));
         }
 
+        /**
+         * @param outputConfig An object containing information about where the human review results will be uploaded. See Output Config details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputConfig(@Nullable Output<FlowDefinitionOutputConfigGetArgs> outputConfig) {
             $.outputConfig = outputConfig;
             return this;
         }
 
+        /**
+         * @param outputConfig An object containing information about where the human review results will be uploaded. See Output Config details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputConfig(FlowDefinitionOutputConfigGetArgs outputConfig) {
             return outputConfig(Output.of(outputConfig));
         }
 
+        /**
+         * @param roleArn The Amazon Resource Name (ARN) of the role needed to call other services on your behalf.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(@Nullable Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn The Amazon Resource Name (ARN) of the role needed to call other services on your behalf.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

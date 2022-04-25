@@ -24,6 +24,10 @@ public final class GetElasticIpArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters")
     private @Nullable List<GetElasticIpFilter> filters;
 
+    /**
+     * @return One or more name/value pairs to use as filters. There are several valid keys, for a full reference, check out the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAddresses.html).
+     * 
+     */
     public Optional<List<GetElasticIpFilter>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -35,6 +39,10 @@ public final class GetElasticIpArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The allocation id of the specific VPC EIP to retrieve. If a classic EIP is required, do NOT set `id`, only set `public_ip`
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -46,6 +54,10 @@ public final class GetElasticIpArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="publicIp")
     private @Nullable String publicIp;
 
+    /**
+     * @return The public IP of the specific EIP to retrieve.
+     * 
+     */
     public Optional<String> publicIp() {
         return Optional.ofNullable(this.publicIp);
     }
@@ -57,6 +69,10 @@ public final class GetElasticIpArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return A map of tags, each pair of which must exactly match a pair on the desired Elastic IP
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -88,25 +104,55 @@ public final class GetElasticIpArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetElasticIpArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filters One or more name/value pairs to use as filters. There are several valid keys, for a full reference, check out the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAddresses.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable List<GetElasticIpFilter> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters One or more name/value pairs to use as filters. There are several valid keys, for a full reference, check out the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAddresses.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(GetElasticIpFilter... filters) {
             return filters(List.of(filters));
         }
 
+        /**
+         * @param id The allocation id of the specific VPC EIP to retrieve. If a classic EIP is required, do NOT set `id`, only set `public_ip`
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param publicIp The public IP of the specific EIP to retrieve.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIp(@Nullable String publicIp) {
             $.publicIp = publicIp;
             return this;
         }
 
+        /**
+         * @param tags A map of tags, each pair of which must exactly match a pair on the desired Elastic IP
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

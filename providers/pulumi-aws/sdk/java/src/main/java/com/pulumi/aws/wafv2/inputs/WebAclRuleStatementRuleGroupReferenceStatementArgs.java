@@ -24,6 +24,10 @@ public final class WebAclRuleStatementRuleGroupReferenceStatementArgs extends co
     @Import(name="arn", required=true)
     private Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the `aws.wafv2.RuleGroup` resource.
+     * 
+     */
     public Output<String> arn() {
         return this.arn;
     }
@@ -35,6 +39,10 @@ public final class WebAclRuleStatementRuleGroupReferenceStatementArgs extends co
     @Import(name="excludedRules")
     private @Nullable Output<List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArgs>> excludedRules;
 
+    /**
+     * @return The `rules` whose actions are set to `COUNT` by the web ACL, regardless of the action that is set on the rule. See Excluded Rule below for details.
+     * 
+     */
     public Optional<Output<List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArgs>>> excludedRules() {
         return Optional.ofNullable(this.excludedRules);
     }
@@ -64,24 +72,54 @@ public final class WebAclRuleStatementRuleGroupReferenceStatementArgs extends co
             $ = new WebAclRuleStatementRuleGroupReferenceStatementArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the `aws.wafv2.RuleGroup` resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the `aws.wafv2.RuleGroup` resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param excludedRules The `rules` whose actions are set to `COUNT` by the web ACL, regardless of the action that is set on the rule. See Excluded Rule below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedRules(@Nullable Output<List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArgs>> excludedRules) {
             $.excludedRules = excludedRules;
             return this;
         }
 
+        /**
+         * @param excludedRules The `rules` whose actions are set to `COUNT` by the web ACL, regardless of the action that is set on the rule. See Excluded Rule below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedRules(List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArgs> excludedRules) {
             return excludedRules(Output.of(excludedRules));
         }
 
+        /**
+         * @param excludedRules The `rules` whose actions are set to `COUNT` by the web ACL, regardless of the action that is set on the rule. See Excluded Rule below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedRules(WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArgs... excludedRules) {
             return excludedRules(List.of(excludedRules));
         }

@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPrice {
     /**
-     * Defines the amount of money paid to an Amazon Mechanical Turk worker in United States dollars. See Amount In Usd details below.
+     * @return Defines the amount of money paid to an Amazon Mechanical Turk worker in United States dollars. See Amount In Usd details below.
      * 
      */
     private final @Nullable FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsd amountInUsd;
@@ -23,9 +23,9 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPrice {
     }
 
     /**
-     * Defines the amount of money paid to an Amazon Mechanical Turk worker in United States dollars. See Amount In Usd details below.
+     * @return Defines the amount of money paid to an Amazon Mechanical Turk worker in United States dollars. See Amount In Usd details below.
      * 
-    */
+     */
     public Optional<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsd> amountInUsd() {
         return Optional.ofNullable(this.amountInUsd);
     }

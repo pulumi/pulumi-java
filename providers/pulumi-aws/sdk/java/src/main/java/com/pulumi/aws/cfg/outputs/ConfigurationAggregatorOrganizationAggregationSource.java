@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ConfigurationAggregatorOrganizationAggregationSource {
     /**
-     * If true, aggregate existing AWS Config regions and future regions.
+     * @return If true, aggregate existing AWS Config regions and future regions.
      * 
      */
     private final @Nullable Boolean allRegions;
     /**
-     * List of source regions being aggregated.
+     * @return List of source regions being aggregated.
      * 
      */
     private final @Nullable List<String> regions;
     /**
-     * ARN of the IAM role used to retrieve AWS Organization details associated with the aggregator account.
+     * @return ARN of the IAM role used to retrieve AWS Organization details associated with the aggregator account.
      * 
      */
     private final String roleArn;
@@ -40,23 +40,23 @@ public final class ConfigurationAggregatorOrganizationAggregationSource {
     }
 
     /**
-     * If true, aggregate existing AWS Config regions and future regions.
+     * @return If true, aggregate existing AWS Config regions and future regions.
      * 
-    */
+     */
     public Optional<Boolean> allRegions() {
         return Optional.ofNullable(this.allRegions);
     }
     /**
-     * List of source regions being aggregated.
+     * @return List of source regions being aggregated.
      * 
-    */
+     */
     public List<String> regions() {
         return this.regions == null ? List.of() : this.regions;
     }
     /**
-     * ARN of the IAM role used to retrieve AWS Organization details associated with the aggregator account.
+     * @return ARN of the IAM role used to retrieve AWS Organization details associated with the aggregator account.
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }

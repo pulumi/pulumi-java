@@ -22,6 +22,10 @@ public final class ClusterConfigurationGetArgs extends com.pulumi.resources.Reso
     @Import(name="executeCommandConfiguration")
     private @Nullable Output<ClusterConfigurationExecuteCommandConfigurationGetArgs> executeCommandConfiguration;
 
+    /**
+     * @return The details of the execute command configuration. Detailed below.
+     * 
+     */
     public Optional<Output<ClusterConfigurationExecuteCommandConfigurationGetArgs>> executeCommandConfiguration() {
         return Optional.ofNullable(this.executeCommandConfiguration);
     }
@@ -50,11 +54,23 @@ public final class ClusterConfigurationGetArgs extends com.pulumi.resources.Reso
             $ = new ClusterConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param executeCommandConfiguration The details of the execute command configuration. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executeCommandConfiguration(@Nullable Output<ClusterConfigurationExecuteCommandConfigurationGetArgs> executeCommandConfiguration) {
             $.executeCommandConfiguration = executeCommandConfiguration;
             return this;
         }
 
+        /**
+         * @param executeCommandConfiguration The details of the execute command configuration. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executeCommandConfiguration(ClusterConfigurationExecuteCommandConfigurationGetArgs executeCommandConfiguration) {
             return executeCommandConfiguration(Output.of(executeCommandConfiguration));
         }

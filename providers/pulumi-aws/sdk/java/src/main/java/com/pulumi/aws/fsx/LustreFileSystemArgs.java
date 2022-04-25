@@ -26,6 +26,10 @@ public final class LustreFileSystemArgs extends com.pulumi.resources.ResourceArg
     @Import(name="autoImportPolicy")
     private @Nullable Output<String> autoImportPolicy;
 
+    /**
+     * @return How Amazon FSx keeps your file and directory listings up to date as you add or modify objects in your linked S3 bucket. see [Auto Import Data Repo](https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html) for more details. Only supported on `PERSISTENT_1` deployment types.
+     * 
+     */
     public Optional<Output<String>> autoImportPolicy() {
         return Optional.ofNullable(this.autoImportPolicy);
     }
@@ -37,6 +41,10 @@ public final class LustreFileSystemArgs extends com.pulumi.resources.ResourceArg
     @Import(name="automaticBackupRetentionDays")
     private @Nullable Output<Integer> automaticBackupRetentionDays;
 
+    /**
+     * @return The number of days to retain automatic backups. Setting this to 0 disables automatic backups. You can retain automatic backups for a maximum of 90 days. only valid for `PERSISTENT_1` and `PERSISTENT_2` deployment_type.
+     * 
+     */
     public Optional<Output<Integer>> automaticBackupRetentionDays() {
         return Optional.ofNullable(this.automaticBackupRetentionDays);
     }
@@ -48,6 +56,10 @@ public final class LustreFileSystemArgs extends com.pulumi.resources.ResourceArg
     @Import(name="backupId")
     private @Nullable Output<String> backupId;
 
+    /**
+     * @return The ID of the source backup to create the filesystem from.
+     * 
+     */
     public Optional<Output<String>> backupId() {
         return Optional.ofNullable(this.backupId);
     }
@@ -59,6 +71,10 @@ public final class LustreFileSystemArgs extends com.pulumi.resources.ResourceArg
     @Import(name="copyTagsToBackups")
     private @Nullable Output<Boolean> copyTagsToBackups;
 
+    /**
+     * @return A boolean flag indicating whether tags for the file system should be copied to backups. Applicable for `PERSISTENT_1` and `PERSISTENT_2` deployment_type. The default value is false.
+     * 
+     */
     public Optional<Output<Boolean>> copyTagsToBackups() {
         return Optional.ofNullable(this.copyTagsToBackups);
     }
@@ -70,6 +86,10 @@ public final class LustreFileSystemArgs extends com.pulumi.resources.ResourceArg
     @Import(name="dailyAutomaticBackupStartTime")
     private @Nullable Output<String> dailyAutomaticBackupStartTime;
 
+    /**
+     * @return A recurring daily time, in the format HH:MM. HH is the zero-padded hour of the day (0-23), and MM is the zero-padded minute of the hour. For example, 05:00 specifies 5 AM daily. only valid for `PERSISTENT_1` and `PERSISTENT_2` deployment_type. Requires `automatic_backup_retention_days` to be set.
+     * 
+     */
     public Optional<Output<String>> dailyAutomaticBackupStartTime() {
         return Optional.ofNullable(this.dailyAutomaticBackupStartTime);
     }
@@ -81,6 +101,10 @@ public final class LustreFileSystemArgs extends com.pulumi.resources.ResourceArg
     @Import(name="dataCompressionType")
     private @Nullable Output<String> dataCompressionType;
 
+    /**
+     * @return Sets the data compression configuration for the file system. Valid values are `LZ4` and `NONE`. Default value is `NONE`. Unsetting this value reverts the compression type back to `NONE`.
+     * 
+     */
     public Optional<Output<String>> dataCompressionType() {
         return Optional.ofNullable(this.dataCompressionType);
     }
@@ -92,6 +116,10 @@ public final class LustreFileSystemArgs extends com.pulumi.resources.ResourceArg
     @Import(name="deploymentType")
     private @Nullable Output<String> deploymentType;
 
+    /**
+     * @return - The filesystem deployment type. One of: `SCRATCH_1`, `SCRATCH_2`, `PERSISTENT_1`, `PERSISTENT_2`.
+     * 
+     */
     public Optional<Output<String>> deploymentType() {
         return Optional.ofNullable(this.deploymentType);
     }
@@ -103,6 +131,10 @@ public final class LustreFileSystemArgs extends com.pulumi.resources.ResourceArg
     @Import(name="driveCacheType")
     private @Nullable Output<String> driveCacheType;
 
+    /**
+     * @return - The type of drive cache used by `PERSISTENT_1` filesystems that are provisioned with `HDD` storage_type. Required for `HDD` storage_type, set to either `READ` or `NONE`.
+     * 
+     */
     public Optional<Output<String>> driveCacheType() {
         return Optional.ofNullable(this.driveCacheType);
     }
@@ -114,6 +146,10 @@ public final class LustreFileSystemArgs extends com.pulumi.resources.ResourceArg
     @Import(name="exportPath")
     private @Nullable Output<String> exportPath;
 
+    /**
+     * @return S3 URI (with optional prefix) where the root of your Amazon FSx file system is exported. Can only be specified with `import_path` argument and the path must use the same Amazon S3 bucket as specified in `import_path`. Set equal to `import_path` to overwrite files on export. Defaults to `s3://{IMPORT BUCKET}/FSxLustre{CREATION TIMESTAMP}`. Only supported on `PERSISTENT_1` deployment types.
+     * 
+     */
     public Optional<Output<String>> exportPath() {
         return Optional.ofNullable(this.exportPath);
     }
@@ -125,6 +161,10 @@ public final class LustreFileSystemArgs extends com.pulumi.resources.ResourceArg
     @Import(name="fileSystemTypeVersion")
     private @Nullable Output<String> fileSystemTypeVersion;
 
+    /**
+     * @return Sets the Lustre version for the file system that you&#39;re creating. Valid values are 2.10 for `SCRATCH_1`, `SCRATCH_2` and `PERSISTENT_1` deployment types. Valid values for 2.12 include all deployment types.
+     * 
+     */
     public Optional<Output<String>> fileSystemTypeVersion() {
         return Optional.ofNullable(this.fileSystemTypeVersion);
     }
@@ -136,6 +176,10 @@ public final class LustreFileSystemArgs extends com.pulumi.resources.ResourceArg
     @Import(name="importPath")
     private @Nullable Output<String> importPath;
 
+    /**
+     * @return S3 URI (with optional prefix) that you&#39;re using as the data repository for your FSx for Lustre file system. For example, `s3://example-bucket/optional-prefix/`. Only supported on `PERSISTENT_1` deployment types.
+     * 
+     */
     public Optional<Output<String>> importPath() {
         return Optional.ofNullable(this.importPath);
     }
@@ -147,6 +191,10 @@ public final class LustreFileSystemArgs extends com.pulumi.resources.ResourceArg
     @Import(name="importedFileChunkSize")
     private @Nullable Output<Integer> importedFileChunkSize;
 
+    /**
+     * @return For files imported from a data repository, this value determines the stripe count and maximum amount of data per file (in MiB) stored on a single physical disk. Can only be specified with `import_path` argument. Defaults to `1024`. Minimum of `1` and maximum of `512000`. Only supported on `PERSISTENT_1` deployment types.
+     * 
+     */
     public Optional<Output<Integer>> importedFileChunkSize() {
         return Optional.ofNullable(this.importedFileChunkSize);
     }
@@ -158,6 +206,10 @@ public final class LustreFileSystemArgs extends com.pulumi.resources.ResourceArg
     @Import(name="kmsKeyId")
     private @Nullable Output<String> kmsKeyId;
 
+    /**
+     * @return ARN for the KMS Key to encrypt the file system at rest, applicable for `PERSISTENT_1` and `PERSISTENT_2` deployment_type. Defaults to an AWS managed KMS Key.
+     * 
+     */
     public Optional<Output<String>> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
@@ -169,6 +221,10 @@ public final class LustreFileSystemArgs extends com.pulumi.resources.ResourceArg
     @Import(name="perUnitStorageThroughput")
     private @Nullable Output<Integer> perUnitStorageThroughput;
 
+    /**
+     * @return - Describes the amount of read and write throughput for each 1 tebibyte of storage, in MB/s/TiB, required for the `PERSISTENT_1` and `PERSISTENT_2` deployment_type. Valid values for `PERSISTENT_1` deployment_type and `SSD` storage_type are 50, 100, 200. Valid values for `PERSISTENT_1` deployment_type and `HDD` storage_type are 12, 40. Valid values for `PERSISTENT_2` deployment_type and `  SSD ` storage_type are 125, 250, 500, 1000.
+     * 
+     */
     public Optional<Output<Integer>> perUnitStorageThroughput() {
         return Optional.ofNullable(this.perUnitStorageThroughput);
     }
@@ -180,6 +236,10 @@ public final class LustreFileSystemArgs extends com.pulumi.resources.ResourceArg
     @Import(name="securityGroupIds")
     private @Nullable Output<List<String>> securityGroupIds;
 
+    /**
+     * @return A list of IDs for the security groups that apply to the specified network interfaces created for file system access. These security groups will apply to all network interfaces.
+     * 
+     */
     public Optional<Output<List<String>>> securityGroupIds() {
         return Optional.ofNullable(this.securityGroupIds);
     }
@@ -191,6 +251,10 @@ public final class LustreFileSystemArgs extends com.pulumi.resources.ResourceArg
     @Import(name="storageCapacity")
     private @Nullable Output<Integer> storageCapacity;
 
+    /**
+     * @return The storage capacity (GiB) of the file system. Minimum of `1200`. See more details at [Allowed values for Fsx storage capacity](https://docs.aws.amazon.com/fsx/latest/APIReference/API_CreateFileSystem.html#FSx-CreateFileSystem-request-StorageCapacity). Update is allowed only for `SCRATCH_2`, `PERSISTENT_1` and `PERSISTENT_2` deployment types, See more details at [Fsx Storage Capacity Update](https://docs.aws.amazon.com/fsx/latest/APIReference/API_UpdateFileSystem.html#FSx-UpdateFileSystem-request-StorageCapacity). Required when not creating filesystem for a backup.
+     * 
+     */
     public Optional<Output<Integer>> storageCapacity() {
         return Optional.ofNullable(this.storageCapacity);
     }
@@ -202,6 +266,10 @@ public final class LustreFileSystemArgs extends com.pulumi.resources.ResourceArg
     @Import(name="storageType")
     private @Nullable Output<String> storageType;
 
+    /**
+     * @return - The filesystem storage type. Either `SSD` or `HDD`, defaults to `SSD`. `HDD` is only supported on `PERSISTENT_1` deployment types.
+     * 
+     */
     public Optional<Output<String>> storageType() {
         return Optional.ofNullable(this.storageType);
     }
@@ -213,6 +281,10 @@ public final class LustreFileSystemArgs extends com.pulumi.resources.ResourceArg
     @Import(name="subnetIds", required=true)
     private Output<String> subnetIds;
 
+    /**
+     * @return A list of IDs for the subnets that the file system will be accessible from. File systems currently support only one subnet. The file server is also launched in that subnet&#39;s Availability Zone.
+     * 
+     */
     public Output<String> subnetIds() {
         return this.subnetIds;
     }
@@ -224,6 +296,10 @@ public final class LustreFileSystemArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the file system. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -235,6 +311,10 @@ public final class LustreFileSystemArgs extends com.pulumi.resources.ResourceArg
     @Import(name="weeklyMaintenanceStartTime")
     private @Nullable Output<String> weeklyMaintenanceStartTime;
 
+    /**
+     * @return The preferred start time (in `d:HH:MM` format) to perform weekly maintenance, in the UTC time zone.
+     * 
+     */
     public Optional<Output<String>> weeklyMaintenanceStartTime() {
         return Optional.ofNullable(this.weeklyMaintenanceStartTime);
     }
@@ -282,186 +362,432 @@ public final class LustreFileSystemArgs extends com.pulumi.resources.ResourceArg
             $ = new LustreFileSystemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoImportPolicy How Amazon FSx keeps your file and directory listings up to date as you add or modify objects in your linked S3 bucket. see [Auto Import Data Repo](https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html) for more details. Only supported on `PERSISTENT_1` deployment types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoImportPolicy(@Nullable Output<String> autoImportPolicy) {
             $.autoImportPolicy = autoImportPolicy;
             return this;
         }
 
+        /**
+         * @param autoImportPolicy How Amazon FSx keeps your file and directory listings up to date as you add or modify objects in your linked S3 bucket. see [Auto Import Data Repo](https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html) for more details. Only supported on `PERSISTENT_1` deployment types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoImportPolicy(String autoImportPolicy) {
             return autoImportPolicy(Output.of(autoImportPolicy));
         }
 
+        /**
+         * @param automaticBackupRetentionDays The number of days to retain automatic backups. Setting this to 0 disables automatic backups. You can retain automatic backups for a maximum of 90 days. only valid for `PERSISTENT_1` and `PERSISTENT_2` deployment_type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automaticBackupRetentionDays(@Nullable Output<Integer> automaticBackupRetentionDays) {
             $.automaticBackupRetentionDays = automaticBackupRetentionDays;
             return this;
         }
 
+        /**
+         * @param automaticBackupRetentionDays The number of days to retain automatic backups. Setting this to 0 disables automatic backups. You can retain automatic backups for a maximum of 90 days. only valid for `PERSISTENT_1` and `PERSISTENT_2` deployment_type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automaticBackupRetentionDays(Integer automaticBackupRetentionDays) {
             return automaticBackupRetentionDays(Output.of(automaticBackupRetentionDays));
         }
 
+        /**
+         * @param backupId The ID of the source backup to create the filesystem from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupId(@Nullable Output<String> backupId) {
             $.backupId = backupId;
             return this;
         }
 
+        /**
+         * @param backupId The ID of the source backup to create the filesystem from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupId(String backupId) {
             return backupId(Output.of(backupId));
         }
 
+        /**
+         * @param copyTagsToBackups A boolean flag indicating whether tags for the file system should be copied to backups. Applicable for `PERSISTENT_1` and `PERSISTENT_2` deployment_type. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyTagsToBackups(@Nullable Output<Boolean> copyTagsToBackups) {
             $.copyTagsToBackups = copyTagsToBackups;
             return this;
         }
 
+        /**
+         * @param copyTagsToBackups A boolean flag indicating whether tags for the file system should be copied to backups. Applicable for `PERSISTENT_1` and `PERSISTENT_2` deployment_type. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyTagsToBackups(Boolean copyTagsToBackups) {
             return copyTagsToBackups(Output.of(copyTagsToBackups));
         }
 
+        /**
+         * @param dailyAutomaticBackupStartTime A recurring daily time, in the format HH:MM. HH is the zero-padded hour of the day (0-23), and MM is the zero-padded minute of the hour. For example, 05:00 specifies 5 AM daily. only valid for `PERSISTENT_1` and `PERSISTENT_2` deployment_type. Requires `automatic_backup_retention_days` to be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dailyAutomaticBackupStartTime(@Nullable Output<String> dailyAutomaticBackupStartTime) {
             $.dailyAutomaticBackupStartTime = dailyAutomaticBackupStartTime;
             return this;
         }
 
+        /**
+         * @param dailyAutomaticBackupStartTime A recurring daily time, in the format HH:MM. HH is the zero-padded hour of the day (0-23), and MM is the zero-padded minute of the hour. For example, 05:00 specifies 5 AM daily. only valid for `PERSISTENT_1` and `PERSISTENT_2` deployment_type. Requires `automatic_backup_retention_days` to be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dailyAutomaticBackupStartTime(String dailyAutomaticBackupStartTime) {
             return dailyAutomaticBackupStartTime(Output.of(dailyAutomaticBackupStartTime));
         }
 
+        /**
+         * @param dataCompressionType Sets the data compression configuration for the file system. Valid values are `LZ4` and `NONE`. Default value is `NONE`. Unsetting this value reverts the compression type back to `NONE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCompressionType(@Nullable Output<String> dataCompressionType) {
             $.dataCompressionType = dataCompressionType;
             return this;
         }
 
+        /**
+         * @param dataCompressionType Sets the data compression configuration for the file system. Valid values are `LZ4` and `NONE`. Default value is `NONE`. Unsetting this value reverts the compression type back to `NONE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCompressionType(String dataCompressionType) {
             return dataCompressionType(Output.of(dataCompressionType));
         }
 
+        /**
+         * @param deploymentType - The filesystem deployment type. One of: `SCRATCH_1`, `SCRATCH_2`, `PERSISTENT_1`, `PERSISTENT_2`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentType(@Nullable Output<String> deploymentType) {
             $.deploymentType = deploymentType;
             return this;
         }
 
+        /**
+         * @param deploymentType - The filesystem deployment type. One of: `SCRATCH_1`, `SCRATCH_2`, `PERSISTENT_1`, `PERSISTENT_2`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentType(String deploymentType) {
             return deploymentType(Output.of(deploymentType));
         }
 
+        /**
+         * @param driveCacheType - The type of drive cache used by `PERSISTENT_1` filesystems that are provisioned with `HDD` storage_type. Required for `HDD` storage_type, set to either `READ` or `NONE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driveCacheType(@Nullable Output<String> driveCacheType) {
             $.driveCacheType = driveCacheType;
             return this;
         }
 
+        /**
+         * @param driveCacheType - The type of drive cache used by `PERSISTENT_1` filesystems that are provisioned with `HDD` storage_type. Required for `HDD` storage_type, set to either `READ` or `NONE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driveCacheType(String driveCacheType) {
             return driveCacheType(Output.of(driveCacheType));
         }
 
+        /**
+         * @param exportPath S3 URI (with optional prefix) where the root of your Amazon FSx file system is exported. Can only be specified with `import_path` argument and the path must use the same Amazon S3 bucket as specified in `import_path`. Set equal to `import_path` to overwrite files on export. Defaults to `s3://{IMPORT BUCKET}/FSxLustre{CREATION TIMESTAMP}`. Only supported on `PERSISTENT_1` deployment types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exportPath(@Nullable Output<String> exportPath) {
             $.exportPath = exportPath;
             return this;
         }
 
+        /**
+         * @param exportPath S3 URI (with optional prefix) where the root of your Amazon FSx file system is exported. Can only be specified with `import_path` argument and the path must use the same Amazon S3 bucket as specified in `import_path`. Set equal to `import_path` to overwrite files on export. Defaults to `s3://{IMPORT BUCKET}/FSxLustre{CREATION TIMESTAMP}`. Only supported on `PERSISTENT_1` deployment types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exportPath(String exportPath) {
             return exportPath(Output.of(exportPath));
         }
 
+        /**
+         * @param fileSystemTypeVersion Sets the Lustre version for the file system that you&#39;re creating. Valid values are 2.10 for `SCRATCH_1`, `SCRATCH_2` and `PERSISTENT_1` deployment types. Valid values for 2.12 include all deployment types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemTypeVersion(@Nullable Output<String> fileSystemTypeVersion) {
             $.fileSystemTypeVersion = fileSystemTypeVersion;
             return this;
         }
 
+        /**
+         * @param fileSystemTypeVersion Sets the Lustre version for the file system that you&#39;re creating. Valid values are 2.10 for `SCRATCH_1`, `SCRATCH_2` and `PERSISTENT_1` deployment types. Valid values for 2.12 include all deployment types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemTypeVersion(String fileSystemTypeVersion) {
             return fileSystemTypeVersion(Output.of(fileSystemTypeVersion));
         }
 
+        /**
+         * @param importPath S3 URI (with optional prefix) that you&#39;re using as the data repository for your FSx for Lustre file system. For example, `s3://example-bucket/optional-prefix/`. Only supported on `PERSISTENT_1` deployment types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importPath(@Nullable Output<String> importPath) {
             $.importPath = importPath;
             return this;
         }
 
+        /**
+         * @param importPath S3 URI (with optional prefix) that you&#39;re using as the data repository for your FSx for Lustre file system. For example, `s3://example-bucket/optional-prefix/`. Only supported on `PERSISTENT_1` deployment types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importPath(String importPath) {
             return importPath(Output.of(importPath));
         }
 
+        /**
+         * @param importedFileChunkSize For files imported from a data repository, this value determines the stripe count and maximum amount of data per file (in MiB) stored on a single physical disk. Can only be specified with `import_path` argument. Defaults to `1024`. Minimum of `1` and maximum of `512000`. Only supported on `PERSISTENT_1` deployment types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importedFileChunkSize(@Nullable Output<Integer> importedFileChunkSize) {
             $.importedFileChunkSize = importedFileChunkSize;
             return this;
         }
 
+        /**
+         * @param importedFileChunkSize For files imported from a data repository, this value determines the stripe count and maximum amount of data per file (in MiB) stored on a single physical disk. Can only be specified with `import_path` argument. Defaults to `1024`. Minimum of `1` and maximum of `512000`. Only supported on `PERSISTENT_1` deployment types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importedFileChunkSize(Integer importedFileChunkSize) {
             return importedFileChunkSize(Output.of(importedFileChunkSize));
         }
 
+        /**
+         * @param kmsKeyId ARN for the KMS Key to encrypt the file system at rest, applicable for `PERSISTENT_1` and `PERSISTENT_2` deployment_type. Defaults to an AWS managed KMS Key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             $.kmsKeyId = kmsKeyId;
             return this;
         }
 
+        /**
+         * @param kmsKeyId ARN for the KMS Key to encrypt the file system at rest, applicable for `PERSISTENT_1` and `PERSISTENT_2` deployment_type. Defaults to an AWS managed KMS Key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(String kmsKeyId) {
             return kmsKeyId(Output.of(kmsKeyId));
         }
 
+        /**
+         * @param perUnitStorageThroughput - Describes the amount of read and write throughput for each 1 tebibyte of storage, in MB/s/TiB, required for the `PERSISTENT_1` and `PERSISTENT_2` deployment_type. Valid values for `PERSISTENT_1` deployment_type and `SSD` storage_type are 50, 100, 200. Valid values for `PERSISTENT_1` deployment_type and `HDD` storage_type are 12, 40. Valid values for `PERSISTENT_2` deployment_type and `  SSD ` storage_type are 125, 250, 500, 1000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder perUnitStorageThroughput(@Nullable Output<Integer> perUnitStorageThroughput) {
             $.perUnitStorageThroughput = perUnitStorageThroughput;
             return this;
         }
 
+        /**
+         * @param perUnitStorageThroughput - Describes the amount of read and write throughput for each 1 tebibyte of storage, in MB/s/TiB, required for the `PERSISTENT_1` and `PERSISTENT_2` deployment_type. Valid values for `PERSISTENT_1` deployment_type and `SSD` storage_type are 50, 100, 200. Valid values for `PERSISTENT_1` deployment_type and `HDD` storage_type are 12, 40. Valid values for `PERSISTENT_2` deployment_type and `  SSD ` storage_type are 125, 250, 500, 1000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder perUnitStorageThroughput(Integer perUnitStorageThroughput) {
             return perUnitStorageThroughput(Output.of(perUnitStorageThroughput));
         }
 
+        /**
+         * @param securityGroupIds A list of IDs for the security groups that apply to the specified network interfaces created for file system access. These security groups will apply to all network interfaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             $.securityGroupIds = securityGroupIds;
             return this;
         }
 
+        /**
+         * @param securityGroupIds A list of IDs for the security groups that apply to the specified network interfaces created for file system access. These security groups will apply to all network interfaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(List<String> securityGroupIds) {
             return securityGroupIds(Output.of(securityGroupIds));
         }
 
+        /**
+         * @param securityGroupIds A list of IDs for the security groups that apply to the specified network interfaces created for file system access. These security groups will apply to all network interfaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
 
+        /**
+         * @param storageCapacity The storage capacity (GiB) of the file system. Minimum of `1200`. See more details at [Allowed values for Fsx storage capacity](https://docs.aws.amazon.com/fsx/latest/APIReference/API_CreateFileSystem.html#FSx-CreateFileSystem-request-StorageCapacity). Update is allowed only for `SCRATCH_2`, `PERSISTENT_1` and `PERSISTENT_2` deployment types, See more details at [Fsx Storage Capacity Update](https://docs.aws.amazon.com/fsx/latest/APIReference/API_UpdateFileSystem.html#FSx-UpdateFileSystem-request-StorageCapacity). Required when not creating filesystem for a backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageCapacity(@Nullable Output<Integer> storageCapacity) {
             $.storageCapacity = storageCapacity;
             return this;
         }
 
+        /**
+         * @param storageCapacity The storage capacity (GiB) of the file system. Minimum of `1200`. See more details at [Allowed values for Fsx storage capacity](https://docs.aws.amazon.com/fsx/latest/APIReference/API_CreateFileSystem.html#FSx-CreateFileSystem-request-StorageCapacity). Update is allowed only for `SCRATCH_2`, `PERSISTENT_1` and `PERSISTENT_2` deployment types, See more details at [Fsx Storage Capacity Update](https://docs.aws.amazon.com/fsx/latest/APIReference/API_UpdateFileSystem.html#FSx-UpdateFileSystem-request-StorageCapacity). Required when not creating filesystem for a backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageCapacity(Integer storageCapacity) {
             return storageCapacity(Output.of(storageCapacity));
         }
 
+        /**
+         * @param storageType - The filesystem storage type. Either `SSD` or `HDD`, defaults to `SSD`. `HDD` is only supported on `PERSISTENT_1` deployment types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageType(@Nullable Output<String> storageType) {
             $.storageType = storageType;
             return this;
         }
 
+        /**
+         * @param storageType - The filesystem storage type. Either `SSD` or `HDD`, defaults to `SSD`. `HDD` is only supported on `PERSISTENT_1` deployment types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageType(String storageType) {
             return storageType(Output.of(storageType));
         }
 
+        /**
+         * @param subnetIds A list of IDs for the subnets that the file system will be accessible from. File systems currently support only one subnet. The file server is also launched in that subnet&#39;s Availability Zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(Output<String> subnetIds) {
             $.subnetIds = subnetIds;
             return this;
         }
 
+        /**
+         * @param subnetIds A list of IDs for the subnets that the file system will be accessible from. File systems currently support only one subnet. The file server is also launched in that subnet&#39;s Availability Zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(String subnetIds) {
             return subnetIds(Output.of(subnetIds));
         }
 
+        /**
+         * @param tags A map of tags to assign to the file system. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the file system. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param weeklyMaintenanceStartTime The preferred start time (in `d:HH:MM` format) to perform weekly maintenance, in the UTC time zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeklyMaintenanceStartTime(@Nullable Output<String> weeklyMaintenanceStartTime) {
             $.weeklyMaintenanceStartTime = weeklyMaintenanceStartTime;
             return this;
         }
 
+        /**
+         * @param weeklyMaintenanceStartTime The preferred start time (in `d:HH:MM` format) to perform weekly maintenance, in the UTC time zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeklyMaintenanceStartTime(String weeklyMaintenanceStartTime) {
             return weeklyMaintenanceStartTime(Output.of(weeklyMaintenanceStartTime));
         }

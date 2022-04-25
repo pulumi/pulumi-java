@@ -20,6 +20,10 @@ public final class GetResponseHeadersPolicyCustomHeadersConfigItem extends com.p
     @Import(name="header", required=true)
     private String header;
 
+    /**
+     * @return The HTTP response header name.
+     * 
+     */
     public String header() {
         return this.header;
     }
@@ -31,6 +35,10 @@ public final class GetResponseHeadersPolicyCustomHeadersConfigItem extends com.p
     @Import(name="override", required=true)
     private Boolean override;
 
+    /**
+     * @return A Boolean value that determines whether CloudFront overrides the X-XSS-Protection HTTP response header received from the origin with the one specified in this response headers policy.
+     * 
+     */
     public Boolean override() {
         return this.override;
     }
@@ -42,6 +50,10 @@ public final class GetResponseHeadersPolicyCustomHeadersConfigItem extends com.p
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The value for the HTTP response header.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -72,16 +84,34 @@ public final class GetResponseHeadersPolicyCustomHeadersConfigItem extends com.p
             $ = new GetResponseHeadersPolicyCustomHeadersConfigItem(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param header The HTTP response header name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder header(String header) {
             $.header = header;
             return this;
         }
 
+        /**
+         * @param override A Boolean value that determines whether CloudFront overrides the X-XSS-Protection HTTP response header received from the origin with the one specified in this response headers policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder override(Boolean override) {
             $.override = override;
             return this;
         }
 
+        /**
+         * @param value The value for the HTTP response header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

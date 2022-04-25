@@ -24,6 +24,10 @@ public final class RuleGroupActivatedRuleGetArgs extends com.pulumi.resources.Re
     @Import(name="action", required=true)
     private Output<RuleGroupActivatedRuleActionGetArgs> action;
 
+    /**
+     * @return Specifies the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.
+     * 
+     */
     public Output<RuleGroupActivatedRuleActionGetArgs> action() {
         return this.action;
     }
@@ -35,6 +39,10 @@ public final class RuleGroupActivatedRuleGetArgs extends com.pulumi.resources.Re
     @Import(name="priority", required=true)
     private Output<Integer> priority;
 
+    /**
+     * @return Specifies the order in which the rules are evaluated. Rules with a lower value are evaluated before rules with a higher value.
+     * 
+     */
     public Output<Integer> priority() {
         return this.priority;
     }
@@ -46,6 +54,10 @@ public final class RuleGroupActivatedRuleGetArgs extends com.pulumi.resources.Re
     @Import(name="ruleId", required=true)
     private Output<String> ruleId;
 
+    /**
+     * @return The ID of a `waf_regional_rule`
+     * 
+     */
     public Output<String> ruleId() {
         return this.ruleId;
     }
@@ -57,6 +69,10 @@ public final class RuleGroupActivatedRuleGetArgs extends com.pulumi.resources.Re
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The rule type, either `REGULAR`, `RATE_BASED`, or `GROUP`. Defaults to `REGULAR`.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -88,38 +104,86 @@ public final class RuleGroupActivatedRuleGetArgs extends com.pulumi.resources.Re
             $ = new RuleGroupActivatedRuleGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Specifies the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Output<RuleGroupActivatedRuleActionGetArgs> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action Specifies the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(RuleGroupActivatedRuleActionGetArgs action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param priority Specifies the order in which the rules are evaluated. Rules with a lower value are evaluated before rules with a higher value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority Specifies the order in which the rules are evaluated. Rules with a lower value are evaluated before rules with a higher value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param ruleId The ID of a `waf_regional_rule`
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleId(Output<String> ruleId) {
             $.ruleId = ruleId;
             return this;
         }
 
+        /**
+         * @param ruleId The ID of a `waf_regional_rule`
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleId(String ruleId) {
             return ruleId(Output.of(ruleId));
         }
 
+        /**
+         * @param type The rule type, either `REGULAR`, `RATE_BASED`, or `GROUP`. Defaults to `REGULAR`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The rule type, either `REGULAR`, `RATE_BASED`, or `GROUP`. Defaults to `REGULAR`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

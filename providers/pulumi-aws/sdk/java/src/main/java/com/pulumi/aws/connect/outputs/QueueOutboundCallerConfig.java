@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class QueueOutboundCallerConfig {
     /**
-     * Specifies the caller ID name.
+     * @return Specifies the caller ID name.
      * 
      */
     private final @Nullable String outboundCallerIdName;
     /**
-     * Specifies the caller ID number.
+     * @return Specifies the caller ID number.
      * 
      */
     private final @Nullable String outboundCallerIdNumberId;
     /**
-     * Specifies outbound whisper flow to be used during an outbound call.
+     * @return Specifies outbound whisper flow to be used during an outbound call.
      * 
      */
     private final @Nullable String outboundFlowId;
@@ -38,23 +38,23 @@ public final class QueueOutboundCallerConfig {
     }
 
     /**
-     * Specifies the caller ID name.
+     * @return Specifies the caller ID name.
      * 
-    */
+     */
     public Optional<String> outboundCallerIdName() {
         return Optional.ofNullable(this.outboundCallerIdName);
     }
     /**
-     * Specifies the caller ID number.
+     * @return Specifies the caller ID number.
      * 
-    */
+     */
     public Optional<String> outboundCallerIdNumberId() {
         return Optional.ofNullable(this.outboundCallerIdNumberId);
     }
     /**
-     * Specifies outbound whisper flow to be used during an outbound call.
+     * @return Specifies outbound whisper flow to be used during an outbound call.
      * 
-    */
+     */
     public Optional<String> outboundFlowId() {
         return Optional.ofNullable(this.outboundFlowId);
     }

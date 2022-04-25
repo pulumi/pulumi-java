@@ -21,6 +21,10 @@ public final class FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceGetArg
     @Import(name="priority", required=true)
     private Output<Integer> priority;
 
+    /**
+     * @return An integer setting that indicates the order in which to run the stateless rule groups in a single policy. AWS Network Firewall applies each stateless rule group to a packet starting with the group that has the lowest priority setting.
+     * 
+     */
     public Output<Integer> priority() {
         return this.priority;
     }
@@ -32,6 +36,10 @@ public final class FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceGetArg
     @Import(name="resourceArn", required=true)
     private Output<String> resourceArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the stateless rule group.
+     * 
+     */
     public Output<String> resourceArn() {
         return this.resourceArn;
     }
@@ -61,20 +69,44 @@ public final class FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceGetArg
             $ = new FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param priority An integer setting that indicates the order in which to run the stateless rule groups in a single policy. AWS Network Firewall applies each stateless rule group to a packet starting with the group that has the lowest priority setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority An integer setting that indicates the order in which to run the stateless rule groups in a single policy. AWS Network Firewall applies each stateless rule group to a packet starting with the group that has the lowest priority setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param resourceArn The Amazon Resource Name (ARN) of the stateless rule group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceArn(Output<String> resourceArn) {
             $.resourceArn = resourceArn;
             return this;
         }
 
+        /**
+         * @param resourceArn The Amazon Resource Name (ARN) of the stateless rule group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceArn(String resourceArn) {
             return resourceArn(Output.of(resourceArn));
         }

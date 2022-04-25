@@ -20,6 +20,10 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
     @Import(name="awsLambda", required=true)
     private Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaArgs> awsLambda;
 
+    /**
+     * @return Configuration for an AWS Lambda function. See AWS Lambda below for more details.
+     * 
+     */
     public Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaArgs> awsLambda() {
         return this.awsLambda;
     }
@@ -48,11 +52,23 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
             $ = new ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param awsLambda Configuration for an AWS Lambda function. See AWS Lambda below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsLambda(Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaArgs> awsLambda) {
             $.awsLambda = awsLambda;
             return this;
         }
 
+        /**
+         * @param awsLambda Configuration for an AWS Lambda function. See AWS Lambda below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsLambda(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaArgs awsLambda) {
             return awsLambda(Output.of(awsLambda));
         }

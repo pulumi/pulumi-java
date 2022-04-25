@@ -25,6 +25,10 @@ public final class OrganizationalUnitState extends com.pulumi.resources.Resource
     @Import(name="accounts")
     private @Nullable Output<List<OrganizationalUnitAccountGetArgs>> accounts;
 
+    /**
+     * @return List of child accounts for this Organizational Unit. Does not return account information for child Organizational Units. All elements have these attributes:
+     * 
+     */
     public Optional<Output<List<OrganizationalUnitAccountGetArgs>>> accounts() {
         return Optional.ofNullable(this.accounts);
     }
@@ -36,6 +40,10 @@ public final class OrganizationalUnitState extends com.pulumi.resources.Resource
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return ARN of the organizational unit
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -47,6 +55,10 @@ public final class OrganizationalUnitState extends com.pulumi.resources.Resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name for the organizational unit
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -58,6 +70,10 @@ public final class OrganizationalUnitState extends com.pulumi.resources.Resource
     @Import(name="parentId")
     private @Nullable Output<String> parentId;
 
+    /**
+     * @return ID of the parent organizational unit, which may be the root
+     * 
+     */
     public Optional<Output<String>> parentId() {
         return Optional.ofNullable(this.parentId);
     }
@@ -69,6 +85,10 @@ public final class OrganizationalUnitState extends com.pulumi.resources.Resource
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -80,6 +100,10 @@ public final class OrganizationalUnitState extends com.pulumi.resources.Resource
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -113,60 +137,138 @@ public final class OrganizationalUnitState extends com.pulumi.resources.Resource
             $ = new OrganizationalUnitState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accounts List of child accounts for this Organizational Unit. Does not return account information for child Organizational Units. All elements have these attributes:
+         * 
+         * @return builder
+         * 
+         */
         public Builder accounts(@Nullable Output<List<OrganizationalUnitAccountGetArgs>> accounts) {
             $.accounts = accounts;
             return this;
         }
 
+        /**
+         * @param accounts List of child accounts for this Organizational Unit. Does not return account information for child Organizational Units. All elements have these attributes:
+         * 
+         * @return builder
+         * 
+         */
         public Builder accounts(List<OrganizationalUnitAccountGetArgs> accounts) {
             return accounts(Output.of(accounts));
         }
 
+        /**
+         * @param accounts List of child accounts for this Organizational Unit. Does not return account information for child Organizational Units. All elements have these attributes:
+         * 
+         * @return builder
+         * 
+         */
         public Builder accounts(OrganizationalUnitAccountGetArgs... accounts) {
             return accounts(List.of(accounts));
         }
 
+        /**
+         * @param arn ARN of the organizational unit
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn ARN of the organizational unit
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param name The name for the organizational unit
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name for the organizational unit
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parentId ID of the parent organizational unit, which may be the root
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentId(@Nullable Output<String> parentId) {
             $.parentId = parentId;
             return this;
         }
 
+        /**
+         * @param parentId ID of the parent organizational unit, which may be the root
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentId(String parentId) {
             return parentId(Output.of(parentId));
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

@@ -11,18 +11,18 @@ import java.util.Objects;
 @CustomType
 public final class GetLogGroupsResult {
     /**
-     * Set of ARNs of the Cloudwatch log groups
+     * @return Set of ARNs of the Cloudwatch log groups
      * 
      */
     private final List<String> arns;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final String logGroupNamePrefix;
     /**
-     * Set of names of the Cloudwatch log groups
+     * @return Set of names of the Cloudwatch log groups
      * 
      */
     private final List<String> logGroupNames;
@@ -40,16 +40,16 @@ public final class GetLogGroupsResult {
     }
 
     /**
-     * Set of ARNs of the Cloudwatch log groups
+     * @return Set of ARNs of the Cloudwatch log groups
      * 
-    */
+     */
     public List<String> arns() {
         return this.arns;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -57,9 +57,9 @@ public final class GetLogGroupsResult {
         return this.logGroupNamePrefix;
     }
     /**
-     * Set of names of the Cloudwatch log groups
+     * @return Set of names of the Cloudwatch log groups
      * 
-    */
+     */
     public List<String> logGroupNames() {
         return this.logGroupNames;
     }

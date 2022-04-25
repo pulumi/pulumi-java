@@ -21,6 +21,10 @@ public final class RealtimeLogConfigEndpointArgs extends com.pulumi.resources.Re
     @Import(name="kinesisStreamConfig", required=true)
     private Output<RealtimeLogConfigEndpointKinesisStreamConfigArgs> kinesisStreamConfig;
 
+    /**
+     * @return The Amazon Kinesis data stream configuration.
+     * 
+     */
     public Output<RealtimeLogConfigEndpointKinesisStreamConfigArgs> kinesisStreamConfig() {
         return this.kinesisStreamConfig;
     }
@@ -32,6 +36,10 @@ public final class RealtimeLogConfigEndpointArgs extends com.pulumi.resources.Re
     @Import(name="streamType", required=true)
     private Output<String> streamType;
 
+    /**
+     * @return The type of data stream where real-time log data is sent. The only valid value is `Kinesis`.
+     * 
+     */
     public Output<String> streamType() {
         return this.streamType;
     }
@@ -61,20 +69,44 @@ public final class RealtimeLogConfigEndpointArgs extends com.pulumi.resources.Re
             $ = new RealtimeLogConfigEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kinesisStreamConfig The Amazon Kinesis data stream configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kinesisStreamConfig(Output<RealtimeLogConfigEndpointKinesisStreamConfigArgs> kinesisStreamConfig) {
             $.kinesisStreamConfig = kinesisStreamConfig;
             return this;
         }
 
+        /**
+         * @param kinesisStreamConfig The Amazon Kinesis data stream configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kinesisStreamConfig(RealtimeLogConfigEndpointKinesisStreamConfigArgs kinesisStreamConfig) {
             return kinesisStreamConfig(Output.of(kinesisStreamConfig));
         }
 
+        /**
+         * @param streamType The type of data stream where real-time log data is sent. The only valid value is `Kinesis`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamType(Output<String> streamType) {
             $.streamType = streamType;
             return this;
         }
 
+        /**
+         * @param streamType The type of data stream where real-time log data is sent. The only valid value is `Kinesis`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamType(String streamType) {
             return streamType(Output.of(streamType));
         }

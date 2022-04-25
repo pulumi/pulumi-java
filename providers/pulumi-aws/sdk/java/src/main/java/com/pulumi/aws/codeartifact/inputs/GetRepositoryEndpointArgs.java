@@ -21,6 +21,10 @@ public final class GetRepositoryEndpointArgs extends com.pulumi.resources.Invoke
     @Import(name="domain", required=true)
     private String domain;
 
+    /**
+     * @return The name of the domain that contains the repository.
+     * 
+     */
     public String domain() {
         return this.domain;
     }
@@ -32,6 +36,10 @@ public final class GetRepositoryEndpointArgs extends com.pulumi.resources.Invoke
     @Import(name="domainOwner")
     private @Nullable String domainOwner;
 
+    /**
+     * @return The account number of the AWS account that owns the domain.
+     * 
+     */
     public Optional<String> domainOwner() {
         return Optional.ofNullable(this.domainOwner);
     }
@@ -43,6 +51,10 @@ public final class GetRepositoryEndpointArgs extends com.pulumi.resources.Invoke
     @Import(name="format", required=true)
     private String format;
 
+    /**
+     * @return Which endpoint of a repository to return. A repository has one endpoint for each package format: `npm`, `pypi`, `maven`, and `nuget`.
+     * 
+     */
     public String format() {
         return this.format;
     }
@@ -54,6 +66,10 @@ public final class GetRepositoryEndpointArgs extends com.pulumi.resources.Invoke
     @Import(name="repository", required=true)
     private String repository;
 
+    /**
+     * @return The name of the repository.
+     * 
+     */
     public String repository() {
         return this.repository;
     }
@@ -85,21 +101,45 @@ public final class GetRepositoryEndpointArgs extends com.pulumi.resources.Invoke
             $ = new GetRepositoryEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domain The name of the domain that contains the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(String domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param domainOwner The account number of the AWS account that owns the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainOwner(@Nullable String domainOwner) {
             $.domainOwner = domainOwner;
             return this;
         }
 
+        /**
+         * @param format Which endpoint of a repository to return. A repository has one endpoint for each package format: `npm`, `pypi`, `maven`, and `nuget`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(String format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param repository The name of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repository(String repository) {
             $.repository = repository;
             return this;

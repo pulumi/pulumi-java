@@ -28,6 +28,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="activationKey")
     private @Nullable Output<String> activationKey;
 
+    /**
+     * @return Gateway activation key during resource creation. Conflicts with `gateway_ip_address`. Additional information is available in the [Storage Gateway User Guide](https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html).
+     * 
+     */
     public Optional<Output<String>> activationKey() {
         return Optional.ofNullable(this.activationKey);
     }
@@ -39,6 +43,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the gateway.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -50,6 +58,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="averageDownloadRateLimitInBitsPerSec")
     private @Nullable Output<Integer> averageDownloadRateLimitInBitsPerSec;
 
+    /**
+     * @return The average download bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
+     * 
+     */
     public Optional<Output<Integer>> averageDownloadRateLimitInBitsPerSec() {
         return Optional.ofNullable(this.averageDownloadRateLimitInBitsPerSec);
     }
@@ -61,6 +73,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="averageUploadRateLimitInBitsPerSec")
     private @Nullable Output<Integer> averageUploadRateLimitInBitsPerSec;
 
+    /**
+     * @return The average upload bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
+     * 
+     */
     public Optional<Output<Integer>> averageUploadRateLimitInBitsPerSec() {
         return Optional.ofNullable(this.averageUploadRateLimitInBitsPerSec);
     }
@@ -72,6 +88,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudwatchLogGroupArn")
     private @Nullable Output<String> cloudwatchLogGroupArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the Amazon CloudWatch log group to use to monitor and log events in the gateway.
+     * 
+     */
     public Optional<Output<String>> cloudwatchLogGroupArn() {
         return Optional.ofNullable(this.cloudwatchLogGroupArn);
     }
@@ -83,6 +103,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ec2InstanceId")
     private @Nullable Output<String> ec2InstanceId;
 
+    /**
+     * @return The ID of the Amazon EC2 instance that was used to launch the gateway.
+     * 
+     */
     public Optional<Output<String>> ec2InstanceId() {
         return Optional.ofNullable(this.ec2InstanceId);
     }
@@ -94,6 +118,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointType")
     private @Nullable Output<String> endpointType;
 
+    /**
+     * @return The type of endpoint for your gateway.
+     * 
+     */
     public Optional<Output<String>> endpointType() {
         return Optional.ofNullable(this.endpointType);
     }
@@ -105,6 +133,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayId")
     private @Nullable Output<String> gatewayId;
 
+    /**
+     * @return Identifier of the gateway.
+     * 
+     */
     public Optional<Output<String>> gatewayId() {
         return Optional.ofNullable(this.gatewayId);
     }
@@ -116,6 +148,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayIpAddress")
     private @Nullable Output<String> gatewayIpAddress;
 
+    /**
+     * @return Gateway IP address to retrieve activation key during resource creation. Conflicts with `activation_key`. Gateway must be accessible on port 80 from where this provider is running. Additional information is available in the [Storage Gateway User Guide](https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html).
+     * 
+     */
     public Optional<Output<String>> gatewayIpAddress() {
         return Optional.ofNullable(this.gatewayIpAddress);
     }
@@ -127,6 +163,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayName")
     private @Nullable Output<String> gatewayName;
 
+    /**
+     * @return Name of the gateway.
+     * 
+     */
     public Optional<Output<String>> gatewayName() {
         return Optional.ofNullable(this.gatewayName);
     }
@@ -138,6 +178,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayNetworkInterfaces")
     private @Nullable Output<List<GatewayGatewayNetworkInterfaceGetArgs>> gatewayNetworkInterfaces;
 
+    /**
+     * @return An array that contains descriptions of the gateway network interfaces. See Gateway Network Interface.
+     * 
+     */
     public Optional<Output<List<GatewayGatewayNetworkInterfaceGetArgs>>> gatewayNetworkInterfaces() {
         return Optional.ofNullable(this.gatewayNetworkInterfaces);
     }
@@ -149,6 +193,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayTimezone")
     private @Nullable Output<String> gatewayTimezone;
 
+    /**
+     * @return Time zone for the gateway. The time zone is of the format &#34;GMT&#34;, &#34;GMT-hr:mm&#34;, or &#34;GMT+hr:mm&#34;. For example, `GMT-4:00` indicates the time is 4 hours behind GMT. The time zone is used, for example, for scheduling snapshots and your gateway&#39;s maintenance schedule.
+     * 
+     */
     public Optional<Output<String>> gatewayTimezone() {
         return Optional.ofNullable(this.gatewayTimezone);
     }
@@ -160,6 +208,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayType")
     private @Nullable Output<String> gatewayType;
 
+    /**
+     * @return Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_FSX_SMB`, `FILE_S3`, `STORED`, `VTL`.
+     * 
+     */
     public Optional<Output<String>> gatewayType() {
         return Optional.ofNullable(this.gatewayType);
     }
@@ -171,6 +223,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayVpcEndpoint")
     private @Nullable Output<String> gatewayVpcEndpoint;
 
+    /**
+     * @return VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running this provider. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
+     * 
+     */
     public Optional<Output<String>> gatewayVpcEndpoint() {
         return Optional.ofNullable(this.gatewayVpcEndpoint);
     }
@@ -182,6 +238,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostEnvironment")
     private @Nullable Output<String> hostEnvironment;
 
+    /**
+     * @return The type of hypervisor environment used by the host.
+     * 
+     */
     public Optional<Output<String>> hostEnvironment() {
         return Optional.ofNullable(this.hostEnvironment);
     }
@@ -193,6 +253,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="mediumChangerType")
     private @Nullable Output<String> mediumChangerType;
 
+    /**
+     * @return Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`, `IBM-03584L32-0402`.
+     * 
+     */
     public Optional<Output<String>> mediumChangerType() {
         return Optional.ofNullable(this.mediumChangerType);
     }
@@ -204,6 +268,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="smbActiveDirectorySettings")
     private @Nullable Output<GatewaySmbActiveDirectorySettingsGetArgs> smbActiveDirectorySettings;
 
+    /**
+     * @return Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
+     * 
+     */
     public Optional<Output<GatewaySmbActiveDirectorySettingsGetArgs>> smbActiveDirectorySettings() {
         return Optional.ofNullable(this.smbActiveDirectorySettings);
     }
@@ -215,6 +283,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="smbFileShareVisibility")
     private @Nullable Output<Boolean> smbFileShareVisibility;
 
+    /**
+     * @return Specifies whether the shares on this gateway appear when listing shares.
+     * 
+     */
     public Optional<Output<Boolean>> smbFileShareVisibility() {
         return Optional.ofNullable(this.smbFileShareVisibility);
     }
@@ -226,6 +298,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="smbGuestPassword")
     private @Nullable Output<String> smbGuestPassword;
 
+    /**
+     * @return Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
+     * 
+     */
     public Optional<Output<String>> smbGuestPassword() {
         return Optional.ofNullable(this.smbGuestPassword);
     }
@@ -237,6 +313,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="smbSecurityStrategy")
     private @Nullable Output<String> smbSecurityStrategy;
 
+    /**
+     * @return Specifies the type of security strategy. Valid values are: `ClientSpecified`, `MandatorySigning`, and `MandatoryEncryption`. See [Setting a Security Level for Your Gateway](https://docs.aws.amazon.com/storagegateway/latest/userguide/managing-gateway-file.html#security-strategy) for more information.
+     * 
+     */
     public Optional<Output<String>> smbSecurityStrategy() {
         return Optional.ofNullable(this.smbSecurityStrategy);
     }
@@ -248,6 +328,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -259,6 +343,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -270,6 +358,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tapeDriveType")
     private @Nullable Output<String> tapeDriveType;
 
+    /**
+     * @return Type of tape drive to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `IBM-ULT3580-TD5`.
+     * 
+     */
     public Optional<Output<String>> tapeDriveType() {
         return Optional.ofNullable(this.tapeDriveType);
     }
@@ -320,213 +412,495 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
             $ = new GatewayState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activationKey Gateway activation key during resource creation. Conflicts with `gateway_ip_address`. Additional information is available in the [Storage Gateway User Guide](https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder activationKey(@Nullable Output<String> activationKey) {
             $.activationKey = activationKey;
             return this;
         }
 
+        /**
+         * @param activationKey Gateway activation key during resource creation. Conflicts with `gateway_ip_address`. Additional information is available in the [Storage Gateway User Guide](https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder activationKey(String activationKey) {
             return activationKey(Output.of(activationKey));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param averageDownloadRateLimitInBitsPerSec The average download bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder averageDownloadRateLimitInBitsPerSec(@Nullable Output<Integer> averageDownloadRateLimitInBitsPerSec) {
             $.averageDownloadRateLimitInBitsPerSec = averageDownloadRateLimitInBitsPerSec;
             return this;
         }
 
+        /**
+         * @param averageDownloadRateLimitInBitsPerSec The average download bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder averageDownloadRateLimitInBitsPerSec(Integer averageDownloadRateLimitInBitsPerSec) {
             return averageDownloadRateLimitInBitsPerSec(Output.of(averageDownloadRateLimitInBitsPerSec));
         }
 
+        /**
+         * @param averageUploadRateLimitInBitsPerSec The average upload bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder averageUploadRateLimitInBitsPerSec(@Nullable Output<Integer> averageUploadRateLimitInBitsPerSec) {
             $.averageUploadRateLimitInBitsPerSec = averageUploadRateLimitInBitsPerSec;
             return this;
         }
 
+        /**
+         * @param averageUploadRateLimitInBitsPerSec The average upload bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder averageUploadRateLimitInBitsPerSec(Integer averageUploadRateLimitInBitsPerSec) {
             return averageUploadRateLimitInBitsPerSec(Output.of(averageUploadRateLimitInBitsPerSec));
         }
 
+        /**
+         * @param cloudwatchLogGroupArn The Amazon Resource Name (ARN) of the Amazon CloudWatch log group to use to monitor and log events in the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudwatchLogGroupArn(@Nullable Output<String> cloudwatchLogGroupArn) {
             $.cloudwatchLogGroupArn = cloudwatchLogGroupArn;
             return this;
         }
 
+        /**
+         * @param cloudwatchLogGroupArn The Amazon Resource Name (ARN) of the Amazon CloudWatch log group to use to monitor and log events in the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudwatchLogGroupArn(String cloudwatchLogGroupArn) {
             return cloudwatchLogGroupArn(Output.of(cloudwatchLogGroupArn));
         }
 
+        /**
+         * @param ec2InstanceId The ID of the Amazon EC2 instance that was used to launch the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ec2InstanceId(@Nullable Output<String> ec2InstanceId) {
             $.ec2InstanceId = ec2InstanceId;
             return this;
         }
 
+        /**
+         * @param ec2InstanceId The ID of the Amazon EC2 instance that was used to launch the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ec2InstanceId(String ec2InstanceId) {
             return ec2InstanceId(Output.of(ec2InstanceId));
         }
 
+        /**
+         * @param endpointType The type of endpoint for your gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(@Nullable Output<String> endpointType) {
             $.endpointType = endpointType;
             return this;
         }
 
+        /**
+         * @param endpointType The type of endpoint for your gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(String endpointType) {
             return endpointType(Output.of(endpointType));
         }
 
+        /**
+         * @param gatewayId Identifier of the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayId(@Nullable Output<String> gatewayId) {
             $.gatewayId = gatewayId;
             return this;
         }
 
+        /**
+         * @param gatewayId Identifier of the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayId(String gatewayId) {
             return gatewayId(Output.of(gatewayId));
         }
 
+        /**
+         * @param gatewayIpAddress Gateway IP address to retrieve activation key during resource creation. Conflicts with `activation_key`. Gateway must be accessible on port 80 from where this provider is running. Additional information is available in the [Storage Gateway User Guide](https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayIpAddress(@Nullable Output<String> gatewayIpAddress) {
             $.gatewayIpAddress = gatewayIpAddress;
             return this;
         }
 
+        /**
+         * @param gatewayIpAddress Gateway IP address to retrieve activation key during resource creation. Conflicts with `activation_key`. Gateway must be accessible on port 80 from where this provider is running. Additional information is available in the [Storage Gateway User Guide](https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayIpAddress(String gatewayIpAddress) {
             return gatewayIpAddress(Output.of(gatewayIpAddress));
         }
 
+        /**
+         * @param gatewayName Name of the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayName(@Nullable Output<String> gatewayName) {
             $.gatewayName = gatewayName;
             return this;
         }
 
+        /**
+         * @param gatewayName Name of the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayName(String gatewayName) {
             return gatewayName(Output.of(gatewayName));
         }
 
+        /**
+         * @param gatewayNetworkInterfaces An array that contains descriptions of the gateway network interfaces. See Gateway Network Interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayNetworkInterfaces(@Nullable Output<List<GatewayGatewayNetworkInterfaceGetArgs>> gatewayNetworkInterfaces) {
             $.gatewayNetworkInterfaces = gatewayNetworkInterfaces;
             return this;
         }
 
+        /**
+         * @param gatewayNetworkInterfaces An array that contains descriptions of the gateway network interfaces. See Gateway Network Interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayNetworkInterfaces(List<GatewayGatewayNetworkInterfaceGetArgs> gatewayNetworkInterfaces) {
             return gatewayNetworkInterfaces(Output.of(gatewayNetworkInterfaces));
         }
 
+        /**
+         * @param gatewayNetworkInterfaces An array that contains descriptions of the gateway network interfaces. See Gateway Network Interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayNetworkInterfaces(GatewayGatewayNetworkInterfaceGetArgs... gatewayNetworkInterfaces) {
             return gatewayNetworkInterfaces(List.of(gatewayNetworkInterfaces));
         }
 
+        /**
+         * @param gatewayTimezone Time zone for the gateway. The time zone is of the format &#34;GMT&#34;, &#34;GMT-hr:mm&#34;, or &#34;GMT+hr:mm&#34;. For example, `GMT-4:00` indicates the time is 4 hours behind GMT. The time zone is used, for example, for scheduling snapshots and your gateway&#39;s maintenance schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayTimezone(@Nullable Output<String> gatewayTimezone) {
             $.gatewayTimezone = gatewayTimezone;
             return this;
         }
 
+        /**
+         * @param gatewayTimezone Time zone for the gateway. The time zone is of the format &#34;GMT&#34;, &#34;GMT-hr:mm&#34;, or &#34;GMT+hr:mm&#34;. For example, `GMT-4:00` indicates the time is 4 hours behind GMT. The time zone is used, for example, for scheduling snapshots and your gateway&#39;s maintenance schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayTimezone(String gatewayTimezone) {
             return gatewayTimezone(Output.of(gatewayTimezone));
         }
 
+        /**
+         * @param gatewayType Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_FSX_SMB`, `FILE_S3`, `STORED`, `VTL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayType(@Nullable Output<String> gatewayType) {
             $.gatewayType = gatewayType;
             return this;
         }
 
+        /**
+         * @param gatewayType Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_FSX_SMB`, `FILE_S3`, `STORED`, `VTL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayType(String gatewayType) {
             return gatewayType(Output.of(gatewayType));
         }
 
+        /**
+         * @param gatewayVpcEndpoint VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running this provider. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayVpcEndpoint(@Nullable Output<String> gatewayVpcEndpoint) {
             $.gatewayVpcEndpoint = gatewayVpcEndpoint;
             return this;
         }
 
+        /**
+         * @param gatewayVpcEndpoint VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running this provider. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayVpcEndpoint(String gatewayVpcEndpoint) {
             return gatewayVpcEndpoint(Output.of(gatewayVpcEndpoint));
         }
 
+        /**
+         * @param hostEnvironment The type of hypervisor environment used by the host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostEnvironment(@Nullable Output<String> hostEnvironment) {
             $.hostEnvironment = hostEnvironment;
             return this;
         }
 
+        /**
+         * @param hostEnvironment The type of hypervisor environment used by the host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostEnvironment(String hostEnvironment) {
             return hostEnvironment(Output.of(hostEnvironment));
         }
 
+        /**
+         * @param mediumChangerType Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`, `IBM-03584L32-0402`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediumChangerType(@Nullable Output<String> mediumChangerType) {
             $.mediumChangerType = mediumChangerType;
             return this;
         }
 
+        /**
+         * @param mediumChangerType Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`, `IBM-03584L32-0402`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediumChangerType(String mediumChangerType) {
             return mediumChangerType(Output.of(mediumChangerType));
         }
 
+        /**
+         * @param smbActiveDirectorySettings Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder smbActiveDirectorySettings(@Nullable Output<GatewaySmbActiveDirectorySettingsGetArgs> smbActiveDirectorySettings) {
             $.smbActiveDirectorySettings = smbActiveDirectorySettings;
             return this;
         }
 
+        /**
+         * @param smbActiveDirectorySettings Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder smbActiveDirectorySettings(GatewaySmbActiveDirectorySettingsGetArgs smbActiveDirectorySettings) {
             return smbActiveDirectorySettings(Output.of(smbActiveDirectorySettings));
         }
 
+        /**
+         * @param smbFileShareVisibility Specifies whether the shares on this gateway appear when listing shares.
+         * 
+         * @return builder
+         * 
+         */
         public Builder smbFileShareVisibility(@Nullable Output<Boolean> smbFileShareVisibility) {
             $.smbFileShareVisibility = smbFileShareVisibility;
             return this;
         }
 
+        /**
+         * @param smbFileShareVisibility Specifies whether the shares on this gateway appear when listing shares.
+         * 
+         * @return builder
+         * 
+         */
         public Builder smbFileShareVisibility(Boolean smbFileShareVisibility) {
             return smbFileShareVisibility(Output.of(smbFileShareVisibility));
         }
 
+        /**
+         * @param smbGuestPassword Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder smbGuestPassword(@Nullable Output<String> smbGuestPassword) {
             $.smbGuestPassword = smbGuestPassword;
             return this;
         }
 
+        /**
+         * @param smbGuestPassword Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder smbGuestPassword(String smbGuestPassword) {
             return smbGuestPassword(Output.of(smbGuestPassword));
         }
 
+        /**
+         * @param smbSecurityStrategy Specifies the type of security strategy. Valid values are: `ClientSpecified`, `MandatorySigning`, and `MandatoryEncryption`. See [Setting a Security Level for Your Gateway](https://docs.aws.amazon.com/storagegateway/latest/userguide/managing-gateway-file.html#security-strategy) for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder smbSecurityStrategy(@Nullable Output<String> smbSecurityStrategy) {
             $.smbSecurityStrategy = smbSecurityStrategy;
             return this;
         }
 
+        /**
+         * @param smbSecurityStrategy Specifies the type of security strategy. Valid values are: `ClientSpecified`, `MandatorySigning`, and `MandatoryEncryption`. See [Setting a Security Level for Your Gateway](https://docs.aws.amazon.com/storagegateway/latest/userguide/managing-gateway-file.html#security-strategy) for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder smbSecurityStrategy(String smbSecurityStrategy) {
             return smbSecurityStrategy(Output.of(smbSecurityStrategy));
         }
 
+        /**
+         * @param tags Key-value map of resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param tapeDriveType Type of tape drive to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `IBM-ULT3580-TD5`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tapeDriveType(@Nullable Output<String> tapeDriveType) {
             $.tapeDriveType = tapeDriveType;
             return this;
         }
 
+        /**
+         * @param tapeDriveType Type of tape drive to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `IBM-ULT3580-TD5`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tapeDriveType(String tapeDriveType) {
             return tapeDriveType(Output.of(tapeDriveType));
         }

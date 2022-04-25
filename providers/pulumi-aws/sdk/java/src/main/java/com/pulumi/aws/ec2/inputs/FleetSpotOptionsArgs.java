@@ -24,6 +24,10 @@ public final class FleetSpotOptionsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="allocationStrategy")
     private @Nullable Output<String> allocationStrategy;
 
+    /**
+     * @return How to allocate the target capacity across the Spot pools. Valid values: `diversified`, `lowestPrice`. Default: `lowestPrice`.
+     * 
+     */
     public Optional<Output<String>> allocationStrategy() {
         return Optional.ofNullable(this.allocationStrategy);
     }
@@ -35,6 +39,10 @@ public final class FleetSpotOptionsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="instanceInterruptionBehavior")
     private @Nullable Output<String> instanceInterruptionBehavior;
 
+    /**
+     * @return Behavior when a Spot Instance is interrupted. Valid values: `hibernate`, `stop`, `terminate`. Default: `terminate`.
+     * 
+     */
     public Optional<Output<String>> instanceInterruptionBehavior() {
         return Optional.ofNullable(this.instanceInterruptionBehavior);
     }
@@ -46,6 +54,10 @@ public final class FleetSpotOptionsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="instancePoolsToUseCount")
     private @Nullable Output<Integer> instancePoolsToUseCount;
 
+    /**
+     * @return Number of Spot pools across which to allocate your target Spot capacity. Valid only when Spot `allocation_strategy` is set to `lowestPrice`. Default: `1`.
+     * 
+     */
     public Optional<Output<Integer>> instancePoolsToUseCount() {
         return Optional.ofNullable(this.instancePoolsToUseCount);
     }
@@ -57,6 +69,10 @@ public final class FleetSpotOptionsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="maintenanceStrategies")
     private @Nullable Output<FleetSpotOptionsMaintenanceStrategiesArgs> maintenanceStrategies;
 
+    /**
+     * @return Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
+     * 
+     */
     public Optional<Output<FleetSpotOptionsMaintenanceStrategiesArgs>> maintenanceStrategies() {
         return Optional.ofNullable(this.maintenanceStrategies);
     }
@@ -88,38 +104,86 @@ public final class FleetSpotOptionsArgs extends com.pulumi.resources.ResourceArg
             $ = new FleetSpotOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allocationStrategy How to allocate the target capacity across the Spot pools. Valid values: `diversified`, `lowestPrice`. Default: `lowestPrice`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocationStrategy(@Nullable Output<String> allocationStrategy) {
             $.allocationStrategy = allocationStrategy;
             return this;
         }
 
+        /**
+         * @param allocationStrategy How to allocate the target capacity across the Spot pools. Valid values: `diversified`, `lowestPrice`. Default: `lowestPrice`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocationStrategy(String allocationStrategy) {
             return allocationStrategy(Output.of(allocationStrategy));
         }
 
+        /**
+         * @param instanceInterruptionBehavior Behavior when a Spot Instance is interrupted. Valid values: `hibernate`, `stop`, `terminate`. Default: `terminate`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceInterruptionBehavior(@Nullable Output<String> instanceInterruptionBehavior) {
             $.instanceInterruptionBehavior = instanceInterruptionBehavior;
             return this;
         }
 
+        /**
+         * @param instanceInterruptionBehavior Behavior when a Spot Instance is interrupted. Valid values: `hibernate`, `stop`, `terminate`. Default: `terminate`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceInterruptionBehavior(String instanceInterruptionBehavior) {
             return instanceInterruptionBehavior(Output.of(instanceInterruptionBehavior));
         }
 
+        /**
+         * @param instancePoolsToUseCount Number of Spot pools across which to allocate your target Spot capacity. Valid only when Spot `allocation_strategy` is set to `lowestPrice`. Default: `1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instancePoolsToUseCount(@Nullable Output<Integer> instancePoolsToUseCount) {
             $.instancePoolsToUseCount = instancePoolsToUseCount;
             return this;
         }
 
+        /**
+         * @param instancePoolsToUseCount Number of Spot pools across which to allocate your target Spot capacity. Valid only when Spot `allocation_strategy` is set to `lowestPrice`. Default: `1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instancePoolsToUseCount(Integer instancePoolsToUseCount) {
             return instancePoolsToUseCount(Output.of(instancePoolsToUseCount));
         }
 
+        /**
+         * @param maintenanceStrategies Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceStrategies(@Nullable Output<FleetSpotOptionsMaintenanceStrategiesArgs> maintenanceStrategies) {
             $.maintenanceStrategies = maintenanceStrategies;
             return this;
         }
 
+        /**
+         * @param maintenanceStrategies Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceStrategies(FleetSpotOptionsMaintenanceStrategiesArgs maintenanceStrategies) {
             return maintenanceStrategies(Output.of(maintenanceStrategies));
         }

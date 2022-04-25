@@ -23,6 +23,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateAuthorityArn", required=true)
     private Output<String> certificateAuthorityArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the certificate authority.
+     * 
+     */
     public Output<String> certificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
@@ -34,6 +38,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateSigningRequest", required=true)
     private Output<String> certificateSigningRequest;
 
+    /**
+     * @return Certificate Signing Request in PEM format.
+     * 
+     */
     public Output<String> certificateSigningRequest() {
         return this.certificateSigningRequest;
     }
@@ -45,6 +53,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="signingAlgorithm", required=true)
     private Output<String> signingAlgorithm;
 
+    /**
+     * @return Algorithm to use to sign certificate requests. Valid values: `SHA256WITHRSA`, `SHA256WITHECDSA`, `SHA384WITHRSA`, `SHA384WITHECDSA`, `SHA512WITHRSA`, `SHA512WITHECDSA`
+     * 
+     */
     public Output<String> signingAlgorithm() {
         return this.signingAlgorithm;
     }
@@ -56,6 +68,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="templateArn")
     private @Nullable Output<String> templateArn;
 
+    /**
+     * @return The template to use when issuing a certificate. See [ACM PCA Documentation](https://docs.aws.amazon.com/acm-pca/latest/userguide/UsingTemplates.html) for more information.
+     * 
+     */
     public Optional<Output<String>> templateArn() {
         return Optional.ofNullable(this.templateArn);
     }
@@ -67,6 +83,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="validity", required=true)
     private Output<CertificateValidityArgs> validity;
 
+    /**
+     * @return Configures end of the validity period for the certificate. See validity block below.
+     * 
+     */
     public Output<CertificateValidityArgs> validity() {
         return this.validity;
     }
@@ -99,47 +119,107 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateAuthorityArn Amazon Resource Name (ARN) of the certificate authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthorityArn(Output<String> certificateAuthorityArn) {
             $.certificateAuthorityArn = certificateAuthorityArn;
             return this;
         }
 
+        /**
+         * @param certificateAuthorityArn Amazon Resource Name (ARN) of the certificate authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthorityArn(String certificateAuthorityArn) {
             return certificateAuthorityArn(Output.of(certificateAuthorityArn));
         }
 
+        /**
+         * @param certificateSigningRequest Certificate Signing Request in PEM format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateSigningRequest(Output<String> certificateSigningRequest) {
             $.certificateSigningRequest = certificateSigningRequest;
             return this;
         }
 
+        /**
+         * @param certificateSigningRequest Certificate Signing Request in PEM format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateSigningRequest(String certificateSigningRequest) {
             return certificateSigningRequest(Output.of(certificateSigningRequest));
         }
 
+        /**
+         * @param signingAlgorithm Algorithm to use to sign certificate requests. Valid values: `SHA256WITHRSA`, `SHA256WITHECDSA`, `SHA384WITHRSA`, `SHA384WITHECDSA`, `SHA512WITHRSA`, `SHA512WITHECDSA`
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingAlgorithm(Output<String> signingAlgorithm) {
             $.signingAlgorithm = signingAlgorithm;
             return this;
         }
 
+        /**
+         * @param signingAlgorithm Algorithm to use to sign certificate requests. Valid values: `SHA256WITHRSA`, `SHA256WITHECDSA`, `SHA384WITHRSA`, `SHA384WITHECDSA`, `SHA512WITHRSA`, `SHA512WITHECDSA`
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingAlgorithm(String signingAlgorithm) {
             return signingAlgorithm(Output.of(signingAlgorithm));
         }
 
+        /**
+         * @param templateArn The template to use when issuing a certificate. See [ACM PCA Documentation](https://docs.aws.amazon.com/acm-pca/latest/userguide/UsingTemplates.html) for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateArn(@Nullable Output<String> templateArn) {
             $.templateArn = templateArn;
             return this;
         }
 
+        /**
+         * @param templateArn The template to use when issuing a certificate. See [ACM PCA Documentation](https://docs.aws.amazon.com/acm-pca/latest/userguide/UsingTemplates.html) for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateArn(String templateArn) {
             return templateArn(Output.of(templateArn));
         }
 
+        /**
+         * @param validity Configures end of the validity period for the certificate. See validity block below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validity(Output<CertificateValidityArgs> validity) {
             $.validity = validity;
             return this;
         }
 
+        /**
+         * @param validity Configures end of the validity period for the certificate. See validity block below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validity(CertificateValidityArgs validity) {
             return validity(Output.of(validity));
         }

@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class DomainSamlOptionsSamlOptionsIdp {
     /**
-     * The unique Entity ID of the application in SAML Identity Provider.
+     * @return The unique Entity ID of the application in SAML Identity Provider.
      * 
      */
     private final String entityId;
     /**
-     * The Metadata of the SAML application in xml format.
+     * @return The Metadata of the SAML application in xml format.
      * 
      */
     private final String metadataContent;
@@ -29,16 +29,16 @@ public final class DomainSamlOptionsSamlOptionsIdp {
     }
 
     /**
-     * The unique Entity ID of the application in SAML Identity Provider.
+     * @return The unique Entity ID of the application in SAML Identity Provider.
      * 
-    */
+     */
     public String entityId() {
         return this.entityId;
     }
     /**
-     * The Metadata of the SAML application in xml format.
+     * @return The Metadata of the SAML application in xml format.
      * 
-    */
+     */
     public String metadataContent() {
         return this.metadataContent;
     }

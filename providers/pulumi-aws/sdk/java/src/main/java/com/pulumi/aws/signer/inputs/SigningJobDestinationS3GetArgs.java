@@ -22,6 +22,10 @@ public final class SigningJobDestinationS3GetArgs extends com.pulumi.resources.R
     @Import(name="bucket", required=true)
     private Output<String> bucket;
 
+    /**
+     * @return Name of the S3 bucket.
+     * 
+     */
     public Output<String> bucket() {
         return this.bucket;
     }
@@ -33,6 +37,10 @@ public final class SigningJobDestinationS3GetArgs extends com.pulumi.resources.R
     @Import(name="prefix")
     private @Nullable Output<String> prefix;
 
+    /**
+     * @return An Amazon S3 object key prefix that you can use to limit signed objects keys to begin with the specified prefix.
+     * 
+     */
     public Optional<Output<String>> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -62,20 +70,44 @@ public final class SigningJobDestinationS3GetArgs extends com.pulumi.resources.R
             $ = new SigningJobDestinationS3GetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket Name of the S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket Name of the S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param prefix An Amazon S3 object key prefix that you can use to limit signed objects keys to begin with the specified prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable Output<String> prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param prefix An Amazon S3 object key prefix that you can use to limit signed objects keys to begin with the specified prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(String prefix) {
             return prefix(Output.of(prefix));
         }

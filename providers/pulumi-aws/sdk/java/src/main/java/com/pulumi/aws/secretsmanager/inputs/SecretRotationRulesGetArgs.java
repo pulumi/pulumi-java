@@ -20,6 +20,10 @@ public final class SecretRotationRulesGetArgs extends com.pulumi.resources.Resou
     @Import(name="automaticallyAfterDays", required=true)
     private Output<Integer> automaticallyAfterDays;
 
+    /**
+     * @return Specifies the number of days between automatic scheduled rotations of the secret.
+     * 
+     */
     public Output<Integer> automaticallyAfterDays() {
         return this.automaticallyAfterDays;
     }
@@ -48,11 +52,23 @@ public final class SecretRotationRulesGetArgs extends com.pulumi.resources.Resou
             $ = new SecretRotationRulesGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automaticallyAfterDays Specifies the number of days between automatic scheduled rotations of the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automaticallyAfterDays(Output<Integer> automaticallyAfterDays) {
             $.automaticallyAfterDays = automaticallyAfterDays;
             return this;
         }
 
+        /**
+         * @param automaticallyAfterDays Specifies the number of days between automatic scheduled rotations of the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automaticallyAfterDays(Integer automaticallyAfterDays) {
             return automaticallyAfterDays(Output.of(automaticallyAfterDays));
         }

@@ -22,6 +22,10 @@ public final class StaticIpState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the Lightsail static IP
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -33,6 +37,10 @@ public final class StaticIpState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAddress")
     private @Nullable Output<String> ipAddress;
 
+    /**
+     * @return The allocated static IP address
+     * 
+     */
     public Optional<Output<String>> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -44,6 +52,10 @@ public final class StaticIpState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name for the allocated static IP
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -55,6 +67,10 @@ public final class StaticIpState extends com.pulumi.resources.ResourceArgs {
     @Import(name="supportCode")
     private @Nullable Output<String> supportCode;
 
+    /**
+     * @return The support code.
+     * 
+     */
     public Optional<Output<String>> supportCode() {
         return Optional.ofNullable(this.supportCode);
     }
@@ -86,38 +102,86 @@ public final class StaticIpState extends com.pulumi.resources.ResourceArgs {
             $ = new StaticIpState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the Lightsail static IP
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the Lightsail static IP
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param ipAddress The allocated static IP address
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param ipAddress The allocated static IP address
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             return ipAddress(Output.of(ipAddress));
         }
 
+        /**
+         * @param name The name for the allocated static IP
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name for the allocated static IP
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param supportCode The support code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportCode(@Nullable Output<String> supportCode) {
             $.supportCode = supportCode;
             return this;
         }
 
+        /**
+         * @param supportCode The support code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportCode(String supportCode) {
             return supportCode(Output.of(supportCode));
         }

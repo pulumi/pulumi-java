@@ -22,6 +22,10 @@ public final class PullThroughCacheRuleState extends com.pulumi.resources.Resour
     @Import(name="ecrRepositoryPrefix")
     private @Nullable Output<String> ecrRepositoryPrefix;
 
+    /**
+     * @return The repository name prefix to use when caching images from the source registry.
+     * 
+     */
     public Optional<Output<String>> ecrRepositoryPrefix() {
         return Optional.ofNullable(this.ecrRepositoryPrefix);
     }
@@ -33,6 +37,10 @@ public final class PullThroughCacheRuleState extends com.pulumi.resources.Resour
     @Import(name="registryId")
     private @Nullable Output<String> registryId;
 
+    /**
+     * @return The registry ID where the repository was created.
+     * 
+     */
     public Optional<Output<String>> registryId() {
         return Optional.ofNullable(this.registryId);
     }
@@ -44,6 +52,10 @@ public final class PullThroughCacheRuleState extends com.pulumi.resources.Resour
     @Import(name="upstreamRegistryUrl")
     private @Nullable Output<String> upstreamRegistryUrl;
 
+    /**
+     * @return The registry URL of the upstream public registry to use as the source.
+     * 
+     */
     public Optional<Output<String>> upstreamRegistryUrl() {
         return Optional.ofNullable(this.upstreamRegistryUrl);
     }
@@ -74,29 +86,65 @@ public final class PullThroughCacheRuleState extends com.pulumi.resources.Resour
             $ = new PullThroughCacheRuleState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ecrRepositoryPrefix The repository name prefix to use when caching images from the source registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ecrRepositoryPrefix(@Nullable Output<String> ecrRepositoryPrefix) {
             $.ecrRepositoryPrefix = ecrRepositoryPrefix;
             return this;
         }
 
+        /**
+         * @param ecrRepositoryPrefix The repository name prefix to use when caching images from the source registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ecrRepositoryPrefix(String ecrRepositoryPrefix) {
             return ecrRepositoryPrefix(Output.of(ecrRepositoryPrefix));
         }
 
+        /**
+         * @param registryId The registry ID where the repository was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryId(@Nullable Output<String> registryId) {
             $.registryId = registryId;
             return this;
         }
 
+        /**
+         * @param registryId The registry ID where the repository was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryId(String registryId) {
             return registryId(Output.of(registryId));
         }
 
+        /**
+         * @param upstreamRegistryUrl The registry URL of the upstream public registry to use as the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upstreamRegistryUrl(@Nullable Output<String> upstreamRegistryUrl) {
             $.upstreamRegistryUrl = upstreamRegistryUrl;
             return this;
         }
 
+        /**
+         * @param upstreamRegistryUrl The registry URL of the upstream public registry to use as the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upstreamRegistryUrl(String upstreamRegistryUrl) {
             return upstreamRegistryUrl(Output.of(upstreamRegistryUrl));
         }

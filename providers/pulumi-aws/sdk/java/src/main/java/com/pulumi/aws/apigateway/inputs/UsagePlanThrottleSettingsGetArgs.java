@@ -23,6 +23,10 @@ public final class UsagePlanThrottleSettingsGetArgs extends com.pulumi.resources
     @Import(name="burstLimit")
     private @Nullable Output<Integer> burstLimit;
 
+    /**
+     * @return The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.
+     * 
+     */
     public Optional<Output<Integer>> burstLimit() {
         return Optional.ofNullable(this.burstLimit);
     }
@@ -34,6 +38,10 @@ public final class UsagePlanThrottleSettingsGetArgs extends com.pulumi.resources
     @Import(name="rateLimit")
     private @Nullable Output<Double> rateLimit;
 
+    /**
+     * @return The API request steady-state rate limit.
+     * 
+     */
     public Optional<Output<Double>> rateLimit() {
         return Optional.ofNullable(this.rateLimit);
     }
@@ -63,20 +71,44 @@ public final class UsagePlanThrottleSettingsGetArgs extends com.pulumi.resources
             $ = new UsagePlanThrottleSettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param burstLimit The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder burstLimit(@Nullable Output<Integer> burstLimit) {
             $.burstLimit = burstLimit;
             return this;
         }
 
+        /**
+         * @param burstLimit The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder burstLimit(Integer burstLimit) {
             return burstLimit(Output.of(burstLimit));
         }
 
+        /**
+         * @param rateLimit The API request steady-state rate limit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rateLimit(@Nullable Output<Double> rateLimit) {
             $.rateLimit = rateLimit;
             return this;
         }
 
+        /**
+         * @param rateLimit The API request steady-state rate limit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rateLimit(Double rateLimit) {
             return rateLimit(Output.of(rateLimit));
         }

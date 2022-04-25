@@ -19,6 +19,10 @@ public final class GetClusterCertificateAuthority extends com.pulumi.resources.I
     @Import(name="data", required=true)
     private String data;
 
+    /**
+     * @return The base64 encoded certificate data required to communicate with your cluster. Add this to the `certificate-authority-data` section of the `kubeconfig` file for your cluster.
+     * 
+     */
     public String data() {
         return this.data;
     }
@@ -47,6 +51,12 @@ public final class GetClusterCertificateAuthority extends com.pulumi.resources.I
             $ = new GetClusterCertificateAuthority(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param data The base64 encoded certificate data required to communicate with your cluster. Add this to the `certificate-authority-data` section of the `kubeconfig` file for your cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(String data) {
             $.data = data;
             return this;

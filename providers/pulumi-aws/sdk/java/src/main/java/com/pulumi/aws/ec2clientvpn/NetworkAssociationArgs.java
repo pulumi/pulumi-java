@@ -23,6 +23,10 @@ public final class NetworkAssociationArgs extends com.pulumi.resources.ResourceA
     @Import(name="clientVpnEndpointId", required=true)
     private Output<String> clientVpnEndpointId;
 
+    /**
+     * @return The ID of the Client VPN endpoint.
+     * 
+     */
     public Output<String> clientVpnEndpointId() {
         return this.clientVpnEndpointId;
     }
@@ -34,6 +38,10 @@ public final class NetworkAssociationArgs extends com.pulumi.resources.ResourceA
     @Import(name="securityGroups")
     private @Nullable Output<List<String>> securityGroups;
 
+    /**
+     * @return A list of up to five custom security groups to apply to the target network. If not specified, the VPC&#39;s default security group is assigned.
+     * 
+     */
     public Optional<Output<List<String>>> securityGroups() {
         return Optional.ofNullable(this.securityGroups);
     }
@@ -45,6 +53,10 @@ public final class NetworkAssociationArgs extends com.pulumi.resources.ResourceA
     @Import(name="subnetId", required=true)
     private Output<String> subnetId;
 
+    /**
+     * @return The ID of the subnet to associate with the Client VPN endpoint.
+     * 
+     */
     public Output<String> subnetId() {
         return this.subnetId;
     }
@@ -75,33 +87,75 @@ public final class NetworkAssociationArgs extends com.pulumi.resources.ResourceA
             $ = new NetworkAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientVpnEndpointId The ID of the Client VPN endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientVpnEndpointId(Output<String> clientVpnEndpointId) {
             $.clientVpnEndpointId = clientVpnEndpointId;
             return this;
         }
 
+        /**
+         * @param clientVpnEndpointId The ID of the Client VPN endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientVpnEndpointId(String clientVpnEndpointId) {
             return clientVpnEndpointId(Output.of(clientVpnEndpointId));
         }
 
+        /**
+         * @param securityGroups A list of up to five custom security groups to apply to the target network. If not specified, the VPC&#39;s default security group is assigned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             $.securityGroups = securityGroups;
             return this;
         }
 
+        /**
+         * @param securityGroups A list of up to five custom security groups to apply to the target network. If not specified, the VPC&#39;s default security group is assigned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(List<String> securityGroups) {
             return securityGroups(Output.of(securityGroups));
         }
 
+        /**
+         * @param securityGroups A list of up to five custom security groups to apply to the target network. If not specified, the VPC&#39;s default security group is assigned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
 
+        /**
+         * @param subnetId The ID of the subnet to associate with the Client VPN endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param subnetId The ID of the subnet to associate with the Client VPN endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }

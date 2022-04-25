@@ -15,23 +15,23 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetPipelineDefinitionResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * Parameter objects used in the pipeline definition. See below
+     * @return Parameter objects used in the pipeline definition. See below
      * 
      */
     private final List<GetPipelineDefinitionParameterObject> parameterObjects;
     /**
-     * Parameter values used in the pipeline definition. See below
+     * @return Parameter values used in the pipeline definition. See below
      * 
      */
     private final @Nullable List<GetPipelineDefinitionParameterValue> parameterValues;
     private final String pipelineId;
     /**
-     * Objects defined in the pipeline. See below
+     * @return Objects defined in the pipeline. See below
      * 
      */
     private final List<GetPipelineDefinitionPipelineObject> pipelineObjects;
@@ -51,23 +51,23 @@ public final class GetPipelineDefinitionResult {
     }
 
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Parameter objects used in the pipeline definition. See below
+     * @return Parameter objects used in the pipeline definition. See below
      * 
-    */
+     */
     public List<GetPipelineDefinitionParameterObject> parameterObjects() {
         return this.parameterObjects;
     }
     /**
-     * Parameter values used in the pipeline definition. See below
+     * @return Parameter values used in the pipeline definition. See below
      * 
-    */
+     */
     public List<GetPipelineDefinitionParameterValue> parameterValues() {
         return this.parameterValues == null ? List.of() : this.parameterValues;
     }
@@ -75,9 +75,9 @@ public final class GetPipelineDefinitionResult {
         return this.pipelineId;
     }
     /**
-     * Objects defined in the pipeline. See below
+     * @return Objects defined in the pipeline. See below
      * 
-    */
+     */
     public List<GetPipelineDefinitionPipelineObject> pipelineObjects() {
         return this.pipelineObjects;
     }

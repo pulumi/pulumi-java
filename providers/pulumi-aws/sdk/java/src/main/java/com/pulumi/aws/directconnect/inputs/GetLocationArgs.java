@@ -19,6 +19,10 @@ public final class GetLocationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="locationCode", required=true)
     private String locationCode;
 
+    /**
+     * @return The code for the location to retrieve.
+     * 
+     */
     public String locationCode() {
         return this.locationCode;
     }
@@ -47,6 +51,12 @@ public final class GetLocationArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetLocationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param locationCode The code for the location to retrieve.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationCode(String locationCode) {
             $.locationCode = locationCode;
             return this;

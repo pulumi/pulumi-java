@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OrganizationRootPolicyType {
     /**
-     * The status of the policy type as it relates to the associated root
+     * @return The status of the policy type as it relates to the associated root
      * 
      */
     private final @Nullable String status;
@@ -27,9 +27,9 @@ public final class OrganizationRootPolicyType {
     }
 
     /**
-     * The status of the policy type as it relates to the associated root
+     * @return The status of the policy type as it relates to the associated root
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }

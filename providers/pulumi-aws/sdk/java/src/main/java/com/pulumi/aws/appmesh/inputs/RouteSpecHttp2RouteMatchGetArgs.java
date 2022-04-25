@@ -24,6 +24,10 @@ public final class RouteSpecHttp2RouteMatchGetArgs extends com.pulumi.resources.
     @Import(name="headers")
     private @Nullable Output<List<RouteSpecHttp2RouteMatchHeaderGetArgs>> headers;
 
+    /**
+     * @return The client request headers to match on.
+     * 
+     */
     public Optional<Output<List<RouteSpecHttp2RouteMatchHeaderGetArgs>>> headers() {
         return Optional.ofNullable(this.headers);
     }
@@ -35,6 +39,10 @@ public final class RouteSpecHttp2RouteMatchGetArgs extends com.pulumi.resources.
     @Import(name="method")
     private @Nullable Output<String> method;
 
+    /**
+     * @return The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
+     * 
+     */
     public Optional<Output<String>> method() {
         return Optional.ofNullable(this.method);
     }
@@ -47,6 +55,11 @@ public final class RouteSpecHttp2RouteMatchGetArgs extends com.pulumi.resources.
     @Import(name="prefix", required=true)
     private Output<String> prefix;
 
+    /**
+     * @return The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
+     * This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+     * 
+     */
     public Output<String> prefix() {
         return this.prefix;
     }
@@ -58,6 +71,10 @@ public final class RouteSpecHttp2RouteMatchGetArgs extends com.pulumi.resources.
     @Import(name="scheme")
     private @Nullable Output<String> scheme;
 
+    /**
+     * @return The client request header scheme to match on. Valid values: `http`, `https`.
+     * 
+     */
     public Optional<Output<String>> scheme() {
         return Optional.ofNullable(this.scheme);
     }
@@ -89,42 +106,98 @@ public final class RouteSpecHttp2RouteMatchGetArgs extends com.pulumi.resources.
             $ = new RouteSpecHttp2RouteMatchGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param headers The client request headers to match on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(@Nullable Output<List<RouteSpecHttp2RouteMatchHeaderGetArgs>> headers) {
             $.headers = headers;
             return this;
         }
 
+        /**
+         * @param headers The client request headers to match on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(List<RouteSpecHttp2RouteMatchHeaderGetArgs> headers) {
             return headers(Output.of(headers));
         }
 
+        /**
+         * @param headers The client request headers to match on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(RouteSpecHttp2RouteMatchHeaderGetArgs... headers) {
             return headers(List.of(headers));
         }
 
+        /**
+         * @param method The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(@Nullable Output<String> method) {
             $.method = method;
             return this;
         }
 
+        /**
+         * @param method The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(String method) {
             return method(Output.of(method));
         }
 
+        /**
+         * @param prefix The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
+         * This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(Output<String> prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param prefix The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
+         * This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(String prefix) {
             return prefix(Output.of(prefix));
         }
 
+        /**
+         * @param scheme The client request header scheme to match on. Valid values: `http`, `https`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheme(@Nullable Output<String> scheme) {
             $.scheme = scheme;
             return this;
         }
 
+        /**
+         * @param scheme The client request header scheme to match on. Valid values: `http`, `https`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheme(String scheme) {
             return scheme(Output.of(scheme));
         }

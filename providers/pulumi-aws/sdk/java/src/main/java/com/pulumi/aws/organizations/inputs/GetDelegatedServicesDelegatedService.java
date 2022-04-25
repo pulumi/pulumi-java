@@ -19,6 +19,10 @@ public final class GetDelegatedServicesDelegatedService extends com.pulumi.resou
     @Import(name="delegationEnabledDate", required=true)
     private String delegationEnabledDate;
 
+    /**
+     * @return The date that the account became a delegated administrator for this service.
+     * 
+     */
     public String delegationEnabledDate() {
         return this.delegationEnabledDate;
     }
@@ -30,6 +34,10 @@ public final class GetDelegatedServicesDelegatedService extends com.pulumi.resou
     @Import(name="servicePrincipal", required=true)
     private String servicePrincipal;
 
+    /**
+     * @return The name of an AWS service that can request an operation for the specified service.
+     * 
+     */
     public String servicePrincipal() {
         return this.servicePrincipal;
     }
@@ -59,11 +67,23 @@ public final class GetDelegatedServicesDelegatedService extends com.pulumi.resou
             $ = new GetDelegatedServicesDelegatedService(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param delegationEnabledDate The date that the account became a delegated administrator for this service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delegationEnabledDate(String delegationEnabledDate) {
             $.delegationEnabledDate = delegationEnabledDate;
             return this;
         }
 
+        /**
+         * @param servicePrincipal The name of an AWS service that can request an operation for the specified service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipal(String servicePrincipal) {
             $.servicePrincipal = servicePrincipal;
             return this;

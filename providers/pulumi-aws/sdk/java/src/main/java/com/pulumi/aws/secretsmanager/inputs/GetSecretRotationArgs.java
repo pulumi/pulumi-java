@@ -19,6 +19,10 @@ public final class GetSecretRotationArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="secretId", required=true)
     private String secretId;
 
+    /**
+     * @return Specifies the secret containing the version that you want to retrieve. You can specify either the Amazon Resource Name (ARN) or the friendly name of the secret.
+     * 
+     */
     public String secretId() {
         return this.secretId;
     }
@@ -47,6 +51,12 @@ public final class GetSecretRotationArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetSecretRotationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param secretId Specifies the secret containing the version that you want to retrieve. You can specify either the Amazon Resource Name (ARN) or the friendly name of the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretId(String secretId) {
             $.secretId = secretId;
             return this;

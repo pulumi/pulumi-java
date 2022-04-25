@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RepositoryEncryptionConfiguration {
     /**
-     * The encryption type to use for the repository. Valid values are `AES256` or `KMS`. Defaults to `AES256`.
+     * @return The encryption type to use for the repository. Valid values are `AES256` or `KMS`. Defaults to `AES256`.
      * 
      */
     private final @Nullable String encryptionType;
     /**
-     * The ARN of the KMS key to use when `encryption_type` is `KMS`. If not specified, uses the default AWS managed key for ECR.
+     * @return The ARN of the KMS key to use when `encryption_type` is `KMS`. If not specified, uses the default AWS managed key for ECR.
      * 
      */
     private final @Nullable String kmsKey;
@@ -31,16 +31,16 @@ public final class RepositoryEncryptionConfiguration {
     }
 
     /**
-     * The encryption type to use for the repository. Valid values are `AES256` or `KMS`. Defaults to `AES256`.
+     * @return The encryption type to use for the repository. Valid values are `AES256` or `KMS`. Defaults to `AES256`.
      * 
-    */
+     */
     public Optional<String> encryptionType() {
         return Optional.ofNullable(this.encryptionType);
     }
     /**
-     * The ARN of the KMS key to use when `encryption_type` is `KMS`. If not specified, uses the default AWS managed key for ECR.
+     * @return The ARN of the KMS key to use when `encryption_type` is `KMS`. If not specified, uses the default AWS managed key for ECR.
      * 
-    */
+     */
     public Optional<String> kmsKey() {
         return Optional.ofNullable(this.kmsKey);
     }

@@ -22,6 +22,10 @@ public final class InstanceCapacityReservationSpecificationCapacityReservationTa
     @Import(name="capacityReservationId")
     private @Nullable Output<String> capacityReservationId;
 
+    /**
+     * @return The ID of the Capacity Reservation in which to run the instance.
+     * 
+     */
     public Optional<Output<String>> capacityReservationId() {
         return Optional.ofNullable(this.capacityReservationId);
     }
@@ -50,11 +54,23 @@ public final class InstanceCapacityReservationSpecificationCapacityReservationTa
             $ = new InstanceCapacityReservationSpecificationCapacityReservationTargetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacityReservationId The ID of the Capacity Reservation in which to run the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityReservationId(@Nullable Output<String> capacityReservationId) {
             $.capacityReservationId = capacityReservationId;
             return this;
         }
 
+        /**
+         * @param capacityReservationId The ID of the Capacity Reservation in which to run the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityReservationId(String capacityReservationId) {
             return capacityReservationId(Output.of(capacityReservationId));
         }

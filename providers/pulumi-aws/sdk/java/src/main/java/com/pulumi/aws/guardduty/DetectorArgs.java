@@ -25,6 +25,10 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="datasources")
     private @Nullable Output<DetectorDatasourcesArgs> datasources;
 
+    /**
+     * @return Describes which data sources will be enabled for the detector. See Data Sources below for more details.
+     * 
+     */
     public Optional<Output<DetectorDatasourcesArgs>> datasources() {
         return Optional.ofNullable(this.datasources);
     }
@@ -36,6 +40,10 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enable")
     private @Nullable Output<Boolean> enable;
 
+    /**
+     * @return If true, enables [S3 Protection](https://docs.aws.amazon.com/guardduty/latest/ug/s3_detection.html). Defaults to `true`.
+     * 
+     */
     public Optional<Output<Boolean>> enable() {
         return Optional.ofNullable(this.enable);
     }
@@ -47,6 +55,10 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="findingPublishingFrequency")
     private @Nullable Output<String> findingPublishingFrequency;
 
+    /**
+     * @return Specifies the frequency of notifications sent for subsequent finding occurrences. If the detector is a GuardDuty member account, the value is determined by the GuardDuty primary account and cannot be modified, otherwise defaults to `SIX_HOURS`. For standalone and GuardDuty primary accounts, it must be configured in this provider to enable drift detection. Valid values for standalone and primary accounts: `FIFTEEN_MINUTES`, `ONE_HOUR`, `SIX_HOURS`. See [AWS Documentation](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings_cloudwatch.html#guardduty_findings_cloudwatch_notification_frequency) for more information.
+     * 
+     */
     public Optional<Output<String>> findingPublishingFrequency() {
         return Optional.ofNullable(this.findingPublishingFrequency);
     }
@@ -58,6 +70,10 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -89,38 +105,86 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DetectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasources Describes which data sources will be enabled for the detector. See Data Sources below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasources(@Nullable Output<DetectorDatasourcesArgs> datasources) {
             $.datasources = datasources;
             return this;
         }
 
+        /**
+         * @param datasources Describes which data sources will be enabled for the detector. See Data Sources below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasources(DetectorDatasourcesArgs datasources) {
             return datasources(Output.of(datasources));
         }
 
+        /**
+         * @param enable If true, enables [S3 Protection](https://docs.aws.amazon.com/guardduty/latest/ug/s3_detection.html). Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(@Nullable Output<Boolean> enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param enable If true, enables [S3 Protection](https://docs.aws.amazon.com/guardduty/latest/ug/s3_detection.html). Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(Boolean enable) {
             return enable(Output.of(enable));
         }
 
+        /**
+         * @param findingPublishingFrequency Specifies the frequency of notifications sent for subsequent finding occurrences. If the detector is a GuardDuty member account, the value is determined by the GuardDuty primary account and cannot be modified, otherwise defaults to `SIX_HOURS`. For standalone and GuardDuty primary accounts, it must be configured in this provider to enable drift detection. Valid values for standalone and primary accounts: `FIFTEEN_MINUTES`, `ONE_HOUR`, `SIX_HOURS`. See [AWS Documentation](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings_cloudwatch.html#guardduty_findings_cloudwatch_notification_frequency) for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingPublishingFrequency(@Nullable Output<String> findingPublishingFrequency) {
             $.findingPublishingFrequency = findingPublishingFrequency;
             return this;
         }
 
+        /**
+         * @param findingPublishingFrequency Specifies the frequency of notifications sent for subsequent finding occurrences. If the detector is a GuardDuty member account, the value is determined by the GuardDuty primary account and cannot be modified, otherwise defaults to `SIX_HOURS`. For standalone and GuardDuty primary accounts, it must be configured in this provider to enable drift detection. Valid values for standalone and primary accounts: `FIFTEEN_MINUTES`, `ONE_HOUR`, `SIX_HOURS`. See [AWS Documentation](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings_cloudwatch.html#guardduty_findings_cloudwatch_notification_frequency) for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingPublishingFrequency(String findingPublishingFrequency) {
             return findingPublishingFrequency(Output.of(findingPublishingFrequency));
         }
 
+        /**
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

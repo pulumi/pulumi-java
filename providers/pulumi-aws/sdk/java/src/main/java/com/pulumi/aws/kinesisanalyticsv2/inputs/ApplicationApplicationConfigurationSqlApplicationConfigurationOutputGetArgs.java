@@ -26,6 +26,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="destinationSchema", required=true)
     private Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs> destinationSchema;
 
+    /**
+     * @return Describes the data format when records are written to the destination.
+     * 
+     */
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs> destinationSchema() {
         return this.destinationSchema;
     }
@@ -37,6 +41,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="kinesisFirehoseOutput")
     private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputGetArgs> kinesisFirehoseOutput;
 
+    /**
+     * @return Identifies a Kinesis Data Firehose delivery stream as the destination.
+     * 
+     */
     public Optional<Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputGetArgs>> kinesisFirehoseOutput() {
         return Optional.ofNullable(this.kinesisFirehoseOutput);
     }
@@ -48,6 +56,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="kinesisStreamsOutput")
     private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutputGetArgs> kinesisStreamsOutput;
 
+    /**
+     * @return Identifies a Kinesis data stream as the destination.
+     * 
+     */
     public Optional<Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutputGetArgs>> kinesisStreamsOutput() {
         return Optional.ofNullable(this.kinesisStreamsOutput);
     }
@@ -59,6 +71,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="lambdaOutput")
     private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputGetArgs> lambdaOutput;
 
+    /**
+     * @return Identifies a Lambda function as the destination.
+     * 
+     */
     public Optional<Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputGetArgs>> lambdaOutput() {
         return Optional.ofNullable(this.lambdaOutput);
     }
@@ -70,6 +86,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the in-application stream.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -110,47 +130,107 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationSchema Describes the data format when records are written to the destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationSchema(Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs> destinationSchema) {
             $.destinationSchema = destinationSchema;
             return this;
         }
 
+        /**
+         * @param destinationSchema Describes the data format when records are written to the destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationSchema(ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs destinationSchema) {
             return destinationSchema(Output.of(destinationSchema));
         }
 
+        /**
+         * @param kinesisFirehoseOutput Identifies a Kinesis Data Firehose delivery stream as the destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kinesisFirehoseOutput(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputGetArgs> kinesisFirehoseOutput) {
             $.kinesisFirehoseOutput = kinesisFirehoseOutput;
             return this;
         }
 
+        /**
+         * @param kinesisFirehoseOutput Identifies a Kinesis Data Firehose delivery stream as the destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kinesisFirehoseOutput(ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputGetArgs kinesisFirehoseOutput) {
             return kinesisFirehoseOutput(Output.of(kinesisFirehoseOutput));
         }
 
+        /**
+         * @param kinesisStreamsOutput Identifies a Kinesis data stream as the destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kinesisStreamsOutput(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutputGetArgs> kinesisStreamsOutput) {
             $.kinesisStreamsOutput = kinesisStreamsOutput;
             return this;
         }
 
+        /**
+         * @param kinesisStreamsOutput Identifies a Kinesis data stream as the destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kinesisStreamsOutput(ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutputGetArgs kinesisStreamsOutput) {
             return kinesisStreamsOutput(Output.of(kinesisStreamsOutput));
         }
 
+        /**
+         * @param lambdaOutput Identifies a Lambda function as the destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lambdaOutput(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputGetArgs> lambdaOutput) {
             $.lambdaOutput = lambdaOutput;
             return this;
         }
 
+        /**
+         * @param lambdaOutput Identifies a Lambda function as the destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lambdaOutput(ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputGetArgs lambdaOutput) {
             return lambdaOutput(Output.of(lambdaOutput));
         }
 
+        /**
+         * @param name The name of the in-application stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the in-application stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

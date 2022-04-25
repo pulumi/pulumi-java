@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FleetTargetCapacitySpecification {
     /**
-     * Default target capacity type. Valid values: `on-demand`, `spot`.
+     * @return Default target capacity type. Valid values: `on-demand`, `spot`.
      * 
      */
     private final String defaultTargetCapacityType;
     /**
-     * The number of On-Demand units to request.
+     * @return The number of On-Demand units to request.
      * 
      */
     private final @Nullable Integer onDemandTargetCapacity;
     /**
-     * The number of Spot units to request.
+     * @return The number of Spot units to request.
      * 
      */
     private final @Nullable Integer spotTargetCapacity;
     /**
-     * The number of units to request, filled using `default_target_capacity_type`.
+     * @return The number of units to request, filled using `default_target_capacity_type`.
      * 
      */
     private final Integer totalTargetCapacity;
@@ -46,30 +46,30 @@ public final class FleetTargetCapacitySpecification {
     }
 
     /**
-     * Default target capacity type. Valid values: `on-demand`, `spot`.
+     * @return Default target capacity type. Valid values: `on-demand`, `spot`.
      * 
-    */
+     */
     public String defaultTargetCapacityType() {
         return this.defaultTargetCapacityType;
     }
     /**
-     * The number of On-Demand units to request.
+     * @return The number of On-Demand units to request.
      * 
-    */
+     */
     public Optional<Integer> onDemandTargetCapacity() {
         return Optional.ofNullable(this.onDemandTargetCapacity);
     }
     /**
-     * The number of Spot units to request.
+     * @return The number of Spot units to request.
      * 
-    */
+     */
     public Optional<Integer> spotTargetCapacity() {
         return Optional.ofNullable(this.spotTargetCapacity);
     }
     /**
-     * The number of units to request, filled using `default_target_capacity_type`.
+     * @return The number of units to request, filled using `default_target_capacity_type`.
      * 
-    */
+     */
     public Integer totalTargetCapacity() {
         return this.totalTargetCapacity;
     }

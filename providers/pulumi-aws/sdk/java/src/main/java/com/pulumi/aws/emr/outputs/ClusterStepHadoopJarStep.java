@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterStepHadoopJarStep {
     /**
-     * List of command line arguments passed to the JAR file&#39;s main function when executed.
+     * @return List of command line arguments passed to the JAR file&#39;s main function when executed.
      * 
      */
     private final @Nullable List<String> args;
     /**
-     * Path to a JAR file run during the step.
+     * @return Path to a JAR file run during the step.
      * 
      */
     private final String jar;
     /**
-     * Name of the main class in the specified Java file. If not specified, the JAR file should specify a Main-Class in its manifest file.
+     * @return Name of the main class in the specified Java file. If not specified, the JAR file should specify a Main-Class in its manifest file.
      * 
      */
     private final @Nullable String mainClass;
     /**
-     * Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.
+     * @return Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.
      * 
      */
     private final @Nullable Map<String,String> properties;
@@ -47,30 +47,30 @@ public final class ClusterStepHadoopJarStep {
     }
 
     /**
-     * List of command line arguments passed to the JAR file&#39;s main function when executed.
+     * @return List of command line arguments passed to the JAR file&#39;s main function when executed.
      * 
-    */
+     */
     public List<String> args() {
         return this.args == null ? List.of() : this.args;
     }
     /**
-     * Path to a JAR file run during the step.
+     * @return Path to a JAR file run during the step.
      * 
-    */
+     */
     public String jar() {
         return this.jar;
     }
     /**
-     * Name of the main class in the specified Java file. If not specified, the JAR file should specify a Main-Class in its manifest file.
+     * @return Name of the main class in the specified Java file. If not specified, the JAR file should specify a Main-Class in its manifest file.
      * 
-    */
+     */
     public Optional<String> mainClass() {
         return Optional.ofNullable(this.mainClass);
     }
     /**
-     * Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.
+     * @return Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.
      * 
-    */
+     */
     public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }

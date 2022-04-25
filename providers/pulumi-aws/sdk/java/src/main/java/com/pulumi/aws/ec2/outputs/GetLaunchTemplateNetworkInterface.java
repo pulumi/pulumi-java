@@ -18,7 +18,7 @@ public final class GetLaunchTemplateNetworkInterface {
     private final @Nullable Boolean associatePublicIpAddress;
     private final @Nullable Boolean deleteOnTermination;
     /**
-     * Description of the launch template.
+     * @return Description of the launch template.
      * 
      */
     private final String description;
@@ -78,9 +78,9 @@ public final class GetLaunchTemplateNetworkInterface {
         return Optional.ofNullable(this.deleteOnTermination);
     }
     /**
-     * Description of the launch template.
+     * @return Description of the launch template.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }

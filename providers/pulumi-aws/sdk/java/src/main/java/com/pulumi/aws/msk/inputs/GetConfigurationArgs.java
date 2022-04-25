@@ -19,6 +19,10 @@ public final class GetConfigurationArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the configuration.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +51,12 @@ public final class GetConfigurationArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

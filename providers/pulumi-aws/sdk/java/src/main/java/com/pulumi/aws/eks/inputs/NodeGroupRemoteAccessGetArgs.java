@@ -23,6 +23,10 @@ public final class NodeGroupRemoteAccessGetArgs extends com.pulumi.resources.Res
     @Import(name="ec2SshKey")
     private @Nullable Output<String> ec2SshKey;
 
+    /**
+     * @return EC2 Key Pair name that provides access for SSH communication with the worker nodes in the EKS Node Group. If you specify this configuration, but do not specify `source_security_group_ids` when you create an EKS Node Group, port 22 on the worker nodes is opened to the Internet (0.0.0.0/0).
+     * 
+     */
     public Optional<Output<String>> ec2SshKey() {
         return Optional.ofNullable(this.ec2SshKey);
     }
@@ -34,6 +38,10 @@ public final class NodeGroupRemoteAccessGetArgs extends com.pulumi.resources.Res
     @Import(name="sourceSecurityGroupIds")
     private @Nullable Output<List<String>> sourceSecurityGroupIds;
 
+    /**
+     * @return Set of EC2 Security Group IDs to allow SSH access (port 22) from on the worker nodes. If you specify `ec2_ssh_key`, but do not specify this configuration when you create an EKS Node Group, port 22 on the worker nodes is opened to the Internet (0.0.0.0/0).
+     * 
+     */
     public Optional<Output<List<String>>> sourceSecurityGroupIds() {
         return Optional.ofNullable(this.sourceSecurityGroupIds);
     }
@@ -63,24 +71,54 @@ public final class NodeGroupRemoteAccessGetArgs extends com.pulumi.resources.Res
             $ = new NodeGroupRemoteAccessGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ec2SshKey EC2 Key Pair name that provides access for SSH communication with the worker nodes in the EKS Node Group. If you specify this configuration, but do not specify `source_security_group_ids` when you create an EKS Node Group, port 22 on the worker nodes is opened to the Internet (0.0.0.0/0).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ec2SshKey(@Nullable Output<String> ec2SshKey) {
             $.ec2SshKey = ec2SshKey;
             return this;
         }
 
+        /**
+         * @param ec2SshKey EC2 Key Pair name that provides access for SSH communication with the worker nodes in the EKS Node Group. If you specify this configuration, but do not specify `source_security_group_ids` when you create an EKS Node Group, port 22 on the worker nodes is opened to the Internet (0.0.0.0/0).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ec2SshKey(String ec2SshKey) {
             return ec2SshKey(Output.of(ec2SshKey));
         }
 
+        /**
+         * @param sourceSecurityGroupIds Set of EC2 Security Group IDs to allow SSH access (port 22) from on the worker nodes. If you specify `ec2_ssh_key`, but do not specify this configuration when you create an EKS Node Group, port 22 on the worker nodes is opened to the Internet (0.0.0.0/0).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSecurityGroupIds(@Nullable Output<List<String>> sourceSecurityGroupIds) {
             $.sourceSecurityGroupIds = sourceSecurityGroupIds;
             return this;
         }
 
+        /**
+         * @param sourceSecurityGroupIds Set of EC2 Security Group IDs to allow SSH access (port 22) from on the worker nodes. If you specify `ec2_ssh_key`, but do not specify this configuration when you create an EKS Node Group, port 22 on the worker nodes is opened to the Internet (0.0.0.0/0).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSecurityGroupIds(List<String> sourceSecurityGroupIds) {
             return sourceSecurityGroupIds(Output.of(sourceSecurityGroupIds));
         }
 
+        /**
+         * @param sourceSecurityGroupIds Set of EC2 Security Group IDs to allow SSH access (port 22) from on the worker nodes. If you specify `ec2_ssh_key`, but do not specify this configuration when you create an EKS Node Group, port 22 on the worker nodes is opened to the Internet (0.0.0.0/0).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSecurityGroupIds(String... sourceSecurityGroupIds) {
             return sourceSecurityGroupIds(List.of(sourceSecurityGroupIds));
         }

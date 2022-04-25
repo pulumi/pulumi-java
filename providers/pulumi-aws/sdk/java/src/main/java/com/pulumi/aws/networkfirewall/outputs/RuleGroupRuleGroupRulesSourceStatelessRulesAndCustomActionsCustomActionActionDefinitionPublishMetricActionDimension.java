@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimension {
     /**
-     * The value to use in the custom metric dimension.
+     * @return The value to use in the custom metric dimension.
      * 
      */
     private final String value;
@@ -21,9 +21,9 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCu
     }
 
     /**
-     * The value to use in the custom metric dimension.
+     * @return The value to use in the custom metric dimension.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

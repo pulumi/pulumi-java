@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 public final class EnvironmentLoggingConfigurationWorkerLogs {
     private final @Nullable String cloudWatchLogGroupArn;
     /**
-     * Enabling or disabling the collection of logs
+     * @return Enabling or disabling the collection of logs
      * 
      */
     private final @Nullable Boolean enabled;
     /**
-     * Logging level. Valid values: `CRITICAL`, `ERROR`, `WARNING`, `INFO`, `DEBUG`. Will be `INFO` by default.
+     * @return Logging level. Valid values: `CRITICAL`, `ERROR`, `WARNING`, `INFO`, `DEBUG`. Will be `INFO` by default.
      * 
      */
     private final @Nullable String logLevel;
@@ -38,16 +38,16 @@ public final class EnvironmentLoggingConfigurationWorkerLogs {
         return Optional.ofNullable(this.cloudWatchLogGroupArn);
     }
     /**
-     * Enabling or disabling the collection of logs
+     * @return Enabling or disabling the collection of logs
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * Logging level. Valid values: `CRITICAL`, `ERROR`, `WARNING`, `INFO`, `DEBUG`. Will be `INFO` by default.
+     * @return Logging level. Valid values: `CRITICAL`, `ERROR`, `WARNING`, `INFO`, `DEBUG`. Will be `INFO` by default.
      * 
-    */
+     */
     public Optional<String> logLevel() {
         return Optional.ofNullable(this.logLevel);
     }

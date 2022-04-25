@@ -11,27 +11,27 @@ import java.util.Objects;
 @CustomType
 public final class GetIpSetResult {
     /**
-     * An array of strings that specify one or more IP addresses or blocks of IP addresses in Classless Inter-Domain Routing (CIDR) notation.
+     * @return An array of strings that specify one or more IP addresses or blocks of IP addresses in Classless Inter-Domain Routing (CIDR) notation.
      * 
      */
     private final List<String> addresses;
     /**
-     * The Amazon Resource Name (ARN) of the entity.
+     * @return The Amazon Resource Name (ARN) of the entity.
      * 
      */
     private final String arn;
     /**
-     * The description of the set that helps with identification.
+     * @return The description of the set that helps with identification.
      * 
      */
     private final String description;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The IP address version of the set.
+     * @return The IP address version of the set.
      * 
      */
     private final String ipAddressVersion;
@@ -57,37 +57,37 @@ public final class GetIpSetResult {
     }
 
     /**
-     * An array of strings that specify one or more IP addresses or blocks of IP addresses in Classless Inter-Domain Routing (CIDR) notation.
+     * @return An array of strings that specify one or more IP addresses or blocks of IP addresses in Classless Inter-Domain Routing (CIDR) notation.
      * 
-    */
+     */
     public List<String> addresses() {
         return this.addresses;
     }
     /**
-     * The Amazon Resource Name (ARN) of the entity.
+     * @return The Amazon Resource Name (ARN) of the entity.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The description of the set that helps with identification.
+     * @return The description of the set that helps with identification.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The IP address version of the set.
+     * @return The IP address version of the set.
      * 
-    */
+     */
     public String ipAddressVersion() {
         return this.ipAddressVersion;
     }

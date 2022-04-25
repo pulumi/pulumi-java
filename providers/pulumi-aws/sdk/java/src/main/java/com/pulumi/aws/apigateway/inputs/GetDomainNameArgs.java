@@ -22,6 +22,10 @@ public final class GetDomainNameArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="domainName", required=true)
     private String domainName;
 
+    /**
+     * @return The fully-qualified domain name to look up. If no domain name is found, an error will be returned.
+     * 
+     */
     public String domainName() {
         return this.domainName;
     }
@@ -33,6 +37,10 @@ public final class GetDomainNameArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Key-value map of tags for the resource.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -62,11 +70,23 @@ public final class GetDomainNameArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDomainNameArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainName The fully-qualified domain name to look up. If no domain name is found, an error will be returned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of tags for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

@@ -23,6 +23,10 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="awsServiceAccessPrincipals")
     private @Nullable Output<List<String>> awsServiceAccessPrincipals;
 
+    /**
+     * @return List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
+     * 
+     */
     public Optional<Output<List<String>>> awsServiceAccessPrincipals() {
         return Optional.ofNullable(this.awsServiceAccessPrincipals);
     }
@@ -34,6 +38,10 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabledPolicyTypes")
     private @Nullable Output<List<String>> enabledPolicyTypes;
 
+    /**
+     * @return List of Organizations policy types to enable in the Organization Root. Organization must have `feature_set` set to `ALL`. For additional information about valid policy types (e.g., `AISERVICES_OPT_OUT_POLICY`, `BACKUP_POLICY`, `SERVICE_CONTROL_POLICY`, and `TAG_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
+     * 
+     */
     public Optional<Output<List<String>>> enabledPolicyTypes() {
         return Optional.ofNullable(this.enabledPolicyTypes);
     }
@@ -45,6 +53,10 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="featureSet")
     private @Nullable Output<String> featureSet;
 
+    /**
+     * @return Specify &#34;ALL&#34; (default) or &#34;CONSOLIDATED_BILLING&#34;.
+     * 
+     */
     public Optional<Output<String>> featureSet() {
         return Optional.ofNullable(this.featureSet);
     }
@@ -75,37 +87,85 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OrganizationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param awsServiceAccessPrincipals List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsServiceAccessPrincipals(@Nullable Output<List<String>> awsServiceAccessPrincipals) {
             $.awsServiceAccessPrincipals = awsServiceAccessPrincipals;
             return this;
         }
 
+        /**
+         * @param awsServiceAccessPrincipals List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsServiceAccessPrincipals(List<String> awsServiceAccessPrincipals) {
             return awsServiceAccessPrincipals(Output.of(awsServiceAccessPrincipals));
         }
 
+        /**
+         * @param awsServiceAccessPrincipals List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsServiceAccessPrincipals(String... awsServiceAccessPrincipals) {
             return awsServiceAccessPrincipals(List.of(awsServiceAccessPrincipals));
         }
 
+        /**
+         * @param enabledPolicyTypes List of Organizations policy types to enable in the Organization Root. Organization must have `feature_set` set to `ALL`. For additional information about valid policy types (e.g., `AISERVICES_OPT_OUT_POLICY`, `BACKUP_POLICY`, `SERVICE_CONTROL_POLICY`, and `TAG_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledPolicyTypes(@Nullable Output<List<String>> enabledPolicyTypes) {
             $.enabledPolicyTypes = enabledPolicyTypes;
             return this;
         }
 
+        /**
+         * @param enabledPolicyTypes List of Organizations policy types to enable in the Organization Root. Organization must have `feature_set` set to `ALL`. For additional information about valid policy types (e.g., `AISERVICES_OPT_OUT_POLICY`, `BACKUP_POLICY`, `SERVICE_CONTROL_POLICY`, and `TAG_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledPolicyTypes(List<String> enabledPolicyTypes) {
             return enabledPolicyTypes(Output.of(enabledPolicyTypes));
         }
 
+        /**
+         * @param enabledPolicyTypes List of Organizations policy types to enable in the Organization Root. Organization must have `feature_set` set to `ALL`. For additional information about valid policy types (e.g., `AISERVICES_OPT_OUT_POLICY`, `BACKUP_POLICY`, `SERVICE_CONTROL_POLICY`, and `TAG_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledPolicyTypes(String... enabledPolicyTypes) {
             return enabledPolicyTypes(List.of(enabledPolicyTypes));
         }
 
+        /**
+         * @param featureSet Specify &#34;ALL&#34; (default) or &#34;CONSOLIDATED_BILLING&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder featureSet(@Nullable Output<String> featureSet) {
             $.featureSet = featureSet;
             return this;
         }
 
+        /**
+         * @param featureSet Specify &#34;ALL&#34; (default) or &#34;CONSOLIDATED_BILLING&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder featureSet(String featureSet) {
             return featureSet(Output.of(featureSet));
         }

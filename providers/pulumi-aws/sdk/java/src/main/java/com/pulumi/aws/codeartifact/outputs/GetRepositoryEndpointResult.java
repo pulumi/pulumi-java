@@ -13,13 +13,13 @@ public final class GetRepositoryEndpointResult {
     private final String domainOwner;
     private final String format;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final String repository;
     /**
-     * The URL of the returned endpoint.
+     * @return The URL of the returned endpoint.
      * 
      */
     private final String repositoryEndpoint;
@@ -50,9 +50,9 @@ public final class GetRepositoryEndpointResult {
         return this.format;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -60,9 +60,9 @@ public final class GetRepositoryEndpointResult {
         return this.repository;
     }
     /**
-     * The URL of the returned endpoint.
+     * @return The URL of the returned endpoint.
      * 
-    */
+     */
     public String repositoryEndpoint() {
         return this.repositoryEndpoint;
     }

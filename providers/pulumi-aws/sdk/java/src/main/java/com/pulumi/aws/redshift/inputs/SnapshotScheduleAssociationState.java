@@ -22,6 +22,10 @@ public final class SnapshotScheduleAssociationState extends com.pulumi.resources
     @Import(name="clusterIdentifier")
     private @Nullable Output<String> clusterIdentifier;
 
+    /**
+     * @return The cluster identifier.
+     * 
+     */
     public Optional<Output<String>> clusterIdentifier() {
         return Optional.ofNullable(this.clusterIdentifier);
     }
@@ -33,6 +37,10 @@ public final class SnapshotScheduleAssociationState extends com.pulumi.resources
     @Import(name="scheduleIdentifier")
     private @Nullable Output<String> scheduleIdentifier;
 
+    /**
+     * @return The snapshot schedule identifier.
+     * 
+     */
     public Optional<Output<String>> scheduleIdentifier() {
         return Optional.ofNullable(this.scheduleIdentifier);
     }
@@ -62,20 +70,44 @@ public final class SnapshotScheduleAssociationState extends com.pulumi.resources
             $ = new SnapshotScheduleAssociationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterIdentifier The cluster identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIdentifier(@Nullable Output<String> clusterIdentifier) {
             $.clusterIdentifier = clusterIdentifier;
             return this;
         }
 
+        /**
+         * @param clusterIdentifier The cluster identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIdentifier(String clusterIdentifier) {
             return clusterIdentifier(Output.of(clusterIdentifier));
         }
 
+        /**
+         * @param scheduleIdentifier The snapshot schedule identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleIdentifier(@Nullable Output<String> scheduleIdentifier) {
             $.scheduleIdentifier = scheduleIdentifier;
             return this;
         }
 
+        /**
+         * @param scheduleIdentifier The snapshot schedule identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleIdentifier(String scheduleIdentifier) {
             return scheduleIdentifier(Output.of(scheduleIdentifier));
         }

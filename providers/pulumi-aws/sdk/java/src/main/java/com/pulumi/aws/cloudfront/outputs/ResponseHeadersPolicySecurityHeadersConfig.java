@@ -17,32 +17,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ResponseHeadersPolicySecurityHeadersConfig {
     /**
-     * The policy directives and their values that CloudFront includes as values for the `Content-Security-Policy` HTTP response header.
+     * @return The policy directives and their values that CloudFront includes as values for the `Content-Security-Policy` HTTP response header.
      * 
      */
     private final @Nullable ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy contentSecurityPolicy;
     /**
-     * Determines whether CloudFront includes the `X-Content-Type-Options` HTTP response header with its value set to `nosniff`. See Content Type Options for more information.
+     * @return Determines whether CloudFront includes the `X-Content-Type-Options` HTTP response header with its value set to `nosniff`. See Content Type Options for more information.
      * 
      */
     private final @Nullable ResponseHeadersPolicySecurityHeadersConfigContentTypeOptions contentTypeOptions;
     /**
-     * Determines whether CloudFront includes the `X-Frame-Options` HTTP response header and the header’s value. See Frame Options for more information.
+     * @return Determines whether CloudFront includes the `X-Frame-Options` HTTP response header and the header’s value. See Frame Options for more information.
      * 
      */
     private final @Nullable ResponseHeadersPolicySecurityHeadersConfigFrameOptions frameOptions;
     /**
-     * The value of the `Referrer-Policy` HTTP response header. Valid Values: `no-referrer` | `no-referrer-when-downgrade` | `origin` | `origin-when-cross-origin` | `same-origin` | `strict-origin` | `strict-origin-when-cross-origin` | `unsafe-url`
+     * @return The value of the `Referrer-Policy` HTTP response header. Valid Values: `no-referrer` | `no-referrer-when-downgrade` | `origin` | `origin-when-cross-origin` | `same-origin` | `strict-origin` | `strict-origin-when-cross-origin` | `unsafe-url`
      * 
      */
     private final @Nullable ResponseHeadersPolicySecurityHeadersConfigReferrerPolicy referrerPolicy;
     /**
-     * Determines whether CloudFront includes the `Strict-Transport-Security` HTTP response header and the header’s value. See Strict Transport Security for more information.
+     * @return Determines whether CloudFront includes the `Strict-Transport-Security` HTTP response header and the header’s value. See Strict Transport Security for more information.
      * 
      */
     private final @Nullable ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity strictTransportSecurity;
     /**
-     * Determine whether CloudFront includes the `X-XSS-Protection` HTTP response header and the header’s value. See XSS Protection for more information.
+     * @return Determine whether CloudFront includes the `X-XSS-Protection` HTTP response header and the header’s value. See XSS Protection for more information.
      * 
      */
     private final @Nullable ResponseHeadersPolicySecurityHeadersConfigXssProtection xssProtection;
@@ -64,44 +64,44 @@ public final class ResponseHeadersPolicySecurityHeadersConfig {
     }
 
     /**
-     * The policy directives and their values that CloudFront includes as values for the `Content-Security-Policy` HTTP response header.
+     * @return The policy directives and their values that CloudFront includes as values for the `Content-Security-Policy` HTTP response header.
      * 
-    */
+     */
     public Optional<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy> contentSecurityPolicy() {
         return Optional.ofNullable(this.contentSecurityPolicy);
     }
     /**
-     * Determines whether CloudFront includes the `X-Content-Type-Options` HTTP response header with its value set to `nosniff`. See Content Type Options for more information.
+     * @return Determines whether CloudFront includes the `X-Content-Type-Options` HTTP response header with its value set to `nosniff`. See Content Type Options for more information.
      * 
-    */
+     */
     public Optional<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptions> contentTypeOptions() {
         return Optional.ofNullable(this.contentTypeOptions);
     }
     /**
-     * Determines whether CloudFront includes the `X-Frame-Options` HTTP response header and the header’s value. See Frame Options for more information.
+     * @return Determines whether CloudFront includes the `X-Frame-Options` HTTP response header and the header’s value. See Frame Options for more information.
      * 
-    */
+     */
     public Optional<ResponseHeadersPolicySecurityHeadersConfigFrameOptions> frameOptions() {
         return Optional.ofNullable(this.frameOptions);
     }
     /**
-     * The value of the `Referrer-Policy` HTTP response header. Valid Values: `no-referrer` | `no-referrer-when-downgrade` | `origin` | `origin-when-cross-origin` | `same-origin` | `strict-origin` | `strict-origin-when-cross-origin` | `unsafe-url`
+     * @return The value of the `Referrer-Policy` HTTP response header. Valid Values: `no-referrer` | `no-referrer-when-downgrade` | `origin` | `origin-when-cross-origin` | `same-origin` | `strict-origin` | `strict-origin-when-cross-origin` | `unsafe-url`
      * 
-    */
+     */
     public Optional<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicy> referrerPolicy() {
         return Optional.ofNullable(this.referrerPolicy);
     }
     /**
-     * Determines whether CloudFront includes the `Strict-Transport-Security` HTTP response header and the header’s value. See Strict Transport Security for more information.
+     * @return Determines whether CloudFront includes the `Strict-Transport-Security` HTTP response header and the header’s value. See Strict Transport Security for more information.
      * 
-    */
+     */
     public Optional<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity> strictTransportSecurity() {
         return Optional.ofNullable(this.strictTransportSecurity);
     }
     /**
-     * Determine whether CloudFront includes the `X-XSS-Protection` HTTP response header and the header’s value. See XSS Protection for more information.
+     * @return Determine whether CloudFront includes the `X-XSS-Protection` HTTP response header and the header’s value. See XSS Protection for more information.
      * 
-    */
+     */
     public Optional<ResponseHeadersPolicySecurityHeadersConfigXssProtection> xssProtection() {
         return Optional.ofNullable(this.xssProtection);
     }

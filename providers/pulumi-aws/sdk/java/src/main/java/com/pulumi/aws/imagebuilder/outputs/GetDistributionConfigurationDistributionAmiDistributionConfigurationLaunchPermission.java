@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission {
     /**
-     * Set of EC2 launch permission user groups.
+     * @return Set of EC2 launch permission user groups.
      * 
      */
     private final List<String> userGroups;
     /**
-     * Set of AWS Account identifiers.
+     * @return Set of AWS Account identifiers.
      * 
      */
     private final List<String> userIds;
@@ -30,16 +30,16 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
     }
 
     /**
-     * Set of EC2 launch permission user groups.
+     * @return Set of EC2 launch permission user groups.
      * 
-    */
+     */
     public List<String> userGroups() {
         return this.userGroups;
     }
     /**
-     * Set of AWS Account identifiers.
+     * @return Set of AWS Account identifiers.
      * 
-    */
+     */
     public List<String> userIds() {
         return this.userIds;
     }

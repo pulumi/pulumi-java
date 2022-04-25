@@ -22,6 +22,10 @@ public final class ResourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="parentId")
     private @Nullable Output<String> parentId;
 
+    /**
+     * @return The ID of the parent API resource
+     * 
+     */
     public Optional<Output<String>> parentId() {
         return Optional.ofNullable(this.parentId);
     }
@@ -33,6 +37,10 @@ public final class ResourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return The complete path for this API resource, including all parent paths.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -44,6 +52,10 @@ public final class ResourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="pathPart")
     private @Nullable Output<String> pathPart;
 
+    /**
+     * @return The last path segment of this API resource.
+     * 
+     */
     public Optional<Output<String>> pathPart() {
         return Optional.ofNullable(this.pathPart);
     }
@@ -55,6 +67,10 @@ public final class ResourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="restApi")
     private @Nullable Output<String> restApi;
 
+    /**
+     * @return The ID of the associated REST API
+     * 
+     */
     public Optional<Output<String>> restApi() {
         return Optional.ofNullable(this.restApi);
     }
@@ -86,38 +102,86 @@ public final class ResourceState extends com.pulumi.resources.ResourceArgs {
             $ = new ResourceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parentId The ID of the parent API resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentId(@Nullable Output<String> parentId) {
             $.parentId = parentId;
             return this;
         }
 
+        /**
+         * @param parentId The ID of the parent API resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentId(String parentId) {
             return parentId(Output.of(parentId));
         }
 
+        /**
+         * @param path The complete path for this API resource, including all parent paths.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The complete path for this API resource, including all parent paths.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param pathPart The last path segment of this API resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathPart(@Nullable Output<String> pathPart) {
             $.pathPart = pathPart;
             return this;
         }
 
+        /**
+         * @param pathPart The last path segment of this API resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathPart(String pathPart) {
             return pathPart(Output.of(pathPart));
         }
 
+        /**
+         * @param restApi The ID of the associated REST API
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApi(@Nullable Output<String> restApi) {
             $.restApi = restApi;
             return this;
         }
 
+        /**
+         * @param restApi The ID of the associated REST API
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApi(String restApi) {
             return restApi(Output.of(restApi));
         }

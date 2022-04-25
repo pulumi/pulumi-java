@@ -26,6 +26,10 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alias")
     private @Nullable Output<String> alias;
 
+    /**
+     * @return The alias for the directory (must be unique amongst all aliases in AWS). Required for `enable_sso`.
+     * 
+     */
     public Optional<Output<String>> alias() {
         return Optional.ofNullable(this.alias);
     }
@@ -37,6 +41,10 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectSettings")
     private @Nullable Output<DirectoryConnectSettingsArgs> connectSettings;
 
+    /**
+     * @return Connector related information about the directory. Fields documented below.
+     * 
+     */
     public Optional<Output<DirectoryConnectSettingsArgs>> connectSettings() {
         return Optional.ofNullable(this.connectSettings);
     }
@@ -48,6 +56,10 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A textual description for the directory.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -59,6 +71,10 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="edition")
     private @Nullable Output<String> edition;
 
+    /**
+     * @return The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
+     * 
+     */
     public Optional<Output<String>> edition() {
         return Optional.ofNullable(this.edition);
     }
@@ -70,6 +86,10 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableSso")
     private @Nullable Output<Boolean> enableSso;
 
+    /**
+     * @return Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> enableSso() {
         return Optional.ofNullable(this.enableSso);
     }
@@ -81,6 +101,10 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The fully qualified name for the directory, such as `corp.example.com`
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -92,6 +116,10 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="password", required=true)
     private Output<String> password;
 
+    /**
+     * @return The password for the directory administrator or connector user.
+     * 
+     */
     public Output<String> password() {
         return this.password;
     }
@@ -103,6 +131,10 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shortName")
     private @Nullable Output<String> shortName;
 
+    /**
+     * @return The short name of the directory, such as `CORP`.
+     * 
+     */
     public Optional<Output<String>> shortName() {
         return Optional.ofNullable(this.shortName);
     }
@@ -114,6 +146,10 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="size")
     private @Nullable Output<String> size;
 
+    /**
+     * @return The size of the directory (`Small` or `Large` are accepted values).
+     * 
+     */
     public Optional<Output<String>> size() {
         return Optional.ofNullable(this.size);
     }
@@ -125,6 +161,10 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -136,6 +176,10 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -147,6 +191,10 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcSettings")
     private @Nullable Output<DirectoryVpcSettingsArgs> vpcSettings;
 
+    /**
+     * @return VPC related information about the directory. Fields documented below.
+     * 
+     */
     public Optional<Output<DirectoryVpcSettingsArgs>> vpcSettings() {
         return Optional.ofNullable(this.vpcSettings);
     }
@@ -186,110 +234,254 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DirectoryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alias The alias for the directory (must be unique amongst all aliases in AWS). Required for `enable_sso`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(@Nullable Output<String> alias) {
             $.alias = alias;
             return this;
         }
 
+        /**
+         * @param alias The alias for the directory (must be unique amongst all aliases in AWS). Required for `enable_sso`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(String alias) {
             return alias(Output.of(alias));
         }
 
+        /**
+         * @param connectSettings Connector related information about the directory. Fields documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectSettings(@Nullable Output<DirectoryConnectSettingsArgs> connectSettings) {
             $.connectSettings = connectSettings;
             return this;
         }
 
+        /**
+         * @param connectSettings Connector related information about the directory. Fields documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectSettings(DirectoryConnectSettingsArgs connectSettings) {
             return connectSettings(Output.of(connectSettings));
         }
 
+        /**
+         * @param description A textual description for the directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A textual description for the directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param edition The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
+         * 
+         * @return builder
+         * 
+         */
         public Builder edition(@Nullable Output<String> edition) {
             $.edition = edition;
             return this;
         }
 
+        /**
+         * @param edition The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
+         * 
+         * @return builder
+         * 
+         */
         public Builder edition(String edition) {
             return edition(Output.of(edition));
         }
 
+        /**
+         * @param enableSso Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSso(@Nullable Output<Boolean> enableSso) {
             $.enableSso = enableSso;
             return this;
         }
 
+        /**
+         * @param enableSso Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSso(Boolean enableSso) {
             return enableSso(Output.of(enableSso));
         }
 
+        /**
+         * @param name The fully qualified name for the directory, such as `corp.example.com`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The fully qualified name for the directory, such as `corp.example.com`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param password The password for the directory administrator or connector user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password The password for the directory administrator or connector user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param shortName The short name of the directory, such as `CORP`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shortName(@Nullable Output<String> shortName) {
             $.shortName = shortName;
             return this;
         }
 
+        /**
+         * @param shortName The short name of the directory, such as `CORP`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shortName(String shortName) {
             return shortName(Output.of(shortName));
         }
 
+        /**
+         * @param size The size of the directory (`Small` or `Large` are accepted values).
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(@Nullable Output<String> size) {
             $.size = size;
             return this;
         }
 
+        /**
+         * @param size The size of the directory (`Small` or `Large` are accepted values).
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(String size) {
             return size(Output.of(size));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param type The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param vpcSettings VPC related information about the directory. Fields documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcSettings(@Nullable Output<DirectoryVpcSettingsArgs> vpcSettings) {
             $.vpcSettings = vpcSettings;
             return this;
         }
 
+        /**
+         * @param vpcSettings VPC related information about the directory. Fields documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcSettings(DirectoryVpcSettingsArgs vpcSettings) {
             return vpcSettings(Output.of(vpcSettings));
         }

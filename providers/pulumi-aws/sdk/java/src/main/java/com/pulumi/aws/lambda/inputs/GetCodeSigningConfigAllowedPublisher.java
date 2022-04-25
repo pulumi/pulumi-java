@@ -20,6 +20,10 @@ public final class GetCodeSigningConfigAllowedPublisher extends com.pulumi.resou
     @Import(name="signingProfileVersionArns", required=true)
     private List<String> signingProfileVersionArns;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for each of the signing profiles. A signing profile defines a trusted user who can sign a code package.
+     * 
+     */
     public List<String> signingProfileVersionArns() {
         return this.signingProfileVersionArns;
     }
@@ -48,11 +52,23 @@ public final class GetCodeSigningConfigAllowedPublisher extends com.pulumi.resou
             $ = new GetCodeSigningConfigAllowedPublisher(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param signingProfileVersionArns The Amazon Resource Name (ARN) for each of the signing profiles. A signing profile defines a trusted user who can sign a code package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingProfileVersionArns(List<String> signingProfileVersionArns) {
             $.signingProfileVersionArns = signingProfileVersionArns;
             return this;
         }
 
+        /**
+         * @param signingProfileVersionArns The Amazon Resource Name (ARN) for each of the signing profiles. A signing profile defines a trusted user who can sign a code package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingProfileVersionArns(String... signingProfileVersionArns) {
             return signingProfileVersionArns(List.of(signingProfileVersionArns));
         }

@@ -13,29 +13,29 @@ public final class GetPermissionSetResult {
     private final String arn;
     private final String createdDate;
     /**
-     * The description of the Permission Set.
+     * @return The description of the Permission Set.
      * 
      */
     private final String description;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final String instanceArn;
     private final String name;
     /**
-     * The relay state URL used to redirect users within the application during the federation authentication process.
+     * @return The relay state URL used to redirect users within the application during the federation authentication process.
      * 
      */
     private final String relayState;
     /**
-     * The length of time that the application user sessions are valid in the ISO-8601 standard.
+     * @return The length of time that the application user sessions are valid in the ISO-8601 standard.
      * 
      */
     private final String sessionDuration;
     /**
-     * Key-value map of resource tags.
+     * @return Key-value map of resource tags.
      * 
      */
     private final Map<String,String> tags;
@@ -69,16 +69,16 @@ public final class GetPermissionSetResult {
         return this.createdDate;
     }
     /**
-     * The description of the Permission Set.
+     * @return The description of the Permission Set.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -89,23 +89,23 @@ public final class GetPermissionSetResult {
         return this.name;
     }
     /**
-     * The relay state URL used to redirect users within the application during the federation authentication process.
+     * @return The relay state URL used to redirect users within the application during the federation authentication process.
      * 
-    */
+     */
     public String relayState() {
         return this.relayState;
     }
     /**
-     * The length of time that the application user sessions are valid in the ISO-8601 standard.
+     * @return The length of time that the application user sessions are valid in the ISO-8601 standard.
      * 
-    */
+     */
     public String sessionDuration() {
         return this.sessionDuration;
     }
     /**
-     * Key-value map of resource tags.
+     * @return Key-value map of resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }

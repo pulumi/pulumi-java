@@ -21,6 +21,10 @@ public final class GetSchedulingPolicyFairSharePolicy extends com.pulumi.resourc
     @Import(name="computeReservation", required=true)
     private Integer computeReservation;
 
+    /**
+     * @return A value used to reserve some of the available maximum vCPU for fair share identifiers that have not yet been used. For more information, see [FairsharePolicy](https://docs.aws.amazon.com/batch/latest/APIReference/API_FairsharePolicy.html).
+     * 
+     */
     public Integer computeReservation() {
         return this.computeReservation;
     }
@@ -39,6 +43,10 @@ public final class GetSchedulingPolicyFairSharePolicy extends com.pulumi.resourc
     @Import(name="shareDistributions", required=true)
     private List<GetSchedulingPolicyFairSharePolicyShareDistribution> shareDistributions;
 
+    /**
+     * @return One or more share distribution blocks which define the weights for the fair share identifiers for the fair share policy. For more information, see [FairsharePolicy](https://docs.aws.amazon.com/batch/latest/APIReference/API_FairsharePolicy.html). The `share_distribution` block is documented below.
+     * 
+     */
     public List<GetSchedulingPolicyFairSharePolicyShareDistribution> shareDistributions() {
         return this.shareDistributions;
     }
@@ -69,6 +77,12 @@ public final class GetSchedulingPolicyFairSharePolicy extends com.pulumi.resourc
             $ = new GetSchedulingPolicyFairSharePolicy(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param computeReservation A value used to reserve some of the available maximum vCPU for fair share identifiers that have not yet been used. For more information, see [FairsharePolicy](https://docs.aws.amazon.com/batch/latest/APIReference/API_FairsharePolicy.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeReservation(Integer computeReservation) {
             $.computeReservation = computeReservation;
             return this;
@@ -79,11 +93,23 @@ public final class GetSchedulingPolicyFairSharePolicy extends com.pulumi.resourc
             return this;
         }
 
+        /**
+         * @param shareDistributions One or more share distribution blocks which define the weights for the fair share identifiers for the fair share policy. For more information, see [FairsharePolicy](https://docs.aws.amazon.com/batch/latest/APIReference/API_FairsharePolicy.html). The `share_distribution` block is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareDistributions(List<GetSchedulingPolicyFairSharePolicyShareDistribution> shareDistributions) {
             $.shareDistributions = shareDistributions;
             return this;
         }
 
+        /**
+         * @param shareDistributions One or more share distribution blocks which define the weights for the fair share identifiers for the fair share policy. For more information, see [FairsharePolicy](https://docs.aws.amazon.com/batch/latest/APIReference/API_FairsharePolicy.html). The `share_distribution` block is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareDistributions(GetSchedulingPolicyFairSharePolicyShareDistribution... shareDistributions) {
             return shareDistributions(List.of(shareDistributions));
         }

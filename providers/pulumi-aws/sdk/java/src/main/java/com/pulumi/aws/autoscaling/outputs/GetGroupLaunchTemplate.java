@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GetGroupLaunchTemplate {
     /**
-     * Name of the Auto Scaling Group.
+     * @return Name of the Auto Scaling Group.
      * 
      */
     private final String id;
     /**
-     * Specify the exact name of the desired autoscaling group.
+     * @return Specify the exact name of the desired autoscaling group.
      * 
      */
     private final String name;
@@ -32,16 +32,16 @@ public final class GetGroupLaunchTemplate {
     }
 
     /**
-     * Name of the Auto Scaling Group.
+     * @return Name of the Auto Scaling Group.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Specify the exact name of the desired autoscaling group.
+     * @return Specify the exact name of the desired autoscaling group.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

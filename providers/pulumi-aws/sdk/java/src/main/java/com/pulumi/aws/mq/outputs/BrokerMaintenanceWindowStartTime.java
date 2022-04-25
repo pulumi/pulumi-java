@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class BrokerMaintenanceWindowStartTime {
     /**
-     * Day of the week, e.g., `MONDAY`, `TUESDAY`, or `WEDNESDAY`.
+     * @return Day of the week, e.g., `MONDAY`, `TUESDAY`, or `WEDNESDAY`.
      * 
      */
     private final String dayOfWeek;
     /**
-     * Time, in 24-hour format, e.g., `02:00`.
+     * @return Time, in 24-hour format, e.g., `02:00`.
      * 
      */
     private final String timeOfDay;
     /**
-     * Time zone in either the Country/City format or the UTC offset format, e.g., `CET`.
+     * @return Time zone in either the Country/City format or the UTC offset format, e.g., `CET`.
      * 
      */
     private final String timeZone;
@@ -36,23 +36,23 @@ public final class BrokerMaintenanceWindowStartTime {
     }
 
     /**
-     * Day of the week, e.g., `MONDAY`, `TUESDAY`, or `WEDNESDAY`.
+     * @return Day of the week, e.g., `MONDAY`, `TUESDAY`, or `WEDNESDAY`.
      * 
-    */
+     */
     public String dayOfWeek() {
         return this.dayOfWeek;
     }
     /**
-     * Time, in 24-hour format, e.g., `02:00`.
+     * @return Time, in 24-hour format, e.g., `02:00`.
      * 
-    */
+     */
     public String timeOfDay() {
         return this.timeOfDay;
     }
     /**
-     * Time zone in either the Country/City format or the UTC offset format, e.g., `CET`.
+     * @return Time zone in either the Country/City format or the UTC offset format, e.g., `CET`.
      * 
-    */
+     */
     public String timeZone() {
         return this.timeZone;
     }

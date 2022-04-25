@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ResourceSetResourceDnsTargetResource {
     /**
-     * Domain name that is targeted.
+     * @return Domain name that is targeted.
      * 
      */
     private final String domainName;
     /**
-     * Hosted Zone ARN that contains the DNS record with the provided name of target resource.
+     * @return Hosted Zone ARN that contains the DNS record with the provided name of target resource.
      * 
      */
     private final @Nullable String hostedZoneArn;
     /**
-     * Resource record set ID that is targeted.
+     * @return Resource record set ID that is targeted.
      * 
      */
     private final @Nullable String recordSetId;
     /**
-     * Type of DNS Record of target resource.
+     * @return Type of DNS Record of target resource.
      * 
      */
     private final @Nullable String recordType;
     /**
-     * Target resource the R53 record specified with the above params points to.
+     * @return Target resource the R53 record specified with the above params points to.
      * 
      */
     private final @Nullable ResourceSetResourceDnsTargetResourceTargetResource targetResource;
@@ -53,37 +53,37 @@ public final class ResourceSetResourceDnsTargetResource {
     }
 
     /**
-     * Domain name that is targeted.
+     * @return Domain name that is targeted.
      * 
-    */
+     */
     public String domainName() {
         return this.domainName;
     }
     /**
-     * Hosted Zone ARN that contains the DNS record with the provided name of target resource.
+     * @return Hosted Zone ARN that contains the DNS record with the provided name of target resource.
      * 
-    */
+     */
     public Optional<String> hostedZoneArn() {
         return Optional.ofNullable(this.hostedZoneArn);
     }
     /**
-     * Resource record set ID that is targeted.
+     * @return Resource record set ID that is targeted.
      * 
-    */
+     */
     public Optional<String> recordSetId() {
         return Optional.ofNullable(this.recordSetId);
     }
     /**
-     * Type of DNS Record of target resource.
+     * @return Type of DNS Record of target resource.
      * 
-    */
+     */
     public Optional<String> recordType() {
         return Optional.ofNullable(this.recordType);
     }
     /**
-     * Target resource the R53 record specified with the above params points to.
+     * @return Target resource the R53 record specified with the above params points to.
      * 
-    */
+     */
     public Optional<ResourceSetResourceDnsTargetResourceTargetResource> targetResource() {
         return Optional.ofNullable(this.targetResource);
     }

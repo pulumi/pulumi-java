@@ -20,6 +20,10 @@ public final class GetTransitGatewayFilter extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the field to filter by, as defined by the [underlying AWS API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeTransitGateways.html).
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -31,6 +35,10 @@ public final class GetTransitGatewayFilter extends com.pulumi.resources.InvokeAr
     @Import(name="values", required=true)
     private List<String> values;
 
+    /**
+     * @return List of one or more values for the filter.
+     * 
+     */
     public List<String> values() {
         return this.values;
     }
@@ -60,16 +68,34 @@ public final class GetTransitGatewayFilter extends com.pulumi.resources.InvokeAr
             $ = new GetTransitGatewayFilter(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the field to filter by, as defined by the [underlying AWS API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeTransitGateways.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param values List of one or more values for the filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values List of one or more values for the filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

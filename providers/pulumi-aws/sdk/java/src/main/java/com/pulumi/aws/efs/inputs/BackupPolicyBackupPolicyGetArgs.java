@@ -20,6 +20,10 @@ public final class BackupPolicyBackupPolicyGetArgs extends com.pulumi.resources.
     @Import(name="status", required=true)
     private Output<String> status;
 
+    /**
+     * @return A status of the backup policy. Valid values: `ENABLED`, `DISABLED`.
+     * 
+     */
     public Output<String> status() {
         return this.status;
     }
@@ -48,11 +52,23 @@ public final class BackupPolicyBackupPolicyGetArgs extends com.pulumi.resources.
             $ = new BackupPolicyBackupPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param status A status of the backup policy. Valid values: `ENABLED`, `DISABLED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status A status of the backup policy. Valid values: `ENABLED`, `DISABLED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }

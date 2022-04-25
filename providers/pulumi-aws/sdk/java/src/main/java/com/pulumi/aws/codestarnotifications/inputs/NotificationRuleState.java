@@ -25,6 +25,10 @@ public final class NotificationRuleState extends com.pulumi.resources.ResourceAr
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The codestar notification rule ARN.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -36,6 +40,10 @@ public final class NotificationRuleState extends com.pulumi.resources.ResourceAr
     @Import(name="detailType")
     private @Nullable Output<String> detailType;
 
+    /**
+     * @return The level of detail to include in the notifications for this resource. Possible values are `BASIC` and `FULL`.
+     * 
+     */
     public Optional<Output<String>> detailType() {
         return Optional.ofNullable(this.detailType);
     }
@@ -48,6 +56,11 @@ public final class NotificationRuleState extends com.pulumi.resources.ResourceAr
     @Import(name="eventTypeIds")
     private @Nullable Output<List<String>> eventTypeIds;
 
+    /**
+     * @return A list of event types associated with this notification rule.
+     * For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notifications/latest/userguide/concepts.html#concepts-api).
+     * 
+     */
     public Optional<Output<List<String>>> eventTypeIds() {
         return Optional.ofNullable(this.eventTypeIds);
     }
@@ -59,6 +72,10 @@ public final class NotificationRuleState extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of notification rule.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -70,6 +87,10 @@ public final class NotificationRuleState extends com.pulumi.resources.ResourceAr
     @Import(name="resource")
     private @Nullable Output<String> resource;
 
+    /**
+     * @return The ARN of the resource to associate with the notification rule.
+     * 
+     */
     public Optional<Output<String>> resource() {
         return Optional.ofNullable(this.resource);
     }
@@ -81,6 +102,10 @@ public final class NotificationRuleState extends com.pulumi.resources.ResourceAr
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return The status of the notification rule. Possible values are `ENABLED` and `DISABLED`, default is `ENABLED`.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -92,6 +117,10 @@ public final class NotificationRuleState extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -103,6 +132,10 @@ public final class NotificationRuleState extends com.pulumi.resources.ResourceAr
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -114,6 +147,10 @@ public final class NotificationRuleState extends com.pulumi.resources.ResourceAr
     @Import(name="targets")
     private @Nullable Output<List<NotificationRuleTargetGetArgs>> targets;
 
+    /**
+     * @return Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation.
+     * 
+     */
     public Optional<Output<List<NotificationRuleTargetGetArgs>>> targets() {
         return Optional.ofNullable(this.targets);
     }
@@ -150,91 +187,214 @@ public final class NotificationRuleState extends com.pulumi.resources.ResourceAr
             $ = new NotificationRuleState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The codestar notification rule ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The codestar notification rule ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param detailType The level of detail to include in the notifications for this resource. Possible values are `BASIC` and `FULL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detailType(@Nullable Output<String> detailType) {
             $.detailType = detailType;
             return this;
         }
 
+        /**
+         * @param detailType The level of detail to include in the notifications for this resource. Possible values are `BASIC` and `FULL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detailType(String detailType) {
             return detailType(Output.of(detailType));
         }
 
+        /**
+         * @param eventTypeIds A list of event types associated with this notification rule.
+         * For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notifications/latest/userguide/concepts.html#concepts-api).
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventTypeIds(@Nullable Output<List<String>> eventTypeIds) {
             $.eventTypeIds = eventTypeIds;
             return this;
         }
 
+        /**
+         * @param eventTypeIds A list of event types associated with this notification rule.
+         * For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notifications/latest/userguide/concepts.html#concepts-api).
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventTypeIds(List<String> eventTypeIds) {
             return eventTypeIds(Output.of(eventTypeIds));
         }
 
+        /**
+         * @param eventTypeIds A list of event types associated with this notification rule.
+         * For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notifications/latest/userguide/concepts.html#concepts-api).
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventTypeIds(String... eventTypeIds) {
             return eventTypeIds(List.of(eventTypeIds));
         }
 
+        /**
+         * @param name The name of notification rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of notification rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resource The ARN of the resource to associate with the notification rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(@Nullable Output<String> resource) {
             $.resource = resource;
             return this;
         }
 
+        /**
+         * @param resource The ARN of the resource to associate with the notification rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(String resource) {
             return resource(Output.of(resource));
         }
 
+        /**
+         * @param status The status of the notification rule. Possible values are `ENABLED` and `DISABLED`, default is `ENABLED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The status of the notification rule. Possible values are `ENABLED` and `DISABLED`, default is `ENABLED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param targets Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(@Nullable Output<List<NotificationRuleTargetGetArgs>> targets) {
             $.targets = targets;
             return this;
         }
 
+        /**
+         * @param targets Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(List<NotificationRuleTargetGetArgs> targets) {
             return targets(Output.of(targets));
         }
 
+        /**
+         * @param targets Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(NotificationRuleTargetGetArgs... targets) {
             return targets(List.of(targets));
         }

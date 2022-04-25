@@ -34,6 +34,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacityProviderStrategies")
     private @Nullable Output<List<ServiceCapacityProviderStrategyGetArgs>> capacityProviderStrategies;
 
+    /**
+     * @return Capacity provider strategies to use for the service. Can be one or more. These can be updated without destroying and recreating the service only if `force_new_deployment = true` and not changing from 0 `capacity_provider_strategy` blocks to greater than 0, or vice versa. See below.
+     * 
+     */
     public Optional<Output<List<ServiceCapacityProviderStrategyGetArgs>>> capacityProviderStrategies() {
         return Optional.ofNullable(this.capacityProviderStrategies);
     }
@@ -45,6 +49,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="cluster")
     private @Nullable Output<String> cluster;
 
+    /**
+     * @return ARN of an ECS cluster.
+     * 
+     */
     public Optional<Output<String>> cluster() {
         return Optional.ofNullable(this.cluster);
     }
@@ -56,6 +64,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="deploymentCircuitBreaker")
     private @Nullable Output<ServiceDeploymentCircuitBreakerGetArgs> deploymentCircuitBreaker;
 
+    /**
+     * @return Configuration block for deployment circuit breaker. See below.
+     * 
+     */
     public Optional<Output<ServiceDeploymentCircuitBreakerGetArgs>> deploymentCircuitBreaker() {
         return Optional.ofNullable(this.deploymentCircuitBreaker);
     }
@@ -67,6 +79,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="deploymentController")
     private @Nullable Output<ServiceDeploymentControllerGetArgs> deploymentController;
 
+    /**
+     * @return Configuration block for deployment controller configuration. See below.
+     * 
+     */
     public Optional<Output<ServiceDeploymentControllerGetArgs>> deploymentController() {
         return Optional.ofNullable(this.deploymentController);
     }
@@ -78,6 +94,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="deploymentMaximumPercent")
     private @Nullable Output<Integer> deploymentMaximumPercent;
 
+    /**
+     * @return Upper limit (as a percentage of the service&#39;s desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
+     * 
+     */
     public Optional<Output<Integer>> deploymentMaximumPercent() {
         return Optional.ofNullable(this.deploymentMaximumPercent);
     }
@@ -89,6 +109,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="deploymentMinimumHealthyPercent")
     private @Nullable Output<Integer> deploymentMinimumHealthyPercent;
 
+    /**
+     * @return Lower limit (as a percentage of the service&#39;s desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.
+     * 
+     */
     public Optional<Output<Integer>> deploymentMinimumHealthyPercent() {
         return Optional.ofNullable(this.deploymentMinimumHealthyPercent);
     }
@@ -100,6 +124,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="desiredCount")
     private @Nullable Output<Integer> desiredCount;
 
+    /**
+     * @return Number of instances of the task definition to place and keep running. Defaults to 0. Do not specify if using the `DAEMON` scheduling strategy.
+     * 
+     */
     public Optional<Output<Integer>> desiredCount() {
         return Optional.ofNullable(this.desiredCount);
     }
@@ -111,6 +139,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableEcsManagedTags")
     private @Nullable Output<Boolean> enableEcsManagedTags;
 
+    /**
+     * @return Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
+     * 
+     */
     public Optional<Output<Boolean>> enableEcsManagedTags() {
         return Optional.ofNullable(this.enableEcsManagedTags);
     }
@@ -122,6 +154,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableExecuteCommand")
     private @Nullable Output<Boolean> enableExecuteCommand;
 
+    /**
+     * @return Specifies whether to enable Amazon ECS Exec for the tasks within the service.
+     * 
+     */
     public Optional<Output<Boolean>> enableExecuteCommand() {
         return Optional.ofNullable(this.enableExecuteCommand);
     }
@@ -133,6 +169,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="forceNewDeployment")
     private @Nullable Output<Boolean> forceNewDeployment;
 
+    /**
+     * @return Enable to force a new task deployment of the service. This can be used to update tasks to use a newer Docker image with same image/tag combination (e.g., `myimage:latest`), roll Fargate tasks onto a newer platform version, or immediately deploy `ordered_placement_strategy` and `placement_constraints` updates.
+     * 
+     */
     public Optional<Output<Boolean>> forceNewDeployment() {
         return Optional.ofNullable(this.forceNewDeployment);
     }
@@ -144,6 +184,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthCheckGracePeriodSeconds")
     private @Nullable Output<Integer> healthCheckGracePeriodSeconds;
 
+    /**
+     * @return Seconds to ignore failing load balancer health checks on newly instantiated tasks to prevent premature shutdown, up to 2147483647. Only valid for services configured to use load balancers.
+     * 
+     */
     public Optional<Output<Integer>> healthCheckGracePeriodSeconds() {
         return Optional.ofNullable(this.healthCheckGracePeriodSeconds);
     }
@@ -155,6 +199,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="iamRole")
     private @Nullable Output<String> iamRole;
 
+    /**
+     * @return ARN of the IAM role that allows Amazon ECS to make calls to your load balancer on your behalf. This parameter is required if you are using a load balancer with your service, but only if your task definition does not use the `awsvpc` network mode. If using `awsvpc` network mode, do not specify this role. If your account has already created the Amazon ECS service-linked role, that role is used by default for your service unless you specify a role here.
+     * 
+     */
     public Optional<Output<String>> iamRole() {
         return Optional.ofNullable(this.iamRole);
     }
@@ -166,6 +214,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="launchType")
     private @Nullable Output<String> launchType;
 
+    /**
+     * @return Launch type on which to run your service. The valid values are `EC2`, `FARGATE`, and `EXTERNAL`. Defaults to `EC2`.
+     * 
+     */
     public Optional<Output<String>> launchType() {
         return Optional.ofNullable(this.launchType);
     }
@@ -177,6 +229,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancers")
     private @Nullable Output<List<ServiceLoadBalancerGetArgs>> loadBalancers;
 
+    /**
+     * @return Configuration block for load balancers. See below.
+     * 
+     */
     public Optional<Output<List<ServiceLoadBalancerGetArgs>>> loadBalancers() {
         return Optional.ofNullable(this.loadBalancers);
     }
@@ -188,6 +244,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the service (up to 255 letters, numbers, hyphens, and underscores)
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -199,6 +259,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkConfiguration")
     private @Nullable Output<ServiceNetworkConfigurationGetArgs> networkConfiguration;
 
+    /**
+     * @return Network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes. See below.
+     * 
+     */
     public Optional<Output<ServiceNetworkConfigurationGetArgs>> networkConfiguration() {
         return Optional.ofNullable(this.networkConfiguration);
     }
@@ -210,6 +274,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="orderedPlacementStrategies")
     private @Nullable Output<List<ServiceOrderedPlacementStrategyGetArgs>> orderedPlacementStrategies;
 
+    /**
+     * @return Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. The maximum number of `ordered_placement_strategy` blocks is `5`. See below.
+     * 
+     */
     public Optional<Output<List<ServiceOrderedPlacementStrategyGetArgs>>> orderedPlacementStrategies() {
         return Optional.ofNullable(this.orderedPlacementStrategies);
     }
@@ -221,6 +289,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="placementConstraints")
     private @Nullable Output<List<ServicePlacementConstraintGetArgs>> placementConstraints;
 
+    /**
+     * @return Rules that are taken into consideration during task placement. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. Maximum number of `placement_constraints` is `10`. See below.
+     * 
+     */
     public Optional<Output<List<ServicePlacementConstraintGetArgs>>> placementConstraints() {
         return Optional.ofNullable(this.placementConstraints);
     }
@@ -232,6 +304,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="platformVersion")
     private @Nullable Output<String> platformVersion;
 
+    /**
+     * @return Platform version on which to run your service. Only applicable for `launch_type` set to `FARGATE`. Defaults to `LATEST`. More information about Fargate platform versions can be found in the [AWS ECS User Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
+     * 
+     */
     public Optional<Output<String>> platformVersion() {
         return Optional.ofNullable(this.platformVersion);
     }
@@ -243,6 +319,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="propagateTags")
     private @Nullable Output<String> propagateTags;
 
+    /**
+     * @return Specifies whether to propagate the tags from the task definition or the service to the tasks. The valid values are `SERVICE` and `TASK_DEFINITION`.
+     * 
+     */
     public Optional<Output<String>> propagateTags() {
         return Optional.ofNullable(this.propagateTags);
     }
@@ -254,6 +334,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedulingStrategy")
     private @Nullable Output<String> schedulingStrategy;
 
+    /**
+     * @return Scheduling strategy to use for the service. The valid values are `REPLICA` and `DAEMON`. Defaults to `REPLICA`. Note that [*Tasks using the Fargate launch type or the `CODE_DEPLOY` or `EXTERNAL` deployment controller types don&#39;t support the `DAEMON` scheduling strategy*](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html).
+     * 
+     */
     public Optional<Output<String>> schedulingStrategy() {
         return Optional.ofNullable(this.schedulingStrategy);
     }
@@ -265,6 +349,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceRegistries")
     private @Nullable Output<ServiceServiceRegistriesGetArgs> serviceRegistries;
 
+    /**
+     * @return Service discovery registries for the service. The maximum number of `service_registries` blocks is `1`. See below.
+     * 
+     */
     public Optional<Output<ServiceServiceRegistriesGetArgs>> serviceRegistries() {
         return Optional.ofNullable(this.serviceRegistries);
     }
@@ -276,6 +364,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -287,6 +379,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -298,6 +394,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="taskDefinition")
     private @Nullable Output<String> taskDefinition;
 
+    /**
+     * @return Family and revision (`family:revision`) or full ARN of the task definition that you want to run in your service. Required unless using the `EXTERNAL` deployment controller. If a revision is not specified, the latest `ACTIVE` revision is used.
+     * 
+     */
     public Optional<Output<String>> taskDefinition() {
         return Optional.ofNullable(this.taskDefinition);
     }
@@ -309,6 +409,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="waitForSteadyState")
     private @Nullable Output<Boolean> waitForSteadyState;
 
+    /**
+     * @return If `true`, this provider will wait for the service to reach a steady state (like [`aws ecs wait services-stable`](https://docs.aws.amazon.com/cli/latest/reference/ecs/wait/services-stable.html)) before continuing. Default `false`.
+     * 
+     */
     public Optional<Output<Boolean>> waitForSteadyState() {
         return Optional.ofNullable(this.waitForSteadyState);
     }
@@ -362,252 +466,588 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
             $ = new ServiceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacityProviderStrategies Capacity provider strategies to use for the service. Can be one or more. These can be updated without destroying and recreating the service only if `force_new_deployment = true` and not changing from 0 `capacity_provider_strategy` blocks to greater than 0, or vice versa. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityProviderStrategies(@Nullable Output<List<ServiceCapacityProviderStrategyGetArgs>> capacityProviderStrategies) {
             $.capacityProviderStrategies = capacityProviderStrategies;
             return this;
         }
 
+        /**
+         * @param capacityProviderStrategies Capacity provider strategies to use for the service. Can be one or more. These can be updated without destroying and recreating the service only if `force_new_deployment = true` and not changing from 0 `capacity_provider_strategy` blocks to greater than 0, or vice versa. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityProviderStrategies(List<ServiceCapacityProviderStrategyGetArgs> capacityProviderStrategies) {
             return capacityProviderStrategies(Output.of(capacityProviderStrategies));
         }
 
+        /**
+         * @param capacityProviderStrategies Capacity provider strategies to use for the service. Can be one or more. These can be updated without destroying and recreating the service only if `force_new_deployment = true` and not changing from 0 `capacity_provider_strategy` blocks to greater than 0, or vice versa. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityProviderStrategies(ServiceCapacityProviderStrategyGetArgs... capacityProviderStrategies) {
             return capacityProviderStrategies(List.of(capacityProviderStrategies));
         }
 
+        /**
+         * @param cluster ARN of an ECS cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(@Nullable Output<String> cluster) {
             $.cluster = cluster;
             return this;
         }
 
+        /**
+         * @param cluster ARN of an ECS cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(String cluster) {
             return cluster(Output.of(cluster));
         }
 
+        /**
+         * @param deploymentCircuitBreaker Configuration block for deployment circuit breaker. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentCircuitBreaker(@Nullable Output<ServiceDeploymentCircuitBreakerGetArgs> deploymentCircuitBreaker) {
             $.deploymentCircuitBreaker = deploymentCircuitBreaker;
             return this;
         }
 
+        /**
+         * @param deploymentCircuitBreaker Configuration block for deployment circuit breaker. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentCircuitBreaker(ServiceDeploymentCircuitBreakerGetArgs deploymentCircuitBreaker) {
             return deploymentCircuitBreaker(Output.of(deploymentCircuitBreaker));
         }
 
+        /**
+         * @param deploymentController Configuration block for deployment controller configuration. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentController(@Nullable Output<ServiceDeploymentControllerGetArgs> deploymentController) {
             $.deploymentController = deploymentController;
             return this;
         }
 
+        /**
+         * @param deploymentController Configuration block for deployment controller configuration. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentController(ServiceDeploymentControllerGetArgs deploymentController) {
             return deploymentController(Output.of(deploymentController));
         }
 
+        /**
+         * @param deploymentMaximumPercent Upper limit (as a percentage of the service&#39;s desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentMaximumPercent(@Nullable Output<Integer> deploymentMaximumPercent) {
             $.deploymentMaximumPercent = deploymentMaximumPercent;
             return this;
         }
 
+        /**
+         * @param deploymentMaximumPercent Upper limit (as a percentage of the service&#39;s desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentMaximumPercent(Integer deploymentMaximumPercent) {
             return deploymentMaximumPercent(Output.of(deploymentMaximumPercent));
         }
 
+        /**
+         * @param deploymentMinimumHealthyPercent Lower limit (as a percentage of the service&#39;s desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentMinimumHealthyPercent(@Nullable Output<Integer> deploymentMinimumHealthyPercent) {
             $.deploymentMinimumHealthyPercent = deploymentMinimumHealthyPercent;
             return this;
         }
 
+        /**
+         * @param deploymentMinimumHealthyPercent Lower limit (as a percentage of the service&#39;s desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentMinimumHealthyPercent(Integer deploymentMinimumHealthyPercent) {
             return deploymentMinimumHealthyPercent(Output.of(deploymentMinimumHealthyPercent));
         }
 
+        /**
+         * @param desiredCount Number of instances of the task definition to place and keep running. Defaults to 0. Do not specify if using the `DAEMON` scheduling strategy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder desiredCount(@Nullable Output<Integer> desiredCount) {
             $.desiredCount = desiredCount;
             return this;
         }
 
+        /**
+         * @param desiredCount Number of instances of the task definition to place and keep running. Defaults to 0. Do not specify if using the `DAEMON` scheduling strategy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder desiredCount(Integer desiredCount) {
             return desiredCount(Output.of(desiredCount));
         }
 
+        /**
+         * @param enableEcsManagedTags Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableEcsManagedTags(@Nullable Output<Boolean> enableEcsManagedTags) {
             $.enableEcsManagedTags = enableEcsManagedTags;
             return this;
         }
 
+        /**
+         * @param enableEcsManagedTags Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableEcsManagedTags(Boolean enableEcsManagedTags) {
             return enableEcsManagedTags(Output.of(enableEcsManagedTags));
         }
 
+        /**
+         * @param enableExecuteCommand Specifies whether to enable Amazon ECS Exec for the tasks within the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableExecuteCommand(@Nullable Output<Boolean> enableExecuteCommand) {
             $.enableExecuteCommand = enableExecuteCommand;
             return this;
         }
 
+        /**
+         * @param enableExecuteCommand Specifies whether to enable Amazon ECS Exec for the tasks within the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableExecuteCommand(Boolean enableExecuteCommand) {
             return enableExecuteCommand(Output.of(enableExecuteCommand));
         }
 
+        /**
+         * @param forceNewDeployment Enable to force a new task deployment of the service. This can be used to update tasks to use a newer Docker image with same image/tag combination (e.g., `myimage:latest`), roll Fargate tasks onto a newer platform version, or immediately deploy `ordered_placement_strategy` and `placement_constraints` updates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceNewDeployment(@Nullable Output<Boolean> forceNewDeployment) {
             $.forceNewDeployment = forceNewDeployment;
             return this;
         }
 
+        /**
+         * @param forceNewDeployment Enable to force a new task deployment of the service. This can be used to update tasks to use a newer Docker image with same image/tag combination (e.g., `myimage:latest`), roll Fargate tasks onto a newer platform version, or immediately deploy `ordered_placement_strategy` and `placement_constraints` updates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceNewDeployment(Boolean forceNewDeployment) {
             return forceNewDeployment(Output.of(forceNewDeployment));
         }
 
+        /**
+         * @param healthCheckGracePeriodSeconds Seconds to ignore failing load balancer health checks on newly instantiated tasks to prevent premature shutdown, up to 2147483647. Only valid for services configured to use load balancers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckGracePeriodSeconds(@Nullable Output<Integer> healthCheckGracePeriodSeconds) {
             $.healthCheckGracePeriodSeconds = healthCheckGracePeriodSeconds;
             return this;
         }
 
+        /**
+         * @param healthCheckGracePeriodSeconds Seconds to ignore failing load balancer health checks on newly instantiated tasks to prevent premature shutdown, up to 2147483647. Only valid for services configured to use load balancers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckGracePeriodSeconds(Integer healthCheckGracePeriodSeconds) {
             return healthCheckGracePeriodSeconds(Output.of(healthCheckGracePeriodSeconds));
         }
 
+        /**
+         * @param iamRole ARN of the IAM role that allows Amazon ECS to make calls to your load balancer on your behalf. This parameter is required if you are using a load balancer with your service, but only if your task definition does not use the `awsvpc` network mode. If using `awsvpc` network mode, do not specify this role. If your account has already created the Amazon ECS service-linked role, that role is used by default for your service unless you specify a role here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamRole(@Nullable Output<String> iamRole) {
             $.iamRole = iamRole;
             return this;
         }
 
+        /**
+         * @param iamRole ARN of the IAM role that allows Amazon ECS to make calls to your load balancer on your behalf. This parameter is required if you are using a load balancer with your service, but only if your task definition does not use the `awsvpc` network mode. If using `awsvpc` network mode, do not specify this role. If your account has already created the Amazon ECS service-linked role, that role is used by default for your service unless you specify a role here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamRole(String iamRole) {
             return iamRole(Output.of(iamRole));
         }
 
+        /**
+         * @param launchType Launch type on which to run your service. The valid values are `EC2`, `FARGATE`, and `EXTERNAL`. Defaults to `EC2`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchType(@Nullable Output<String> launchType) {
             $.launchType = launchType;
             return this;
         }
 
+        /**
+         * @param launchType Launch type on which to run your service. The valid values are `EC2`, `FARGATE`, and `EXTERNAL`. Defaults to `EC2`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchType(String launchType) {
             return launchType(Output.of(launchType));
         }
 
+        /**
+         * @param loadBalancers Configuration block for load balancers. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancers(@Nullable Output<List<ServiceLoadBalancerGetArgs>> loadBalancers) {
             $.loadBalancers = loadBalancers;
             return this;
         }
 
+        /**
+         * @param loadBalancers Configuration block for load balancers. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancers(List<ServiceLoadBalancerGetArgs> loadBalancers) {
             return loadBalancers(Output.of(loadBalancers));
         }
 
+        /**
+         * @param loadBalancers Configuration block for load balancers. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancers(ServiceLoadBalancerGetArgs... loadBalancers) {
             return loadBalancers(List.of(loadBalancers));
         }
 
+        /**
+         * @param name Name of the service (up to 255 letters, numbers, hyphens, and underscores)
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the service (up to 255 letters, numbers, hyphens, and underscores)
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param networkConfiguration Network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfiguration(@Nullable Output<ServiceNetworkConfigurationGetArgs> networkConfiguration) {
             $.networkConfiguration = networkConfiguration;
             return this;
         }
 
+        /**
+         * @param networkConfiguration Network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfiguration(ServiceNetworkConfigurationGetArgs networkConfiguration) {
             return networkConfiguration(Output.of(networkConfiguration));
         }
 
+        /**
+         * @param orderedPlacementStrategies Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. The maximum number of `ordered_placement_strategy` blocks is `5`. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orderedPlacementStrategies(@Nullable Output<List<ServiceOrderedPlacementStrategyGetArgs>> orderedPlacementStrategies) {
             $.orderedPlacementStrategies = orderedPlacementStrategies;
             return this;
         }
 
+        /**
+         * @param orderedPlacementStrategies Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. The maximum number of `ordered_placement_strategy` blocks is `5`. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orderedPlacementStrategies(List<ServiceOrderedPlacementStrategyGetArgs> orderedPlacementStrategies) {
             return orderedPlacementStrategies(Output.of(orderedPlacementStrategies));
         }
 
+        /**
+         * @param orderedPlacementStrategies Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. The maximum number of `ordered_placement_strategy` blocks is `5`. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orderedPlacementStrategies(ServiceOrderedPlacementStrategyGetArgs... orderedPlacementStrategies) {
             return orderedPlacementStrategies(List.of(orderedPlacementStrategies));
         }
 
+        /**
+         * @param placementConstraints Rules that are taken into consideration during task placement. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. Maximum number of `placement_constraints` is `10`. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder placementConstraints(@Nullable Output<List<ServicePlacementConstraintGetArgs>> placementConstraints) {
             $.placementConstraints = placementConstraints;
             return this;
         }
 
+        /**
+         * @param placementConstraints Rules that are taken into consideration during task placement. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. Maximum number of `placement_constraints` is `10`. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder placementConstraints(List<ServicePlacementConstraintGetArgs> placementConstraints) {
             return placementConstraints(Output.of(placementConstraints));
         }
 
+        /**
+         * @param placementConstraints Rules that are taken into consideration during task placement. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. Maximum number of `placement_constraints` is `10`. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder placementConstraints(ServicePlacementConstraintGetArgs... placementConstraints) {
             return placementConstraints(List.of(placementConstraints));
         }
 
+        /**
+         * @param platformVersion Platform version on which to run your service. Only applicable for `launch_type` set to `FARGATE`. Defaults to `LATEST`. More information about Fargate platform versions can be found in the [AWS ECS User Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder platformVersion(@Nullable Output<String> platformVersion) {
             $.platformVersion = platformVersion;
             return this;
         }
 
+        /**
+         * @param platformVersion Platform version on which to run your service. Only applicable for `launch_type` set to `FARGATE`. Defaults to `LATEST`. More information about Fargate platform versions can be found in the [AWS ECS User Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder platformVersion(String platformVersion) {
             return platformVersion(Output.of(platformVersion));
         }
 
+        /**
+         * @param propagateTags Specifies whether to propagate the tags from the task definition or the service to the tasks. The valid values are `SERVICE` and `TASK_DEFINITION`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propagateTags(@Nullable Output<String> propagateTags) {
             $.propagateTags = propagateTags;
             return this;
         }
 
+        /**
+         * @param propagateTags Specifies whether to propagate the tags from the task definition or the service to the tasks. The valid values are `SERVICE` and `TASK_DEFINITION`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propagateTags(String propagateTags) {
             return propagateTags(Output.of(propagateTags));
         }
 
+        /**
+         * @param schedulingStrategy Scheduling strategy to use for the service. The valid values are `REPLICA` and `DAEMON`. Defaults to `REPLICA`. Note that [*Tasks using the Fargate launch type or the `CODE_DEPLOY` or `EXTERNAL` deployment controller types don&#39;t support the `DAEMON` scheduling strategy*](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulingStrategy(@Nullable Output<String> schedulingStrategy) {
             $.schedulingStrategy = schedulingStrategy;
             return this;
         }
 
+        /**
+         * @param schedulingStrategy Scheduling strategy to use for the service. The valid values are `REPLICA` and `DAEMON`. Defaults to `REPLICA`. Note that [*Tasks using the Fargate launch type or the `CODE_DEPLOY` or `EXTERNAL` deployment controller types don&#39;t support the `DAEMON` scheduling strategy*](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulingStrategy(String schedulingStrategy) {
             return schedulingStrategy(Output.of(schedulingStrategy));
         }
 
+        /**
+         * @param serviceRegistries Service discovery registries for the service. The maximum number of `service_registries` blocks is `1`. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRegistries(@Nullable Output<ServiceServiceRegistriesGetArgs> serviceRegistries) {
             $.serviceRegistries = serviceRegistries;
             return this;
         }
 
+        /**
+         * @param serviceRegistries Service discovery registries for the service. The maximum number of `service_registries` blocks is `1`. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRegistries(ServiceServiceRegistriesGetArgs serviceRegistries) {
             return serviceRegistries(Output.of(serviceRegistries));
         }
 
+        /**
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param taskDefinition Family and revision (`family:revision`) or full ARN of the task definition that you want to run in your service. Required unless using the `EXTERNAL` deployment controller. If a revision is not specified, the latest `ACTIVE` revision is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskDefinition(@Nullable Output<String> taskDefinition) {
             $.taskDefinition = taskDefinition;
             return this;
         }
 
+        /**
+         * @param taskDefinition Family and revision (`family:revision`) or full ARN of the task definition that you want to run in your service. Required unless using the `EXTERNAL` deployment controller. If a revision is not specified, the latest `ACTIVE` revision is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskDefinition(String taskDefinition) {
             return taskDefinition(Output.of(taskDefinition));
         }
 
+        /**
+         * @param waitForSteadyState If `true`, this provider will wait for the service to reach a steady state (like [`aws ecs wait services-stable`](https://docs.aws.amazon.com/cli/latest/reference/ecs/wait/services-stable.html)) before continuing. Default `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitForSteadyState(@Nullable Output<Boolean> waitForSteadyState) {
             $.waitForSteadyState = waitForSteadyState;
             return this;
         }
 
+        /**
+         * @param waitForSteadyState If `true`, this provider will wait for the service to reach a steady state (like [`aws ecs wait services-stable`](https://docs.aws.amazon.com/cli/latest/reference/ecs/wait/services-stable.html)) before continuing. Default `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitForSteadyState(Boolean waitForSteadyState) {
             return waitForSteadyState(Output.of(waitForSteadyState));
         }

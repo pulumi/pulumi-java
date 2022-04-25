@@ -23,6 +23,10 @@ public final class AppCookieStickinessPolicyArgs extends com.pulumi.resources.Re
     @Import(name="cookieName", required=true)
     private Output<String> cookieName;
 
+    /**
+     * @return The application cookie whose lifetime the ELB&#39;s cookie should follow.
+     * 
+     */
     public Output<String> cookieName() {
         return this.cookieName;
     }
@@ -36,6 +40,12 @@ public final class AppCookieStickinessPolicyArgs extends com.pulumi.resources.Re
     @Import(name="lbPort", required=true)
     private Output<Integer> lbPort;
 
+    /**
+     * @return The load balancer port to which the policy
+     * should be applied. This must be an active listener on the load
+     * balancer.
+     * 
+     */
     public Output<Integer> lbPort() {
         return this.lbPort;
     }
@@ -48,6 +58,11 @@ public final class AppCookieStickinessPolicyArgs extends com.pulumi.resources.Re
     @Import(name="loadBalancer", required=true)
     private Output<String> loadBalancer;
 
+    /**
+     * @return The name of load balancer to which the policy
+     * should be attached.
+     * 
+     */
     public Output<String> loadBalancer() {
         return this.loadBalancer;
     }
@@ -59,6 +74,10 @@ public final class AppCookieStickinessPolicyArgs extends com.pulumi.resources.Re
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the stickiness policy.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -90,38 +109,92 @@ public final class AppCookieStickinessPolicyArgs extends com.pulumi.resources.Re
             $ = new AppCookieStickinessPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cookieName The application cookie whose lifetime the ELB&#39;s cookie should follow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cookieName(Output<String> cookieName) {
             $.cookieName = cookieName;
             return this;
         }
 
+        /**
+         * @param cookieName The application cookie whose lifetime the ELB&#39;s cookie should follow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cookieName(String cookieName) {
             return cookieName(Output.of(cookieName));
         }
 
+        /**
+         * @param lbPort The load balancer port to which the policy
+         * should be applied. This must be an active listener on the load
+         * balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lbPort(Output<Integer> lbPort) {
             $.lbPort = lbPort;
             return this;
         }
 
+        /**
+         * @param lbPort The load balancer port to which the policy
+         * should be applied. This must be an active listener on the load
+         * balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lbPort(Integer lbPort) {
             return lbPort(Output.of(lbPort));
         }
 
+        /**
+         * @param loadBalancer The name of load balancer to which the policy
+         * should be attached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancer(Output<String> loadBalancer) {
             $.loadBalancer = loadBalancer;
             return this;
         }
 
+        /**
+         * @param loadBalancer The name of load balancer to which the policy
+         * should be attached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancer(String loadBalancer) {
             return loadBalancer(Output.of(loadBalancer));
         }
 
+        /**
+         * @param name The name of the stickiness policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the stickiness policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

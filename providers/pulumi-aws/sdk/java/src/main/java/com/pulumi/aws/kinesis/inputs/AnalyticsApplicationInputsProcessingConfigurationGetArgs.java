@@ -20,6 +20,10 @@ public final class AnalyticsApplicationInputsProcessingConfigurationGetArgs exte
     @Import(name="lambda", required=true)
     private Output<AnalyticsApplicationInputsProcessingConfigurationLambdaGetArgs> lambda;
 
+    /**
+     * @return The Lambda function configuration. See Lambda below for more details.
+     * 
+     */
     public Output<AnalyticsApplicationInputsProcessingConfigurationLambdaGetArgs> lambda() {
         return this.lambda;
     }
@@ -48,11 +52,23 @@ public final class AnalyticsApplicationInputsProcessingConfigurationGetArgs exte
             $ = new AnalyticsApplicationInputsProcessingConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lambda The Lambda function configuration. See Lambda below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lambda(Output<AnalyticsApplicationInputsProcessingConfigurationLambdaGetArgs> lambda) {
             $.lambda = lambda;
             return this;
         }
 
+        /**
+         * @param lambda The Lambda function configuration. See Lambda below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lambda(AnalyticsApplicationInputsProcessingConfigurationLambdaGetArgs lambda) {
             return lambda(Output.of(lambda));
         }

@@ -23,6 +23,10 @@ public final class GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerCon
     @Import(name="authorizerResultTtlInSeconds")
     private @Nullable Output<Integer> authorizerResultTtlInSeconds;
 
+    /**
+     * @return The number of seconds a response should be cached for. The default is 5 minutes (300 seconds). The Lambda function can override this by returning a `ttlOverride` key in its response. A value of 0 disables caching of responses. Minimum value of 0. Maximum value of 3600.
+     * 
+     */
     public Optional<Output<Integer>> authorizerResultTtlInSeconds() {
         return Optional.ofNullable(this.authorizerResultTtlInSeconds);
     }
@@ -34,6 +38,10 @@ public final class GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerCon
     @Import(name="authorizerUri", required=true)
     private Output<String> authorizerUri;
 
+    /**
+     * @return The ARN of the Lambda function to be called for authorization. Note: This Lambda function must have a resource-based policy assigned to it, to allow `lambda:InvokeFunction` from service principal `appsync.amazonaws.com`.
+     * 
+     */
     public Output<String> authorizerUri() {
         return this.authorizerUri;
     }
@@ -45,6 +53,10 @@ public final class GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerCon
     @Import(name="identityValidationExpression")
     private @Nullable Output<String> identityValidationExpression;
 
+    /**
+     * @return A regular expression for validation of tokens before the Lambda function is called.
+     * 
+     */
     public Optional<Output<String>> identityValidationExpression() {
         return Optional.ofNullable(this.identityValidationExpression);
     }
@@ -75,29 +87,65 @@ public final class GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerCon
             $ = new GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizerResultTtlInSeconds The number of seconds a response should be cached for. The default is 5 minutes (300 seconds). The Lambda function can override this by returning a `ttlOverride` key in its response. A value of 0 disables caching of responses. Minimum value of 0. Maximum value of 3600.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerResultTtlInSeconds(@Nullable Output<Integer> authorizerResultTtlInSeconds) {
             $.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
             return this;
         }
 
+        /**
+         * @param authorizerResultTtlInSeconds The number of seconds a response should be cached for. The default is 5 minutes (300 seconds). The Lambda function can override this by returning a `ttlOverride` key in its response. A value of 0 disables caching of responses. Minimum value of 0. Maximum value of 3600.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerResultTtlInSeconds(Integer authorizerResultTtlInSeconds) {
             return authorizerResultTtlInSeconds(Output.of(authorizerResultTtlInSeconds));
         }
 
+        /**
+         * @param authorizerUri The ARN of the Lambda function to be called for authorization. Note: This Lambda function must have a resource-based policy assigned to it, to allow `lambda:InvokeFunction` from service principal `appsync.amazonaws.com`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerUri(Output<String> authorizerUri) {
             $.authorizerUri = authorizerUri;
             return this;
         }
 
+        /**
+         * @param authorizerUri The ARN of the Lambda function to be called for authorization. Note: This Lambda function must have a resource-based policy assigned to it, to allow `lambda:InvokeFunction` from service principal `appsync.amazonaws.com`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerUri(String authorizerUri) {
             return authorizerUri(Output.of(authorizerUri));
         }
 
+        /**
+         * @param identityValidationExpression A regular expression for validation of tokens before the Lambda function is called.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityValidationExpression(@Nullable Output<String> identityValidationExpression) {
             $.identityValidationExpression = identityValidationExpression;
             return this;
         }
 
+        /**
+         * @param identityValidationExpression A regular expression for validation of tokens before the Lambda function is called.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityValidationExpression(String identityValidationExpression) {
             return identityValidationExpression(Output.of(identityValidationExpression));
         }

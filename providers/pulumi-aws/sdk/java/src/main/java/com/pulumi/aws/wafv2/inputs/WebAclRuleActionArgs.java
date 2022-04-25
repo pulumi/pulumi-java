@@ -24,6 +24,10 @@ public final class WebAclRuleActionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="allow")
     private @Nullable Output<WebAclRuleActionAllowArgs> allow;
 
+    /**
+     * @return Instructs AWS WAF to allow the web request. See Allow below for details.
+     * 
+     */
     public Optional<Output<WebAclRuleActionAllowArgs>> allow() {
         return Optional.ofNullable(this.allow);
     }
@@ -35,6 +39,10 @@ public final class WebAclRuleActionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="block")
     private @Nullable Output<WebAclRuleActionBlockArgs> block;
 
+    /**
+     * @return Instructs AWS WAF to block the web request. See Block below for details.
+     * 
+     */
     public Optional<Output<WebAclRuleActionBlockArgs>> block() {
         return Optional.ofNullable(this.block);
     }
@@ -46,6 +54,10 @@ public final class WebAclRuleActionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="count")
     private @Nullable Output<WebAclRuleActionCountArgs> count;
 
+    /**
+     * @return Instructs AWS WAF to count the web request and allow it. See Count below for details.
+     * 
+     */
     public Optional<Output<WebAclRuleActionCountArgs>> count() {
         return Optional.ofNullable(this.count);
     }
@@ -76,29 +88,65 @@ public final class WebAclRuleActionArgs extends com.pulumi.resources.ResourceArg
             $ = new WebAclRuleActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allow Instructs AWS WAF to allow the web request. See Allow below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allow(@Nullable Output<WebAclRuleActionAllowArgs> allow) {
             $.allow = allow;
             return this;
         }
 
+        /**
+         * @param allow Instructs AWS WAF to allow the web request. See Allow below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allow(WebAclRuleActionAllowArgs allow) {
             return allow(Output.of(allow));
         }
 
+        /**
+         * @param block Instructs AWS WAF to block the web request. See Block below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder block(@Nullable Output<WebAclRuleActionBlockArgs> block) {
             $.block = block;
             return this;
         }
 
+        /**
+         * @param block Instructs AWS WAF to block the web request. See Block below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder block(WebAclRuleActionBlockArgs block) {
             return block(Output.of(block));
         }
 
+        /**
+         * @param count Instructs AWS WAF to count the web request and allow it. See Count below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Output<WebAclRuleActionCountArgs> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count Instructs AWS WAF to count the web request and allow it. See Count below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(WebAclRuleActionCountArgs count) {
             return count(Output.of(count));
         }

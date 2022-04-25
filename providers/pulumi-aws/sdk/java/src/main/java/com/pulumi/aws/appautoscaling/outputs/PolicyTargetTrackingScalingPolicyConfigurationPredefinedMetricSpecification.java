@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification {
     /**
-     * The metric type.
+     * @return The metric type.
      * 
      */
     private final String predefinedMetricType;
     /**
-     * Reserved for future use. Must be less than or equal to 1023 characters in length.
+     * @return Reserved for future use. Must be less than or equal to 1023 characters in length.
      * 
      */
     private final @Nullable String resourceLabel;
@@ -31,16 +31,16 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetri
     }
 
     /**
-     * The metric type.
+     * @return The metric type.
      * 
-    */
+     */
     public String predefinedMetricType() {
         return this.predefinedMetricType;
     }
     /**
-     * Reserved for future use. Must be less than or equal to 1023 characters in length.
+     * @return Reserved for future use. Must be less than or equal to 1023 characters in length.
      * 
-    */
+     */
     public Optional<String> resourceLabel() {
         return Optional.ofNullable(this.resourceLabel);
     }

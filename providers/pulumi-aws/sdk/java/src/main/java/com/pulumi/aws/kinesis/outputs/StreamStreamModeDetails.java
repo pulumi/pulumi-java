@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class StreamStreamModeDetails {
     /**
-     * Specifies the capacity mode of the stream. Must be either `PROVISIONED` or `ON_DEMAND`.
+     * @return Specifies the capacity mode of the stream. Must be either `PROVISIONED` or `ON_DEMAND`.
      * 
      */
     private final String streamMode;
@@ -21,9 +21,9 @@ public final class StreamStreamModeDetails {
     }
 
     /**
-     * Specifies the capacity mode of the stream. Must be either `PROVISIONED` or `ON_DEMAND`.
+     * @return Specifies the capacity mode of the stream. Must be either `PROVISIONED` or `ON_DEMAND`.
      * 
-    */
+     */
     public String streamMode() {
         return this.streamMode;
     }

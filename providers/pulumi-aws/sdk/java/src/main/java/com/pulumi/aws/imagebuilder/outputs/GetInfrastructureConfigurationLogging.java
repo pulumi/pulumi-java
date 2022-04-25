@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GetInfrastructureConfigurationLogging {
     /**
-     * Nested list of S3 logs settings.
+     * @return Nested list of S3 logs settings.
      * 
      */
     private final List<GetInfrastructureConfigurationLoggingS3Log> s3Logs;
@@ -22,9 +22,9 @@ public final class GetInfrastructureConfigurationLogging {
     }
 
     /**
-     * Nested list of S3 logs settings.
+     * @return Nested list of S3 logs settings.
      * 
-    */
+     */
     public List<GetInfrastructureConfigurationLoggingS3Log> s3Logs() {
         return this.s3Logs;
     }

@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSize {
     /**
-     * Specifies the endpoint capacity type. Valid values are: `INSTANCE_COUNT`, or `CAPACITY_PERCENT`.
+     * @return Specifies the endpoint capacity type. Valid values are: `INSTANCE_COUNT`, or `CAPACITY_PERCENT`.
      * 
      */
     private final String type;
     /**
-     * Defines the capacity size, either as a number of instances or a capacity percentage.
+     * @return Defines the capacity size, either as a number of instances or a capacity percentage.
      * 
      */
     private final Integer value;
@@ -30,16 +30,16 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
     }
 
     /**
-     * Specifies the endpoint capacity type. Valid values are: `INSTANCE_COUNT`, or `CAPACITY_PERCENT`.
+     * @return Specifies the endpoint capacity type. Valid values are: `INSTANCE_COUNT`, or `CAPACITY_PERCENT`.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Defines the capacity size, either as a number of instances or a capacity percentage.
+     * @return Defines the capacity size, either as a number of instances or a capacity percentage.
      * 
-    */
+     */
     public Integer value() {
         return this.value;
     }

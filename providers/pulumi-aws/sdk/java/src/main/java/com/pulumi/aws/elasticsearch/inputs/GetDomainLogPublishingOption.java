@@ -20,6 +20,10 @@ public final class GetDomainLogPublishingOption extends com.pulumi.resources.Inv
     @Import(name="cloudwatchLogGroupArn", required=true)
     private String cloudwatchLogGroupArn;
 
+    /**
+     * @return The CloudWatch Log Group where the logs are published.
+     * 
+     */
     public String cloudwatchLogGroupArn() {
         return this.cloudwatchLogGroupArn;
     }
@@ -31,6 +35,10 @@ public final class GetDomainLogPublishingOption extends com.pulumi.resources.Inv
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whether node to node encryption is enabled.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -42,6 +50,10 @@ public final class GetDomainLogPublishingOption extends com.pulumi.resources.Inv
     @Import(name="logType", required=true)
     private String logType;
 
+    /**
+     * @return The type of Elasticsearch log being published.
+     * 
+     */
     public String logType() {
         return this.logType;
     }
@@ -72,16 +84,34 @@ public final class GetDomainLogPublishingOption extends com.pulumi.resources.Inv
             $ = new GetDomainLogPublishingOption(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudwatchLogGroupArn The CloudWatch Log Group where the logs are published.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudwatchLogGroupArn(String cloudwatchLogGroupArn) {
             $.cloudwatchLogGroupArn = cloudwatchLogGroupArn;
             return this;
         }
 
+        /**
+         * @param enabled Whether node to node encryption is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param logType The type of Elasticsearch log being published.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logType(String logType) {
             $.logType = logType;
             return this;

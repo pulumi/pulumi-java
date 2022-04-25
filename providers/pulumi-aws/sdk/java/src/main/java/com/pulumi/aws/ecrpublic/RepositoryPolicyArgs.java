@@ -27,6 +27,10 @@ public final class RepositoryPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="repositoryName", required=true)
     private Output<String> repositoryName;
 
+    /**
+     * @return Name of the repository to apply the policy.
+     * 
+     */
     public Output<String> repositoryName() {
         return this.repositoryName;
     }
@@ -65,11 +69,23 @@ public final class RepositoryPolicyArgs extends com.pulumi.resources.ResourceArg
             return policy(Output.of(policy));
         }
 
+        /**
+         * @param repositoryName Name of the repository to apply the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryName(Output<String> repositoryName) {
             $.repositoryName = repositoryName;
             return this;
         }
 
+        /**
+         * @param repositoryName Name of the repository to apply the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryName(String repositoryName) {
             return repositoryName(Output.of(repositoryName));
         }

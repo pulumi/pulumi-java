@@ -29,6 +29,10 @@ public final class AnalyticsApplicationInputsGetArgs extends com.pulumi.resource
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return The ARN of the Kinesis Analytics Application.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -41,6 +45,11 @@ public final class AnalyticsApplicationInputsGetArgs extends com.pulumi.resource
     @Import(name="kinesisFirehose")
     private @Nullable Output<AnalyticsApplicationInputsKinesisFirehoseGetArgs> kinesisFirehose;
 
+    /**
+     * @return The Kinesis Firehose configuration for the streaming source. Conflicts with `kinesis_stream`.
+     * See Kinesis Firehose below for more details.
+     * 
+     */
     public Optional<Output<AnalyticsApplicationInputsKinesisFirehoseGetArgs>> kinesisFirehose() {
         return Optional.ofNullable(this.kinesisFirehose);
     }
@@ -53,6 +62,11 @@ public final class AnalyticsApplicationInputsGetArgs extends com.pulumi.resource
     @Import(name="kinesisStream")
     private @Nullable Output<AnalyticsApplicationInputsKinesisStreamGetArgs> kinesisStream;
 
+    /**
+     * @return The Kinesis Stream configuration for the streaming source. Conflicts with `kinesis_firehose`.
+     * See Kinesis Stream below for more details.
+     * 
+     */
     public Optional<Output<AnalyticsApplicationInputsKinesisStreamGetArgs>> kinesisStream() {
         return Optional.ofNullable(this.kinesisStream);
     }
@@ -64,6 +78,10 @@ public final class AnalyticsApplicationInputsGetArgs extends com.pulumi.resource
     @Import(name="namePrefix", required=true)
     private Output<String> namePrefix;
 
+    /**
+     * @return The Name Prefix to use when creating an in-application stream.
+     * 
+     */
     public Output<String> namePrefix() {
         return this.namePrefix;
     }
@@ -76,6 +94,11 @@ public final class AnalyticsApplicationInputsGetArgs extends com.pulumi.resource
     @Import(name="parallelism")
     private @Nullable Output<AnalyticsApplicationInputsParallelismGetArgs> parallelism;
 
+    /**
+     * @return The number of Parallel in-application streams to create.
+     * See Parallelism below for more details.
+     * 
+     */
     public Optional<Output<AnalyticsApplicationInputsParallelismGetArgs>> parallelism() {
         return Optional.ofNullable(this.parallelism);
     }
@@ -88,6 +111,11 @@ public final class AnalyticsApplicationInputsGetArgs extends com.pulumi.resource
     @Import(name="processingConfiguration")
     private @Nullable Output<AnalyticsApplicationInputsProcessingConfigurationGetArgs> processingConfiguration;
 
+    /**
+     * @return The Processing Configuration to transform records as they are received from the stream.
+     * See Processing Configuration below for more details.
+     * 
+     */
     public Optional<Output<AnalyticsApplicationInputsProcessingConfigurationGetArgs>> processingConfiguration() {
         return Optional.ofNullable(this.processingConfiguration);
     }
@@ -99,6 +127,10 @@ public final class AnalyticsApplicationInputsGetArgs extends com.pulumi.resource
     @Import(name="schema", required=true)
     private Output<AnalyticsApplicationInputsSchemaGetArgs> schema;
 
+    /**
+     * @return The Schema format of the data in the streaming source. See Source Schema below for more details.
+     * 
+     */
     public Output<AnalyticsApplicationInputsSchemaGetArgs> schema() {
         return this.schema;
     }
@@ -111,6 +143,11 @@ public final class AnalyticsApplicationInputsGetArgs extends com.pulumi.resource
     @Import(name="startingPositionConfigurations")
     private @Nullable Output<List<AnalyticsApplicationInputsStartingPositionConfigurationGetArgs>> startingPositionConfigurations;
 
+    /**
+     * @return The point at which the application starts processing records from the streaming source.
+     * See Starting Position Configuration below for more details.
+     * 
+     */
     public Optional<Output<List<AnalyticsApplicationInputsStartingPositionConfigurationGetArgs>>> startingPositionConfigurations() {
         return Optional.ofNullable(this.startingPositionConfigurations);
     }
@@ -154,78 +191,191 @@ public final class AnalyticsApplicationInputsGetArgs extends com.pulumi.resource
             $ = new AnalyticsApplicationInputsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ARN of the Kinesis Analytics Application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The ARN of the Kinesis Analytics Application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param kinesisFirehose The Kinesis Firehose configuration for the streaming source. Conflicts with `kinesis_stream`.
+         * See Kinesis Firehose below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kinesisFirehose(@Nullable Output<AnalyticsApplicationInputsKinesisFirehoseGetArgs> kinesisFirehose) {
             $.kinesisFirehose = kinesisFirehose;
             return this;
         }
 
+        /**
+         * @param kinesisFirehose The Kinesis Firehose configuration for the streaming source. Conflicts with `kinesis_stream`.
+         * See Kinesis Firehose below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kinesisFirehose(AnalyticsApplicationInputsKinesisFirehoseGetArgs kinesisFirehose) {
             return kinesisFirehose(Output.of(kinesisFirehose));
         }
 
+        /**
+         * @param kinesisStream The Kinesis Stream configuration for the streaming source. Conflicts with `kinesis_firehose`.
+         * See Kinesis Stream below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kinesisStream(@Nullable Output<AnalyticsApplicationInputsKinesisStreamGetArgs> kinesisStream) {
             $.kinesisStream = kinesisStream;
             return this;
         }
 
+        /**
+         * @param kinesisStream The Kinesis Stream configuration for the streaming source. Conflicts with `kinesis_firehose`.
+         * See Kinesis Stream below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kinesisStream(AnalyticsApplicationInputsKinesisStreamGetArgs kinesisStream) {
             return kinesisStream(Output.of(kinesisStream));
         }
 
+        /**
+         * @param namePrefix The Name Prefix to use when creating an in-application stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(Output<String> namePrefix) {
             $.namePrefix = namePrefix;
             return this;
         }
 
+        /**
+         * @param namePrefix The Name Prefix to use when creating an in-application stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(String namePrefix) {
             return namePrefix(Output.of(namePrefix));
         }
 
+        /**
+         * @param parallelism The number of Parallel in-application streams to create.
+         * See Parallelism below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parallelism(@Nullable Output<AnalyticsApplicationInputsParallelismGetArgs> parallelism) {
             $.parallelism = parallelism;
             return this;
         }
 
+        /**
+         * @param parallelism The number of Parallel in-application streams to create.
+         * See Parallelism below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parallelism(AnalyticsApplicationInputsParallelismGetArgs parallelism) {
             return parallelism(Output.of(parallelism));
         }
 
+        /**
+         * @param processingConfiguration The Processing Configuration to transform records as they are received from the stream.
+         * See Processing Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processingConfiguration(@Nullable Output<AnalyticsApplicationInputsProcessingConfigurationGetArgs> processingConfiguration) {
             $.processingConfiguration = processingConfiguration;
             return this;
         }
 
+        /**
+         * @param processingConfiguration The Processing Configuration to transform records as they are received from the stream.
+         * See Processing Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processingConfiguration(AnalyticsApplicationInputsProcessingConfigurationGetArgs processingConfiguration) {
             return processingConfiguration(Output.of(processingConfiguration));
         }
 
+        /**
+         * @param schema The Schema format of the data in the streaming source. See Source Schema below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(Output<AnalyticsApplicationInputsSchemaGetArgs> schema) {
             $.schema = schema;
             return this;
         }
 
+        /**
+         * @param schema The Schema format of the data in the streaming source. See Source Schema below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(AnalyticsApplicationInputsSchemaGetArgs schema) {
             return schema(Output.of(schema));
         }
 
+        /**
+         * @param startingPositionConfigurations The point at which the application starts processing records from the streaming source.
+         * See Starting Position Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startingPositionConfigurations(@Nullable Output<List<AnalyticsApplicationInputsStartingPositionConfigurationGetArgs>> startingPositionConfigurations) {
             $.startingPositionConfigurations = startingPositionConfigurations;
             return this;
         }
 
+        /**
+         * @param startingPositionConfigurations The point at which the application starts processing records from the streaming source.
+         * See Starting Position Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startingPositionConfigurations(List<AnalyticsApplicationInputsStartingPositionConfigurationGetArgs> startingPositionConfigurations) {
             return startingPositionConfigurations(Output.of(startingPositionConfigurations));
         }
 
+        /**
+         * @param startingPositionConfigurations The point at which the application starts processing records from the streaming source.
+         * See Starting Position Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startingPositionConfigurations(AnalyticsApplicationInputsStartingPositionConfigurationGetArgs... startingPositionConfigurations) {
             return startingPositionConfigurations(List.of(startingPositionConfigurations));
         }

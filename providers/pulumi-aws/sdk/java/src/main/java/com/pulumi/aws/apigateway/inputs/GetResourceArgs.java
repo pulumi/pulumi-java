@@ -19,6 +19,10 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return The full path of the resource.  If no path is found, an error will be returned.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -30,6 +34,10 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="restApiId", required=true)
     private String restApiId;
 
+    /**
+     * @return The REST API id that owns the resource. If no REST API is found, an error will be returned.
+     * 
+     */
     public String restApiId() {
         return this.restApiId;
     }
@@ -59,11 +67,23 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param path The full path of the resource.  If no path is found, an error will be returned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param restApiId The REST API id that owns the resource. If no REST API is found, an error will be returned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(String restApiId) {
             $.restApiId = restApiId;
             return this;

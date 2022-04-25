@@ -23,6 +23,10 @@ public final class InsightFiltersFirstObservedAtArgs extends com.pulumi.resource
     @Import(name="dateRange")
     private @Nullable Output<InsightFiltersFirstObservedAtDateRangeArgs> dateRange;
 
+    /**
+     * @return A configuration block of the date range for the date filter. See date_range below for more details.
+     * 
+     */
     public Optional<Output<InsightFiltersFirstObservedAtDateRangeArgs>> dateRange() {
         return Optional.ofNullable(this.dateRange);
     }
@@ -34,6 +38,10 @@ public final class InsightFiltersFirstObservedAtArgs extends com.pulumi.resource
     @Import(name="end")
     private @Nullable Output<String> end;
 
+    /**
+     * @return An end date for the date filter. Required with `start` if `date_range` is not specified.
+     * 
+     */
     public Optional<Output<String>> end() {
         return Optional.ofNullable(this.end);
     }
@@ -45,6 +53,10 @@ public final class InsightFiltersFirstObservedAtArgs extends com.pulumi.resource
     @Import(name="start")
     private @Nullable Output<String> start;
 
+    /**
+     * @return A start date for the date filter. Required with `end` if `date_range` is not specified.
+     * 
+     */
     public Optional<Output<String>> start() {
         return Optional.ofNullable(this.start);
     }
@@ -75,29 +87,65 @@ public final class InsightFiltersFirstObservedAtArgs extends com.pulumi.resource
             $ = new InsightFiltersFirstObservedAtArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dateRange A configuration block of the date range for the date filter. See date_range below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateRange(@Nullable Output<InsightFiltersFirstObservedAtDateRangeArgs> dateRange) {
             $.dateRange = dateRange;
             return this;
         }
 
+        /**
+         * @param dateRange A configuration block of the date range for the date filter. See date_range below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateRange(InsightFiltersFirstObservedAtDateRangeArgs dateRange) {
             return dateRange(Output.of(dateRange));
         }
 
+        /**
+         * @param end An end date for the date filter. Required with `start` if `date_range` is not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder end(@Nullable Output<String> end) {
             $.end = end;
             return this;
         }
 
+        /**
+         * @param end An end date for the date filter. Required with `start` if `date_range` is not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder end(String end) {
             return end(Output.of(end));
         }
 
+        /**
+         * @param start A start date for the date filter. Required with `end` if `date_range` is not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(@Nullable Output<String> start) {
             $.start = start;
             return this;
         }
 
+        /**
+         * @param start A start date for the date filter. Required with `end` if `date_range` is not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(String start) {
             return start(Output.of(start));
         }

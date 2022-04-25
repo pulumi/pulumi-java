@@ -20,6 +20,10 @@ public final class CustomPluginLocationGetArgs extends com.pulumi.resources.Reso
     @Import(name="s3", required=true)
     private Output<CustomPluginLocationS3GetArgs> s3;
 
+    /**
+     * @return Information of the plugin file stored in Amazon S3. See below.
+     * 
+     */
     public Output<CustomPluginLocationS3GetArgs> s3() {
         return this.s3;
     }
@@ -48,11 +52,23 @@ public final class CustomPluginLocationGetArgs extends com.pulumi.resources.Reso
             $ = new CustomPluginLocationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param s3 Information of the plugin file stored in Amazon S3. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3(Output<CustomPluginLocationS3GetArgs> s3) {
             $.s3 = s3;
             return this;
         }
 
+        /**
+         * @param s3 Information of the plugin file stored in Amazon S3. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3(CustomPluginLocationS3GetArgs s3) {
             return s3(Output.of(s3));
         }

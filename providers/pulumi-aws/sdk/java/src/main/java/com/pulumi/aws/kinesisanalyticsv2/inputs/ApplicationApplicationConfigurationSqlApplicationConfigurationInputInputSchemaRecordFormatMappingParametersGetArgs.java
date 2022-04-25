@@ -23,6 +23,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="csvMappingParameters")
     private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersGetArgs> csvMappingParameters;
 
+    /**
+     * @return Provides additional mapping information when the record format uses delimiters (for example, CSV).
+     * 
+     */
     public Optional<Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersGetArgs>> csvMappingParameters() {
         return Optional.ofNullable(this.csvMappingParameters);
     }
@@ -34,6 +38,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="jsonMappingParameters")
     private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersGetArgs> jsonMappingParameters;
 
+    /**
+     * @return Provides additional mapping information when JSON is the record format on the streaming source.
+     * 
+     */
     public Optional<Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersGetArgs>> jsonMappingParameters() {
         return Optional.ofNullable(this.jsonMappingParameters);
     }
@@ -63,20 +71,44 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param csvMappingParameters Provides additional mapping information when the record format uses delimiters (for example, CSV).
+         * 
+         * @return builder
+         * 
+         */
         public Builder csvMappingParameters(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersGetArgs> csvMappingParameters) {
             $.csvMappingParameters = csvMappingParameters;
             return this;
         }
 
+        /**
+         * @param csvMappingParameters Provides additional mapping information when the record format uses delimiters (for example, CSV).
+         * 
+         * @return builder
+         * 
+         */
         public Builder csvMappingParameters(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersGetArgs csvMappingParameters) {
             return csvMappingParameters(Output.of(csvMappingParameters));
         }
 
+        /**
+         * @param jsonMappingParameters Provides additional mapping information when JSON is the record format on the streaming source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jsonMappingParameters(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersGetArgs> jsonMappingParameters) {
             $.jsonMappingParameters = jsonMappingParameters;
             return this;
         }
 
+        /**
+         * @param jsonMappingParameters Provides additional mapping information when JSON is the record format on the streaming source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jsonMappingParameters(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersGetArgs jsonMappingParameters) {
             return jsonMappingParameters(Output.of(jsonMappingParameters));
         }

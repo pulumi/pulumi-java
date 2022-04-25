@@ -22,6 +22,10 @@ public final class GetLaunchPathsSummary extends com.pulumi.resources.InvokeArgs
     @Import(name="constraintSummaries", required=true)
     private List<GetLaunchPathsSummaryConstraintSummary> constraintSummaries;
 
+    /**
+     * @return Block for constraints on the portfolio-product relationship. See details below.
+     * 
+     */
     public List<GetLaunchPathsSummaryConstraintSummary> constraintSummaries() {
         return this.constraintSummaries;
     }
@@ -33,6 +37,10 @@ public final class GetLaunchPathsSummary extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the portfolio to which the path was assigned.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -44,6 +52,10 @@ public final class GetLaunchPathsSummary extends com.pulumi.resources.InvokeArgs
     @Import(name="pathId", required=true)
     private String pathId;
 
+    /**
+     * @return Identifier of the product path.
+     * 
+     */
     public String pathId() {
         return this.pathId;
     }
@@ -55,6 +67,10 @@ public final class GetLaunchPathsSummary extends com.pulumi.resources.InvokeArgs
     @Import(name="tags", required=true)
     private Map<String,String> tags;
 
+    /**
+     * @return Tags associated with this product path.
+     * 
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
@@ -86,25 +102,55 @@ public final class GetLaunchPathsSummary extends com.pulumi.resources.InvokeArgs
             $ = new GetLaunchPathsSummary(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param constraintSummaries Block for constraints on the portfolio-product relationship. See details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder constraintSummaries(List<GetLaunchPathsSummaryConstraintSummary> constraintSummaries) {
             $.constraintSummaries = constraintSummaries;
             return this;
         }
 
+        /**
+         * @param constraintSummaries Block for constraints on the portfolio-product relationship. See details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder constraintSummaries(GetLaunchPathsSummaryConstraintSummary... constraintSummaries) {
             return constraintSummaries(List.of(constraintSummaries));
         }
 
+        /**
+         * @param name Name of the portfolio to which the path was assigned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param pathId Identifier of the product path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathId(String pathId) {
             $.pathId = pathId;
             return this;
         }
 
+        /**
+         * @param tags Tags associated with this product path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             $.tags = tags;
             return this;

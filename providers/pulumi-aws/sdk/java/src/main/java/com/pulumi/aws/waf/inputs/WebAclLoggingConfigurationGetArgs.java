@@ -23,6 +23,10 @@ public final class WebAclLoggingConfigurationGetArgs extends com.pulumi.resource
     @Import(name="logDestination", required=true)
     private Output<String> logDestination;
 
+    /**
+     * @return Amazon Resource Name (ARN) of Kinesis Firehose Delivery Stream
+     * 
+     */
     public Output<String> logDestination() {
         return this.logDestination;
     }
@@ -34,6 +38,10 @@ public final class WebAclLoggingConfigurationGetArgs extends com.pulumi.resource
     @Import(name="redactedFields")
     private @Nullable Output<WebAclLoggingConfigurationRedactedFieldsGetArgs> redactedFields;
 
+    /**
+     * @return Configuration block containing parts of the request that you want redacted from the logs. Detailed below.
+     * 
+     */
     public Optional<Output<WebAclLoggingConfigurationRedactedFieldsGetArgs>> redactedFields() {
         return Optional.ofNullable(this.redactedFields);
     }
@@ -63,20 +71,44 @@ public final class WebAclLoggingConfigurationGetArgs extends com.pulumi.resource
             $ = new WebAclLoggingConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logDestination Amazon Resource Name (ARN) of Kinesis Firehose Delivery Stream
+         * 
+         * @return builder
+         * 
+         */
         public Builder logDestination(Output<String> logDestination) {
             $.logDestination = logDestination;
             return this;
         }
 
+        /**
+         * @param logDestination Amazon Resource Name (ARN) of Kinesis Firehose Delivery Stream
+         * 
+         * @return builder
+         * 
+         */
         public Builder logDestination(String logDestination) {
             return logDestination(Output.of(logDestination));
         }
 
+        /**
+         * @param redactedFields Configuration block containing parts of the request that you want redacted from the logs. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redactedFields(@Nullable Output<WebAclLoggingConfigurationRedactedFieldsGetArgs> redactedFields) {
             $.redactedFields = redactedFields;
             return this;
         }
 
+        /**
+         * @param redactedFields Configuration block containing parts of the request that you want redacted from the logs. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redactedFields(WebAclLoggingConfigurationRedactedFieldsGetArgs redactedFields) {
             return redactedFields(Output.of(redactedFields));
         }

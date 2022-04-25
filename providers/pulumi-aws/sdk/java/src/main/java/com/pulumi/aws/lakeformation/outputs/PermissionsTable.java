@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PermissionsTable {
     /**
-     * Identifier for the Data Catalog. By default, it is the account ID of the caller.
+     * @return Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
      */
     private final @Nullable String catalogId;
     /**
-     * Name of the database for the table with columns resource. Unique to the Data Catalog.
+     * @return Name of the database for the table with columns resource. Unique to the Data Catalog.
      * 
      */
     private final String databaseName;
     /**
-     * Name of the table resource.
+     * @return Name of the table resource.
      * 
      */
     private final @Nullable String name;
@@ -42,23 +42,23 @@ public final class PermissionsTable {
     }
 
     /**
-     * Identifier for the Data Catalog. By default, it is the account ID of the caller.
+     * @return Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
-    */
+     */
     public Optional<String> catalogId() {
         return Optional.ofNullable(this.catalogId);
     }
     /**
-     * Name of the database for the table with columns resource. Unique to the Data Catalog.
+     * @return Name of the database for the table with columns resource. Unique to the Data Catalog.
      * 
-    */
+     */
     public String databaseName() {
         return this.databaseName;
     }
     /**
-     * Name of the table resource.
+     * @return Name of the table resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

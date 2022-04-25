@@ -20,6 +20,10 @@ public final class GetClusterIdentity extends com.pulumi.resources.InvokeArgs {
     @Import(name="oidcs", required=true)
     private List<GetClusterIdentityOidc> oidcs;
 
+    /**
+     * @return Nested attribute containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster.
+     * 
+     */
     public List<GetClusterIdentityOidc> oidcs() {
         return this.oidcs;
     }
@@ -48,11 +52,23 @@ public final class GetClusterIdentity extends com.pulumi.resources.InvokeArgs {
             $ = new GetClusterIdentity(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param oidcs Nested attribute containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oidcs(List<GetClusterIdentityOidc> oidcs) {
             $.oidcs = oidcs;
             return this;
         }
 
+        /**
+         * @param oidcs Nested attribute containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oidcs(GetClusterIdentityOidc... oidcs) {
             return oidcs(List.of(oidcs));
         }

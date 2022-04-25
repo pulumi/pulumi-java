@@ -19,6 +19,10 @@ public final class GetNodeGroupResourceAutoscalingGroup extends com.pulumi.resou
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the AutoScaling Group.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +51,12 @@ public final class GetNodeGroupResourceAutoscalingGroup extends com.pulumi.resou
             $ = new GetNodeGroupResourceAutoscalingGroup(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the AutoScaling Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

@@ -14,24 +14,24 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetImageResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final String imageDigest;
     /**
-     * The date and time, expressed as a unix timestamp, at which the current image was pushed to the repository.
+     * @return The date and time, expressed as a unix timestamp, at which the current image was pushed to the repository.
      * 
      */
     private final Integer imagePushedAt;
     /**
-     * The size, in bytes, of the image in the repository.
+     * @return The size, in bytes, of the image in the repository.
      * 
      */
     private final Integer imageSizeInBytes;
     private final @Nullable String imageTag;
     /**
-     * The list of tags associated with this image.
+     * @return The list of tags associated with this image.
      * 
      */
     private final List<String> imageTags;
@@ -59,9 +59,9 @@ public final class GetImageResult {
     }
 
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -69,16 +69,16 @@ public final class GetImageResult {
         return this.imageDigest;
     }
     /**
-     * The date and time, expressed as a unix timestamp, at which the current image was pushed to the repository.
+     * @return The date and time, expressed as a unix timestamp, at which the current image was pushed to the repository.
      * 
-    */
+     */
     public Integer imagePushedAt() {
         return this.imagePushedAt;
     }
     /**
-     * The size, in bytes, of the image in the repository.
+     * @return The size, in bytes, of the image in the repository.
      * 
-    */
+     */
     public Integer imageSizeInBytes() {
         return this.imageSizeInBytes;
     }
@@ -86,9 +86,9 @@ public final class GetImageResult {
         return Optional.ofNullable(this.imageTag);
     }
     /**
-     * The list of tags associated with this image.
+     * @return The list of tags associated with this image.
      * 
-    */
+     */
     public List<String> imageTags() {
         return this.imageTags;
     }

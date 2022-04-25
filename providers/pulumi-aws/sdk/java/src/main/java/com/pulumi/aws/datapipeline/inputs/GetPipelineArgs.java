@@ -22,6 +22,10 @@ public final class GetPipelineArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="pipelineId", required=true)
     private String pipelineId;
 
+    /**
+     * @return ID of the pipeline.
+     * 
+     */
     public String pipelineId() {
         return this.pipelineId;
     }
@@ -33,6 +37,10 @@ public final class GetPipelineArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return A map of tags assigned to the resource.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -62,11 +70,23 @@ public final class GetPipelineArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetPipelineArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pipelineId ID of the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineId(String pipelineId) {
             $.pipelineId = pipelineId;
             return this;
         }
 
+        /**
+         * @param tags A map of tags assigned to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

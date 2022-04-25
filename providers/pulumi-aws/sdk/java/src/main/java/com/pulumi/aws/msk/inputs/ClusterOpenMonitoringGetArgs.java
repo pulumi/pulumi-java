@@ -20,6 +20,10 @@ public final class ClusterOpenMonitoringGetArgs extends com.pulumi.resources.Res
     @Import(name="prometheus", required=true)
     private Output<ClusterOpenMonitoringPrometheusGetArgs> prometheus;
 
+    /**
+     * @return Configuration block for Prometheus settings for open monitoring. See below.
+     * 
+     */
     public Output<ClusterOpenMonitoringPrometheusGetArgs> prometheus() {
         return this.prometheus;
     }
@@ -48,11 +52,23 @@ public final class ClusterOpenMonitoringGetArgs extends com.pulumi.resources.Res
             $ = new ClusterOpenMonitoringGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param prometheus Configuration block for Prometheus settings for open monitoring. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prometheus(Output<ClusterOpenMonitoringPrometheusGetArgs> prometheus) {
             $.prometheus = prometheus;
             return this;
         }
 
+        /**
+         * @param prometheus Configuration block for Prometheus settings for open monitoring. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prometheus(ClusterOpenMonitoringPrometheusGetArgs prometheus) {
             return prometheus(Output.of(prometheus));
         }

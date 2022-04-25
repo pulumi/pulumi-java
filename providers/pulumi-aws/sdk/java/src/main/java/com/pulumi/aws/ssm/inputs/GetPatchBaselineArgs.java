@@ -22,6 +22,10 @@ public final class GetPatchBaselineArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="defaultBaseline")
     private @Nullable Boolean defaultBaseline;
 
+    /**
+     * @return Filters the results against the baselines default_baseline field.
+     * 
+     */
     public Optional<Boolean> defaultBaseline() {
         return Optional.ofNullable(this.defaultBaseline);
     }
@@ -33,6 +37,10 @@ public final class GetPatchBaselineArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="namePrefix")
     private @Nullable String namePrefix;
 
+    /**
+     * @return Filter results by the baseline name prefix.
+     * 
+     */
     public Optional<String> namePrefix() {
         return Optional.ofNullable(this.namePrefix);
     }
@@ -44,6 +52,10 @@ public final class GetPatchBaselineArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="operatingSystem")
     private @Nullable String operatingSystem;
 
+    /**
+     * @return The specified OS for the baseline.
+     * 
+     */
     public Optional<String> operatingSystem() {
         return Optional.ofNullable(this.operatingSystem);
     }
@@ -55,6 +67,10 @@ public final class GetPatchBaselineArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="owner", required=true)
     private String owner;
 
+    /**
+     * @return The owner of the baseline. Valid values: `All`, `AWS`, `Self` (the current account).
+     * 
+     */
     public String owner() {
         return this.owner;
     }
@@ -86,21 +102,45 @@ public final class GetPatchBaselineArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetPatchBaselineArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultBaseline Filters the results against the baselines default_baseline field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultBaseline(@Nullable Boolean defaultBaseline) {
             $.defaultBaseline = defaultBaseline;
             return this;
         }
 
+        /**
+         * @param namePrefix Filter results by the baseline name prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(@Nullable String namePrefix) {
             $.namePrefix = namePrefix;
             return this;
         }
 
+        /**
+         * @param operatingSystem The specified OS for the baseline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatingSystem(@Nullable String operatingSystem) {
             $.operatingSystem = operatingSystem;
             return this;
         }
 
+        /**
+         * @param owner The owner of the baseline. Valid values: `All`, `AWS`, `Self` (the current account).
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(String owner) {
             $.owner = owner;
             return this;

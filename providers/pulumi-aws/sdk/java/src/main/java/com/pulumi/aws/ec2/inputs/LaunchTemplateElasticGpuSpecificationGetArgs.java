@@ -20,6 +20,10 @@ public final class LaunchTemplateElasticGpuSpecificationGetArgs extends com.pulu
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The [Elastic GPU Type](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-gpus.html#elastic-gpus-basics)
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -48,11 +52,23 @@ public final class LaunchTemplateElasticGpuSpecificationGetArgs extends com.pulu
             $ = new LaunchTemplateElasticGpuSpecificationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The [Elastic GPU Type](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-gpus.html#elastic-gpus-basics)
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The [Elastic GPU Type](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-gpus.html#elastic-gpus-basics)
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

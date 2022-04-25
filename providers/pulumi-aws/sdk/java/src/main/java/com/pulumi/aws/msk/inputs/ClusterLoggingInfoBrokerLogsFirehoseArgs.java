@@ -23,6 +23,10 @@ public final class ClusterLoggingInfoBrokerLogsFirehoseArgs extends com.pulumi.r
     @Import(name="deliveryStream")
     private @Nullable Output<String> deliveryStream;
 
+    /**
+     * @return Name of the Kinesis Data Firehose delivery stream to deliver logs to.
+     * 
+     */
     public Optional<Output<String>> deliveryStream() {
         return Optional.ofNullable(this.deliveryStream);
     }
@@ -34,6 +38,10 @@ public final class ClusterLoggingInfoBrokerLogsFirehoseArgs extends com.pulumi.r
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -63,20 +71,44 @@ public final class ClusterLoggingInfoBrokerLogsFirehoseArgs extends com.pulumi.r
             $ = new ClusterLoggingInfoBrokerLogsFirehoseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deliveryStream Name of the Kinesis Data Firehose delivery stream to deliver logs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryStream(@Nullable Output<String> deliveryStream) {
             $.deliveryStream = deliveryStream;
             return this;
         }
 
+        /**
+         * @param deliveryStream Name of the Kinesis Data Firehose delivery stream to deliver logs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryStream(String deliveryStream) {
             return deliveryStream(Output.of(deliveryStream));
         }
 
+        /**
+         * @param enabled Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

@@ -24,6 +24,10 @@ public final class GetCustomerGatewayArgs extends com.pulumi.resources.InvokeArg
     @Import(name="filters")
     private @Nullable List<GetCustomerGatewayFilter> filters;
 
+    /**
+     * @return One or more [name-value pairs][dcg-filters] to filter by.
+     * 
+     */
     public Optional<List<GetCustomerGatewayFilter>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -35,6 +39,10 @@ public final class GetCustomerGatewayArgs extends com.pulumi.resources.InvokeArg
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The ID of the gateway.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -46,6 +54,10 @@ public final class GetCustomerGatewayArgs extends com.pulumi.resources.InvokeArg
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Map of key-value pairs assigned to the gateway.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -76,20 +88,44 @@ public final class GetCustomerGatewayArgs extends com.pulumi.resources.InvokeArg
             $ = new GetCustomerGatewayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filters One or more [name-value pairs][dcg-filters] to filter by.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable List<GetCustomerGatewayFilter> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters One or more [name-value pairs][dcg-filters] to filter by.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(GetCustomerGatewayFilter... filters) {
             return filters(List.of(filters));
         }
 
+        /**
+         * @param id The ID of the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param tags Map of key-value pairs assigned to the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

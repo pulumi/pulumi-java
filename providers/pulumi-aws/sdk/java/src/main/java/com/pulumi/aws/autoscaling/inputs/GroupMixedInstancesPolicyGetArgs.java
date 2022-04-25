@@ -23,6 +23,10 @@ public final class GroupMixedInstancesPolicyGetArgs extends com.pulumi.resources
     @Import(name="instancesDistribution")
     private @Nullable Output<GroupMixedInstancesPolicyInstancesDistributionGetArgs> instancesDistribution;
 
+    /**
+     * @return Nested argument containing settings on how to mix on-demand and Spot instances in the Auto Scaling group. Defined below.
+     * 
+     */
     public Optional<Output<GroupMixedInstancesPolicyInstancesDistributionGetArgs>> instancesDistribution() {
         return Optional.ofNullable(this.instancesDistribution);
     }
@@ -34,6 +38,10 @@ public final class GroupMixedInstancesPolicyGetArgs extends com.pulumi.resources
     @Import(name="launchTemplate", required=true)
     private Output<GroupMixedInstancesPolicyLaunchTemplateGetArgs> launchTemplate;
 
+    /**
+     * @return Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
+     * 
+     */
     public Output<GroupMixedInstancesPolicyLaunchTemplateGetArgs> launchTemplate() {
         return this.launchTemplate;
     }
@@ -63,20 +71,44 @@ public final class GroupMixedInstancesPolicyGetArgs extends com.pulumi.resources
             $ = new GroupMixedInstancesPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instancesDistribution Nested argument containing settings on how to mix on-demand and Spot instances in the Auto Scaling group. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instancesDistribution(@Nullable Output<GroupMixedInstancesPolicyInstancesDistributionGetArgs> instancesDistribution) {
             $.instancesDistribution = instancesDistribution;
             return this;
         }
 
+        /**
+         * @param instancesDistribution Nested argument containing settings on how to mix on-demand and Spot instances in the Auto Scaling group. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instancesDistribution(GroupMixedInstancesPolicyInstancesDistributionGetArgs instancesDistribution) {
             return instancesDistribution(Output.of(instancesDistribution));
         }
 
+        /**
+         * @param launchTemplate Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchTemplate(Output<GroupMixedInstancesPolicyLaunchTemplateGetArgs> launchTemplate) {
             $.launchTemplate = launchTemplate;
             return this;
         }
 
+        /**
+         * @param launchTemplate Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchTemplate(GroupMixedInstancesPolicyLaunchTemplateGetArgs launchTemplate) {
             return launchTemplate(Output.of(launchTemplate));
         }

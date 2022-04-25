@@ -26,6 +26,12 @@ public final class GetInstancesArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters")
     private @Nullable List<GetInstancesFilter> filters;
 
+    /**
+     * @return One or more name/value pairs to use as filters. There are
+     * several valid keys, for a full reference, check out
+     * [describe-instances in the AWS CLI reference][1].
+     * 
+     */
     public Optional<List<GetInstancesFilter>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -37,6 +43,10 @@ public final class GetInstancesArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="instanceStateNames")
     private @Nullable List<String> instanceStateNames;
 
+    /**
+     * @return A list of instance states that should be applicable to the desired instances. The permitted values are: `pending, running, shutting-down, stopped, stopping, terminated`. The default value is `running`.
+     * 
+     */
     public Optional<List<String>> instanceStateNames() {
         return Optional.ofNullable(this.instanceStateNames);
     }
@@ -49,6 +59,11 @@ public final class GetInstancesArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="instanceTags")
     private @Nullable Map<String,String> instanceTags;
 
+    /**
+     * @return A map of tags, each pair of which must
+     * exactly match a pair on desired instances.
+     * 
+     */
     public Optional<Map<String,String>> instanceTags() {
         return Optional.ofNullable(this.instanceTags);
     }
@@ -79,24 +94,59 @@ public final class GetInstancesArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetInstancesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filters One or more name/value pairs to use as filters. There are
+         * several valid keys, for a full reference, check out
+         * [describe-instances in the AWS CLI reference][1].
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable List<GetInstancesFilter> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters One or more name/value pairs to use as filters. There are
+         * several valid keys, for a full reference, check out
+         * [describe-instances in the AWS CLI reference][1].
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(GetInstancesFilter... filters) {
             return filters(List.of(filters));
         }
 
+        /**
+         * @param instanceStateNames A list of instance states that should be applicable to the desired instances. The permitted values are: `pending, running, shutting-down, stopped, stopping, terminated`. The default value is `running`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceStateNames(@Nullable List<String> instanceStateNames) {
             $.instanceStateNames = instanceStateNames;
             return this;
         }
 
+        /**
+         * @param instanceStateNames A list of instance states that should be applicable to the desired instances. The permitted values are: `pending, running, shutting-down, stopped, stopping, terminated`. The default value is `running`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceStateNames(String... instanceStateNames) {
             return instanceStateNames(List.of(instanceStateNames));
         }
 
+        /**
+         * @param instanceTags A map of tags, each pair of which must
+         * exactly match a pair on desired instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceTags(@Nullable Map<String,String> instanceTags) {
             $.instanceTags = instanceTags;
             return this;

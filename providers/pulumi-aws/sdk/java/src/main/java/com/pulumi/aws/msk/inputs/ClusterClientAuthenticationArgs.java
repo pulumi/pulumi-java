@@ -23,6 +23,10 @@ public final class ClusterClientAuthenticationArgs extends com.pulumi.resources.
     @Import(name="sasl")
     private @Nullable Output<ClusterClientAuthenticationSaslArgs> sasl;
 
+    /**
+     * @return Configuration block for specifying SASL client authentication. See below.
+     * 
+     */
     public Optional<Output<ClusterClientAuthenticationSaslArgs>> sasl() {
         return Optional.ofNullable(this.sasl);
     }
@@ -34,6 +38,10 @@ public final class ClusterClientAuthenticationArgs extends com.pulumi.resources.
     @Import(name="tls")
     private @Nullable Output<ClusterClientAuthenticationTlsArgs> tls;
 
+    /**
+     * @return Configuration block for specifying TLS client authentication. See below.
+     * 
+     */
     public Optional<Output<ClusterClientAuthenticationTlsArgs>> tls() {
         return Optional.ofNullable(this.tls);
     }
@@ -63,20 +71,44 @@ public final class ClusterClientAuthenticationArgs extends com.pulumi.resources.
             $ = new ClusterClientAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sasl Configuration block for specifying SASL client authentication. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasl(@Nullable Output<ClusterClientAuthenticationSaslArgs> sasl) {
             $.sasl = sasl;
             return this;
         }
 
+        /**
+         * @param sasl Configuration block for specifying SASL client authentication. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasl(ClusterClientAuthenticationSaslArgs sasl) {
             return sasl(Output.of(sasl));
         }
 
+        /**
+         * @param tls Configuration block for specifying TLS client authentication. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tls(@Nullable Output<ClusterClientAuthenticationTlsArgs> tls) {
             $.tls = tls;
             return this;
         }
 
+        /**
+         * @param tls Configuration block for specifying TLS client authentication. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tls(ClusterClientAuthenticationTlsArgs tls) {
             return tls(Output.of(tls));
         }

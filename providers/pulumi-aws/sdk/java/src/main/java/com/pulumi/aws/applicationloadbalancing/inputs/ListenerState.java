@@ -26,6 +26,10 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="alpnPolicy")
     private @Nullable Output<String> alpnPolicy;
 
+    /**
+     * @return Name of the Application-Layer Protocol Negotiation (ALPN) policy. Can be set if `protocol` is `TLS`. Valid values are `HTTP1Only`, `HTTP2Only`, `HTTP2Optional`, `HTTP2Preferred`, and `None`.
+     * 
+     */
     public Optional<Output<String>> alpnPolicy() {
         return Optional.ofNullable(this.alpnPolicy);
     }
@@ -37,6 +41,10 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return ARN of the target group.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -48,6 +56,10 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateArn")
     private @Nullable Output<String> certificateArn;
 
+    /**
+     * @return ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the `aws.lb.ListenerCertificate` resource.
+     * 
+     */
     public Optional<Output<String>> certificateArn() {
         return Optional.ofNullable(this.certificateArn);
     }
@@ -59,6 +71,10 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultActions")
     private @Nullable Output<List<ListenerDefaultActionGetArgs>> defaultActions;
 
+    /**
+     * @return Configuration block for default actions. Detailed below.
+     * 
+     */
     public Optional<Output<List<ListenerDefaultActionGetArgs>>> defaultActions() {
         return Optional.ofNullable(this.defaultActions);
     }
@@ -70,6 +86,10 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancerArn")
     private @Nullable Output<String> loadBalancerArn;
 
+    /**
+     * @return ARN of the load balancer.
+     * 
+     */
     public Optional<Output<String>> loadBalancerArn() {
         return Optional.ofNullable(this.loadBalancerArn);
     }
@@ -81,6 +101,10 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -92,6 +116,10 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="protocol")
     private @Nullable Output<String> protocol;
 
+    /**
+     * @return Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
+     * 
+     */
     public Optional<Output<String>> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -103,6 +131,10 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sslPolicy")
     private @Nullable Output<String> sslPolicy;
 
+    /**
+     * @return Name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` or `TLS`.
+     * 
+     */
     public Optional<Output<String>> sslPolicy() {
         return Optional.ofNullable(this.sslPolicy);
     }
@@ -114,6 +146,10 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -125,6 +161,10 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -162,96 +202,222 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
             $ = new ListenerState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alpnPolicy Name of the Application-Layer Protocol Negotiation (ALPN) policy. Can be set if `protocol` is `TLS`. Valid values are `HTTP1Only`, `HTTP2Only`, `HTTP2Optional`, `HTTP2Preferred`, and `None`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alpnPolicy(@Nullable Output<String> alpnPolicy) {
             $.alpnPolicy = alpnPolicy;
             return this;
         }
 
+        /**
+         * @param alpnPolicy Name of the Application-Layer Protocol Negotiation (ALPN) policy. Can be set if `protocol` is `TLS`. Valid values are `HTTP1Only`, `HTTP2Only`, `HTTP2Optional`, `HTTP2Preferred`, and `None`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alpnPolicy(String alpnPolicy) {
             return alpnPolicy(Output.of(alpnPolicy));
         }
 
+        /**
+         * @param arn ARN of the target group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn ARN of the target group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param certificateArn ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the `aws.lb.ListenerCertificate` resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateArn(@Nullable Output<String> certificateArn) {
             $.certificateArn = certificateArn;
             return this;
         }
 
+        /**
+         * @param certificateArn ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the `aws.lb.ListenerCertificate` resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateArn(String certificateArn) {
             return certificateArn(Output.of(certificateArn));
         }
 
+        /**
+         * @param defaultActions Configuration block for default actions. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultActions(@Nullable Output<List<ListenerDefaultActionGetArgs>> defaultActions) {
             $.defaultActions = defaultActions;
             return this;
         }
 
+        /**
+         * @param defaultActions Configuration block for default actions. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultActions(List<ListenerDefaultActionGetArgs> defaultActions) {
             return defaultActions(Output.of(defaultActions));
         }
 
+        /**
+         * @param defaultActions Configuration block for default actions. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultActions(ListenerDefaultActionGetArgs... defaultActions) {
             return defaultActions(List.of(defaultActions));
         }
 
+        /**
+         * @param loadBalancerArn ARN of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerArn(@Nullable Output<String> loadBalancerArn) {
             $.loadBalancerArn = loadBalancerArn;
             return this;
         }
 
+        /**
+         * @param loadBalancerArn ARN of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerArn(String loadBalancerArn) {
             return loadBalancerArn(Output.of(loadBalancerArn));
         }
 
+        /**
+         * @param port Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param protocol Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable Output<String> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Output.of(protocol));
         }
 
+        /**
+         * @param sslPolicy Name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` or `TLS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslPolicy(@Nullable Output<String> sslPolicy) {
             $.sslPolicy = sslPolicy;
             return this;
         }
 
+        /**
+         * @param sslPolicy Name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` or `TLS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslPolicy(String sslPolicy) {
             return sslPolicy(Output.of(sslPolicy));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

@@ -24,6 +24,10 @@ public final class ThingGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the Thing Group.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -35,6 +39,10 @@ public final class ThingGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parentGroupName")
     private @Nullable Output<String> parentGroupName;
 
+    /**
+     * @return The name of the parent Thing Group.
+     * 
+     */
     public Optional<Output<String>> parentGroupName() {
         return Optional.ofNullable(this.parentGroupName);
     }
@@ -46,6 +54,10 @@ public final class ThingGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<ThingGroupPropertiesArgs> properties;
 
+    /**
+     * @return The Thing Group properties. Defined below.
+     * 
+     */
     public Optional<Output<ThingGroupPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -57,6 +69,10 @@ public final class ThingGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value mapping of resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -88,38 +104,86 @@ public final class ThingGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ThingGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the Thing Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the Thing Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parentGroupName The name of the parent Thing Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentGroupName(@Nullable Output<String> parentGroupName) {
             $.parentGroupName = parentGroupName;
             return this;
         }
 
+        /**
+         * @param parentGroupName The name of the parent Thing Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentGroupName(String parentGroupName) {
             return parentGroupName(Output.of(parentGroupName));
         }
 
+        /**
+         * @param properties The Thing Group properties. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<ThingGroupPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The Thing Group properties. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(ThingGroupPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param tags Key-value mapping of resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value mapping of resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

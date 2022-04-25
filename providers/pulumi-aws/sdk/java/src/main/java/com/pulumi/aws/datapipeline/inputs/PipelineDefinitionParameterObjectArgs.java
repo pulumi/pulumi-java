@@ -31,6 +31,10 @@ public final class PipelineDefinitionParameterObjectArgs extends com.pulumi.reso
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return ID of the parameter value.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -73,11 +77,23 @@ public final class PipelineDefinitionParameterObjectArgs extends com.pulumi.reso
             return attributes(List.of(attributes));
         }
 
+        /**
+         * @param id ID of the parameter value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id ID of the parameter value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

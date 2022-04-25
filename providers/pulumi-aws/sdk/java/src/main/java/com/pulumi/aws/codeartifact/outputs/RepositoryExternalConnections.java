@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RepositoryExternalConnections {
     /**
-     * The name of the external connection associated with a repository.
+     * @return The name of the external connection associated with a repository.
      * 
      */
     private final String externalConnectionName;
@@ -30,9 +30,9 @@ public final class RepositoryExternalConnections {
     }
 
     /**
-     * The name of the external connection associated with a repository.
+     * @return The name of the external connection associated with a repository.
      * 
-    */
+     */
     public String externalConnectionName() {
         return this.externalConnectionName;
     }

@@ -27,6 +27,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacityProviders")
     private @Nullable Output<List<String>> capacityProviders;
 
+    /**
+     * @return List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
+     * 
+     */
     public Optional<Output<List<String>>> capacityProviders() {
         return Optional.ofNullable(this.capacityProviders);
     }
@@ -38,6 +42,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="configuration")
     private @Nullable Output<ClusterConfigurationArgs> configuration;
 
+    /**
+     * @return The execute command configuration for the cluster. Detailed below.
+     * 
+     */
     public Optional<Output<ClusterConfigurationArgs>> configuration() {
         return Optional.ofNullable(this.configuration);
     }
@@ -49,6 +57,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultCapacityProviderStrategies")
     private @Nullable Output<List<ClusterDefaultCapacityProviderStrategyArgs>> defaultCapacityProviderStrategies;
 
+    /**
+     * @return Configuration block for capacity provider strategy to use by default for the cluster. Can be one or more. Detailed below.
+     * 
+     */
     public Optional<Output<List<ClusterDefaultCapacityProviderStrategyArgs>>> defaultCapacityProviderStrategies() {
         return Optional.ofNullable(this.defaultCapacityProviderStrategies);
     }
@@ -60,6 +72,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the setting to manage. Valid values: `containerInsights`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -71,6 +87,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="settings")
     private @Nullable Output<List<ClusterSettingArgs>> settings;
 
+    /**
+     * @return Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Detailed below.
+     * 
+     */
     public Optional<Output<List<ClusterSettingArgs>>> settings() {
         return Optional.ofNullable(this.settings);
     }
@@ -82,6 +102,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -115,68 +139,158 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacityProviders List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityProviders(@Nullable Output<List<String>> capacityProviders) {
             $.capacityProviders = capacityProviders;
             return this;
         }
 
+        /**
+         * @param capacityProviders List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityProviders(List<String> capacityProviders) {
             return capacityProviders(Output.of(capacityProviders));
         }
 
+        /**
+         * @param capacityProviders List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityProviders(String... capacityProviders) {
             return capacityProviders(List.of(capacityProviders));
         }
 
+        /**
+         * @param configuration The execute command configuration for the cluster. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(@Nullable Output<ClusterConfigurationArgs> configuration) {
             $.configuration = configuration;
             return this;
         }
 
+        /**
+         * @param configuration The execute command configuration for the cluster. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(ClusterConfigurationArgs configuration) {
             return configuration(Output.of(configuration));
         }
 
+        /**
+         * @param defaultCapacityProviderStrategies Configuration block for capacity provider strategy to use by default for the cluster. Can be one or more. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultCapacityProviderStrategies(@Nullable Output<List<ClusterDefaultCapacityProviderStrategyArgs>> defaultCapacityProviderStrategies) {
             $.defaultCapacityProviderStrategies = defaultCapacityProviderStrategies;
             return this;
         }
 
+        /**
+         * @param defaultCapacityProviderStrategies Configuration block for capacity provider strategy to use by default for the cluster. Can be one or more. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultCapacityProviderStrategies(List<ClusterDefaultCapacityProviderStrategyArgs> defaultCapacityProviderStrategies) {
             return defaultCapacityProviderStrategies(Output.of(defaultCapacityProviderStrategies));
         }
 
+        /**
+         * @param defaultCapacityProviderStrategies Configuration block for capacity provider strategy to use by default for the cluster. Can be one or more. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultCapacityProviderStrategies(ClusterDefaultCapacityProviderStrategyArgs... defaultCapacityProviderStrategies) {
             return defaultCapacityProviderStrategies(List.of(defaultCapacityProviderStrategies));
         }
 
+        /**
+         * @param name Name of the setting to manage. Valid values: `containerInsights`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the setting to manage. Valid values: `containerInsights`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param settings Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(@Nullable Output<List<ClusterSettingArgs>> settings) {
             $.settings = settings;
             return this;
         }
 
+        /**
+         * @param settings Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(List<ClusterSettingArgs> settings) {
             return settings(Output.of(settings));
         }
 
+        /**
+         * @param settings Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(ClusterSettingArgs... settings) {
             return settings(List.of(settings));
         }
 
+        /**
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
