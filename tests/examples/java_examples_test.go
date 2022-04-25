@@ -30,7 +30,6 @@ const previewOnly = true
 func TestExamples(t *testing.T) {
 	t.Run("random", func(t *testing.T) {
 		test := getJvmBase(t, "random", integration.ProgramTestOptions{
-			Quick: true,
 			ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
 				o := stackInfo.Outputs
 				assert.Greater(t, o["randomInteger"].(float64), -0.1)
@@ -60,7 +59,6 @@ func TestExamples(t *testing.T) {
 			Config: map[string]string{
 				"azure-native:location": "westus",
 			},
-			Quick: true,
 			ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
 				o := stackInfo.Outputs
 				cdnEndpoint := o["cdnEndpoint"].(string)
@@ -77,7 +75,6 @@ func TestExamples(t *testing.T) {
 			Config: map[string]string{
 				"aws:region": "us-east-1",
 			},
-			Quick: true,
 			ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
 				o := stackInfo.Outputs
 				publicIp := o["publicIp"].(string)
