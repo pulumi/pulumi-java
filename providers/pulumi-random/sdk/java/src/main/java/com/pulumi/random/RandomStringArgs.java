@@ -26,6 +26,10 @@ public final class RandomStringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keepers")
     private @Nullable Output<Map<String,Object>> keepers;
 
+    /**
+     * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> keepers() {
         return Optional.ofNullable(this.keepers);
     }
@@ -37,6 +41,10 @@ public final class RandomStringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="length", required=true)
     private Output<Integer> length;
 
+    /**
+     * @return The length of the string desired.
+     * 
+     */
     public Output<Integer> length() {
         return this.length;
     }
@@ -48,6 +56,10 @@ public final class RandomStringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lower")
     private @Nullable Output<Boolean> lower;
 
+    /**
+     * @return Include lowercase alphabet characters in the result.
+     * 
+     */
     public Optional<Output<Boolean>> lower() {
         return Optional.ofNullable(this.lower);
     }
@@ -59,6 +71,10 @@ public final class RandomStringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minLower")
     private @Nullable Output<Integer> minLower;
 
+    /**
+     * @return Minimum number of lowercase alphabet characters in the result.
+     * 
+     */
     public Optional<Output<Integer>> minLower() {
         return Optional.ofNullable(this.minLower);
     }
@@ -70,6 +86,10 @@ public final class RandomStringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minNumeric")
     private @Nullable Output<Integer> minNumeric;
 
+    /**
+     * @return Minimum number of numeric characters in the result.
+     * 
+     */
     public Optional<Output<Integer>> minNumeric() {
         return Optional.ofNullable(this.minNumeric);
     }
@@ -81,6 +101,10 @@ public final class RandomStringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minSpecial")
     private @Nullable Output<Integer> minSpecial;
 
+    /**
+     * @return Minimum number of special characters in the result.
+     * 
+     */
     public Optional<Output<Integer>> minSpecial() {
         return Optional.ofNullable(this.minSpecial);
     }
@@ -92,6 +116,10 @@ public final class RandomStringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minUpper")
     private @Nullable Output<Integer> minUpper;
 
+    /**
+     * @return Minimum number of uppercase alphabet characters in the result.
+     * 
+     */
     public Optional<Output<Integer>> minUpper() {
         return Optional.ofNullable(this.minUpper);
     }
@@ -103,6 +131,10 @@ public final class RandomStringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="number")
     private @Nullable Output<Boolean> number;
 
+    /**
+     * @return Include numeric characters in the result.
+     * 
+     */
     public Optional<Output<Boolean>> number() {
         return Optional.ofNullable(this.number);
     }
@@ -114,6 +146,10 @@ public final class RandomStringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="overrideSpecial")
     private @Nullable Output<String> overrideSpecial;
 
+    /**
+     * @return Supply your own list of special characters to use for string generation.  This overrides the default character list in the special argument.  The `special` argument must still be set to true for any overwritten characters to be used in generation.
+     * 
+     */
     public Optional<Output<String>> overrideSpecial() {
         return Optional.ofNullable(this.overrideSpecial);
     }
@@ -125,6 +161,10 @@ public final class RandomStringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="special")
     private @Nullable Output<Boolean> special;
 
+    /**
+     * @return Include special characters in the result. These are `!@#$%&amp;*()-_=+[]{}&lt;&gt;:?`
+     * 
+     */
     public Optional<Output<Boolean>> special() {
         return Optional.ofNullable(this.special);
     }
@@ -136,6 +176,10 @@ public final class RandomStringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="upper")
     private @Nullable Output<Boolean> upper;
 
+    /**
+     * @return Include uppercase alphabet characters in the result.
+     * 
+     */
     public Optional<Output<Boolean>> upper() {
         return Optional.ofNullable(this.upper);
     }
@@ -174,101 +218,233 @@ public final class RandomStringArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RandomStringArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keepers(@Nullable Output<Map<String,Object>> keepers) {
             $.keepers = keepers;
             return this;
         }
 
+        /**
+         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keepers(Map<String,Object> keepers) {
             return keepers(Output.of(keepers));
         }
 
+        /**
+         * @param length The length of the string desired.
+         * 
+         * @return builder
+         * 
+         */
         public Builder length(Output<Integer> length) {
             $.length = length;
             return this;
         }
 
+        /**
+         * @param length The length of the string desired.
+         * 
+         * @return builder
+         * 
+         */
         public Builder length(Integer length) {
             return length(Output.of(length));
         }
 
+        /**
+         * @param lower Include lowercase alphabet characters in the result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lower(@Nullable Output<Boolean> lower) {
             $.lower = lower;
             return this;
         }
 
+        /**
+         * @param lower Include lowercase alphabet characters in the result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lower(Boolean lower) {
             return lower(Output.of(lower));
         }
 
+        /**
+         * @param minLower Minimum number of lowercase alphabet characters in the result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minLower(@Nullable Output<Integer> minLower) {
             $.minLower = minLower;
             return this;
         }
 
+        /**
+         * @param minLower Minimum number of lowercase alphabet characters in the result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minLower(Integer minLower) {
             return minLower(Output.of(minLower));
         }
 
+        /**
+         * @param minNumeric Minimum number of numeric characters in the result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNumeric(@Nullable Output<Integer> minNumeric) {
             $.minNumeric = minNumeric;
             return this;
         }
 
+        /**
+         * @param minNumeric Minimum number of numeric characters in the result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNumeric(Integer minNumeric) {
             return minNumeric(Output.of(minNumeric));
         }
 
+        /**
+         * @param minSpecial Minimum number of special characters in the result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minSpecial(@Nullable Output<Integer> minSpecial) {
             $.minSpecial = minSpecial;
             return this;
         }
 
+        /**
+         * @param minSpecial Minimum number of special characters in the result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minSpecial(Integer minSpecial) {
             return minSpecial(Output.of(minSpecial));
         }
 
+        /**
+         * @param minUpper Minimum number of uppercase alphabet characters in the result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minUpper(@Nullable Output<Integer> minUpper) {
             $.minUpper = minUpper;
             return this;
         }
 
+        /**
+         * @param minUpper Minimum number of uppercase alphabet characters in the result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minUpper(Integer minUpper) {
             return minUpper(Output.of(minUpper));
         }
 
+        /**
+         * @param number Include numeric characters in the result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder number(@Nullable Output<Boolean> number) {
             $.number = number;
             return this;
         }
 
+        /**
+         * @param number Include numeric characters in the result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder number(Boolean number) {
             return number(Output.of(number));
         }
 
+        /**
+         * @param overrideSpecial Supply your own list of special characters to use for string generation.  This overrides the default character list in the special argument.  The `special` argument must still be set to true for any overwritten characters to be used in generation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overrideSpecial(@Nullable Output<String> overrideSpecial) {
             $.overrideSpecial = overrideSpecial;
             return this;
         }
 
+        /**
+         * @param overrideSpecial Supply your own list of special characters to use for string generation.  This overrides the default character list in the special argument.  The `special` argument must still be set to true for any overwritten characters to be used in generation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overrideSpecial(String overrideSpecial) {
             return overrideSpecial(Output.of(overrideSpecial));
         }
 
+        /**
+         * @param special Include special characters in the result. These are `!@#$%&amp;*()-_=+[]{}&lt;&gt;:?`
+         * 
+         * @return builder
+         * 
+         */
         public Builder special(@Nullable Output<Boolean> special) {
             $.special = special;
             return this;
         }
 
+        /**
+         * @param special Include special characters in the result. These are `!@#$%&amp;*()-_=+[]{}&lt;&gt;:?`
+         * 
+         * @return builder
+         * 
+         */
         public Builder special(Boolean special) {
             return special(Output.of(special));
         }
 
+        /**
+         * @param upper Include uppercase alphabet characters in the result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upper(@Nullable Output<Boolean> upper) {
             $.upper = upper;
             return this;
         }
 
+        /**
+         * @param upper Include uppercase alphabet characters in the result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upper(Boolean upper) {
             return upper(Output.of(upper));
         }
