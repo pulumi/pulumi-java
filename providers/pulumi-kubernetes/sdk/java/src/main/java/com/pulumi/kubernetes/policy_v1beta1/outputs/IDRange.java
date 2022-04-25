@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class IDRange {
-    /**
-     * max is the end of the range, inclusive.
-     * 
-     */
+        /**
+         * @return max is the end of the range, inclusive.
+         * 
+         */
     private final Integer max;
-    /**
-     * min is the start of the range, inclusive.
-     * 
-     */
+        /**
+         * @return min is the start of the range, inclusive.
+         * 
+         */
     private final Integer min;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class IDRange {
     }
 
     /**
-     * max is the end of the range, inclusive.
+     * @return max is the end of the range, inclusive.
      * 
-    */
+     */
     public Integer max() {
         return this.max;
     }
     /**
-     * min is the start of the range, inclusive.
+     * @return min is the start of the range, inclusive.
      * 
-    */
+     */
     public Integer min() {
         return this.min;
     }

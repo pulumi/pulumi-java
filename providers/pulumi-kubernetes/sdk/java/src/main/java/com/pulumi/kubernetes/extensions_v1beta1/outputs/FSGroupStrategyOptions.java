@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FSGroupStrategyOptions {
-    /**
-     * ranges are the allowed ranges of fs groups.  If you would like to force a single fs group then supply a single range with the same start and end. Required for MustRunAs.
-     * 
-     */
+        /**
+         * @return ranges are the allowed ranges of fs groups.  If you would like to force a single fs group then supply a single range with the same start and end. Required for MustRunAs.
+         * 
+         */
     private final @Nullable List<IDRange> ranges;
-    /**
-     * rule is the strategy that will dictate what FSGroup is used in the SecurityContext.
-     * 
-     */
+        /**
+         * @return rule is the strategy that will dictate what FSGroup is used in the SecurityContext.
+         * 
+         */
     private final @Nullable String rule;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class FSGroupStrategyOptions {
     }
 
     /**
-     * ranges are the allowed ranges of fs groups.  If you would like to force a single fs group then supply a single range with the same start and end. Required for MustRunAs.
+     * @return ranges are the allowed ranges of fs groups.  If you would like to force a single fs group then supply a single range with the same start and end. Required for MustRunAs.
      * 
-    */
+     */
     public List<IDRange> ranges() {
         return this.ranges == null ? List.of() : this.ranges;
     }
     /**
-     * rule is the strategy that will dictate what FSGroup is used in the SecurityContext.
+     * @return rule is the strategy that will dictate what FSGroup is used in the SecurityContext.
      * 
-    */
+     */
     public Optional<String> rule() {
         return Optional.ofNullable(this.rule);
     }

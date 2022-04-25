@@ -14,30 +14,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CSIVolumeSource {
-    /**
-     * Driver is the name of the CSI driver that handles this volume. Consult with your admin for the correct name as registered in the cluster.
-     * 
-     */
+        /**
+         * @return Driver is the name of the CSI driver that handles this volume. Consult with your admin for the correct name as registered in the cluster.
+         * 
+         */
     private final String driver;
-    /**
-     * Filesystem type to mount. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. If not provided, the empty value is passed to the associated CSI driver which will determine the default filesystem to apply.
-     * 
-     */
+        /**
+         * @return Filesystem type to mount. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. If not provided, the empty value is passed to the associated CSI driver which will determine the default filesystem to apply.
+         * 
+         */
     private final @Nullable String fsType;
-    /**
-     * NodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and  may be empty if no secret is required. If the secret object contains more than one secret, all secret references are passed.
-     * 
-     */
+        /**
+         * @return NodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and  may be empty if no secret is required. If the secret object contains more than one secret, all secret references are passed.
+         * 
+         */
     private final @Nullable LocalObjectReference nodePublishSecretRef;
-    /**
-     * Specifies a read-only configuration for the volume. Defaults to false (read/write).
-     * 
-     */
+        /**
+         * @return Specifies a read-only configuration for the volume. Defaults to false (read/write).
+         * 
+         */
     private final @Nullable Boolean readOnly;
-    /**
-     * VolumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver&#39;s documentation for supported values.
-     * 
-     */
+        /**
+         * @return VolumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver&#39;s documentation for supported values.
+         * 
+         */
     private final @Nullable Map<String,String> volumeAttributes;
 
     @CustomType.Constructor
@@ -55,37 +55,37 @@ public final class CSIVolumeSource {
     }
 
     /**
-     * Driver is the name of the CSI driver that handles this volume. Consult with your admin for the correct name as registered in the cluster.
+     * @return Driver is the name of the CSI driver that handles this volume. Consult with your admin for the correct name as registered in the cluster.
      * 
-    */
+     */
     public String driver() {
         return this.driver;
     }
     /**
-     * Filesystem type to mount. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. If not provided, the empty value is passed to the associated CSI driver which will determine the default filesystem to apply.
+     * @return Filesystem type to mount. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. If not provided, the empty value is passed to the associated CSI driver which will determine the default filesystem to apply.
      * 
-    */
+     */
     public Optional<String> fsType() {
         return Optional.ofNullable(this.fsType);
     }
     /**
-     * NodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and  may be empty if no secret is required. If the secret object contains more than one secret, all secret references are passed.
+     * @return NodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and  may be empty if no secret is required. If the secret object contains more than one secret, all secret references are passed.
      * 
-    */
+     */
     public Optional<LocalObjectReference> nodePublishSecretRef() {
         return Optional.ofNullable(this.nodePublishSecretRef);
     }
     /**
-     * Specifies a read-only configuration for the volume. Defaults to false (read/write).
+     * @return Specifies a read-only configuration for the volume. Defaults to false (read/write).
      * 
-    */
+     */
     public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
-     * VolumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver&#39;s documentation for supported values.
+     * @return VolumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver&#39;s documentation for supported values.
      * 
-    */
+     */
     public Map<String,String> volumeAttributes() {
         return this.volumeAttributes == null ? Map.of() : this.volumeAttributes;
     }

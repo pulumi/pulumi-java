@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class AttachedVolume {
-    /**
-     * DevicePath represents the device path where the volume should be available
-     * 
-     */
+        /**
+         * @return DevicePath represents the device path where the volume should be available
+         * 
+         */
     private final String devicePath;
-    /**
-     * Name of the attached volume
-     * 
-     */
+        /**
+         * @return Name of the attached volume
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class AttachedVolume {
     }
 
     /**
-     * DevicePath represents the device path where the volume should be available
+     * @return DevicePath represents the device path where the volume should be available
      * 
-    */
+     */
     public String devicePath() {
         return this.devicePath;
     }
     /**
-     * Name of the attached volume
+     * @return Name of the attached volume
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

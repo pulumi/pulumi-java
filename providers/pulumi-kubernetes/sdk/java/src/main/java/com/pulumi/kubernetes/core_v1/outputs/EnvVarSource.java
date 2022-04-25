@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EnvVarSource {
-    /**
-     * Selects a key of a ConfigMap.
-     * 
-     */
+        /**
+         * @return Selects a key of a ConfigMap.
+         * 
+         */
     private final @Nullable ConfigMapKeySelector configMapKeyRef;
-    /**
-     * Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels[&#39;&lt;KEY&gt;&#39;]`, `metadata.annotations[&#39;&lt;KEY&gt;&#39;]`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.
-     * 
-     */
+        /**
+         * @return Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels[&#39;&lt;KEY&gt;&#39;]`, `metadata.annotations[&#39;&lt;KEY&gt;&#39;]`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.
+         * 
+         */
     private final @Nullable ObjectFieldSelector fieldRef;
-    /**
-     * Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.
-     * 
-     */
+        /**
+         * @return Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.
+         * 
+         */
     private final @Nullable ResourceFieldSelector resourceFieldRef;
-    /**
-     * Selects a key of a secret in the pod&#39;s namespace
-     * 
-     */
+        /**
+         * @return Selects a key of a secret in the pod&#39;s namespace
+         * 
+         */
     private final @Nullable SecretKeySelector secretKeyRef;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class EnvVarSource {
     }
 
     /**
-     * Selects a key of a ConfigMap.
+     * @return Selects a key of a ConfigMap.
      * 
-    */
+     */
     public Optional<ConfigMapKeySelector> configMapKeyRef() {
         return Optional.ofNullable(this.configMapKeyRef);
     }
     /**
-     * Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels[&#39;&lt;KEY&gt;&#39;]`, `metadata.annotations[&#39;&lt;KEY&gt;&#39;]`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.
+     * @return Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels[&#39;&lt;KEY&gt;&#39;]`, `metadata.annotations[&#39;&lt;KEY&gt;&#39;]`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.
      * 
-    */
+     */
     public Optional<ObjectFieldSelector> fieldRef() {
         return Optional.ofNullable(this.fieldRef);
     }
     /**
-     * Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.
+     * @return Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.
      * 
-    */
+     */
     public Optional<ResourceFieldSelector> resourceFieldRef() {
         return Optional.ofNullable(this.resourceFieldRef);
     }
     /**
-     * Selects a key of a secret in the pod&#39;s namespace
+     * @return Selects a key of a secret in the pod&#39;s namespace
      * 
-    */
+     */
     public Optional<SecretKeySelector> secretKeyRef() {
         return Optional.ofNullable(this.secretKeyRef);
     }

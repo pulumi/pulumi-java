@@ -26,6 +26,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cluster")
     private @Nullable Output<String> cluster;
 
+    /**
+     * @return If present, the name of the kubeconfig cluster to use.
+     * 
+     */
     public Optional<Output<String>> cluster() {
         return Optional.ofNullable(this.cluster);
     }
@@ -37,6 +41,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="context")
     private @Nullable Output<String> context;
 
+    /**
+     * @return If present, the name of the kubeconfig context to use.
+     * 
+     */
     public Optional<Output<String>> context() {
         return Optional.ofNullable(this.context);
     }
@@ -49,6 +57,11 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableDryRun", json=true)
     private @Nullable Output<Boolean> enableDryRun;
 
+    /**
+     * @return BETA FEATURE - If present and set to true, enable server-side diff calculations.
+     * This feature is in developer preview, and is disabled by default.
+     * 
+     */
     public Optional<Output<Boolean>> enableDryRun() {
         return Optional.ofNullable(this.enableDryRun);
     }
@@ -61,6 +74,11 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableReplaceCRD", json=true)
     private @Nullable Output<Boolean> enableReplaceCRD;
 
+    /**
+     * @return BETA FEATURE - If present and set to true, replace CRDs on update rather than patching.
+     * This feature is in developer preview, and is disabled by default.
+     * 
+     */
     public Optional<Output<Boolean>> enableReplaceCRD() {
         return Optional.ofNullable(this.enableReplaceCRD);
     }
@@ -72,6 +90,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="helmReleaseSettings", json=true)
     private @Nullable Output<HelmReleaseSettingsArgs> helmReleaseSettings;
 
+    /**
+     * @return Options to configure the Helm Release resource.
+     * 
+     */
     public Optional<Output<HelmReleaseSettingsArgs>> helmReleaseSettings() {
         return Optional.ofNullable(this.helmReleaseSettings);
     }
@@ -83,6 +105,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kubeClientSettings", json=true)
     private @Nullable Output<KubeClientSettingsArgs> kubeClientSettings;
 
+    /**
+     * @return Options for tuning the Kubernetes client used by a Provider.
+     * 
+     */
     public Optional<Output<KubeClientSettingsArgs>> kubeClientSettings() {
         return Optional.ofNullable(this.kubeClientSettings);
     }
@@ -94,6 +120,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kubeconfig")
     private @Nullable Output<String> kubeconfig;
 
+    /**
+     * @return The contents of a kubeconfig file or the path to a kubeconfig file.
+     * 
+     */
     public Optional<Output<String>> kubeconfig() {
         return Optional.ofNullable(this.kubeconfig);
     }
@@ -110,6 +140,15 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namespace")
     private @Nullable Output<String> namespace;
 
+    /**
+     * @return If present, the default namespace to use. This flag is ignored for cluster-scoped resources.
+     * 
+     * A namespace can be specified in multiple places, and the precedence is as follows:
+     * 1. `.metadata.namespace` set on the resource.
+     * 2. This `namespace` parameter.
+     * 3. `namespace` set for the active context in the kubeconfig.
+     * 
+     */
     public Optional<Output<String>> namespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -128,6 +167,17 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="renderYamlToDirectory")
     private @Nullable Output<String> renderYamlToDirectory;
 
+    /**
+     * @return BETA FEATURE - If present, render resource manifests to this directory. In this mode, resources will not
+     * be created on a Kubernetes cluster, but the rendered manifests will be kept in sync with changes
+     * to the Pulumi program. This feature is in developer preview, and is disabled by default.
+     * 
+     * Note that some computed Outputs such as status fields will not be populated
+     * since the resources are not created on a Kubernetes cluster. These Output values will remain undefined,
+     * and may result in an error if they are referenced by other resources. Also note that any secret values
+     * used in these resources will be rendered in plaintext to the resulting YAML.
+     * 
+     */
     public Optional<Output<String>> renderYamlToDirectory() {
         return Optional.ofNullable(this.renderYamlToDirectory);
     }
@@ -139,6 +189,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="suppressDeprecationWarnings", json=true)
     private @Nullable Output<Boolean> suppressDeprecationWarnings;
 
+    /**
+     * @return If present and set to true, suppress apiVersion deprecation warnings from the CLI.
+     * 
+     */
     public Optional<Output<Boolean>> suppressDeprecationWarnings() {
         return Optional.ofNullable(this.suppressDeprecationWarnings);
     }
@@ -150,6 +204,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="suppressHelmHookWarnings", json=true)
     private @Nullable Output<Boolean> suppressHelmHookWarnings;
 
+    /**
+     * @return If present and set to true, suppress unsupported Helm hook warnings from the CLI.
+     * 
+     */
     public Optional<Output<Boolean>> suppressHelmHookWarnings() {
         return Optional.ofNullable(this.suppressHelmHookWarnings);
     }
@@ -188,101 +246,261 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ProviderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cluster If present, the name of the kubeconfig cluster to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(@Nullable Output<String> cluster) {
             $.cluster = cluster;
             return this;
         }
 
+        /**
+         * @param cluster If present, the name of the kubeconfig cluster to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(String cluster) {
             return cluster(Output.of(cluster));
         }
 
+        /**
+         * @param context If present, the name of the kubeconfig context to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder context(@Nullable Output<String> context) {
             $.context = context;
             return this;
         }
 
+        /**
+         * @param context If present, the name of the kubeconfig context to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder context(String context) {
             return context(Output.of(context));
         }
 
+        /**
+         * @param enableDryRun BETA FEATURE - If present and set to true, enable server-side diff calculations.
+         * This feature is in developer preview, and is disabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDryRun(@Nullable Output<Boolean> enableDryRun) {
             $.enableDryRun = enableDryRun;
             return this;
         }
 
+        /**
+         * @param enableDryRun BETA FEATURE - If present and set to true, enable server-side diff calculations.
+         * This feature is in developer preview, and is disabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDryRun(Boolean enableDryRun) {
             return enableDryRun(Output.of(enableDryRun));
         }
 
+        /**
+         * @param enableReplaceCRD BETA FEATURE - If present and set to true, replace CRDs on update rather than patching.
+         * This feature is in developer preview, and is disabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableReplaceCRD(@Nullable Output<Boolean> enableReplaceCRD) {
             $.enableReplaceCRD = enableReplaceCRD;
             return this;
         }
 
+        /**
+         * @param enableReplaceCRD BETA FEATURE - If present and set to true, replace CRDs on update rather than patching.
+         * This feature is in developer preview, and is disabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableReplaceCRD(Boolean enableReplaceCRD) {
             return enableReplaceCRD(Output.of(enableReplaceCRD));
         }
 
+        /**
+         * @param helmReleaseSettings Options to configure the Helm Release resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder helmReleaseSettings(@Nullable Output<HelmReleaseSettingsArgs> helmReleaseSettings) {
             $.helmReleaseSettings = helmReleaseSettings;
             return this;
         }
 
+        /**
+         * @param helmReleaseSettings Options to configure the Helm Release resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder helmReleaseSettings(HelmReleaseSettingsArgs helmReleaseSettings) {
             return helmReleaseSettings(Output.of(helmReleaseSettings));
         }
 
+        /**
+         * @param kubeClientSettings Options for tuning the Kubernetes client used by a Provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubeClientSettings(@Nullable Output<KubeClientSettingsArgs> kubeClientSettings) {
             $.kubeClientSettings = kubeClientSettings;
             return this;
         }
 
+        /**
+         * @param kubeClientSettings Options for tuning the Kubernetes client used by a Provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubeClientSettings(KubeClientSettingsArgs kubeClientSettings) {
             return kubeClientSettings(Output.of(kubeClientSettings));
         }
 
+        /**
+         * @param kubeconfig The contents of a kubeconfig file or the path to a kubeconfig file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubeconfig(@Nullable Output<String> kubeconfig) {
             $.kubeconfig = kubeconfig;
             return this;
         }
 
+        /**
+         * @param kubeconfig The contents of a kubeconfig file or the path to a kubeconfig file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubeconfig(String kubeconfig) {
             return kubeconfig(Output.of(kubeconfig));
         }
 
+        /**
+         * @param namespace If present, the default namespace to use. This flag is ignored for cluster-scoped resources.
+         * 
+         * A namespace can be specified in multiple places, and the precedence is as follows:
+         * 1. `.metadata.namespace` set on the resource.
+         * 2. This `namespace` parameter.
+         * 3. `namespace` set for the active context in the kubeconfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(@Nullable Output<String> namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param namespace If present, the default namespace to use. This flag is ignored for cluster-scoped resources.
+         * 
+         * A namespace can be specified in multiple places, and the precedence is as follows:
+         * 1. `.metadata.namespace` set on the resource.
+         * 2. This `namespace` parameter.
+         * 3. `namespace` set for the active context in the kubeconfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             return namespace(Output.of(namespace));
         }
 
+        /**
+         * @param renderYamlToDirectory BETA FEATURE - If present, render resource manifests to this directory. In this mode, resources will not
+         * be created on a Kubernetes cluster, but the rendered manifests will be kept in sync with changes
+         * to the Pulumi program. This feature is in developer preview, and is disabled by default.
+         * 
+         * Note that some computed Outputs such as status fields will not be populated
+         * since the resources are not created on a Kubernetes cluster. These Output values will remain undefined,
+         * and may result in an error if they are referenced by other resources. Also note that any secret values
+         * used in these resources will be rendered in plaintext to the resulting YAML.
+         * 
+         * @return builder
+         * 
+         */
         public Builder renderYamlToDirectory(@Nullable Output<String> renderYamlToDirectory) {
             $.renderYamlToDirectory = renderYamlToDirectory;
             return this;
         }
 
+        /**
+         * @param renderYamlToDirectory BETA FEATURE - If present, render resource manifests to this directory. In this mode, resources will not
+         * be created on a Kubernetes cluster, but the rendered manifests will be kept in sync with changes
+         * to the Pulumi program. This feature is in developer preview, and is disabled by default.
+         * 
+         * Note that some computed Outputs such as status fields will not be populated
+         * since the resources are not created on a Kubernetes cluster. These Output values will remain undefined,
+         * and may result in an error if they are referenced by other resources. Also note that any secret values
+         * used in these resources will be rendered in plaintext to the resulting YAML.
+         * 
+         * @return builder
+         * 
+         */
         public Builder renderYamlToDirectory(String renderYamlToDirectory) {
             return renderYamlToDirectory(Output.of(renderYamlToDirectory));
         }
 
+        /**
+         * @param suppressDeprecationWarnings If present and set to true, suppress apiVersion deprecation warnings from the CLI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suppressDeprecationWarnings(@Nullable Output<Boolean> suppressDeprecationWarnings) {
             $.suppressDeprecationWarnings = suppressDeprecationWarnings;
             return this;
         }
 
+        /**
+         * @param suppressDeprecationWarnings If present and set to true, suppress apiVersion deprecation warnings from the CLI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suppressDeprecationWarnings(Boolean suppressDeprecationWarnings) {
             return suppressDeprecationWarnings(Output.of(suppressDeprecationWarnings));
         }
 
+        /**
+         * @param suppressHelmHookWarnings If present and set to true, suppress unsupported Helm hook warnings from the CLI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suppressHelmHookWarnings(@Nullable Output<Boolean> suppressHelmHookWarnings) {
             $.suppressHelmHookWarnings = suppressHelmHookWarnings;
             return this;
         }
 
+        /**
+         * @param suppressHelmHookWarnings If present and set to true, suppress unsupported Helm hook warnings from the CLI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suppressHelmHookWarnings(Boolean suppressHelmHookWarnings) {
             return suppressHelmHookWarnings(Output.of(suppressHelmHookWarnings));
         }

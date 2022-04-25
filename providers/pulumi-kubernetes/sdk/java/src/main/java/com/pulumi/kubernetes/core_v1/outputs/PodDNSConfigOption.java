@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PodDNSConfigOption {
-    /**
-     * Required.
-     * 
-     */
+        /**
+         * @return Required.
+         * 
+         */
     private final @Nullable String name;
     private final @Nullable String value;
 
@@ -27,9 +27,9 @@ public final class PodDNSConfigOption {
     }
 
     /**
-     * Required.
+     * @return Required.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

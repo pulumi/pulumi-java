@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureFilePersistentVolumeSource {
-    /**
-     * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
-     * 
-     */
+        /**
+         * @return Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+         * 
+         */
     private final @Nullable Boolean readOnly;
-    /**
-     * the name of secret that contains Azure Storage Account Name and Key
-     * 
-     */
+        /**
+         * @return the name of secret that contains Azure Storage Account Name and Key
+         * 
+         */
     private final String secretName;
-    /**
-     * the namespace of the secret that contains Azure Storage Account Name and Key default is the same as the Pod
-     * 
-     */
+        /**
+         * @return the namespace of the secret that contains Azure Storage Account Name and Key default is the same as the Pod
+         * 
+         */
     private final @Nullable String secretNamespace;
-    /**
-     * Share Name
-     * 
-     */
+        /**
+         * @return Share Name
+         * 
+         */
     private final String shareName;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class AzureFilePersistentVolumeSource {
     }
 
     /**
-     * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * @return Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
-    */
+     */
     public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
-     * the name of secret that contains Azure Storage Account Name and Key
+     * @return the name of secret that contains Azure Storage Account Name and Key
      * 
-    */
+     */
     public String secretName() {
         return this.secretName;
     }
     /**
-     * the namespace of the secret that contains Azure Storage Account Name and Key default is the same as the Pod
+     * @return the namespace of the secret that contains Azure Storage Account Name and Key default is the same as the Pod
      * 
-    */
+     */
     public Optional<String> secretNamespace() {
         return Optional.ofNullable(this.secretNamespace);
     }
     /**
-     * Share Name
+     * @return Share Name
      * 
-    */
+     */
     public String shareName() {
         return this.shareName;
     }

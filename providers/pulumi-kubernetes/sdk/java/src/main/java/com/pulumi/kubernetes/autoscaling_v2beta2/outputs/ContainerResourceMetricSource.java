@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class ContainerResourceMetricSource {
-    /**
-     * container is the name of the container in the pods of the scaling target
-     * 
-     */
+        /**
+         * @return container is the name of the container in the pods of the scaling target
+         * 
+         */
     private final String container;
-    /**
-     * name is the name of the resource in question.
-     * 
-     */
+        /**
+         * @return name is the name of the resource in question.
+         * 
+         */
     private final String name;
-    /**
-     * target specifies the target value for the given metric
-     * 
-     */
+        /**
+         * @return target specifies the target value for the given metric
+         * 
+         */
     private final MetricTarget target;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class ContainerResourceMetricSource {
     }
 
     /**
-     * container is the name of the container in the pods of the scaling target
+     * @return container is the name of the container in the pods of the scaling target
      * 
-    */
+     */
     public String container() {
         return this.container;
     }
     /**
-     * name is the name of the resource in question.
+     * @return name is the name of the resource in question.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * target specifies the target value for the given metric
+     * @return target specifies the target value for the given metric
      * 
-    */
+     */
     public MetricTarget target() {
         return this.target;
     }

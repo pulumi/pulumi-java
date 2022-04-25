@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class HorizontalPodAutoscalerSpec {
-    /**
-     * upper limit for the number of pods that can be set by the autoscaler; cannot be smaller than MinReplicas.
-     * 
-     */
+        /**
+         * @return upper limit for the number of pods that can be set by the autoscaler; cannot be smaller than MinReplicas.
+         * 
+         */
     private final Integer maxReplicas;
-    /**
-     * minReplicas is the lower limit for the number of replicas to which the autoscaler can scale down.  It defaults to 1 pod.  minReplicas is allowed to be 0 if the alpha feature gate HPAScaleToZero is enabled and at least one Object or External metric is configured.  Scaling is active as long as at least one metric value is available.
-     * 
-     */
+        /**
+         * @return minReplicas is the lower limit for the number of replicas to which the autoscaler can scale down.  It defaults to 1 pod.  minReplicas is allowed to be 0 if the alpha feature gate HPAScaleToZero is enabled and at least one Object or External metric is configured.  Scaling is active as long as at least one metric value is available.
+         * 
+         */
     private final @Nullable Integer minReplicas;
-    /**
-     * reference to scaled resource; horizontal pod autoscaler will learn the current resource consumption and will set the desired number of pods by using its Scale subresource.
-     * 
-     */
+        /**
+         * @return reference to scaled resource; horizontal pod autoscaler will learn the current resource consumption and will set the desired number of pods by using its Scale subresource.
+         * 
+         */
     private final CrossVersionObjectReference scaleTargetRef;
-    /**
-     * target average CPU utilization (represented as a percentage of requested CPU) over all the pods; if not specified the default autoscaling policy will be used.
-     * 
-     */
+        /**
+         * @return target average CPU utilization (represented as a percentage of requested CPU) over all the pods; if not specified the default autoscaling policy will be used.
+         * 
+         */
     private final @Nullable Integer targetCPUUtilizationPercentage;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class HorizontalPodAutoscalerSpec {
     }
 
     /**
-     * upper limit for the number of pods that can be set by the autoscaler; cannot be smaller than MinReplicas.
+     * @return upper limit for the number of pods that can be set by the autoscaler; cannot be smaller than MinReplicas.
      * 
-    */
+     */
     public Integer maxReplicas() {
         return this.maxReplicas;
     }
     /**
-     * minReplicas is the lower limit for the number of replicas to which the autoscaler can scale down.  It defaults to 1 pod.  minReplicas is allowed to be 0 if the alpha feature gate HPAScaleToZero is enabled and at least one Object or External metric is configured.  Scaling is active as long as at least one metric value is available.
+     * @return minReplicas is the lower limit for the number of replicas to which the autoscaler can scale down.  It defaults to 1 pod.  minReplicas is allowed to be 0 if the alpha feature gate HPAScaleToZero is enabled and at least one Object or External metric is configured.  Scaling is active as long as at least one metric value is available.
      * 
-    */
+     */
     public Optional<Integer> minReplicas() {
         return Optional.ofNullable(this.minReplicas);
     }
     /**
-     * reference to scaled resource; horizontal pod autoscaler will learn the current resource consumption and will set the desired number of pods by using its Scale subresource.
+     * @return reference to scaled resource; horizontal pod autoscaler will learn the current resource consumption and will set the desired number of pods by using its Scale subresource.
      * 
-    */
+     */
     public CrossVersionObjectReference scaleTargetRef() {
         return this.scaleTargetRef;
     }
     /**
-     * target average CPU utilization (represented as a percentage of requested CPU) over all the pods; if not specified the default autoscaling policy will be used.
+     * @return target average CPU utilization (represented as a percentage of requested CPU) over all the pods; if not specified the default autoscaling policy will be used.
      * 
-    */
+     */
     public Optional<Integer> targetCPUUtilizationPercentage() {
         return Optional.ofNullable(this.targetCPUUtilizationPercentage);
     }

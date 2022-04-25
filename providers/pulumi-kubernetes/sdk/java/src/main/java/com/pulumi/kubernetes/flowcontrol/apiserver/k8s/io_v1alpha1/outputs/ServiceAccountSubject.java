@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ServiceAccountSubject {
-    /**
-     * `name` is the name of matching ServiceAccount objects, or &#34;*&#34; to match regardless of name. Required.
-     * 
-     */
+        /**
+         * @return `name` is the name of matching ServiceAccount objects, or &#34;*&#34; to match regardless of name. Required.
+         * 
+         */
     private final String name;
-    /**
-     * `namespace` is the namespace of matching ServiceAccount objects. Required.
-     * 
-     */
+        /**
+         * @return `namespace` is the namespace of matching ServiceAccount objects. Required.
+         * 
+         */
     private final String namespace;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ServiceAccountSubject {
     }
 
     /**
-     * `name` is the name of matching ServiceAccount objects, or &#34;*&#34; to match regardless of name. Required.
+     * @return `name` is the name of matching ServiceAccount objects, or &#34;*&#34; to match regardless of name. Required.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * `namespace` is the namespace of matching ServiceAccount objects. Required.
+     * @return `namespace` is the namespace of matching ServiceAccount objects. Required.
      * 
-    */
+     */
     public String namespace() {
         return this.namespace;
     }

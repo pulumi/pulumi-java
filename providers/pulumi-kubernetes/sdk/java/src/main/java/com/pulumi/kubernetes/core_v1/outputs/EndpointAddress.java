@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EndpointAddress {
-    /**
-     * The Hostname of this endpoint
-     * 
-     */
+        /**
+         * @return The Hostname of this endpoint
+         * 
+         */
     private final @Nullable String hostname;
-    /**
-     * The IP of this endpoint. May not be loopback (127.0.0.0/8), link-local (169.254.0.0/16), or link-local multicast ((224.0.0.0/24). IPv6 is also accepted but not fully supported on all platforms. Also, certain kubernetes components, like kube-proxy, are not IPv6 ready.
-     * 
-     */
+        /**
+         * @return The IP of this endpoint. May not be loopback (127.0.0.0/8), link-local (169.254.0.0/16), or link-local multicast ((224.0.0.0/24). IPv6 is also accepted but not fully supported on all platforms. Also, certain kubernetes components, like kube-proxy, are not IPv6 ready.
+         * 
+         */
     private final String ip;
-    /**
-     * Optional: Node hosting this endpoint. This can be used to determine endpoints local to a node.
-     * 
-     */
+        /**
+         * @return Optional: Node hosting this endpoint. This can be used to determine endpoints local to a node.
+         * 
+         */
     private final @Nullable String nodeName;
-    /**
-     * Reference to object providing the endpoint.
-     * 
-     */
+        /**
+         * @return Reference to object providing the endpoint.
+         * 
+         */
     private final @Nullable ObjectReference targetRef;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class EndpointAddress {
     }
 
     /**
-     * The Hostname of this endpoint
+     * @return The Hostname of this endpoint
      * 
-    */
+     */
     public Optional<String> hostname() {
         return Optional.ofNullable(this.hostname);
     }
     /**
-     * The IP of this endpoint. May not be loopback (127.0.0.0/8), link-local (169.254.0.0/16), or link-local multicast ((224.0.0.0/24). IPv6 is also accepted but not fully supported on all platforms. Also, certain kubernetes components, like kube-proxy, are not IPv6 ready.
+     * @return The IP of this endpoint. May not be loopback (127.0.0.0/8), link-local (169.254.0.0/16), or link-local multicast ((224.0.0.0/24). IPv6 is also accepted but not fully supported on all platforms. Also, certain kubernetes components, like kube-proxy, are not IPv6 ready.
      * 
-    */
+     */
     public String ip() {
         return this.ip;
     }
     /**
-     * Optional: Node hosting this endpoint. This can be used to determine endpoints local to a node.
+     * @return Optional: Node hosting this endpoint. This can be used to determine endpoints local to a node.
      * 
-    */
+     */
     public Optional<String> nodeName() {
         return Optional.ofNullable(this.nodeName);
     }
     /**
-     * Reference to object providing the endpoint.
+     * @return Reference to object providing the endpoint.
      * 
-    */
+     */
     public Optional<ObjectReference> targetRef() {
         return Optional.ofNullable(this.targetRef);
     }

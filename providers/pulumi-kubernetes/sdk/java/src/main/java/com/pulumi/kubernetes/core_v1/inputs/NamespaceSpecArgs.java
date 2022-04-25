@@ -27,6 +27,10 @@ public final class NamespaceSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="finalizers")
     private @Nullable Output<List<String>> finalizers;
 
+    /**
+     * @return Finalizers is an opaque list of values that must be empty to permanently remove object from storage. More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
+     * 
+     */
     public Optional<Output<List<String>>> finalizers() {
         return Optional.ofNullable(this.finalizers);
     }
@@ -55,15 +59,33 @@ public final class NamespaceSpecArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NamespaceSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param finalizers Finalizers is an opaque list of values that must be empty to permanently remove object from storage. More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
+         * 
+         * @return builder
+         * 
+         */
         public Builder finalizers(@Nullable Output<List<String>> finalizers) {
             $.finalizers = finalizers;
             return this;
         }
 
+        /**
+         * @param finalizers Finalizers is an opaque list of values that must be empty to permanently remove object from storage. More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
+         * 
+         * @return builder
+         * 
+         */
         public Builder finalizers(List<String> finalizers) {
             return finalizers(Output.of(finalizers));
         }
 
+        /**
+         * @param finalizers Finalizers is an opaque list of values that must be empty to permanently remove object from storage. More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
+         * 
+         * @return builder
+         * 
+         */
         public Builder finalizers(String... finalizers) {
             return finalizers(List.of(finalizers));
         }

@@ -27,6 +27,10 @@ public final class WebhookClientConfigArgs extends com.pulumi.resources.Resource
     @Import(name="caBundle")
     private @Nullable Output<String> caBundle;
 
+    /**
+     * @return caBundle is a PEM encoded CA bundle which will be used to validate the webhook&#39;s server certificate. If unspecified, system trust roots on the apiserver are used.
+     * 
+     */
     public Optional<Output<String>> caBundle() {
         return Optional.ofNullable(this.caBundle);
     }
@@ -40,6 +44,12 @@ public final class WebhookClientConfigArgs extends com.pulumi.resources.Resource
     @Import(name="service")
     private @Nullable Output<ServiceReferenceArgs> service;
 
+    /**
+     * @return service is a reference to the service for this webhook. Either service or url must be specified.
+     * 
+     * If the webhook is running within the cluster, then you should use `service`.
+     * 
+     */
     public Optional<Output<ServiceReferenceArgs>> service() {
         return Optional.ofNullable(this.service);
     }
@@ -61,6 +71,20 @@ public final class WebhookClientConfigArgs extends com.pulumi.resources.Resource
     @Import(name="url")
     private @Nullable Output<String> url;
 
+    /**
+     * @return url gives the location of the webhook, in standard URL form (`scheme://host:port/path`). Exactly one of `url` or `service` must be specified.
+     * 
+     * The `host` should not refer to a service running in the cluster; use the `service` field instead. The host might be resolved via external DNS in some apiservers (e.g., `kube-apiserver` cannot resolve in-cluster DNS as that would be a layering violation). `host` may also be an IP address.
+     * 
+     * Please note that using `localhost` or `127.0.0.1` as a `host` is risky unless you take great care to run this webhook on all hosts which run an apiserver which might need to make calls to this webhook. Such installs are likely to be non-portable, i.e., not easy to turn up in a new cluster.
+     * 
+     * The scheme must be &#34;https&#34;; the URL must begin with &#34;https://&#34;.
+     * 
+     * A path is optional, and if present may be any string permissible in a URL. You may use the path to pass an arbitrary string to the webhook, for example, a cluster identifier.
+     * 
+     * Attempting to use a user or basic auth e.g. &#34;user:password@&#34; is not allowed. Fragments (&#34;#...&#34;) and query parameters (&#34;?...&#34;) are not allowed, either.
+     * 
+     */
     public Optional<Output<String>> url() {
         return Optional.ofNullable(this.url);
     }
@@ -91,29 +115,89 @@ public final class WebhookClientConfigArgs extends com.pulumi.resources.Resource
             $ = new WebhookClientConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param caBundle caBundle is a PEM encoded CA bundle which will be used to validate the webhook&#39;s server certificate. If unspecified, system trust roots on the apiserver are used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caBundle(@Nullable Output<String> caBundle) {
             $.caBundle = caBundle;
             return this;
         }
 
+        /**
+         * @param caBundle caBundle is a PEM encoded CA bundle which will be used to validate the webhook&#39;s server certificate. If unspecified, system trust roots on the apiserver are used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caBundle(String caBundle) {
             return caBundle(Output.of(caBundle));
         }
 
+        /**
+         * @param service service is a reference to the service for this webhook. Either service or url must be specified.
+         * 
+         * If the webhook is running within the cluster, then you should use `service`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable Output<ServiceReferenceArgs> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service service is a reference to the service for this webhook. Either service or url must be specified.
+         * 
+         * If the webhook is running within the cluster, then you should use `service`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(ServiceReferenceArgs service) {
             return service(Output.of(service));
         }
 
+        /**
+         * @param url url gives the location of the webhook, in standard URL form (`scheme://host:port/path`). Exactly one of `url` or `service` must be specified.
+         * 
+         * The `host` should not refer to a service running in the cluster; use the `service` field instead. The host might be resolved via external DNS in some apiservers (e.g., `kube-apiserver` cannot resolve in-cluster DNS as that would be a layering violation). `host` may also be an IP address.
+         * 
+         * Please note that using `localhost` or `127.0.0.1` as a `host` is risky unless you take great care to run this webhook on all hosts which run an apiserver which might need to make calls to this webhook. Such installs are likely to be non-portable, i.e., not easy to turn up in a new cluster.
+         * 
+         * The scheme must be &#34;https&#34;; the URL must begin with &#34;https://&#34;.
+         * 
+         * A path is optional, and if present may be any string permissible in a URL. You may use the path to pass an arbitrary string to the webhook, for example, a cluster identifier.
+         * 
+         * Attempting to use a user or basic auth e.g. &#34;user:password@&#34; is not allowed. Fragments (&#34;#...&#34;) and query parameters (&#34;?...&#34;) are not allowed, either.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url url gives the location of the webhook, in standard URL form (`scheme://host:port/path`). Exactly one of `url` or `service` must be specified.
+         * 
+         * The `host` should not refer to a service running in the cluster; use the `service` field instead. The host might be resolved via external DNS in some apiservers (e.g., `kube-apiserver` cannot resolve in-cluster DNS as that would be a layering violation). `host` may also be an IP address.
+         * 
+         * Please note that using `localhost` or `127.0.0.1` as a `host` is risky unless you take great care to run this webhook on all hosts which run an apiserver which might need to make calls to this webhook. Such installs are likely to be non-portable, i.e., not easy to turn up in a new cluster.
+         * 
+         * The scheme must be &#34;https&#34;; the URL must begin with &#34;https://&#34;.
+         * 
+         * A path is optional, and if present may be any string permissible in a URL. You may use the path to pass an arbitrary string to the webhook, for example, a cluster identifier.
+         * 
+         * Attempting to use a user or basic auth e.g. &#34;user:password@&#34; is not allowed. Fragments (&#34;#...&#34;) and query parameters (&#34;?...&#34;) are not allowed, either.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

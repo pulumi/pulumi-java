@@ -14,50 +14,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class StatefulSetStatus {
-    /**
-     * collisionCount is the count of hash collisions for the StatefulSet. The StatefulSet controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ControllerRevision.
-     * 
-     */
+        /**
+         * @return collisionCount is the count of hash collisions for the StatefulSet. The StatefulSet controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ControllerRevision.
+         * 
+         */
     private final @Nullable Integer collisionCount;
-    /**
-     * Represents the latest available observations of a statefulset&#39;s current state.
-     * 
-     */
+        /**
+         * @return Represents the latest available observations of a statefulset&#39;s current state.
+         * 
+         */
     private final @Nullable List<StatefulSetCondition> conditions;
-    /**
-     * currentReplicas is the number of Pods created by the StatefulSet controller from the StatefulSet version indicated by currentRevision.
-     * 
-     */
+        /**
+         * @return currentReplicas is the number of Pods created by the StatefulSet controller from the StatefulSet version indicated by currentRevision.
+         * 
+         */
     private final @Nullable Integer currentReplicas;
-    /**
-     * currentRevision, if not empty, indicates the version of the StatefulSet used to generate Pods in the sequence [0,currentReplicas).
-     * 
-     */
+        /**
+         * @return currentRevision, if not empty, indicates the version of the StatefulSet used to generate Pods in the sequence [0,currentReplicas).
+         * 
+         */
     private final @Nullable String currentRevision;
-    /**
-     * observedGeneration is the most recent generation observed for this StatefulSet. It corresponds to the StatefulSet&#39;s generation, which is updated on mutation by the API Server.
-     * 
-     */
+        /**
+         * @return observedGeneration is the most recent generation observed for this StatefulSet. It corresponds to the StatefulSet&#39;s generation, which is updated on mutation by the API Server.
+         * 
+         */
     private final @Nullable Integer observedGeneration;
-    /**
-     * readyReplicas is the number of Pods created by the StatefulSet controller that have a Ready Condition.
-     * 
-     */
+        /**
+         * @return readyReplicas is the number of Pods created by the StatefulSet controller that have a Ready Condition.
+         * 
+         */
     private final @Nullable Integer readyReplicas;
-    /**
-     * replicas is the number of Pods created by the StatefulSet controller.
-     * 
-     */
+        /**
+         * @return replicas is the number of Pods created by the StatefulSet controller.
+         * 
+         */
     private final Integer replicas;
-    /**
-     * updateRevision, if not empty, indicates the version of the StatefulSet used to generate Pods in the sequence [replicas-updatedReplicas,replicas)
-     * 
-     */
+        /**
+         * @return updateRevision, if not empty, indicates the version of the StatefulSet used to generate Pods in the sequence [replicas-updatedReplicas,replicas)
+         * 
+         */
     private final @Nullable String updateRevision;
-    /**
-     * updatedReplicas is the number of Pods created by the StatefulSet controller from the StatefulSet version indicated by updateRevision.
-     * 
-     */
+        /**
+         * @return updatedReplicas is the number of Pods created by the StatefulSet controller from the StatefulSet version indicated by updateRevision.
+         * 
+         */
     private final @Nullable Integer updatedReplicas;
 
     @CustomType.Constructor
@@ -83,65 +83,65 @@ public final class StatefulSetStatus {
     }
 
     /**
-     * collisionCount is the count of hash collisions for the StatefulSet. The StatefulSet controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ControllerRevision.
+     * @return collisionCount is the count of hash collisions for the StatefulSet. The StatefulSet controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ControllerRevision.
      * 
-    */
+     */
     public Optional<Integer> collisionCount() {
         return Optional.ofNullable(this.collisionCount);
     }
     /**
-     * Represents the latest available observations of a statefulset&#39;s current state.
+     * @return Represents the latest available observations of a statefulset&#39;s current state.
      * 
-    */
+     */
     public List<StatefulSetCondition> conditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
     /**
-     * currentReplicas is the number of Pods created by the StatefulSet controller from the StatefulSet version indicated by currentRevision.
+     * @return currentReplicas is the number of Pods created by the StatefulSet controller from the StatefulSet version indicated by currentRevision.
      * 
-    */
+     */
     public Optional<Integer> currentReplicas() {
         return Optional.ofNullable(this.currentReplicas);
     }
     /**
-     * currentRevision, if not empty, indicates the version of the StatefulSet used to generate Pods in the sequence [0,currentReplicas).
+     * @return currentRevision, if not empty, indicates the version of the StatefulSet used to generate Pods in the sequence [0,currentReplicas).
      * 
-    */
+     */
     public Optional<String> currentRevision() {
         return Optional.ofNullable(this.currentRevision);
     }
     /**
-     * observedGeneration is the most recent generation observed for this StatefulSet. It corresponds to the StatefulSet&#39;s generation, which is updated on mutation by the API Server.
+     * @return observedGeneration is the most recent generation observed for this StatefulSet. It corresponds to the StatefulSet&#39;s generation, which is updated on mutation by the API Server.
      * 
-    */
+     */
     public Optional<Integer> observedGeneration() {
         return Optional.ofNullable(this.observedGeneration);
     }
     /**
-     * readyReplicas is the number of Pods created by the StatefulSet controller that have a Ready Condition.
+     * @return readyReplicas is the number of Pods created by the StatefulSet controller that have a Ready Condition.
      * 
-    */
+     */
     public Optional<Integer> readyReplicas() {
         return Optional.ofNullable(this.readyReplicas);
     }
     /**
-     * replicas is the number of Pods created by the StatefulSet controller.
+     * @return replicas is the number of Pods created by the StatefulSet controller.
      * 
-    */
+     */
     public Integer replicas() {
         return this.replicas;
     }
     /**
-     * updateRevision, if not empty, indicates the version of the StatefulSet used to generate Pods in the sequence [replicas-updatedReplicas,replicas)
+     * @return updateRevision, if not empty, indicates the version of the StatefulSet used to generate Pods in the sequence [replicas-updatedReplicas,replicas)
      * 
-    */
+     */
     public Optional<String> updateRevision() {
         return Optional.ofNullable(this.updateRevision);
     }
     /**
-     * updatedReplicas is the number of Pods created by the StatefulSet controller from the StatefulSet version indicated by updateRevision.
+     * @return updatedReplicas is the number of Pods created by the StatefulSet controller from the StatefulSet version indicated by updateRevision.
      * 
-    */
+     */
     public Optional<Integer> updatedReplicas() {
         return Optional.ofNullable(this.updatedReplicas);
     }

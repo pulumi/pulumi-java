@@ -27,6 +27,10 @@ public final class DeploymentStrategyArgs extends com.pulumi.resources.ResourceA
     @Import(name="rollingUpdate")
     private @Nullable Output<RollingUpdateDeploymentArgs> rollingUpdate;
 
+    /**
+     * @return Rolling update config params. Present only if DeploymentStrategyType = RollingUpdate.
+     * 
+     */
     public Optional<Output<RollingUpdateDeploymentArgs>> rollingUpdate() {
         return Optional.ofNullable(this.rollingUpdate);
     }
@@ -38,6 +42,10 @@ public final class DeploymentStrategyArgs extends com.pulumi.resources.ResourceA
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Type of deployment. Can be &#34;Recreate&#34; or &#34;RollingUpdate&#34;. Default is RollingUpdate.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -67,20 +75,44 @@ public final class DeploymentStrategyArgs extends com.pulumi.resources.ResourceA
             $ = new DeploymentStrategyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rollingUpdate Rolling update config params. Present only if DeploymentStrategyType = RollingUpdate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollingUpdate(@Nullable Output<RollingUpdateDeploymentArgs> rollingUpdate) {
             $.rollingUpdate = rollingUpdate;
             return this;
         }
 
+        /**
+         * @param rollingUpdate Rolling update config params. Present only if DeploymentStrategyType = RollingUpdate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollingUpdate(RollingUpdateDeploymentArgs rollingUpdate) {
             return rollingUpdate(Output.of(rollingUpdate));
         }
 
+        /**
+         * @param type Type of deployment. Can be &#34;Recreate&#34; or &#34;RollingUpdate&#34;. Default is RollingUpdate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of deployment. Can be &#34;Recreate&#34; or &#34;RollingUpdate&#34;. Default is RollingUpdate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

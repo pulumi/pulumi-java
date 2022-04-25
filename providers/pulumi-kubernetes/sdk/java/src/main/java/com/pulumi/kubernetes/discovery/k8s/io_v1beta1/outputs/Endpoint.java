@@ -16,47 +16,47 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class Endpoint {
-    /**
-     * addresses of this endpoint. The contents of this field are interpreted according to the corresponding EndpointSlice addressType field. Consumers must handle different types of addresses in the context of their own capabilities. This must contain at least one address but no more than 100.
-     * 
-     */
+        /**
+         * @return addresses of this endpoint. The contents of this field are interpreted according to the corresponding EndpointSlice addressType field. Consumers must handle different types of addresses in the context of their own capabilities. This must contain at least one address but no more than 100.
+         * 
+         */
     private final List<String> addresses;
-    /**
-     * conditions contains information about the current status of the endpoint.
-     * 
-     */
+        /**
+         * @return conditions contains information about the current status of the endpoint.
+         * 
+         */
     private final @Nullable EndpointConditions conditions;
-    /**
-     * hints contains information associated with how an endpoint should be consumed.
-     * 
-     */
+        /**
+         * @return hints contains information associated with how an endpoint should be consumed.
+         * 
+         */
     private final @Nullable EndpointHints hints;
-    /**
-     * hostname of this endpoint. This field may be used by consumers of endpoints to distinguish endpoints from each other (e.g. in DNS names). Multiple endpoints which use the same hostname should be considered fungible (e.g. multiple A values in DNS). Must be lowercase and pass DNS Label (RFC 1123) validation.
-     * 
-     */
+        /**
+         * @return hostname of this endpoint. This field may be used by consumers of endpoints to distinguish endpoints from each other (e.g. in DNS names). Multiple endpoints which use the same hostname should be considered fungible (e.g. multiple A values in DNS). Must be lowercase and pass DNS Label (RFC 1123) validation.
+         * 
+         */
     private final @Nullable String hostname;
-    /**
-     * nodeName represents the name of the Node hosting this endpoint. This can be used to determine endpoints local to a Node. This field can be enabled with the EndpointSliceNodeName feature gate.
-     * 
-     */
+        /**
+         * @return nodeName represents the name of the Node hosting this endpoint. This can be used to determine endpoints local to a Node. This field can be enabled with the EndpointSliceNodeName feature gate.
+         * 
+         */
     private final @Nullable String nodeName;
-    /**
-     * targetRef is a reference to a Kubernetes object that represents this endpoint.
-     * 
-     */
+        /**
+         * @return targetRef is a reference to a Kubernetes object that represents this endpoint.
+         * 
+         */
     private final @Nullable ObjectReference targetRef;
-    /**
-     * topology contains arbitrary topology information associated with the endpoint. These key/value pairs must conform with the label format. https://kubernetes.io/docs/concepts/overview/working-with-objects/labels Topology may include a maximum of 16 key/value pairs. This includes, but is not limited to the following well known keys: * kubernetes.io/hostname: the value indicates the hostname of the node
-     *   where the endpoint is located. This should match the corresponding
-     *   node label.
-     * * topology.kubernetes.io/zone: the value indicates the zone where the
-     *   endpoint is located. This should match the corresponding node label.
-     * * topology.kubernetes.io/region: the value indicates the region where the
-     *   endpoint is located. This should match the corresponding node label.
-     *   This field is deprecated and will be removed in future api versions.
-     * 
-     */
+        /**
+         * @return topology contains arbitrary topology information associated with the endpoint. These key/value pairs must conform with the label format. https://kubernetes.io/docs/concepts/overview/working-with-objects/labels Topology may include a maximum of 16 key/value pairs. This includes, but is not limited to the following well known keys: * kubernetes.io/hostname: the value indicates the hostname of the node
+         *   where the endpoint is located. This should match the corresponding
+         *   node label.
+         * * topology.kubernetes.io/zone: the value indicates the zone where the
+         *   endpoint is located. This should match the corresponding node label.
+         * * topology.kubernetes.io/region: the value indicates the region where the
+         *   endpoint is located. This should match the corresponding node label.
+         *   This field is deprecated and will be removed in future api versions.
+         * 
+         */
     private final @Nullable Map<String,String> topology;
 
     @CustomType.Constructor
@@ -78,49 +78,49 @@ public final class Endpoint {
     }
 
     /**
-     * addresses of this endpoint. The contents of this field are interpreted according to the corresponding EndpointSlice addressType field. Consumers must handle different types of addresses in the context of their own capabilities. This must contain at least one address but no more than 100.
+     * @return addresses of this endpoint. The contents of this field are interpreted according to the corresponding EndpointSlice addressType field. Consumers must handle different types of addresses in the context of their own capabilities. This must contain at least one address but no more than 100.
      * 
-    */
+     */
     public List<String> addresses() {
         return this.addresses;
     }
     /**
-     * conditions contains information about the current status of the endpoint.
+     * @return conditions contains information about the current status of the endpoint.
      * 
-    */
+     */
     public Optional<EndpointConditions> conditions() {
         return Optional.ofNullable(this.conditions);
     }
     /**
-     * hints contains information associated with how an endpoint should be consumed.
+     * @return hints contains information associated with how an endpoint should be consumed.
      * 
-    */
+     */
     public Optional<EndpointHints> hints() {
         return Optional.ofNullable(this.hints);
     }
     /**
-     * hostname of this endpoint. This field may be used by consumers of endpoints to distinguish endpoints from each other (e.g. in DNS names). Multiple endpoints which use the same hostname should be considered fungible (e.g. multiple A values in DNS). Must be lowercase and pass DNS Label (RFC 1123) validation.
+     * @return hostname of this endpoint. This field may be used by consumers of endpoints to distinguish endpoints from each other (e.g. in DNS names). Multiple endpoints which use the same hostname should be considered fungible (e.g. multiple A values in DNS). Must be lowercase and pass DNS Label (RFC 1123) validation.
      * 
-    */
+     */
     public Optional<String> hostname() {
         return Optional.ofNullable(this.hostname);
     }
     /**
-     * nodeName represents the name of the Node hosting this endpoint. This can be used to determine endpoints local to a Node. This field can be enabled with the EndpointSliceNodeName feature gate.
+     * @return nodeName represents the name of the Node hosting this endpoint. This can be used to determine endpoints local to a Node. This field can be enabled with the EndpointSliceNodeName feature gate.
      * 
-    */
+     */
     public Optional<String> nodeName() {
         return Optional.ofNullable(this.nodeName);
     }
     /**
-     * targetRef is a reference to a Kubernetes object that represents this endpoint.
+     * @return targetRef is a reference to a Kubernetes object that represents this endpoint.
      * 
-    */
+     */
     public Optional<ObjectReference> targetRef() {
         return Optional.ofNullable(this.targetRef);
     }
     /**
-     * topology contains arbitrary topology information associated with the endpoint. These key/value pairs must conform with the label format. https://kubernetes.io/docs/concepts/overview/working-with-objects/labels Topology may include a maximum of 16 key/value pairs. This includes, but is not limited to the following well known keys: * kubernetes.io/hostname: the value indicates the hostname of the node
+     * @return topology contains arbitrary topology information associated with the endpoint. These key/value pairs must conform with the label format. https://kubernetes.io/docs/concepts/overview/working-with-objects/labels Topology may include a maximum of 16 key/value pairs. This includes, but is not limited to the following well known keys: * kubernetes.io/hostname: the value indicates the hostname of the node
      *   where the endpoint is located. This should match the corresponding
      *   node label.
      * * topology.kubernetes.io/zone: the value indicates the zone where the
@@ -129,7 +129,7 @@ public final class Endpoint {
      *   endpoint is located. This should match the corresponding node label.
      *   This field is deprecated and will be removed in future api versions.
      * 
-    */
+     */
     public Map<String,String> topology() {
         return this.topology == null ? Map.of() : this.topology;
     }

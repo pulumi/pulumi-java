@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WindowsSecurityContextOptions {
-    /**
-     * GMSACredentialSpec is where the GMSA admission webhook (https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the GMSA credential spec named by the GMSACredentialSpecName field.
-     * 
-     */
+        /**
+         * @return GMSACredentialSpec is where the GMSA admission webhook (https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the GMSA credential spec named by the GMSACredentialSpecName field.
+         * 
+         */
     private final @Nullable String gmsaCredentialSpec;
-    /**
-     * GMSACredentialSpecName is the name of the GMSA credential spec to use.
-     * 
-     */
+        /**
+         * @return GMSACredentialSpecName is the name of the GMSA credential spec to use.
+         * 
+         */
     private final @Nullable String gmsaCredentialSpecName;
-    /**
-     * HostProcess determines if a container should be run as a &#39;Host Process&#39; container. This field is alpha-level and will only be honored by components that enable the WindowsHostProcessContainers feature flag. Setting this field without the feature flag will result in errors when validating the Pod. All of a Pod&#39;s containers must have the same effective HostProcess value (it is not allowed to have a mix of HostProcess containers and non-HostProcess containers).  In addition, if HostProcess is true then HostNetwork must also be set to true.
-     * 
-     */
+        /**
+         * @return HostProcess determines if a container should be run as a &#39;Host Process&#39; container. This field is alpha-level and will only be honored by components that enable the WindowsHostProcessContainers feature flag. Setting this field without the feature flag will result in errors when validating the Pod. All of a Pod&#39;s containers must have the same effective HostProcess value (it is not allowed to have a mix of HostProcess containers and non-HostProcess containers).  In addition, if HostProcess is true then HostNetwork must also be set to true.
+         * 
+         */
     private final @Nullable Boolean hostProcess;
-    /**
-     * The UserName in Windows to run the entrypoint of the container process. Defaults to the user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.
-     * 
-     */
+        /**
+         * @return The UserName in Windows to run the entrypoint of the container process. Defaults to the user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.
+         * 
+         */
     private final @Nullable String runAsUserName;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class WindowsSecurityContextOptions {
     }
 
     /**
-     * GMSACredentialSpec is where the GMSA admission webhook (https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the GMSA credential spec named by the GMSACredentialSpecName field.
+     * @return GMSACredentialSpec is where the GMSA admission webhook (https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the GMSA credential spec named by the GMSACredentialSpecName field.
      * 
-    */
+     */
     public Optional<String> gmsaCredentialSpec() {
         return Optional.ofNullable(this.gmsaCredentialSpec);
     }
     /**
-     * GMSACredentialSpecName is the name of the GMSA credential spec to use.
+     * @return GMSACredentialSpecName is the name of the GMSA credential spec to use.
      * 
-    */
+     */
     public Optional<String> gmsaCredentialSpecName() {
         return Optional.ofNullable(this.gmsaCredentialSpecName);
     }
     /**
-     * HostProcess determines if a container should be run as a &#39;Host Process&#39; container. This field is alpha-level and will only be honored by components that enable the WindowsHostProcessContainers feature flag. Setting this field without the feature flag will result in errors when validating the Pod. All of a Pod&#39;s containers must have the same effective HostProcess value (it is not allowed to have a mix of HostProcess containers and non-HostProcess containers).  In addition, if HostProcess is true then HostNetwork must also be set to true.
+     * @return HostProcess determines if a container should be run as a &#39;Host Process&#39; container. This field is alpha-level and will only be honored by components that enable the WindowsHostProcessContainers feature flag. Setting this field without the feature flag will result in errors when validating the Pod. All of a Pod&#39;s containers must have the same effective HostProcess value (it is not allowed to have a mix of HostProcess containers and non-HostProcess containers).  In addition, if HostProcess is true then HostNetwork must also be set to true.
      * 
-    */
+     */
     public Optional<Boolean> hostProcess() {
         return Optional.ofNullable(this.hostProcess);
     }
     /**
-     * The UserName in Windows to run the entrypoint of the container process. Defaults to the user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.
+     * @return The UserName in Windows to run the entrypoint of the container process. Defaults to the user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.
      * 
-    */
+     */
     public Optional<String> runAsUserName() {
         return Optional.ofNullable(this.runAsUserName);
     }

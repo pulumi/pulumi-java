@@ -12,36 +12,36 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RuleWithOperations {
-    /**
-     * APIGroups is the API groups the resources belong to. &#39;*&#39; is all groups. If &#39;*&#39; is present, the length of the slice must be one. Required.
-     * 
-     */
+        /**
+         * @return APIGroups is the API groups the resources belong to. &#39;*&#39; is all groups. If &#39;*&#39; is present, the length of the slice must be one. Required.
+         * 
+         */
     private final @Nullable List<String> apiGroups;
-    /**
-     * APIVersions is the API versions the resources belong to. &#39;*&#39; is all versions. If &#39;*&#39; is present, the length of the slice must be one. Required.
-     * 
-     */
+        /**
+         * @return APIVersions is the API versions the resources belong to. &#39;*&#39; is all versions. If &#39;*&#39; is present, the length of the slice must be one. Required.
+         * 
+         */
     private final @Nullable List<String> apiVersions;
-    /**
-     * Operations is the operations the admission hook cares about - CREATE, UPDATE, or * for all operations. If &#39;*&#39; is present, the length of the slice must be one. Required.
-     * 
-     */
+        /**
+         * @return Operations is the operations the admission hook cares about - CREATE, UPDATE, or * for all operations. If &#39;*&#39; is present, the length of the slice must be one. Required.
+         * 
+         */
     private final @Nullable List<String> operations;
-    /**
-     * Resources is a list of resources this rule applies to.
-     * 
-     * For example: &#39;pods&#39; means pods. &#39;pods/log&#39; means the log subresource of pods. &#39;*&#39; means all resources, but not subresources. &#39;pods/*&#39; means all subresources of pods. &#39;*{@literal /}scale&#39; means all scale subresources. &#39;*{@literal /}*&#39; means all resources and their subresources.
-     * 
-     * If wildcard is present, the validation rule will ensure resources do not overlap with each other.
-     * 
-     * Depending on the enclosing object, subresources might not be allowed. Required.
-     * 
-     */
+        /**
+         * @return Resources is a list of resources this rule applies to.
+         * 
+         * For example: &#39;pods&#39; means pods. &#39;pods/log&#39; means the log subresource of pods. &#39;*&#39; means all resources, but not subresources. &#39;pods/*&#39; means all subresources of pods. &#39;*{@literal /}scale&#39; means all scale subresources. &#39;*{@literal /}*&#39; means all resources and their subresources.
+         * 
+         * If wildcard is present, the validation rule will ensure resources do not overlap with each other.
+         * 
+         * Depending on the enclosing object, subresources might not be allowed. Required.
+         * 
+         */
     private final @Nullable List<String> resources;
-    /**
-     * scope specifies the scope of this rule. Valid values are &#34;Cluster&#34;, &#34;Namespaced&#34;, and &#34;*&#34; &#34;Cluster&#34; means that only cluster-scoped resources will match this rule. Namespace API objects are cluster-scoped. &#34;Namespaced&#34; means that only namespaced resources will match this rule. &#34;*&#34; means that there are no scope restrictions. Subresources match the scope of their parent resource. Default is &#34;*&#34;.
-     * 
-     */
+        /**
+         * @return scope specifies the scope of this rule. Valid values are &#34;Cluster&#34;, &#34;Namespaced&#34;, and &#34;*&#34; &#34;Cluster&#34; means that only cluster-scoped resources will match this rule. Namespace API objects are cluster-scoped. &#34;Namespaced&#34; means that only namespaced resources will match this rule. &#34;*&#34; means that there are no scope restrictions. Subresources match the scope of their parent resource. Default is &#34;*&#34;.
+         * 
+         */
     private final @Nullable String scope;
 
     @CustomType.Constructor
@@ -59,28 +59,28 @@ public final class RuleWithOperations {
     }
 
     /**
-     * APIGroups is the API groups the resources belong to. &#39;*&#39; is all groups. If &#39;*&#39; is present, the length of the slice must be one. Required.
+     * @return APIGroups is the API groups the resources belong to. &#39;*&#39; is all groups. If &#39;*&#39; is present, the length of the slice must be one. Required.
      * 
-    */
+     */
     public List<String> apiGroups() {
         return this.apiGroups == null ? List.of() : this.apiGroups;
     }
     /**
-     * APIVersions is the API versions the resources belong to. &#39;*&#39; is all versions. If &#39;*&#39; is present, the length of the slice must be one. Required.
+     * @return APIVersions is the API versions the resources belong to. &#39;*&#39; is all versions. If &#39;*&#39; is present, the length of the slice must be one. Required.
      * 
-    */
+     */
     public List<String> apiVersions() {
         return this.apiVersions == null ? List.of() : this.apiVersions;
     }
     /**
-     * Operations is the operations the admission hook cares about - CREATE, UPDATE, or * for all operations. If &#39;*&#39; is present, the length of the slice must be one. Required.
+     * @return Operations is the operations the admission hook cares about - CREATE, UPDATE, or * for all operations. If &#39;*&#39; is present, the length of the slice must be one. Required.
      * 
-    */
+     */
     public List<String> operations() {
         return this.operations == null ? List.of() : this.operations;
     }
     /**
-     * Resources is a list of resources this rule applies to.
+     * @return Resources is a list of resources this rule applies to.
      * 
      * For example: &#39;pods&#39; means pods. &#39;pods/log&#39; means the log subresource of pods. &#39;*&#39; means all resources, but not subresources. &#39;pods/*&#39; means all subresources of pods. &#39;*{@literal /}scale&#39; means all scale subresources. &#39;*{@literal /}*&#39; means all resources and their subresources.
      * 
@@ -88,14 +88,14 @@ public final class RuleWithOperations {
      * 
      * Depending on the enclosing object, subresources might not be allowed. Required.
      * 
-    */
+     */
     public List<String> resources() {
         return this.resources == null ? List.of() : this.resources;
     }
     /**
-     * scope specifies the scope of this rule. Valid values are &#34;Cluster&#34;, &#34;Namespaced&#34;, and &#34;*&#34; &#34;Cluster&#34; means that only cluster-scoped resources will match this rule. Namespace API objects are cluster-scoped. &#34;Namespaced&#34; means that only namespaced resources will match this rule. &#34;*&#34; means that there are no scope restrictions. Subresources match the scope of their parent resource. Default is &#34;*&#34;.
+     * @return scope specifies the scope of this rule. Valid values are &#34;Cluster&#34;, &#34;Namespaced&#34;, and &#34;*&#34; &#34;Cluster&#34; means that only cluster-scoped resources will match this rule. Namespace API objects are cluster-scoped. &#34;Namespaced&#34; means that only namespaced resources will match this rule. &#34;*&#34; means that there are no scope restrictions. Subresources match the scope of their parent resource. Default is &#34;*&#34;.
      * 
-    */
+     */
     public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }

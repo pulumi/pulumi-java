@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SecretKeySelector {
-    /**
-     * The key of the secret to select from.  Must be a valid secret key.
-     * 
-     */
+        /**
+         * @return The key of the secret to select from.  Must be a valid secret key.
+         * 
+         */
     private final String key;
-    /**
-     * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
-     * 
-     */
+        /**
+         * @return Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Specify whether the Secret or its key must be defined
-     * 
-     */
+        /**
+         * @return Specify whether the Secret or its key must be defined
+         * 
+         */
     private final @Nullable Boolean optional;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class SecretKeySelector {
     }
 
     /**
-     * The key of the secret to select from.  Must be a valid secret key.
+     * @return The key of the secret to select from.  Must be a valid secret key.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+     * @return Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Specify whether the Secret or its key must be defined
+     * @return Specify whether the Secret or its key must be defined
      * 
-    */
+     */
     public Optional<Boolean> optional() {
         return Optional.ofNullable(this.optional);
     }

@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RunAsUserStrategyOptions {
-    /**
-     * ranges are the allowed ranges of uids that may be used. If you would like to force a single uid then supply a single range with the same start and end. Required for MustRunAs.
-     * 
-     */
+        /**
+         * @return ranges are the allowed ranges of uids that may be used. If you would like to force a single uid then supply a single range with the same start and end. Required for MustRunAs.
+         * 
+         */
     private final @Nullable List<IDRange> ranges;
-    /**
-     * rule is the strategy that will dictate the allowable RunAsUser values that may be set.
-     * 
-     */
+        /**
+         * @return rule is the strategy that will dictate the allowable RunAsUser values that may be set.
+         * 
+         */
     private final String rule;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class RunAsUserStrategyOptions {
     }
 
     /**
-     * ranges are the allowed ranges of uids that may be used. If you would like to force a single uid then supply a single range with the same start and end. Required for MustRunAs.
+     * @return ranges are the allowed ranges of uids that may be used. If you would like to force a single uid then supply a single range with the same start and end. Required for MustRunAs.
      * 
-    */
+     */
     public List<IDRange> ranges() {
         return this.ranges == null ? List.of() : this.ranges;
     }
     /**
-     * rule is the strategy that will dictate the allowable RunAsUser values that may be set.
+     * @return rule is the strategy that will dictate the allowable RunAsUser values that may be set.
      * 
-    */
+     */
     public String rule() {
         return this.rule;
     }

@@ -11,18 +11,18 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class HorizontalPodAutoscalerBehavior {
-    /**
-     * scaleDown is scaling policy for scaling Down. If not set, the default value is to allow to scale down to minReplicas pods, with a 300 second stabilization window (i.e., the highest recommendation for the last 300sec is used).
-     * 
-     */
+        /**
+         * @return scaleDown is scaling policy for scaling Down. If not set, the default value is to allow to scale down to minReplicas pods, with a 300 second stabilization window (i.e., the highest recommendation for the last 300sec is used).
+         * 
+         */
     private final @Nullable HPAScalingRules scaleDown;
-    /**
-     * scaleUp is scaling policy for scaling Up. If not set, the default value is the higher of:
-     *   * increase no more than 4 pods per 60 seconds
-     *   * double the number of pods per 60 seconds
-     *     No stabilization is used.
-     * 
-     */
+        /**
+         * @return scaleUp is scaling policy for scaling Up. If not set, the default value is the higher of:
+         *   * increase no more than 4 pods per 60 seconds
+         *   * double the number of pods per 60 seconds
+         *     No stabilization is used.
+         * 
+         */
     private final @Nullable HPAScalingRules scaleUp;
 
     @CustomType.Constructor
@@ -34,19 +34,19 @@ public final class HorizontalPodAutoscalerBehavior {
     }
 
     /**
-     * scaleDown is scaling policy for scaling Down. If not set, the default value is to allow to scale down to minReplicas pods, with a 300 second stabilization window (i.e., the highest recommendation for the last 300sec is used).
+     * @return scaleDown is scaling policy for scaling Down. If not set, the default value is to allow to scale down to minReplicas pods, with a 300 second stabilization window (i.e., the highest recommendation for the last 300sec is used).
      * 
-    */
+     */
     public Optional<HPAScalingRules> scaleDown() {
         return Optional.ofNullable(this.scaleDown);
     }
     /**
-     * scaleUp is scaling policy for scaling Up. If not set, the default value is the higher of:
+     * @return scaleUp is scaling policy for scaling Up. If not set, the default value is the higher of:
      *   * increase no more than 4 pods per 60 seconds
      *   * double the number of pods per 60 seconds
      *     No stabilization is used.
      * 
-    */
+     */
     public Optional<HPAScalingRules> scaleUp() {
         return Optional.ofNullable(this.scaleUp);
     }

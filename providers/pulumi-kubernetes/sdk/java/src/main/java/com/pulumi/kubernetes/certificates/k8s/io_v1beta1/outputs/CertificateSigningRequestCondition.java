@@ -11,35 +11,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CertificateSigningRequestCondition {
-    /**
-     * lastTransitionTime is the time the condition last transitioned from one status to another. If unset, when a new condition type is added or an existing condition&#39;s status is changed, the server defaults this to the current time.
-     * 
-     */
+        /**
+         * @return lastTransitionTime is the time the condition last transitioned from one status to another. If unset, when a new condition type is added or an existing condition&#39;s status is changed, the server defaults this to the current time.
+         * 
+         */
     private final @Nullable String lastTransitionTime;
-    /**
-     * timestamp for the last update to this condition
-     * 
-     */
+        /**
+         * @return timestamp for the last update to this condition
+         * 
+         */
     private final @Nullable String lastUpdateTime;
-    /**
-     * human readable message with details about the request state
-     * 
-     */
+        /**
+         * @return human readable message with details about the request state
+         * 
+         */
     private final @Nullable String message;
-    /**
-     * brief reason for the request state
-     * 
-     */
+        /**
+         * @return brief reason for the request state
+         * 
+         */
     private final @Nullable String reason;
-    /**
-     * Status of the condition, one of True, False, Unknown. Approved, Denied, and Failed conditions may not be &#34;False&#34; or &#34;Unknown&#34;. Defaults to &#34;True&#34;. If unset, should be treated as &#34;True&#34;.
-     * 
-     */
+        /**
+         * @return Status of the condition, one of True, False, Unknown. Approved, Denied, and Failed conditions may not be &#34;False&#34; or &#34;Unknown&#34;. Defaults to &#34;True&#34;. If unset, should be treated as &#34;True&#34;.
+         * 
+         */
     private final @Nullable String status;
-    /**
-     * request approval state, currently Approved or Denied.
-     * 
-     */
+        /**
+         * @return request approval state, currently Approved or Denied.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -59,44 +59,44 @@ public final class CertificateSigningRequestCondition {
     }
 
     /**
-     * lastTransitionTime is the time the condition last transitioned from one status to another. If unset, when a new condition type is added or an existing condition&#39;s status is changed, the server defaults this to the current time.
+     * @return lastTransitionTime is the time the condition last transitioned from one status to another. If unset, when a new condition type is added or an existing condition&#39;s status is changed, the server defaults this to the current time.
      * 
-    */
+     */
     public Optional<String> lastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
-     * timestamp for the last update to this condition
+     * @return timestamp for the last update to this condition
      * 
-    */
+     */
     public Optional<String> lastUpdateTime() {
         return Optional.ofNullable(this.lastUpdateTime);
     }
     /**
-     * human readable message with details about the request state
+     * @return human readable message with details about the request state
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * brief reason for the request state
+     * @return brief reason for the request state
      * 
-    */
+     */
     public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }
     /**
-     * Status of the condition, one of True, False, Unknown. Approved, Denied, and Failed conditions may not be &#34;False&#34; or &#34;Unknown&#34;. Defaults to &#34;True&#34;. If unset, should be treated as &#34;True&#34;.
+     * @return Status of the condition, one of True, False, Unknown. Approved, Denied, and Failed conditions may not be &#34;False&#34; or &#34;Unknown&#34;. Defaults to &#34;True&#34;. If unset, should be treated as &#34;True&#34;.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * request approval state, currently Approved or Denied.
+     * @return request approval state, currently Approved or Denied.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

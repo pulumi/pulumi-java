@@ -28,6 +28,10 @@ public final class RollingUpdateDeploymentArgs extends com.pulumi.resources.Reso
     @Import(name="maxSurge")
     private @Nullable Output<Either<Integer,String>> maxSurge;
 
+    /**
+     * @return The maximum number of pods that can be scheduled above the desired number of pods. Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%). This can not be 0 if MaxUnavailable is 0. Absolute number is calculated from percentage by rounding up. Defaults to 25%. Example: when this is set to 30%, the new ReplicaSet can be scaled up immediately when the rolling update starts, such that the total number of old and new pods do not exceed 130% of desired pods. Once old pods have been killed, new ReplicaSet can be scaled up further, ensuring that total number of pods running at any time during the update is at most 130% of desired pods.
+     * 
+     */
     public Optional<Output<Either<Integer,String>>> maxSurge() {
         return Optional.ofNullable(this.maxSurge);
     }
@@ -39,6 +43,10 @@ public final class RollingUpdateDeploymentArgs extends com.pulumi.resources.Reso
     @Import(name="maxUnavailable")
     private @Nullable Output<Either<Integer,String>> maxUnavailable;
 
+    /**
+     * @return The maximum number of pods that can be unavailable during the update. Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%). Absolute number is calculated from percentage by rounding down. This can not be 0 if MaxSurge is 0. Defaults to 25%. Example: when this is set to 30%, the old ReplicaSet can be scaled down to 70% of desired pods immediately when the rolling update starts. Once new pods are ready, old ReplicaSet can be scaled down further, followed by scaling up the new ReplicaSet, ensuring that the total number of pods available at all times during the update is at least 70% of desired pods.
+     * 
+     */
     public Optional<Output<Either<Integer,String>>> maxUnavailable() {
         return Optional.ofNullable(this.maxUnavailable);
     }
@@ -68,36 +76,84 @@ public final class RollingUpdateDeploymentArgs extends com.pulumi.resources.Reso
             $ = new RollingUpdateDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxSurge The maximum number of pods that can be scheduled above the desired number of pods. Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%). This can not be 0 if MaxUnavailable is 0. Absolute number is calculated from percentage by rounding up. Defaults to 25%. Example: when this is set to 30%, the new ReplicaSet can be scaled up immediately when the rolling update starts, such that the total number of old and new pods do not exceed 130% of desired pods. Once old pods have been killed, new ReplicaSet can be scaled up further, ensuring that total number of pods running at any time during the update is at most 130% of desired pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSurge(@Nullable Output<Either<Integer,String>> maxSurge) {
             $.maxSurge = maxSurge;
             return this;
         }
 
+        /**
+         * @param maxSurge The maximum number of pods that can be scheduled above the desired number of pods. Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%). This can not be 0 if MaxUnavailable is 0. Absolute number is calculated from percentage by rounding up. Defaults to 25%. Example: when this is set to 30%, the new ReplicaSet can be scaled up immediately when the rolling update starts, such that the total number of old and new pods do not exceed 130% of desired pods. Once old pods have been killed, new ReplicaSet can be scaled up further, ensuring that total number of pods running at any time during the update is at most 130% of desired pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSurge(Either<Integer,String> maxSurge) {
             return maxSurge(Output.of(maxSurge));
         }
 
+        /**
+         * @param maxSurge The maximum number of pods that can be scheduled above the desired number of pods. Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%). This can not be 0 if MaxUnavailable is 0. Absolute number is calculated from percentage by rounding up. Defaults to 25%. Example: when this is set to 30%, the new ReplicaSet can be scaled up immediately when the rolling update starts, such that the total number of old and new pods do not exceed 130% of desired pods. Once old pods have been killed, new ReplicaSet can be scaled up further, ensuring that total number of pods running at any time during the update is at most 130% of desired pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSurge(Integer maxSurge) {
             return maxSurge(Either.ofLeft(maxSurge));
         }
 
+        /**
+         * @param maxSurge The maximum number of pods that can be scheduled above the desired number of pods. Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%). This can not be 0 if MaxUnavailable is 0. Absolute number is calculated from percentage by rounding up. Defaults to 25%. Example: when this is set to 30%, the new ReplicaSet can be scaled up immediately when the rolling update starts, such that the total number of old and new pods do not exceed 130% of desired pods. Once old pods have been killed, new ReplicaSet can be scaled up further, ensuring that total number of pods running at any time during the update is at most 130% of desired pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSurge(String maxSurge) {
             return maxSurge(Either.ofRight(maxSurge));
         }
 
+        /**
+         * @param maxUnavailable The maximum number of pods that can be unavailable during the update. Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%). Absolute number is calculated from percentage by rounding down. This can not be 0 if MaxSurge is 0. Defaults to 25%. Example: when this is set to 30%, the old ReplicaSet can be scaled down to 70% of desired pods immediately when the rolling update starts. Once new pods are ready, old ReplicaSet can be scaled down further, followed by scaling up the new ReplicaSet, ensuring that the total number of pods available at all times during the update is at least 70% of desired pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxUnavailable(@Nullable Output<Either<Integer,String>> maxUnavailable) {
             $.maxUnavailable = maxUnavailable;
             return this;
         }
 
+        /**
+         * @param maxUnavailable The maximum number of pods that can be unavailable during the update. Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%). Absolute number is calculated from percentage by rounding down. This can not be 0 if MaxSurge is 0. Defaults to 25%. Example: when this is set to 30%, the old ReplicaSet can be scaled down to 70% of desired pods immediately when the rolling update starts. Once new pods are ready, old ReplicaSet can be scaled down further, followed by scaling up the new ReplicaSet, ensuring that the total number of pods available at all times during the update is at least 70% of desired pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxUnavailable(Either<Integer,String> maxUnavailable) {
             return maxUnavailable(Output.of(maxUnavailable));
         }
 
+        /**
+         * @param maxUnavailable The maximum number of pods that can be unavailable during the update. Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%). Absolute number is calculated from percentage by rounding down. This can not be 0 if MaxSurge is 0. Defaults to 25%. Example: when this is set to 30%, the old ReplicaSet can be scaled down to 70% of desired pods immediately when the rolling update starts. Once new pods are ready, old ReplicaSet can be scaled down further, followed by scaling up the new ReplicaSet, ensuring that the total number of pods available at all times during the update is at least 70% of desired pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxUnavailable(Integer maxUnavailable) {
             return maxUnavailable(Either.ofLeft(maxUnavailable));
         }
 
+        /**
+         * @param maxUnavailable The maximum number of pods that can be unavailable during the update. Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%). Absolute number is calculated from percentage by rounding down. This can not be 0 if MaxSurge is 0. Defaults to 25%. Example: when this is set to 30%, the old ReplicaSet can be scaled down to 70% of desired pods immediately when the rolling update starts. Once new pods are ready, old ReplicaSet can be scaled down further, followed by scaling up the new ReplicaSet, ensuring that the total number of pods available at all times during the update is at least 70% of desired pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxUnavailable(String maxUnavailable) {
             return maxUnavailable(Either.ofRight(maxUnavailable));
         }

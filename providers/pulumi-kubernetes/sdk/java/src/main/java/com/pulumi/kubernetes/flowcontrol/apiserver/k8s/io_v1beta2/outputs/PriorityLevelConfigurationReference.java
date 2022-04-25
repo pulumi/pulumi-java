@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class PriorityLevelConfigurationReference {
-    /**
-     * `name` is the name of the priority level configuration being referenced Required.
-     * 
-     */
+        /**
+         * @return `name` is the name of the priority level configuration being referenced Required.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class PriorityLevelConfigurationReference {
     }
 
     /**
-     * `name` is the name of the priority level configuration being referenced Required.
+     * @return `name` is the name of the priority level configuration being referenced Required.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

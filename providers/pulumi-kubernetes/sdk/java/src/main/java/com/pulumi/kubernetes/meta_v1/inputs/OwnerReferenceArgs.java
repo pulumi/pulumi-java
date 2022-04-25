@@ -27,6 +27,10 @@ public final class OwnerReferenceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="apiVersion", required=true)
     private Output<String> apiVersion;
 
+    /**
+     * @return API version of the referent.
+     * 
+     */
     public Output<String> apiVersion() {
         return this.apiVersion;
     }
@@ -38,6 +42,10 @@ public final class OwnerReferenceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="blockOwnerDeletion")
     private @Nullable Output<Boolean> blockOwnerDeletion;
 
+    /**
+     * @return If true, AND if the owner has the &#34;foregroundDeletion&#34; finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs &#34;delete&#34; permission of the owner, otherwise 422 (Unprocessable Entity) will be returned.
+     * 
+     */
     public Optional<Output<Boolean>> blockOwnerDeletion() {
         return Optional.ofNullable(this.blockOwnerDeletion);
     }
@@ -49,6 +57,10 @@ public final class OwnerReferenceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="controller")
     private @Nullable Output<Boolean> controller;
 
+    /**
+     * @return If true, this reference points to the managing controller.
+     * 
+     */
     public Optional<Output<Boolean>> controller() {
         return Optional.ofNullable(this.controller);
     }
@@ -60,6 +72,10 @@ public final class OwnerReferenceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -71,6 +87,10 @@ public final class OwnerReferenceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -82,6 +102,10 @@ public final class OwnerReferenceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="uid", required=true)
     private Output<String> uid;
 
+    /**
+     * @return UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+     * 
+     */
     public Output<String> uid() {
         return this.uid;
     }
@@ -115,56 +139,128 @@ public final class OwnerReferenceArgs extends com.pulumi.resources.ResourceArgs 
             $ = new OwnerReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiVersion API version of the referent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(Output<String> apiVersion) {
             $.apiVersion = apiVersion;
             return this;
         }
 
+        /**
+         * @param apiVersion API version of the referent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(String apiVersion) {
             return apiVersion(Output.of(apiVersion));
         }
 
+        /**
+         * @param blockOwnerDeletion If true, AND if the owner has the &#34;foregroundDeletion&#34; finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs &#34;delete&#34; permission of the owner, otherwise 422 (Unprocessable Entity) will be returned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockOwnerDeletion(@Nullable Output<Boolean> blockOwnerDeletion) {
             $.blockOwnerDeletion = blockOwnerDeletion;
             return this;
         }
 
+        /**
+         * @param blockOwnerDeletion If true, AND if the owner has the &#34;foregroundDeletion&#34; finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs &#34;delete&#34; permission of the owner, otherwise 422 (Unprocessable Entity) will be returned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockOwnerDeletion(Boolean blockOwnerDeletion) {
             return blockOwnerDeletion(Output.of(blockOwnerDeletion));
         }
 
+        /**
+         * @param controller If true, this reference points to the managing controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controller(@Nullable Output<Boolean> controller) {
             $.controller = controller;
             return this;
         }
 
+        /**
+         * @param controller If true, this reference points to the managing controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controller(Boolean controller) {
             return controller(Output.of(controller));
         }
 
+        /**
+         * @param kind Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param name Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param uid UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(Output<String> uid) {
             $.uid = uid;
             return this;
         }
 
+        /**
+         * @param uid UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(String uid) {
             return uid(Output.of(uid));
         }

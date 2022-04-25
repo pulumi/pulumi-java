@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class TopologySelectorLabelRequirement {
-    /**
-     * The label key that the selector applies to.
-     * 
-     */
+        /**
+         * @return The label key that the selector applies to.
+         * 
+         */
     private final String key;
-    /**
-     * An array of string values. One value must match the label to be selected. Each entry in Values is ORed.
-     * 
-     */
+        /**
+         * @return An array of string values. One value must match the label to be selected. Each entry in Values is ORed.
+         * 
+         */
     private final List<String> values;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class TopologySelectorLabelRequirement {
     }
 
     /**
-     * The label key that the selector applies to.
+     * @return The label key that the selector applies to.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * An array of string values. One value must match the label to be selected. Each entry in Values is ORed.
+     * @return An array of string values. One value must match the label to be selected. Each entry in Values is ORed.
      * 
-    */
+     */
     public List<String> values() {
         return this.values;
     }

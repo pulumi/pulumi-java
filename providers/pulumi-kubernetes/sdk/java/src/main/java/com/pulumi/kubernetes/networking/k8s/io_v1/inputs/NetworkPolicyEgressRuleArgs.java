@@ -28,6 +28,10 @@ public final class NetworkPolicyEgressRuleArgs extends com.pulumi.resources.Reso
     @Import(name="ports")
     private @Nullable Output<List<NetworkPolicyPortArgs>> ports;
 
+    /**
+     * @return List of destination ports for outgoing traffic. Each item in this list is combined using a logical OR. If this field is empty or missing, this rule matches all ports (traffic not restricted by port). If this field is present and contains at least one item, then this rule allows traffic only if the traffic matches at least one port in the list.
+     * 
+     */
     public Optional<Output<List<NetworkPolicyPortArgs>>> ports() {
         return Optional.ofNullable(this.ports);
     }
@@ -39,6 +43,10 @@ public final class NetworkPolicyEgressRuleArgs extends com.pulumi.resources.Reso
     @Import(name="to")
     private @Nullable Output<List<NetworkPolicyPeerArgs>> to;
 
+    /**
+     * @return List of destinations for outgoing traffic of pods selected for this rule. Items in this list are combined using a logical OR operation. If this field is empty or missing, this rule matches all destinations (traffic not restricted by destination). If this field is present and contains at least one item, this rule allows traffic only if the traffic matches at least one item in the to list.
+     * 
+     */
     public Optional<Output<List<NetworkPolicyPeerArgs>>> to() {
         return Optional.ofNullable(this.to);
     }
@@ -68,28 +76,64 @@ public final class NetworkPolicyEgressRuleArgs extends com.pulumi.resources.Reso
             $ = new NetworkPolicyEgressRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ports List of destination ports for outgoing traffic. Each item in this list is combined using a logical OR. If this field is empty or missing, this rule matches all ports (traffic not restricted by port). If this field is present and contains at least one item, then this rule allows traffic only if the traffic matches at least one port in the list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(@Nullable Output<List<NetworkPolicyPortArgs>> ports) {
             $.ports = ports;
             return this;
         }
 
+        /**
+         * @param ports List of destination ports for outgoing traffic. Each item in this list is combined using a logical OR. If this field is empty or missing, this rule matches all ports (traffic not restricted by port). If this field is present and contains at least one item, then this rule allows traffic only if the traffic matches at least one port in the list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(List<NetworkPolicyPortArgs> ports) {
             return ports(Output.of(ports));
         }
 
+        /**
+         * @param ports List of destination ports for outgoing traffic. Each item in this list is combined using a logical OR. If this field is empty or missing, this rule matches all ports (traffic not restricted by port). If this field is present and contains at least one item, then this rule allows traffic only if the traffic matches at least one port in the list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(NetworkPolicyPortArgs... ports) {
             return ports(List.of(ports));
         }
 
+        /**
+         * @param to List of destinations for outgoing traffic of pods selected for this rule. Items in this list are combined using a logical OR operation. If this field is empty or missing, this rule matches all destinations (traffic not restricted by destination). If this field is present and contains at least one item, this rule allows traffic only if the traffic matches at least one item in the to list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder to(@Nullable Output<List<NetworkPolicyPeerArgs>> to) {
             $.to = to;
             return this;
         }
 
+        /**
+         * @param to List of destinations for outgoing traffic of pods selected for this rule. Items in this list are combined using a logical OR operation. If this field is empty or missing, this rule matches all destinations (traffic not restricted by destination). If this field is present and contains at least one item, this rule allows traffic only if the traffic matches at least one item in the to list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder to(List<NetworkPolicyPeerArgs> to) {
             return to(Output.of(to));
         }
 
+        /**
+         * @param to List of destinations for outgoing traffic of pods selected for this rule. Items in this list are combined using a logical OR operation. If this field is empty or missing, this rule matches all destinations (traffic not restricted by destination). If this field is present and contains at least one item, this rule allows traffic only if the traffic matches at least one item in the to list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder to(NetworkPolicyPeerArgs... to) {
             return to(List.of(to));
         }

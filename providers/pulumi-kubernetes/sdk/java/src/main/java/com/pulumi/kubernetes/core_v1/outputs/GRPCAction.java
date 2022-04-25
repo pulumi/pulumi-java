@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GRPCAction {
-    /**
-     * Port number of the gRPC service. Number must be in the range 1 to 65535.
-     * 
-     */
+        /**
+         * @return Port number of the gRPC service. Number must be in the range 1 to 65535.
+         * 
+         */
     private final Integer port;
-    /**
-     * Service is the name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).
-     * 
-     * If this is not specified, the default behavior is defined by gRPC.
-     * 
-     */
+        /**
+         * @return Service is the name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).
+         * 
+         * If this is not specified, the default behavior is defined by gRPC.
+         * 
+         */
     private final @Nullable String service;
 
     @CustomType.Constructor
@@ -34,18 +34,18 @@ public final class GRPCAction {
     }
 
     /**
-     * Port number of the gRPC service. Number must be in the range 1 to 65535.
+     * @return Port number of the gRPC service. Number must be in the range 1 to 65535.
      * 
-    */
+     */
     public Integer port() {
         return this.port;
     }
     /**
-     * Service is the name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).
+     * @return Service is the name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).
      * 
      * If this is not specified, the default behavior is defined by gRPC.
      * 
-    */
+     */
     public Optional<String> service() {
         return Optional.ofNullable(this.service);
     }

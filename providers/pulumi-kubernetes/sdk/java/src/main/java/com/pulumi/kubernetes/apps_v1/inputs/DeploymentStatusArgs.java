@@ -28,6 +28,10 @@ public final class DeploymentStatusArgs extends com.pulumi.resources.ResourceArg
     @Import(name="availableReplicas")
     private @Nullable Output<Integer> availableReplicas;
 
+    /**
+     * @return Total number of available pods (ready for at least minReadySeconds) targeted by this deployment.
+     * 
+     */
     public Optional<Output<Integer>> availableReplicas() {
         return Optional.ofNullable(this.availableReplicas);
     }
@@ -39,6 +43,10 @@ public final class DeploymentStatusArgs extends com.pulumi.resources.ResourceArg
     @Import(name="collisionCount")
     private @Nullable Output<Integer> collisionCount;
 
+    /**
+     * @return Count of hash collisions for the Deployment. The Deployment controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ReplicaSet.
+     * 
+     */
     public Optional<Output<Integer>> collisionCount() {
         return Optional.ofNullable(this.collisionCount);
     }
@@ -50,6 +58,10 @@ public final class DeploymentStatusArgs extends com.pulumi.resources.ResourceArg
     @Import(name="conditions")
     private @Nullable Output<List<DeploymentConditionArgs>> conditions;
 
+    /**
+     * @return Represents the latest available observations of a deployment&#39;s current state.
+     * 
+     */
     public Optional<Output<List<DeploymentConditionArgs>>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
@@ -61,6 +73,10 @@ public final class DeploymentStatusArgs extends com.pulumi.resources.ResourceArg
     @Import(name="observedGeneration")
     private @Nullable Output<Integer> observedGeneration;
 
+    /**
+     * @return The generation observed by the deployment controller.
+     * 
+     */
     public Optional<Output<Integer>> observedGeneration() {
         return Optional.ofNullable(this.observedGeneration);
     }
@@ -72,6 +88,10 @@ public final class DeploymentStatusArgs extends com.pulumi.resources.ResourceArg
     @Import(name="readyReplicas")
     private @Nullable Output<Integer> readyReplicas;
 
+    /**
+     * @return readyReplicas is the number of pods targeted by this Deployment with a Ready Condition.
+     * 
+     */
     public Optional<Output<Integer>> readyReplicas() {
         return Optional.ofNullable(this.readyReplicas);
     }
@@ -83,6 +103,10 @@ public final class DeploymentStatusArgs extends com.pulumi.resources.ResourceArg
     @Import(name="replicas")
     private @Nullable Output<Integer> replicas;
 
+    /**
+     * @return Total number of non-terminated pods targeted by this deployment (their labels match the selector).
+     * 
+     */
     public Optional<Output<Integer>> replicas() {
         return Optional.ofNullable(this.replicas);
     }
@@ -94,6 +118,10 @@ public final class DeploymentStatusArgs extends com.pulumi.resources.ResourceArg
     @Import(name="unavailableReplicas")
     private @Nullable Output<Integer> unavailableReplicas;
 
+    /**
+     * @return Total number of unavailable pods targeted by this deployment. This is the total number of pods that are still required for the deployment to have 100% available capacity. They may either be pods that are running but not yet available or pods that still have not been created.
+     * 
+     */
     public Optional<Output<Integer>> unavailableReplicas() {
         return Optional.ofNullable(this.unavailableReplicas);
     }
@@ -105,6 +133,10 @@ public final class DeploymentStatusArgs extends com.pulumi.resources.ResourceArg
     @Import(name="updatedReplicas")
     private @Nullable Output<Integer> updatedReplicas;
 
+    /**
+     * @return Total number of non-terminated pods targeted by this deployment that have the desired template spec.
+     * 
+     */
     public Optional<Output<Integer>> updatedReplicas() {
         return Optional.ofNullable(this.updatedReplicas);
     }
@@ -140,78 +172,180 @@ public final class DeploymentStatusArgs extends com.pulumi.resources.ResourceArg
             $ = new DeploymentStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availableReplicas Total number of available pods (ready for at least minReadySeconds) targeted by this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableReplicas(@Nullable Output<Integer> availableReplicas) {
             $.availableReplicas = availableReplicas;
             return this;
         }
 
+        /**
+         * @param availableReplicas Total number of available pods (ready for at least minReadySeconds) targeted by this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableReplicas(Integer availableReplicas) {
             return availableReplicas(Output.of(availableReplicas));
         }
 
+        /**
+         * @param collisionCount Count of hash collisions for the Deployment. The Deployment controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ReplicaSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collisionCount(@Nullable Output<Integer> collisionCount) {
             $.collisionCount = collisionCount;
             return this;
         }
 
+        /**
+         * @param collisionCount Count of hash collisions for the Deployment. The Deployment controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ReplicaSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collisionCount(Integer collisionCount) {
             return collisionCount(Output.of(collisionCount));
         }
 
+        /**
+         * @param conditions Represents the latest available observations of a deployment&#39;s current state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(@Nullable Output<List<DeploymentConditionArgs>> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions Represents the latest available observations of a deployment&#39;s current state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<DeploymentConditionArgs> conditions) {
             return conditions(Output.of(conditions));
         }
 
+        /**
+         * @param conditions Represents the latest available observations of a deployment&#39;s current state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(DeploymentConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
 
+        /**
+         * @param observedGeneration The generation observed by the deployment controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
             $.observedGeneration = observedGeneration;
             return this;
         }
 
+        /**
+         * @param observedGeneration The generation observed by the deployment controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder observedGeneration(Integer observedGeneration) {
             return observedGeneration(Output.of(observedGeneration));
         }
 
+        /**
+         * @param readyReplicas readyReplicas is the number of pods targeted by this Deployment with a Ready Condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readyReplicas(@Nullable Output<Integer> readyReplicas) {
             $.readyReplicas = readyReplicas;
             return this;
         }
 
+        /**
+         * @param readyReplicas readyReplicas is the number of pods targeted by this Deployment with a Ready Condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readyReplicas(Integer readyReplicas) {
             return readyReplicas(Output.of(readyReplicas));
         }
 
+        /**
+         * @param replicas Total number of non-terminated pods targeted by this deployment (their labels match the selector).
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicas(@Nullable Output<Integer> replicas) {
             $.replicas = replicas;
             return this;
         }
 
+        /**
+         * @param replicas Total number of non-terminated pods targeted by this deployment (their labels match the selector).
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicas(Integer replicas) {
             return replicas(Output.of(replicas));
         }
 
+        /**
+         * @param unavailableReplicas Total number of unavailable pods targeted by this deployment. This is the total number of pods that are still required for the deployment to have 100% available capacity. They may either be pods that are running but not yet available or pods that still have not been created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unavailableReplicas(@Nullable Output<Integer> unavailableReplicas) {
             $.unavailableReplicas = unavailableReplicas;
             return this;
         }
 
+        /**
+         * @param unavailableReplicas Total number of unavailable pods targeted by this deployment. This is the total number of pods that are still required for the deployment to have 100% available capacity. They may either be pods that are running but not yet available or pods that still have not been created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unavailableReplicas(Integer unavailableReplicas) {
             return unavailableReplicas(Output.of(unavailableReplicas));
         }
 
+        /**
+         * @param updatedReplicas Total number of non-terminated pods targeted by this deployment that have the desired template spec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updatedReplicas(@Nullable Output<Integer> updatedReplicas) {
             $.updatedReplicas = updatedReplicas;
             return this;
         }
 
+        /**
+         * @param updatedReplicas Total number of non-terminated pods targeted by this deployment that have the desired template spec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updatedReplicas(Integer updatedReplicas) {
             return updatedReplicas(Output.of(updatedReplicas));
         }

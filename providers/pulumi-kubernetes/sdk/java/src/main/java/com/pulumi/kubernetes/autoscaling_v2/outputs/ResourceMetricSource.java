@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ResourceMetricSource {
-    /**
-     * name is the name of the resource in question.
-     * 
-     */
+        /**
+         * @return name is the name of the resource in question.
+         * 
+         */
     private final String name;
-    /**
-     * target specifies the target value for the given metric
-     * 
-     */
+        /**
+         * @return target specifies the target value for the given metric
+         * 
+         */
     private final MetricTarget target;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class ResourceMetricSource {
     }
 
     /**
-     * name is the name of the resource in question.
+     * @return name is the name of the resource in question.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * target specifies the target value for the given metric
+     * @return target specifies the target value for the given metric
      * 
-    */
+     */
     public MetricTarget target() {
         return this.target;
     }

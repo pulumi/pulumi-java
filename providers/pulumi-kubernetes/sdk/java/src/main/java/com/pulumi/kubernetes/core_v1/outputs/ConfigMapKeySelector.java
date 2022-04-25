@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ConfigMapKeySelector {
-    /**
-     * The key to select.
-     * 
-     */
+        /**
+         * @return The key to select.
+         * 
+         */
     private final String key;
-    /**
-     * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
-     * 
-     */
+        /**
+         * @return Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Specify whether the ConfigMap or its key must be defined
-     * 
-     */
+        /**
+         * @return Specify whether the ConfigMap or its key must be defined
+         * 
+         */
     private final @Nullable Boolean optional;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class ConfigMapKeySelector {
     }
 
     /**
-     * The key to select.
+     * @return The key to select.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+     * @return Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Specify whether the ConfigMap or its key must be defined
+     * @return Specify whether the ConfigMap or its key must be defined
      * 
-    */
+     */
     public Optional<Boolean> optional() {
         return Optional.ofNullable(this.optional);
     }

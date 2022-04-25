@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MetricIdentifier {
-    /**
-     * name is the name of the given metric
-     * 
-     */
+        /**
+         * @return name is the name of the given metric
+         * 
+         */
     private final String name;
-    /**
-     * selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.
-     * 
-     */
+        /**
+         * @return selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.
+         * 
+         */
     private final @Nullable LabelSelector selector;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class MetricIdentifier {
     }
 
     /**
-     * name is the name of the given metric
+     * @return name is the name of the given metric
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.
+     * @return selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.
      * 
-    */
+     */
     public Optional<LabelSelector> selector() {
         return Optional.ofNullable(this.selector);
     }

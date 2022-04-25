@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EndpointSubset {
-    /**
-     * IP addresses which offer the related ports that are marked as ready. These endpoints should be considered safe for load balancers and clients to utilize.
-     * 
-     */
+        /**
+         * @return IP addresses which offer the related ports that are marked as ready. These endpoints should be considered safe for load balancers and clients to utilize.
+         * 
+         */
     private final @Nullable List<EndpointAddress> addresses;
-    /**
-     * IP addresses which offer the related ports but are not currently marked as ready because they have not yet finished starting, have recently failed a readiness check, or have recently failed a liveness check.
-     * 
-     */
+        /**
+         * @return IP addresses which offer the related ports but are not currently marked as ready because they have not yet finished starting, have recently failed a readiness check, or have recently failed a liveness check.
+         * 
+         */
     private final @Nullable List<EndpointAddress> notReadyAddresses;
-    /**
-     * Port numbers available on the related IP addresses.
-     * 
-     */
+        /**
+         * @return Port numbers available on the related IP addresses.
+         * 
+         */
     private final @Nullable List<EndpointPort> ports;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class EndpointSubset {
     }
 
     /**
-     * IP addresses which offer the related ports that are marked as ready. These endpoints should be considered safe for load balancers and clients to utilize.
+     * @return IP addresses which offer the related ports that are marked as ready. These endpoints should be considered safe for load balancers and clients to utilize.
      * 
-    */
+     */
     public List<EndpointAddress> addresses() {
         return this.addresses == null ? List.of() : this.addresses;
     }
     /**
-     * IP addresses which offer the related ports but are not currently marked as ready because they have not yet finished starting, have recently failed a readiness check, or have recently failed a liveness check.
+     * @return IP addresses which offer the related ports but are not currently marked as ready because they have not yet finished starting, have recently failed a readiness check, or have recently failed a liveness check.
      * 
-    */
+     */
     public List<EndpointAddress> notReadyAddresses() {
         return this.notReadyAddresses == null ? List.of() : this.notReadyAddresses;
     }
     /**
-     * Port numbers available on the related IP addresses.
+     * @return Port numbers available on the related IP addresses.
      * 
-    */
+     */
     public List<EndpointPort> ports() {
         return this.ports == null ? List.of() : this.ports;
     }

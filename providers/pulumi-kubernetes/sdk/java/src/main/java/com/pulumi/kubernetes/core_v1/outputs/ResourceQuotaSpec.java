@@ -14,20 +14,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ResourceQuotaSpec {
-    /**
-     * hard is the set of desired hard limits for each named resource. More info: https://kubernetes.io/docs/concepts/policy/resource-quotas/
-     * 
-     */
+        /**
+         * @return hard is the set of desired hard limits for each named resource. More info: https://kubernetes.io/docs/concepts/policy/resource-quotas/
+         * 
+         */
     private final @Nullable Map<String,String> hard;
-    /**
-     * scopeSelector is also a collection of filters like scopes that must match each object tracked by a quota but expressed using ScopeSelectorOperator in combination with possible values. For a resource to match, both scopes AND scopeSelector (if specified in spec), must be matched.
-     * 
-     */
+        /**
+         * @return scopeSelector is also a collection of filters like scopes that must match each object tracked by a quota but expressed using ScopeSelectorOperator in combination with possible values. For a resource to match, both scopes AND scopeSelector (if specified in spec), must be matched.
+         * 
+         */
     private final @Nullable ScopeSelector scopeSelector;
-    /**
-     * A collection of filters that must match each object tracked by a quota. If not specified, the quota matches all objects.
-     * 
-     */
+        /**
+         * @return A collection of filters that must match each object tracked by a quota. If not specified, the quota matches all objects.
+         * 
+         */
     private final @Nullable List<String> scopes;
 
     @CustomType.Constructor
@@ -41,23 +41,23 @@ public final class ResourceQuotaSpec {
     }
 
     /**
-     * hard is the set of desired hard limits for each named resource. More info: https://kubernetes.io/docs/concepts/policy/resource-quotas/
+     * @return hard is the set of desired hard limits for each named resource. More info: https://kubernetes.io/docs/concepts/policy/resource-quotas/
      * 
-    */
+     */
     public Map<String,String> hard() {
         return this.hard == null ? Map.of() : this.hard;
     }
     /**
-     * scopeSelector is also a collection of filters like scopes that must match each object tracked by a quota but expressed using ScopeSelectorOperator in combination with possible values. For a resource to match, both scopes AND scopeSelector (if specified in spec), must be matched.
+     * @return scopeSelector is also a collection of filters like scopes that must match each object tracked by a quota but expressed using ScopeSelectorOperator in combination with possible values. For a resource to match, both scopes AND scopeSelector (if specified in spec), must be matched.
      * 
-    */
+     */
     public Optional<ScopeSelector> scopeSelector() {
         return Optional.ofNullable(this.scopeSelector);
     }
     /**
-     * A collection of filters that must match each object tracked by a quota. If not specified, the quota matches all objects.
+     * @return A collection of filters that must match each object tracked by a quota. If not specified, the quota matches all objects.
      * 
-    */
+     */
     public List<String> scopes() {
         return this.scopes == null ? List.of() : this.scopes;
     }

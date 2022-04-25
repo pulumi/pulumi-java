@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CustomResourceDefinitionStatus {
-    /**
-     * acceptedNames are the names that are actually being used to serve discovery. They may be different than the names in spec.
-     * 
-     */
+        /**
+         * @return acceptedNames are the names that are actually being used to serve discovery. They may be different than the names in spec.
+         * 
+         */
     private final CustomResourceDefinitionNames acceptedNames;
-    /**
-     * conditions indicate state for particular aspects of a CustomResourceDefinition
-     * 
-     */
+        /**
+         * @return conditions indicate state for particular aspects of a CustomResourceDefinition
+         * 
+         */
     private final @Nullable List<CustomResourceDefinitionCondition> conditions;
-    /**
-     * storedVersions lists all versions of CustomResources that were ever persisted. Tracking these versions allows a migration path for stored versions in etcd. The field is mutable so a migration controller can finish a migration to another version (ensuring no old objects are left in storage), and then remove the rest of the versions from this list. Versions may not be removed from `spec.versions` while they exist in this list.
-     * 
-     */
+        /**
+         * @return storedVersions lists all versions of CustomResources that were ever persisted. Tracking these versions allows a migration path for stored versions in etcd. The field is mutable so a migration controller can finish a migration to another version (ensuring no old objects are left in storage), and then remove the rest of the versions from this list. Versions may not be removed from `spec.versions` while they exist in this list.
+         * 
+         */
     private final List<String> storedVersions;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class CustomResourceDefinitionStatus {
     }
 
     /**
-     * acceptedNames are the names that are actually being used to serve discovery. They may be different than the names in spec.
+     * @return acceptedNames are the names that are actually being used to serve discovery. They may be different than the names in spec.
      * 
-    */
+     */
     public CustomResourceDefinitionNames acceptedNames() {
         return this.acceptedNames;
     }
     /**
-     * conditions indicate state for particular aspects of a CustomResourceDefinition
+     * @return conditions indicate state for particular aspects of a CustomResourceDefinition
      * 
-    */
+     */
     public List<CustomResourceDefinitionCondition> conditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
     /**
-     * storedVersions lists all versions of CustomResources that were ever persisted. Tracking these versions allows a migration path for stored versions in etcd. The field is mutable so a migration controller can finish a migration to another version (ensuring no old objects are left in storage), and then remove the rest of the versions from this list. Versions may not be removed from `spec.versions` while they exist in this list.
+     * @return storedVersions lists all versions of CustomResources that were ever persisted. Tracking these versions allows a migration path for stored versions in etcd. The field is mutable so a migration controller can finish a migration to another version (ensuring no old objects are left in storage), and then remove the rest of the versions from this list. Versions may not be removed from `spec.versions` while they exist in this list.
      * 
-    */
+     */
     public List<String> storedVersions() {
         return this.storedVersions;
     }

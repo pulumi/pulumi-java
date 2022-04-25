@@ -28,6 +28,10 @@ public final class ContainerStateArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="running")
     private @Nullable Output<ContainerStateRunningArgs> running;
 
+    /**
+     * @return Details about a running container
+     * 
+     */
     public Optional<Output<ContainerStateRunningArgs>> running() {
         return Optional.ofNullable(this.running);
     }
@@ -39,6 +43,10 @@ public final class ContainerStateArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="terminated")
     private @Nullable Output<ContainerStateTerminatedArgs> terminated;
 
+    /**
+     * @return Details about a terminated container
+     * 
+     */
     public Optional<Output<ContainerStateTerminatedArgs>> terminated() {
         return Optional.ofNullable(this.terminated);
     }
@@ -50,6 +58,10 @@ public final class ContainerStateArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="waiting")
     private @Nullable Output<ContainerStateWaitingArgs> waiting;
 
+    /**
+     * @return Details about a waiting container
+     * 
+     */
     public Optional<Output<ContainerStateWaitingArgs>> waiting() {
         return Optional.ofNullable(this.waiting);
     }
@@ -80,29 +92,65 @@ public final class ContainerStateArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ContainerStateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param running Details about a running container
+         * 
+         * @return builder
+         * 
+         */
         public Builder running(@Nullable Output<ContainerStateRunningArgs> running) {
             $.running = running;
             return this;
         }
 
+        /**
+         * @param running Details about a running container
+         * 
+         * @return builder
+         * 
+         */
         public Builder running(ContainerStateRunningArgs running) {
             return running(Output.of(running));
         }
 
+        /**
+         * @param terminated Details about a terminated container
+         * 
+         * @return builder
+         * 
+         */
         public Builder terminated(@Nullable Output<ContainerStateTerminatedArgs> terminated) {
             $.terminated = terminated;
             return this;
         }
 
+        /**
+         * @param terminated Details about a terminated container
+         * 
+         * @return builder
+         * 
+         */
         public Builder terminated(ContainerStateTerminatedArgs terminated) {
             return terminated(Output.of(terminated));
         }
 
+        /**
+         * @param waiting Details about a waiting container
+         * 
+         * @return builder
+         * 
+         */
         public Builder waiting(@Nullable Output<ContainerStateWaitingArgs> waiting) {
             $.waiting = waiting;
             return this;
         }
 
+        /**
+         * @param waiting Details about a waiting container
+         * 
+         * @return builder
+         * 
+         */
         public Builder waiting(ContainerStateWaitingArgs waiting) {
             return waiting(Output.of(waiting));
         }

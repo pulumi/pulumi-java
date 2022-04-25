@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class HorizontalPodAutoscalerCondition {
-    /**
-     * lastTransitionTime is the last time the condition transitioned from one status to another
-     * 
-     */
+        /**
+         * @return lastTransitionTime is the last time the condition transitioned from one status to another
+         * 
+         */
     private final @Nullable String lastTransitionTime;
-    /**
-     * message is a human-readable explanation containing details about the transition
-     * 
-     */
+        /**
+         * @return message is a human-readable explanation containing details about the transition
+         * 
+         */
     private final @Nullable String message;
-    /**
-     * reason is the reason for the condition&#39;s last transition.
-     * 
-     */
+        /**
+         * @return reason is the reason for the condition&#39;s last transition.
+         * 
+         */
     private final @Nullable String reason;
-    /**
-     * status is the status of the condition (True, False, Unknown)
-     * 
-     */
+        /**
+         * @return status is the status of the condition (True, False, Unknown)
+         * 
+         */
     private final String status;
-    /**
-     * type describes the current condition
-     * 
-     */
+        /**
+         * @return type describes the current condition
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class HorizontalPodAutoscalerCondition {
     }
 
     /**
-     * lastTransitionTime is the last time the condition transitioned from one status to another
+     * @return lastTransitionTime is the last time the condition transitioned from one status to another
      * 
-    */
+     */
     public Optional<String> lastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
-     * message is a human-readable explanation containing details about the transition
+     * @return message is a human-readable explanation containing details about the transition
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * reason is the reason for the condition&#39;s last transition.
+     * @return reason is the reason for the condition&#39;s last transition.
      * 
-    */
+     */
     public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }
     /**
-     * status is the status of the condition (True, False, Unknown)
+     * @return status is the status of the condition (True, False, Unknown)
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * type describes the current condition
+     * @return type describes the current condition
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

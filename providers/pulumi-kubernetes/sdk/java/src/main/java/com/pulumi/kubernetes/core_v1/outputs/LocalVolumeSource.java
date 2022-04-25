@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LocalVolumeSource {
-    /**
-     * Filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default value is to auto-select a filesystem if unspecified.
-     * 
-     */
+        /**
+         * @return Filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default value is to auto-select a filesystem if unspecified.
+         * 
+         */
     private final @Nullable String fsType;
-    /**
-     * The full path to the volume on the node. It can be either a directory or block device (disk, partition, ...).
-     * 
-     */
+        /**
+         * @return The full path to the volume on the node. It can be either a directory or block device (disk, partition, ...).
+         * 
+         */
     private final String path;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class LocalVolumeSource {
     }
 
     /**
-     * Filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default value is to auto-select a filesystem if unspecified.
+     * @return Filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default value is to auto-select a filesystem if unspecified.
      * 
-    */
+     */
     public Optional<String> fsType() {
         return Optional.ofNullable(this.fsType);
     }
     /**
-     * The full path to the volume on the node. It can be either a directory or block device (disk, partition, ...).
+     * @return The full path to the volume on the node. It can be either a directory or block device (disk, partition, ...).
      * 
-    */
+     */
     public String path() {
         return this.path;
     }

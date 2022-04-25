@@ -26,6 +26,10 @@ public final class CrossVersionObjectReferenceArgs extends com.pulumi.resources.
     @Import(name="apiVersion")
     private @Nullable Output<String> apiVersion;
 
+    /**
+     * @return API version of the referent
+     * 
+     */
     public Optional<Output<String>> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
@@ -37,6 +41,10 @@ public final class CrossVersionObjectReferenceArgs extends com.pulumi.resources.
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Kind of the referent; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds&#34;
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -48,6 +56,10 @@ public final class CrossVersionObjectReferenceArgs extends com.pulumi.resources.
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifiers#names
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -78,29 +90,65 @@ public final class CrossVersionObjectReferenceArgs extends com.pulumi.resources.
             $ = new CrossVersionObjectReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiVersion API version of the referent
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
             $.apiVersion = apiVersion;
             return this;
         }
 
+        /**
+         * @param apiVersion API version of the referent
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(String apiVersion) {
             return apiVersion(Output.of(apiVersion));
         }
 
+        /**
+         * @param kind Kind of the referent; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of the referent; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param name Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifiers#names
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifiers#names
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EventSeries {
-    /**
-     * Number of occurrences in this series up to the last heartbeat time
-     * 
-     */
+        /**
+         * @return Number of occurrences in this series up to the last heartbeat time
+         * 
+         */
     private final @Nullable Integer count;
-    /**
-     * Time of the last occurrence observed
-     * 
-     */
+        /**
+         * @return Time of the last occurrence observed
+         * 
+         */
     private final @Nullable String lastObservedTime;
-    /**
-     * State of this Series: Ongoing or Finished Deprecated. Planned removal for 1.18
-     * 
-     */
+        /**
+         * @return State of this Series: Ongoing or Finished Deprecated. Planned removal for 1.18
+         * 
+         */
     private final @Nullable String state;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class EventSeries {
     }
 
     /**
-     * Number of occurrences in this series up to the last heartbeat time
+     * @return Number of occurrences in this series up to the last heartbeat time
      * 
-    */
+     */
     public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
     /**
-     * Time of the last occurrence observed
+     * @return Time of the last occurrence observed
      * 
-    */
+     */
     public Optional<String> lastObservedTime() {
         return Optional.ofNullable(this.lastObservedTime);
     }
     /**
-     * State of this Series: Ongoing or Finished Deprecated. Planned removal for 1.18
+     * @return State of this Series: Ongoing or Finished Deprecated. Planned removal for 1.18
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }

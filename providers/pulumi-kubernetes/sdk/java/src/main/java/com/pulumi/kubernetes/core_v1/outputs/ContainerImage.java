@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ContainerImage {
-    /**
-     * Names by which this image is known. e.g. [&#34;k8s.gcr.io/hyperkube:v1.0.7&#34;, &#34;dockerhub.io/google_containers/hyperkube:v1.0.7&#34;]
-     * 
-     */
+        /**
+         * @return Names by which this image is known. e.g. [&#34;k8s.gcr.io/hyperkube:v1.0.7&#34;, &#34;dockerhub.io/google_containers/hyperkube:v1.0.7&#34;]
+         * 
+         */
     private final List<String> names;
-    /**
-     * The size of the image in bytes.
-     * 
-     */
+        /**
+         * @return The size of the image in bytes.
+         * 
+         */
     private final @Nullable Integer sizeBytes;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class ContainerImage {
     }
 
     /**
-     * Names by which this image is known. e.g. [&#34;k8s.gcr.io/hyperkube:v1.0.7&#34;, &#34;dockerhub.io/google_containers/hyperkube:v1.0.7&#34;]
+     * @return Names by which this image is known. e.g. [&#34;k8s.gcr.io/hyperkube:v1.0.7&#34;, &#34;dockerhub.io/google_containers/hyperkube:v1.0.7&#34;]
      * 
-    */
+     */
     public List<String> names() {
         return this.names;
     }
     /**
-     * The size of the image in bytes.
+     * @return The size of the image in bytes.
      * 
-    */
+     */
     public Optional<Integer> sizeBytes() {
         return Optional.ofNullable(this.sizeBytes);
     }

@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class AuditSinkSpec {
-    /**
-     * Policy defines the policy for selecting which events should be sent to the webhook required
-     * 
-     */
+        /**
+         * @return Policy defines the policy for selecting which events should be sent to the webhook required
+         * 
+         */
     private final Policy policy;
-    /**
-     * Webhook to send events required
-     * 
-     */
+        /**
+         * @return Webhook to send events required
+         * 
+         */
     private final Webhook webhook;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class AuditSinkSpec {
     }
 
     /**
-     * Policy defines the policy for selecting which events should be sent to the webhook required
+     * @return Policy defines the policy for selecting which events should be sent to the webhook required
      * 
-    */
+     */
     public Policy policy() {
         return this.policy;
     }
     /**
-     * Webhook to send events required
+     * @return Webhook to send events required
      * 
-    */
+     */
     public Webhook webhook() {
         return this.webhook;
     }

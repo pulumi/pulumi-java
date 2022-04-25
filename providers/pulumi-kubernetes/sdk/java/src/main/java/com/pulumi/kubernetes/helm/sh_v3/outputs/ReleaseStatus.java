@@ -12,40 +12,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ReleaseStatus {
-    /**
-     * The version number of the application being deployed.
-     * 
-     */
+        /**
+         * @return The version number of the application being deployed.
+         * 
+         */
     private final @Nullable String appVersion;
-    /**
-     * The name of the chart.
-     * 
-     */
+        /**
+         * @return The name of the chart.
+         * 
+         */
     private final @Nullable String chart;
-    /**
-     * Name is the name of the release.
-     * 
-     */
+        /**
+         * @return Name is the name of the release.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Namespace is the kubernetes namespace of the release.
-     * 
-     */
+        /**
+         * @return Namespace is the kubernetes namespace of the release.
+         * 
+         */
     private final @Nullable String namespace;
-    /**
-     * Version is an int32 which represents the version of the release.
-     * 
-     */
+        /**
+         * @return Version is an int32 which represents the version of the release.
+         * 
+         */
     private final @Nullable Integer revision;
-    /**
-     * Status of the release.
-     * 
-     */
+        /**
+         * @return Status of the release.
+         * 
+         */
     private final String status;
-    /**
-     * A SemVer 2 conformant version string of the chart.
-     * 
-     */
+        /**
+         * @return A SemVer 2 conformant version string of the chart.
+         * 
+         */
     private final @Nullable String version;
 
     @CustomType.Constructor
@@ -67,51 +67,51 @@ public final class ReleaseStatus {
     }
 
     /**
-     * The version number of the application being deployed.
+     * @return The version number of the application being deployed.
      * 
-    */
+     */
     public Optional<String> appVersion() {
         return Optional.ofNullable(this.appVersion);
     }
     /**
-     * The name of the chart.
+     * @return The name of the chart.
      * 
-    */
+     */
     public Optional<String> chart() {
         return Optional.ofNullable(this.chart);
     }
     /**
-     * Name is the name of the release.
+     * @return Name is the name of the release.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Namespace is the kubernetes namespace of the release.
+     * @return Namespace is the kubernetes namespace of the release.
      * 
-    */
+     */
     public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
-     * Version is an int32 which represents the version of the release.
+     * @return Version is an int32 which represents the version of the release.
      * 
-    */
+     */
     public Optional<Integer> revision() {
         return Optional.ofNullable(this.revision);
     }
     /**
-     * Status of the release.
+     * @return Status of the release.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * A SemVer 2 conformant version string of the chart.
+     * @return A SemVer 2 conformant version string of the chart.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

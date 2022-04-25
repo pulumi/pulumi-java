@@ -13,35 +13,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ReplicaSetStatus {
-    /**
-     * The number of available replicas (ready for at least minReadySeconds) for this replica set.
-     * 
-     */
+        /**
+         * @return The number of available replicas (ready for at least minReadySeconds) for this replica set.
+         * 
+         */
     private final @Nullable Integer availableReplicas;
-    /**
-     * Represents the latest available observations of a replica set&#39;s current state.
-     * 
-     */
+        /**
+         * @return Represents the latest available observations of a replica set&#39;s current state.
+         * 
+         */
     private final @Nullable List<ReplicaSetCondition> conditions;
-    /**
-     * The number of pods that have labels matching the labels of the pod template of the replicaset.
-     * 
-     */
+        /**
+         * @return The number of pods that have labels matching the labels of the pod template of the replicaset.
+         * 
+         */
     private final @Nullable Integer fullyLabeledReplicas;
-    /**
-     * ObservedGeneration reflects the generation of the most recently observed ReplicaSet.
-     * 
-     */
+        /**
+         * @return ObservedGeneration reflects the generation of the most recently observed ReplicaSet.
+         * 
+         */
     private final @Nullable Integer observedGeneration;
-    /**
-     * The number of ready replicas for this replica set.
-     * 
-     */
+        /**
+         * @return The number of ready replicas for this replica set.
+         * 
+         */
     private final @Nullable Integer readyReplicas;
-    /**
-     * Replicas is the most recently oberved number of replicas. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller/#what-is-a-replicationcontroller
-     * 
-     */
+        /**
+         * @return Replicas is the most recently oberved number of replicas. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller/#what-is-a-replicationcontroller
+         * 
+         */
     private final Integer replicas;
 
     @CustomType.Constructor
@@ -61,44 +61,44 @@ public final class ReplicaSetStatus {
     }
 
     /**
-     * The number of available replicas (ready for at least minReadySeconds) for this replica set.
+     * @return The number of available replicas (ready for at least minReadySeconds) for this replica set.
      * 
-    */
+     */
     public Optional<Integer> availableReplicas() {
         return Optional.ofNullable(this.availableReplicas);
     }
     /**
-     * Represents the latest available observations of a replica set&#39;s current state.
+     * @return Represents the latest available observations of a replica set&#39;s current state.
      * 
-    */
+     */
     public List<ReplicaSetCondition> conditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
     /**
-     * The number of pods that have labels matching the labels of the pod template of the replicaset.
+     * @return The number of pods that have labels matching the labels of the pod template of the replicaset.
      * 
-    */
+     */
     public Optional<Integer> fullyLabeledReplicas() {
         return Optional.ofNullable(this.fullyLabeledReplicas);
     }
     /**
-     * ObservedGeneration reflects the generation of the most recently observed ReplicaSet.
+     * @return ObservedGeneration reflects the generation of the most recently observed ReplicaSet.
      * 
-    */
+     */
     public Optional<Integer> observedGeneration() {
         return Optional.ofNullable(this.observedGeneration);
     }
     /**
-     * The number of ready replicas for this replica set.
+     * @return The number of ready replicas for this replica set.
      * 
-    */
+     */
     public Optional<Integer> readyReplicas() {
         return Optional.ofNullable(this.readyReplicas);
     }
     /**
-     * Replicas is the most recently oberved number of replicas. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller/#what-is-a-replicationcontroller
+     * @return Replicas is the most recently oberved number of replicas. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller/#what-is-a-replicationcontroller
      * 
-    */
+     */
     public Integer replicas() {
         return this.replicas;
     }

@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ContainerState {
-    /**
-     * Details about a running container
-     * 
-     */
+        /**
+         * @return Details about a running container
+         * 
+         */
     private final @Nullable ContainerStateRunning running;
-    /**
-     * Details about a terminated container
-     * 
-     */
+        /**
+         * @return Details about a terminated container
+         * 
+         */
     private final @Nullable ContainerStateTerminated terminated;
-    /**
-     * Details about a waiting container
-     * 
-     */
+        /**
+         * @return Details about a waiting container
+         * 
+         */
     private final @Nullable ContainerStateWaiting waiting;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class ContainerState {
     }
 
     /**
-     * Details about a running container
+     * @return Details about a running container
      * 
-    */
+     */
     public Optional<ContainerStateRunning> running() {
         return Optional.ofNullable(this.running);
     }
     /**
-     * Details about a terminated container
+     * @return Details about a terminated container
      * 
-    */
+     */
     public Optional<ContainerStateTerminated> terminated() {
         return Optional.ofNullable(this.terminated);
     }
     /**
-     * Details about a waiting container
+     * @return Details about a waiting container
      * 
-    */
+     */
     public Optional<ContainerStateWaiting> waiting() {
         return Optional.ofNullable(this.waiting);
     }

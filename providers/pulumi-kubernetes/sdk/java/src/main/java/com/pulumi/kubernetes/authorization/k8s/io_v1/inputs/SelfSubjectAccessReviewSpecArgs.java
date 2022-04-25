@@ -27,6 +27,10 @@ public final class SelfSubjectAccessReviewSpecArgs extends com.pulumi.resources.
     @Import(name="nonResourceAttributes")
     private @Nullable Output<NonResourceAttributesArgs> nonResourceAttributes;
 
+    /**
+     * @return NonResourceAttributes describes information for a non-resource access request
+     * 
+     */
     public Optional<Output<NonResourceAttributesArgs>> nonResourceAttributes() {
         return Optional.ofNullable(this.nonResourceAttributes);
     }
@@ -38,6 +42,10 @@ public final class SelfSubjectAccessReviewSpecArgs extends com.pulumi.resources.
     @Import(name="resourceAttributes")
     private @Nullable Output<ResourceAttributesArgs> resourceAttributes;
 
+    /**
+     * @return ResourceAuthorizationAttributes describes information for a resource access request
+     * 
+     */
     public Optional<Output<ResourceAttributesArgs>> resourceAttributes() {
         return Optional.ofNullable(this.resourceAttributes);
     }
@@ -67,20 +75,44 @@ public final class SelfSubjectAccessReviewSpecArgs extends com.pulumi.resources.
             $ = new SelfSubjectAccessReviewSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nonResourceAttributes NonResourceAttributes describes information for a non-resource access request
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonResourceAttributes(@Nullable Output<NonResourceAttributesArgs> nonResourceAttributes) {
             $.nonResourceAttributes = nonResourceAttributes;
             return this;
         }
 
+        /**
+         * @param nonResourceAttributes NonResourceAttributes describes information for a non-resource access request
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonResourceAttributes(NonResourceAttributesArgs nonResourceAttributes) {
             return nonResourceAttributes(Output.of(nonResourceAttributes));
         }
 
+        /**
+         * @param resourceAttributes ResourceAuthorizationAttributes describes information for a resource access request
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAttributes(@Nullable Output<ResourceAttributesArgs> resourceAttributes) {
             $.resourceAttributes = resourceAttributes;
             return this;
         }
 
+        /**
+         * @param resourceAttributes ResourceAuthorizationAttributes describes information for a resource access request
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAttributes(ResourceAttributesArgs resourceAttributes) {
             return resourceAttributes(Output.of(resourceAttributes));
         }

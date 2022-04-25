@@ -14,45 +14,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RBDPersistentVolumeSource {
-    /**
-     * Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd
-     * 
-     */
+        /**
+         * @return Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd
+         * 
+         */
     private final @Nullable String fsType;
-    /**
-     * The rados image name. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
-     * 
-     */
+        /**
+         * @return The rados image name. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+         * 
+         */
     private final String image;
-    /**
-     * Keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
-     * 
-     */
+        /**
+         * @return Keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+         * 
+         */
     private final @Nullable String keyring;
-    /**
-     * A collection of Ceph monitors. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
-     * 
-     */
+        /**
+         * @return A collection of Ceph monitors. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+         * 
+         */
     private final List<String> monitors;
-    /**
-     * The rados pool name. Default is rbd. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
-     * 
-     */
+        /**
+         * @return The rados pool name. Default is rbd. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+         * 
+         */
     private final @Nullable String pool;
-    /**
-     * ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
-     * 
-     */
+        /**
+         * @return ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+         * 
+         */
     private final @Nullable Boolean readOnly;
-    /**
-     * SecretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
-     * 
-     */
+        /**
+         * @return SecretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+         * 
+         */
     private final @Nullable SecretReference secretRef;
-    /**
-     * The rados user name. Default is admin. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
-     * 
-     */
+        /**
+         * @return The rados user name. Default is admin. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+         * 
+         */
     private final @Nullable String user;
 
     @CustomType.Constructor
@@ -76,58 +76,58 @@ public final class RBDPersistentVolumeSource {
     }
 
     /**
-     * Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd
+     * @return Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd
      * 
-    */
+     */
     public Optional<String> fsType() {
         return Optional.ofNullable(this.fsType);
     }
     /**
-     * The rados image name. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+     * @return The rados image name. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
-    */
+     */
     public String image() {
         return this.image;
     }
     /**
-     * Keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+     * @return Keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
-    */
+     */
     public Optional<String> keyring() {
         return Optional.ofNullable(this.keyring);
     }
     /**
-     * A collection of Ceph monitors. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+     * @return A collection of Ceph monitors. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
-    */
+     */
     public List<String> monitors() {
         return this.monitors;
     }
     /**
-     * The rados pool name. Default is rbd. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+     * @return The rados pool name. Default is rbd. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
-    */
+     */
     public Optional<String> pool() {
         return Optional.ofNullable(this.pool);
     }
     /**
-     * ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+     * @return ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
-    */
+     */
     public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
-     * SecretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+     * @return SecretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
-    */
+     */
     public Optional<SecretReference> secretRef() {
         return Optional.ofNullable(this.secretRef);
     }
     /**
-     * The rados user name. Default is admin. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+     * @return The rados user name. Default is admin. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
-    */
+     */
     public Optional<String> user() {
         return Optional.ofNullable(this.user);
     }

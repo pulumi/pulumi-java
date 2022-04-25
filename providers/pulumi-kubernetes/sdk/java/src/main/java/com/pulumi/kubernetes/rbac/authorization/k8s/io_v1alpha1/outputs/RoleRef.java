@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class RoleRef {
-    /**
-     * APIGroup is the group for the resource being referenced
-     * 
-     */
+        /**
+         * @return APIGroup is the group for the resource being referenced
+         * 
+         */
     private final String apiGroup;
-    /**
-     * Kind is the type of resource being referenced
-     * 
-     */
+        /**
+         * @return Kind is the type of resource being referenced
+         * 
+         */
     private final String kind;
-    /**
-     * Name is the name of resource being referenced
-     * 
-     */
+        /**
+         * @return Name is the name of resource being referenced
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class RoleRef {
     }
 
     /**
-     * APIGroup is the group for the resource being referenced
+     * @return APIGroup is the group for the resource being referenced
      * 
-    */
+     */
     public String apiGroup() {
         return this.apiGroup;
     }
     /**
-     * Kind is the type of resource being referenced
+     * @return Kind is the type of resource being referenced
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Name is the name of resource being referenced
+     * @return Name is the name of resource being referenced
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

@@ -24,6 +24,10 @@ public final class ServiceAccountSubjectArgs extends com.pulumi.resources.Resour
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return `name` is the name of matching ServiceAccount objects, or &#34;*&#34; to match regardless of name. Required.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -35,6 +39,10 @@ public final class ServiceAccountSubjectArgs extends com.pulumi.resources.Resour
     @Import(name="namespace", required=true)
     private Output<String> namespace;
 
+    /**
+     * @return `namespace` is the namespace of matching ServiceAccount objects. Required.
+     * 
+     */
     public Output<String> namespace() {
         return this.namespace;
     }
@@ -64,20 +72,44 @@ public final class ServiceAccountSubjectArgs extends com.pulumi.resources.Resour
             $ = new ServiceAccountSubjectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name `name` is the name of matching ServiceAccount objects, or &#34;*&#34; to match regardless of name. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name `name` is the name of matching ServiceAccount objects, or &#34;*&#34; to match regardless of name. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namespace `namespace` is the namespace of matching ServiceAccount objects. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(Output<String> namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param namespace `namespace` is the namespace of matching ServiceAccount objects. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             return namespace(Output.of(namespace));
         }

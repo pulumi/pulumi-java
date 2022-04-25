@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NamespaceSpec {
-    /**
-     * Finalizers is an opaque list of values that must be empty to permanently remove object from storage. More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
-     * 
-     */
+        /**
+         * @return Finalizers is an opaque list of values that must be empty to permanently remove object from storage. More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
+         * 
+         */
     private final @Nullable List<String> finalizers;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class NamespaceSpec {
     }
 
     /**
-     * Finalizers is an opaque list of values that must be empty to permanently remove object from storage. More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
+     * @return Finalizers is an opaque list of values that must be empty to permanently remove object from storage. More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
      * 
-    */
+     */
     public List<String> finalizers() {
         return this.finalizers == null ? List.of() : this.finalizers;
     }

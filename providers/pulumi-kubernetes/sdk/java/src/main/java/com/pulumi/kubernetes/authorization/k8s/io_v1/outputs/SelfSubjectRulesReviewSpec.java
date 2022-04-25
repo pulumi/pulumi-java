@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SelfSubjectRulesReviewSpec {
-    /**
-     * Namespace to evaluate rules for. Required.
-     * 
-     */
+        /**
+         * @return Namespace to evaluate rules for. Required.
+         * 
+         */
     private final @Nullable String namespace;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class SelfSubjectRulesReviewSpec {
     }
 
     /**
-     * Namespace to evaluate rules for. Required.
+     * @return Namespace to evaluate rules for. Required.
      * 
-    */
+     */
     public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }

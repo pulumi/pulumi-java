@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GitRepoVolumeSource {
-    /**
-     * Target directory name. Must not contain or start with &#39;..&#39;.  If &#39;.&#39; is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
-     * 
-     */
+        /**
+         * @return Target directory name. Must not contain or start with &#39;..&#39;.  If &#39;.&#39; is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
+         * 
+         */
     private final @Nullable String directory;
-    /**
-     * Repository URL
-     * 
-     */
+        /**
+         * @return Repository URL
+         * 
+         */
     private final String repository;
-    /**
-     * Commit hash for the specified revision.
-     * 
-     */
+        /**
+         * @return Commit hash for the specified revision.
+         * 
+         */
     private final @Nullable String revision;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class GitRepoVolumeSource {
     }
 
     /**
-     * Target directory name. Must not contain or start with &#39;..&#39;.  If &#39;.&#39; is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
+     * @return Target directory name. Must not contain or start with &#39;..&#39;.  If &#39;.&#39; is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
      * 
-    */
+     */
     public Optional<String> directory() {
         return Optional.ofNullable(this.directory);
     }
     /**
-     * Repository URL
+     * @return Repository URL
      * 
-    */
+     */
     public String repository() {
         return this.repository;
     }
     /**
-     * Commit hash for the specified revision.
+     * @return Commit hash for the specified revision.
      * 
-    */
+     */
     public Optional<String> revision() {
         return Optional.ofNullable(this.revision);
     }

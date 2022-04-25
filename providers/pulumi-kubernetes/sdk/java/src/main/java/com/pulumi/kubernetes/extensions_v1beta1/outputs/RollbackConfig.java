@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RollbackConfig {
-    /**
-     * The revision to rollback to. If set to 0, rollback to the last revision.
-     * 
-     */
+        /**
+         * @return The revision to rollback to. If set to 0, rollback to the last revision.
+         * 
+         */
     private final @Nullable Integer revision;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class RollbackConfig {
     }
 
     /**
-     * The revision to rollback to. If set to 0, rollback to the last revision.
+     * @return The revision to rollback to. If set to 0, rollback to the last revision.
      * 
-    */
+     */
     public Optional<Integer> revision() {
         return Optional.ofNullable(this.revision);
     }

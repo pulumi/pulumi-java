@@ -11,28 +11,28 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NodeSelectorRequirement {
-    /**
-     * The label key that the selector applies to.
-     * 
-     */
+        /**
+         * @return The label key that the selector applies to.
+         * 
+         */
     private final String key;
-    /**
-     * Represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt.
-     * 
-     * Possible enum values:
-     *  - `&#34;DoesNotExist&#34;`
-     *  - `&#34;Exists&#34;`
-     *  - `&#34;Gt&#34;`
-     *  - `&#34;In&#34;`
-     *  - `&#34;Lt&#34;`
-     *  - `&#34;NotIn&#34;`
-     * 
-     */
+        /**
+         * @return Represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt.
+         * 
+         * Possible enum values:
+         *  - `&#34;DoesNotExist&#34;`
+         *  - `&#34;Exists&#34;`
+         *  - `&#34;Gt&#34;`
+         *  - `&#34;In&#34;`
+         *  - `&#34;Lt&#34;`
+         *  - `&#34;NotIn&#34;`
+         * 
+         */
     private final String operator;
-    /**
-     * An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch.
-     * 
-     */
+        /**
+         * @return An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch.
+         * 
+         */
     private final @Nullable List<String> values;
 
     @CustomType.Constructor
@@ -46,14 +46,14 @@ public final class NodeSelectorRequirement {
     }
 
     /**
-     * The label key that the selector applies to.
+     * @return The label key that the selector applies to.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt.
+     * @return Represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt.
      * 
      * Possible enum values:
      *  - `&#34;DoesNotExist&#34;`
@@ -63,14 +63,14 @@ public final class NodeSelectorRequirement {
      *  - `&#34;Lt&#34;`
      *  - `&#34;NotIn&#34;`
      * 
-    */
+     */
     public String operator() {
         return this.operator;
     }
     /**
-     * An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch.
+     * @return An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch.
      * 
-    */
+     */
     public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }

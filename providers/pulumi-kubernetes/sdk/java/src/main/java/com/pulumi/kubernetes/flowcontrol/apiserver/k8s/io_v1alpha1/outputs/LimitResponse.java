@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LimitResponse {
-    /**
-     * `queuing` holds the configuration parameters for queuing. This field may be non-empty only if `type` is `&#34;Queue&#34;`.
-     * 
-     */
+        /**
+         * @return `queuing` holds the configuration parameters for queuing. This field may be non-empty only if `type` is `&#34;Queue&#34;`.
+         * 
+         */
     private final @Nullable QueuingConfiguration queuing;
-    /**
-     * `type` is &#34;Queue&#34; or &#34;Reject&#34;. &#34;Queue&#34; means that requests that can not be executed upon arrival are held in a queue until they can be executed or a queuing limit is reached. &#34;Reject&#34; means that requests that can not be executed upon arrival are rejected. Required.
-     * 
-     */
+        /**
+         * @return `type` is &#34;Queue&#34; or &#34;Reject&#34;. &#34;Queue&#34; means that requests that can not be executed upon arrival are held in a queue until they can be executed or a queuing limit is reached. &#34;Reject&#34; means that requests that can not be executed upon arrival are rejected. Required.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class LimitResponse {
     }
 
     /**
-     * `queuing` holds the configuration parameters for queuing. This field may be non-empty only if `type` is `&#34;Queue&#34;`.
+     * @return `queuing` holds the configuration parameters for queuing. This field may be non-empty only if `type` is `&#34;Queue&#34;`.
      * 
-    */
+     */
     public Optional<QueuingConfiguration> queuing() {
         return Optional.ofNullable(this.queuing);
     }
     /**
-     * `type` is &#34;Queue&#34; or &#34;Reject&#34;. &#34;Queue&#34; means that requests that can not be executed upon arrival are held in a queue until they can be executed or a queuing limit is reached. &#34;Reject&#34; means that requests that can not be executed upon arrival are rejected. Required.
+     * @return `type` is &#34;Queue&#34; or &#34;Reject&#34;. &#34;Queue&#34; means that requests that can not be executed upon arrival are held in a queue until they can be executed or a queuing limit is reached. &#34;Reject&#34; means that requests that can not be executed upon arrival are rejected. Required.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

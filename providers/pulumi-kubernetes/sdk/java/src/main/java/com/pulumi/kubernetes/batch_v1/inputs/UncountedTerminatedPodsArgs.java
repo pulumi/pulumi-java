@@ -27,6 +27,10 @@ public final class UncountedTerminatedPodsArgs extends com.pulumi.resources.Reso
     @Import(name="failed")
     private @Nullable Output<List<String>> failed;
 
+    /**
+     * @return Failed holds UIDs of failed Pods.
+     * 
+     */
     public Optional<Output<List<String>>> failed() {
         return Optional.ofNullable(this.failed);
     }
@@ -38,6 +42,10 @@ public final class UncountedTerminatedPodsArgs extends com.pulumi.resources.Reso
     @Import(name="succeeded")
     private @Nullable Output<List<String>> succeeded;
 
+    /**
+     * @return Succeeded holds UIDs of succeeded Pods.
+     * 
+     */
     public Optional<Output<List<String>>> succeeded() {
         return Optional.ofNullable(this.succeeded);
     }
@@ -67,28 +75,64 @@ public final class UncountedTerminatedPodsArgs extends com.pulumi.resources.Reso
             $ = new UncountedTerminatedPodsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param failed Failed holds UIDs of failed Pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failed(@Nullable Output<List<String>> failed) {
             $.failed = failed;
             return this;
         }
 
+        /**
+         * @param failed Failed holds UIDs of failed Pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failed(List<String> failed) {
             return failed(Output.of(failed));
         }
 
+        /**
+         * @param failed Failed holds UIDs of failed Pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failed(String... failed) {
             return failed(List.of(failed));
         }
 
+        /**
+         * @param succeeded Succeeded holds UIDs of succeeded Pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder succeeded(@Nullable Output<List<String>> succeeded) {
             $.succeeded = succeeded;
             return this;
         }
 
+        /**
+         * @param succeeded Succeeded holds UIDs of succeeded Pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder succeeded(List<String> succeeded) {
             return succeeded(Output.of(succeeded));
         }
 
+        /**
+         * @param succeeded Succeeded holds UIDs of succeeded Pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder succeeded(String... succeeded) {
             return succeeded(List.of(succeeded));
         }

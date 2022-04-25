@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ScopeSelector {
-    /**
-     * A list of scope selector requirements by scope of the resources.
-     * 
-     */
+        /**
+         * @return A list of scope selector requirements by scope of the resources.
+         * 
+         */
     private final @Nullable List<ScopedResourceSelectorRequirement> matchExpressions;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ScopeSelector {
     }
 
     /**
-     * A list of scope selector requirements by scope of the resources.
+     * @return A list of scope selector requirements by scope of the resources.
      * 
-    */
+     */
     public List<ScopedResourceSelectorRequirement> matchExpressions() {
         return this.matchExpressions == null ? List.of() : this.matchExpressions;
     }

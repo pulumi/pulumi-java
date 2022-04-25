@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ContainerStateRunning {
-    /**
-     * Time at which the container was last (re-)started
-     * 
-     */
+        /**
+         * @return Time at which the container was last (re-)started
+         * 
+         */
     private final @Nullable String startedAt;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ContainerStateRunning {
     }
 
     /**
-     * Time at which the container was last (re-)started
+     * @return Time at which the container was last (re-)started
      * 
-    */
+     */
     public Optional<String> startedAt() {
         return Optional.ofNullable(this.startedAt);
     }

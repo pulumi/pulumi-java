@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class APIServiceCondition {
-    /**
-     * Last time the condition transitioned from one status to another.
-     * 
-     */
+        /**
+         * @return Last time the condition transitioned from one status to another.
+         * 
+         */
     private final @Nullable String lastTransitionTime;
-    /**
-     * Human-readable message indicating details about last transition.
-     * 
-     */
+        /**
+         * @return Human-readable message indicating details about last transition.
+         * 
+         */
     private final @Nullable String message;
-    /**
-     * Unique, one-word, CamelCase reason for the condition&#39;s last transition.
-     * 
-     */
+        /**
+         * @return Unique, one-word, CamelCase reason for the condition&#39;s last transition.
+         * 
+         */
     private final @Nullable String reason;
-    /**
-     * Status is the status of the condition. Can be True, False, Unknown.
-     * 
-     */
+        /**
+         * @return Status is the status of the condition. Can be True, False, Unknown.
+         * 
+         */
     private final String status;
-    /**
-     * Type is the type of the condition.
-     * 
-     */
+        /**
+         * @return Type is the type of the condition.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class APIServiceCondition {
     }
 
     /**
-     * Last time the condition transitioned from one status to another.
+     * @return Last time the condition transitioned from one status to another.
      * 
-    */
+     */
     public Optional<String> lastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
-     * Human-readable message indicating details about last transition.
+     * @return Human-readable message indicating details about last transition.
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * Unique, one-word, CamelCase reason for the condition&#39;s last transition.
+     * @return Unique, one-word, CamelCase reason for the condition&#39;s last transition.
      * 
-    */
+     */
     public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }
     /**
-     * Status is the status of the condition. Can be True, False, Unknown.
+     * @return Status is the status of the condition. Can be True, False, Unknown.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Type is the type of the condition.
+     * @return Type is the type of the condition.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

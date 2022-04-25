@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LeaseSpec {
-    /**
-     * acquireTime is a time when the current lease was acquired.
-     * 
-     */
+        /**
+         * @return acquireTime is a time when the current lease was acquired.
+         * 
+         */
     private final @Nullable String acquireTime;
-    /**
-     * holderIdentity contains the identity of the holder of a current lease.
-     * 
-     */
+        /**
+         * @return holderIdentity contains the identity of the holder of a current lease.
+         * 
+         */
     private final @Nullable String holderIdentity;
-    /**
-     * leaseDurationSeconds is a duration that candidates for a lease need to wait to force acquire it. This is measure against time of last observed RenewTime.
-     * 
-     */
+        /**
+         * @return leaseDurationSeconds is a duration that candidates for a lease need to wait to force acquire it. This is measure against time of last observed RenewTime.
+         * 
+         */
     private final @Nullable Integer leaseDurationSeconds;
-    /**
-     * leaseTransitions is the number of transitions of a lease between holders.
-     * 
-     */
+        /**
+         * @return leaseTransitions is the number of transitions of a lease between holders.
+         * 
+         */
     private final @Nullable Integer leaseTransitions;
-    /**
-     * renewTime is a time when the current holder of a lease has last updated the lease.
-     * 
-     */
+        /**
+         * @return renewTime is a time when the current holder of a lease has last updated the lease.
+         * 
+         */
     private final @Nullable String renewTime;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class LeaseSpec {
     }
 
     /**
-     * acquireTime is a time when the current lease was acquired.
+     * @return acquireTime is a time when the current lease was acquired.
      * 
-    */
+     */
     public Optional<String> acquireTime() {
         return Optional.ofNullable(this.acquireTime);
     }
     /**
-     * holderIdentity contains the identity of the holder of a current lease.
+     * @return holderIdentity contains the identity of the holder of a current lease.
      * 
-    */
+     */
     public Optional<String> holderIdentity() {
         return Optional.ofNullable(this.holderIdentity);
     }
     /**
-     * leaseDurationSeconds is a duration that candidates for a lease need to wait to force acquire it. This is measure against time of last observed RenewTime.
+     * @return leaseDurationSeconds is a duration that candidates for a lease need to wait to force acquire it. This is measure against time of last observed RenewTime.
      * 
-    */
+     */
     public Optional<Integer> leaseDurationSeconds() {
         return Optional.ofNullable(this.leaseDurationSeconds);
     }
     /**
-     * leaseTransitions is the number of transitions of a lease between holders.
+     * @return leaseTransitions is the number of transitions of a lease between holders.
      * 
-    */
+     */
     public Optional<Integer> leaseTransitions() {
         return Optional.ofNullable(this.leaseTransitions);
     }
     /**
-     * renewTime is a time when the current holder of a lease has last updated the lease.
+     * @return renewTime is a time when the current holder of a lease has last updated the lease.
      * 
-    */
+     */
     public Optional<String> renewTime() {
         return Optional.ofNullable(this.renewTime);
     }

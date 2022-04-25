@@ -26,6 +26,10 @@ public final class RollbackConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="revision")
     private @Nullable Output<Integer> revision;
 
+    /**
+     * @return The revision to rollback to. If set to 0, rollback to the last revision.
+     * 
+     */
     public Optional<Output<Integer>> revision() {
         return Optional.ofNullable(this.revision);
     }
@@ -54,11 +58,23 @@ public final class RollbackConfigArgs extends com.pulumi.resources.ResourceArgs 
             $ = new RollbackConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param revision The revision to rollback to. If set to 0, rollback to the last revision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(@Nullable Output<Integer> revision) {
             $.revision = revision;
             return this;
         }
 
+        /**
+         * @param revision The revision to rollback to. If set to 0, rollback to the last revision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(Integer revision) {
             return revision(Output.of(revision));
         }

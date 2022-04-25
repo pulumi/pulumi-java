@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LoadBalancerStatus {
-    /**
-     * Ingress is a list containing ingress points for the load-balancer. Traffic intended for the service should be sent to these ingress points.
-     * 
-     */
+        /**
+         * @return Ingress is a list containing ingress points for the load-balancer. Traffic intended for the service should be sent to these ingress points.
+         * 
+         */
     private final @Nullable List<LoadBalancerIngress> ingress;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class LoadBalancerStatus {
     }
 
     /**
-     * Ingress is a list containing ingress points for the load-balancer. Traffic intended for the service should be sent to these ingress points.
+     * @return Ingress is a list containing ingress points for the load-balancer. Traffic intended for the service should be sent to these ingress points.
      * 
-    */
+     */
     public List<LoadBalancerIngress> ingress() {
         return this.ingress == null ? List.of() : this.ingress;
     }

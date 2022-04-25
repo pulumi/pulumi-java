@@ -12,40 +12,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ManagedFieldsEntry {
-    /**
-     * APIVersion defines the version of this resource that this field set applies to. The format is &#34;group/version&#34; just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.
-     * 
-     */
+        /**
+         * @return APIVersion defines the version of this resource that this field set applies to. The format is &#34;group/version&#34; just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.
+         * 
+         */
     private final @Nullable String apiVersion;
-    /**
-     * FieldsType is the discriminator for the different fields format and version. There is currently only one possible value: &#34;FieldsV1&#34;
-     * 
-     */
+        /**
+         * @return FieldsType is the discriminator for the different fields format and version. There is currently only one possible value: &#34;FieldsV1&#34;
+         * 
+         */
     private final @Nullable String fieldsType;
-    /**
-     * FieldsV1 holds the first JSON version format as described in the &#34;FieldsV1&#34; type.
-     * 
-     */
+        /**
+         * @return FieldsV1 holds the first JSON version format as described in the &#34;FieldsV1&#34; type.
+         * 
+         */
     private final @Nullable JsonElement fieldsV1;
-    /**
-     * Manager is an identifier of the workflow managing these fields.
-     * 
-     */
+        /**
+         * @return Manager is an identifier of the workflow managing these fields.
+         * 
+         */
     private final @Nullable String manager;
-    /**
-     * Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are &#39;Apply&#39; and &#39;Update&#39;.
-     * 
-     */
+        /**
+         * @return Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are &#39;Apply&#39; and &#39;Update&#39;.
+         * 
+         */
     private final @Nullable String operation;
-    /**
-     * Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.
-     * 
-     */
+        /**
+         * @return Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.
+         * 
+         */
     private final @Nullable String subresource;
-    /**
-     * Time is timestamp of when these fields were set. It should always be empty if Operation is &#39;Apply&#39;
-     * 
-     */
+        /**
+         * @return Time is timestamp of when these fields were set. It should always be empty if Operation is &#39;Apply&#39;
+         * 
+         */
     private final @Nullable String time;
 
     @CustomType.Constructor
@@ -67,51 +67,51 @@ public final class ManagedFieldsEntry {
     }
 
     /**
-     * APIVersion defines the version of this resource that this field set applies to. The format is &#34;group/version&#34; just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.
+     * @return APIVersion defines the version of this resource that this field set applies to. The format is &#34;group/version&#34; just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.
      * 
-    */
+     */
     public Optional<String> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
-     * FieldsType is the discriminator for the different fields format and version. There is currently only one possible value: &#34;FieldsV1&#34;
+     * @return FieldsType is the discriminator for the different fields format and version. There is currently only one possible value: &#34;FieldsV1&#34;
      * 
-    */
+     */
     public Optional<String> fieldsType() {
         return Optional.ofNullable(this.fieldsType);
     }
     /**
-     * FieldsV1 holds the first JSON version format as described in the &#34;FieldsV1&#34; type.
+     * @return FieldsV1 holds the first JSON version format as described in the &#34;FieldsV1&#34; type.
      * 
-    */
+     */
     public Optional<JsonElement> fieldsV1() {
         return Optional.ofNullable(this.fieldsV1);
     }
     /**
-     * Manager is an identifier of the workflow managing these fields.
+     * @return Manager is an identifier of the workflow managing these fields.
      * 
-    */
+     */
     public Optional<String> manager() {
         return Optional.ofNullable(this.manager);
     }
     /**
-     * Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are &#39;Apply&#39; and &#39;Update&#39;.
+     * @return Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are &#39;Apply&#39; and &#39;Update&#39;.
      * 
-    */
+     */
     public Optional<String> operation() {
         return Optional.ofNullable(this.operation);
     }
     /**
-     * Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.
+     * @return Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.
      * 
-    */
+     */
     public Optional<String> subresource() {
         return Optional.ofNullable(this.subresource);
     }
     /**
-     * Time is timestamp of when these fields were set. It should always be empty if Operation is &#39;Apply&#39;
+     * @return Time is timestamp of when these fields were set. It should always be empty if Operation is &#39;Apply&#39;
      * 
-    */
+     */
     public Optional<String> time() {
         return Optional.ofNullable(this.time);
     }

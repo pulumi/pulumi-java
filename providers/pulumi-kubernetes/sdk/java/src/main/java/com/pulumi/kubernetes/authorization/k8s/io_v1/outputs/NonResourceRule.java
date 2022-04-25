@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NonResourceRule {
-    /**
-     * NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path.  &#34;*&#34; means all.
-     * 
-     */
+        /**
+         * @return NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path.  &#34;*&#34; means all.
+         * 
+         */
     private final @Nullable List<String> nonResourceURLs;
-    /**
-     * Verb is a list of kubernetes non-resource API verbs, like: get, post, put, delete, patch, head, options.  &#34;*&#34; means all.
-     * 
-     */
+        /**
+         * @return Verb is a list of kubernetes non-resource API verbs, like: get, post, put, delete, patch, head, options.  &#34;*&#34; means all.
+         * 
+         */
     private final List<String> verbs;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class NonResourceRule {
     }
 
     /**
-     * NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path.  &#34;*&#34; means all.
+     * @return NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path.  &#34;*&#34; means all.
      * 
-    */
+     */
     public List<String> nonResourceURLs() {
         return this.nonResourceURLs == null ? List.of() : this.nonResourceURLs;
     }
     /**
-     * Verb is a list of kubernetes non-resource API verbs, like: get, post, put, delete, patch, head, options.  &#34;*&#34; means all.
+     * @return Verb is a list of kubernetes non-resource API verbs, like: get, post, put, delete, patch, head, options.  &#34;*&#34; means all.
      * 
-    */
+     */
     public List<String> verbs() {
         return this.verbs;
     }

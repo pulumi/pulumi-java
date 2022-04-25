@@ -11,34 +11,34 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ScopedResourceSelectorRequirement {
-    /**
-     * Represents a scope&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist.
-     * 
-     * Possible enum values:
-     *  - `&#34;DoesNotExist&#34;`
-     *  - `&#34;Exists&#34;`
-     *  - `&#34;In&#34;`
-     *  - `&#34;NotIn&#34;`
-     * 
-     */
+        /**
+         * @return Represents a scope&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist.
+         * 
+         * Possible enum values:
+         *  - `&#34;DoesNotExist&#34;`
+         *  - `&#34;Exists&#34;`
+         *  - `&#34;In&#34;`
+         *  - `&#34;NotIn&#34;`
+         * 
+         */
     private final String operator;
-    /**
-     * The name of the scope that the selector applies to.
-     * 
-     * Possible enum values:
-     *  - `&#34;BestEffort&#34;` Match all pod objects that have best effort quality of service
-     *  - `&#34;CrossNamespacePodAffinity&#34;` Match all pod objects that have cross-namespace pod (anti)affinity mentioned. This is a beta feature enabled by the PodAffinityNamespaceSelector feature flag.
-     *  - `&#34;NotBestEffort&#34;` Match all pod objects that do not have best effort quality of service
-     *  - `&#34;NotTerminating&#34;` Match all pod objects where spec.activeDeadlineSeconds is nil
-     *  - `&#34;PriorityClass&#34;` Match all pod objects that have priority class mentioned
-     *  - `&#34;Terminating&#34;` Match all pod objects where spec.activeDeadlineSeconds &gt;=0
-     * 
-     */
+        /**
+         * @return The name of the scope that the selector applies to.
+         * 
+         * Possible enum values:
+         *  - `&#34;BestEffort&#34;` Match all pod objects that have best effort quality of service
+         *  - `&#34;CrossNamespacePodAffinity&#34;` Match all pod objects that have cross-namespace pod (anti)affinity mentioned. This is a beta feature enabled by the PodAffinityNamespaceSelector feature flag.
+         *  - `&#34;NotBestEffort&#34;` Match all pod objects that do not have best effort quality of service
+         *  - `&#34;NotTerminating&#34;` Match all pod objects where spec.activeDeadlineSeconds is nil
+         *  - `&#34;PriorityClass&#34;` Match all pod objects that have priority class mentioned
+         *  - `&#34;Terminating&#34;` Match all pod objects where spec.activeDeadlineSeconds &gt;=0
+         * 
+         */
     private final String scopeName;
-    /**
-     * An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
-     * 
-     */
+        /**
+         * @return An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
+         * 
+         */
     private final @Nullable List<String> values;
 
     @CustomType.Constructor
@@ -52,7 +52,7 @@ public final class ScopedResourceSelectorRequirement {
     }
 
     /**
-     * Represents a scope&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist.
+     * @return Represents a scope&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist.
      * 
      * Possible enum values:
      *  - `&#34;DoesNotExist&#34;`
@@ -60,12 +60,12 @@ public final class ScopedResourceSelectorRequirement {
      *  - `&#34;In&#34;`
      *  - `&#34;NotIn&#34;`
      * 
-    */
+     */
     public String operator() {
         return this.operator;
     }
     /**
-     * The name of the scope that the selector applies to.
+     * @return The name of the scope that the selector applies to.
      * 
      * Possible enum values:
      *  - `&#34;BestEffort&#34;` Match all pod objects that have best effort quality of service
@@ -75,14 +75,14 @@ public final class ScopedResourceSelectorRequirement {
      *  - `&#34;PriorityClass&#34;` Match all pod objects that have priority class mentioned
      *  - `&#34;Terminating&#34;` Match all pod objects where spec.activeDeadlineSeconds &gt;=0
      * 
-    */
+     */
     public String scopeName() {
         return this.scopeName;
     }
     /**
-     * An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
+     * @return An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
      * 
-    */
+     */
     public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }

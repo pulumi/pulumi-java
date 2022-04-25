@@ -27,6 +27,10 @@ public final class SELinuxStrategyOptionsArgs extends com.pulumi.resources.Resou
     @Import(name="rule", required=true)
     private Output<String> rule;
 
+    /**
+     * @return rule is the strategy that will dictate the allowable labels that may be set.
+     * 
+     */
     public Output<String> rule() {
         return this.rule;
     }
@@ -38,6 +42,10 @@ public final class SELinuxStrategyOptionsArgs extends com.pulumi.resources.Resou
     @Import(name="seLinuxOptions")
     private @Nullable Output<SELinuxOptionsArgs> seLinuxOptions;
 
+    /**
+     * @return seLinuxOptions required to run as; required for MustRunAs More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
+     * 
+     */
     public Optional<Output<SELinuxOptionsArgs>> seLinuxOptions() {
         return Optional.ofNullable(this.seLinuxOptions);
     }
@@ -67,20 +75,44 @@ public final class SELinuxStrategyOptionsArgs extends com.pulumi.resources.Resou
             $ = new SELinuxStrategyOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rule rule is the strategy that will dictate the allowable labels that may be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rule(Output<String> rule) {
             $.rule = rule;
             return this;
         }
 
+        /**
+         * @param rule rule is the strategy that will dictate the allowable labels that may be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rule(String rule) {
             return rule(Output.of(rule));
         }
 
+        /**
+         * @param seLinuxOptions seLinuxOptions required to run as; required for MustRunAs More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
+         * 
+         * @return builder
+         * 
+         */
         public Builder seLinuxOptions(@Nullable Output<SELinuxOptionsArgs> seLinuxOptions) {
             $.seLinuxOptions = seLinuxOptions;
             return this;
         }
 
+        /**
+         * @param seLinuxOptions seLinuxOptions required to run as; required for MustRunAs More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
+         * 
+         * @return builder
+         * 
+         */
         public Builder seLinuxOptions(SELinuxOptionsArgs seLinuxOptions) {
             return seLinuxOptions(Output.of(seLinuxOptions));
         }

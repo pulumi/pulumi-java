@@ -28,6 +28,10 @@ public final class ReplicationControllerStatusArgs extends com.pulumi.resources.
     @Import(name="availableReplicas")
     private @Nullable Output<Integer> availableReplicas;
 
+    /**
+     * @return The number of available replicas (ready for at least minReadySeconds) for this replication controller.
+     * 
+     */
     public Optional<Output<Integer>> availableReplicas() {
         return Optional.ofNullable(this.availableReplicas);
     }
@@ -39,6 +43,10 @@ public final class ReplicationControllerStatusArgs extends com.pulumi.resources.
     @Import(name="conditions")
     private @Nullable Output<List<ReplicationControllerConditionArgs>> conditions;
 
+    /**
+     * @return Represents the latest available observations of a replication controller&#39;s current state.
+     * 
+     */
     public Optional<Output<List<ReplicationControllerConditionArgs>>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
@@ -50,6 +58,10 @@ public final class ReplicationControllerStatusArgs extends com.pulumi.resources.
     @Import(name="fullyLabeledReplicas")
     private @Nullable Output<Integer> fullyLabeledReplicas;
 
+    /**
+     * @return The number of pods that have labels matching the labels of the pod template of the replication controller.
+     * 
+     */
     public Optional<Output<Integer>> fullyLabeledReplicas() {
         return Optional.ofNullable(this.fullyLabeledReplicas);
     }
@@ -61,6 +73,10 @@ public final class ReplicationControllerStatusArgs extends com.pulumi.resources.
     @Import(name="observedGeneration")
     private @Nullable Output<Integer> observedGeneration;
 
+    /**
+     * @return ObservedGeneration reflects the generation of the most recently observed replication controller.
+     * 
+     */
     public Optional<Output<Integer>> observedGeneration() {
         return Optional.ofNullable(this.observedGeneration);
     }
@@ -72,6 +88,10 @@ public final class ReplicationControllerStatusArgs extends com.pulumi.resources.
     @Import(name="readyReplicas")
     private @Nullable Output<Integer> readyReplicas;
 
+    /**
+     * @return The number of ready replicas for this replication controller.
+     * 
+     */
     public Optional<Output<Integer>> readyReplicas() {
         return Optional.ofNullable(this.readyReplicas);
     }
@@ -83,6 +103,10 @@ public final class ReplicationControllerStatusArgs extends com.pulumi.resources.
     @Import(name="replicas", required=true)
     private Output<Integer> replicas;
 
+    /**
+     * @return Replicas is the most recently oberved number of replicas. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#what-is-a-replicationcontroller
+     * 
+     */
     public Output<Integer> replicas() {
         return this.replicas;
     }
@@ -116,60 +140,138 @@ public final class ReplicationControllerStatusArgs extends com.pulumi.resources.
             $ = new ReplicationControllerStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availableReplicas The number of available replicas (ready for at least minReadySeconds) for this replication controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableReplicas(@Nullable Output<Integer> availableReplicas) {
             $.availableReplicas = availableReplicas;
             return this;
         }
 
+        /**
+         * @param availableReplicas The number of available replicas (ready for at least minReadySeconds) for this replication controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableReplicas(Integer availableReplicas) {
             return availableReplicas(Output.of(availableReplicas));
         }
 
+        /**
+         * @param conditions Represents the latest available observations of a replication controller&#39;s current state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(@Nullable Output<List<ReplicationControllerConditionArgs>> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions Represents the latest available observations of a replication controller&#39;s current state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<ReplicationControllerConditionArgs> conditions) {
             return conditions(Output.of(conditions));
         }
 
+        /**
+         * @param conditions Represents the latest available observations of a replication controller&#39;s current state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(ReplicationControllerConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
 
+        /**
+         * @param fullyLabeledReplicas The number of pods that have labels matching the labels of the pod template of the replication controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullyLabeledReplicas(@Nullable Output<Integer> fullyLabeledReplicas) {
             $.fullyLabeledReplicas = fullyLabeledReplicas;
             return this;
         }
 
+        /**
+         * @param fullyLabeledReplicas The number of pods that have labels matching the labels of the pod template of the replication controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullyLabeledReplicas(Integer fullyLabeledReplicas) {
             return fullyLabeledReplicas(Output.of(fullyLabeledReplicas));
         }
 
+        /**
+         * @param observedGeneration ObservedGeneration reflects the generation of the most recently observed replication controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
             $.observedGeneration = observedGeneration;
             return this;
         }
 
+        /**
+         * @param observedGeneration ObservedGeneration reflects the generation of the most recently observed replication controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder observedGeneration(Integer observedGeneration) {
             return observedGeneration(Output.of(observedGeneration));
         }
 
+        /**
+         * @param readyReplicas The number of ready replicas for this replication controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readyReplicas(@Nullable Output<Integer> readyReplicas) {
             $.readyReplicas = readyReplicas;
             return this;
         }
 
+        /**
+         * @param readyReplicas The number of ready replicas for this replication controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readyReplicas(Integer readyReplicas) {
             return readyReplicas(Output.of(readyReplicas));
         }
 
+        /**
+         * @param replicas Replicas is the most recently oberved number of replicas. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#what-is-a-replicationcontroller
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicas(Output<Integer> replicas) {
             $.replicas = replicas;
             return this;
         }
 
+        /**
+         * @param replicas Replicas is the most recently oberved number of replicas. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#what-is-a-replicationcontroller
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicas(Integer replicas) {
             return replicas(Output.of(replicas));
         }

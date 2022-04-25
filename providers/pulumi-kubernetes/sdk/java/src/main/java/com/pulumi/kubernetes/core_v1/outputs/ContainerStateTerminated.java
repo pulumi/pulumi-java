@@ -12,40 +12,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ContainerStateTerminated {
-    /**
-     * Container&#39;s ID in the format &#39;docker://&lt;container_id&gt;&#39;
-     * 
-     */
+        /**
+         * @return Container&#39;s ID in the format &#39;docker://&lt;container_id&gt;&#39;
+         * 
+         */
     private final @Nullable String containerID;
-    /**
-     * Exit status from the last termination of the container
-     * 
-     */
+        /**
+         * @return Exit status from the last termination of the container
+         * 
+         */
     private final Integer exitCode;
-    /**
-     * Time at which the container last terminated
-     * 
-     */
+        /**
+         * @return Time at which the container last terminated
+         * 
+         */
     private final @Nullable String finishedAt;
-    /**
-     * Message regarding the last termination of the container
-     * 
-     */
+        /**
+         * @return Message regarding the last termination of the container
+         * 
+         */
     private final @Nullable String message;
-    /**
-     * (brief) reason from the last termination of the container
-     * 
-     */
+        /**
+         * @return (brief) reason from the last termination of the container
+         * 
+         */
     private final @Nullable String reason;
-    /**
-     * Signal from the last termination of the container
-     * 
-     */
+        /**
+         * @return Signal from the last termination of the container
+         * 
+         */
     private final @Nullable Integer signal;
-    /**
-     * Time at which previous execution of the container started
-     * 
-     */
+        /**
+         * @return Time at which previous execution of the container started
+         * 
+         */
     private final @Nullable String startedAt;
 
     @CustomType.Constructor
@@ -67,51 +67,51 @@ public final class ContainerStateTerminated {
     }
 
     /**
-     * Container&#39;s ID in the format &#39;docker://&lt;container_id&gt;&#39;
+     * @return Container&#39;s ID in the format &#39;docker://&lt;container_id&gt;&#39;
      * 
-    */
+     */
     public Optional<String> containerID() {
         return Optional.ofNullable(this.containerID);
     }
     /**
-     * Exit status from the last termination of the container
+     * @return Exit status from the last termination of the container
      * 
-    */
+     */
     public Integer exitCode() {
         return this.exitCode;
     }
     /**
-     * Time at which the container last terminated
+     * @return Time at which the container last terminated
      * 
-    */
+     */
     public Optional<String> finishedAt() {
         return Optional.ofNullable(this.finishedAt);
     }
     /**
-     * Message regarding the last termination of the container
+     * @return Message regarding the last termination of the container
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * (brief) reason from the last termination of the container
+     * @return (brief) reason from the last termination of the container
      * 
-    */
+     */
     public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }
     /**
-     * Signal from the last termination of the container
+     * @return Signal from the last termination of the container
      * 
-    */
+     */
     public Optional<Integer> signal() {
         return Optional.ofNullable(this.signal);
     }
     /**
-     * Time at which previous execution of the container started
+     * @return Time at which previous execution of the container started
      * 
-    */
+     */
     public Optional<String> startedAt() {
         return Optional.ofNullable(this.startedAt);
     }

@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class IngressClassParametersReference {
-    /**
-     * APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.
-     * 
-     */
+        /**
+         * @return APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.
+         * 
+         */
     private final @Nullable String apiGroup;
-    /**
-     * Kind is the type of resource being referenced.
-     * 
-     */
+        /**
+         * @return Kind is the type of resource being referenced.
+         * 
+         */
     private final String kind;
-    /**
-     * Name is the name of resource being referenced.
-     * 
-     */
+        /**
+         * @return Name is the name of resource being referenced.
+         * 
+         */
     private final String name;
-    /**
-     * Namespace is the namespace of the resource being referenced. This field is required when scope is set to &#34;Namespace&#34; and must be unset when scope is set to &#34;Cluster&#34;.
-     * 
-     */
+        /**
+         * @return Namespace is the namespace of the resource being referenced. This field is required when scope is set to &#34;Namespace&#34; and must be unset when scope is set to &#34;Cluster&#34;.
+         * 
+         */
     private final @Nullable String namespace;
-    /**
-     * Scope represents if this refers to a cluster or namespace scoped resource. This may be set to &#34;Cluster&#34; (default) or &#34;Namespace&#34;.
-     * 
-     */
+        /**
+         * @return Scope represents if this refers to a cluster or namespace scoped resource. This may be set to &#34;Cluster&#34; (default) or &#34;Namespace&#34;.
+         * 
+         */
     private final @Nullable String scope;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class IngressClassParametersReference {
     }
 
     /**
-     * APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.
+     * @return APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.
      * 
-    */
+     */
     public Optional<String> apiGroup() {
         return Optional.ofNullable(this.apiGroup);
     }
     /**
-     * Kind is the type of resource being referenced.
+     * @return Kind is the type of resource being referenced.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Name is the name of resource being referenced.
+     * @return Name is the name of resource being referenced.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Namespace is the namespace of the resource being referenced. This field is required when scope is set to &#34;Namespace&#34; and must be unset when scope is set to &#34;Cluster&#34;.
+     * @return Namespace is the namespace of the resource being referenced. This field is required when scope is set to &#34;Namespace&#34; and must be unset when scope is set to &#34;Cluster&#34;.
      * 
-    */
+     */
     public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
-     * Scope represents if this refers to a cluster or namespace scoped resource. This may be set to &#34;Cluster&#34; (default) or &#34;Namespace&#34;.
+     * @return Scope represents if this refers to a cluster or namespace scoped resource. This may be set to &#34;Cluster&#34; (default) or &#34;Namespace&#34;.
      * 
-    */
+     */
     public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }

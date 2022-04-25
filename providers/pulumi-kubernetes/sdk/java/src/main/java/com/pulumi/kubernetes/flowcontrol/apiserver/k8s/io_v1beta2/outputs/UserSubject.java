@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class UserSubject {
-    /**
-     * `name` is the username that matches, or &#34;*&#34; to match all usernames. Required.
-     * 
-     */
+        /**
+         * @return `name` is the username that matches, or &#34;*&#34; to match all usernames. Required.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class UserSubject {
     }
 
     /**
-     * `name` is the username that matches, or &#34;*&#34; to match all usernames. Required.
+     * @return `name` is the username that matches, or &#34;*&#34; to match all usernames. Required.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

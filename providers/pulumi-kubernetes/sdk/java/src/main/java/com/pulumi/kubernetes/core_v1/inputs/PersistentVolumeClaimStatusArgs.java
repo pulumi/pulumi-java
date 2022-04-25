@@ -29,6 +29,10 @@ public final class PersistentVolumeClaimStatusArgs extends com.pulumi.resources.
     @Import(name="accessModes")
     private @Nullable Output<List<String>> accessModes;
 
+    /**
+     * @return AccessModes contains the actual access modes the volume backing the PVC has. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
+     * 
+     */
     public Optional<Output<List<String>>> accessModes() {
         return Optional.ofNullable(this.accessModes);
     }
@@ -40,6 +44,10 @@ public final class PersistentVolumeClaimStatusArgs extends com.pulumi.resources.
     @Import(name="allocatedResources")
     private @Nullable Output<Map<String,String>> allocatedResources;
 
+    /**
+     * @return The storage resource within AllocatedResources tracks the capacity allocated to a PVC. It may be larger than the actual capacity when a volume expansion operation is requested. For storage quota, the larger value from allocatedResources and PVC.spec.resources is used. If allocatedResources is not set, PVC.spec.resources alone is used for quota calculation. If a volume expansion capacity request is lowered, allocatedResources is only lowered if there are no expansion operations in progress and if the actual volume capacity is equal or lower than the requested capacity. This is an alpha field and requires enabling RecoverVolumeExpansionFailure feature.
+     * 
+     */
     public Optional<Output<Map<String,String>>> allocatedResources() {
         return Optional.ofNullable(this.allocatedResources);
     }
@@ -51,6 +59,10 @@ public final class PersistentVolumeClaimStatusArgs extends com.pulumi.resources.
     @Import(name="capacity")
     private @Nullable Output<Map<String,String>> capacity;
 
+    /**
+     * @return Represents the actual resources of the underlying volume.
+     * 
+     */
     public Optional<Output<Map<String,String>>> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -62,6 +74,10 @@ public final class PersistentVolumeClaimStatusArgs extends com.pulumi.resources.
     @Import(name="conditions")
     private @Nullable Output<List<PersistentVolumeClaimConditionArgs>> conditions;
 
+    /**
+     * @return Current Condition of persistent volume claim. If underlying persistent volume is being resized then the Condition will be set to &#39;ResizeStarted&#39;.
+     * 
+     */
     public Optional<Output<List<PersistentVolumeClaimConditionArgs>>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
@@ -78,6 +94,15 @@ public final class PersistentVolumeClaimStatusArgs extends com.pulumi.resources.
     @Import(name="phase")
     private @Nullable Output<String> phase;
 
+    /**
+     * @return Phase represents the current phase of PersistentVolumeClaim.
+     * 
+     * Possible enum values:
+     *  - `&#34;Bound&#34;` used for PersistentVolumeClaims that are bound
+     *  - `&#34;Lost&#34;` used for PersistentVolumeClaims that lost their underlying PersistentVolume. The claim was bound to a PersistentVolume and this volume does not exist any longer and all data on it was lost.
+     *  - `&#34;Pending&#34;` used for PersistentVolumeClaims that are not yet bound
+     * 
+     */
     public Optional<Output<String>> phase() {
         return Optional.ofNullable(this.phase);
     }
@@ -89,6 +114,10 @@ public final class PersistentVolumeClaimStatusArgs extends com.pulumi.resources.
     @Import(name="resizeStatus")
     private @Nullable Output<String> resizeStatus;
 
+    /**
+     * @return ResizeStatus stores status of resize operation. ResizeStatus is not set by default but when expansion is complete resizeStatus is set to empty string by resize controller or kubelet. This is an alpha field and requires enabling RecoverVolumeExpansionFailure feature.
+     * 
+     */
     public Optional<Output<String>> resizeStatus() {
         return Optional.ofNullable(this.resizeStatus);
     }
@@ -122,64 +151,158 @@ public final class PersistentVolumeClaimStatusArgs extends com.pulumi.resources.
             $ = new PersistentVolumeClaimStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessModes AccessModes contains the actual access modes the volume backing the PVC has. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessModes(@Nullable Output<List<String>> accessModes) {
             $.accessModes = accessModes;
             return this;
         }
 
+        /**
+         * @param accessModes AccessModes contains the actual access modes the volume backing the PVC has. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessModes(List<String> accessModes) {
             return accessModes(Output.of(accessModes));
         }
 
+        /**
+         * @param accessModes AccessModes contains the actual access modes the volume backing the PVC has. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessModes(String... accessModes) {
             return accessModes(List.of(accessModes));
         }
 
+        /**
+         * @param allocatedResources The storage resource within AllocatedResources tracks the capacity allocated to a PVC. It may be larger than the actual capacity when a volume expansion operation is requested. For storage quota, the larger value from allocatedResources and PVC.spec.resources is used. If allocatedResources is not set, PVC.spec.resources alone is used for quota calculation. If a volume expansion capacity request is lowered, allocatedResources is only lowered if there are no expansion operations in progress and if the actual volume capacity is equal or lower than the requested capacity. This is an alpha field and requires enabling RecoverVolumeExpansionFailure feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocatedResources(@Nullable Output<Map<String,String>> allocatedResources) {
             $.allocatedResources = allocatedResources;
             return this;
         }
 
+        /**
+         * @param allocatedResources The storage resource within AllocatedResources tracks the capacity allocated to a PVC. It may be larger than the actual capacity when a volume expansion operation is requested. For storage quota, the larger value from allocatedResources and PVC.spec.resources is used. If allocatedResources is not set, PVC.spec.resources alone is used for quota calculation. If a volume expansion capacity request is lowered, allocatedResources is only lowered if there are no expansion operations in progress and if the actual volume capacity is equal or lower than the requested capacity. This is an alpha field and requires enabling RecoverVolumeExpansionFailure feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocatedResources(Map<String,String> allocatedResources) {
             return allocatedResources(Output.of(allocatedResources));
         }
 
+        /**
+         * @param capacity Represents the actual resources of the underlying volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Output<Map<String,String>> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity Represents the actual resources of the underlying volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Map<String,String> capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param conditions Current Condition of persistent volume claim. If underlying persistent volume is being resized then the Condition will be set to &#39;ResizeStarted&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(@Nullable Output<List<PersistentVolumeClaimConditionArgs>> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions Current Condition of persistent volume claim. If underlying persistent volume is being resized then the Condition will be set to &#39;ResizeStarted&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<PersistentVolumeClaimConditionArgs> conditions) {
             return conditions(Output.of(conditions));
         }
 
+        /**
+         * @param conditions Current Condition of persistent volume claim. If underlying persistent volume is being resized then the Condition will be set to &#39;ResizeStarted&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(PersistentVolumeClaimConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
 
+        /**
+         * @param phase Phase represents the current phase of PersistentVolumeClaim.
+         * 
+         * Possible enum values:
+         *  - `&#34;Bound&#34;` used for PersistentVolumeClaims that are bound
+         *  - `&#34;Lost&#34;` used for PersistentVolumeClaims that lost their underlying PersistentVolume. The claim was bound to a PersistentVolume and this volume does not exist any longer and all data on it was lost.
+         *  - `&#34;Pending&#34;` used for PersistentVolumeClaims that are not yet bound
+         * 
+         * @return builder
+         * 
+         */
         public Builder phase(@Nullable Output<String> phase) {
             $.phase = phase;
             return this;
         }
 
+        /**
+         * @param phase Phase represents the current phase of PersistentVolumeClaim.
+         * 
+         * Possible enum values:
+         *  - `&#34;Bound&#34;` used for PersistentVolumeClaims that are bound
+         *  - `&#34;Lost&#34;` used for PersistentVolumeClaims that lost their underlying PersistentVolume. The claim was bound to a PersistentVolume and this volume does not exist any longer and all data on it was lost.
+         *  - `&#34;Pending&#34;` used for PersistentVolumeClaims that are not yet bound
+         * 
+         * @return builder
+         * 
+         */
         public Builder phase(String phase) {
             return phase(Output.of(phase));
         }
 
+        /**
+         * @param resizeStatus ResizeStatus stores status of resize operation. ResizeStatus is not set by default but when expansion is complete resizeStatus is set to empty string by resize controller or kubelet. This is an alpha field and requires enabling RecoverVolumeExpansionFailure feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resizeStatus(@Nullable Output<String> resizeStatus) {
             $.resizeStatus = resizeStatus;
             return this;
         }
 
+        /**
+         * @param resizeStatus ResizeStatus stores status of resize operation. ResizeStatus is not set by default but when expansion is complete resizeStatus is set to empty string by resize controller or kubelet. This is an alpha field and requires enabling RecoverVolumeExpansionFailure feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resizeStatus(String resizeStatus) {
             return resizeStatus(Output.of(resizeStatus));
         }

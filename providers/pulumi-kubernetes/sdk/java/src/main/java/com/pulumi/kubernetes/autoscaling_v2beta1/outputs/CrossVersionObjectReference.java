@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CrossVersionObjectReference {
-    /**
-     * API version of the referent
-     * 
-     */
+        /**
+         * @return API version of the referent
+         * 
+         */
     private final @Nullable String apiVersion;
-    /**
-     * Kind of the referent; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds&#34;
-     * 
-     */
+        /**
+         * @return Kind of the referent; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds&#34;
+         * 
+         */
     private final String kind;
-    /**
-     * Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifiers#names
-     * 
-     */
+        /**
+         * @return Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifiers#names
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class CrossVersionObjectReference {
     }
 
     /**
-     * API version of the referent
+     * @return API version of the referent
      * 
-    */
+     */
     public Optional<String> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
-     * Kind of the referent; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds&#34;
+     * @return Kind of the referent; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds&#34;
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifiers#names
+     * @return Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifiers#names
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

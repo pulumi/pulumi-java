@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ConfigMapNodeConfigSource {
-    /**
-     * KubeletConfigKey declares which key of the referenced ConfigMap corresponds to the KubeletConfiguration structure This field is required in all cases.
-     * 
-     */
+        /**
+         * @return KubeletConfigKey declares which key of the referenced ConfigMap corresponds to the KubeletConfiguration structure This field is required in all cases.
+         * 
+         */
     private final String kubeletConfigKey;
-    /**
-     * Name is the metadata.name of the referenced ConfigMap. This field is required in all cases.
-     * 
-     */
+        /**
+         * @return Name is the metadata.name of the referenced ConfigMap. This field is required in all cases.
+         * 
+         */
     private final String name;
-    /**
-     * Namespace is the metadata.namespace of the referenced ConfigMap. This field is required in all cases.
-     * 
-     */
+        /**
+         * @return Namespace is the metadata.namespace of the referenced ConfigMap. This field is required in all cases.
+         * 
+         */
     private final String namespace;
-    /**
-     * ResourceVersion is the metadata.ResourceVersion of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
-     * 
-     */
+        /**
+         * @return ResourceVersion is the metadata.ResourceVersion of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
+         * 
+         */
     private final @Nullable String resourceVersion;
-    /**
-     * UID is the metadata.UID of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
-     * 
-     */
+        /**
+         * @return UID is the metadata.UID of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
+         * 
+         */
     private final @Nullable String uid;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class ConfigMapNodeConfigSource {
     }
 
     /**
-     * KubeletConfigKey declares which key of the referenced ConfigMap corresponds to the KubeletConfiguration structure This field is required in all cases.
+     * @return KubeletConfigKey declares which key of the referenced ConfigMap corresponds to the KubeletConfiguration structure This field is required in all cases.
      * 
-    */
+     */
     public String kubeletConfigKey() {
         return this.kubeletConfigKey;
     }
     /**
-     * Name is the metadata.name of the referenced ConfigMap. This field is required in all cases.
+     * @return Name is the metadata.name of the referenced ConfigMap. This field is required in all cases.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Namespace is the metadata.namespace of the referenced ConfigMap. This field is required in all cases.
+     * @return Namespace is the metadata.namespace of the referenced ConfigMap. This field is required in all cases.
      * 
-    */
+     */
     public String namespace() {
         return this.namespace;
     }
     /**
-     * ResourceVersion is the metadata.ResourceVersion of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
+     * @return ResourceVersion is the metadata.ResourceVersion of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
      * 
-    */
+     */
     public Optional<String> resourceVersion() {
         return Optional.ofNullable(this.resourceVersion);
     }
     /**
-     * UID is the metadata.UID of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
+     * @return UID is the metadata.UID of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
      * 
-    */
+     */
     public Optional<String> uid() {
         return Optional.ofNullable(this.uid);
     }

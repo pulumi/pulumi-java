@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ResourceFieldSelector {
-    /**
-     * Container name: required for volumes, optional for env vars
-     * 
-     */
+        /**
+         * @return Container name: required for volumes, optional for env vars
+         * 
+         */
     private final @Nullable String containerName;
-    /**
-     * Specifies the output format of the exposed resources, defaults to &#34;1&#34;
-     * 
-     */
+        /**
+         * @return Specifies the output format of the exposed resources, defaults to &#34;1&#34;
+         * 
+         */
     private final @Nullable String divisor;
-    /**
-     * Required: resource to select
-     * 
-     */
+        /**
+         * @return Required: resource to select
+         * 
+         */
     private final String resource;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class ResourceFieldSelector {
     }
 
     /**
-     * Container name: required for volumes, optional for env vars
+     * @return Container name: required for volumes, optional for env vars
      * 
-    */
+     */
     public Optional<String> containerName() {
         return Optional.ofNullable(this.containerName);
     }
     /**
-     * Specifies the output format of the exposed resources, defaults to &#34;1&#34;
+     * @return Specifies the output format of the exposed resources, defaults to &#34;1&#34;
      * 
-    */
+     */
     public Optional<String> divisor() {
         return Optional.ofNullable(this.divisor);
     }
     /**
-     * Required: resource to select
+     * @return Required: resource to select
      * 
-    */
+     */
     public String resource() {
         return this.resource;
     }

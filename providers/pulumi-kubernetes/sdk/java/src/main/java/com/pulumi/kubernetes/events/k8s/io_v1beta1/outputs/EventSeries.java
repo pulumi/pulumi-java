@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EventSeries {
-    /**
-     * count is the number of occurrences in this series up to the last heartbeat time.
-     * 
-     */
+        /**
+         * @return count is the number of occurrences in this series up to the last heartbeat time.
+         * 
+         */
     private final Integer count;
-    /**
-     * lastObservedTime is the time when last Event from the series was seen before last heartbeat.
-     * 
-     */
+        /**
+         * @return lastObservedTime is the time when last Event from the series was seen before last heartbeat.
+         * 
+         */
     private final String lastObservedTime;
-    /**
-     * Information whether this series is ongoing or finished. Deprecated. Planned removal for 1.18
-     * 
-     */
+        /**
+         * @return Information whether this series is ongoing or finished. Deprecated. Planned removal for 1.18
+         * 
+         */
     private final @Nullable String state;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class EventSeries {
     }
 
     /**
-     * count is the number of occurrences in this series up to the last heartbeat time.
+     * @return count is the number of occurrences in this series up to the last heartbeat time.
      * 
-    */
+     */
     public Integer count() {
         return this.count;
     }
     /**
-     * lastObservedTime is the time when last Event from the series was seen before last heartbeat.
+     * @return lastObservedTime is the time when last Event from the series was seen before last heartbeat.
      * 
-    */
+     */
     public String lastObservedTime() {
         return this.lastObservedTime;
     }
     /**
-     * Information whether this series is ongoing or finished. Deprecated. Planned removal for 1.18
+     * @return Information whether this series is ongoing or finished. Deprecated. Planned removal for 1.18
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }

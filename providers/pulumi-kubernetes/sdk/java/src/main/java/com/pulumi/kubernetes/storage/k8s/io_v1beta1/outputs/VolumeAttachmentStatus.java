@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VolumeAttachmentStatus {
-    /**
-     * The last error encountered during attach operation, if any. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.
-     * 
-     */
+        /**
+         * @return The last error encountered during attach operation, if any. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.
+         * 
+         */
     private final @Nullable VolumeError attachError;
-    /**
-     * Indicates the volume is successfully attached. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.
-     * 
-     */
+        /**
+         * @return Indicates the volume is successfully attached. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.
+         * 
+         */
     private final Boolean attached;
-    /**
-     * Upon successful attach, this field is populated with any information returned by the attach operation that must be passed into subsequent WaitForAttach or Mount calls. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.
-     * 
-     */
+        /**
+         * @return Upon successful attach, this field is populated with any information returned by the attach operation that must be passed into subsequent WaitForAttach or Mount calls. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.
+         * 
+         */
     private final @Nullable Map<String,String> attachmentMetadata;
-    /**
-     * The last error encountered during detach operation, if any. This field must only be set by the entity completing the detach operation, i.e. the external-attacher.
-     * 
-     */
+        /**
+         * @return The last error encountered during detach operation, if any. This field must only be set by the entity completing the detach operation, i.e. the external-attacher.
+         * 
+         */
     private final @Nullable VolumeError detachError;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class VolumeAttachmentStatus {
     }
 
     /**
-     * The last error encountered during attach operation, if any. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.
+     * @return The last error encountered during attach operation, if any. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.
      * 
-    */
+     */
     public Optional<VolumeError> attachError() {
         return Optional.ofNullable(this.attachError);
     }
     /**
-     * Indicates the volume is successfully attached. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.
+     * @return Indicates the volume is successfully attached. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.
      * 
-    */
+     */
     public Boolean attached() {
         return this.attached;
     }
     /**
-     * Upon successful attach, this field is populated with any information returned by the attach operation that must be passed into subsequent WaitForAttach or Mount calls. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.
+     * @return Upon successful attach, this field is populated with any information returned by the attach operation that must be passed into subsequent WaitForAttach or Mount calls. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.
      * 
-    */
+     */
     public Map<String,String> attachmentMetadata() {
         return this.attachmentMetadata == null ? Map.of() : this.attachmentMetadata;
     }
     /**
-     * The last error encountered during detach operation, if any. This field must only be set by the entity completing the detach operation, i.e. the external-attacher.
+     * @return The last error encountered during detach operation, if any. This field must only be set by the entity completing the detach operation, i.e. the external-attacher.
      * 
-    */
+     */
     public Optional<VolumeError> detachError() {
         return Optional.ofNullable(this.detachError);
     }

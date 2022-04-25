@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class JobTemplateSpec {
-    /**
-     * Standard object&#39;s metadata of the jobs created from this template. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
-     */
+        /**
+         * @return Standard object&#39;s metadata of the jobs created from this template. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+         * 
+         */
     private final @Nullable ObjectMeta metadata;
-    /**
-     * Specification of the desired behavior of the job. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
-     * 
-     */
+        /**
+         * @return Specification of the desired behavior of the job. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+         * 
+         */
     private final @Nullable JobSpec spec;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class JobTemplateSpec {
     }
 
     /**
-     * Standard object&#39;s metadata of the jobs created from this template. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * @return Standard object&#39;s metadata of the jobs created from this template. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
-    */
+     */
     public Optional<ObjectMeta> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
-     * Specification of the desired behavior of the job. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     * @return Specification of the desired behavior of the job. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
      * 
-    */
+     */
     public Optional<JobSpec> spec() {
         return Optional.ofNullable(this.spec);
     }

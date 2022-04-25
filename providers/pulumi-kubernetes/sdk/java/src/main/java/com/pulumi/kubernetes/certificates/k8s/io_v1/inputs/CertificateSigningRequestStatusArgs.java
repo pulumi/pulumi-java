@@ -49,6 +49,31 @@ public final class CertificateSigningRequestStatusArgs extends com.pulumi.resour
     @Import(name="certificate")
     private @Nullable Output<String> certificate;
 
+    /**
+     * @return certificate is populated with an issued certificate by the signer after an Approved condition is present. This field is set via the /status subresource. Once populated, this field is immutable.
+     * 
+     * If the certificate signing request is denied, a condition of type &#34;Denied&#34; is added and this field remains empty. If the signer cannot issue the certificate, a condition of type &#34;Failed&#34; is added and this field remains empty.
+     * 
+     * Validation requirements:
+     *  1. certificate must contain one or more PEM blocks.
+     *  2. All PEM blocks must have the &#34;CERTIFICATE&#34; label, contain no headers, and the encoded data
+     *       must be a BER-encoded ASN.1 Certificate structure as described in section 4 of RFC5280.
+     *  3. Non-PEM content may appear before or after the &#34;CERTIFICATE&#34; PEM blocks and is unvalidated,
+     *       to allow for explanatory text as described in section 5.2 of RFC7468.
+     * 
+     * If more than one PEM block is present, and the definition of the requested spec.signerName does not indicate otherwise, the first block is the issued certificate, and subsequent blocks should be treated as intermediate certificates and presented in TLS handshakes.
+     * 
+     * The certificate is encoded in PEM format.
+     * 
+     * When serialized as JSON or YAML, the data is additionally base64-encoded, so it consists of:
+     * 
+     *     base64(
+     *     -----BEGIN CERTIFICATE-----
+     *     ...
+     *     -----END CERTIFICATE-----
+     *     )
+     * 
+     */
     public Optional<Output<String>> certificate() {
         return Optional.ofNullable(this.certificate);
     }
@@ -60,6 +85,10 @@ public final class CertificateSigningRequestStatusArgs extends com.pulumi.resour
     @Import(name="conditions")
     private @Nullable Output<List<CertificateSigningRequestConditionArgs>> conditions;
 
+    /**
+     * @return conditions applied to the request. Known conditions are &#34;Approved&#34;, &#34;Denied&#34;, and &#34;Failed&#34;.
+     * 
+     */
     public Optional<Output<List<CertificateSigningRequestConditionArgs>>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
@@ -89,24 +118,96 @@ public final class CertificateSigningRequestStatusArgs extends com.pulumi.resour
             $ = new CertificateSigningRequestStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificate certificate is populated with an issued certificate by the signer after an Approved condition is present. This field is set via the /status subresource. Once populated, this field is immutable.
+         * 
+         * If the certificate signing request is denied, a condition of type &#34;Denied&#34; is added and this field remains empty. If the signer cannot issue the certificate, a condition of type &#34;Failed&#34; is added and this field remains empty.
+         * 
+         * Validation requirements:
+         *  1. certificate must contain one or more PEM blocks.
+         *  2. All PEM blocks must have the &#34;CERTIFICATE&#34; label, contain no headers, and the encoded data
+         *       must be a BER-encoded ASN.1 Certificate structure as described in section 4 of RFC5280.
+         *  3. Non-PEM content may appear before or after the &#34;CERTIFICATE&#34; PEM blocks and is unvalidated,
+         *       to allow for explanatory text as described in section 5.2 of RFC7468.
+         * 
+         * If more than one PEM block is present, and the definition of the requested spec.signerName does not indicate otherwise, the first block is the issued certificate, and subsequent blocks should be treated as intermediate certificates and presented in TLS handshakes.
+         * 
+         * The certificate is encoded in PEM format.
+         * 
+         * When serialized as JSON or YAML, the data is additionally base64-encoded, so it consists of:
+         * 
+         *     base64(
+         *     -----BEGIN CERTIFICATE-----
+         *     ...
+         *     -----END CERTIFICATE-----
+         *     )
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(@Nullable Output<String> certificate) {
             $.certificate = certificate;
             return this;
         }
 
+        /**
+         * @param certificate certificate is populated with an issued certificate by the signer after an Approved condition is present. This field is set via the /status subresource. Once populated, this field is immutable.
+         * 
+         * If the certificate signing request is denied, a condition of type &#34;Denied&#34; is added and this field remains empty. If the signer cannot issue the certificate, a condition of type &#34;Failed&#34; is added and this field remains empty.
+         * 
+         * Validation requirements:
+         *  1. certificate must contain one or more PEM blocks.
+         *  2. All PEM blocks must have the &#34;CERTIFICATE&#34; label, contain no headers, and the encoded data
+         *       must be a BER-encoded ASN.1 Certificate structure as described in section 4 of RFC5280.
+         *  3. Non-PEM content may appear before or after the &#34;CERTIFICATE&#34; PEM blocks and is unvalidated,
+         *       to allow for explanatory text as described in section 5.2 of RFC7468.
+         * 
+         * If more than one PEM block is present, and the definition of the requested spec.signerName does not indicate otherwise, the first block is the issued certificate, and subsequent blocks should be treated as intermediate certificates and presented in TLS handshakes.
+         * 
+         * The certificate is encoded in PEM format.
+         * 
+         * When serialized as JSON or YAML, the data is additionally base64-encoded, so it consists of:
+         * 
+         *     base64(
+         *     -----BEGIN CERTIFICATE-----
+         *     ...
+         *     -----END CERTIFICATE-----
+         *     )
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(String certificate) {
             return certificate(Output.of(certificate));
         }
 
+        /**
+         * @param conditions conditions applied to the request. Known conditions are &#34;Approved&#34;, &#34;Denied&#34;, and &#34;Failed&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(@Nullable Output<List<CertificateSigningRequestConditionArgs>> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions conditions applied to the request. Known conditions are &#34;Approved&#34;, &#34;Denied&#34;, and &#34;Failed&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<CertificateSigningRequestConditionArgs> conditions) {
             return conditions(Output.of(conditions));
         }
 
+        /**
+         * @param conditions conditions applied to the request. Known conditions are &#34;Approved&#34;, &#34;Denied&#34;, and &#34;Failed&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(CertificateSigningRequestConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }

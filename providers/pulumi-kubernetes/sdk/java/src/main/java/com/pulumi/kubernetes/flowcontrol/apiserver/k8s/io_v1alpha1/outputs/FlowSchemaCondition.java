@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FlowSchemaCondition {
-    /**
-     * `lastTransitionTime` is the last time the condition transitioned from one status to another.
-     * 
-     */
+        /**
+         * @return `lastTransitionTime` is the last time the condition transitioned from one status to another.
+         * 
+         */
     private final @Nullable String lastTransitionTime;
-    /**
-     * `message` is a human-readable message indicating details about last transition.
-     * 
-     */
+        /**
+         * @return `message` is a human-readable message indicating details about last transition.
+         * 
+         */
     private final @Nullable String message;
-    /**
-     * `reason` is a unique, one-word, CamelCase reason for the condition&#39;s last transition.
-     * 
-     */
+        /**
+         * @return `reason` is a unique, one-word, CamelCase reason for the condition&#39;s last transition.
+         * 
+         */
     private final @Nullable String reason;
-    /**
-     * `status` is the status of the condition. Can be True, False, Unknown. Required.
-     * 
-     */
+        /**
+         * @return `status` is the status of the condition. Can be True, False, Unknown. Required.
+         * 
+         */
     private final @Nullable String status;
-    /**
-     * `type` is the type of the condition. Required.
-     * 
-     */
+        /**
+         * @return `type` is the type of the condition. Required.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class FlowSchemaCondition {
     }
 
     /**
-     * `lastTransitionTime` is the last time the condition transitioned from one status to another.
+     * @return `lastTransitionTime` is the last time the condition transitioned from one status to another.
      * 
-    */
+     */
     public Optional<String> lastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
-     * `message` is a human-readable message indicating details about last transition.
+     * @return `message` is a human-readable message indicating details about last transition.
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * `reason` is a unique, one-word, CamelCase reason for the condition&#39;s last transition.
+     * @return `reason` is a unique, one-word, CamelCase reason for the condition&#39;s last transition.
      * 
-    */
+     */
     public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }
     /**
-     * `status` is the status of the condition. Can be True, False, Unknown. Required.
+     * @return `status` is the status of the condition. Can be True, False, Unknown. Required.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * `type` is the type of the condition. Required.
+     * @return `type` is the type of the condition. Required.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

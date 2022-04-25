@@ -27,6 +27,10 @@ public final class PodsMetricStatusArgs extends com.pulumi.resources.ResourceArg
     @Import(name="currentAverageValue", required=true)
     private Output<String> currentAverageValue;
 
+    /**
+     * @return currentAverageValue is the current value of the average of the metric across all relevant pods (as a quantity)
+     * 
+     */
     public Output<String> currentAverageValue() {
         return this.currentAverageValue;
     }
@@ -38,6 +42,10 @@ public final class PodsMetricStatusArgs extends com.pulumi.resources.ResourceArg
     @Import(name="metricName", required=true)
     private Output<String> metricName;
 
+    /**
+     * @return metricName is the name of the metric in question
+     * 
+     */
     public Output<String> metricName() {
         return this.metricName;
     }
@@ -49,6 +57,10 @@ public final class PodsMetricStatusArgs extends com.pulumi.resources.ResourceArg
     @Import(name="selector")
     private @Nullable Output<LabelSelectorArgs> selector;
 
+    /**
+     * @return selector is the string-encoded form of a standard kubernetes label selector for the given metric When set in the PodsMetricSource, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.
+     * 
+     */
     public Optional<Output<LabelSelectorArgs>> selector() {
         return Optional.ofNullable(this.selector);
     }
@@ -79,29 +91,65 @@ public final class PodsMetricStatusArgs extends com.pulumi.resources.ResourceArg
             $ = new PodsMetricStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param currentAverageValue currentAverageValue is the current value of the average of the metric across all relevant pods (as a quantity)
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentAverageValue(Output<String> currentAverageValue) {
             $.currentAverageValue = currentAverageValue;
             return this;
         }
 
+        /**
+         * @param currentAverageValue currentAverageValue is the current value of the average of the metric across all relevant pods (as a quantity)
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentAverageValue(String currentAverageValue) {
             return currentAverageValue(Output.of(currentAverageValue));
         }
 
+        /**
+         * @param metricName metricName is the name of the metric in question
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(Output<String> metricName) {
             $.metricName = metricName;
             return this;
         }
 
+        /**
+         * @param metricName metricName is the name of the metric in question
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(String metricName) {
             return metricName(Output.of(metricName));
         }
 
+        /**
+         * @param selector selector is the string-encoded form of a standard kubernetes label selector for the given metric When set in the PodsMetricSource, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(@Nullable Output<LabelSelectorArgs> selector) {
             $.selector = selector;
             return this;
         }
 
+        /**
+         * @param selector selector is the string-encoded form of a standard kubernetes label selector for the given metric When set in the PodsMetricSource, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(LabelSelectorArgs selector) {
             return selector(Output.of(selector));
         }

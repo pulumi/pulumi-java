@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class PodsMetricStatus {
-    /**
-     * current contains the current value for the given metric
-     * 
-     */
+        /**
+         * @return current contains the current value for the given metric
+         * 
+         */
     private final MetricValueStatus current;
-    /**
-     * metric identifies the target metric by name and selector
-     * 
-     */
+        /**
+         * @return metric identifies the target metric by name and selector
+         * 
+         */
     private final MetricIdentifier metric;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class PodsMetricStatus {
     }
 
     /**
-     * current contains the current value for the given metric
+     * @return current contains the current value for the given metric
      * 
-    */
+     */
     public MetricValueStatus current() {
         return this.current;
     }
     /**
-     * metric identifies the target metric by name and selector
+     * @return metric identifies the target metric by name and selector
      * 
-    */
+     */
     public MetricIdentifier metric() {
         return this.metric;
     }

@@ -16,50 +16,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DeploymentSpec {
-    /**
-     * Minimum number of seconds for which a newly created pod should be ready without any of its container crashing, for it to be considered available. Defaults to 0 (pod will be considered available as soon as it is ready)
-     * 
-     */
+        /**
+         * @return Minimum number of seconds for which a newly created pod should be ready without any of its container crashing, for it to be considered available. Defaults to 0 (pod will be considered available as soon as it is ready)
+         * 
+         */
     private final @Nullable Integer minReadySeconds;
-    /**
-     * Indicates that the deployment is paused and will not be processed by the deployment controller.
-     * 
-     */
+        /**
+         * @return Indicates that the deployment is paused and will not be processed by the deployment controller.
+         * 
+         */
     private final @Nullable Boolean paused;
-    /**
-     * The maximum time in seconds for a deployment to make progress before it is considered to be failed. The deployment controller will continue to process failed deployments and a condition with a ProgressDeadlineExceeded reason will be surfaced in the deployment status. Note that progress will not be estimated during the time a deployment is paused. This is set to the max value of int32 (i.e. 2147483647) by default, which means &#34;no deadline&#34;.
-     * 
-     */
+        /**
+         * @return The maximum time in seconds for a deployment to make progress before it is considered to be failed. The deployment controller will continue to process failed deployments and a condition with a ProgressDeadlineExceeded reason will be surfaced in the deployment status. Note that progress will not be estimated during the time a deployment is paused. This is set to the max value of int32 (i.e. 2147483647) by default, which means &#34;no deadline&#34;.
+         * 
+         */
     private final @Nullable Integer progressDeadlineSeconds;
-    /**
-     * Number of desired pods. This is a pointer to distinguish between explicit zero and not specified. Defaults to 1.
-     * 
-     */
+        /**
+         * @return Number of desired pods. This is a pointer to distinguish between explicit zero and not specified. Defaults to 1.
+         * 
+         */
     private final @Nullable Integer replicas;
-    /**
-     * The number of old ReplicaSets to retain to allow rollback. This is a pointer to distinguish between explicit zero and not specified. This is set to the max value of int32 (i.e. 2147483647) by default, which means &#34;retaining all old RelicaSets&#34;.
-     * 
-     */
+        /**
+         * @return The number of old ReplicaSets to retain to allow rollback. This is a pointer to distinguish between explicit zero and not specified. This is set to the max value of int32 (i.e. 2147483647) by default, which means &#34;retaining all old RelicaSets&#34;.
+         * 
+         */
     private final @Nullable Integer revisionHistoryLimit;
-    /**
-     * DEPRECATED. The config this deployment is rolling back to. Will be cleared after rollback is done.
-     * 
-     */
+        /**
+         * @return DEPRECATED. The config this deployment is rolling back to. Will be cleared after rollback is done.
+         * 
+         */
     private final @Nullable RollbackConfig rollbackTo;
-    /**
-     * Label selector for pods. Existing ReplicaSets whose pods are selected by this will be the ones affected by this deployment.
-     * 
-     */
+        /**
+         * @return Label selector for pods. Existing ReplicaSets whose pods are selected by this will be the ones affected by this deployment.
+         * 
+         */
     private final @Nullable LabelSelector selector;
-    /**
-     * The deployment strategy to use to replace existing pods with new ones.
-     * 
-     */
+        /**
+         * @return The deployment strategy to use to replace existing pods with new ones.
+         * 
+         */
     private final @Nullable DeploymentStrategy strategy;
-    /**
-     * Template describes the pods that will be created.
-     * 
-     */
+        /**
+         * @return Template describes the pods that will be created.
+         * 
+         */
     private final PodTemplateSpec template;
 
     @CustomType.Constructor
@@ -85,65 +85,65 @@ public final class DeploymentSpec {
     }
 
     /**
-     * Minimum number of seconds for which a newly created pod should be ready without any of its container crashing, for it to be considered available. Defaults to 0 (pod will be considered available as soon as it is ready)
+     * @return Minimum number of seconds for which a newly created pod should be ready without any of its container crashing, for it to be considered available. Defaults to 0 (pod will be considered available as soon as it is ready)
      * 
-    */
+     */
     public Optional<Integer> minReadySeconds() {
         return Optional.ofNullable(this.minReadySeconds);
     }
     /**
-     * Indicates that the deployment is paused and will not be processed by the deployment controller.
+     * @return Indicates that the deployment is paused and will not be processed by the deployment controller.
      * 
-    */
+     */
     public Optional<Boolean> paused() {
         return Optional.ofNullable(this.paused);
     }
     /**
-     * The maximum time in seconds for a deployment to make progress before it is considered to be failed. The deployment controller will continue to process failed deployments and a condition with a ProgressDeadlineExceeded reason will be surfaced in the deployment status. Note that progress will not be estimated during the time a deployment is paused. This is set to the max value of int32 (i.e. 2147483647) by default, which means &#34;no deadline&#34;.
+     * @return The maximum time in seconds for a deployment to make progress before it is considered to be failed. The deployment controller will continue to process failed deployments and a condition with a ProgressDeadlineExceeded reason will be surfaced in the deployment status. Note that progress will not be estimated during the time a deployment is paused. This is set to the max value of int32 (i.e. 2147483647) by default, which means &#34;no deadline&#34;.
      * 
-    */
+     */
     public Optional<Integer> progressDeadlineSeconds() {
         return Optional.ofNullable(this.progressDeadlineSeconds);
     }
     /**
-     * Number of desired pods. This is a pointer to distinguish between explicit zero and not specified. Defaults to 1.
+     * @return Number of desired pods. This is a pointer to distinguish between explicit zero and not specified. Defaults to 1.
      * 
-    */
+     */
     public Optional<Integer> replicas() {
         return Optional.ofNullable(this.replicas);
     }
     /**
-     * The number of old ReplicaSets to retain to allow rollback. This is a pointer to distinguish between explicit zero and not specified. This is set to the max value of int32 (i.e. 2147483647) by default, which means &#34;retaining all old RelicaSets&#34;.
+     * @return The number of old ReplicaSets to retain to allow rollback. This is a pointer to distinguish between explicit zero and not specified. This is set to the max value of int32 (i.e. 2147483647) by default, which means &#34;retaining all old RelicaSets&#34;.
      * 
-    */
+     */
     public Optional<Integer> revisionHistoryLimit() {
         return Optional.ofNullable(this.revisionHistoryLimit);
     }
     /**
-     * DEPRECATED. The config this deployment is rolling back to. Will be cleared after rollback is done.
+     * @return DEPRECATED. The config this deployment is rolling back to. Will be cleared after rollback is done.
      * 
-    */
+     */
     public Optional<RollbackConfig> rollbackTo() {
         return Optional.ofNullable(this.rollbackTo);
     }
     /**
-     * Label selector for pods. Existing ReplicaSets whose pods are selected by this will be the ones affected by this deployment.
+     * @return Label selector for pods. Existing ReplicaSets whose pods are selected by this will be the ones affected by this deployment.
      * 
-    */
+     */
     public Optional<LabelSelector> selector() {
         return Optional.ofNullable(this.selector);
     }
     /**
-     * The deployment strategy to use to replace existing pods with new ones.
+     * @return The deployment strategy to use to replace existing pods with new ones.
      * 
-    */
+     */
     public Optional<DeploymentStrategy> strategy() {
         return Optional.ofNullable(this.strategy);
     }
     /**
-     * Template describes the pods that will be created.
+     * @return Template describes the pods that will be created.
      * 
-    */
+     */
     public PodTemplateSpec template() {
         return this.template;
     }

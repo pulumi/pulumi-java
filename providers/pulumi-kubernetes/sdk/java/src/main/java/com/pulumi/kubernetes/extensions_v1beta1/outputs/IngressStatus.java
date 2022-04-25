@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class IngressStatus {
-    /**
-     * LoadBalancer contains the current status of the load-balancer.
-     * 
-     */
+        /**
+         * @return LoadBalancer contains the current status of the load-balancer.
+         * 
+         */
     private final @Nullable LoadBalancerStatus loadBalancer;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class IngressStatus {
     }
 
     /**
-     * LoadBalancer contains the current status of the load-balancer.
+     * @return LoadBalancer contains the current status of the load-balancer.
      * 
-    */
+     */
     public Optional<LoadBalancerStatus> loadBalancer() {
         return Optional.ofNullable(this.loadBalancer);
     }

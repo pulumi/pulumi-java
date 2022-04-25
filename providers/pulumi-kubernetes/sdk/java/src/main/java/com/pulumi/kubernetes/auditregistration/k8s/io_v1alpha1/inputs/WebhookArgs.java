@@ -27,6 +27,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientConfig", required=true)
     private Output<WebhookClientConfigArgs> clientConfig;
 
+    /**
+     * @return ClientConfig holds the connection parameters for the webhook required
+     * 
+     */
     public Output<WebhookClientConfigArgs> clientConfig() {
         return this.clientConfig;
     }
@@ -38,6 +42,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="throttle")
     private @Nullable Output<WebhookThrottleConfigArgs> throttle;
 
+    /**
+     * @return Throttle holds the options for throttling the webhook
+     * 
+     */
     public Optional<Output<WebhookThrottleConfigArgs>> throttle() {
         return Optional.ofNullable(this.throttle);
     }
@@ -67,20 +75,44 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WebhookArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientConfig ClientConfig holds the connection parameters for the webhook required
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientConfig(Output<WebhookClientConfigArgs> clientConfig) {
             $.clientConfig = clientConfig;
             return this;
         }
 
+        /**
+         * @param clientConfig ClientConfig holds the connection parameters for the webhook required
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientConfig(WebhookClientConfigArgs clientConfig) {
             return clientConfig(Output.of(clientConfig));
         }
 
+        /**
+         * @param throttle Throttle holds the options for throttling the webhook
+         * 
+         * @return builder
+         * 
+         */
         public Builder throttle(@Nullable Output<WebhookThrottleConfigArgs> throttle) {
             $.throttle = throttle;
             return this;
         }
 
+        /**
+         * @param throttle Throttle holds the options for throttling the webhook
+         * 
+         * @return builder
+         * 
+         */
         public Builder throttle(WebhookThrottleConfigArgs throttle) {
             return throttle(Output.of(throttle));
         }

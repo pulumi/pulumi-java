@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ResourceMetricStatus {
-    /**
-     * current contains the current value for the given metric
-     * 
-     */
+        /**
+         * @return current contains the current value for the given metric
+         * 
+         */
     private final MetricValueStatus current;
-    /**
-     * Name is the name of the resource in question.
-     * 
-     */
+        /**
+         * @return Name is the name of the resource in question.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class ResourceMetricStatus {
     }
 
     /**
-     * current contains the current value for the given metric
+     * @return current contains the current value for the given metric
      * 
-    */
+     */
     public MetricValueStatus current() {
         return this.current;
     }
     /**
-     * Name is the name of the resource in question.
+     * @return Name is the name of the resource in question.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

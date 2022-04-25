@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EnvVar {
-    /**
-     * Name of the environment variable. Must be a C_IDENTIFIER.
-     * 
-     */
+        /**
+         * @return Name of the environment variable. Must be a C_IDENTIFIER.
+         * 
+         */
     private final String name;
-    /**
-     * Variable references $(VAR_NAME) are expanded using the previously defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. &#34;$$(VAR_NAME)&#34; will produce the string literal &#34;$(VAR_NAME)&#34;. Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to &#34;&#34;.
-     * 
-     */
+        /**
+         * @return Variable references $(VAR_NAME) are expanded using the previously defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. &#34;$$(VAR_NAME)&#34; will produce the string literal &#34;$(VAR_NAME)&#34;. Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to &#34;&#34;.
+         * 
+         */
     private final @Nullable String value;
-    /**
-     * Source for the environment variable&#39;s value. Cannot be used if value is not empty.
-     * 
-     */
+        /**
+         * @return Source for the environment variable&#39;s value. Cannot be used if value is not empty.
+         * 
+         */
     private final @Nullable EnvVarSource valueFrom;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class EnvVar {
     }
 
     /**
-     * Name of the environment variable. Must be a C_IDENTIFIER.
+     * @return Name of the environment variable. Must be a C_IDENTIFIER.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Variable references $(VAR_NAME) are expanded using the previously defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. &#34;$$(VAR_NAME)&#34; will produce the string literal &#34;$(VAR_NAME)&#34;. Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to &#34;&#34;.
+     * @return Variable references $(VAR_NAME) are expanded using the previously defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. &#34;$$(VAR_NAME)&#34; will produce the string literal &#34;$(VAR_NAME)&#34;. Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to &#34;&#34;.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
     /**
-     * Source for the environment variable&#39;s value. Cannot be used if value is not empty.
+     * @return Source for the environment variable&#39;s value. Cannot be used if value is not empty.
      * 
-    */
+     */
     public Optional<EnvVarSource> valueFrom() {
         return Optional.ofNullable(this.valueFrom);
     }

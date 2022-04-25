@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RollingUpdateStatefulSetStrategy {
-    /**
-     * Partition indicates the ordinal at which the StatefulSet should be partitioned. Default value is 0.
-     * 
-     */
+        /**
+         * @return Partition indicates the ordinal at which the StatefulSet should be partitioned. Default value is 0.
+         * 
+         */
     private final @Nullable Integer partition;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class RollingUpdateStatefulSetStrategy {
     }
 
     /**
-     * Partition indicates the ordinal at which the StatefulSet should be partitioned. Default value is 0.
+     * @return Partition indicates the ordinal at which the StatefulSet should be partitioned. Default value is 0.
      * 
-    */
+     */
     public Optional<Integer> partition() {
         return Optional.ofNullable(this.partition);
     }

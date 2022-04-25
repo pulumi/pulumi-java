@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class HTTPIngressRuleValue {
-    /**
-     * A collection of paths that map requests to backends.
-     * 
-     */
+        /**
+         * @return A collection of paths that map requests to backends.
+         * 
+         */
     private final List<HTTPIngressPath> paths;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class HTTPIngressRuleValue {
     }
 
     /**
-     * A collection of paths that map requests to backends.
+     * @return A collection of paths that map requests to backends.
      * 
-    */
+     */
     public List<HTTPIngressPath> paths() {
         return this.paths;
     }

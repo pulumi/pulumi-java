@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CinderVolumeSource {
-    /**
-     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
-     * 
-     */
+        /**
+         * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+         * 
+         */
     private final @Nullable String fsType;
-    /**
-     * Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
-     * 
-     */
+        /**
+         * @return Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+         * 
+         */
     private final @Nullable Boolean readOnly;
-    /**
-     * Optional: points to a secret object containing parameters used to connect to OpenStack.
-     * 
-     */
+        /**
+         * @return Optional: points to a secret object containing parameters used to connect to OpenStack.
+         * 
+         */
     private final @Nullable LocalObjectReference secretRef;
-    /**
-     * volume id used to identify the volume in cinder. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
-     * 
-     */
+        /**
+         * @return volume id used to identify the volume in cinder. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+         * 
+         */
     private final String volumeID;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class CinderVolumeSource {
     }
 
     /**
-     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+     * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
      * 
-    */
+     */
     public Optional<String> fsType() {
         return Optional.ofNullable(this.fsType);
     }
     /**
-     * Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+     * @return Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
      * 
-    */
+     */
     public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
-     * Optional: points to a secret object containing parameters used to connect to OpenStack.
+     * @return Optional: points to a secret object containing parameters used to connect to OpenStack.
      * 
-    */
+     */
     public Optional<LocalObjectReference> secretRef() {
         return Optional.ofNullable(this.secretRef);
     }
     /**
-     * volume id used to identify the volume in cinder. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+     * @return volume id used to identify the volume in cinder. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
      * 
-    */
+     */
     public String volumeID() {
         return this.volumeID;
     }

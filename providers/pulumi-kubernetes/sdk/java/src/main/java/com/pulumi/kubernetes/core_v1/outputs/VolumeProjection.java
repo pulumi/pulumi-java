@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VolumeProjection {
-    /**
-     * information about the configMap data to project
-     * 
-     */
+        /**
+         * @return information about the configMap data to project
+         * 
+         */
     private final @Nullable ConfigMapProjection configMap;
-    /**
-     * information about the downwardAPI data to project
-     * 
-     */
+        /**
+         * @return information about the downwardAPI data to project
+         * 
+         */
     private final @Nullable DownwardAPIProjection downwardAPI;
-    /**
-     * information about the secret data to project
-     * 
-     */
+        /**
+         * @return information about the secret data to project
+         * 
+         */
     private final @Nullable SecretProjection secret;
-    /**
-     * information about the serviceAccountToken data to project
-     * 
-     */
+        /**
+         * @return information about the serviceAccountToken data to project
+         * 
+         */
     private final @Nullable ServiceAccountTokenProjection serviceAccountToken;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class VolumeProjection {
     }
 
     /**
-     * information about the configMap data to project
+     * @return information about the configMap data to project
      * 
-    */
+     */
     public Optional<ConfigMapProjection> configMap() {
         return Optional.ofNullable(this.configMap);
     }
     /**
-     * information about the downwardAPI data to project
+     * @return information about the downwardAPI data to project
      * 
-    */
+     */
     public Optional<DownwardAPIProjection> downwardAPI() {
         return Optional.ofNullable(this.downwardAPI);
     }
     /**
-     * information about the secret data to project
+     * @return information about the secret data to project
      * 
-    */
+     */
     public Optional<SecretProjection> secret() {
         return Optional.ofNullable(this.secret);
     }
     /**
-     * information about the serviceAccountToken data to project
+     * @return information about the serviceAccountToken data to project
      * 
-    */
+     */
     public Optional<ServiceAccountTokenProjection> serviceAccountToken() {
         return Optional.ofNullable(this.serviceAccountToken);
     }

@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class Taint {
-    /**
-     * Required. The effect of the taint on pods that do not tolerate the taint. Valid effects are NoSchedule, PreferNoSchedule and NoExecute.
-     * 
-     * Possible enum values:
-     *  - `&#34;NoExecute&#34;` Evict any already-running pods that do not tolerate the taint. Currently enforced by NodeController.
-     *  - `&#34;NoSchedule&#34;` Do not allow new pods to schedule onto the node unless they tolerate the taint, but allow all pods submitted to Kubelet without going through the scheduler to start, and allow all already-running pods to continue running. Enforced by the scheduler.
-     *  - `&#34;PreferNoSchedule&#34;` Like TaintEffectNoSchedule, but the scheduler tries not to schedule new pods onto the node, rather than prohibiting new pods from scheduling onto the node entirely. Enforced by the scheduler.
-     * 
-     */
+        /**
+         * @return Required. The effect of the taint on pods that do not tolerate the taint. Valid effects are NoSchedule, PreferNoSchedule and NoExecute.
+         * 
+         * Possible enum values:
+         *  - `&#34;NoExecute&#34;` Evict any already-running pods that do not tolerate the taint. Currently enforced by NodeController.
+         *  - `&#34;NoSchedule&#34;` Do not allow new pods to schedule onto the node unless they tolerate the taint, but allow all pods submitted to Kubelet without going through the scheduler to start, and allow all already-running pods to continue running. Enforced by the scheduler.
+         *  - `&#34;PreferNoSchedule&#34;` Like TaintEffectNoSchedule, but the scheduler tries not to schedule new pods onto the node, rather than prohibiting new pods from scheduling onto the node entirely. Enforced by the scheduler.
+         * 
+         */
     private final String effect;
-    /**
-     * Required. The taint key to be applied to a node.
-     * 
-     */
+        /**
+         * @return Required. The taint key to be applied to a node.
+         * 
+         */
     private final String key;
-    /**
-     * TimeAdded represents the time at which the taint was added. It is only written for NoExecute taints.
-     * 
-     */
+        /**
+         * @return TimeAdded represents the time at which the taint was added. It is only written for NoExecute taints.
+         * 
+         */
     private final @Nullable String timeAdded;
-    /**
-     * The taint value corresponding to the taint key.
-     * 
-     */
+        /**
+         * @return The taint value corresponding to the taint key.
+         * 
+         */
     private final @Nullable String value;
 
     @CustomType.Constructor
@@ -50,35 +50,35 @@ public final class Taint {
     }
 
     /**
-     * Required. The effect of the taint on pods that do not tolerate the taint. Valid effects are NoSchedule, PreferNoSchedule and NoExecute.
+     * @return Required. The effect of the taint on pods that do not tolerate the taint. Valid effects are NoSchedule, PreferNoSchedule and NoExecute.
      * 
      * Possible enum values:
      *  - `&#34;NoExecute&#34;` Evict any already-running pods that do not tolerate the taint. Currently enforced by NodeController.
      *  - `&#34;NoSchedule&#34;` Do not allow new pods to schedule onto the node unless they tolerate the taint, but allow all pods submitted to Kubelet without going through the scheduler to start, and allow all already-running pods to continue running. Enforced by the scheduler.
      *  - `&#34;PreferNoSchedule&#34;` Like TaintEffectNoSchedule, but the scheduler tries not to schedule new pods onto the node, rather than prohibiting new pods from scheduling onto the node entirely. Enforced by the scheduler.
      * 
-    */
+     */
     public String effect() {
         return this.effect;
     }
     /**
-     * Required. The taint key to be applied to a node.
+     * @return Required. The taint key to be applied to a node.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * TimeAdded represents the time at which the taint was added. It is only written for NoExecute taints.
+     * @return TimeAdded represents the time at which the taint was added. It is only written for NoExecute taints.
      * 
-    */
+     */
     public Optional<String> timeAdded() {
         return Optional.ofNullable(this.timeAdded);
     }
     /**
-     * The taint value corresponding to the taint key.
+     * @return The taint value corresponding to the taint key.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

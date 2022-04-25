@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WebhookThrottleConfig {
-    /**
-     * ThrottleBurst is the maximum number of events sent at the same moment default 15 QPS
-     * 
-     */
+        /**
+         * @return ThrottleBurst is the maximum number of events sent at the same moment default 15 QPS
+         * 
+         */
     private final @Nullable Integer burst;
-    /**
-     * ThrottleQPS maximum number of batches per second default 10 QPS
-     * 
-     */
+        /**
+         * @return ThrottleQPS maximum number of batches per second default 10 QPS
+         * 
+         */
     private final @Nullable Integer qps;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class WebhookThrottleConfig {
     }
 
     /**
-     * ThrottleBurst is the maximum number of events sent at the same moment default 15 QPS
+     * @return ThrottleBurst is the maximum number of events sent at the same moment default 15 QPS
      * 
-    */
+     */
     public Optional<Integer> burst() {
         return Optional.ofNullable(this.burst);
     }
     /**
-     * ThrottleQPS maximum number of batches per second default 10 QPS
+     * @return ThrottleQPS maximum number of batches per second default 10 QPS
      * 
-    */
+     */
     public Optional<Integer> qps() {
         return Optional.ofNullable(this.qps);
     }

@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ExternalMetricSource {
-    /**
-     * metricName is the name of the metric in question.
-     * 
-     */
+        /**
+         * @return metricName is the name of the metric in question.
+         * 
+         */
     private final String metricName;
-    /**
-     * metricSelector is used to identify a specific time series within a given metric.
-     * 
-     */
+        /**
+         * @return metricSelector is used to identify a specific time series within a given metric.
+         * 
+         */
     private final @Nullable LabelSelector metricSelector;
-    /**
-     * targetAverageValue is the target per-pod value of global metric (as a quantity). Mutually exclusive with TargetValue.
-     * 
-     */
+        /**
+         * @return targetAverageValue is the target per-pod value of global metric (as a quantity). Mutually exclusive with TargetValue.
+         * 
+         */
     private final @Nullable String targetAverageValue;
-    /**
-     * targetValue is the target value of the metric (as a quantity). Mutually exclusive with TargetAverageValue.
-     * 
-     */
+        /**
+         * @return targetValue is the target value of the metric (as a quantity). Mutually exclusive with TargetAverageValue.
+         * 
+         */
     private final @Nullable String targetValue;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class ExternalMetricSource {
     }
 
     /**
-     * metricName is the name of the metric in question.
+     * @return metricName is the name of the metric in question.
      * 
-    */
+     */
     public String metricName() {
         return this.metricName;
     }
     /**
-     * metricSelector is used to identify a specific time series within a given metric.
+     * @return metricSelector is used to identify a specific time series within a given metric.
      * 
-    */
+     */
     public Optional<LabelSelector> metricSelector() {
         return Optional.ofNullable(this.metricSelector);
     }
     /**
-     * targetAverageValue is the target per-pod value of global metric (as a quantity). Mutually exclusive with TargetValue.
+     * @return targetAverageValue is the target per-pod value of global metric (as a quantity). Mutually exclusive with TargetValue.
      * 
-    */
+     */
     public Optional<String> targetAverageValue() {
         return Optional.ofNullable(this.targetAverageValue);
     }
     /**
-     * targetValue is the target value of the metric (as a quantity). Mutually exclusive with TargetAverageValue.
+     * @return targetValue is the target value of the metric (as a quantity). Mutually exclusive with TargetAverageValue.
      * 
-    */
+     */
     public Optional<String> targetValue() {
         return Optional.ofNullable(this.targetValue);
     }

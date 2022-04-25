@@ -27,6 +27,10 @@ public final class DaemonSetUpdateStrategyArgs extends com.pulumi.resources.Reso
     @Import(name="rollingUpdate")
     private @Nullable Output<RollingUpdateDaemonSetArgs> rollingUpdate;
 
+    /**
+     * @return Rolling update config params. Present only if type = &#34;RollingUpdate&#34;.
+     * 
+     */
     public Optional<Output<RollingUpdateDaemonSetArgs>> rollingUpdate() {
         return Optional.ofNullable(this.rollingUpdate);
     }
@@ -38,6 +42,10 @@ public final class DaemonSetUpdateStrategyArgs extends com.pulumi.resources.Reso
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Type of daemon set update. Can be &#34;RollingUpdate&#34; or &#34;OnDelete&#34;. Default is RollingUpdate.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -67,20 +75,44 @@ public final class DaemonSetUpdateStrategyArgs extends com.pulumi.resources.Reso
             $ = new DaemonSetUpdateStrategyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rollingUpdate Rolling update config params. Present only if type = &#34;RollingUpdate&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollingUpdate(@Nullable Output<RollingUpdateDaemonSetArgs> rollingUpdate) {
             $.rollingUpdate = rollingUpdate;
             return this;
         }
 
+        /**
+         * @param rollingUpdate Rolling update config params. Present only if type = &#34;RollingUpdate&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollingUpdate(RollingUpdateDaemonSetArgs rollingUpdate) {
             return rollingUpdate(Output.of(rollingUpdate));
         }
 
+        /**
+         * @param type Type of daemon set update. Can be &#34;RollingUpdate&#34; or &#34;OnDelete&#34;. Default is RollingUpdate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of daemon set update. Can be &#34;RollingUpdate&#34; or &#34;OnDelete&#34;. Default is RollingUpdate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

@@ -14,22 +14,22 @@ public final class NamespaceCondition {
     private final @Nullable String lastTransitionTime;
     private final @Nullable String message;
     private final @Nullable String reason;
-    /**
-     * Status of the condition, one of True, False, Unknown.
-     * 
-     */
+        /**
+         * @return Status of the condition, one of True, False, Unknown.
+         * 
+         */
     private final String status;
-    /**
-     * Type of namespace controller condition.
-     * 
-     * Possible enum values:
-     *  - `&#34;NamespaceContentRemaining&#34;` contains information about resources remaining in a namespace.
-     *  - `&#34;NamespaceDeletionContentFailure&#34;` contains information about namespace deleter errors during deletion of resources.
-     *  - `&#34;NamespaceDeletionDiscoveryFailure&#34;` contains information about namespace deleter errors during resource discovery.
-     *  - `&#34;NamespaceDeletionGroupVersionParsingFailure&#34;` contains information about namespace deleter errors parsing GV for legacy types.
-     *  - `&#34;NamespaceFinalizersRemaining&#34;` contains information about which finalizers are on resources remaining in a namespace.
-     * 
-     */
+        /**
+         * @return Type of namespace controller condition.
+         * 
+         * Possible enum values:
+         *  - `&#34;NamespaceContentRemaining&#34;` contains information about resources remaining in a namespace.
+         *  - `&#34;NamespaceDeletionContentFailure&#34;` contains information about namespace deleter errors during deletion of resources.
+         *  - `&#34;NamespaceDeletionDiscoveryFailure&#34;` contains information about namespace deleter errors during resource discovery.
+         *  - `&#34;NamespaceDeletionGroupVersionParsingFailure&#34;` contains information about namespace deleter errors parsing GV for legacy types.
+         *  - `&#34;NamespaceFinalizersRemaining&#34;` contains information about which finalizers are on resources remaining in a namespace.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -56,14 +56,14 @@ public final class NamespaceCondition {
         return Optional.ofNullable(this.reason);
     }
     /**
-     * Status of the condition, one of True, False, Unknown.
+     * @return Status of the condition, one of True, False, Unknown.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Type of namespace controller condition.
+     * @return Type of namespace controller condition.
      * 
      * Possible enum values:
      *  - `&#34;NamespaceContentRemaining&#34;` contains information about resources remaining in a namespace.
@@ -72,7 +72,7 @@ public final class NamespaceCondition {
      *  - `&#34;NamespaceDeletionGroupVersionParsingFailure&#34;` contains information about namespace deleter errors parsing GV for legacy types.
      *  - `&#34;NamespaceFinalizersRemaining&#34;` contains information about which finalizers are on resources remaining in a namespace.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

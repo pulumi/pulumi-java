@@ -30,6 +30,10 @@ public final class DeploymentSpecArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="minReadySeconds")
     private @Nullable Output<Integer> minReadySeconds;
 
+    /**
+     * @return Minimum number of seconds for which a newly created pod should be ready without any of its container crashing, for it to be considered available. Defaults to 0 (pod will be considered available as soon as it is ready)
+     * 
+     */
     public Optional<Output<Integer>> minReadySeconds() {
         return Optional.ofNullable(this.minReadySeconds);
     }
@@ -41,6 +45,10 @@ public final class DeploymentSpecArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="paused")
     private @Nullable Output<Boolean> paused;
 
+    /**
+     * @return Indicates that the deployment is paused.
+     * 
+     */
     public Optional<Output<Boolean>> paused() {
         return Optional.ofNullable(this.paused);
     }
@@ -52,6 +60,10 @@ public final class DeploymentSpecArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="progressDeadlineSeconds")
     private @Nullable Output<Integer> progressDeadlineSeconds;
 
+    /**
+     * @return The maximum time in seconds for a deployment to make progress before it is considered to be failed. The deployment controller will continue to process failed deployments and a condition with a ProgressDeadlineExceeded reason will be surfaced in the deployment status. Note that progress will not be estimated during the time a deployment is paused. Defaults to 600s.
+     * 
+     */
     public Optional<Output<Integer>> progressDeadlineSeconds() {
         return Optional.ofNullable(this.progressDeadlineSeconds);
     }
@@ -63,6 +75,10 @@ public final class DeploymentSpecArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="replicas")
     private @Nullable Output<Integer> replicas;
 
+    /**
+     * @return Number of desired pods. This is a pointer to distinguish between explicit zero and not specified. Defaults to 1.
+     * 
+     */
     public Optional<Output<Integer>> replicas() {
         return Optional.ofNullable(this.replicas);
     }
@@ -74,6 +90,10 @@ public final class DeploymentSpecArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="revisionHistoryLimit")
     private @Nullable Output<Integer> revisionHistoryLimit;
 
+    /**
+     * @return The number of old ReplicaSets to retain to allow rollback. This is a pointer to distinguish between explicit zero and not specified. Defaults to 10.
+     * 
+     */
     public Optional<Output<Integer>> revisionHistoryLimit() {
         return Optional.ofNullable(this.revisionHistoryLimit);
     }
@@ -85,6 +105,10 @@ public final class DeploymentSpecArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="selector", required=true)
     private Output<LabelSelectorArgs> selector;
 
+    /**
+     * @return Label selector for pods. Existing ReplicaSets whose pods are selected by this will be the ones affected by this deployment. It must match the pod template&#39;s labels.
+     * 
+     */
     public Output<LabelSelectorArgs> selector() {
         return this.selector;
     }
@@ -96,6 +120,10 @@ public final class DeploymentSpecArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="strategy")
     private @Nullable Output<DeploymentStrategyArgs> strategy;
 
+    /**
+     * @return The deployment strategy to use to replace existing pods with new ones.
+     * 
+     */
     public Optional<Output<DeploymentStrategyArgs>> strategy() {
         return Optional.ofNullable(this.strategy);
     }
@@ -107,6 +135,10 @@ public final class DeploymentSpecArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="template", required=true)
     private Output<PodTemplateSpecArgs> template;
 
+    /**
+     * @return Template describes the pods that will be created.
+     * 
+     */
     public Output<PodTemplateSpecArgs> template() {
         return this.template;
     }
@@ -142,74 +174,170 @@ public final class DeploymentSpecArgs extends com.pulumi.resources.ResourceArgs 
             $ = new DeploymentSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param minReadySeconds Minimum number of seconds for which a newly created pod should be ready without any of its container crashing, for it to be considered available. Defaults to 0 (pod will be considered available as soon as it is ready)
+         * 
+         * @return builder
+         * 
+         */
         public Builder minReadySeconds(@Nullable Output<Integer> minReadySeconds) {
             $.minReadySeconds = minReadySeconds;
             return this;
         }
 
+        /**
+         * @param minReadySeconds Minimum number of seconds for which a newly created pod should be ready without any of its container crashing, for it to be considered available. Defaults to 0 (pod will be considered available as soon as it is ready)
+         * 
+         * @return builder
+         * 
+         */
         public Builder minReadySeconds(Integer minReadySeconds) {
             return minReadySeconds(Output.of(minReadySeconds));
         }
 
+        /**
+         * @param paused Indicates that the deployment is paused.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paused(@Nullable Output<Boolean> paused) {
             $.paused = paused;
             return this;
         }
 
+        /**
+         * @param paused Indicates that the deployment is paused.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paused(Boolean paused) {
             return paused(Output.of(paused));
         }
 
+        /**
+         * @param progressDeadlineSeconds The maximum time in seconds for a deployment to make progress before it is considered to be failed. The deployment controller will continue to process failed deployments and a condition with a ProgressDeadlineExceeded reason will be surfaced in the deployment status. Note that progress will not be estimated during the time a deployment is paused. Defaults to 600s.
+         * 
+         * @return builder
+         * 
+         */
         public Builder progressDeadlineSeconds(@Nullable Output<Integer> progressDeadlineSeconds) {
             $.progressDeadlineSeconds = progressDeadlineSeconds;
             return this;
         }
 
+        /**
+         * @param progressDeadlineSeconds The maximum time in seconds for a deployment to make progress before it is considered to be failed. The deployment controller will continue to process failed deployments and a condition with a ProgressDeadlineExceeded reason will be surfaced in the deployment status. Note that progress will not be estimated during the time a deployment is paused. Defaults to 600s.
+         * 
+         * @return builder
+         * 
+         */
         public Builder progressDeadlineSeconds(Integer progressDeadlineSeconds) {
             return progressDeadlineSeconds(Output.of(progressDeadlineSeconds));
         }
 
+        /**
+         * @param replicas Number of desired pods. This is a pointer to distinguish between explicit zero and not specified. Defaults to 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicas(@Nullable Output<Integer> replicas) {
             $.replicas = replicas;
             return this;
         }
 
+        /**
+         * @param replicas Number of desired pods. This is a pointer to distinguish between explicit zero and not specified. Defaults to 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicas(Integer replicas) {
             return replicas(Output.of(replicas));
         }
 
+        /**
+         * @param revisionHistoryLimit The number of old ReplicaSets to retain to allow rollback. This is a pointer to distinguish between explicit zero and not specified. Defaults to 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revisionHistoryLimit(@Nullable Output<Integer> revisionHistoryLimit) {
             $.revisionHistoryLimit = revisionHistoryLimit;
             return this;
         }
 
+        /**
+         * @param revisionHistoryLimit The number of old ReplicaSets to retain to allow rollback. This is a pointer to distinguish between explicit zero and not specified. Defaults to 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revisionHistoryLimit(Integer revisionHistoryLimit) {
             return revisionHistoryLimit(Output.of(revisionHistoryLimit));
         }
 
+        /**
+         * @param selector Label selector for pods. Existing ReplicaSets whose pods are selected by this will be the ones affected by this deployment. It must match the pod template&#39;s labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(Output<LabelSelectorArgs> selector) {
             $.selector = selector;
             return this;
         }
 
+        /**
+         * @param selector Label selector for pods. Existing ReplicaSets whose pods are selected by this will be the ones affected by this deployment. It must match the pod template&#39;s labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(LabelSelectorArgs selector) {
             return selector(Output.of(selector));
         }
 
+        /**
+         * @param strategy The deployment strategy to use to replace existing pods with new ones.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strategy(@Nullable Output<DeploymentStrategyArgs> strategy) {
             $.strategy = strategy;
             return this;
         }
 
+        /**
+         * @param strategy The deployment strategy to use to replace existing pods with new ones.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strategy(DeploymentStrategyArgs strategy) {
             return strategy(Output.of(strategy));
         }
 
+        /**
+         * @param template Template describes the pods that will be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder template(Output<PodTemplateSpecArgs> template) {
             $.template = template;
             return this;
         }
 
+        /**
+         * @param template Template describes the pods that will be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder template(PodTemplateSpecArgs template) {
             return template(Output.of(template));
         }

@@ -9,55 +9,55 @@ import java.util.Objects;
 
 @CustomType
 public final class NodeSystemInfo {
-    /**
-     * The Architecture reported by the node
-     * 
-     */
+        /**
+         * @return The Architecture reported by the node
+         * 
+         */
     private final String architecture;
-    /**
-     * Boot ID reported by the node.
-     * 
-     */
+        /**
+         * @return Boot ID reported by the node.
+         * 
+         */
     private final String bootID;
-    /**
-     * ContainerRuntime Version reported by the node through runtime remote API (e.g. docker://1.5.0).
-     * 
-     */
+        /**
+         * @return ContainerRuntime Version reported by the node through runtime remote API (e.g. docker://1.5.0).
+         * 
+         */
     private final String containerRuntimeVersion;
-    /**
-     * Kernel Version reported by the node from &#39;uname -r&#39; (e.g. 3.16.0-0.bpo.4-amd64).
-     * 
-     */
+        /**
+         * @return Kernel Version reported by the node from &#39;uname -r&#39; (e.g. 3.16.0-0.bpo.4-amd64).
+         * 
+         */
     private final String kernelVersion;
-    /**
-     * KubeProxy Version reported by the node.
-     * 
-     */
+        /**
+         * @return KubeProxy Version reported by the node.
+         * 
+         */
     private final String kubeProxyVersion;
-    /**
-     * Kubelet Version reported by the node.
-     * 
-     */
+        /**
+         * @return Kubelet Version reported by the node.
+         * 
+         */
     private final String kubeletVersion;
-    /**
-     * MachineID reported by the node. For unique machine identification in the cluster this field is preferred. Learn more from man(5) machine-id: http://man7.org/linux/man-pages/man5/machine-id.5.html
-     * 
-     */
+        /**
+         * @return MachineID reported by the node. For unique machine identification in the cluster this field is preferred. Learn more from man(5) machine-id: http://man7.org/linux/man-pages/man5/machine-id.5.html
+         * 
+         */
     private final String machineID;
-    /**
-     * The Operating System reported by the node
-     * 
-     */
+        /**
+         * @return The Operating System reported by the node
+         * 
+         */
     private final String operatingSystem;
-    /**
-     * OS Image reported by the node from /etc/os-release (e.g. Debian GNU/Linux 7 (wheezy)).
-     * 
-     */
+        /**
+         * @return OS Image reported by the node from /etc/os-release (e.g. Debian GNU/Linux 7 (wheezy)).
+         * 
+         */
     private final String osImage;
-    /**
-     * SystemUUID reported by the node. For unique machine identification MachineID is preferred. This field is specific to Red Hat hosts https://access.redhat.com/documentation/en-us/red_hat_subscription_management/1/html/rhsm/uuid
-     * 
-     */
+        /**
+         * @return SystemUUID reported by the node. For unique machine identification MachineID is preferred. This field is specific to Red Hat hosts https://access.redhat.com/documentation/en-us/red_hat_subscription_management/1/html/rhsm/uuid
+         * 
+         */
     private final String systemUUID;
 
     @CustomType.Constructor
@@ -85,72 +85,72 @@ public final class NodeSystemInfo {
     }
 
     /**
-     * The Architecture reported by the node
+     * @return The Architecture reported by the node
      * 
-    */
+     */
     public String architecture() {
         return this.architecture;
     }
     /**
-     * Boot ID reported by the node.
+     * @return Boot ID reported by the node.
      * 
-    */
+     */
     public String bootID() {
         return this.bootID;
     }
     /**
-     * ContainerRuntime Version reported by the node through runtime remote API (e.g. docker://1.5.0).
+     * @return ContainerRuntime Version reported by the node through runtime remote API (e.g. docker://1.5.0).
      * 
-    */
+     */
     public String containerRuntimeVersion() {
         return this.containerRuntimeVersion;
     }
     /**
-     * Kernel Version reported by the node from &#39;uname -r&#39; (e.g. 3.16.0-0.bpo.4-amd64).
+     * @return Kernel Version reported by the node from &#39;uname -r&#39; (e.g. 3.16.0-0.bpo.4-amd64).
      * 
-    */
+     */
     public String kernelVersion() {
         return this.kernelVersion;
     }
     /**
-     * KubeProxy Version reported by the node.
+     * @return KubeProxy Version reported by the node.
      * 
-    */
+     */
     public String kubeProxyVersion() {
         return this.kubeProxyVersion;
     }
     /**
-     * Kubelet Version reported by the node.
+     * @return Kubelet Version reported by the node.
      * 
-    */
+     */
     public String kubeletVersion() {
         return this.kubeletVersion;
     }
     /**
-     * MachineID reported by the node. For unique machine identification in the cluster this field is preferred. Learn more from man(5) machine-id: http://man7.org/linux/man-pages/man5/machine-id.5.html
+     * @return MachineID reported by the node. For unique machine identification in the cluster this field is preferred. Learn more from man(5) machine-id: http://man7.org/linux/man-pages/man5/machine-id.5.html
      * 
-    */
+     */
     public String machineID() {
         return this.machineID;
     }
     /**
-     * The Operating System reported by the node
+     * @return The Operating System reported by the node
      * 
-    */
+     */
     public String operatingSystem() {
         return this.operatingSystem;
     }
     /**
-     * OS Image reported by the node from /etc/os-release (e.g. Debian GNU/Linux 7 (wheezy)).
+     * @return OS Image reported by the node from /etc/os-release (e.g. Debian GNU/Linux 7 (wheezy)).
      * 
-    */
+     */
     public String osImage() {
         return this.osImage;
     }
     /**
-     * SystemUUID reported by the node. For unique machine identification MachineID is preferred. This field is specific to Red Hat hosts https://access.redhat.com/documentation/en-us/red_hat_subscription_management/1/html/rhsm/uuid
+     * @return SystemUUID reported by the node. For unique machine identification MachineID is preferred. This field is specific to Red Hat hosts https://access.redhat.com/documentation/en-us/red_hat_subscription_management/1/html/rhsm/uuid
      * 
-    */
+     */
     public String systemUUID() {
         return this.systemUUID;
     }

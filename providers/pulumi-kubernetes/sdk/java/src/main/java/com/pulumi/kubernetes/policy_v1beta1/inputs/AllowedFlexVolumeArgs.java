@@ -24,6 +24,10 @@ public final class AllowedFlexVolumeArgs extends com.pulumi.resources.ResourceAr
     @Import(name="driver", required=true)
     private Output<String> driver;
 
+    /**
+     * @return driver is the name of the Flexvolume driver.
+     * 
+     */
     public Output<String> driver() {
         return this.driver;
     }
@@ -52,11 +56,23 @@ public final class AllowedFlexVolumeArgs extends com.pulumi.resources.ResourceAr
             $ = new AllowedFlexVolumeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param driver driver is the name of the Flexvolume driver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driver(Output<String> driver) {
             $.driver = driver;
             return this;
         }
 
+        /**
+         * @param driver driver is the name of the Flexvolume driver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driver(String driver) {
             return driver(Output.of(driver));
         }

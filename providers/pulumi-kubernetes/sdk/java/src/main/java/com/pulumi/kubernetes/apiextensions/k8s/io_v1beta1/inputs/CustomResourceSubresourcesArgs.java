@@ -27,6 +27,10 @@ public final class CustomResourceSubresourcesArgs extends com.pulumi.resources.R
     @Import(name="scale")
     private @Nullable Output<CustomResourceSubresourceScaleArgs> scale;
 
+    /**
+     * @return scale indicates the custom resource should serve a `/scale` subresource that returns an `autoscaling/v1` Scale object.
+     * 
+     */
     public Optional<Output<CustomResourceSubresourceScaleArgs>> scale() {
         return Optional.ofNullable(this.scale);
     }
@@ -38,6 +42,10 @@ public final class CustomResourceSubresourcesArgs extends com.pulumi.resources.R
     @Import(name="status")
     private @Nullable Output<JsonElement> status;
 
+    /**
+     * @return status indicates the custom resource should serve a `/status` subresource. When enabled: 1. requests to the custom resource primary endpoint ignore changes to the `status` stanza of the object. 2. requests to the custom resource `/status` subresource ignore changes to anything other than the `status` stanza of the object.
+     * 
+     */
     public Optional<Output<JsonElement>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -67,20 +75,44 @@ public final class CustomResourceSubresourcesArgs extends com.pulumi.resources.R
             $ = new CustomResourceSubresourcesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scale scale indicates the custom resource should serve a `/scale` subresource that returns an `autoscaling/v1` Scale object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scale(@Nullable Output<CustomResourceSubresourceScaleArgs> scale) {
             $.scale = scale;
             return this;
         }
 
+        /**
+         * @param scale scale indicates the custom resource should serve a `/scale` subresource that returns an `autoscaling/v1` Scale object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scale(CustomResourceSubresourceScaleArgs scale) {
             return scale(Output.of(scale));
         }
 
+        /**
+         * @param status status indicates the custom resource should serve a `/status` subresource. When enabled: 1. requests to the custom resource primary endpoint ignore changes to the `status` stanza of the object. 2. requests to the custom resource `/status` subresource ignore changes to anything other than the `status` stanza of the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<JsonElement> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status status indicates the custom resource should serve a `/status` subresource. When enabled: 1. requests to the custom resource primary endpoint ignore changes to the `status` stanza of the object. 2. requests to the custom resource `/status` subresource ignore changes to anything other than the `status` stanza of the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(JsonElement status) {
             return status(Output.of(status));
         }

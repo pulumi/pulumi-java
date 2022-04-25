@@ -26,6 +26,10 @@ public final class ContainerStateRunningArgs extends com.pulumi.resources.Resour
     @Import(name="startedAt")
     private @Nullable Output<String> startedAt;
 
+    /**
+     * @return Time at which the container was last (re-)started
+     * 
+     */
     public Optional<Output<String>> startedAt() {
         return Optional.ofNullable(this.startedAt);
     }
@@ -54,11 +58,23 @@ public final class ContainerStateRunningArgs extends com.pulumi.resources.Resour
             $ = new ContainerStateRunningArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param startedAt Time at which the container was last (re-)started
+         * 
+         * @return builder
+         * 
+         */
         public Builder startedAt(@Nullable Output<String> startedAt) {
             $.startedAt = startedAt;
             return this;
         }
 
+        /**
+         * @param startedAt Time at which the container was last (re-)started
+         * 
+         * @return builder
+         * 
+         */
         public Builder startedAt(String startedAt) {
             return startedAt(Output.of(startedAt));
         }

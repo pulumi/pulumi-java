@@ -42,6 +42,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="activeDeadlineSeconds")
     private @Nullable Output<Integer> activeDeadlineSeconds;
 
+    /**
+     * @return Optional duration in seconds the pod may be active on the node relative to StartTime before the system will actively try to mark it failed and kill associated containers. Value must be a positive integer.
+     * 
+     */
     public Optional<Output<Integer>> activeDeadlineSeconds() {
         return Optional.ofNullable(this.activeDeadlineSeconds);
     }
@@ -53,6 +57,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="affinity")
     private @Nullable Output<AffinityArgs> affinity;
 
+    /**
+     * @return If specified, the pod&#39;s scheduling constraints
+     * 
+     */
     public Optional<Output<AffinityArgs>> affinity() {
         return Optional.ofNullable(this.affinity);
     }
@@ -64,6 +72,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="automountServiceAccountToken")
     private @Nullable Output<Boolean> automountServiceAccountToken;
 
+    /**
+     * @return AutomountServiceAccountToken indicates whether a service account token should be automatically mounted.
+     * 
+     */
     public Optional<Output<Boolean>> automountServiceAccountToken() {
         return Optional.ofNullable(this.automountServiceAccountToken);
     }
@@ -75,6 +87,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containers", required=true)
     private Output<List<ContainerArgs>> containers;
 
+    /**
+     * @return List of containers belonging to the pod. Containers cannot currently be added or removed. There must be at least one container in a Pod. Cannot be updated.
+     * 
+     */
     public Output<List<ContainerArgs>> containers() {
         return this.containers;
     }
@@ -86,6 +102,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsConfig")
     private @Nullable Output<PodDNSConfigArgs> dnsConfig;
 
+    /**
+     * @return Specifies the DNS parameters of a pod. Parameters specified here will be merged to the generated DNS configuration based on DNSPolicy.
+     * 
+     */
     public Optional<Output<PodDNSConfigArgs>> dnsConfig() {
         return Optional.ofNullable(this.dnsConfig);
     }
@@ -103,6 +123,16 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsPolicy")
     private @Nullable Output<String> dnsPolicy;
 
+    /**
+     * @return Set DNS policy for the pod. Defaults to &#34;ClusterFirst&#34;. Valid values are &#39;ClusterFirstWithHostNet&#39;, &#39;ClusterFirst&#39;, &#39;Default&#39; or &#39;None&#39;. DNS parameters given in DNSConfig will be merged with the policy selected with DNSPolicy. To have DNS options set along with hostNetwork, you have to specify DNS policy explicitly to &#39;ClusterFirstWithHostNet&#39;.
+     * 
+     * Possible enum values:
+     *  - `&#34;ClusterFirst&#34;` indicates that the pod should use cluster DNS first unless hostNetwork is true, if it is available, then fall back on the default (as determined by kubelet) DNS settings.
+     *  - `&#34;ClusterFirstWithHostNet&#34;` indicates that the pod should use cluster DNS first, if it is available, then fall back on the default (as determined by kubelet) DNS settings.
+     *  - `&#34;Default&#34;` indicates that the pod should use the default (as determined by kubelet) DNS settings.
+     *  - `&#34;None&#34;` indicates that the pod should use empty DNS settings. DNS parameters such as nameservers and search paths should be defined via DNSConfig.
+     * 
+     */
     public Optional<Output<String>> dnsPolicy() {
         return Optional.ofNullable(this.dnsPolicy);
     }
@@ -114,6 +144,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableServiceLinks")
     private @Nullable Output<Boolean> enableServiceLinks;
 
+    /**
+     * @return EnableServiceLinks indicates whether information about services should be injected into pod&#39;s environment variables, matching the syntax of Docker links. Optional: Defaults to true.
+     * 
+     */
     public Optional<Output<Boolean>> enableServiceLinks() {
         return Optional.ofNullable(this.enableServiceLinks);
     }
@@ -125,6 +159,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ephemeralContainers")
     private @Nullable Output<List<EphemeralContainerArgs>> ephemeralContainers;
 
+    /**
+     * @return List of ephemeral containers run in this pod. Ephemeral containers may be run in an existing pod to perform user-initiated actions such as debugging. This list cannot be specified when creating a pod, and it cannot be modified by updating the pod spec. In order to add an ephemeral container to an existing pod, use the pod&#39;s ephemeralcontainers subresource. This field is beta-level and available on clusters that haven&#39;t disabled the EphemeralContainers feature gate.
+     * 
+     */
     public Optional<Output<List<EphemeralContainerArgs>>> ephemeralContainers() {
         return Optional.ofNullable(this.ephemeralContainers);
     }
@@ -136,6 +174,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostAliases")
     private @Nullable Output<List<HostAliasArgs>> hostAliases;
 
+    /**
+     * @return HostAliases is an optional list of hosts and IPs that will be injected into the pod&#39;s hosts file if specified. This is only valid for non-hostNetwork pods.
+     * 
+     */
     public Optional<Output<List<HostAliasArgs>>> hostAliases() {
         return Optional.ofNullable(this.hostAliases);
     }
@@ -147,6 +189,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostIPC")
     private @Nullable Output<Boolean> hostIPC;
 
+    /**
+     * @return Use the host&#39;s ipc namespace. Optional: Default to false.
+     * 
+     */
     public Optional<Output<Boolean>> hostIPC() {
         return Optional.ofNullable(this.hostIPC);
     }
@@ -158,6 +204,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostNetwork")
     private @Nullable Output<Boolean> hostNetwork;
 
+    /**
+     * @return Host networking requested for this pod. Use the host&#39;s network namespace. If this option is set, the ports that will be used must be specified. Default to false.
+     * 
+     */
     public Optional<Output<Boolean>> hostNetwork() {
         return Optional.ofNullable(this.hostNetwork);
     }
@@ -169,6 +219,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostPID")
     private @Nullable Output<Boolean> hostPID;
 
+    /**
+     * @return Use the host&#39;s pid namespace. Optional: Default to false.
+     * 
+     */
     public Optional<Output<Boolean>> hostPID() {
         return Optional.ofNullable(this.hostPID);
     }
@@ -180,6 +234,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostname")
     private @Nullable Output<String> hostname;
 
+    /**
+     * @return Specifies the hostname of the Pod If not specified, the pod&#39;s hostname will be set to a system-defined value.
+     * 
+     */
     public Optional<Output<String>> hostname() {
         return Optional.ofNullable(this.hostname);
     }
@@ -191,6 +249,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="imagePullSecrets")
     private @Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets;
 
+    /**
+     * @return ImagePullSecrets is an optional list of references to secrets in the same namespace to use for pulling any of the images used by this PodSpec. If specified, these secrets will be passed to individual puller implementations for them to use. For example, in the case of docker, only DockerConfig type secrets are honored. More info: https://kubernetes.io/docs/concepts/containers/images#specifying-imagepullsecrets-on-a-pod
+     * 
+     */
     public Optional<Output<List<LocalObjectReferenceArgs>>> imagePullSecrets() {
         return Optional.ofNullable(this.imagePullSecrets);
     }
@@ -202,6 +264,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="initContainers")
     private @Nullable Output<List<ContainerArgs>> initContainers;
 
+    /**
+     * @return List of initialization containers belonging to the pod. Init containers are executed in order prior to containers being started. If any init container fails, the pod is considered to have failed and is handled according to its restartPolicy. The name for an init container or normal container must be unique among all containers. Init containers may not have Lifecycle actions, Readiness probes, Liveness probes, or Startup probes. The resourceRequirements of an init container are taken into account during scheduling by finding the highest request/limit for each resource type, and then using the max of of that value or the sum of the normal containers. Limits are applied to init containers in a similar fashion. Init containers cannot currently be added or removed. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/
+     * 
+     */
     public Optional<Output<List<ContainerArgs>>> initContainers() {
         return Optional.ofNullable(this.initContainers);
     }
@@ -213,6 +279,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeName")
     private @Nullable Output<String> nodeName;
 
+    /**
+     * @return NodeName is a request to schedule this pod onto a specific node. If it is non-empty, the scheduler simply schedules this pod onto that node, assuming that it fits resource requirements.
+     * 
+     */
     public Optional<Output<String>> nodeName() {
         return Optional.ofNullable(this.nodeName);
     }
@@ -224,6 +294,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeSelector")
     private @Nullable Output<Map<String,String>> nodeSelector;
 
+    /**
+     * @return NodeSelector is a selector which must be true for the pod to fit on a node. Selector which must match a node&#39;s labels for the pod to be scheduled on that node. More info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
+     * 
+     */
     public Optional<Output<Map<String,String>>> nodeSelector() {
         return Optional.ofNullable(this.nodeSelector);
     }
@@ -239,6 +313,14 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="os")
     private @Nullable Output<PodOSArgs> os;
 
+    /**
+     * @return Specifies the OS of the containers in the pod. Some pod and container fields are restricted if this is set.
+     * 
+     * If the OS field is set to linux, the following fields must be unset: -securityContext.windowsOptions
+     * 
+     * If the OS field is set to windows, following fields must be unset: - spec.hostPID - spec.hostIPC - spec.securityContext.seLinuxOptions - spec.securityContext.seccompProfile - spec.securityContext.fsGroup - spec.securityContext.fsGroupChangePolicy - spec.securityContext.sysctls - spec.shareProcessNamespace - spec.securityContext.runAsUser - spec.securityContext.runAsGroup - spec.securityContext.supplementalGroups - spec.containers[*].securityContext.seLinuxOptions - spec.containers[*].securityContext.seccompProfile - spec.containers[*].securityContext.capabilities - spec.containers[*].securityContext.readOnlyRootFilesystem - spec.containers[*].securityContext.privileged - spec.containers[*].securityContext.allowPrivilegeEscalation - spec.containers[*].securityContext.procMount - spec.containers[*].securityContext.runAsUser - spec.containers[*].securityContext.runAsGroup This is an alpha field and requires the IdentifyPodOS feature
+     * 
+     */
     public Optional<Output<PodOSArgs>> os() {
         return Optional.ofNullable(this.os);
     }
@@ -250,6 +332,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="overhead")
     private @Nullable Output<Map<String,String>> overhead;
 
+    /**
+     * @return Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. This field will be autopopulated at admission time by the RuntimeClass admission controller. If the RuntimeClass admission controller is enabled, overhead must not be set in Pod create requests. The RuntimeClass admission controller will reject Pod create requests which have the overhead already set. If RuntimeClass is configured and selected in the PodSpec, Overhead will be set to the value defined in the corresponding RuntimeClass, otherwise it will remain unset and treated as zero. More info: https://git.k8s.io/enhancements/keps/sig-node/688-pod-overhead/README.md This field is beta-level as of Kubernetes v1.18, and is only honored by servers that enable the PodOverhead feature.
+     * 
+     */
     public Optional<Output<Map<String,String>>> overhead() {
         return Optional.ofNullable(this.overhead);
     }
@@ -261,6 +347,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="preemptionPolicy")
     private @Nullable Output<String> preemptionPolicy;
 
+    /**
+     * @return PreemptionPolicy is the Policy for preempting pods with lower priority. One of Never, PreemptLowerPriority. Defaults to PreemptLowerPriority if unset. This field is beta-level, gated by the NonPreemptingPriority feature-gate.
+     * 
+     */
     public Optional<Output<String>> preemptionPolicy() {
         return Optional.ofNullable(this.preemptionPolicy);
     }
@@ -272,6 +362,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="priority")
     private @Nullable Output<Integer> priority;
 
+    /**
+     * @return The priority value. Various system components use this field to find the priority of the pod. When Priority Admission Controller is enabled, it prevents users from setting this field. The admission controller populates this field from PriorityClassName. The higher the value, the higher the priority.
+     * 
+     */
     public Optional<Output<Integer>> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -283,6 +377,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="priorityClassName")
     private @Nullable Output<String> priorityClassName;
 
+    /**
+     * @return If specified, indicates the pod&#39;s priority. &#34;system-node-critical&#34; and &#34;system-cluster-critical&#34; are two special keywords which indicate the highest priorities with the former being the highest priority. Any other name must be defined by creating a PriorityClass object with that name. If not specified, the pod priority will be default or zero if there is no default.
+     * 
+     */
     public Optional<Output<String>> priorityClassName() {
         return Optional.ofNullable(this.priorityClassName);
     }
@@ -294,6 +392,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="readinessGates")
     private @Nullable Output<List<PodReadinessGateArgs>> readinessGates;
 
+    /**
+     * @return If specified, all readiness gates will be evaluated for pod readiness. A pod is ready when all its containers are ready AND all conditions specified in the readiness gates have status equal to &#34;True&#34; More info: https://git.k8s.io/enhancements/keps/sig-network/580-pod-readiness-gates
+     * 
+     */
     public Optional<Output<List<PodReadinessGateArgs>>> readinessGates() {
         return Optional.ofNullable(this.readinessGates);
     }
@@ -310,6 +412,15 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="restartPolicy")
     private @Nullable Output<String> restartPolicy;
 
+    /**
+     * @return Restart policy for all containers within the pod. One of Always, OnFailure, Never. Default to Always. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#restart-policy
+     * 
+     * Possible enum values:
+     *  - `&#34;Always&#34;`
+     *  - `&#34;Never&#34;`
+     *  - `&#34;OnFailure&#34;`
+     * 
+     */
     public Optional<Output<String>> restartPolicy() {
         return Optional.ofNullable(this.restartPolicy);
     }
@@ -321,6 +432,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runtimeClassName")
     private @Nullable Output<String> runtimeClassName;
 
+    /**
+     * @return RuntimeClassName refers to a RuntimeClass object in the node.k8s.io group, which should be used to run this pod.  If no RuntimeClass resource matches the named class, the pod will not be run. If unset or empty, the &#34;legacy&#34; RuntimeClass will be used, which is an implicit class with an empty definition that uses the default runtime handler. More info: https://git.k8s.io/enhancements/keps/sig-node/585-runtime-class This is a beta feature as of Kubernetes v1.14.
+     * 
+     */
     public Optional<Output<String>> runtimeClassName() {
         return Optional.ofNullable(this.runtimeClassName);
     }
@@ -332,6 +447,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedulerName")
     private @Nullable Output<String> schedulerName;
 
+    /**
+     * @return If specified, the pod will be dispatched by specified scheduler. If not specified, the pod will be dispatched by default scheduler.
+     * 
+     */
     public Optional<Output<String>> schedulerName() {
         return Optional.ofNullable(this.schedulerName);
     }
@@ -343,6 +462,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityContext")
     private @Nullable Output<PodSecurityContextArgs> securityContext;
 
+    /**
+     * @return SecurityContext holds pod-level security attributes and common container settings. Optional: Defaults to empty.  See type description for default values of each field.
+     * 
+     */
     public Optional<Output<PodSecurityContextArgs>> securityContext() {
         return Optional.ofNullable(this.securityContext);
     }
@@ -354,6 +477,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
     private @Nullable Output<String> serviceAccount;
 
+    /**
+     * @return DeprecatedServiceAccount is a depreciated alias for ServiceAccountName. Deprecated: Use serviceAccountName instead.
+     * 
+     */
     public Optional<Output<String>> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
@@ -365,6 +492,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountName")
     private @Nullable Output<String> serviceAccountName;
 
+    /**
+     * @return ServiceAccountName is the name of the ServiceAccount to use to run this pod. More info: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
+     * 
+     */
     public Optional<Output<String>> serviceAccountName() {
         return Optional.ofNullable(this.serviceAccountName);
     }
@@ -376,6 +507,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="setHostnameAsFQDN")
     private @Nullable Output<Boolean> setHostnameAsFQDN;
 
+    /**
+     * @return If true the pod&#39;s hostname will be configured as the pod&#39;s FQDN, rather than the leaf name (the default). In Linux containers, this means setting the FQDN in the hostname field of the kernel (the nodename field of struct utsname). In Windows containers, this means setting the registry value of hostname for the registry key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters to FQDN. If a pod does not have FQDN, this has no effect. Default to false.
+     * 
+     */
     public Optional<Output<Boolean>> setHostnameAsFQDN() {
         return Optional.ofNullable(this.setHostnameAsFQDN);
     }
@@ -387,6 +522,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shareProcessNamespace")
     private @Nullable Output<Boolean> shareProcessNamespace;
 
+    /**
+     * @return Share a single process namespace between all of the containers in a pod. When this is set containers will be able to view and signal processes from other containers in the same pod, and the first process in each container will not be assigned PID 1. HostPID and ShareProcessNamespace cannot both be set. Optional: Default to false.
+     * 
+     */
     public Optional<Output<Boolean>> shareProcessNamespace() {
         return Optional.ofNullable(this.shareProcessNamespace);
     }
@@ -398,6 +537,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subdomain")
     private @Nullable Output<String> subdomain;
 
+    /**
+     * @return If specified, the fully qualified Pod hostname will be &#34;&lt;hostname&gt;.&lt;subdomain&gt;.&lt;pod namespace&gt;.svc.&lt;cluster domain&gt;&#34;. If not specified, the pod will not have a domainname at all.
+     * 
+     */
     public Optional<Output<String>> subdomain() {
         return Optional.ofNullable(this.subdomain);
     }
@@ -409,6 +552,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="terminationGracePeriodSeconds")
     private @Nullable Output<Integer> terminationGracePeriodSeconds;
 
+    /**
+     * @return Optional duration in seconds the pod needs to terminate gracefully. May be decreased in delete request. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). If this value is nil, the default grace period will be used instead. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. Defaults to 30 seconds.
+     * 
+     */
     public Optional<Output<Integer>> terminationGracePeriodSeconds() {
         return Optional.ofNullable(this.terminationGracePeriodSeconds);
     }
@@ -420,6 +567,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tolerations")
     private @Nullable Output<List<TolerationArgs>> tolerations;
 
+    /**
+     * @return If specified, the pod&#39;s tolerations.
+     * 
+     */
     public Optional<Output<List<TolerationArgs>>> tolerations() {
         return Optional.ofNullable(this.tolerations);
     }
@@ -431,6 +582,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="topologySpreadConstraints")
     private @Nullable Output<List<TopologySpreadConstraintArgs>> topologySpreadConstraints;
 
+    /**
+     * @return TopologySpreadConstraints describes how a group of pods ought to spread across topology domains. Scheduler will schedule pods in a way which abides by the constraints. All topologySpreadConstraints are ANDed.
+     * 
+     */
     public Optional<Output<List<TopologySpreadConstraintArgs>>> topologySpreadConstraints() {
         return Optional.ofNullable(this.topologySpreadConstraints);
     }
@@ -442,6 +597,10 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="volumes")
     private @Nullable Output<List<VolumeArgs>> volumes;
 
+    /**
+     * @return List of volumes that can be mounted by containers belonging to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes
+     * 
+     */
     public Optional<Output<List<VolumeArgs>>> volumes() {
         return Optional.ofNullable(this.volumes);
     }
@@ -505,362 +664,878 @@ public final class PodSpecArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PodSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activeDeadlineSeconds Optional duration in seconds the pod may be active on the node relative to StartTime before the system will actively try to mark it failed and kill associated containers. Value must be a positive integer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeDeadlineSeconds(@Nullable Output<Integer> activeDeadlineSeconds) {
             $.activeDeadlineSeconds = activeDeadlineSeconds;
             return this;
         }
 
+        /**
+         * @param activeDeadlineSeconds Optional duration in seconds the pod may be active on the node relative to StartTime before the system will actively try to mark it failed and kill associated containers. Value must be a positive integer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeDeadlineSeconds(Integer activeDeadlineSeconds) {
             return activeDeadlineSeconds(Output.of(activeDeadlineSeconds));
         }
 
+        /**
+         * @param affinity If specified, the pod&#39;s scheduling constraints
+         * 
+         * @return builder
+         * 
+         */
         public Builder affinity(@Nullable Output<AffinityArgs> affinity) {
             $.affinity = affinity;
             return this;
         }
 
+        /**
+         * @param affinity If specified, the pod&#39;s scheduling constraints
+         * 
+         * @return builder
+         * 
+         */
         public Builder affinity(AffinityArgs affinity) {
             return affinity(Output.of(affinity));
         }
 
+        /**
+         * @param automountServiceAccountToken AutomountServiceAccountToken indicates whether a service account token should be automatically mounted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automountServiceAccountToken(@Nullable Output<Boolean> automountServiceAccountToken) {
             $.automountServiceAccountToken = automountServiceAccountToken;
             return this;
         }
 
+        /**
+         * @param automountServiceAccountToken AutomountServiceAccountToken indicates whether a service account token should be automatically mounted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automountServiceAccountToken(Boolean automountServiceAccountToken) {
             return automountServiceAccountToken(Output.of(automountServiceAccountToken));
         }
 
+        /**
+         * @param containers List of containers belonging to the pod. Containers cannot currently be added or removed. There must be at least one container in a Pod. Cannot be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containers(Output<List<ContainerArgs>> containers) {
             $.containers = containers;
             return this;
         }
 
+        /**
+         * @param containers List of containers belonging to the pod. Containers cannot currently be added or removed. There must be at least one container in a Pod. Cannot be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containers(List<ContainerArgs> containers) {
             return containers(Output.of(containers));
         }
 
+        /**
+         * @param containers List of containers belonging to the pod. Containers cannot currently be added or removed. There must be at least one container in a Pod. Cannot be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containers(ContainerArgs... containers) {
             return containers(List.of(containers));
         }
 
+        /**
+         * @param dnsConfig Specifies the DNS parameters of a pod. Parameters specified here will be merged to the generated DNS configuration based on DNSPolicy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsConfig(@Nullable Output<PodDNSConfigArgs> dnsConfig) {
             $.dnsConfig = dnsConfig;
             return this;
         }
 
+        /**
+         * @param dnsConfig Specifies the DNS parameters of a pod. Parameters specified here will be merged to the generated DNS configuration based on DNSPolicy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsConfig(PodDNSConfigArgs dnsConfig) {
             return dnsConfig(Output.of(dnsConfig));
         }
 
+        /**
+         * @param dnsPolicy Set DNS policy for the pod. Defaults to &#34;ClusterFirst&#34;. Valid values are &#39;ClusterFirstWithHostNet&#39;, &#39;ClusterFirst&#39;, &#39;Default&#39; or &#39;None&#39;. DNS parameters given in DNSConfig will be merged with the policy selected with DNSPolicy. To have DNS options set along with hostNetwork, you have to specify DNS policy explicitly to &#39;ClusterFirstWithHostNet&#39;.
+         * 
+         * Possible enum values:
+         *  - `&#34;ClusterFirst&#34;` indicates that the pod should use cluster DNS first unless hostNetwork is true, if it is available, then fall back on the default (as determined by kubelet) DNS settings.
+         *  - `&#34;ClusterFirstWithHostNet&#34;` indicates that the pod should use cluster DNS first, if it is available, then fall back on the default (as determined by kubelet) DNS settings.
+         *  - `&#34;Default&#34;` indicates that the pod should use the default (as determined by kubelet) DNS settings.
+         *  - `&#34;None&#34;` indicates that the pod should use empty DNS settings. DNS parameters such as nameservers and search paths should be defined via DNSConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsPolicy(@Nullable Output<String> dnsPolicy) {
             $.dnsPolicy = dnsPolicy;
             return this;
         }
 
+        /**
+         * @param dnsPolicy Set DNS policy for the pod. Defaults to &#34;ClusterFirst&#34;. Valid values are &#39;ClusterFirstWithHostNet&#39;, &#39;ClusterFirst&#39;, &#39;Default&#39; or &#39;None&#39;. DNS parameters given in DNSConfig will be merged with the policy selected with DNSPolicy. To have DNS options set along with hostNetwork, you have to specify DNS policy explicitly to &#39;ClusterFirstWithHostNet&#39;.
+         * 
+         * Possible enum values:
+         *  - `&#34;ClusterFirst&#34;` indicates that the pod should use cluster DNS first unless hostNetwork is true, if it is available, then fall back on the default (as determined by kubelet) DNS settings.
+         *  - `&#34;ClusterFirstWithHostNet&#34;` indicates that the pod should use cluster DNS first, if it is available, then fall back on the default (as determined by kubelet) DNS settings.
+         *  - `&#34;Default&#34;` indicates that the pod should use the default (as determined by kubelet) DNS settings.
+         *  - `&#34;None&#34;` indicates that the pod should use empty DNS settings. DNS parameters such as nameservers and search paths should be defined via DNSConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsPolicy(String dnsPolicy) {
             return dnsPolicy(Output.of(dnsPolicy));
         }
 
+        /**
+         * @param enableServiceLinks EnableServiceLinks indicates whether information about services should be injected into pod&#39;s environment variables, matching the syntax of Docker links. Optional: Defaults to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableServiceLinks(@Nullable Output<Boolean> enableServiceLinks) {
             $.enableServiceLinks = enableServiceLinks;
             return this;
         }
 
+        /**
+         * @param enableServiceLinks EnableServiceLinks indicates whether information about services should be injected into pod&#39;s environment variables, matching the syntax of Docker links. Optional: Defaults to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableServiceLinks(Boolean enableServiceLinks) {
             return enableServiceLinks(Output.of(enableServiceLinks));
         }
 
+        /**
+         * @param ephemeralContainers List of ephemeral containers run in this pod. Ephemeral containers may be run in an existing pod to perform user-initiated actions such as debugging. This list cannot be specified when creating a pod, and it cannot be modified by updating the pod spec. In order to add an ephemeral container to an existing pod, use the pod&#39;s ephemeralcontainers subresource. This field is beta-level and available on clusters that haven&#39;t disabled the EphemeralContainers feature gate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ephemeralContainers(@Nullable Output<List<EphemeralContainerArgs>> ephemeralContainers) {
             $.ephemeralContainers = ephemeralContainers;
             return this;
         }
 
+        /**
+         * @param ephemeralContainers List of ephemeral containers run in this pod. Ephemeral containers may be run in an existing pod to perform user-initiated actions such as debugging. This list cannot be specified when creating a pod, and it cannot be modified by updating the pod spec. In order to add an ephemeral container to an existing pod, use the pod&#39;s ephemeralcontainers subresource. This field is beta-level and available on clusters that haven&#39;t disabled the EphemeralContainers feature gate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ephemeralContainers(List<EphemeralContainerArgs> ephemeralContainers) {
             return ephemeralContainers(Output.of(ephemeralContainers));
         }
 
+        /**
+         * @param ephemeralContainers List of ephemeral containers run in this pod. Ephemeral containers may be run in an existing pod to perform user-initiated actions such as debugging. This list cannot be specified when creating a pod, and it cannot be modified by updating the pod spec. In order to add an ephemeral container to an existing pod, use the pod&#39;s ephemeralcontainers subresource. This field is beta-level and available on clusters that haven&#39;t disabled the EphemeralContainers feature gate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ephemeralContainers(EphemeralContainerArgs... ephemeralContainers) {
             return ephemeralContainers(List.of(ephemeralContainers));
         }
 
+        /**
+         * @param hostAliases HostAliases is an optional list of hosts and IPs that will be injected into the pod&#39;s hosts file if specified. This is only valid for non-hostNetwork pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostAliases(@Nullable Output<List<HostAliasArgs>> hostAliases) {
             $.hostAliases = hostAliases;
             return this;
         }
 
+        /**
+         * @param hostAliases HostAliases is an optional list of hosts and IPs that will be injected into the pod&#39;s hosts file if specified. This is only valid for non-hostNetwork pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostAliases(List<HostAliasArgs> hostAliases) {
             return hostAliases(Output.of(hostAliases));
         }
 
+        /**
+         * @param hostAliases HostAliases is an optional list of hosts and IPs that will be injected into the pod&#39;s hosts file if specified. This is only valid for non-hostNetwork pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostAliases(HostAliasArgs... hostAliases) {
             return hostAliases(List.of(hostAliases));
         }
 
+        /**
+         * @param hostIPC Use the host&#39;s ipc namespace. Optional: Default to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostIPC(@Nullable Output<Boolean> hostIPC) {
             $.hostIPC = hostIPC;
             return this;
         }
 
+        /**
+         * @param hostIPC Use the host&#39;s ipc namespace. Optional: Default to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostIPC(Boolean hostIPC) {
             return hostIPC(Output.of(hostIPC));
         }
 
+        /**
+         * @param hostNetwork Host networking requested for this pod. Use the host&#39;s network namespace. If this option is set, the ports that will be used must be specified. Default to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostNetwork(@Nullable Output<Boolean> hostNetwork) {
             $.hostNetwork = hostNetwork;
             return this;
         }
 
+        /**
+         * @param hostNetwork Host networking requested for this pod. Use the host&#39;s network namespace. If this option is set, the ports that will be used must be specified. Default to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostNetwork(Boolean hostNetwork) {
             return hostNetwork(Output.of(hostNetwork));
         }
 
+        /**
+         * @param hostPID Use the host&#39;s pid namespace. Optional: Default to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPID(@Nullable Output<Boolean> hostPID) {
             $.hostPID = hostPID;
             return this;
         }
 
+        /**
+         * @param hostPID Use the host&#39;s pid namespace. Optional: Default to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPID(Boolean hostPID) {
             return hostPID(Output.of(hostPID));
         }
 
+        /**
+         * @param hostname Specifies the hostname of the Pod If not specified, the pod&#39;s hostname will be set to a system-defined value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(@Nullable Output<String> hostname) {
             $.hostname = hostname;
             return this;
         }
 
+        /**
+         * @param hostname Specifies the hostname of the Pod If not specified, the pod&#39;s hostname will be set to a system-defined value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(String hostname) {
             return hostname(Output.of(hostname));
         }
 
+        /**
+         * @param imagePullSecrets ImagePullSecrets is an optional list of references to secrets in the same namespace to use for pulling any of the images used by this PodSpec. If specified, these secrets will be passed to individual puller implementations for them to use. For example, in the case of docker, only DockerConfig type secrets are honored. More info: https://kubernetes.io/docs/concepts/containers/images#specifying-imagepullsecrets-on-a-pod
+         * 
+         * @return builder
+         * 
+         */
         public Builder imagePullSecrets(@Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets) {
             $.imagePullSecrets = imagePullSecrets;
             return this;
         }
 
+        /**
+         * @param imagePullSecrets ImagePullSecrets is an optional list of references to secrets in the same namespace to use for pulling any of the images used by this PodSpec. If specified, these secrets will be passed to individual puller implementations for them to use. For example, in the case of docker, only DockerConfig type secrets are honored. More info: https://kubernetes.io/docs/concepts/containers/images#specifying-imagepullsecrets-on-a-pod
+         * 
+         * @return builder
+         * 
+         */
         public Builder imagePullSecrets(List<LocalObjectReferenceArgs> imagePullSecrets) {
             return imagePullSecrets(Output.of(imagePullSecrets));
         }
 
+        /**
+         * @param imagePullSecrets ImagePullSecrets is an optional list of references to secrets in the same namespace to use for pulling any of the images used by this PodSpec. If specified, these secrets will be passed to individual puller implementations for them to use. For example, in the case of docker, only DockerConfig type secrets are honored. More info: https://kubernetes.io/docs/concepts/containers/images#specifying-imagepullsecrets-on-a-pod
+         * 
+         * @return builder
+         * 
+         */
         public Builder imagePullSecrets(LocalObjectReferenceArgs... imagePullSecrets) {
             return imagePullSecrets(List.of(imagePullSecrets));
         }
 
+        /**
+         * @param initContainers List of initialization containers belonging to the pod. Init containers are executed in order prior to containers being started. If any init container fails, the pod is considered to have failed and is handled according to its restartPolicy. The name for an init container or normal container must be unique among all containers. Init containers may not have Lifecycle actions, Readiness probes, Liveness probes, or Startup probes. The resourceRequirements of an init container are taken into account during scheduling by finding the highest request/limit for each resource type, and then using the max of of that value or the sum of the normal containers. Limits are applied to init containers in a similar fashion. Init containers cannot currently be added or removed. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/
+         * 
+         * @return builder
+         * 
+         */
         public Builder initContainers(@Nullable Output<List<ContainerArgs>> initContainers) {
             $.initContainers = initContainers;
             return this;
         }
 
+        /**
+         * @param initContainers List of initialization containers belonging to the pod. Init containers are executed in order prior to containers being started. If any init container fails, the pod is considered to have failed and is handled according to its restartPolicy. The name for an init container or normal container must be unique among all containers. Init containers may not have Lifecycle actions, Readiness probes, Liveness probes, or Startup probes. The resourceRequirements of an init container are taken into account during scheduling by finding the highest request/limit for each resource type, and then using the max of of that value or the sum of the normal containers. Limits are applied to init containers in a similar fashion. Init containers cannot currently be added or removed. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/
+         * 
+         * @return builder
+         * 
+         */
         public Builder initContainers(List<ContainerArgs> initContainers) {
             return initContainers(Output.of(initContainers));
         }
 
+        /**
+         * @param initContainers List of initialization containers belonging to the pod. Init containers are executed in order prior to containers being started. If any init container fails, the pod is considered to have failed and is handled according to its restartPolicy. The name for an init container or normal container must be unique among all containers. Init containers may not have Lifecycle actions, Readiness probes, Liveness probes, or Startup probes. The resourceRequirements of an init container are taken into account during scheduling by finding the highest request/limit for each resource type, and then using the max of of that value or the sum of the normal containers. Limits are applied to init containers in a similar fashion. Init containers cannot currently be added or removed. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/
+         * 
+         * @return builder
+         * 
+         */
         public Builder initContainers(ContainerArgs... initContainers) {
             return initContainers(List.of(initContainers));
         }
 
+        /**
+         * @param nodeName NodeName is a request to schedule this pod onto a specific node. If it is non-empty, the scheduler simply schedules this pod onto that node, assuming that it fits resource requirements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeName(@Nullable Output<String> nodeName) {
             $.nodeName = nodeName;
             return this;
         }
 
+        /**
+         * @param nodeName NodeName is a request to schedule this pod onto a specific node. If it is non-empty, the scheduler simply schedules this pod onto that node, assuming that it fits resource requirements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeName(String nodeName) {
             return nodeName(Output.of(nodeName));
         }
 
+        /**
+         * @param nodeSelector NodeSelector is a selector which must be true for the pod to fit on a node. Selector which must match a node&#39;s labels for the pod to be scheduled on that node. More info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeSelector(@Nullable Output<Map<String,String>> nodeSelector) {
             $.nodeSelector = nodeSelector;
             return this;
         }
 
+        /**
+         * @param nodeSelector NodeSelector is a selector which must be true for the pod to fit on a node. Selector which must match a node&#39;s labels for the pod to be scheduled on that node. More info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeSelector(Map<String,String> nodeSelector) {
             return nodeSelector(Output.of(nodeSelector));
         }
 
+        /**
+         * @param os Specifies the OS of the containers in the pod. Some pod and container fields are restricted if this is set.
+         * 
+         * If the OS field is set to linux, the following fields must be unset: -securityContext.windowsOptions
+         * 
+         * If the OS field is set to windows, following fields must be unset: - spec.hostPID - spec.hostIPC - spec.securityContext.seLinuxOptions - spec.securityContext.seccompProfile - spec.securityContext.fsGroup - spec.securityContext.fsGroupChangePolicy - spec.securityContext.sysctls - spec.shareProcessNamespace - spec.securityContext.runAsUser - spec.securityContext.runAsGroup - spec.securityContext.supplementalGroups - spec.containers[*].securityContext.seLinuxOptions - spec.containers[*].securityContext.seccompProfile - spec.containers[*].securityContext.capabilities - spec.containers[*].securityContext.readOnlyRootFilesystem - spec.containers[*].securityContext.privileged - spec.containers[*].securityContext.allowPrivilegeEscalation - spec.containers[*].securityContext.procMount - spec.containers[*].securityContext.runAsUser - spec.containers[*].securityContext.runAsGroup This is an alpha field and requires the IdentifyPodOS feature
+         * 
+         * @return builder
+         * 
+         */
         public Builder os(@Nullable Output<PodOSArgs> os) {
             $.os = os;
             return this;
         }
 
+        /**
+         * @param os Specifies the OS of the containers in the pod. Some pod and container fields are restricted if this is set.
+         * 
+         * If the OS field is set to linux, the following fields must be unset: -securityContext.windowsOptions
+         * 
+         * If the OS field is set to windows, following fields must be unset: - spec.hostPID - spec.hostIPC - spec.securityContext.seLinuxOptions - spec.securityContext.seccompProfile - spec.securityContext.fsGroup - spec.securityContext.fsGroupChangePolicy - spec.securityContext.sysctls - spec.shareProcessNamespace - spec.securityContext.runAsUser - spec.securityContext.runAsGroup - spec.securityContext.supplementalGroups - spec.containers[*].securityContext.seLinuxOptions - spec.containers[*].securityContext.seccompProfile - spec.containers[*].securityContext.capabilities - spec.containers[*].securityContext.readOnlyRootFilesystem - spec.containers[*].securityContext.privileged - spec.containers[*].securityContext.allowPrivilegeEscalation - spec.containers[*].securityContext.procMount - spec.containers[*].securityContext.runAsUser - spec.containers[*].securityContext.runAsGroup This is an alpha field and requires the IdentifyPodOS feature
+         * 
+         * @return builder
+         * 
+         */
         public Builder os(PodOSArgs os) {
             return os(Output.of(os));
         }
 
+        /**
+         * @param overhead Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. This field will be autopopulated at admission time by the RuntimeClass admission controller. If the RuntimeClass admission controller is enabled, overhead must not be set in Pod create requests. The RuntimeClass admission controller will reject Pod create requests which have the overhead already set. If RuntimeClass is configured and selected in the PodSpec, Overhead will be set to the value defined in the corresponding RuntimeClass, otherwise it will remain unset and treated as zero. More info: https://git.k8s.io/enhancements/keps/sig-node/688-pod-overhead/README.md This field is beta-level as of Kubernetes v1.18, and is only honored by servers that enable the PodOverhead feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overhead(@Nullable Output<Map<String,String>> overhead) {
             $.overhead = overhead;
             return this;
         }
 
+        /**
+         * @param overhead Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. This field will be autopopulated at admission time by the RuntimeClass admission controller. If the RuntimeClass admission controller is enabled, overhead must not be set in Pod create requests. The RuntimeClass admission controller will reject Pod create requests which have the overhead already set. If RuntimeClass is configured and selected in the PodSpec, Overhead will be set to the value defined in the corresponding RuntimeClass, otherwise it will remain unset and treated as zero. More info: https://git.k8s.io/enhancements/keps/sig-node/688-pod-overhead/README.md This field is beta-level as of Kubernetes v1.18, and is only honored by servers that enable the PodOverhead feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overhead(Map<String,String> overhead) {
             return overhead(Output.of(overhead));
         }
 
+        /**
+         * @param preemptionPolicy PreemptionPolicy is the Policy for preempting pods with lower priority. One of Never, PreemptLowerPriority. Defaults to PreemptLowerPriority if unset. This field is beta-level, gated by the NonPreemptingPriority feature-gate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preemptionPolicy(@Nullable Output<String> preemptionPolicy) {
             $.preemptionPolicy = preemptionPolicy;
             return this;
         }
 
+        /**
+         * @param preemptionPolicy PreemptionPolicy is the Policy for preempting pods with lower priority. One of Never, PreemptLowerPriority. Defaults to PreemptLowerPriority if unset. This field is beta-level, gated by the NonPreemptingPriority feature-gate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preemptionPolicy(String preemptionPolicy) {
             return preemptionPolicy(Output.of(preemptionPolicy));
         }
 
+        /**
+         * @param priority The priority value. Various system components use this field to find the priority of the pod. When Priority Admission Controller is enabled, it prevents users from setting this field. The admission controller populates this field from PriorityClassName. The higher the value, the higher the priority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority The priority value. Various system components use this field to find the priority of the pod. When Priority Admission Controller is enabled, it prevents users from setting this field. The admission controller populates this field from PriorityClassName. The higher the value, the higher the priority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param priorityClassName If specified, indicates the pod&#39;s priority. &#34;system-node-critical&#34; and &#34;system-cluster-critical&#34; are two special keywords which indicate the highest priorities with the former being the highest priority. Any other name must be defined by creating a PriorityClass object with that name. If not specified, the pod priority will be default or zero if there is no default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priorityClassName(@Nullable Output<String> priorityClassName) {
             $.priorityClassName = priorityClassName;
             return this;
         }
 
+        /**
+         * @param priorityClassName If specified, indicates the pod&#39;s priority. &#34;system-node-critical&#34; and &#34;system-cluster-critical&#34; are two special keywords which indicate the highest priorities with the former being the highest priority. Any other name must be defined by creating a PriorityClass object with that name. If not specified, the pod priority will be default or zero if there is no default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priorityClassName(String priorityClassName) {
             return priorityClassName(Output.of(priorityClassName));
         }
 
+        /**
+         * @param readinessGates If specified, all readiness gates will be evaluated for pod readiness. A pod is ready when all its containers are ready AND all conditions specified in the readiness gates have status equal to &#34;True&#34; More info: https://git.k8s.io/enhancements/keps/sig-network/580-pod-readiness-gates
+         * 
+         * @return builder
+         * 
+         */
         public Builder readinessGates(@Nullable Output<List<PodReadinessGateArgs>> readinessGates) {
             $.readinessGates = readinessGates;
             return this;
         }
 
+        /**
+         * @param readinessGates If specified, all readiness gates will be evaluated for pod readiness. A pod is ready when all its containers are ready AND all conditions specified in the readiness gates have status equal to &#34;True&#34; More info: https://git.k8s.io/enhancements/keps/sig-network/580-pod-readiness-gates
+         * 
+         * @return builder
+         * 
+         */
         public Builder readinessGates(List<PodReadinessGateArgs> readinessGates) {
             return readinessGates(Output.of(readinessGates));
         }
 
+        /**
+         * @param readinessGates If specified, all readiness gates will be evaluated for pod readiness. A pod is ready when all its containers are ready AND all conditions specified in the readiness gates have status equal to &#34;True&#34; More info: https://git.k8s.io/enhancements/keps/sig-network/580-pod-readiness-gates
+         * 
+         * @return builder
+         * 
+         */
         public Builder readinessGates(PodReadinessGateArgs... readinessGates) {
             return readinessGates(List.of(readinessGates));
         }
 
+        /**
+         * @param restartPolicy Restart policy for all containers within the pod. One of Always, OnFailure, Never. Default to Always. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#restart-policy
+         * 
+         * Possible enum values:
+         *  - `&#34;Always&#34;`
+         *  - `&#34;Never&#34;`
+         *  - `&#34;OnFailure&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder restartPolicy(@Nullable Output<String> restartPolicy) {
             $.restartPolicy = restartPolicy;
             return this;
         }
 
+        /**
+         * @param restartPolicy Restart policy for all containers within the pod. One of Always, OnFailure, Never. Default to Always. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#restart-policy
+         * 
+         * Possible enum values:
+         *  - `&#34;Always&#34;`
+         *  - `&#34;Never&#34;`
+         *  - `&#34;OnFailure&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder restartPolicy(String restartPolicy) {
             return restartPolicy(Output.of(restartPolicy));
         }
 
+        /**
+         * @param runtimeClassName RuntimeClassName refers to a RuntimeClass object in the node.k8s.io group, which should be used to run this pod.  If no RuntimeClass resource matches the named class, the pod will not be run. If unset or empty, the &#34;legacy&#34; RuntimeClass will be used, which is an implicit class with an empty definition that uses the default runtime handler. More info: https://git.k8s.io/enhancements/keps/sig-node/585-runtime-class This is a beta feature as of Kubernetes v1.14.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeClassName(@Nullable Output<String> runtimeClassName) {
             $.runtimeClassName = runtimeClassName;
             return this;
         }
 
+        /**
+         * @param runtimeClassName RuntimeClassName refers to a RuntimeClass object in the node.k8s.io group, which should be used to run this pod.  If no RuntimeClass resource matches the named class, the pod will not be run. If unset or empty, the &#34;legacy&#34; RuntimeClass will be used, which is an implicit class with an empty definition that uses the default runtime handler. More info: https://git.k8s.io/enhancements/keps/sig-node/585-runtime-class This is a beta feature as of Kubernetes v1.14.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeClassName(String runtimeClassName) {
             return runtimeClassName(Output.of(runtimeClassName));
         }
 
+        /**
+         * @param schedulerName If specified, the pod will be dispatched by specified scheduler. If not specified, the pod will be dispatched by default scheduler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulerName(@Nullable Output<String> schedulerName) {
             $.schedulerName = schedulerName;
             return this;
         }
 
+        /**
+         * @param schedulerName If specified, the pod will be dispatched by specified scheduler. If not specified, the pod will be dispatched by default scheduler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulerName(String schedulerName) {
             return schedulerName(Output.of(schedulerName));
         }
 
+        /**
+         * @param securityContext SecurityContext holds pod-level security attributes and common container settings. Optional: Defaults to empty.  See type description for default values of each field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityContext(@Nullable Output<PodSecurityContextArgs> securityContext) {
             $.securityContext = securityContext;
             return this;
         }
 
+        /**
+         * @param securityContext SecurityContext holds pod-level security attributes and common container settings. Optional: Defaults to empty.  See type description for default values of each field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityContext(PodSecurityContextArgs securityContext) {
             return securityContext(Output.of(securityContext));
         }
 
+        /**
+         * @param serviceAccount DeprecatedServiceAccount is a depreciated alias for ServiceAccountName. Deprecated: Use serviceAccountName instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param serviceAccount DeprecatedServiceAccount is a depreciated alias for ServiceAccountName. Deprecated: Use serviceAccountName instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(String serviceAccount) {
             return serviceAccount(Output.of(serviceAccount));
         }
 
+        /**
+         * @param serviceAccountName ServiceAccountName is the name of the ServiceAccount to use to run this pod. More info: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountName(@Nullable Output<String> serviceAccountName) {
             $.serviceAccountName = serviceAccountName;
             return this;
         }
 
+        /**
+         * @param serviceAccountName ServiceAccountName is the name of the ServiceAccount to use to run this pod. More info: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountName(String serviceAccountName) {
             return serviceAccountName(Output.of(serviceAccountName));
         }
 
+        /**
+         * @param setHostnameAsFQDN If true the pod&#39;s hostname will be configured as the pod&#39;s FQDN, rather than the leaf name (the default). In Linux containers, this means setting the FQDN in the hostname field of the kernel (the nodename field of struct utsname). In Windows containers, this means setting the registry value of hostname for the registry key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters to FQDN. If a pod does not have FQDN, this has no effect. Default to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder setHostnameAsFQDN(@Nullable Output<Boolean> setHostnameAsFQDN) {
             $.setHostnameAsFQDN = setHostnameAsFQDN;
             return this;
         }
 
+        /**
+         * @param setHostnameAsFQDN If true the pod&#39;s hostname will be configured as the pod&#39;s FQDN, rather than the leaf name (the default). In Linux containers, this means setting the FQDN in the hostname field of the kernel (the nodename field of struct utsname). In Windows containers, this means setting the registry value of hostname for the registry key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters to FQDN. If a pod does not have FQDN, this has no effect. Default to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder setHostnameAsFQDN(Boolean setHostnameAsFQDN) {
             return setHostnameAsFQDN(Output.of(setHostnameAsFQDN));
         }
 
+        /**
+         * @param shareProcessNamespace Share a single process namespace between all of the containers in a pod. When this is set containers will be able to view and signal processes from other containers in the same pod, and the first process in each container will not be assigned PID 1. HostPID and ShareProcessNamespace cannot both be set. Optional: Default to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareProcessNamespace(@Nullable Output<Boolean> shareProcessNamespace) {
             $.shareProcessNamespace = shareProcessNamespace;
             return this;
         }
 
+        /**
+         * @param shareProcessNamespace Share a single process namespace between all of the containers in a pod. When this is set containers will be able to view and signal processes from other containers in the same pod, and the first process in each container will not be assigned PID 1. HostPID and ShareProcessNamespace cannot both be set. Optional: Default to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareProcessNamespace(Boolean shareProcessNamespace) {
             return shareProcessNamespace(Output.of(shareProcessNamespace));
         }
 
+        /**
+         * @param subdomain If specified, the fully qualified Pod hostname will be &#34;&lt;hostname&gt;.&lt;subdomain&gt;.&lt;pod namespace&gt;.svc.&lt;cluster domain&gt;&#34;. If not specified, the pod will not have a domainname at all.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdomain(@Nullable Output<String> subdomain) {
             $.subdomain = subdomain;
             return this;
         }
 
+        /**
+         * @param subdomain If specified, the fully qualified Pod hostname will be &#34;&lt;hostname&gt;.&lt;subdomain&gt;.&lt;pod namespace&gt;.svc.&lt;cluster domain&gt;&#34;. If not specified, the pod will not have a domainname at all.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdomain(String subdomain) {
             return subdomain(Output.of(subdomain));
         }
 
+        /**
+         * @param terminationGracePeriodSeconds Optional duration in seconds the pod needs to terminate gracefully. May be decreased in delete request. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). If this value is nil, the default grace period will be used instead. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. Defaults to 30 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder terminationGracePeriodSeconds(@Nullable Output<Integer> terminationGracePeriodSeconds) {
             $.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
             return this;
         }
 
+        /**
+         * @param terminationGracePeriodSeconds Optional duration in seconds the pod needs to terminate gracefully. May be decreased in delete request. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). If this value is nil, the default grace period will be used instead. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. Defaults to 30 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder terminationGracePeriodSeconds(Integer terminationGracePeriodSeconds) {
             return terminationGracePeriodSeconds(Output.of(terminationGracePeriodSeconds));
         }
 
+        /**
+         * @param tolerations If specified, the pod&#39;s tolerations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tolerations(@Nullable Output<List<TolerationArgs>> tolerations) {
             $.tolerations = tolerations;
             return this;
         }
 
+        /**
+         * @param tolerations If specified, the pod&#39;s tolerations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tolerations(List<TolerationArgs> tolerations) {
             return tolerations(Output.of(tolerations));
         }
 
+        /**
+         * @param tolerations If specified, the pod&#39;s tolerations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tolerations(TolerationArgs... tolerations) {
             return tolerations(List.of(tolerations));
         }
 
+        /**
+         * @param topologySpreadConstraints TopologySpreadConstraints describes how a group of pods ought to spread across topology domains. Scheduler will schedule pods in a way which abides by the constraints. All topologySpreadConstraints are ANDed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topologySpreadConstraints(@Nullable Output<List<TopologySpreadConstraintArgs>> topologySpreadConstraints) {
             $.topologySpreadConstraints = topologySpreadConstraints;
             return this;
         }
 
+        /**
+         * @param topologySpreadConstraints TopologySpreadConstraints describes how a group of pods ought to spread across topology domains. Scheduler will schedule pods in a way which abides by the constraints. All topologySpreadConstraints are ANDed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topologySpreadConstraints(List<TopologySpreadConstraintArgs> topologySpreadConstraints) {
             return topologySpreadConstraints(Output.of(topologySpreadConstraints));
         }
 
+        /**
+         * @param topologySpreadConstraints TopologySpreadConstraints describes how a group of pods ought to spread across topology domains. Scheduler will schedule pods in a way which abides by the constraints. All topologySpreadConstraints are ANDed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topologySpreadConstraints(TopologySpreadConstraintArgs... topologySpreadConstraints) {
             return topologySpreadConstraints(List.of(topologySpreadConstraints));
         }
 
+        /**
+         * @param volumes List of volumes that can be mounted by containers belonging to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(@Nullable Output<List<VolumeArgs>> volumes) {
             $.volumes = volumes;
             return this;
         }
 
+        /**
+         * @param volumes List of volumes that can be mounted by containers belonging to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(List<VolumeArgs> volumes) {
             return volumes(Output.of(volumes));
         }
 
+        /**
+         * @param volumes List of volumes that can be mounted by containers belonging to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(VolumeArgs... volumes) {
             return volumes(List.of(volumes));
         }

@@ -26,6 +26,10 @@ public final class HorizontalPodAutoscalerBehaviorArgs extends com.pulumi.resour
     @Import(name="scaleDown")
     private @Nullable Output<HPAScalingRulesArgs> scaleDown;
 
+    /**
+     * @return scaleDown is scaling policy for scaling Down. If not set, the default value is to allow to scale down to minReplicas pods, with a 300 second stabilization window (i.e., the highest recommendation for the last 300sec is used).
+     * 
+     */
     public Optional<Output<HPAScalingRulesArgs>> scaleDown() {
         return Optional.ofNullable(this.scaleDown);
     }
@@ -40,6 +44,13 @@ public final class HorizontalPodAutoscalerBehaviorArgs extends com.pulumi.resour
     @Import(name="scaleUp")
     private @Nullable Output<HPAScalingRulesArgs> scaleUp;
 
+    /**
+     * @return scaleUp is scaling policy for scaling Up. If not set, the default value is the higher of:
+     *   * increase no more than 4 pods per 60 seconds
+     *   * double the number of pods per 60 seconds
+     *     No stabilization is used.
+     * 
+     */
     public Optional<Output<HPAScalingRulesArgs>> scaleUp() {
         return Optional.ofNullable(this.scaleUp);
     }
@@ -69,20 +80,50 @@ public final class HorizontalPodAutoscalerBehaviorArgs extends com.pulumi.resour
             $ = new HorizontalPodAutoscalerBehaviorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scaleDown scaleDown is scaling policy for scaling Down. If not set, the default value is to allow to scale down to minReplicas pods, with a 300 second stabilization window (i.e., the highest recommendation for the last 300sec is used).
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleDown(@Nullable Output<HPAScalingRulesArgs> scaleDown) {
             $.scaleDown = scaleDown;
             return this;
         }
 
+        /**
+         * @param scaleDown scaleDown is scaling policy for scaling Down. If not set, the default value is to allow to scale down to minReplicas pods, with a 300 second stabilization window (i.e., the highest recommendation for the last 300sec is used).
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleDown(HPAScalingRulesArgs scaleDown) {
             return scaleDown(Output.of(scaleDown));
         }
 
+        /**
+         * @param scaleUp scaleUp is scaling policy for scaling Up. If not set, the default value is the higher of:
+         *   * increase no more than 4 pods per 60 seconds
+         *   * double the number of pods per 60 seconds
+         *     No stabilization is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleUp(@Nullable Output<HPAScalingRulesArgs> scaleUp) {
             $.scaleUp = scaleUp;
             return this;
         }
 
+        /**
+         * @param scaleUp scaleUp is scaling policy for scaling Up. If not set, the default value is the higher of:
+         *   * increase no more than 4 pods per 60 seconds
+         *   * double the number of pods per 60 seconds
+         *     No stabilization is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleUp(HPAScalingRulesArgs scaleUp) {
             return scaleUp(Output.of(scaleUp));
         }

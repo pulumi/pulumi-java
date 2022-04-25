@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class DaemonEndpoint {
-    /**
-     * Port number of the given endpoint.
-     * 
-     */
+        /**
+         * @return Port number of the given endpoint.
+         * 
+         */
     private final Integer Port;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class DaemonEndpoint {
     }
 
     /**
-     * Port number of the given endpoint.
+     * @return Port number of the given endpoint.
      * 
-    */
+     */
     public Integer Port() {
         return this.Port;
     }

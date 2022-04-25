@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LoadBalancerIngress {
-    /**
-     * Hostname is set for load-balancer ingress points that are DNS based (typically AWS load-balancers)
-     * 
-     */
+        /**
+         * @return Hostname is set for load-balancer ingress points that are DNS based (typically AWS load-balancers)
+         * 
+         */
     private final @Nullable String hostname;
-    /**
-     * IP is set for load-balancer ingress points that are IP based (typically GCE or OpenStack load-balancers)
-     * 
-     */
+        /**
+         * @return IP is set for load-balancer ingress points that are IP based (typically GCE or OpenStack load-balancers)
+         * 
+         */
     private final @Nullable String ip;
-    /**
-     * Ports is a list of records of service ports If used, every port defined in the service should have an entry in it
-     * 
-     */
+        /**
+         * @return Ports is a list of records of service ports If used, every port defined in the service should have an entry in it
+         * 
+         */
     private final @Nullable List<PortStatus> ports;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class LoadBalancerIngress {
     }
 
     /**
-     * Hostname is set for load-balancer ingress points that are DNS based (typically AWS load-balancers)
+     * @return Hostname is set for load-balancer ingress points that are DNS based (typically AWS load-balancers)
      * 
-    */
+     */
     public Optional<String> hostname() {
         return Optional.ofNullable(this.hostname);
     }
     /**
-     * IP is set for load-balancer ingress points that are IP based (typically GCE or OpenStack load-balancers)
+     * @return IP is set for load-balancer ingress points that are IP based (typically GCE or OpenStack load-balancers)
      * 
-    */
+     */
     public Optional<String> ip() {
         return Optional.ofNullable(this.ip);
     }
     /**
-     * Ports is a list of records of service ports If used, every port defined in the service should have an entry in it
+     * @return Ports is a list of records of service ports If used, every port defined in the service should have an entry in it
      * 
-    */
+     */
     public List<PortStatus> ports() {
         return this.ports == null ? List.of() : this.ports;
     }

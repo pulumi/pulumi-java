@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NetworkPolicyPort {
-    /**
-     * If specified, the port on the given protocol.  This can either be a numerical or named port on a pod.  If this field is not provided, this matches all port names and numbers. If present, only traffic on the specified protocol AND port will be matched.
-     * 
-     */
+        /**
+         * @return If specified, the port on the given protocol.  This can either be a numerical or named port on a pod.  If this field is not provided, this matches all port names and numbers. If present, only traffic on the specified protocol AND port will be matched.
+         * 
+         */
     private final @Nullable Either<Integer,String> port;
-    /**
-     * Optional.  The protocol (TCP, UDP, or SCTP) which traffic must match. If not specified, this field defaults to TCP.
-     * 
-     */
+        /**
+         * @return Optional.  The protocol (TCP, UDP, or SCTP) which traffic must match. If not specified, this field defaults to TCP.
+         * 
+         */
     private final @Nullable String protocol;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class NetworkPolicyPort {
     }
 
     /**
-     * If specified, the port on the given protocol.  This can either be a numerical or named port on a pod.  If this field is not provided, this matches all port names and numbers. If present, only traffic on the specified protocol AND port will be matched.
+     * @return If specified, the port on the given protocol.  This can either be a numerical or named port on a pod.  If this field is not provided, this matches all port names and numbers. If present, only traffic on the specified protocol AND port will be matched.
      * 
-    */
+     */
     public Optional<Either<Integer,String>> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * Optional.  The protocol (TCP, UDP, or SCTP) which traffic must match. If not specified, this field defaults to TCP.
+     * @return Optional.  The protocol (TCP, UDP, or SCTP) which traffic must match. If not specified, this field defaults to TCP.
      * 
-    */
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }

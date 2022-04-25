@@ -14,26 +14,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class StatefulSet {
-    /**
-     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
-     */
+        /**
+         * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+         * 
+         */
     private final @Nullable String apiVersion;
-    /**
-     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
-     */
+        /**
+         * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+         * 
+         */
     private final @Nullable String kind;
     private final @Nullable ObjectMeta metadata;
-    /**
-     * Spec defines the desired identities of pods in this set.
-     * 
-     */
+        /**
+         * @return Spec defines the desired identities of pods in this set.
+         * 
+         */
     private final @Nullable StatefulSetSpec spec;
-    /**
-     * Status is the current status of Pods in this StatefulSet. This data may be out of date by some window of time.
-     * 
-     */
+        /**
+         * @return Status is the current status of Pods in this StatefulSet. This data may be out of date by some window of time.
+         * 
+         */
     private final @Nullable StatefulSetStatus status;
 
     @CustomType.Constructor
@@ -51,16 +51,16 @@ public final class StatefulSet {
     }
 
     /**
-     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
-    */
+     */
     public Optional<String> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
-     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -68,16 +68,16 @@ public final class StatefulSet {
         return Optional.ofNullable(this.metadata);
     }
     /**
-     * Spec defines the desired identities of pods in this set.
+     * @return Spec defines the desired identities of pods in this set.
      * 
-    */
+     */
     public Optional<StatefulSetSpec> spec() {
         return Optional.ofNullable(this.spec);
     }
     /**
-     * Status is the current status of Pods in this StatefulSet. This data may be out of date by some window of time.
+     * @return Status is the current status of Pods in this StatefulSet. This data may be out of date by some window of time.
      * 
-    */
+     */
     public Optional<StatefulSetStatus> status() {
         return Optional.ofNullable(this.status);
     }

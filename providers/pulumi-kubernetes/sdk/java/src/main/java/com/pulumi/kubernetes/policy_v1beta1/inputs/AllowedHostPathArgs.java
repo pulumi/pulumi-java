@@ -29,6 +29,12 @@ public final class AllowedHostPathArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="pathPrefix")
     private @Nullable Output<String> pathPrefix;
 
+    /**
+     * @return pathPrefix is the path prefix that the host volume must match. It does not support `*`. Trailing slashes are trimmed when validating the path prefix with a host path.
+     * 
+     * Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not allow `/food` or `/etc/foo`
+     * 
+     */
     public Optional<Output<String>> pathPrefix() {
         return Optional.ofNullable(this.pathPrefix);
     }
@@ -40,6 +46,10 @@ public final class AllowedHostPathArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
+    /**
+     * @return when set to true, will allow host volumes matching the pathPrefix only if all volume mounts are readOnly.
+     * 
+     */
     public Optional<Output<Boolean>> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -69,20 +79,48 @@ public final class AllowedHostPathArgs extends com.pulumi.resources.ResourceArgs
             $ = new AllowedHostPathArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pathPrefix pathPrefix is the path prefix that the host volume must match. It does not support `*`. Trailing slashes are trimmed when validating the path prefix with a host path.
+         * 
+         * Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not allow `/food` or `/etc/foo`
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathPrefix(@Nullable Output<String> pathPrefix) {
             $.pathPrefix = pathPrefix;
             return this;
         }
 
+        /**
+         * @param pathPrefix pathPrefix is the path prefix that the host volume must match. It does not support `*`. Trailing slashes are trimmed when validating the path prefix with a host path.
+         * 
+         * Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not allow `/food` or `/etc/foo`
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathPrefix(String pathPrefix) {
             return pathPrefix(Output.of(pathPrefix));
         }
 
+        /**
+         * @param readOnly when set to true, will allow host volumes matching the pathPrefix only if all volume mounts are readOnly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             $.readOnly = readOnly;
             return this;
         }
 
+        /**
+         * @param readOnly when set to true, will allow host volumes matching the pathPrefix only if all volume mounts are readOnly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(Boolean readOnly) {
             return readOnly(Output.of(readOnly));
         }

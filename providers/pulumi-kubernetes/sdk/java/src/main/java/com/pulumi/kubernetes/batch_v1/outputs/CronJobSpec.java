@@ -14,45 +14,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CronJobSpec {
-    /**
-     * Specifies how to treat concurrent executions of a Job. Valid values are: - &#34;Allow&#34; (default): allows CronJobs to run concurrently; - &#34;Forbid&#34;: forbids concurrent runs, skipping next run if previous run hasn&#39;t finished yet; - &#34;Replace&#34;: cancels currently running job and replaces it with a new one
-     * 
-     * Possible enum values:
-     *  - `&#34;Allow&#34;` allows CronJobs to run concurrently.
-     *  - `&#34;Forbid&#34;` forbids concurrent runs, skipping next run if previous hasn&#39;t finished yet.
-     *  - `&#34;Replace&#34;` cancels currently running job and replaces it with a new one.
-     * 
-     */
+        /**
+         * @return Specifies how to treat concurrent executions of a Job. Valid values are: - &#34;Allow&#34; (default): allows CronJobs to run concurrently; - &#34;Forbid&#34;: forbids concurrent runs, skipping next run if previous run hasn&#39;t finished yet; - &#34;Replace&#34;: cancels currently running job and replaces it with a new one
+         * 
+         * Possible enum values:
+         *  - `&#34;Allow&#34;` allows CronJobs to run concurrently.
+         *  - `&#34;Forbid&#34;` forbids concurrent runs, skipping next run if previous hasn&#39;t finished yet.
+         *  - `&#34;Replace&#34;` cancels currently running job and replaces it with a new one.
+         * 
+         */
     private final @Nullable String concurrencyPolicy;
-    /**
-     * The number of failed finished jobs to retain. Value must be non-negative integer. Defaults to 1.
-     * 
-     */
+        /**
+         * @return The number of failed finished jobs to retain. Value must be non-negative integer. Defaults to 1.
+         * 
+         */
     private final @Nullable Integer failedJobsHistoryLimit;
-    /**
-     * Specifies the job that will be created when executing a CronJob.
-     * 
-     */
+        /**
+         * @return Specifies the job that will be created when executing a CronJob.
+         * 
+         */
     private final JobTemplateSpec jobTemplate;
-    /**
-     * The schedule in Cron format, see https://en.wikipedia.org/wiki/Cron.
-     * 
-     */
+        /**
+         * @return The schedule in Cron format, see https://en.wikipedia.org/wiki/Cron.
+         * 
+         */
     private final String schedule;
-    /**
-     * Optional deadline in seconds for starting the job if it misses scheduled time for any reason.  Missed jobs executions will be counted as failed ones.
-     * 
-     */
+        /**
+         * @return Optional deadline in seconds for starting the job if it misses scheduled time for any reason.  Missed jobs executions will be counted as failed ones.
+         * 
+         */
     private final @Nullable Integer startingDeadlineSeconds;
-    /**
-     * The number of successful finished jobs to retain. Value must be non-negative integer. Defaults to 3.
-     * 
-     */
+        /**
+         * @return The number of successful finished jobs to retain. Value must be non-negative integer. Defaults to 3.
+         * 
+         */
     private final @Nullable Integer successfulJobsHistoryLimit;
-    /**
-     * This flag tells the controller to suspend subsequent executions, it does not apply to already started executions.  Defaults to false.
-     * 
-     */
+        /**
+         * @return This flag tells the controller to suspend subsequent executions, it does not apply to already started executions.  Defaults to false.
+         * 
+         */
     private final @Nullable Boolean suspend;
 
     @CustomType.Constructor
@@ -74,56 +74,56 @@ public final class CronJobSpec {
     }
 
     /**
-     * Specifies how to treat concurrent executions of a Job. Valid values are: - &#34;Allow&#34; (default): allows CronJobs to run concurrently; - &#34;Forbid&#34;: forbids concurrent runs, skipping next run if previous run hasn&#39;t finished yet; - &#34;Replace&#34;: cancels currently running job and replaces it with a new one
+     * @return Specifies how to treat concurrent executions of a Job. Valid values are: - &#34;Allow&#34; (default): allows CronJobs to run concurrently; - &#34;Forbid&#34;: forbids concurrent runs, skipping next run if previous run hasn&#39;t finished yet; - &#34;Replace&#34;: cancels currently running job and replaces it with a new one
      * 
      * Possible enum values:
      *  - `&#34;Allow&#34;` allows CronJobs to run concurrently.
      *  - `&#34;Forbid&#34;` forbids concurrent runs, skipping next run if previous hasn&#39;t finished yet.
      *  - `&#34;Replace&#34;` cancels currently running job and replaces it with a new one.
      * 
-    */
+     */
     public Optional<String> concurrencyPolicy() {
         return Optional.ofNullable(this.concurrencyPolicy);
     }
     /**
-     * The number of failed finished jobs to retain. Value must be non-negative integer. Defaults to 1.
+     * @return The number of failed finished jobs to retain. Value must be non-negative integer. Defaults to 1.
      * 
-    */
+     */
     public Optional<Integer> failedJobsHistoryLimit() {
         return Optional.ofNullable(this.failedJobsHistoryLimit);
     }
     /**
-     * Specifies the job that will be created when executing a CronJob.
+     * @return Specifies the job that will be created when executing a CronJob.
      * 
-    */
+     */
     public JobTemplateSpec jobTemplate() {
         return this.jobTemplate;
     }
     /**
-     * The schedule in Cron format, see https://en.wikipedia.org/wiki/Cron.
+     * @return The schedule in Cron format, see https://en.wikipedia.org/wiki/Cron.
      * 
-    */
+     */
     public String schedule() {
         return this.schedule;
     }
     /**
-     * Optional deadline in seconds for starting the job if it misses scheduled time for any reason.  Missed jobs executions will be counted as failed ones.
+     * @return Optional deadline in seconds for starting the job if it misses scheduled time for any reason.  Missed jobs executions will be counted as failed ones.
      * 
-    */
+     */
     public Optional<Integer> startingDeadlineSeconds() {
         return Optional.ofNullable(this.startingDeadlineSeconds);
     }
     /**
-     * The number of successful finished jobs to retain. Value must be non-negative integer. Defaults to 3.
+     * @return The number of successful finished jobs to retain. Value must be non-negative integer. Defaults to 3.
      * 
-    */
+     */
     public Optional<Integer> successfulJobsHistoryLimit() {
         return Optional.ofNullable(this.successfulJobsHistoryLimit);
     }
     /**
-     * This flag tells the controller to suspend subsequent executions, it does not apply to already started executions.  Defaults to false.
+     * @return This flag tells the controller to suspend subsequent executions, it does not apply to already started executions.  Defaults to false.
      * 
-    */
+     */
     public Optional<Boolean> suspend() {
         return Optional.ofNullable(this.suspend);
     }

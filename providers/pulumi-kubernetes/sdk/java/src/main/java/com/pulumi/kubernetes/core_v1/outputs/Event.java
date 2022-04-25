@@ -16,90 +16,90 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class Event {
-    /**
-     * What action was taken/failed regarding to the Regarding object.
-     * 
-     */
+        /**
+         * @return What action was taken/failed regarding to the Regarding object.
+         * 
+         */
     private final @Nullable String action;
-    /**
-     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
-     */
+        /**
+         * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+         * 
+         */
     private final @Nullable String apiVersion;
-    /**
-     * The number of times this event has occurred.
-     * 
-     */
+        /**
+         * @return The number of times this event has occurred.
+         * 
+         */
     private final @Nullable Integer count;
-    /**
-     * Time when this Event was first observed.
-     * 
-     */
+        /**
+         * @return Time when this Event was first observed.
+         * 
+         */
     private final @Nullable String eventTime;
-    /**
-     * The time at which the event was first recorded. (Time of server receipt is in TypeMeta.)
-     * 
-     */
+        /**
+         * @return The time at which the event was first recorded. (Time of server receipt is in TypeMeta.)
+         * 
+         */
     private final @Nullable String firstTimestamp;
-    /**
-     * The object that this event is about.
-     * 
-     */
+        /**
+         * @return The object that this event is about.
+         * 
+         */
     private final ObjectReference involvedObject;
-    /**
-     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
-     */
+        /**
+         * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * The time at which the most recent occurrence of this event was recorded.
-     * 
-     */
+        /**
+         * @return The time at which the most recent occurrence of this event was recorded.
+         * 
+         */
     private final @Nullable String lastTimestamp;
-    /**
-     * A human-readable description of the status of this operation.
-     * 
-     */
+        /**
+         * @return A human-readable description of the status of this operation.
+         * 
+         */
     private final @Nullable String message;
-    /**
-     * Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
-     */
+        /**
+         * @return Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+         * 
+         */
     private final ObjectMeta metadata;
-    /**
-     * This should be a short, machine understandable string that gives the reason for the transition into the object&#39;s current status.
-     * 
-     */
+        /**
+         * @return This should be a short, machine understandable string that gives the reason for the transition into the object&#39;s current status.
+         * 
+         */
     private final @Nullable String reason;
-    /**
-     * Optional secondary object for more complex actions.
-     * 
-     */
+        /**
+         * @return Optional secondary object for more complex actions.
+         * 
+         */
     private final @Nullable ObjectReference related;
-    /**
-     * Name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`.
-     * 
-     */
+        /**
+         * @return Name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`.
+         * 
+         */
     private final @Nullable String reportingComponent;
-    /**
-     * ID of the controller instance, e.g. `kubelet-xyzf`.
-     * 
-     */
+        /**
+         * @return ID of the controller instance, e.g. `kubelet-xyzf`.
+         * 
+         */
     private final @Nullable String reportingInstance;
-    /**
-     * Data about the Event series this event represents or nil if it&#39;s a singleton Event.
-     * 
-     */
+        /**
+         * @return Data about the Event series this event represents or nil if it&#39;s a singleton Event.
+         * 
+         */
     private final @Nullable EventSeries series;
-    /**
-     * The component reporting this event. Should be a short machine understandable string.
-     * 
-     */
+        /**
+         * @return The component reporting this event. Should be a short machine understandable string.
+         * 
+         */
     private final @Nullable EventSource source;
-    /**
-     * Type of this event (Normal, Warning), new types could be added in the future
-     * 
-     */
+        /**
+         * @return Type of this event (Normal, Warning), new types could be added in the future
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -141,121 +141,121 @@ public final class Event {
     }
 
     /**
-     * What action was taken/failed regarding to the Regarding object.
+     * @return What action was taken/failed regarding to the Regarding object.
      * 
-    */
+     */
     public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
     /**
-     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
-    */
+     */
     public Optional<String> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
-     * The number of times this event has occurred.
+     * @return The number of times this event has occurred.
      * 
-    */
+     */
     public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
     /**
-     * Time when this Event was first observed.
+     * @return Time when this Event was first observed.
      * 
-    */
+     */
     public Optional<String> eventTime() {
         return Optional.ofNullable(this.eventTime);
     }
     /**
-     * The time at which the event was first recorded. (Time of server receipt is in TypeMeta.)
+     * @return The time at which the event was first recorded. (Time of server receipt is in TypeMeta.)
      * 
-    */
+     */
     public Optional<String> firstTimestamp() {
         return Optional.ofNullable(this.firstTimestamp);
     }
     /**
-     * The object that this event is about.
+     * @return The object that this event is about.
      * 
-    */
+     */
     public ObjectReference involvedObject() {
         return this.involvedObject;
     }
     /**
-     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * The time at which the most recent occurrence of this event was recorded.
+     * @return The time at which the most recent occurrence of this event was recorded.
      * 
-    */
+     */
     public Optional<String> lastTimestamp() {
         return Optional.ofNullable(this.lastTimestamp);
     }
     /**
-     * A human-readable description of the status of this operation.
+     * @return A human-readable description of the status of this operation.
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * @return Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
-    */
+     */
     public ObjectMeta metadata() {
         return this.metadata;
     }
     /**
-     * This should be a short, machine understandable string that gives the reason for the transition into the object&#39;s current status.
+     * @return This should be a short, machine understandable string that gives the reason for the transition into the object&#39;s current status.
      * 
-    */
+     */
     public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }
     /**
-     * Optional secondary object for more complex actions.
+     * @return Optional secondary object for more complex actions.
      * 
-    */
+     */
     public Optional<ObjectReference> related() {
         return Optional.ofNullable(this.related);
     }
     /**
-     * Name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`.
+     * @return Name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`.
      * 
-    */
+     */
     public Optional<String> reportingComponent() {
         return Optional.ofNullable(this.reportingComponent);
     }
     /**
-     * ID of the controller instance, e.g. `kubelet-xyzf`.
+     * @return ID of the controller instance, e.g. `kubelet-xyzf`.
      * 
-    */
+     */
     public Optional<String> reportingInstance() {
         return Optional.ofNullable(this.reportingInstance);
     }
     /**
-     * Data about the Event series this event represents or nil if it&#39;s a singleton Event.
+     * @return Data about the Event series this event represents or nil if it&#39;s a singleton Event.
      * 
-    */
+     */
     public Optional<EventSeries> series() {
         return Optional.ofNullable(this.series);
     }
     /**
-     * The component reporting this event. Should be a short machine understandable string.
+     * @return The component reporting this event. Should be a short machine understandable string.
      * 
-    */
+     */
     public Optional<EventSource> source() {
         return Optional.ofNullable(this.source);
     }
     /**
-     * Type of this event (Normal, Warning), new types could be added in the future
+     * @return Type of this event (Normal, Warning), new types could be added in the future
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

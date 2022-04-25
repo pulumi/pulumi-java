@@ -27,6 +27,10 @@ public final class ScopeSelectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="matchExpressions")
     private @Nullable Output<List<ScopedResourceSelectorRequirementArgs>> matchExpressions;
 
+    /**
+     * @return A list of scope selector requirements by scope of the resources.
+     * 
+     */
     public Optional<Output<List<ScopedResourceSelectorRequirementArgs>>> matchExpressions() {
         return Optional.ofNullable(this.matchExpressions);
     }
@@ -55,15 +59,33 @@ public final class ScopeSelectorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ScopeSelectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param matchExpressions A list of scope selector requirements by scope of the resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchExpressions(@Nullable Output<List<ScopedResourceSelectorRequirementArgs>> matchExpressions) {
             $.matchExpressions = matchExpressions;
             return this;
         }
 
+        /**
+         * @param matchExpressions A list of scope selector requirements by scope of the resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchExpressions(List<ScopedResourceSelectorRequirementArgs> matchExpressions) {
             return matchExpressions(Output.of(matchExpressions));
         }
 
+        /**
+         * @param matchExpressions A list of scope selector requirements by scope of the resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchExpressions(ScopedResourceSelectorRequirementArgs... matchExpressions) {
             return matchExpressions(List.of(matchExpressions));
         }

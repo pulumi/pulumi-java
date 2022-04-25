@@ -15,30 +15,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClusterRole {
-    /**
-     * AggregationRule is an optional field that describes how to build the Rules for this ClusterRole. If AggregationRule is set, then the Rules are controller managed and direct changes to Rules will be stomped by the controller.
-     * 
-     */
+        /**
+         * @return AggregationRule is an optional field that describes how to build the Rules for this ClusterRole. If AggregationRule is set, then the Rules are controller managed and direct changes to Rules will be stomped by the controller.
+         * 
+         */
     private final @Nullable AggregationRule aggregationRule;
-    /**
-     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
-     */
+        /**
+         * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+         * 
+         */
     private final @Nullable String apiVersion;
-    /**
-     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
-     */
+        /**
+         * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * Standard object&#39;s metadata.
-     * 
-     */
+        /**
+         * @return Standard object&#39;s metadata.
+         * 
+         */
     private final @Nullable ObjectMeta metadata;
-    /**
-     * Rules holds all the PolicyRules for this ClusterRole
-     * 
-     */
+        /**
+         * @return Rules holds all the PolicyRules for this ClusterRole
+         * 
+         */
     private final @Nullable List<PolicyRule> rules;
 
     @CustomType.Constructor
@@ -56,37 +56,37 @@ public final class ClusterRole {
     }
 
     /**
-     * AggregationRule is an optional field that describes how to build the Rules for this ClusterRole. If AggregationRule is set, then the Rules are controller managed and direct changes to Rules will be stomped by the controller.
+     * @return AggregationRule is an optional field that describes how to build the Rules for this ClusterRole. If AggregationRule is set, then the Rules are controller managed and direct changes to Rules will be stomped by the controller.
      * 
-    */
+     */
     public Optional<AggregationRule> aggregationRule() {
         return Optional.ofNullable(this.aggregationRule);
     }
     /**
-     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
-    */
+     */
     public Optional<String> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
-     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Standard object&#39;s metadata.
+     * @return Standard object&#39;s metadata.
      * 
-    */
+     */
     public Optional<ObjectMeta> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
-     * Rules holds all the PolicyRules for this ClusterRole
+     * @return Rules holds all the PolicyRules for this ClusterRole
      * 
-    */
+     */
     public List<PolicyRule> rules() {
         return this.rules == null ? List.of() : this.rules;
     }

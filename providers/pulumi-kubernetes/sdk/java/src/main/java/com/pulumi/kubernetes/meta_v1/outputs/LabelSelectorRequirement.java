@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LabelSelectorRequirement {
-    /**
-     * key is the label key that the selector applies to.
-     * 
-     */
+        /**
+         * @return key is the label key that the selector applies to.
+         * 
+         */
     private final String key;
-    /**
-     * operator represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
-     * 
-     */
+        /**
+         * @return operator represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
+         * 
+         */
     private final String operator;
-    /**
-     * values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
-     * 
-     */
+        /**
+         * @return values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
+         * 
+         */
     private final @Nullable List<String> values;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class LabelSelectorRequirement {
     }
 
     /**
-     * key is the label key that the selector applies to.
+     * @return key is the label key that the selector applies to.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * operator represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
+     * @return operator represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
      * 
-    */
+     */
     public String operator() {
         return this.operator;
     }
     /**
-     * values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
+     * @return values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
      * 
-    */
+     */
     public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }
