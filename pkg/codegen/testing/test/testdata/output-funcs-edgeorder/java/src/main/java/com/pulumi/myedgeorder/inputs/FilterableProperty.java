@@ -26,6 +26,10 @@ public final class FilterableProperty extends com.pulumi.resources.InvokeArgs {
     @Import(name="supportedValues", required=true)
     private List<String> supportedValues;
 
+    /**
+     * @return Values to be filtered.
+     * 
+     */
     public List<String> supportedValues() {
         return this.supportedValues;
     }
@@ -37,6 +41,10 @@ public final class FilterableProperty extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private Either<String,SupportedFilterTypes> type;
 
+    /**
+     * @return Type of product filter.
+     * 
+     */
     public Either<String,SupportedFilterTypes> type() {
         return this.type;
     }
@@ -66,24 +74,54 @@ public final class FilterableProperty extends com.pulumi.resources.InvokeArgs {
             $ = new FilterableProperty(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param supportedValues Values to be filtered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportedValues(List<String> supportedValues) {
             $.supportedValues = supportedValues;
             return this;
         }
 
+        /**
+         * @param supportedValues Values to be filtered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportedValues(String... supportedValues) {
             return supportedValues(List.of(supportedValues));
         }
 
+        /**
+         * @param type Type of product filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,SupportedFilterTypes> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of product filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type Type of product filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(SupportedFilterTypes type) {
             return type(Either.ofRight(type));
         }

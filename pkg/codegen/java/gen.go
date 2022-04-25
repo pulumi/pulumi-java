@@ -628,7 +628,9 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 // Generates derived builder setters that resolve to the main setter.
 // This helps to promote T to Output<T>, accept varargs for a List parameter
 // and to unroll Either<L, R> to both of its types.
-func (pt *plainType) genBuilderHelpers(ctx *classFileContext, setterName, fieldName string, t TypeShape, prop *schema.Property) {
+func (pt *plainType) genBuilderHelpers(ctx *classFileContext, setterName,
+	fieldName string, t TypeShape, prop *schema.Property) {
+
 	w := ctx.writer
 	const indent = "        "
 

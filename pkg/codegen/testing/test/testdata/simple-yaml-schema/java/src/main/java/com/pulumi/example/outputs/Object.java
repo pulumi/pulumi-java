@@ -20,12 +20,12 @@ public final class Object {
     private final @Nullable List<ConfigMap> configs;
     private final @Nullable Resource foo;
     /**
-     * List of lists of other objects
+     * @return List of lists of other objects
      * 
      */
     private final @Nullable List<List<SomeOtherObject>> others;
     /**
-     * Mapping from string to list of some other object
+     * @return Mapping from string to list of some other object
      * 
      */
     private final @Nullable Map<String,List<SomeOtherObject>> stillOthers;
@@ -54,16 +54,16 @@ public final class Object {
         return Optional.ofNullable(this.foo);
     }
     /**
-     * List of lists of other objects
+     * @return List of lists of other objects
      * 
-    */
+     */
     public List<List<SomeOtherObject>> others() {
         return this.others == null ? List.of() : this.others;
     }
     /**
-     * Mapping from string to list of some other object
+     * @return Mapping from string to list of some other object
      * 
-    */
+     */
     public Map<String,List<SomeOtherObject>> stillOthers() {
         return this.stillOthers == null ? Map.of() : this.stillOthers;
     }

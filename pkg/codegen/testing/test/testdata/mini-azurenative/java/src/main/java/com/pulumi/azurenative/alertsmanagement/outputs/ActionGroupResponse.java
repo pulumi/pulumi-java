@@ -12,42 +12,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ActionGroupResponse {
     /**
-     * Action group to trigger if action rule matches
+     * @return Action group to trigger if action rule matches
      * 
      */
     private final String actionGroupId;
     /**
-     * Creation time of action rule. Date-Time in ISO-8601 format.
+     * @return Creation time of action rule. Date-Time in ISO-8601 format.
      * 
      */
     private final String createdAt;
     /**
-     * Created by user name.
+     * @return Created by user name.
      * 
      */
     private final String createdBy;
     /**
-     * Description of action rule
+     * @return Description of action rule
      * 
      */
     private final @Nullable String description;
     /**
-     * Last updated time of action rule. Date-Time in ISO-8601 format.
+     * @return Last updated time of action rule. Date-Time in ISO-8601 format.
      * 
      */
     private final String lastModifiedAt;
     /**
-     * Last modified by user name.
+     * @return Last modified by user name.
      * 
      */
     private final String lastModifiedBy;
     /**
-     * Indicates if the given action rule is enabled or disabled
+     * @return Indicates if the given action rule is enabled or disabled
      * 
      */
     private final @Nullable String status;
     /**
-     * Indicates type of action rule
+     * @return Indicates type of action rule
      * Expected value is &#39;ActionGroup&#39;.
      * 
      */
@@ -74,59 +74,59 @@ public final class ActionGroupResponse {
     }
 
     /**
-     * Action group to trigger if action rule matches
+     * @return Action group to trigger if action rule matches
      * 
-    */
+     */
     public String actionGroupId() {
         return this.actionGroupId;
     }
     /**
-     * Creation time of action rule. Date-Time in ISO-8601 format.
+     * @return Creation time of action rule. Date-Time in ISO-8601 format.
      * 
-    */
+     */
     public String createdAt() {
         return this.createdAt;
     }
     /**
-     * Created by user name.
+     * @return Created by user name.
      * 
-    */
+     */
     public String createdBy() {
         return this.createdBy;
     }
     /**
-     * Description of action rule
+     * @return Description of action rule
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Last updated time of action rule. Date-Time in ISO-8601 format.
+     * @return Last updated time of action rule. Date-Time in ISO-8601 format.
      * 
-    */
+     */
     public String lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
-     * Last modified by user name.
+     * @return Last modified by user name.
      * 
-    */
+     */
     public String lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
-     * Indicates if the given action rule is enabled or disabled
+     * @return Indicates if the given action rule is enabled or disabled
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * Indicates type of action rule
+     * @return Indicates type of action rule
      * Expected value is &#39;ActionGroup&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
