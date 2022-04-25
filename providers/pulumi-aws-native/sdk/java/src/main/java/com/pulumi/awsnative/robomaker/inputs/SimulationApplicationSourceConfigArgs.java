@@ -25,6 +25,10 @@ public final class SimulationApplicationSourceConfigArgs extends com.pulumi.reso
     @Import(name="architecture", required=true)
     private Output<SimulationApplicationSourceConfigArchitecture> architecture;
 
+    /**
+     * @return The target processor architecture for the application.
+     * 
+     */
     public Output<SimulationApplicationSourceConfigArchitecture> architecture() {
         return this.architecture;
     }
@@ -36,6 +40,10 @@ public final class SimulationApplicationSourceConfigArgs extends com.pulumi.reso
     @Import(name="s3Bucket", required=true)
     private Output<String> s3Bucket;
 
+    /**
+     * @return The Amazon S3 bucket name.
+     * 
+     */
     public Output<String> s3Bucket() {
         return this.s3Bucket;
     }
@@ -47,6 +55,10 @@ public final class SimulationApplicationSourceConfigArgs extends com.pulumi.reso
     @Import(name="s3Key", required=true)
     private Output<String> s3Key;
 
+    /**
+     * @return The s3 object key.
+     * 
+     */
     public Output<String> s3Key() {
         return this.s3Key;
     }
@@ -77,29 +89,65 @@ public final class SimulationApplicationSourceConfigArgs extends com.pulumi.reso
             $ = new SimulationApplicationSourceConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param architecture The target processor architecture for the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder architecture(Output<SimulationApplicationSourceConfigArchitecture> architecture) {
             $.architecture = architecture;
             return this;
         }
 
+        /**
+         * @param architecture The target processor architecture for the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder architecture(SimulationApplicationSourceConfigArchitecture architecture) {
             return architecture(Output.of(architecture));
         }
 
+        /**
+         * @param s3Bucket The Amazon S3 bucket name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Bucket(Output<String> s3Bucket) {
             $.s3Bucket = s3Bucket;
             return this;
         }
 
+        /**
+         * @param s3Bucket The Amazon S3 bucket name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Bucket(String s3Bucket) {
             return s3Bucket(Output.of(s3Bucket));
         }
 
+        /**
+         * @param s3Key The s3 object key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Key(Output<String> s3Key) {
             $.s3Key = s3Key;
             return this;
         }
 
+        /**
+         * @param s3Key The s3 object key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Key(String s3Key) {
             return s3Key(Output.of(s3Key));
         }

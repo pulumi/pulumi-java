@@ -14,55 +14,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDeviceResult {
-    /**
-     * The description of the device.
-     * 
-     */
+        /**
+         * @return The description of the device.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The Amazon Resource Name (ARN) of the device.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the device.
+         * 
+         */
     private final @Nullable String deviceArn;
-    /**
-     * The ID of the device.
-     * 
-     */
+        /**
+         * @return The ID of the device.
+         * 
+         */
     private final @Nullable String deviceId;
-    /**
-     * The site location.
-     * 
-     */
+        /**
+         * @return The site location.
+         * 
+         */
     private final @Nullable DeviceLocation location;
-    /**
-     * The device model
-     * 
-     */
+        /**
+         * @return The device model
+         * 
+         */
     private final @Nullable String model;
-    /**
-     * The device serial number.
-     * 
-     */
+        /**
+         * @return The device serial number.
+         * 
+         */
     private final @Nullable String serialNumber;
-    /**
-     * The site ID.
-     * 
-     */
+        /**
+         * @return The site ID.
+         * 
+         */
     private final @Nullable String siteId;
-    /**
-     * The tags for the device.
-     * 
-     */
+        /**
+         * @return The tags for the device.
+         * 
+         */
     private final @Nullable List<DeviceTag> tags;
-    /**
-     * The device type.
-     * 
-     */
+        /**
+         * @return The device type.
+         * 
+         */
     private final @Nullable String type;
-    /**
-     * The device vendor.
-     * 
-     */
+        /**
+         * @return The device vendor.
+         * 
+         */
     private final @Nullable String vendor;
 
     @CustomType.Constructor
@@ -90,72 +90,72 @@ public final class GetDeviceResult {
     }
 
     /**
-     * The description of the device.
+     * @return The description of the device.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The Amazon Resource Name (ARN) of the device.
+     * @return The Amazon Resource Name (ARN) of the device.
      * 
-    */
+     */
     public Optional<String> deviceArn() {
         return Optional.ofNullable(this.deviceArn);
     }
     /**
-     * The ID of the device.
+     * @return The ID of the device.
      * 
-    */
+     */
     public Optional<String> deviceId() {
         return Optional.ofNullable(this.deviceId);
     }
     /**
-     * The site location.
+     * @return The site location.
      * 
-    */
+     */
     public Optional<DeviceLocation> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The device model
+     * @return The device model
      * 
-    */
+     */
     public Optional<String> model() {
         return Optional.ofNullable(this.model);
     }
     /**
-     * The device serial number.
+     * @return The device serial number.
      * 
-    */
+     */
     public Optional<String> serialNumber() {
         return Optional.ofNullable(this.serialNumber);
     }
     /**
-     * The site ID.
+     * @return The site ID.
      * 
-    */
+     */
     public Optional<String> siteId() {
         return Optional.ofNullable(this.siteId);
     }
     /**
-     * The tags for the device.
+     * @return The tags for the device.
      * 
-    */
+     */
     public List<DeviceTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * The device type.
+     * @return The device type.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * The device vendor.
+     * @return The device vendor.
      * 
-    */
+     */
     public Optional<String> vendor() {
         return Optional.ofNullable(this.vendor);
     }

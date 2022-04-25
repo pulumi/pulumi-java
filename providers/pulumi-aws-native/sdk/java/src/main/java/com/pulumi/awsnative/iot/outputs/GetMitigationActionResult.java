@@ -18,10 +18,10 @@ public final class GetMitigationActionResult {
     private final @Nullable String mitigationActionArn;
     private final @Nullable String mitigationActionId;
     private final @Nullable String roleArn;
-    /**
-     * An array of key-value pairs to apply to this resource.
-     * 
-     */
+        /**
+         * @return An array of key-value pairs to apply to this resource.
+         * 
+         */
     private final @Nullable List<MitigationActionTag> tags;
 
     @CustomType.Constructor
@@ -51,9 +51,9 @@ public final class GetMitigationActionResult {
         return Optional.ofNullable(this.roleArn);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<MitigationActionTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

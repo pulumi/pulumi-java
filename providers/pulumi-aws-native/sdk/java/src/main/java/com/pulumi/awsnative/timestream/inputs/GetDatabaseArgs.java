@@ -19,6 +19,10 @@ public final class GetDatabaseArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="databaseName", required=true)
     private String databaseName;
 
+    /**
+     * @return The name for the database. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the database name.
+     * 
+     */
     public String databaseName() {
         return this.databaseName;
     }
@@ -47,6 +51,12 @@ public final class GetDatabaseArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDatabaseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseName The name for the database. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the database name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             $.databaseName = databaseName;
             return this;

@@ -32,6 +32,10 @@ public final class AnalyzerArchiveRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="ruleName", required=true)
     private String ruleName;
 
+    /**
+     * @return The archive rule name
+     * 
+     */
     public String ruleName() {
         return this.ruleName;
     }
@@ -70,6 +74,12 @@ public final class AnalyzerArchiveRule extends com.pulumi.resources.InvokeArgs {
             return filter(List.of(filter));
         }
 
+        /**
+         * @param ruleName The archive rule name
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(String ruleName) {
             $.ruleName = ruleName;
             return this;

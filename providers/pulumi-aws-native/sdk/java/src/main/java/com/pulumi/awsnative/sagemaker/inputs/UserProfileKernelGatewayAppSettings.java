@@ -27,6 +27,10 @@ public final class UserProfileKernelGatewayAppSettings extends com.pulumi.resour
     @Import(name="customImages")
     private @Nullable List<UserProfileCustomImage> customImages;
 
+    /**
+     * @return A list of custom SageMaker images that are configured to run as a KernelGateway app.
+     * 
+     */
     public Optional<List<UserProfileCustomImage>> customImages() {
         return Optional.ofNullable(this.customImages);
     }
@@ -38,6 +42,10 @@ public final class UserProfileKernelGatewayAppSettings extends com.pulumi.resour
     @Import(name="defaultResourceSpec")
     private @Nullable UserProfileResourceSpec defaultResourceSpec;
 
+    /**
+     * @return The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image used by the KernelGateway app.
+     * 
+     */
     public Optional<UserProfileResourceSpec> defaultResourceSpec() {
         return Optional.ofNullable(this.defaultResourceSpec);
     }
@@ -67,15 +75,33 @@ public final class UserProfileKernelGatewayAppSettings extends com.pulumi.resour
             $ = new UserProfileKernelGatewayAppSettings(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customImages A list of custom SageMaker images that are configured to run as a KernelGateway app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customImages(@Nullable List<UserProfileCustomImage> customImages) {
             $.customImages = customImages;
             return this;
         }
 
+        /**
+         * @param customImages A list of custom SageMaker images that are configured to run as a KernelGateway app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customImages(UserProfileCustomImage... customImages) {
             return customImages(List.of(customImages));
         }
 
+        /**
+         * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image used by the KernelGateway app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultResourceSpec(@Nullable UserProfileResourceSpec defaultResourceSpec) {
             $.defaultResourceSpec = defaultResourceSpec;
             return this;

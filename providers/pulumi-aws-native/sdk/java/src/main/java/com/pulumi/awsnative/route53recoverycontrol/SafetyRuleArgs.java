@@ -34,6 +34,10 @@ public final class SafetyRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="controlPanelArn")
     private @Nullable Output<String> controlPanelArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the control panel.
+     * 
+     */
     public Optional<Output<String>> controlPanelArn() {
         return Optional.ofNullable(this.controlPanelArn);
     }
@@ -66,6 +70,10 @@ public final class SafetyRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<SafetyRuleTagArgs>> tags;
 
+    /**
+     * @return A collection of tags associated with a resource
+     * 
+     */
     public Optional<Output<List<SafetyRuleTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -108,11 +116,23 @@ public final class SafetyRuleArgs extends com.pulumi.resources.ResourceArgs {
             return assertionRule(Output.of(assertionRule));
         }
 
+        /**
+         * @param controlPanelArn The Amazon Resource Name (ARN) of the control panel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlPanelArn(@Nullable Output<String> controlPanelArn) {
             $.controlPanelArn = controlPanelArn;
             return this;
         }
 
+        /**
+         * @param controlPanelArn The Amazon Resource Name (ARN) of the control panel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlPanelArn(String controlPanelArn) {
             return controlPanelArn(Output.of(controlPanelArn));
         }
@@ -144,15 +164,33 @@ public final class SafetyRuleArgs extends com.pulumi.resources.ResourceArgs {
             return ruleConfig(Output.of(ruleConfig));
         }
 
+        /**
+         * @param tags A collection of tags associated with a resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<SafetyRuleTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A collection of tags associated with a resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<SafetyRuleTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A collection of tags associated with a resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(SafetyRuleTagArgs... tags) {
             return tags(List.of(tags));
         }

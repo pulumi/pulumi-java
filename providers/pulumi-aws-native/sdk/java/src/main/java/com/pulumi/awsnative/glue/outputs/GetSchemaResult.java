@@ -15,31 +15,31 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSchemaResult {
-    /**
-     * Amazon Resource Name for the Schema.
-     * 
-     */
+        /**
+         * @return Amazon Resource Name for the Schema.
+         * 
+         */
     private final @Nullable String arn;
     private final @Nullable SchemaVersion checkpointVersion;
-    /**
-     * Compatibility setting for the schema.
-     * 
-     */
+        /**
+         * @return Compatibility setting for the schema.
+         * 
+         */
     private final @Nullable SchemaCompatibility compatibility;
-    /**
-     * A description of the schema. If description is not provided, there will not be any default value for this.
-     * 
-     */
+        /**
+         * @return A description of the schema. If description is not provided, there will not be any default value for this.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Represents the version ID associated with the initial schema version.
-     * 
-     */
+        /**
+         * @return Represents the version ID associated with the initial schema version.
+         * 
+         */
     private final @Nullable String initialSchemaVersionId;
-    /**
-     * List of tags to tag the schema
-     * 
-     */
+        /**
+         * @return List of tags to tag the schema
+         * 
+         */
     private final @Nullable List<SchemaTag> tags;
 
     @CustomType.Constructor
@@ -59,9 +59,9 @@ public final class GetSchemaResult {
     }
 
     /**
-     * Amazon Resource Name for the Schema.
+     * @return Amazon Resource Name for the Schema.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -69,30 +69,30 @@ public final class GetSchemaResult {
         return Optional.ofNullable(this.checkpointVersion);
     }
     /**
-     * Compatibility setting for the schema.
+     * @return Compatibility setting for the schema.
      * 
-    */
+     */
     public Optional<SchemaCompatibility> compatibility() {
         return Optional.ofNullable(this.compatibility);
     }
     /**
-     * A description of the schema. If description is not provided, there will not be any default value for this.
+     * @return A description of the schema. If description is not provided, there will not be any default value for this.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Represents the version ID associated with the initial schema version.
+     * @return Represents the version ID associated with the initial schema version.
      * 
-    */
+     */
     public Optional<String> initialSchemaVersionId() {
         return Optional.ofNullable(this.initialSchemaVersionId);
     }
     /**
-     * List of tags to tag the schema
+     * @return List of tags to tag the schema
      * 
-    */
+     */
     public List<SchemaTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TaskSetScale {
-    /**
-     * The unit of measure for the scale value.
-     * 
-     */
+        /**
+         * @return The unit of measure for the scale value.
+         * 
+         */
     private final @Nullable TaskSetScaleUnit unit;
-    /**
-     * The value, specified as a percent total of a service&#39;s desiredCount, to scale the task set. Accepted values are numbers between 0 and 100.
-     * 
-     */
+        /**
+         * @return The value, specified as a percent total of a service&#39;s desiredCount, to scale the task set. Accepted values are numbers between 0 and 100.
+         * 
+         */
     private final @Nullable Double value;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class TaskSetScale {
     }
 
     /**
-     * The unit of measure for the scale value.
+     * @return The unit of measure for the scale value.
      * 
-    */
+     */
     public Optional<TaskSetScaleUnit> unit() {
         return Optional.ofNullable(this.unit);
     }
     /**
-     * The value, specified as a percent total of a service&#39;s desiredCount, to scale the task set. Accepted values are numbers between 0 and 100.
+     * @return The value, specified as a percent total of a service&#39;s desiredCount, to scale the task set. Accepted values are numbers between 0 and 100.
      * 
-    */
+     */
     public Optional<Double> value() {
         return Optional.ofNullable(this.value);
     }

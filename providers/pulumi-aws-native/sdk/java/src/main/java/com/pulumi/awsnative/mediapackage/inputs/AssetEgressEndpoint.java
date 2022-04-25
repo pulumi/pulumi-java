@@ -23,6 +23,10 @@ public final class AssetEgressEndpoint extends com.pulumi.resources.InvokeArgs {
     @Import(name="packagingConfigurationId", required=true)
     private String packagingConfigurationId;
 
+    /**
+     * @return The ID of the PackagingConfiguration being applied to the Asset.
+     * 
+     */
     public String packagingConfigurationId() {
         return this.packagingConfigurationId;
     }
@@ -34,6 +38,10 @@ public final class AssetEgressEndpoint extends com.pulumi.resources.InvokeArgs {
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return The URL of the parent manifest for the repackaged Asset.
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -63,11 +71,23 @@ public final class AssetEgressEndpoint extends com.pulumi.resources.InvokeArgs {
             $ = new AssetEgressEndpoint(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param packagingConfigurationId The ID of the PackagingConfiguration being applied to the Asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packagingConfigurationId(String packagingConfigurationId) {
             $.packagingConfigurationId = packagingConfigurationId;
             return this;
         }
 
+        /**
+         * @param url The URL of the parent manifest for the repackaged Asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;

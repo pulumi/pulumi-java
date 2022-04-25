@@ -16,50 +16,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetVariableResult {
-    /**
-     * The ARN of the variable.
-     * 
-     */
+        /**
+         * @return The ARN of the variable.
+         * 
+         */
     private final @Nullable String arn;
-    /**
-     * The time when the variable was created.
-     * 
-     */
+        /**
+         * @return The time when the variable was created.
+         * 
+         */
     private final @Nullable String createdTime;
-    /**
-     * The source of the data.
-     * 
-     */
+        /**
+         * @return The source of the data.
+         * 
+         */
     private final @Nullable VariableDataSource dataSource;
-    /**
-     * The data type.
-     * 
-     */
+        /**
+         * @return The data type.
+         * 
+         */
     private final @Nullable VariableDataType dataType;
-    /**
-     * The default value for the variable when no value is received.
-     * 
-     */
+        /**
+         * @return The default value for the variable when no value is received.
+         * 
+         */
     private final @Nullable String defaultValue;
-    /**
-     * The description.
-     * 
-     */
+        /**
+         * @return The description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The time when the variable was last updated.
-     * 
-     */
+        /**
+         * @return The time when the variable was last updated.
+         * 
+         */
     private final @Nullable String lastUpdatedTime;
-    /**
-     * Tags associated with this variable.
-     * 
-     */
+        /**
+         * @return Tags associated with this variable.
+         * 
+         */
     private final @Nullable List<VariableTag> tags;
-    /**
-     * The variable type. For more information see https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types
-     * 
-     */
+        /**
+         * @return The variable type. For more information see https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types
+         * 
+         */
     private final @Nullable VariableType variableType;
 
     @CustomType.Constructor
@@ -85,65 +85,65 @@ public final class GetVariableResult {
     }
 
     /**
-     * The ARN of the variable.
+     * @return The ARN of the variable.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The time when the variable was created.
+     * @return The time when the variable was created.
      * 
-    */
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
-     * The source of the data.
+     * @return The source of the data.
      * 
-    */
+     */
     public Optional<VariableDataSource> dataSource() {
         return Optional.ofNullable(this.dataSource);
     }
     /**
-     * The data type.
+     * @return The data type.
      * 
-    */
+     */
     public Optional<VariableDataType> dataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
-     * The default value for the variable when no value is received.
+     * @return The default value for the variable when no value is received.
      * 
-    */
+     */
     public Optional<String> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
     /**
-     * The description.
+     * @return The description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The time when the variable was last updated.
+     * @return The time when the variable was last updated.
      * 
-    */
+     */
     public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
-     * Tags associated with this variable.
+     * @return Tags associated with this variable.
      * 
-    */
+     */
     public List<VariableTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * The variable type. For more information see https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types
+     * @return The variable type. For more information see https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types
      * 
-    */
+     */
     public Optional<VariableType> variableType() {
         return Optional.ofNullable(this.variableType);
     }

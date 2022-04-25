@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LaunchConfigurationBlockDeviceMapping {
-    /**
-     * The device name exposed to the EC2 instance (for example, /dev/sdh or xvdh).
-     * 
-     */
+        /**
+         * @return The device name exposed to the EC2 instance (for example, /dev/sdh or xvdh).
+         * 
+         */
     private final String deviceName;
-    /**
-     * Parameters used to automatically set up EBS volumes when an instance is launched.
-     * 
-     */
+        /**
+         * @return Parameters used to automatically set up EBS volumes when an instance is launched.
+         * 
+         */
     private final @Nullable LaunchConfigurationBlockDevice ebs;
-    /**
-     * Setting this value to true suppresses the specified device included in the block device mapping of the AMI.
-     * 
-     */
+        /**
+         * @return Setting this value to true suppresses the specified device included in the block device mapping of the AMI.
+         * 
+         */
     private final @Nullable Boolean noDevice;
-    /**
-     * The name of the virtual device.
-     * 
-     */
+        /**
+         * @return The name of the virtual device.
+         * 
+         */
     private final @Nullable String virtualName;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class LaunchConfigurationBlockDeviceMapping {
     }
 
     /**
-     * The device name exposed to the EC2 instance (for example, /dev/sdh or xvdh).
+     * @return The device name exposed to the EC2 instance (for example, /dev/sdh or xvdh).
      * 
-    */
+     */
     public String deviceName() {
         return this.deviceName;
     }
     /**
-     * Parameters used to automatically set up EBS volumes when an instance is launched.
+     * @return Parameters used to automatically set up EBS volumes when an instance is launched.
      * 
-    */
+     */
     public Optional<LaunchConfigurationBlockDevice> ebs() {
         return Optional.ofNullable(this.ebs);
     }
     /**
-     * Setting this value to true suppresses the specified device included in the block device mapping of the AMI.
+     * @return Setting this value to true suppresses the specified device included in the block device mapping of the AMI.
      * 
-    */
+     */
     public Optional<Boolean> noDevice() {
         return Optional.ofNullable(this.noDevice);
     }
     /**
-     * The name of the virtual device.
+     * @return The name of the virtual device.
      * 
-    */
+     */
     public Optional<String> virtualName() {
         return Optional.ofNullable(this.virtualName);
     }

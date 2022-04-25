@@ -14,26 +14,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAnomalyDetectorResult {
-    /**
-     * Configuration options for the AnomalyDetector
-     * 
-     */
+        /**
+         * @return Configuration options for the AnomalyDetector
+         * 
+         */
     private final @Nullable AnomalyDetectorConfig anomalyDetectorConfig;
-    /**
-     * A description for the AnomalyDetector.
-     * 
-     */
+        /**
+         * @return A description for the AnomalyDetector.
+         * 
+         */
     private final @Nullable String anomalyDetectorDescription;
     private final @Nullable String arn;
-    /**
-     * KMS key used to encrypt the AnomalyDetector data
-     * 
-     */
+        /**
+         * @return KMS key used to encrypt the AnomalyDetector data
+         * 
+         */
     private final @Nullable String kmsKeyArn;
-    /**
-     * List of metric sets for anomaly detection
-     * 
-     */
+        /**
+         * @return List of metric sets for anomaly detection
+         * 
+         */
     private final @Nullable List<AnomalyDetectorMetricSet> metricSetList;
 
     @CustomType.Constructor
@@ -51,16 +51,16 @@ public final class GetAnomalyDetectorResult {
     }
 
     /**
-     * Configuration options for the AnomalyDetector
+     * @return Configuration options for the AnomalyDetector
      * 
-    */
+     */
     public Optional<AnomalyDetectorConfig> anomalyDetectorConfig() {
         return Optional.ofNullable(this.anomalyDetectorConfig);
     }
     /**
-     * A description for the AnomalyDetector.
+     * @return A description for the AnomalyDetector.
      * 
-    */
+     */
     public Optional<String> anomalyDetectorDescription() {
         return Optional.ofNullable(this.anomalyDetectorDescription);
     }
@@ -68,16 +68,16 @@ public final class GetAnomalyDetectorResult {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * KMS key used to encrypt the AnomalyDetector data
+     * @return KMS key used to encrypt the AnomalyDetector data
      * 
-    */
+     */
     public Optional<String> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
     /**
-     * List of metric sets for anomaly detection
+     * @return List of metric sets for anomaly detection
      * 
-    */
+     */
     public List<AnomalyDetectorMetricSet> metricSetList() {
         return this.metricSetList == null ? List.of() : this.metricSetList;
     }

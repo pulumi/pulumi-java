@@ -30,6 +30,10 @@ public final class ThemeVersion extends com.pulumi.resources.InvokeArgs {
     @Import(name="arn")
     private @Nullable String arn;
 
+    /**
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
+     * 
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -42,6 +46,11 @@ public final class ThemeVersion extends com.pulumi.resources.InvokeArgs {
     @Import(name="baseThemeId")
     private @Nullable String baseThemeId;
 
+    /**
+     * @return &lt;p&gt;The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All
+     *             themes initially inherit from a default QuickSight theme.&lt;/p&gt;
+     * 
+     */
     public Optional<String> baseThemeId() {
         return Optional.ofNullable(this.baseThemeId);
     }
@@ -60,6 +69,10 @@ public final class ThemeVersion extends com.pulumi.resources.InvokeArgs {
     @Import(name="createdTime")
     private @Nullable String createdTime;
 
+    /**
+     * @return &lt;p&gt;The date and time that this theme version was created.&lt;/p&gt;
+     * 
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
@@ -71,6 +84,10 @@ public final class ThemeVersion extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return &lt;p&gt;The description of the theme.&lt;/p&gt;
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -82,6 +99,10 @@ public final class ThemeVersion extends com.pulumi.resources.InvokeArgs {
     @Import(name="errors")
     private @Nullable List<ThemeError> errors;
 
+    /**
+     * @return &lt;p&gt;Errors associated with the theme.&lt;/p&gt;
+     * 
+     */
     public Optional<List<ThemeError>> errors() {
         return Optional.ofNullable(this.errors);
     }
@@ -100,6 +121,10 @@ public final class ThemeVersion extends com.pulumi.resources.InvokeArgs {
     @Import(name="versionNumber")
     private @Nullable Double versionNumber;
 
+    /**
+     * @return &lt;p&gt;The version number of the theme.&lt;/p&gt;
+     * 
+     */
     public Optional<Double> versionNumber() {
         return Optional.ofNullable(this.versionNumber);
     }
@@ -135,11 +160,24 @@ public final class ThemeVersion extends com.pulumi.resources.InvokeArgs {
             $ = new ThemeVersion(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable String arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param baseThemeId &lt;p&gt;The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All
+         *             themes initially inherit from a default QuickSight theme.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseThemeId(@Nullable String baseThemeId) {
             $.baseThemeId = baseThemeId;
             return this;
@@ -150,21 +188,45 @@ public final class ThemeVersion extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param createdTime &lt;p&gt;The date and time that this theme version was created.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(@Nullable String createdTime) {
             $.createdTime = createdTime;
             return this;
         }
 
+        /**
+         * @param description &lt;p&gt;The description of the theme.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param errors &lt;p&gt;Errors associated with the theme.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(@Nullable List<ThemeError> errors) {
             $.errors = errors;
             return this;
         }
 
+        /**
+         * @param errors &lt;p&gt;Errors associated with the theme.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(ThemeError... errors) {
             return errors(List.of(errors));
         }
@@ -174,6 +236,12 @@ public final class ThemeVersion extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param versionNumber &lt;p&gt;The version number of the theme.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionNumber(@Nullable Double versionNumber) {
             $.versionNumber = versionNumber;
             return this;

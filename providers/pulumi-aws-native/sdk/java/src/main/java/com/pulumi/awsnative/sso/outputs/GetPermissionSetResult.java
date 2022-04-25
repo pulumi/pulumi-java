@@ -14,31 +14,31 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetPermissionSetResult {
-    /**
-     * The permission set description.
-     * 
-     */
+        /**
+         * @return The permission set description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The inline policy to put in permission set.
-     * 
-     */
+        /**
+         * @return The inline policy to put in permission set.
+         * 
+         */
     private final @Nullable Object inlinePolicy;
     private final @Nullable List<String> managedPolicies;
-    /**
-     * The permission set that the policy will be attached to
-     * 
-     */
+        /**
+         * @return The permission set that the policy will be attached to
+         * 
+         */
     private final @Nullable String permissionSetArn;
-    /**
-     * The relay state URL that redirect links to any service in the AWS Management Console.
-     * 
-     */
+        /**
+         * @return The relay state URL that redirect links to any service in the AWS Management Console.
+         * 
+         */
     private final @Nullable String relayStateType;
-    /**
-     * The length of time that a user can be signed in to an AWS account.
-     * 
-     */
+        /**
+         * @return The length of time that a user can be signed in to an AWS account.
+         * 
+         */
     private final @Nullable String sessionDuration;
     private final @Nullable List<PermissionSetTag> tags;
 
@@ -61,16 +61,16 @@ public final class GetPermissionSetResult {
     }
 
     /**
-     * The permission set description.
+     * @return The permission set description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The inline policy to put in permission set.
+     * @return The inline policy to put in permission set.
      * 
-    */
+     */
     public Optional<Object> inlinePolicy() {
         return Optional.ofNullable(this.inlinePolicy);
     }
@@ -78,23 +78,23 @@ public final class GetPermissionSetResult {
         return this.managedPolicies == null ? List.of() : this.managedPolicies;
     }
     /**
-     * The permission set that the policy will be attached to
+     * @return The permission set that the policy will be attached to
      * 
-    */
+     */
     public Optional<String> permissionSetArn() {
         return Optional.ofNullable(this.permissionSetArn);
     }
     /**
-     * The relay state URL that redirect links to any service in the AWS Management Console.
+     * @return The relay state URL that redirect links to any service in the AWS Management Console.
      * 
-    */
+     */
     public Optional<String> relayStateType() {
         return Optional.ofNullable(this.relayStateType);
     }
     /**
-     * The length of time that a user can be signed in to an AWS account.
+     * @return The length of time that a user can be signed in to an AWS account.
      * 
-    */
+     */
     public Optional<String> sessionDuration() {
         return Optional.ofNullable(this.sessionDuration);
     }

@@ -19,6 +19,10 @@ public final class GetResiliencyPolicyArgs extends com.pulumi.resources.InvokeAr
     @Import(name="policyArn", required=true)
     private String policyArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the Resiliency Policy.
+     * 
+     */
     public String policyArn() {
         return this.policyArn;
     }
@@ -47,6 +51,12 @@ public final class GetResiliencyPolicyArgs extends com.pulumi.resources.InvokeAr
             $ = new GetResiliencyPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policyArn Amazon Resource Name (ARN) of the Resiliency Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyArn(String policyArn) {
             $.policyArn = policyArn;
             return this;

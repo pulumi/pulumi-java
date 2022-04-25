@@ -18,65 +18,65 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetStageResult {
-    /**
-     * Specifies settings for logging access in this stage.
-     * 
-     */
+        /**
+         * @return Specifies settings for logging access in this stage.
+         * 
+         */
     private final @Nullable StageAccessLogSetting accessLogSetting;
-    /**
-     * Indicates whether cache clustering is enabled for the stage.
-     * 
-     */
+        /**
+         * @return Indicates whether cache clustering is enabled for the stage.
+         * 
+         */
     private final @Nullable Boolean cacheClusterEnabled;
-    /**
-     * The stage&#39;s cache cluster size.
-     * 
-     */
+        /**
+         * @return The stage&#39;s cache cluster size.
+         * 
+         */
     private final @Nullable String cacheClusterSize;
-    /**
-     * Specifies settings for the canary deployment in this stage.
-     * 
-     */
+        /**
+         * @return Specifies settings for the canary deployment in this stage.
+         * 
+         */
     private final @Nullable StageCanarySetting canarySetting;
-    /**
-     * The ID of the client certificate that API Gateway uses to call your integration endpoints in the stage.
-     * 
-     */
+        /**
+         * @return The ID of the client certificate that API Gateway uses to call your integration endpoints in the stage.
+         * 
+         */
     private final @Nullable String clientCertificateId;
-    /**
-     * The ID of the deployment that the stage is associated with. This parameter is required to create a stage.
-     * 
-     */
+        /**
+         * @return The ID of the deployment that the stage is associated with. This parameter is required to create a stage.
+         * 
+         */
     private final @Nullable String deploymentId;
-    /**
-     * A description of the stage.
-     * 
-     */
+        /**
+         * @return A description of the stage.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The version ID of the API documentation snapshot.
-     * 
-     */
+        /**
+         * @return The version ID of the API documentation snapshot.
+         * 
+         */
     private final @Nullable String documentationVersion;
-    /**
-     * Settings for all methods in the stage.
-     * 
-     */
+        /**
+         * @return Settings for all methods in the stage.
+         * 
+         */
     private final @Nullable List<StageMethodSetting> methodSettings;
-    /**
-     * An array of arbitrary tags (key-value pairs) to associate with the stage.
-     * 
-     */
+        /**
+         * @return An array of arbitrary tags (key-value pairs) to associate with the stage.
+         * 
+         */
     private final @Nullable List<StageTag> tags;
-    /**
-     * Specifies whether active X-Ray tracing is enabled for this stage.
-     * 
-     */
+        /**
+         * @return Specifies whether active X-Ray tracing is enabled for this stage.
+         * 
+         */
     private final @Nullable Boolean tracingEnabled;
-    /**
-     * A map (string-to-string map) that defines the stage variables, where the variable name is the key and the variable value is the value.
-     * 
-     */
+        /**
+         * @return A map (string-to-string map) that defines the stage variables, where the variable name is the key and the variable value is the value.
+         * 
+         */
     private final @Nullable Object variables;
 
     @CustomType.Constructor
@@ -108,86 +108,86 @@ public final class GetStageResult {
     }
 
     /**
-     * Specifies settings for logging access in this stage.
+     * @return Specifies settings for logging access in this stage.
      * 
-    */
+     */
     public Optional<StageAccessLogSetting> accessLogSetting() {
         return Optional.ofNullable(this.accessLogSetting);
     }
     /**
-     * Indicates whether cache clustering is enabled for the stage.
+     * @return Indicates whether cache clustering is enabled for the stage.
      * 
-    */
+     */
     public Optional<Boolean> cacheClusterEnabled() {
         return Optional.ofNullable(this.cacheClusterEnabled);
     }
     /**
-     * The stage&#39;s cache cluster size.
+     * @return The stage&#39;s cache cluster size.
      * 
-    */
+     */
     public Optional<String> cacheClusterSize() {
         return Optional.ofNullable(this.cacheClusterSize);
     }
     /**
-     * Specifies settings for the canary deployment in this stage.
+     * @return Specifies settings for the canary deployment in this stage.
      * 
-    */
+     */
     public Optional<StageCanarySetting> canarySetting() {
         return Optional.ofNullable(this.canarySetting);
     }
     /**
-     * The ID of the client certificate that API Gateway uses to call your integration endpoints in the stage.
+     * @return The ID of the client certificate that API Gateway uses to call your integration endpoints in the stage.
      * 
-    */
+     */
     public Optional<String> clientCertificateId() {
         return Optional.ofNullable(this.clientCertificateId);
     }
     /**
-     * The ID of the deployment that the stage is associated with. This parameter is required to create a stage.
+     * @return The ID of the deployment that the stage is associated with. This parameter is required to create a stage.
      * 
-    */
+     */
     public Optional<String> deploymentId() {
         return Optional.ofNullable(this.deploymentId);
     }
     /**
-     * A description of the stage.
+     * @return A description of the stage.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The version ID of the API documentation snapshot.
+     * @return The version ID of the API documentation snapshot.
      * 
-    */
+     */
     public Optional<String> documentationVersion() {
         return Optional.ofNullable(this.documentationVersion);
     }
     /**
-     * Settings for all methods in the stage.
+     * @return Settings for all methods in the stage.
      * 
-    */
+     */
     public List<StageMethodSetting> methodSettings() {
         return this.methodSettings == null ? List.of() : this.methodSettings;
     }
     /**
-     * An array of arbitrary tags (key-value pairs) to associate with the stage.
+     * @return An array of arbitrary tags (key-value pairs) to associate with the stage.
      * 
-    */
+     */
     public List<StageTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * Specifies whether active X-Ray tracing is enabled for this stage.
+     * @return Specifies whether active X-Ray tracing is enabled for this stage.
      * 
-    */
+     */
     public Optional<Boolean> tracingEnabled() {
         return Optional.ofNullable(this.tracingEnabled);
     }
     /**
-     * A map (string-to-string map) that defines the stage variables, where the variable name is the key and the variable value is the value.
+     * @return A map (string-to-string map) that defines the stage variables, where the variable name is the key and the variable value is the value.
      * 
-    */
+     */
     public Optional<Object> variables() {
         return Optional.ofNullable(this.variables);
     }

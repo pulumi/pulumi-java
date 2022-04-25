@@ -14,10 +14,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetIPSetResult {
-    /**
-     * List of IPAddresses.
-     * 
-     */
+        /**
+         * @return List of IPAddresses.
+         * 
+         */
     private final @Nullable List<String> addresses;
     private final @Nullable String arn;
     private final @Nullable String description;
@@ -42,9 +42,9 @@ public final class GetIPSetResult {
     }
 
     /**
-     * List of IPAddresses.
+     * @return List of IPAddresses.
      * 
-    */
+     */
     public List<String> addresses() {
         return this.addresses == null ? List.of() : this.addresses;
     }

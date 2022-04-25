@@ -24,6 +24,10 @@ public final class GlobalReplicationGroupRegionalConfigurationArgs extends com.p
     @Import(name="replicationGroupId")
     private @Nullable Output<String> replicationGroupId;
 
+    /**
+     * @return The replication group id of the Global Datastore member.
+     * 
+     */
     public Optional<Output<String>> replicationGroupId() {
         return Optional.ofNullable(this.replicationGroupId);
     }
@@ -35,6 +39,10 @@ public final class GlobalReplicationGroupRegionalConfigurationArgs extends com.p
     @Import(name="replicationGroupRegion")
     private @Nullable Output<String> replicationGroupRegion;
 
+    /**
+     * @return The AWS region of the Global Datastore member.
+     * 
+     */
     public Optional<Output<String>> replicationGroupRegion() {
         return Optional.ofNullable(this.replicationGroupRegion);
     }
@@ -46,6 +54,10 @@ public final class GlobalReplicationGroupRegionalConfigurationArgs extends com.p
     @Import(name="reshardingConfigurations")
     private @Nullable Output<List<GlobalReplicationGroupReshardingConfigurationArgs>> reshardingConfigurations;
 
+    /**
+     * @return A list of PreferredAvailabilityZones objects that specifies the configuration of a node group in the resharded cluster.
+     * 
+     */
     public Optional<Output<List<GlobalReplicationGroupReshardingConfigurationArgs>>> reshardingConfigurations() {
         return Optional.ofNullable(this.reshardingConfigurations);
     }
@@ -76,33 +88,75 @@ public final class GlobalReplicationGroupRegionalConfigurationArgs extends com.p
             $ = new GlobalReplicationGroupRegionalConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param replicationGroupId The replication group id of the Global Datastore member.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationGroupId(@Nullable Output<String> replicationGroupId) {
             $.replicationGroupId = replicationGroupId;
             return this;
         }
 
+        /**
+         * @param replicationGroupId The replication group id of the Global Datastore member.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationGroupId(String replicationGroupId) {
             return replicationGroupId(Output.of(replicationGroupId));
         }
 
+        /**
+         * @param replicationGroupRegion The AWS region of the Global Datastore member.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationGroupRegion(@Nullable Output<String> replicationGroupRegion) {
             $.replicationGroupRegion = replicationGroupRegion;
             return this;
         }
 
+        /**
+         * @param replicationGroupRegion The AWS region of the Global Datastore member.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationGroupRegion(String replicationGroupRegion) {
             return replicationGroupRegion(Output.of(replicationGroupRegion));
         }
 
+        /**
+         * @param reshardingConfigurations A list of PreferredAvailabilityZones objects that specifies the configuration of a node group in the resharded cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reshardingConfigurations(@Nullable Output<List<GlobalReplicationGroupReshardingConfigurationArgs>> reshardingConfigurations) {
             $.reshardingConfigurations = reshardingConfigurations;
             return this;
         }
 
+        /**
+         * @param reshardingConfigurations A list of PreferredAvailabilityZones objects that specifies the configuration of a node group in the resharded cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reshardingConfigurations(List<GlobalReplicationGroupReshardingConfigurationArgs> reshardingConfigurations) {
             return reshardingConfigurations(Output.of(reshardingConfigurations));
         }
 
+        /**
+         * @param reshardingConfigurations A list of PreferredAvailabilityZones objects that specifies the configuration of a node group in the resharded cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reshardingConfigurations(GlobalReplicationGroupReshardingConfigurationArgs... reshardingConfigurations) {
             return reshardingConfigurations(List.of(reshardingConfigurations));
         }

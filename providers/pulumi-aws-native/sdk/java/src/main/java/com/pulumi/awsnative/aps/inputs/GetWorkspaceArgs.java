@@ -19,6 +19,10 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return Workspace arn.
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -47,6 +51,12 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetWorkspaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Workspace arn.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;

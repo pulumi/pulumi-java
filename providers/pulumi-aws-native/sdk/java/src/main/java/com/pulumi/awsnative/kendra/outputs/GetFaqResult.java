@@ -15,10 +15,10 @@ import javax.annotation.Nullable;
 public final class GetFaqResult {
     private final @Nullable String arn;
     private final @Nullable String id;
-    /**
-     * Tags for labeling the FAQ
-     * 
-     */
+        /**
+         * @return Tags for labeling the FAQ
+         * 
+         */
     private final @Nullable List<FaqTag> tags;
 
     @CustomType.Constructor
@@ -38,9 +38,9 @@ public final class GetFaqResult {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Tags for labeling the FAQ
+     * @return Tags for labeling the FAQ
      * 
-    */
+     */
     public List<FaqTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

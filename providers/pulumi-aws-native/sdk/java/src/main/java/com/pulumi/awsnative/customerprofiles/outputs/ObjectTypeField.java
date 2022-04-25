@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ObjectTypeField {
-    /**
-     * The content type of the field. Used for determining equality when searching.
-     * 
-     */
+        /**
+         * @return The content type of the field. Used for determining equality when searching.
+         * 
+         */
     private final @Nullable ObjectTypeFieldContentType contentType;
-    /**
-     * A field of a ProfileObject. For example: _source.FirstName, where &#34;_source&#34; is a ProfileObjectType of a Zendesk user and &#34;FirstName&#34; is a field in that ObjectType.
-     * 
-     */
+        /**
+         * @return A field of a ProfileObject. For example: _source.FirstName, where &#34;_source&#34; is a ProfileObjectType of a Zendesk user and &#34;FirstName&#34; is a field in that ObjectType.
+         * 
+         */
     private final @Nullable String source;
-    /**
-     * The location of the data in the standard ProfileObject model. For example: _profile.Address.PostalCode.
-     * 
-     */
+        /**
+         * @return The location of the data in the standard ProfileObject model. For example: _profile.Address.PostalCode.
+         * 
+         */
     private final @Nullable String target;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class ObjectTypeField {
     }
 
     /**
-     * The content type of the field. Used for determining equality when searching.
+     * @return The content type of the field. Used for determining equality when searching.
      * 
-    */
+     */
     public Optional<ObjectTypeFieldContentType> contentType() {
         return Optional.ofNullable(this.contentType);
     }
     /**
-     * A field of a ProfileObject. For example: _source.FirstName, where &#34;_source&#34; is a ProfileObjectType of a Zendesk user and &#34;FirstName&#34; is a field in that ObjectType.
+     * @return A field of a ProfileObject. For example: _source.FirstName, where &#34;_source&#34; is a ProfileObjectType of a Zendesk user and &#34;FirstName&#34; is a field in that ObjectType.
      * 
-    */
+     */
     public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
     /**
-     * The location of the data in the standard ProfileObject model. For example: _profile.Address.PostalCode.
+     * @return The location of the data in the standard ProfileObject model. For example: _profile.Address.PostalCode.
      * 
-    */
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }

@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ReplicationConfiguration {
-    /**
-     * An array of objects representing the replication rules for a replication configuration. A replication configuration may contain a maximum of 10 rules.
-     * 
-     */
+        /**
+         * @return An array of objects representing the replication rules for a replication configuration. A replication configuration may contain a maximum of 10 rules.
+         * 
+         */
     private final List<ReplicationConfigurationReplicationRule> rules;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class ReplicationConfiguration {
     }
 
     /**
-     * An array of objects representing the replication rules for a replication configuration. A replication configuration may contain a maximum of 10 rules.
+     * @return An array of objects representing the replication rules for a replication configuration. A replication configuration may contain a maximum of 10 rules.
      * 
-    */
+     */
     public List<ReplicationConfigurationReplicationRule> rules() {
         return this.rules;
     }

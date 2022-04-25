@@ -13,35 +13,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApplicationComponentMonitoringSetting {
-    /**
-     * The ARN of the compnonent.
-     * 
-     */
+        /**
+         * @return The ARN of the compnonent.
+         * 
+         */
     private final @Nullable String componentARN;
-    /**
-     * The component monitoring configuration mode.
-     * 
-     */
+        /**
+         * @return The component monitoring configuration mode.
+         * 
+         */
     private final ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode;
-    /**
-     * The name of the component.
-     * 
-     */
+        /**
+         * @return The name of the component.
+         * 
+         */
     private final @Nullable String componentName;
-    /**
-     * The monitoring configuration of the component.
-     * 
-     */
+        /**
+         * @return The monitoring configuration of the component.
+         * 
+         */
     private final @Nullable ApplicationComponentConfiguration customComponentConfiguration;
-    /**
-     * The overwritten settings on default component monitoring configuration.
-     * 
-     */
+        /**
+         * @return The overwritten settings on default component monitoring configuration.
+         * 
+         */
     private final @Nullable ApplicationComponentConfiguration defaultOverwriteComponentConfiguration;
-    /**
-     * The tier of the application component.
-     * 
-     */
+        /**
+         * @return The tier of the application component.
+         * 
+         */
     private final String tier;
 
     @CustomType.Constructor
@@ -61,44 +61,44 @@ public final class ApplicationComponentMonitoringSetting {
     }
 
     /**
-     * The ARN of the compnonent.
+     * @return The ARN of the compnonent.
      * 
-    */
+     */
     public Optional<String> componentARN() {
         return Optional.ofNullable(this.componentARN);
     }
     /**
-     * The component monitoring configuration mode.
+     * @return The component monitoring configuration mode.
      * 
-    */
+     */
     public ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode() {
         return this.componentConfigurationMode;
     }
     /**
-     * The name of the component.
+     * @return The name of the component.
      * 
-    */
+     */
     public Optional<String> componentName() {
         return Optional.ofNullable(this.componentName);
     }
     /**
-     * The monitoring configuration of the component.
+     * @return The monitoring configuration of the component.
      * 
-    */
+     */
     public Optional<ApplicationComponentConfiguration> customComponentConfiguration() {
         return Optional.ofNullable(this.customComponentConfiguration);
     }
     /**
-     * The overwritten settings on default component monitoring configuration.
+     * @return The overwritten settings on default component monitoring configuration.
      * 
-    */
+     */
     public Optional<ApplicationComponentConfiguration> defaultOverwriteComponentConfiguration() {
         return Optional.ofNullable(this.defaultOverwriteComponentConfiguration);
     }
     /**
-     * The tier of the application component.
+     * @return The tier of the application component.
      * 
-    */
+     */
     public String tier() {
         return this.tier;
     }

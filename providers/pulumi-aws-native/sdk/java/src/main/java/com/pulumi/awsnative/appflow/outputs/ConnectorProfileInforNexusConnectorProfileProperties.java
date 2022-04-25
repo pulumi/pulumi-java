@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ConnectorProfileInforNexusConnectorProfileProperties {
-    /**
-     * The location of the InforNexus resource
-     * 
-     */
+        /**
+         * @return The location of the InforNexus resource
+         * 
+         */
     private final String instanceUrl;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ConnectorProfileInforNexusConnectorProfileProperties {
     }
 
     /**
-     * The location of the InforNexus resource
+     * @return The location of the InforNexus resource
      * 
-    */
+     */
     public String instanceUrl() {
         return this.instanceUrl;
     }

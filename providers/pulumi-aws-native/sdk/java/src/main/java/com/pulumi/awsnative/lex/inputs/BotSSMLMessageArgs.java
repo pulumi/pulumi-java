@@ -24,6 +24,10 @@ public final class BotSSMLMessageArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return The SSML text that defines the prompt.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -52,11 +56,23 @@ public final class BotSSMLMessageArgs extends com.pulumi.resources.ResourceArgs 
             $ = new BotSSMLMessageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param value The SSML text that defines the prompt.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The SSML text that defines the prompt.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

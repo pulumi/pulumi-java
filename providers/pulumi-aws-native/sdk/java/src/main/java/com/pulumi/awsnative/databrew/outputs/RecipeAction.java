@@ -14,10 +14,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RecipeAction {
-    /**
-     * Step action operation
-     * 
-     */
+        /**
+         * @return Step action operation
+         * 
+         */
     private final String operation;
     private final @Nullable Either<RecipeParameters,RecipeParameterMap> parameters;
 
@@ -30,9 +30,9 @@ public final class RecipeAction {
     }
 
     /**
-     * Step action operation
+     * @return Step action operation
      * 
-    */
+     */
     public String operation() {
         return this.operation;
     }

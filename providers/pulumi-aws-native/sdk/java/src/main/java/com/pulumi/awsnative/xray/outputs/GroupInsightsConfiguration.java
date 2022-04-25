@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GroupInsightsConfiguration {
-    /**
-     * Set the InsightsEnabled value to true to enable insights or false to disable insights.
-     * 
-     */
+        /**
+         * @return Set the InsightsEnabled value to true to enable insights or false to disable insights.
+         * 
+         */
     private final @Nullable Boolean insightsEnabled;
-    /**
-     * Set the NotificationsEnabled value to true to enable insights notifications. Notifications can only be enabled on a group with InsightsEnabled set to true.
-     * 
-     */
+        /**
+         * @return Set the NotificationsEnabled value to true to enable insights notifications. Notifications can only be enabled on a group with InsightsEnabled set to true.
+         * 
+         */
     private final @Nullable Boolean notificationsEnabled;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class GroupInsightsConfiguration {
     }
 
     /**
-     * Set the InsightsEnabled value to true to enable insights or false to disable insights.
+     * @return Set the InsightsEnabled value to true to enable insights or false to disable insights.
      * 
-    */
+     */
     public Optional<Boolean> insightsEnabled() {
         return Optional.ofNullable(this.insightsEnabled);
     }
     /**
-     * Set the NotificationsEnabled value to true to enable insights notifications. Notifications can only be enabled on a group with InsightsEnabled set to true.
+     * @return Set the NotificationsEnabled value to true to enable insights notifications. Notifications can only be enabled on a group with InsightsEnabled set to true.
      * 
-    */
+     */
     public Optional<Boolean> notificationsEnabled() {
         return Optional.ofNullable(this.notificationsEnabled);
     }

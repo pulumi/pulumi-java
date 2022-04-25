@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class SafetyRuleRuleConfig {
-    /**
-     * Logical negation of the rule. If the rule would usually evaluate true, it&#39;s evaluated as false, and vice versa.
-     * 
-     */
+        /**
+         * @return Logical negation of the rule. If the rule would usually evaluate true, it&#39;s evaluated as false, and vice versa.
+         * 
+         */
     private final Boolean inverted;
-    /**
-     * The value of N, when you specify an ATLEAST rule type. That is, Threshold is the number of controls that must be set when you specify an ATLEAST type.
-     * 
-     */
+        /**
+         * @return The value of N, when you specify an ATLEAST rule type. That is, Threshold is the number of controls that must be set when you specify an ATLEAST type.
+         * 
+         */
     private final Integer threshold;
     private final SafetyRuleRuleType type;
 
@@ -34,16 +34,16 @@ public final class SafetyRuleRuleConfig {
     }
 
     /**
-     * Logical negation of the rule. If the rule would usually evaluate true, it&#39;s evaluated as false, and vice versa.
+     * @return Logical negation of the rule. If the rule would usually evaluate true, it&#39;s evaluated as false, and vice versa.
      * 
-    */
+     */
     public Boolean inverted() {
         return this.inverted;
     }
     /**
-     * The value of N, when you specify an ATLEAST rule type. That is, Threshold is the number of controls that must be set when you specify an ATLEAST type.
+     * @return The value of N, when you specify an ATLEAST rule type. That is, Threshold is the number of controls that must be set when you specify an ATLEAST type.
      * 
-    */
+     */
     public Integer threshold() {
         return this.threshold;
     }

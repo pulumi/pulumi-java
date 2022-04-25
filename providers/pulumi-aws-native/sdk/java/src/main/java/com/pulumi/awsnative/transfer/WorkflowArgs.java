@@ -25,6 +25,10 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A textual description for the workflow.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="onExceptionSteps")
     private @Nullable Output<List<WorkflowStepArgs>> onExceptionSteps;
 
+    /**
+     * @return Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+     * 
+     */
     public Optional<Output<List<WorkflowStepArgs>>> onExceptionSteps() {
         return Optional.ofNullable(this.onExceptionSteps);
     }
@@ -47,6 +55,10 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="steps", required=true)
     private Output<List<WorkflowStepArgs>> steps;
 
+    /**
+     * @return Specifies the details for the steps that are in the specified workflow.
+     * 
+     */
     public Output<List<WorkflowStepArgs>> steps() {
         return this.steps;
     }
@@ -58,6 +70,10 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<WorkflowTagArgs>> tags;
 
+    /**
+     * @return Key-value pairs that can be used to group and search for workflows. Tags are metadata attached to workflows for any purpose.
+     * 
+     */
     public Optional<Output<List<WorkflowTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -89,50 +105,116 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WorkflowArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A textual description for the workflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A textual description for the workflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param onExceptionSteps Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onExceptionSteps(@Nullable Output<List<WorkflowStepArgs>> onExceptionSteps) {
             $.onExceptionSteps = onExceptionSteps;
             return this;
         }
 
+        /**
+         * @param onExceptionSteps Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onExceptionSteps(List<WorkflowStepArgs> onExceptionSteps) {
             return onExceptionSteps(Output.of(onExceptionSteps));
         }
 
+        /**
+         * @param onExceptionSteps Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onExceptionSteps(WorkflowStepArgs... onExceptionSteps) {
             return onExceptionSteps(List.of(onExceptionSteps));
         }
 
+        /**
+         * @param steps Specifies the details for the steps that are in the specified workflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder steps(Output<List<WorkflowStepArgs>> steps) {
             $.steps = steps;
             return this;
         }
 
+        /**
+         * @param steps Specifies the details for the steps that are in the specified workflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder steps(List<WorkflowStepArgs> steps) {
             return steps(Output.of(steps));
         }
 
+        /**
+         * @param steps Specifies the details for the steps that are in the specified workflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder steps(WorkflowStepArgs... steps) {
             return steps(List.of(steps));
         }
 
+        /**
+         * @param tags Key-value pairs that can be used to group and search for workflows. Tags are metadata attached to workflows for any purpose.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<WorkflowTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value pairs that can be used to group and search for workflows. Tags are metadata attached to workflows for any purpose.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<WorkflowTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Key-value pairs that can be used to group and search for workflows. Tags are metadata attached to workflows for any purpose.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(WorkflowTagArgs... tags) {
             return tags(List.of(tags));
         }

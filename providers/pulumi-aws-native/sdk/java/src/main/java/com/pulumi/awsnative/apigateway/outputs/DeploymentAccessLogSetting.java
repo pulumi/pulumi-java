@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DeploymentAccessLogSetting {
-    /**
-     * The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with amazon-apigateway-.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with amazon-apigateway-.
+         * 
+         */
     private final @Nullable String destinationArn;
-    /**
-     * A single line format of the access logs of data, as specified by selected $context variables. The format must include at least $context.requestId.
-     * 
-     */
+        /**
+         * @return A single line format of the access logs of data, as specified by selected $context variables. The format must include at least $context.requestId.
+         * 
+         */
     private final @Nullable String format;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class DeploymentAccessLogSetting {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with amazon-apigateway-.
+     * @return The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with amazon-apigateway-.
      * 
-    */
+     */
     public Optional<String> destinationArn() {
         return Optional.ofNullable(this.destinationArn);
     }
     /**
-     * A single line format of the access logs of data, as specified by selected $context variables. The format must include at least $context.requestId.
+     * @return A single line format of the access logs of data, as specified by selected $context variables. The format must include at least $context.requestId.
      * 
-    */
+     */
     public Optional<String> format() {
         return Optional.ofNullable(this.format);
     }

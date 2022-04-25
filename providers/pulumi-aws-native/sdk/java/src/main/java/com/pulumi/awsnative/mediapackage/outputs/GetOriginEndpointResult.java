@@ -20,60 +20,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetOriginEndpointResult {
-    /**
-     * The Amazon Resource Name (ARN) assigned to the OriginEndpoint.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) assigned to the OriginEndpoint.
+         * 
+         */
     private final @Nullable String arn;
     private final @Nullable OriginEndpointAuthorization authorization;
-    /**
-     * The ID of the Channel the OriginEndpoint is associated with.
-     * 
-     */
+        /**
+         * @return The ID of the Channel the OriginEndpoint is associated with.
+         * 
+         */
     private final @Nullable String channelId;
     private final @Nullable OriginEndpointCmafPackage cmafPackage;
     private final @Nullable OriginEndpointDashPackage dashPackage;
-    /**
-     * A short text description of the OriginEndpoint.
-     * 
-     */
+        /**
+         * @return A short text description of the OriginEndpoint.
+         * 
+         */
     private final @Nullable String description;
     private final @Nullable OriginEndpointHlsPackage hlsPackage;
-    /**
-     * A short string appended to the end of the OriginEndpoint URL.
-     * 
-     */
+        /**
+         * @return A short string appended to the end of the OriginEndpoint URL.
+         * 
+         */
     private final @Nullable String manifestName;
     private final @Nullable OriginEndpointMssPackage mssPackage;
-    /**
-     * Control whether origination of video is allowed for this OriginEndpoint. If set to ALLOW, the OriginEndpoint may by requested, pursuant to any other form of access control. If set to DENY, the OriginEndpoint may not be requested. This can be helpful for Live to VOD harvesting, or for temporarily disabling origination
-     * 
-     */
+        /**
+         * @return Control whether origination of video is allowed for this OriginEndpoint. If set to ALLOW, the OriginEndpoint may by requested, pursuant to any other form of access control. If set to DENY, the OriginEndpoint may not be requested. This can be helpful for Live to VOD harvesting, or for temporarily disabling origination
+         * 
+         */
     private final @Nullable OriginEndpointOrigination origination;
-    /**
-     * Maximum duration (seconds) of content to retain for startover playback. If not specified, startover playback will be disabled for the OriginEndpoint.
-     * 
-     */
+        /**
+         * @return Maximum duration (seconds) of content to retain for startover playback. If not specified, startover playback will be disabled for the OriginEndpoint.
+         * 
+         */
     private final @Nullable Integer startoverWindowSeconds;
-    /**
-     * A collection of tags associated with a resource
-     * 
-     */
+        /**
+         * @return A collection of tags associated with a resource
+         * 
+         */
     private final @Nullable List<OriginEndpointTag> tags;
-    /**
-     * Amount of delay (seconds) to enforce on the playback of live content. If not specified, there will be no time delay in effect for the OriginEndpoint.
-     * 
-     */
+        /**
+         * @return Amount of delay (seconds) to enforce on the playback of live content. If not specified, there will be no time delay in effect for the OriginEndpoint.
+         * 
+         */
     private final @Nullable Integer timeDelaySeconds;
-    /**
-     * The URL of the packaged OriginEndpoint for consumption.
-     * 
-     */
+        /**
+         * @return The URL of the packaged OriginEndpoint for consumption.
+         * 
+         */
     private final @Nullable String url;
-    /**
-     * A list of source IP CIDR blocks that will be allowed to access the OriginEndpoint.
-     * 
-     */
+        /**
+         * @return A list of source IP CIDR blocks that will be allowed to access the OriginEndpoint.
+         * 
+         */
     private final @Nullable List<String> whitelist;
 
     @CustomType.Constructor
@@ -111,9 +111,9 @@ public final class GetOriginEndpointResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) assigned to the OriginEndpoint.
+     * @return The Amazon Resource Name (ARN) assigned to the OriginEndpoint.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -121,9 +121,9 @@ public final class GetOriginEndpointResult {
         return Optional.ofNullable(this.authorization);
     }
     /**
-     * The ID of the Channel the OriginEndpoint is associated with.
+     * @return The ID of the Channel the OriginEndpoint is associated with.
      * 
-    */
+     */
     public Optional<String> channelId() {
         return Optional.ofNullable(this.channelId);
     }
@@ -134,9 +134,9 @@ public final class GetOriginEndpointResult {
         return Optional.ofNullable(this.dashPackage);
     }
     /**
-     * A short text description of the OriginEndpoint.
+     * @return A short text description of the OriginEndpoint.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -144,9 +144,9 @@ public final class GetOriginEndpointResult {
         return Optional.ofNullable(this.hlsPackage);
     }
     /**
-     * A short string appended to the end of the OriginEndpoint URL.
+     * @return A short string appended to the end of the OriginEndpoint URL.
      * 
-    */
+     */
     public Optional<String> manifestName() {
         return Optional.ofNullable(this.manifestName);
     }
@@ -154,44 +154,44 @@ public final class GetOriginEndpointResult {
         return Optional.ofNullable(this.mssPackage);
     }
     /**
-     * Control whether origination of video is allowed for this OriginEndpoint. If set to ALLOW, the OriginEndpoint may by requested, pursuant to any other form of access control. If set to DENY, the OriginEndpoint may not be requested. This can be helpful for Live to VOD harvesting, or for temporarily disabling origination
+     * @return Control whether origination of video is allowed for this OriginEndpoint. If set to ALLOW, the OriginEndpoint may by requested, pursuant to any other form of access control. If set to DENY, the OriginEndpoint may not be requested. This can be helpful for Live to VOD harvesting, or for temporarily disabling origination
      * 
-    */
+     */
     public Optional<OriginEndpointOrigination> origination() {
         return Optional.ofNullable(this.origination);
     }
     /**
-     * Maximum duration (seconds) of content to retain for startover playback. If not specified, startover playback will be disabled for the OriginEndpoint.
+     * @return Maximum duration (seconds) of content to retain for startover playback. If not specified, startover playback will be disabled for the OriginEndpoint.
      * 
-    */
+     */
     public Optional<Integer> startoverWindowSeconds() {
         return Optional.ofNullable(this.startoverWindowSeconds);
     }
     /**
-     * A collection of tags associated with a resource
+     * @return A collection of tags associated with a resource
      * 
-    */
+     */
     public List<OriginEndpointTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * Amount of delay (seconds) to enforce on the playback of live content. If not specified, there will be no time delay in effect for the OriginEndpoint.
+     * @return Amount of delay (seconds) to enforce on the playback of live content. If not specified, there will be no time delay in effect for the OriginEndpoint.
      * 
-    */
+     */
     public Optional<Integer> timeDelaySeconds() {
         return Optional.ofNullable(this.timeDelaySeconds);
     }
     /**
-     * The URL of the packaged OriginEndpoint for consumption.
+     * @return The URL of the packaged OriginEndpoint for consumption.
      * 
-    */
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
     /**
-     * A list of source IP CIDR blocks that will be allowed to access the OriginEndpoint.
+     * @return A list of source IP CIDR blocks that will be allowed to access the OriginEndpoint.
      * 
-    */
+     */
     public List<String> whitelist() {
         return this.whitelist == null ? List.of() : this.whitelist;
     }

@@ -23,6 +23,10 @@ public final class HostedZoneQueryLoggingConfig extends com.pulumi.resources.Inv
     @Import(name="cloudWatchLogsLogGroupArn", required=true)
     private String cloudWatchLogsLogGroupArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the CloudWatch Logs log group that Amazon Route 53 is publishing logs to.
+     * 
+     */
     public String cloudWatchLogsLogGroupArn() {
         return this.cloudWatchLogsLogGroupArn;
     }
@@ -51,6 +55,12 @@ public final class HostedZoneQueryLoggingConfig extends com.pulumi.resources.Inv
             $ = new HostedZoneQueryLoggingConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudWatchLogsLogGroupArn The Amazon Resource Name (ARN) of the CloudWatch Logs log group that Amazon Route 53 is publishing logs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudWatchLogsLogGroupArn(String cloudWatchLogsLogGroupArn) {
             $.cloudWatchLogsLogGroupArn = cloudWatchLogsLogGroupArn;
             return this;

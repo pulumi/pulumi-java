@@ -14,15 +14,15 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetVirtualClusterResult {
     private final @Nullable String arn;
-    /**
-     * Id of the virtual cluster.
-     * 
-     */
+        /**
+         * @return Id of the virtual cluster.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * An array of key-value pairs to apply to this virtual cluster.
-     * 
-     */
+        /**
+         * @return An array of key-value pairs to apply to this virtual cluster.
+         * 
+         */
     private final @Nullable List<VirtualClusterTag> tags;
 
     @CustomType.Constructor
@@ -39,16 +39,16 @@ public final class GetVirtualClusterResult {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Id of the virtual cluster.
+     * @return Id of the virtual cluster.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * An array of key-value pairs to apply to this virtual cluster.
+     * @return An array of key-value pairs to apply to this virtual cluster.
      * 
-    */
+     */
     public List<VirtualClusterTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

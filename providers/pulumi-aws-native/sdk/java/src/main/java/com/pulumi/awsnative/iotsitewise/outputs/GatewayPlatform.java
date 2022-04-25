@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GatewayPlatform {
-    /**
-     * A gateway that runs on AWS IoT Greengrass V1.
-     * 
-     */
+        /**
+         * @return A gateway that runs on AWS IoT Greengrass V1.
+         * 
+         */
     private final @Nullable GatewayGreengrass greengrass;
-    /**
-     * A gateway that runs on AWS IoT Greengrass V2.
-     * 
-     */
+        /**
+         * @return A gateway that runs on AWS IoT Greengrass V2.
+         * 
+         */
     private final @Nullable GatewayGreengrassV2 greengrassV2;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class GatewayPlatform {
     }
 
     /**
-     * A gateway that runs on AWS IoT Greengrass V1.
+     * @return A gateway that runs on AWS IoT Greengrass V1.
      * 
-    */
+     */
     public Optional<GatewayGreengrass> greengrass() {
         return Optional.ofNullable(this.greengrass);
     }
     /**
-     * A gateway that runs on AWS IoT Greengrass V2.
+     * @return A gateway that runs on AWS IoT Greengrass V2.
      * 
-    */
+     */
     public Optional<GatewayGreengrassV2> greengrassV2() {
         return Optional.ofNullable(this.greengrassV2);
     }

@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class DashboardDateTimeParameter {
-    /**
-     * &lt;p&gt;A display name for the date-time parameter.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;A display name for the date-time parameter.&lt;/p&gt;
+         * 
+         */
     private final String name;
-    /**
-     * &lt;p&gt;The values for the date-time parameter.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;The values for the date-time parameter.&lt;/p&gt;
+         * 
+         */
     private final List<String> values;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class DashboardDateTimeParameter {
     }
 
     /**
-     * &lt;p&gt;A display name for the date-time parameter.&lt;/p&gt;
+     * @return &lt;p&gt;A display name for the date-time parameter.&lt;/p&gt;
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * &lt;p&gt;The values for the date-time parameter.&lt;/p&gt;
+     * @return &lt;p&gt;The values for the date-time parameter.&lt;/p&gt;
      * 
-    */
+     */
     public List<String> values() {
         return this.values;
     }

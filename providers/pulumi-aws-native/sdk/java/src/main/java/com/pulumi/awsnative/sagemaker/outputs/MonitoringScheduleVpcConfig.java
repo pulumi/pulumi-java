@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class MonitoringScheduleVpcConfig {
-    /**
-     * The VPC security group IDs, in the form sg-xxxxxxxx. Specify the security groups for the VPC that is specified in the Subnets field.
-     * 
-     */
+        /**
+         * @return The VPC security group IDs, in the form sg-xxxxxxxx. Specify the security groups for the VPC that is specified in the Subnets field.
+         * 
+         */
     private final List<String> securityGroupIds;
-    /**
-     * The ID of the subnets in the VPC to which you want to connect to your monitoring jobs.
-     * 
-     */
+        /**
+         * @return The ID of the subnets in the VPC to which you want to connect to your monitoring jobs.
+         * 
+         */
     private final List<String> subnets;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class MonitoringScheduleVpcConfig {
     }
 
     /**
-     * The VPC security group IDs, in the form sg-xxxxxxxx. Specify the security groups for the VPC that is specified in the Subnets field.
+     * @return The VPC security group IDs, in the form sg-xxxxxxxx. Specify the security groups for the VPC that is specified in the Subnets field.
      * 
-    */
+     */
     public List<String> securityGroupIds() {
         return this.securityGroupIds;
     }
     /**
-     * The ID of the subnets in the VPC to which you want to connect to your monitoring jobs.
+     * @return The ID of the subnets in the VPC to which you want to connect to your monitoring jobs.
      * 
-    */
+     */
     public List<String> subnets() {
         return this.subnets;
     }

@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AccessPointVpcConfiguration {
-    /**
-     * If this field is specified, this access point will only allow connections from the specified VPC ID.
-     * 
-     */
+        /**
+         * @return If this field is specified, this access point will only allow connections from the specified VPC ID.
+         * 
+         */
     private final @Nullable String vpcId;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class AccessPointVpcConfiguration {
     }
 
     /**
-     * If this field is specified, this access point will only allow connections from the specified VPC ID.
+     * @return If this field is specified, this access point will only allow connections from the specified VPC ID.
      * 
-    */
+     */
     public Optional<String> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }

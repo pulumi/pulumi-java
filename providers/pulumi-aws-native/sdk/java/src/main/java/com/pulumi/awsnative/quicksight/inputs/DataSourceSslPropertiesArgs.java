@@ -27,6 +27,10 @@ public final class DataSourceSslPropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="disableSsl")
     private @Nullable Output<Boolean> disableSsl;
 
+    /**
+     * @return &lt;p&gt;A Boolean option to control whether SSL should be disabled.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<Boolean>> disableSsl() {
         return Optional.ofNullable(this.disableSsl);
     }
@@ -55,11 +59,23 @@ public final class DataSourceSslPropertiesArgs extends com.pulumi.resources.Reso
             $ = new DataSourceSslPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disableSsl &lt;p&gt;A Boolean option to control whether SSL should be disabled.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableSsl(@Nullable Output<Boolean> disableSsl) {
             $.disableSsl = disableSsl;
             return this;
         }
 
+        /**
+         * @param disableSsl &lt;p&gt;A Boolean option to control whether SSL should be disabled.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableSsl(Boolean disableSsl) {
             return disableSsl(Output.of(disableSsl));
         }

@@ -11,16 +11,16 @@ import java.util.Objects;
 
 @CustomType
 public final class TemplateSourceAnalysis {
-    /**
-     * &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
+         * 
+         */
     private final String arn;
-    /**
-     * &lt;p&gt;A structure containing information about the dataset references used as placeholders
-     *             in the template.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;A structure containing information about the dataset references used as placeholders
+         *             in the template.&lt;/p&gt;
+         * 
+         */
     private final List<TemplateDataSetReference> dataSetReferences;
 
     @CustomType.Constructor
@@ -32,17 +32,17 @@ public final class TemplateSourceAnalysis {
     }
 
     /**
-     * &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * &lt;p&gt;A structure containing information about the dataset references used as placeholders
+     * @return &lt;p&gt;A structure containing information about the dataset references used as placeholders
      *             in the template.&lt;/p&gt;
      * 
-    */
+     */
     public List<TemplateDataSetReference> dataSetReferences() {
         return this.dataSetReferences;
     }

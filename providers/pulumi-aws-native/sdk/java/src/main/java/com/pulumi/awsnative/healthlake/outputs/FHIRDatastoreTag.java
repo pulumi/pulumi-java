@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class FHIRDatastoreTag {
-    /**
-     * The key of the tag.
-     * 
-     */
+        /**
+         * @return The key of the tag.
+         * 
+         */
     private final String key;
-    /**
-     * The value of the tag.
-     * 
-     */
+        /**
+         * @return The value of the tag.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class FHIRDatastoreTag {
     }
 
     /**
-     * The key of the tag.
+     * @return The key of the tag.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * The value of the tag.
+     * @return The value of the tag.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetConnectorProfileResult {
-    /**
-     * Mode in which data transfer should be enabled. Private connection mode is currently enabled for Salesforce, Snowflake, Trendmicro and Singular
-     * 
-     */
+        /**
+         * @return Mode in which data transfer should be enabled. Private connection mode is currently enabled for Salesforce, Snowflake, Trendmicro and Singular
+         * 
+         */
     private final @Nullable ConnectorProfileConnectionMode connectionMode;
-    /**
-     * Unique identifier for connector profile resources
-     * 
-     */
+        /**
+         * @return Unique identifier for connector profile resources
+         * 
+         */
     private final @Nullable String connectorProfileArn;
-    /**
-     * A unique Arn for Connector-Profile resource
-     * 
-     */
+        /**
+         * @return A unique Arn for Connector-Profile resource
+         * 
+         */
     private final @Nullable String credentialsArn;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class GetConnectorProfileResult {
     }
 
     /**
-     * Mode in which data transfer should be enabled. Private connection mode is currently enabled for Salesforce, Snowflake, Trendmicro and Singular
+     * @return Mode in which data transfer should be enabled. Private connection mode is currently enabled for Salesforce, Snowflake, Trendmicro and Singular
      * 
-    */
+     */
     public Optional<ConnectorProfileConnectionMode> connectionMode() {
         return Optional.ofNullable(this.connectionMode);
     }
     /**
-     * Unique identifier for connector profile resources
+     * @return Unique identifier for connector profile resources
      * 
-    */
+     */
     public Optional<String> connectorProfileArn() {
         return Optional.ofNullable(this.connectorProfileArn);
     }
     /**
-     * A unique Arn for Connector-Profile resource
+     * @return A unique Arn for Connector-Profile resource
      * 
-    */
+     */
     public Optional<String> credentialsArn() {
         return Optional.ofNullable(this.credentialsArn);
     }

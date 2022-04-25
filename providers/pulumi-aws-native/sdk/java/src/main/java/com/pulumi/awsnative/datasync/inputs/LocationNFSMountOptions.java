@@ -25,6 +25,10 @@ public final class LocationNFSMountOptions extends com.pulumi.resources.InvokeAr
     @Import(name="version")
     private @Nullable LocationNFSMountOptionsVersion version;
 
+    /**
+     * @return The specific NFS version that you want DataSync to use to mount your NFS share.
+     * 
+     */
     public Optional<LocationNFSMountOptionsVersion> version() {
         return Optional.ofNullable(this.version);
     }
@@ -53,6 +57,12 @@ public final class LocationNFSMountOptions extends com.pulumi.resources.InvokeAr
             $ = new LocationNFSMountOptions(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param version The specific NFS version that you want DataSync to use to mount your NFS share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable LocationNFSMountOptionsVersion version) {
             $.version = version;
             return this;

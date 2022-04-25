@@ -25,6 +25,10 @@ public final class LocationSMBMountOptions extends com.pulumi.resources.InvokeAr
     @Import(name="version")
     private @Nullable LocationSMBMountOptionsVersion version;
 
+    /**
+     * @return The specific SMB version that you want DataSync to use to mount your SMB share.
+     * 
+     */
     public Optional<LocationSMBMountOptionsVersion> version() {
         return Optional.ofNullable(this.version);
     }
@@ -53,6 +57,12 @@ public final class LocationSMBMountOptions extends com.pulumi.resources.InvokeAr
             $ = new LocationSMBMountOptions(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param version The specific SMB version that you want DataSync to use to mount your SMB share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable LocationSMBMountOptionsVersion version) {
             $.version = version;
             return this;

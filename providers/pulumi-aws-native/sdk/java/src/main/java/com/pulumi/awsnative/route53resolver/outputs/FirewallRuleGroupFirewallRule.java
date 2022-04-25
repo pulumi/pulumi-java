@@ -15,40 +15,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FirewallRuleGroupFirewallRule {
-    /**
-     * Rule Action
-     * 
-     */
+        /**
+         * @return Rule Action
+         * 
+         */
     private final FirewallRuleGroupFirewallRuleAction action;
-    /**
-     * BlockOverrideDnsType
-     * 
-     */
+        /**
+         * @return BlockOverrideDnsType
+         * 
+         */
     private final @Nullable FirewallRuleGroupFirewallRuleBlockOverrideDnsType blockOverrideDnsType;
-    /**
-     * BlockOverrideDomain
-     * 
-     */
+        /**
+         * @return BlockOverrideDomain
+         * 
+         */
     private final @Nullable String blockOverrideDomain;
-    /**
-     * BlockOverrideTtl
-     * 
-     */
+        /**
+         * @return BlockOverrideTtl
+         * 
+         */
     private final @Nullable Integer blockOverrideTtl;
-    /**
-     * BlockResponse
-     * 
-     */
+        /**
+         * @return BlockResponse
+         * 
+         */
     private final @Nullable FirewallRuleGroupFirewallRuleBlockResponse blockResponse;
-    /**
-     * ResourceId
-     * 
-     */
+        /**
+         * @return ResourceId
+         * 
+         */
     private final String firewallDomainListId;
-    /**
-     * Rule Priority
-     * 
-     */
+        /**
+         * @return Rule Priority
+         * 
+         */
     private final Integer priority;
 
     @CustomType.Constructor
@@ -70,51 +70,51 @@ public final class FirewallRuleGroupFirewallRule {
     }
 
     /**
-     * Rule Action
+     * @return Rule Action
      * 
-    */
+     */
     public FirewallRuleGroupFirewallRuleAction action() {
         return this.action;
     }
     /**
-     * BlockOverrideDnsType
+     * @return BlockOverrideDnsType
      * 
-    */
+     */
     public Optional<FirewallRuleGroupFirewallRuleBlockOverrideDnsType> blockOverrideDnsType() {
         return Optional.ofNullable(this.blockOverrideDnsType);
     }
     /**
-     * BlockOverrideDomain
+     * @return BlockOverrideDomain
      * 
-    */
+     */
     public Optional<String> blockOverrideDomain() {
         return Optional.ofNullable(this.blockOverrideDomain);
     }
     /**
-     * BlockOverrideTtl
+     * @return BlockOverrideTtl
      * 
-    */
+     */
     public Optional<Integer> blockOverrideTtl() {
         return Optional.ofNullable(this.blockOverrideTtl);
     }
     /**
-     * BlockResponse
+     * @return BlockResponse
      * 
-    */
+     */
     public Optional<FirewallRuleGroupFirewallRuleBlockResponse> blockResponse() {
         return Optional.ofNullable(this.blockResponse);
     }
     /**
-     * ResourceId
+     * @return ResourceId
      * 
-    */
+     */
     public String firewallDomainListId() {
         return this.firewallDomainListId;
     }
     /**
-     * Rule Priority
+     * @return Rule Priority
      * 
-    */
+     */
     public Integer priority() {
         return this.priority;
     }

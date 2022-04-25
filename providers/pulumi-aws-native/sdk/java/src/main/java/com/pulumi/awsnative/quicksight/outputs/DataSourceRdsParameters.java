@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class DataSourceRdsParameters {
-    /**
-     * &lt;p&gt;Database.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;Database.&lt;/p&gt;
+         * 
+         */
     private final String database;
-    /**
-     * &lt;p&gt;Instance ID.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;Instance ID.&lt;/p&gt;
+         * 
+         */
     private final String instanceId;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class DataSourceRdsParameters {
     }
 
     /**
-     * &lt;p&gt;Database.&lt;/p&gt;
+     * @return &lt;p&gt;Database.&lt;/p&gt;
      * 
-    */
+     */
     public String database() {
         return this.database;
     }
     /**
-     * &lt;p&gt;Instance ID.&lt;/p&gt;
+     * @return &lt;p&gt;Instance ID.&lt;/p&gt;
      * 
-    */
+     */
     public String instanceId() {
         return this.instanceId;
     }

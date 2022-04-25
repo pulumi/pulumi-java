@@ -22,6 +22,10 @@ public final class DatasetDataCatalogInputDefinition extends com.pulumi.resource
     @Import(name="catalogId")
     private @Nullable String catalogId;
 
+    /**
+     * @return Catalog id
+     * 
+     */
     public Optional<String> catalogId() {
         return Optional.ofNullable(this.catalogId);
     }
@@ -33,6 +37,10 @@ public final class DatasetDataCatalogInputDefinition extends com.pulumi.resource
     @Import(name="databaseName")
     private @Nullable String databaseName;
 
+    /**
+     * @return Database name
+     * 
+     */
     public Optional<String> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
@@ -44,6 +52,10 @@ public final class DatasetDataCatalogInputDefinition extends com.pulumi.resource
     @Import(name="tableName")
     private @Nullable String tableName;
 
+    /**
+     * @return Table name
+     * 
+     */
     public Optional<String> tableName() {
         return Optional.ofNullable(this.tableName);
     }
@@ -82,16 +94,34 @@ public final class DatasetDataCatalogInputDefinition extends com.pulumi.resource
             $ = new DatasetDataCatalogInputDefinition(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param catalogId Catalog id
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogId(@Nullable String catalogId) {
             $.catalogId = catalogId;
             return this;
         }
 
+        /**
+         * @param databaseName Database name
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(@Nullable String databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param tableName Table name
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(@Nullable String tableName) {
             $.tableName = tableName;
             return this;

@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DBProxyAuthFormat {
-    /**
-     * The type of authentication that the proxy uses for connections from the proxy to the underlying database.
-     * 
-     */
+        /**
+         * @return The type of authentication that the proxy uses for connections from the proxy to the underlying database.
+         * 
+         */
     private final @Nullable DBProxyAuthFormatAuthScheme authScheme;
-    /**
-     * A user-specified description about the authentication used by a proxy to log in as a specific database user.
-     * 
-     */
+        /**
+         * @return A user-specified description about the authentication used by a proxy to log in as a specific database user.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Whether to require or disallow AWS Identity and Access Management (IAM) authentication for connections to the proxy.
-     * 
-     */
+        /**
+         * @return Whether to require or disallow AWS Identity and Access Management (IAM) authentication for connections to the proxy.
+         * 
+         */
     private final @Nullable DBProxyAuthFormatIAMAuth iAMAuth;
-    /**
-     * The Amazon Resource Name (ARN) representing the secret that the proxy uses to authenticate to the RDS DB instance or Aurora DB cluster. These secrets are stored within Amazon Secrets Manager.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) representing the secret that the proxy uses to authenticate to the RDS DB instance or Aurora DB cluster. These secrets are stored within Amazon Secrets Manager.
+         * 
+         */
     private final @Nullable String secretArn;
-    /**
-     * The name of the database user to which the proxy connects.
-     * 
-     */
+        /**
+         * @return The name of the database user to which the proxy connects.
+         * 
+         */
     private final @Nullable String userName;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class DBProxyAuthFormat {
     }
 
     /**
-     * The type of authentication that the proxy uses for connections from the proxy to the underlying database.
+     * @return The type of authentication that the proxy uses for connections from the proxy to the underlying database.
      * 
-    */
+     */
     public Optional<DBProxyAuthFormatAuthScheme> authScheme() {
         return Optional.ofNullable(this.authScheme);
     }
     /**
-     * A user-specified description about the authentication used by a proxy to log in as a specific database user.
+     * @return A user-specified description about the authentication used by a proxy to log in as a specific database user.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Whether to require or disallow AWS Identity and Access Management (IAM) authentication for connections to the proxy.
+     * @return Whether to require or disallow AWS Identity and Access Management (IAM) authentication for connections to the proxy.
      * 
-    */
+     */
     public Optional<DBProxyAuthFormatIAMAuth> iAMAuth() {
         return Optional.ofNullable(this.iAMAuth);
     }
     /**
-     * The Amazon Resource Name (ARN) representing the secret that the proxy uses to authenticate to the RDS DB instance or Aurora DB cluster. These secrets are stored within Amazon Secrets Manager.
+     * @return The Amazon Resource Name (ARN) representing the secret that the proxy uses to authenticate to the RDS DB instance or Aurora DB cluster. These secrets are stored within Amazon Secrets Manager.
      * 
-    */
+     */
     public Optional<String> secretArn() {
         return Optional.ofNullable(this.secretArn);
     }
     /**
-     * The name of the database user to which the proxy connects.
+     * @return The name of the database user to which the proxy connects.
      * 
-    */
+     */
     public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }

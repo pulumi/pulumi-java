@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApplicationWindowsEvent {
-    /**
-     * The levels of event to log.
-     * 
-     */
+        /**
+         * @return The levels of event to log.
+         * 
+         */
     private final List<ApplicationEventLevel> eventLevels;
-    /**
-     * The type of Windows Events to log.
-     * 
-     */
+        /**
+         * @return The type of Windows Events to log.
+         * 
+         */
     private final String eventName;
-    /**
-     * The CloudWatch log group name to be associated to the monitored log.
-     * 
-     */
+        /**
+         * @return The CloudWatch log group name to be associated to the monitored log.
+         * 
+         */
     private final String logGroupName;
-    /**
-     * The name of the log pattern set.
-     * 
-     */
+        /**
+         * @return The name of the log pattern set.
+         * 
+         */
     private final @Nullable String patternSet;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class ApplicationWindowsEvent {
     }
 
     /**
-     * The levels of event to log.
+     * @return The levels of event to log.
      * 
-    */
+     */
     public List<ApplicationEventLevel> eventLevels() {
         return this.eventLevels;
     }
     /**
-     * The type of Windows Events to log.
+     * @return The type of Windows Events to log.
      * 
-    */
+     */
     public String eventName() {
         return this.eventName;
     }
     /**
-     * The CloudWatch log group name to be associated to the monitored log.
+     * @return The CloudWatch log group name to be associated to the monitored log.
      * 
-    */
+     */
     public String logGroupName() {
         return this.logGroupName;
     }
     /**
-     * The name of the log pattern set.
+     * @return The name of the log pattern set.
      * 
-    */
+     */
     public Optional<String> patternSet() {
         return Optional.ofNullable(this.patternSet);
     }

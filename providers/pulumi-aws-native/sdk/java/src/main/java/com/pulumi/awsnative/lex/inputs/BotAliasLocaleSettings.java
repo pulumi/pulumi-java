@@ -33,6 +33,10 @@ public final class BotAliasLocaleSettings extends com.pulumi.resources.InvokeArg
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whether the Lambda code hook is enabled
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -67,6 +71,12 @@ public final class BotAliasLocaleSettings extends com.pulumi.resources.InvokeArg
             return this;
         }
 
+        /**
+         * @param enabled Whether the Lambda code hook is enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

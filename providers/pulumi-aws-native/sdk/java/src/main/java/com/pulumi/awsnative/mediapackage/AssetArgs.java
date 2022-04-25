@@ -24,6 +24,10 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="packagingGroupId", required=true)
     private Output<String> packagingGroupId;
 
+    /**
+     * @return The ID of the PackagingGroup for the Asset.
+     * 
+     */
     public Output<String> packagingGroupId() {
         return this.packagingGroupId;
     }
@@ -35,6 +39,10 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return The resource ID to include in SPEKE key requests.
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -46,6 +54,10 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceArn", required=true)
     private Output<String> sourceArn;
 
+    /**
+     * @return ARN of the source object in S3.
+     * 
+     */
     public Output<String> sourceArn() {
         return this.sourceArn;
     }
@@ -57,6 +69,10 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceRoleArn", required=true)
     private Output<String> sourceRoleArn;
 
+    /**
+     * @return The IAM role_arn used to access the source S3 bucket.
+     * 
+     */
     public Output<String> sourceRoleArn() {
         return this.sourceRoleArn;
     }
@@ -68,6 +84,10 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<AssetTagArgs>> tags;
 
+    /**
+     * @return A collection of tags associated with a resource
+     * 
+     */
     public Optional<Output<List<AssetTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -100,51 +120,117 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AssetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param packagingGroupId The ID of the PackagingGroup for the Asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packagingGroupId(Output<String> packagingGroupId) {
             $.packagingGroupId = packagingGroupId;
             return this;
         }
 
+        /**
+         * @param packagingGroupId The ID of the PackagingGroup for the Asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packagingGroupId(String packagingGroupId) {
             return packagingGroupId(Output.of(packagingGroupId));
         }
 
+        /**
+         * @param resourceId The resource ID to include in SPEKE key requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The resource ID to include in SPEKE key requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param sourceArn ARN of the source object in S3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceArn(Output<String> sourceArn) {
             $.sourceArn = sourceArn;
             return this;
         }
 
+        /**
+         * @param sourceArn ARN of the source object in S3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceArn(String sourceArn) {
             return sourceArn(Output.of(sourceArn));
         }
 
+        /**
+         * @param sourceRoleArn The IAM role_arn used to access the source S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRoleArn(Output<String> sourceRoleArn) {
             $.sourceRoleArn = sourceRoleArn;
             return this;
         }
 
+        /**
+         * @param sourceRoleArn The IAM role_arn used to access the source S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRoleArn(String sourceRoleArn) {
             return sourceRoleArn(Output.of(sourceRoleArn));
         }
 
+        /**
+         * @param tags A collection of tags associated with a resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<AssetTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A collection of tags associated with a resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<AssetTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A collection of tags associated with a resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(AssetTagArgs... tags) {
             return tags(List.of(tags));
         }

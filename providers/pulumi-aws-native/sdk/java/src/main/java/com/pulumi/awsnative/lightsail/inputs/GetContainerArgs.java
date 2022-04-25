@@ -19,6 +19,10 @@ public final class GetContainerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return The name for the container service.
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -47,6 +51,12 @@ public final class GetContainerArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetContainerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param serviceName The name for the container service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;

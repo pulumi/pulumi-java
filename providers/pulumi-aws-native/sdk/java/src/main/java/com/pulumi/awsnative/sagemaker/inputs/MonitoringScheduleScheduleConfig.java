@@ -23,6 +23,10 @@ public final class MonitoringScheduleScheduleConfig extends com.pulumi.resources
     @Import(name="scheduleExpression", required=true)
     private String scheduleExpression;
 
+    /**
+     * @return A cron expression that describes details about the monitoring schedule.
+     * 
+     */
     public String scheduleExpression() {
         return this.scheduleExpression;
     }
@@ -51,6 +55,12 @@ public final class MonitoringScheduleScheduleConfig extends com.pulumi.resources
             $ = new MonitoringScheduleScheduleConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scheduleExpression A cron expression that describes details about the monitoring schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleExpression(String scheduleExpression) {
             $.scheduleExpression = scheduleExpression;
             return this;

@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TaskSetAwsVpcConfiguration {
-    /**
-     * Whether the task&#39;s elastic network interface receives a public IP address. The default value is DISABLED.
-     * 
-     */
+        /**
+         * @return Whether the task&#39;s elastic network interface receives a public IP address. The default value is DISABLED.
+         * 
+         */
     private final @Nullable TaskSetAwsVpcConfigurationAssignPublicIp assignPublicIp;
-    /**
-     * The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used. There is a limit of 5 security groups that can be specified per AwsVpcConfiguration.
-     * 
-     */
+        /**
+         * @return The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used. There is a limit of 5 security groups that can be specified per AwsVpcConfiguration.
+         * 
+         */
     private final @Nullable List<String> securityGroups;
-    /**
-     * The subnets associated with the task or service. There is a limit of 16 subnets that can be specified per AwsVpcConfiguration.
-     * 
-     */
+        /**
+         * @return The subnets associated with the task or service. There is a limit of 16 subnets that can be specified per AwsVpcConfiguration.
+         * 
+         */
     private final List<String> subnets;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class TaskSetAwsVpcConfiguration {
     }
 
     /**
-     * Whether the task&#39;s elastic network interface receives a public IP address. The default value is DISABLED.
+     * @return Whether the task&#39;s elastic network interface receives a public IP address. The default value is DISABLED.
      * 
-    */
+     */
     public Optional<TaskSetAwsVpcConfigurationAssignPublicIp> assignPublicIp() {
         return Optional.ofNullable(this.assignPublicIp);
     }
     /**
-     * The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used. There is a limit of 5 security groups that can be specified per AwsVpcConfiguration.
+     * @return The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used. There is a limit of 5 security groups that can be specified per AwsVpcConfiguration.
      * 
-    */
+     */
     public List<String> securityGroups() {
         return this.securityGroups == null ? List.of() : this.securityGroups;
     }
     /**
-     * The subnets associated with the task or service. There is a limit of 16 subnets that can be specified per AwsVpcConfiguration.
+     * @return The subnets associated with the task or service. There is a limit of 16 subnets that can be specified per AwsVpcConfiguration.
      * 
-    */
+     */
     public List<String> subnets() {
         return this.subnets;
     }

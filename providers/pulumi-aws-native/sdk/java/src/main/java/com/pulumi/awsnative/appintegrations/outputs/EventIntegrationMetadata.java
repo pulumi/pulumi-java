@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class EventIntegrationMetadata {
-    /**
-     * A key to identify the metadata.
-     * 
-     */
+        /**
+         * @return A key to identify the metadata.
+         * 
+         */
     private final String key;
-    /**
-     * Corresponding metadata value for the key.
-     * 
-     */
+        /**
+         * @return Corresponding metadata value for the key.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class EventIntegrationMetadata {
     }
 
     /**
-     * A key to identify the metadata.
+     * @return A key to identify the metadata.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Corresponding metadata value for the key.
+     * @return Corresponding metadata value for the key.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

@@ -14,15 +14,15 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDatabaseResult {
     private final @Nullable String arn;
-    /**
-     * The KMS key for the database. If the KMS key is not specified, the database will be encrypted with a Timestream managed KMS key located in your account.
-     * 
-     */
+        /**
+         * @return The KMS key for the database. If the KMS key is not specified, the database will be encrypted with a Timestream managed KMS key located in your account.
+         * 
+         */
     private final @Nullable String kmsKeyId;
-    /**
-     * An array of key-value pairs to apply to this resource.
-     * 
-     */
+        /**
+         * @return An array of key-value pairs to apply to this resource.
+         * 
+         */
     private final @Nullable List<DatabaseTag> tags;
 
     @CustomType.Constructor
@@ -39,16 +39,16 @@ public final class GetDatabaseResult {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The KMS key for the database. If the KMS key is not specified, the database will be encrypted with a Timestream managed KMS key located in your account.
+     * @return The KMS key for the database. If the KMS key is not specified, the database will be encrypted with a Timestream managed KMS key located in your account.
      * 
-    */
+     */
     public Optional<String> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<DatabaseTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

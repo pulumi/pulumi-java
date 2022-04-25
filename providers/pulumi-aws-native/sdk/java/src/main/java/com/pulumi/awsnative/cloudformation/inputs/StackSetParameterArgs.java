@@ -20,6 +20,10 @@ public final class StackSetParameterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="parameterKey", required=true)
     private Output<String> parameterKey;
 
+    /**
+     * @return The key associated with the parameter. If you don&#39;t specify a key and value for a particular parameter, AWS CloudFormation uses the default value that is specified in your template.
+     * 
+     */
     public Output<String> parameterKey() {
         return this.parameterKey;
     }
@@ -31,6 +35,10 @@ public final class StackSetParameterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="parameterValue", required=true)
     private Output<String> parameterValue;
 
+    /**
+     * @return The input value associated with the parameter.
+     * 
+     */
     public Output<String> parameterValue() {
         return this.parameterValue;
     }
@@ -60,20 +68,44 @@ public final class StackSetParameterArgs extends com.pulumi.resources.ResourceAr
             $ = new StackSetParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parameterKey The key associated with the parameter. If you don&#39;t specify a key and value for a particular parameter, AWS CloudFormation uses the default value that is specified in your template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterKey(Output<String> parameterKey) {
             $.parameterKey = parameterKey;
             return this;
         }
 
+        /**
+         * @param parameterKey The key associated with the parameter. If you don&#39;t specify a key and value for a particular parameter, AWS CloudFormation uses the default value that is specified in your template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterKey(String parameterKey) {
             return parameterKey(Output.of(parameterKey));
         }
 
+        /**
+         * @param parameterValue The input value associated with the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterValue(Output<String> parameterValue) {
             $.parameterValue = parameterValue;
             return this;
         }
 
+        /**
+         * @param parameterValue The input value associated with the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterValue(String parameterValue) {
             return parameterValue(Output.of(parameterValue));
         }

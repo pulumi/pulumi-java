@@ -25,6 +25,10 @@ public final class ResourceSetR53ResourceRecord extends com.pulumi.resources.Inv
     @Import(name="domainName")
     private @Nullable String domainName;
 
+    /**
+     * @return The DNS target domain name.
+     * 
+     */
     public Optional<String> domainName() {
         return Optional.ofNullable(this.domainName);
     }
@@ -36,6 +40,10 @@ public final class ResourceSetR53ResourceRecord extends com.pulumi.resources.Inv
     @Import(name="recordSetId")
     private @Nullable String recordSetId;
 
+    /**
+     * @return The Resource Record set id.
+     * 
+     */
     public Optional<String> recordSetId() {
         return Optional.ofNullable(this.recordSetId);
     }
@@ -65,11 +73,23 @@ public final class ResourceSetR53ResourceRecord extends com.pulumi.resources.Inv
             $ = new ResourceSetR53ResourceRecord(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainName The DNS target domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(@Nullable String domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param recordSetId The Resource Record set id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordSetId(@Nullable String recordSetId) {
             $.recordSetId = recordSetId;
             return this;

@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class BucketReplicaModifications {
-    /**
-     * Specifies whether Amazon S3 replicates modifications on replicas.
-     * 
-     */
+        /**
+         * @return Specifies whether Amazon S3 replicates modifications on replicas.
+         * 
+         */
     private final BucketReplicaModificationsStatus status;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class BucketReplicaModifications {
     }
 
     /**
-     * Specifies whether Amazon S3 replicates modifications on replicas.
+     * @return Specifies whether Amazon S3 replicates modifications on replicas.
      * 
-    */
+     */
     public BucketReplicaModificationsStatus status() {
         return this.status;
     }

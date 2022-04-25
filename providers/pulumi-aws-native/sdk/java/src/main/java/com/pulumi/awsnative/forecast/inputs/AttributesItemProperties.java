@@ -22,6 +22,10 @@ public final class AttributesItemProperties extends com.pulumi.resources.InvokeA
     @Import(name="attributeName")
     private @Nullable String attributeName;
 
+    /**
+     * @return Name of the dataset field
+     * 
+     */
     public Optional<String> attributeName() {
         return Optional.ofNullable(this.attributeName);
     }
@@ -33,6 +37,10 @@ public final class AttributesItemProperties extends com.pulumi.resources.InvokeA
     @Import(name="attributeType")
     private @Nullable DatasetAttributesItemPropertiesAttributeType attributeType;
 
+    /**
+     * @return Data type of the field
+     * 
+     */
     public Optional<DatasetAttributesItemPropertiesAttributeType> attributeType() {
         return Optional.ofNullable(this.attributeType);
     }
@@ -62,11 +70,23 @@ public final class AttributesItemProperties extends com.pulumi.resources.InvokeA
             $ = new AttributesItemProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attributeName Name of the dataset field
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributeName(@Nullable String attributeName) {
             $.attributeName = attributeName;
             return this;
         }
 
+        /**
+         * @param attributeType Data type of the field
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributeType(@Nullable DatasetAttributesItemPropertiesAttributeType attributeType) {
             $.attributeType = attributeType;
             return this;

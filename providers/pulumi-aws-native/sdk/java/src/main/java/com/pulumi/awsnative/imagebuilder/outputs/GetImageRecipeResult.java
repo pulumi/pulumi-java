@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetImageRecipeResult {
-    /**
-     * Specify additional settings and launch scripts for your build instances.
-     * 
-     */
+        /**
+         * @return Specify additional settings and launch scripts for your build instances.
+         * 
+         */
     private final @Nullable ImageRecipeAdditionalInstanceConfiguration additionalInstanceConfiguration;
-    /**
-     * The Amazon Resource Name (ARN) of the image recipe.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the image recipe.
+         * 
+         */
     private final @Nullable String arn;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class GetImageRecipeResult {
     }
 
     /**
-     * Specify additional settings and launch scripts for your build instances.
+     * @return Specify additional settings and launch scripts for your build instances.
      * 
-    */
+     */
     public Optional<ImageRecipeAdditionalInstanceConfiguration> additionalInstanceConfiguration() {
         return Optional.ofNullable(this.additionalInstanceConfiguration);
     }
     /**
-     * The Amazon Resource Name (ARN) of the image recipe.
+     * @return The Amazon Resource Name (ARN) of the image recipe.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }

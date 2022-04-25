@@ -16,50 +16,50 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAlarmResult {
     private final @Nullable String alarmArn;
-    /**
-     * The arithmetic operation to use when comparing the specified statistic to the threshold. The specified statistic value is used as the first operand.
-     * 
-     */
+        /**
+         * @return The arithmetic operation to use when comparing the specified statistic to the threshold. The specified statistic value is used as the first operand.
+         * 
+         */
     private final @Nullable String comparisonOperator;
-    /**
-     * The contact protocols to use for the alarm, such as Email, SMS (text messaging), or both.
-     * 
-     */
+        /**
+         * @return The contact protocols to use for the alarm, such as Email, SMS (text messaging), or both.
+         * 
+         */
     private final @Nullable List<String> contactProtocols;
-    /**
-     * The number of data points that must be not within the specified threshold to trigger the alarm. If you are setting an &#34;M out of N&#34; alarm, this value (datapointsToAlarm) is the M.
-     * 
-     */
+        /**
+         * @return The number of data points that must be not within the specified threshold to trigger the alarm. If you are setting an &#34;M out of N&#34; alarm, this value (datapointsToAlarm) is the M.
+         * 
+         */
     private final @Nullable Integer datapointsToAlarm;
-    /**
-     * The number of most recent periods over which data is compared to the specified threshold. If you are setting an &#34;M out of N&#34; alarm, this value (evaluationPeriods) is the N.
-     * 
-     */
+        /**
+         * @return The number of most recent periods over which data is compared to the specified threshold. If you are setting an &#34;M out of N&#34; alarm, this value (evaluationPeriods) is the N.
+         * 
+         */
     private final @Nullable Integer evaluationPeriods;
-    /**
-     * Indicates whether the alarm is enabled. Notifications are enabled by default if you don&#39;t specify this parameter.
-     * 
-     */
+        /**
+         * @return Indicates whether the alarm is enabled. Notifications are enabled by default if you don&#39;t specify this parameter.
+         * 
+         */
     private final @Nullable Boolean notificationEnabled;
-    /**
-     * The alarm states that trigger a notification.
-     * 
-     */
+        /**
+         * @return The alarm states that trigger a notification.
+         * 
+         */
     private final @Nullable List<String> notificationTriggers;
-    /**
-     * The current state of the alarm.
-     * 
-     */
+        /**
+         * @return The current state of the alarm.
+         * 
+         */
     private final @Nullable String state;
-    /**
-     * The value against which the specified statistic is compared.
-     * 
-     */
+        /**
+         * @return The value against which the specified statistic is compared.
+         * 
+         */
     private final @Nullable Double threshold;
-    /**
-     * Sets how this alarm will handle missing data points.
-     * 
-     */
+        /**
+         * @return Sets how this alarm will handle missing data points.
+         * 
+         */
     private final @Nullable String treatMissingData;
 
     @CustomType.Constructor
@@ -90,65 +90,65 @@ public final class GetAlarmResult {
         return Optional.ofNullable(this.alarmArn);
     }
     /**
-     * The arithmetic operation to use when comparing the specified statistic to the threshold. The specified statistic value is used as the first operand.
+     * @return The arithmetic operation to use when comparing the specified statistic to the threshold. The specified statistic value is used as the first operand.
      * 
-    */
+     */
     public Optional<String> comparisonOperator() {
         return Optional.ofNullable(this.comparisonOperator);
     }
     /**
-     * The contact protocols to use for the alarm, such as Email, SMS (text messaging), or both.
+     * @return The contact protocols to use for the alarm, such as Email, SMS (text messaging), or both.
      * 
-    */
+     */
     public List<String> contactProtocols() {
         return this.contactProtocols == null ? List.of() : this.contactProtocols;
     }
     /**
-     * The number of data points that must be not within the specified threshold to trigger the alarm. If you are setting an &#34;M out of N&#34; alarm, this value (datapointsToAlarm) is the M.
+     * @return The number of data points that must be not within the specified threshold to trigger the alarm. If you are setting an &#34;M out of N&#34; alarm, this value (datapointsToAlarm) is the M.
      * 
-    */
+     */
     public Optional<Integer> datapointsToAlarm() {
         return Optional.ofNullable(this.datapointsToAlarm);
     }
     /**
-     * The number of most recent periods over which data is compared to the specified threshold. If you are setting an &#34;M out of N&#34; alarm, this value (evaluationPeriods) is the N.
+     * @return The number of most recent periods over which data is compared to the specified threshold. If you are setting an &#34;M out of N&#34; alarm, this value (evaluationPeriods) is the N.
      * 
-    */
+     */
     public Optional<Integer> evaluationPeriods() {
         return Optional.ofNullable(this.evaluationPeriods);
     }
     /**
-     * Indicates whether the alarm is enabled. Notifications are enabled by default if you don&#39;t specify this parameter.
+     * @return Indicates whether the alarm is enabled. Notifications are enabled by default if you don&#39;t specify this parameter.
      * 
-    */
+     */
     public Optional<Boolean> notificationEnabled() {
         return Optional.ofNullable(this.notificationEnabled);
     }
     /**
-     * The alarm states that trigger a notification.
+     * @return The alarm states that trigger a notification.
      * 
-    */
+     */
     public List<String> notificationTriggers() {
         return this.notificationTriggers == null ? List.of() : this.notificationTriggers;
     }
     /**
-     * The current state of the alarm.
+     * @return The current state of the alarm.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
-     * The value against which the specified statistic is compared.
+     * @return The value against which the specified statistic is compared.
      * 
-    */
+     */
     public Optional<Double> threshold() {
         return Optional.ofNullable(this.threshold);
     }
     /**
-     * Sets how this alarm will handle missing data points.
+     * @return Sets how this alarm will handle missing data points.
      * 
-    */
+     */
     public Optional<String> treatMissingData() {
         return Optional.ofNullable(this.treatMissingData);
     }

@@ -30,6 +30,10 @@ public final class RecipeStep extends com.pulumi.resources.InvokeArgs {
     @Import(name="conditionExpressions")
     private @Nullable List<RecipeConditionExpression> conditionExpressions;
 
+    /**
+     * @return Condition expressions applied to the step action
+     * 
+     */
     public Optional<List<RecipeConditionExpression>> conditionExpressions() {
         return Optional.ofNullable(this.conditionExpressions);
     }
@@ -64,11 +68,23 @@ public final class RecipeStep extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param conditionExpressions Condition expressions applied to the step action
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditionExpressions(@Nullable List<RecipeConditionExpression> conditionExpressions) {
             $.conditionExpressions = conditionExpressions;
             return this;
         }
 
+        /**
+         * @param conditionExpressions Condition expressions applied to the step action
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditionExpressions(RecipeConditionExpression... conditionExpressions) {
             return conditionExpressions(List.of(conditionExpressions));
         }

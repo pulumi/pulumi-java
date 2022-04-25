@@ -13,50 +13,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetMetricStreamResult {
-    /**
-     * Amazon Resource Name of the metric stream.
-     * 
-     */
+        /**
+         * @return Amazon Resource Name of the metric stream.
+         * 
+         */
     private final @Nullable String arn;
-    /**
-     * The date of creation of the metric stream.
-     * 
-     */
+        /**
+         * @return The date of creation of the metric stream.
+         * 
+         */
     private final @Nullable String creationDate;
-    /**
-     * Define which metrics will be not streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
-     * 
-     */
+        /**
+         * @return Define which metrics will be not streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
+         * 
+         */
     private final @Nullable List<MetricStreamFilter> excludeFilters;
-    /**
-     * The ARN of the Kinesis Firehose where to stream the data.
-     * 
-     */
+        /**
+         * @return The ARN of the Kinesis Firehose where to stream the data.
+         * 
+         */
     private final @Nullable String firehoseArn;
-    /**
-     * Define which metrics will be streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
-     * 
-     */
+        /**
+         * @return Define which metrics will be streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
+         * 
+         */
     private final @Nullable List<MetricStreamFilter> includeFilters;
-    /**
-     * The date of the last update of the metric stream.
-     * 
-     */
+        /**
+         * @return The date of the last update of the metric stream.
+         * 
+         */
     private final @Nullable String lastUpdateDate;
-    /**
-     * The output format of the data streamed to the Kinesis Firehose.
-     * 
-     */
+        /**
+         * @return The output format of the data streamed to the Kinesis Firehose.
+         * 
+         */
     private final @Nullable String outputFormat;
-    /**
-     * The ARN of the role that provides access to the Kinesis Firehose.
-     * 
-     */
+        /**
+         * @return The ARN of the role that provides access to the Kinesis Firehose.
+         * 
+         */
     private final @Nullable String roleArn;
-    /**
-     * Displays the state of the Metric Stream.
-     * 
-     */
+        /**
+         * @return Displays the state of the Metric Stream.
+         * 
+         */
     private final @Nullable String state;
 
     @CustomType.Constructor
@@ -82,65 +82,65 @@ public final class GetMetricStreamResult {
     }
 
     /**
-     * Amazon Resource Name of the metric stream.
+     * @return Amazon Resource Name of the metric stream.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The date of creation of the metric stream.
+     * @return The date of creation of the metric stream.
      * 
-    */
+     */
     public Optional<String> creationDate() {
         return Optional.ofNullable(this.creationDate);
     }
     /**
-     * Define which metrics will be not streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
+     * @return Define which metrics will be not streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
      * 
-    */
+     */
     public List<MetricStreamFilter> excludeFilters() {
         return this.excludeFilters == null ? List.of() : this.excludeFilters;
     }
     /**
-     * The ARN of the Kinesis Firehose where to stream the data.
+     * @return The ARN of the Kinesis Firehose where to stream the data.
      * 
-    */
+     */
     public Optional<String> firehoseArn() {
         return Optional.ofNullable(this.firehoseArn);
     }
     /**
-     * Define which metrics will be streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
+     * @return Define which metrics will be streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
      * 
-    */
+     */
     public List<MetricStreamFilter> includeFilters() {
         return this.includeFilters == null ? List.of() : this.includeFilters;
     }
     /**
-     * The date of the last update of the metric stream.
+     * @return The date of the last update of the metric stream.
      * 
-    */
+     */
     public Optional<String> lastUpdateDate() {
         return Optional.ofNullable(this.lastUpdateDate);
     }
     /**
-     * The output format of the data streamed to the Kinesis Firehose.
+     * @return The output format of the data streamed to the Kinesis Firehose.
      * 
-    */
+     */
     public Optional<String> outputFormat() {
         return Optional.ofNullable(this.outputFormat);
     }
     /**
-     * The ARN of the role that provides access to the Kinesis Firehose.
+     * @return The ARN of the role that provides access to the Kinesis Firehose.
      * 
-    */
+     */
     public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
     /**
-     * Displays the state of the Metric Stream.
+     * @return Displays the state of the Metric Stream.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }

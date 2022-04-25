@@ -19,6 +19,10 @@ public final class GetPrimaryTaskSetArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="cluster", required=true)
     private String cluster;
 
+    /**
+     * @return The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to create the task set in.
+     * 
+     */
     public String cluster() {
         return this.cluster;
     }
@@ -30,6 +34,10 @@ public final class GetPrimaryTaskSetArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="service", required=true)
     private String service;
 
+    /**
+     * @return The short name or full Amazon Resource Name (ARN) of the service to create the task set in.
+     * 
+     */
     public String service() {
         return this.service;
     }
@@ -59,11 +67,23 @@ public final class GetPrimaryTaskSetArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetPrimaryTaskSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cluster The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to create the task set in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(String cluster) {
             $.cluster = cluster;
             return this;
         }
 
+        /**
+         * @param service The short name or full Amazon Resource Name (ARN) of the service to create the task set in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             $.service = service;
             return this;

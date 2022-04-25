@@ -10,29 +10,29 @@ import java.util.Objects;
 
 @CustomType
 public final class DashboardResourcePermission {
-    /**
-     * &lt;p&gt;The IAM action to grant or revoke permissions on.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;The IAM action to grant or revoke permissions on.&lt;/p&gt;
+         * 
+         */
     private final List<String> actions;
-    /**
-     * &lt;p&gt;The Amazon Resource Name (ARN) of the principal. This can be one of the
-     *             following:&lt;/p&gt;
-     *         &lt;ul&gt;
-     *             &lt;li&gt;
-     *                 &lt;p&gt;The ARN of an Amazon QuickSight user or group associated with a data source or dataset. (This is common.)&lt;/p&gt;
-     *             &lt;/li&gt;
-     *             &lt;li&gt;
-     *                 &lt;p&gt;The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis, dashboard, template, or theme. (This is common.)&lt;/p&gt;
-     *             &lt;/li&gt;
-     *             &lt;li&gt;
-     *                 &lt;p&gt;The ARN of an AWS account root: This is an IAM ARN rather than a QuickSight
-     *                     ARN. Use this option only to share resources (templates) across AWS accounts.
-     *                     (This is less common.) &lt;/p&gt;
-     *             &lt;/li&gt;
-     *          &lt;/ul&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;The Amazon Resource Name (ARN) of the principal. This can be one of the
+         *             following:&lt;/p&gt;
+         *         &lt;ul&gt;
+         *             &lt;li&gt;
+         *                 &lt;p&gt;The ARN of an Amazon QuickSight user or group associated with a data source or dataset. (This is common.)&lt;/p&gt;
+         *             &lt;/li&gt;
+         *             &lt;li&gt;
+         *                 &lt;p&gt;The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis, dashboard, template, or theme. (This is common.)&lt;/p&gt;
+         *             &lt;/li&gt;
+         *             &lt;li&gt;
+         *                 &lt;p&gt;The ARN of an AWS account root: This is an IAM ARN rather than a QuickSight
+         *                     ARN. Use this option only to share resources (templates) across AWS accounts.
+         *                     (This is less common.) &lt;/p&gt;
+         *             &lt;/li&gt;
+         *          &lt;/ul&gt;
+         * 
+         */
     private final String principal;
 
     @CustomType.Constructor
@@ -44,14 +44,14 @@ public final class DashboardResourcePermission {
     }
 
     /**
-     * &lt;p&gt;The IAM action to grant or revoke permissions on.&lt;/p&gt;
+     * @return &lt;p&gt;The IAM action to grant or revoke permissions on.&lt;/p&gt;
      * 
-    */
+     */
     public List<String> actions() {
         return this.actions;
     }
     /**
-     * &lt;p&gt;The Amazon Resource Name (ARN) of the principal. This can be one of the
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the principal. This can be one of the
      *             following:&lt;/p&gt;
      *         &lt;ul&gt;
      *             &lt;li&gt;
@@ -67,7 +67,7 @@ public final class DashboardResourcePermission {
      *             &lt;/li&gt;
      *          &lt;/ul&gt;
      * 
-    */
+     */
     public String principal() {
         return this.principal;
     }

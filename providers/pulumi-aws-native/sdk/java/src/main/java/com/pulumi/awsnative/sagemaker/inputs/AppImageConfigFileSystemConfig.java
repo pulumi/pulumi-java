@@ -26,6 +26,10 @@ public final class AppImageConfigFileSystemConfig extends com.pulumi.resources.I
     @Import(name="defaultGid")
     private @Nullable Integer defaultGid;
 
+    /**
+     * @return The default POSIX group ID (GID). If not specified, defaults to 100.
+     * 
+     */
     public Optional<Integer> defaultGid() {
         return Optional.ofNullable(this.defaultGid);
     }
@@ -37,6 +41,10 @@ public final class AppImageConfigFileSystemConfig extends com.pulumi.resources.I
     @Import(name="defaultUid")
     private @Nullable Integer defaultUid;
 
+    /**
+     * @return The default POSIX user ID (UID). If not specified, defaults to 1000.
+     * 
+     */
     public Optional<Integer> defaultUid() {
         return Optional.ofNullable(this.defaultUid);
     }
@@ -48,6 +56,10 @@ public final class AppImageConfigFileSystemConfig extends com.pulumi.resources.I
     @Import(name="mountPath")
     private @Nullable String mountPath;
 
+    /**
+     * @return The path within the image to mount the user&#39;s EFS home directory. The directory should be empty. If not specified, defaults to /home/sagemaker-user.
+     * 
+     */
     public Optional<String> mountPath() {
         return Optional.ofNullable(this.mountPath);
     }
@@ -78,16 +90,34 @@ public final class AppImageConfigFileSystemConfig extends com.pulumi.resources.I
             $ = new AppImageConfigFileSystemConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultGid The default POSIX group ID (GID). If not specified, defaults to 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultGid(@Nullable Integer defaultGid) {
             $.defaultGid = defaultGid;
             return this;
         }
 
+        /**
+         * @param defaultUid The default POSIX user ID (UID). If not specified, defaults to 1000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultUid(@Nullable Integer defaultUid) {
             $.defaultUid = defaultUid;
             return this;
         }
 
+        /**
+         * @param mountPath The path within the image to mount the user&#39;s EFS home directory. The directory should be empty. If not specified, defaults to /home/sagemaker-user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountPath(@Nullable String mountPath) {
             $.mountPath = mountPath;
             return this;

@@ -17,10 +17,10 @@ public final class GetStoredQueryResult {
     private final @Nullable String queryDescription;
     private final @Nullable String queryExpression;
     private final @Nullable String queryId;
-    /**
-     * The tags for the stored query.
-     * 
-     */
+        /**
+         * @return The tags for the stored query.
+         * 
+         */
     private final @Nullable List<StoredQueryTag> tags;
 
     @CustomType.Constructor
@@ -50,9 +50,9 @@ public final class GetStoredQueryResult {
         return Optional.ofNullable(this.queryId);
     }
     /**
-     * The tags for the stored query.
+     * @return The tags for the stored query.
      * 
-    */
+     */
     public List<StoredQueryTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class MonitoringScheduleScheduleConfig {
-    /**
-     * A cron expression that describes details about the monitoring schedule.
-     * 
-     */
+        /**
+         * @return A cron expression that describes details about the monitoring schedule.
+         * 
+         */
     private final String scheduleExpression;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class MonitoringScheduleScheduleConfig {
     }
 
     /**
-     * A cron expression that describes details about the monitoring schedule.
+     * @return A cron expression that describes details about the monitoring schedule.
      * 
-    */
+     */
     public String scheduleExpression() {
         return this.scheduleExpression;
     }

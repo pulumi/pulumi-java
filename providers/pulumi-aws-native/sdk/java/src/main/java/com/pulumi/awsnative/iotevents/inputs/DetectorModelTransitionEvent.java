@@ -27,6 +27,10 @@ public final class DetectorModelTransitionEvent extends com.pulumi.resources.Inv
     @Import(name="actions")
     private @Nullable List<DetectorModelAction> actions;
 
+    /**
+     * @return The actions to be performed.
+     * 
+     */
     public Optional<List<DetectorModelAction>> actions() {
         return Optional.ofNullable(this.actions);
     }
@@ -38,6 +42,10 @@ public final class DetectorModelTransitionEvent extends com.pulumi.resources.Inv
     @Import(name="condition", required=true)
     private String condition;
 
+    /**
+     * @return A Boolean expression that when `TRUE` causes the `actions` to be performed and the `nextState` to be entered.
+     * 
+     */
     public String condition() {
         return this.condition;
     }
@@ -49,6 +57,10 @@ public final class DetectorModelTransitionEvent extends com.pulumi.resources.Inv
     @Import(name="eventName", required=true)
     private String eventName;
 
+    /**
+     * @return The name of the event.
+     * 
+     */
     public String eventName() {
         return this.eventName;
     }
@@ -60,6 +72,10 @@ public final class DetectorModelTransitionEvent extends com.pulumi.resources.Inv
     @Import(name="nextState", required=true)
     private String nextState;
 
+    /**
+     * @return The next state to enter.
+     * 
+     */
     public String nextState() {
         return this.nextState;
     }
@@ -91,25 +107,55 @@ public final class DetectorModelTransitionEvent extends com.pulumi.resources.Inv
             $ = new DetectorModelTransitionEvent(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions The actions to be performed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(@Nullable List<DetectorModelAction> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions The actions to be performed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(DetectorModelAction... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param condition A Boolean expression that when `TRUE` causes the `actions` to be performed and the `nextState` to be entered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(String condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param eventName The name of the event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventName(String eventName) {
             $.eventName = eventName;
             return this;
         }
 
+        /**
+         * @param nextState The next state to enter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextState(String nextState) {
             $.nextState = nextState;
             return this;

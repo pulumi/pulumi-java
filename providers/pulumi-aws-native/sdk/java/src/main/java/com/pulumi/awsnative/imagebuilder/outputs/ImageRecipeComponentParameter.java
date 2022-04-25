@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ImageRecipeComponentParameter {
-    /**
-     * The name of the component parameter to set.
-     * 
-     */
+        /**
+         * @return The name of the component parameter to set.
+         * 
+         */
     private final String name;
-    /**
-     * Sets the value for the named component parameter.
-     * 
-     */
+        /**
+         * @return Sets the value for the named component parameter.
+         * 
+         */
     private final List<String> value;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class ImageRecipeComponentParameter {
     }
 
     /**
-     * The name of the component parameter to set.
+     * @return The name of the component parameter to set.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Sets the value for the named component parameter.
+     * @return Sets the value for the named component parameter.
      * 
-    */
+     */
     public List<String> value() {
         return this.value;
     }

@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApplicationSubComponentConfigurationDetails {
-    /**
-     * A list of metrics to monitor for the component.
-     * 
-     */
+        /**
+         * @return A list of metrics to monitor for the component.
+         * 
+         */
     private final @Nullable List<ApplicationAlarmMetric> alarmMetrics;
-    /**
-     * A list of logs to monitor for the component.
-     * 
-     */
+        /**
+         * @return A list of logs to monitor for the component.
+         * 
+         */
     private final @Nullable List<ApplicationLog> logs;
-    /**
-     * A list of Windows Events to log.
-     * 
-     */
+        /**
+         * @return A list of Windows Events to log.
+         * 
+         */
     private final @Nullable List<ApplicationWindowsEvent> windowsEvents;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class ApplicationSubComponentConfigurationDetails {
     }
 
     /**
-     * A list of metrics to monitor for the component.
+     * @return A list of metrics to monitor for the component.
      * 
-    */
+     */
     public List<ApplicationAlarmMetric> alarmMetrics() {
         return this.alarmMetrics == null ? List.of() : this.alarmMetrics;
     }
     /**
-     * A list of logs to monitor for the component.
+     * @return A list of logs to monitor for the component.
      * 
-    */
+     */
     public List<ApplicationLog> logs() {
         return this.logs == null ? List.of() : this.logs;
     }
     /**
-     * A list of Windows Events to log.
+     * @return A list of Windows Events to log.
      * 
-    */
+     */
     public List<ApplicationWindowsEvent> windowsEvents() {
         return this.windowsEvents == null ? List.of() : this.windowsEvents;
     }

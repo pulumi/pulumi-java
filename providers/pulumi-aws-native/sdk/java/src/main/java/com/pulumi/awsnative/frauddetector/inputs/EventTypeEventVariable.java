@@ -34,6 +34,10 @@ public final class EventTypeEventVariable extends com.pulumi.resources.InvokeArg
     @Import(name="createdTime")
     private @Nullable String createdTime;
 
+    /**
+     * @return The time when the event type was created.
+     * 
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
@@ -66,6 +70,10 @@ public final class EventTypeEventVariable extends com.pulumi.resources.InvokeArg
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -84,6 +92,10 @@ public final class EventTypeEventVariable extends com.pulumi.resources.InvokeArg
     @Import(name="lastUpdatedTime")
     private @Nullable String lastUpdatedTime;
 
+    /**
+     * @return The time when the event type was last updated.
+     * 
+     */
     public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
@@ -102,6 +114,10 @@ public final class EventTypeEventVariable extends com.pulumi.resources.InvokeArg
     @Import(name="tags")
     private @Nullable List<EventTypeTag> tags;
 
+    /**
+     * @return Tags associated with this event type.
+     * 
+     */
     public Optional<List<EventTypeTag>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -152,6 +168,12 @@ public final class EventTypeEventVariable extends com.pulumi.resources.InvokeArg
             return this;
         }
 
+        /**
+         * @param createdTime The time when the event type was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(@Nullable String createdTime) {
             $.createdTime = createdTime;
             return this;
@@ -172,6 +194,12 @@ public final class EventTypeEventVariable extends com.pulumi.resources.InvokeArg
             return this;
         }
 
+        /**
+         * @param description The description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
@@ -182,6 +210,12 @@ public final class EventTypeEventVariable extends com.pulumi.resources.InvokeArg
             return this;
         }
 
+        /**
+         * @param lastUpdatedTime The time when the event type was last updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             $.lastUpdatedTime = lastUpdatedTime;
             return this;
@@ -192,11 +226,23 @@ public final class EventTypeEventVariable extends com.pulumi.resources.InvokeArg
             return this;
         }
 
+        /**
+         * @param tags Tags associated with this event type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable List<EventTypeTag> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags associated with this event type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(EventTypeTag... tags) {
             return tags(List.of(tags));
         }

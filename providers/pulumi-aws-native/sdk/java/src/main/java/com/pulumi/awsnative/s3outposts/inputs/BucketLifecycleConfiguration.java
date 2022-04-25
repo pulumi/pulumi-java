@@ -20,6 +20,10 @@ public final class BucketLifecycleConfiguration extends com.pulumi.resources.Inv
     @Import(name="rules", required=true)
     private List<BucketRule> rules;
 
+    /**
+     * @return A list of lifecycle rules for individual objects in an Amazon S3Outposts bucket.
+     * 
+     */
     public List<BucketRule> rules() {
         return this.rules;
     }
@@ -48,11 +52,23 @@ public final class BucketLifecycleConfiguration extends com.pulumi.resources.Inv
             $ = new BucketLifecycleConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rules A list of lifecycle rules for individual objects in an Amazon S3Outposts bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<BucketRule> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules A list of lifecycle rules for individual objects in an Amazon S3Outposts bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(BucketRule... rules) {
             return rules(List.of(rules));
         }

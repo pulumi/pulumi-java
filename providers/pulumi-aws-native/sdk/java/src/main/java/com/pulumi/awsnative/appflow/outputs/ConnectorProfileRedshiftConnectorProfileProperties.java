@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ConnectorProfileRedshiftConnectorProfileProperties {
-    /**
-     * The name of the Amazon S3 bucket associated with Redshift.
-     * 
-     */
+        /**
+         * @return The name of the Amazon S3 bucket associated with Redshift.
+         * 
+         */
     private final String bucketName;
-    /**
-     * The object key for the destination bucket in which Amazon AppFlow will place the ﬁles.
-     * 
-     */
+        /**
+         * @return The object key for the destination bucket in which Amazon AppFlow will place the ﬁles.
+         * 
+         */
     private final @Nullable String bucketPrefix;
-    /**
-     * The JDBC URL of the Amazon Redshift cluster.
-     * 
-     */
+        /**
+         * @return The JDBC URL of the Amazon Redshift cluster.
+         * 
+         */
     private final String databaseUrl;
-    /**
-     * The Amazon Resource Name (ARN) of the IAM role.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the IAM role.
+         * 
+         */
     private final String roleArn;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class ConnectorProfileRedshiftConnectorProfileProperties {
     }
 
     /**
-     * The name of the Amazon S3 bucket associated with Redshift.
+     * @return The name of the Amazon S3 bucket associated with Redshift.
      * 
-    */
+     */
     public String bucketName() {
         return this.bucketName;
     }
     /**
-     * The object key for the destination bucket in which Amazon AppFlow will place the ﬁles.
+     * @return The object key for the destination bucket in which Amazon AppFlow will place the ﬁles.
      * 
-    */
+     */
     public Optional<String> bucketPrefix() {
         return Optional.ofNullable(this.bucketPrefix);
     }
     /**
-     * The JDBC URL of the Amazon Redshift cluster.
+     * @return The JDBC URL of the Amazon Redshift cluster.
      * 
-    */
+     */
     public String databaseUrl() {
         return this.databaseUrl;
     }
     /**
-     * The Amazon Resource Name (ARN) of the IAM role.
+     * @return The Amazon Resource Name (ARN) of the IAM role.
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }

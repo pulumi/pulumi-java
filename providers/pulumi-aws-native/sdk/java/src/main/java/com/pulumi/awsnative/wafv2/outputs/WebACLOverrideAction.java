@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WebACLOverrideAction {
-    /**
-     * Count traffic towards application.
-     * 
-     */
+        /**
+         * @return Count traffic towards application.
+         * 
+         */
     private final @Nullable Object count;
-    /**
-     * Keep the RuleGroup or ManagedRuleGroup behavior as is.
-     * 
-     */
+        /**
+         * @return Keep the RuleGroup or ManagedRuleGroup behavior as is.
+         * 
+         */
     private final @Nullable Object none;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class WebACLOverrideAction {
     }
 
     /**
-     * Count traffic towards application.
+     * @return Count traffic towards application.
      * 
-    */
+     */
     public Optional<Object> count() {
         return Optional.ofNullable(this.count);
     }
     /**
-     * Keep the RuleGroup or ManagedRuleGroup behavior as is.
+     * @return Keep the RuleGroup or ManagedRuleGroup behavior as is.
      * 
-    */
+     */
     public Optional<Object> none() {
         return Optional.ofNullable(this.none);
     }

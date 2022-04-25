@@ -19,6 +19,10 @@ public final class GetDimensionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return A unique identifier for the dimension.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +51,12 @@ public final class GetDimensionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDimensionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name A unique identifier for the dimension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

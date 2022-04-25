@@ -15,35 +15,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAcceleratorResult {
-    /**
-     * The Amazon Resource Name (ARN) of the accelerator.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the accelerator.
+         * 
+         */
     private final @Nullable String acceleratorArn;
-    /**
-     * The Domain Name System (DNS) name that Global Accelerator creates that points to your accelerator&#39;s static IP addresses.
-     * 
-     */
+        /**
+         * @return The Domain Name System (DNS) name that Global Accelerator creates that points to your accelerator&#39;s static IP addresses.
+         * 
+         */
     private final @Nullable String dnsName;
-    /**
-     * Indicates whether an accelerator is enabled. The value is true or false.
-     * 
-     */
+        /**
+         * @return Indicates whether an accelerator is enabled. The value is true or false.
+         * 
+         */
     private final @Nullable Boolean enabled;
-    /**
-     * IP Address type.
-     * 
-     */
+        /**
+         * @return IP Address type.
+         * 
+         */
     private final @Nullable AcceleratorIpAddressType ipAddressType;
-    /**
-     * The IP addresses from BYOIP Prefix pool.
-     * 
-     */
+        /**
+         * @return The IP addresses from BYOIP Prefix pool.
+         * 
+         */
     private final @Nullable List<String> ipAddresses;
-    /**
-     * Name of accelerator.
-     * 
-     */
+        /**
+         * @return Name of accelerator.
+         * 
+         */
     private final @Nullable String name;
     private final @Nullable List<AcceleratorTag> tags;
 
@@ -66,44 +66,44 @@ public final class GetAcceleratorResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the accelerator.
+     * @return The Amazon Resource Name (ARN) of the accelerator.
      * 
-    */
+     */
     public Optional<String> acceleratorArn() {
         return Optional.ofNullable(this.acceleratorArn);
     }
     /**
-     * The Domain Name System (DNS) name that Global Accelerator creates that points to your accelerator&#39;s static IP addresses.
+     * @return The Domain Name System (DNS) name that Global Accelerator creates that points to your accelerator&#39;s static IP addresses.
      * 
-    */
+     */
     public Optional<String> dnsName() {
         return Optional.ofNullable(this.dnsName);
     }
     /**
-     * Indicates whether an accelerator is enabled. The value is true or false.
+     * @return Indicates whether an accelerator is enabled. The value is true or false.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * IP Address type.
+     * @return IP Address type.
      * 
-    */
+     */
     public Optional<AcceleratorIpAddressType> ipAddressType() {
         return Optional.ofNullable(this.ipAddressType);
     }
     /**
-     * The IP addresses from BYOIP Prefix pool.
+     * @return The IP addresses from BYOIP Prefix pool.
      * 
-    */
+     */
     public List<String> ipAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
     /**
-     * Name of accelerator.
+     * @return Name of accelerator.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

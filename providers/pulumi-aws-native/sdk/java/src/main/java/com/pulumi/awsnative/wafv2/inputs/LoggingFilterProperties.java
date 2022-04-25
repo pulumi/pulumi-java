@@ -25,6 +25,10 @@ public final class LoggingFilterProperties extends com.pulumi.resources.InvokeAr
     @Import(name="defaultBehavior", required=true)
     private LoggingConfigurationLoggingFilterPropertiesDefaultBehavior defaultBehavior;
 
+    /**
+     * @return Default handling for logs that don&#39;t match any of the specified filtering conditions.
+     * 
+     */
     public LoggingConfigurationLoggingFilterPropertiesDefaultBehavior defaultBehavior() {
         return this.defaultBehavior;
     }
@@ -36,6 +40,10 @@ public final class LoggingFilterProperties extends com.pulumi.resources.InvokeAr
     @Import(name="filters", required=true)
     private List<LoggingConfigurationFilter> filters;
 
+    /**
+     * @return The filters that you want to apply to the logs.
+     * 
+     */
     public List<LoggingConfigurationFilter> filters() {
         return this.filters;
     }
@@ -65,16 +73,34 @@ public final class LoggingFilterProperties extends com.pulumi.resources.InvokeAr
             $ = new LoggingFilterProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultBehavior Default handling for logs that don&#39;t match any of the specified filtering conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultBehavior(LoggingConfigurationLoggingFilterPropertiesDefaultBehavior defaultBehavior) {
             $.defaultBehavior = defaultBehavior;
             return this;
         }
 
+        /**
+         * @param filters The filters that you want to apply to the logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(List<LoggingConfigurationFilter> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters The filters that you want to apply to the logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(LoggingConfigurationFilter... filters) {
             return filters(List.of(filters));
         }

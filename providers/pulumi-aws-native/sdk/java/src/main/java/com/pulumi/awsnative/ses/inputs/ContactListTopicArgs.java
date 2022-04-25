@@ -29,6 +29,10 @@ public final class ContactListTopicArgs extends com.pulumi.resources.ResourceArg
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the topic.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -40,6 +44,10 @@ public final class ContactListTopicArgs extends com.pulumi.resources.ResourceArg
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The display name of the topic.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -51,6 +59,10 @@ public final class ContactListTopicArgs extends com.pulumi.resources.ResourceArg
     @Import(name="topicName", required=true)
     private Output<String> topicName;
 
+    /**
+     * @return The name of the topic.
+     * 
+     */
     public Output<String> topicName() {
         return this.topicName;
     }
@@ -91,29 +103,65 @@ public final class ContactListTopicArgs extends com.pulumi.resources.ResourceArg
             return defaultSubscriptionStatus(Output.of(defaultSubscriptionStatus));
         }
 
+        /**
+         * @param description The description of the topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName The display name of the topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param topicName The name of the topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicName(Output<String> topicName) {
             $.topicName = topicName;
             return this;
         }
 
+        /**
+         * @param topicName The name of the topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicName(String topicName) {
             return topicName(Output.of(topicName));
         }

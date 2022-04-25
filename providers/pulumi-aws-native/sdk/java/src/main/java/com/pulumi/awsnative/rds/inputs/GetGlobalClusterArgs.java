@@ -19,6 +19,10 @@ public final class GetGlobalClusterArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="globalClusterIdentifier", required=true)
     private String globalClusterIdentifier;
 
+    /**
+     * @return The cluster identifier of the new global database cluster. This parameter is stored as a lowercase string.
+     * 
+     */
     public String globalClusterIdentifier() {
         return this.globalClusterIdentifier;
     }
@@ -47,6 +51,12 @@ public final class GetGlobalClusterArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetGlobalClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param globalClusterIdentifier The cluster identifier of the new global database cluster. This parameter is stored as a lowercase string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalClusterIdentifier(String globalClusterIdentifier) {
             $.globalClusterIdentifier = globalClusterIdentifier;
             return this;

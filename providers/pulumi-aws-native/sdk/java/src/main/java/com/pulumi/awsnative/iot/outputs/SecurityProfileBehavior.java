@@ -15,21 +15,21 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SecurityProfileBehavior {
     private final @Nullable SecurityProfileBehaviorCriteria criteria;
-    /**
-     * What is measured by the behavior.
-     * 
-     */
+        /**
+         * @return What is measured by the behavior.
+         * 
+         */
     private final @Nullable String metric;
     private final @Nullable SecurityProfileMetricDimension metricDimension;
-    /**
-     * The name for the behavior.
-     * 
-     */
+        /**
+         * @return The name for the behavior.
+         * 
+         */
     private final String name;
-    /**
-     * Manage Detect alarm SNS notifications by setting behavior notification to on or suppressed. Detect will continue to performing device behavior evaluations. However, suppressed alarms wouldn&#39;t be forwarded for SNS notification.
-     * 
-     */
+        /**
+         * @return Manage Detect alarm SNS notifications by setting behavior notification to on or suppressed. Detect will continue to performing device behavior evaluations. However, suppressed alarms wouldn&#39;t be forwarded for SNS notification.
+         * 
+         */
     private final @Nullable Boolean suppressAlerts;
 
     @CustomType.Constructor
@@ -50,9 +50,9 @@ public final class SecurityProfileBehavior {
         return Optional.ofNullable(this.criteria);
     }
     /**
-     * What is measured by the behavior.
+     * @return What is measured by the behavior.
      * 
-    */
+     */
     public Optional<String> metric() {
         return Optional.ofNullable(this.metric);
     }
@@ -60,16 +60,16 @@ public final class SecurityProfileBehavior {
         return Optional.ofNullable(this.metricDimension);
     }
     /**
-     * The name for the behavior.
+     * @return The name for the behavior.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Manage Detect alarm SNS notifications by setting behavior notification to on or suppressed. Detect will continue to performing device behavior evaluations. However, suppressed alarms wouldn&#39;t be forwarded for SNS notification.
+     * @return Manage Detect alarm SNS notifications by setting behavior notification to on or suppressed. Detect will continue to performing device behavior evaluations. However, suppressed alarms wouldn&#39;t be forwarded for SNS notification.
      * 
-    */
+     */
     public Optional<Boolean> suppressAlerts() {
         return Optional.ofNullable(this.suppressAlerts);
     }

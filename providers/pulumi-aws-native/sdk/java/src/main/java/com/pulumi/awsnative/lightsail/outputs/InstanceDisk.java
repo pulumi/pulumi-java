@@ -13,40 +13,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class InstanceDisk {
-    /**
-     * Instance attached to the disk.
-     * 
-     */
+        /**
+         * @return Instance attached to the disk.
+         * 
+         */
     private final @Nullable String attachedTo;
-    /**
-     * Attachment state of the disk.
-     * 
-     */
+        /**
+         * @return Attachment state of the disk.
+         * 
+         */
     private final @Nullable String attachmentState;
-    /**
-     * The names to use for your new Lightsail disk.
-     * 
-     */
+        /**
+         * @return The names to use for your new Lightsail disk.
+         * 
+         */
     private final String diskName;
-    /**
-     * IOPS of disk.
-     * 
-     */
+        /**
+         * @return IOPS of disk.
+         * 
+         */
     private final @Nullable Integer iOPS;
-    /**
-     * Is the Attached disk is the system disk of the Instance.
-     * 
-     */
+        /**
+         * @return Is the Attached disk is the system disk of the Instance.
+         * 
+         */
     private final @Nullable Boolean isSystemDisk;
-    /**
-     * Path of the disk attached to the instance.
-     * 
-     */
+        /**
+         * @return Path of the disk attached to the instance.
+         * 
+         */
     private final String path;
-    /**
-     * Size of the disk attached to the Instance.
-     * 
-     */
+        /**
+         * @return Size of the disk attached to the Instance.
+         * 
+         */
     private final @Nullable String sizeInGb;
 
     @CustomType.Constructor
@@ -68,51 +68,51 @@ public final class InstanceDisk {
     }
 
     /**
-     * Instance attached to the disk.
+     * @return Instance attached to the disk.
      * 
-    */
+     */
     public Optional<String> attachedTo() {
         return Optional.ofNullable(this.attachedTo);
     }
     /**
-     * Attachment state of the disk.
+     * @return Attachment state of the disk.
      * 
-    */
+     */
     public Optional<String> attachmentState() {
         return Optional.ofNullable(this.attachmentState);
     }
     /**
-     * The names to use for your new Lightsail disk.
+     * @return The names to use for your new Lightsail disk.
      * 
-    */
+     */
     public String diskName() {
         return this.diskName;
     }
     /**
-     * IOPS of disk.
+     * @return IOPS of disk.
      * 
-    */
+     */
     public Optional<Integer> iOPS() {
         return Optional.ofNullable(this.iOPS);
     }
     /**
-     * Is the Attached disk is the system disk of the Instance.
+     * @return Is the Attached disk is the system disk of the Instance.
      * 
-    */
+     */
     public Optional<Boolean> isSystemDisk() {
         return Optional.ofNullable(this.isSystemDisk);
     }
     /**
-     * Path of the disk attached to the instance.
+     * @return Path of the disk attached to the instance.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }
     /**
-     * Size of the disk attached to the Instance.
+     * @return Size of the disk attached to the Instance.
      * 
-    */
+     */
     public Optional<String> sizeInGb() {
         return Optional.ofNullable(this.sizeInGb);
     }

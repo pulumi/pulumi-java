@@ -19,6 +19,10 @@ public final class GetWorkGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The workGroup name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +51,12 @@ public final class GetWorkGroupArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetWorkGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The workGroup name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

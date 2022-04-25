@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetLabelResult {
-    /**
-     * The label ARN.
-     * 
-     */
+        /**
+         * @return The label ARN.
+         * 
+         */
     private final @Nullable String arn;
-    /**
-     * The timestamp when the label was created.
-     * 
-     */
+        /**
+         * @return The timestamp when the label was created.
+         * 
+         */
     private final @Nullable String createdTime;
-    /**
-     * The label description.
-     * 
-     */
+        /**
+         * @return The label description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The timestamp when the label was last updated.
-     * 
-     */
+        /**
+         * @return The timestamp when the label was last updated.
+         * 
+         */
     private final @Nullable String lastUpdatedTime;
-    /**
-     * Tags associated with this label.
-     * 
-     */
+        /**
+         * @return Tags associated with this label.
+         * 
+         */
     private final @Nullable List<LabelTag> tags;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class GetLabelResult {
     }
 
     /**
-     * The label ARN.
+     * @return The label ARN.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The timestamp when the label was created.
+     * @return The timestamp when the label was created.
      * 
-    */
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
-     * The label description.
+     * @return The label description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The timestamp when the label was last updated.
+     * @return The timestamp when the label was last updated.
      * 
-    */
+     */
     public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
-     * Tags associated with this label.
+     * @return Tags associated with this label.
      * 
-    */
+     */
     public List<LabelTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

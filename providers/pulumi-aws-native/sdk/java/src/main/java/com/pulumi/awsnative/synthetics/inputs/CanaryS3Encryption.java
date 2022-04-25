@@ -21,6 +21,10 @@ public final class CanaryS3Encryption extends com.pulumi.resources.InvokeArgs {
     @Import(name="encryptionMode")
     private @Nullable String encryptionMode;
 
+    /**
+     * @return Encryption mode for encrypting artifacts when uploading to S3. Valid values: SSE_S3 and SSE_KMS.
+     * 
+     */
     public Optional<String> encryptionMode() {
         return Optional.ofNullable(this.encryptionMode);
     }
@@ -32,6 +36,10 @@ public final class CanaryS3Encryption extends com.pulumi.resources.InvokeArgs {
     @Import(name="kmsKeyArn")
     private @Nullable String kmsKeyArn;
 
+    /**
+     * @return KMS key Arn for encrypting artifacts when uploading to S3. You must specify KMS key Arn for SSE_KMS encryption mode only.
+     * 
+     */
     public Optional<String> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
@@ -61,11 +69,23 @@ public final class CanaryS3Encryption extends com.pulumi.resources.InvokeArgs {
             $ = new CanaryS3Encryption(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionMode Encryption mode for encrypting artifacts when uploading to S3. Valid values: SSE_S3 and SSE_KMS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionMode(@Nullable String encryptionMode) {
             $.encryptionMode = encryptionMode;
             return this;
         }
 
+        /**
+         * @param kmsKeyArn KMS key Arn for encrypting artifacts when uploading to S3. You must specify KMS key Arn for SSE_KMS encryption mode only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             $.kmsKeyArn = kmsKeyArn;
             return this;

@@ -11,800 +11,800 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ProviderEndpointArgs {
-    /**
-     * Override the default endpoint for AWS Access Analyzer
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Access Analyzer
+         * 
+         */
     private final @Nullable Output<String> accessanalyzer;
-    /**
-     * Override the default endpoint for AWS Certificate Manager
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Certificate Manager
+         * 
+         */
     private final @Nullable Output<String> acm;
-    /**
-     * Override the default endpoint for AWS Certificate Manager Private Certificate Authority
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Certificate Manager Private Certificate Authority
+         * 
+         */
     private final @Nullable Output<String> acmpca;
-    /**
-     * Override the default endpoint for AWS Amplify Console
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Amplify Console
+         * 
+         */
     private final @Nullable Output<String> amplify;
-    /**
-     * Override the default endpoint for AWS AppConfig
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS AppConfig
+         * 
+         */
     private final @Nullable Output<String> appconfig;
-    /**
-     * Override the default endpoint for AWS Application Auto Scaling
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Application Auto Scaling
+         * 
+         */
     private final @Nullable Output<String> applicationautoscaling;
-    /**
-     * Override the default endpoint for AWS CloudWatch Application Insights
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS CloudWatch Application Insights
+         * 
+         */
     private final @Nullable Output<String> applicationinsights;
-    /**
-     * Override the default endpoint for AWS App Mesh
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS App Mesh
+         * 
+         */
     private final @Nullable Output<String> appmesh;
-    /**
-     * Override the default endpoint for AWS App Runner
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS App Runner
+         * 
+         */
     private final @Nullable Output<String> apprunner;
-    /**
-     * Override the default endpoint for AWS AppStream 2.0
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS AppStream 2.0
+         * 
+         */
     private final @Nullable Output<String> appstream;
-    /**
-     * Override the default endpoint for AWS AppSync
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS AppSync
+         * 
+         */
     private final @Nullable Output<String> appsync;
-    /**
-     * Override the default endpoint for AWS Athena
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Athena
+         * 
+         */
     private final @Nullable Output<String> athena;
-    /**
-     * Override the default endpoint for AWS Audit Manager
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Audit Manager
+         * 
+         */
     private final @Nullable Output<String> auditmanager;
-    /**
-     * Override the default endpoint for AWS Auto Scaling
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Auto Scaling
+         * 
+         */
     private final @Nullable Output<String> autoscaling;
-    /**
-     * Override the default endpoint for AWS Backup
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Backup
+         * 
+         */
     private final @Nullable Output<String> backup;
-    /**
-     * Override the default endpoint for AWS Batch
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Batch
+         * 
+         */
     private final @Nullable Output<String> batch;
-    /**
-     * Override the default endpoint for AWS Budgets
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Budgets
+         * 
+         */
     private final @Nullable Output<String> budgets;
-    /**
-     * Override the default endpoint for Amazon Chime
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Chime
+         * 
+         */
     private final @Nullable Output<String> chime;
-    /**
-     * Override the default endpoint for AWS Cloud9
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Cloud9
+         * 
+         */
     private final @Nullable Output<String> cloud9;
-    /**
-     * Override the default endpoint for AWS CloudFormation
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS CloudFormation
+         * 
+         */
     private final @Nullable Output<String> cloudformation;
-    /**
-     * Override the default endpoint for AWS CloudFront
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS CloudFront
+         * 
+         */
     private final @Nullable Output<String> cloudfront;
-    /**
-     * Override the default endpoint for AWS CloudHSM
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS CloudHSM
+         * 
+         */
     private final @Nullable Output<String> cloudhsm;
-    /**
-     * Override the default endpoint for AWS CloudSearch
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS CloudSearch
+         * 
+         */
     private final @Nullable Output<String> cloudsearch;
-    /**
-     * Override the default endpoint for AWS CloudTrail
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS CloudTrail
+         * 
+         */
     private final @Nullable Output<String> cloudtrail;
-    /**
-     * Override the default endpoint for AWS CloudWatch
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS CloudWatch
+         * 
+         */
     private final @Nullable Output<String> cloudwatch;
-    /**
-     * Override the default endpoint for AWS CloudWatch Events
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS CloudWatch Events
+         * 
+         */
     private final @Nullable Output<String> cloudwatchevents;
-    /**
-     * Override the default endpoint for AWS CloudWatch Logs
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS CloudWatch Logs
+         * 
+         */
     private final @Nullable Output<String> cloudwatchlogs;
-    /**
-     * Override the default endpoint for AWS CodeArtifact
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS CodeArtifact
+         * 
+         */
     private final @Nullable Output<String> codeartifact;
-    /**
-     * Override the default endpoint for AWS CodeBuild
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS CodeBuild
+         * 
+         */
     private final @Nullable Output<String> codebuild;
-    /**
-     * Override the default endpoint for AWS CodeCommit
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS CodeCommit
+         * 
+         */
     private final @Nullable Output<String> codecommit;
-    /**
-     * Override the default endpoint for AWS CodeDeploy
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS CodeDeploy
+         * 
+         */
     private final @Nullable Output<String> codedeploy;
-    /**
-     * Override the default endpoint for AWS CodePipeline
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS CodePipeline
+         * 
+         */
     private final @Nullable Output<String> codepipeline;
-    /**
-     * Override the default endpoint for AWS CodeStart Connections
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS CodeStart Connections
+         * 
+         */
     private final @Nullable Output<String> codestarconnections;
-    /**
-     * Override the default endpoint for Amazon Cognito
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Cognito
+         * 
+         */
     private final @Nullable Output<String> cognitoidentity;
-    /**
-     * Override the default endpoint for AWS Config
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Config
+         * 
+         */
     private final @Nullable Output<String> configservice;
-    /**
-     * Override the default endpoint for Amazon Connect
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Connect
+         * 
+         */
     private final @Nullable Output<String> connect;
-    /**
-     * Override the default endpoint for AWS Cost and Usage Reports
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Cost and Usage Reports
+         * 
+         */
     private final @Nullable Output<String> cur;
-    /**
-     * Override the default endpoint for AWS Data Exchange
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Data Exchange
+         * 
+         */
     private final @Nullable Output<String> dataexchange;
-    /**
-     * Override the default endpoint for AWS Data Pipeline
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Data Pipeline
+         * 
+         */
     private final @Nullable Output<String> datapipeline;
-    /**
-     * Override the default endpoint for AWS DataSync
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS DataSync
+         * 
+         */
     private final @Nullable Output<String> datasync;
-    /**
-     * Override the default endpoint for AWS DynamoDB Accelerator
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS DynamoDB Accelerator
+         * 
+         */
     private final @Nullable Output<String> dax;
-    /**
-     * Override the default endpoint for AWS Detective
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Detective
+         * 
+         */
     private final @Nullable Output<String> detective;
-    /**
-     * Override the default endpoint for AWS Device Farm
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Device Farm
+         * 
+         */
     private final @Nullable Output<String> devicefarm;
-    /**
-     * Override the default endpoint for AWS Direct Connect
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Direct Connect
+         * 
+         */
     private final @Nullable Output<String> directconnect;
-    /**
-     * Override the default endpoint for AWS Data Lifecycle Manager
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Data Lifecycle Manager
+         * 
+         */
     private final @Nullable Output<String> dlm;
-    /**
-     * Override the default endpoint for AWS Database Migration Service
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Database Migration Service
+         * 
+         */
     private final @Nullable Output<String> dms;
-    /**
-     * Override the default endpoint for AWS DocumentDB
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS DocumentDB
+         * 
+         */
     private final @Nullable Output<String> docdb;
-    /**
-     * Override the default endpoint for AWS Directory Service
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Directory Service
+         * 
+         */
     private final @Nullable Output<String> ds;
-    /**
-     * Override the default endpoint for AWS DynamoDB
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS DynamoDB
+         * 
+         */
     private final @Nullable Output<String> dynamodb;
-    /**
-     * Override the default endpoint for AWS Elastic Compute Cloud (EC2)
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Elastic Compute Cloud (EC2)
+         * 
+         */
     private final @Nullable Output<String> ec2;
-    /**
-     * Override the default endpoint for AWS Elastic Container Registry (ECR)
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Elastic Container Registry (ECR)
+         * 
+         */
     private final @Nullable Output<String> ecr;
-    /**
-     * Override the default endpoint for AWS Elastic Container Registry (ECR) Public
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Elastic Container Registry (ECR) Public
+         * 
+         */
     private final @Nullable Output<String> ecrpublic;
-    /**
-     * Override the default endpoint for AWS Elastic Container Service (ECS)
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Elastic Container Service (ECS)
+         * 
+         */
     private final @Nullable Output<String> ecs;
-    /**
-     * Override the default endpoint for AWS Elastic File System (EFS)
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Elastic File System (EFS)
+         * 
+         */
     private final @Nullable Output<String> efs;
-    /**
-     * Override the default endpoint for AWS Elastic Kubernetes Service (EKS)
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Elastic Kubernetes Service (EKS)
+         * 
+         */
     private final @Nullable Output<String> eks;
-    /**
-     * Override the default endpoint for AWS ElastiCache
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS ElastiCache
+         * 
+         */
     private final @Nullable Output<String> elasticache;
-    /**
-     * Override the default endpoint for AWS Elastic Beanstalk
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Elastic Beanstalk
+         * 
+         */
     private final @Nullable Output<String> elasticbeanstalk;
-    /**
-     * Override the default endpoint for AWS Elastic Transcoder
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Elastic Transcoder
+         * 
+         */
     private final @Nullable Output<String> elastictranscoder;
-    /**
-     * Override the default endpoint for AWS Elastic Load Balancing
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Elastic Load Balancing
+         * 
+         */
     private final @Nullable Output<String> elb;
-    /**
-     * Override the default endpoint for AWS Elastic Load Balancing V2
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Elastic Load Balancing V2
+         * 
+         */
     private final @Nullable Output<String> elbv2;
-    /**
-     * Override the default endpoint for AWS EMR
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS EMR
+         * 
+         */
     private final @Nullable Output<String> emr;
-    /**
-     * Override the default endpoint for AWS EMR on EKS
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS EMR on EKS
+         * 
+         */
     private final @Nullable Output<String> emrcontainers;
-    /**
-     * Override the default endpoint for AWS OpenSearch Service (formerly Elasticsearch)
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS OpenSearch Service (formerly Elasticsearch)
+         * 
+         */
     private final @Nullable Output<String> es;
-    /**
-     * Override the default endpoint for AWS Kinesis Data Firehose
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Kinesis Data Firehose
+         * 
+         */
     private final @Nullable Output<String> firehose;
-    /**
-     * Override the default endpoint for AWS Firewall Manager
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Firewall Manager
+         * 
+         */
     private final @Nullable Output<String> fms;
-    /**
-     * Override the default endpoint for Amazon Forecast
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Forecast
+         * 
+         */
     private final @Nullable Output<String> forecast;
-    /**
-     * Override the default endpoint for AWS FSx
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS FSx
+         * 
+         */
     private final @Nullable Output<String> fsx;
-    /**
-     * Override the default endpoint for AWS GameLift
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS GameLift
+         * 
+         */
     private final @Nullable Output<String> gamelift;
-    /**
-     * Override the default endpoint for Amazon S3 Glacier
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon S3 Glacier
+         * 
+         */
     private final @Nullable Output<String> glacier;
-    /**
-     * Override the default endpoint for AWS Global Accelerator
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Global Accelerator
+         * 
+         */
     private final @Nullable Output<String> globalaccelerator;
-    /**
-     * Override the default endpoint for AWS Glue
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Glue
+         * 
+         */
     private final @Nullable Output<String> glue;
-    /**
-     * Override the default endpoint for AWS IoT Greengrass
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS IoT Greengrass
+         * 
+         */
     private final @Nullable Output<String> greengrass;
-    /**
-     * Override the default endpoint for AWS GuardDuty
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS GuardDuty
+         * 
+         */
     private final @Nullable Output<String> guardduty;
-    /**
-     * Override the default endpoint for AWS Identity and Access Management
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Identity and Access Management
+         * 
+         */
     private final @Nullable Output<String> iam;
-    /**
-     * Override the default endpoint for AWS Single Sign-On (SSO) Identity Store
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Single Sign-On (SSO) Identity Store
+         * 
+         */
     private final @Nullable Output<String> identitystore;
-    /**
-     * Override the default endpoint for AWS Image Builder
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Image Builder
+         * 
+         */
     private final @Nullable Output<String> imagebuilder;
-    /**
-     * Override the default endpoint for Amazon Inspector
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Inspector
+         * 
+         */
     private final @Nullable Output<String> inspector;
-    /**
-     * Override the default endpoint for AWS IoT
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS IoT
+         * 
+         */
     private final @Nullable Output<String> iot;
-    /**
-     * Override the default endpoint for AWS IoT Analytics
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS IoT Analytics
+         * 
+         */
     private final @Nullable Output<String> iotanalytics;
-    /**
-     * Override the default endpoint for AWS IoT Events
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS IoT Events
+         * 
+         */
     private final @Nullable Output<String> iotevents;
-    /**
-     * Override the default endpoint for Amazon Managed Streaming for Apache Kafka (MSK)
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Managed Streaming for Apache Kafka (MSK)
+         * 
+         */
     private final @Nullable Output<String> kafka;
-    /**
-     * Override the default endpoint for Amazon Kinesis
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Kinesis
+         * 
+         */
     private final @Nullable Output<String> kinesis;
-    /**
-     * Override the default endpoint for Amazon Kinesis Data Analytics
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Kinesis Data Analytics
+         * 
+         */
     private final @Nullable Output<String> kinesisanalytics;
-    /**
-     * Override the default endpoint for Amazon Kinesis Data Analytics V2
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Kinesis Data Analytics V2
+         * 
+         */
     private final @Nullable Output<String> kinesisanalyticsv2;
-    /**
-     * Override the default endpoint for Amazon Kinesis Video Streams
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Kinesis Video Streams
+         * 
+         */
     private final @Nullable Output<String> kinesisvideo;
-    /**
-     * Override the default endpoint for AWS Key Management Service
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Key Management Service
+         * 
+         */
     private final @Nullable Output<String> kms;
-    /**
-     * Override the default endpoint for AWS Lake Formation
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Lake Formation
+         * 
+         */
     private final @Nullable Output<String> lakeformation;
-    /**
-     * Override the default endpoint for AWS Lambda
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Lambda
+         * 
+         */
     private final @Nullable Output<String> lambda;
-    /**
-     * Override the default endpoint for Amazon Lex
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Lex
+         * 
+         */
     private final @Nullable Output<String> lexmodels;
-    /**
-     * Override the default endpoint for AWS License Manager
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS License Manager
+         * 
+         */
     private final @Nullable Output<String> licensemanager;
-    /**
-     * Override the default endpoint for Amazon Lightsail
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Lightsail
+         * 
+         */
     private final @Nullable Output<String> lightsail;
-    /**
-     * Override the default endpoint for Amazon Location
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Location
+         * 
+         */
     private final @Nullable Output<String> location;
-    /**
-     * Override the default endpoint for Amazon Macie
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Macie
+         * 
+         */
     private final @Nullable Output<String> macie;
-    /**
-     * Override the default endpoint for Amazon Macie V2
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Macie V2
+         * 
+         */
     private final @Nullable Output<String> macie2;
-    /**
-     * Override the default endpoint for Amazon Managed Blockchain
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Managed Blockchain
+         * 
+         */
     private final @Nullable Output<String> managedblockchain;
-    /**
-     * Override the default endpoint for AWS Marketplace Catalog
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Marketplace Catalog
+         * 
+         */
     private final @Nullable Output<String> marketplacecatalog;
-    /**
-     * Override the default endpoint for AWS MediaConnect
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS MediaConnect
+         * 
+         */
     private final @Nullable Output<String> mediaconnect;
-    /**
-     * Override the default endpoint for AWS MediaConvert
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS MediaConvert
+         * 
+         */
     private final @Nullable Output<String> mediaconvert;
-    /**
-     * Override the default endpoint for AWS MediaLive
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS MediaLive
+         * 
+         */
     private final @Nullable Output<String> medialive;
-    /**
-     * Override the default endpoint for AWS MediaPackage
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS MediaPackage
+         * 
+         */
     private final @Nullable Output<String> mediapackage;
-    /**
-     * Override the default endpoint for AWS Elemental MediaStore container
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Elemental MediaStore container
+         * 
+         */
     private final @Nullable Output<String> mediastore;
-    /**
-     * Override the default endpoint for AWS Elemental MediaStore asset
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Elemental MediaStore asset
+         * 
+         */
     private final @Nullable Output<String> mediastoredata;
-    /**
-     * Override the default endpoint for AWS MemoryDB for Redis
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS MemoryDB for Redis
+         * 
+         */
     private final @Nullable Output<String> memorydb;
-    /**
-     * Override the default endpoint for Amazon MQ
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon MQ
+         * 
+         */
     private final @Nullable Output<String> mq;
-    /**
-     * Override the default endpoint for Amazon Managed Workflows for Apache Airflow
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Managed Workflows for Apache Airflow
+         * 
+         */
     private final @Nullable Output<String> mwaa;
-    /**
-     * Override the default endpoint for Amazon Neptune
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Neptune
+         * 
+         */
     private final @Nullable Output<String> neptune;
-    /**
-     * Override the default endpoint for AWS Network Firewall
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Network Firewall
+         * 
+         */
     private final @Nullable Output<String> networkfirewall;
-    /**
-     * Override the default endpoint for AWS Network Manager
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Network Manager
+         * 
+         */
     private final @Nullable Output<String> networkmanager;
-    /**
-     * Override the default endpoint for AWS OpsWorks
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS OpsWorks
+         * 
+         */
     private final @Nullable Output<String> opsworks;
-    /**
-     * Override the default endpoint for AWS Organizations
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Organizations
+         * 
+         */
     private final @Nullable Output<String> organizations;
-    /**
-     * Override the default endpoint for AWS Outposts
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Outposts
+         * 
+         */
     private final @Nullable Output<String> outposts;
-    /**
-     * Override the default endpoint for Amazon Personalize
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Personalize
+         * 
+         */
     private final @Nullable Output<String> personalize;
-    /**
-     * Override the default endpoint for Amazon Pinpoint
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Pinpoint
+         * 
+         */
     private final @Nullable Output<String> pinpoint;
-    /**
-     * Override the default endpoint for Amazon Web Services Price List Service
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Web Services Price List Service
+         * 
+         */
     private final @Nullable Output<String> pricing;
-    /**
-     * Override the default endpoint for Amazon QLDB
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon QLDB
+         * 
+         */
     private final @Nullable Output<String> qldb;
-    /**
-     * Override the default endpoint for Amazon QuickSight
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon QuickSight
+         * 
+         */
     private final @Nullable Output<String> quicksight;
-    /**
-     * Override the default endpoint for AWS Resource Access Manager
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Resource Access Manager
+         * 
+         */
     private final @Nullable Output<String> ram;
-    /**
-     * Override the default endpoint for Amazon Relational Database Service
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Relational Database Service
+         * 
+         */
     private final @Nullable Output<String> rds;
-    /**
-     * Override the default endpoint for Amazon Redshift
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Redshift
+         * 
+         */
     private final @Nullable Output<String> redshift;
-    /**
-     * Override the default endpoint for AWS Resource Groups
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Resource Groups
+         * 
+         */
     private final @Nullable Output<String> resourcegroups;
-    /**
-     * Override the default endpoint for AWS Resource Groups Tagging API
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Resource Groups Tagging API
+         * 
+         */
     private final @Nullable Output<String> resourcegroupstaggingapi;
-    /**
-     * Override the default endpoint for Amazon Route 53
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Route 53
+         * 
+         */
     private final @Nullable Output<String> route53;
-    /**
-     * Override the default endpoint for Amazon Route 53 Domains
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Route 53 Domains
+         * 
+         */
     private final @Nullable Output<String> route53domains;
-    /**
-     * Override the default endpoint for Amazon Route 53 Recovery Control
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Route 53 Recovery Control
+         * 
+         */
     private final @Nullable Output<String> route53recoverycontrolconfig;
-    /**
-     * Override the default endpoint for Amazon Route 53 Recovery Readiness
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Route 53 Recovery Readiness
+         * 
+         */
     private final @Nullable Output<String> route53recoveryreadiness;
-    /**
-     * Override the default endpoint for Amazon Route 53 Resolver
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Route 53 Resolver
+         * 
+         */
     private final @Nullable Output<String> route53resolver;
-    /**
-     * Override the default endpoint for Amazon Simple Storage Service (S3)
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Simple Storage Service (S3)
+         * 
+         */
     private final @Nullable Output<String> s3;
-    /**
-     * Override the default endpoint for Amazon Simple Storage Service (S3) Control
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Simple Storage Service (S3) Control
+         * 
+         */
     private final @Nullable Output<String> s3control;
-    /**
-     * Override the default endpoint for Amazon S3 on Outposts
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon S3 on Outposts
+         * 
+         */
     private final @Nullable Output<String> s3outposts;
-    /**
-     * Override the default endpoint for AWS SageMaker
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS SageMaker
+         * 
+         */
     private final @Nullable Output<String> sagemaker;
-    /**
-     * Override the default endpoint for Amazon EventBridge Schema Registry
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon EventBridge Schema Registry
+         * 
+         */
     private final @Nullable Output<String> schemas;
-    /**
-     * Override the default endpoint for Amazon SimpleDB
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon SimpleDB
+         * 
+         */
     private final @Nullable Output<String> sdb;
-    /**
-     * Override the default endpoint for AWS Secrets Manager
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Secrets Manager
+         * 
+         */
     private final @Nullable Output<String> secretsmanager;
-    /**
-     * Override the default endpoint for AWS Security Hub
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Security Hub
+         * 
+         */
     private final @Nullable Output<String> securityhub;
-    /**
-     * Override the default endpoint for AWS Serverless Application Repository
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Serverless Application Repository
+         * 
+         */
     private final @Nullable Output<String> serverlessrepo;
-    /**
-     * Override the default endpoint for AWS Service Catalog
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Service Catalog
+         * 
+         */
     private final @Nullable Output<String> servicecatalog;
-    /**
-     * Override the default endpoint for AWS Cloud Map
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Cloud Map
+         * 
+         */
     private final @Nullable Output<String> servicediscovery;
-    /**
-     * Override the default endpoint for AWS Service Quotas
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Service Quotas
+         * 
+         */
     private final @Nullable Output<String> servicequotas;
-    /**
-     * Override the default endpoint for Amazon Simple Email Service (SES)
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Simple Email Service (SES)
+         * 
+         */
     private final @Nullable Output<String> ses;
-    /**
-     * Override the default endpoint for AWS Shield Advanced API
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Shield Advanced API
+         * 
+         */
     private final @Nullable Output<String> shield;
-    /**
-     * Override the default endpoint for AWS Signer
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Signer
+         * 
+         */
     private final @Nullable Output<String> signer;
-    /**
-     * Override the default endpoint for Amazon Simple Notification Service (SNS)
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Simple Notification Service (SNS)
+         * 
+         */
     private final @Nullable Output<String> sns;
-    /**
-     * Override the default endpoint for Amazon Simple Queue Service (SQS)
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Simple Queue Service (SQS)
+         * 
+         */
     private final @Nullable Output<String> sqs;
-    /**
-     * Override the default endpoint for AWS Systems Manager
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Systems Manager
+         * 
+         */
     private final @Nullable Output<String> ssm;
-    /**
-     * Override the default endpoint for AWS Single Sign On (SSO)
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Single Sign On (SSO)
+         * 
+         */
     private final @Nullable Output<String> ssoadmin;
-    /**
-     * Override the default endpoint for AWS Step Functions
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Step Functions
+         * 
+         */
     private final @Nullable Output<String> stepfunctions;
-    /**
-     * Override the default endpoint for AWS Storage Gateway
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Storage Gateway
+         * 
+         */
     private final @Nullable Output<String> storagegateway;
-    /**
-     * Override the default endpoint for AWS Security Token Service (STS)
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Security Token Service (STS)
+         * 
+         */
     private final @Nullable Output<String> sts;
-    /**
-     * Override the default endpoint for Amazon Simple Workflow Service (SWF)
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Simple Workflow Service (SWF)
+         * 
+         */
     private final @Nullable Output<String> swf;
-    /**
-     * Override the default endpoint for Amazon CloudWatch Synthetics
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon CloudWatch Synthetics
+         * 
+         */
     private final @Nullable Output<String> synthetics;
-    /**
-     * Override the default endpoint for Amazon Timestream
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon Timestream
+         * 
+         */
     private final @Nullable Output<String> timestreamwrite;
-    /**
-     * Override the default endpoint for AWS Transfer Family
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS Transfer Family
+         * 
+         */
     private final @Nullable Output<String> transfer;
-    /**
-     * Override the default endpoint for AWS WAF Classic
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS WAF Classic
+         * 
+         */
     private final @Nullable Output<String> waf;
-    /**
-     * Override the default endpoint for AWS WAF Regional Classic
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS WAF Regional Classic
+         * 
+         */
     private final @Nullable Output<String> wafregional;
-    /**
-     * Override the default endpoint for AWS WAF V2
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS WAF V2
+         * 
+         */
     private final @Nullable Output<String> wafv2;
-    /**
-     * Override the default endpoint for Amazon WorkLink
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon WorkLink
+         * 
+         */
     private final @Nullable Output<String> worklink;
-    /**
-     * Override the default endpoint for Amazon WorkMail
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon WorkMail
+         * 
+         */
     private final @Nullable Output<String> workmail;
-    /**
-     * Override the default endpoint for Amazon WorkSpaces
-     * 
-     */
+        /**
+         * @return Override the default endpoint for Amazon WorkSpaces
+         * 
+         */
     private final @Nullable Output<String> workspaces;
-    /**
-     * Override the default endpoint for AWS X-Ray
-     * 
-     */
+        /**
+         * @return Override the default endpoint for AWS X-Ray
+         * 
+         */
     private final @Nullable Output<String> xray;
 
     @CustomType.Constructor
@@ -1130,1115 +1130,1115 @@ public final class ProviderEndpointArgs {
     }
 
     /**
-     * Override the default endpoint for AWS Access Analyzer
+     * @return Override the default endpoint for AWS Access Analyzer
      * 
-    */
+     */
     public @Nullable Output<String> accessanalyzer() {
         return this.accessanalyzer;
     }
     /**
-     * Override the default endpoint for AWS Certificate Manager
+     * @return Override the default endpoint for AWS Certificate Manager
      * 
-    */
+     */
     public @Nullable Output<String> acm() {
         return this.acm;
     }
     /**
-     * Override the default endpoint for AWS Certificate Manager Private Certificate Authority
+     * @return Override the default endpoint for AWS Certificate Manager Private Certificate Authority
      * 
-    */
+     */
     public @Nullable Output<String> acmpca() {
         return this.acmpca;
     }
     /**
-     * Override the default endpoint for AWS Amplify Console
+     * @return Override the default endpoint for AWS Amplify Console
      * 
-    */
+     */
     public @Nullable Output<String> amplify() {
         return this.amplify;
     }
     /**
-     * Override the default endpoint for AWS AppConfig
+     * @return Override the default endpoint for AWS AppConfig
      * 
-    */
+     */
     public @Nullable Output<String> appconfig() {
         return this.appconfig;
     }
     /**
-     * Override the default endpoint for AWS Application Auto Scaling
+     * @return Override the default endpoint for AWS Application Auto Scaling
      * 
-    */
+     */
     public @Nullable Output<String> applicationautoscaling() {
         return this.applicationautoscaling;
     }
     /**
-     * Override the default endpoint for AWS CloudWatch Application Insights
+     * @return Override the default endpoint for AWS CloudWatch Application Insights
      * 
-    */
+     */
     public @Nullable Output<String> applicationinsights() {
         return this.applicationinsights;
     }
     /**
-     * Override the default endpoint for AWS App Mesh
+     * @return Override the default endpoint for AWS App Mesh
      * 
-    */
+     */
     public @Nullable Output<String> appmesh() {
         return this.appmesh;
     }
     /**
-     * Override the default endpoint for AWS App Runner
+     * @return Override the default endpoint for AWS App Runner
      * 
-    */
+     */
     public @Nullable Output<String> apprunner() {
         return this.apprunner;
     }
     /**
-     * Override the default endpoint for AWS AppStream 2.0
+     * @return Override the default endpoint for AWS AppStream 2.0
      * 
-    */
+     */
     public @Nullable Output<String> appstream() {
         return this.appstream;
     }
     /**
-     * Override the default endpoint for AWS AppSync
+     * @return Override the default endpoint for AWS AppSync
      * 
-    */
+     */
     public @Nullable Output<String> appsync() {
         return this.appsync;
     }
     /**
-     * Override the default endpoint for AWS Athena
+     * @return Override the default endpoint for AWS Athena
      * 
-    */
+     */
     public @Nullable Output<String> athena() {
         return this.athena;
     }
     /**
-     * Override the default endpoint for AWS Audit Manager
+     * @return Override the default endpoint for AWS Audit Manager
      * 
-    */
+     */
     public @Nullable Output<String> auditmanager() {
         return this.auditmanager;
     }
     /**
-     * Override the default endpoint for AWS Auto Scaling
+     * @return Override the default endpoint for AWS Auto Scaling
      * 
-    */
+     */
     public @Nullable Output<String> autoscaling() {
         return this.autoscaling;
     }
     /**
-     * Override the default endpoint for AWS Backup
+     * @return Override the default endpoint for AWS Backup
      * 
-    */
+     */
     public @Nullable Output<String> backup() {
         return this.backup;
     }
     /**
-     * Override the default endpoint for AWS Batch
+     * @return Override the default endpoint for AWS Batch
      * 
-    */
+     */
     public @Nullable Output<String> batch() {
         return this.batch;
     }
     /**
-     * Override the default endpoint for AWS Budgets
+     * @return Override the default endpoint for AWS Budgets
      * 
-    */
+     */
     public @Nullable Output<String> budgets() {
         return this.budgets;
     }
     /**
-     * Override the default endpoint for Amazon Chime
+     * @return Override the default endpoint for Amazon Chime
      * 
-    */
+     */
     public @Nullable Output<String> chime() {
         return this.chime;
     }
     /**
-     * Override the default endpoint for AWS Cloud9
+     * @return Override the default endpoint for AWS Cloud9
      * 
-    */
+     */
     public @Nullable Output<String> cloud9() {
         return this.cloud9;
     }
     /**
-     * Override the default endpoint for AWS CloudFormation
+     * @return Override the default endpoint for AWS CloudFormation
      * 
-    */
+     */
     public @Nullable Output<String> cloudformation() {
         return this.cloudformation;
     }
     /**
-     * Override the default endpoint for AWS CloudFront
+     * @return Override the default endpoint for AWS CloudFront
      * 
-    */
+     */
     public @Nullable Output<String> cloudfront() {
         return this.cloudfront;
     }
     /**
-     * Override the default endpoint for AWS CloudHSM
+     * @return Override the default endpoint for AWS CloudHSM
      * 
-    */
+     */
     public @Nullable Output<String> cloudhsm() {
         return this.cloudhsm;
     }
     /**
-     * Override the default endpoint for AWS CloudSearch
+     * @return Override the default endpoint for AWS CloudSearch
      * 
-    */
+     */
     public @Nullable Output<String> cloudsearch() {
         return this.cloudsearch;
     }
     /**
-     * Override the default endpoint for AWS CloudTrail
+     * @return Override the default endpoint for AWS CloudTrail
      * 
-    */
+     */
     public @Nullable Output<String> cloudtrail() {
         return this.cloudtrail;
     }
     /**
-     * Override the default endpoint for AWS CloudWatch
+     * @return Override the default endpoint for AWS CloudWatch
      * 
-    */
+     */
     public @Nullable Output<String> cloudwatch() {
         return this.cloudwatch;
     }
     /**
-     * Override the default endpoint for AWS CloudWatch Events
+     * @return Override the default endpoint for AWS CloudWatch Events
      * 
-    */
+     */
     public @Nullable Output<String> cloudwatchevents() {
         return this.cloudwatchevents;
     }
     /**
-     * Override the default endpoint for AWS CloudWatch Logs
+     * @return Override the default endpoint for AWS CloudWatch Logs
      * 
-    */
+     */
     public @Nullable Output<String> cloudwatchlogs() {
         return this.cloudwatchlogs;
     }
     /**
-     * Override the default endpoint for AWS CodeArtifact
+     * @return Override the default endpoint for AWS CodeArtifact
      * 
-    */
+     */
     public @Nullable Output<String> codeartifact() {
         return this.codeartifact;
     }
     /**
-     * Override the default endpoint for AWS CodeBuild
+     * @return Override the default endpoint for AWS CodeBuild
      * 
-    */
+     */
     public @Nullable Output<String> codebuild() {
         return this.codebuild;
     }
     /**
-     * Override the default endpoint for AWS CodeCommit
+     * @return Override the default endpoint for AWS CodeCommit
      * 
-    */
+     */
     public @Nullable Output<String> codecommit() {
         return this.codecommit;
     }
     /**
-     * Override the default endpoint for AWS CodeDeploy
+     * @return Override the default endpoint for AWS CodeDeploy
      * 
-    */
+     */
     public @Nullable Output<String> codedeploy() {
         return this.codedeploy;
     }
     /**
-     * Override the default endpoint for AWS CodePipeline
+     * @return Override the default endpoint for AWS CodePipeline
      * 
-    */
+     */
     public @Nullable Output<String> codepipeline() {
         return this.codepipeline;
     }
     /**
-     * Override the default endpoint for AWS CodeStart Connections
+     * @return Override the default endpoint for AWS CodeStart Connections
      * 
-    */
+     */
     public @Nullable Output<String> codestarconnections() {
         return this.codestarconnections;
     }
     /**
-     * Override the default endpoint for Amazon Cognito
+     * @return Override the default endpoint for Amazon Cognito
      * 
-    */
+     */
     public @Nullable Output<String> cognitoidentity() {
         return this.cognitoidentity;
     }
     /**
-     * Override the default endpoint for AWS Config
+     * @return Override the default endpoint for AWS Config
      * 
-    */
+     */
     public @Nullable Output<String> configservice() {
         return this.configservice;
     }
     /**
-     * Override the default endpoint for Amazon Connect
+     * @return Override the default endpoint for Amazon Connect
      * 
-    */
+     */
     public @Nullable Output<String> connect() {
         return this.connect;
     }
     /**
-     * Override the default endpoint for AWS Cost and Usage Reports
+     * @return Override the default endpoint for AWS Cost and Usage Reports
      * 
-    */
+     */
     public @Nullable Output<String> cur() {
         return this.cur;
     }
     /**
-     * Override the default endpoint for AWS Data Exchange
+     * @return Override the default endpoint for AWS Data Exchange
      * 
-    */
+     */
     public @Nullable Output<String> dataexchange() {
         return this.dataexchange;
     }
     /**
-     * Override the default endpoint for AWS Data Pipeline
+     * @return Override the default endpoint for AWS Data Pipeline
      * 
-    */
+     */
     public @Nullable Output<String> datapipeline() {
         return this.datapipeline;
     }
     /**
-     * Override the default endpoint for AWS DataSync
+     * @return Override the default endpoint for AWS DataSync
      * 
-    */
+     */
     public @Nullable Output<String> datasync() {
         return this.datasync;
     }
     /**
-     * Override the default endpoint for AWS DynamoDB Accelerator
+     * @return Override the default endpoint for AWS DynamoDB Accelerator
      * 
-    */
+     */
     public @Nullable Output<String> dax() {
         return this.dax;
     }
     /**
-     * Override the default endpoint for AWS Detective
+     * @return Override the default endpoint for AWS Detective
      * 
-    */
+     */
     public @Nullable Output<String> detective() {
         return this.detective;
     }
     /**
-     * Override the default endpoint for AWS Device Farm
+     * @return Override the default endpoint for AWS Device Farm
      * 
-    */
+     */
     public @Nullable Output<String> devicefarm() {
         return this.devicefarm;
     }
     /**
-     * Override the default endpoint for AWS Direct Connect
+     * @return Override the default endpoint for AWS Direct Connect
      * 
-    */
+     */
     public @Nullable Output<String> directconnect() {
         return this.directconnect;
     }
     /**
-     * Override the default endpoint for AWS Data Lifecycle Manager
+     * @return Override the default endpoint for AWS Data Lifecycle Manager
      * 
-    */
+     */
     public @Nullable Output<String> dlm() {
         return this.dlm;
     }
     /**
-     * Override the default endpoint for AWS Database Migration Service
+     * @return Override the default endpoint for AWS Database Migration Service
      * 
-    */
+     */
     public @Nullable Output<String> dms() {
         return this.dms;
     }
     /**
-     * Override the default endpoint for AWS DocumentDB
+     * @return Override the default endpoint for AWS DocumentDB
      * 
-    */
+     */
     public @Nullable Output<String> docdb() {
         return this.docdb;
     }
     /**
-     * Override the default endpoint for AWS Directory Service
+     * @return Override the default endpoint for AWS Directory Service
      * 
-    */
+     */
     public @Nullable Output<String> ds() {
         return this.ds;
     }
     /**
-     * Override the default endpoint for AWS DynamoDB
+     * @return Override the default endpoint for AWS DynamoDB
      * 
-    */
+     */
     public @Nullable Output<String> dynamodb() {
         return this.dynamodb;
     }
     /**
-     * Override the default endpoint for AWS Elastic Compute Cloud (EC2)
+     * @return Override the default endpoint for AWS Elastic Compute Cloud (EC2)
      * 
-    */
+     */
     public @Nullable Output<String> ec2() {
         return this.ec2;
     }
     /**
-     * Override the default endpoint for AWS Elastic Container Registry (ECR)
+     * @return Override the default endpoint for AWS Elastic Container Registry (ECR)
      * 
-    */
+     */
     public @Nullable Output<String> ecr() {
         return this.ecr;
     }
     /**
-     * Override the default endpoint for AWS Elastic Container Registry (ECR) Public
+     * @return Override the default endpoint for AWS Elastic Container Registry (ECR) Public
      * 
-    */
+     */
     public @Nullable Output<String> ecrpublic() {
         return this.ecrpublic;
     }
     /**
-     * Override the default endpoint for AWS Elastic Container Service (ECS)
+     * @return Override the default endpoint for AWS Elastic Container Service (ECS)
      * 
-    */
+     */
     public @Nullable Output<String> ecs() {
         return this.ecs;
     }
     /**
-     * Override the default endpoint for AWS Elastic File System (EFS)
+     * @return Override the default endpoint for AWS Elastic File System (EFS)
      * 
-    */
+     */
     public @Nullable Output<String> efs() {
         return this.efs;
     }
     /**
-     * Override the default endpoint for AWS Elastic Kubernetes Service (EKS)
+     * @return Override the default endpoint for AWS Elastic Kubernetes Service (EKS)
      * 
-    */
+     */
     public @Nullable Output<String> eks() {
         return this.eks;
     }
     /**
-     * Override the default endpoint for AWS ElastiCache
+     * @return Override the default endpoint for AWS ElastiCache
      * 
-    */
+     */
     public @Nullable Output<String> elasticache() {
         return this.elasticache;
     }
     /**
-     * Override the default endpoint for AWS Elastic Beanstalk
+     * @return Override the default endpoint for AWS Elastic Beanstalk
      * 
-    */
+     */
     public @Nullable Output<String> elasticbeanstalk() {
         return this.elasticbeanstalk;
     }
     /**
-     * Override the default endpoint for AWS Elastic Transcoder
+     * @return Override the default endpoint for AWS Elastic Transcoder
      * 
-    */
+     */
     public @Nullable Output<String> elastictranscoder() {
         return this.elastictranscoder;
     }
     /**
-     * Override the default endpoint for AWS Elastic Load Balancing
+     * @return Override the default endpoint for AWS Elastic Load Balancing
      * 
-    */
+     */
     public @Nullable Output<String> elb() {
         return this.elb;
     }
     /**
-     * Override the default endpoint for AWS Elastic Load Balancing V2
+     * @return Override the default endpoint for AWS Elastic Load Balancing V2
      * 
-    */
+     */
     public @Nullable Output<String> elbv2() {
         return this.elbv2;
     }
     /**
-     * Override the default endpoint for AWS EMR
+     * @return Override the default endpoint for AWS EMR
      * 
-    */
+     */
     public @Nullable Output<String> emr() {
         return this.emr;
     }
     /**
-     * Override the default endpoint for AWS EMR on EKS
+     * @return Override the default endpoint for AWS EMR on EKS
      * 
-    */
+     */
     public @Nullable Output<String> emrcontainers() {
         return this.emrcontainers;
     }
     /**
-     * Override the default endpoint for AWS OpenSearch Service (formerly Elasticsearch)
+     * @return Override the default endpoint for AWS OpenSearch Service (formerly Elasticsearch)
      * 
-    */
+     */
     public @Nullable Output<String> es() {
         return this.es;
     }
     /**
-     * Override the default endpoint for AWS Kinesis Data Firehose
+     * @return Override the default endpoint for AWS Kinesis Data Firehose
      * 
-    */
+     */
     public @Nullable Output<String> firehose() {
         return this.firehose;
     }
     /**
-     * Override the default endpoint for AWS Firewall Manager
+     * @return Override the default endpoint for AWS Firewall Manager
      * 
-    */
+     */
     public @Nullable Output<String> fms() {
         return this.fms;
     }
     /**
-     * Override the default endpoint for Amazon Forecast
+     * @return Override the default endpoint for Amazon Forecast
      * 
-    */
+     */
     public @Nullable Output<String> forecast() {
         return this.forecast;
     }
     /**
-     * Override the default endpoint for AWS FSx
+     * @return Override the default endpoint for AWS FSx
      * 
-    */
+     */
     public @Nullable Output<String> fsx() {
         return this.fsx;
     }
     /**
-     * Override the default endpoint for AWS GameLift
+     * @return Override the default endpoint for AWS GameLift
      * 
-    */
+     */
     public @Nullable Output<String> gamelift() {
         return this.gamelift;
     }
     /**
-     * Override the default endpoint for Amazon S3 Glacier
+     * @return Override the default endpoint for Amazon S3 Glacier
      * 
-    */
+     */
     public @Nullable Output<String> glacier() {
         return this.glacier;
     }
     /**
-     * Override the default endpoint for AWS Global Accelerator
+     * @return Override the default endpoint for AWS Global Accelerator
      * 
-    */
+     */
     public @Nullable Output<String> globalaccelerator() {
         return this.globalaccelerator;
     }
     /**
-     * Override the default endpoint for AWS Glue
+     * @return Override the default endpoint for AWS Glue
      * 
-    */
+     */
     public @Nullable Output<String> glue() {
         return this.glue;
     }
     /**
-     * Override the default endpoint for AWS IoT Greengrass
+     * @return Override the default endpoint for AWS IoT Greengrass
      * 
-    */
+     */
     public @Nullable Output<String> greengrass() {
         return this.greengrass;
     }
     /**
-     * Override the default endpoint for AWS GuardDuty
+     * @return Override the default endpoint for AWS GuardDuty
      * 
-    */
+     */
     public @Nullable Output<String> guardduty() {
         return this.guardduty;
     }
     /**
-     * Override the default endpoint for AWS Identity and Access Management
+     * @return Override the default endpoint for AWS Identity and Access Management
      * 
-    */
+     */
     public @Nullable Output<String> iam() {
         return this.iam;
     }
     /**
-     * Override the default endpoint for AWS Single Sign-On (SSO) Identity Store
+     * @return Override the default endpoint for AWS Single Sign-On (SSO) Identity Store
      * 
-    */
+     */
     public @Nullable Output<String> identitystore() {
         return this.identitystore;
     }
     /**
-     * Override the default endpoint for AWS Image Builder
+     * @return Override the default endpoint for AWS Image Builder
      * 
-    */
+     */
     public @Nullable Output<String> imagebuilder() {
         return this.imagebuilder;
     }
     /**
-     * Override the default endpoint for Amazon Inspector
+     * @return Override the default endpoint for Amazon Inspector
      * 
-    */
+     */
     public @Nullable Output<String> inspector() {
         return this.inspector;
     }
     /**
-     * Override the default endpoint for AWS IoT
+     * @return Override the default endpoint for AWS IoT
      * 
-    */
+     */
     public @Nullable Output<String> iot() {
         return this.iot;
     }
     /**
-     * Override the default endpoint for AWS IoT Analytics
+     * @return Override the default endpoint for AWS IoT Analytics
      * 
-    */
+     */
     public @Nullable Output<String> iotanalytics() {
         return this.iotanalytics;
     }
     /**
-     * Override the default endpoint for AWS IoT Events
+     * @return Override the default endpoint for AWS IoT Events
      * 
-    */
+     */
     public @Nullable Output<String> iotevents() {
         return this.iotevents;
     }
     /**
-     * Override the default endpoint for Amazon Managed Streaming for Apache Kafka (MSK)
+     * @return Override the default endpoint for Amazon Managed Streaming for Apache Kafka (MSK)
      * 
-    */
+     */
     public @Nullable Output<String> kafka() {
         return this.kafka;
     }
     /**
-     * Override the default endpoint for Amazon Kinesis
+     * @return Override the default endpoint for Amazon Kinesis
      * 
-    */
+     */
     public @Nullable Output<String> kinesis() {
         return this.kinesis;
     }
     /**
-     * Override the default endpoint for Amazon Kinesis Data Analytics
+     * @return Override the default endpoint for Amazon Kinesis Data Analytics
      * 
-    */
+     */
     public @Nullable Output<String> kinesisanalytics() {
         return this.kinesisanalytics;
     }
     /**
-     * Override the default endpoint for Amazon Kinesis Data Analytics V2
+     * @return Override the default endpoint for Amazon Kinesis Data Analytics V2
      * 
-    */
+     */
     public @Nullable Output<String> kinesisanalyticsv2() {
         return this.kinesisanalyticsv2;
     }
     /**
-     * Override the default endpoint for Amazon Kinesis Video Streams
+     * @return Override the default endpoint for Amazon Kinesis Video Streams
      * 
-    */
+     */
     public @Nullable Output<String> kinesisvideo() {
         return this.kinesisvideo;
     }
     /**
-     * Override the default endpoint for AWS Key Management Service
+     * @return Override the default endpoint for AWS Key Management Service
      * 
-    */
+     */
     public @Nullable Output<String> kms() {
         return this.kms;
     }
     /**
-     * Override the default endpoint for AWS Lake Formation
+     * @return Override the default endpoint for AWS Lake Formation
      * 
-    */
+     */
     public @Nullable Output<String> lakeformation() {
         return this.lakeformation;
     }
     /**
-     * Override the default endpoint for AWS Lambda
+     * @return Override the default endpoint for AWS Lambda
      * 
-    */
+     */
     public @Nullable Output<String> lambda() {
         return this.lambda;
     }
     /**
-     * Override the default endpoint for Amazon Lex
+     * @return Override the default endpoint for Amazon Lex
      * 
-    */
+     */
     public @Nullable Output<String> lexmodels() {
         return this.lexmodels;
     }
     /**
-     * Override the default endpoint for AWS License Manager
+     * @return Override the default endpoint for AWS License Manager
      * 
-    */
+     */
     public @Nullable Output<String> licensemanager() {
         return this.licensemanager;
     }
     /**
-     * Override the default endpoint for Amazon Lightsail
+     * @return Override the default endpoint for Amazon Lightsail
      * 
-    */
+     */
     public @Nullable Output<String> lightsail() {
         return this.lightsail;
     }
     /**
-     * Override the default endpoint for Amazon Location
+     * @return Override the default endpoint for Amazon Location
      * 
-    */
+     */
     public @Nullable Output<String> location() {
         return this.location;
     }
     /**
-     * Override the default endpoint for Amazon Macie
+     * @return Override the default endpoint for Amazon Macie
      * 
-    */
+     */
     public @Nullable Output<String> macie() {
         return this.macie;
     }
     /**
-     * Override the default endpoint for Amazon Macie V2
+     * @return Override the default endpoint for Amazon Macie V2
      * 
-    */
+     */
     public @Nullable Output<String> macie2() {
         return this.macie2;
     }
     /**
-     * Override the default endpoint for Amazon Managed Blockchain
+     * @return Override the default endpoint for Amazon Managed Blockchain
      * 
-    */
+     */
     public @Nullable Output<String> managedblockchain() {
         return this.managedblockchain;
     }
     /**
-     * Override the default endpoint for AWS Marketplace Catalog
+     * @return Override the default endpoint for AWS Marketplace Catalog
      * 
-    */
+     */
     public @Nullable Output<String> marketplacecatalog() {
         return this.marketplacecatalog;
     }
     /**
-     * Override the default endpoint for AWS MediaConnect
+     * @return Override the default endpoint for AWS MediaConnect
      * 
-    */
+     */
     public @Nullable Output<String> mediaconnect() {
         return this.mediaconnect;
     }
     /**
-     * Override the default endpoint for AWS MediaConvert
+     * @return Override the default endpoint for AWS MediaConvert
      * 
-    */
+     */
     public @Nullable Output<String> mediaconvert() {
         return this.mediaconvert;
     }
     /**
-     * Override the default endpoint for AWS MediaLive
+     * @return Override the default endpoint for AWS MediaLive
      * 
-    */
+     */
     public @Nullable Output<String> medialive() {
         return this.medialive;
     }
     /**
-     * Override the default endpoint for AWS MediaPackage
+     * @return Override the default endpoint for AWS MediaPackage
      * 
-    */
+     */
     public @Nullable Output<String> mediapackage() {
         return this.mediapackage;
     }
     /**
-     * Override the default endpoint for AWS Elemental MediaStore container
+     * @return Override the default endpoint for AWS Elemental MediaStore container
      * 
-    */
+     */
     public @Nullable Output<String> mediastore() {
         return this.mediastore;
     }
     /**
-     * Override the default endpoint for AWS Elemental MediaStore asset
+     * @return Override the default endpoint for AWS Elemental MediaStore asset
      * 
-    */
+     */
     public @Nullable Output<String> mediastoredata() {
         return this.mediastoredata;
     }
     /**
-     * Override the default endpoint for AWS MemoryDB for Redis
+     * @return Override the default endpoint for AWS MemoryDB for Redis
      * 
-    */
+     */
     public @Nullable Output<String> memorydb() {
         return this.memorydb;
     }
     /**
-     * Override the default endpoint for Amazon MQ
+     * @return Override the default endpoint for Amazon MQ
      * 
-    */
+     */
     public @Nullable Output<String> mq() {
         return this.mq;
     }
     /**
-     * Override the default endpoint for Amazon Managed Workflows for Apache Airflow
+     * @return Override the default endpoint for Amazon Managed Workflows for Apache Airflow
      * 
-    */
+     */
     public @Nullable Output<String> mwaa() {
         return this.mwaa;
     }
     /**
-     * Override the default endpoint for Amazon Neptune
+     * @return Override the default endpoint for Amazon Neptune
      * 
-    */
+     */
     public @Nullable Output<String> neptune() {
         return this.neptune;
     }
     /**
-     * Override the default endpoint for AWS Network Firewall
+     * @return Override the default endpoint for AWS Network Firewall
      * 
-    */
+     */
     public @Nullable Output<String> networkfirewall() {
         return this.networkfirewall;
     }
     /**
-     * Override the default endpoint for AWS Network Manager
+     * @return Override the default endpoint for AWS Network Manager
      * 
-    */
+     */
     public @Nullable Output<String> networkmanager() {
         return this.networkmanager;
     }
     /**
-     * Override the default endpoint for AWS OpsWorks
+     * @return Override the default endpoint for AWS OpsWorks
      * 
-    */
+     */
     public @Nullable Output<String> opsworks() {
         return this.opsworks;
     }
     /**
-     * Override the default endpoint for AWS Organizations
+     * @return Override the default endpoint for AWS Organizations
      * 
-    */
+     */
     public @Nullable Output<String> organizations() {
         return this.organizations;
     }
     /**
-     * Override the default endpoint for AWS Outposts
+     * @return Override the default endpoint for AWS Outposts
      * 
-    */
+     */
     public @Nullable Output<String> outposts() {
         return this.outposts;
     }
     /**
-     * Override the default endpoint for Amazon Personalize
+     * @return Override the default endpoint for Amazon Personalize
      * 
-    */
+     */
     public @Nullable Output<String> personalize() {
         return this.personalize;
     }
     /**
-     * Override the default endpoint for Amazon Pinpoint
+     * @return Override the default endpoint for Amazon Pinpoint
      * 
-    */
+     */
     public @Nullable Output<String> pinpoint() {
         return this.pinpoint;
     }
     /**
-     * Override the default endpoint for Amazon Web Services Price List Service
+     * @return Override the default endpoint for Amazon Web Services Price List Service
      * 
-    */
+     */
     public @Nullable Output<String> pricing() {
         return this.pricing;
     }
     /**
-     * Override the default endpoint for Amazon QLDB
+     * @return Override the default endpoint for Amazon QLDB
      * 
-    */
+     */
     public @Nullable Output<String> qldb() {
         return this.qldb;
     }
     /**
-     * Override the default endpoint for Amazon QuickSight
+     * @return Override the default endpoint for Amazon QuickSight
      * 
-    */
+     */
     public @Nullable Output<String> quicksight() {
         return this.quicksight;
     }
     /**
-     * Override the default endpoint for AWS Resource Access Manager
+     * @return Override the default endpoint for AWS Resource Access Manager
      * 
-    */
+     */
     public @Nullable Output<String> ram() {
         return this.ram;
     }
     /**
-     * Override the default endpoint for Amazon Relational Database Service
+     * @return Override the default endpoint for Amazon Relational Database Service
      * 
-    */
+     */
     public @Nullable Output<String> rds() {
         return this.rds;
     }
     /**
-     * Override the default endpoint for Amazon Redshift
+     * @return Override the default endpoint for Amazon Redshift
      * 
-    */
+     */
     public @Nullable Output<String> redshift() {
         return this.redshift;
     }
     /**
-     * Override the default endpoint for AWS Resource Groups
+     * @return Override the default endpoint for AWS Resource Groups
      * 
-    */
+     */
     public @Nullable Output<String> resourcegroups() {
         return this.resourcegroups;
     }
     /**
-     * Override the default endpoint for AWS Resource Groups Tagging API
+     * @return Override the default endpoint for AWS Resource Groups Tagging API
      * 
-    */
+     */
     public @Nullable Output<String> resourcegroupstaggingapi() {
         return this.resourcegroupstaggingapi;
     }
     /**
-     * Override the default endpoint for Amazon Route 53
+     * @return Override the default endpoint for Amazon Route 53
      * 
-    */
+     */
     public @Nullable Output<String> route53() {
         return this.route53;
     }
     /**
-     * Override the default endpoint for Amazon Route 53 Domains
+     * @return Override the default endpoint for Amazon Route 53 Domains
      * 
-    */
+     */
     public @Nullable Output<String> route53domains() {
         return this.route53domains;
     }
     /**
-     * Override the default endpoint for Amazon Route 53 Recovery Control
+     * @return Override the default endpoint for Amazon Route 53 Recovery Control
      * 
-    */
+     */
     public @Nullable Output<String> route53recoverycontrolconfig() {
         return this.route53recoverycontrolconfig;
     }
     /**
-     * Override the default endpoint for Amazon Route 53 Recovery Readiness
+     * @return Override the default endpoint for Amazon Route 53 Recovery Readiness
      * 
-    */
+     */
     public @Nullable Output<String> route53recoveryreadiness() {
         return this.route53recoveryreadiness;
     }
     /**
-     * Override the default endpoint for Amazon Route 53 Resolver
+     * @return Override the default endpoint for Amazon Route 53 Resolver
      * 
-    */
+     */
     public @Nullable Output<String> route53resolver() {
         return this.route53resolver;
     }
     /**
-     * Override the default endpoint for Amazon Simple Storage Service (S3)
+     * @return Override the default endpoint for Amazon Simple Storage Service (S3)
      * 
-    */
+     */
     public @Nullable Output<String> s3() {
         return this.s3;
     }
     /**
-     * Override the default endpoint for Amazon Simple Storage Service (S3) Control
+     * @return Override the default endpoint for Amazon Simple Storage Service (S3) Control
      * 
-    */
+     */
     public @Nullable Output<String> s3control() {
         return this.s3control;
     }
     /**
-     * Override the default endpoint for Amazon S3 on Outposts
+     * @return Override the default endpoint for Amazon S3 on Outposts
      * 
-    */
+     */
     public @Nullable Output<String> s3outposts() {
         return this.s3outposts;
     }
     /**
-     * Override the default endpoint for AWS SageMaker
+     * @return Override the default endpoint for AWS SageMaker
      * 
-    */
+     */
     public @Nullable Output<String> sagemaker() {
         return this.sagemaker;
     }
     /**
-     * Override the default endpoint for Amazon EventBridge Schema Registry
+     * @return Override the default endpoint for Amazon EventBridge Schema Registry
      * 
-    */
+     */
     public @Nullable Output<String> schemas() {
         return this.schemas;
     }
     /**
-     * Override the default endpoint for Amazon SimpleDB
+     * @return Override the default endpoint for Amazon SimpleDB
      * 
-    */
+     */
     public @Nullable Output<String> sdb() {
         return this.sdb;
     }
     /**
-     * Override the default endpoint for AWS Secrets Manager
+     * @return Override the default endpoint for AWS Secrets Manager
      * 
-    */
+     */
     public @Nullable Output<String> secretsmanager() {
         return this.secretsmanager;
     }
     /**
-     * Override the default endpoint for AWS Security Hub
+     * @return Override the default endpoint for AWS Security Hub
      * 
-    */
+     */
     public @Nullable Output<String> securityhub() {
         return this.securityhub;
     }
     /**
-     * Override the default endpoint for AWS Serverless Application Repository
+     * @return Override the default endpoint for AWS Serverless Application Repository
      * 
-    */
+     */
     public @Nullable Output<String> serverlessrepo() {
         return this.serverlessrepo;
     }
     /**
-     * Override the default endpoint for AWS Service Catalog
+     * @return Override the default endpoint for AWS Service Catalog
      * 
-    */
+     */
     public @Nullable Output<String> servicecatalog() {
         return this.servicecatalog;
     }
     /**
-     * Override the default endpoint for AWS Cloud Map
+     * @return Override the default endpoint for AWS Cloud Map
      * 
-    */
+     */
     public @Nullable Output<String> servicediscovery() {
         return this.servicediscovery;
     }
     /**
-     * Override the default endpoint for AWS Service Quotas
+     * @return Override the default endpoint for AWS Service Quotas
      * 
-    */
+     */
     public @Nullable Output<String> servicequotas() {
         return this.servicequotas;
     }
     /**
-     * Override the default endpoint for Amazon Simple Email Service (SES)
+     * @return Override the default endpoint for Amazon Simple Email Service (SES)
      * 
-    */
+     */
     public @Nullable Output<String> ses() {
         return this.ses;
     }
     /**
-     * Override the default endpoint for AWS Shield Advanced API
+     * @return Override the default endpoint for AWS Shield Advanced API
      * 
-    */
+     */
     public @Nullable Output<String> shield() {
         return this.shield;
     }
     /**
-     * Override the default endpoint for AWS Signer
+     * @return Override the default endpoint for AWS Signer
      * 
-    */
+     */
     public @Nullable Output<String> signer() {
         return this.signer;
     }
     /**
-     * Override the default endpoint for Amazon Simple Notification Service (SNS)
+     * @return Override the default endpoint for Amazon Simple Notification Service (SNS)
      * 
-    */
+     */
     public @Nullable Output<String> sns() {
         return this.sns;
     }
     /**
-     * Override the default endpoint for Amazon Simple Queue Service (SQS)
+     * @return Override the default endpoint for Amazon Simple Queue Service (SQS)
      * 
-    */
+     */
     public @Nullable Output<String> sqs() {
         return this.sqs;
     }
     /**
-     * Override the default endpoint for AWS Systems Manager
+     * @return Override the default endpoint for AWS Systems Manager
      * 
-    */
+     */
     public @Nullable Output<String> ssm() {
         return this.ssm;
     }
     /**
-     * Override the default endpoint for AWS Single Sign On (SSO)
+     * @return Override the default endpoint for AWS Single Sign On (SSO)
      * 
-    */
+     */
     public @Nullable Output<String> ssoadmin() {
         return this.ssoadmin;
     }
     /**
-     * Override the default endpoint for AWS Step Functions
+     * @return Override the default endpoint for AWS Step Functions
      * 
-    */
+     */
     public @Nullable Output<String> stepfunctions() {
         return this.stepfunctions;
     }
     /**
-     * Override the default endpoint for AWS Storage Gateway
+     * @return Override the default endpoint for AWS Storage Gateway
      * 
-    */
+     */
     public @Nullable Output<String> storagegateway() {
         return this.storagegateway;
     }
     /**
-     * Override the default endpoint for AWS Security Token Service (STS)
+     * @return Override the default endpoint for AWS Security Token Service (STS)
      * 
-    */
+     */
     public @Nullable Output<String> sts() {
         return this.sts;
     }
     /**
-     * Override the default endpoint for Amazon Simple Workflow Service (SWF)
+     * @return Override the default endpoint for Amazon Simple Workflow Service (SWF)
      * 
-    */
+     */
     public @Nullable Output<String> swf() {
         return this.swf;
     }
     /**
-     * Override the default endpoint for Amazon CloudWatch Synthetics
+     * @return Override the default endpoint for Amazon CloudWatch Synthetics
      * 
-    */
+     */
     public @Nullable Output<String> synthetics() {
         return this.synthetics;
     }
     /**
-     * Override the default endpoint for Amazon Timestream
+     * @return Override the default endpoint for Amazon Timestream
      * 
-    */
+     */
     public @Nullable Output<String> timestreamwrite() {
         return this.timestreamwrite;
     }
     /**
-     * Override the default endpoint for AWS Transfer Family
+     * @return Override the default endpoint for AWS Transfer Family
      * 
-    */
+     */
     public @Nullable Output<String> transfer() {
         return this.transfer;
     }
     /**
-     * Override the default endpoint for AWS WAF Classic
+     * @return Override the default endpoint for AWS WAF Classic
      * 
-    */
+     */
     public @Nullable Output<String> waf() {
         return this.waf;
     }
     /**
-     * Override the default endpoint for AWS WAF Regional Classic
+     * @return Override the default endpoint for AWS WAF Regional Classic
      * 
-    */
+     */
     public @Nullable Output<String> wafregional() {
         return this.wafregional;
     }
     /**
-     * Override the default endpoint for AWS WAF V2
+     * @return Override the default endpoint for AWS WAF V2
      * 
-    */
+     */
     public @Nullable Output<String> wafv2() {
         return this.wafv2;
     }
     /**
-     * Override the default endpoint for Amazon WorkLink
+     * @return Override the default endpoint for Amazon WorkLink
      * 
-    */
+     */
     public @Nullable Output<String> worklink() {
         return this.worklink;
     }
     /**
-     * Override the default endpoint for Amazon WorkMail
+     * @return Override the default endpoint for Amazon WorkMail
      * 
-    */
+     */
     public @Nullable Output<String> workmail() {
         return this.workmail;
     }
     /**
-     * Override the default endpoint for Amazon WorkSpaces
+     * @return Override the default endpoint for Amazon WorkSpaces
      * 
-    */
+     */
     public @Nullable Output<String> workspaces() {
         return this.workspaces;
     }
     /**
-     * Override the default endpoint for AWS X-Ray
+     * @return Override the default endpoint for AWS X-Ray
      * 
-    */
+     */
     public @Nullable Output<String> xray() {
         return this.xray;
     }

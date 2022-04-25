@@ -19,6 +19,10 @@ public final class GetServiceProfileArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Service profile Id. Returned after successful create.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +51,12 @@ public final class GetServiceProfileArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetServiceProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Service profile Id. Returned after successful create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

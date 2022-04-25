@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class BotAliasLambdaCodeHook {
-    /**
-     * The version of the request-response that you want Amazon Lex to use to invoke your Lambda function.
-     * 
-     */
+        /**
+         * @return The version of the request-response that you want Amazon Lex to use to invoke your Lambda function.
+         * 
+         */
     private final String codeHookInterfaceVersion;
-    /**
-     * The Amazon Resource Name (ARN) of the Lambda function.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the Lambda function.
+         * 
+         */
     private final String lambdaArn;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class BotAliasLambdaCodeHook {
     }
 
     /**
-     * The version of the request-response that you want Amazon Lex to use to invoke your Lambda function.
+     * @return The version of the request-response that you want Amazon Lex to use to invoke your Lambda function.
      * 
-    */
+     */
     public String codeHookInterfaceVersion() {
         return this.codeHookInterfaceVersion;
     }
     /**
-     * The Amazon Resource Name (ARN) of the Lambda function.
+     * @return The Amazon Resource Name (ARN) of the Lambda function.
      * 
-    */
+     */
     public String lambdaArn() {
         return this.lambdaArn;
     }

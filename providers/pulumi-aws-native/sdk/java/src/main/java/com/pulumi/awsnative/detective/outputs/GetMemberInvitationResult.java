@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetMemberInvitationResult {
-    /**
-     * When set to true, invitation emails are not sent to the member accounts. Member accounts must still accept the invitation before they are added to the behavior graph. Updating this field has no effect.
-     * 
-     */
+        /**
+         * @return When set to true, invitation emails are not sent to the member accounts. Member accounts must still accept the invitation before they are added to the behavior graph. Updating this field has no effect.
+         * 
+         */
     private final @Nullable Boolean disableEmailNotification;
-    /**
-     * The root email address for the account to be invited, for validation. Updating this field has no effect.
-     * 
-     */
+        /**
+         * @return The root email address for the account to be invited, for validation. Updating this field has no effect.
+         * 
+         */
     private final @Nullable String memberEmailAddress;
-    /**
-     * A message to be included in the email invitation sent to the invited account. Updating this field has no effect.
-     * 
-     */
+        /**
+         * @return A message to be included in the email invitation sent to the invited account. Updating this field has no effect.
+         * 
+         */
     private final @Nullable String message;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class GetMemberInvitationResult {
     }
 
     /**
-     * When set to true, invitation emails are not sent to the member accounts. Member accounts must still accept the invitation before they are added to the behavior graph. Updating this field has no effect.
+     * @return When set to true, invitation emails are not sent to the member accounts. Member accounts must still accept the invitation before they are added to the behavior graph. Updating this field has no effect.
      * 
-    */
+     */
     public Optional<Boolean> disableEmailNotification() {
         return Optional.ofNullable(this.disableEmailNotification);
     }
     /**
-     * The root email address for the account to be invited, for validation. Updating this field has no effect.
+     * @return The root email address for the account to be invited, for validation. Updating this field has no effect.
      * 
-    */
+     */
     public Optional<String> memberEmailAddress() {
         return Optional.ofNullable(this.memberEmailAddress);
     }
     /**
-     * A message to be included in the email invitation sent to the invited account. Updating this field has no effect.
+     * @return A message to be included in the email invitation sent to the invited account. Updating this field has no effect.
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }

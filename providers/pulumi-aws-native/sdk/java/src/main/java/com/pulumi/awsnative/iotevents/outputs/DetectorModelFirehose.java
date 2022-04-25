@@ -12,16 +12,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DetectorModelFirehose {
-    /**
-     * The name of the Kinesis Data Firehose delivery stream where the data is written.
-     * 
-     */
+        /**
+         * @return The name of the Kinesis Data Firehose delivery stream where the data is written.
+         * 
+         */
     private final String deliveryStreamName;
     private final @Nullable DetectorModelPayload payload;
-    /**
-     * A character separator that is used to separate records written to the Kinesis Data Firehose delivery stream. Valid values are: &#39;\n&#39; (newline), &#39;\t&#39; (tab), &#39;\r\n&#39; (Windows newline), &#39;,&#39; (comma).
-     * 
-     */
+        /**
+         * @return A character separator that is used to separate records written to the Kinesis Data Firehose delivery stream. Valid values are: &#39;\n&#39; (newline), &#39;\t&#39; (tab), &#39;\r\n&#39; (Windows newline), &#39;,&#39; (comma).
+         * 
+         */
     private final @Nullable String separator;
 
     @CustomType.Constructor
@@ -35,9 +35,9 @@ public final class DetectorModelFirehose {
     }
 
     /**
-     * The name of the Kinesis Data Firehose delivery stream where the data is written.
+     * @return The name of the Kinesis Data Firehose delivery stream where the data is written.
      * 
-    */
+     */
     public String deliveryStreamName() {
         return this.deliveryStreamName;
     }
@@ -45,9 +45,9 @@ public final class DetectorModelFirehose {
         return Optional.ofNullable(this.payload);
     }
     /**
-     * A character separator that is used to separate records written to the Kinesis Data Firehose delivery stream. Valid values are: &#39;\n&#39; (newline), &#39;\t&#39; (tab), &#39;\r\n&#39; (Windows newline), &#39;,&#39; (comma).
+     * @return A character separator that is used to separate records written to the Kinesis Data Firehose delivery stream. Valid values are: &#39;\n&#39; (newline), &#39;\t&#39; (tab), &#39;\r\n&#39; (Windows newline), &#39;,&#39; (comma).
      * 
-    */
+     */
     public Optional<String> separator() {
         return Optional.ofNullable(this.separator);
     }

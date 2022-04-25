@@ -28,6 +28,10 @@ public final class AppImageConfigKernelGatewayImageConfigArgs extends com.pulumi
     @Import(name="fileSystemConfig")
     private @Nullable Output<AppImageConfigFileSystemConfigArgs> fileSystemConfig;
 
+    /**
+     * @return The Amazon Elastic File System (EFS) storage configuration for a SageMaker image.
+     * 
+     */
     public Optional<Output<AppImageConfigFileSystemConfigArgs>> fileSystemConfig() {
         return Optional.ofNullable(this.fileSystemConfig);
     }
@@ -39,6 +43,10 @@ public final class AppImageConfigKernelGatewayImageConfigArgs extends com.pulumi
     @Import(name="kernelSpecs", required=true)
     private Output<List<AppImageConfigKernelSpecArgs>> kernelSpecs;
 
+    /**
+     * @return The specification of the Jupyter kernels in the image.
+     * 
+     */
     public Output<List<AppImageConfigKernelSpecArgs>> kernelSpecs() {
         return this.kernelSpecs;
     }
@@ -68,24 +76,54 @@ public final class AppImageConfigKernelGatewayImageConfigArgs extends com.pulumi
             $ = new AppImageConfigKernelGatewayImageConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fileSystemConfig The Amazon Elastic File System (EFS) storage configuration for a SageMaker image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemConfig(@Nullable Output<AppImageConfigFileSystemConfigArgs> fileSystemConfig) {
             $.fileSystemConfig = fileSystemConfig;
             return this;
         }
 
+        /**
+         * @param fileSystemConfig The Amazon Elastic File System (EFS) storage configuration for a SageMaker image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemConfig(AppImageConfigFileSystemConfigArgs fileSystemConfig) {
             return fileSystemConfig(Output.of(fileSystemConfig));
         }
 
+        /**
+         * @param kernelSpecs The specification of the Jupyter kernels in the image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kernelSpecs(Output<List<AppImageConfigKernelSpecArgs>> kernelSpecs) {
             $.kernelSpecs = kernelSpecs;
             return this;
         }
 
+        /**
+         * @param kernelSpecs The specification of the Jupyter kernels in the image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kernelSpecs(List<AppImageConfigKernelSpecArgs> kernelSpecs) {
             return kernelSpecs(Output.of(kernelSpecs));
         }
 
+        /**
+         * @param kernelSpecs The specification of the Jupyter kernels in the image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kernelSpecs(AppImageConfigKernelSpecArgs... kernelSpecs) {
             return kernelSpecs(List.of(kernelSpecs));
         }

@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DetectorModelIotSiteWise {
-    /**
-     * The ID of the asset that has the specified property. You can specify an expression.
-     * 
-     */
+        /**
+         * @return The ID of the asset that has the specified property. You can specify an expression.
+         * 
+         */
     private final @Nullable String assetId;
-    /**
-     * A unique identifier for this entry. You can use the entry ID to track which data entry causes an error in case of failure. The default is a new unique identifier. You can also specify an expression.
-     * 
-     */
+        /**
+         * @return A unique identifier for this entry. You can use the entry ID to track which data entry causes an error in case of failure. The default is a new unique identifier. You can also specify an expression.
+         * 
+         */
     private final @Nullable String entryId;
-    /**
-     * The alias of the asset property. You can also specify an expression.
-     * 
-     */
+        /**
+         * @return The alias of the asset property. You can also specify an expression.
+         * 
+         */
     private final @Nullable String propertyAlias;
-    /**
-     * The ID of the asset property. You can specify an expression.
-     * 
-     */
+        /**
+         * @return The ID of the asset property. You can specify an expression.
+         * 
+         */
     private final @Nullable String propertyId;
     private final DetectorModelAssetPropertyValue propertyValue;
 
@@ -49,30 +49,30 @@ public final class DetectorModelIotSiteWise {
     }
 
     /**
-     * The ID of the asset that has the specified property. You can specify an expression.
+     * @return The ID of the asset that has the specified property. You can specify an expression.
      * 
-    */
+     */
     public Optional<String> assetId() {
         return Optional.ofNullable(this.assetId);
     }
     /**
-     * A unique identifier for this entry. You can use the entry ID to track which data entry causes an error in case of failure. The default is a new unique identifier. You can also specify an expression.
+     * @return A unique identifier for this entry. You can use the entry ID to track which data entry causes an error in case of failure. The default is a new unique identifier. You can also specify an expression.
      * 
-    */
+     */
     public Optional<String> entryId() {
         return Optional.ofNullable(this.entryId);
     }
     /**
-     * The alias of the asset property. You can also specify an expression.
+     * @return The alias of the asset property. You can also specify an expression.
      * 
-    */
+     */
     public Optional<String> propertyAlias() {
         return Optional.ofNullable(this.propertyAlias);
     }
     /**
-     * The ID of the asset property. You can specify an expression.
+     * @return The ID of the asset property. You can specify an expression.
      * 
-    */
+     */
     public Optional<String> propertyId() {
         return Optional.ofNullable(this.propertyId);
     }

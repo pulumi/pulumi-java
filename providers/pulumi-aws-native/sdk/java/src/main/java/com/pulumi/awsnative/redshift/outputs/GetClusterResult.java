@@ -17,217 +17,217 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetClusterResult {
-    /**
-     * Major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default value is True
-     * 
-     */
+        /**
+         * @return Major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default value is True
+         * 
+         */
     private final @Nullable Boolean allowVersionUpgrade;
-    /**
-     * The value represents how the cluster is configured to use AQUA (Advanced Query Accelerator) after the cluster is restored. Possible values include the following.
-     * 
-     * enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
-     * disabled - Don&#39;t use AQUA.
-     * auto - Amazon Redshift determines whether to use AQUA.
-     * 
-     */
+        /**
+         * @return The value represents how the cluster is configured to use AQUA (Advanced Query Accelerator) after the cluster is restored. Possible values include the following.
+         * 
+         * enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+         * disabled - Don&#39;t use AQUA.
+         * auto - Amazon Redshift determines whether to use AQUA.
+         * 
+         */
     private final @Nullable String aquaConfigurationStatus;
-    /**
-     * The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Default value is 1
-     * 
-     */
+        /**
+         * @return The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Default value is 1
+         * 
+         */
     private final @Nullable Integer automatedSnapshotRetentionPeriod;
-    /**
-     * The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. Default: A random, system-chosen Availability Zone in the region that is specified by the endpoint
-     * 
-     */
+        /**
+         * @return The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. Default: A random, system-chosen Availability Zone in the region that is specified by the endpoint
+         * 
+         */
     private final @Nullable String availabilityZone;
-    /**
-     * The option to enable relocation for an Amazon Redshift cluster between Availability Zones after the cluster modification is complete.
-     * 
-     */
+        /**
+         * @return The option to enable relocation for an Amazon Redshift cluster between Availability Zones after the cluster modification is complete.
+         * 
+         */
     private final @Nullable Boolean availabilityZoneRelocation;
-    /**
-     * The availability zone relocation status of the cluster
-     * 
-     */
+        /**
+         * @return The availability zone relocation status of the cluster
+         * 
+         */
     private final @Nullable String availabilityZoneRelocationStatus;
-    /**
-     * A boolean value indicating whether the resize operation is using the classic resize process. If you don&#39;t provide this parameter or set the value to false , the resize type is elastic.
-     * 
-     */
+        /**
+         * @return A boolean value indicating whether the resize operation is using the classic resize process. If you don&#39;t provide this parameter or set the value to false , the resize type is elastic.
+         * 
+         */
     private final @Nullable Boolean classic;
-    /**
-     * The name of the parameter group to be associated with this cluster.
-     * 
-     */
+        /**
+         * @return The name of the parameter group to be associated with this cluster.
+         * 
+         */
     private final @Nullable String clusterParameterGroupName;
-    /**
-     * A list of security groups to be associated with this cluster.
-     * 
-     */
+        /**
+         * @return A list of security groups to be associated with this cluster.
+         * 
+         */
     private final @Nullable List<String> clusterSecurityGroups;
-    /**
-     * The type of the cluster. When cluster type is specified as single-node, the NumberOfNodes parameter is not required and if multi-node, the NumberOfNodes parameter is required
-     * 
-     */
+        /**
+         * @return The type of the cluster. When cluster type is specified as single-node, the NumberOfNodes parameter is not required and if multi-node, the NumberOfNodes parameter is required
+         * 
+         */
     private final @Nullable String clusterType;
-    /**
-     * The version of the Amazon Redshift engine software that you want to deploy on the cluster.The version selected runs on all the nodes in the cluster.
-     * 
-     */
+        /**
+         * @return The version of the Amazon Redshift engine software that you want to deploy on the cluster.The version selected runs on all the nodes in the cluster.
+         * 
+         */
     private final @Nullable String clusterVersion;
-    /**
-     * A boolean indicating whether to enable the deferred maintenance window.
-     * 
-     */
+        /**
+         * @return A boolean indicating whether to enable the deferred maintenance window.
+         * 
+         */
     private final @Nullable Boolean deferMaintenance;
-    /**
-     * An integer indicating the duration of the maintenance window in days. If you specify a duration, you can&#39;t specify an end time. The duration must be 45 days or less.
-     * 
-     */
+        /**
+         * @return An integer indicating the duration of the maintenance window in days. If you specify a duration, you can&#39;t specify an end time. The duration must be 45 days or less.
+         * 
+         */
     private final @Nullable Integer deferMaintenanceDuration;
-    /**
-     * A timestamp indicating end time for the deferred maintenance window. If you specify an end time, you can&#39;t specify a duration.
-     * 
-     */
+        /**
+         * @return A timestamp indicating end time for the deferred maintenance window. If you specify an end time, you can&#39;t specify a duration.
+         * 
+         */
     private final @Nullable String deferMaintenanceEndTime;
-    /**
-     * A unique identifier for the deferred maintenance window.
-     * 
-     */
+        /**
+         * @return A unique identifier for the deferred maintenance window.
+         * 
+         */
     private final @Nullable String deferMaintenanceIdentifier;
-    /**
-     * A timestamp indicating the start time for the deferred maintenance window.
-     * 
-     */
+        /**
+         * @return A timestamp indicating the start time for the deferred maintenance window.
+         * 
+         */
     private final @Nullable String deferMaintenanceStartTime;
-    /**
-     * The destination AWS Region that you want to copy snapshots to. Constraints: Must be the name of a valid AWS Region. For more information, see Regions and Endpoints in the Amazon Web Services [https://docs.aws.amazon.com/general/latest/gr/rande.html#redshift_region] General Reference
-     * 
-     */
+        /**
+         * @return The destination AWS Region that you want to copy snapshots to. Constraints: Must be the name of a valid AWS Region. For more information, see Regions and Endpoints in the Amazon Web Services [https://docs.aws.amazon.com/general/latest/gr/rande.html#redshift_region] General Reference
+         * 
+         */
     private final @Nullable String destinationRegion;
-    /**
-     * The Elastic IP (EIP) address for the cluster.
-     * 
-     */
+        /**
+         * @return The Elastic IP (EIP) address for the cluster.
+         * 
+         */
     private final @Nullable String elasticIp;
-    /**
-     * If true, the data in the cluster is encrypted at rest.
-     * 
-     */
+        /**
+         * @return If true, the data in the cluster is encrypted at rest.
+         * 
+         */
     private final @Nullable Boolean encrypted;
     private final @Nullable ClusterEndpoint endpoint;
-    /**
-     * An option that specifies whether to create the cluster with enhanced VPC routing enabled. To create a cluster that uses enhanced VPC routing, the cluster must be in a VPC. For more information, see Enhanced VPC Routing in the Amazon Redshift Cluster Management Guide.
-     * 
-     * If this option is true , enhanced VPC routing is enabled.
-     * 
-     * Default: false
-     * 
-     */
+        /**
+         * @return An option that specifies whether to create the cluster with enhanced VPC routing enabled. To create a cluster that uses enhanced VPC routing, the cluster must be in a VPC. For more information, see Enhanced VPC Routing in the Amazon Redshift Cluster Management Guide.
+         * 
+         * If this option is true , enhanced VPC routing is enabled.
+         * 
+         * Default: false
+         * 
+         */
     private final @Nullable Boolean enhancedVpcRouting;
-    /**
-     * Specifies the name of the HSM client certificate the Amazon Redshift cluster uses to retrieve the data encryption keys stored in an HSM
-     * 
-     */
+        /**
+         * @return Specifies the name of the HSM client certificate the Amazon Redshift cluster uses to retrieve the data encryption keys stored in an HSM
+         * 
+         */
     private final @Nullable String hsmClientCertificateIdentifier;
-    /**
-     * Specifies the name of the HSM configuration that contains the information the Amazon Redshift cluster can use to retrieve and store keys in an HSM.
-     * 
-     */
+        /**
+         * @return Specifies the name of the HSM configuration that contains the information the Amazon Redshift cluster can use to retrieve and store keys in an HSM.
+         * 
+         */
     private final @Nullable String hsmConfigurationIdentifier;
-    /**
-     * A list of AWS Identity and Access Management (IAM) roles that can be used by the cluster to access other AWS services. You must supply the IAM roles in their Amazon Resource Name (ARN) format. You can supply up to 10 IAM roles in a single request
-     * 
-     */
+        /**
+         * @return A list of AWS Identity and Access Management (IAM) roles that can be used by the cluster to access other AWS services. You must supply the IAM roles in their Amazon Resource Name (ARN) format. You can supply up to 10 IAM roles in a single request
+         * 
+         */
     private final @Nullable List<String> iamRoles;
     private final @Nullable String id;
-    /**
-     * The AWS Key Management Service (KMS) key ID of the encryption key that you want to use to encrypt data in the cluster.
-     * 
-     */
+        /**
+         * @return The AWS Key Management Service (KMS) key ID of the encryption key that you want to use to encrypt data in the cluster.
+         * 
+         */
     private final @Nullable String kmsKeyId;
     private final @Nullable ClusterLoggingProperties loggingProperties;
-    /**
-     * The name for the maintenance track that you want to assign for the cluster. This name change is asynchronous. The new track name stays in the PendingModifiedValues for the cluster until the next maintenance window. When the maintenance track changes, the cluster is switched to the latest cluster release available for the maintenance track. At this point, the maintenance track name is applied.
-     * 
-     */
+        /**
+         * @return The name for the maintenance track that you want to assign for the cluster. This name change is asynchronous. The new track name stays in the PendingModifiedValues for the cluster until the next maintenance window. When the maintenance track changes, the cluster is switched to the latest cluster release available for the maintenance track. At this point, the maintenance track name is applied.
+         * 
+         */
     private final @Nullable String maintenanceTrackName;
-    /**
-     * The number of days to retain newly copied snapshots in the destination AWS Region after they are copied from the source AWS Region. If the value is -1, the manual snapshot is retained indefinitely.
-     * 
-     * The value must be either -1 or an integer between 1 and 3,653.
-     * 
-     */
+        /**
+         * @return The number of days to retain newly copied snapshots in the destination AWS Region after they are copied from the source AWS Region. If the value is -1, the manual snapshot is retained indefinitely.
+         * 
+         * The value must be either -1 or an integer between 1 and 3,653.
+         * 
+         */
     private final @Nullable Integer manualSnapshotRetentionPeriod;
-    /**
-     * The node type to be provisioned for the cluster.Valid Values: ds2.xlarge | ds2.8xlarge | dc1.large | dc1.8xlarge | dc2.large | dc2.8xlarge | ra3.4xlarge | ra3.16xlarge
-     * 
-     */
+        /**
+         * @return The node type to be provisioned for the cluster.Valid Values: ds2.xlarge | ds2.8xlarge | dc1.large | dc1.8xlarge | dc2.large | dc2.8xlarge | ra3.4xlarge | ra3.16xlarge
+         * 
+         */
     private final @Nullable String nodeType;
-    /**
-     * The number of compute nodes in the cluster. This parameter is required when the ClusterType parameter is specified as multi-node.
-     * 
-     */
+        /**
+         * @return The number of compute nodes in the cluster. This parameter is required when the ClusterType parameter is specified as multi-node.
+         * 
+         */
     private final @Nullable Integer numberOfNodes;
-    /**
-     * The port number on which the cluster accepts incoming connections. The cluster is accessible only via the JDBC and ODBC connection strings
-     * 
-     */
+        /**
+         * @return The port number on which the cluster accepts incoming connections. The cluster is accessible only via the JDBC and ODBC connection strings
+         * 
+         */
     private final @Nullable Integer port;
-    /**
-     * The weekly time range (in UTC) during which automated cluster maintenance can occur.
-     * 
-     */
+        /**
+         * @return The weekly time range (in UTC) during which automated cluster maintenance can occur.
+         * 
+         */
     private final @Nullable String preferredMaintenanceWindow;
-    /**
-     * If true, the cluster can be accessed from a public network.
-     * 
-     */
+        /**
+         * @return If true, the cluster can be accessed from a public network.
+         * 
+         */
     private final @Nullable Boolean publiclyAccessible;
-    /**
-     * The Redshift operation to be performed. Resource Action supports pause-cluster, resume-cluster APIs
-     * 
-     */
+        /**
+         * @return The Redshift operation to be performed. Resource Action supports pause-cluster, resume-cluster APIs
+         * 
+         */
     private final @Nullable String resourceAction;
-    /**
-     * The identifier of the database revision. You can retrieve this value from the response to the DescribeClusterDbRevisions request.
-     * 
-     */
+        /**
+         * @return The identifier of the database revision. You can retrieve this value from the response to the DescribeClusterDbRevisions request.
+         * 
+         */
     private final @Nullable String revisionTarget;
-    /**
-     * A boolean indicating if we want to rotate Encryption Keys.
-     * 
-     */
+        /**
+         * @return A boolean indicating if we want to rotate Encryption Keys.
+         * 
+         */
     private final @Nullable Boolean rotateEncryptionKey;
-    /**
-     * The name of the snapshot copy grant to use when snapshots of an AWS KMS-encrypted cluster are copied to the destination region.
-     * 
-     */
+        /**
+         * @return The name of the snapshot copy grant to use when snapshots of an AWS KMS-encrypted cluster are copied to the destination region.
+         * 
+         */
     private final @Nullable String snapshotCopyGrantName;
-    /**
-     * Indicates whether to apply the snapshot retention period to newly copied manual snapshots instead of automated snapshots.
-     * 
-     */
+        /**
+         * @return Indicates whether to apply the snapshot retention period to newly copied manual snapshots instead of automated snapshots.
+         * 
+         */
     private final @Nullable Boolean snapshotCopyManual;
-    /**
-     * The number of days to retain automated snapshots in the destination region after they are copied from the source region.
-     * 
-     *  Default is 7.
-     * 
-     *  Constraints: Must be at least 1 and no more than 35.
-     * 
-     */
+        /**
+         * @return The number of days to retain automated snapshots in the destination region after they are copied from the source region.
+         * 
+         *  Default is 7.
+         * 
+         *  Constraints: Must be at least 1 and no more than 35.
+         * 
+         */
     private final @Nullable Integer snapshotCopyRetentionPeriod;
-    /**
-     * The list of tags for the cluster parameter group.
-     * 
-     */
+        /**
+         * @return The list of tags for the cluster parameter group.
+         * 
+         */
     private final @Nullable List<ClusterTag> tags;
-    /**
-     * A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.
-     * 
-     */
+        /**
+         * @return A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.
+         * 
+         */
     private final @Nullable List<String> vpcSecurityGroupIds;
 
     @CustomType.Constructor
@@ -319,139 +319,139 @@ public final class GetClusterResult {
     }
 
     /**
-     * Major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default value is True
+     * @return Major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default value is True
      * 
-    */
+     */
     public Optional<Boolean> allowVersionUpgrade() {
         return Optional.ofNullable(this.allowVersionUpgrade);
     }
     /**
-     * The value represents how the cluster is configured to use AQUA (Advanced Query Accelerator) after the cluster is restored. Possible values include the following.
+     * @return The value represents how the cluster is configured to use AQUA (Advanced Query Accelerator) after the cluster is restored. Possible values include the following.
      * 
      * enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
      * disabled - Don&#39;t use AQUA.
      * auto - Amazon Redshift determines whether to use AQUA.
      * 
-    */
+     */
     public Optional<String> aquaConfigurationStatus() {
         return Optional.ofNullable(this.aquaConfigurationStatus);
     }
     /**
-     * The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Default value is 1
+     * @return The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Default value is 1
      * 
-    */
+     */
     public Optional<Integer> automatedSnapshotRetentionPeriod() {
         return Optional.ofNullable(this.automatedSnapshotRetentionPeriod);
     }
     /**
-     * The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. Default: A random, system-chosen Availability Zone in the region that is specified by the endpoint
+     * @return The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. Default: A random, system-chosen Availability Zone in the region that is specified by the endpoint
      * 
-    */
+     */
     public Optional<String> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
     /**
-     * The option to enable relocation for an Amazon Redshift cluster between Availability Zones after the cluster modification is complete.
+     * @return The option to enable relocation for an Amazon Redshift cluster between Availability Zones after the cluster modification is complete.
      * 
-    */
+     */
     public Optional<Boolean> availabilityZoneRelocation() {
         return Optional.ofNullable(this.availabilityZoneRelocation);
     }
     /**
-     * The availability zone relocation status of the cluster
+     * @return The availability zone relocation status of the cluster
      * 
-    */
+     */
     public Optional<String> availabilityZoneRelocationStatus() {
         return Optional.ofNullable(this.availabilityZoneRelocationStatus);
     }
     /**
-     * A boolean value indicating whether the resize operation is using the classic resize process. If you don&#39;t provide this parameter or set the value to false , the resize type is elastic.
+     * @return A boolean value indicating whether the resize operation is using the classic resize process. If you don&#39;t provide this parameter or set the value to false , the resize type is elastic.
      * 
-    */
+     */
     public Optional<Boolean> classic() {
         return Optional.ofNullable(this.classic);
     }
     /**
-     * The name of the parameter group to be associated with this cluster.
+     * @return The name of the parameter group to be associated with this cluster.
      * 
-    */
+     */
     public Optional<String> clusterParameterGroupName() {
         return Optional.ofNullable(this.clusterParameterGroupName);
     }
     /**
-     * A list of security groups to be associated with this cluster.
+     * @return A list of security groups to be associated with this cluster.
      * 
-    */
+     */
     public List<String> clusterSecurityGroups() {
         return this.clusterSecurityGroups == null ? List.of() : this.clusterSecurityGroups;
     }
     /**
-     * The type of the cluster. When cluster type is specified as single-node, the NumberOfNodes parameter is not required and if multi-node, the NumberOfNodes parameter is required
+     * @return The type of the cluster. When cluster type is specified as single-node, the NumberOfNodes parameter is not required and if multi-node, the NumberOfNodes parameter is required
      * 
-    */
+     */
     public Optional<String> clusterType() {
         return Optional.ofNullable(this.clusterType);
     }
     /**
-     * The version of the Amazon Redshift engine software that you want to deploy on the cluster.The version selected runs on all the nodes in the cluster.
+     * @return The version of the Amazon Redshift engine software that you want to deploy on the cluster.The version selected runs on all the nodes in the cluster.
      * 
-    */
+     */
     public Optional<String> clusterVersion() {
         return Optional.ofNullable(this.clusterVersion);
     }
     /**
-     * A boolean indicating whether to enable the deferred maintenance window.
+     * @return A boolean indicating whether to enable the deferred maintenance window.
      * 
-    */
+     */
     public Optional<Boolean> deferMaintenance() {
         return Optional.ofNullable(this.deferMaintenance);
     }
     /**
-     * An integer indicating the duration of the maintenance window in days. If you specify a duration, you can&#39;t specify an end time. The duration must be 45 days or less.
+     * @return An integer indicating the duration of the maintenance window in days. If you specify a duration, you can&#39;t specify an end time. The duration must be 45 days or less.
      * 
-    */
+     */
     public Optional<Integer> deferMaintenanceDuration() {
         return Optional.ofNullable(this.deferMaintenanceDuration);
     }
     /**
-     * A timestamp indicating end time for the deferred maintenance window. If you specify an end time, you can&#39;t specify a duration.
+     * @return A timestamp indicating end time for the deferred maintenance window. If you specify an end time, you can&#39;t specify a duration.
      * 
-    */
+     */
     public Optional<String> deferMaintenanceEndTime() {
         return Optional.ofNullable(this.deferMaintenanceEndTime);
     }
     /**
-     * A unique identifier for the deferred maintenance window.
+     * @return A unique identifier for the deferred maintenance window.
      * 
-    */
+     */
     public Optional<String> deferMaintenanceIdentifier() {
         return Optional.ofNullable(this.deferMaintenanceIdentifier);
     }
     /**
-     * A timestamp indicating the start time for the deferred maintenance window.
+     * @return A timestamp indicating the start time for the deferred maintenance window.
      * 
-    */
+     */
     public Optional<String> deferMaintenanceStartTime() {
         return Optional.ofNullable(this.deferMaintenanceStartTime);
     }
     /**
-     * The destination AWS Region that you want to copy snapshots to. Constraints: Must be the name of a valid AWS Region. For more information, see Regions and Endpoints in the Amazon Web Services [https://docs.aws.amazon.com/general/latest/gr/rande.html#redshift_region] General Reference
+     * @return The destination AWS Region that you want to copy snapshots to. Constraints: Must be the name of a valid AWS Region. For more information, see Regions and Endpoints in the Amazon Web Services [https://docs.aws.amazon.com/general/latest/gr/rande.html#redshift_region] General Reference
      * 
-    */
+     */
     public Optional<String> destinationRegion() {
         return Optional.ofNullable(this.destinationRegion);
     }
     /**
-     * The Elastic IP (EIP) address for the cluster.
+     * @return The Elastic IP (EIP) address for the cluster.
      * 
-    */
+     */
     public Optional<String> elasticIp() {
         return Optional.ofNullable(this.elasticIp);
     }
     /**
-     * If true, the data in the cluster is encrypted at rest.
+     * @return If true, the data in the cluster is encrypted at rest.
      * 
-    */
+     */
     public Optional<Boolean> encrypted() {
         return Optional.ofNullable(this.encrypted);
     }
@@ -459,34 +459,34 @@ public final class GetClusterResult {
         return Optional.ofNullable(this.endpoint);
     }
     /**
-     * An option that specifies whether to create the cluster with enhanced VPC routing enabled. To create a cluster that uses enhanced VPC routing, the cluster must be in a VPC. For more information, see Enhanced VPC Routing in the Amazon Redshift Cluster Management Guide.
+     * @return An option that specifies whether to create the cluster with enhanced VPC routing enabled. To create a cluster that uses enhanced VPC routing, the cluster must be in a VPC. For more information, see Enhanced VPC Routing in the Amazon Redshift Cluster Management Guide.
      * 
      * If this option is true , enhanced VPC routing is enabled.
      * 
      * Default: false
      * 
-    */
+     */
     public Optional<Boolean> enhancedVpcRouting() {
         return Optional.ofNullable(this.enhancedVpcRouting);
     }
     /**
-     * Specifies the name of the HSM client certificate the Amazon Redshift cluster uses to retrieve the data encryption keys stored in an HSM
+     * @return Specifies the name of the HSM client certificate the Amazon Redshift cluster uses to retrieve the data encryption keys stored in an HSM
      * 
-    */
+     */
     public Optional<String> hsmClientCertificateIdentifier() {
         return Optional.ofNullable(this.hsmClientCertificateIdentifier);
     }
     /**
-     * Specifies the name of the HSM configuration that contains the information the Amazon Redshift cluster can use to retrieve and store keys in an HSM.
+     * @return Specifies the name of the HSM configuration that contains the information the Amazon Redshift cluster can use to retrieve and store keys in an HSM.
      * 
-    */
+     */
     public Optional<String> hsmConfigurationIdentifier() {
         return Optional.ofNullable(this.hsmConfigurationIdentifier);
     }
     /**
-     * A list of AWS Identity and Access Management (IAM) roles that can be used by the cluster to access other AWS services. You must supply the IAM roles in their Amazon Resource Name (ARN) format. You can supply up to 10 IAM roles in a single request
+     * @return A list of AWS Identity and Access Management (IAM) roles that can be used by the cluster to access other AWS services. You must supply the IAM roles in their Amazon Resource Name (ARN) format. You can supply up to 10 IAM roles in a single request
      * 
-    */
+     */
     public List<String> iamRoles() {
         return this.iamRoles == null ? List.of() : this.iamRoles;
     }
@@ -494,9 +494,9 @@ public final class GetClusterResult {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The AWS Key Management Service (KMS) key ID of the encryption key that you want to use to encrypt data in the cluster.
+     * @return The AWS Key Management Service (KMS) key ID of the encryption key that you want to use to encrypt data in the cluster.
      * 
-    */
+     */
     public Optional<String> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
@@ -504,113 +504,113 @@ public final class GetClusterResult {
         return Optional.ofNullable(this.loggingProperties);
     }
     /**
-     * The name for the maintenance track that you want to assign for the cluster. This name change is asynchronous. The new track name stays in the PendingModifiedValues for the cluster until the next maintenance window. When the maintenance track changes, the cluster is switched to the latest cluster release available for the maintenance track. At this point, the maintenance track name is applied.
+     * @return The name for the maintenance track that you want to assign for the cluster. This name change is asynchronous. The new track name stays in the PendingModifiedValues for the cluster until the next maintenance window. When the maintenance track changes, the cluster is switched to the latest cluster release available for the maintenance track. At this point, the maintenance track name is applied.
      * 
-    */
+     */
     public Optional<String> maintenanceTrackName() {
         return Optional.ofNullable(this.maintenanceTrackName);
     }
     /**
-     * The number of days to retain newly copied snapshots in the destination AWS Region after they are copied from the source AWS Region. If the value is -1, the manual snapshot is retained indefinitely.
+     * @return The number of days to retain newly copied snapshots in the destination AWS Region after they are copied from the source AWS Region. If the value is -1, the manual snapshot is retained indefinitely.
      * 
      * The value must be either -1 or an integer between 1 and 3,653.
      * 
-    */
+     */
     public Optional<Integer> manualSnapshotRetentionPeriod() {
         return Optional.ofNullable(this.manualSnapshotRetentionPeriod);
     }
     /**
-     * The node type to be provisioned for the cluster.Valid Values: ds2.xlarge | ds2.8xlarge | dc1.large | dc1.8xlarge | dc2.large | dc2.8xlarge | ra3.4xlarge | ra3.16xlarge
+     * @return The node type to be provisioned for the cluster.Valid Values: ds2.xlarge | ds2.8xlarge | dc1.large | dc1.8xlarge | dc2.large | dc2.8xlarge | ra3.4xlarge | ra3.16xlarge
      * 
-    */
+     */
     public Optional<String> nodeType() {
         return Optional.ofNullable(this.nodeType);
     }
     /**
-     * The number of compute nodes in the cluster. This parameter is required when the ClusterType parameter is specified as multi-node.
+     * @return The number of compute nodes in the cluster. This parameter is required when the ClusterType parameter is specified as multi-node.
      * 
-    */
+     */
     public Optional<Integer> numberOfNodes() {
         return Optional.ofNullable(this.numberOfNodes);
     }
     /**
-     * The port number on which the cluster accepts incoming connections. The cluster is accessible only via the JDBC and ODBC connection strings
+     * @return The port number on which the cluster accepts incoming connections. The cluster is accessible only via the JDBC and ODBC connection strings
      * 
-    */
+     */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * The weekly time range (in UTC) during which automated cluster maintenance can occur.
+     * @return The weekly time range (in UTC) during which automated cluster maintenance can occur.
      * 
-    */
+     */
     public Optional<String> preferredMaintenanceWindow() {
         return Optional.ofNullable(this.preferredMaintenanceWindow);
     }
     /**
-     * If true, the cluster can be accessed from a public network.
+     * @return If true, the cluster can be accessed from a public network.
      * 
-    */
+     */
     public Optional<Boolean> publiclyAccessible() {
         return Optional.ofNullable(this.publiclyAccessible);
     }
     /**
-     * The Redshift operation to be performed. Resource Action supports pause-cluster, resume-cluster APIs
+     * @return The Redshift operation to be performed. Resource Action supports pause-cluster, resume-cluster APIs
      * 
-    */
+     */
     public Optional<String> resourceAction() {
         return Optional.ofNullable(this.resourceAction);
     }
     /**
-     * The identifier of the database revision. You can retrieve this value from the response to the DescribeClusterDbRevisions request.
+     * @return The identifier of the database revision. You can retrieve this value from the response to the DescribeClusterDbRevisions request.
      * 
-    */
+     */
     public Optional<String> revisionTarget() {
         return Optional.ofNullable(this.revisionTarget);
     }
     /**
-     * A boolean indicating if we want to rotate Encryption Keys.
+     * @return A boolean indicating if we want to rotate Encryption Keys.
      * 
-    */
+     */
     public Optional<Boolean> rotateEncryptionKey() {
         return Optional.ofNullable(this.rotateEncryptionKey);
     }
     /**
-     * The name of the snapshot copy grant to use when snapshots of an AWS KMS-encrypted cluster are copied to the destination region.
+     * @return The name of the snapshot copy grant to use when snapshots of an AWS KMS-encrypted cluster are copied to the destination region.
      * 
-    */
+     */
     public Optional<String> snapshotCopyGrantName() {
         return Optional.ofNullable(this.snapshotCopyGrantName);
     }
     /**
-     * Indicates whether to apply the snapshot retention period to newly copied manual snapshots instead of automated snapshots.
+     * @return Indicates whether to apply the snapshot retention period to newly copied manual snapshots instead of automated snapshots.
      * 
-    */
+     */
     public Optional<Boolean> snapshotCopyManual() {
         return Optional.ofNullable(this.snapshotCopyManual);
     }
     /**
-     * The number of days to retain automated snapshots in the destination region after they are copied from the source region.
+     * @return The number of days to retain automated snapshots in the destination region after they are copied from the source region.
      * 
      *  Default is 7.
      * 
      *  Constraints: Must be at least 1 and no more than 35.
      * 
-    */
+     */
     public Optional<Integer> snapshotCopyRetentionPeriod() {
         return Optional.ofNullable(this.snapshotCopyRetentionPeriod);
     }
     /**
-     * The list of tags for the cluster parameter group.
+     * @return The list of tags for the cluster parameter group.
      * 
-    */
+     */
     public List<ClusterTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.
+     * @return A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.
      * 
-    */
+     */
     public List<String> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds == null ? List.of() : this.vpcSecurityGroupIds;
     }

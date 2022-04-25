@@ -14,16 +14,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RuleGroupCustomResponse {
-    /**
-     * Custom response body key.
-     * 
-     */
+        /**
+         * @return Custom response body key.
+         * 
+         */
     private final @Nullable String customResponseBodyKey;
     private final Integer responseCode;
-    /**
-     * Collection of HTTP headers.
-     * 
-     */
+        /**
+         * @return Collection of HTTP headers.
+         * 
+         */
     private final @Nullable List<RuleGroupCustomHTTPHeader> responseHeaders;
 
     @CustomType.Constructor
@@ -37,9 +37,9 @@ public final class RuleGroupCustomResponse {
     }
 
     /**
-     * Custom response body key.
+     * @return Custom response body key.
      * 
-    */
+     */
     public Optional<String> customResponseBodyKey() {
         return Optional.ofNullable(this.customResponseBodyKey);
     }
@@ -47,9 +47,9 @@ public final class RuleGroupCustomResponse {
         return this.responseCode;
     }
     /**
-     * Collection of HTTP headers.
+     * @return Collection of HTTP headers.
      * 
-    */
+     */
     public List<RuleGroupCustomHTTPHeader> responseHeaders() {
         return this.responseHeaders == null ? List.of() : this.responseHeaders;
     }

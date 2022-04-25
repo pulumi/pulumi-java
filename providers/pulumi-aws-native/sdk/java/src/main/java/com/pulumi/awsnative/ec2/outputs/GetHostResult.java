@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetHostResult {
-    /**
-     * Indicates whether the host accepts any untargeted instance launches that match its instance type configuration, or if it only accepts Host tenancy instance launches that specify its unique host ID.
-     * 
-     */
+        /**
+         * @return Indicates whether the host accepts any untargeted instance launches that match its instance type configuration, or if it only accepts Host tenancy instance launches that specify its unique host ID.
+         * 
+         */
     private final @Nullable String autoPlacement;
-    /**
-     * Id of the host created.
-     * 
-     */
+        /**
+         * @return Id of the host created.
+         * 
+         */
     private final @Nullable String hostId;
-    /**
-     * Indicates whether to enable or disable host recovery for the Dedicated Host. Host recovery is disabled by default.
-     * 
-     */
+        /**
+         * @return Indicates whether to enable or disable host recovery for the Dedicated Host. Host recovery is disabled by default.
+         * 
+         */
     private final @Nullable String hostRecovery;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class GetHostResult {
     }
 
     /**
-     * Indicates whether the host accepts any untargeted instance launches that match its instance type configuration, or if it only accepts Host tenancy instance launches that specify its unique host ID.
+     * @return Indicates whether the host accepts any untargeted instance launches that match its instance type configuration, or if it only accepts Host tenancy instance launches that specify its unique host ID.
      * 
-    */
+     */
     public Optional<String> autoPlacement() {
         return Optional.ofNullable(this.autoPlacement);
     }
     /**
-     * Id of the host created.
+     * @return Id of the host created.
      * 
-    */
+     */
     public Optional<String> hostId() {
         return Optional.ofNullable(this.hostId);
     }
     /**
-     * Indicates whether to enable or disable host recovery for the Dedicated Host. Host recovery is disabled by default.
+     * @return Indicates whether to enable or disable host recovery for the Dedicated Host. Host recovery is disabled by default.
      * 
-    */
+     */
     public Optional<String> hostRecovery() {
         return Optional.ofNullable(this.hostRecovery);
     }

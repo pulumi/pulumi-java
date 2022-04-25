@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FlowDestinationFlowConfig {
-    /**
-     * Name of destination connector profile
-     * 
-     */
+        /**
+         * @return Name of destination connector profile
+         * 
+         */
     private final @Nullable String connectorProfileName;
-    /**
-     * Destination connector type
-     * 
-     */
+        /**
+         * @return Destination connector type
+         * 
+         */
     private final FlowConnectorType connectorType;
-    /**
-     * Destination connector details
-     * 
-     */
+        /**
+         * @return Destination connector details
+         * 
+         */
     private final FlowDestinationConnectorProperties destinationConnectorProperties;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class FlowDestinationFlowConfig {
     }
 
     /**
-     * Name of destination connector profile
+     * @return Name of destination connector profile
      * 
-    */
+     */
     public Optional<String> connectorProfileName() {
         return Optional.ofNullable(this.connectorProfileName);
     }
     /**
-     * Destination connector type
+     * @return Destination connector type
      * 
-    */
+     */
     public FlowConnectorType connectorType() {
         return this.connectorType;
     }
     /**
-     * Destination connector details
+     * @return Destination connector details
      * 
-    */
+     */
     public FlowDestinationConnectorProperties destinationConnectorProperties() {
         return this.destinationConnectorProperties;
     }

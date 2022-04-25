@@ -27,6 +27,10 @@ public final class AppImageConfigKernelGatewayImageConfig extends com.pulumi.res
     @Import(name="fileSystemConfig")
     private @Nullable AppImageConfigFileSystemConfig fileSystemConfig;
 
+    /**
+     * @return The Amazon Elastic File System (EFS) storage configuration for a SageMaker image.
+     * 
+     */
     public Optional<AppImageConfigFileSystemConfig> fileSystemConfig() {
         return Optional.ofNullable(this.fileSystemConfig);
     }
@@ -38,6 +42,10 @@ public final class AppImageConfigKernelGatewayImageConfig extends com.pulumi.res
     @Import(name="kernelSpecs", required=true)
     private List<AppImageConfigKernelSpec> kernelSpecs;
 
+    /**
+     * @return The specification of the Jupyter kernels in the image.
+     * 
+     */
     public List<AppImageConfigKernelSpec> kernelSpecs() {
         return this.kernelSpecs;
     }
@@ -67,16 +75,34 @@ public final class AppImageConfigKernelGatewayImageConfig extends com.pulumi.res
             $ = new AppImageConfigKernelGatewayImageConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fileSystemConfig The Amazon Elastic File System (EFS) storage configuration for a SageMaker image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemConfig(@Nullable AppImageConfigFileSystemConfig fileSystemConfig) {
             $.fileSystemConfig = fileSystemConfig;
             return this;
         }
 
+        /**
+         * @param kernelSpecs The specification of the Jupyter kernels in the image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kernelSpecs(List<AppImageConfigKernelSpec> kernelSpecs) {
             $.kernelSpecs = kernelSpecs;
             return this;
         }
 
+        /**
+         * @param kernelSpecs The specification of the Jupyter kernels in the image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kernelSpecs(AppImageConfigKernelSpec... kernelSpecs) {
             return kernelSpecs(List.of(kernelSpecs));
         }

@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RecipeConditionExpression {
-    /**
-     * Input condition to be applied to the target column
-     * 
-     */
+        /**
+         * @return Input condition to be applied to the target column
+         * 
+         */
     private final String condition;
-    /**
-     * Name of the target column
-     * 
-     */
+        /**
+         * @return Name of the target column
+         * 
+         */
     private final String targetColumn;
-    /**
-     * Value of the condition
-     * 
-     */
+        /**
+         * @return Value of the condition
+         * 
+         */
     private final @Nullable String value;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class RecipeConditionExpression {
     }
 
     /**
-     * Input condition to be applied to the target column
+     * @return Input condition to be applied to the target column
      * 
-    */
+     */
     public String condition() {
         return this.condition;
     }
     /**
-     * Name of the target column
+     * @return Name of the target column
      * 
-    */
+     */
     public String targetColumn() {
         return this.targetColumn;
     }
     /**
-     * Value of the condition
+     * @return Value of the condition
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

@@ -25,6 +25,10 @@ public final class EndpointAccessNetworkInterface extends com.pulumi.resources.I
     @Import(name="availabilityZone")
     private @Nullable String availabilityZone;
 
+    /**
+     * @return The Availability Zone.
+     * 
+     */
     public Optional<String> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
@@ -36,6 +40,10 @@ public final class EndpointAccessNetworkInterface extends com.pulumi.resources.I
     @Import(name="networkInterfaceId")
     private @Nullable String networkInterfaceId;
 
+    /**
+     * @return The network interface identifier.
+     * 
+     */
     public Optional<String> networkInterfaceId() {
         return Optional.ofNullable(this.networkInterfaceId);
     }
@@ -47,6 +55,10 @@ public final class EndpointAccessNetworkInterface extends com.pulumi.resources.I
     @Import(name="privateIpAddress")
     private @Nullable String privateIpAddress;
 
+    /**
+     * @return The IPv4 address of the network interface within the subnet.
+     * 
+     */
     public Optional<String> privateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
@@ -58,6 +70,10 @@ public final class EndpointAccessNetworkInterface extends com.pulumi.resources.I
     @Import(name="subnetId")
     private @Nullable String subnetId;
 
+    /**
+     * @return The subnet identifier.
+     * 
+     */
     public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
@@ -89,21 +105,45 @@ public final class EndpointAccessNetworkInterface extends com.pulumi.resources.I
             $ = new EndpointAccessNetworkInterface(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availabilityZone The Availability Zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(@Nullable String availabilityZone) {
             $.availabilityZone = availabilityZone;
             return this;
         }
 
+        /**
+         * @param networkInterfaceId The network interface identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             $.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
+        /**
+         * @param privateIpAddress The IPv4 address of the network interface within the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
             $.privateIpAddress = privateIpAddress;
             return this;
         }
 
+        /**
+         * @param subnetId The subnet identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(@Nullable String subnetId) {
             $.subnetId = subnetId;
             return this;

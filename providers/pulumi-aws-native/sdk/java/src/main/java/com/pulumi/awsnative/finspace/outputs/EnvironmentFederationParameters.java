@@ -12,35 +12,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EnvironmentFederationParameters {
-    /**
-     * SAML metadata URL to link with the Environment
-     * 
-     */
+        /**
+         * @return SAML metadata URL to link with the Environment
+         * 
+         */
     private final @Nullable String applicationCallBackURL;
-    /**
-     * Attribute map for SAML configuration
-     * 
-     */
+        /**
+         * @return Attribute map for SAML configuration
+         * 
+         */
     private final @Nullable Object attributeMap;
-    /**
-     * Federation provider name to link with the Environment
-     * 
-     */
+        /**
+         * @return Federation provider name to link with the Environment
+         * 
+         */
     private final @Nullable String federationProviderName;
-    /**
-     * SAML metadata URL to link with the Environment
-     * 
-     */
+        /**
+         * @return SAML metadata URL to link with the Environment
+         * 
+         */
     private final @Nullable String federationURN;
-    /**
-     * SAML metadata document to link the federation provider to the Environment
-     * 
-     */
+        /**
+         * @return SAML metadata document to link the federation provider to the Environment
+         * 
+         */
     private final @Nullable String samlMetadataDocument;
-    /**
-     * SAML metadata URL to link with the Environment
-     * 
-     */
+        /**
+         * @return SAML metadata URL to link with the Environment
+         * 
+         */
     private final @Nullable String samlMetadataURL;
 
     @CustomType.Constructor
@@ -60,44 +60,44 @@ public final class EnvironmentFederationParameters {
     }
 
     /**
-     * SAML metadata URL to link with the Environment
+     * @return SAML metadata URL to link with the Environment
      * 
-    */
+     */
     public Optional<String> applicationCallBackURL() {
         return Optional.ofNullable(this.applicationCallBackURL);
     }
     /**
-     * Attribute map for SAML configuration
+     * @return Attribute map for SAML configuration
      * 
-    */
+     */
     public Optional<Object> attributeMap() {
         return Optional.ofNullable(this.attributeMap);
     }
     /**
-     * Federation provider name to link with the Environment
+     * @return Federation provider name to link with the Environment
      * 
-    */
+     */
     public Optional<String> federationProviderName() {
         return Optional.ofNullable(this.federationProviderName);
     }
     /**
-     * SAML metadata URL to link with the Environment
+     * @return SAML metadata URL to link with the Environment
      * 
-    */
+     */
     public Optional<String> federationURN() {
         return Optional.ofNullable(this.federationURN);
     }
     /**
-     * SAML metadata document to link the federation provider to the Environment
+     * @return SAML metadata document to link the federation provider to the Environment
      * 
-    */
+     */
     public Optional<String> samlMetadataDocument() {
         return Optional.ofNullable(this.samlMetadataDocument);
     }
     /**
-     * SAML metadata URL to link with the Environment
+     * @return SAML metadata URL to link with the Environment
      * 
-    */
+     */
     public Optional<String> samlMetadataURL() {
         return Optional.ofNullable(this.samlMetadataURL);
     }

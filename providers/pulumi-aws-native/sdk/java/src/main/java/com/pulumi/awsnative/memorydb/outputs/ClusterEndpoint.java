@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClusterEndpoint {
-    /**
-     * The DNS address of the primary read-write node.
-     * 
-     */
+        /**
+         * @return The DNS address of the primary read-write node.
+         * 
+         */
     private final @Nullable String address;
-    /**
-     * The port number that the engine is listening on.
-     * 
-     */
+        /**
+         * @return The port number that the engine is listening on.
+         * 
+         */
     private final @Nullable Integer port;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class ClusterEndpoint {
     }
 
     /**
-     * The DNS address of the primary read-write node.
+     * @return The DNS address of the primary read-write node.
      * 
-    */
+     */
     public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
     /**
-     * The port number that the engine is listening on.
+     * @return The port number that the engine is listening on.
      * 
-    */
+     */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }

@@ -22,6 +22,10 @@ public final class DocumentationVersionArgs extends com.pulumi.resources.Resourc
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the API documentation snapshot.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -33,6 +37,10 @@ public final class DocumentationVersionArgs extends com.pulumi.resources.Resourc
     @Import(name="documentationVersion", required=true)
     private Output<String> documentationVersion;
 
+    /**
+     * @return The version identifier of the API documentation snapshot.
+     * 
+     */
     public Output<String> documentationVersion() {
         return this.documentationVersion;
     }
@@ -44,6 +52,10 @@ public final class DocumentationVersionArgs extends com.pulumi.resources.Resourc
     @Import(name="restApiId", required=true)
     private Output<String> restApiId;
 
+    /**
+     * @return The identifier of the API.
+     * 
+     */
     public Output<String> restApiId() {
         return this.restApiId;
     }
@@ -74,29 +86,65 @@ public final class DocumentationVersionArgs extends com.pulumi.resources.Resourc
             $ = new DocumentationVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the API documentation snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the API documentation snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param documentationVersion The version identifier of the API documentation snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentationVersion(Output<String> documentationVersion) {
             $.documentationVersion = documentationVersion;
             return this;
         }
 
+        /**
+         * @param documentationVersion The version identifier of the API documentation snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentationVersion(String documentationVersion) {
             return documentationVersion(Output.of(documentationVersion));
         }
 
+        /**
+         * @param restApiId The identifier of the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(Output<String> restApiId) {
             $.restApiId = restApiId;
             return this;
         }
 
+        /**
+         * @param restApiId The identifier of the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(String restApiId) {
             return restApiId(Output.of(restApiId));
         }

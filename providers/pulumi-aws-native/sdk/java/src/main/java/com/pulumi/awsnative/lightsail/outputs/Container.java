@@ -14,30 +14,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class Container {
-    /**
-     * The launch command for the container.
-     * 
-     */
+        /**
+         * @return The launch command for the container.
+         * 
+         */
     private final @Nullable List<String> command;
-    /**
-     * The name of the container.
-     * 
-     */
+        /**
+         * @return The name of the container.
+         * 
+         */
     private final @Nullable String containerName;
-    /**
-     * The environment variables of the container.
-     * 
-     */
+        /**
+         * @return The environment variables of the container.
+         * 
+         */
     private final @Nullable List<ContainerEnvironmentVariable> environment;
-    /**
-     * The name of the image used for the container.
-     * 
-     */
+        /**
+         * @return The name of the image used for the container.
+         * 
+         */
     private final @Nullable String image;
-    /**
-     * The open firewall ports of the container.
-     * 
-     */
+        /**
+         * @return The open firewall ports of the container.
+         * 
+         */
     private final @Nullable List<ContainerPortInfo> ports;
 
     @CustomType.Constructor
@@ -55,37 +55,37 @@ public final class Container {
     }
 
     /**
-     * The launch command for the container.
+     * @return The launch command for the container.
      * 
-    */
+     */
     public List<String> command() {
         return this.command == null ? List.of() : this.command;
     }
     /**
-     * The name of the container.
+     * @return The name of the container.
      * 
-    */
+     */
     public Optional<String> containerName() {
         return Optional.ofNullable(this.containerName);
     }
     /**
-     * The environment variables of the container.
+     * @return The environment variables of the container.
      * 
-    */
+     */
     public List<ContainerEnvironmentVariable> environment() {
         return this.environment == null ? List.of() : this.environment;
     }
     /**
-     * The name of the image used for the container.
+     * @return The name of the image used for the container.
      * 
-    */
+     */
     public Optional<String> image() {
         return Optional.ofNullable(this.image);
     }
     /**
-     * The open firewall ports of the container.
+     * @return The open firewall ports of the container.
      * 
-    */
+     */
     public List<ContainerPortInfo> ports() {
         return this.ports == null ? List.of() : this.ports;
     }

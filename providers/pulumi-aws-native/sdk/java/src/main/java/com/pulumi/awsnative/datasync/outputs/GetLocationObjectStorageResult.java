@@ -15,40 +15,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetLocationObjectStorageResult {
-    /**
-     * Optional. The access key is used if credentials are required to access the self-managed object storage server.
-     * 
-     */
+        /**
+         * @return Optional. The access key is used if credentials are required to access the self-managed object storage server.
+         * 
+         */
     private final @Nullable String accessKey;
-    /**
-     * The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.
+         * 
+         */
     private final @Nullable List<String> agentArns;
-    /**
-     * The Amazon Resource Name (ARN) of the location that is created.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the location that is created.
+         * 
+         */
     private final @Nullable String locationArn;
-    /**
-     * The URL of the object storage location that was described.
-     * 
-     */
+        /**
+         * @return The URL of the object storage location that was described.
+         * 
+         */
     private final @Nullable String locationUri;
-    /**
-     * The port that your self-managed server accepts inbound network traffic on.
-     * 
-     */
+        /**
+         * @return The port that your self-managed server accepts inbound network traffic on.
+         * 
+         */
     private final @Nullable Integer serverPort;
-    /**
-     * The protocol that the object storage server uses to communicate.
-     * 
-     */
+        /**
+         * @return The protocol that the object storage server uses to communicate.
+         * 
+         */
     private final @Nullable LocationObjectStorageServerProtocol serverProtocol;
-    /**
-     * An array of key-value pairs to apply to this resource.
-     * 
-     */
+        /**
+         * @return An array of key-value pairs to apply to this resource.
+         * 
+         */
     private final @Nullable List<LocationObjectStorageTag> tags;
 
     @CustomType.Constructor
@@ -70,51 +70,51 @@ public final class GetLocationObjectStorageResult {
     }
 
     /**
-     * Optional. The access key is used if credentials are required to access the self-managed object storage server.
+     * @return Optional. The access key is used if credentials are required to access the self-managed object storage server.
      * 
-    */
+     */
     public Optional<String> accessKey() {
         return Optional.ofNullable(this.accessKey);
     }
     /**
-     * The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.
+     * @return The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.
      * 
-    */
+     */
     public List<String> agentArns() {
         return this.agentArns == null ? List.of() : this.agentArns;
     }
     /**
-     * The Amazon Resource Name (ARN) of the location that is created.
+     * @return The Amazon Resource Name (ARN) of the location that is created.
      * 
-    */
+     */
     public Optional<String> locationArn() {
         return Optional.ofNullable(this.locationArn);
     }
     /**
-     * The URL of the object storage location that was described.
+     * @return The URL of the object storage location that was described.
      * 
-    */
+     */
     public Optional<String> locationUri() {
         return Optional.ofNullable(this.locationUri);
     }
     /**
-     * The port that your self-managed server accepts inbound network traffic on.
+     * @return The port that your self-managed server accepts inbound network traffic on.
      * 
-    */
+     */
     public Optional<Integer> serverPort() {
         return Optional.ofNullable(this.serverPort);
     }
     /**
-     * The protocol that the object storage server uses to communicate.
+     * @return The protocol that the object storage server uses to communicate.
      * 
-    */
+     */
     public Optional<LocationObjectStorageServerProtocol> serverProtocol() {
         return Optional.ofNullable(this.serverProtocol);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<LocationObjectStorageTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

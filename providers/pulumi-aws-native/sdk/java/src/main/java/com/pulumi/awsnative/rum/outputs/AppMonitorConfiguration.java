@@ -15,50 +15,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AppMonitorConfiguration {
-    /**
-     * If you set this to true, the RUM web client sets two cookies, a session cookie and a user cookie. The cookies allow the RUM web client to collect data relating to the number of users an application has and the behavior of the application across a sequence of events. Cookies are stored in the top-level domain of the current page.
-     * 
-     */
+        /**
+         * @return If you set this to true, the RUM web client sets two cookies, a session cookie and a user cookie. The cookies allow the RUM web client to collect data relating to the number of users an application has and the behavior of the application across a sequence of events. Cookies are stored in the top-level domain of the current page.
+         * 
+         */
     private final @Nullable Boolean allowCookies;
-    /**
-     * If you set this to true, RUM enables xray tracing for the user sessions that RUM samples. RUM adds an xray trace header to allowed HTTP requests. It also records an xray segment for allowed HTTP requests. You can see traces and segments from these user sessions in the xray console and the CW ServiceLens console.
-     * 
-     */
+        /**
+         * @return If you set this to true, RUM enables xray tracing for the user sessions that RUM samples. RUM adds an xray trace header to allowed HTTP requests. It also records an xray segment for allowed HTTP requests. You can see traces and segments from these user sessions in the xray console and the CW ServiceLens console.
+         * 
+         */
     private final @Nullable Boolean enableXRay;
-    /**
-     * A list of URLs in your website or application to exclude from RUM data collection. You can&#39;t include both ExcludedPages and IncludedPages in the same operation.
-     * 
-     */
+        /**
+         * @return A list of URLs in your website or application to exclude from RUM data collection. You can&#39;t include both ExcludedPages and IncludedPages in the same operation.
+         * 
+         */
     private final @Nullable List<String> excludedPages;
-    /**
-     * A list of pages in the RUM console that are to be displayed with a favorite icon.
-     * 
-     */
+        /**
+         * @return A list of pages in the RUM console that are to be displayed with a favorite icon.
+         * 
+         */
     private final @Nullable List<String> favoritePages;
-    /**
-     * The ARN of the guest IAM role that is attached to the identity pool that is used to authorize the sending of data to RUM.
-     * 
-     */
+        /**
+         * @return The ARN of the guest IAM role that is attached to the identity pool that is used to authorize the sending of data to RUM.
+         * 
+         */
     private final @Nullable String guestRoleArn;
-    /**
-     * The ID of the identity pool that is used to authorize the sending of data to RUM.
-     * 
-     */
+        /**
+         * @return The ID of the identity pool that is used to authorize the sending of data to RUM.
+         * 
+         */
     private final @Nullable String identityPoolId;
-    /**
-     * If this app monitor is to collect data from only certain pages in your application, this structure lists those pages. You can&#39;t include both ExcludedPages and IncludedPages in the same operation.
-     * 
-     */
+        /**
+         * @return If this app monitor is to collect data from only certain pages in your application, this structure lists those pages. You can&#39;t include both ExcludedPages and IncludedPages in the same operation.
+         * 
+         */
     private final @Nullable List<String> includedPages;
-    /**
-     * Specifies the percentage of user sessions to use for RUM data collection. Choosing a higher percentage gives you more data but also incurs more costs. The number you specify is the percentage of user sessions that will be used. If you omit this parameter, the default of 10 is used.
-     * 
-     */
+        /**
+         * @return Specifies the percentage of user sessions to use for RUM data collection. Choosing a higher percentage gives you more data but also incurs more costs. The number you specify is the percentage of user sessions that will be used. If you omit this parameter, the default of 10 is used.
+         * 
+         */
     private final @Nullable Double sessionSampleRate;
-    /**
-     * An array that lists the types of telemetry data that this app monitor is to collect.
-     * 
-     */
+        /**
+         * @return An array that lists the types of telemetry data that this app monitor is to collect.
+         * 
+         */
     private final @Nullable List<AppMonitorTelemetry> telemetries;
 
     @CustomType.Constructor
@@ -84,65 +84,65 @@ public final class AppMonitorConfiguration {
     }
 
     /**
-     * If you set this to true, the RUM web client sets two cookies, a session cookie and a user cookie. The cookies allow the RUM web client to collect data relating to the number of users an application has and the behavior of the application across a sequence of events. Cookies are stored in the top-level domain of the current page.
+     * @return If you set this to true, the RUM web client sets two cookies, a session cookie and a user cookie. The cookies allow the RUM web client to collect data relating to the number of users an application has and the behavior of the application across a sequence of events. Cookies are stored in the top-level domain of the current page.
      * 
-    */
+     */
     public Optional<Boolean> allowCookies() {
         return Optional.ofNullable(this.allowCookies);
     }
     /**
-     * If you set this to true, RUM enables xray tracing for the user sessions that RUM samples. RUM adds an xray trace header to allowed HTTP requests. It also records an xray segment for allowed HTTP requests. You can see traces and segments from these user sessions in the xray console and the CW ServiceLens console.
+     * @return If you set this to true, RUM enables xray tracing for the user sessions that RUM samples. RUM adds an xray trace header to allowed HTTP requests. It also records an xray segment for allowed HTTP requests. You can see traces and segments from these user sessions in the xray console and the CW ServiceLens console.
      * 
-    */
+     */
     public Optional<Boolean> enableXRay() {
         return Optional.ofNullable(this.enableXRay);
     }
     /**
-     * A list of URLs in your website or application to exclude from RUM data collection. You can&#39;t include both ExcludedPages and IncludedPages in the same operation.
+     * @return A list of URLs in your website or application to exclude from RUM data collection. You can&#39;t include both ExcludedPages and IncludedPages in the same operation.
      * 
-    */
+     */
     public List<String> excludedPages() {
         return this.excludedPages == null ? List.of() : this.excludedPages;
     }
     /**
-     * A list of pages in the RUM console that are to be displayed with a favorite icon.
+     * @return A list of pages in the RUM console that are to be displayed with a favorite icon.
      * 
-    */
+     */
     public List<String> favoritePages() {
         return this.favoritePages == null ? List.of() : this.favoritePages;
     }
     /**
-     * The ARN of the guest IAM role that is attached to the identity pool that is used to authorize the sending of data to RUM.
+     * @return The ARN of the guest IAM role that is attached to the identity pool that is used to authorize the sending of data to RUM.
      * 
-    */
+     */
     public Optional<String> guestRoleArn() {
         return Optional.ofNullable(this.guestRoleArn);
     }
     /**
-     * The ID of the identity pool that is used to authorize the sending of data to RUM.
+     * @return The ID of the identity pool that is used to authorize the sending of data to RUM.
      * 
-    */
+     */
     public Optional<String> identityPoolId() {
         return Optional.ofNullable(this.identityPoolId);
     }
     /**
-     * If this app monitor is to collect data from only certain pages in your application, this structure lists those pages. You can&#39;t include both ExcludedPages and IncludedPages in the same operation.
+     * @return If this app monitor is to collect data from only certain pages in your application, this structure lists those pages. You can&#39;t include both ExcludedPages and IncludedPages in the same operation.
      * 
-    */
+     */
     public List<String> includedPages() {
         return this.includedPages == null ? List.of() : this.includedPages;
     }
     /**
-     * Specifies the percentage of user sessions to use for RUM data collection. Choosing a higher percentage gives you more data but also incurs more costs. The number you specify is the percentage of user sessions that will be used. If you omit this parameter, the default of 10 is used.
+     * @return Specifies the percentage of user sessions to use for RUM data collection. Choosing a higher percentage gives you more data but also incurs more costs. The number you specify is the percentage of user sessions that will be used. If you omit this parameter, the default of 10 is used.
      * 
-    */
+     */
     public Optional<Double> sessionSampleRate() {
         return Optional.ofNullable(this.sessionSampleRate);
     }
     /**
-     * An array that lists the types of telemetry data that this app monitor is to collect.
+     * @return An array that lists the types of telemetry data that this app monitor is to collect.
      * 
-    */
+     */
     public List<AppMonitorTelemetry> telemetries() {
         return this.telemetries == null ? List.of() : this.telemetries;
     }

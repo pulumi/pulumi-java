@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class FleetMetricAggregationType {
-    /**
-     * Fleet Indexing aggregation type names such as Statistics, Percentiles and Cardinality
-     * 
-     */
+        /**
+         * @return Fleet Indexing aggregation type names such as Statistics, Percentiles and Cardinality
+         * 
+         */
     private final String name;
-    /**
-     * Fleet Indexing aggregation type values
-     * 
-     */
+        /**
+         * @return Fleet Indexing aggregation type values
+         * 
+         */
     private final List<String> values;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class FleetMetricAggregationType {
     }
 
     /**
-     * Fleet Indexing aggregation type names such as Statistics, Percentiles and Cardinality
+     * @return Fleet Indexing aggregation type names such as Statistics, Percentiles and Cardinality
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Fleet Indexing aggregation type values
+     * @return Fleet Indexing aggregation type values
      * 
-    */
+     */
     public List<String> values() {
         return this.values;
     }

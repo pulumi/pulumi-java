@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class WebACLCustomRequestHandling {
-    /**
-     * Collection of HTTP headers.
-     * 
-     */
+        /**
+         * @return Collection of HTTP headers.
+         * 
+         */
     private final List<WebACLCustomHTTPHeader> insertHeaders;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class WebACLCustomRequestHandling {
     }
 
     /**
-     * Collection of HTTP headers.
+     * @return Collection of HTTP headers.
      * 
-    */
+     */
     public List<WebACLCustomHTTPHeader> insertHeaders() {
         return this.insertHeaders;
     }

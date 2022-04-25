@@ -14,15 +14,15 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OriginEndpointMssPackage {
     private final @Nullable OriginEndpointMssEncryption encryption;
-    /**
-     * The time window (in seconds) contained in each manifest.
-     * 
-     */
+        /**
+         * @return The time window (in seconds) contained in each manifest.
+         * 
+         */
     private final @Nullable Integer manifestWindowSeconds;
-    /**
-     * The duration (in seconds) of each segment.
-     * 
-     */
+        /**
+         * @return The duration (in seconds) of each segment.
+         * 
+         */
     private final @Nullable Integer segmentDurationSeconds;
     private final @Nullable OriginEndpointStreamSelection streamSelection;
 
@@ -42,16 +42,16 @@ public final class OriginEndpointMssPackage {
         return Optional.ofNullable(this.encryption);
     }
     /**
-     * The time window (in seconds) contained in each manifest.
+     * @return The time window (in seconds) contained in each manifest.
      * 
-    */
+     */
     public Optional<Integer> manifestWindowSeconds() {
         return Optional.ofNullable(this.manifestWindowSeconds);
     }
     /**
-     * The duration (in seconds) of each segment.
+     * @return The duration (in seconds) of each segment.
      * 
-    */
+     */
     public Optional<Integer> segmentDurationSeconds() {
         return Optional.ofNullable(this.segmentDurationSeconds);
     }

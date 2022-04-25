@@ -26,6 +26,10 @@ public final class ImagePipelineImageTestsConfiguration extends com.pulumi.resou
     @Import(name="imageTestsEnabled")
     private @Nullable Boolean imageTestsEnabled;
 
+    /**
+     * @return Defines if tests should be executed when building this image.
+     * 
+     */
     public Optional<Boolean> imageTestsEnabled() {
         return Optional.ofNullable(this.imageTestsEnabled);
     }
@@ -37,6 +41,10 @@ public final class ImagePipelineImageTestsConfiguration extends com.pulumi.resou
     @Import(name="timeoutMinutes")
     private @Nullable Integer timeoutMinutes;
 
+    /**
+     * @return The maximum time in minutes that tests are permitted to run.
+     * 
+     */
     public Optional<Integer> timeoutMinutes() {
         return Optional.ofNullable(this.timeoutMinutes);
     }
@@ -66,11 +74,23 @@ public final class ImagePipelineImageTestsConfiguration extends com.pulumi.resou
             $ = new ImagePipelineImageTestsConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param imageTestsEnabled Defines if tests should be executed when building this image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageTestsEnabled(@Nullable Boolean imageTestsEnabled) {
             $.imageTestsEnabled = imageTestsEnabled;
             return this;
         }
 
+        /**
+         * @param timeoutMinutes The maximum time in minutes that tests are permitted to run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutMinutes(@Nullable Integer timeoutMinutes) {
             $.timeoutMinutes = timeoutMinutes;
             return this;

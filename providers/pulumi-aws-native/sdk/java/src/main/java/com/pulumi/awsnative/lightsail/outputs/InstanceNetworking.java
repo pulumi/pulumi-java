@@ -14,10 +14,10 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InstanceNetworking {
     private final @Nullable InstanceMonthlyTransfer monthlyTransfer;
-    /**
-     * Ports to the Instance.
-     * 
-     */
+        /**
+         * @return Ports to the Instance.
+         * 
+         */
     private final List<InstancePort> ports;
 
     @CustomType.Constructor
@@ -32,9 +32,9 @@ public final class InstanceNetworking {
         return Optional.ofNullable(this.monthlyTransfer);
     }
     /**
-     * Ports to the Instance.
+     * @return Ports to the Instance.
      * 
-    */
+     */
     public List<InstancePort> ports() {
         return this.ports;
     }

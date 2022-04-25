@@ -13,10 +13,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WebACLJsonMatchPattern {
-    /**
-     * Inspect all parts of the web request&#39;s JSON body.
-     * 
-     */
+        /**
+         * @return Inspect all parts of the web request&#39;s JSON body.
+         * 
+         */
     private final @Nullable Object all;
     private final @Nullable List<String> includedPaths;
 
@@ -29,9 +29,9 @@ public final class WebACLJsonMatchPattern {
     }
 
     /**
-     * Inspect all parts of the web request&#39;s JSON body.
+     * @return Inspect all parts of the web request&#39;s JSON body.
      * 
-    */
+     */
     public Optional<Object> all() {
         return Optional.ofNullable(this.all);
     }

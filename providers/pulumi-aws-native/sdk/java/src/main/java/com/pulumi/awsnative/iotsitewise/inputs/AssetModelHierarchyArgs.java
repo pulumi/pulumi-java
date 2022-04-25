@@ -24,6 +24,10 @@ public final class AssetModelHierarchyArgs extends com.pulumi.resources.Resource
     @Import(name="childAssetModelId", required=true)
     private Output<String> childAssetModelId;
 
+    /**
+     * @return The ID of the asset model. All assets in this hierarchy must be instances of the child AssetModelId asset model.
+     * 
+     */
     public Output<String> childAssetModelId() {
         return this.childAssetModelId;
     }
@@ -35,6 +39,10 @@ public final class AssetModelHierarchyArgs extends com.pulumi.resources.Resource
     @Import(name="logicalId", required=true)
     private Output<String> logicalId;
 
+    /**
+     * @return Customer provided ID for hierarchy.
+     * 
+     */
     public Output<String> logicalId() {
         return this.logicalId;
     }
@@ -46,6 +54,10 @@ public final class AssetModelHierarchyArgs extends com.pulumi.resources.Resource
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the asset model hierarchy.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -76,29 +88,65 @@ public final class AssetModelHierarchyArgs extends com.pulumi.resources.Resource
             $ = new AssetModelHierarchyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param childAssetModelId The ID of the asset model. All assets in this hierarchy must be instances of the child AssetModelId asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder childAssetModelId(Output<String> childAssetModelId) {
             $.childAssetModelId = childAssetModelId;
             return this;
         }
 
+        /**
+         * @param childAssetModelId The ID of the asset model. All assets in this hierarchy must be instances of the child AssetModelId asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder childAssetModelId(String childAssetModelId) {
             return childAssetModelId(Output.of(childAssetModelId));
         }
 
+        /**
+         * @param logicalId Customer provided ID for hierarchy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logicalId(Output<String> logicalId) {
             $.logicalId = logicalId;
             return this;
         }
 
+        /**
+         * @param logicalId Customer provided ID for hierarchy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logicalId(String logicalId) {
             return logicalId(Output.of(logicalId));
         }
 
+        /**
+         * @param name The name of the asset model hierarchy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the asset model hierarchy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

@@ -15,55 +15,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetUserResult {
-    /**
-     * The identifier of the user account in the directory used for identity management.
-     * 
-     */
+        /**
+         * @return The identifier of the user account in the directory used for identity management.
+         * 
+         */
     private final @Nullable String directoryUserId;
-    /**
-     * The identifier of the hierarchy group for the user.
-     * 
-     */
+        /**
+         * @return The identifier of the hierarchy group for the user.
+         * 
+         */
     private final @Nullable String hierarchyGroupArn;
-    /**
-     * The information about the identity of the user.
-     * 
-     */
+        /**
+         * @return The information about the identity of the user.
+         * 
+         */
     private final @Nullable UserIdentityInfo identityInfo;
-    /**
-     * The identifier of the Amazon Connect instance.
-     * 
-     */
+        /**
+         * @return The identifier of the Amazon Connect instance.
+         * 
+         */
     private final @Nullable String instanceArn;
-    /**
-     * The phone settings for the user.
-     * 
-     */
+        /**
+         * @return The phone settings for the user.
+         * 
+         */
     private final @Nullable UserPhoneConfig phoneConfig;
-    /**
-     * The identifier of the routing profile for the user.
-     * 
-     */
+        /**
+         * @return The identifier of the routing profile for the user.
+         * 
+         */
     private final @Nullable String routingProfileArn;
-    /**
-     * One or more security profile arns for the user
-     * 
-     */
+        /**
+         * @return One or more security profile arns for the user
+         * 
+         */
     private final @Nullable List<String> securityProfileArns;
-    /**
-     * One or more tags.
-     * 
-     */
+        /**
+         * @return One or more tags.
+         * 
+         */
     private final @Nullable List<UserTag> tags;
-    /**
-     * The Amazon Resource Name (ARN) for the user.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) for the user.
+         * 
+         */
     private final @Nullable String userArn;
-    /**
-     * The user name for the account.
-     * 
-     */
+        /**
+         * @return The user name for the account.
+         * 
+         */
     private final @Nullable String username;
 
     @CustomType.Constructor
@@ -91,72 +91,72 @@ public final class GetUserResult {
     }
 
     /**
-     * The identifier of the user account in the directory used for identity management.
+     * @return The identifier of the user account in the directory used for identity management.
      * 
-    */
+     */
     public Optional<String> directoryUserId() {
         return Optional.ofNullable(this.directoryUserId);
     }
     /**
-     * The identifier of the hierarchy group for the user.
+     * @return The identifier of the hierarchy group for the user.
      * 
-    */
+     */
     public Optional<String> hierarchyGroupArn() {
         return Optional.ofNullable(this.hierarchyGroupArn);
     }
     /**
-     * The information about the identity of the user.
+     * @return The information about the identity of the user.
      * 
-    */
+     */
     public Optional<UserIdentityInfo> identityInfo() {
         return Optional.ofNullable(this.identityInfo);
     }
     /**
-     * The identifier of the Amazon Connect instance.
+     * @return The identifier of the Amazon Connect instance.
      * 
-    */
+     */
     public Optional<String> instanceArn() {
         return Optional.ofNullable(this.instanceArn);
     }
     /**
-     * The phone settings for the user.
+     * @return The phone settings for the user.
      * 
-    */
+     */
     public Optional<UserPhoneConfig> phoneConfig() {
         return Optional.ofNullable(this.phoneConfig);
     }
     /**
-     * The identifier of the routing profile for the user.
+     * @return The identifier of the routing profile for the user.
      * 
-    */
+     */
     public Optional<String> routingProfileArn() {
         return Optional.ofNullable(this.routingProfileArn);
     }
     /**
-     * One or more security profile arns for the user
+     * @return One or more security profile arns for the user
      * 
-    */
+     */
     public List<String> securityProfileArns() {
         return this.securityProfileArns == null ? List.of() : this.securityProfileArns;
     }
     /**
-     * One or more tags.
+     * @return One or more tags.
      * 
-    */
+     */
     public List<UserTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * The Amazon Resource Name (ARN) for the user.
+     * @return The Amazon Resource Name (ARN) for the user.
      * 
-    */
+     */
     public Optional<String> userArn() {
         return Optional.ofNullable(this.userArn);
     }
     /**
-     * The user name for the account.
+     * @return The user name for the account.
      * 
-    */
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }

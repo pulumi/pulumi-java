@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GameServerGroupTag {
-    /**
-     * The key for a developer-defined key:value pair for tagging an AWS resource.
-     * 
-     */
+        /**
+         * @return The key for a developer-defined key:value pair for tagging an AWS resource.
+         * 
+         */
     private final @Nullable String key;
-    /**
-     * The value for a developer-defined key:value pair for tagging an AWS resource.
-     * 
-     */
+        /**
+         * @return The value for a developer-defined key:value pair for tagging an AWS resource.
+         * 
+         */
     private final @Nullable String value;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class GameServerGroupTag {
     }
 
     /**
-     * The key for a developer-defined key:value pair for tagging an AWS resource.
+     * @return The key for a developer-defined key:value pair for tagging an AWS resource.
      * 
-    */
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
-     * The value for a developer-defined key:value pair for tagging an AWS resource.
+     * @return The value for a developer-defined key:value pair for tagging an AWS resource.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

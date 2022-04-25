@@ -11,25 +11,25 @@ import java.util.Objects;
 
 @CustomType
 public final class FleetIpPermission {
-    /**
-     * A starting value for a range of allowed port numbers.
-     * 
-     */
+        /**
+         * @return A starting value for a range of allowed port numbers.
+         * 
+         */
     private final Integer fromPort;
-    /**
-     * A range of allowed IP addresses. This value must be expressed in CIDR notation. Example: &#34;000.000.000.000/[subnet mask]&#34; or optionally the shortened version &#34;0.0.0.0/[subnet mask]&#34;.
-     * 
-     */
+        /**
+         * @return A range of allowed IP addresses. This value must be expressed in CIDR notation. Example: &#34;000.000.000.000/[subnet mask]&#34; or optionally the shortened version &#34;0.0.0.0/[subnet mask]&#34;.
+         * 
+         */
     private final String ipRange;
-    /**
-     * The network communication protocol used by the fleet.
-     * 
-     */
+        /**
+         * @return The network communication protocol used by the fleet.
+         * 
+         */
     private final FleetIpPermissionProtocol protocol;
-    /**
-     * An ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher than FromPort.
-     * 
-     */
+        /**
+         * @return An ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher than FromPort.
+         * 
+         */
     private final Integer toPort;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class FleetIpPermission {
     }
 
     /**
-     * A starting value for a range of allowed port numbers.
+     * @return A starting value for a range of allowed port numbers.
      * 
-    */
+     */
     public Integer fromPort() {
         return this.fromPort;
     }
     /**
-     * A range of allowed IP addresses. This value must be expressed in CIDR notation. Example: &#34;000.000.000.000/[subnet mask]&#34; or optionally the shortened version &#34;0.0.0.0/[subnet mask]&#34;.
+     * @return A range of allowed IP addresses. This value must be expressed in CIDR notation. Example: &#34;000.000.000.000/[subnet mask]&#34; or optionally the shortened version &#34;0.0.0.0/[subnet mask]&#34;.
      * 
-    */
+     */
     public String ipRange() {
         return this.ipRange;
     }
     /**
-     * The network communication protocol used by the fleet.
+     * @return The network communication protocol used by the fleet.
      * 
-    */
+     */
     public FleetIpPermissionProtocol protocol() {
         return this.protocol;
     }
     /**
-     * An ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher than FromPort.
+     * @return An ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher than FromPort.
      * 
-    */
+     */
     public Integer toPort() {
         return this.toPort;
     }

@@ -24,6 +24,10 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bucket", required=true)
     private Output<String> bucket;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the bucket you want to associate this AccessPoint with.
+     * 
+     */
     public Output<String> bucket() {
         return this.bucket;
     }
@@ -35,6 +39,10 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A name for the AccessPoint.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -46,6 +54,10 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policy")
     private @Nullable Output<Object> policy;
 
+    /**
+     * @return The access point policy associated with this access point.
+     * 
+     */
     public Optional<Output<Object>> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -57,6 +69,10 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcConfiguration", required=true)
     private Output<AccessPointVpcConfigurationArgs> vpcConfiguration;
 
+    /**
+     * @return Virtual Private Cloud (VPC) from which requests can be made to the AccessPoint.
+     * 
+     */
     public Output<AccessPointVpcConfigurationArgs> vpcConfiguration() {
         return this.vpcConfiguration;
     }
@@ -88,38 +104,86 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AccessPointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket The Amazon Resource Name (ARN) of the bucket you want to associate this AccessPoint with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket The Amazon Resource Name (ARN) of the bucket you want to associate this AccessPoint with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param name A name for the AccessPoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A name for the AccessPoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param policy The access point policy associated with this access point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable Output<Object> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy The access point policy associated with this access point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(Object policy) {
             return policy(Output.of(policy));
         }
 
+        /**
+         * @param vpcConfiguration Virtual Private Cloud (VPC) from which requests can be made to the AccessPoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcConfiguration(Output<AccessPointVpcConfigurationArgs> vpcConfiguration) {
             $.vpcConfiguration = vpcConfiguration;
             return this;
         }
 
+        /**
+         * @param vpcConfiguration Virtual Private Cloud (VPC) from which requests can be made to the AccessPoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcConfiguration(AccessPointVpcConfigurationArgs vpcConfiguration) {
             return vpcConfiguration(Output.of(vpcConfiguration));
         }

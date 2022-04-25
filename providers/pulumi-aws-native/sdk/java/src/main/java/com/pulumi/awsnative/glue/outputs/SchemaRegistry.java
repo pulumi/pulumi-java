@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SchemaRegistry {
-    /**
-     * Amazon Resource Name for the Registry.
-     * 
-     */
+        /**
+         * @return Amazon Resource Name for the Registry.
+         * 
+         */
     private final @Nullable String arn;
-    /**
-     * Name of the registry in which the schema will be created.
-     * 
-     */
+        /**
+         * @return Name of the registry in which the schema will be created.
+         * 
+         */
     private final @Nullable String name;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class SchemaRegistry {
     }
 
     /**
-     * Amazon Resource Name for the Registry.
+     * @return Amazon Resource Name for the Registry.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Name of the registry in which the schema will be created.
+     * @return Name of the registry in which the schema will be created.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

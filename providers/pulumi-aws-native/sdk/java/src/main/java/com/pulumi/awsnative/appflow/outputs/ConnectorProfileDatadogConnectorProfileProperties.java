@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ConnectorProfileDatadogConnectorProfileProperties {
-    /**
-     * The location of the Datadog resource
-     * 
-     */
+        /**
+         * @return The location of the Datadog resource
+         * 
+         */
     private final String instanceUrl;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ConnectorProfileDatadogConnectorProfileProperties {
     }
 
     /**
-     * The location of the Datadog resource
+     * @return The location of the Datadog resource
      * 
-    */
+     */
     public String instanceUrl() {
         return this.instanceUrl;
     }

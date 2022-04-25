@@ -20,6 +20,10 @@ public final class BucketReplicaModificationsArgs extends com.pulumi.resources.R
     @Import(name="status", required=true)
     private Output<BucketReplicaModificationsStatus> status;
 
+    /**
+     * @return Specifies whether Amazon S3 replicates modifications on replicas.
+     * 
+     */
     public Output<BucketReplicaModificationsStatus> status() {
         return this.status;
     }
@@ -48,11 +52,23 @@ public final class BucketReplicaModificationsArgs extends com.pulumi.resources.R
             $ = new BucketReplicaModificationsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param status Specifies whether Amazon S3 replicates modifications on replicas.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Output<BucketReplicaModificationsStatus> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Specifies whether Amazon S3 replicates modifications on replicas.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(BucketReplicaModificationsStatus status) {
             return status(Output.of(status));
         }

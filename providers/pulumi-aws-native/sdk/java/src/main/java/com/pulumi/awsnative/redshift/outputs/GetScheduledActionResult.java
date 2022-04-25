@@ -15,50 +15,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetScheduledActionResult {
-    /**
-     * If true, the schedule is enabled. If false, the scheduled action does not trigger.
-     * 
-     */
+        /**
+         * @return If true, the schedule is enabled. If false, the scheduled action does not trigger.
+         * 
+         */
     private final @Nullable Boolean enable;
-    /**
-     * The end time in UTC of the scheduled action. After this time, the scheduled action does not trigger.
-     * 
-     */
+        /**
+         * @return The end time in UTC of the scheduled action. After this time, the scheduled action does not trigger.
+         * 
+         */
     private final @Nullable String endTime;
-    /**
-     * The IAM role to assume to run the target action.
-     * 
-     */
+        /**
+         * @return The IAM role to assume to run the target action.
+         * 
+         */
     private final @Nullable String iamRole;
-    /**
-     * List of times when the scheduled action will run.
-     * 
-     */
+        /**
+         * @return List of times when the scheduled action will run.
+         * 
+         */
     private final @Nullable List<String> nextInvocations;
-    /**
-     * The schedule in `at( )` or `cron( )` format.
-     * 
-     */
+        /**
+         * @return The schedule in `at( )` or `cron( )` format.
+         * 
+         */
     private final @Nullable String schedule;
-    /**
-     * The description of the scheduled action.
-     * 
-     */
+        /**
+         * @return The description of the scheduled action.
+         * 
+         */
     private final @Nullable String scheduledActionDescription;
-    /**
-     * The start time in UTC of the scheduled action. Before this time, the scheduled action does not trigger.
-     * 
-     */
+        /**
+         * @return The start time in UTC of the scheduled action. Before this time, the scheduled action does not trigger.
+         * 
+         */
     private final @Nullable String startTime;
-    /**
-     * The state of the scheduled action.
-     * 
-     */
+        /**
+         * @return The state of the scheduled action.
+         * 
+         */
     private final @Nullable ScheduledActionState state;
-    /**
-     * A JSON format string of the Amazon Redshift API operation with input parameters.
-     * 
-     */
+        /**
+         * @return A JSON format string of the Amazon Redshift API operation with input parameters.
+         * 
+         */
     private final @Nullable ScheduledActionType targetAction;
 
     @CustomType.Constructor
@@ -84,65 +84,65 @@ public final class GetScheduledActionResult {
     }
 
     /**
-     * If true, the schedule is enabled. If false, the scheduled action does not trigger.
+     * @return If true, the schedule is enabled. If false, the scheduled action does not trigger.
      * 
-    */
+     */
     public Optional<Boolean> enable() {
         return Optional.ofNullable(this.enable);
     }
     /**
-     * The end time in UTC of the scheduled action. After this time, the scheduled action does not trigger.
+     * @return The end time in UTC of the scheduled action. After this time, the scheduled action does not trigger.
      * 
-    */
+     */
     public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
-     * The IAM role to assume to run the target action.
+     * @return The IAM role to assume to run the target action.
      * 
-    */
+     */
     public Optional<String> iamRole() {
         return Optional.ofNullable(this.iamRole);
     }
     /**
-     * List of times when the scheduled action will run.
+     * @return List of times when the scheduled action will run.
      * 
-    */
+     */
     public List<String> nextInvocations() {
         return this.nextInvocations == null ? List.of() : this.nextInvocations;
     }
     /**
-     * The schedule in `at( )` or `cron( )` format.
+     * @return The schedule in `at( )` or `cron( )` format.
      * 
-    */
+     */
     public Optional<String> schedule() {
         return Optional.ofNullable(this.schedule);
     }
     /**
-     * The description of the scheduled action.
+     * @return The description of the scheduled action.
      * 
-    */
+     */
     public Optional<String> scheduledActionDescription() {
         return Optional.ofNullable(this.scheduledActionDescription);
     }
     /**
-     * The start time in UTC of the scheduled action. Before this time, the scheduled action does not trigger.
+     * @return The start time in UTC of the scheduled action. Before this time, the scheduled action does not trigger.
      * 
-    */
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
-     * The state of the scheduled action.
+     * @return The state of the scheduled action.
      * 
-    */
+     */
     public Optional<ScheduledActionState> state() {
         return Optional.ofNullable(this.state);
     }
     /**
-     * A JSON format string of the Amazon Redshift API operation with input parameters.
+     * @return A JSON format string of the Amazon Redshift API operation with input parameters.
      * 
-    */
+     */
     public Optional<ScheduledActionType> targetAction() {
         return Optional.ofNullable(this.targetAction);
     }

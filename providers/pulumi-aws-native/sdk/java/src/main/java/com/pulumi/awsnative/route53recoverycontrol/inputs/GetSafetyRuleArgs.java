@@ -19,6 +19,10 @@ public final class GetSafetyRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="safetyRuleArn", required=true)
     private String safetyRuleArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the safety rule.
+     * 
+     */
     public String safetyRuleArn() {
         return this.safetyRuleArn;
     }
@@ -47,6 +51,12 @@ public final class GetSafetyRuleArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSafetyRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param safetyRuleArn The Amazon Resource Name (ARN) of the safety rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder safetyRuleArn(String safetyRuleArn) {
             $.safetyRuleArn = safetyRuleArn;
             return this;

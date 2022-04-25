@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties {
-    /**
-     * The ARN for an Amazon Web Services Organization that you want to share your AMI with.
-     * 
-     */
+        /**
+         * @return The ARN for an Amazon Web Services Organization that you want to share your AMI with.
+         * 
+         */
     private final @Nullable List<String> organizationArns;
-    /**
-     * The ARN for an Organizations organizational unit (OU) that you want to share your AMI with.
-     * 
-     */
+        /**
+         * @return The ARN for an Organizations organizational unit (OU) that you want to share your AMI with.
+         * 
+         */
     private final @Nullable List<String> organizationalUnitArns;
-    /**
-     * The name of the group.
-     * 
-     */
+        /**
+         * @return The name of the group.
+         * 
+         */
     private final @Nullable List<String> userGroups;
-    /**
-     * The AWS account ID.
-     * 
-     */
+        /**
+         * @return The AWS account ID.
+         * 
+         */
     private final @Nullable List<String> userIds;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     }
 
     /**
-     * The ARN for an Amazon Web Services Organization that you want to share your AMI with.
+     * @return The ARN for an Amazon Web Services Organization that you want to share your AMI with.
      * 
-    */
+     */
     public List<String> organizationArns() {
         return this.organizationArns == null ? List.of() : this.organizationArns;
     }
     /**
-     * The ARN for an Organizations organizational unit (OU) that you want to share your AMI with.
+     * @return The ARN for an Organizations organizational unit (OU) that you want to share your AMI with.
      * 
-    */
+     */
     public List<String> organizationalUnitArns() {
         return this.organizationalUnitArns == null ? List.of() : this.organizationalUnitArns;
     }
     /**
-     * The name of the group.
+     * @return The name of the group.
      * 
-    */
+     */
     public List<String> userGroups() {
         return this.userGroups == null ? List.of() : this.userGroups;
     }
     /**
-     * The AWS account ID.
+     * @return The AWS account ID.
      * 
-    */
+     */
     public List<String> userIds() {
         return this.userIds == null ? List.of() : this.userIds;
     }

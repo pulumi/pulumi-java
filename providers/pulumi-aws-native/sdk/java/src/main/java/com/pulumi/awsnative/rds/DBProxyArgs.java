@@ -28,6 +28,10 @@ public final class DBProxyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="auth", required=true)
     private Output<List<DBProxyAuthFormatArgs>> auth;
 
+    /**
+     * @return The authorization mechanism that the proxy uses.
+     * 
+     */
     public Output<List<DBProxyAuthFormatArgs>> auth() {
         return this.auth;
     }
@@ -39,6 +43,10 @@ public final class DBProxyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dBProxyName")
     private @Nullable Output<String> dBProxyName;
 
+    /**
+     * @return The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region.
+     * 
+     */
     public Optional<Output<String>> dBProxyName() {
         return Optional.ofNullable(this.dBProxyName);
     }
@@ -50,6 +58,10 @@ public final class DBProxyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="debugLogging")
     private @Nullable Output<Boolean> debugLogging;
 
+    /**
+     * @return Whether the proxy includes detailed information about SQL statements in its logs.
+     * 
+     */
     public Optional<Output<Boolean>> debugLogging() {
         return Optional.ofNullable(this.debugLogging);
     }
@@ -61,6 +73,10 @@ public final class DBProxyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="engineFamily", required=true)
     private Output<DBProxyEngineFamily> engineFamily;
 
+    /**
+     * @return The kinds of databases that the proxy can connect to.
+     * 
+     */
     public Output<DBProxyEngineFamily> engineFamily() {
         return this.engineFamily;
     }
@@ -72,6 +88,10 @@ public final class DBProxyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="idleClientTimeout")
     private @Nullable Output<Integer> idleClientTimeout;
 
+    /**
+     * @return The number of seconds that a connection to the proxy can be inactive before the proxy disconnects it.
+     * 
+     */
     public Optional<Output<Integer>> idleClientTimeout() {
         return Optional.ofNullable(this.idleClientTimeout);
     }
@@ -83,6 +103,10 @@ public final class DBProxyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requireTLS")
     private @Nullable Output<Boolean> requireTLS;
 
+    /**
+     * @return A Boolean parameter that specifies whether Transport Layer Security (TLS) encryption is required for connections to the proxy.
+     * 
+     */
     public Optional<Output<Boolean>> requireTLS() {
         return Optional.ofNullable(this.requireTLS);
     }
@@ -94,6 +118,10 @@ public final class DBProxyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the IAM role that the proxy uses to access secrets in AWS Secrets Manager.
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -105,6 +133,10 @@ public final class DBProxyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<DBProxyTagFormatArgs>> tags;
 
+    /**
+     * @return An optional set of key-value pairs to associate arbitrary data of your choosing with the proxy.
+     * 
+     */
     public Optional<Output<List<DBProxyTagFormatArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -116,6 +148,10 @@ public final class DBProxyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcSecurityGroupIds")
     private @Nullable Output<List<String>> vpcSecurityGroupIds;
 
+    /**
+     * @return VPC security group IDs to associate with the new proxy.
+     * 
+     */
     public Optional<Output<List<String>>> vpcSecurityGroupIds() {
         return Optional.ofNullable(this.vpcSecurityGroupIds);
     }
@@ -127,6 +163,10 @@ public final class DBProxyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcSubnetIds", required=true)
     private Output<List<String>> vpcSubnetIds;
 
+    /**
+     * @return VPC subnet IDs to associate with the new proxy.
+     * 
+     */
     public Output<List<String>> vpcSubnetIds() {
         return this.vpcSubnetIds;
     }
@@ -164,108 +204,252 @@ public final class DBProxyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DBProxyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param auth The authorization mechanism that the proxy uses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auth(Output<List<DBProxyAuthFormatArgs>> auth) {
             $.auth = auth;
             return this;
         }
 
+        /**
+         * @param auth The authorization mechanism that the proxy uses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auth(List<DBProxyAuthFormatArgs> auth) {
             return auth(Output.of(auth));
         }
 
+        /**
+         * @param auth The authorization mechanism that the proxy uses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auth(DBProxyAuthFormatArgs... auth) {
             return auth(List.of(auth));
         }
 
+        /**
+         * @param dBProxyName The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dBProxyName(@Nullable Output<String> dBProxyName) {
             $.dBProxyName = dBProxyName;
             return this;
         }
 
+        /**
+         * @param dBProxyName The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dBProxyName(String dBProxyName) {
             return dBProxyName(Output.of(dBProxyName));
         }
 
+        /**
+         * @param debugLogging Whether the proxy includes detailed information about SQL statements in its logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder debugLogging(@Nullable Output<Boolean> debugLogging) {
             $.debugLogging = debugLogging;
             return this;
         }
 
+        /**
+         * @param debugLogging Whether the proxy includes detailed information about SQL statements in its logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder debugLogging(Boolean debugLogging) {
             return debugLogging(Output.of(debugLogging));
         }
 
+        /**
+         * @param engineFamily The kinds of databases that the proxy can connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineFamily(Output<DBProxyEngineFamily> engineFamily) {
             $.engineFamily = engineFamily;
             return this;
         }
 
+        /**
+         * @param engineFamily The kinds of databases that the proxy can connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineFamily(DBProxyEngineFamily engineFamily) {
             return engineFamily(Output.of(engineFamily));
         }
 
+        /**
+         * @param idleClientTimeout The number of seconds that a connection to the proxy can be inactive before the proxy disconnects it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleClientTimeout(@Nullable Output<Integer> idleClientTimeout) {
             $.idleClientTimeout = idleClientTimeout;
             return this;
         }
 
+        /**
+         * @param idleClientTimeout The number of seconds that a connection to the proxy can be inactive before the proxy disconnects it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleClientTimeout(Integer idleClientTimeout) {
             return idleClientTimeout(Output.of(idleClientTimeout));
         }
 
+        /**
+         * @param requireTLS A Boolean parameter that specifies whether Transport Layer Security (TLS) encryption is required for connections to the proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireTLS(@Nullable Output<Boolean> requireTLS) {
             $.requireTLS = requireTLS;
             return this;
         }
 
+        /**
+         * @param requireTLS A Boolean parameter that specifies whether Transport Layer Security (TLS) encryption is required for connections to the proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireTLS(Boolean requireTLS) {
             return requireTLS(Output.of(requireTLS));
         }
 
+        /**
+         * @param roleArn The Amazon Resource Name (ARN) of the IAM role that the proxy uses to access secrets in AWS Secrets Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn The Amazon Resource Name (ARN) of the IAM role that the proxy uses to access secrets in AWS Secrets Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param tags An optional set of key-value pairs to associate arbitrary data of your choosing with the proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<DBProxyTagFormatArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An optional set of key-value pairs to associate arbitrary data of your choosing with the proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<DBProxyTagFormatArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An optional set of key-value pairs to associate arbitrary data of your choosing with the proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(DBProxyTagFormatArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param vpcSecurityGroupIds VPC security group IDs to associate with the new proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
             $.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
 
+        /**
+         * @param vpcSecurityGroupIds VPC security group IDs to associate with the new proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcSecurityGroupIds(List<String> vpcSecurityGroupIds) {
             return vpcSecurityGroupIds(Output.of(vpcSecurityGroupIds));
         }
 
+        /**
+         * @param vpcSecurityGroupIds VPC security group IDs to associate with the new proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
             return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
         }
 
+        /**
+         * @param vpcSubnetIds VPC subnet IDs to associate with the new proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcSubnetIds(Output<List<String>> vpcSubnetIds) {
             $.vpcSubnetIds = vpcSubnetIds;
             return this;
         }
 
+        /**
+         * @param vpcSubnetIds VPC subnet IDs to associate with the new proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcSubnetIds(List<String> vpcSubnetIds) {
             return vpcSubnetIds(Output.of(vpcSubnetIds));
         }
 
+        /**
+         * @param vpcSubnetIds VPC subnet IDs to associate with the new proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcSubnetIds(String... vpcSubnetIds) {
             return vpcSubnetIds(List.of(vpcSubnetIds));
         }

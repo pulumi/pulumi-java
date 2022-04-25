@@ -11,15 +11,15 @@ import java.util.Objects;
 @CustomType
 public final class PackagingConfigurationSpekeKeyProvider {
     private final String roleArn;
-    /**
-     * The system IDs to include in key requests.
-     * 
-     */
+        /**
+         * @return The system IDs to include in key requests.
+         * 
+         */
     private final List<String> systemIds;
-    /**
-     * The URL of the external key provider service.
-     * 
-     */
+        /**
+         * @return The URL of the external key provider service.
+         * 
+         */
     private final String url;
 
     @CustomType.Constructor
@@ -36,16 +36,16 @@ public final class PackagingConfigurationSpekeKeyProvider {
         return this.roleArn;
     }
     /**
-     * The system IDs to include in key requests.
+     * @return The system IDs to include in key requests.
      * 
-    */
+     */
     public List<String> systemIds() {
         return this.systemIds;
     }
     /**
-     * The URL of the external key provider service.
+     * @return The URL of the external key provider service.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

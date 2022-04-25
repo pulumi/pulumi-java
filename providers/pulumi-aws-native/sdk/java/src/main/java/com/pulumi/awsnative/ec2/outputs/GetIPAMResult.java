@@ -15,41 +15,41 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetIPAMResult {
-    /**
-     * The Amazon Resource Name (ARN) of the IPAM.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the IPAM.
+         * 
+         */
     private final @Nullable String arn;
     private final @Nullable String description;
-    /**
-     * Id of the IPAM.
-     * 
-     */
+        /**
+         * @return Id of the IPAM.
+         * 
+         */
     private final @Nullable String ipamId;
-    /**
-     * The regions IPAM is enabled for. Allows pools to be created in these regions, as well as enabling monitoring
-     * 
-     */
+        /**
+         * @return The regions IPAM is enabled for. Allows pools to be created in these regions, as well as enabling monitoring
+         * 
+         */
     private final @Nullable List<IPAMIpamOperatingRegion> operatingRegions;
-    /**
-     * The Id of the default scope for publicly routable IP space, created with this IPAM.
-     * 
-     */
+        /**
+         * @return The Id of the default scope for publicly routable IP space, created with this IPAM.
+         * 
+         */
     private final @Nullable String privateDefaultScopeId;
-    /**
-     * The Id of the default scope for publicly routable IP space, created with this IPAM.
-     * 
-     */
+        /**
+         * @return The Id of the default scope for publicly routable IP space, created with this IPAM.
+         * 
+         */
     private final @Nullable String publicDefaultScopeId;
-    /**
-     * The number of scopes that currently exist in this IPAM.
-     * 
-     */
+        /**
+         * @return The number of scopes that currently exist in this IPAM.
+         * 
+         */
     private final @Nullable Integer scopeCount;
-    /**
-     * An array of key-value pairs to apply to this resource.
-     * 
-     */
+        /**
+         * @return An array of key-value pairs to apply to this resource.
+         * 
+         */
     private final @Nullable List<IPAMTag> tags;
 
     @CustomType.Constructor
@@ -73,9 +73,9 @@ public final class GetIPAMResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the IPAM.
+     * @return The Amazon Resource Name (ARN) of the IPAM.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -83,44 +83,44 @@ public final class GetIPAMResult {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Id of the IPAM.
+     * @return Id of the IPAM.
      * 
-    */
+     */
     public Optional<String> ipamId() {
         return Optional.ofNullable(this.ipamId);
     }
     /**
-     * The regions IPAM is enabled for. Allows pools to be created in these regions, as well as enabling monitoring
+     * @return The regions IPAM is enabled for. Allows pools to be created in these regions, as well as enabling monitoring
      * 
-    */
+     */
     public List<IPAMIpamOperatingRegion> operatingRegions() {
         return this.operatingRegions == null ? List.of() : this.operatingRegions;
     }
     /**
-     * The Id of the default scope for publicly routable IP space, created with this IPAM.
+     * @return The Id of the default scope for publicly routable IP space, created with this IPAM.
      * 
-    */
+     */
     public Optional<String> privateDefaultScopeId() {
         return Optional.ofNullable(this.privateDefaultScopeId);
     }
     /**
-     * The Id of the default scope for publicly routable IP space, created with this IPAM.
+     * @return The Id of the default scope for publicly routable IP space, created with this IPAM.
      * 
-    */
+     */
     public Optional<String> publicDefaultScopeId() {
         return Optional.ofNullable(this.publicDefaultScopeId);
     }
     /**
-     * The number of scopes that currently exist in this IPAM.
+     * @return The number of scopes that currently exist in this IPAM.
      * 
-    */
+     */
     public Optional<Integer> scopeCount() {
         return Optional.ofNullable(this.scopeCount);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<IPAMTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

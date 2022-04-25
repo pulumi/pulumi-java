@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetStudioSessionMappingResult {
-    /**
-     * The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. Session policies refine Studio user permissions without the need to use multiple IAM user roles.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. Session policies refine Studio user permissions without the need to use multiple IAM user roles.
+         * 
+         */
     private final @Nullable String sessionPolicyArn;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class GetStudioSessionMappingResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. Session policies refine Studio user permissions without the need to use multiple IAM user roles.
+     * @return The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. Session policies refine Studio user permissions without the need to use multiple IAM user roles.
      * 
-    */
+     */
     public Optional<String> sessionPolicyArn() {
         return Optional.ofNullable(this.sessionPolicyArn);
     }

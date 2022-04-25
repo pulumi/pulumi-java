@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAccessPointResult {
-    /**
-     * The Amazon Resource Name (ARN) of the specified AccessPoint.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the specified AccessPoint.
+         * 
+         */
     private final @Nullable String arn;
-    /**
-     * The access point policy associated with this access point.
-     * 
-     */
+        /**
+         * @return The access point policy associated with this access point.
+         * 
+         */
     private final @Nullable Object policy;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class GetAccessPointResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the specified AccessPoint.
+     * @return The Amazon Resource Name (ARN) of the specified AccessPoint.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The access point policy associated with this access point.
+     * @return The access point policy associated with this access point.
      * 
-    */
+     */
     public Optional<Object> policy() {
         return Optional.ofNullable(this.policy);
     }

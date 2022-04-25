@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ContainerPublicEndpoint {
-    /**
-     * The name of the container for the endpoint.
-     * 
-     */
+        /**
+         * @return The name of the container for the endpoint.
+         * 
+         */
     private final @Nullable String containerName;
-    /**
-     * The port of the container to which traffic is forwarded to.
-     * 
-     */
+        /**
+         * @return The port of the container to which traffic is forwarded to.
+         * 
+         */
     private final @Nullable Integer containerPort;
-    /**
-     * An object that describes the health check configuration of the container.
-     * 
-     */
+        /**
+         * @return An object that describes the health check configuration of the container.
+         * 
+         */
     private final @Nullable ContainerHealthCheckConfig healthCheckConfig;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class ContainerPublicEndpoint {
     }
 
     /**
-     * The name of the container for the endpoint.
+     * @return The name of the container for the endpoint.
      * 
-    */
+     */
     public Optional<String> containerName() {
         return Optional.ofNullable(this.containerName);
     }
     /**
-     * The port of the container to which traffic is forwarded to.
+     * @return The port of the container to which traffic is forwarded to.
      * 
-    */
+     */
     public Optional<Integer> containerPort() {
         return Optional.ofNullable(this.containerPort);
     }
     /**
-     * An object that describes the health check configuration of the container.
+     * @return An object that describes the health check configuration of the container.
      * 
-    */
+     */
     public Optional<ContainerHealthCheckConfig> healthCheckConfig() {
         return Optional.ofNullable(this.healthCheckConfig);
     }

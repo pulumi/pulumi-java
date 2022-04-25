@@ -19,6 +19,10 @@ public final class GetScheduleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Schedule Name
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +51,12 @@ public final class GetScheduleArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Schedule Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

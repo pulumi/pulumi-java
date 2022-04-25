@@ -26,6 +26,10 @@ public final class IPSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addresses", required=true)
     private Output<List<String>> addresses;
 
+    /**
+     * @return List of IPAddresses.
+     * 
+     */
     public Output<List<String>> addresses() {
         return this.addresses;
     }
@@ -94,15 +98,33 @@ public final class IPSetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IPSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addresses List of IPAddresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addresses(Output<List<String>> addresses) {
             $.addresses = addresses;
             return this;
         }
 
+        /**
+         * @param addresses List of IPAddresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addresses(List<String> addresses) {
             return addresses(Output.of(addresses));
         }
 
+        /**
+         * @param addresses List of IPAddresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addresses(String... addresses) {
             return addresses(List.of(addresses));
         }

@@ -14,20 +14,20 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MonitoringScheduleEndpointInput {
     private final String endpointName;
-    /**
-     * Path to the filesystem where the endpoint data is available to the container.
-     * 
-     */
+        /**
+         * @return Path to the filesystem where the endpoint data is available to the container.
+         * 
+         */
     private final String localPath;
-    /**
-     * Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key. Defauts to FullyReplicated
-     * 
-     */
+        /**
+         * @return Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key. Defauts to FullyReplicated
+         * 
+         */
     private final @Nullable MonitoringScheduleEndpointInputS3DataDistributionType s3DataDistributionType;
-    /**
-     * Whether the Pipe or File is used as the input mode for transfering data for the monitoring job. Pipe mode is recommended for large datasets. File mode is useful for small files that fit in memory. Defaults to File.
-     * 
-     */
+        /**
+         * @return Whether the Pipe or File is used as the input mode for transfering data for the monitoring job. Pipe mode is recommended for large datasets. File mode is useful for small files that fit in memory. Defaults to File.
+         * 
+         */
     private final @Nullable MonitoringScheduleEndpointInputS3InputMode s3InputMode;
 
     @CustomType.Constructor
@@ -46,23 +46,23 @@ public final class MonitoringScheduleEndpointInput {
         return this.endpointName;
     }
     /**
-     * Path to the filesystem where the endpoint data is available to the container.
+     * @return Path to the filesystem where the endpoint data is available to the container.
      * 
-    */
+     */
     public String localPath() {
         return this.localPath;
     }
     /**
-     * Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key. Defauts to FullyReplicated
+     * @return Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key. Defauts to FullyReplicated
      * 
-    */
+     */
     public Optional<MonitoringScheduleEndpointInputS3DataDistributionType> s3DataDistributionType() {
         return Optional.ofNullable(this.s3DataDistributionType);
     }
     /**
-     * Whether the Pipe or File is used as the input mode for transfering data for the monitoring job. Pipe mode is recommended for large datasets. File mode is useful for small files that fit in memory. Defaults to File.
+     * @return Whether the Pipe or File is used as the input mode for transfering data for the monitoring job. Pipe mode is recommended for large datasets. File mode is useful for small files that fit in memory. Defaults to File.
      * 
-    */
+     */
     public Optional<MonitoringScheduleEndpointInputS3InputMode> s3InputMode() {
         return Optional.ofNullable(this.s3InputMode);
     }

@@ -27,6 +27,10 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,10 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -49,6 +57,10 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyPolicy", required=true)
     private Output<Object> keyPolicy;
 
+    /**
+     * @return The key policy that authorizes use of the CMK. The key policy must observe the following rules.
+     * 
+     */
     public Output<Object> keyPolicy() {
         return this.keyPolicy;
     }
@@ -60,6 +72,10 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pendingWindowInDays")
     private @Nullable Output<Integer> pendingWindowInDays;
 
+    /**
+     * @return Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
+     * 
+     */
     public Optional<Output<Integer>> pendingWindowInDays() {
         return Optional.ofNullable(this.pendingWindowInDays);
     }
@@ -71,6 +87,10 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="primaryKeyArn", required=true)
     private Output<String> primaryKeyArn;
 
+    /**
+     * @return Identifies the primary CMK to create a replica of. Specify the Amazon Resource Name (ARN) of the CMK. You cannot specify an alias or key ID. For help finding the ARN, see Finding the Key ID and ARN in the AWS Key Management Service Developer Guide.
+     * 
+     */
     public Output<String> primaryKeyArn() {
         return this.primaryKeyArn;
     }
@@ -82,6 +102,10 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<ReplicaKeyTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<ReplicaKeyTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -115,60 +139,138 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ReplicaKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param enabled Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param keyPolicy The key policy that authorizes use of the CMK. The key policy must observe the following rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyPolicy(Output<Object> keyPolicy) {
             $.keyPolicy = keyPolicy;
             return this;
         }
 
+        /**
+         * @param keyPolicy The key policy that authorizes use of the CMK. The key policy must observe the following rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyPolicy(Object keyPolicy) {
             return keyPolicy(Output.of(keyPolicy));
         }
 
+        /**
+         * @param pendingWindowInDays Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pendingWindowInDays(@Nullable Output<Integer> pendingWindowInDays) {
             $.pendingWindowInDays = pendingWindowInDays;
             return this;
         }
 
+        /**
+         * @param pendingWindowInDays Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pendingWindowInDays(Integer pendingWindowInDays) {
             return pendingWindowInDays(Output.of(pendingWindowInDays));
         }
 
+        /**
+         * @param primaryKeyArn Identifies the primary CMK to create a replica of. Specify the Amazon Resource Name (ARN) of the CMK. You cannot specify an alias or key ID. For help finding the ARN, see Finding the Key ID and ARN in the AWS Key Management Service Developer Guide.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryKeyArn(Output<String> primaryKeyArn) {
             $.primaryKeyArn = primaryKeyArn;
             return this;
         }
 
+        /**
+         * @param primaryKeyArn Identifies the primary CMK to create a replica of. Specify the Amazon Resource Name (ARN) of the CMK. You cannot specify an alias or key ID. For help finding the ARN, see Finding the Key ID and ARN in the AWS Key Management Service Developer Guide.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryKeyArn(String primaryKeyArn) {
             return primaryKeyArn(Output.of(primaryKeyArn));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<ReplicaKeyTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<ReplicaKeyTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(ReplicaKeyTagArgs... tags) {
             return tags(List.of(tags));
         }

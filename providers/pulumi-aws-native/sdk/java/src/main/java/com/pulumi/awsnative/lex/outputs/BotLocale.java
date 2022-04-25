@@ -17,17 +17,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BotLocale {
     private final @Nullable String description;
-    /**
-     * List of intents
-     * 
-     */
+        /**
+         * @return List of intents
+         * 
+         */
     private final @Nullable List<BotIntent> intents;
     private final String localeId;
     private final Double nluConfidenceThreshold;
-    /**
-     * List of SlotTypes
-     * 
-     */
+        /**
+         * @return List of SlotTypes
+         * 
+         */
     private final @Nullable List<BotSlotType> slotTypes;
     private final @Nullable BotVoiceSettings voiceSettings;
 
@@ -51,9 +51,9 @@ public final class BotLocale {
         return Optional.ofNullable(this.description);
     }
     /**
-     * List of intents
+     * @return List of intents
      * 
-    */
+     */
     public List<BotIntent> intents() {
         return this.intents == null ? List.of() : this.intents;
     }
@@ -64,9 +64,9 @@ public final class BotLocale {
         return this.nluConfidenceThreshold;
     }
     /**
-     * List of SlotTypes
+     * @return List of SlotTypes
      * 
-    */
+     */
     public List<BotSlotType> slotTypes() {
         return this.slotTypes == null ? List.of() : this.slotTypes;
     }

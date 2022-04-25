@@ -14,15 +14,15 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WorkflowStepCopyStepDetailsProperties {
     private final @Nullable WorkflowInputFileLocation destinationFileLocation;
-    /**
-     * The name of the step, used as an identifier.
-     * 
-     */
+        /**
+         * @return The name of the step, used as an identifier.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * A flag that indicates whether or not to overwrite an existing file of the same name. The default is FALSE.
-     * 
-     */
+        /**
+         * @return A flag that indicates whether or not to overwrite an existing file of the same name. The default is FALSE.
+         * 
+         */
     private final @Nullable WorkflowStepCopyStepDetailsPropertiesOverwriteExisting overwriteExisting;
 
     @CustomType.Constructor
@@ -39,16 +39,16 @@ public final class WorkflowStepCopyStepDetailsProperties {
         return Optional.ofNullable(this.destinationFileLocation);
     }
     /**
-     * The name of the step, used as an identifier.
+     * @return The name of the step, used as an identifier.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * A flag that indicates whether or not to overwrite an existing file of the same name. The default is FALSE.
+     * @return A flag that indicates whether or not to overwrite an existing file of the same name. The default is FALSE.
      * 
-    */
+     */
     public Optional<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> overwriteExisting() {
         return Optional.ofNullable(this.overwriteExisting);
     }

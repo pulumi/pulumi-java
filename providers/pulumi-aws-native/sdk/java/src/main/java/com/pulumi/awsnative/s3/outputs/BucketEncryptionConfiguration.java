@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class BucketEncryptionConfiguration {
-    /**
-     * Specifies the ID (Key ARN or Alias ARN) of the customer managed customer master key (CMK) stored in AWS Key Management Service (KMS) for the destination bucket.
-     * 
-     */
+        /**
+         * @return Specifies the ID (Key ARN or Alias ARN) of the customer managed customer master key (CMK) stored in AWS Key Management Service (KMS) for the destination bucket.
+         * 
+         */
     private final String replicaKmsKeyID;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class BucketEncryptionConfiguration {
     }
 
     /**
-     * Specifies the ID (Key ARN or Alias ARN) of the customer managed customer master key (CMK) stored in AWS Key Management Service (KMS) for the destination bucket.
+     * @return Specifies the ID (Key ARN or Alias ARN) of the customer managed customer master key (CMK) stored in AWS Key Management Service (KMS) for the destination bucket.
      * 
-    */
+     */
     public String replicaKmsKeyID() {
         return this.replicaKmsKeyID;
     }

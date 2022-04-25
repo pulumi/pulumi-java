@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ResourceSetR53ResourceRecord {
-    /**
-     * The DNS target domain name.
-     * 
-     */
+        /**
+         * @return The DNS target domain name.
+         * 
+         */
     private final @Nullable String domainName;
-    /**
-     * The Resource Record set id.
-     * 
-     */
+        /**
+         * @return The Resource Record set id.
+         * 
+         */
     private final @Nullable String recordSetId;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ResourceSetR53ResourceRecord {
     }
 
     /**
-     * The DNS target domain name.
+     * @return The DNS target domain name.
      * 
-    */
+     */
     public Optional<String> domainName() {
         return Optional.ofNullable(this.domainName);
     }
     /**
-     * The Resource Record set id.
+     * @return The Resource Record set id.
      * 
-    */
+     */
     public Optional<String> recordSetId() {
         return Optional.ofNullable(this.recordSetId);
     }

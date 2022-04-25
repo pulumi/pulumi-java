@@ -24,6 +24,10 @@ public final class FirewallDomainListArgs extends com.pulumi.resources.ResourceA
     @Import(name="domainFileUrl")
     private @Nullable Output<String> domainFileUrl;
 
+    /**
+     * @return S3 URL to import domains from.
+     * 
+     */
     public Optional<Output<String>> domainFileUrl() {
         return Optional.ofNullable(this.domainFileUrl);
     }
@@ -42,6 +46,10 @@ public final class FirewallDomainListArgs extends com.pulumi.resources.ResourceA
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return FirewallDomainListName
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -53,6 +61,10 @@ public final class FirewallDomainListArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
     private @Nullable Output<List<FirewallDomainListTagArgs>> tags;
 
+    /**
+     * @return Tags
+     * 
+     */
     public Optional<Output<List<FirewallDomainListTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -84,11 +96,23 @@ public final class FirewallDomainListArgs extends com.pulumi.resources.ResourceA
             $ = new FirewallDomainListArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainFileUrl S3 URL to import domains from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainFileUrl(@Nullable Output<String> domainFileUrl) {
             $.domainFileUrl = domainFileUrl;
             return this;
         }
 
+        /**
+         * @param domainFileUrl S3 URL to import domains from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainFileUrl(String domainFileUrl) {
             return domainFileUrl(Output.of(domainFileUrl));
         }
@@ -106,24 +130,54 @@ public final class FirewallDomainListArgs extends com.pulumi.resources.ResourceA
             return domains(List.of(domains));
         }
 
+        /**
+         * @param name FirewallDomainListName
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name FirewallDomainListName
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags Tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<FirewallDomainListTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<FirewallDomainListTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(FirewallDomainListTagArgs... tags) {
             return tags(List.of(tags));
         }

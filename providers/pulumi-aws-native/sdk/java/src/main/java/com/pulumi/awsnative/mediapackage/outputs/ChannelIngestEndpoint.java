@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ChannelIngestEndpoint {
-    /**
-     * The system generated unique identifier for the IngestEndpoint
-     * 
-     */
+        /**
+         * @return The system generated unique identifier for the IngestEndpoint
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The system generated password for ingest authentication.
-     * 
-     */
+        /**
+         * @return The system generated password for ingest authentication.
+         * 
+         */
     private final @Nullable String password;
-    /**
-     * The ingest URL to which the source stream should be sent.
-     * 
-     */
+        /**
+         * @return The ingest URL to which the source stream should be sent.
+         * 
+         */
     private final @Nullable String url;
-    /**
-     * The system generated username for ingest authentication.
-     * 
-     */
+        /**
+         * @return The system generated username for ingest authentication.
+         * 
+         */
     private final @Nullable String username;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class ChannelIngestEndpoint {
     }
 
     /**
-     * The system generated unique identifier for the IngestEndpoint
+     * @return The system generated unique identifier for the IngestEndpoint
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The system generated password for ingest authentication.
+     * @return The system generated password for ingest authentication.
      * 
-    */
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * The ingest URL to which the source stream should be sent.
+     * @return The ingest URL to which the source stream should be sent.
      * 
-    */
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
     /**
-     * The system generated username for ingest authentication.
+     * @return The system generated username for ingest authentication.
      * 
-    */
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }

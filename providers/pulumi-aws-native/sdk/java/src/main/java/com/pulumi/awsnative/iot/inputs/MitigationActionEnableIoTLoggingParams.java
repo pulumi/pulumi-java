@@ -24,6 +24,10 @@ public final class MitigationActionEnableIoTLoggingParams extends com.pulumi.res
     @Import(name="logLevel", required=true)
     private MitigationActionEnableIoTLoggingParamsLogLevel logLevel;
 
+    /**
+     * @return  Specifies which types of information are logged.
+     * 
+     */
     public MitigationActionEnableIoTLoggingParamsLogLevel logLevel() {
         return this.logLevel;
     }
@@ -35,6 +39,10 @@ public final class MitigationActionEnableIoTLoggingParams extends com.pulumi.res
     @Import(name="roleArnForLogging", required=true)
     private String roleArnForLogging;
 
+    /**
+     * @return  The ARN of the IAM role used for logging.
+     * 
+     */
     public String roleArnForLogging() {
         return this.roleArnForLogging;
     }
@@ -64,11 +72,23 @@ public final class MitigationActionEnableIoTLoggingParams extends com.pulumi.res
             $ = new MitigationActionEnableIoTLoggingParams(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logLevel  Specifies which types of information are logged.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLevel(MitigationActionEnableIoTLoggingParamsLogLevel logLevel) {
             $.logLevel = logLevel;
             return this;
         }
 
+        /**
+         * @param roleArnForLogging  The ARN of the IAM role used for logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArnForLogging(String roleArnForLogging) {
             $.roleArnForLogging = roleArnForLogging;
             return this;

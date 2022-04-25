@@ -25,6 +25,10 @@ public final class AgentPermissionsPropertiesArgs extends com.pulumi.resources.R
     @Import(name="principals", required=true)
     private Output<List<String>> principals;
 
+    /**
+     * @return The principals for the agent permissions.
+     * 
+     */
     public Output<List<String>> principals() {
         return this.principals;
     }
@@ -53,15 +57,33 @@ public final class AgentPermissionsPropertiesArgs extends com.pulumi.resources.R
             $ = new AgentPermissionsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principals The principals for the agent permissions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principals(Output<List<String>> principals) {
             $.principals = principals;
             return this;
         }
 
+        /**
+         * @param principals The principals for the agent permissions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principals(List<String> principals) {
             return principals(Output.of(principals));
         }
 
+        /**
+         * @param principals The principals for the agent permissions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principals(String... principals) {
             return principals(List.of(principals));
         }

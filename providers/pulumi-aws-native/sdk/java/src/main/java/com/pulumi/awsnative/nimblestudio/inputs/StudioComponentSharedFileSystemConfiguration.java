@@ -25,6 +25,10 @@ public final class StudioComponentSharedFileSystemConfiguration extends com.pulu
     @Import(name="endpoint")
     private @Nullable String endpoint;
 
+    /**
+     * @return &lt;p&gt;The endpoint of the shared file system that is accessed by the studio component resource.&lt;/p&gt;
+     * 
+     */
     public Optional<String> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
@@ -36,6 +40,10 @@ public final class StudioComponentSharedFileSystemConfiguration extends com.pulu
     @Import(name="fileSystemId")
     private @Nullable String fileSystemId;
 
+    /**
+     * @return &lt;p&gt;The unique identifier for a file system.&lt;/p&gt;
+     * 
+     */
     public Optional<String> fileSystemId() {
         return Optional.ofNullable(this.fileSystemId);
     }
@@ -47,6 +55,10 @@ public final class StudioComponentSharedFileSystemConfiguration extends com.pulu
     @Import(name="linuxMountPoint")
     private @Nullable String linuxMountPoint;
 
+    /**
+     * @return &lt;p&gt;The mount location for a shared file system on a Linux virtual workstation.&lt;/p&gt;
+     * 
+     */
     public Optional<String> linuxMountPoint() {
         return Optional.ofNullable(this.linuxMountPoint);
     }
@@ -58,6 +70,10 @@ public final class StudioComponentSharedFileSystemConfiguration extends com.pulu
     @Import(name="shareName")
     private @Nullable String shareName;
 
+    /**
+     * @return &lt;p&gt;The name of the file share.&lt;/p&gt;
+     * 
+     */
     public Optional<String> shareName() {
         return Optional.ofNullable(this.shareName);
     }
@@ -69,6 +85,10 @@ public final class StudioComponentSharedFileSystemConfiguration extends com.pulu
     @Import(name="windowsMountDrive")
     private @Nullable String windowsMountDrive;
 
+    /**
+     * @return &lt;p&gt;The mount location for a shared file system on a Windows virtual workstation.&lt;/p&gt;
+     * 
+     */
     public Optional<String> windowsMountDrive() {
         return Optional.ofNullable(this.windowsMountDrive);
     }
@@ -101,26 +121,56 @@ public final class StudioComponentSharedFileSystemConfiguration extends com.pulu
             $ = new StudioComponentSharedFileSystemConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpoint &lt;p&gt;The endpoint of the shared file system that is accessed by the studio component resource.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(@Nullable String endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param fileSystemId &lt;p&gt;The unique identifier for a file system.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemId(@Nullable String fileSystemId) {
             $.fileSystemId = fileSystemId;
             return this;
         }
 
+        /**
+         * @param linuxMountPoint &lt;p&gt;The mount location for a shared file system on a Linux virtual workstation.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder linuxMountPoint(@Nullable String linuxMountPoint) {
             $.linuxMountPoint = linuxMountPoint;
             return this;
         }
 
+        /**
+         * @param shareName &lt;p&gt;The name of the file share.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(@Nullable String shareName) {
             $.shareName = shareName;
             return this;
         }
 
+        /**
+         * @param windowsMountDrive &lt;p&gt;The mount location for a shared file system on a Windows virtual workstation.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsMountDrive(@Nullable String windowsMountDrive) {
             $.windowsMountDrive = windowsMountDrive;
             return this;

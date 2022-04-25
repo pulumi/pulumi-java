@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAddonResult {
-    /**
-     * Version of Addon
-     * 
-     */
+        /**
+         * @return Version of Addon
+         * 
+         */
     private final @Nullable String addonVersion;
-    /**
-     * Amazon Resource Name (ARN) of the add-on
-     * 
-     */
+        /**
+         * @return Amazon Resource Name (ARN) of the add-on
+         * 
+         */
     private final @Nullable String arn;
-    /**
-     * IAM role to bind to the add-on&#39;s service account
-     * 
-     */
+        /**
+         * @return IAM role to bind to the add-on&#39;s service account
+         * 
+         */
     private final @Nullable String serviceAccountRoleArn;
-    /**
-     * An array of key-value pairs to apply to this resource.
-     * 
-     */
+        /**
+         * @return An array of key-value pairs to apply to this resource.
+         * 
+         */
     private final @Nullable List<AddonTag> tags;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class GetAddonResult {
     }
 
     /**
-     * Version of Addon
+     * @return Version of Addon
      * 
-    */
+     */
     public Optional<String> addonVersion() {
         return Optional.ofNullable(this.addonVersion);
     }
     /**
-     * Amazon Resource Name (ARN) of the add-on
+     * @return Amazon Resource Name (ARN) of the add-on
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * IAM role to bind to the add-on&#39;s service account
+     * @return IAM role to bind to the add-on&#39;s service account
      * 
-    */
+     */
     public Optional<String> serviceAccountRoleArn() {
         return Optional.ofNullable(this.serviceAccountRoleArn);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<AddonTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

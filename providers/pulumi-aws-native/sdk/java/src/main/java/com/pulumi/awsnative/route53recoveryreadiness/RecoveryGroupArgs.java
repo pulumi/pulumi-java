@@ -24,6 +24,10 @@ public final class RecoveryGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cells")
     private @Nullable Output<List<String>> cells;
 
+    /**
+     * @return A list of the cell Amazon Resource Names (ARNs) in the recovery group.
+     * 
+     */
     public Optional<Output<List<String>>> cells() {
         return Optional.ofNullable(this.cells);
     }
@@ -35,6 +39,10 @@ public final class RecoveryGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="recoveryGroupName")
     private @Nullable Output<String> recoveryGroupName;
 
+    /**
+     * @return The name of the recovery group to create.
+     * 
+     */
     public Optional<Output<String>> recoveryGroupName() {
         return Optional.ofNullable(this.recoveryGroupName);
     }
@@ -46,6 +54,10 @@ public final class RecoveryGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<RecoveryGroupTagArgs>> tags;
 
+    /**
+     * @return A collection of tags associated with a resource.
+     * 
+     */
     public Optional<Output<List<RecoveryGroupTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -76,37 +88,85 @@ public final class RecoveryGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RecoveryGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cells A list of the cell Amazon Resource Names (ARNs) in the recovery group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cells(@Nullable Output<List<String>> cells) {
             $.cells = cells;
             return this;
         }
 
+        /**
+         * @param cells A list of the cell Amazon Resource Names (ARNs) in the recovery group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cells(List<String> cells) {
             return cells(Output.of(cells));
         }
 
+        /**
+         * @param cells A list of the cell Amazon Resource Names (ARNs) in the recovery group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cells(String... cells) {
             return cells(List.of(cells));
         }
 
+        /**
+         * @param recoveryGroupName The name of the recovery group to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryGroupName(@Nullable Output<String> recoveryGroupName) {
             $.recoveryGroupName = recoveryGroupName;
             return this;
         }
 
+        /**
+         * @param recoveryGroupName The name of the recovery group to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryGroupName(String recoveryGroupName) {
             return recoveryGroupName(Output.of(recoveryGroupName));
         }
 
+        /**
+         * @param tags A collection of tags associated with a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<RecoveryGroupTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A collection of tags associated with a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<RecoveryGroupTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A collection of tags associated with a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(RecoveryGroupTagArgs... tags) {
             return tags(List.of(tags));
         }

@@ -12,20 +12,20 @@ import java.util.Objects;
 
 @CustomType
 public final class LoggingConfigurationFilter {
-    /**
-     * How to handle logs that satisfy the filter&#39;s conditions and requirement.
-     * 
-     */
+        /**
+         * @return How to handle logs that satisfy the filter&#39;s conditions and requirement.
+         * 
+         */
     private final LoggingConfigurationFilterBehavior behavior;
-    /**
-     * Match conditions for the filter.
-     * 
-     */
+        /**
+         * @return Match conditions for the filter.
+         * 
+         */
     private final List<LoggingConfigurationCondition> conditions;
-    /**
-     * Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition.
-     * 
-     */
+        /**
+         * @return Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition.
+         * 
+         */
     private final LoggingConfigurationFilterRequirement requirement;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class LoggingConfigurationFilter {
     }
 
     /**
-     * How to handle logs that satisfy the filter&#39;s conditions and requirement.
+     * @return How to handle logs that satisfy the filter&#39;s conditions and requirement.
      * 
-    */
+     */
     public LoggingConfigurationFilterBehavior behavior() {
         return this.behavior;
     }
     /**
-     * Match conditions for the filter.
+     * @return Match conditions for the filter.
      * 
-    */
+     */
     public List<LoggingConfigurationCondition> conditions() {
         return this.conditions;
     }
     /**
-     * Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition.
+     * @return Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition.
      * 
-    */
+     */
     public LoggingConfigurationFilterRequirement requirement() {
         return this.requirement;
     }

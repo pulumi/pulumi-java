@@ -16,50 +16,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetChannelResult {
-    /**
-     * Channel ARN is automatically generated on creation and assigned as the unique identifier.
-     * 
-     */
+        /**
+         * @return Channel ARN is automatically generated on creation and assigned as the unique identifier.
+         * 
+         */
     private final @Nullable String arn;
-    /**
-     * Whether the channel is authorized.
-     * 
-     */
+        /**
+         * @return Whether the channel is authorized.
+         * 
+         */
     private final @Nullable Boolean authorized;
-    /**
-     * Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming software.
-     * 
-     */
+        /**
+         * @return Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming software.
+         * 
+         */
     private final @Nullable String ingestEndpoint;
-    /**
-     * Channel latency mode.
-     * 
-     */
+        /**
+         * @return Channel latency mode.
+         * 
+         */
     private final @Nullable ChannelLatencyMode latencyMode;
-    /**
-     * Channel
-     * 
-     */
+        /**
+         * @return Channel
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Channel Playback URL.
-     * 
-     */
+        /**
+         * @return Channel Playback URL.
+         * 
+         */
     private final @Nullable String playbackUrl;
-    /**
-     * Recording Configuration ARN. A value other than an empty string indicates that recording is enabled. Default: “” (recording is disabled).
-     * 
-     */
+        /**
+         * @return Recording Configuration ARN. A value other than an empty string indicates that recording is enabled. Default: “” (recording is disabled).
+         * 
+         */
     private final @Nullable String recordingConfigurationArn;
-    /**
-     * A list of key-value pairs that contain metadata for the asset model.
-     * 
-     */
+        /**
+         * @return A list of key-value pairs that contain metadata for the asset model.
+         * 
+         */
     private final @Nullable List<ChannelTag> tags;
-    /**
-     * Channel type, which determines the allowable resolution and bitrate. If you exceed the allowable resolution or bitrate, the stream probably will disconnect immediately.
-     * 
-     */
+        /**
+         * @return Channel type, which determines the allowable resolution and bitrate. If you exceed the allowable resolution or bitrate, the stream probably will disconnect immediately.
+         * 
+         */
     private final @Nullable ChannelType type;
 
     @CustomType.Constructor
@@ -85,65 +85,65 @@ public final class GetChannelResult {
     }
 
     /**
-     * Channel ARN is automatically generated on creation and assigned as the unique identifier.
+     * @return Channel ARN is automatically generated on creation and assigned as the unique identifier.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Whether the channel is authorized.
+     * @return Whether the channel is authorized.
      * 
-    */
+     */
     public Optional<Boolean> authorized() {
         return Optional.ofNullable(this.authorized);
     }
     /**
-     * Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming software.
+     * @return Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming software.
      * 
-    */
+     */
     public Optional<String> ingestEndpoint() {
         return Optional.ofNullable(this.ingestEndpoint);
     }
     /**
-     * Channel latency mode.
+     * @return Channel latency mode.
      * 
-    */
+     */
     public Optional<ChannelLatencyMode> latencyMode() {
         return Optional.ofNullable(this.latencyMode);
     }
     /**
-     * Channel
+     * @return Channel
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Channel Playback URL.
+     * @return Channel Playback URL.
      * 
-    */
+     */
     public Optional<String> playbackUrl() {
         return Optional.ofNullable(this.playbackUrl);
     }
     /**
-     * Recording Configuration ARN. A value other than an empty string indicates that recording is enabled. Default: “” (recording is disabled).
+     * @return Recording Configuration ARN. A value other than an empty string indicates that recording is enabled. Default: “” (recording is disabled).
      * 
-    */
+     */
     public Optional<String> recordingConfigurationArn() {
         return Optional.ofNullable(this.recordingConfigurationArn);
     }
     /**
-     * A list of key-value pairs that contain metadata for the asset model.
+     * @return A list of key-value pairs that contain metadata for the asset model.
      * 
-    */
+     */
     public List<ChannelTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * Channel type, which determines the allowable resolution and bitrate. If you exceed the allowable resolution or bitrate, the stream probably will disconnect immediately.
+     * @return Channel type, which determines the allowable resolution and bitrate. If you exceed the allowable resolution or bitrate, the stream probably will disconnect immediately.
      * 
-    */
+     */
     public Optional<ChannelType> type() {
         return Optional.ofNullable(this.type);
     }

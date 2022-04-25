@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetConnectionResult {
-    /**
-     * The Amazon Resource Name (ARN) of the  connection. The ARN is used as the connection reference when the connection is shared between AWS services.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the  connection. The ARN is used as the connection reference when the connection is shared between AWS services.
+         * 
+         */
     private final @Nullable String connectionArn;
-    /**
-     * The current status of the connection.
-     * 
-     */
+        /**
+         * @return The current status of the connection.
+         * 
+         */
     private final @Nullable String connectionStatus;
-    /**
-     * The name of the external provider where your third-party code repository is configured. For Bitbucket, this is the account ID of the owner of the Bitbucket repository.
-     * 
-     */
+        /**
+         * @return The name of the external provider where your third-party code repository is configured. For Bitbucket, this is the account ID of the owner of the Bitbucket repository.
+         * 
+         */
     private final @Nullable String ownerAccountId;
-    /**
-     * Specifies the tags applied to a connection.
-     * 
-     */
+        /**
+         * @return Specifies the tags applied to a connection.
+         * 
+         */
     private final @Nullable List<ConnectionTag> tags;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class GetConnectionResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the  connection. The ARN is used as the connection reference when the connection is shared between AWS services.
+     * @return The Amazon Resource Name (ARN) of the  connection. The ARN is used as the connection reference when the connection is shared between AWS services.
      * 
-    */
+     */
     public Optional<String> connectionArn() {
         return Optional.ofNullable(this.connectionArn);
     }
     /**
-     * The current status of the connection.
+     * @return The current status of the connection.
      * 
-    */
+     */
     public Optional<String> connectionStatus() {
         return Optional.ofNullable(this.connectionStatus);
     }
     /**
-     * The name of the external provider where your third-party code repository is configured. For Bitbucket, this is the account ID of the owner of the Bitbucket repository.
+     * @return The name of the external provider where your third-party code repository is configured. For Bitbucket, this is the account ID of the owner of the Bitbucket repository.
      * 
-    */
+     */
     public Optional<String> ownerAccountId() {
         return Optional.ofNullable(this.ownerAccountId);
     }
     /**
-     * Specifies the tags applied to a connection.
+     * @return Specifies the tags applied to a connection.
      * 
-    */
+     */
     public List<ConnectionTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

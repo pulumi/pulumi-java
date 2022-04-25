@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WorkflowStepCustomStepDetailsProperties {
-    /**
-     * The name of the step, used as an identifier.
-     * 
-     */
+        /**
+         * @return The name of the step, used as an identifier.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The ARN for the lambda function that is being called.
-     * 
-     */
+        /**
+         * @return The ARN for the lambda function that is being called.
+         * 
+         */
     private final @Nullable String target;
-    /**
-     * Timeout, in seconds, for the step.
-     * 
-     */
+        /**
+         * @return Timeout, in seconds, for the step.
+         * 
+         */
     private final @Nullable Integer timeoutSeconds;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class WorkflowStepCustomStepDetailsProperties {
     }
 
     /**
-     * The name of the step, used as an identifier.
+     * @return The name of the step, used as an identifier.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The ARN for the lambda function that is being called.
+     * @return The ARN for the lambda function that is being called.
      * 
-    */
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
     /**
-     * Timeout, in seconds, for the step.
+     * @return Timeout, in seconds, for the step.
      * 
-    */
+     */
     public Optional<Integer> timeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }

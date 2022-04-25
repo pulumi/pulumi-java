@@ -13,35 +13,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetWorkspaceResult {
-    /**
-     * The AMP Workspace alert manager definition data
-     * 
-     */
+        /**
+         * @return The AMP Workspace alert manager definition data
+         * 
+         */
     private final @Nullable String alertManagerDefinition;
-    /**
-     * AMP Workspace alias.
-     * 
-     */
+        /**
+         * @return AMP Workspace alias.
+         * 
+         */
     private final @Nullable String alias;
-    /**
-     * Workspace arn.
-     * 
-     */
+        /**
+         * @return Workspace arn.
+         * 
+         */
     private final @Nullable String arn;
-    /**
-     * AMP Workspace prometheus endpoint
-     * 
-     */
+        /**
+         * @return AMP Workspace prometheus endpoint
+         * 
+         */
     private final @Nullable String prometheusEndpoint;
-    /**
-     * An array of key-value pairs to apply to this resource.
-     * 
-     */
+        /**
+         * @return An array of key-value pairs to apply to this resource.
+         * 
+         */
     private final @Nullable List<WorkspaceTag> tags;
-    /**
-     * Required to identify a specific APS Workspace.
-     * 
-     */
+        /**
+         * @return Required to identify a specific APS Workspace.
+         * 
+         */
     private final @Nullable String workspaceId;
 
     @CustomType.Constructor
@@ -61,44 +61,44 @@ public final class GetWorkspaceResult {
     }
 
     /**
-     * The AMP Workspace alert manager definition data
+     * @return The AMP Workspace alert manager definition data
      * 
-    */
+     */
     public Optional<String> alertManagerDefinition() {
         return Optional.ofNullable(this.alertManagerDefinition);
     }
     /**
-     * AMP Workspace alias.
+     * @return AMP Workspace alias.
      * 
-    */
+     */
     public Optional<String> alias() {
         return Optional.ofNullable(this.alias);
     }
     /**
-     * Workspace arn.
+     * @return Workspace arn.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * AMP Workspace prometheus endpoint
+     * @return AMP Workspace prometheus endpoint
      * 
-    */
+     */
     public Optional<String> prometheusEndpoint() {
         return Optional.ofNullable(this.prometheusEndpoint);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<WorkspaceTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * Required to identify a specific APS Workspace.
+     * @return Required to identify a specific APS Workspace.
      * 
-    */
+     */
     public Optional<String> workspaceId() {
         return Optional.ofNullable(this.workspaceId);
     }

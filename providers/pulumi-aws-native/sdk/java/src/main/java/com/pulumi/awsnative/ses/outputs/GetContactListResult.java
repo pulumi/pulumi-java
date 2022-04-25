@@ -14,20 +14,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetContactListResult {
-    /**
-     * The description of the contact list.
-     * 
-     */
+        /**
+         * @return The description of the contact list.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The tags (keys and values) associated with the contact list.
-     * 
-     */
+        /**
+         * @return The tags (keys and values) associated with the contact list.
+         * 
+         */
     private final @Nullable List<ContactListTag> tags;
-    /**
-     * The topics associated with the contact list.
-     * 
-     */
+        /**
+         * @return The topics associated with the contact list.
+         * 
+         */
     private final @Nullable List<ContactListTopic> topics;
 
     @CustomType.Constructor
@@ -41,23 +41,23 @@ public final class GetContactListResult {
     }
 
     /**
-     * The description of the contact list.
+     * @return The description of the contact list.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The tags (keys and values) associated with the contact list.
+     * @return The tags (keys and values) associated with the contact list.
      * 
-    */
+     */
     public List<ContactListTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * The topics associated with the contact list.
+     * @return The topics associated with the contact list.
      * 
-    */
+     */
     public List<ContactListTopic> topics() {
         return this.topics == null ? List.of() : this.topics;
     }

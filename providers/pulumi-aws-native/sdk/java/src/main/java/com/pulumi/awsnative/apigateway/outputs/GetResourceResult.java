@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetResourceResult {
-    /**
-     * A unique primary identifier for a Resource
-     * 
-     */
+        /**
+         * @return A unique primary identifier for a Resource
+         * 
+         */
     private final @Nullable String resourceId;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class GetResourceResult {
     }
 
     /**
-     * A unique primary identifier for a Resource
+     * @return A unique primary identifier for a Resource
      * 
-    */
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }

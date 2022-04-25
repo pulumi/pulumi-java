@@ -14,30 +14,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDeviceProfileResult {
-    /**
-     * Service profile Arn. Returned after successful create.
-     * 
-     */
+        /**
+         * @return Service profile Arn. Returned after successful create.
+         * 
+         */
     private final @Nullable String arn;
-    /**
-     * Service profile Id. Returned after successful create.
-     * 
-     */
+        /**
+         * @return Service profile Id. Returned after successful create.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * LoRaWANDeviceProfile supports all LoRa specific attributes for service profile for CreateDeviceProfile operation
-     * 
-     */
+        /**
+         * @return LoRaWANDeviceProfile supports all LoRa specific attributes for service profile for CreateDeviceProfile operation
+         * 
+         */
     private final @Nullable DeviceProfileLoRaWANDeviceProfile loRaWAN;
-    /**
-     * Name of service profile
-     * 
-     */
+        /**
+         * @return Name of service profile
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * A list of key-value pairs that contain metadata for the device profile.
-     * 
-     */
+        /**
+         * @return A list of key-value pairs that contain metadata for the device profile.
+         * 
+         */
     private final @Nullable List<DeviceProfileTag> tags;
 
     @CustomType.Constructor
@@ -55,37 +55,37 @@ public final class GetDeviceProfileResult {
     }
 
     /**
-     * Service profile Arn. Returned after successful create.
+     * @return Service profile Arn. Returned after successful create.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Service profile Id. Returned after successful create.
+     * @return Service profile Id. Returned after successful create.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * LoRaWANDeviceProfile supports all LoRa specific attributes for service profile for CreateDeviceProfile operation
+     * @return LoRaWANDeviceProfile supports all LoRa specific attributes for service profile for CreateDeviceProfile operation
      * 
-    */
+     */
     public Optional<DeviceProfileLoRaWANDeviceProfile> loRaWAN() {
         return Optional.ofNullable(this.loRaWAN);
     }
     /**
-     * Name of service profile
+     * @return Name of service profile
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * A list of key-value pairs that contain metadata for the device profile.
+     * @return A list of key-value pairs that contain metadata for the device profile.
      * 
-    */
+     */
     public List<DeviceProfileTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

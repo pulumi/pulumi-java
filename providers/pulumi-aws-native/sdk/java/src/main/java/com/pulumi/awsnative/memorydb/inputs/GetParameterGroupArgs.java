@@ -19,6 +19,10 @@ public final class GetParameterGroupArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="parameterGroupName", required=true)
     private String parameterGroupName;
 
+    /**
+     * @return The name of the parameter group.
+     * 
+     */
     public String parameterGroupName() {
         return this.parameterGroupName;
     }
@@ -47,6 +51,12 @@ public final class GetParameterGroupArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetParameterGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parameterGroupName The name of the parameter group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterGroupName(String parameterGroupName) {
             $.parameterGroupName = parameterGroupName;
             return this;

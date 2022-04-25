@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApiKeyStageKey {
-    /**
-     * The ID of a RestApi resource that includes the stage with which you want to associate the API key.
-     * 
-     */
+        /**
+         * @return The ID of a RestApi resource that includes the stage with which you want to associate the API key.
+         * 
+         */
     private final @Nullable String restApiId;
-    /**
-     * The name of the stage with which to associate the API key. The stage must be included in the RestApi resource that you specified in the RestApiId property.
-     * 
-     */
+        /**
+         * @return The name of the stage with which to associate the API key. The stage must be included in the RestApi resource that you specified in the RestApiId property.
+         * 
+         */
     private final @Nullable String stageName;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ApiKeyStageKey {
     }
 
     /**
-     * The ID of a RestApi resource that includes the stage with which you want to associate the API key.
+     * @return The ID of a RestApi resource that includes the stage with which you want to associate the API key.
      * 
-    */
+     */
     public Optional<String> restApiId() {
         return Optional.ofNullable(this.restApiId);
     }
     /**
-     * The name of the stage with which to associate the API key. The stage must be included in the RestApi resource that you specified in the RestApiId property.
+     * @return The name of the stage with which to associate the API key. The stage must be included in the RestApi resource that you specified in the RestApiId property.
      * 
-    */
+     */
     public Optional<String> stageName() {
         return Optional.ofNullable(this.stageName);
     }

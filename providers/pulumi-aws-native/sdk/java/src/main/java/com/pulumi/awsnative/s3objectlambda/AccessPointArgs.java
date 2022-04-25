@@ -23,6 +23,10 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name you want to assign to this Object lambda Access Point.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -34,6 +38,10 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="objectLambdaConfiguration", required=true)
     private Output<AccessPointObjectLambdaConfigurationArgs> objectLambdaConfiguration;
 
+    /**
+     * @return The Object lambda Access Point Configuration that configures transformations to be applied on the objects on specified S3 Actions
+     * 
+     */
     public Output<AccessPointObjectLambdaConfigurationArgs> objectLambdaConfiguration() {
         return this.objectLambdaConfiguration;
     }
@@ -63,20 +71,44 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AccessPointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name you want to assign to this Object lambda Access Point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name you want to assign to this Object lambda Access Point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param objectLambdaConfiguration The Object lambda Access Point Configuration that configures transformations to be applied on the objects on specified S3 Actions
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectLambdaConfiguration(Output<AccessPointObjectLambdaConfigurationArgs> objectLambdaConfiguration) {
             $.objectLambdaConfiguration = objectLambdaConfiguration;
             return this;
         }
 
+        /**
+         * @param objectLambdaConfiguration The Object lambda Access Point Configuration that configures transformations to be applied on the objects on specified S3 Actions
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectLambdaConfiguration(AccessPointObjectLambdaConfigurationArgs objectLambdaConfiguration) {
             return objectLambdaConfiguration(Output.of(objectLambdaConfiguration));
         }

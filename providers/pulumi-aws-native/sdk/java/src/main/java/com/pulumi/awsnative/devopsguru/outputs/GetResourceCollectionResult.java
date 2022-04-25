@@ -13,10 +13,10 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetResourceCollectionResult {
     private final @Nullable ResourceCollectionFilter resourceCollectionFilter;
-    /**
-     * The type of ResourceCollection
-     * 
-     */
+        /**
+         * @return The type of ResourceCollection
+         * 
+         */
     private final @Nullable ResourceCollectionType resourceCollectionType;
 
     @CustomType.Constructor
@@ -31,9 +31,9 @@ public final class GetResourceCollectionResult {
         return Optional.ofNullable(this.resourceCollectionFilter);
     }
     /**
-     * The type of ResourceCollection
+     * @return The type of ResourceCollection
      * 
-    */
+     */
     public Optional<ResourceCollectionType> resourceCollectionType() {
         return Optional.ofNullable(this.resourceCollectionType);
     }

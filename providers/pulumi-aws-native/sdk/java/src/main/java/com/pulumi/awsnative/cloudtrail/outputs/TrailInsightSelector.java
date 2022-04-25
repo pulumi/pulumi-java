@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TrailInsightSelector {
-    /**
-     * The type of insight to log on a trail.
-     * 
-     */
+        /**
+         * @return The type of insight to log on a trail.
+         * 
+         */
     private final @Nullable String insightType;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class TrailInsightSelector {
     }
 
     /**
-     * The type of insight to log on a trail.
+     * @return The type of insight to log on a trail.
      * 
-    */
+     */
     public Optional<String> insightType() {
         return Optional.ofNullable(this.insightType);
     }

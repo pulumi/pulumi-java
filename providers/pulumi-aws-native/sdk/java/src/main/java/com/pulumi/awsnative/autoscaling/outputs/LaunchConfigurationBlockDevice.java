@@ -13,40 +13,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LaunchConfigurationBlockDevice {
-    /**
-     * Indicates whether the volume is deleted on instance termination.
-     * 
-     */
+        /**
+         * @return Indicates whether the volume is deleted on instance termination.
+         * 
+         */
     private final @Nullable Boolean deleteOnTermination;
-    /**
-     * Specifies whether the volume should be encrypted.
-     * 
-     */
+        /**
+         * @return Specifies whether the volume should be encrypted.
+         * 
+         */
     private final @Nullable Boolean encrypted;
-    /**
-     * The number of input/output (I/O) operations per second (IOPS) to provision for the volume.
-     * 
-     */
+        /**
+         * @return The number of input/output (I/O) operations per second (IOPS) to provision for the volume.
+         * 
+         */
     private final @Nullable Integer iops;
-    /**
-     * The snapshot ID of the volume to use.
-     * 
-     */
+        /**
+         * @return The snapshot ID of the volume to use.
+         * 
+         */
     private final @Nullable String snapshotId;
-    /**
-     * The throughput (MiBps) to provision for a gp3 volume.
-     * 
-     */
+        /**
+         * @return The throughput (MiBps) to provision for a gp3 volume.
+         * 
+         */
     private final @Nullable Integer throughput;
-    /**
-     * The volume size, in GiBs.
-     * 
-     */
+        /**
+         * @return The volume size, in GiBs.
+         * 
+         */
     private final @Nullable Integer volumeSize;
-    /**
-     * The volume type.
-     * 
-     */
+        /**
+         * @return The volume type.
+         * 
+         */
     private final @Nullable String volumeType;
 
     @CustomType.Constructor
@@ -68,51 +68,51 @@ public final class LaunchConfigurationBlockDevice {
     }
 
     /**
-     * Indicates whether the volume is deleted on instance termination.
+     * @return Indicates whether the volume is deleted on instance termination.
      * 
-    */
+     */
     public Optional<Boolean> deleteOnTermination() {
         return Optional.ofNullable(this.deleteOnTermination);
     }
     /**
-     * Specifies whether the volume should be encrypted.
+     * @return Specifies whether the volume should be encrypted.
      * 
-    */
+     */
     public Optional<Boolean> encrypted() {
         return Optional.ofNullable(this.encrypted);
     }
     /**
-     * The number of input/output (I/O) operations per second (IOPS) to provision for the volume.
+     * @return The number of input/output (I/O) operations per second (IOPS) to provision for the volume.
      * 
-    */
+     */
     public Optional<Integer> iops() {
         return Optional.ofNullable(this.iops);
     }
     /**
-     * The snapshot ID of the volume to use.
+     * @return The snapshot ID of the volume to use.
      * 
-    */
+     */
     public Optional<String> snapshotId() {
         return Optional.ofNullable(this.snapshotId);
     }
     /**
-     * The throughput (MiBps) to provision for a gp3 volume.
+     * @return The throughput (MiBps) to provision for a gp3 volume.
      * 
-    */
+     */
     public Optional<Integer> throughput() {
         return Optional.ofNullable(this.throughput);
     }
     /**
-     * The volume size, in GiBs.
+     * @return The volume size, in GiBs.
      * 
-    */
+     */
     public Optional<Integer> volumeSize() {
         return Optional.ofNullable(this.volumeSize);
     }
     /**
-     * The volume type.
+     * @return The volume type.
      * 
-    */
+     */
     public Optional<String> volumeType() {
         return Optional.ofNullable(this.volumeType);
     }

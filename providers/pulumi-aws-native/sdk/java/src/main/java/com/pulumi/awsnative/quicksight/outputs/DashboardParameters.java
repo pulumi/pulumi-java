@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DashboardParameters {
-    /**
-     * &lt;p&gt;Date-time parameters.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;Date-time parameters.&lt;/p&gt;
+         * 
+         */
     private final @Nullable List<DashboardDateTimeParameter> dateTimeParameters;
-    /**
-     * &lt;p&gt;Decimal parameters.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;Decimal parameters.&lt;/p&gt;
+         * 
+         */
     private final @Nullable List<DashboardDecimalParameter> decimalParameters;
-    /**
-     * &lt;p&gt;Integer parameters.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;Integer parameters.&lt;/p&gt;
+         * 
+         */
     private final @Nullable List<DashboardIntegerParameter> integerParameters;
-    /**
-     * &lt;p&gt;String parameters.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;String parameters.&lt;/p&gt;
+         * 
+         */
     private final @Nullable List<DashboardStringParameter> stringParameters;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class DashboardParameters {
     }
 
     /**
-     * &lt;p&gt;Date-time parameters.&lt;/p&gt;
+     * @return &lt;p&gt;Date-time parameters.&lt;/p&gt;
      * 
-    */
+     */
     public List<DashboardDateTimeParameter> dateTimeParameters() {
         return this.dateTimeParameters == null ? List.of() : this.dateTimeParameters;
     }
     /**
-     * &lt;p&gt;Decimal parameters.&lt;/p&gt;
+     * @return &lt;p&gt;Decimal parameters.&lt;/p&gt;
      * 
-    */
+     */
     public List<DashboardDecimalParameter> decimalParameters() {
         return this.decimalParameters == null ? List.of() : this.decimalParameters;
     }
     /**
-     * &lt;p&gt;Integer parameters.&lt;/p&gt;
+     * @return &lt;p&gt;Integer parameters.&lt;/p&gt;
      * 
-    */
+     */
     public List<DashboardIntegerParameter> integerParameters() {
         return this.integerParameters == null ? List.of() : this.integerParameters;
     }
     /**
-     * &lt;p&gt;String parameters.&lt;/p&gt;
+     * @return &lt;p&gt;String parameters.&lt;/p&gt;
      * 
-    */
+     */
     public List<DashboardStringParameter> stringParameters() {
         return this.stringParameters == null ? List.of() : this.stringParameters;
     }

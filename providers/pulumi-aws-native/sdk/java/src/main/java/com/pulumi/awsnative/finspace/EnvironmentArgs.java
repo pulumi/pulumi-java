@@ -26,6 +26,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataBundles")
     private @Nullable Output<List<String>> dataBundles;
 
+    /**
+     * @return ARNs of FinSpace Data Bundles to install
+     * 
+     */
     public Optional<Output<List<String>>> dataBundles() {
         return Optional.ofNullable(this.dataBundles);
     }
@@ -37,6 +41,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the Environment
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -48,6 +56,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="federationMode")
     private @Nullable Output<EnvironmentFederationMode> federationMode;
 
+    /**
+     * @return Federation mode used with the Environment
+     * 
+     */
     public Optional<Output<EnvironmentFederationMode>> federationMode() {
         return Optional.ofNullable(this.federationMode);
     }
@@ -66,6 +78,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
     private @Nullable Output<String> kmsKeyId;
 
+    /**
+     * @return KMS key used to encrypt customer data within FinSpace Environment infrastructure
+     * 
+     */
     public Optional<Output<String>> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
@@ -77,6 +93,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the Environment
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -118,33 +138,75 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataBundles ARNs of FinSpace Data Bundles to install
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataBundles(@Nullable Output<List<String>> dataBundles) {
             $.dataBundles = dataBundles;
             return this;
         }
 
+        /**
+         * @param dataBundles ARNs of FinSpace Data Bundles to install
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataBundles(List<String> dataBundles) {
             return dataBundles(Output.of(dataBundles));
         }
 
+        /**
+         * @param dataBundles ARNs of FinSpace Data Bundles to install
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataBundles(String... dataBundles) {
             return dataBundles(List.of(dataBundles));
         }
 
+        /**
+         * @param description Description of the Environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the Environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param federationMode Federation mode used with the Environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder federationMode(@Nullable Output<EnvironmentFederationMode> federationMode) {
             $.federationMode = federationMode;
             return this;
         }
 
+        /**
+         * @param federationMode Federation mode used with the Environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder federationMode(EnvironmentFederationMode federationMode) {
             return federationMode(Output.of(federationMode));
         }
@@ -158,20 +220,44 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
             return federationParameters(Output.of(federationParameters));
         }
 
+        /**
+         * @param kmsKeyId KMS key used to encrypt customer data within FinSpace Environment infrastructure
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             $.kmsKeyId = kmsKeyId;
             return this;
         }
 
+        /**
+         * @param kmsKeyId KMS key used to encrypt customer data within FinSpace Environment infrastructure
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(String kmsKeyId) {
             return kmsKeyId(Output.of(kmsKeyId));
         }
 
+        /**
+         * @param name Name of the Environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the Environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

@@ -23,22 +23,22 @@ public final class GetAssessmentResult {
     private final @Nullable String assessmentId;
     private final @Nullable AssessmentReportsDestination assessmentReportsDestination;
     private final @Nullable Double creationTime;
-    /**
-     * The list of delegations.
-     * 
-     */
+        /**
+         * @return The list of delegations.
+         * 
+         */
     private final @Nullable List<AssessmentDelegation> delegations;
-    /**
-     * The list of roles for the specified assessment.
-     * 
-     */
+        /**
+         * @return The list of roles for the specified assessment.
+         * 
+         */
     private final @Nullable List<AssessmentRole> roles;
     private final @Nullable AssessmentScope scope;
     private final @Nullable AssessmentStatus status;
-    /**
-     * The tags associated with the assessment.
-     * 
-     */
+        /**
+         * @return The tags associated with the assessment.
+         * 
+         */
     private final @Nullable List<AssessmentTag> tags;
 
     @CustomType.Constructor
@@ -76,16 +76,16 @@ public final class GetAssessmentResult {
         return Optional.ofNullable(this.creationTime);
     }
     /**
-     * The list of delegations.
+     * @return The list of delegations.
      * 
-    */
+     */
     public List<AssessmentDelegation> delegations() {
         return this.delegations == null ? List.of() : this.delegations;
     }
     /**
-     * The list of roles for the specified assessment.
+     * @return The list of roles for the specified assessment.
      * 
-    */
+     */
     public List<AssessmentRole> roles() {
         return this.roles == null ? List.of() : this.roles;
     }
@@ -96,9 +96,9 @@ public final class GetAssessmentResult {
         return Optional.ofNullable(this.status);
     }
     /**
-     * The tags associated with the assessment.
+     * @return The tags associated with the assessment.
      * 
-    */
+     */
     public List<AssessmentTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

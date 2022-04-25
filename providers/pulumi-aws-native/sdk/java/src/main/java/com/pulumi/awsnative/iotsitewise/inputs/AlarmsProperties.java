@@ -25,6 +25,10 @@ public final class AlarmsProperties extends com.pulumi.resources.InvokeArgs {
     @Import(name="alarmRoleArn")
     private @Nullable String alarmRoleArn;
 
+    /**
+     * @return The ARN of the IAM role that allows the alarm to perform actions and access AWS resources and services, such as AWS IoT Events.
+     * 
+     */
     public Optional<String> alarmRoleArn() {
         return Optional.ofNullable(this.alarmRoleArn);
     }
@@ -36,6 +40,10 @@ public final class AlarmsProperties extends com.pulumi.resources.InvokeArgs {
     @Import(name="notificationLambdaArn")
     private @Nullable String notificationLambdaArn;
 
+    /**
+     * @return The ARN of the AWS Lambda function that manages alarm notifications. For more information, see Managing alarm notifications in the AWS IoT Events Developer Guide.
+     * 
+     */
     public Optional<String> notificationLambdaArn() {
         return Optional.ofNullable(this.notificationLambdaArn);
     }
@@ -65,11 +73,23 @@ public final class AlarmsProperties extends com.pulumi.resources.InvokeArgs {
             $ = new AlarmsProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alarmRoleArn The ARN of the IAM role that allows the alarm to perform actions and access AWS resources and services, such as AWS IoT Events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarmRoleArn(@Nullable String alarmRoleArn) {
             $.alarmRoleArn = alarmRoleArn;
             return this;
         }
 
+        /**
+         * @param notificationLambdaArn The ARN of the AWS Lambda function that manages alarm notifications. For more information, see Managing alarm notifications in the AWS IoT Events Developer Guide.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationLambdaArn(@Nullable String notificationLambdaArn) {
             $.notificationLambdaArn = notificationLambdaArn;
             return this;

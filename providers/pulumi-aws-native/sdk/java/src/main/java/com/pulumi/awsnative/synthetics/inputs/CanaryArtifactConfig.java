@@ -21,6 +21,10 @@ public final class CanaryArtifactConfig extends com.pulumi.resources.InvokeArgs 
     @Import(name="s3Encryption")
     private @Nullable CanaryS3Encryption s3Encryption;
 
+    /**
+     * @return Encryption configuration for uploading artifacts to S3
+     * 
+     */
     public Optional<CanaryS3Encryption> s3Encryption() {
         return Optional.ofNullable(this.s3Encryption);
     }
@@ -49,6 +53,12 @@ public final class CanaryArtifactConfig extends com.pulumi.resources.InvokeArgs 
             $ = new CanaryArtifactConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param s3Encryption Encryption configuration for uploading artifacts to S3
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Encryption(@Nullable CanaryS3Encryption s3Encryption) {
             $.s3Encryption = s3Encryption;
             return this;

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class BotButton {
-    /**
-     * The text that appears on the button.
-     * 
-     */
+        /**
+         * @return The text that appears on the button.
+         * 
+         */
     private final String text;
-    /**
-     * The value returned to Amazon Lex when the user chooses this button.
-     * 
-     */
+        /**
+         * @return The value returned to Amazon Lex when the user chooses this button.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class BotButton {
     }
 
     /**
-     * The text that appears on the button.
+     * @return The text that appears on the button.
      * 
-    */
+     */
     public String text() {
         return this.text;
     }
     /**
-     * The value returned to Amazon Lex when the user chooses this button.
+     * @return The value returned to Amazon Lex when the user chooses this button.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

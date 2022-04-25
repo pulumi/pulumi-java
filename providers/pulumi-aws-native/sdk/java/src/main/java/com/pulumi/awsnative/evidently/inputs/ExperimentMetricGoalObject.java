@@ -29,6 +29,10 @@ public final class ExperimentMetricGoalObject extends com.pulumi.resources.Invok
     @Import(name="entityIdKey", required=true)
     private String entityIdKey;
 
+    /**
+     * @return The JSON path to reference the entity id in the event.
+     * 
+     */
     public String entityIdKey() {
         return this.entityIdKey;
     }
@@ -40,6 +44,10 @@ public final class ExperimentMetricGoalObject extends com.pulumi.resources.Invok
     @Import(name="eventPattern", required=true)
     private String eventPattern;
 
+    /**
+     * @return Event patterns have the same structure as the events they match. Rules use event patterns to select events. An event pattern either matches an event or it doesn&#39;t.
+     * 
+     */
     public String eventPattern() {
         return this.eventPattern;
     }
@@ -65,6 +73,10 @@ public final class ExperimentMetricGoalObject extends com.pulumi.resources.Invok
     @Import(name="valueKey", required=true)
     private String valueKey;
 
+    /**
+     * @return The JSON path to reference the numerical metric value in the event.
+     * 
+     */
     public String valueKey() {
         return this.valueKey;
     }
@@ -103,11 +115,23 @@ public final class ExperimentMetricGoalObject extends com.pulumi.resources.Invok
             return this;
         }
 
+        /**
+         * @param entityIdKey The JSON path to reference the entity id in the event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityIdKey(String entityIdKey) {
             $.entityIdKey = entityIdKey;
             return this;
         }
 
+        /**
+         * @param eventPattern Event patterns have the same structure as the events they match. Rules use event patterns to select events. An event pattern either matches an event or it doesn&#39;t.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventPattern(String eventPattern) {
             $.eventPattern = eventPattern;
             return this;
@@ -123,6 +147,12 @@ public final class ExperimentMetricGoalObject extends com.pulumi.resources.Invok
             return this;
         }
 
+        /**
+         * @param valueKey The JSON path to reference the numerical metric value in the event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueKey(String valueKey) {
             $.valueKey = valueKey;
             return this;

@@ -15,55 +15,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetFirewallDomainListResult {
-    /**
-     * Arn
-     * 
-     */
+        /**
+         * @return Arn
+         * 
+         */
     private final @Nullable String arn;
-    /**
-     * Rfc3339TimeString
-     * 
-     */
+        /**
+         * @return Rfc3339TimeString
+         * 
+         */
     private final @Nullable String creationTime;
-    /**
-     * The id of the creator request.
-     * 
-     */
+        /**
+         * @return The id of the creator request.
+         * 
+         */
     private final @Nullable String creatorRequestId;
-    /**
-     * Count
-     * 
-     */
+        /**
+         * @return Count
+         * 
+         */
     private final @Nullable Integer domainCount;
-    /**
-     * ResourceId
-     * 
-     */
+        /**
+         * @return ResourceId
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * ServicePrincipal
-     * 
-     */
+        /**
+         * @return ServicePrincipal
+         * 
+         */
     private final @Nullable String managedOwnerName;
-    /**
-     * Rfc3339TimeString
-     * 
-     */
+        /**
+         * @return Rfc3339TimeString
+         * 
+         */
     private final @Nullable String modificationTime;
-    /**
-     * ResolverFirewallDomainList, possible values are COMPLETE, DELETING, UPDATING, COMPLETE_IMPORT_FAILED, IMPORTING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
-     * 
-     */
+        /**
+         * @return ResolverFirewallDomainList, possible values are COMPLETE, DELETING, UPDATING, COMPLETE_IMPORT_FAILED, IMPORTING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
+         * 
+         */
     private final @Nullable FirewallDomainListStatus status;
-    /**
-     * FirewallDomainListAssociationStatus
-     * 
-     */
+        /**
+         * @return FirewallDomainListAssociationStatus
+         * 
+         */
     private final @Nullable String statusMessage;
-    /**
-     * Tags
-     * 
-     */
+        /**
+         * @return Tags
+         * 
+         */
     private final @Nullable List<FirewallDomainListTag> tags;
 
     @CustomType.Constructor
@@ -91,72 +91,72 @@ public final class GetFirewallDomainListResult {
     }
 
     /**
-     * Arn
+     * @return Arn
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Rfc3339TimeString
+     * @return Rfc3339TimeString
      * 
-    */
+     */
     public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
-     * The id of the creator request.
+     * @return The id of the creator request.
      * 
-    */
+     */
     public Optional<String> creatorRequestId() {
         return Optional.ofNullable(this.creatorRequestId);
     }
     /**
-     * Count
+     * @return Count
      * 
-    */
+     */
     public Optional<Integer> domainCount() {
         return Optional.ofNullable(this.domainCount);
     }
     /**
-     * ResourceId
+     * @return ResourceId
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * ServicePrincipal
+     * @return ServicePrincipal
      * 
-    */
+     */
     public Optional<String> managedOwnerName() {
         return Optional.ofNullable(this.managedOwnerName);
     }
     /**
-     * Rfc3339TimeString
+     * @return Rfc3339TimeString
      * 
-    */
+     */
     public Optional<String> modificationTime() {
         return Optional.ofNullable(this.modificationTime);
     }
     /**
-     * ResolverFirewallDomainList, possible values are COMPLETE, DELETING, UPDATING, COMPLETE_IMPORT_FAILED, IMPORTING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
+     * @return ResolverFirewallDomainList, possible values are COMPLETE, DELETING, UPDATING, COMPLETE_IMPORT_FAILED, IMPORTING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
      * 
-    */
+     */
     public Optional<FirewallDomainListStatus> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * FirewallDomainListAssociationStatus
+     * @return FirewallDomainListAssociationStatus
      * 
-    */
+     */
     public Optional<String> statusMessage() {
         return Optional.ofNullable(this.statusMessage);
     }
     /**
-     * Tags
+     * @return Tags
      * 
-    */
+     */
     public List<FirewallDomainListTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

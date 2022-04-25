@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAlertResult {
-    /**
-     * ARN assigned to the alert.
-     * 
-     */
+        /**
+         * @return ARN assigned to the alert.
+         * 
+         */
     private final @Nullable String arn;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class GetAlertResult {
     }
 
     /**
-     * ARN assigned to the alert.
+     * @return ARN assigned to the alert.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }

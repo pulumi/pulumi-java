@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RuleGroupRuleAction {
-    /**
-     * Allow traffic towards application.
-     * 
-     */
+        /**
+         * @return Allow traffic towards application.
+         * 
+         */
     private final @Nullable RuleGroupRuleActionAllowProperties allow;
-    /**
-     * Block traffic towards application.
-     * 
-     */
+        /**
+         * @return Block traffic towards application.
+         * 
+         */
     private final @Nullable RuleGroupRuleActionBlockProperties block;
-    /**
-     * Checks valid token exists with request.
-     * 
-     */
+        /**
+         * @return Checks valid token exists with request.
+         * 
+         */
     private final @Nullable RuleGroupRuleActionCaptchaProperties captcha;
-    /**
-     * Count traffic towards application.
-     * 
-     */
+        /**
+         * @return Count traffic towards application.
+         * 
+         */
     private final @Nullable RuleGroupRuleActionCountProperties count;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class RuleGroupRuleAction {
     }
 
     /**
-     * Allow traffic towards application.
+     * @return Allow traffic towards application.
      * 
-    */
+     */
     public Optional<RuleGroupRuleActionAllowProperties> allow() {
         return Optional.ofNullable(this.allow);
     }
     /**
-     * Block traffic towards application.
+     * @return Block traffic towards application.
      * 
-    */
+     */
     public Optional<RuleGroupRuleActionBlockProperties> block() {
         return Optional.ofNullable(this.block);
     }
     /**
-     * Checks valid token exists with request.
+     * @return Checks valid token exists with request.
      * 
-    */
+     */
     public Optional<RuleGroupRuleActionCaptchaProperties> captcha() {
         return Optional.ofNullable(this.captcha);
     }
     /**
-     * Count traffic towards application.
+     * @return Count traffic towards application.
      * 
-    */
+     */
     public Optional<RuleGroupRuleActionCountProperties> count() {
         return Optional.ofNullable(this.count);
     }

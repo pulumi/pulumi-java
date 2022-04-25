@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class OriginEndpointAuthorization {
-    /**
-     * The Amazon Resource Name (ARN) for the secret in Secrets Manager that your Content Distribution Network (CDN) uses for authorization to access your endpoint.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) for the secret in Secrets Manager that your Content Distribution Network (CDN) uses for authorization to access your endpoint.
+         * 
+         */
     private final String cdnIdentifierSecret;
-    /**
-     * The Amazon Resource Name (ARN) for the IAM role that allows MediaPackage to communicate with AWS Secrets Manager.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) for the IAM role that allows MediaPackage to communicate with AWS Secrets Manager.
+         * 
+         */
     private final String secretsRoleArn;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class OriginEndpointAuthorization {
     }
 
     /**
-     * The Amazon Resource Name (ARN) for the secret in Secrets Manager that your Content Distribution Network (CDN) uses for authorization to access your endpoint.
+     * @return The Amazon Resource Name (ARN) for the secret in Secrets Manager that your Content Distribution Network (CDN) uses for authorization to access your endpoint.
      * 
-    */
+     */
     public String cdnIdentifierSecret() {
         return this.cdnIdentifierSecret;
     }
     /**
-     * The Amazon Resource Name (ARN) for the IAM role that allows MediaPackage to communicate with AWS Secrets Manager.
+     * @return The Amazon Resource Name (ARN) for the IAM role that allows MediaPackage to communicate with AWS Secrets Manager.
      * 
-    */
+     */
     public String secretsRoleArn() {
         return this.secretsRoleArn;
     }

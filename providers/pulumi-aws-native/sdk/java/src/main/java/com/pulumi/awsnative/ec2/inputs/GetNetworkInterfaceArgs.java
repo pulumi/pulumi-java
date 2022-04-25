@@ -19,6 +19,10 @@ public final class GetNetworkInterfaceArgs extends com.pulumi.resources.InvokeAr
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Network interface id.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +51,12 @@ public final class GetNetworkInterfaceArgs extends com.pulumi.resources.InvokeAr
             $ = new GetNetworkInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Network interface id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

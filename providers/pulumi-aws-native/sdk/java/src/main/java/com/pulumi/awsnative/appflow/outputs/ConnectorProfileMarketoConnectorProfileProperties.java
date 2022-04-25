@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ConnectorProfileMarketoConnectorProfileProperties {
-    /**
-     * The location of the Marketo resource
-     * 
-     */
+        /**
+         * @return The location of the Marketo resource
+         * 
+         */
     private final String instanceUrl;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ConnectorProfileMarketoConnectorProfileProperties {
     }
 
     /**
-     * The location of the Marketo resource
+     * @return The location of the Marketo resource
      * 
-    */
+     */
     public String instanceUrl() {
         return this.instanceUrl;
     }

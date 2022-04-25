@@ -25,6 +25,10 @@ public final class ContactListArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contactListName")
     private @Nullable Output<String> contactListName;
 
+    /**
+     * @return The name of the contact list.
+     * 
+     */
     public Optional<Output<String>> contactListName() {
         return Optional.ofNullable(this.contactListName);
     }
@@ -36,6 +40,10 @@ public final class ContactListArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the contact list.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class ContactListArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<ContactListTagArgs>> tags;
 
+    /**
+     * @return The tags (keys and values) associated with the contact list.
+     * 
+     */
     public Optional<Output<List<ContactListTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -58,6 +70,10 @@ public final class ContactListArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="topics")
     private @Nullable Output<List<ContactListTopicArgs>> topics;
 
+    /**
+     * @return The topics associated with the contact list.
+     * 
+     */
     public Optional<Output<List<ContactListTopicArgs>>> topics() {
         return Optional.ofNullable(this.topics);
     }
@@ -89,46 +105,106 @@ public final class ContactListArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ContactListArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contactListName The name of the contact list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactListName(@Nullable Output<String> contactListName) {
             $.contactListName = contactListName;
             return this;
         }
 
+        /**
+         * @param contactListName The name of the contact list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactListName(String contactListName) {
             return contactListName(Output.of(contactListName));
         }
 
+        /**
+         * @param description The description of the contact list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the contact list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param tags The tags (keys and values) associated with the contact list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<ContactListTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags (keys and values) associated with the contact list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<ContactListTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The tags (keys and values) associated with the contact list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(ContactListTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param topics The topics associated with the contact list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topics(@Nullable Output<List<ContactListTopicArgs>> topics) {
             $.topics = topics;
             return this;
         }
 
+        /**
+         * @param topics The topics associated with the contact list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topics(List<ContactListTopicArgs> topics) {
             return topics(Output.of(topics));
         }
 
+        /**
+         * @param topics The topics associated with the contact list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topics(ContactListTopicArgs... topics) {
             return topics(List.of(topics));
         }

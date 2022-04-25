@@ -27,6 +27,10 @@ public final class BucketRedirectAllRequestsToArgs extends com.pulumi.resources.
     @Import(name="hostName", required=true)
     private Output<String> hostName;
 
+    /**
+     * @return Name of the host where requests are redirected.
+     * 
+     */
     public Output<String> hostName() {
         return this.hostName;
     }
@@ -38,6 +42,10 @@ public final class BucketRedirectAllRequestsToArgs extends com.pulumi.resources.
     @Import(name="protocol")
     private @Nullable Output<BucketRedirectAllRequestsToProtocol> protocol;
 
+    /**
+     * @return Protocol to use when redirecting requests. The default is the protocol that is used in the original request.
+     * 
+     */
     public Optional<Output<BucketRedirectAllRequestsToProtocol>> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -67,20 +75,44 @@ public final class BucketRedirectAllRequestsToArgs extends com.pulumi.resources.
             $ = new BucketRedirectAllRequestsToArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostName Name of the host where requests are redirected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(Output<String> hostName) {
             $.hostName = hostName;
             return this;
         }
 
+        /**
+         * @param hostName Name of the host where requests are redirected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(String hostName) {
             return hostName(Output.of(hostName));
         }
 
+        /**
+         * @param protocol Protocol to use when redirecting requests. The default is the protocol that is used in the original request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable Output<BucketRedirectAllRequestsToProtocol> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol Protocol to use when redirecting requests. The default is the protocol that is used in the original request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(BucketRedirectAllRequestsToProtocol protocol) {
             return protocol(Output.of(protocol));
         }

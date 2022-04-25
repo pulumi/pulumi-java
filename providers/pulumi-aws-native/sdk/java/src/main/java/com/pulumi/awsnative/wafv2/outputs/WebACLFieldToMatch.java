@@ -14,37 +14,37 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WebACLFieldToMatch {
-    /**
-     * All query arguments of a web request.
-     * 
-     */
+        /**
+         * @return All query arguments of a web request.
+         * 
+         */
     private final @Nullable Object allQueryArguments;
-    /**
-     * The body of a web request. This immediately follows the request headers.
-     * 
-     */
+        /**
+         * @return The body of a web request. This immediately follows the request headers.
+         * 
+         */
     private final @Nullable Object body;
     private final @Nullable WebACLJsonBody jsonBody;
-    /**
-     * The HTTP method of a web request. The method indicates the type of operation that the request is asking the origin to perform.
-     * 
-     */
+        /**
+         * @return The HTTP method of a web request. The method indicates the type of operation that the request is asking the origin to perform.
+         * 
+         */
     private final @Nullable Object method;
-    /**
-     * The query string of a web request. This is the part of a URL that appears after a ? character, if any.
-     * 
-     */
+        /**
+         * @return The query string of a web request. This is the part of a URL that appears after a ? character, if any.
+         * 
+         */
     private final @Nullable Object queryString;
     private final @Nullable WebACLFieldToMatchSingleHeaderProperties singleHeader;
-    /**
-     * One query argument in a web request, identified by name, for example UserName or SalesRegion. The name can be up to 30 characters long and isn&#39;t case sensitive.
-     * 
-     */
+        /**
+         * @return One query argument in a web request, identified by name, for example UserName or SalesRegion. The name can be up to 30 characters long and isn&#39;t case sensitive.
+         * 
+         */
     private final @Nullable WebACLFieldToMatchSingleQueryArgumentProperties singleQueryArgument;
-    /**
-     * The path component of the URI of a web request. This is the part of a web request that identifies a resource, for example, /images/daily-ad.jpg.
-     * 
-     */
+        /**
+         * @return The path component of the URI of a web request. This is the part of a web request that identifies a resource, for example, /images/daily-ad.jpg.
+         * 
+         */
     private final @Nullable Object uriPath;
 
     @CustomType.Constructor
@@ -68,16 +68,16 @@ public final class WebACLFieldToMatch {
     }
 
     /**
-     * All query arguments of a web request.
+     * @return All query arguments of a web request.
      * 
-    */
+     */
     public Optional<Object> allQueryArguments() {
         return Optional.ofNullable(this.allQueryArguments);
     }
     /**
-     * The body of a web request. This immediately follows the request headers.
+     * @return The body of a web request. This immediately follows the request headers.
      * 
-    */
+     */
     public Optional<Object> body() {
         return Optional.ofNullable(this.body);
     }
@@ -85,16 +85,16 @@ public final class WebACLFieldToMatch {
         return Optional.ofNullable(this.jsonBody);
     }
     /**
-     * The HTTP method of a web request. The method indicates the type of operation that the request is asking the origin to perform.
+     * @return The HTTP method of a web request. The method indicates the type of operation that the request is asking the origin to perform.
      * 
-    */
+     */
     public Optional<Object> method() {
         return Optional.ofNullable(this.method);
     }
     /**
-     * The query string of a web request. This is the part of a URL that appears after a ? character, if any.
+     * @return The query string of a web request. This is the part of a URL that appears after a ? character, if any.
      * 
-    */
+     */
     public Optional<Object> queryString() {
         return Optional.ofNullable(this.queryString);
     }
@@ -102,16 +102,16 @@ public final class WebACLFieldToMatch {
         return Optional.ofNullable(this.singleHeader);
     }
     /**
-     * One query argument in a web request, identified by name, for example UserName or SalesRegion. The name can be up to 30 characters long and isn&#39;t case sensitive.
+     * @return One query argument in a web request, identified by name, for example UserName or SalesRegion. The name can be up to 30 characters long and isn&#39;t case sensitive.
      * 
-    */
+     */
     public Optional<WebACLFieldToMatchSingleQueryArgumentProperties> singleQueryArgument() {
         return Optional.ofNullable(this.singleQueryArgument);
     }
     /**
-     * The path component of the URI of a web request. This is the part of a web request that identifies a resource, for example, /images/daily-ad.jpg.
+     * @return The path component of the URI of a web request. This is the part of a web request that identifies a resource, for example, /images/daily-ad.jpg.
      * 
-    */
+     */
     public Optional<Object> uriPath() {
         return Optional.ofNullable(this.uriPath);
     }

@@ -15,22 +15,22 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetLocationNFSResult {
-    /**
-     * The Amazon Resource Name (ARN) of the NFS location.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the NFS location.
+         * 
+         */
     private final @Nullable String locationArn;
-    /**
-     * The URL of the NFS location that was described.
-     * 
-     */
+        /**
+         * @return The URL of the NFS location that was described.
+         * 
+         */
     private final @Nullable String locationUri;
     private final @Nullable LocationNFSMountOptions mountOptions;
     private final @Nullable LocationNFSOnPremConfig onPremConfig;
-    /**
-     * An array of key-value pairs to apply to this resource.
-     * 
-     */
+        /**
+         * @return An array of key-value pairs to apply to this resource.
+         * 
+         */
     private final @Nullable List<LocationNFSTag> tags;
 
     @CustomType.Constructor
@@ -48,16 +48,16 @@ public final class GetLocationNFSResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the NFS location.
+     * @return The Amazon Resource Name (ARN) of the NFS location.
      * 
-    */
+     */
     public Optional<String> locationArn() {
         return Optional.ofNullable(this.locationArn);
     }
     /**
-     * The URL of the NFS location that was described.
+     * @return The URL of the NFS location that was described.
      * 
-    */
+     */
     public Optional<String> locationUri() {
         return Optional.ofNullable(this.locationUri);
     }
@@ -68,9 +68,9 @@ public final class GetLocationNFSResult {
         return Optional.ofNullable(this.onPremConfig);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<LocationNFSTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

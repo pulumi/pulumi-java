@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetVpcConnectorResult {
-    /**
-     * The Amazon Resource Name (ARN) of this VPC connector.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of this VPC connector.
+         * 
+         */
     private final @Nullable String vpcConnectorArn;
-    /**
-     * The revision of this VPC connector. It&#39;s unique among all the active connectors (&#34;Status&#34;: &#34;ACTIVE&#34;) that share the same Name.
-     * 
-     */
+        /**
+         * @return The revision of this VPC connector. It&#39;s unique among all the active connectors (&#34;Status&#34;: &#34;ACTIVE&#34;) that share the same Name.
+         * 
+         */
     private final @Nullable Integer vpcConnectorRevision;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class GetVpcConnectorResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of this VPC connector.
+     * @return The Amazon Resource Name (ARN) of this VPC connector.
      * 
-    */
+     */
     public Optional<String> vpcConnectorArn() {
         return Optional.ofNullable(this.vpcConnectorArn);
     }
     /**
-     * The revision of this VPC connector. It&#39;s unique among all the active connectors (&#34;Status&#34;: &#34;ACTIVE&#34;) that share the same Name.
+     * @return The revision of this VPC connector. It&#39;s unique among all the active connectors (&#34;Status&#34;: &#34;ACTIVE&#34;) that share the same Name.
      * 
-    */
+     */
     public Optional<Integer> vpcConnectorRevision() {
         return Optional.ofNullable(this.vpcConnectorRevision);
     }

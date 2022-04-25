@@ -35,6 +35,10 @@ public final class ServiceCodeRepositoryArgs extends com.pulumi.resources.Resour
     @Import(name="repositoryUrl", required=true)
     private Output<String> repositoryUrl;
 
+    /**
+     * @return Repository Url
+     * 
+     */
     public Output<String> repositoryUrl() {
         return this.repositoryUrl;
     }
@@ -81,11 +85,23 @@ public final class ServiceCodeRepositoryArgs extends com.pulumi.resources.Resour
             return codeConfiguration(Output.of(codeConfiguration));
         }
 
+        /**
+         * @param repositoryUrl Repository Url
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryUrl(Output<String> repositoryUrl) {
             $.repositoryUrl = repositoryUrl;
             return this;
         }
 
+        /**
+         * @param repositoryUrl Repository Url
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryUrl(String repositoryUrl) {
             return repositoryUrl(Output.of(repositoryUrl));
         }

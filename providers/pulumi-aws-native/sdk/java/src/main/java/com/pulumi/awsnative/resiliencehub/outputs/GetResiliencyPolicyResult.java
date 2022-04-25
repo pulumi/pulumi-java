@@ -15,32 +15,32 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetResiliencyPolicyResult {
-    /**
-     * Data Location Constraint of the Policy.
-     * 
-     */
+        /**
+         * @return Data Location Constraint of the Policy.
+         * 
+         */
     private final @Nullable ResiliencyPolicyDataLocationConstraint dataLocationConstraint;
     private final @Nullable ResiliencyPolicyPolicyMap policy;
-    /**
-     * Amazon Resource Name (ARN) of the Resiliency Policy.
-     * 
-     */
+        /**
+         * @return Amazon Resource Name (ARN) of the Resiliency Policy.
+         * 
+         */
     private final @Nullable String policyArn;
-    /**
-     * Description of Resiliency Policy.
-     * 
-     */
+        /**
+         * @return Description of Resiliency Policy.
+         * 
+         */
     private final @Nullable String policyDescription;
-    /**
-     * Name of Resiliency Policy.
-     * 
-     */
+        /**
+         * @return Name of Resiliency Policy.
+         * 
+         */
     private final @Nullable String policyName;
     private final @Nullable ResiliencyPolicyTagMap tags;
-    /**
-     * Resiliency Policy Tier.
-     * 
-     */
+        /**
+         * @return Resiliency Policy Tier.
+         * 
+         */
     private final @Nullable ResiliencyPolicyTier tier;
 
     @CustomType.Constructor
@@ -62,9 +62,9 @@ public final class GetResiliencyPolicyResult {
     }
 
     /**
-     * Data Location Constraint of the Policy.
+     * @return Data Location Constraint of the Policy.
      * 
-    */
+     */
     public Optional<ResiliencyPolicyDataLocationConstraint> dataLocationConstraint() {
         return Optional.ofNullable(this.dataLocationConstraint);
     }
@@ -72,23 +72,23 @@ public final class GetResiliencyPolicyResult {
         return Optional.ofNullable(this.policy);
     }
     /**
-     * Amazon Resource Name (ARN) of the Resiliency Policy.
+     * @return Amazon Resource Name (ARN) of the Resiliency Policy.
      * 
-    */
+     */
     public Optional<String> policyArn() {
         return Optional.ofNullable(this.policyArn);
     }
     /**
-     * Description of Resiliency Policy.
+     * @return Description of Resiliency Policy.
      * 
-    */
+     */
     public Optional<String> policyDescription() {
         return Optional.ofNullable(this.policyDescription);
     }
     /**
-     * Name of Resiliency Policy.
+     * @return Name of Resiliency Policy.
      * 
-    */
+     */
     public Optional<String> policyName() {
         return Optional.ofNullable(this.policyName);
     }
@@ -96,9 +96,9 @@ public final class GetResiliencyPolicyResult {
         return Optional.ofNullable(this.tags);
     }
     /**
-     * Resiliency Policy Tier.
+     * @return Resiliency Policy Tier.
      * 
-    */
+     */
     public Optional<ResiliencyPolicyTier> tier() {
         return Optional.ofNullable(this.tier);
     }

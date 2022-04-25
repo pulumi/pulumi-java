@@ -20,6 +20,10 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="appName", required=true)
     private String appName;
 
+    /**
+     * @return The name of the app.
+     * 
+     */
     public String appName() {
         return this.appName;
     }
@@ -31,6 +35,10 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="appType", required=true)
     private AppType appType;
 
+    /**
+     * @return The type of app.
+     * 
+     */
     public AppType appType() {
         return this.appType;
     }
@@ -42,6 +50,10 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="domainId", required=true)
     private String domainId;
 
+    /**
+     * @return The domain ID.
+     * 
+     */
     public String domainId() {
         return this.domainId;
     }
@@ -53,6 +65,10 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="userProfileName", required=true)
     private String userProfileName;
 
+    /**
+     * @return The user profile name.
+     * 
+     */
     public String userProfileName() {
         return this.userProfileName;
     }
@@ -84,21 +100,45 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAppArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appName The name of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appName(String appName) {
             $.appName = appName;
             return this;
         }
 
+        /**
+         * @param appType The type of app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appType(AppType appType) {
             $.appType = appType;
             return this;
         }
 
+        /**
+         * @param domainId The domain ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainId(String domainId) {
             $.domainId = domainId;
             return this;
         }
 
+        /**
+         * @param userProfileName The user profile name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProfileName(String userProfileName) {
             $.userProfileName = userProfileName;
             return this;

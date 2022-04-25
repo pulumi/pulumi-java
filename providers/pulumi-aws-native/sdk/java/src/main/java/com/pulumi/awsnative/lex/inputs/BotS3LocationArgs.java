@@ -26,6 +26,10 @@ public final class BotS3LocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3Bucket", required=true)
     private Output<String> s3Bucket;
 
+    /**
+     * @return An Amazon S3 bucket in the same AWS Region as your function. The bucket can be in a different AWS account.
+     * 
+     */
     public Output<String> s3Bucket() {
         return this.s3Bucket;
     }
@@ -37,6 +41,10 @@ public final class BotS3LocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3ObjectKey", required=true)
     private Output<String> s3ObjectKey;
 
+    /**
+     * @return The Amazon S3 key of the deployment package.
+     * 
+     */
     public Output<String> s3ObjectKey() {
         return this.s3ObjectKey;
     }
@@ -48,6 +56,10 @@ public final class BotS3LocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3ObjectVersion")
     private @Nullable Output<String> s3ObjectVersion;
 
+    /**
+     * @return For versioned objects, the version of the deployment package object to use. If not specified, the current object version will be used.
+     * 
+     */
     public Optional<Output<String>> s3ObjectVersion() {
         return Optional.ofNullable(this.s3ObjectVersion);
     }
@@ -78,29 +90,65 @@ public final class BotS3LocationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BotS3LocationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param s3Bucket An Amazon S3 bucket in the same AWS Region as your function. The bucket can be in a different AWS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Bucket(Output<String> s3Bucket) {
             $.s3Bucket = s3Bucket;
             return this;
         }
 
+        /**
+         * @param s3Bucket An Amazon S3 bucket in the same AWS Region as your function. The bucket can be in a different AWS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Bucket(String s3Bucket) {
             return s3Bucket(Output.of(s3Bucket));
         }
 
+        /**
+         * @param s3ObjectKey The Amazon S3 key of the deployment package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3ObjectKey(Output<String> s3ObjectKey) {
             $.s3ObjectKey = s3ObjectKey;
             return this;
         }
 
+        /**
+         * @param s3ObjectKey The Amazon S3 key of the deployment package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3ObjectKey(String s3ObjectKey) {
             return s3ObjectKey(Output.of(s3ObjectKey));
         }
 
+        /**
+         * @param s3ObjectVersion For versioned objects, the version of the deployment package object to use. If not specified, the current object version will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3ObjectVersion(@Nullable Output<String> s3ObjectVersion) {
             $.s3ObjectVersion = s3ObjectVersion;
             return this;
         }
 
+        /**
+         * @param s3ObjectVersion For versioned objects, the version of the deployment package object to use. If not specified, the current object version will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3ObjectVersion(String s3ObjectVersion) {
             return s3ObjectVersion(Output.of(s3ObjectVersion));
         }

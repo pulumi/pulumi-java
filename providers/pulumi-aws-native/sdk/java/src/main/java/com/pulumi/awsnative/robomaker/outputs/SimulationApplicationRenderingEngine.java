@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class SimulationApplicationRenderingEngine {
-    /**
-     * The name of the rendering engine.
-     * 
-     */
+        /**
+         * @return The name of the rendering engine.
+         * 
+         */
     private final SimulationApplicationRenderingEngineName name;
-    /**
-     * The version of the rendering engine.
-     * 
-     */
+        /**
+         * @return The version of the rendering engine.
+         * 
+         */
     private final String version;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class SimulationApplicationRenderingEngine {
     }
 
     /**
-     * The name of the rendering engine.
+     * @return The name of the rendering engine.
      * 
-    */
+     */
     public SimulationApplicationRenderingEngineName name() {
         return this.name;
     }
     /**
-     * The version of the rendering engine.
+     * @return The version of the rendering engine.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class BotPlainTextMessage {
-    /**
-     * The message to send to the user.
-     * 
-     */
+        /**
+         * @return The message to send to the user.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class BotPlainTextMessage {
     }
 
     /**
-     * The message to send to the user.
+     * @return The message to send to the user.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

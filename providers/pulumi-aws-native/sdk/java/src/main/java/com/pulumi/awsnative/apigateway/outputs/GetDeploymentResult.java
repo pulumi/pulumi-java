@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDeploymentResult {
-    /**
-     * Primary Id for this resource
-     * 
-     */
+        /**
+         * @return Primary Id for this resource
+         * 
+         */
     private final @Nullable String deploymentId;
-    /**
-     * A description of the purpose of the API Gateway deployment.
-     * 
-     */
+        /**
+         * @return A description of the purpose of the API Gateway deployment.
+         * 
+         */
     private final @Nullable String description;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class GetDeploymentResult {
     }
 
     /**
-     * Primary Id for this resource
+     * @return Primary Id for this resource
      * 
-    */
+     */
     public Optional<String> deploymentId() {
         return Optional.ofNullable(this.deploymentId);
     }
     /**
-     * A description of the purpose of the API Gateway deployment.
+     * @return A description of the purpose of the API Gateway deployment.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }

@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class BucketEncryption {
-    /**
-     * Specifies the default server-side-encryption configuration.
-     * 
-     */
+        /**
+         * @return Specifies the default server-side-encryption configuration.
+         * 
+         */
     private final List<BucketServerSideEncryptionRule> serverSideEncryptionConfiguration;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class BucketEncryption {
     }
 
     /**
-     * Specifies the default server-side-encryption configuration.
+     * @return Specifies the default server-side-encryption configuration.
      * 
-    */
+     */
     public List<BucketServerSideEncryptionRule> serverSideEncryptionConfiguration() {
         return this.serverSideEncryptionConfiguration;
     }

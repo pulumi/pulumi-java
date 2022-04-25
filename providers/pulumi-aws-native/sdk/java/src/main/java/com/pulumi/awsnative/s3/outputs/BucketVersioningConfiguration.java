@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class BucketVersioningConfiguration {
-    /**
-     * The versioning state of the bucket.
-     * 
-     */
+        /**
+         * @return The versioning state of the bucket.
+         * 
+         */
     private final BucketVersioningConfigurationStatus status;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class BucketVersioningConfiguration {
     }
 
     /**
-     * The versioning state of the bucket.
+     * @return The versioning state of the bucket.
      * 
-    */
+     */
     public BucketVersioningConfigurationStatus status() {
         return this.status;
     }

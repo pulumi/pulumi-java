@@ -14,20 +14,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetBucketResult {
-    /**
-     * The Amazon Resource Name (ARN) of the specified bucket.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the specified bucket.
+         * 
+         */
     private final @Nullable String arn;
-    /**
-     * Rules that define how Amazon S3Outposts manages objects during their lifetime.
-     * 
-     */
+        /**
+         * @return Rules that define how Amazon S3Outposts manages objects during their lifetime.
+         * 
+         */
     private final @Nullable BucketLifecycleConfiguration lifecycleConfiguration;
-    /**
-     * An arbitrary set of tags (key-value pairs) for this S3Outposts bucket.
-     * 
-     */
+        /**
+         * @return An arbitrary set of tags (key-value pairs) for this S3Outposts bucket.
+         * 
+         */
     private final @Nullable List<BucketTag> tags;
 
     @CustomType.Constructor
@@ -41,23 +41,23 @@ public final class GetBucketResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the specified bucket.
+     * @return The Amazon Resource Name (ARN) of the specified bucket.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Rules that define how Amazon S3Outposts manages objects during their lifetime.
+     * @return Rules that define how Amazon S3Outposts manages objects during their lifetime.
      * 
-    */
+     */
     public Optional<BucketLifecycleConfiguration> lifecycleConfiguration() {
         return Optional.ofNullable(this.lifecycleConfiguration);
     }
     /**
-     * An arbitrary set of tags (key-value pairs) for this S3Outposts bucket.
+     * @return An arbitrary set of tags (key-value pairs) for this S3Outposts bucket.
      * 
-    */
+     */
     public List<BucketTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

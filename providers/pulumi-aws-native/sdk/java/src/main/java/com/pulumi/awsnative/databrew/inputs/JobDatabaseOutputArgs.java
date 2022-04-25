@@ -31,6 +31,10 @@ public final class JobDatabaseOutputArgs extends com.pulumi.resources.ResourceAr
     @Import(name="databaseOutputMode")
     private @Nullable Output<JobDatabaseOutputDatabaseOutputMode> databaseOutputMode;
 
+    /**
+     * @return Database table name
+     * 
+     */
     public Optional<Output<JobDatabaseOutputDatabaseOutputMode>> databaseOutputMode() {
         return Optional.ofNullable(this.databaseOutputMode);
     }
@@ -42,6 +46,10 @@ public final class JobDatabaseOutputArgs extends com.pulumi.resources.ResourceAr
     @Import(name="glueConnectionName", required=true)
     private Output<String> glueConnectionName;
 
+    /**
+     * @return Glue connection name
+     * 
+     */
     public Output<String> glueConnectionName() {
         return this.glueConnectionName;
     }
@@ -81,20 +89,44 @@ public final class JobDatabaseOutputArgs extends com.pulumi.resources.ResourceAr
             return databaseOptions(Output.of(databaseOptions));
         }
 
+        /**
+         * @param databaseOutputMode Database table name
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseOutputMode(@Nullable Output<JobDatabaseOutputDatabaseOutputMode> databaseOutputMode) {
             $.databaseOutputMode = databaseOutputMode;
             return this;
         }
 
+        /**
+         * @param databaseOutputMode Database table name
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseOutputMode(JobDatabaseOutputDatabaseOutputMode databaseOutputMode) {
             return databaseOutputMode(Output.of(databaseOutputMode));
         }
 
+        /**
+         * @param glueConnectionName Glue connection name
+         * 
+         * @return builder
+         * 
+         */
         public Builder glueConnectionName(Output<String> glueConnectionName) {
             $.glueConnectionName = glueConnectionName;
             return this;
         }
 
+        /**
+         * @param glueConnectionName Glue connection name
+         * 
+         * @return builder
+         * 
+         */
         public Builder glueConnectionName(String glueConnectionName) {
             return glueConnectionName(Output.of(glueConnectionName));
         }

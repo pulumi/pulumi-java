@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ContactListTopic {
     private final String defaultSubscriptionStatus;
-    /**
-     * The description of the topic.
-     * 
-     */
+        /**
+         * @return The description of the topic.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The display name of the topic.
-     * 
-     */
+        /**
+         * @return The display name of the topic.
+         * 
+         */
     private final String displayName;
-    /**
-     * The name of the topic.
-     * 
-     */
+        /**
+         * @return The name of the topic.
+         * 
+         */
     private final String topicName;
 
     @CustomType.Constructor
@@ -44,23 +44,23 @@ public final class ContactListTopic {
         return this.defaultSubscriptionStatus;
     }
     /**
-     * The description of the topic.
+     * @return The description of the topic.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The display name of the topic.
+     * @return The display name of the topic.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The name of the topic.
+     * @return The name of the topic.
      * 
-    */
+     */
     public String topicName() {
         return this.topicName;
     }

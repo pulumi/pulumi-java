@@ -22,6 +22,10 @@ public final class ModuleDefaultVersionArgs extends com.pulumi.resources.Resourc
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the module version to set as the default version.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -33,6 +37,10 @@ public final class ModuleDefaultVersionArgs extends com.pulumi.resources.Resourc
     @Import(name="moduleName")
     private @Nullable Output<String> moduleName;
 
+    /**
+     * @return The name of a module existing in the registry.
+     * 
+     */
     public Optional<Output<String>> moduleName() {
         return Optional.ofNullable(this.moduleName);
     }
@@ -44,6 +52,10 @@ public final class ModuleDefaultVersionArgs extends com.pulumi.resources.Resourc
     @Import(name="versionId")
     private @Nullable Output<String> versionId;
 
+    /**
+     * @return The ID of an existing version of the named module to set as the default.
+     * 
+     */
     public Optional<Output<String>> versionId() {
         return Optional.ofNullable(this.versionId);
     }
@@ -74,29 +86,65 @@ public final class ModuleDefaultVersionArgs extends com.pulumi.resources.Resourc
             $ = new ModuleDefaultVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the module version to set as the default version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the module version to set as the default version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param moduleName The name of a module existing in the registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder moduleName(@Nullable Output<String> moduleName) {
             $.moduleName = moduleName;
             return this;
         }
 
+        /**
+         * @param moduleName The name of a module existing in the registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder moduleName(String moduleName) {
             return moduleName(Output.of(moduleName));
         }
 
+        /**
+         * @param versionId The ID of an existing version of the named module to set as the default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionId(@Nullable Output<String> versionId) {
             $.versionId = versionId;
             return this;
         }
 
+        /**
+         * @param versionId The ID of an existing version of the named module to set as the default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionId(String versionId) {
             return versionId(Output.of(versionId));
         }

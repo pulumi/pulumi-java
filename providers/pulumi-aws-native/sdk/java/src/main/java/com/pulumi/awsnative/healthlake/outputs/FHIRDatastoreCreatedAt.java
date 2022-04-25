@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class FHIRDatastoreCreatedAt {
-    /**
-     * Nanoseconds.
-     * 
-     */
+        /**
+         * @return Nanoseconds.
+         * 
+         */
     private final Integer nanos;
-    /**
-     * Seconds since epoch.
-     * 
-     */
+        /**
+         * @return Seconds since epoch.
+         * 
+         */
     private final String seconds;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class FHIRDatastoreCreatedAt {
     }
 
     /**
-     * Nanoseconds.
+     * @return Nanoseconds.
      * 
-    */
+     */
     public Integer nanos() {
         return this.nanos;
     }
     /**
-     * Seconds since epoch.
+     * @return Seconds since epoch.
      * 
-    */
+     */
     public String seconds() {
         return this.seconds;
     }

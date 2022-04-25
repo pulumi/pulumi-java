@@ -32,6 +32,10 @@ public final class ApplicationConfigurationDetails extends com.pulumi.resources.
     @Import(name="alarmMetrics")
     private @Nullable List<ApplicationAlarmMetric> alarmMetrics;
 
+    /**
+     * @return A list of metrics to monitor for the component.
+     * 
+     */
     public Optional<List<ApplicationAlarmMetric>> alarmMetrics() {
         return Optional.ofNullable(this.alarmMetrics);
     }
@@ -43,6 +47,10 @@ public final class ApplicationConfigurationDetails extends com.pulumi.resources.
     @Import(name="alarms")
     private @Nullable List<ApplicationAlarm> alarms;
 
+    /**
+     * @return A list of alarms to monitor for the component.
+     * 
+     */
     public Optional<List<ApplicationAlarm>> alarms() {
         return Optional.ofNullable(this.alarms);
     }
@@ -54,6 +62,10 @@ public final class ApplicationConfigurationDetails extends com.pulumi.resources.
     @Import(name="hAClusterPrometheusExporter")
     private @Nullable ApplicationHAClusterPrometheusExporter hAClusterPrometheusExporter;
 
+    /**
+     * @return The HA cluster Prometheus Exporter settings.
+     * 
+     */
     public Optional<ApplicationHAClusterPrometheusExporter> hAClusterPrometheusExporter() {
         return Optional.ofNullable(this.hAClusterPrometheusExporter);
     }
@@ -65,6 +77,10 @@ public final class ApplicationConfigurationDetails extends com.pulumi.resources.
     @Import(name="hANAPrometheusExporter")
     private @Nullable ApplicationHANAPrometheusExporter hANAPrometheusExporter;
 
+    /**
+     * @return The HANA DB Prometheus Exporter settings.
+     * 
+     */
     public Optional<ApplicationHANAPrometheusExporter> hANAPrometheusExporter() {
         return Optional.ofNullable(this.hANAPrometheusExporter);
     }
@@ -76,6 +92,10 @@ public final class ApplicationConfigurationDetails extends com.pulumi.resources.
     @Import(name="jMXPrometheusExporter")
     private @Nullable ApplicationJMXPrometheusExporter jMXPrometheusExporter;
 
+    /**
+     * @return The JMX Prometheus Exporter settings.
+     * 
+     */
     public Optional<ApplicationJMXPrometheusExporter> jMXPrometheusExporter() {
         return Optional.ofNullable(this.jMXPrometheusExporter);
     }
@@ -87,6 +107,10 @@ public final class ApplicationConfigurationDetails extends com.pulumi.resources.
     @Import(name="logs")
     private @Nullable List<ApplicationLog> logs;
 
+    /**
+     * @return A list of logs to monitor for the component.
+     * 
+     */
     public Optional<List<ApplicationLog>> logs() {
         return Optional.ofNullable(this.logs);
     }
@@ -98,6 +122,10 @@ public final class ApplicationConfigurationDetails extends com.pulumi.resources.
     @Import(name="windowsEvents")
     private @Nullable List<ApplicationWindowsEvent> windowsEvents;
 
+    /**
+     * @return A list of Windows Events to log.
+     * 
+     */
     public Optional<List<ApplicationWindowsEvent>> windowsEvents() {
         return Optional.ofNullable(this.windowsEvents);
     }
@@ -132,53 +160,119 @@ public final class ApplicationConfigurationDetails extends com.pulumi.resources.
             $ = new ApplicationConfigurationDetails(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alarmMetrics A list of metrics to monitor for the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarmMetrics(@Nullable List<ApplicationAlarmMetric> alarmMetrics) {
             $.alarmMetrics = alarmMetrics;
             return this;
         }
 
+        /**
+         * @param alarmMetrics A list of metrics to monitor for the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarmMetrics(ApplicationAlarmMetric... alarmMetrics) {
             return alarmMetrics(List.of(alarmMetrics));
         }
 
+        /**
+         * @param alarms A list of alarms to monitor for the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarms(@Nullable List<ApplicationAlarm> alarms) {
             $.alarms = alarms;
             return this;
         }
 
+        /**
+         * @param alarms A list of alarms to monitor for the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarms(ApplicationAlarm... alarms) {
             return alarms(List.of(alarms));
         }
 
+        /**
+         * @param hAClusterPrometheusExporter The HA cluster Prometheus Exporter settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hAClusterPrometheusExporter(@Nullable ApplicationHAClusterPrometheusExporter hAClusterPrometheusExporter) {
             $.hAClusterPrometheusExporter = hAClusterPrometheusExporter;
             return this;
         }
 
+        /**
+         * @param hANAPrometheusExporter The HANA DB Prometheus Exporter settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hANAPrometheusExporter(@Nullable ApplicationHANAPrometheusExporter hANAPrometheusExporter) {
             $.hANAPrometheusExporter = hANAPrometheusExporter;
             return this;
         }
 
+        /**
+         * @param jMXPrometheusExporter The JMX Prometheus Exporter settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jMXPrometheusExporter(@Nullable ApplicationJMXPrometheusExporter jMXPrometheusExporter) {
             $.jMXPrometheusExporter = jMXPrometheusExporter;
             return this;
         }
 
+        /**
+         * @param logs A list of logs to monitor for the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logs(@Nullable List<ApplicationLog> logs) {
             $.logs = logs;
             return this;
         }
 
+        /**
+         * @param logs A list of logs to monitor for the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logs(ApplicationLog... logs) {
             return logs(List.of(logs));
         }
 
+        /**
+         * @param windowsEvents A list of Windows Events to log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsEvents(@Nullable List<ApplicationWindowsEvent> windowsEvents) {
             $.windowsEvents = windowsEvents;
             return this;
         }
 
+        /**
+         * @param windowsEvents A list of Windows Events to log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsEvents(ApplicationWindowsEvent... windowsEvents) {
             return windowsEvents(List.of(windowsEvents));
         }

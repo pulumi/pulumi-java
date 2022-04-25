@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetChannelResult {
-    /**
-     * The Amazon Resource Name (ARN) assigned to the Channel.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) assigned to the Channel.
+         * 
+         */
     private final @Nullable String arn;
-    /**
-     * A short text description of the Channel.
-     * 
-     */
+        /**
+         * @return A short text description of the Channel.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The configuration parameters for egress access logging.
-     * 
-     */
+        /**
+         * @return The configuration parameters for egress access logging.
+         * 
+         */
     private final @Nullable ChannelLogConfiguration egressAccessLogs;
-    /**
-     * A short text description of the Channel.
-     * 
-     */
+        /**
+         * @return A short text description of the Channel.
+         * 
+         */
     private final @Nullable ChannelHlsIngest hlsIngest;
-    /**
-     * The configuration parameters for egress access logging.
-     * 
-     */
+        /**
+         * @return The configuration parameters for egress access logging.
+         * 
+         */
     private final @Nullable ChannelLogConfiguration ingressAccessLogs;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class GetChannelResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) assigned to the Channel.
+     * @return The Amazon Resource Name (ARN) assigned to the Channel.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * A short text description of the Channel.
+     * @return A short text description of the Channel.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The configuration parameters for egress access logging.
+     * @return The configuration parameters for egress access logging.
      * 
-    */
+     */
     public Optional<ChannelLogConfiguration> egressAccessLogs() {
         return Optional.ofNullable(this.egressAccessLogs);
     }
     /**
-     * A short text description of the Channel.
+     * @return A short text description of the Channel.
      * 
-    */
+     */
     public Optional<ChannelHlsIngest> hlsIngest() {
         return Optional.ofNullable(this.hlsIngest);
     }
     /**
-     * The configuration parameters for egress access logging.
+     * @return The configuration parameters for egress access logging.
      * 
-    */
+     */
     public Optional<ChannelLogConfiguration> ingressAccessLogs() {
         return Optional.ofNullable(this.ingressAccessLogs);
     }

@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LaunchProfileStreamingSessionStorageRoot {
-    /**
-     * &lt;p&gt;The folder path in Linux workstations where files are uploaded.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;The folder path in Linux workstations where files are uploaded.&lt;/p&gt;
+         * 
+         */
     private final @Nullable String linux;
-    /**
-     * &lt;p&gt;The folder path in Windows workstations where files are uploaded.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;The folder path in Windows workstations where files are uploaded.&lt;/p&gt;
+         * 
+         */
     private final @Nullable String windows;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class LaunchProfileStreamingSessionStorageRoot {
     }
 
     /**
-     * &lt;p&gt;The folder path in Linux workstations where files are uploaded.&lt;/p&gt;
+     * @return &lt;p&gt;The folder path in Linux workstations where files are uploaded.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> linux() {
         return Optional.ofNullable(this.linux);
     }
     /**
-     * &lt;p&gt;The folder path in Windows workstations where files are uploaded.&lt;/p&gt;
+     * @return &lt;p&gt;The folder path in Windows workstations where files are uploaded.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> windows() {
         return Optional.ofNullable(this.windows);
     }

@@ -26,6 +26,10 @@ public final class ContactFlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="content", required=true)
     private Output<String> content;
 
+    /**
+     * @return The content of the contact flow in JSON format.
+     * 
+     */
     public Output<String> content() {
         return this.content;
     }
@@ -37,6 +41,10 @@ public final class ContactFlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the contact flow.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -48,6 +56,10 @@ public final class ContactFlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceArn", required=true)
     private Output<String> instanceArn;
 
+    /**
+     * @return The identifier of the Amazon Connect instance (ARN).
+     * 
+     */
     public Output<String> instanceArn() {
         return this.instanceArn;
     }
@@ -59,6 +71,10 @@ public final class ContactFlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the contact flow.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -70,6 +86,10 @@ public final class ContactFlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<ContactFlowState> state;
 
+    /**
+     * @return The state of the contact flow.
+     * 
+     */
     public Optional<Output<ContactFlowState>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -81,6 +101,10 @@ public final class ContactFlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<ContactFlowTagArgs>> tags;
 
+    /**
+     * @return One or more tags.
+     * 
+     */
     public Optional<Output<List<ContactFlowTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -92,6 +116,10 @@ public final class ContactFlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<ContactFlowType> type;
 
+    /**
+     * @return The type of the contact flow.
+     * 
+     */
     public Optional<Output<ContactFlowType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -126,69 +154,159 @@ public final class ContactFlowArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ContactFlowArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The content of the contact flow in JSON format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content The content of the contact flow in JSON format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param description The description of the contact flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the contact flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param instanceArn The identifier of the Amazon Connect instance (ARN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceArn(Output<String> instanceArn) {
             $.instanceArn = instanceArn;
             return this;
         }
 
+        /**
+         * @param instanceArn The identifier of the Amazon Connect instance (ARN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceArn(String instanceArn) {
             return instanceArn(Output.of(instanceArn));
         }
 
+        /**
+         * @param name The name of the contact flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the contact flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param state The state of the contact flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<ContactFlowState> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The state of the contact flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(ContactFlowState state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param tags One or more tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<ContactFlowTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags One or more tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<ContactFlowTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags One or more tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(ContactFlowTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param type The type of the contact flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<ContactFlowType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the contact flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ContactFlowType type) {
             return type(Output.of(type));
         }

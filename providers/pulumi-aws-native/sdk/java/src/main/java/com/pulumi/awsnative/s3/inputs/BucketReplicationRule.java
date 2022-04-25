@@ -52,6 +52,10 @@ public final class BucketReplicationRule extends com.pulumi.resources.InvokeArgs
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return A unique identifier for the rule.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -63,6 +67,10 @@ public final class BucketReplicationRule extends com.pulumi.resources.InvokeArgs
     @Import(name="prefix")
     private @Nullable String prefix;
 
+    /**
+     * @return An object key name prefix that identifies the object or objects to which the rule applies.
+     * 
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -88,6 +96,10 @@ public final class BucketReplicationRule extends com.pulumi.resources.InvokeArgs
     @Import(name="status", required=true)
     private BucketReplicationRuleStatus status;
 
+    /**
+     * @return Specifies whether the rule is enabled.
+     * 
+     */
     public BucketReplicationRuleStatus status() {
         return this.status;
     }
@@ -138,11 +150,23 @@ public final class BucketReplicationRule extends com.pulumi.resources.InvokeArgs
             return this;
         }
 
+        /**
+         * @param id A unique identifier for the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param prefix An object key name prefix that identifies the object or objects to which the rule applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable String prefix) {
             $.prefix = prefix;
             return this;
@@ -158,6 +182,12 @@ public final class BucketReplicationRule extends com.pulumi.resources.InvokeArgs
             return this;
         }
 
+        /**
+         * @param status Specifies whether the rule is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(BucketReplicationRuleStatus status) {
             $.status = status;
             return this;

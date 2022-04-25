@@ -23,6 +23,10 @@ public final class StreamingImageArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return &lt;p&gt;A human-readable description of the streaming image.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -34,6 +38,10 @@ public final class StreamingImageArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="ec2ImageId", required=true)
     private Output<String> ec2ImageId;
 
+    /**
+     * @return &lt;p&gt;The ID of an EC2 machine image with which to create this streaming image.&lt;/p&gt;
+     * 
+     */
     public Output<String> ec2ImageId() {
         return this.ec2ImageId;
     }
@@ -45,6 +53,10 @@ public final class StreamingImageArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return &lt;p&gt;A friendly name for a streaming image resource.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -56,6 +68,10 @@ public final class StreamingImageArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="studioId", required=true)
     private Output<String> studioId;
 
+    /**
+     * @return &lt;p&gt;The studioId. &lt;/p&gt;
+     * 
+     */
     public Output<String> studioId() {
         return this.studioId;
     }
@@ -95,38 +111,86 @@ public final class StreamingImageArgs extends com.pulumi.resources.ResourceArgs 
             $ = new StreamingImageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description &lt;p&gt;A human-readable description of the streaming image.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description &lt;p&gt;A human-readable description of the streaming image.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param ec2ImageId &lt;p&gt;The ID of an EC2 machine image with which to create this streaming image.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder ec2ImageId(Output<String> ec2ImageId) {
             $.ec2ImageId = ec2ImageId;
             return this;
         }
 
+        /**
+         * @param ec2ImageId &lt;p&gt;The ID of an EC2 machine image with which to create this streaming image.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder ec2ImageId(String ec2ImageId) {
             return ec2ImageId(Output.of(ec2ImageId));
         }
 
+        /**
+         * @param name &lt;p&gt;A friendly name for a streaming image resource.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name &lt;p&gt;A friendly name for a streaming image resource.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param studioId &lt;p&gt;The studioId. &lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder studioId(Output<String> studioId) {
             $.studioId = studioId;
             return this;
         }
 
+        /**
+         * @param studioId &lt;p&gt;The studioId. &lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder studioId(String studioId) {
             return studioId(Output.of(studioId));
         }

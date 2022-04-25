@@ -14,35 +14,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetResolverRuleResult {
-    /**
-     * The Amazon Resource Name (ARN) of the resolver rule.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the resolver rule.
+         * 
+         */
     private final @Nullable String arn;
-    /**
-     * The name for the Resolver rule
-     * 
-     */
+        /**
+         * @return The name for the Resolver rule
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The ID of the endpoint that the rule is associated with.
-     * 
-     */
+        /**
+         * @return The ID of the endpoint that the rule is associated with.
+         * 
+         */
     private final @Nullable String resolverEndpointId;
-    /**
-     * The ID of the endpoint that the rule is associated with.
-     * 
-     */
+        /**
+         * @return The ID of the endpoint that the rule is associated with.
+         * 
+         */
     private final @Nullable String resolverRuleId;
-    /**
-     * An array of key-value pairs to apply to this resource.
-     * 
-     */
+        /**
+         * @return An array of key-value pairs to apply to this resource.
+         * 
+         */
     private final @Nullable List<ResolverRuleTag> tags;
-    /**
-     * An array that contains the IP addresses and ports that an outbound endpoint forwards DNS queries to. Typically, these are the IP addresses of DNS resolvers on your network. Specify IPv4 addresses. IPv6 is not supported.
-     * 
-     */
+        /**
+         * @return An array that contains the IP addresses and ports that an outbound endpoint forwards DNS queries to. Typically, these are the IP addresses of DNS resolvers on your network. Specify IPv4 addresses. IPv6 is not supported.
+         * 
+         */
     private final @Nullable List<ResolverRuleTargetAddress> targetIps;
 
     @CustomType.Constructor
@@ -62,44 +62,44 @@ public final class GetResolverRuleResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the resolver rule.
+     * @return The Amazon Resource Name (ARN) of the resolver rule.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The name for the Resolver rule
+     * @return The name for the Resolver rule
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The ID of the endpoint that the rule is associated with.
+     * @return The ID of the endpoint that the rule is associated with.
      * 
-    */
+     */
     public Optional<String> resolverEndpointId() {
         return Optional.ofNullable(this.resolverEndpointId);
     }
     /**
-     * The ID of the endpoint that the rule is associated with.
+     * @return The ID of the endpoint that the rule is associated with.
      * 
-    */
+     */
     public Optional<String> resolverRuleId() {
         return Optional.ofNullable(this.resolverRuleId);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<ResolverRuleTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * An array that contains the IP addresses and ports that an outbound endpoint forwards DNS queries to. Typically, these are the IP addresses of DNS resolvers on your network. Specify IPv4 addresses. IPv6 is not supported.
+     * @return An array that contains the IP addresses and ports that an outbound endpoint forwards DNS queries to. Typically, these are the IP addresses of DNS resolvers on your network. Specify IPv4 addresses. IPv6 is not supported.
      * 
-    */
+     */
     public List<ResolverRuleTargetAddress> targetIps() {
         return this.targetIps == null ? List.of() : this.targetIps;
     }

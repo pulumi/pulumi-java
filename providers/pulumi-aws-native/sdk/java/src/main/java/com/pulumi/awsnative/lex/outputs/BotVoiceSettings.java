@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class BotVoiceSettings {
-    /**
-     * The Amazon Polly voice ID that Amazon Lex uses for voice interaction with the user.
-     * 
-     */
+        /**
+         * @return The Amazon Polly voice ID that Amazon Lex uses for voice interaction with the user.
+         * 
+         */
     private final String voiceId;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class BotVoiceSettings {
     }
 
     /**
-     * The Amazon Polly voice ID that Amazon Lex uses for voice interaction with the user.
+     * @return The Amazon Polly voice ID that Amazon Lex uses for voice interaction with the user.
      * 
-    */
+     */
     public String voiceId() {
         return this.voiceId;
     }

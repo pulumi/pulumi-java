@@ -12,23 +12,23 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetResourceAssociationResult {
-    /**
-     * The name or the Id of the Application.
-     * 
-     */
+        /**
+         * @return The name or the Id of the Application.
+         * 
+         */
     private final @Nullable String application;
     private final @Nullable String applicationArn;
     private final @Nullable String id;
-    /**
-     * The name or the Id of the Resource.
-     * 
-     */
+        /**
+         * @return The name or the Id of the Resource.
+         * 
+         */
     private final @Nullable String resource;
     private final @Nullable String resourceArn;
-    /**
-     * The type of the CFN Resource for now it&#39;s enum CFN_STACK.
-     * 
-     */
+        /**
+         * @return The type of the CFN Resource for now it&#39;s enum CFN_STACK.
+         * 
+         */
     private final @Nullable ResourceAssociationResourceType resourceType;
 
     @CustomType.Constructor
@@ -48,9 +48,9 @@ public final class GetResourceAssociationResult {
     }
 
     /**
-     * The name or the Id of the Application.
+     * @return The name or the Id of the Application.
      * 
-    */
+     */
     public Optional<String> application() {
         return Optional.ofNullable(this.application);
     }
@@ -61,9 +61,9 @@ public final class GetResourceAssociationResult {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The name or the Id of the Resource.
+     * @return The name or the Id of the Resource.
      * 
-    */
+     */
     public Optional<String> resource() {
         return Optional.ofNullable(this.resource);
     }
@@ -71,9 +71,9 @@ public final class GetResourceAssociationResult {
         return Optional.ofNullable(this.resourceArn);
     }
     /**
-     * The type of the CFN Resource for now it&#39;s enum CFN_STACK.
+     * @return The type of the CFN Resource for now it&#39;s enum CFN_STACK.
      * 
-    */
+     */
     public Optional<ResourceAssociationResourceType> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }

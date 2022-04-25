@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FHIRDatastoreKmsEncryptionConfig {
-    /**
-     * The type of customer-managed-key (CMK) used for encryption. The two types of supported CMKs are customer owned CMKs and AWS owned CMKs.
-     * 
-     */
+        /**
+         * @return The type of customer-managed-key (CMK) used for encryption. The two types of supported CMKs are customer owned CMKs and AWS owned CMKs.
+         * 
+         */
     private final FHIRDatastoreKmsEncryptionConfigCmkType cmkType;
-    /**
-     * The KMS encryption key id/alias used to encrypt the Data Store contents at rest.
-     * 
-     */
+        /**
+         * @return The KMS encryption key id/alias used to encrypt the Data Store contents at rest.
+         * 
+         */
     private final @Nullable String kmsKeyId;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class FHIRDatastoreKmsEncryptionConfig {
     }
 
     /**
-     * The type of customer-managed-key (CMK) used for encryption. The two types of supported CMKs are customer owned CMKs and AWS owned CMKs.
+     * @return The type of customer-managed-key (CMK) used for encryption. The two types of supported CMKs are customer owned CMKs and AWS owned CMKs.
      * 
-    */
+     */
     public FHIRDatastoreKmsEncryptionConfigCmkType cmkType() {
         return this.cmkType;
     }
     /**
-     * The KMS encryption key id/alias used to encrypt the Data Store contents at rest.
+     * @return The KMS encryption key id/alias used to encrypt the Data Store contents at rest.
      * 
-    */
+     */
     public Optional<String> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }

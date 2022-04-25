@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class DataSourceManifestFileLocation {
-    /**
-     * &lt;p&gt;Amazon S3 bucket.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;Amazon S3 bucket.&lt;/p&gt;
+         * 
+         */
     private final String bucket;
-    /**
-     * &lt;p&gt;Amazon S3 key that identifies an object.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;Amazon S3 key that identifies an object.&lt;/p&gt;
+         * 
+         */
     private final String key;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class DataSourceManifestFileLocation {
     }
 
     /**
-     * &lt;p&gt;Amazon S3 bucket.&lt;/p&gt;
+     * @return &lt;p&gt;Amazon S3 bucket.&lt;/p&gt;
      * 
-    */
+     */
     public String bucket() {
         return this.bucket;
     }
     /**
-     * &lt;p&gt;Amazon S3 key that identifies an object.&lt;/p&gt;
+     * @return &lt;p&gt;Amazon S3 key that identifies an object.&lt;/p&gt;
      * 
-    */
+     */
     public String key() {
         return this.key;
     }

@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetGatewayResult {
-    /**
-     * A list of gateway capability summaries that each contain a namespace and status.
-     * 
-     */
+        /**
+         * @return A list of gateway capability summaries that each contain a namespace and status.
+         * 
+         */
     private final @Nullable List<GatewayCapabilitySummary> gatewayCapabilitySummaries;
-    /**
-     * The ID of the gateway device.
-     * 
-     */
+        /**
+         * @return The ID of the gateway device.
+         * 
+         */
     private final @Nullable String gatewayId;
-    /**
-     * A unique, friendly name for the gateway.
-     * 
-     */
+        /**
+         * @return A unique, friendly name for the gateway.
+         * 
+         */
     private final @Nullable String gatewayName;
-    /**
-     * A list of key-value pairs that contain metadata for the gateway.
-     * 
-     */
+        /**
+         * @return A list of key-value pairs that contain metadata for the gateway.
+         * 
+         */
     private final @Nullable List<GatewayTag> tags;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class GetGatewayResult {
     }
 
     /**
-     * A list of gateway capability summaries that each contain a namespace and status.
+     * @return A list of gateway capability summaries that each contain a namespace and status.
      * 
-    */
+     */
     public List<GatewayCapabilitySummary> gatewayCapabilitySummaries() {
         return this.gatewayCapabilitySummaries == null ? List.of() : this.gatewayCapabilitySummaries;
     }
     /**
-     * The ID of the gateway device.
+     * @return The ID of the gateway device.
      * 
-    */
+     */
     public Optional<String> gatewayId() {
         return Optional.ofNullable(this.gatewayId);
     }
     /**
-     * A unique, friendly name for the gateway.
+     * @return A unique, friendly name for the gateway.
      * 
-    */
+     */
     public Optional<String> gatewayName() {
         return Optional.ofNullable(this.gatewayName);
     }
     /**
-     * A list of key-value pairs that contain metadata for the gateway.
+     * @return A list of key-value pairs that contain metadata for the gateway.
      * 
-    */
+     */
     public List<GatewayTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

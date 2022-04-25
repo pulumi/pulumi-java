@@ -73,6 +73,10 @@ public final class StorageLensConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="isEnabled", required=true)
     private Output<Boolean> isEnabled;
 
+    /**
+     * @return Specifies whether the Amazon S3 Storage Lens configuration is enabled or disabled.
+     * 
+     */
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
@@ -84,6 +88,10 @@ public final class StorageLensConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="storageLensArn")
     private @Nullable Output<String> storageLensArn;
 
+    /**
+     * @return The ARN for the Amazon S3 Storage Lens configuration.
+     * 
+     */
     public Optional<Output<String>> storageLensArn() {
         return Optional.ofNullable(this.storageLensArn);
     }
@@ -173,20 +181,44 @@ public final class StorageLensConfigurationArgs extends com.pulumi.resources.Res
             return include(Output.of(include));
         }
 
+        /**
+         * @param isEnabled Specifies whether the Amazon S3 Storage Lens configuration is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Output<Boolean> isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isEnabled Specifies whether the Amazon S3 Storage Lens configuration is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             return isEnabled(Output.of(isEnabled));
         }
 
+        /**
+         * @param storageLensArn The ARN for the Amazon S3 Storage Lens configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLensArn(@Nullable Output<String> storageLensArn) {
             $.storageLensArn = storageLensArn;
             return this;
         }
 
+        /**
+         * @param storageLensArn The ARN for the Amazon S3 Storage Lens configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLensArn(String storageLensArn) {
             return storageLensArn(Output.of(storageLensArn));
         }

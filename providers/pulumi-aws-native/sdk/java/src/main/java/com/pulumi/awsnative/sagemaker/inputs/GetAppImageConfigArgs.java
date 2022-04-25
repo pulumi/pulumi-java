@@ -19,6 +19,10 @@ public final class GetAppImageConfigArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="appImageConfigName", required=true)
     private String appImageConfigName;
 
+    /**
+     * @return The Name of the AppImageConfig.
+     * 
+     */
     public String appImageConfigName() {
         return this.appImageConfigName;
     }
@@ -47,6 +51,12 @@ public final class GetAppImageConfigArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetAppImageConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appImageConfigName The Name of the AppImageConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appImageConfigName(String appImageConfigName) {
             $.appImageConfigName = appImageConfigName;
             return this;

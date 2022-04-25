@@ -14,10 +14,10 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetNetworkAclResult {
     private final @Nullable String id;
-    /**
-     * The tags to assign to the network ACL.
-     * 
-     */
+        /**
+         * @return The tags to assign to the network ACL.
+         * 
+         */
     private final @Nullable List<NetworkAclTag> tags;
 
     @CustomType.Constructor
@@ -32,9 +32,9 @@ public final class GetNetworkAclResult {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The tags to assign to the network ACL.
+     * @return The tags to assign to the network ACL.
      * 
-    */
+     */
     public List<NetworkAclTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

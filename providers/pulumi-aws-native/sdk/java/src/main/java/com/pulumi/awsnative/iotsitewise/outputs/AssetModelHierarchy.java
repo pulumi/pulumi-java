@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class AssetModelHierarchy {
-    /**
-     * The ID of the asset model. All assets in this hierarchy must be instances of the child AssetModelId asset model.
-     * 
-     */
+        /**
+         * @return The ID of the asset model. All assets in this hierarchy must be instances of the child AssetModelId asset model.
+         * 
+         */
     private final String childAssetModelId;
-    /**
-     * Customer provided ID for hierarchy.
-     * 
-     */
+        /**
+         * @return Customer provided ID for hierarchy.
+         * 
+         */
     private final String logicalId;
-    /**
-     * The name of the asset model hierarchy.
-     * 
-     */
+        /**
+         * @return The name of the asset model hierarchy.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class AssetModelHierarchy {
     }
 
     /**
-     * The ID of the asset model. All assets in this hierarchy must be instances of the child AssetModelId asset model.
+     * @return The ID of the asset model. All assets in this hierarchy must be instances of the child AssetModelId asset model.
      * 
-    */
+     */
     public String childAssetModelId() {
         return this.childAssetModelId;
     }
     /**
-     * Customer provided ID for hierarchy.
+     * @return Customer provided ID for hierarchy.
      * 
-    */
+     */
     public String logicalId() {
         return this.logicalId;
     }
     /**
-     * The name of the asset model hierarchy.
+     * @return The name of the asset model hierarchy.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

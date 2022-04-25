@@ -17,10 +17,10 @@ public final class GetProjectResult {
     private final @Nullable String arn;
     private final @Nullable ProjectDataDeliveryObject dataDelivery;
     private final @Nullable String description;
-    /**
-     * An array of key-value pairs to apply to this resource.
-     * 
-     */
+        /**
+         * @return An array of key-value pairs to apply to this resource.
+         * 
+         */
     private final @Nullable List<ProjectTag> tags;
 
     @CustomType.Constructor
@@ -45,9 +45,9 @@ public final class GetProjectResult {
         return Optional.ofNullable(this.description);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<ProjectTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

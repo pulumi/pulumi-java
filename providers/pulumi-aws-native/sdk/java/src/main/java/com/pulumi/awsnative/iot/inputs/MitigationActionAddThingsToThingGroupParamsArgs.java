@@ -28,6 +28,10 @@ public final class MitigationActionAddThingsToThingGroupParamsArgs extends com.p
     @Import(name="overrideDynamicGroups")
     private @Nullable Output<Boolean> overrideDynamicGroups;
 
+    /**
+     * @return Specifies if this mitigation action can move the things that triggered the mitigation action out of one or more dynamic thing groups.
+     * 
+     */
     public Optional<Output<Boolean>> overrideDynamicGroups() {
         return Optional.ofNullable(this.overrideDynamicGroups);
     }
@@ -39,6 +43,10 @@ public final class MitigationActionAddThingsToThingGroupParamsArgs extends com.p
     @Import(name="thingGroupNames", required=true)
     private Output<List<String>> thingGroupNames;
 
+    /**
+     * @return The list of groups to which you want to add the things that triggered the mitigation action.
+     * 
+     */
     public Output<List<String>> thingGroupNames() {
         return this.thingGroupNames;
     }
@@ -68,24 +76,54 @@ public final class MitigationActionAddThingsToThingGroupParamsArgs extends com.p
             $ = new MitigationActionAddThingsToThingGroupParamsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param overrideDynamicGroups Specifies if this mitigation action can move the things that triggered the mitigation action out of one or more dynamic thing groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overrideDynamicGroups(@Nullable Output<Boolean> overrideDynamicGroups) {
             $.overrideDynamicGroups = overrideDynamicGroups;
             return this;
         }
 
+        /**
+         * @param overrideDynamicGroups Specifies if this mitigation action can move the things that triggered the mitigation action out of one or more dynamic thing groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overrideDynamicGroups(Boolean overrideDynamicGroups) {
             return overrideDynamicGroups(Output.of(overrideDynamicGroups));
         }
 
+        /**
+         * @param thingGroupNames The list of groups to which you want to add the things that triggered the mitigation action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thingGroupNames(Output<List<String>> thingGroupNames) {
             $.thingGroupNames = thingGroupNames;
             return this;
         }
 
+        /**
+         * @param thingGroupNames The list of groups to which you want to add the things that triggered the mitigation action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thingGroupNames(List<String> thingGroupNames) {
             return thingGroupNames(Output.of(thingGroupNames));
         }
 
+        /**
+         * @param thingGroupNames The list of groups to which you want to add the things that triggered the mitigation action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thingGroupNames(String... thingGroupNames) {
             return thingGroupNames(List.of(thingGroupNames));
         }

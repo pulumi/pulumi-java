@@ -13,50 +13,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FlowEntitlementEncryption {
-    /**
-     * The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).
-     * 
-     */
+        /**
+         * @return The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).
+         * 
+         */
     private final FlowEntitlementEncryptionAlgorithm algorithm;
-    /**
-     * A 128-bit, 16-byte hex value represented by a 32-character string, to be used with the key for encrypting content. This parameter is not valid for static key encryption.
-     * 
-     */
+        /**
+         * @return A 128-bit, 16-byte hex value represented by a 32-character string, to be used with the key for encrypting content. This parameter is not valid for static key encryption.
+         * 
+         */
     private final @Nullable String constantInitializationVector;
-    /**
-     * The value of one of the devices that you configured with your digital rights management (DRM) platform key provider. This parameter is required for SPEKE encryption and is not valid for static key encryption.
-     * 
-     */
+        /**
+         * @return The value of one of the devices that you configured with your digital rights management (DRM) platform key provider. This parameter is required for SPEKE encryption and is not valid for static key encryption.
+         * 
+         */
     private final @Nullable String deviceId;
-    /**
-     * The type of key that is used for the encryption. If no keyType is provided, the service will use the default setting (static-key).
-     * 
-     */
+        /**
+         * @return The type of key that is used for the encryption. If no keyType is provided, the service will use the default setting (static-key).
+         * 
+         */
     private final @Nullable FlowEntitlementEncryptionKeyType keyType;
-    /**
-     * The AWS Region that the API Gateway proxy endpoint was created in. This parameter is required for SPEKE encryption and is not valid for static key encryption.
-     * 
-     */
+        /**
+         * @return The AWS Region that the API Gateway proxy endpoint was created in. This parameter is required for SPEKE encryption and is not valid for static key encryption.
+         * 
+         */
     private final @Nullable String region;
-    /**
-     * An identifier for the content. The service sends this value to the key server to identify the current endpoint. The resource ID is also known as the content ID. This parameter is required for SPEKE encryption and is not valid for static key encryption.
-     * 
-     */
+        /**
+         * @return An identifier for the content. The service sends this value to the key server to identify the current endpoint. The resource ID is also known as the content ID. This parameter is required for SPEKE encryption and is not valid for static key encryption.
+         * 
+         */
     private final @Nullable String resourceId;
-    /**
-     * The ARN of the role that you created during setup (when you set up AWS Elemental MediaConnect as a trusted entity).
-     * 
-     */
+        /**
+         * @return The ARN of the role that you created during setup (when you set up AWS Elemental MediaConnect as a trusted entity).
+         * 
+         */
     private final String roleArn;
-    /**
-     *  The ARN of the secret that you created in AWS Secrets Manager to store the encryption key. This parameter is required for static key encryption and is not valid for SPEKE encryption.
-     * 
-     */
+        /**
+         * @return  The ARN of the secret that you created in AWS Secrets Manager to store the encryption key. This parameter is required for static key encryption and is not valid for SPEKE encryption.
+         * 
+         */
     private final @Nullable String secretArn;
-    /**
-     * The URL from the API Gateway proxy that you set up to talk to your key server. This parameter is required for SPEKE encryption and is not valid for static key encryption.
-     * 
-     */
+        /**
+         * @return The URL from the API Gateway proxy that you set up to talk to your key server. This parameter is required for SPEKE encryption and is not valid for static key encryption.
+         * 
+         */
     private final @Nullable String url;
 
     @CustomType.Constructor
@@ -82,65 +82,65 @@ public final class FlowEntitlementEncryption {
     }
 
     /**
-     * The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).
+     * @return The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).
      * 
-    */
+     */
     public FlowEntitlementEncryptionAlgorithm algorithm() {
         return this.algorithm;
     }
     /**
-     * A 128-bit, 16-byte hex value represented by a 32-character string, to be used with the key for encrypting content. This parameter is not valid for static key encryption.
+     * @return A 128-bit, 16-byte hex value represented by a 32-character string, to be used with the key for encrypting content. This parameter is not valid for static key encryption.
      * 
-    */
+     */
     public Optional<String> constantInitializationVector() {
         return Optional.ofNullable(this.constantInitializationVector);
     }
     /**
-     * The value of one of the devices that you configured with your digital rights management (DRM) platform key provider. This parameter is required for SPEKE encryption and is not valid for static key encryption.
+     * @return The value of one of the devices that you configured with your digital rights management (DRM) platform key provider. This parameter is required for SPEKE encryption and is not valid for static key encryption.
      * 
-    */
+     */
     public Optional<String> deviceId() {
         return Optional.ofNullable(this.deviceId);
     }
     /**
-     * The type of key that is used for the encryption. If no keyType is provided, the service will use the default setting (static-key).
+     * @return The type of key that is used for the encryption. If no keyType is provided, the service will use the default setting (static-key).
      * 
-    */
+     */
     public Optional<FlowEntitlementEncryptionKeyType> keyType() {
         return Optional.ofNullable(this.keyType);
     }
     /**
-     * The AWS Region that the API Gateway proxy endpoint was created in. This parameter is required for SPEKE encryption and is not valid for static key encryption.
+     * @return The AWS Region that the API Gateway proxy endpoint was created in. This parameter is required for SPEKE encryption and is not valid for static key encryption.
      * 
-    */
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
     /**
-     * An identifier for the content. The service sends this value to the key server to identify the current endpoint. The resource ID is also known as the content ID. This parameter is required for SPEKE encryption and is not valid for static key encryption.
+     * @return An identifier for the content. The service sends this value to the key server to identify the current endpoint. The resource ID is also known as the content ID. This parameter is required for SPEKE encryption and is not valid for static key encryption.
      * 
-    */
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
-     * The ARN of the role that you created during setup (when you set up AWS Elemental MediaConnect as a trusted entity).
+     * @return The ARN of the role that you created during setup (when you set up AWS Elemental MediaConnect as a trusted entity).
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }
     /**
-     *  The ARN of the secret that you created in AWS Secrets Manager to store the encryption key. This parameter is required for static key encryption and is not valid for SPEKE encryption.
+     * @return  The ARN of the secret that you created in AWS Secrets Manager to store the encryption key. This parameter is required for static key encryption and is not valid for SPEKE encryption.
      * 
-    */
+     */
     public Optional<String> secretArn() {
         return Optional.ofNullable(this.secretArn);
     }
     /**
-     * The URL from the API Gateway proxy that you set up to talk to your key server. This parameter is required for SPEKE encryption and is not valid for static key encryption.
+     * @return The URL from the API Gateway proxy that you set up to talk to your key server. This parameter is required for SPEKE encryption and is not valid for static key encryption.
      * 
-    */
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }

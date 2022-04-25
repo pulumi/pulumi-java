@@ -26,6 +26,10 @@ public final class FleetIpPermissionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="fromPort", required=true)
     private Output<Integer> fromPort;
 
+    /**
+     * @return A starting value for a range of allowed port numbers.
+     * 
+     */
     public Output<Integer> fromPort() {
         return this.fromPort;
     }
@@ -37,6 +41,10 @@ public final class FleetIpPermissionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="ipRange", required=true)
     private Output<String> ipRange;
 
+    /**
+     * @return A range of allowed IP addresses. This value must be expressed in CIDR notation. Example: &#34;000.000.000.000/[subnet mask]&#34; or optionally the shortened version &#34;0.0.0.0/[subnet mask]&#34;.
+     * 
+     */
     public Output<String> ipRange() {
         return this.ipRange;
     }
@@ -48,6 +56,10 @@ public final class FleetIpPermissionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="protocol", required=true)
     private Output<FleetIpPermissionProtocol> protocol;
 
+    /**
+     * @return The network communication protocol used by the fleet.
+     * 
+     */
     public Output<FleetIpPermissionProtocol> protocol() {
         return this.protocol;
     }
@@ -59,6 +71,10 @@ public final class FleetIpPermissionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="toPort", required=true)
     private Output<Integer> toPort;
 
+    /**
+     * @return An ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher than FromPort.
+     * 
+     */
     public Output<Integer> toPort() {
         return this.toPort;
     }
@@ -90,38 +106,86 @@ public final class FleetIpPermissionArgs extends com.pulumi.resources.ResourceAr
             $ = new FleetIpPermissionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fromPort A starting value for a range of allowed port numbers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fromPort(Output<Integer> fromPort) {
             $.fromPort = fromPort;
             return this;
         }
 
+        /**
+         * @param fromPort A starting value for a range of allowed port numbers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fromPort(Integer fromPort) {
             return fromPort(Output.of(fromPort));
         }
 
+        /**
+         * @param ipRange A range of allowed IP addresses. This value must be expressed in CIDR notation. Example: &#34;000.000.000.000/[subnet mask]&#34; or optionally the shortened version &#34;0.0.0.0/[subnet mask]&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRange(Output<String> ipRange) {
             $.ipRange = ipRange;
             return this;
         }
 
+        /**
+         * @param ipRange A range of allowed IP addresses. This value must be expressed in CIDR notation. Example: &#34;000.000.000.000/[subnet mask]&#34; or optionally the shortened version &#34;0.0.0.0/[subnet mask]&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRange(String ipRange) {
             return ipRange(Output.of(ipRange));
         }
 
+        /**
+         * @param protocol The network communication protocol used by the fleet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(Output<FleetIpPermissionProtocol> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol The network communication protocol used by the fleet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(FleetIpPermissionProtocol protocol) {
             return protocol(Output.of(protocol));
         }
 
+        /**
+         * @param toPort An ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher than FromPort.
+         * 
+         * @return builder
+         * 
+         */
         public Builder toPort(Output<Integer> toPort) {
             $.toPort = toPort;
             return this;
         }
 
+        /**
+         * @param toPort An ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher than FromPort.
+         * 
+         * @return builder
+         * 
+         */
         public Builder toPort(Integer toPort) {
             return toPort(Output.of(toPort));
         }

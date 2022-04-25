@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ConnectorProfileDynatraceConnectorProfileProperties {
-    /**
-     * The location of the Dynatrace resource
-     * 
-     */
+        /**
+         * @return The location of the Dynatrace resource
+         * 
+         */
     private final String instanceUrl;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ConnectorProfileDynatraceConnectorProfileProperties {
     }
 
     /**
-     * The location of the Dynatrace resource
+     * @return The location of the Dynatrace resource
      * 
-    */
+     */
     public String instanceUrl() {
         return this.instanceUrl;
     }

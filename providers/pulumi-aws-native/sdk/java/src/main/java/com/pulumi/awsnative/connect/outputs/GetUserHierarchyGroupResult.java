@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetUserHierarchyGroupResult {
-    /**
-     * The identifier of the Amazon Connect instance.
-     * 
-     */
+        /**
+         * @return The identifier of the Amazon Connect instance.
+         * 
+         */
     private final @Nullable String instanceArn;
-    /**
-     * The name of the user hierarchy group.
-     * 
-     */
+        /**
+         * @return The name of the user hierarchy group.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The Amazon Resource Name (ARN) for the user hierarchy group.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) for the user hierarchy group.
+         * 
+         */
     private final @Nullable String userHierarchyGroupArn;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class GetUserHierarchyGroupResult {
     }
 
     /**
-     * The identifier of the Amazon Connect instance.
+     * @return The identifier of the Amazon Connect instance.
      * 
-    */
+     */
     public Optional<String> instanceArn() {
         return Optional.ofNullable(this.instanceArn);
     }
     /**
-     * The name of the user hierarchy group.
+     * @return The name of the user hierarchy group.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The Amazon Resource Name (ARN) for the user hierarchy group.
+     * @return The Amazon Resource Name (ARN) for the user hierarchy group.
      * 
-    */
+     */
     public Optional<String> userHierarchyGroupArn() {
         return Optional.ofNullable(this.userHierarchyGroupArn);
     }

@@ -21,6 +21,10 @@ public final class JobRecipe extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Recipe name
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -32,6 +36,10 @@ public final class JobRecipe extends com.pulumi.resources.InvokeArgs {
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return Recipe version
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -61,11 +69,23 @@ public final class JobRecipe extends com.pulumi.resources.InvokeArgs {
             $ = new JobRecipe(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Recipe name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param version Recipe version
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

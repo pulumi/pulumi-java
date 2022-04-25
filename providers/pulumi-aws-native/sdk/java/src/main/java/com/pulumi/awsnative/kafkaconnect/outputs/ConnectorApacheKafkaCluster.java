@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ConnectorApacheKafkaCluster {
-    /**
-     * The bootstrap servers string of the Apache Kafka cluster.
-     * 
-     */
+        /**
+         * @return The bootstrap servers string of the Apache Kafka cluster.
+         * 
+         */
     private final String bootstrapServers;
     private final ConnectorVpc vpc;
 
@@ -26,9 +26,9 @@ public final class ConnectorApacheKafkaCluster {
     }
 
     /**
-     * The bootstrap servers string of the Apache Kafka cluster.
+     * @return The bootstrap servers string of the Apache Kafka cluster.
      * 
-    */
+     */
     public String bootstrapServers() {
         return this.bootstrapServers;
     }

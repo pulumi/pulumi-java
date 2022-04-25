@@ -26,6 +26,10 @@ public final class EventSourceMappingSourceAccessConfiguration extends com.pulum
     @Import(name="type")
     private @Nullable EventSourceMappingSourceAccessConfigurationType type;
 
+    /**
+     * @return The type of source access configuration.
+     * 
+     */
     public Optional<EventSourceMappingSourceAccessConfigurationType> type() {
         return Optional.ofNullable(this.type);
     }
@@ -37,6 +41,10 @@ public final class EventSourceMappingSourceAccessConfiguration extends com.pulum
     @Import(name="uRI")
     private @Nullable String uRI;
 
+    /**
+     * @return The URI for the source access configuration resource.
+     * 
+     */
     public Optional<String> uRI() {
         return Optional.ofNullable(this.uRI);
     }
@@ -66,11 +74,23 @@ public final class EventSourceMappingSourceAccessConfiguration extends com.pulum
             $ = new EventSourceMappingSourceAccessConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of source access configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable EventSourceMappingSourceAccessConfigurationType type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param uRI The URI for the source access configuration resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uRI(@Nullable String uRI) {
             $.uRI = uRI;
             return this;

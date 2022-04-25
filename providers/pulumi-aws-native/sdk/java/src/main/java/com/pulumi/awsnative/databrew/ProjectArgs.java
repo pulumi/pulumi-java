@@ -25,6 +25,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="datasetName", required=true)
     private Output<String> datasetName;
 
+    /**
+     * @return Dataset name
+     * 
+     */
     public Output<String> datasetName() {
         return this.datasetName;
     }
@@ -36,6 +40,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Project name
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -47,6 +55,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="recipeName", required=true)
     private Output<String> recipeName;
 
+    /**
+     * @return Recipe name
+     * 
+     */
     public Output<String> recipeName() {
         return this.recipeName;
     }
@@ -58,6 +70,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return Role arn
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -69,6 +85,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sample")
     private @Nullable Output<ProjectSampleArgs> sample;
 
+    /**
+     * @return Sample
+     * 
+     */
     public Optional<Output<ProjectSampleArgs>> sample() {
         return Optional.ofNullable(this.sample);
     }
@@ -109,47 +129,107 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ProjectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetName Dataset name
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetName(Output<String> datasetName) {
             $.datasetName = datasetName;
             return this;
         }
 
+        /**
+         * @param datasetName Dataset name
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetName(String datasetName) {
             return datasetName(Output.of(datasetName));
         }
 
+        /**
+         * @param name Project name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Project name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param recipeName Recipe name
+         * 
+         * @return builder
+         * 
+         */
         public Builder recipeName(Output<String> recipeName) {
             $.recipeName = recipeName;
             return this;
         }
 
+        /**
+         * @param recipeName Recipe name
+         * 
+         * @return builder
+         * 
+         */
         public Builder recipeName(String recipeName) {
             return recipeName(Output.of(recipeName));
         }
 
+        /**
+         * @param roleArn Role arn
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn Role arn
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param sample Sample
+         * 
+         * @return builder
+         * 
+         */
         public Builder sample(@Nullable Output<ProjectSampleArgs> sample) {
             $.sample = sample;
             return this;
         }
 
+        /**
+         * @param sample Sample
+         * 
+         * @return builder
+         * 
+         */
         public Builder sample(ProjectSampleArgs sample) {
             return sample(Output.of(sample));
         }

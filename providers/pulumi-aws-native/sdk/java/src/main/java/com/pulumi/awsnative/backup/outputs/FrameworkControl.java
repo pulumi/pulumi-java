@@ -14,20 +14,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FrameworkControl {
-    /**
-     * A list of ParameterName and ParameterValue pairs.
-     * 
-     */
+        /**
+         * @return A list of ParameterName and ParameterValue pairs.
+         * 
+         */
     private final @Nullable List<FrameworkControlInputParameter> controlInputParameters;
-    /**
-     * The name of a control. This name is between 1 and 256 characters.
-     * 
-     */
+        /**
+         * @return The name of a control. This name is between 1 and 256 characters.
+         * 
+         */
     private final String controlName;
-    /**
-     * The scope of a control. The control scope defines what the control will evaluate. Three examples of control scopes are: a specific backup plan, all backup plans with a specific tag, or all backup plans.
-     * 
-     */
+        /**
+         * @return The scope of a control. The control scope defines what the control will evaluate. Three examples of control scopes are: a specific backup plan, all backup plans with a specific tag, or all backup plans.
+         * 
+         */
     private final @Nullable FrameworkControlControlScopeProperties controlScope;
 
     @CustomType.Constructor
@@ -41,23 +41,23 @@ public final class FrameworkControl {
     }
 
     /**
-     * A list of ParameterName and ParameterValue pairs.
+     * @return A list of ParameterName and ParameterValue pairs.
      * 
-    */
+     */
     public List<FrameworkControlInputParameter> controlInputParameters() {
         return this.controlInputParameters == null ? List.of() : this.controlInputParameters;
     }
     /**
-     * The name of a control. This name is between 1 and 256 characters.
+     * @return The name of a control. This name is between 1 and 256 characters.
      * 
-    */
+     */
     public String controlName() {
         return this.controlName;
     }
     /**
-     * The scope of a control. The control scope defines what the control will evaluate. Three examples of control scopes are: a specific backup plan, all backup plans with a specific tag, or all backup plans.
+     * @return The scope of a control. The control scope defines what the control will evaluate. Three examples of control scopes are: a specific backup plan, all backup plans with a specific tag, or all backup plans.
      * 
-    */
+     */
     public Optional<FrameworkControlControlScopeProperties> controlScope() {
         return Optional.ofNullable(this.controlScope);
     }

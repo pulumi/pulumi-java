@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ReportDeliveryChannelProperties {
-    /**
-     * A list of the format of your reports: CSV, JSON, or both. If not specified, the default format is CSV.
-     * 
-     */
+        /**
+         * @return A list of the format of your reports: CSV, JSON, or both. If not specified, the default format is CSV.
+         * 
+         */
     private final @Nullable List<String> formats;
-    /**
-     * The unique name of the S3 bucket that receives your reports.
-     * 
-     */
+        /**
+         * @return The unique name of the S3 bucket that receives your reports.
+         * 
+         */
     private final String s3BucketName;
-    /**
-     * The prefix for where AWS Backup Audit Manager delivers your reports to Amazon S3. The prefix is this part of the following path: s3://your-bucket-name/prefix/Backup/us-west-2/year/month/day/report-name. If not specified, there is no prefix.
-     * 
-     */
+        /**
+         * @return The prefix for where AWS Backup Audit Manager delivers your reports to Amazon S3. The prefix is this part of the following path: s3://your-bucket-name/prefix/Backup/us-west-2/year/month/day/report-name. If not specified, there is no prefix.
+         * 
+         */
     private final @Nullable String s3KeyPrefix;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class ReportDeliveryChannelProperties {
     }
 
     /**
-     * A list of the format of your reports: CSV, JSON, or both. If not specified, the default format is CSV.
+     * @return A list of the format of your reports: CSV, JSON, or both. If not specified, the default format is CSV.
      * 
-    */
+     */
     public List<String> formats() {
         return this.formats == null ? List.of() : this.formats;
     }
     /**
-     * The unique name of the S3 bucket that receives your reports.
+     * @return The unique name of the S3 bucket that receives your reports.
      * 
-    */
+     */
     public String s3BucketName() {
         return this.s3BucketName;
     }
     /**
-     * The prefix for where AWS Backup Audit Manager delivers your reports to Amazon S3. The prefix is this part of the following path: s3://your-bucket-name/prefix/Backup/us-west-2/year/month/day/report-name. If not specified, there is no prefix.
+     * @return The prefix for where AWS Backup Audit Manager delivers your reports to Amazon S3. The prefix is this part of the following path: s3://your-bucket-name/prefix/Backup/us-west-2/year/month/day/report-name. If not specified, there is no prefix.
      * 
-    */
+     */
     public Optional<String> s3KeyPrefix() {
         return Optional.ofNullable(this.s3KeyPrefix);
     }

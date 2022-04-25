@@ -12,20 +12,20 @@ import java.util.Objects;
 
 @CustomType
 public final class AssetModelMetric {
-    /**
-     * The mathematical expression that defines the metric aggregation function. You can specify up to 10 functions per expression.
-     * 
-     */
+        /**
+         * @return The mathematical expression that defines the metric aggregation function. You can specify up to 10 functions per expression.
+         * 
+         */
     private final String expression;
-    /**
-     * The list of variables used in the expression.
-     * 
-     */
+        /**
+         * @return The list of variables used in the expression.
+         * 
+         */
     private final List<AssetModelExpressionVariable> variables;
-    /**
-     * The window (time interval) over which AWS IoT SiteWise computes the metric&#39;s aggregation expression
-     * 
-     */
+        /**
+         * @return The window (time interval) over which AWS IoT SiteWise computes the metric&#39;s aggregation expression
+         * 
+         */
     private final AssetModelMetricWindow window;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class AssetModelMetric {
     }
 
     /**
-     * The mathematical expression that defines the metric aggregation function. You can specify up to 10 functions per expression.
+     * @return The mathematical expression that defines the metric aggregation function. You can specify up to 10 functions per expression.
      * 
-    */
+     */
     public String expression() {
         return this.expression;
     }
     /**
-     * The list of variables used in the expression.
+     * @return The list of variables used in the expression.
      * 
-    */
+     */
     public List<AssetModelExpressionVariable> variables() {
         return this.variables;
     }
     /**
-     * The window (time interval) over which AWS IoT SiteWise computes the metric&#39;s aggregation expression
+     * @return The window (time interval) over which AWS IoT SiteWise computes the metric&#39;s aggregation expression
      * 
-    */
+     */
     public AssetModelMetricWindow window() {
         return this.window;
     }

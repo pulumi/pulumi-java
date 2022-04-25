@@ -24,6 +24,10 @@ public final class BotInputContextArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the context.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -52,11 +56,23 @@ public final class BotInputContextArgs extends com.pulumi.resources.ResourceArgs
             $ = new BotInputContextArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the context.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the context.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

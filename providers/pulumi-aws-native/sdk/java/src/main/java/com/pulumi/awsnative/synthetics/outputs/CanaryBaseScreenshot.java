@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CanaryBaseScreenshot {
-    /**
-     * List of coordinates of rectangles to be ignored during visual testing
-     * 
-     */
+        /**
+         * @return List of coordinates of rectangles to be ignored during visual testing
+         * 
+         */
     private final @Nullable List<String> ignoreCoordinates;
-    /**
-     * Name of the screenshot to be used as base reference for visual testing
-     * 
-     */
+        /**
+         * @return Name of the screenshot to be used as base reference for visual testing
+         * 
+         */
     private final String screenshotName;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class CanaryBaseScreenshot {
     }
 
     /**
-     * List of coordinates of rectangles to be ignored during visual testing
+     * @return List of coordinates of rectangles to be ignored during visual testing
      * 
-    */
+     */
     public List<String> ignoreCoordinates() {
         return this.ignoreCoordinates == null ? List.of() : this.ignoreCoordinates;
     }
     /**
-     * Name of the screenshot to be used as base reference for visual testing
+     * @return Name of the screenshot to be used as base reference for visual testing
      * 
-    */
+     */
     public String screenshotName() {
         return this.screenshotName;
     }

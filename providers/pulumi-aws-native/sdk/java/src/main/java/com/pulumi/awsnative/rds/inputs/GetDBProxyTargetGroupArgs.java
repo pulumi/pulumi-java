@@ -19,6 +19,10 @@ public final class GetDBProxyTargetGroupArgs extends com.pulumi.resources.Invoke
     @Import(name="targetGroupArn", required=true)
     private String targetGroupArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) representing the target group.
+     * 
+     */
     public String targetGroupArn() {
         return this.targetGroupArn;
     }
@@ -47,6 +51,12 @@ public final class GetDBProxyTargetGroupArgs extends com.pulumi.resources.Invoke
             $ = new GetDBProxyTargetGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param targetGroupArn The Amazon Resource Name (ARN) representing the target group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetGroupArn(String targetGroupArn) {
             $.targetGroupArn = targetGroupArn;
             return this;

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class AcceleratorTag {
-    /**
-     * Key of the tag. Value can be 1 to 127 characters.
-     * 
-     */
+        /**
+         * @return Key of the tag. Value can be 1 to 127 characters.
+         * 
+         */
     private final String key;
-    /**
-     * Value for the tag. Value can be 1 to 255 characters.
-     * 
-     */
+        /**
+         * @return Value for the tag. Value can be 1 to 255 characters.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class AcceleratorTag {
     }
 
     /**
-     * Key of the tag. Value can be 1 to 127 characters.
+     * @return Key of the tag. Value can be 1 to 127 characters.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Value for the tag. Value can be 1 to 255 characters.
+     * @return Value for the tag. Value can be 1 to 255 characters.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

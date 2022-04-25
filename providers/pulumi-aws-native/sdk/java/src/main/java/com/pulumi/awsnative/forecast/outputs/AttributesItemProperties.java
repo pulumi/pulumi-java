@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AttributesItemProperties {
-    /**
-     * Name of the dataset field
-     * 
-     */
+        /**
+         * @return Name of the dataset field
+         * 
+         */
     private final @Nullable String attributeName;
-    /**
-     * Data type of the field
-     * 
-     */
+        /**
+         * @return Data type of the field
+         * 
+         */
     private final @Nullable DatasetAttributesItemPropertiesAttributeType attributeType;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class AttributesItemProperties {
     }
 
     /**
-     * Name of the dataset field
+     * @return Name of the dataset field
      * 
-    */
+     */
     public Optional<String> attributeName() {
         return Optional.ofNullable(this.attributeName);
     }
     /**
-     * Data type of the field
+     * @return Data type of the field
      * 
-    */
+     */
     public Optional<DatasetAttributesItemPropertiesAttributeType> attributeType() {
         return Optional.ofNullable(this.attributeType);
     }

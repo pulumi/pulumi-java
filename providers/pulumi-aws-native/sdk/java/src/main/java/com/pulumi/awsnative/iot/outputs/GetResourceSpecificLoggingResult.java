@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetResourceSpecificLoggingResult {
-    /**
-     * The log level for a specific target. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
-     * 
-     */
+        /**
+         * @return The log level for a specific target. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
+         * 
+         */
     private final @Nullable ResourceSpecificLoggingLogLevel logLevel;
-    /**
-     * Unique Id for a Target (TargetType:TargetName), this will be internally built to serve as primary identifier for a log target.
-     * 
-     */
+        /**
+         * @return Unique Id for a Target (TargetType:TargetName), this will be internally built to serve as primary identifier for a log target.
+         * 
+         */
     private final @Nullable String targetId;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class GetResourceSpecificLoggingResult {
     }
 
     /**
-     * The log level for a specific target. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
+     * @return The log level for a specific target. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
      * 
-    */
+     */
     public Optional<ResourceSpecificLoggingLogLevel> logLevel() {
         return Optional.ofNullable(this.logLevel);
     }
     /**
-     * Unique Id for a Target (TargetType:TargetName), this will be internally built to serve as primary identifier for a log target.
+     * @return Unique Id for a Target (TargetType:TargetName), this will be internally built to serve as primary identifier for a log target.
      * 
-    */
+     */
     public Optional<String> targetId() {
         return Optional.ofNullable(this.targetId);
     }

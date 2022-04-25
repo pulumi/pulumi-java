@@ -25,6 +25,10 @@ public final class DiskLocation extends com.pulumi.resources.InvokeArgs {
     @Import(name="availabilityZone")
     private @Nullable String availabilityZone;
 
+    /**
+     * @return The Availability Zone in which to create your disk. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
+     * 
+     */
     public Optional<String> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
@@ -36,6 +40,10 @@ public final class DiskLocation extends com.pulumi.resources.InvokeArgs {
     @Import(name="regionName")
     private @Nullable String regionName;
 
+    /**
+     * @return The Region Name in which to create your disk.
+     * 
+     */
     public Optional<String> regionName() {
         return Optional.ofNullable(this.regionName);
     }
@@ -65,11 +73,23 @@ public final class DiskLocation extends com.pulumi.resources.InvokeArgs {
             $ = new DiskLocation(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availabilityZone The Availability Zone in which to create your disk. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(@Nullable String availabilityZone) {
             $.availabilityZone = availabilityZone;
             return this;
         }
 
+        /**
+         * @param regionName The Region Name in which to create your disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regionName(@Nullable String regionName) {
             $.regionName = regionName;
             return this;

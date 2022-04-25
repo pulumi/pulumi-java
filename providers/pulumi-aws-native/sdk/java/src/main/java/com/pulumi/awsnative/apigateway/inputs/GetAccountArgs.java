@@ -19,6 +19,10 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Primary identifier which is manually generated.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +51,12 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Primary identifier which is manually generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

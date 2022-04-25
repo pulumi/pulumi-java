@@ -16,50 +16,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDBProxyResult {
-    /**
-     * The authorization mechanism that the proxy uses.
-     * 
-     */
+        /**
+         * @return The authorization mechanism that the proxy uses.
+         * 
+         */
     private final @Nullable List<DBProxyAuthFormat> auth;
-    /**
-     * The Amazon Resource Name (ARN) for the proxy.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) for the proxy.
+         * 
+         */
     private final @Nullable String dBProxyArn;
-    /**
-     * Whether the proxy includes detailed information about SQL statements in its logs.
-     * 
-     */
+        /**
+         * @return Whether the proxy includes detailed information about SQL statements in its logs.
+         * 
+         */
     private final @Nullable Boolean debugLogging;
-    /**
-     * The endpoint that you can use to connect to the proxy. You include the endpoint value in the connection string for a database client application.
-     * 
-     */
+        /**
+         * @return The endpoint that you can use to connect to the proxy. You include the endpoint value in the connection string for a database client application.
+         * 
+         */
     private final @Nullable String endpoint;
-    /**
-     * The number of seconds that a connection to the proxy can be inactive before the proxy disconnects it.
-     * 
-     */
+        /**
+         * @return The number of seconds that a connection to the proxy can be inactive before the proxy disconnects it.
+         * 
+         */
     private final @Nullable Integer idleClientTimeout;
-    /**
-     * A Boolean parameter that specifies whether Transport Layer Security (TLS) encryption is required for connections to the proxy.
-     * 
-     */
+        /**
+         * @return A Boolean parameter that specifies whether Transport Layer Security (TLS) encryption is required for connections to the proxy.
+         * 
+         */
     private final @Nullable Boolean requireTLS;
-    /**
-     * The Amazon Resource Name (ARN) of the IAM role that the proxy uses to access secrets in AWS Secrets Manager.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the IAM role that the proxy uses to access secrets in AWS Secrets Manager.
+         * 
+         */
     private final @Nullable String roleArn;
-    /**
-     * An optional set of key-value pairs to associate arbitrary data of your choosing with the proxy.
-     * 
-     */
+        /**
+         * @return An optional set of key-value pairs to associate arbitrary data of your choosing with the proxy.
+         * 
+         */
     private final @Nullable List<DBProxyTagFormat> tags;
-    /**
-     * VPC security group IDs to associate with the new proxy.
-     * 
-     */
+        /**
+         * @return VPC security group IDs to associate with the new proxy.
+         * 
+         */
     private final @Nullable List<String> vpcSecurityGroupIds;
 
     @CustomType.Constructor
@@ -85,65 +85,65 @@ public final class GetDBProxyResult {
     }
 
     /**
-     * The authorization mechanism that the proxy uses.
+     * @return The authorization mechanism that the proxy uses.
      * 
-    */
+     */
     public List<DBProxyAuthFormat> auth() {
         return this.auth == null ? List.of() : this.auth;
     }
     /**
-     * The Amazon Resource Name (ARN) for the proxy.
+     * @return The Amazon Resource Name (ARN) for the proxy.
      * 
-    */
+     */
     public Optional<String> dBProxyArn() {
         return Optional.ofNullable(this.dBProxyArn);
     }
     /**
-     * Whether the proxy includes detailed information about SQL statements in its logs.
+     * @return Whether the proxy includes detailed information about SQL statements in its logs.
      * 
-    */
+     */
     public Optional<Boolean> debugLogging() {
         return Optional.ofNullable(this.debugLogging);
     }
     /**
-     * The endpoint that you can use to connect to the proxy. You include the endpoint value in the connection string for a database client application.
+     * @return The endpoint that you can use to connect to the proxy. You include the endpoint value in the connection string for a database client application.
      * 
-    */
+     */
     public Optional<String> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
     /**
-     * The number of seconds that a connection to the proxy can be inactive before the proxy disconnects it.
+     * @return The number of seconds that a connection to the proxy can be inactive before the proxy disconnects it.
      * 
-    */
+     */
     public Optional<Integer> idleClientTimeout() {
         return Optional.ofNullable(this.idleClientTimeout);
     }
     /**
-     * A Boolean parameter that specifies whether Transport Layer Security (TLS) encryption is required for connections to the proxy.
+     * @return A Boolean parameter that specifies whether Transport Layer Security (TLS) encryption is required for connections to the proxy.
      * 
-    */
+     */
     public Optional<Boolean> requireTLS() {
         return Optional.ofNullable(this.requireTLS);
     }
     /**
-     * The Amazon Resource Name (ARN) of the IAM role that the proxy uses to access secrets in AWS Secrets Manager.
+     * @return The Amazon Resource Name (ARN) of the IAM role that the proxy uses to access secrets in AWS Secrets Manager.
      * 
-    */
+     */
     public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
     /**
-     * An optional set of key-value pairs to associate arbitrary data of your choosing with the proxy.
+     * @return An optional set of key-value pairs to associate arbitrary data of your choosing with the proxy.
      * 
-    */
+     */
     public List<DBProxyTagFormat> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * VPC security group IDs to associate with the new proxy.
+     * @return VPC security group IDs to associate with the new proxy.
      * 
-    */
+     */
     public List<String> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds == null ? List.of() : this.vpcSecurityGroupIds;
     }

@@ -12,10 +12,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ThemeError {
-    /**
-     * &lt;p&gt;The error message.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;The error message.&lt;/p&gt;
+         * 
+         */
     private final @Nullable String message;
     private final @Nullable ThemeErrorType type;
 
@@ -28,9 +28,9 @@ public final class ThemeError {
     }
 
     /**
-     * &lt;p&gt;The error message.&lt;/p&gt;
+     * @return &lt;p&gt;The error message.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }

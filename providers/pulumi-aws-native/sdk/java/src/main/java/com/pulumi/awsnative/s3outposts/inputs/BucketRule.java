@@ -29,6 +29,10 @@ public final class BucketRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="abortIncompleteMultipartUpload")
     private @Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload;
 
+    /**
+     * @return Specifies a lifecycle rule that stops incomplete multipart uploads to an Amazon S3Outposts bucket.
+     * 
+     */
     public Optional<BucketAbortIncompleteMultipartUpload> abortIncompleteMultipartUpload() {
         return Optional.ofNullable(this.abortIncompleteMultipartUpload);
     }
@@ -40,6 +44,10 @@ public final class BucketRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="expirationDate")
     private @Nullable String expirationDate;
 
+    /**
+     * @return Indicates when objects are deleted from Amazon S3Outposts. The date value must be in ISO 8601 format. The time is always midnight UTC.
+     * 
+     */
     public Optional<String> expirationDate() {
         return Optional.ofNullable(this.expirationDate);
     }
@@ -51,6 +59,10 @@ public final class BucketRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="expirationInDays")
     private @Nullable Integer expirationInDays;
 
+    /**
+     * @return Indicates the number of days after creation when objects are deleted from Amazon S3Outposts.
+     * 
+     */
     public Optional<Integer> expirationInDays() {
         return Optional.ofNullable(this.expirationInDays);
     }
@@ -62,6 +74,10 @@ public final class BucketRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="filter")
     private @Nullable BucketRuleFilterProperties filter;
 
+    /**
+     * @return The container for the filter of the lifecycle rule.
+     * 
+     */
     public Optional<BucketRuleFilterProperties> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -73,6 +89,10 @@ public final class BucketRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Unique identifier for the lifecycle rule. The value can&#39;t be longer than 255 characters.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -113,26 +133,56 @@ public final class BucketRule extends com.pulumi.resources.InvokeArgs {
             $ = new BucketRule(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param abortIncompleteMultipartUpload Specifies a lifecycle rule that stops incomplete multipart uploads to an Amazon S3Outposts bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder abortIncompleteMultipartUpload(@Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload) {
             $.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
             return this;
         }
 
+        /**
+         * @param expirationDate Indicates when objects are deleted from Amazon S3Outposts. The date value must be in ISO 8601 format. The time is always midnight UTC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationDate(@Nullable String expirationDate) {
             $.expirationDate = expirationDate;
             return this;
         }
 
+        /**
+         * @param expirationInDays Indicates the number of days after creation when objects are deleted from Amazon S3Outposts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationInDays(@Nullable Integer expirationInDays) {
             $.expirationInDays = expirationInDays;
             return this;
         }
 
+        /**
+         * @param filter The container for the filter of the lifecycle rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable BucketRuleFilterProperties filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param id Unique identifier for the lifecycle rule. The value can&#39;t be longer than 255 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;

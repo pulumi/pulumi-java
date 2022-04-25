@@ -24,6 +24,10 @@ public final class LocationHDFSNameNode extends com.pulumi.resources.InvokeArgs 
     @Import(name="hostname", required=true)
     private String hostname;
 
+    /**
+     * @return The DNS name or IP address of the Name Node in the customer&#39;s on premises HDFS cluster.
+     * 
+     */
     public String hostname() {
         return this.hostname;
     }
@@ -35,6 +39,10 @@ public final class LocationHDFSNameNode extends com.pulumi.resources.InvokeArgs 
     @Import(name="port", required=true)
     private Integer port;
 
+    /**
+     * @return The port on which the Name Node is listening on for client requests.
+     * 
+     */
     public Integer port() {
         return this.port;
     }
@@ -64,11 +72,23 @@ public final class LocationHDFSNameNode extends com.pulumi.resources.InvokeArgs 
             $ = new LocationHDFSNameNode(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostname The DNS name or IP address of the Name Node in the customer&#39;s on premises HDFS cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(String hostname) {
             $.hostname = hostname;
             return this;
         }
 
+        /**
+         * @param port The port on which the Name Node is listening on for client requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             $.port = port;
             return this;

@@ -21,10 +21,10 @@ public final class GetFeatureResult {
     private final @Nullable String description;
     private final @Nullable List<FeatureEntityOverride> entityOverrides;
     private final @Nullable FeatureEvaluationStrategy evaluationStrategy;
-    /**
-     * An array of key-value pairs to apply to this resource.
-     * 
-     */
+        /**
+         * @return An array of key-value pairs to apply to this resource.
+         * 
+         */
     private final @Nullable List<FeatureTag> tags;
     private final @Nullable List<FeatureVariationObject> variations;
 
@@ -62,9 +62,9 @@ public final class GetFeatureResult {
         return Optional.ofNullable(this.evaluationStrategy);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<FeatureTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

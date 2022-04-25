@@ -64,6 +64,10 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roles")
     private @Nullable Output<List<AssessmentRoleArgs>> roles;
 
+    /**
+     * @return The list of roles for the specified assessment.
+     * 
+     */
     public Optional<Output<List<AssessmentRoleArgs>>> roles() {
         return Optional.ofNullable(this.roles);
     }
@@ -89,6 +93,10 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<AssessmentTagArgs>> tags;
 
+    /**
+     * @return The tags associated with the assessment.
+     * 
+     */
     public Optional<Output<List<AssessmentTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -170,15 +178,33 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
             return name(Output.of(name));
         }
 
+        /**
+         * @param roles The list of roles for the specified assessment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(@Nullable Output<List<AssessmentRoleArgs>> roles) {
             $.roles = roles;
             return this;
         }
 
+        /**
+         * @param roles The list of roles for the specified assessment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(List<AssessmentRoleArgs> roles) {
             return roles(Output.of(roles));
         }
 
+        /**
+         * @param roles The list of roles for the specified assessment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(AssessmentRoleArgs... roles) {
             return roles(List.of(roles));
         }
@@ -201,15 +227,33 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
             return status(Output.of(status));
         }
 
+        /**
+         * @param tags The tags associated with the assessment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<AssessmentTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags associated with the assessment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<AssessmentTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The tags associated with the assessment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(AssessmentTagArgs... tags) {
             return tags(List.of(tags));
         }

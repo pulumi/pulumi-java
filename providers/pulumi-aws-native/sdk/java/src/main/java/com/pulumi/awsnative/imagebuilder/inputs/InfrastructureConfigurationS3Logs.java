@@ -25,6 +25,10 @@ public final class InfrastructureConfigurationS3Logs extends com.pulumi.resource
     @Import(name="s3BucketName")
     private @Nullable String s3BucketName;
 
+    /**
+     * @return S3BucketName
+     * 
+     */
     public Optional<String> s3BucketName() {
         return Optional.ofNullable(this.s3BucketName);
     }
@@ -36,6 +40,10 @@ public final class InfrastructureConfigurationS3Logs extends com.pulumi.resource
     @Import(name="s3KeyPrefix")
     private @Nullable String s3KeyPrefix;
 
+    /**
+     * @return S3KeyPrefix
+     * 
+     */
     public Optional<String> s3KeyPrefix() {
         return Optional.ofNullable(this.s3KeyPrefix);
     }
@@ -65,11 +73,23 @@ public final class InfrastructureConfigurationS3Logs extends com.pulumi.resource
             $ = new InfrastructureConfigurationS3Logs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param s3BucketName S3BucketName
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3BucketName(@Nullable String s3BucketName) {
             $.s3BucketName = s3BucketName;
             return this;
         }
 
+        /**
+         * @param s3KeyPrefix S3KeyPrefix
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
             $.s3KeyPrefix = s3KeyPrefix;
             return this;

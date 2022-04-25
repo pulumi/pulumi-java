@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetCustomMetricResult {
-    /**
-     * Field represents a friendly name in the console for the custom metric; it doesn&#39;t have to be unique. Don&#39;t use this name as the metric identifier in the device metric report. Can be updated once defined.
-     * 
-     */
+        /**
+         * @return Field represents a friendly name in the console for the custom metric; it doesn&#39;t have to be unique. Don&#39;t use this name as the metric identifier in the device metric report. Can be updated once defined.
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * The Amazon Resource Number (ARN) of the custom metric.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Number (ARN) of the custom metric.
+         * 
+         */
     private final @Nullable String metricArn;
-    /**
-     * An array of key-value pairs to apply to this resource.
-     * 
-     */
+        /**
+         * @return An array of key-value pairs to apply to this resource.
+         * 
+         */
     private final @Nullable List<CustomMetricTag> tags;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class GetCustomMetricResult {
     }
 
     /**
-     * Field represents a friendly name in the console for the custom metric; it doesn&#39;t have to be unique. Don&#39;t use this name as the metric identifier in the device metric report. Can be updated once defined.
+     * @return Field represents a friendly name in the console for the custom metric; it doesn&#39;t have to be unique. Don&#39;t use this name as the metric identifier in the device metric report. Can be updated once defined.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * The Amazon Resource Number (ARN) of the custom metric.
+     * @return The Amazon Resource Number (ARN) of the custom metric.
      * 
-    */
+     */
     public Optional<String> metricArn() {
         return Optional.ofNullable(this.metricArn);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<CustomMetricTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

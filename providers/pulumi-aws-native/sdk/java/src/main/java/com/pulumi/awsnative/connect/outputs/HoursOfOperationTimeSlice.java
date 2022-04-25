@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class HoursOfOperationTimeSlice {
-    /**
-     * The hours.
-     * 
-     */
+        /**
+         * @return The hours.
+         * 
+         */
     private final Integer hours;
-    /**
-     * The minutes.
-     * 
-     */
+        /**
+         * @return The minutes.
+         * 
+         */
     private final Integer minutes;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class HoursOfOperationTimeSlice {
     }
 
     /**
-     * The hours.
+     * @return The hours.
      * 
-    */
+     */
     public Integer hours() {
         return this.hours;
     }
     /**
-     * The minutes.
+     * @return The minutes.
      * 
-    */
+     */
     public Integer minutes() {
         return this.minutes;
     }

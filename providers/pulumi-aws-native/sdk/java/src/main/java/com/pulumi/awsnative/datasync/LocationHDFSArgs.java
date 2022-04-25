@@ -28,6 +28,10 @@ public final class LocationHDFSArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="agentArns", required=true)
     private Output<List<String>> agentArns;
 
+    /**
+     * @return ARN(s) of the agent(s) to use for an HDFS location.
+     * 
+     */
     public Output<List<String>> agentArns() {
         return this.agentArns;
     }
@@ -39,6 +43,10 @@ public final class LocationHDFSArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authenticationType", required=true)
     private Output<LocationHDFSAuthenticationType> authenticationType;
 
+    /**
+     * @return The authentication mode used to determine identity of user.
+     * 
+     */
     public Output<LocationHDFSAuthenticationType> authenticationType() {
         return this.authenticationType;
     }
@@ -50,6 +58,10 @@ public final class LocationHDFSArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="blockSize")
     private @Nullable Output<Integer> blockSize;
 
+    /**
+     * @return Size of chunks (blocks) in bytes that the data is divided into when stored in the HDFS cluster.
+     * 
+     */
     public Optional<Output<Integer>> blockSize() {
         return Optional.ofNullable(this.blockSize);
     }
@@ -61,6 +73,10 @@ public final class LocationHDFSArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kerberosKeytab")
     private @Nullable Output<String> kerberosKeytab;
 
+    /**
+     * @return The Base64 string representation of the Keytab file.
+     * 
+     */
     public Optional<Output<String>> kerberosKeytab() {
         return Optional.ofNullable(this.kerberosKeytab);
     }
@@ -72,6 +88,10 @@ public final class LocationHDFSArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kerberosKrb5Conf")
     private @Nullable Output<String> kerberosKrb5Conf;
 
+    /**
+     * @return The string representation of the Krb5Conf file, or the presigned URL to access the Krb5.conf file within an S3 bucket.
+     * 
+     */
     public Optional<Output<String>> kerberosKrb5Conf() {
         return Optional.ofNullable(this.kerberosKrb5Conf);
     }
@@ -83,6 +103,10 @@ public final class LocationHDFSArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kerberosPrincipal")
     private @Nullable Output<String> kerberosPrincipal;
 
+    /**
+     * @return The unique identity, or principal, to which Kerberos can assign tickets.
+     * 
+     */
     public Optional<Output<String>> kerberosPrincipal() {
         return Optional.ofNullable(this.kerberosPrincipal);
     }
@@ -94,6 +118,10 @@ public final class LocationHDFSArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyProviderUri")
     private @Nullable Output<String> kmsKeyProviderUri;
 
+    /**
+     * @return The identifier for the Key Management Server where the encryption keys that encrypt data inside HDFS clusters are stored.
+     * 
+     */
     public Optional<Output<String>> kmsKeyProviderUri() {
         return Optional.ofNullable(this.kmsKeyProviderUri);
     }
@@ -105,6 +133,10 @@ public final class LocationHDFSArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nameNodes", required=true)
     private Output<List<LocationHDFSNameNodeArgs>> nameNodes;
 
+    /**
+     * @return An array of Name Node(s) of the HDFS location.
+     * 
+     */
     public Output<List<LocationHDFSNameNodeArgs>> nameNodes() {
         return this.nameNodes;
     }
@@ -123,6 +155,10 @@ public final class LocationHDFSArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="replicationFactor")
     private @Nullable Output<Integer> replicationFactor;
 
+    /**
+     * @return Number of copies of each block that exists inside the HDFS cluster.
+     * 
+     */
     public Optional<Output<Integer>> replicationFactor() {
         return Optional.ofNullable(this.replicationFactor);
     }
@@ -134,6 +170,10 @@ public final class LocationHDFSArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="simpleUser")
     private @Nullable Output<String> simpleUser;
 
+    /**
+     * @return The user name that has read and write permissions on the specified HDFS cluster.
+     * 
+     */
     public Optional<Output<String>> simpleUser() {
         return Optional.ofNullable(this.simpleUser);
     }
@@ -145,6 +185,10 @@ public final class LocationHDFSArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subdirectory")
     private @Nullable Output<String> subdirectory;
 
+    /**
+     * @return The subdirectory in HDFS that is used to read data from the HDFS source location or write data to the HDFS destination.
+     * 
+     */
     public Optional<Output<String>> subdirectory() {
         return Optional.ofNullable(this.subdirectory);
     }
@@ -156,6 +200,10 @@ public final class LocationHDFSArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<LocationHDFSTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<LocationHDFSTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -196,82 +244,190 @@ public final class LocationHDFSArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LocationHDFSArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentArns ARN(s) of the agent(s) to use for an HDFS location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentArns(Output<List<String>> agentArns) {
             $.agentArns = agentArns;
             return this;
         }
 
+        /**
+         * @param agentArns ARN(s) of the agent(s) to use for an HDFS location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentArns(List<String> agentArns) {
             return agentArns(Output.of(agentArns));
         }
 
+        /**
+         * @param agentArns ARN(s) of the agent(s) to use for an HDFS location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentArns(String... agentArns) {
             return agentArns(List.of(agentArns));
         }
 
+        /**
+         * @param authenticationType The authentication mode used to determine identity of user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(Output<LocationHDFSAuthenticationType> authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param authenticationType The authentication mode used to determine identity of user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(LocationHDFSAuthenticationType authenticationType) {
             return authenticationType(Output.of(authenticationType));
         }
 
+        /**
+         * @param blockSize Size of chunks (blocks) in bytes that the data is divided into when stored in the HDFS cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockSize(@Nullable Output<Integer> blockSize) {
             $.blockSize = blockSize;
             return this;
         }
 
+        /**
+         * @param blockSize Size of chunks (blocks) in bytes that the data is divided into when stored in the HDFS cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockSize(Integer blockSize) {
             return blockSize(Output.of(blockSize));
         }
 
+        /**
+         * @param kerberosKeytab The Base64 string representation of the Keytab file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosKeytab(@Nullable Output<String> kerberosKeytab) {
             $.kerberosKeytab = kerberosKeytab;
             return this;
         }
 
+        /**
+         * @param kerberosKeytab The Base64 string representation of the Keytab file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosKeytab(String kerberosKeytab) {
             return kerberosKeytab(Output.of(kerberosKeytab));
         }
 
+        /**
+         * @param kerberosKrb5Conf The string representation of the Krb5Conf file, or the presigned URL to access the Krb5.conf file within an S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosKrb5Conf(@Nullable Output<String> kerberosKrb5Conf) {
             $.kerberosKrb5Conf = kerberosKrb5Conf;
             return this;
         }
 
+        /**
+         * @param kerberosKrb5Conf The string representation of the Krb5Conf file, or the presigned URL to access the Krb5.conf file within an S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosKrb5Conf(String kerberosKrb5Conf) {
             return kerberosKrb5Conf(Output.of(kerberosKrb5Conf));
         }
 
+        /**
+         * @param kerberosPrincipal The unique identity, or principal, to which Kerberos can assign tickets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosPrincipal(@Nullable Output<String> kerberosPrincipal) {
             $.kerberosPrincipal = kerberosPrincipal;
             return this;
         }
 
+        /**
+         * @param kerberosPrincipal The unique identity, or principal, to which Kerberos can assign tickets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosPrincipal(String kerberosPrincipal) {
             return kerberosPrincipal(Output.of(kerberosPrincipal));
         }
 
+        /**
+         * @param kmsKeyProviderUri The identifier for the Key Management Server where the encryption keys that encrypt data inside HDFS clusters are stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyProviderUri(@Nullable Output<String> kmsKeyProviderUri) {
             $.kmsKeyProviderUri = kmsKeyProviderUri;
             return this;
         }
 
+        /**
+         * @param kmsKeyProviderUri The identifier for the Key Management Server where the encryption keys that encrypt data inside HDFS clusters are stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyProviderUri(String kmsKeyProviderUri) {
             return kmsKeyProviderUri(Output.of(kmsKeyProviderUri));
         }
 
+        /**
+         * @param nameNodes An array of Name Node(s) of the HDFS location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameNodes(Output<List<LocationHDFSNameNodeArgs>> nameNodes) {
             $.nameNodes = nameNodes;
             return this;
         }
 
+        /**
+         * @param nameNodes An array of Name Node(s) of the HDFS location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameNodes(List<LocationHDFSNameNodeArgs> nameNodes) {
             return nameNodes(Output.of(nameNodes));
         }
 
+        /**
+         * @param nameNodes An array of Name Node(s) of the HDFS location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameNodes(LocationHDFSNameNodeArgs... nameNodes) {
             return nameNodes(List.of(nameNodes));
         }
@@ -285,42 +441,96 @@ public final class LocationHDFSArgs extends com.pulumi.resources.ResourceArgs {
             return qopConfiguration(Output.of(qopConfiguration));
         }
 
+        /**
+         * @param replicationFactor Number of copies of each block that exists inside the HDFS cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationFactor(@Nullable Output<Integer> replicationFactor) {
             $.replicationFactor = replicationFactor;
             return this;
         }
 
+        /**
+         * @param replicationFactor Number of copies of each block that exists inside the HDFS cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationFactor(Integer replicationFactor) {
             return replicationFactor(Output.of(replicationFactor));
         }
 
+        /**
+         * @param simpleUser The user name that has read and write permissions on the specified HDFS cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder simpleUser(@Nullable Output<String> simpleUser) {
             $.simpleUser = simpleUser;
             return this;
         }
 
+        /**
+         * @param simpleUser The user name that has read and write permissions on the specified HDFS cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder simpleUser(String simpleUser) {
             return simpleUser(Output.of(simpleUser));
         }
 
+        /**
+         * @param subdirectory The subdirectory in HDFS that is used to read data from the HDFS source location or write data to the HDFS destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
             $.subdirectory = subdirectory;
             return this;
         }
 
+        /**
+         * @param subdirectory The subdirectory in HDFS that is used to read data from the HDFS source location or write data to the HDFS destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdirectory(String subdirectory) {
             return subdirectory(Output.of(subdirectory));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<LocationHDFSTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<LocationHDFSTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(LocationHDFSTagArgs... tags) {
             return tags(List.of(tags));
         }

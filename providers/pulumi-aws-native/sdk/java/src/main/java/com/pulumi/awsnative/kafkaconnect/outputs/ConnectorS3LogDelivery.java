@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ConnectorS3LogDelivery {
-    /**
-     * The name of the S3 bucket that is the destination for log delivery.
-     * 
-     */
+        /**
+         * @return The name of the S3 bucket that is the destination for log delivery.
+         * 
+         */
     private final @Nullable String bucket;
-    /**
-     * Specifies whether the logs get sent to the specified Amazon S3 destination.
-     * 
-     */
+        /**
+         * @return Specifies whether the logs get sent to the specified Amazon S3 destination.
+         * 
+         */
     private final Boolean enabled;
-    /**
-     * The S3 prefix that is the destination for log delivery.
-     * 
-     */
+        /**
+         * @return The S3 prefix that is the destination for log delivery.
+         * 
+         */
     private final @Nullable String prefix;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class ConnectorS3LogDelivery {
     }
 
     /**
-     * The name of the S3 bucket that is the destination for log delivery.
+     * @return The name of the S3 bucket that is the destination for log delivery.
      * 
-    */
+     */
     public Optional<String> bucket() {
         return Optional.ofNullable(this.bucket);
     }
     /**
-     * Specifies whether the logs get sent to the specified Amazon S3 destination.
+     * @return Specifies whether the logs get sent to the specified Amazon S3 destination.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * The S3 prefix that is the destination for log delivery.
+     * @return The S3 prefix that is the destination for log delivery.
      * 
-    */
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }

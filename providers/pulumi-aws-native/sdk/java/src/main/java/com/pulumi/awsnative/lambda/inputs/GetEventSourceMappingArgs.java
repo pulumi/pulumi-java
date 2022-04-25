@@ -19,6 +19,10 @@ public final class GetEventSourceMappingArgs extends com.pulumi.resources.Invoke
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Event Source Mapping Identifier UUID.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +51,12 @@ public final class GetEventSourceMappingArgs extends com.pulumi.resources.Invoke
             $ = new GetEventSourceMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Event Source Mapping Identifier UUID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

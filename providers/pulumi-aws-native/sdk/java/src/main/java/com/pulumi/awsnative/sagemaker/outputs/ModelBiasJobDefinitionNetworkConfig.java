@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ModelBiasJobDefinitionNetworkConfig {
-    /**
-     * Whether to encrypt all communications between distributed processing jobs. Choose True to encrypt communications. Encryption provides greater security for distributed processing jobs, but the processing might take longer.
-     * 
-     */
+        /**
+         * @return Whether to encrypt all communications between distributed processing jobs. Choose True to encrypt communications. Encryption provides greater security for distributed processing jobs, but the processing might take longer.
+         * 
+         */
     private final @Nullable Boolean enableInterContainerTrafficEncryption;
-    /**
-     * Whether to allow inbound and outbound network calls to and from the containers used for the processing job.
-     * 
-     */
+        /**
+         * @return Whether to allow inbound and outbound network calls to and from the containers used for the processing job.
+         * 
+         */
     private final @Nullable Boolean enableNetworkIsolation;
     private final @Nullable ModelBiasJobDefinitionVpcConfig vpcConfig;
 
@@ -35,16 +35,16 @@ public final class ModelBiasJobDefinitionNetworkConfig {
     }
 
     /**
-     * Whether to encrypt all communications between distributed processing jobs. Choose True to encrypt communications. Encryption provides greater security for distributed processing jobs, but the processing might take longer.
+     * @return Whether to encrypt all communications between distributed processing jobs. Choose True to encrypt communications. Encryption provides greater security for distributed processing jobs, but the processing might take longer.
      * 
-    */
+     */
     public Optional<Boolean> enableInterContainerTrafficEncryption() {
         return Optional.ofNullable(this.enableInterContainerTrafficEncryption);
     }
     /**
-     * Whether to allow inbound and outbound network calls to and from the containers used for the processing job.
+     * @return Whether to allow inbound and outbound network calls to and from the containers used for the processing job.
      * 
-    */
+     */
     public Optional<Boolean> enableNetworkIsolation() {
         return Optional.ofNullable(this.enableNetworkIsolation);
     }

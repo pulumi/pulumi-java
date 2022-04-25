@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class MitigationActionEnableIoTLoggingParams {
-    /**
-     *  Specifies which types of information are logged.
-     * 
-     */
+        /**
+         * @return  Specifies which types of information are logged.
+         * 
+         */
     private final MitigationActionEnableIoTLoggingParamsLogLevel logLevel;
-    /**
-     *  The ARN of the IAM role used for logging.
-     * 
-     */
+        /**
+         * @return  The ARN of the IAM role used for logging.
+         * 
+         */
     private final String roleArnForLogging;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class MitigationActionEnableIoTLoggingParams {
     }
 
     /**
-     *  Specifies which types of information are logged.
+     * @return  Specifies which types of information are logged.
      * 
-    */
+     */
     public MitigationActionEnableIoTLoggingParamsLogLevel logLevel() {
         return this.logLevel;
     }
     /**
-     *  The ARN of the IAM role used for logging.
+     * @return  The ARN of the IAM role used for logging.
      * 
-    */
+     */
     public String roleArnForLogging() {
         return this.roleArnForLogging;
     }

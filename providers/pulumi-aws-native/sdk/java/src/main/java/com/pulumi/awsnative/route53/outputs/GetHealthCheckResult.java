@@ -14,16 +14,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetHealthCheckResult {
-    /**
-     * A complex type that contains information about the health check.
-     * 
-     */
+        /**
+         * @return A complex type that contains information about the health check.
+         * 
+         */
     private final @Nullable HealthCheckConfigProperties healthCheckConfig;
     private final @Nullable String healthCheckId;
-    /**
-     * An array of key-value pairs to apply to this resource.
-     * 
-     */
+        /**
+         * @return An array of key-value pairs to apply to this resource.
+         * 
+         */
     private final @Nullable List<HealthCheckTag> healthCheckTags;
 
     @CustomType.Constructor
@@ -37,9 +37,9 @@ public final class GetHealthCheckResult {
     }
 
     /**
-     * A complex type that contains information about the health check.
+     * @return A complex type that contains information about the health check.
      * 
-    */
+     */
     public Optional<HealthCheckConfigProperties> healthCheckConfig() {
         return Optional.ofNullable(this.healthCheckConfig);
     }
@@ -47,9 +47,9 @@ public final class GetHealthCheckResult {
         return Optional.ofNullable(this.healthCheckId);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<HealthCheckTag> healthCheckTags() {
         return this.healthCheckTags == null ? List.of() : this.healthCheckTags;
     }

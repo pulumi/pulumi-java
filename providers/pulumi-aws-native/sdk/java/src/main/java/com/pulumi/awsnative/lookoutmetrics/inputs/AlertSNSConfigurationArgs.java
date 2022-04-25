@@ -24,6 +24,10 @@ public final class AlertSNSConfigurationArgs extends com.pulumi.resources.Resour
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return ARN of an IAM role that LookoutMetrics should assume to access the SNS topic.
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -35,6 +39,10 @@ public final class AlertSNSConfigurationArgs extends com.pulumi.resources.Resour
     @Import(name="snsTopicArn", required=true)
     private Output<String> snsTopicArn;
 
+    /**
+     * @return ARN of an SNS topic to send alert notifications to.
+     * 
+     */
     public Output<String> snsTopicArn() {
         return this.snsTopicArn;
     }
@@ -64,20 +72,44 @@ public final class AlertSNSConfigurationArgs extends com.pulumi.resources.Resour
             $ = new AlertSNSConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param roleArn ARN of an IAM role that LookoutMetrics should assume to access the SNS topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn ARN of an IAM role that LookoutMetrics should assume to access the SNS topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param snsTopicArn ARN of an SNS topic to send alert notifications to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snsTopicArn(Output<String> snsTopicArn) {
             $.snsTopicArn = snsTopicArn;
             return this;
         }
 
+        /**
+         * @param snsTopicArn ARN of an SNS topic to send alert notifications to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snsTopicArn(String snsTopicArn) {
             return snsTopicArn(Output.of(snsTopicArn));
         }

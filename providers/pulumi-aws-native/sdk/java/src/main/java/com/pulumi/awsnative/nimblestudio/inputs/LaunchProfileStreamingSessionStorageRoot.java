@@ -26,6 +26,10 @@ public final class LaunchProfileStreamingSessionStorageRoot extends com.pulumi.r
     @Import(name="linux")
     private @Nullable String linux;
 
+    /**
+     * @return &lt;p&gt;The folder path in Linux workstations where files are uploaded.&lt;/p&gt;
+     * 
+     */
     public Optional<String> linux() {
         return Optional.ofNullable(this.linux);
     }
@@ -37,6 +41,10 @@ public final class LaunchProfileStreamingSessionStorageRoot extends com.pulumi.r
     @Import(name="windows")
     private @Nullable String windows;
 
+    /**
+     * @return &lt;p&gt;The folder path in Windows workstations where files are uploaded.&lt;/p&gt;
+     * 
+     */
     public Optional<String> windows() {
         return Optional.ofNullable(this.windows);
     }
@@ -66,11 +74,23 @@ public final class LaunchProfileStreamingSessionStorageRoot extends com.pulumi.r
             $ = new LaunchProfileStreamingSessionStorageRoot(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linux &lt;p&gt;The folder path in Linux workstations where files are uploaded.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder linux(@Nullable String linux) {
             $.linux = linux;
             return this;
         }
 
+        /**
+         * @param windows &lt;p&gt;The folder path in Windows workstations where files are uploaded.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder windows(@Nullable String windows) {
             $.windows = windows;
             return this;

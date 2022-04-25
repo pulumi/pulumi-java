@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class BotSampleValue {
-    /**
-     * The value that can be used for a slot type.
-     * 
-     */
+        /**
+         * @return The value that can be used for a slot type.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class BotSampleValue {
     }
 
     /**
-     * The value that can be used for a slot type.
+     * @return The value that can be used for a slot type.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

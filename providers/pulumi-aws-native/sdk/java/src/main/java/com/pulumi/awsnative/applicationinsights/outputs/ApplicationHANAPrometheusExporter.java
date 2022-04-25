@@ -12,33 +12,33 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApplicationHANAPrometheusExporter {
-    /**
-     * A flag which indicates agreeing to install SAP HANA DB client.
-     * 
-     */
+        /**
+         * @return A flag which indicates agreeing to install SAP HANA DB client.
+         * 
+         */
     private final Boolean agreeToInstallHANADBClient;
-    /**
-     * The HANA DB port.
-     * 
-     */
+        /**
+         * @return The HANA DB port.
+         * 
+         */
     private final String hANAPort;
-    /**
-     * HANA DB SID.
-     * 
-     */
+        /**
+         * @return HANA DB SID.
+         * 
+         */
     private final String hANASID;
-    /**
-     * The secret name which manages the HANA DB credentials e.g. {
-     *   &#34;username&#34;: &#34;&lt;&gt;&#34;,
-     *   &#34;password&#34;: &#34;&lt;&gt;&#34;
-     * }.
-     * 
-     */
+        /**
+         * @return The secret name which manages the HANA DB credentials e.g. {
+         *   &#34;username&#34;: &#34;&lt;&gt;&#34;,
+         *   &#34;password&#34;: &#34;&lt;&gt;&#34;
+         * }.
+         * 
+         */
     private final String hANASecretName;
-    /**
-     * Prometheus exporter port.
-     * 
-     */
+        /**
+         * @return Prometheus exporter port.
+         * 
+         */
     private final @Nullable String prometheusPort;
 
     @CustomType.Constructor
@@ -56,40 +56,40 @@ public final class ApplicationHANAPrometheusExporter {
     }
 
     /**
-     * A flag which indicates agreeing to install SAP HANA DB client.
+     * @return A flag which indicates agreeing to install SAP HANA DB client.
      * 
-    */
+     */
     public Boolean agreeToInstallHANADBClient() {
         return this.agreeToInstallHANADBClient;
     }
     /**
-     * The HANA DB port.
+     * @return The HANA DB port.
      * 
-    */
+     */
     public String hANAPort() {
         return this.hANAPort;
     }
     /**
-     * HANA DB SID.
+     * @return HANA DB SID.
      * 
-    */
+     */
     public String hANASID() {
         return this.hANASID;
     }
     /**
-     * The secret name which manages the HANA DB credentials e.g. {
+     * @return The secret name which manages the HANA DB credentials e.g. {
      *   &#34;username&#34;: &#34;&lt;&gt;&#34;,
      *   &#34;password&#34;: &#34;&lt;&gt;&#34;
      * }.
      * 
-    */
+     */
     public String hANASecretName() {
         return this.hANASecretName;
     }
     /**
-     * Prometheus exporter port.
+     * @return Prometheus exporter port.
      * 
-    */
+     */
     public Optional<String> prometheusPort() {
         return Optional.ofNullable(this.prometheusPort);
     }

@@ -14,15 +14,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BucketAnalyticsConfiguration {
-    /**
-     * The ID that identifies the analytics configuration.
-     * 
-     */
+        /**
+         * @return The ID that identifies the analytics configuration.
+         * 
+         */
     private final String id;
-    /**
-     * The prefix that an object must have to be included in the analytics results.
-     * 
-     */
+        /**
+         * @return The prefix that an object must have to be included in the analytics results.
+         * 
+         */
     private final @Nullable String prefix;
     private final BucketStorageClassAnalysis storageClassAnalysis;
     private final @Nullable List<BucketTagFilter> tagFilters;
@@ -40,16 +40,16 @@ public final class BucketAnalyticsConfiguration {
     }
 
     /**
-     * The ID that identifies the analytics configuration.
+     * @return The ID that identifies the analytics configuration.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The prefix that an object must have to be included in the analytics results.
+     * @return The prefix that an object must have to be included in the analytics results.
      * 
-    */
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }

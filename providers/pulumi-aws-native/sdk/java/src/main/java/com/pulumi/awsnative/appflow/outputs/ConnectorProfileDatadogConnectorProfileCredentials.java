@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ConnectorProfileDatadogConnectorProfileCredentials {
-    /**
-     * A unique alphanumeric identiﬁer used to authenticate a user, developer, or calling program to your API.
-     * 
-     */
+        /**
+         * @return A unique alphanumeric identiﬁer used to authenticate a user, developer, or calling program to your API.
+         * 
+         */
     private final String apiKey;
-    /**
-     * Application keys, in conjunction with your API key, give you full access to Datadog’s programmatic API. Application keys are associated with the user account that created them. The application key is used to log all requests made to the API.
-     * 
-     */
+        /**
+         * @return Application keys, in conjunction with your API key, give you full access to Datadog’s programmatic API. Application keys are associated with the user account that created them. The application key is used to log all requests made to the API.
+         * 
+         */
     private final String applicationKey;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ConnectorProfileDatadogConnectorProfileCredentials {
     }
 
     /**
-     * A unique alphanumeric identiﬁer used to authenticate a user, developer, or calling program to your API.
+     * @return A unique alphanumeric identiﬁer used to authenticate a user, developer, or calling program to your API.
      * 
-    */
+     */
     public String apiKey() {
         return this.apiKey;
     }
     /**
-     * Application keys, in conjunction with your API key, give you full access to Datadog’s programmatic API. Application keys are associated with the user account that created them. The application key is used to log all requests made to the API.
+     * @return Application keys, in conjunction with your API key, give you full access to Datadog’s programmatic API. Application keys are associated with the user account that created them. The application key is used to log all requests made to the API.
      * 
-    */
+     */
     public String applicationKey() {
         return this.applicationKey;
     }

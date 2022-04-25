@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EnvironmentNetworkConfiguration {
-    /**
-     * A list of security groups to use for the environment.
-     * 
-     */
+        /**
+         * @return A list of security groups to use for the environment.
+         * 
+         */
     private final @Nullable List<String> securityGroupIds;
-    /**
-     * A list of subnets to use for the environment. These must be private subnets, in the same VPC, in two different availability zones.
-     * 
-     */
+        /**
+         * @return A list of subnets to use for the environment. These must be private subnets, in the same VPC, in two different availability zones.
+         * 
+         */
     private final @Nullable List<String> subnetIds;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class EnvironmentNetworkConfiguration {
     }
 
     /**
-     * A list of security groups to use for the environment.
+     * @return A list of security groups to use for the environment.
      * 
-    */
+     */
     public List<String> securityGroupIds() {
         return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
     }
     /**
-     * A list of subnets to use for the environment. These must be private subnets, in the same VPC, in two different availability zones.
+     * @return A list of subnets to use for the environment. These must be private subnets, in the same VPC, in two different availability zones.
      * 
-    */
+     */
     public List<String> subnetIds() {
         return this.subnetIds == null ? List.of() : this.subnetIds;
     }

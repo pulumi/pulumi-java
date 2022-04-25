@@ -25,6 +25,10 @@ public final class ConnectorWorkerConfigurationArgs extends com.pulumi.resources
     @Import(name="revision", required=true)
     private Output<Integer> revision;
 
+    /**
+     * @return The revision of the worker configuration to use.
+     * 
+     */
     public Output<Integer> revision() {
         return this.revision;
     }
@@ -36,6 +40,10 @@ public final class ConnectorWorkerConfigurationArgs extends com.pulumi.resources
     @Import(name="workerConfigurationArn", required=true)
     private Output<String> workerConfigurationArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the worker configuration to use.
+     * 
+     */
     public Output<String> workerConfigurationArn() {
         return this.workerConfigurationArn;
     }
@@ -65,20 +73,44 @@ public final class ConnectorWorkerConfigurationArgs extends com.pulumi.resources
             $ = new ConnectorWorkerConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param revision The revision of the worker configuration to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(Output<Integer> revision) {
             $.revision = revision;
             return this;
         }
 
+        /**
+         * @param revision The revision of the worker configuration to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(Integer revision) {
             return revision(Output.of(revision));
         }
 
+        /**
+         * @param workerConfigurationArn The Amazon Resource Name (ARN) of the worker configuration to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerConfigurationArn(Output<String> workerConfigurationArn) {
             $.workerConfigurationArn = workerConfigurationArn;
             return this;
         }
 
+        /**
+         * @param workerConfigurationArn The Amazon Resource Name (ARN) of the worker configuration to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerConfigurationArn(String workerConfigurationArn) {
             return workerConfigurationArn(Output.of(workerConfigurationArn));
         }

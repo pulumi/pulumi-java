@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetResolverConfigResult {
-    /**
-     * ResolverAutodefinedReverseStatus, possible values are ENABLING, ENABLED, DISABLING AND DISABLED.
-     * 
-     */
+        /**
+         * @return ResolverAutodefinedReverseStatus, possible values are ENABLING, ENABLED, DISABLING AND DISABLED.
+         * 
+         */
     private final @Nullable ResolverConfigAutodefinedReverse autodefinedReverse;
-    /**
-     * Id
-     * 
-     */
+        /**
+         * @return Id
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * AccountId
-     * 
-     */
+        /**
+         * @return AccountId
+         * 
+         */
     private final @Nullable String ownerId;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class GetResolverConfigResult {
     }
 
     /**
-     * ResolverAutodefinedReverseStatus, possible values are ENABLING, ENABLED, DISABLING AND DISABLED.
+     * @return ResolverAutodefinedReverseStatus, possible values are ENABLING, ENABLED, DISABLING AND DISABLED.
      * 
-    */
+     */
     public Optional<ResolverConfigAutodefinedReverse> autodefinedReverse() {
         return Optional.ofNullable(this.autodefinedReverse);
     }
     /**
-     * Id
+     * @return Id
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * AccountId
+     * @return AccountId
      * 
-    */
+     */
     public Optional<String> ownerId() {
         return Optional.ofNullable(this.ownerId);
     }

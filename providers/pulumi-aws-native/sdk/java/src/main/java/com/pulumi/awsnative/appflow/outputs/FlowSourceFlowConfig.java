@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FlowSourceFlowConfig {
-    /**
-     * Name of source connector profile
-     * 
-     */
+        /**
+         * @return Name of source connector profile
+         * 
+         */
     private final @Nullable String connectorProfileName;
-    /**
-     * Type of source connector
-     * 
-     */
+        /**
+         * @return Type of source connector
+         * 
+         */
     private final FlowConnectorType connectorType;
-    /**
-     * Configuration for scheduled incremental data pull
-     * 
-     */
+        /**
+         * @return Configuration for scheduled incremental data pull
+         * 
+         */
     private final @Nullable FlowIncrementalPullConfig incrementalPullConfig;
-    /**
-     * Source connector details required to query a connector
-     * 
-     */
+        /**
+         * @return Source connector details required to query a connector
+         * 
+         */
     private final FlowSourceConnectorProperties sourceConnectorProperties;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class FlowSourceFlowConfig {
     }
 
     /**
-     * Name of source connector profile
+     * @return Name of source connector profile
      * 
-    */
+     */
     public Optional<String> connectorProfileName() {
         return Optional.ofNullable(this.connectorProfileName);
     }
     /**
-     * Type of source connector
+     * @return Type of source connector
      * 
-    */
+     */
     public FlowConnectorType connectorType() {
         return this.connectorType;
     }
     /**
-     * Configuration for scheduled incremental data pull
+     * @return Configuration for scheduled incremental data pull
      * 
-    */
+     */
     public Optional<FlowIncrementalPullConfig> incrementalPullConfig() {
         return Optional.ofNullable(this.incrementalPullConfig);
     }
     /**
-     * Source connector details required to query a connector
+     * @return Source connector details required to query a connector
      * 
-    */
+     */
     public FlowSourceConnectorProperties sourceConnectorProperties() {
         return this.sourceConnectorProperties;
     }

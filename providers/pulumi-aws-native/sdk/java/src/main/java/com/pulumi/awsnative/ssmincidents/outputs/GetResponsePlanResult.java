@@ -16,32 +16,32 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetResponsePlanResult {
-    /**
-     * The list of actions.
-     * 
-     */
+        /**
+         * @return The list of actions.
+         * 
+         */
     private final @Nullable List<ResponsePlanAction> actions;
-    /**
-     * The ARN of the response plan.
-     * 
-     */
+        /**
+         * @return The ARN of the response plan.
+         * 
+         */
     private final @Nullable String arn;
     private final @Nullable ResponsePlanChatChannel chatChannel;
-    /**
-     * The display name of the response plan.
-     * 
-     */
+        /**
+         * @return The display name of the response plan.
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * The list of engagements to use.
-     * 
-     */
+        /**
+         * @return The list of engagements to use.
+         * 
+         */
     private final @Nullable List<String> engagements;
     private final @Nullable ResponsePlanIncidentTemplate incidentTemplate;
-    /**
-     * The tags to apply to the response plan.
-     * 
-     */
+        /**
+         * @return The tags to apply to the response plan.
+         * 
+         */
     private final @Nullable List<ResponsePlanTag> tags;
 
     @CustomType.Constructor
@@ -63,16 +63,16 @@ public final class GetResponsePlanResult {
     }
 
     /**
-     * The list of actions.
+     * @return The list of actions.
      * 
-    */
+     */
     public List<ResponsePlanAction> actions() {
         return this.actions == null ? List.of() : this.actions;
     }
     /**
-     * The ARN of the response plan.
+     * @return The ARN of the response plan.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -80,16 +80,16 @@ public final class GetResponsePlanResult {
         return Optional.ofNullable(this.chatChannel);
     }
     /**
-     * The display name of the response plan.
+     * @return The display name of the response plan.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * The list of engagements to use.
+     * @return The list of engagements to use.
      * 
-    */
+     */
     public List<String> engagements() {
         return this.engagements == null ? List.of() : this.engagements;
     }
@@ -97,9 +97,9 @@ public final class GetResponsePlanResult {
         return Optional.ofNullable(this.incidentTemplate);
     }
     /**
-     * The tags to apply to the response plan.
+     * @return The tags to apply to the response plan.
      * 
-    */
+     */
     public List<ResponsePlanTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

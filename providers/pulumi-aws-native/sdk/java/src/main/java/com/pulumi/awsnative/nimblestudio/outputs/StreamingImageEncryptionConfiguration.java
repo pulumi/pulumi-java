@@ -12,10 +12,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class StreamingImageEncryptionConfiguration {
-    /**
-     * &lt;p&gt;The ARN for a KMS key that is used to encrypt studio data.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;The ARN for a KMS key that is used to encrypt studio data.&lt;/p&gt;
+         * 
+         */
     private final @Nullable String keyArn;
     private final StreamingImageEncryptionConfigurationKeyType keyType;
 
@@ -28,9 +28,9 @@ public final class StreamingImageEncryptionConfiguration {
     }
 
     /**
-     * &lt;p&gt;The ARN for a KMS key that is used to encrypt studio data.&lt;/p&gt;
+     * @return &lt;p&gt;The ARN for a KMS key that is used to encrypt studio data.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> keyArn() {
         return Optional.ofNullable(this.keyArn);
     }

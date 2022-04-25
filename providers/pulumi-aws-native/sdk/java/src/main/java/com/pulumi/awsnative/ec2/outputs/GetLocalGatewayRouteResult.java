@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetLocalGatewayRouteResult {
-    /**
-     * The state of the route.
-     * 
-     */
+        /**
+         * @return The state of the route.
+         * 
+         */
     private final @Nullable String state;
-    /**
-     * The route type.
-     * 
-     */
+        /**
+         * @return The route type.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class GetLocalGatewayRouteResult {
     }
 
     /**
-     * The state of the route.
+     * @return The state of the route.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
-     * The route type.
+     * @return The route type.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

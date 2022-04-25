@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MethodIntegrationResponse {
-    /**
-     * Specifies how to handle request payload content type conversions.
-     * 
-     */
+        /**
+         * @return Specifies how to handle request payload content type conversions.
+         * 
+         */
     private final @Nullable MethodIntegrationResponseContentHandling contentHandling;
-    /**
-     * The response parameters from the backend response that API Gateway sends to the method response.
-     * 
-     */
+        /**
+         * @return The response parameters from the backend response that API Gateway sends to the method response.
+         * 
+         */
     private final @Nullable Object responseParameters;
-    /**
-     * The templates that are used to transform the integration response body. Specify templates as key-value pairs (string-to-string mappings), with a content type as the key and a template as the value.
-     * 
-     */
+        /**
+         * @return The templates that are used to transform the integration response body. Specify templates as key-value pairs (string-to-string mappings), with a content type as the key and a template as the value.
+         * 
+         */
     private final @Nullable Object responseTemplates;
-    /**
-     * A regular expression that specifies which error strings or status codes from the backend map to the integration response.
-     * 
-     */
+        /**
+         * @return A regular expression that specifies which error strings or status codes from the backend map to the integration response.
+         * 
+         */
     private final @Nullable String selectionPattern;
-    /**
-     * The status code that API Gateway uses to map the integration response to a MethodResponse status code.
-     * 
-     */
+        /**
+         * @return The status code that API Gateway uses to map the integration response to a MethodResponse status code.
+         * 
+         */
     private final String statusCode;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class MethodIntegrationResponse {
     }
 
     /**
-     * Specifies how to handle request payload content type conversions.
+     * @return Specifies how to handle request payload content type conversions.
      * 
-    */
+     */
     public Optional<MethodIntegrationResponseContentHandling> contentHandling() {
         return Optional.ofNullable(this.contentHandling);
     }
     /**
-     * The response parameters from the backend response that API Gateway sends to the method response.
+     * @return The response parameters from the backend response that API Gateway sends to the method response.
      * 
-    */
+     */
     public Optional<Object> responseParameters() {
         return Optional.ofNullable(this.responseParameters);
     }
     /**
-     * The templates that are used to transform the integration response body. Specify templates as key-value pairs (string-to-string mappings), with a content type as the key and a template as the value.
+     * @return The templates that are used to transform the integration response body. Specify templates as key-value pairs (string-to-string mappings), with a content type as the key and a template as the value.
      * 
-    */
+     */
     public Optional<Object> responseTemplates() {
         return Optional.ofNullable(this.responseTemplates);
     }
     /**
-     * A regular expression that specifies which error strings or status codes from the backend map to the integration response.
+     * @return A regular expression that specifies which error strings or status codes from the backend map to the integration response.
      * 
-    */
+     */
     public Optional<String> selectionPattern() {
         return Optional.ofNullable(this.selectionPattern);
     }
     /**
-     * The status code that API Gateway uses to map the integration response to a MethodResponse status code.
+     * @return The status code that API Gateway uses to map the integration response to a MethodResponse status code.
      * 
-    */
+     */
     public String statusCode() {
         return this.statusCode;
     }

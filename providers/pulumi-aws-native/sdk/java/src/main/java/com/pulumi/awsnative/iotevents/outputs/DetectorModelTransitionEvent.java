@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DetectorModelTransitionEvent {
-    /**
-     * The actions to be performed.
-     * 
-     */
+        /**
+         * @return The actions to be performed.
+         * 
+         */
     private final @Nullable List<DetectorModelAction> actions;
-    /**
-     * A Boolean expression that when `TRUE` causes the `actions` to be performed and the `nextState` to be entered.
-     * 
-     */
+        /**
+         * @return A Boolean expression that when `TRUE` causes the `actions` to be performed and the `nextState` to be entered.
+         * 
+         */
     private final String condition;
-    /**
-     * The name of the event.
-     * 
-     */
+        /**
+         * @return The name of the event.
+         * 
+         */
     private final String eventName;
-    /**
-     * The next state to enter.
-     * 
-     */
+        /**
+         * @return The next state to enter.
+         * 
+         */
     private final String nextState;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class DetectorModelTransitionEvent {
     }
 
     /**
-     * The actions to be performed.
+     * @return The actions to be performed.
      * 
-    */
+     */
     public List<DetectorModelAction> actions() {
         return this.actions == null ? List.of() : this.actions;
     }
     /**
-     * A Boolean expression that when `TRUE` causes the `actions` to be performed and the `nextState` to be entered.
+     * @return A Boolean expression that when `TRUE` causes the `actions` to be performed and the `nextState` to be entered.
      * 
-    */
+     */
     public String condition() {
         return this.condition;
     }
     /**
-     * The name of the event.
+     * @return The name of the event.
      * 
-    */
+     */
     public String eventName() {
         return this.eventName;
     }
     /**
-     * The next state to enter.
+     * @return The next state to enter.
      * 
-    */
+     */
     public String nextState() {
         return this.nextState;
     }

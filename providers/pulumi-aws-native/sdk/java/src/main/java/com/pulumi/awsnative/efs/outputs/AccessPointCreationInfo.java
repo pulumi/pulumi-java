@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class AccessPointCreationInfo {
-    /**
-     * Specifies the POSIX group ID to apply to the RootDirectory. Accepts values from 0 to 2^32 (4294967295).
-     * 
-     */
+        /**
+         * @return Specifies the POSIX group ID to apply to the RootDirectory. Accepts values from 0 to 2^32 (4294967295).
+         * 
+         */
     private final String ownerGid;
-    /**
-     * Specifies the POSIX user ID to apply to the RootDirectory. Accepts values from 0 to 2^32 (4294967295).
-     * 
-     */
+        /**
+         * @return Specifies the POSIX user ID to apply to the RootDirectory. Accepts values from 0 to 2^32 (4294967295).
+         * 
+         */
     private final String ownerUid;
-    /**
-     * Specifies the POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file&#39;s mode bits.
-     * 
-     */
+        /**
+         * @return Specifies the POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file&#39;s mode bits.
+         * 
+         */
     private final String permissions;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class AccessPointCreationInfo {
     }
 
     /**
-     * Specifies the POSIX group ID to apply to the RootDirectory. Accepts values from 0 to 2^32 (4294967295).
+     * @return Specifies the POSIX group ID to apply to the RootDirectory. Accepts values from 0 to 2^32 (4294967295).
      * 
-    */
+     */
     public String ownerGid() {
         return this.ownerGid;
     }
     /**
-     * Specifies the POSIX user ID to apply to the RootDirectory. Accepts values from 0 to 2^32 (4294967295).
+     * @return Specifies the POSIX user ID to apply to the RootDirectory. Accepts values from 0 to 2^32 (4294967295).
      * 
-    */
+     */
     public String ownerUid() {
         return this.ownerUid;
     }
     /**
-     * Specifies the POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file&#39;s mode bits.
+     * @return Specifies the POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file&#39;s mode bits.
      * 
-    */
+     */
     public String permissions() {
         return this.permissions;
     }

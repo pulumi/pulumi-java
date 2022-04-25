@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ApplicationAlarmMetric {
-    /**
-     * The name of the metric to be monitored for the component.
-     * 
-     */
+        /**
+         * @return The name of the metric to be monitored for the component.
+         * 
+         */
     private final String alarmMetricName;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ApplicationAlarmMetric {
     }
 
     /**
-     * The name of the metric to be monitored for the component.
+     * @return The name of the metric to be monitored for the component.
      * 
-    */
+     */
     public String alarmMetricName() {
         return this.alarmMetricName;
     }

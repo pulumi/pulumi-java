@@ -25,6 +25,10 @@ public final class ImageRecipeSystemsManagerAgent extends com.pulumi.resources.I
     @Import(name="uninstallAfterBuild")
     private @Nullable Boolean uninstallAfterBuild;
 
+    /**
+     * @return Controls whether the SSM agent is removed from your final build image, prior to creating the new AMI. If this is set to true, then the agent is removed from the final image. If it&#39;s set to false, then the agent is left in, so that it is included in the new AMI. The default value is false.
+     * 
+     */
     public Optional<Boolean> uninstallAfterBuild() {
         return Optional.ofNullable(this.uninstallAfterBuild);
     }
@@ -53,6 +57,12 @@ public final class ImageRecipeSystemsManagerAgent extends com.pulumi.resources.I
             $ = new ImageRecipeSystemsManagerAgent(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param uninstallAfterBuild Controls whether the SSM agent is removed from your final build image, prior to creating the new AMI. If this is set to true, then the agent is removed from the final image. If it&#39;s set to false, then the agent is left in, so that it is included in the new AMI. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uninstallAfterBuild(@Nullable Boolean uninstallAfterBuild) {
             $.uninstallAfterBuild = uninstallAfterBuild;
             return this;

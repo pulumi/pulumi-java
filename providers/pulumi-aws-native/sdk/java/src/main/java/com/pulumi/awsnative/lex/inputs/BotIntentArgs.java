@@ -121,6 +121,10 @@ public final class BotIntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="slots")
     private @Nullable Output<List<BotSlotArgs>> slots;
 
+    /**
+     * @return List of slots
+     * 
+     */
     public Optional<Output<List<BotSlotArgs>>> slots() {
         return Optional.ofNullable(this.slots);
     }
@@ -285,15 +289,33 @@ public final class BotIntentArgs extends com.pulumi.resources.ResourceArgs {
             return slotPriorities(List.of(slotPriorities));
         }
 
+        /**
+         * @param slots List of slots
+         * 
+         * @return builder
+         * 
+         */
         public Builder slots(@Nullable Output<List<BotSlotArgs>> slots) {
             $.slots = slots;
             return this;
         }
 
+        /**
+         * @param slots List of slots
+         * 
+         * @return builder
+         * 
+         */
         public Builder slots(List<BotSlotArgs> slots) {
             return slots(Output.of(slots));
         }
 
+        /**
+         * @param slots List of slots
+         * 
+         * @return builder
+         * 
+         */
         public Builder slots(BotSlotArgs... slots) {
             return slots(List.of(slots));
         }

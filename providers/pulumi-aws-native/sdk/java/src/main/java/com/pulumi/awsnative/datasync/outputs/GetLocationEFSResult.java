@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetLocationEFSResult {
-    /**
-     * The Amazon Resource Name (ARN) of the Amazon EFS file system location that is created.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the Amazon EFS file system location that is created.
+         * 
+         */
     private final @Nullable String locationArn;
-    /**
-     * The URL of the EFS location that was described.
-     * 
-     */
+        /**
+         * @return The URL of the EFS location that was described.
+         * 
+         */
     private final @Nullable String locationUri;
-    /**
-     * An array of key-value pairs to apply to this resource.
-     * 
-     */
+        /**
+         * @return An array of key-value pairs to apply to this resource.
+         * 
+         */
     private final @Nullable List<LocationEFSTag> tags;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class GetLocationEFSResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the Amazon EFS file system location that is created.
+     * @return The Amazon Resource Name (ARN) of the Amazon EFS file system location that is created.
      * 
-    */
+     */
     public Optional<String> locationArn() {
         return Optional.ofNullable(this.locationArn);
     }
     /**
-     * The URL of the EFS location that was described.
+     * @return The URL of the EFS location that was described.
      * 
-    */
+     */
     public Optional<String> locationUri() {
         return Optional.ofNullable(this.locationUri);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<LocationEFSTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

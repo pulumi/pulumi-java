@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LinkBandwidth {
-    /**
-     * Download speed in Mbps.
-     * 
-     */
+        /**
+         * @return Download speed in Mbps.
+         * 
+         */
     private final @Nullable Integer downloadSpeed;
-    /**
-     * Upload speed in Mbps.
-     * 
-     */
+        /**
+         * @return Upload speed in Mbps.
+         * 
+         */
     private final @Nullable Integer uploadSpeed;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class LinkBandwidth {
     }
 
     /**
-     * Download speed in Mbps.
+     * @return Download speed in Mbps.
      * 
-    */
+     */
     public Optional<Integer> downloadSpeed() {
         return Optional.ofNullable(this.downloadSpeed);
     }
     /**
-     * Upload speed in Mbps.
+     * @return Upload speed in Mbps.
      * 
-    */
+     */
     public Optional<Integer> uploadSpeed() {
         return Optional.ofNullable(this.uploadSpeed);
     }

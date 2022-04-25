@@ -13,55 +13,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetStudioResult {
-    /**
-     * The Amazon Resource Name (ARN) of the EMR Studio.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the EMR Studio.
+         * 
+         */
     private final @Nullable String arn;
-    /**
-     * The default Amazon S3 location to back up EMR Studio Workspaces and notebook files. A Studio user can select an alternative Amazon S3 location when creating a Workspace.
-     * 
-     */
+        /**
+         * @return The default Amazon S3 location to back up EMR Studio Workspaces and notebook files. A Studio user can select an alternative Amazon S3 location when creating a Workspace.
+         * 
+         */
     private final @Nullable String defaultS3Location;
-    /**
-     * A detailed description of the Studio.
-     * 
-     */
+        /**
+         * @return A detailed description of the Studio.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Your identity provider&#39;s authentication endpoint. Amazon EMR Studio redirects federated users to this endpoint for authentication when logging in to a Studio with the Studio URL.
-     * 
-     */
+        /**
+         * @return Your identity provider&#39;s authentication endpoint. Amazon EMR Studio redirects federated users to this endpoint for authentication when logging in to a Studio with the Studio URL.
+         * 
+         */
     private final @Nullable String idpAuthUrl;
-    /**
-     * The name of relay state parameter for external Identity Provider.
-     * 
-     */
+        /**
+         * @return The name of relay state parameter for external Identity Provider.
+         * 
+         */
     private final @Nullable String idpRelayStateParameterName;
-    /**
-     * A descriptive name for the Amazon EMR Studio.
-     * 
-     */
+        /**
+         * @return A descriptive name for the Amazon EMR Studio.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The ID of the EMR Studio.
-     * 
-     */
+        /**
+         * @return The ID of the EMR Studio.
+         * 
+         */
     private final @Nullable String studioId;
-    /**
-     * A list of up to 5 subnet IDs to associate with the Studio. The subnets must belong to the VPC specified by VpcId. Studio users can create a Workspace in any of the specified subnets.
-     * 
-     */
+        /**
+         * @return A list of up to 5 subnet IDs to associate with the Studio. The subnets must belong to the VPC specified by VpcId. Studio users can create a Workspace in any of the specified subnets.
+         * 
+         */
     private final @Nullable List<String> subnetIds;
-    /**
-     * A list of tags to associate with the Studio. Tags are user-defined key-value pairs that consist of a required key string with a maximum of 128 characters, and an optional value string with a maximum of 256 characters.
-     * 
-     */
+        /**
+         * @return A list of tags to associate with the Studio. Tags are user-defined key-value pairs that consist of a required key string with a maximum of 128 characters, and an optional value string with a maximum of 256 characters.
+         * 
+         */
     private final @Nullable List<StudioTag> tags;
-    /**
-     * The unique Studio access URL.
-     * 
-     */
+        /**
+         * @return The unique Studio access URL.
+         * 
+         */
     private final @Nullable String url;
 
     @CustomType.Constructor
@@ -89,72 +89,72 @@ public final class GetStudioResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the EMR Studio.
+     * @return The Amazon Resource Name (ARN) of the EMR Studio.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The default Amazon S3 location to back up EMR Studio Workspaces and notebook files. A Studio user can select an alternative Amazon S3 location when creating a Workspace.
+     * @return The default Amazon S3 location to back up EMR Studio Workspaces and notebook files. A Studio user can select an alternative Amazon S3 location when creating a Workspace.
      * 
-    */
+     */
     public Optional<String> defaultS3Location() {
         return Optional.ofNullable(this.defaultS3Location);
     }
     /**
-     * A detailed description of the Studio.
+     * @return A detailed description of the Studio.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Your identity provider&#39;s authentication endpoint. Amazon EMR Studio redirects federated users to this endpoint for authentication when logging in to a Studio with the Studio URL.
+     * @return Your identity provider&#39;s authentication endpoint. Amazon EMR Studio redirects federated users to this endpoint for authentication when logging in to a Studio with the Studio URL.
      * 
-    */
+     */
     public Optional<String> idpAuthUrl() {
         return Optional.ofNullable(this.idpAuthUrl);
     }
     /**
-     * The name of relay state parameter for external Identity Provider.
+     * @return The name of relay state parameter for external Identity Provider.
      * 
-    */
+     */
     public Optional<String> idpRelayStateParameterName() {
         return Optional.ofNullable(this.idpRelayStateParameterName);
     }
     /**
-     * A descriptive name for the Amazon EMR Studio.
+     * @return A descriptive name for the Amazon EMR Studio.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The ID of the EMR Studio.
+     * @return The ID of the EMR Studio.
      * 
-    */
+     */
     public Optional<String> studioId() {
         return Optional.ofNullable(this.studioId);
     }
     /**
-     * A list of up to 5 subnet IDs to associate with the Studio. The subnets must belong to the VPC specified by VpcId. Studio users can create a Workspace in any of the specified subnets.
+     * @return A list of up to 5 subnet IDs to associate with the Studio. The subnets must belong to the VPC specified by VpcId. Studio users can create a Workspace in any of the specified subnets.
      * 
-    */
+     */
     public List<String> subnetIds() {
         return this.subnetIds == null ? List.of() : this.subnetIds;
     }
     /**
-     * A list of tags to associate with the Studio. Tags are user-defined key-value pairs that consist of a required key string with a maximum of 128 characters, and an optional value string with a maximum of 256 characters.
+     * @return A list of tags to associate with the Studio. Tags are user-defined key-value pairs that consist of a required key string with a maximum of 128 characters, and an optional value string with a maximum of 256 characters.
      * 
-    */
+     */
     public List<StudioTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * The unique Studio access URL.
+     * @return The unique Studio access URL.
      * 
-    */
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }

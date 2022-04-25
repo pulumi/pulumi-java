@@ -26,6 +26,10 @@ public final class ServiceAuthenticationConfigurationArgs extends com.pulumi.res
     @Import(name="accessRoleArn")
     private @Nullable Output<String> accessRoleArn;
 
+    /**
+     * @return Access Role Arn
+     * 
+     */
     public Optional<Output<String>> accessRoleArn() {
         return Optional.ofNullable(this.accessRoleArn);
     }
@@ -37,6 +41,10 @@ public final class ServiceAuthenticationConfigurationArgs extends com.pulumi.res
     @Import(name="connectionArn")
     private @Nullable Output<String> connectionArn;
 
+    /**
+     * @return Connection Arn
+     * 
+     */
     public Optional<Output<String>> connectionArn() {
         return Optional.ofNullable(this.connectionArn);
     }
@@ -66,20 +74,44 @@ public final class ServiceAuthenticationConfigurationArgs extends com.pulumi.res
             $ = new ServiceAuthenticationConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessRoleArn Access Role Arn
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessRoleArn(@Nullable Output<String> accessRoleArn) {
             $.accessRoleArn = accessRoleArn;
             return this;
         }
 
+        /**
+         * @param accessRoleArn Access Role Arn
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessRoleArn(String accessRoleArn) {
             return accessRoleArn(Output.of(accessRoleArn));
         }
 
+        /**
+         * @param connectionArn Connection Arn
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionArn(@Nullable Output<String> connectionArn) {
             $.connectionArn = connectionArn;
             return this;
         }
 
+        /**
+         * @param connectionArn Connection Arn
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionArn(String connectionArn) {
             return connectionArn(Output.of(connectionArn));
         }

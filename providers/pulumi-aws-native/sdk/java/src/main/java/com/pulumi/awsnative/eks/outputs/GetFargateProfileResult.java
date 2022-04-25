@@ -14,10 +14,10 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetFargateProfileResult {
     private final @Nullable String arn;
-    /**
-     * An array of key-value pairs to apply to this resource.
-     * 
-     */
+        /**
+         * @return An array of key-value pairs to apply to this resource.
+         * 
+         */
     private final @Nullable List<FargateProfileTag> tags;
 
     @CustomType.Constructor
@@ -32,9 +32,9 @@ public final class GetFargateProfileResult {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<FargateProfileTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

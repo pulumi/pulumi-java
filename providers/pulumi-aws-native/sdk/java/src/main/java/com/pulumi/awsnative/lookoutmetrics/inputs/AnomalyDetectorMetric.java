@@ -22,6 +22,10 @@ public final class AnomalyDetectorMetric extends com.pulumi.resources.InvokeArgs
     @Import(name="aggregationFunction", required=true)
     private AnomalyDetectorMetricAggregationFunction aggregationFunction;
 
+    /**
+     * @return Operator used to aggregate metric values
+     * 
+     */
     public AnomalyDetectorMetricAggregationFunction aggregationFunction() {
         return this.aggregationFunction;
     }
@@ -66,6 +70,12 @@ public final class AnomalyDetectorMetric extends com.pulumi.resources.InvokeArgs
             $ = new AnomalyDetectorMetric(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aggregationFunction Operator used to aggregate metric values
+         * 
+         * @return builder
+         * 
+         */
         public Builder aggregationFunction(AnomalyDetectorMetricAggregationFunction aggregationFunction) {
             $.aggregationFunction = aggregationFunction;
             return this;

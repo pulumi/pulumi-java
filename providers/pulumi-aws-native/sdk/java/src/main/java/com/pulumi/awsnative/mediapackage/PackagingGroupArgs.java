@@ -25,6 +25,10 @@ public final class PackagingGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="authorization")
     private @Nullable Output<PackagingGroupAuthorizationArgs> authorization;
 
+    /**
+     * @return CDN Authorization
+     * 
+     */
     public Optional<Output<PackagingGroupAuthorizationArgs>> authorization() {
         return Optional.ofNullable(this.authorization);
     }
@@ -36,6 +40,10 @@ public final class PackagingGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="egressAccessLogs")
     private @Nullable Output<PackagingGroupLogConfigurationArgs> egressAccessLogs;
 
+    /**
+     * @return The configuration parameters for egress access logging.
+     * 
+     */
     public Optional<Output<PackagingGroupLogConfigurationArgs>> egressAccessLogs() {
         return Optional.ofNullable(this.egressAccessLogs);
     }
@@ -47,6 +55,10 @@ public final class PackagingGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<List<PackagingGroupTagArgs>> tags;
 
+    /**
+     * @return A collection of tags associated with a resource
+     * 
+     */
     public Optional<Output<List<PackagingGroupTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -77,33 +89,75 @@ public final class PackagingGroupArgs extends com.pulumi.resources.ResourceArgs 
             $ = new PackagingGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorization CDN Authorization
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorization(@Nullable Output<PackagingGroupAuthorizationArgs> authorization) {
             $.authorization = authorization;
             return this;
         }
 
+        /**
+         * @param authorization CDN Authorization
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorization(PackagingGroupAuthorizationArgs authorization) {
             return authorization(Output.of(authorization));
         }
 
+        /**
+         * @param egressAccessLogs The configuration parameters for egress access logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressAccessLogs(@Nullable Output<PackagingGroupLogConfigurationArgs> egressAccessLogs) {
             $.egressAccessLogs = egressAccessLogs;
             return this;
         }
 
+        /**
+         * @param egressAccessLogs The configuration parameters for egress access logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressAccessLogs(PackagingGroupLogConfigurationArgs egressAccessLogs) {
             return egressAccessLogs(Output.of(egressAccessLogs));
         }
 
+        /**
+         * @param tags A collection of tags associated with a resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<PackagingGroupTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A collection of tags associated with a resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<PackagingGroupTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A collection of tags associated with a resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(PackagingGroupTagArgs... tags) {
             return tags(List.of(tags));
         }

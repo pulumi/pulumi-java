@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetLoggingResult {
-    /**
-     * The log level to use. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
-     * 
-     */
+        /**
+         * @return The log level to use. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
+         * 
+         */
     private final @Nullable LoggingDefaultLogLevel defaultLogLevel;
-    /**
-     * The ARN of the role that allows IoT to write to Cloudwatch logs.
-     * 
-     */
+        /**
+         * @return The ARN of the role that allows IoT to write to Cloudwatch logs.
+         * 
+         */
     private final @Nullable String roleArn;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class GetLoggingResult {
     }
 
     /**
-     * The log level to use. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
+     * @return The log level to use. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
      * 
-    */
+     */
     public Optional<LoggingDefaultLogLevel> defaultLogLevel() {
         return Optional.ofNullable(this.defaultLogLevel);
     }
     /**
-     * The ARN of the role that allows IoT to write to Cloudwatch logs.
+     * @return The ARN of the role that allows IoT to write to Cloudwatch logs.
      * 
-    */
+     */
     public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }

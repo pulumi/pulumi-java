@@ -12,35 +12,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ContainerHealthCheckConfig {
-    /**
-     * The number of consecutive health checks successes required before moving the container to the Healthy state. The default value is 2.
-     * 
-     */
+        /**
+         * @return The number of consecutive health checks successes required before moving the container to the Healthy state. The default value is 2.
+         * 
+         */
     private final @Nullable Integer healthyThreshold;
-    /**
-     * The approximate interval, in seconds, between health checks of an individual container. You can specify between 5 and 300 seconds. The default value is 5.
-     * 
-     */
+        /**
+         * @return The approximate interval, in seconds, between health checks of an individual container. You can specify between 5 and 300 seconds. The default value is 5.
+         * 
+         */
     private final @Nullable Integer intervalSeconds;
-    /**
-     * The path on the container on which to perform the health check. The default value is /.
-     * 
-     */
+        /**
+         * @return The path on the container on which to perform the health check. The default value is /.
+         * 
+         */
     private final @Nullable String path;
-    /**
-     * The HTTP codes to use when checking for a successful response from a container. You can specify values between 200 and 499. You can specify multiple values (for example, 200,202) or a range of values (for example, 200-299).
-     * 
-     */
+        /**
+         * @return The HTTP codes to use when checking for a successful response from a container. You can specify values between 200 and 499. You can specify multiple values (for example, 200,202) or a range of values (for example, 200-299).
+         * 
+         */
     private final @Nullable String successCodes;
-    /**
-     * The amount of time, in seconds, during which no response means a failed health check. You can specify between 2 and 60 seconds. The default value is 2.
-     * 
-     */
+        /**
+         * @return The amount of time, in seconds, during which no response means a failed health check. You can specify between 2 and 60 seconds. The default value is 2.
+         * 
+         */
     private final @Nullable Integer timeoutSeconds;
-    /**
-     * The number of consecutive health check failures required before moving the container to the Unhealthy state. The default value is 2.
-     * 
-     */
+        /**
+         * @return The number of consecutive health check failures required before moving the container to the Unhealthy state. The default value is 2.
+         * 
+         */
     private final @Nullable Integer unhealthyThreshold;
 
     @CustomType.Constructor
@@ -60,44 +60,44 @@ public final class ContainerHealthCheckConfig {
     }
 
     /**
-     * The number of consecutive health checks successes required before moving the container to the Healthy state. The default value is 2.
+     * @return The number of consecutive health checks successes required before moving the container to the Healthy state. The default value is 2.
      * 
-    */
+     */
     public Optional<Integer> healthyThreshold() {
         return Optional.ofNullable(this.healthyThreshold);
     }
     /**
-     * The approximate interval, in seconds, between health checks of an individual container. You can specify between 5 and 300 seconds. The default value is 5.
+     * @return The approximate interval, in seconds, between health checks of an individual container. You can specify between 5 and 300 seconds. The default value is 5.
      * 
-    */
+     */
     public Optional<Integer> intervalSeconds() {
         return Optional.ofNullable(this.intervalSeconds);
     }
     /**
-     * The path on the container on which to perform the health check. The default value is /.
+     * @return The path on the container on which to perform the health check. The default value is /.
      * 
-    */
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
-     * The HTTP codes to use when checking for a successful response from a container. You can specify values between 200 and 499. You can specify multiple values (for example, 200,202) or a range of values (for example, 200-299).
+     * @return The HTTP codes to use when checking for a successful response from a container. You can specify values between 200 and 499. You can specify multiple values (for example, 200,202) or a range of values (for example, 200-299).
      * 
-    */
+     */
     public Optional<String> successCodes() {
         return Optional.ofNullable(this.successCodes);
     }
     /**
-     * The amount of time, in seconds, during which no response means a failed health check. You can specify between 2 and 60 seconds. The default value is 2.
+     * @return The amount of time, in seconds, during which no response means a failed health check. You can specify between 2 and 60 seconds. The default value is 2.
      * 
-    */
+     */
     public Optional<Integer> timeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }
     /**
-     * The number of consecutive health check failures required before moving the container to the Unhealthy state. The default value is 2.
+     * @return The number of consecutive health check failures required before moving the container to the Unhealthy state. The default value is 2.
      * 
-    */
+     */
     public Optional<Integer> unhealthyThreshold() {
         return Optional.ofNullable(this.unhealthyThreshold);
     }

@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class DetectorModelDefinition {
-    /**
-     * The state that is entered at the creation of each detector (instance).
-     * 
-     */
+        /**
+         * @return The state that is entered at the creation of each detector (instance).
+         * 
+         */
     private final String initialStateName;
-    /**
-     * Information about the states of the detector.
-     * 
-     */
+        /**
+         * @return Information about the states of the detector.
+         * 
+         */
     private final List<DetectorModelState> states;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class DetectorModelDefinition {
     }
 
     /**
-     * The state that is entered at the creation of each detector (instance).
+     * @return The state that is entered at the creation of each detector (instance).
      * 
-    */
+     */
     public String initialStateName() {
         return this.initialStateName;
     }
     /**
-     * Information about the states of the detector.
+     * @return Information about the states of the detector.
      * 
-    */
+     */
     public List<DetectorModelState> states() {
         return this.states;
     }

@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetTopicRuleDestinationResult {
-    /**
-     * Amazon Resource Name (ARN).
-     * 
-     */
+        /**
+         * @return Amazon Resource Name (ARN).
+         * 
+         */
     private final @Nullable String arn;
-    /**
-     * The status of the TopicRuleDestination.
-     * 
-     */
+        /**
+         * @return The status of the TopicRuleDestination.
+         * 
+         */
     private final @Nullable TopicRuleDestinationStatus status;
-    /**
-     * The reasoning for the current status of the TopicRuleDestination.
-     * 
-     */
+        /**
+         * @return The reasoning for the current status of the TopicRuleDestination.
+         * 
+         */
     private final @Nullable String statusReason;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class GetTopicRuleDestinationResult {
     }
 
     /**
-     * Amazon Resource Name (ARN).
+     * @return Amazon Resource Name (ARN).
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The status of the TopicRuleDestination.
+     * @return The status of the TopicRuleDestination.
      * 
-    */
+     */
     public Optional<TopicRuleDestinationStatus> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * The reasoning for the current status of the TopicRuleDestination.
+     * @return The reasoning for the current status of the TopicRuleDestination.
      * 
-    */
+     */
     public Optional<String> statusReason() {
         return Optional.ofNullable(this.statusReason);
     }

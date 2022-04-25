@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TaskDefinitionHealthCheck {
-    /**
-     * A string array representing the command that the container runs to determine if it is healthy.
-     * 
-     */
+        /**
+         * @return A string array representing the command that the container runs to determine if it is healthy.
+         * 
+         */
     private final @Nullable List<String> command;
-    /**
-     * The time period in seconds between each health check execution. You may specify between 5 and 300 seconds. The default value is 30 seconds.
-     * 
-     */
+        /**
+         * @return The time period in seconds between each health check execution. You may specify between 5 and 300 seconds. The default value is 30 seconds.
+         * 
+         */
     private final @Nullable Integer interval;
-    /**
-     * The number of times to retry a failed health check before the container is considered unhealthy. You may specify between 1 and 10 retries. The default value is three retries.
-     * 
-     */
+        /**
+         * @return The number of times to retry a failed health check before the container is considered unhealthy. You may specify between 1 and 10 retries. The default value is three retries.
+         * 
+         */
     private final @Nullable Integer retries;
-    /**
-     * The optional grace period within which to provide containers time to bootstrap before failed health checks count towards the maximum number of retries. You may specify between 0 and 300 seconds. The startPeriod is disabled by default.
-     * 
-     */
+        /**
+         * @return The optional grace period within which to provide containers time to bootstrap before failed health checks count towards the maximum number of retries. You may specify between 0 and 300 seconds. The startPeriod is disabled by default.
+         * 
+         */
     private final @Nullable Integer startPeriod;
-    /**
-     * The time period in seconds to wait for a health check to succeed before it is considered a failure. You may specify between 2 and 60 seconds. The default value is 5 seconds.
-     * 
-     */
+        /**
+         * @return The time period in seconds to wait for a health check to succeed before it is considered a failure. You may specify between 2 and 60 seconds. The default value is 5 seconds.
+         * 
+         */
     private final @Nullable Integer timeout;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class TaskDefinitionHealthCheck {
     }
 
     /**
-     * A string array representing the command that the container runs to determine if it is healthy.
+     * @return A string array representing the command that the container runs to determine if it is healthy.
      * 
-    */
+     */
     public List<String> command() {
         return this.command == null ? List.of() : this.command;
     }
     /**
-     * The time period in seconds between each health check execution. You may specify between 5 and 300 seconds. The default value is 30 seconds.
+     * @return The time period in seconds between each health check execution. You may specify between 5 and 300 seconds. The default value is 30 seconds.
      * 
-    */
+     */
     public Optional<Integer> interval() {
         return Optional.ofNullable(this.interval);
     }
     /**
-     * The number of times to retry a failed health check before the container is considered unhealthy. You may specify between 1 and 10 retries. The default value is three retries.
+     * @return The number of times to retry a failed health check before the container is considered unhealthy. You may specify between 1 and 10 retries. The default value is three retries.
      * 
-    */
+     */
     public Optional<Integer> retries() {
         return Optional.ofNullable(this.retries);
     }
     /**
-     * The optional grace period within which to provide containers time to bootstrap before failed health checks count towards the maximum number of retries. You may specify between 0 and 300 seconds. The startPeriod is disabled by default.
+     * @return The optional grace period within which to provide containers time to bootstrap before failed health checks count towards the maximum number of retries. You may specify between 0 and 300 seconds. The startPeriod is disabled by default.
      * 
-    */
+     */
     public Optional<Integer> startPeriod() {
         return Optional.ofNullable(this.startPeriod);
     }
     /**
-     * The time period in seconds to wait for a health check to succeed before it is considered a failure. You may specify between 2 and 60 seconds. The default value is 5 seconds.
+     * @return The time period in seconds to wait for a health check to succeed before it is considered a failure. You may specify between 2 and 60 seconds. The default value is 5 seconds.
      * 
-    */
+     */
     public Optional<Integer> timeout() {
         return Optional.ofNullable(this.timeout);
     }

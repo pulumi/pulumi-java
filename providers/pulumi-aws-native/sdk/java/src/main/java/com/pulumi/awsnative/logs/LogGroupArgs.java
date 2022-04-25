@@ -25,6 +25,10 @@ public final class LogGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
     private @Nullable Output<String> kmsKeyId;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the CMK to use when encrypting log data.
+     * 
+     */
     public Optional<Output<String>> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
@@ -36,6 +40,10 @@ public final class LogGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logGroupName")
     private @Nullable Output<String> logGroupName;
 
+    /**
+     * @return The name of the log group. If you don&#39;t specify a name, AWS CloudFormation generates a unique ID for the log group.
+     * 
+     */
     public Optional<Output<String>> logGroupName() {
         return Optional.ofNullable(this.logGroupName);
     }
@@ -47,6 +55,10 @@ public final class LogGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retentionInDays")
     private @Nullable Output<Integer> retentionInDays;
 
+    /**
+     * @return The number of days to retain the log events in the specified log group. Possible values are: 1, 3, 5, 7, 14, 30, 60, 90, 120, 150, 180, 365, 400, 545, 731, 1827, and 3653.
+     * 
+     */
     public Optional<Output<Integer>> retentionInDays() {
         return Optional.ofNullable(this.retentionInDays);
     }
@@ -58,6 +70,10 @@ public final class LogGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<LogGroupTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<LogGroupTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -89,42 +105,96 @@ public final class LogGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LogGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyId The Amazon Resource Name (ARN) of the CMK to use when encrypting log data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             $.kmsKeyId = kmsKeyId;
             return this;
         }
 
+        /**
+         * @param kmsKeyId The Amazon Resource Name (ARN) of the CMK to use when encrypting log data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(String kmsKeyId) {
             return kmsKeyId(Output.of(kmsKeyId));
         }
 
+        /**
+         * @param logGroupName The name of the log group. If you don&#39;t specify a name, AWS CloudFormation generates a unique ID for the log group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logGroupName(@Nullable Output<String> logGroupName) {
             $.logGroupName = logGroupName;
             return this;
         }
 
+        /**
+         * @param logGroupName The name of the log group. If you don&#39;t specify a name, AWS CloudFormation generates a unique ID for the log group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logGroupName(String logGroupName) {
             return logGroupName(Output.of(logGroupName));
         }
 
+        /**
+         * @param retentionInDays The number of days to retain the log events in the specified log group. Possible values are: 1, 3, 5, 7, 14, 30, 60, 90, 120, 150, 180, 365, 400, 545, 731, 1827, and 3653.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
             $.retentionInDays = retentionInDays;
             return this;
         }
 
+        /**
+         * @param retentionInDays The number of days to retain the log events in the specified log group. Possible values are: 1, 3, 5, 7, 14, 30, 60, 90, 120, 150, 180, 365, 400, 545, 731, 1827, and 3653.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionInDays(Integer retentionInDays) {
             return retentionInDays(Output.of(retentionInDays));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<LogGroupTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<LogGroupTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(LogGroupTagArgs... tags) {
             return tags(List.of(tags));
         }

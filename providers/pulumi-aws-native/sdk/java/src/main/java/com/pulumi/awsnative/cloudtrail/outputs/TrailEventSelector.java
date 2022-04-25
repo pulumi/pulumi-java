@@ -16,20 +16,20 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TrailEventSelector {
     private final @Nullable List<TrailDataResource> dataResources;
-    /**
-     * An optional list of service event sources from which you do not want management events to be logged on your trail. In this release, the list can be empty (disables the filter), or it can filter out AWS Key Management Service events by containing &#34;kms.amazonaws.com&#34;. By default, ExcludeManagementEventSources is empty, and AWS KMS events are included in events that are logged to your trail.
-     * 
-     */
+        /**
+         * @return An optional list of service event sources from which you do not want management events to be logged on your trail. In this release, the list can be empty (disables the filter), or it can filter out AWS Key Management Service events by containing &#34;kms.amazonaws.com&#34;. By default, ExcludeManagementEventSources is empty, and AWS KMS events are included in events that are logged to your trail.
+         * 
+         */
     private final @Nullable List<String> excludeManagementEventSources;
-    /**
-     * Specify if you want your event selector to include management events for your trail.
-     * 
-     */
+        /**
+         * @return Specify if you want your event selector to include management events for your trail.
+         * 
+         */
     private final @Nullable Boolean includeManagementEvents;
-    /**
-     * Specify if you want your trail to log read-only events, write-only events, or all. For example, the EC2 GetConsoleOutput is a read-only API operation and RunInstances is a write-only API operation.
-     * 
-     */
+        /**
+         * @return Specify if you want your trail to log read-only events, write-only events, or all. For example, the EC2 GetConsoleOutput is a read-only API operation and RunInstances is a write-only API operation.
+         * 
+         */
     private final @Nullable TrailEventSelectorReadWriteType readWriteType;
 
     @CustomType.Constructor
@@ -48,23 +48,23 @@ public final class TrailEventSelector {
         return this.dataResources == null ? List.of() : this.dataResources;
     }
     /**
-     * An optional list of service event sources from which you do not want management events to be logged on your trail. In this release, the list can be empty (disables the filter), or it can filter out AWS Key Management Service events by containing &#34;kms.amazonaws.com&#34;. By default, ExcludeManagementEventSources is empty, and AWS KMS events are included in events that are logged to your trail.
+     * @return An optional list of service event sources from which you do not want management events to be logged on your trail. In this release, the list can be empty (disables the filter), or it can filter out AWS Key Management Service events by containing &#34;kms.amazonaws.com&#34;. By default, ExcludeManagementEventSources is empty, and AWS KMS events are included in events that are logged to your trail.
      * 
-    */
+     */
     public List<String> excludeManagementEventSources() {
         return this.excludeManagementEventSources == null ? List.of() : this.excludeManagementEventSources;
     }
     /**
-     * Specify if you want your event selector to include management events for your trail.
+     * @return Specify if you want your event selector to include management events for your trail.
      * 
-    */
+     */
     public Optional<Boolean> includeManagementEvents() {
         return Optional.ofNullable(this.includeManagementEvents);
     }
     /**
-     * Specify if you want your trail to log read-only events, write-only events, or all. For example, the EC2 GetConsoleOutput is a read-only API operation and RunInstances is a write-only API operation.
+     * @return Specify if you want your trail to log read-only events, write-only events, or all. For example, the EC2 GetConsoleOutput is a read-only API operation and RunInstances is a write-only API operation.
      * 
-    */
+     */
     public Optional<TrailEventSelectorReadWriteType> readWriteType() {
         return Optional.ofNullable(this.readWriteType);
     }

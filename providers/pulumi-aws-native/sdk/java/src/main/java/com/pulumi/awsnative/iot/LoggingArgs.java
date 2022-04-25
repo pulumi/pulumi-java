@@ -21,6 +21,10 @@ public final class LoggingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountId", required=true)
     private Output<String> accountId;
 
+    /**
+     * @return Your 12-digit account ID (used as the primary identifier for the CloudFormation resource).
+     * 
+     */
     public Output<String> accountId() {
         return this.accountId;
     }
@@ -32,6 +36,10 @@ public final class LoggingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultLogLevel", required=true)
     private Output<LoggingDefaultLogLevel> defaultLogLevel;
 
+    /**
+     * @return The log level to use. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
+     * 
+     */
     public Output<LoggingDefaultLogLevel> defaultLogLevel() {
         return this.defaultLogLevel;
     }
@@ -43,6 +51,10 @@ public final class LoggingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return The ARN of the role that allows IoT to write to Cloudwatch logs.
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -73,29 +85,65 @@ public final class LoggingArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LoggingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId Your 12-digit account ID (used as the primary identifier for the CloudFormation resource).
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(Output<String> accountId) {
             $.accountId = accountId;
             return this;
         }
 
+        /**
+         * @param accountId Your 12-digit account ID (used as the primary identifier for the CloudFormation resource).
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(String accountId) {
             return accountId(Output.of(accountId));
         }
 
+        /**
+         * @param defaultLogLevel The log level to use. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultLogLevel(Output<LoggingDefaultLogLevel> defaultLogLevel) {
             $.defaultLogLevel = defaultLogLevel;
             return this;
         }
 
+        /**
+         * @param defaultLogLevel The log level to use. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultLogLevel(LoggingDefaultLogLevel defaultLogLevel) {
             return defaultLogLevel(Output.of(defaultLogLevel));
         }
 
+        /**
+         * @param roleArn The ARN of the role that allows IoT to write to Cloudwatch logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn The ARN of the role that allows IoT to write to Cloudwatch logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }

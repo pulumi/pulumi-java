@@ -26,6 +26,10 @@ public final class DataSetOutputColumn extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return &lt;p&gt;A description for a column.&lt;/p&gt;
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class DataSetOutputColumn extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return &lt;p&gt;A display name for the dataset.&lt;/p&gt;
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -74,11 +82,23 @@ public final class DataSetOutputColumn extends com.pulumi.resources.InvokeArgs {
             $ = new DataSetOutputColumn(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description &lt;p&gt;A description for a column.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param name &lt;p&gt;A display name for the dataset.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

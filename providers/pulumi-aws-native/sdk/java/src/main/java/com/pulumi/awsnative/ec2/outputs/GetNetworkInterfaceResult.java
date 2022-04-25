@@ -17,60 +17,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetNetworkInterfaceResult {
-    /**
-     * A description for the network interface.
-     * 
-     */
+        /**
+         * @return A description for the network interface.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * A list of security group IDs associated with this network interface.
-     * 
-     */
+        /**
+         * @return A list of security group IDs associated with this network interface.
+         * 
+         */
     private final @Nullable List<String> groupSet;
-    /**
-     * Network interface id.
-     * 
-     */
+        /**
+         * @return Network interface id.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The number of IPv6 addresses to assign to a network interface. Amazon EC2 automatically selects the IPv6 addresses from the subnet range. To specify specific IPv6 addresses, use the Ipv6Addresses property and don&#39;t specify this property.
-     * 
-     */
+        /**
+         * @return The number of IPv6 addresses to assign to a network interface. Amazon EC2 automatically selects the IPv6 addresses from the subnet range. To specify specific IPv6 addresses, use the Ipv6Addresses property and don&#39;t specify this property.
+         * 
+         */
     private final @Nullable Integer ipv6AddressCount;
-    /**
-     * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate with the network interface. If you&#39;re specifying a number of IPv6 addresses, use the Ipv6AddressCount property and don&#39;t specify this property.
-     * 
-     */
+        /**
+         * @return One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate with the network interface. If you&#39;re specifying a number of IPv6 addresses, use the Ipv6AddressCount property and don&#39;t specify this property.
+         * 
+         */
     private final @Nullable List<NetworkInterfaceInstanceIpv6Address> ipv6Addresses;
-    /**
-     * Returns the primary private IP address of the network interface.
-     * 
-     */
+        /**
+         * @return Returns the primary private IP address of the network interface.
+         * 
+         */
     private final @Nullable String primaryPrivateIpAddress;
-    /**
-     * Assigns a list of private IP addresses to the network interface. You can specify a primary private IP address by setting the value of the Primary property to true in the PrivateIpAddressSpecification property. If you want EC2 to automatically assign private IP addresses, use the SecondaryPrivateIpAddressCount property and do not specify this property.
-     * 
-     */
+        /**
+         * @return Assigns a list of private IP addresses to the network interface. You can specify a primary private IP address by setting the value of the Primary property to true in the PrivateIpAddressSpecification property. If you want EC2 to automatically assign private IP addresses, use the SecondaryPrivateIpAddressCount property and do not specify this property.
+         * 
+         */
     private final @Nullable List<NetworkInterfacePrivateIpAddressSpecification> privateIpAddresses;
-    /**
-     * The number of secondary private IPv4 addresses to assign to a network interface. When you specify a number of secondary IPv4 addresses, Amazon EC2 selects these IP addresses within the subnet&#39;s IPv4 CIDR range. You can&#39;t specify this option and specify more than one private IP address using privateIpAddresses
-     * 
-     */
+        /**
+         * @return The number of secondary private IPv4 addresses to assign to a network interface. When you specify a number of secondary IPv4 addresses, Amazon EC2 selects these IP addresses within the subnet&#39;s IPv4 CIDR range. You can&#39;t specify this option and specify more than one private IP address using privateIpAddresses
+         * 
+         */
     private final @Nullable Integer secondaryPrivateIpAddressCount;
-    /**
-     * Returns the secondary private IP addresses of the network interface.
-     * 
-     */
+        /**
+         * @return Returns the secondary private IP addresses of the network interface.
+         * 
+         */
     private final @Nullable List<String> secondaryPrivateIpAddresses;
-    /**
-     * Indicates whether traffic to or from the instance is validated.
-     * 
-     */
+        /**
+         * @return Indicates whether traffic to or from the instance is validated.
+         * 
+         */
     private final @Nullable Boolean sourceDestCheck;
-    /**
-     * An arbitrary set of tags (key-value pairs) for this network interface.
-     * 
-     */
+        /**
+         * @return An arbitrary set of tags (key-value pairs) for this network interface.
+         * 
+         */
     private final @Nullable List<NetworkInterfaceTag> tags;
 
     @CustomType.Constructor
@@ -100,79 +100,79 @@ public final class GetNetworkInterfaceResult {
     }
 
     /**
-     * A description for the network interface.
+     * @return A description for the network interface.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * A list of security group IDs associated with this network interface.
+     * @return A list of security group IDs associated with this network interface.
      * 
-    */
+     */
     public List<String> groupSet() {
         return this.groupSet == null ? List.of() : this.groupSet;
     }
     /**
-     * Network interface id.
+     * @return Network interface id.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The number of IPv6 addresses to assign to a network interface. Amazon EC2 automatically selects the IPv6 addresses from the subnet range. To specify specific IPv6 addresses, use the Ipv6Addresses property and don&#39;t specify this property.
+     * @return The number of IPv6 addresses to assign to a network interface. Amazon EC2 automatically selects the IPv6 addresses from the subnet range. To specify specific IPv6 addresses, use the Ipv6Addresses property and don&#39;t specify this property.
      * 
-    */
+     */
     public Optional<Integer> ipv6AddressCount() {
         return Optional.ofNullable(this.ipv6AddressCount);
     }
     /**
-     * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate with the network interface. If you&#39;re specifying a number of IPv6 addresses, use the Ipv6AddressCount property and don&#39;t specify this property.
+     * @return One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate with the network interface. If you&#39;re specifying a number of IPv6 addresses, use the Ipv6AddressCount property and don&#39;t specify this property.
      * 
-    */
+     */
     public List<NetworkInterfaceInstanceIpv6Address> ipv6Addresses() {
         return this.ipv6Addresses == null ? List.of() : this.ipv6Addresses;
     }
     /**
-     * Returns the primary private IP address of the network interface.
+     * @return Returns the primary private IP address of the network interface.
      * 
-    */
+     */
     public Optional<String> primaryPrivateIpAddress() {
         return Optional.ofNullable(this.primaryPrivateIpAddress);
     }
     /**
-     * Assigns a list of private IP addresses to the network interface. You can specify a primary private IP address by setting the value of the Primary property to true in the PrivateIpAddressSpecification property. If you want EC2 to automatically assign private IP addresses, use the SecondaryPrivateIpAddressCount property and do not specify this property.
+     * @return Assigns a list of private IP addresses to the network interface. You can specify a primary private IP address by setting the value of the Primary property to true in the PrivateIpAddressSpecification property. If you want EC2 to automatically assign private IP addresses, use the SecondaryPrivateIpAddressCount property and do not specify this property.
      * 
-    */
+     */
     public List<NetworkInterfacePrivateIpAddressSpecification> privateIpAddresses() {
         return this.privateIpAddresses == null ? List.of() : this.privateIpAddresses;
     }
     /**
-     * The number of secondary private IPv4 addresses to assign to a network interface. When you specify a number of secondary IPv4 addresses, Amazon EC2 selects these IP addresses within the subnet&#39;s IPv4 CIDR range. You can&#39;t specify this option and specify more than one private IP address using privateIpAddresses
+     * @return The number of secondary private IPv4 addresses to assign to a network interface. When you specify a number of secondary IPv4 addresses, Amazon EC2 selects these IP addresses within the subnet&#39;s IPv4 CIDR range. You can&#39;t specify this option and specify more than one private IP address using privateIpAddresses
      * 
-    */
+     */
     public Optional<Integer> secondaryPrivateIpAddressCount() {
         return Optional.ofNullable(this.secondaryPrivateIpAddressCount);
     }
     /**
-     * Returns the secondary private IP addresses of the network interface.
+     * @return Returns the secondary private IP addresses of the network interface.
      * 
-    */
+     */
     public List<String> secondaryPrivateIpAddresses() {
         return this.secondaryPrivateIpAddresses == null ? List.of() : this.secondaryPrivateIpAddresses;
     }
     /**
-     * Indicates whether traffic to or from the instance is validated.
+     * @return Indicates whether traffic to or from the instance is validated.
      * 
-    */
+     */
     public Optional<Boolean> sourceDestCheck() {
         return Optional.ofNullable(this.sourceDestCheck);
     }
     /**
-     * An arbitrary set of tags (key-value pairs) for this network interface.
+     * @return An arbitrary set of tags (key-value pairs) for this network interface.
      * 
-    */
+     */
     public List<NetworkInterfaceTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

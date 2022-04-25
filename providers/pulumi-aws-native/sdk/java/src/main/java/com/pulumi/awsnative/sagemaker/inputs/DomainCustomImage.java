@@ -26,6 +26,10 @@ public final class DomainCustomImage extends com.pulumi.resources.InvokeArgs {
     @Import(name="appImageConfigName", required=true)
     private String appImageConfigName;
 
+    /**
+     * @return The Name of the AppImageConfig.
+     * 
+     */
     public String appImageConfigName() {
         return this.appImageConfigName;
     }
@@ -37,6 +41,10 @@ public final class DomainCustomImage extends com.pulumi.resources.InvokeArgs {
     @Import(name="imageName", required=true)
     private String imageName;
 
+    /**
+     * @return The name of the CustomImage. Must be unique to your account.
+     * 
+     */
     public String imageName() {
         return this.imageName;
     }
@@ -48,6 +56,10 @@ public final class DomainCustomImage extends com.pulumi.resources.InvokeArgs {
     @Import(name="imageVersionNumber")
     private @Nullable Integer imageVersionNumber;
 
+    /**
+     * @return The version number of the CustomImage.
+     * 
+     */
     public Optional<Integer> imageVersionNumber() {
         return Optional.ofNullable(this.imageVersionNumber);
     }
@@ -78,16 +90,34 @@ public final class DomainCustomImage extends com.pulumi.resources.InvokeArgs {
             $ = new DomainCustomImage(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appImageConfigName The Name of the AppImageConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appImageConfigName(String appImageConfigName) {
             $.appImageConfigName = appImageConfigName;
             return this;
         }
 
+        /**
+         * @param imageName The name of the CustomImage. Must be unique to your account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageName(String imageName) {
             $.imageName = imageName;
             return this;
         }
 
+        /**
+         * @param imageVersionNumber The version number of the CustomImage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageVersionNumber(@Nullable Integer imageVersionNumber) {
             $.imageVersionNumber = imageVersionNumber;
             return this;

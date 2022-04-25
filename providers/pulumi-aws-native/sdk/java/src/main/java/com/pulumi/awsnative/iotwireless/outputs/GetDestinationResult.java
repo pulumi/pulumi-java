@@ -14,35 +14,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDestinationResult {
-    /**
-     * Destination arn. Returned after successful create.
-     * 
-     */
+        /**
+         * @return Destination arn. Returned after successful create.
+         * 
+         */
     private final @Nullable String arn;
-    /**
-     * Destination description
-     * 
-     */
+        /**
+         * @return Destination description
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Destination expression
-     * 
-     */
+        /**
+         * @return Destination expression
+         * 
+         */
     private final @Nullable String expression;
-    /**
-     * Must be RuleName
-     * 
-     */
+        /**
+         * @return Must be RuleName
+         * 
+         */
     private final @Nullable DestinationExpressionType expressionType;
-    /**
-     * AWS role ARN that grants access
-     * 
-     */
+        /**
+         * @return AWS role ARN that grants access
+         * 
+         */
     private final @Nullable String roleArn;
-    /**
-     * A list of key-value pairs that contain metadata for the destination.
-     * 
-     */
+        /**
+         * @return A list of key-value pairs that contain metadata for the destination.
+         * 
+         */
     private final @Nullable List<DestinationTag> tags;
 
     @CustomType.Constructor
@@ -62,44 +62,44 @@ public final class GetDestinationResult {
     }
 
     /**
-     * Destination arn. Returned after successful create.
+     * @return Destination arn. Returned after successful create.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Destination description
+     * @return Destination description
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Destination expression
+     * @return Destination expression
      * 
-    */
+     */
     public Optional<String> expression() {
         return Optional.ofNullable(this.expression);
     }
     /**
-     * Must be RuleName
+     * @return Must be RuleName
      * 
-    */
+     */
     public Optional<DestinationExpressionType> expressionType() {
         return Optional.ofNullable(this.expressionType);
     }
     /**
-     * AWS role ARN that grants access
+     * @return AWS role ARN that grants access
      * 
-    */
+     */
     public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
     /**
-     * A list of key-value pairs that contain metadata for the destination.
+     * @return A list of key-value pairs that contain metadata for the destination.
      * 
-    */
+     */
     public List<DestinationTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

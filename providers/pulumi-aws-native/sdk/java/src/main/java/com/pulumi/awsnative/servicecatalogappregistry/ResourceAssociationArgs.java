@@ -21,6 +21,10 @@ public final class ResourceAssociationArgs extends com.pulumi.resources.Resource
     @Import(name="application", required=true)
     private Output<String> application;
 
+    /**
+     * @return The name or the Id of the Application.
+     * 
+     */
     public Output<String> application() {
         return this.application;
     }
@@ -32,6 +36,10 @@ public final class ResourceAssociationArgs extends com.pulumi.resources.Resource
     @Import(name="resource", required=true)
     private Output<String> resource;
 
+    /**
+     * @return The name or the Id of the Resource.
+     * 
+     */
     public Output<String> resource() {
         return this.resource;
     }
@@ -43,6 +51,10 @@ public final class ResourceAssociationArgs extends com.pulumi.resources.Resource
     @Import(name="resourceType", required=true)
     private Output<ResourceAssociationResourceType> resourceType;
 
+    /**
+     * @return The type of the CFN Resource for now it&#39;s enum CFN_STACK.
+     * 
+     */
     public Output<ResourceAssociationResourceType> resourceType() {
         return this.resourceType;
     }
@@ -73,29 +85,65 @@ public final class ResourceAssociationArgs extends com.pulumi.resources.Resource
             $ = new ResourceAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param application The name or the Id of the Application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder application(Output<String> application) {
             $.application = application;
             return this;
         }
 
+        /**
+         * @param application The name or the Id of the Application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder application(String application) {
             return application(Output.of(application));
         }
 
+        /**
+         * @param resource The name or the Id of the Resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(Output<String> resource) {
             $.resource = resource;
             return this;
         }
 
+        /**
+         * @param resource The name or the Id of the Resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(String resource) {
             return resource(Output.of(resource));
         }
 
+        /**
+         * @param resourceType The type of the CFN Resource for now it&#39;s enum CFN_STACK.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(Output<ResourceAssociationResourceType> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType The type of the CFN Resource for now it&#39;s enum CFN_STACK.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(ResourceAssociationResourceType resourceType) {
             return resourceType(Output.of(resourceType));
         }

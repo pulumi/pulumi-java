@@ -29,6 +29,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="attachments")
     private @Nullable Output<List<DocumentAttachmentsSourceArgs>> attachments;
 
+    /**
+     * @return A list of key and value pairs that describe attachments to a version of a document.
+     * 
+     */
     public Optional<Output<List<DocumentAttachmentsSourceArgs>>> attachments() {
         return Optional.ofNullable(this.attachments);
     }
@@ -40,6 +44,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="content", required=true)
     private Output<Object> content;
 
+    /**
+     * @return The content for the Systems Manager document in JSON, YAML or String format.
+     * 
+     */
     public Output<Object> content() {
         return this.content;
     }
@@ -51,6 +59,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="documentFormat")
     private @Nullable Output<DocumentFormat> documentFormat;
 
+    /**
+     * @return Specify the document format for the request. The document format can be either JSON or YAML. JSON is the default format.
+     * 
+     */
     public Optional<Output<DocumentFormat>> documentFormat() {
         return Optional.ofNullable(this.documentFormat);
     }
@@ -62,6 +74,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="documentType")
     private @Nullable Output<DocumentType> documentType;
 
+    /**
+     * @return The type of document to create.
+     * 
+     */
     public Optional<Output<DocumentType>> documentType() {
         return Optional.ofNullable(this.documentType);
     }
@@ -73,6 +89,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A name for the Systems Manager document.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -84,6 +104,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requires")
     private @Nullable Output<List<DocumentRequiresArgs>> requires;
 
+    /**
+     * @return A list of SSM documents required by a document. For example, an ApplicationConfiguration document requires an ApplicationConfigurationSchema document.
+     * 
+     */
     public Optional<Output<List<DocumentRequiresArgs>>> requires() {
         return Optional.ofNullable(this.requires);
     }
@@ -95,6 +119,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<DocumentTagArgs>> tags;
 
+    /**
+     * @return Optional metadata that you assign to a resource. Tags enable you to categorize a resource in different ways, such as by purpose, owner, or environment.
+     * 
+     */
     public Optional<Output<List<DocumentTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -106,6 +134,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetType")
     private @Nullable Output<String> targetType;
 
+    /**
+     * @return Specify a target type to define the kinds of resources the document can run on.
+     * 
+     */
     public Optional<Output<String>> targetType() {
         return Optional.ofNullable(this.targetType);
     }
@@ -117,6 +149,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="versionName")
     private @Nullable Output<String> versionName;
 
+    /**
+     * @return An optional field specifying the version of the artifact you are creating with the document. This value is unique across all versions of a document, and cannot be changed.
+     * 
+     */
     public Optional<Output<String>> versionName() {
         return Optional.ofNullable(this.versionName);
     }
@@ -153,95 +189,221 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DocumentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attachments A list of key and value pairs that describe attachments to a version of a document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachments(@Nullable Output<List<DocumentAttachmentsSourceArgs>> attachments) {
             $.attachments = attachments;
             return this;
         }
 
+        /**
+         * @param attachments A list of key and value pairs that describe attachments to a version of a document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachments(List<DocumentAttachmentsSourceArgs> attachments) {
             return attachments(Output.of(attachments));
         }
 
+        /**
+         * @param attachments A list of key and value pairs that describe attachments to a version of a document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachments(DocumentAttachmentsSourceArgs... attachments) {
             return attachments(List.of(attachments));
         }
 
+        /**
+         * @param content The content for the Systems Manager document in JSON, YAML or String format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(Output<Object> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content The content for the Systems Manager document in JSON, YAML or String format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(Object content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param documentFormat Specify the document format for the request. The document format can be either JSON or YAML. JSON is the default format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentFormat(@Nullable Output<DocumentFormat> documentFormat) {
             $.documentFormat = documentFormat;
             return this;
         }
 
+        /**
+         * @param documentFormat Specify the document format for the request. The document format can be either JSON or YAML. JSON is the default format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentFormat(DocumentFormat documentFormat) {
             return documentFormat(Output.of(documentFormat));
         }
 
+        /**
+         * @param documentType The type of document to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentType(@Nullable Output<DocumentType> documentType) {
             $.documentType = documentType;
             return this;
         }
 
+        /**
+         * @param documentType The type of document to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentType(DocumentType documentType) {
             return documentType(Output.of(documentType));
         }
 
+        /**
+         * @param name A name for the Systems Manager document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A name for the Systems Manager document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param requires A list of SSM documents required by a document. For example, an ApplicationConfiguration document requires an ApplicationConfigurationSchema document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requires(@Nullable Output<List<DocumentRequiresArgs>> requires) {
             $.requires = requires;
             return this;
         }
 
+        /**
+         * @param requires A list of SSM documents required by a document. For example, an ApplicationConfiguration document requires an ApplicationConfigurationSchema document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requires(List<DocumentRequiresArgs> requires) {
             return requires(Output.of(requires));
         }
 
+        /**
+         * @param requires A list of SSM documents required by a document. For example, an ApplicationConfiguration document requires an ApplicationConfigurationSchema document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requires(DocumentRequiresArgs... requires) {
             return requires(List.of(requires));
         }
 
+        /**
+         * @param tags Optional metadata that you assign to a resource. Tags enable you to categorize a resource in different ways, such as by purpose, owner, or environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<DocumentTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Optional metadata that you assign to a resource. Tags enable you to categorize a resource in different ways, such as by purpose, owner, or environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<DocumentTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Optional metadata that you assign to a resource. Tags enable you to categorize a resource in different ways, such as by purpose, owner, or environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(DocumentTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param targetType Specify a target type to define the kinds of resources the document can run on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetType(@Nullable Output<String> targetType) {
             $.targetType = targetType;
             return this;
         }
 
+        /**
+         * @param targetType Specify a target type to define the kinds of resources the document can run on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetType(String targetType) {
             return targetType(Output.of(targetType));
         }
 
+        /**
+         * @param versionName An optional field specifying the version of the artifact you are creating with the document. This value is unique across all versions of a document, and cannot be changed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionName(@Nullable Output<String> versionName) {
             $.versionName = versionName;
             return this;
         }
 
+        /**
+         * @param versionName An optional field specifying the version of the artifact you are creating with the document. This value is unique across all versions of a document, and cannot be changed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionName(String versionName) {
             return versionName(Output.of(versionName));
         }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class DashboardTag {
-    /**
-     * &lt;p&gt;Tag key.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;Tag key.&lt;/p&gt;
+         * 
+         */
     private final String key;
-    /**
-     * &lt;p&gt;Tag value.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;Tag value.&lt;/p&gt;
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class DashboardTag {
     }
 
     /**
-     * &lt;p&gt;Tag key.&lt;/p&gt;
+     * @return &lt;p&gt;Tag key.&lt;/p&gt;
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * &lt;p&gt;Tag value.&lt;/p&gt;
+     * @return &lt;p&gt;Tag value.&lt;/p&gt;
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

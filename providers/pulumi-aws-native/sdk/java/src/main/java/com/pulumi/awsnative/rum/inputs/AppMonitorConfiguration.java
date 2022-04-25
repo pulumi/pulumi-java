@@ -29,6 +29,10 @@ public final class AppMonitorConfiguration extends com.pulumi.resources.InvokeAr
     @Import(name="allowCookies")
     private @Nullable Boolean allowCookies;
 
+    /**
+     * @return If you set this to true, the RUM web client sets two cookies, a session cookie and a user cookie. The cookies allow the RUM web client to collect data relating to the number of users an application has and the behavior of the application across a sequence of events. Cookies are stored in the top-level domain of the current page.
+     * 
+     */
     public Optional<Boolean> allowCookies() {
         return Optional.ofNullable(this.allowCookies);
     }
@@ -40,6 +44,10 @@ public final class AppMonitorConfiguration extends com.pulumi.resources.InvokeAr
     @Import(name="enableXRay")
     private @Nullable Boolean enableXRay;
 
+    /**
+     * @return If you set this to true, RUM enables xray tracing for the user sessions that RUM samples. RUM adds an xray trace header to allowed HTTP requests. It also records an xray segment for allowed HTTP requests. You can see traces and segments from these user sessions in the xray console and the CW ServiceLens console.
+     * 
+     */
     public Optional<Boolean> enableXRay() {
         return Optional.ofNullable(this.enableXRay);
     }
@@ -51,6 +59,10 @@ public final class AppMonitorConfiguration extends com.pulumi.resources.InvokeAr
     @Import(name="excludedPages")
     private @Nullable List<String> excludedPages;
 
+    /**
+     * @return A list of URLs in your website or application to exclude from RUM data collection. You can&#39;t include both ExcludedPages and IncludedPages in the same operation.
+     * 
+     */
     public Optional<List<String>> excludedPages() {
         return Optional.ofNullable(this.excludedPages);
     }
@@ -62,6 +74,10 @@ public final class AppMonitorConfiguration extends com.pulumi.resources.InvokeAr
     @Import(name="favoritePages")
     private @Nullable List<String> favoritePages;
 
+    /**
+     * @return A list of pages in the RUM console that are to be displayed with a favorite icon.
+     * 
+     */
     public Optional<List<String>> favoritePages() {
         return Optional.ofNullable(this.favoritePages);
     }
@@ -73,6 +89,10 @@ public final class AppMonitorConfiguration extends com.pulumi.resources.InvokeAr
     @Import(name="guestRoleArn")
     private @Nullable String guestRoleArn;
 
+    /**
+     * @return The ARN of the guest IAM role that is attached to the identity pool that is used to authorize the sending of data to RUM.
+     * 
+     */
     public Optional<String> guestRoleArn() {
         return Optional.ofNullable(this.guestRoleArn);
     }
@@ -84,6 +104,10 @@ public final class AppMonitorConfiguration extends com.pulumi.resources.InvokeAr
     @Import(name="identityPoolId")
     private @Nullable String identityPoolId;
 
+    /**
+     * @return The ID of the identity pool that is used to authorize the sending of data to RUM.
+     * 
+     */
     public Optional<String> identityPoolId() {
         return Optional.ofNullable(this.identityPoolId);
     }
@@ -95,6 +119,10 @@ public final class AppMonitorConfiguration extends com.pulumi.resources.InvokeAr
     @Import(name="includedPages")
     private @Nullable List<String> includedPages;
 
+    /**
+     * @return If this app monitor is to collect data from only certain pages in your application, this structure lists those pages. You can&#39;t include both ExcludedPages and IncludedPages in the same operation.
+     * 
+     */
     public Optional<List<String>> includedPages() {
         return Optional.ofNullable(this.includedPages);
     }
@@ -106,6 +134,10 @@ public final class AppMonitorConfiguration extends com.pulumi.resources.InvokeAr
     @Import(name="sessionSampleRate")
     private @Nullable Double sessionSampleRate;
 
+    /**
+     * @return Specifies the percentage of user sessions to use for RUM data collection. Choosing a higher percentage gives you more data but also incurs more costs. The number you specify is the percentage of user sessions that will be used. If you omit this parameter, the default of 10 is used.
+     * 
+     */
     public Optional<Double> sessionSampleRate() {
         return Optional.ofNullable(this.sessionSampleRate);
     }
@@ -117,6 +149,10 @@ public final class AppMonitorConfiguration extends com.pulumi.resources.InvokeAr
     @Import(name="telemetries")
     private @Nullable List<AppMonitorTelemetry> telemetries;
 
+    /**
+     * @return An array that lists the types of telemetry data that this app monitor is to collect.
+     * 
+     */
     public Optional<List<AppMonitorTelemetry>> telemetries() {
         return Optional.ofNullable(this.telemetries);
     }
@@ -153,63 +189,141 @@ public final class AppMonitorConfiguration extends com.pulumi.resources.InvokeAr
             $ = new AppMonitorConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowCookies If you set this to true, the RUM web client sets two cookies, a session cookie and a user cookie. The cookies allow the RUM web client to collect data relating to the number of users an application has and the behavior of the application across a sequence of events. Cookies are stored in the top-level domain of the current page.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowCookies(@Nullable Boolean allowCookies) {
             $.allowCookies = allowCookies;
             return this;
         }
 
+        /**
+         * @param enableXRay If you set this to true, RUM enables xray tracing for the user sessions that RUM samples. RUM adds an xray trace header to allowed HTTP requests. It also records an xray segment for allowed HTTP requests. You can see traces and segments from these user sessions in the xray console and the CW ServiceLens console.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableXRay(@Nullable Boolean enableXRay) {
             $.enableXRay = enableXRay;
             return this;
         }
 
+        /**
+         * @param excludedPages A list of URLs in your website or application to exclude from RUM data collection. You can&#39;t include both ExcludedPages and IncludedPages in the same operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedPages(@Nullable List<String> excludedPages) {
             $.excludedPages = excludedPages;
             return this;
         }
 
+        /**
+         * @param excludedPages A list of URLs in your website or application to exclude from RUM data collection. You can&#39;t include both ExcludedPages and IncludedPages in the same operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedPages(String... excludedPages) {
             return excludedPages(List.of(excludedPages));
         }
 
+        /**
+         * @param favoritePages A list of pages in the RUM console that are to be displayed with a favorite icon.
+         * 
+         * @return builder
+         * 
+         */
         public Builder favoritePages(@Nullable List<String> favoritePages) {
             $.favoritePages = favoritePages;
             return this;
         }
 
+        /**
+         * @param favoritePages A list of pages in the RUM console that are to be displayed with a favorite icon.
+         * 
+         * @return builder
+         * 
+         */
         public Builder favoritePages(String... favoritePages) {
             return favoritePages(List.of(favoritePages));
         }
 
+        /**
+         * @param guestRoleArn The ARN of the guest IAM role that is attached to the identity pool that is used to authorize the sending of data to RUM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestRoleArn(@Nullable String guestRoleArn) {
             $.guestRoleArn = guestRoleArn;
             return this;
         }
 
+        /**
+         * @param identityPoolId The ID of the identity pool that is used to authorize the sending of data to RUM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityPoolId(@Nullable String identityPoolId) {
             $.identityPoolId = identityPoolId;
             return this;
         }
 
+        /**
+         * @param includedPages If this app monitor is to collect data from only certain pages in your application, this structure lists those pages. You can&#39;t include both ExcludedPages and IncludedPages in the same operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedPages(@Nullable List<String> includedPages) {
             $.includedPages = includedPages;
             return this;
         }
 
+        /**
+         * @param includedPages If this app monitor is to collect data from only certain pages in your application, this structure lists those pages. You can&#39;t include both ExcludedPages and IncludedPages in the same operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedPages(String... includedPages) {
             return includedPages(List.of(includedPages));
         }
 
+        /**
+         * @param sessionSampleRate Specifies the percentage of user sessions to use for RUM data collection. Choosing a higher percentage gives you more data but also incurs more costs. The number you specify is the percentage of user sessions that will be used. If you omit this parameter, the default of 10 is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionSampleRate(@Nullable Double sessionSampleRate) {
             $.sessionSampleRate = sessionSampleRate;
             return this;
         }
 
+        /**
+         * @param telemetries An array that lists the types of telemetry data that this app monitor is to collect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder telemetries(@Nullable List<AppMonitorTelemetry> telemetries) {
             $.telemetries = telemetries;
             return this;
         }
 
+        /**
+         * @param telemetries An array that lists the types of telemetry data that this app monitor is to collect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder telemetries(AppMonitorTelemetry... telemetries) {
             return telemetries(List.of(telemetries));
         }

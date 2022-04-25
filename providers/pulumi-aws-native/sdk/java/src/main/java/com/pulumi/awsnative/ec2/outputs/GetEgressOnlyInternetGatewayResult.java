@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetEgressOnlyInternetGatewayResult {
-    /**
-     * Service Generated ID of the EgressOnlyInternetGateway
-     * 
-     */
+        /**
+         * @return Service Generated ID of the EgressOnlyInternetGateway
+         * 
+         */
     private final @Nullable String id;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class GetEgressOnlyInternetGatewayResult {
     }
 
     /**
-     * Service Generated ID of the EgressOnlyInternetGateway
+     * @return Service Generated ID of the EgressOnlyInternetGateway
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }

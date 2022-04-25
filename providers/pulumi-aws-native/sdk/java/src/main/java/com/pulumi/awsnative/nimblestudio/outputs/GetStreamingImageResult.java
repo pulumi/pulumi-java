@@ -13,31 +13,31 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetStreamingImageResult {
-    /**
-     * &lt;p&gt;A human-readable description of the streaming image.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;A human-readable description of the streaming image.&lt;/p&gt;
+         * 
+         */
     private final @Nullable String description;
     private final @Nullable StreamingImageEncryptionConfiguration encryptionConfiguration;
-    /**
-     * &lt;p&gt;The list of EULAs that must be accepted before a Streaming Session can be started using this streaming image.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;The list of EULAs that must be accepted before a Streaming Session can be started using this streaming image.&lt;/p&gt;
+         * 
+         */
     private final @Nullable List<String> eulaIds;
-    /**
-     * &lt;p&gt;A friendly name for a streaming image resource.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;A friendly name for a streaming image resource.&lt;/p&gt;
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * &lt;p&gt;The owner of the streaming image, either the studioId that contains the streaming image, or &#39;amazon&#39; for images that are provided by Amazon Nimble Studio.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;The owner of the streaming image, either the studioId that contains the streaming image, or &#39;amazon&#39; for images that are provided by Amazon Nimble Studio.&lt;/p&gt;
+         * 
+         */
     private final @Nullable String owner;
-    /**
-     * &lt;p&gt;The platform of the streaming image, either WINDOWS or LINUX.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;The platform of the streaming image, either WINDOWS or LINUX.&lt;/p&gt;
+         * 
+         */
     private final @Nullable String platform;
     private final @Nullable String streamingImageId;
 
@@ -60,9 +60,9 @@ public final class GetStreamingImageResult {
     }
 
     /**
-     * &lt;p&gt;A human-readable description of the streaming image.&lt;/p&gt;
+     * @return &lt;p&gt;A human-readable description of the streaming image.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -70,30 +70,30 @@ public final class GetStreamingImageResult {
         return Optional.ofNullable(this.encryptionConfiguration);
     }
     /**
-     * &lt;p&gt;The list of EULAs that must be accepted before a Streaming Session can be started using this streaming image.&lt;/p&gt;
+     * @return &lt;p&gt;The list of EULAs that must be accepted before a Streaming Session can be started using this streaming image.&lt;/p&gt;
      * 
-    */
+     */
     public List<String> eulaIds() {
         return this.eulaIds == null ? List.of() : this.eulaIds;
     }
     /**
-     * &lt;p&gt;A friendly name for a streaming image resource.&lt;/p&gt;
+     * @return &lt;p&gt;A friendly name for a streaming image resource.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * &lt;p&gt;The owner of the streaming image, either the studioId that contains the streaming image, or &#39;amazon&#39; for images that are provided by Amazon Nimble Studio.&lt;/p&gt;
+     * @return &lt;p&gt;The owner of the streaming image, either the studioId that contains the streaming image, or &#39;amazon&#39; for images that are provided by Amazon Nimble Studio.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> owner() {
         return Optional.ofNullable(this.owner);
     }
     /**
-     * &lt;p&gt;The platform of the streaming image, either WINDOWS or LINUX.&lt;/p&gt;
+     * @return &lt;p&gt;The platform of the streaming image, either WINDOWS or LINUX.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> platform() {
         return Optional.ofNullable(this.platform);
     }

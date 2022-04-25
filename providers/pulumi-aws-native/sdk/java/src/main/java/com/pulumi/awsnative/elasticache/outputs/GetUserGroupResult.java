@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetUserGroupResult {
-    /**
-     * The Amazon Resource Name (ARN) of the user account.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the user account.
+         * 
+         */
     private final @Nullable String arn;
-    /**
-     * Indicates user group status. Can be &#34;creating&#34;, &#34;active&#34;, &#34;modifying&#34;, &#34;deleting&#34;.
-     * 
-     */
+        /**
+         * @return Indicates user group status. Can be &#34;creating&#34;, &#34;active&#34;, &#34;modifying&#34;, &#34;deleting&#34;.
+         * 
+         */
     private final @Nullable String status;
-    /**
-     * List of users associated to this user group.
-     * 
-     */
+        /**
+         * @return List of users associated to this user group.
+         * 
+         */
     private final @Nullable List<String> userIds;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class GetUserGroupResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the user account.
+     * @return The Amazon Resource Name (ARN) of the user account.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Indicates user group status. Can be &#34;creating&#34;, &#34;active&#34;, &#34;modifying&#34;, &#34;deleting&#34;.
+     * @return Indicates user group status. Can be &#34;creating&#34;, &#34;active&#34;, &#34;modifying&#34;, &#34;deleting&#34;.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * List of users associated to this user group.
+     * @return List of users associated to this user group.
      * 
-    */
+     */
     public List<String> userIds() {
         return this.userIds == null ? List.of() : this.userIds;
     }

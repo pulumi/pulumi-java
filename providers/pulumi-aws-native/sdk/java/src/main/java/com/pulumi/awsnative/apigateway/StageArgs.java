@@ -29,6 +29,10 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessLogSetting")
     private @Nullable Output<StageAccessLogSettingArgs> accessLogSetting;
 
+    /**
+     * @return Specifies settings for logging access in this stage.
+     * 
+     */
     public Optional<Output<StageAccessLogSettingArgs>> accessLogSetting() {
         return Optional.ofNullable(this.accessLogSetting);
     }
@@ -40,6 +44,10 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cacheClusterEnabled")
     private @Nullable Output<Boolean> cacheClusterEnabled;
 
+    /**
+     * @return Indicates whether cache clustering is enabled for the stage.
+     * 
+     */
     public Optional<Output<Boolean>> cacheClusterEnabled() {
         return Optional.ofNullable(this.cacheClusterEnabled);
     }
@@ -51,6 +59,10 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cacheClusterSize")
     private @Nullable Output<String> cacheClusterSize;
 
+    /**
+     * @return The stage&#39;s cache cluster size.
+     * 
+     */
     public Optional<Output<String>> cacheClusterSize() {
         return Optional.ofNullable(this.cacheClusterSize);
     }
@@ -62,6 +74,10 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="canarySetting")
     private @Nullable Output<StageCanarySettingArgs> canarySetting;
 
+    /**
+     * @return Specifies settings for the canary deployment in this stage.
+     * 
+     */
     public Optional<Output<StageCanarySettingArgs>> canarySetting() {
         return Optional.ofNullable(this.canarySetting);
     }
@@ -73,6 +89,10 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientCertificateId")
     private @Nullable Output<String> clientCertificateId;
 
+    /**
+     * @return The ID of the client certificate that API Gateway uses to call your integration endpoints in the stage.
+     * 
+     */
     public Optional<Output<String>> clientCertificateId() {
         return Optional.ofNullable(this.clientCertificateId);
     }
@@ -84,6 +104,10 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deploymentId")
     private @Nullable Output<String> deploymentId;
 
+    /**
+     * @return The ID of the deployment that the stage is associated with. This parameter is required to create a stage.
+     * 
+     */
     public Optional<Output<String>> deploymentId() {
         return Optional.ofNullable(this.deploymentId);
     }
@@ -95,6 +119,10 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the stage.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -106,6 +134,10 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="documentationVersion")
     private @Nullable Output<String> documentationVersion;
 
+    /**
+     * @return The version ID of the API documentation snapshot.
+     * 
+     */
     public Optional<Output<String>> documentationVersion() {
         return Optional.ofNullable(this.documentationVersion);
     }
@@ -117,6 +149,10 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="methodSettings")
     private @Nullable Output<List<StageMethodSettingArgs>> methodSettings;
 
+    /**
+     * @return Settings for all methods in the stage.
+     * 
+     */
     public Optional<Output<List<StageMethodSettingArgs>>> methodSettings() {
         return Optional.ofNullable(this.methodSettings);
     }
@@ -128,6 +164,10 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="restApiId", required=true)
     private Output<String> restApiId;
 
+    /**
+     * @return The ID of the RestApi resource that you&#39;re deploying with this stage.
+     * 
+     */
     public Output<String> restApiId() {
         return this.restApiId;
     }
@@ -139,6 +179,10 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stageName")
     private @Nullable Output<String> stageName;
 
+    /**
+     * @return The name of the stage, which API Gateway uses as the first path segment in the invoked Uniform Resource Identifier (URI).
+     * 
+     */
     public Optional<Output<String>> stageName() {
         return Optional.ofNullable(this.stageName);
     }
@@ -150,6 +194,10 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<StageTagArgs>> tags;
 
+    /**
+     * @return An array of arbitrary tags (key-value pairs) to associate with the stage.
+     * 
+     */
     public Optional<Output<List<StageTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -161,6 +209,10 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tracingEnabled")
     private @Nullable Output<Boolean> tracingEnabled;
 
+    /**
+     * @return Specifies whether active X-Ray tracing is enabled for this stage.
+     * 
+     */
     public Optional<Output<Boolean>> tracingEnabled() {
         return Optional.ofNullable(this.tracingEnabled);
     }
@@ -172,6 +224,10 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="variables")
     private @Nullable Output<Object> variables;
 
+    /**
+     * @return A map (string-to-string map) that defines the stage variables, where the variable name is the key and the variable value is the value.
+     * 
+     */
     public Optional<Output<Object>> variables() {
         return Optional.ofNullable(this.variables);
     }
@@ -213,136 +269,316 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
             $ = new StageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessLogSetting Specifies settings for logging access in this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessLogSetting(@Nullable Output<StageAccessLogSettingArgs> accessLogSetting) {
             $.accessLogSetting = accessLogSetting;
             return this;
         }
 
+        /**
+         * @param accessLogSetting Specifies settings for logging access in this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessLogSetting(StageAccessLogSettingArgs accessLogSetting) {
             return accessLogSetting(Output.of(accessLogSetting));
         }
 
+        /**
+         * @param cacheClusterEnabled Indicates whether cache clustering is enabled for the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheClusterEnabled(@Nullable Output<Boolean> cacheClusterEnabled) {
             $.cacheClusterEnabled = cacheClusterEnabled;
             return this;
         }
 
+        /**
+         * @param cacheClusterEnabled Indicates whether cache clustering is enabled for the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheClusterEnabled(Boolean cacheClusterEnabled) {
             return cacheClusterEnabled(Output.of(cacheClusterEnabled));
         }
 
+        /**
+         * @param cacheClusterSize The stage&#39;s cache cluster size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheClusterSize(@Nullable Output<String> cacheClusterSize) {
             $.cacheClusterSize = cacheClusterSize;
             return this;
         }
 
+        /**
+         * @param cacheClusterSize The stage&#39;s cache cluster size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheClusterSize(String cacheClusterSize) {
             return cacheClusterSize(Output.of(cacheClusterSize));
         }
 
+        /**
+         * @param canarySetting Specifies settings for the canary deployment in this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canarySetting(@Nullable Output<StageCanarySettingArgs> canarySetting) {
             $.canarySetting = canarySetting;
             return this;
         }
 
+        /**
+         * @param canarySetting Specifies settings for the canary deployment in this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canarySetting(StageCanarySettingArgs canarySetting) {
             return canarySetting(Output.of(canarySetting));
         }
 
+        /**
+         * @param clientCertificateId The ID of the client certificate that API Gateway uses to call your integration endpoints in the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificateId(@Nullable Output<String> clientCertificateId) {
             $.clientCertificateId = clientCertificateId;
             return this;
         }
 
+        /**
+         * @param clientCertificateId The ID of the client certificate that API Gateway uses to call your integration endpoints in the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificateId(String clientCertificateId) {
             return clientCertificateId(Output.of(clientCertificateId));
         }
 
+        /**
+         * @param deploymentId The ID of the deployment that the stage is associated with. This parameter is required to create a stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentId(@Nullable Output<String> deploymentId) {
             $.deploymentId = deploymentId;
             return this;
         }
 
+        /**
+         * @param deploymentId The ID of the deployment that the stage is associated with. This parameter is required to create a stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentId(String deploymentId) {
             return deploymentId(Output.of(deploymentId));
         }
 
+        /**
+         * @param description A description of the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param documentationVersion The version ID of the API documentation snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentationVersion(@Nullable Output<String> documentationVersion) {
             $.documentationVersion = documentationVersion;
             return this;
         }
 
+        /**
+         * @param documentationVersion The version ID of the API documentation snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentationVersion(String documentationVersion) {
             return documentationVersion(Output.of(documentationVersion));
         }
 
+        /**
+         * @param methodSettings Settings for all methods in the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methodSettings(@Nullable Output<List<StageMethodSettingArgs>> methodSettings) {
             $.methodSettings = methodSettings;
             return this;
         }
 
+        /**
+         * @param methodSettings Settings for all methods in the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methodSettings(List<StageMethodSettingArgs> methodSettings) {
             return methodSettings(Output.of(methodSettings));
         }
 
+        /**
+         * @param methodSettings Settings for all methods in the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methodSettings(StageMethodSettingArgs... methodSettings) {
             return methodSettings(List.of(methodSettings));
         }
 
+        /**
+         * @param restApiId The ID of the RestApi resource that you&#39;re deploying with this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(Output<String> restApiId) {
             $.restApiId = restApiId;
             return this;
         }
 
+        /**
+         * @param restApiId The ID of the RestApi resource that you&#39;re deploying with this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(String restApiId) {
             return restApiId(Output.of(restApiId));
         }
 
+        /**
+         * @param stageName The name of the stage, which API Gateway uses as the first path segment in the invoked Uniform Resource Identifier (URI).
+         * 
+         * @return builder
+         * 
+         */
         public Builder stageName(@Nullable Output<String> stageName) {
             $.stageName = stageName;
             return this;
         }
 
+        /**
+         * @param stageName The name of the stage, which API Gateway uses as the first path segment in the invoked Uniform Resource Identifier (URI).
+         * 
+         * @return builder
+         * 
+         */
         public Builder stageName(String stageName) {
             return stageName(Output.of(stageName));
         }
 
+        /**
+         * @param tags An array of arbitrary tags (key-value pairs) to associate with the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<StageTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of arbitrary tags (key-value pairs) to associate with the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<StageTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of arbitrary tags (key-value pairs) to associate with the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(StageTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param tracingEnabled Specifies whether active X-Ray tracing is enabled for this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tracingEnabled(@Nullable Output<Boolean> tracingEnabled) {
             $.tracingEnabled = tracingEnabled;
             return this;
         }
 
+        /**
+         * @param tracingEnabled Specifies whether active X-Ray tracing is enabled for this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tracingEnabled(Boolean tracingEnabled) {
             return tracingEnabled(Output.of(tracingEnabled));
         }
 
+        /**
+         * @param variables A map (string-to-string map) that defines the stage variables, where the variable name is the key and the variable value is the value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variables(@Nullable Output<Object> variables) {
             $.variables = variables;
             return this;
         }
 
+        /**
+         * @param variables A map (string-to-string map) that defines the stage variables, where the variable name is the key and the variable value is the value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variables(Object variables) {
             return variables(Output.of(variables));
         }

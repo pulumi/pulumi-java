@@ -18,40 +18,40 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetContainerResult {
     private final @Nullable String containerArn;
-    /**
-     * Describes a container deployment configuration of an Amazon Lightsail container service.
-     * 
-     */
+        /**
+         * @return Describes a container deployment configuration of an Amazon Lightsail container service.
+         * 
+         */
     private final @Nullable ContainerServiceDeployment containerServiceDeployment;
-    /**
-     * A Boolean value to indicate whether the container service is disabled.
-     * 
-     */
+        /**
+         * @return A Boolean value to indicate whether the container service is disabled.
+         * 
+         */
     private final @Nullable Boolean isDisabled;
-    /**
-     * The power specification for the container service.
-     * 
-     */
+        /**
+         * @return The power specification for the container service.
+         * 
+         */
     private final @Nullable String power;
-    /**
-     * The public domain names to use with the container service, such as example.com and www.example.com.
-     * 
-     */
+        /**
+         * @return The public domain names to use with the container service, such as example.com and www.example.com.
+         * 
+         */
     private final @Nullable List<ContainerPublicDomainName> publicDomainNames;
-    /**
-     * The scale specification for the container service.
-     * 
-     */
+        /**
+         * @return The scale specification for the container service.
+         * 
+         */
     private final @Nullable Integer scale;
-    /**
-     * An array of key-value pairs to apply to this resource.
-     * 
-     */
+        /**
+         * @return An array of key-value pairs to apply to this resource.
+         * 
+         */
     private final @Nullable List<ContainerTag> tags;
-    /**
-     * The publicly accessible URL of the container service.
-     * 
-     */
+        /**
+         * @return The publicly accessible URL of the container service.
+         * 
+         */
     private final @Nullable String url;
 
     @CustomType.Constructor
@@ -78,51 +78,51 @@ public final class GetContainerResult {
         return Optional.ofNullable(this.containerArn);
     }
     /**
-     * Describes a container deployment configuration of an Amazon Lightsail container service.
+     * @return Describes a container deployment configuration of an Amazon Lightsail container service.
      * 
-    */
+     */
     public Optional<ContainerServiceDeployment> containerServiceDeployment() {
         return Optional.ofNullable(this.containerServiceDeployment);
     }
     /**
-     * A Boolean value to indicate whether the container service is disabled.
+     * @return A Boolean value to indicate whether the container service is disabled.
      * 
-    */
+     */
     public Optional<Boolean> isDisabled() {
         return Optional.ofNullable(this.isDisabled);
     }
     /**
-     * The power specification for the container service.
+     * @return The power specification for the container service.
      * 
-    */
+     */
     public Optional<String> power() {
         return Optional.ofNullable(this.power);
     }
     /**
-     * The public domain names to use with the container service, such as example.com and www.example.com.
+     * @return The public domain names to use with the container service, such as example.com and www.example.com.
      * 
-    */
+     */
     public List<ContainerPublicDomainName> publicDomainNames() {
         return this.publicDomainNames == null ? List.of() : this.publicDomainNames;
     }
     /**
-     * The scale specification for the container service.
+     * @return The scale specification for the container service.
      * 
-    */
+     */
     public Optional<Integer> scale() {
         return Optional.ofNullable(this.scale);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<ContainerTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * The publicly accessible URL of the container service.
+     * @return The publicly accessible URL of the container service.
      * 
-    */
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }

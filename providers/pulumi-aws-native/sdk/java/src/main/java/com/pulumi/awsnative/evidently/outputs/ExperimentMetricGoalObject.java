@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExperimentMetricGoalObject {
     private final ExperimentMetricGoalObjectDesiredChange desiredChange;
-    /**
-     * The JSON path to reference the entity id in the event.
-     * 
-     */
+        /**
+         * @return The JSON path to reference the entity id in the event.
+         * 
+         */
     private final String entityIdKey;
-    /**
-     * Event patterns have the same structure as the events they match. Rules use event patterns to select events. An event pattern either matches an event or it doesn&#39;t.
-     * 
-     */
+        /**
+         * @return Event patterns have the same structure as the events they match. Rules use event patterns to select events. An event pattern either matches an event or it doesn&#39;t.
+         * 
+         */
     private final String eventPattern;
     private final String metricName;
     private final @Nullable String unitLabel;
-    /**
-     * The JSON path to reference the numerical metric value in the event.
-     * 
-     */
+        /**
+         * @return The JSON path to reference the numerical metric value in the event.
+         * 
+         */
     private final String valueKey;
 
     @CustomType.Constructor
@@ -51,16 +51,16 @@ public final class ExperimentMetricGoalObject {
         return this.desiredChange;
     }
     /**
-     * The JSON path to reference the entity id in the event.
+     * @return The JSON path to reference the entity id in the event.
      * 
-    */
+     */
     public String entityIdKey() {
         return this.entityIdKey;
     }
     /**
-     * Event patterns have the same structure as the events they match. Rules use event patterns to select events. An event pattern either matches an event or it doesn&#39;t.
+     * @return Event patterns have the same structure as the events they match. Rules use event patterns to select events. An event pattern either matches an event or it doesn&#39;t.
      * 
-    */
+     */
     public String eventPattern() {
         return this.eventPattern;
     }
@@ -71,9 +71,9 @@ public final class ExperimentMetricGoalObject {
         return Optional.ofNullable(this.unitLabel);
     }
     /**
-     * The JSON path to reference the numerical metric value in the event.
+     * @return The JSON path to reference the numerical metric value in the event.
      * 
-    */
+     */
     public String valueKey() {
         return this.valueKey;
     }

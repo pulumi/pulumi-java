@@ -18,20 +18,20 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDatasetResult {
     private final @Nullable String arn;
-    /**
-     * Frequency of data collection. This parameter is required for RELATED_TIME_SERIES
-     * 
-     */
+        /**
+         * @return Frequency of data collection. This parameter is required for RELATED_TIME_SERIES
+         * 
+         */
     private final @Nullable String dataFrequency;
-    /**
-     * The dataset type
-     * 
-     */
+        /**
+         * @return The dataset type
+         * 
+         */
     private final @Nullable DatasetType datasetType;
-    /**
-     * The domain associated with the dataset
-     * 
-     */
+        /**
+         * @return The domain associated with the dataset
+         * 
+         */
     private final @Nullable DatasetDomain domain;
     private final @Nullable EncryptionConfigProperties encryptionConfig;
     private final @Nullable SchemaProperties schema;
@@ -59,23 +59,23 @@ public final class GetDatasetResult {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Frequency of data collection. This parameter is required for RELATED_TIME_SERIES
+     * @return Frequency of data collection. This parameter is required for RELATED_TIME_SERIES
      * 
-    */
+     */
     public Optional<String> dataFrequency() {
         return Optional.ofNullable(this.dataFrequency);
     }
     /**
-     * The dataset type
+     * @return The dataset type
      * 
-    */
+     */
     public Optional<DatasetType> datasetType() {
         return Optional.ofNullable(this.datasetType);
     }
     /**
-     * The domain associated with the dataset
+     * @return The domain associated with the dataset
      * 
-    */
+     */
     public Optional<DatasetDomain> domain() {
         return Optional.ofNullable(this.domain);
     }

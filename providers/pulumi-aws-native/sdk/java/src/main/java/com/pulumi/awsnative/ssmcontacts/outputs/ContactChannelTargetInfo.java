@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ContactChannelTargetInfo {
-    /**
-     * The Amazon Resource Name (ARN) of the contact channel.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the contact channel.
+         * 
+         */
     private final String channelId;
-    /**
-     * The number of minutes to wait to retry sending engagement in the case the engagement initially fails.
-     * 
-     */
+        /**
+         * @return The number of minutes to wait to retry sending engagement in the case the engagement initially fails.
+         * 
+         */
     private final Integer retryIntervalInMinutes;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class ContactChannelTargetInfo {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the contact channel.
+     * @return The Amazon Resource Name (ARN) of the contact channel.
      * 
-    */
+     */
     public String channelId() {
         return this.channelId;
     }
     /**
-     * The number of minutes to wait to retry sending engagement in the case the engagement initially fails.
+     * @return The number of minutes to wait to retry sending engagement in the case the engagement initially fails.
      * 
-    */
+     */
     public Integer retryIntervalInMinutes() {
         return this.retryIntervalInMinutes;
     }

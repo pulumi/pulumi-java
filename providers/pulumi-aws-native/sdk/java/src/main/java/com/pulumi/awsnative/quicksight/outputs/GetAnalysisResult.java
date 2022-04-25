@@ -15,51 +15,51 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAnalysisResult {
-    /**
-     * &lt;p&gt;The Amazon Resource Name (ARN) of the analysis.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;The Amazon Resource Name (ARN) of the analysis.&lt;/p&gt;
+         * 
+         */
     private final @Nullable String arn;
-    /**
-     * &lt;p&gt;The time that the analysis was created.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;The time that the analysis was created.&lt;/p&gt;
+         * 
+         */
     private final @Nullable String createdTime;
-    /**
-     * &lt;p&gt;The ARNs of the datasets of the analysis.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;The ARNs of the datasets of the analysis.&lt;/p&gt;
+         * 
+         */
     private final @Nullable List<String> dataSetArns;
-    /**
-     * &lt;p&gt;Errors associated with the analysis.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;Errors associated with the analysis.&lt;/p&gt;
+         * 
+         */
     private final @Nullable List<AnalysisError> errors;
-    /**
-     * &lt;p&gt;The descriptive name of the analysis.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;The descriptive name of the analysis.&lt;/p&gt;
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * &lt;p&gt;A structure that describes the principals and the resource-level permissions on an
-     *             analysis. You can use the &lt;code&gt;Permissions&lt;/code&gt; structure to grant permissions by
-     *             providing a list of AWS Identity and Access Management (IAM) action information for each
-     *             principal listed by Amazon Resource Name (ARN). &lt;/p&gt;
-     * 
-     *         &lt;p&gt;To specify no permissions, omit &lt;code&gt;Permissions&lt;/code&gt;.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;A structure that describes the principals and the resource-level permissions on an
+         *             analysis. You can use the &lt;code&gt;Permissions&lt;/code&gt; structure to grant permissions by
+         *             providing a list of AWS Identity and Access Management (IAM) action information for each
+         *             principal listed by Amazon Resource Name (ARN). &lt;/p&gt;
+         * 
+         *         &lt;p&gt;To specify no permissions, omit &lt;code&gt;Permissions&lt;/code&gt;.&lt;/p&gt;
+         * 
+         */
     private final @Nullable List<AnalysisResourcePermission> permissions;
-    /**
-     * &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the
-     *             analysis.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the
+         *             analysis.&lt;/p&gt;
+         * 
+         */
     private final @Nullable List<AnalysisTag> tags;
-    /**
-     * &lt;p&gt;The ARN of the theme of the analysis.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;The ARN of the theme of the analysis.&lt;/p&gt;
+         * 
+         */
     private final @Nullable String themeArn;
 
     @CustomType.Constructor
@@ -83,64 +83,64 @@ public final class GetAnalysisResult {
     }
 
     /**
-     * &lt;p&gt;The Amazon Resource Name (ARN) of the analysis.&lt;/p&gt;
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the analysis.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * &lt;p&gt;The time that the analysis was created.&lt;/p&gt;
+     * @return &lt;p&gt;The time that the analysis was created.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
-     * &lt;p&gt;The ARNs of the datasets of the analysis.&lt;/p&gt;
+     * @return &lt;p&gt;The ARNs of the datasets of the analysis.&lt;/p&gt;
      * 
-    */
+     */
     public List<String> dataSetArns() {
         return this.dataSetArns == null ? List.of() : this.dataSetArns;
     }
     /**
-     * &lt;p&gt;Errors associated with the analysis.&lt;/p&gt;
+     * @return &lt;p&gt;Errors associated with the analysis.&lt;/p&gt;
      * 
-    */
+     */
     public List<AnalysisError> errors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
-     * &lt;p&gt;The descriptive name of the analysis.&lt;/p&gt;
+     * @return &lt;p&gt;The descriptive name of the analysis.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * &lt;p&gt;A structure that describes the principals and the resource-level permissions on an
+     * @return &lt;p&gt;A structure that describes the principals and the resource-level permissions on an
      *             analysis. You can use the &lt;code&gt;Permissions&lt;/code&gt; structure to grant permissions by
      *             providing a list of AWS Identity and Access Management (IAM) action information for each
      *             principal listed by Amazon Resource Name (ARN). &lt;/p&gt;
      * 
      *         &lt;p&gt;To specify no permissions, omit &lt;code&gt;Permissions&lt;/code&gt;.&lt;/p&gt;
      * 
-    */
+     */
     public List<AnalysisResourcePermission> permissions() {
         return this.permissions == null ? List.of() : this.permissions;
     }
     /**
-     * &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the
+     * @return &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the
      *             analysis.&lt;/p&gt;
      * 
-    */
+     */
     public List<AnalysisTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * &lt;p&gt;The ARN of the theme of the analysis.&lt;/p&gt;
+     * @return &lt;p&gt;The ARN of the theme of the analysis.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> themeArn() {
         return Optional.ofNullable(this.themeArn);
     }

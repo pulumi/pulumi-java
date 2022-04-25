@@ -26,6 +26,10 @@ public final class DashboardSourceTemplateArgs extends com.pulumi.resources.Reso
     @Import(name="arn", required=true)
     private Output<String> arn;
 
+    /**
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
+     * 
+     */
     public Output<String> arn() {
         return this.arn;
     }
@@ -37,6 +41,10 @@ public final class DashboardSourceTemplateArgs extends com.pulumi.resources.Reso
     @Import(name="dataSetReferences", required=true)
     private Output<List<DashboardDataSetReferenceArgs>> dataSetReferences;
 
+    /**
+     * @return &lt;p&gt;Dataset references.&lt;/p&gt;
+     * 
+     */
     public Output<List<DashboardDataSetReferenceArgs>> dataSetReferences() {
         return this.dataSetReferences;
     }
@@ -66,24 +74,54 @@ public final class DashboardSourceTemplateArgs extends com.pulumi.resources.Reso
             $ = new DashboardSourceTemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param dataSetReferences &lt;p&gt;Dataset references.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetReferences(Output<List<DashboardDataSetReferenceArgs>> dataSetReferences) {
             $.dataSetReferences = dataSetReferences;
             return this;
         }
 
+        /**
+         * @param dataSetReferences &lt;p&gt;Dataset references.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetReferences(List<DashboardDataSetReferenceArgs> dataSetReferences) {
             return dataSetReferences(Output.of(dataSetReferences));
         }
 
+        /**
+         * @param dataSetReferences &lt;p&gt;Dataset references.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetReferences(DashboardDataSetReferenceArgs... dataSetReferences) {
             return dataSetReferences(List.of(dataSetReferences));
         }

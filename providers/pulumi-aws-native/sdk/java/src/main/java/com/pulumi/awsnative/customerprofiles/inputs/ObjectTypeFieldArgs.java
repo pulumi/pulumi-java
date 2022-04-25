@@ -27,6 +27,10 @@ public final class ObjectTypeFieldArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="contentType")
     private @Nullable Output<ObjectTypeFieldContentType> contentType;
 
+    /**
+     * @return The content type of the field. Used for determining equality when searching.
+     * 
+     */
     public Optional<Output<ObjectTypeFieldContentType>> contentType() {
         return Optional.ofNullable(this.contentType);
     }
@@ -38,6 +42,10 @@ public final class ObjectTypeFieldArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="source")
     private @Nullable Output<String> source;
 
+    /**
+     * @return A field of a ProfileObject. For example: _source.FirstName, where &#34;_source&#34; is a ProfileObjectType of a Zendesk user and &#34;FirstName&#34; is a field in that ObjectType.
+     * 
+     */
     public Optional<Output<String>> source() {
         return Optional.ofNullable(this.source);
     }
@@ -49,6 +57,10 @@ public final class ObjectTypeFieldArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="target")
     private @Nullable Output<String> target;
 
+    /**
+     * @return The location of the data in the standard ProfileObject model. For example: _profile.Address.PostalCode.
+     * 
+     */
     public Optional<Output<String>> target() {
         return Optional.ofNullable(this.target);
     }
@@ -79,29 +91,65 @@ public final class ObjectTypeFieldArgs extends com.pulumi.resources.ResourceArgs
             $ = new ObjectTypeFieldArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentType The content type of the field. Used for determining equality when searching.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(@Nullable Output<ObjectTypeFieldContentType> contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param contentType The content type of the field. Used for determining equality when searching.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(ObjectTypeFieldContentType contentType) {
             return contentType(Output.of(contentType));
         }
 
+        /**
+         * @param source A field of a ProfileObject. For example: _source.FirstName, where &#34;_source&#34; is a ProfileObjectType of a Zendesk user and &#34;FirstName&#34; is a field in that ObjectType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable Output<String> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source A field of a ProfileObject. For example: _source.FirstName, where &#34;_source&#34; is a ProfileObjectType of a Zendesk user and &#34;FirstName&#34; is a field in that ObjectType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             return source(Output.of(source));
         }
 
+        /**
+         * @param target The location of the data in the standard ProfileObject model. For example: _profile.Address.PostalCode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable Output<String> target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param target The location of the data in the standard ProfileObject model. For example: _profile.Address.PostalCode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(String target) {
             return target(Output.of(target));
         }

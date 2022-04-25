@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetProjectResult {
-    /**
-     * The time at which the project was created.
-     * 
-     */
+        /**
+         * @return The time at which the project was created.
+         * 
+         */
     private final @Nullable String creationTime;
     private final @Nullable String projectArn;
     private final @Nullable String projectId;
-    /**
-     * The status of a project.
-     * 
-     */
+        /**
+         * @return The status of a project.
+         * 
+         */
     private final @Nullable ProjectStatus projectStatus;
-    /**
-     * Provisioned ServiceCatalog  Details
-     * 
-     */
+        /**
+         * @return Provisioned ServiceCatalog  Details
+         * 
+         */
     private final @Nullable ServiceCatalogProvisionedProductDetailsProperties serviceCatalogProvisionedProductDetails;
 
     @CustomType.Constructor
@@ -46,9 +46,9 @@ public final class GetProjectResult {
     }
 
     /**
-     * The time at which the project was created.
+     * @return The time at which the project was created.
      * 
-    */
+     */
     public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
@@ -59,16 +59,16 @@ public final class GetProjectResult {
         return Optional.ofNullable(this.projectId);
     }
     /**
-     * The status of a project.
+     * @return The status of a project.
      * 
-    */
+     */
     public Optional<ProjectStatus> projectStatus() {
         return Optional.ofNullable(this.projectStatus);
     }
     /**
-     * Provisioned ServiceCatalog  Details
+     * @return Provisioned ServiceCatalog  Details
      * 
-    */
+     */
     public Optional<ServiceCatalogProvisionedProductDetailsProperties> serviceCatalogProvisionedProductDetails() {
         return Optional.ofNullable(this.serviceCatalogProvisionedProductDetails);
     }

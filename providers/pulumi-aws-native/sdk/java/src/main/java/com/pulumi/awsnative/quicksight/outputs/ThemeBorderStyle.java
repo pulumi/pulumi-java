@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ThemeBorderStyle {
-    /**
-     * &lt;p&gt;The option to enable display of borders for visuals.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;The option to enable display of borders for visuals.&lt;/p&gt;
+         * 
+         */
     private final @Nullable Boolean show;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ThemeBorderStyle {
     }
 
     /**
-     * &lt;p&gt;The option to enable display of borders for visuals.&lt;/p&gt;
+     * @return &lt;p&gt;The option to enable display of borders for visuals.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<Boolean> show() {
         return Optional.ofNullable(this.show);
     }

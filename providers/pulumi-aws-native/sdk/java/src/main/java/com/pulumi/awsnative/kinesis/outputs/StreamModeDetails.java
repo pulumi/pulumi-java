@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class StreamModeDetails {
-    /**
-     * The mode of the stream
-     * 
-     */
+        /**
+         * @return The mode of the stream
+         * 
+         */
     private final StreamModeDetailsStreamMode streamMode;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class StreamModeDetails {
     }
 
     /**
-     * The mode of the stream
+     * @return The mode of the stream
      * 
-    */
+     */
     public StreamModeDetailsStreamMode streamMode() {
         return this.streamMode;
     }

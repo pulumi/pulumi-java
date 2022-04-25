@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DevicePoolRule {
-    /**
-     * The rule&#39;s stringified attribute.
-     * 
-     */
+        /**
+         * @return The rule&#39;s stringified attribute.
+         * 
+         */
     private final @Nullable DevicePoolRuleAttribute attribute;
-    /**
-     * Specifies how Device Farm compares the rule&#39;s attribute to the value.
-     * 
-     */
+        /**
+         * @return Specifies how Device Farm compares the rule&#39;s attribute to the value.
+         * 
+         */
     private final @Nullable DevicePoolRuleOperator operator;
-    /**
-     * The rule&#39;s value.
-     * 
-     */
+        /**
+         * @return The rule&#39;s value.
+         * 
+         */
     private final @Nullable String value;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class DevicePoolRule {
     }
 
     /**
-     * The rule&#39;s stringified attribute.
+     * @return The rule&#39;s stringified attribute.
      * 
-    */
+     */
     public Optional<DevicePoolRuleAttribute> attribute() {
         return Optional.ofNullable(this.attribute);
     }
     /**
-     * Specifies how Device Farm compares the rule&#39;s attribute to the value.
+     * @return Specifies how Device Farm compares the rule&#39;s attribute to the value.
      * 
-    */
+     */
     public Optional<DevicePoolRuleOperator> operator() {
         return Optional.ofNullable(this.operator);
     }
     /**
-     * The rule&#39;s value.
+     * @return The rule&#39;s value.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

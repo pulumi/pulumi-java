@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BucketRedirectRule {
-    /**
-     * The host name to use in the redirect request.
-     * 
-     */
+        /**
+         * @return The host name to use in the redirect request.
+         * 
+         */
     private final @Nullable String hostName;
-    /**
-     * The HTTP redirect code to use on the response. Not required if one of the siblings is present.
-     * 
-     */
+        /**
+         * @return The HTTP redirect code to use on the response. Not required if one of the siblings is present.
+         * 
+         */
     private final @Nullable String httpRedirectCode;
-    /**
-     * Protocol to use when redirecting requests. The default is the protocol that is used in the original request.
-     * 
-     */
+        /**
+         * @return Protocol to use when redirecting requests. The default is the protocol that is used in the original request.
+         * 
+         */
     private final @Nullable BucketRedirectRuleProtocol protocol;
-    /**
-     * The object key prefix to use in the redirect request.
-     * 
-     */
+        /**
+         * @return The object key prefix to use in the redirect request.
+         * 
+         */
     private final @Nullable String replaceKeyPrefixWith;
-    /**
-     * The specific object key to use in the redirect request.d
-     * 
-     */
+        /**
+         * @return The specific object key to use in the redirect request.d
+         * 
+         */
     private final @Nullable String replaceKeyWith;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class BucketRedirectRule {
     }
 
     /**
-     * The host name to use in the redirect request.
+     * @return The host name to use in the redirect request.
      * 
-    */
+     */
     public Optional<String> hostName() {
         return Optional.ofNullable(this.hostName);
     }
     /**
-     * The HTTP redirect code to use on the response. Not required if one of the siblings is present.
+     * @return The HTTP redirect code to use on the response. Not required if one of the siblings is present.
      * 
-    */
+     */
     public Optional<String> httpRedirectCode() {
         return Optional.ofNullable(this.httpRedirectCode);
     }
     /**
-     * Protocol to use when redirecting requests. The default is the protocol that is used in the original request.
+     * @return Protocol to use when redirecting requests. The default is the protocol that is used in the original request.
      * 
-    */
+     */
     public Optional<BucketRedirectRuleProtocol> protocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
-     * The object key prefix to use in the redirect request.
+     * @return The object key prefix to use in the redirect request.
      * 
-    */
+     */
     public Optional<String> replaceKeyPrefixWith() {
         return Optional.ofNullable(this.replaceKeyPrefixWith);
     }
     /**
-     * The specific object key to use in the redirect request.d
+     * @return The specific object key to use in the redirect request.d
      * 
-    */
+     */
     public Optional<String> replaceKeyWith() {
         return Optional.ofNullable(this.replaceKeyWith);
     }

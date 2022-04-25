@@ -27,6 +27,10 @@ public final class InstanceStateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="code")
     private @Nullable Output<Integer> code;
 
+    /**
+     * @return Status code of the Instance.
+     * 
+     */
     public Optional<Output<Integer>> code() {
         return Optional.ofNullable(this.code);
     }
@@ -38,6 +42,10 @@ public final class InstanceStateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Status code of the Instance.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -67,20 +75,44 @@ public final class InstanceStateArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InstanceStateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Status code of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable Output<Integer> code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param code Status code of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(Integer code) {
             return code(Output.of(code));
         }
 
+        /**
+         * @param name Status code of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Status code of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

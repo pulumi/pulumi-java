@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetEnclaveCertificateIamRoleAssociationResult {
-    /**
-     * The name of the Amazon S3 bucket to which the certificate was uploaded.
-     * 
-     */
+        /**
+         * @return The name of the Amazon S3 bucket to which the certificate was uploaded.
+         * 
+         */
     private final @Nullable String certificateS3BucketName;
-    /**
-     * The Amazon S3 object key where the certificate, certificate chain, and encrypted private key bundle are stored.
-     * 
-     */
+        /**
+         * @return The Amazon S3 object key where the certificate, certificate chain, and encrypted private key bundle are stored.
+         * 
+         */
     private final @Nullable String certificateS3ObjectKey;
-    /**
-     * The ID of the AWS KMS CMK used to encrypt the private key of the certificate.
-     * 
-     */
+        /**
+         * @return The ID of the AWS KMS CMK used to encrypt the private key of the certificate.
+         * 
+         */
     private final @Nullable String encryptionKmsKeyId;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class GetEnclaveCertificateIamRoleAssociationResult {
     }
 
     /**
-     * The name of the Amazon S3 bucket to which the certificate was uploaded.
+     * @return The name of the Amazon S3 bucket to which the certificate was uploaded.
      * 
-    */
+     */
     public Optional<String> certificateS3BucketName() {
         return Optional.ofNullable(this.certificateS3BucketName);
     }
     /**
-     * The Amazon S3 object key where the certificate, certificate chain, and encrypted private key bundle are stored.
+     * @return The Amazon S3 object key where the certificate, certificate chain, and encrypted private key bundle are stored.
      * 
-    */
+     */
     public Optional<String> certificateS3ObjectKey() {
         return Optional.ofNullable(this.certificateS3ObjectKey);
     }
     /**
-     * The ID of the AWS KMS CMK used to encrypt the private key of the certificate.
+     * @return The ID of the AWS KMS CMK used to encrypt the private key of the certificate.
      * 
-    */
+     */
     public Optional<String> encryptionKmsKeyId() {
         return Optional.ofNullable(this.encryptionKmsKeyId);
     }

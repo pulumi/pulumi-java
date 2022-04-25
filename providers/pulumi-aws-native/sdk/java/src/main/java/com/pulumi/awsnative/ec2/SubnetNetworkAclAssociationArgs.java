@@ -20,6 +20,10 @@ public final class SubnetNetworkAclAssociationArgs extends com.pulumi.resources.
     @Import(name="networkAclId", required=true)
     private Output<String> networkAclId;
 
+    /**
+     * @return The ID of the network ACL
+     * 
+     */
     public Output<String> networkAclId() {
         return this.networkAclId;
     }
@@ -31,6 +35,10 @@ public final class SubnetNetworkAclAssociationArgs extends com.pulumi.resources.
     @Import(name="subnetId", required=true)
     private Output<String> subnetId;
 
+    /**
+     * @return The ID of the subnet
+     * 
+     */
     public Output<String> subnetId() {
         return this.subnetId;
     }
@@ -60,20 +68,44 @@ public final class SubnetNetworkAclAssociationArgs extends com.pulumi.resources.
             $ = new SubnetNetworkAclAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkAclId The ID of the network ACL
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkAclId(Output<String> networkAclId) {
             $.networkAclId = networkAclId;
             return this;
         }
 
+        /**
+         * @param networkAclId The ID of the network ACL
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkAclId(String networkAclId) {
             return networkAclId(Output.of(networkAclId));
         }
 
+        /**
+         * @param subnetId The ID of the subnet
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param subnetId The ID of the subnet
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }

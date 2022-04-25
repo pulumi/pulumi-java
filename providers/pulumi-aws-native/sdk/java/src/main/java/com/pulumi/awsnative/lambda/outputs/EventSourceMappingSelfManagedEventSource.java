@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EventSourceMappingSelfManagedEventSource {
-    /**
-     * The endpoints for a self-managed event source.
-     * 
-     */
+        /**
+         * @return The endpoints for a self-managed event source.
+         * 
+         */
     private final @Nullable EventSourceMappingEndpoints endpoints;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class EventSourceMappingSelfManagedEventSource {
     }
 
     /**
-     * The endpoints for a self-managed event source.
+     * @return The endpoints for a self-managed event source.
      * 
-    */
+     */
     public Optional<EventSourceMappingEndpoints> endpoints() {
         return Optional.ofNullable(this.endpoints);
     }

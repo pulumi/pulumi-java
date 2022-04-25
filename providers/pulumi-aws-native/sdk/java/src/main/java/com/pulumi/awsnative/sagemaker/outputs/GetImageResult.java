@@ -17,10 +17,10 @@ public final class GetImageResult {
     private final @Nullable String imageDescription;
     private final @Nullable String imageDisplayName;
     private final @Nullable String imageRoleArn;
-    /**
-     * An array of key-value pairs to apply to this resource.
-     * 
-     */
+        /**
+         * @return An array of key-value pairs to apply to this resource.
+         * 
+         */
     private final @Nullable List<ImageTag> tags;
 
     @CustomType.Constructor
@@ -50,9 +50,9 @@ public final class GetImageResult {
         return Optional.ofNullable(this.imageRoleArn);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<ImageTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

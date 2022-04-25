@@ -14,15 +14,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BucketWebsiteConfiguration {
-    /**
-     * The name of the error document for the website.
-     * 
-     */
+        /**
+         * @return The name of the error document for the website.
+         * 
+         */
     private final @Nullable String errorDocument;
-    /**
-     * The name of the index document for the website.
-     * 
-     */
+        /**
+         * @return The name of the index document for the website.
+         * 
+         */
     private final @Nullable String indexDocument;
     private final @Nullable BucketRedirectAllRequestsTo redirectAllRequestsTo;
     private final @Nullable List<BucketRoutingRule> routingRules;
@@ -40,16 +40,16 @@ public final class BucketWebsiteConfiguration {
     }
 
     /**
-     * The name of the error document for the website.
+     * @return The name of the error document for the website.
      * 
-    */
+     */
     public Optional<String> errorDocument() {
         return Optional.ofNullable(this.errorDocument);
     }
     /**
-     * The name of the index document for the website.
+     * @return The name of the index document for the website.
      * 
-    */
+     */
     public Optional<String> indexDocument() {
         return Optional.ofNullable(this.indexDocument);
     }

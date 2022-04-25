@@ -26,6 +26,10 @@ public final class DatasetParameterArgs extends com.pulumi.resources.ResourceArg
     @Import(name="createColumn")
     private @Nullable Output<Boolean> createColumn;
 
+    /**
+     * @return Add the value of this parameter as a column in a dataset.
+     * 
+     */
     public Optional<Output<Boolean>> createColumn() {
         return Optional.ofNullable(this.createColumn);
     }
@@ -58,6 +62,10 @@ public final class DatasetParameterArgs extends com.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
     private Output<DatasetParameterType> type;
 
+    /**
+     * @return Parameter type
+     * 
+     */
     public Output<DatasetParameterType> type() {
         return this.type;
     }
@@ -90,11 +98,23 @@ public final class DatasetParameterArgs extends com.pulumi.resources.ResourceArg
             $ = new DatasetParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createColumn Add the value of this parameter as a column in a dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createColumn(@Nullable Output<Boolean> createColumn) {
             $.createColumn = createColumn;
             return this;
         }
 
+        /**
+         * @param createColumn Add the value of this parameter as a column in a dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createColumn(Boolean createColumn) {
             return createColumn(Output.of(createColumn));
         }
@@ -126,11 +146,23 @@ public final class DatasetParameterArgs extends com.pulumi.resources.ResourceArg
             return name(Output.of(name));
         }
 
+        /**
+         * @param type Parameter type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<DatasetParameterType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Parameter type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(DatasetParameterType type) {
             return type(Output.of(type));
         }

@@ -14,26 +14,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSuiteDefinitionResult {
-    /**
-     * The Amazon Resource name for the suite definition.
-     * 
-     */
+        /**
+         * @return The Amazon Resource name for the suite definition.
+         * 
+         */
     private final @Nullable String suiteDefinitionArn;
     private final @Nullable SuiteDefinitionConfigurationProperties suiteDefinitionConfiguration;
-    /**
-     * The unique identifier for the suite definition.
-     * 
-     */
+        /**
+         * @return The unique identifier for the suite definition.
+         * 
+         */
     private final @Nullable String suiteDefinitionId;
-    /**
-     * The suite definition version of a test suite.
-     * 
-     */
+        /**
+         * @return The suite definition version of a test suite.
+         * 
+         */
     private final @Nullable String suiteDefinitionVersion;
-    /**
-     * An array of key-value pairs to apply to this resource.
-     * 
-     */
+        /**
+         * @return An array of key-value pairs to apply to this resource.
+         * 
+         */
     private final @Nullable List<SuiteDefinitionTag> tags;
 
     @CustomType.Constructor
@@ -51,9 +51,9 @@ public final class GetSuiteDefinitionResult {
     }
 
     /**
-     * The Amazon Resource name for the suite definition.
+     * @return The Amazon Resource name for the suite definition.
      * 
-    */
+     */
     public Optional<String> suiteDefinitionArn() {
         return Optional.ofNullable(this.suiteDefinitionArn);
     }
@@ -61,23 +61,23 @@ public final class GetSuiteDefinitionResult {
         return Optional.ofNullable(this.suiteDefinitionConfiguration);
     }
     /**
-     * The unique identifier for the suite definition.
+     * @return The unique identifier for the suite definition.
      * 
-    */
+     */
     public Optional<String> suiteDefinitionId() {
         return Optional.ofNullable(this.suiteDefinitionId);
     }
     /**
-     * The suite definition version of a test suite.
+     * @return The suite definition version of a test suite.
      * 
-    */
+     */
     public Optional<String> suiteDefinitionVersion() {
         return Optional.ofNullable(this.suiteDefinitionVersion);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<SuiteDefinitionTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

@@ -23,6 +23,10 @@ public final class ClusterEndpointArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="address")
     private @Nullable Output<String> address;
 
+    /**
+     * @return The DNS address of the primary read-write node.
+     * 
+     */
     public Optional<Output<String>> address() {
         return Optional.ofNullable(this.address);
     }
@@ -34,6 +38,10 @@ public final class ClusterEndpointArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return The port number that the engine is listening on.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -63,20 +71,44 @@ public final class ClusterEndpointArgs extends com.pulumi.resources.ResourceArgs
             $ = new ClusterEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param address The DNS address of the primary read-write node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(@Nullable Output<String> address) {
             $.address = address;
             return this;
         }
 
+        /**
+         * @param address The DNS address of the primary read-write node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(String address) {
             return address(Output.of(address));
         }
 
+        /**
+         * @param port The port number that the engine is listening on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The port number that the engine is listening on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }

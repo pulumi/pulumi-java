@@ -15,30 +15,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FlowTask {
-    /**
-     * Operation to be performed on provided source fields
-     * 
-     */
+        /**
+         * @return Operation to be performed on provided source fields
+         * 
+         */
     private final @Nullable FlowConnectorOperator connectorOperator;
-    /**
-     * A field value on which source field should be validated
-     * 
-     */
+        /**
+         * @return A field value on which source field should be validated
+         * 
+         */
     private final @Nullable String destinationField;
-    /**
-     * Source fields on which particular task will be applied
-     * 
-     */
+        /**
+         * @return Source fields on which particular task will be applied
+         * 
+         */
     private final List<String> sourceFields;
-    /**
-     * A Map used to store task related info
-     * 
-     */
+        /**
+         * @return A Map used to store task related info
+         * 
+         */
     private final @Nullable List<FlowTaskPropertiesObject> taskProperties;
-    /**
-     * Type of task
-     * 
-     */
+        /**
+         * @return Type of task
+         * 
+         */
     private final FlowTaskType taskType;
 
     @CustomType.Constructor
@@ -56,37 +56,37 @@ public final class FlowTask {
     }
 
     /**
-     * Operation to be performed on provided source fields
+     * @return Operation to be performed on provided source fields
      * 
-    */
+     */
     public Optional<FlowConnectorOperator> connectorOperator() {
         return Optional.ofNullable(this.connectorOperator);
     }
     /**
-     * A field value on which source field should be validated
+     * @return A field value on which source field should be validated
      * 
-    */
+     */
     public Optional<String> destinationField() {
         return Optional.ofNullable(this.destinationField);
     }
     /**
-     * Source fields on which particular task will be applied
+     * @return Source fields on which particular task will be applied
      * 
-    */
+     */
     public List<String> sourceFields() {
         return this.sourceFields;
     }
     /**
-     * A Map used to store task related info
+     * @return A Map used to store task related info
      * 
-    */
+     */
     public List<FlowTaskPropertiesObject> taskProperties() {
         return this.taskProperties == null ? List.of() : this.taskProperties;
     }
     /**
-     * Type of task
+     * @return Type of task
      * 
-    */
+     */
     public FlowTaskType taskType() {
         return this.taskType;
     }

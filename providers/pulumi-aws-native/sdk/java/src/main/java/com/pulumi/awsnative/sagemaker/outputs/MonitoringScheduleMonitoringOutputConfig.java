@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MonitoringScheduleMonitoringOutputConfig {
-    /**
-     * The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
-     * 
-     */
+        /**
+         * @return The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
+         * 
+         */
     private final @Nullable String kmsKeyId;
-    /**
-     * Monitoring outputs for monitoring jobs. This is where the output of the periodic monitoring jobs is uploaded.
-     * 
-     */
+        /**
+         * @return Monitoring outputs for monitoring jobs. This is where the output of the periodic monitoring jobs is uploaded.
+         * 
+         */
     private final List<MonitoringScheduleMonitoringOutput> monitoringOutputs;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class MonitoringScheduleMonitoringOutputConfig {
     }
 
     /**
-     * The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
+     * @return The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
      * 
-    */
+     */
     public Optional<String> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
     /**
-     * Monitoring outputs for monitoring jobs. This is where the output of the periodic monitoring jobs is uploaded.
+     * @return Monitoring outputs for monitoring jobs. This is where the output of the periodic monitoring jobs is uploaded.
      * 
-    */
+     */
     public List<MonitoringScheduleMonitoringOutput> monitoringOutputs() {
         return this.monitoringOutputs;
     }

@@ -14,50 +14,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAssetResult {
-    /**
-     * The ARN of the Asset.
-     * 
-     */
+        /**
+         * @return The ARN of the Asset.
+         * 
+         */
     private final @Nullable String arn;
-    /**
-     * The time the Asset was initially submitted for Ingest.
-     * 
-     */
+        /**
+         * @return The time the Asset was initially submitted for Ingest.
+         * 
+         */
     private final @Nullable String createdAt;
-    /**
-     * The list of egress endpoints available for the Asset.
-     * 
-     */
+        /**
+         * @return The list of egress endpoints available for the Asset.
+         * 
+         */
     private final @Nullable List<AssetEgressEndpoint> egressEndpoints;
-    /**
-     * The unique identifier for the Asset.
-     * 
-     */
+        /**
+         * @return The unique identifier for the Asset.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The ID of the PackagingGroup for the Asset.
-     * 
-     */
+        /**
+         * @return The ID of the PackagingGroup for the Asset.
+         * 
+         */
     private final @Nullable String packagingGroupId;
-    /**
-     * The resource ID to include in SPEKE key requests.
-     * 
-     */
+        /**
+         * @return The resource ID to include in SPEKE key requests.
+         * 
+         */
     private final @Nullable String resourceId;
-    /**
-     * ARN of the source object in S3.
-     * 
-     */
+        /**
+         * @return ARN of the source object in S3.
+         * 
+         */
     private final @Nullable String sourceArn;
-    /**
-     * The IAM role_arn used to access the source S3 bucket.
-     * 
-     */
+        /**
+         * @return The IAM role_arn used to access the source S3 bucket.
+         * 
+         */
     private final @Nullable String sourceRoleArn;
-    /**
-     * A collection of tags associated with a resource
-     * 
-     */
+        /**
+         * @return A collection of tags associated with a resource
+         * 
+         */
     private final @Nullable List<AssetTag> tags;
 
     @CustomType.Constructor
@@ -83,65 +83,65 @@ public final class GetAssetResult {
     }
 
     /**
-     * The ARN of the Asset.
+     * @return The ARN of the Asset.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The time the Asset was initially submitted for Ingest.
+     * @return The time the Asset was initially submitted for Ingest.
      * 
-    */
+     */
     public Optional<String> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
     /**
-     * The list of egress endpoints available for the Asset.
+     * @return The list of egress endpoints available for the Asset.
      * 
-    */
+     */
     public List<AssetEgressEndpoint> egressEndpoints() {
         return this.egressEndpoints == null ? List.of() : this.egressEndpoints;
     }
     /**
-     * The unique identifier for the Asset.
+     * @return The unique identifier for the Asset.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The ID of the PackagingGroup for the Asset.
+     * @return The ID of the PackagingGroup for the Asset.
      * 
-    */
+     */
     public Optional<String> packagingGroupId() {
         return Optional.ofNullable(this.packagingGroupId);
     }
     /**
-     * The resource ID to include in SPEKE key requests.
+     * @return The resource ID to include in SPEKE key requests.
      * 
-    */
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
-     * ARN of the source object in S3.
+     * @return ARN of the source object in S3.
      * 
-    */
+     */
     public Optional<String> sourceArn() {
         return Optional.ofNullable(this.sourceArn);
     }
     /**
-     * The IAM role_arn used to access the source S3 bucket.
+     * @return The IAM role_arn used to access the source S3 bucket.
      * 
-    */
+     */
     public Optional<String> sourceRoleArn() {
         return Optional.ofNullable(this.sourceRoleArn);
     }
     /**
-     * A collection of tags associated with a resource
+     * @return A collection of tags associated with a resource
      * 
-    */
+     */
     public List<AssetTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

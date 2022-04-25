@@ -16,18 +16,18 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetEnvironmentResult {
-    /**
-     * Key/value pairs representing Airflow configuration variables.
-     *     Keys are prefixed by their section:
-     * 
-     *     [core]
-     *     dags_folder={AIRFLOW_HOME}/dags
-     *     
-     *     Would be represented as
-     *     
-     *     &#34;core.dags_folder&#34;: &#34;{AIRFLOW_HOME}/dags&#34;
-     * 
-     */
+        /**
+         * @return Key/value pairs representing Airflow configuration variables.
+         *     Keys are prefixed by their section:
+         * 
+         *     [core]
+         *     dags_folder={AIRFLOW_HOME}/dags
+         *     
+         *     Would be represented as
+         *     
+         *     &#34;core.dags_folder&#34;: &#34;{AIRFLOW_HOME}/dags&#34;
+         * 
+         */
     private final @Nullable Object airflowConfigurationOptions;
     private final @Nullable String airflowVersion;
     private final @Nullable String arn;
@@ -44,10 +44,10 @@ public final class GetEnvironmentResult {
     private final @Nullable String requirementsS3Path;
     private final @Nullable Integer schedulers;
     private final @Nullable String sourceBucketArn;
-    /**
-     * A map of tags for the environment.
-     * 
-     */
+        /**
+         * @return A map of tags for the environment.
+         * 
+         */
     private final @Nullable Object tags;
     private final @Nullable EnvironmentWebserverAccessMode webserverAccessMode;
     private final @Nullable String webserverUrl;
@@ -98,7 +98,7 @@ public final class GetEnvironmentResult {
     }
 
     /**
-     * Key/value pairs representing Airflow configuration variables.
+     * @return Key/value pairs representing Airflow configuration variables.
      *     Keys are prefixed by their section:
      * 
      *     [core]
@@ -108,7 +108,7 @@ public final class GetEnvironmentResult {
      *     
      *     &#34;core.dags_folder&#34;: &#34;{AIRFLOW_HOME}/dags&#34;
      * 
-    */
+     */
     public Optional<Object> airflowConfigurationOptions() {
         return Optional.ofNullable(this.airflowConfigurationOptions);
     }
@@ -158,9 +158,9 @@ public final class GetEnvironmentResult {
         return Optional.ofNullable(this.sourceBucketArn);
     }
     /**
-     * A map of tags for the environment.
+     * @return A map of tags for the environment.
      * 
-    */
+     */
     public Optional<Object> tags() {
         return Optional.ofNullable(this.tags);
     }

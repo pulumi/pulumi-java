@@ -14,35 +14,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AssetModelProperty {
-    /**
-     * The data type of the asset model property.
-     * 
-     */
+        /**
+         * @return The data type of the asset model property.
+         * 
+         */
     private final AssetModelDataType dataType;
-    /**
-     * The data type of the structure for this property.
-     * 
-     */
+        /**
+         * @return The data type of the structure for this property.
+         * 
+         */
     private final @Nullable AssetModelDataTypeSpec dataTypeSpec;
-    /**
-     * Customer provided ID for property.
-     * 
-     */
+        /**
+         * @return Customer provided ID for property.
+         * 
+         */
     private final String logicalId;
-    /**
-     * The name of the asset model property.
-     * 
-     */
+        /**
+         * @return The name of the asset model property.
+         * 
+         */
     private final String name;
-    /**
-     * The property type
-     * 
-     */
+        /**
+         * @return The property type
+         * 
+         */
     private final AssetModelPropertyType type;
-    /**
-     * The unit of the asset model property, such as Newtons or RPM.
-     * 
-     */
+        /**
+         * @return The unit of the asset model property, such as Newtons or RPM.
+         * 
+         */
     private final @Nullable String unit;
 
     @CustomType.Constructor
@@ -62,44 +62,44 @@ public final class AssetModelProperty {
     }
 
     /**
-     * The data type of the asset model property.
+     * @return The data type of the asset model property.
      * 
-    */
+     */
     public AssetModelDataType dataType() {
         return this.dataType;
     }
     /**
-     * The data type of the structure for this property.
+     * @return The data type of the structure for this property.
      * 
-    */
+     */
     public Optional<AssetModelDataTypeSpec> dataTypeSpec() {
         return Optional.ofNullable(this.dataTypeSpec);
     }
     /**
-     * Customer provided ID for property.
+     * @return Customer provided ID for property.
      * 
-    */
+     */
     public String logicalId() {
         return this.logicalId;
     }
     /**
-     * The name of the asset model property.
+     * @return The name of the asset model property.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The property type
+     * @return The property type
      * 
-    */
+     */
     public AssetModelPropertyType type() {
         return this.type;
     }
     /**
-     * The unit of the asset model property, such as Newtons or RPM.
+     * @return The unit of the asset model property, such as Newtons or RPM.
      * 
-    */
+     */
     public Optional<String> unit() {
         return Optional.ofNullable(this.unit);
     }

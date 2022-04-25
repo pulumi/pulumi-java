@@ -19,22 +19,22 @@ import javax.annotation.Nullable;
 public final class GetRepositoryResult {
     private final @Nullable String arn;
     private final @Nullable RepositoryImageScanningConfiguration imageScanningConfiguration;
-    /**
-     * The image tag mutability setting for the repository.
-     * 
-     */
+        /**
+         * @return The image tag mutability setting for the repository.
+         * 
+         */
     private final @Nullable RepositoryImageTagMutability imageTagMutability;
     private final @Nullable RepositoryLifecyclePolicy lifecyclePolicy;
-    /**
-     * The JSON repository policy text to apply to the repository. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html in the Amazon Elastic Container Registry User Guide.
-     * 
-     */
+        /**
+         * @return The JSON repository policy text to apply to the repository. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html in the Amazon Elastic Container Registry User Guide.
+         * 
+         */
     private final @Nullable Object repositoryPolicyText;
     private final @Nullable String repositoryUri;
-    /**
-     * An array of key-value pairs to apply to this resource.
-     * 
-     */
+        /**
+         * @return An array of key-value pairs to apply to this resource.
+         * 
+         */
     private final @Nullable List<RepositoryTag> tags;
 
     @CustomType.Constructor
@@ -62,9 +62,9 @@ public final class GetRepositoryResult {
         return Optional.ofNullable(this.imageScanningConfiguration);
     }
     /**
-     * The image tag mutability setting for the repository.
+     * @return The image tag mutability setting for the repository.
      * 
-    */
+     */
     public Optional<RepositoryImageTagMutability> imageTagMutability() {
         return Optional.ofNullable(this.imageTagMutability);
     }
@@ -72,9 +72,9 @@ public final class GetRepositoryResult {
         return Optional.ofNullable(this.lifecyclePolicy);
     }
     /**
-     * The JSON repository policy text to apply to the repository. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html in the Amazon Elastic Container Registry User Guide.
+     * @return The JSON repository policy text to apply to the repository. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html in the Amazon Elastic Container Registry User Guide.
      * 
-    */
+     */
     public Optional<Object> repositoryPolicyText() {
         return Optional.ofNullable(this.repositoryPolicyText);
     }
@@ -82,9 +82,9 @@ public final class GetRepositoryResult {
         return Optional.ofNullable(this.repositoryUri);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<RepositoryTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

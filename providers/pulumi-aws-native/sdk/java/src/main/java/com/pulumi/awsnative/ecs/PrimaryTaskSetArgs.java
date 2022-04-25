@@ -20,6 +20,10 @@ public final class PrimaryTaskSetArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="cluster", required=true)
     private Output<String> cluster;
 
+    /**
+     * @return The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to create the task set in.
+     * 
+     */
     public Output<String> cluster() {
         return this.cluster;
     }
@@ -31,6 +35,10 @@ public final class PrimaryTaskSetArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="service", required=true)
     private Output<String> service;
 
+    /**
+     * @return The short name or full Amazon Resource Name (ARN) of the service to create the task set in.
+     * 
+     */
     public Output<String> service() {
         return this.service;
     }
@@ -42,6 +50,10 @@ public final class PrimaryTaskSetArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="taskSetId", required=true)
     private Output<String> taskSetId;
 
+    /**
+     * @return The ID or full Amazon Resource Name (ARN) of the task set.
+     * 
+     */
     public Output<String> taskSetId() {
         return this.taskSetId;
     }
@@ -72,29 +84,65 @@ public final class PrimaryTaskSetArgs extends com.pulumi.resources.ResourceArgs 
             $ = new PrimaryTaskSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cluster The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to create the task set in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(Output<String> cluster) {
             $.cluster = cluster;
             return this;
         }
 
+        /**
+         * @param cluster The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to create the task set in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(String cluster) {
             return cluster(Output.of(cluster));
         }
 
+        /**
+         * @param service The short name or full Amazon Resource Name (ARN) of the service to create the task set in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service The short name or full Amazon Resource Name (ARN) of the service to create the task set in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }
 
+        /**
+         * @param taskSetId The ID or full Amazon Resource Name (ARN) of the task set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskSetId(Output<String> taskSetId) {
             $.taskSetId = taskSetId;
             return this;
         }
 
+        /**
+         * @param taskSetId The ID or full Amazon Resource Name (ARN) of the task set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskSetId(String taskSetId) {
             return taskSetId(Output.of(taskSetId));
         }

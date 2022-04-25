@@ -27,6 +27,10 @@ public final class DomainKernelGatewayAppSettings extends com.pulumi.resources.I
     @Import(name="customImages")
     private @Nullable List<DomainCustomImage> customImages;
 
+    /**
+     * @return A list of custom SageMaker images that are configured to run as a KernelGateway app.
+     * 
+     */
     public Optional<List<DomainCustomImage>> customImages() {
         return Optional.ofNullable(this.customImages);
     }
@@ -38,6 +42,10 @@ public final class DomainKernelGatewayAppSettings extends com.pulumi.resources.I
     @Import(name="defaultResourceSpec")
     private @Nullable DomainResourceSpec defaultResourceSpec;
 
+    /**
+     * @return The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image used by the KernelGateway app.
+     * 
+     */
     public Optional<DomainResourceSpec> defaultResourceSpec() {
         return Optional.ofNullable(this.defaultResourceSpec);
     }
@@ -67,15 +75,33 @@ public final class DomainKernelGatewayAppSettings extends com.pulumi.resources.I
             $ = new DomainKernelGatewayAppSettings(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customImages A list of custom SageMaker images that are configured to run as a KernelGateway app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customImages(@Nullable List<DomainCustomImage> customImages) {
             $.customImages = customImages;
             return this;
         }
 
+        /**
+         * @param customImages A list of custom SageMaker images that are configured to run as a KernelGateway app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customImages(DomainCustomImage... customImages) {
             return customImages(List.of(customImages));
         }
 
+        /**
+         * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image used by the KernelGateway app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultResourceSpec(@Nullable DomainResourceSpec defaultResourceSpec) {
             $.defaultResourceSpec = defaultResourceSpec;
             return this;

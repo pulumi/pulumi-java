@@ -19,6 +19,10 @@ public final class GetUserProfileArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="domainId", required=true)
     private String domainId;
 
+    /**
+     * @return The ID of the associated Domain.
+     * 
+     */
     public String domainId() {
         return this.domainId;
     }
@@ -30,6 +34,10 @@ public final class GetUserProfileArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="userProfileName", required=true)
     private String userProfileName;
 
+    /**
+     * @return A name for the UserProfile.
+     * 
+     */
     public String userProfileName() {
         return this.userProfileName;
     }
@@ -59,11 +67,23 @@ public final class GetUserProfileArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetUserProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainId The ID of the associated Domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainId(String domainId) {
             $.domainId = domainId;
             return this;
         }
 
+        /**
+         * @param userProfileName A name for the UserProfile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProfileName(String userProfileName) {
             $.userProfileName = userProfileName;
             return this;

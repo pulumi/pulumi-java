@@ -13,10 +13,10 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetConnectorResult {
     private final @Nullable ConnectorCapacity capacity;
-    /**
-     * Amazon Resource Name for the created Connector.
-     * 
-     */
+        /**
+         * @return Amazon Resource Name for the created Connector.
+         * 
+         */
     private final @Nullable String connectorArn;
 
     @CustomType.Constructor
@@ -31,9 +31,9 @@ public final class GetConnectorResult {
         return Optional.ofNullable(this.capacity);
     }
     /**
-     * Amazon Resource Name for the created Connector.
+     * @return Amazon Resource Name for the created Connector.
      * 
-    */
+     */
     public Optional<String> connectorArn() {
         return Optional.ofNullable(this.connectorArn);
     }

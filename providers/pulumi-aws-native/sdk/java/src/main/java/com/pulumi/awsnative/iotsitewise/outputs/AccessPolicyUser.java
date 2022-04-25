@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AccessPolicyUser {
-    /**
-     * The AWS SSO ID of the user.
-     * 
-     */
+        /**
+         * @return The AWS SSO ID of the user.
+         * 
+         */
     private final @Nullable String id;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class AccessPolicyUser {
     }
 
     /**
-     * The AWS SSO ID of the user.
+     * @return The AWS SSO ID of the user.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }

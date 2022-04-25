@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ChannelHlsIngest {
-    /**
-     * A list of endpoints to which the source stream should be sent.
-     * 
-     */
+        /**
+         * @return A list of endpoints to which the source stream should be sent.
+         * 
+         */
     private final @Nullable List<ChannelIngestEndpoint> ingestEndpoints;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ChannelHlsIngest {
     }
 
     /**
-     * A list of endpoints to which the source stream should be sent.
+     * @return A list of endpoints to which the source stream should be sent.
      * 
-    */
+     */
     public List<ChannelIngestEndpoint> ingestEndpoints() {
         return this.ingestEndpoints == null ? List.of() : this.ingestEndpoints;
     }

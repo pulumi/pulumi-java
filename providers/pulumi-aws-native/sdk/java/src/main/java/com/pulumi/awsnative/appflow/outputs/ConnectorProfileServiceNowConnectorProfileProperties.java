@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ConnectorProfileServiceNowConnectorProfileProperties {
-    /**
-     * The location of the ServiceNow resource
-     * 
-     */
+        /**
+         * @return The location of the ServiceNow resource
+         * 
+         */
     private final String instanceUrl;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ConnectorProfileServiceNowConnectorProfileProperties {
     }
 
     /**
-     * The location of the ServiceNow resource
+     * @return The location of the ServiceNow resource
      * 
-    */
+     */
     public String instanceUrl() {
         return this.instanceUrl;
     }

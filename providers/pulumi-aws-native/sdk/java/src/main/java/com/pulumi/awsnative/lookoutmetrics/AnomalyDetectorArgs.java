@@ -25,6 +25,10 @@ public final class AnomalyDetectorArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="anomalyDetectorConfig", required=true)
     private Output<AnomalyDetectorConfigArgs> anomalyDetectorConfig;
 
+    /**
+     * @return Configuration options for the AnomalyDetector
+     * 
+     */
     public Output<AnomalyDetectorConfigArgs> anomalyDetectorConfig() {
         return this.anomalyDetectorConfig;
     }
@@ -36,6 +40,10 @@ public final class AnomalyDetectorArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="anomalyDetectorDescription")
     private @Nullable Output<String> anomalyDetectorDescription;
 
+    /**
+     * @return A description for the AnomalyDetector.
+     * 
+     */
     public Optional<Output<String>> anomalyDetectorDescription() {
         return Optional.ofNullable(this.anomalyDetectorDescription);
     }
@@ -47,6 +55,10 @@ public final class AnomalyDetectorArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="anomalyDetectorName")
     private @Nullable Output<String> anomalyDetectorName;
 
+    /**
+     * @return Name for the Amazon Lookout for Metrics Anomaly Detector
+     * 
+     */
     public Optional<Output<String>> anomalyDetectorName() {
         return Optional.ofNullable(this.anomalyDetectorName);
     }
@@ -58,6 +70,10 @@ public final class AnomalyDetectorArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="kmsKeyArn")
     private @Nullable Output<String> kmsKeyArn;
 
+    /**
+     * @return KMS key used to encrypt the AnomalyDetector data
+     * 
+     */
     public Optional<Output<String>> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
@@ -69,6 +85,10 @@ public final class AnomalyDetectorArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="metricSetList", required=true)
     private Output<List<AnomalyDetectorMetricSetArgs>> metricSetList;
 
+    /**
+     * @return List of metric sets for anomaly detection
+     * 
+     */
     public Output<List<AnomalyDetectorMetricSetArgs>> metricSetList() {
         return this.metricSetList;
     }
@@ -101,51 +121,117 @@ public final class AnomalyDetectorArgs extends com.pulumi.resources.ResourceArgs
             $ = new AnomalyDetectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param anomalyDetectorConfig Configuration options for the AnomalyDetector
+         * 
+         * @return builder
+         * 
+         */
         public Builder anomalyDetectorConfig(Output<AnomalyDetectorConfigArgs> anomalyDetectorConfig) {
             $.anomalyDetectorConfig = anomalyDetectorConfig;
             return this;
         }
 
+        /**
+         * @param anomalyDetectorConfig Configuration options for the AnomalyDetector
+         * 
+         * @return builder
+         * 
+         */
         public Builder anomalyDetectorConfig(AnomalyDetectorConfigArgs anomalyDetectorConfig) {
             return anomalyDetectorConfig(Output.of(anomalyDetectorConfig));
         }
 
+        /**
+         * @param anomalyDetectorDescription A description for the AnomalyDetector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder anomalyDetectorDescription(@Nullable Output<String> anomalyDetectorDescription) {
             $.anomalyDetectorDescription = anomalyDetectorDescription;
             return this;
         }
 
+        /**
+         * @param anomalyDetectorDescription A description for the AnomalyDetector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder anomalyDetectorDescription(String anomalyDetectorDescription) {
             return anomalyDetectorDescription(Output.of(anomalyDetectorDescription));
         }
 
+        /**
+         * @param anomalyDetectorName Name for the Amazon Lookout for Metrics Anomaly Detector
+         * 
+         * @return builder
+         * 
+         */
         public Builder anomalyDetectorName(@Nullable Output<String> anomalyDetectorName) {
             $.anomalyDetectorName = anomalyDetectorName;
             return this;
         }
 
+        /**
+         * @param anomalyDetectorName Name for the Amazon Lookout for Metrics Anomaly Detector
+         * 
+         * @return builder
+         * 
+         */
         public Builder anomalyDetectorName(String anomalyDetectorName) {
             return anomalyDetectorName(Output.of(anomalyDetectorName));
         }
 
+        /**
+         * @param kmsKeyArn KMS key used to encrypt the AnomalyDetector data
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             $.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
+        /**
+         * @param kmsKeyArn KMS key used to encrypt the AnomalyDetector data
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyArn(String kmsKeyArn) {
             return kmsKeyArn(Output.of(kmsKeyArn));
         }
 
+        /**
+         * @param metricSetList List of metric sets for anomaly detection
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricSetList(Output<List<AnomalyDetectorMetricSetArgs>> metricSetList) {
             $.metricSetList = metricSetList;
             return this;
         }
 
+        /**
+         * @param metricSetList List of metric sets for anomaly detection
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricSetList(List<AnomalyDetectorMetricSetArgs> metricSetList) {
             return metricSetList(Output.of(metricSetList));
         }
 
+        /**
+         * @param metricSetList List of metric sets for anomaly detection
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricSetList(AnomalyDetectorMetricSetArgs... metricSetList) {
             return metricSetList(List.of(metricSetList));
         }

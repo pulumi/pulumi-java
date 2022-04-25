@@ -15,17 +15,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetInputResult {
     private final @Nullable InputDefinition inputDefinition;
-    /**
-     * A brief description of the input.
-     * 
-     */
+        /**
+         * @return A brief description of the input.
+         * 
+         */
     private final @Nullable String inputDescription;
-    /**
-     * An array of key-value pairs to apply to this resource.
-     * 
-     * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
-     * 
-     */
+        /**
+         * @return An array of key-value pairs to apply to this resource.
+         * 
+         * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
+         * 
+         */
     private final @Nullable List<InputTag> tags;
 
     @CustomType.Constructor
@@ -42,18 +42,18 @@ public final class GetInputResult {
         return Optional.ofNullable(this.inputDefinition);
     }
     /**
-     * A brief description of the input.
+     * @return A brief description of the input.
      * 
-    */
+     */
     public Optional<String> inputDescription() {
         return Optional.ofNullable(this.inputDescription);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
      * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
      * 
-    */
+     */
     public List<InputTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

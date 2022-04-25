@@ -19,6 +19,10 @@ public final class GetTaskDefinitionArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="taskDefinitionArn", required=true)
     private String taskDefinitionArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the Amazon ECS task definition
+     * 
+     */
     public String taskDefinitionArn() {
         return this.taskDefinitionArn;
     }
@@ -47,6 +51,12 @@ public final class GetTaskDefinitionArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetTaskDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param taskDefinitionArn The Amazon Resource Name (ARN) of the Amazon ECS task definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskDefinitionArn(String taskDefinitionArn) {
             $.taskDefinitionArn = taskDefinitionArn;
             return this;

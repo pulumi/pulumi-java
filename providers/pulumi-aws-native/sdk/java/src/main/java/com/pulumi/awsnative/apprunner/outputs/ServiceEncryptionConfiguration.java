@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ServiceEncryptionConfiguration {
-    /**
-     * The KMS Key
-     * 
-     */
+        /**
+         * @return The KMS Key
+         * 
+         */
     private final String kmsKey;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ServiceEncryptionConfiguration {
     }
 
     /**
-     * The KMS Key
+     * @return The KMS Key
      * 
-    */
+     */
     public String kmsKey() {
         return this.kmsKey;
     }

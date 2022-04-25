@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetTransitGatewayConnectResult {
-    /**
-     * The creation time.
-     * 
-     */
+        /**
+         * @return The creation time.
+         * 
+         */
     private final @Nullable String creationTime;
-    /**
-     * The state of the attachment.
-     * 
-     */
+        /**
+         * @return The state of the attachment.
+         * 
+         */
     private final @Nullable String state;
-    /**
-     * The tags for the attachment.
-     * 
-     */
+        /**
+         * @return The tags for the attachment.
+         * 
+         */
     private final @Nullable List<TransitGatewayConnectTag> tags;
-    /**
-     * The ID of the Connect attachment.
-     * 
-     */
+        /**
+         * @return The ID of the Connect attachment.
+         * 
+         */
     private final @Nullable String transitGatewayAttachmentId;
-    /**
-     * The ID of the transit gateway.
-     * 
-     */
+        /**
+         * @return The ID of the transit gateway.
+         * 
+         */
     private final @Nullable String transitGatewayId;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class GetTransitGatewayConnectResult {
     }
 
     /**
-     * The creation time.
+     * @return The creation time.
      * 
-    */
+     */
     public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
-     * The state of the attachment.
+     * @return The state of the attachment.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
-     * The tags for the attachment.
+     * @return The tags for the attachment.
      * 
-    */
+     */
     public List<TransitGatewayConnectTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * The ID of the Connect attachment.
+     * @return The ID of the Connect attachment.
      * 
-    */
+     */
     public Optional<String> transitGatewayAttachmentId() {
         return Optional.ofNullable(this.transitGatewayAttachmentId);
     }
     /**
-     * The ID of the transit gateway.
+     * @return The ID of the transit gateway.
      * 
-    */
+     */
     public Optional<String> transitGatewayId() {
         return Optional.ofNullable(this.transitGatewayId);
     }

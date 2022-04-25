@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class StackSetTag {
-    /**
-     * A string used to identify this tag. You can specify a maximum of 127 characters for a tag key.
-     * 
-     */
+        /**
+         * @return A string used to identify this tag. You can specify a maximum of 127 characters for a tag key.
+         * 
+         */
     private final String key;
-    /**
-     * A string containing the value for this tag. You can specify a maximum of 256 characters for a tag value.
-     * 
-     */
+        /**
+         * @return A string containing the value for this tag. You can specify a maximum of 256 characters for a tag value.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class StackSetTag {
     }
 
     /**
-     * A string used to identify this tag. You can specify a maximum of 127 characters for a tag key.
+     * @return A string used to identify this tag. You can specify a maximum of 127 characters for a tag key.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * A string containing the value for this tag. You can specify a maximum of 256 characters for a tag value.
+     * @return A string containing the value for this tag. You can specify a maximum of 256 characters for a tag value.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

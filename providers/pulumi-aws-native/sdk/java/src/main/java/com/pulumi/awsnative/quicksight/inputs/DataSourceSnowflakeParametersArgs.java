@@ -24,6 +24,10 @@ public final class DataSourceSnowflakeParametersArgs extends com.pulumi.resource
     @Import(name="database", required=true)
     private Output<String> database;
 
+    /**
+     * @return &lt;p&gt;Database.&lt;/p&gt;
+     * 
+     */
     public Output<String> database() {
         return this.database;
     }
@@ -35,6 +39,10 @@ public final class DataSourceSnowflakeParametersArgs extends com.pulumi.resource
     @Import(name="host", required=true)
     private Output<String> host;
 
+    /**
+     * @return &lt;p&gt;Host.&lt;/p&gt;
+     * 
+     */
     public Output<String> host() {
         return this.host;
     }
@@ -46,6 +54,10 @@ public final class DataSourceSnowflakeParametersArgs extends com.pulumi.resource
     @Import(name="warehouse", required=true)
     private Output<String> warehouse;
 
+    /**
+     * @return &lt;p&gt;Warehouse.&lt;/p&gt;
+     * 
+     */
     public Output<String> warehouse() {
         return this.warehouse;
     }
@@ -76,29 +88,65 @@ public final class DataSourceSnowflakeParametersArgs extends com.pulumi.resource
             $ = new DataSourceSnowflakeParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param database &lt;p&gt;Database.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(Output<String> database) {
             $.database = database;
             return this;
         }
 
+        /**
+         * @param database &lt;p&gt;Database.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(String database) {
             return database(Output.of(database));
         }
 
+        /**
+         * @param host &lt;p&gt;Host.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(Output<String> host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param host &lt;p&gt;Host.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             return host(Output.of(host));
         }
 
+        /**
+         * @param warehouse &lt;p&gt;Warehouse.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder warehouse(Output<String> warehouse) {
             $.warehouse = warehouse;
             return this;
         }
 
+        /**
+         * @param warehouse &lt;p&gt;Warehouse.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder warehouse(String warehouse) {
             return warehouse(Output.of(warehouse));
         }

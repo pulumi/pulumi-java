@@ -15,10 +15,10 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PackagingConfigurationMssPackage {
     private final @Nullable PackagingConfigurationMssEncryption encryption;
-    /**
-     * A list of MSS manifest configurations.
-     * 
-     */
+        /**
+         * @return A list of MSS manifest configurations.
+         * 
+         */
     private final List<PackagingConfigurationMssManifest> mssManifests;
     private final @Nullable Integer segmentDurationSeconds;
 
@@ -36,9 +36,9 @@ public final class PackagingConfigurationMssPackage {
         return Optional.ofNullable(this.encryption);
     }
     /**
-     * A list of MSS manifest configurations.
+     * @return A list of MSS manifest configurations.
      * 
-    */
+     */
     public List<PackagingConfigurationMssManifest> mssManifests() {
         return this.mssManifests;
     }

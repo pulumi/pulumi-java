@@ -16,31 +16,31 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DetectorRule {
     private final @Nullable String arn;
-    /**
-     * The time when the event type was created.
-     * 
-     */
+        /**
+         * @return The time when the event type was created.
+         * 
+         */
     private final @Nullable String createdTime;
-    /**
-     * The description.
-     * 
-     */
+        /**
+         * @return The description.
+         * 
+         */
     private final @Nullable String description;
     private final @Nullable String detectorId;
     private final @Nullable String expression;
     private final @Nullable DetectorRuleLanguage language;
-    /**
-     * The time when the event type was last updated.
-     * 
-     */
+        /**
+         * @return The time when the event type was last updated.
+         * 
+         */
     private final @Nullable String lastUpdatedTime;
     private final @Nullable List<DetectorOutcome> outcomes;
     private final @Nullable String ruleId;
     private final @Nullable String ruleVersion;
-    /**
-     * Tags associated with this event type.
-     * 
-     */
+        /**
+         * @return Tags associated with this event type.
+         * 
+         */
     private final @Nullable List<DetectorTag> tags;
 
     @CustomType.Constructor
@@ -73,16 +73,16 @@ public final class DetectorRule {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The time when the event type was created.
+     * @return The time when the event type was created.
      * 
-    */
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
-     * The description.
+     * @return The description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -96,9 +96,9 @@ public final class DetectorRule {
         return Optional.ofNullable(this.language);
     }
     /**
-     * The time when the event type was last updated.
+     * @return The time when the event type was last updated.
      * 
-    */
+     */
     public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
@@ -112,9 +112,9 @@ public final class DetectorRule {
         return Optional.ofNullable(this.ruleVersion);
     }
     /**
-     * Tags associated with this event type.
+     * @return Tags associated with this event type.
      * 
-    */
+     */
     public List<DetectorTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

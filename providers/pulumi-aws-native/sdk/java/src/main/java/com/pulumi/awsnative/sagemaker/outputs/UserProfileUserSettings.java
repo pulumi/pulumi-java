@@ -15,30 +15,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class UserProfileUserSettings {
-    /**
-     * The user profile Amazon Resource Name (ARN).
-     * 
-     */
+        /**
+         * @return The user profile Amazon Resource Name (ARN).
+         * 
+         */
     private final @Nullable String executionRole;
-    /**
-     * The Jupyter server&#39;s app settings.
-     * 
-     */
+        /**
+         * @return The Jupyter server&#39;s app settings.
+         * 
+         */
     private final @Nullable UserProfileJupyterServerAppSettings jupyterServerAppSettings;
-    /**
-     * The kernel gateway app settings.
-     * 
-     */
+        /**
+         * @return The kernel gateway app settings.
+         * 
+         */
     private final @Nullable UserProfileKernelGatewayAppSettings kernelGatewayAppSettings;
-    /**
-     * The security groups for the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
-     * 
-     */
+        /**
+         * @return The security groups for the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
+         * 
+         */
     private final @Nullable List<String> securityGroups;
-    /**
-     * The sharing settings.
-     * 
-     */
+        /**
+         * @return The sharing settings.
+         * 
+         */
     private final @Nullable UserProfileSharingSettings sharingSettings;
 
     @CustomType.Constructor
@@ -56,37 +56,37 @@ public final class UserProfileUserSettings {
     }
 
     /**
-     * The user profile Amazon Resource Name (ARN).
+     * @return The user profile Amazon Resource Name (ARN).
      * 
-    */
+     */
     public Optional<String> executionRole() {
         return Optional.ofNullable(this.executionRole);
     }
     /**
-     * The Jupyter server&#39;s app settings.
+     * @return The Jupyter server&#39;s app settings.
      * 
-    */
+     */
     public Optional<UserProfileJupyterServerAppSettings> jupyterServerAppSettings() {
         return Optional.ofNullable(this.jupyterServerAppSettings);
     }
     /**
-     * The kernel gateway app settings.
+     * @return The kernel gateway app settings.
      * 
-    */
+     */
     public Optional<UserProfileKernelGatewayAppSettings> kernelGatewayAppSettings() {
         return Optional.ofNullable(this.kernelGatewayAppSettings);
     }
     /**
-     * The security groups for the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
+     * @return The security groups for the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
      * 
-    */
+     */
     public List<String> securityGroups() {
         return this.securityGroups == null ? List.of() : this.securityGroups;
     }
     /**
-     * The sharing settings.
+     * @return The sharing settings.
      * 
-    */
+     */
     public Optional<UserProfileSharingSettings> sharingSettings() {
         return Optional.ofNullable(this.sharingSettings);
     }

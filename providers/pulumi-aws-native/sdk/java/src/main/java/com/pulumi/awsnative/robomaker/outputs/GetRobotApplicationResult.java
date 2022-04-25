@@ -16,21 +16,21 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetRobotApplicationResult {
     private final @Nullable String arn;
-    /**
-     * The revision ID of robot application.
-     * 
-     */
+        /**
+         * @return The revision ID of robot application.
+         * 
+         */
     private final @Nullable String currentRevisionId;
-    /**
-     * The URI of the Docker image for the robot application.
-     * 
-     */
+        /**
+         * @return The URI of the Docker image for the robot application.
+         * 
+         */
     private final @Nullable String environment;
     private final @Nullable RobotApplicationRobotSoftwareSuite robotSoftwareSuite;
-    /**
-     * The sources of the robot application.
-     * 
-     */
+        /**
+         * @return The sources of the robot application.
+         * 
+         */
     private final @Nullable List<RobotApplicationSourceConfig> sources;
     private final @Nullable RobotApplicationTags tags;
 
@@ -54,16 +54,16 @@ public final class GetRobotApplicationResult {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The revision ID of robot application.
+     * @return The revision ID of robot application.
      * 
-    */
+     */
     public Optional<String> currentRevisionId() {
         return Optional.ofNullable(this.currentRevisionId);
     }
     /**
-     * The URI of the Docker image for the robot application.
+     * @return The URI of the Docker image for the robot application.
      * 
-    */
+     */
     public Optional<String> environment() {
         return Optional.ofNullable(this.environment);
     }
@@ -71,9 +71,9 @@ public final class GetRobotApplicationResult {
         return Optional.ofNullable(this.robotSoftwareSuite);
     }
     /**
-     * The sources of the robot application.
+     * @return The sources of the robot application.
      * 
-    */
+     */
     public List<RobotApplicationSourceConfig> sources() {
         return this.sources == null ? List.of() : this.sources;
     }

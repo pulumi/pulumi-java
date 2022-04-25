@@ -24,6 +24,10 @@ public final class DashboardDataSetReferenceArgs extends com.pulumi.resources.Re
     @Import(name="dataSetArn", required=true)
     private Output<String> dataSetArn;
 
+    /**
+     * @return &lt;p&gt;Dataset Amazon Resource Name (ARN).&lt;/p&gt;
+     * 
+     */
     public Output<String> dataSetArn() {
         return this.dataSetArn;
     }
@@ -35,6 +39,10 @@ public final class DashboardDataSetReferenceArgs extends com.pulumi.resources.Re
     @Import(name="dataSetPlaceholder", required=true)
     private Output<String> dataSetPlaceholder;
 
+    /**
+     * @return &lt;p&gt;Dataset placeholder.&lt;/p&gt;
+     * 
+     */
     public Output<String> dataSetPlaceholder() {
         return this.dataSetPlaceholder;
     }
@@ -64,20 +72,44 @@ public final class DashboardDataSetReferenceArgs extends com.pulumi.resources.Re
             $ = new DashboardDataSetReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataSetArn &lt;p&gt;Dataset Amazon Resource Name (ARN).&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetArn(Output<String> dataSetArn) {
             $.dataSetArn = dataSetArn;
             return this;
         }
 
+        /**
+         * @param dataSetArn &lt;p&gt;Dataset Amazon Resource Name (ARN).&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetArn(String dataSetArn) {
             return dataSetArn(Output.of(dataSetArn));
         }
 
+        /**
+         * @param dataSetPlaceholder &lt;p&gt;Dataset placeholder.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetPlaceholder(Output<String> dataSetPlaceholder) {
             $.dataSetPlaceholder = dataSetPlaceholder;
             return this;
         }
 
+        /**
+         * @param dataSetPlaceholder &lt;p&gt;Dataset placeholder.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetPlaceholder(String dataSetPlaceholder) {
             return dataSetPlaceholder(Output.of(dataSetPlaceholder));
         }

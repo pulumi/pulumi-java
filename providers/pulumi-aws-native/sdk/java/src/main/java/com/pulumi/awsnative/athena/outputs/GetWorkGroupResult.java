@@ -17,40 +17,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetWorkGroupResult {
-    /**
-     * The date and time the workgroup was created.
-     * 
-     */
+        /**
+         * @return The date and time the workgroup was created.
+         * 
+         */
     private final @Nullable String creationTime;
-    /**
-     * The workgroup description.
-     * 
-     */
+        /**
+         * @return The workgroup description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The option to delete the workgroup and its contents even if the workgroup contains any named queries.
-     * 
-     */
+        /**
+         * @return The option to delete the workgroup and its contents even if the workgroup contains any named queries.
+         * 
+         */
     private final @Nullable Boolean recursiveDeleteOption;
-    /**
-     * The state of the workgroup: ENABLED or DISABLED.
-     * 
-     */
+        /**
+         * @return The state of the workgroup: ENABLED or DISABLED.
+         * 
+         */
     private final @Nullable WorkGroupState state;
-    /**
-     * One or more tags, separated by commas, that you want to attach to the workgroup as you create it
-     * 
-     */
+        /**
+         * @return One or more tags, separated by commas, that you want to attach to the workgroup as you create it
+         * 
+         */
     private final @Nullable List<WorkGroupTag> tags;
-    /**
-     * The workgroup configuration
-     * 
-     */
+        /**
+         * @return The workgroup configuration
+         * 
+         */
     private final @Nullable WorkGroupConfiguration workGroupConfiguration;
-    /**
-     * The workgroup configuration update object
-     * 
-     */
+        /**
+         * @return The workgroup configuration update object
+         * 
+         */
     private final @Nullable WorkGroupConfigurationUpdates workGroupConfigurationUpdates;
 
     @CustomType.Constructor
@@ -72,51 +72,51 @@ public final class GetWorkGroupResult {
     }
 
     /**
-     * The date and time the workgroup was created.
+     * @return The date and time the workgroup was created.
      * 
-    */
+     */
     public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
-     * The workgroup description.
+     * @return The workgroup description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The option to delete the workgroup and its contents even if the workgroup contains any named queries.
+     * @return The option to delete the workgroup and its contents even if the workgroup contains any named queries.
      * 
-    */
+     */
     public Optional<Boolean> recursiveDeleteOption() {
         return Optional.ofNullable(this.recursiveDeleteOption);
     }
     /**
-     * The state of the workgroup: ENABLED or DISABLED.
+     * @return The state of the workgroup: ENABLED or DISABLED.
      * 
-    */
+     */
     public Optional<WorkGroupState> state() {
         return Optional.ofNullable(this.state);
     }
     /**
-     * One or more tags, separated by commas, that you want to attach to the workgroup as you create it
+     * @return One or more tags, separated by commas, that you want to attach to the workgroup as you create it
      * 
-    */
+     */
     public List<WorkGroupTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * The workgroup configuration
+     * @return The workgroup configuration
      * 
-    */
+     */
     public Optional<WorkGroupConfiguration> workGroupConfiguration() {
         return Optional.ofNullable(this.workGroupConfiguration);
     }
     /**
-     * The workgroup configuration update object
+     * @return The workgroup configuration update object
      * 
-    */
+     */
     public Optional<WorkGroupConfigurationUpdates> workGroupConfigurationUpdates() {
         return Optional.ofNullable(this.workGroupConfigurationUpdates);
     }

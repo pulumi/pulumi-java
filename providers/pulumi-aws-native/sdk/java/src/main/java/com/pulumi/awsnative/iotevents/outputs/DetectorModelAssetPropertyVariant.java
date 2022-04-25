@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DetectorModelAssetPropertyVariant {
-    /**
-     * The asset property value is a Boolean value that must be `TRUE` or `FALSE`. You can also specify an expression. If you use an expression, the evaluated result should be a Boolean value.
-     * 
-     */
+        /**
+         * @return The asset property value is a Boolean value that must be `TRUE` or `FALSE`. You can also specify an expression. If you use an expression, the evaluated result should be a Boolean value.
+         * 
+         */
     private final @Nullable String booleanValue;
-    /**
-     * The asset property value is a double. You can also specify an expression. If you use an expression, the evaluated result should be a double.
-     * 
-     */
+        /**
+         * @return The asset property value is a double. You can also specify an expression. If you use an expression, the evaluated result should be a double.
+         * 
+         */
     private final @Nullable String doubleValue;
-    /**
-     * The asset property value is an integer. You can also specify an expression. If you use an expression, the evaluated result should be an integer.
-     * 
-     */
+        /**
+         * @return The asset property value is an integer. You can also specify an expression. If you use an expression, the evaluated result should be an integer.
+         * 
+         */
     private final @Nullable String integerValue;
-    /**
-     * The asset property value is a string. You can also specify an expression. If you use an expression, the evaluated result should be a string.
-     * 
-     */
+        /**
+         * @return The asset property value is a string. You can also specify an expression. If you use an expression, the evaluated result should be a string.
+         * 
+         */
     private final @Nullable String stringValue;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class DetectorModelAssetPropertyVariant {
     }
 
     /**
-     * The asset property value is a Boolean value that must be `TRUE` or `FALSE`. You can also specify an expression. If you use an expression, the evaluated result should be a Boolean value.
+     * @return The asset property value is a Boolean value that must be `TRUE` or `FALSE`. You can also specify an expression. If you use an expression, the evaluated result should be a Boolean value.
      * 
-    */
+     */
     public Optional<String> booleanValue() {
         return Optional.ofNullable(this.booleanValue);
     }
     /**
-     * The asset property value is a double. You can also specify an expression. If you use an expression, the evaluated result should be a double.
+     * @return The asset property value is a double. You can also specify an expression. If you use an expression, the evaluated result should be a double.
      * 
-    */
+     */
     public Optional<String> doubleValue() {
         return Optional.ofNullable(this.doubleValue);
     }
     /**
-     * The asset property value is an integer. You can also specify an expression. If you use an expression, the evaluated result should be an integer.
+     * @return The asset property value is an integer. You can also specify an expression. If you use an expression, the evaluated result should be an integer.
      * 
-    */
+     */
     public Optional<String> integerValue() {
         return Optional.ofNullable(this.integerValue);
     }
     /**
-     * The asset property value is a string. You can also specify an expression. If you use an expression, the evaluated result should be a string.
+     * @return The asset property value is a string. You can also specify an expression. If you use an expression, the evaluated result should be a string.
      * 
-    */
+     */
     public Optional<String> stringValue() {
         return Optional.ofNullable(this.stringValue);
     }

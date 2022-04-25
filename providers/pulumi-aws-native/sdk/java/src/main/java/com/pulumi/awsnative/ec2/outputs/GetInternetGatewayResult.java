@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetInternetGatewayResult {
-    /**
-     * ID of internet gateway.
-     * 
-     */
+        /**
+         * @return ID of internet gateway.
+         * 
+         */
     private final @Nullable String internetGatewayId;
-    /**
-     * Any tags to assign to the internet gateway.
-     * 
-     */
+        /**
+         * @return Any tags to assign to the internet gateway.
+         * 
+         */
     private final @Nullable List<InternetGatewayTag> tags;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class GetInternetGatewayResult {
     }
 
     /**
-     * ID of internet gateway.
+     * @return ID of internet gateway.
      * 
-    */
+     */
     public Optional<String> internetGatewayId() {
         return Optional.ofNullable(this.internetGatewayId);
     }
     /**
-     * Any tags to assign to the internet gateway.
+     * @return Any tags to assign to the internet gateway.
      * 
-    */
+     */
     public List<InternetGatewayTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

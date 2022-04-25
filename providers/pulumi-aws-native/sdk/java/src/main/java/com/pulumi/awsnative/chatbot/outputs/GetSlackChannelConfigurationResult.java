@@ -13,40 +13,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSlackChannelConfigurationResult {
-    /**
-     * Amazon Resource Name (ARN) of the configuration
-     * 
-     */
+        /**
+         * @return Amazon Resource Name (ARN) of the configuration
+         * 
+         */
     private final @Nullable String arn;
-    /**
-     * The list of IAM policy ARNs that are applied as channel guardrails. The AWS managed &#39;AdministratorAccess&#39; policy is applied as a default if this is not set.
-     * 
-     */
+        /**
+         * @return The list of IAM policy ARNs that are applied as channel guardrails. The AWS managed &#39;AdministratorAccess&#39; policy is applied as a default if this is not set.
+         * 
+         */
     private final @Nullable List<String> guardrailPolicies;
-    /**
-     * The ARN of the IAM role that defines the permissions for AWS Chatbot
-     * 
-     */
+        /**
+         * @return The ARN of the IAM role that defines the permissions for AWS Chatbot
+         * 
+         */
     private final @Nullable String iamRoleArn;
-    /**
-     * Specifies the logging level for this configuration:ERROR,INFO or NONE. This property affects the log entries pushed to Amazon CloudWatch logs
-     * 
-     */
+        /**
+         * @return Specifies the logging level for this configuration:ERROR,INFO or NONE. This property affects the log entries pushed to Amazon CloudWatch logs
+         * 
+         */
     private final @Nullable String loggingLevel;
-    /**
-     * The id of the Slack channel
-     * 
-     */
+        /**
+         * @return The id of the Slack channel
+         * 
+         */
     private final @Nullable String slackChannelId;
-    /**
-     * ARNs of SNS topics which delivers notifications to AWS Chatbot, for example CloudWatch alarm notifications.
-     * 
-     */
+        /**
+         * @return ARNs of SNS topics which delivers notifications to AWS Chatbot, for example CloudWatch alarm notifications.
+         * 
+         */
     private final @Nullable List<String> snsTopicArns;
-    /**
-     * Enables use of a user role requirement in your chat configuration
-     * 
-     */
+        /**
+         * @return Enables use of a user role requirement in your chat configuration
+         * 
+         */
     private final @Nullable Boolean userRoleRequired;
 
     @CustomType.Constructor
@@ -68,51 +68,51 @@ public final class GetSlackChannelConfigurationResult {
     }
 
     /**
-     * Amazon Resource Name (ARN) of the configuration
+     * @return Amazon Resource Name (ARN) of the configuration
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The list of IAM policy ARNs that are applied as channel guardrails. The AWS managed &#39;AdministratorAccess&#39; policy is applied as a default if this is not set.
+     * @return The list of IAM policy ARNs that are applied as channel guardrails. The AWS managed &#39;AdministratorAccess&#39; policy is applied as a default if this is not set.
      * 
-    */
+     */
     public List<String> guardrailPolicies() {
         return this.guardrailPolicies == null ? List.of() : this.guardrailPolicies;
     }
     /**
-     * The ARN of the IAM role that defines the permissions for AWS Chatbot
+     * @return The ARN of the IAM role that defines the permissions for AWS Chatbot
      * 
-    */
+     */
     public Optional<String> iamRoleArn() {
         return Optional.ofNullable(this.iamRoleArn);
     }
     /**
-     * Specifies the logging level for this configuration:ERROR,INFO or NONE. This property affects the log entries pushed to Amazon CloudWatch logs
+     * @return Specifies the logging level for this configuration:ERROR,INFO or NONE. This property affects the log entries pushed to Amazon CloudWatch logs
      * 
-    */
+     */
     public Optional<String> loggingLevel() {
         return Optional.ofNullable(this.loggingLevel);
     }
     /**
-     * The id of the Slack channel
+     * @return The id of the Slack channel
      * 
-    */
+     */
     public Optional<String> slackChannelId() {
         return Optional.ofNullable(this.slackChannelId);
     }
     /**
-     * ARNs of SNS topics which delivers notifications to AWS Chatbot, for example CloudWatch alarm notifications.
+     * @return ARNs of SNS topics which delivers notifications to AWS Chatbot, for example CloudWatch alarm notifications.
      * 
-    */
+     */
     public List<String> snsTopicArns() {
         return this.snsTopicArns == null ? List.of() : this.snsTopicArns;
     }
     /**
-     * Enables use of a user role requirement in your chat configuration
+     * @return Enables use of a user role requirement in your chat configuration
      * 
-    */
+     */
     public Optional<Boolean> userRoleRequired() {
         return Optional.ofNullable(this.userRoleRequired);
     }

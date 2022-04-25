@@ -12,35 +12,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDomainResult {
-    /**
-     * The default user settings.
-     * 
-     */
+        /**
+         * @return The default user settings.
+         * 
+         */
     private final @Nullable DomainUserSettings defaultUserSettings;
-    /**
-     * The Amazon Resource Name (ARN) of the created domain.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the created domain.
+         * 
+         */
     private final @Nullable String domainArn;
-    /**
-     * The domain name.
-     * 
-     */
+        /**
+         * @return The domain name.
+         * 
+         */
     private final @Nullable String domainId;
-    /**
-     * The ID of the Amazon Elastic File System (EFS) managed by this Domain.
-     * 
-     */
+        /**
+         * @return The ID of the Amazon Elastic File System (EFS) managed by this Domain.
+         * 
+         */
     private final @Nullable String homeEfsFileSystemId;
-    /**
-     * The SSO managed application instance ID.
-     * 
-     */
+        /**
+         * @return The SSO managed application instance ID.
+         * 
+         */
     private final @Nullable String singleSignOnManagedApplicationInstanceId;
-    /**
-     * The URL to the created domain.
-     * 
-     */
+        /**
+         * @return The URL to the created domain.
+         * 
+         */
     private final @Nullable String url;
 
     @CustomType.Constructor
@@ -60,44 +60,44 @@ public final class GetDomainResult {
     }
 
     /**
-     * The default user settings.
+     * @return The default user settings.
      * 
-    */
+     */
     public Optional<DomainUserSettings> defaultUserSettings() {
         return Optional.ofNullable(this.defaultUserSettings);
     }
     /**
-     * The Amazon Resource Name (ARN) of the created domain.
+     * @return The Amazon Resource Name (ARN) of the created domain.
      * 
-    */
+     */
     public Optional<String> domainArn() {
         return Optional.ofNullable(this.domainArn);
     }
     /**
-     * The domain name.
+     * @return The domain name.
      * 
-    */
+     */
     public Optional<String> domainId() {
         return Optional.ofNullable(this.domainId);
     }
     /**
-     * The ID of the Amazon Elastic File System (EFS) managed by this Domain.
+     * @return The ID of the Amazon Elastic File System (EFS) managed by this Domain.
      * 
-    */
+     */
     public Optional<String> homeEfsFileSystemId() {
         return Optional.ofNullable(this.homeEfsFileSystemId);
     }
     /**
-     * The SSO managed application instance ID.
+     * @return The SSO managed application instance ID.
      * 
-    */
+     */
     public Optional<String> singleSignOnManagedApplicationInstanceId() {
         return Optional.ofNullable(this.singleSignOnManagedApplicationInstanceId);
     }
     /**
-     * The URL to the created domain.
+     * @return The URL to the created domain.
      * 
-    */
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }

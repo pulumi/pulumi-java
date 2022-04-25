@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class HostedZoneConfig {
-    /**
-     * Any comments that you want to include about the hosted zone.
-     * 
-     */
+        /**
+         * @return Any comments that you want to include about the hosted zone.
+         * 
+         */
     private final @Nullable String comment;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class HostedZoneConfig {
     }
 
     /**
-     * Any comments that you want to include about the hosted zone.
+     * @return Any comments that you want to include about the hosted zone.
      * 
-    */
+     */
     public Optional<String> comment() {
         return Optional.ofNullable(this.comment);
     }

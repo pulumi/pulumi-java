@@ -13,10 +13,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DetectorModelAssetPropertyValue {
-    /**
-     * The quality of the asset property value. The value must be `GOOD`, `BAD`, or `UNCERTAIN`. You can also specify an expression.
-     * 
-     */
+        /**
+         * @return The quality of the asset property value. The value must be `GOOD`, `BAD`, or `UNCERTAIN`. You can also specify an expression.
+         * 
+         */
     private final @Nullable String quality;
     private final @Nullable DetectorModelAssetPropertyTimestamp timestamp;
     private final DetectorModelAssetPropertyVariant value;
@@ -32,9 +32,9 @@ public final class DetectorModelAssetPropertyValue {
     }
 
     /**
-     * The quality of the asset property value. The value must be `GOOD`, `BAD`, or `UNCERTAIN`. You can also specify an expression.
+     * @return The quality of the asset property value. The value must be `GOOD`, `BAD`, or `UNCERTAIN`. You can also specify an expression.
      * 
-    */
+     */
     public Optional<String> quality() {
         return Optional.ofNullable(this.quality);
     }

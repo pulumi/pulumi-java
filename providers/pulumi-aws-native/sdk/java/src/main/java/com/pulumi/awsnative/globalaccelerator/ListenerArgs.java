@@ -26,6 +26,10 @@ public final class ListenerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="acceleratorArn", required=true)
     private Output<String> acceleratorArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the accelerator.
+     * 
+     */
     public Output<String> acceleratorArn() {
         return this.acceleratorArn;
     }
@@ -37,6 +41,10 @@ public final class ListenerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientAffinity")
     private @Nullable Output<ListenerClientAffinity> clientAffinity;
 
+    /**
+     * @return Client affinity lets you direct all requests from a user to the same endpoint.
+     * 
+     */
     public Optional<Output<ListenerClientAffinity>> clientAffinity() {
         return Optional.ofNullable(this.clientAffinity);
     }
@@ -55,6 +63,10 @@ public final class ListenerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="protocol", required=true)
     private Output<ListenerProtocol> protocol;
 
+    /**
+     * @return The protocol for the listener.
+     * 
+     */
     public Output<ListenerProtocol> protocol() {
         return this.protocol;
     }
@@ -86,20 +98,44 @@ public final class ListenerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ListenerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceleratorArn The Amazon Resource Name (ARN) of the accelerator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorArn(Output<String> acceleratorArn) {
             $.acceleratorArn = acceleratorArn;
             return this;
         }
 
+        /**
+         * @param acceleratorArn The Amazon Resource Name (ARN) of the accelerator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorArn(String acceleratorArn) {
             return acceleratorArn(Output.of(acceleratorArn));
         }
 
+        /**
+         * @param clientAffinity Client affinity lets you direct all requests from a user to the same endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientAffinity(@Nullable Output<ListenerClientAffinity> clientAffinity) {
             $.clientAffinity = clientAffinity;
             return this;
         }
 
+        /**
+         * @param clientAffinity Client affinity lets you direct all requests from a user to the same endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientAffinity(ListenerClientAffinity clientAffinity) {
             return clientAffinity(Output.of(clientAffinity));
         }
@@ -117,11 +153,23 @@ public final class ListenerArgs extends com.pulumi.resources.ResourceArgs {
             return portRanges(List.of(portRanges));
         }
 
+        /**
+         * @param protocol The protocol for the listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(Output<ListenerProtocol> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol The protocol for the listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(ListenerProtocol protocol) {
             return protocol(Output.of(protocol));
         }

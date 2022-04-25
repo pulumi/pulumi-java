@@ -28,6 +28,10 @@ public final class OriginEndpointCmafEncryptionArgs extends com.pulumi.resources
     @Import(name="constantInitializationVector")
     private @Nullable Output<String> constantInitializationVector;
 
+    /**
+     * @return An optional 128-bit, 16-byte hex value represented by a 32-character string, used in conjunction with the key for encrypting blocks. If you don&#39;t specify a value, then MediaPackage creates the constant initialization vector (IV).
+     * 
+     */
     public Optional<Output<String>> constantInitializationVector() {
         return Optional.ofNullable(this.constantInitializationVector);
     }
@@ -39,6 +43,10 @@ public final class OriginEndpointCmafEncryptionArgs extends com.pulumi.resources
     @Import(name="keyRotationIntervalSeconds")
     private @Nullable Output<Integer> keyRotationIntervalSeconds;
 
+    /**
+     * @return Time (in seconds) between each encryption key rotation.
+     * 
+     */
     public Optional<Output<Integer>> keyRotationIntervalSeconds() {
         return Optional.ofNullable(this.keyRotationIntervalSeconds);
     }
@@ -76,20 +84,44 @@ public final class OriginEndpointCmafEncryptionArgs extends com.pulumi.resources
             $ = new OriginEndpointCmafEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param constantInitializationVector An optional 128-bit, 16-byte hex value represented by a 32-character string, used in conjunction with the key for encrypting blocks. If you don&#39;t specify a value, then MediaPackage creates the constant initialization vector (IV).
+         * 
+         * @return builder
+         * 
+         */
         public Builder constantInitializationVector(@Nullable Output<String> constantInitializationVector) {
             $.constantInitializationVector = constantInitializationVector;
             return this;
         }
 
+        /**
+         * @param constantInitializationVector An optional 128-bit, 16-byte hex value represented by a 32-character string, used in conjunction with the key for encrypting blocks. If you don&#39;t specify a value, then MediaPackage creates the constant initialization vector (IV).
+         * 
+         * @return builder
+         * 
+         */
         public Builder constantInitializationVector(String constantInitializationVector) {
             return constantInitializationVector(Output.of(constantInitializationVector));
         }
 
+        /**
+         * @param keyRotationIntervalSeconds Time (in seconds) between each encryption key rotation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyRotationIntervalSeconds(@Nullable Output<Integer> keyRotationIntervalSeconds) {
             $.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
             return this;
         }
 
+        /**
+         * @param keyRotationIntervalSeconds Time (in seconds) between each encryption key rotation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyRotationIntervalSeconds(Integer keyRotationIntervalSeconds) {
             return keyRotationIntervalSeconds(Output.of(keyRotationIntervalSeconds));
         }

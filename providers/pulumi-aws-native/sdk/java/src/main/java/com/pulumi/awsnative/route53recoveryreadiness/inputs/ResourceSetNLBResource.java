@@ -25,6 +25,10 @@ public final class ResourceSetNLBResource extends com.pulumi.resources.InvokeArg
     @Import(name="arn")
     private @Nullable String arn;
 
+    /**
+     * @return A Network Load Balancer resource Amazon Resource Name (ARN).
+     * 
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -53,6 +57,12 @@ public final class ResourceSetNLBResource extends com.pulumi.resources.InvokeArg
             $ = new ResourceSetNLBResource(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn A Network Load Balancer resource Amazon Resource Name (ARN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable String arn) {
             $.arn = arn;
             return this;

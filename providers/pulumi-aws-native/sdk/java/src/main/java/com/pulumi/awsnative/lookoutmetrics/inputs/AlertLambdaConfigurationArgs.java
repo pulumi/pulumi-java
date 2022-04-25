@@ -24,6 +24,10 @@ public final class AlertLambdaConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="lambdaArn", required=true)
     private Output<String> lambdaArn;
 
+    /**
+     * @return ARN of a Lambda to send alert notifications to.
+     * 
+     */
     public Output<String> lambdaArn() {
         return this.lambdaArn;
     }
@@ -35,6 +39,10 @@ public final class AlertLambdaConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return ARN of an IAM role that LookoutMetrics should assume to access the Lambda function.
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -64,20 +72,44 @@ public final class AlertLambdaConfigurationArgs extends com.pulumi.resources.Res
             $ = new AlertLambdaConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lambdaArn ARN of a Lambda to send alert notifications to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lambdaArn(Output<String> lambdaArn) {
             $.lambdaArn = lambdaArn;
             return this;
         }
 
+        /**
+         * @param lambdaArn ARN of a Lambda to send alert notifications to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lambdaArn(String lambdaArn) {
             return lambdaArn(Output.of(lambdaArn));
         }
 
+        /**
+         * @param roleArn ARN of an IAM role that LookoutMetrics should assume to access the Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn ARN of an IAM role that LookoutMetrics should assume to access the Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }

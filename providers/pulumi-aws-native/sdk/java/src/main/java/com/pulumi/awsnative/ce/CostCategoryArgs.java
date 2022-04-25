@@ -23,6 +23,10 @@ public final class CostCategoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultValue")
     private @Nullable Output<String> defaultValue;
 
+    /**
+     * @return The default value for the cost category
+     * 
+     */
     public Optional<Output<String>> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
@@ -48,6 +52,10 @@ public final class CostCategoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rules", required=true)
     private Output<String> rules;
 
+    /**
+     * @return JSON array format of Expression in Billing and Cost Management API
+     * 
+     */
     public Output<String> rules() {
         return this.rules;
     }
@@ -59,6 +67,10 @@ public final class CostCategoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="splitChargeRules")
     private @Nullable Output<String> splitChargeRules;
 
+    /**
+     * @return Json array format of CostCategorySplitChargeRule in Billing and Cost Management API
+     * 
+     */
     public Optional<Output<String>> splitChargeRules() {
         return Optional.ofNullable(this.splitChargeRules);
     }
@@ -91,11 +103,23 @@ public final class CostCategoryArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CostCategoryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultValue The default value for the cost category
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(@Nullable Output<String> defaultValue) {
             $.defaultValue = defaultValue;
             return this;
         }
 
+        /**
+         * @param defaultValue The default value for the cost category
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(String defaultValue) {
             return defaultValue(Output.of(defaultValue));
         }
@@ -118,20 +142,44 @@ public final class CostCategoryArgs extends com.pulumi.resources.ResourceArgs {
             return ruleVersion(Output.of(ruleVersion));
         }
 
+        /**
+         * @param rules JSON array format of Expression in Billing and Cost Management API
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(Output<String> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules JSON array format of Expression in Billing and Cost Management API
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(String rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param splitChargeRules Json array format of CostCategorySplitChargeRule in Billing and Cost Management API
+         * 
+         * @return builder
+         * 
+         */
         public Builder splitChargeRules(@Nullable Output<String> splitChargeRules) {
             $.splitChargeRules = splitChargeRules;
             return this;
         }
 
+        /**
+         * @param splitChargeRules Json array format of CostCategorySplitChargeRule in Billing and Cost Management API
+         * 
+         * @return builder
+         * 
+         */
         public Builder splitChargeRules(String splitChargeRules) {
             return splitChargeRules(Output.of(splitChargeRules));
         }

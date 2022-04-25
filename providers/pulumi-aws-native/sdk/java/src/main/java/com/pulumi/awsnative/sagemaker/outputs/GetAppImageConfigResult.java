@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAppImageConfigResult {
-    /**
-     * The Amazon Resource Name (ARN) of the AppImageConfig.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the AppImageConfig.
+         * 
+         */
     private final @Nullable String appImageConfigArn;
-    /**
-     * The KernelGatewayImageConfig.
-     * 
-     */
+        /**
+         * @return The KernelGatewayImageConfig.
+         * 
+         */
     private final @Nullable AppImageConfigKernelGatewayImageConfig kernelGatewayImageConfig;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class GetAppImageConfigResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the AppImageConfig.
+     * @return The Amazon Resource Name (ARN) of the AppImageConfig.
      * 
-    */
+     */
     public Optional<String> appImageConfigArn() {
         return Optional.ofNullable(this.appImageConfigArn);
     }
     /**
-     * The KernelGatewayImageConfig.
+     * @return The KernelGatewayImageConfig.
      * 
-    */
+     */
     public Optional<AppImageConfigKernelGatewayImageConfig> kernelGatewayImageConfig() {
         return Optional.ofNullable(this.kernelGatewayImageConfig);
     }

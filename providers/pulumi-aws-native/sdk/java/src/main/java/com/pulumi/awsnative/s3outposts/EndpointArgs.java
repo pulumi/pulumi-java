@@ -23,6 +23,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessType")
     private @Nullable Output<EndpointAccessType> accessType;
 
+    /**
+     * @return The type of access for the on-premise network connectivity for the Outpost endpoint. To access endpoint from an on-premises network, you must specify the access type and provide the customer owned Ipv4 pool.
+     * 
+     */
     public Optional<Output<EndpointAccessType>> accessType() {
         return Optional.ofNullable(this.accessType);
     }
@@ -34,6 +38,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customerOwnedIpv4Pool")
     private @Nullable Output<String> customerOwnedIpv4Pool;
 
+    /**
+     * @return The ID of the customer-owned IPv4 pool for the Endpoint. IP addresses will be allocated from this pool for the endpoint.
+     * 
+     */
     public Optional<Output<String>> customerOwnedIpv4Pool() {
         return Optional.ofNullable(this.customerOwnedIpv4Pool);
     }
@@ -45,6 +53,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="outpostId", required=true)
     private Output<String> outpostId;
 
+    /**
+     * @return The id of the customer outpost on which the bucket resides.
+     * 
+     */
     public Output<String> outpostId() {
         return this.outpostId;
     }
@@ -56,6 +68,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityGroupId", required=true)
     private Output<String> securityGroupId;
 
+    /**
+     * @return The ID of the security group to use with the endpoint.
+     * 
+     */
     public Output<String> securityGroupId() {
         return this.securityGroupId;
     }
@@ -67,6 +83,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetId", required=true)
     private Output<String> subnetId;
 
+    /**
+     * @return The ID of the subnet in the selected VPC. The subnet must belong to the Outpost.
+     * 
+     */
     public Output<String> subnetId() {
         return this.subnetId;
     }
@@ -99,47 +119,107 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessType The type of access for the on-premise network connectivity for the Outpost endpoint. To access endpoint from an on-premises network, you must specify the access type and provide the customer owned Ipv4 pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessType(@Nullable Output<EndpointAccessType> accessType) {
             $.accessType = accessType;
             return this;
         }
 
+        /**
+         * @param accessType The type of access for the on-premise network connectivity for the Outpost endpoint. To access endpoint from an on-premises network, you must specify the access type and provide the customer owned Ipv4 pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessType(EndpointAccessType accessType) {
             return accessType(Output.of(accessType));
         }
 
+        /**
+         * @param customerOwnedIpv4Pool The ID of the customer-owned IPv4 pool for the Endpoint. IP addresses will be allocated from this pool for the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerOwnedIpv4Pool(@Nullable Output<String> customerOwnedIpv4Pool) {
             $.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
             return this;
         }
 
+        /**
+         * @param customerOwnedIpv4Pool The ID of the customer-owned IPv4 pool for the Endpoint. IP addresses will be allocated from this pool for the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerOwnedIpv4Pool(String customerOwnedIpv4Pool) {
             return customerOwnedIpv4Pool(Output.of(customerOwnedIpv4Pool));
         }
 
+        /**
+         * @param outpostId The id of the customer outpost on which the bucket resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outpostId(Output<String> outpostId) {
             $.outpostId = outpostId;
             return this;
         }
 
+        /**
+         * @param outpostId The id of the customer outpost on which the bucket resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outpostId(String outpostId) {
             return outpostId(Output.of(outpostId));
         }
 
+        /**
+         * @param securityGroupId The ID of the security group to use with the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupId(Output<String> securityGroupId) {
             $.securityGroupId = securityGroupId;
             return this;
         }
 
+        /**
+         * @param securityGroupId The ID of the security group to use with the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupId(String securityGroupId) {
             return securityGroupId(Output.of(securityGroupId));
         }
 
+        /**
+         * @param subnetId The ID of the subnet in the selected VPC. The subnet must belong to the Outpost.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param subnetId The ID of the subnet in the selected VPC. The subnet must belong to the Outpost.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }

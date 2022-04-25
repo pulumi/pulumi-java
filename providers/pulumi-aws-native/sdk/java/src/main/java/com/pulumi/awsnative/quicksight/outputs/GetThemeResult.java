@@ -16,37 +16,37 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetThemeResult {
-    /**
-     * &lt;p&gt;The Amazon Resource Name (ARN) of the theme.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;The Amazon Resource Name (ARN) of the theme.&lt;/p&gt;
+         * 
+         */
     private final @Nullable String arn;
-    /**
-     * &lt;p&gt;The date and time that the theme was created.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;The date and time that the theme was created.&lt;/p&gt;
+         * 
+         */
     private final @Nullable String createdTime;
-    /**
-     * &lt;p&gt;The date and time that the theme was last updated.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;The date and time that the theme was last updated.&lt;/p&gt;
+         * 
+         */
     private final @Nullable String lastUpdatedTime;
-    /**
-     * &lt;p&gt;A display name for the theme.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;A display name for the theme.&lt;/p&gt;
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * &lt;p&gt;A valid grouping of resource permissions to apply to the new theme.
-     * 			&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;A valid grouping of resource permissions to apply to the new theme.
+         * 			&lt;/p&gt;
+         * 
+         */
     private final @Nullable List<ThemeResourcePermission> permissions;
-    /**
-     * &lt;p&gt;A map of the key-value pairs for the resource tag or tags that you want to add to the
-     * 			resource.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;A map of the key-value pairs for the resource tag or tags that you want to add to the
+         * 			resource.&lt;/p&gt;
+         * 
+         */
     private final @Nullable List<ThemeTag> tags;
     private final @Nullable ThemeType type;
     private final @Nullable ThemeVersion version;
@@ -72,46 +72,46 @@ public final class GetThemeResult {
     }
 
     /**
-     * &lt;p&gt;The Amazon Resource Name (ARN) of the theme.&lt;/p&gt;
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the theme.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * &lt;p&gt;The date and time that the theme was created.&lt;/p&gt;
+     * @return &lt;p&gt;The date and time that the theme was created.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
-     * &lt;p&gt;The date and time that the theme was last updated.&lt;/p&gt;
+     * @return &lt;p&gt;The date and time that the theme was last updated.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
-     * &lt;p&gt;A display name for the theme.&lt;/p&gt;
+     * @return &lt;p&gt;A display name for the theme.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * &lt;p&gt;A valid grouping of resource permissions to apply to the new theme.
+     * @return &lt;p&gt;A valid grouping of resource permissions to apply to the new theme.
      * 			&lt;/p&gt;
      * 
-    */
+     */
     public List<ThemeResourcePermission> permissions() {
         return this.permissions == null ? List.of() : this.permissions;
     }
     /**
-     * &lt;p&gt;A map of the key-value pairs for the resource tag or tags that you want to add to the
+     * @return &lt;p&gt;A map of the key-value pairs for the resource tag or tags that you want to add to the
      * 			resource.&lt;/p&gt;
      * 
-    */
+     */
     public List<ThemeTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

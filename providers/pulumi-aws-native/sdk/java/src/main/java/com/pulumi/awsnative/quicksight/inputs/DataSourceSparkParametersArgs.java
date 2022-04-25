@@ -25,6 +25,10 @@ public final class DataSourceSparkParametersArgs extends com.pulumi.resources.Re
     @Import(name="host", required=true)
     private Output<String> host;
 
+    /**
+     * @return &lt;p&gt;Host.&lt;/p&gt;
+     * 
+     */
     public Output<String> host() {
         return this.host;
     }
@@ -36,6 +40,10 @@ public final class DataSourceSparkParametersArgs extends com.pulumi.resources.Re
     @Import(name="port", required=true)
     private Output<Double> port;
 
+    /**
+     * @return &lt;p&gt;Port.&lt;/p&gt;
+     * 
+     */
     public Output<Double> port() {
         return this.port;
     }
@@ -65,20 +73,44 @@ public final class DataSourceSparkParametersArgs extends com.pulumi.resources.Re
             $ = new DataSourceSparkParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param host &lt;p&gt;Host.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(Output<String> host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param host &lt;p&gt;Host.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             return host(Output.of(host));
         }
 
+        /**
+         * @param port &lt;p&gt;Port.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Output<Double> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port &lt;p&gt;Port.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Double port) {
             return port(Output.of(port));
         }

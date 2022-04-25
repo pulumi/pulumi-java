@@ -17,20 +17,20 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetHostedZoneResult {
     private final @Nullable HostedZoneConfig hostedZoneConfig;
-    /**
-     * Adds, edits, or deletes tags for a health check or a hosted zone.
-     * 
-     * For information about using tags for cost allocation, see Using Cost Allocation Tags in the AWS Billing and Cost Management User Guide.
-     * 
-     */
+        /**
+         * @return Adds, edits, or deletes tags for a health check or a hosted zone.
+         * 
+         * For information about using tags for cost allocation, see Using Cost Allocation Tags in the AWS Billing and Cost Management User Guide.
+         * 
+         */
     private final @Nullable List<HostedZoneTag> hostedZoneTags;
     private final @Nullable String id;
     private final @Nullable List<String> nameServers;
     private final @Nullable HostedZoneQueryLoggingConfig queryLoggingConfig;
-    /**
-     * A complex type that contains information about the VPCs that are associated with the specified hosted zone.
-     * 
-     */
+        /**
+         * @return A complex type that contains information about the VPCs that are associated with the specified hosted zone.
+         * 
+         */
     private final @Nullable List<HostedZoneVPC> vPCs;
 
     @CustomType.Constructor
@@ -53,11 +53,11 @@ public final class GetHostedZoneResult {
         return Optional.ofNullable(this.hostedZoneConfig);
     }
     /**
-     * Adds, edits, or deletes tags for a health check or a hosted zone.
+     * @return Adds, edits, or deletes tags for a health check or a hosted zone.
      * 
      * For information about using tags for cost allocation, see Using Cost Allocation Tags in the AWS Billing and Cost Management User Guide.
      * 
-    */
+     */
     public List<HostedZoneTag> hostedZoneTags() {
         return this.hostedZoneTags == null ? List.of() : this.hostedZoneTags;
     }
@@ -71,9 +71,9 @@ public final class GetHostedZoneResult {
         return Optional.ofNullable(this.queryLoggingConfig);
     }
     /**
-     * A complex type that contains information about the VPCs that are associated with the specified hosted zone.
+     * @return A complex type that contains information about the VPCs that are associated with the specified hosted zone.
      * 
-    */
+     */
     public List<HostedZoneVPC> vPCs() {
         return this.vPCs == null ? List.of() : this.vPCs;
     }

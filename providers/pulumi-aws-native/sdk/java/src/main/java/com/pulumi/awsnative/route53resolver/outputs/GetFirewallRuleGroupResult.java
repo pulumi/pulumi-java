@@ -17,65 +17,65 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetFirewallRuleGroupResult {
-    /**
-     * Arn
-     * 
-     */
+        /**
+         * @return Arn
+         * 
+         */
     private final @Nullable String arn;
-    /**
-     * Rfc3339TimeString
-     * 
-     */
+        /**
+         * @return Rfc3339TimeString
+         * 
+         */
     private final @Nullable String creationTime;
-    /**
-     * The id of the creator request.
-     * 
-     */
+        /**
+         * @return The id of the creator request.
+         * 
+         */
     private final @Nullable String creatorRequestId;
-    /**
-     * FirewallRules
-     * 
-     */
+        /**
+         * @return FirewallRules
+         * 
+         */
     private final @Nullable List<FirewallRuleGroupFirewallRule> firewallRules;
-    /**
-     * ResourceId
-     * 
-     */
+        /**
+         * @return ResourceId
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * Rfc3339TimeString
-     * 
-     */
+        /**
+         * @return Rfc3339TimeString
+         * 
+         */
     private final @Nullable String modificationTime;
-    /**
-     * AccountId
-     * 
-     */
+        /**
+         * @return AccountId
+         * 
+         */
     private final @Nullable String ownerId;
-    /**
-     * Count
-     * 
-     */
+        /**
+         * @return Count
+         * 
+         */
     private final @Nullable Integer ruleCount;
-    /**
-     * ShareStatus, possible values are NOT_SHARED, SHARED_WITH_ME, SHARED_BY_ME.
-     * 
-     */
+        /**
+         * @return ShareStatus, possible values are NOT_SHARED, SHARED_WITH_ME, SHARED_BY_ME.
+         * 
+         */
     private final @Nullable FirewallRuleGroupShareStatus shareStatus;
-    /**
-     * ResolverFirewallRuleGroupAssociation, possible values are COMPLETE, DELETING, UPDATING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
-     * 
-     */
+        /**
+         * @return ResolverFirewallRuleGroupAssociation, possible values are COMPLETE, DELETING, UPDATING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
+         * 
+         */
     private final @Nullable FirewallRuleGroupStatus status;
-    /**
-     * FirewallRuleGroupStatus
-     * 
-     */
+        /**
+         * @return FirewallRuleGroupStatus
+         * 
+         */
     private final @Nullable String statusMessage;
-    /**
-     * Tags
-     * 
-     */
+        /**
+         * @return Tags
+         * 
+         */
     private final @Nullable List<FirewallRuleGroupTag> tags;
 
     @CustomType.Constructor
@@ -107,86 +107,86 @@ public final class GetFirewallRuleGroupResult {
     }
 
     /**
-     * Arn
+     * @return Arn
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Rfc3339TimeString
+     * @return Rfc3339TimeString
      * 
-    */
+     */
     public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
-     * The id of the creator request.
+     * @return The id of the creator request.
      * 
-    */
+     */
     public Optional<String> creatorRequestId() {
         return Optional.ofNullable(this.creatorRequestId);
     }
     /**
-     * FirewallRules
+     * @return FirewallRules
      * 
-    */
+     */
     public List<FirewallRuleGroupFirewallRule> firewallRules() {
         return this.firewallRules == null ? List.of() : this.firewallRules;
     }
     /**
-     * ResourceId
+     * @return ResourceId
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Rfc3339TimeString
+     * @return Rfc3339TimeString
      * 
-    */
+     */
     public Optional<String> modificationTime() {
         return Optional.ofNullable(this.modificationTime);
     }
     /**
-     * AccountId
+     * @return AccountId
      * 
-    */
+     */
     public Optional<String> ownerId() {
         return Optional.ofNullable(this.ownerId);
     }
     /**
-     * Count
+     * @return Count
      * 
-    */
+     */
     public Optional<Integer> ruleCount() {
         return Optional.ofNullable(this.ruleCount);
     }
     /**
-     * ShareStatus, possible values are NOT_SHARED, SHARED_WITH_ME, SHARED_BY_ME.
+     * @return ShareStatus, possible values are NOT_SHARED, SHARED_WITH_ME, SHARED_BY_ME.
      * 
-    */
+     */
     public Optional<FirewallRuleGroupShareStatus> shareStatus() {
         return Optional.ofNullable(this.shareStatus);
     }
     /**
-     * ResolverFirewallRuleGroupAssociation, possible values are COMPLETE, DELETING, UPDATING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
+     * @return ResolverFirewallRuleGroupAssociation, possible values are COMPLETE, DELETING, UPDATING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
      * 
-    */
+     */
     public Optional<FirewallRuleGroupStatus> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * FirewallRuleGroupStatus
+     * @return FirewallRuleGroupStatus
      * 
-    */
+     */
     public Optional<String> statusMessage() {
         return Optional.ofNullable(this.statusMessage);
     }
     /**
-     * Tags
+     * @return Tags
      * 
-    */
+     */
     public List<FirewallRuleGroupTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

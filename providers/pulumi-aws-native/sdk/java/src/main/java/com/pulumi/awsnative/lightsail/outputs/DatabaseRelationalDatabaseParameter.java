@@ -12,45 +12,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DatabaseRelationalDatabaseParameter {
-    /**
-     * Specifies the valid range of values for the parameter.
-     * 
-     */
+        /**
+         * @return Specifies the valid range of values for the parameter.
+         * 
+         */
     private final @Nullable String allowedValues;
-    /**
-     * Indicates when parameter updates are applied. Can be immediate or pending-reboot.
-     * 
-     */
+        /**
+         * @return Indicates when parameter updates are applied. Can be immediate or pending-reboot.
+         * 
+         */
     private final @Nullable String applyMethod;
-    /**
-     * Specifies the engine-specific parameter type.
-     * 
-     */
+        /**
+         * @return Specifies the engine-specific parameter type.
+         * 
+         */
     private final @Nullable String applyType;
-    /**
-     * Specifies the valid data type for the parameter.
-     * 
-     */
+        /**
+         * @return Specifies the valid data type for the parameter.
+         * 
+         */
     private final @Nullable String dataType;
-    /**
-     * Provides a description of the parameter.
-     * 
-     */
+        /**
+         * @return Provides a description of the parameter.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * A Boolean value indicating whether the parameter can be modified.
-     * 
-     */
+        /**
+         * @return A Boolean value indicating whether the parameter can be modified.
+         * 
+         */
     private final @Nullable Boolean isModifiable;
-    /**
-     * Specifies the name of the parameter.
-     * 
-     */
+        /**
+         * @return Specifies the name of the parameter.
+         * 
+         */
     private final @Nullable String parameterName;
-    /**
-     * Specifies the value of the parameter.
-     * 
-     */
+        /**
+         * @return Specifies the value of the parameter.
+         * 
+         */
     private final @Nullable String parameterValue;
 
     @CustomType.Constructor
@@ -74,58 +74,58 @@ public final class DatabaseRelationalDatabaseParameter {
     }
 
     /**
-     * Specifies the valid range of values for the parameter.
+     * @return Specifies the valid range of values for the parameter.
      * 
-    */
+     */
     public Optional<String> allowedValues() {
         return Optional.ofNullable(this.allowedValues);
     }
     /**
-     * Indicates when parameter updates are applied. Can be immediate or pending-reboot.
+     * @return Indicates when parameter updates are applied. Can be immediate or pending-reboot.
      * 
-    */
+     */
     public Optional<String> applyMethod() {
         return Optional.ofNullable(this.applyMethod);
     }
     /**
-     * Specifies the engine-specific parameter type.
+     * @return Specifies the engine-specific parameter type.
      * 
-    */
+     */
     public Optional<String> applyType() {
         return Optional.ofNullable(this.applyType);
     }
     /**
-     * Specifies the valid data type for the parameter.
+     * @return Specifies the valid data type for the parameter.
      * 
-    */
+     */
     public Optional<String> dataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
-     * Provides a description of the parameter.
+     * @return Provides a description of the parameter.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * A Boolean value indicating whether the parameter can be modified.
+     * @return A Boolean value indicating whether the parameter can be modified.
      * 
-    */
+     */
     public Optional<Boolean> isModifiable() {
         return Optional.ofNullable(this.isModifiable);
     }
     /**
-     * Specifies the name of the parameter.
+     * @return Specifies the name of the parameter.
      * 
-    */
+     */
     public Optional<String> parameterName() {
         return Optional.ofNullable(this.parameterName);
     }
     /**
-     * Specifies the value of the parameter.
+     * @return Specifies the value of the parameter.
      * 
-    */
+     */
     public Optional<String> parameterValue() {
         return Optional.ofNullable(this.parameterValue);
     }

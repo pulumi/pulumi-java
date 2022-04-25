@@ -29,6 +29,10 @@ public final class BucketWebsiteConfigurationArgs extends com.pulumi.resources.R
     @Import(name="errorDocument")
     private @Nullable Output<String> errorDocument;
 
+    /**
+     * @return The name of the error document for the website.
+     * 
+     */
     public Optional<Output<String>> errorDocument() {
         return Optional.ofNullable(this.errorDocument);
     }
@@ -40,6 +44,10 @@ public final class BucketWebsiteConfigurationArgs extends com.pulumi.resources.R
     @Import(name="indexDocument")
     private @Nullable Output<String> indexDocument;
 
+    /**
+     * @return The name of the index document for the website.
+     * 
+     */
     public Optional<Output<String>> indexDocument() {
         return Optional.ofNullable(this.indexDocument);
     }
@@ -85,20 +93,44 @@ public final class BucketWebsiteConfigurationArgs extends com.pulumi.resources.R
             $ = new BucketWebsiteConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errorDocument The name of the error document for the website.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorDocument(@Nullable Output<String> errorDocument) {
             $.errorDocument = errorDocument;
             return this;
         }
 
+        /**
+         * @param errorDocument The name of the error document for the website.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorDocument(String errorDocument) {
             return errorDocument(Output.of(errorDocument));
         }
 
+        /**
+         * @param indexDocument The name of the index document for the website.
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexDocument(@Nullable Output<String> indexDocument) {
             $.indexDocument = indexDocument;
             return this;
         }
 
+        /**
+         * @param indexDocument The name of the index document for the website.
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexDocument(String indexDocument) {
             return indexDocument(Output.of(indexDocument));
         }

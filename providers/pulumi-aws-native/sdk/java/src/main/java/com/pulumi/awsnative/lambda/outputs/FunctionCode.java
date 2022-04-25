@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FunctionCode {
-    /**
-     * ImageUri.
-     * 
-     */
+        /**
+         * @return ImageUri.
+         * 
+         */
     private final @Nullable String imageUri;
-    /**
-     * An Amazon S3 bucket in the same AWS Region as your function. The bucket can be in a different AWS account.
-     * 
-     */
+        /**
+         * @return An Amazon S3 bucket in the same AWS Region as your function. The bucket can be in a different AWS account.
+         * 
+         */
     private final @Nullable String s3Bucket;
-    /**
-     * The Amazon S3 key of the deployment package.
-     * 
-     */
+        /**
+         * @return The Amazon S3 key of the deployment package.
+         * 
+         */
     private final @Nullable String s3Key;
-    /**
-     * For versioned objects, the version of the deployment package object to use.
-     * 
-     */
+        /**
+         * @return For versioned objects, the version of the deployment package object to use.
+         * 
+         */
     private final @Nullable String s3ObjectVersion;
-    /**
-     * The source code of your Lambda function. If you include your function source inline with this parameter, AWS CloudFormation places it in a file named index and zips it to create a deployment package..
-     * 
-     */
+        /**
+         * @return The source code of your Lambda function. If you include your function source inline with this parameter, AWS CloudFormation places it in a file named index and zips it to create a deployment package..
+         * 
+         */
     private final @Nullable String zipFile;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class FunctionCode {
     }
 
     /**
-     * ImageUri.
+     * @return ImageUri.
      * 
-    */
+     */
     public Optional<String> imageUri() {
         return Optional.ofNullable(this.imageUri);
     }
     /**
-     * An Amazon S3 bucket in the same AWS Region as your function. The bucket can be in a different AWS account.
+     * @return An Amazon S3 bucket in the same AWS Region as your function. The bucket can be in a different AWS account.
      * 
-    */
+     */
     public Optional<String> s3Bucket() {
         return Optional.ofNullable(this.s3Bucket);
     }
     /**
-     * The Amazon S3 key of the deployment package.
+     * @return The Amazon S3 key of the deployment package.
      * 
-    */
+     */
     public Optional<String> s3Key() {
         return Optional.ofNullable(this.s3Key);
     }
     /**
-     * For versioned objects, the version of the deployment package object to use.
+     * @return For versioned objects, the version of the deployment package object to use.
      * 
-    */
+     */
     public Optional<String> s3ObjectVersion() {
         return Optional.ofNullable(this.s3ObjectVersion);
     }
     /**
-     * The source code of your Lambda function. If you include your function source inline with this parameter, AWS CloudFormation places it in a file named index and zips it to create a deployment package..
+     * @return The source code of your Lambda function. If you include your function source inline with this parameter, AWS CloudFormation places it in a file named index and zips it to create a deployment package..
      * 
-    */
+     */
     public Optional<String> zipFile() {
         return Optional.ofNullable(this.zipFile);
     }

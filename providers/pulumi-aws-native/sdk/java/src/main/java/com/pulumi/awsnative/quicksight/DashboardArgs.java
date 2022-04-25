@@ -49,6 +49,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return &lt;p&gt;The display name of the dashboard.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -71,6 +75,14 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="permissions")
     private @Nullable Output<List<DashboardResourcePermissionArgs>> permissions;
 
+    /**
+     * @return &lt;p&gt;A structure that contains the permissions of the dashboard. You can use this structure
+     *             for granting permissions by providing a list of IAM action information for each
+     *             principal ARN. &lt;/p&gt;
+     * 
+     *         &lt;p&gt;To specify no permissions, omit the permissions list.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<DashboardResourcePermissionArgs>>> permissions() {
         return Optional.ofNullable(this.permissions);
     }
@@ -90,6 +102,11 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<DashboardTagArgs>> tags;
 
+    /**
+     * @return &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the
+     *             dashboard.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<DashboardTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -104,6 +121,13 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="themeArn")
     private @Nullable Output<String> themeArn;
 
+    /**
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the theme that is being used for this dashboard. If
+     *             you add a value for this field, it overrides the value that is used in the source
+     *             entity. The theme ARN must exist in the same AWS account where you create the
+     *             dashboard.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> themeArn() {
         return Optional.ofNullable(this.themeArn);
     }
@@ -115,6 +139,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="versionDescription")
     private @Nullable Output<String> versionDescription;
 
+    /**
+     * @return &lt;p&gt;A description for the first version of the dashboard being created.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> versionDescription() {
         return Optional.ofNullable(this.versionDescription);
     }
@@ -179,11 +207,23 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
             return dashboardPublishOptions(Output.of(dashboardPublishOptions));
         }
 
+        /**
+         * @param name &lt;p&gt;The display name of the dashboard.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name &lt;p&gt;The display name of the dashboard.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -197,15 +237,45 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param permissions &lt;p&gt;A structure that contains the permissions of the dashboard. You can use this structure
+         *             for granting permissions by providing a list of IAM action information for each
+         *             principal ARN. &lt;/p&gt;
+         * 
+         *         &lt;p&gt;To specify no permissions, omit the permissions list.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(@Nullable Output<List<DashboardResourcePermissionArgs>> permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param permissions &lt;p&gt;A structure that contains the permissions of the dashboard. You can use this structure
+         *             for granting permissions by providing a list of IAM action information for each
+         *             principal ARN. &lt;/p&gt;
+         * 
+         *         &lt;p&gt;To specify no permissions, omit the permissions list.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(List<DashboardResourcePermissionArgs> permissions) {
             return permissions(Output.of(permissions));
         }
 
+        /**
+         * @param permissions &lt;p&gt;A structure that contains the permissions of the dashboard. You can use this structure
+         *             for granting permissions by providing a list of IAM action information for each
+         *             principal ARN. &lt;/p&gt;
+         * 
+         *         &lt;p&gt;To specify no permissions, omit the permissions list.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(DashboardResourcePermissionArgs... permissions) {
             return permissions(List.of(permissions));
         }
@@ -219,33 +289,84 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
             return sourceEntity(Output.of(sourceEntity));
         }
 
+        /**
+         * @param tags &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the
+         *             dashboard.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<DashboardTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the
+         *             dashboard.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<DashboardTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the
+         *             dashboard.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(DashboardTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param themeArn &lt;p&gt;The Amazon Resource Name (ARN) of the theme that is being used for this dashboard. If
+         *             you add a value for this field, it overrides the value that is used in the source
+         *             entity. The theme ARN must exist in the same AWS account where you create the
+         *             dashboard.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder themeArn(@Nullable Output<String> themeArn) {
             $.themeArn = themeArn;
             return this;
         }
 
+        /**
+         * @param themeArn &lt;p&gt;The Amazon Resource Name (ARN) of the theme that is being used for this dashboard. If
+         *             you add a value for this field, it overrides the value that is used in the source
+         *             entity. The theme ARN must exist in the same AWS account where you create the
+         *             dashboard.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder themeArn(String themeArn) {
             return themeArn(Output.of(themeArn));
         }
 
+        /**
+         * @param versionDescription &lt;p&gt;A description for the first version of the dashboard being created.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionDescription(@Nullable Output<String> versionDescription) {
             $.versionDescription = versionDescription;
             return this;
         }
 
+        /**
+         * @param versionDescription &lt;p&gt;A description for the first version of the dashboard being created.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionDescription(String versionDescription) {
             return versionDescription(Output.of(versionDescription));
         }

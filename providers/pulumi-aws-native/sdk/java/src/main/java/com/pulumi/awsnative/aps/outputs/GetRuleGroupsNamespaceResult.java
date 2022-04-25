@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetRuleGroupsNamespaceResult {
-    /**
-     * The RuleGroupsNamespace ARN.
-     * 
-     */
+        /**
+         * @return The RuleGroupsNamespace ARN.
+         * 
+         */
     private final @Nullable String arn;
-    /**
-     * The RuleGroupsNamespace data.
-     * 
-     */
+        /**
+         * @return The RuleGroupsNamespace data.
+         * 
+         */
     private final @Nullable String data;
-    /**
-     * An array of key-value pairs to apply to this resource.
-     * 
-     */
+        /**
+         * @return An array of key-value pairs to apply to this resource.
+         * 
+         */
     private final @Nullable List<RuleGroupsNamespaceTag> tags;
-    /**
-     * Required to identify a specific APS Workspace associated with this RuleGroupsNamespace.
-     * 
-     */
+        /**
+         * @return Required to identify a specific APS Workspace associated with this RuleGroupsNamespace.
+         * 
+         */
     private final @Nullable String workspace;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class GetRuleGroupsNamespaceResult {
     }
 
     /**
-     * The RuleGroupsNamespace ARN.
+     * @return The RuleGroupsNamespace ARN.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The RuleGroupsNamespace data.
+     * @return The RuleGroupsNamespace data.
      * 
-    */
+     */
     public Optional<String> data() {
         return Optional.ofNullable(this.data);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<RuleGroupsNamespaceTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * Required to identify a specific APS Workspace associated with this RuleGroupsNamespace.
+     * @return Required to identify a specific APS Workspace associated with this RuleGroupsNamespace.
      * 
-    */
+     */
     public Optional<String> workspace() {
         return Optional.ofNullable(this.workspace);
     }

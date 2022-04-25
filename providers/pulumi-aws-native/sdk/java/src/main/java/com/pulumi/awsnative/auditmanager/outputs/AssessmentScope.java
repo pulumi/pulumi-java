@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AssessmentScope {
-    /**
-     * The AWS accounts included in scope.
-     * 
-     */
+        /**
+         * @return The AWS accounts included in scope.
+         * 
+         */
     private final @Nullable List<AssessmentAWSAccount> awsAccounts;
-    /**
-     * The AWS services included in scope.
-     * 
-     */
+        /**
+         * @return The AWS services included in scope.
+         * 
+         */
     private final @Nullable List<AssessmentAWSService> awsServices;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class AssessmentScope {
     }
 
     /**
-     * The AWS accounts included in scope.
+     * @return The AWS accounts included in scope.
      * 
-    */
+     */
     public List<AssessmentAWSAccount> awsAccounts() {
         return this.awsAccounts == null ? List.of() : this.awsAccounts;
     }
     /**
-     * The AWS services included in scope.
+     * @return The AWS services included in scope.
      * 
-    */
+     */
     public List<AssessmentAWSService> awsServices() {
         return this.awsServices == null ? List.of() : this.awsServices;
     }

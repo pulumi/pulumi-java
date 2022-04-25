@@ -15,45 +15,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetContactFlowModuleResult {
-    /**
-     * The identifier of the contact flow module (ARN).
-     * 
-     */
+        /**
+         * @return The identifier of the contact flow module (ARN).
+         * 
+         */
     private final @Nullable String contactFlowModuleArn;
-    /**
-     * The content of the contact flow module in JSON format.
-     * 
-     */
+        /**
+         * @return The content of the contact flow module in JSON format.
+         * 
+         */
     private final @Nullable String content;
-    /**
-     * The description of the contact flow module.
-     * 
-     */
+        /**
+         * @return The description of the contact flow module.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The identifier of the Amazon Connect instance (ARN).
-     * 
-     */
+        /**
+         * @return The identifier of the Amazon Connect instance (ARN).
+         * 
+         */
     private final @Nullable String instanceArn;
-    /**
-     * The name of the contact flow module.
-     * 
-     */
+        /**
+         * @return The name of the contact flow module.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The state of the contact flow module.
-     * 
-     */
+        /**
+         * @return The state of the contact flow module.
+         * 
+         */
     private final @Nullable ContactFlowModuleState state;
-    /**
-     * The status of the contact flow module.
-     * 
-     */
+        /**
+         * @return The status of the contact flow module.
+         * 
+         */
     private final @Nullable ContactFlowModuleStatus status;
-    /**
-     * One or more tags.
-     * 
-     */
+        /**
+         * @return One or more tags.
+         * 
+         */
     private final @Nullable List<ContactFlowModuleTag> tags;
 
     @CustomType.Constructor
@@ -77,58 +77,58 @@ public final class GetContactFlowModuleResult {
     }
 
     /**
-     * The identifier of the contact flow module (ARN).
+     * @return The identifier of the contact flow module (ARN).
      * 
-    */
+     */
     public Optional<String> contactFlowModuleArn() {
         return Optional.ofNullable(this.contactFlowModuleArn);
     }
     /**
-     * The content of the contact flow module in JSON format.
+     * @return The content of the contact flow module in JSON format.
      * 
-    */
+     */
     public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
     /**
-     * The description of the contact flow module.
+     * @return The description of the contact flow module.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The identifier of the Amazon Connect instance (ARN).
+     * @return The identifier of the Amazon Connect instance (ARN).
      * 
-    */
+     */
     public Optional<String> instanceArn() {
         return Optional.ofNullable(this.instanceArn);
     }
     /**
-     * The name of the contact flow module.
+     * @return The name of the contact flow module.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The state of the contact flow module.
+     * @return The state of the contact flow module.
      * 
-    */
+     */
     public Optional<ContactFlowModuleState> state() {
         return Optional.ofNullable(this.state);
     }
     /**
-     * The status of the contact flow module.
+     * @return The status of the contact flow module.
      * 
-    */
+     */
     public Optional<ContactFlowModuleStatus> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * One or more tags.
+     * @return One or more tags.
      * 
-    */
+     */
     public List<ContactFlowModuleTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

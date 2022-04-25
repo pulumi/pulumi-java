@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ConnectorProfileVeevaConnectorProfileCredentials {
-    /**
-     * The password that corresponds to the username.
-     * 
-     */
+        /**
+         * @return The password that corresponds to the username.
+         * 
+         */
     private final String password;
-    /**
-     * The name of the user.
-     * 
-     */
+        /**
+         * @return The name of the user.
+         * 
+         */
     private final String username;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ConnectorProfileVeevaConnectorProfileCredentials {
     }
 
     /**
-     * The password that corresponds to the username.
+     * @return The password that corresponds to the username.
      * 
-    */
+     */
     public String password() {
         return this.password;
     }
     /**
-     * The name of the user.
+     * @return The name of the user.
      * 
-    */
+     */
     public String username() {
         return this.username;
     }

@@ -12,25 +12,25 @@ import java.util.Objects;
 
 @CustomType
 public final class JobTemplateAbortCriteria {
-    /**
-     * The type of job action to take to initiate the job abort.
-     * 
-     */
+        /**
+         * @return The type of job action to take to initiate the job abort.
+         * 
+         */
     private final JobTemplateAction action;
-    /**
-     * The type of job execution failures that can initiate a job abort.
-     * 
-     */
+        /**
+         * @return The type of job execution failures that can initiate a job abort.
+         * 
+         */
     private final JobTemplateFailureType failureType;
-    /**
-     * The minimum number of things which must receive job execution notifications before the job can be aborted.
-     * 
-     */
+        /**
+         * @return The minimum number of things which must receive job execution notifications before the job can be aborted.
+         * 
+         */
     private final Integer minNumberOfExecutedThings;
-    /**
-     * The minimum percentage of job execution failures that must occur to initiate the job abort.
-     * 
-     */
+        /**
+         * @return The minimum percentage of job execution failures that must occur to initiate the job abort.
+         * 
+         */
     private final Double thresholdPercentage;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class JobTemplateAbortCriteria {
     }
 
     /**
-     * The type of job action to take to initiate the job abort.
+     * @return The type of job action to take to initiate the job abort.
      * 
-    */
+     */
     public JobTemplateAction action() {
         return this.action;
     }
     /**
-     * The type of job execution failures that can initiate a job abort.
+     * @return The type of job execution failures that can initiate a job abort.
      * 
-    */
+     */
     public JobTemplateFailureType failureType() {
         return this.failureType;
     }
     /**
-     * The minimum number of things which must receive job execution notifications before the job can be aborted.
+     * @return The minimum number of things which must receive job execution notifications before the job can be aborted.
      * 
-    */
+     */
     public Integer minNumberOfExecutedThings() {
         return this.minNumberOfExecutedThings;
     }
     /**
-     * The minimum percentage of job execution failures that must occur to initiate the job abort.
+     * @return The minimum percentage of job execution failures that must occur to initiate the job abort.
      * 
-    */
+     */
     public Double thresholdPercentage() {
         return this.thresholdPercentage;
     }

@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class BucketAccelerateConfiguration {
-    /**
-     * Configures the transfer acceleration state for an Amazon S3 bucket.
-     * 
-     */
+        /**
+         * @return Configures the transfer acceleration state for an Amazon S3 bucket.
+         * 
+         */
     private final BucketAccelerateConfigurationAccelerationStatus accelerationStatus;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class BucketAccelerateConfiguration {
     }
 
     /**
-     * Configures the transfer acceleration state for an Amazon S3 bucket.
+     * @return Configures the transfer acceleration state for an Amazon S3 bucket.
      * 
-    */
+     */
     public BucketAccelerateConfigurationAccelerationStatus accelerationStatus() {
         return this.accelerationStatus;
     }

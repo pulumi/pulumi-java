@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class UsagePlanApiStage {
-    /**
-     * The ID of an API that is in the specified Stage property that you want to associate with the usage plan.
-     * 
-     */
+        /**
+         * @return The ID of an API that is in the specified Stage property that you want to associate with the usage plan.
+         * 
+         */
     private final @Nullable String apiId;
-    /**
-     * The name of the stage to associate with the usage plan.
-     * 
-     */
+        /**
+         * @return The name of the stage to associate with the usage plan.
+         * 
+         */
     private final @Nullable String stage;
-    /**
-     * Map containing method-level throttling information for an API stage in a usage plan. The key for the map is the path and method for which to configure custom throttling, for example, &#39;/pets/GET&#39;. Duplicates are not allowed.
-     * 
-     */
+        /**
+         * @return Map containing method-level throttling information for an API stage in a usage plan. The key for the map is the path and method for which to configure custom throttling, for example, &#39;/pets/GET&#39;. Duplicates are not allowed.
+         * 
+         */
     private final @Nullable Object throttle;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class UsagePlanApiStage {
     }
 
     /**
-     * The ID of an API that is in the specified Stage property that you want to associate with the usage plan.
+     * @return The ID of an API that is in the specified Stage property that you want to associate with the usage plan.
      * 
-    */
+     */
     public Optional<String> apiId() {
         return Optional.ofNullable(this.apiId);
     }
     /**
-     * The name of the stage to associate with the usage plan.
+     * @return The name of the stage to associate with the usage plan.
      * 
-    */
+     */
     public Optional<String> stage() {
         return Optional.ofNullable(this.stage);
     }
     /**
-     * Map containing method-level throttling information for an API stage in a usage plan. The key for the map is the path and method for which to configure custom throttling, for example, &#39;/pets/GET&#39;. Duplicates are not allowed.
+     * @return Map containing method-level throttling information for an API stage in a usage plan. The key for the map is the path and method for which to configure custom throttling, for example, &#39;/pets/GET&#39;. Duplicates are not allowed.
      * 
-    */
+     */
     public Optional<Object> throttle() {
         return Optional.ofNullable(this.throttle);
     }

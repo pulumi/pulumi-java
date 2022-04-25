@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class FHIRDatastorePreloadDataConfig {
-    /**
-     * The type of preloaded data. Only Synthea preloaded data is supported.
-     * 
-     */
+        /**
+         * @return The type of preloaded data. Only Synthea preloaded data is supported.
+         * 
+         */
     private final FHIRDatastorePreloadDataConfigPreloadDataType preloadDataType;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class FHIRDatastorePreloadDataConfig {
     }
 
     /**
-     * The type of preloaded data. Only Synthea preloaded data is supported.
+     * @return The type of preloaded data. Only Synthea preloaded data is supported.
      * 
-    */
+     */
     public FHIRDatastorePreloadDataConfigPreloadDataType preloadDataType() {
         return this.preloadDataType;
     }

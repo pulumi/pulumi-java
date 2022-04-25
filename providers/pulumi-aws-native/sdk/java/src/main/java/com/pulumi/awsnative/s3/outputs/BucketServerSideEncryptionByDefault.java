@@ -12,10 +12,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BucketServerSideEncryptionByDefault {
-    /**
-     * &#34;KMSMasterKeyID&#34; can only be used when you set the value of SSEAlgorithm as aws:kms.
-     * 
-     */
+        /**
+         * @return &#34;KMSMasterKeyID&#34; can only be used when you set the value of SSEAlgorithm as aws:kms.
+         * 
+         */
     private final @Nullable String kMSMasterKeyID;
     private final BucketServerSideEncryptionByDefaultSSEAlgorithm sSEAlgorithm;
 
@@ -28,9 +28,9 @@ public final class BucketServerSideEncryptionByDefault {
     }
 
     /**
-     * &#34;KMSMasterKeyID&#34; can only be used when you set the value of SSEAlgorithm as aws:kms.
+     * @return &#34;KMSMasterKeyID&#34; can only be used when you set the value of SSEAlgorithm as aws:kms.
      * 
-    */
+     */
     public Optional<String> kMSMasterKeyID() {
         return Optional.ofNullable(this.kMSMasterKeyID);
     }

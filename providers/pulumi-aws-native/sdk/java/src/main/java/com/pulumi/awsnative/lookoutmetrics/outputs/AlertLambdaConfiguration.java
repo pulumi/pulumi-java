@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class AlertLambdaConfiguration {
-    /**
-     * ARN of a Lambda to send alert notifications to.
-     * 
-     */
+        /**
+         * @return ARN of a Lambda to send alert notifications to.
+         * 
+         */
     private final String lambdaArn;
-    /**
-     * ARN of an IAM role that LookoutMetrics should assume to access the Lambda function.
-     * 
-     */
+        /**
+         * @return ARN of an IAM role that LookoutMetrics should assume to access the Lambda function.
+         * 
+         */
     private final String roleArn;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class AlertLambdaConfiguration {
     }
 
     /**
-     * ARN of a Lambda to send alert notifications to.
+     * @return ARN of a Lambda to send alert notifications to.
      * 
-    */
+     */
     public String lambdaArn() {
         return this.lambdaArn;
     }
     /**
-     * ARN of an IAM role that LookoutMetrics should assume to access the Lambda function.
+     * @return ARN of an IAM role that LookoutMetrics should assume to access the Lambda function.
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }

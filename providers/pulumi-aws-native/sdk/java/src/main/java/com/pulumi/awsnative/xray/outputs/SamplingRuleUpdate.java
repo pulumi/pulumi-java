@@ -14,57 +14,57 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SamplingRuleUpdate {
-    /**
-     * Matches attributes derived from the request.
-     * 
-     */
+        /**
+         * @return Matches attributes derived from the request.
+         * 
+         */
     private final @Nullable Object attributes;
-    /**
-     * The percentage of matching requests to instrument, after the reservoir is exhausted.
-     * 
-     */
+        /**
+         * @return The percentage of matching requests to instrument, after the reservoir is exhausted.
+         * 
+         */
     private final @Nullable Double fixedRate;
-    /**
-     * Matches the HTTP method from a request URL.
-     * 
-     */
+        /**
+         * @return Matches the HTTP method from a request URL.
+         * 
+         */
     private final @Nullable String hTTPMethod;
-    /**
-     * Matches the hostname from a request URL.
-     * 
-     */
+        /**
+         * @return Matches the hostname from a request URL.
+         * 
+         */
     private final @Nullable String host;
-    /**
-     * The priority of the sampling rule.
-     * 
-     */
+        /**
+         * @return The priority of the sampling rule.
+         * 
+         */
     private final @Nullable Integer priority;
-    /**
-     * A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
-     * 
-     */
+        /**
+         * @return A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
+         * 
+         */
     private final @Nullable Integer reservoirSize;
-    /**
-     * Matches the ARN of the AWS resource on which the service runs.
-     * 
-     */
+        /**
+         * @return Matches the ARN of the AWS resource on which the service runs.
+         * 
+         */
     private final @Nullable String resourceARN;
     private final @Nullable String ruleARN;
     private final @Nullable String ruleName;
-    /**
-     * Matches the name that the service uses to identify itself in segments.
-     * 
-     */
+        /**
+         * @return Matches the name that the service uses to identify itself in segments.
+         * 
+         */
     private final @Nullable String serviceName;
-    /**
-     * Matches the origin that the service uses to identify its type in segments.
-     * 
-     */
+        /**
+         * @return Matches the origin that the service uses to identify its type in segments.
+         * 
+         */
     private final @Nullable String serviceType;
-    /**
-     * Matches the path from a request URL.
-     * 
-     */
+        /**
+         * @return Matches the path from a request URL.
+         * 
+         */
     private final @Nullable String uRLPath;
 
     @CustomType.Constructor
@@ -96,51 +96,51 @@ public final class SamplingRuleUpdate {
     }
 
     /**
-     * Matches attributes derived from the request.
+     * @return Matches attributes derived from the request.
      * 
-    */
+     */
     public Optional<Object> attributes() {
         return Optional.ofNullable(this.attributes);
     }
     /**
-     * The percentage of matching requests to instrument, after the reservoir is exhausted.
+     * @return The percentage of matching requests to instrument, after the reservoir is exhausted.
      * 
-    */
+     */
     public Optional<Double> fixedRate() {
         return Optional.ofNullable(this.fixedRate);
     }
     /**
-     * Matches the HTTP method from a request URL.
+     * @return Matches the HTTP method from a request URL.
      * 
-    */
+     */
     public Optional<String> hTTPMethod() {
         return Optional.ofNullable(this.hTTPMethod);
     }
     /**
-     * Matches the hostname from a request URL.
+     * @return Matches the hostname from a request URL.
      * 
-    */
+     */
     public Optional<String> host() {
         return Optional.ofNullable(this.host);
     }
     /**
-     * The priority of the sampling rule.
+     * @return The priority of the sampling rule.
      * 
-    */
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
-     * A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
+     * @return A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
      * 
-    */
+     */
     public Optional<Integer> reservoirSize() {
         return Optional.ofNullable(this.reservoirSize);
     }
     /**
-     * Matches the ARN of the AWS resource on which the service runs.
+     * @return Matches the ARN of the AWS resource on which the service runs.
      * 
-    */
+     */
     public Optional<String> resourceARN() {
         return Optional.ofNullable(this.resourceARN);
     }
@@ -151,23 +151,23 @@ public final class SamplingRuleUpdate {
         return Optional.ofNullable(this.ruleName);
     }
     /**
-     * Matches the name that the service uses to identify itself in segments.
+     * @return Matches the name that the service uses to identify itself in segments.
      * 
-    */
+     */
     public Optional<String> serviceName() {
         return Optional.ofNullable(this.serviceName);
     }
     /**
-     * Matches the origin that the service uses to identify its type in segments.
+     * @return Matches the origin that the service uses to identify its type in segments.
      * 
-    */
+     */
     public Optional<String> serviceType() {
         return Optional.ofNullable(this.serviceType);
     }
     /**
-     * Matches the path from a request URL.
+     * @return Matches the path from a request URL.
      * 
-    */
+     */
     public Optional<String> uRLPath() {
         return Optional.ofNullable(this.uRLPath);
     }

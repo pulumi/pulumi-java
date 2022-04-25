@@ -16,10 +16,10 @@ public final class GetRouteResult {
     private final @Nullable String arn;
     private final @Nullable String pathResourceToId;
     private final @Nullable String routeIdentifier;
-    /**
-     * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
-     * 
-     */
+        /**
+         * @return Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
+         * 
+         */
     private final @Nullable List<RouteTag> tags;
 
     @CustomType.Constructor
@@ -44,9 +44,9 @@ public final class GetRouteResult {
         return Optional.ofNullable(this.routeIdentifier);
     }
     /**
-     * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
+     * @return Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
-    */
+     */
     public List<RouteTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

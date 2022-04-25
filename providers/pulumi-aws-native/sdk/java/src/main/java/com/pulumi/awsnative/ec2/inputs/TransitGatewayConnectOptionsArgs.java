@@ -22,6 +22,10 @@ public final class TransitGatewayConnectOptionsArgs extends com.pulumi.resources
     @Import(name="protocol")
     private @Nullable Output<String> protocol;
 
+    /**
+     * @return The tunnel protocol.
+     * 
+     */
     public Optional<Output<String>> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -50,11 +54,23 @@ public final class TransitGatewayConnectOptionsArgs extends com.pulumi.resources
             $ = new TransitGatewayConnectOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param protocol The tunnel protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable Output<String> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol The tunnel protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Output.of(protocol));
         }

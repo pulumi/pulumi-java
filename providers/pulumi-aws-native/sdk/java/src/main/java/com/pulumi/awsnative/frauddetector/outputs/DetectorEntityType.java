@@ -15,27 +15,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DetectorEntityType {
     private final @Nullable String arn;
-    /**
-     * The time when the entity type was created.
-     * 
-     */
+        /**
+         * @return The time when the entity type was created.
+         * 
+         */
     private final @Nullable String createdTime;
-    /**
-     * The description.
-     * 
-     */
+        /**
+         * @return The description.
+         * 
+         */
     private final @Nullable String description;
     private final @Nullable Boolean inline;
-    /**
-     * The time when the entity type was last updated.
-     * 
-     */
+        /**
+         * @return The time when the entity type was last updated.
+         * 
+         */
     private final @Nullable String lastUpdatedTime;
     private final @Nullable String name;
-    /**
-     * Tags associated with this entity type.
-     * 
-     */
+        /**
+         * @return Tags associated with this entity type.
+         * 
+         */
     private final @Nullable List<DetectorTag> tags;
 
     @CustomType.Constructor
@@ -60,16 +60,16 @@ public final class DetectorEntityType {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The time when the entity type was created.
+     * @return The time when the entity type was created.
      * 
-    */
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
-     * The description.
+     * @return The description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -77,9 +77,9 @@ public final class DetectorEntityType {
         return Optional.ofNullable(this.inline);
     }
     /**
-     * The time when the entity type was last updated.
+     * @return The time when the entity type was last updated.
      * 
-    */
+     */
     public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
@@ -87,9 +87,9 @@ public final class DetectorEntityType {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Tags associated with this entity type.
+     * @return Tags associated with this entity type.
      * 
-    */
+     */
     public List<DetectorTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

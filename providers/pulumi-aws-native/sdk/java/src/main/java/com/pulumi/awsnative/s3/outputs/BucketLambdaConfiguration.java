@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BucketLambdaConfiguration {
-    /**
-     * The Amazon S3 bucket event for which to invoke the AWS Lambda function.
-     * 
-     */
+        /**
+         * @return The Amazon S3 bucket event for which to invoke the AWS Lambda function.
+         * 
+         */
     private final String event;
-    /**
-     * The filtering rules that determine which objects invoke the AWS Lambda function.
-     * 
-     */
+        /**
+         * @return The filtering rules that determine which objects invoke the AWS Lambda function.
+         * 
+         */
     private final @Nullable BucketNotificationFilter filter;
-    /**
-     * The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon S3 invokes when the specified event type occurs.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon S3 invokes when the specified event type occurs.
+         * 
+         */
     private final String function;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class BucketLambdaConfiguration {
     }
 
     /**
-     * The Amazon S3 bucket event for which to invoke the AWS Lambda function.
+     * @return The Amazon S3 bucket event for which to invoke the AWS Lambda function.
      * 
-    */
+     */
     public String event() {
         return this.event;
     }
     /**
-     * The filtering rules that determine which objects invoke the AWS Lambda function.
+     * @return The filtering rules that determine which objects invoke the AWS Lambda function.
      * 
-    */
+     */
     public Optional<BucketNotificationFilter> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
-     * The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon S3 invokes when the specified event type occurs.
+     * @return The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon S3 invokes when the specified event type occurs.
      * 
-    */
+     */
     public String function() {
         return this.function;
     }

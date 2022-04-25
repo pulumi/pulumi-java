@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class UsagePlanQuotaSettings {
-    /**
-     * The maximum number of requests that users can make within the specified time period.
-     * 
-     */
+        /**
+         * @return The maximum number of requests that users can make within the specified time period.
+         * 
+         */
     private final @Nullable Integer limit;
-    /**
-     * For the initial time period, the number of requests to subtract from the specified limit. When you first implement a usage plan, the plan might start in the middle of the week or month. With this property, you can decrease the limit for this initial time period.
-     * 
-     */
+        /**
+         * @return For the initial time period, the number of requests to subtract from the specified limit. When you first implement a usage plan, the plan might start in the middle of the week or month. With this property, you can decrease the limit for this initial time period.
+         * 
+         */
     private final @Nullable Integer offset;
-    /**
-     * The time period for which the maximum limit of requests applies, such as DAY or WEEK. For valid values, see the period property for the UsagePlan resource in the Amazon API Gateway REST API Reference.
-     * 
-     */
+        /**
+         * @return The time period for which the maximum limit of requests applies, such as DAY or WEEK. For valid values, see the period property for the UsagePlan resource in the Amazon API Gateway REST API Reference.
+         * 
+         */
     private final @Nullable String period;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class UsagePlanQuotaSettings {
     }
 
     /**
-     * The maximum number of requests that users can make within the specified time period.
+     * @return The maximum number of requests that users can make within the specified time period.
      * 
-    */
+     */
     public Optional<Integer> limit() {
         return Optional.ofNullable(this.limit);
     }
     /**
-     * For the initial time period, the number of requests to subtract from the specified limit. When you first implement a usage plan, the plan might start in the middle of the week or month. With this property, you can decrease the limit for this initial time period.
+     * @return For the initial time period, the number of requests to subtract from the specified limit. When you first implement a usage plan, the plan might start in the middle of the week or month. With this property, you can decrease the limit for this initial time period.
      * 
-    */
+     */
     public Optional<Integer> offset() {
         return Optional.ofNullable(this.offset);
     }
     /**
-     * The time period for which the maximum limit of requests applies, such as DAY or WEEK. For valid values, see the period property for the UsagePlan resource in the Amazon API Gateway REST API Reference.
+     * @return The time period for which the maximum limit of requests applies, such as DAY or WEEK. For valid values, see the period property for the UsagePlan resource in the Amazon API Gateway REST API Reference.
      * 
-    */
+     */
     public Optional<String> period() {
         return Optional.ofNullable(this.period);
     }

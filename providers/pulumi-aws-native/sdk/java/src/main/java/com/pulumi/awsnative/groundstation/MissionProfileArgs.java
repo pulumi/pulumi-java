@@ -26,6 +26,10 @@ public final class MissionProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="contactPostPassDurationSeconds")
     private @Nullable Output<Integer> contactPostPassDurationSeconds;
 
+    /**
+     * @return Post-pass time needed after the contact.
+     * 
+     */
     public Optional<Output<Integer>> contactPostPassDurationSeconds() {
         return Optional.ofNullable(this.contactPostPassDurationSeconds);
     }
@@ -37,6 +41,10 @@ public final class MissionProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="contactPrePassDurationSeconds")
     private @Nullable Output<Integer> contactPrePassDurationSeconds;
 
+    /**
+     * @return Pre-pass time needed before the contact.
+     * 
+     */
     public Optional<Output<Integer>> contactPrePassDurationSeconds() {
         return Optional.ofNullable(this.contactPrePassDurationSeconds);
     }
@@ -55,6 +63,10 @@ public final class MissionProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="minimumViableContactDurationSeconds", required=true)
     private Output<Integer> minimumViableContactDurationSeconds;
 
+    /**
+     * @return Visibilities with shorter duration than the specified minimum viable contact duration will be ignored when searching for available contacts.
+     * 
+     */
     public Output<Integer> minimumViableContactDurationSeconds() {
         return this.minimumViableContactDurationSeconds;
     }
@@ -66,6 +78,10 @@ public final class MissionProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A name used to identify a mission profile.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -114,20 +130,44 @@ public final class MissionProfileArgs extends com.pulumi.resources.ResourceArgs 
             $ = new MissionProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contactPostPassDurationSeconds Post-pass time needed after the contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactPostPassDurationSeconds(@Nullable Output<Integer> contactPostPassDurationSeconds) {
             $.contactPostPassDurationSeconds = contactPostPassDurationSeconds;
             return this;
         }
 
+        /**
+         * @param contactPostPassDurationSeconds Post-pass time needed after the contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactPostPassDurationSeconds(Integer contactPostPassDurationSeconds) {
             return contactPostPassDurationSeconds(Output.of(contactPostPassDurationSeconds));
         }
 
+        /**
+         * @param contactPrePassDurationSeconds Pre-pass time needed before the contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactPrePassDurationSeconds(@Nullable Output<Integer> contactPrePassDurationSeconds) {
             $.contactPrePassDurationSeconds = contactPrePassDurationSeconds;
             return this;
         }
 
+        /**
+         * @param contactPrePassDurationSeconds Pre-pass time needed before the contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactPrePassDurationSeconds(Integer contactPrePassDurationSeconds) {
             return contactPrePassDurationSeconds(Output.of(contactPrePassDurationSeconds));
         }
@@ -145,20 +185,44 @@ public final class MissionProfileArgs extends com.pulumi.resources.ResourceArgs 
             return dataflowEdges(List.of(dataflowEdges));
         }
 
+        /**
+         * @param minimumViableContactDurationSeconds Visibilities with shorter duration than the specified minimum viable contact duration will be ignored when searching for available contacts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumViableContactDurationSeconds(Output<Integer> minimumViableContactDurationSeconds) {
             $.minimumViableContactDurationSeconds = minimumViableContactDurationSeconds;
             return this;
         }
 
+        /**
+         * @param minimumViableContactDurationSeconds Visibilities with shorter duration than the specified minimum viable contact duration will be ignored when searching for available contacts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumViableContactDurationSeconds(Integer minimumViableContactDurationSeconds) {
             return minimumViableContactDurationSeconds(Output.of(minimumViableContactDurationSeconds));
         }
 
+        /**
+         * @param name A name used to identify a mission profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A name used to identify a mission profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

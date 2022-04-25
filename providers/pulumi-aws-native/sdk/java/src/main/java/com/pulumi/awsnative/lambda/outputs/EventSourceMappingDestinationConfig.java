@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EventSourceMappingDestinationConfig {
-    /**
-     * The destination configuration for failed invocations.
-     * 
-     */
+        /**
+         * @return The destination configuration for failed invocations.
+         * 
+         */
     private final @Nullable EventSourceMappingOnFailure onFailure;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class EventSourceMappingDestinationConfig {
     }
 
     /**
-     * The destination configuration for failed invocations.
+     * @return The destination configuration for failed invocations.
      * 
-    */
+     */
     public Optional<EventSourceMappingOnFailure> onFailure() {
         return Optional.ofNullable(this.onFailure);
     }

@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetOrganizationConformancePackResult {
-    /**
-     * A list of ConformancePackInputParameter objects.
-     * 
-     */
+        /**
+         * @return A list of ConformancePackInputParameter objects.
+         * 
+         */
     private final @Nullable List<OrganizationConformancePackConformancePackInputParameter> conformancePackInputParameters;
-    /**
-     * AWS Config stores intermediate files while processing conformance pack template.
-     * 
-     */
+        /**
+         * @return AWS Config stores intermediate files while processing conformance pack template.
+         * 
+         */
     private final @Nullable String deliveryS3Bucket;
-    /**
-     * The prefix for the delivery S3 bucket.
-     * 
-     */
+        /**
+         * @return The prefix for the delivery S3 bucket.
+         * 
+         */
     private final @Nullable String deliveryS3KeyPrefix;
-    /**
-     * A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.
-     * 
-     */
+        /**
+         * @return A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.
+         * 
+         */
     private final @Nullable List<String> excludedAccounts;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class GetOrganizationConformancePackResult {
     }
 
     /**
-     * A list of ConformancePackInputParameter objects.
+     * @return A list of ConformancePackInputParameter objects.
      * 
-    */
+     */
     public List<OrganizationConformancePackConformancePackInputParameter> conformancePackInputParameters() {
         return this.conformancePackInputParameters == null ? List.of() : this.conformancePackInputParameters;
     }
     /**
-     * AWS Config stores intermediate files while processing conformance pack template.
+     * @return AWS Config stores intermediate files while processing conformance pack template.
      * 
-    */
+     */
     public Optional<String> deliveryS3Bucket() {
         return Optional.ofNullable(this.deliveryS3Bucket);
     }
     /**
-     * The prefix for the delivery S3 bucket.
+     * @return The prefix for the delivery S3 bucket.
      * 
-    */
+     */
     public Optional<String> deliveryS3KeyPrefix() {
         return Optional.ofNullable(this.deliveryS3KeyPrefix);
     }
     /**
-     * A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.
+     * @return A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.
      * 
-    */
+     */
     public List<String> excludedAccounts() {
         return this.excludedAccounts == null ? List.of() : this.excludedAccounts;
     }

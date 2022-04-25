@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetContainerRecipeResult {
-    /**
-     * The Amazon Resource Name (ARN) of the container recipe.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the container recipe.
+         * 
+         */
     private final @Nullable String arn;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class GetContainerRecipeResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the container recipe.
+     * @return The Amazon Resource Name (ARN) of the container recipe.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }

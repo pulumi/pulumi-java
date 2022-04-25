@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class StackSetParameter {
-    /**
-     * The key associated with the parameter. If you don&#39;t specify a key and value for a particular parameter, AWS CloudFormation uses the default value that is specified in your template.
-     * 
-     */
+        /**
+         * @return The key associated with the parameter. If you don&#39;t specify a key and value for a particular parameter, AWS CloudFormation uses the default value that is specified in your template.
+         * 
+         */
     private final String parameterKey;
-    /**
-     * The input value associated with the parameter.
-     * 
-     */
+        /**
+         * @return The input value associated with the parameter.
+         * 
+         */
     private final String parameterValue;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class StackSetParameter {
     }
 
     /**
-     * The key associated with the parameter. If you don&#39;t specify a key and value for a particular parameter, AWS CloudFormation uses the default value that is specified in your template.
+     * @return The key associated with the parameter. If you don&#39;t specify a key and value for a particular parameter, AWS CloudFormation uses the default value that is specified in your template.
      * 
-    */
+     */
     public String parameterKey() {
         return this.parameterKey;
     }
     /**
-     * The input value associated with the parameter.
+     * @return The input value associated with the parameter.
      * 
-    */
+     */
     public String parameterValue() {
         return this.parameterValue;
     }

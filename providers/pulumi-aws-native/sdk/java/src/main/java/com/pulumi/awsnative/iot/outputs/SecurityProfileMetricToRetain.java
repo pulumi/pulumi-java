@@ -12,10 +12,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SecurityProfileMetricToRetain {
-    /**
-     * What is measured by the behavior.
-     * 
-     */
+        /**
+         * @return What is measured by the behavior.
+         * 
+         */
     private final String metric;
     private final @Nullable SecurityProfileMetricDimension metricDimension;
 
@@ -28,9 +28,9 @@ public final class SecurityProfileMetricToRetain {
     }
 
     /**
-     * What is measured by the behavior.
+     * @return What is measured by the behavior.
      * 
-    */
+     */
     public String metric() {
         return this.metric;
     }

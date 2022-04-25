@@ -11,16 +11,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AnalysisSheet {
-    /**
-     * &lt;p&gt;The name of a sheet. This name is displayed on the sheet&#39;s tab in the QuickSight
-     *             console.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;The name of a sheet. This name is displayed on the sheet&#39;s tab in the QuickSight
+         *             console.&lt;/p&gt;
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * &lt;p&gt;The unique identifier associated with a sheet.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;The unique identifier associated with a sheet.&lt;/p&gt;
+         * 
+         */
     private final @Nullable String sheetId;
 
     @CustomType.Constructor
@@ -32,17 +32,17 @@ public final class AnalysisSheet {
     }
 
     /**
-     * &lt;p&gt;The name of a sheet. This name is displayed on the sheet&#39;s tab in the QuickSight
+     * @return &lt;p&gt;The name of a sheet. This name is displayed on the sheet&#39;s tab in the QuickSight
      *             console.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * &lt;p&gt;The unique identifier associated with a sheet.&lt;/p&gt;
+     * @return &lt;p&gt;The unique identifier associated with a sheet.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> sheetId() {
         return Optional.ofNullable(this.sheetId);
     }

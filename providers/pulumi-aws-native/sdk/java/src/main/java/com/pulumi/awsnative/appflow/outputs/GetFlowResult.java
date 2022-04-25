@@ -17,40 +17,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetFlowResult {
-    /**
-     * Description of the flow.
-     * 
-     */
+        /**
+         * @return Description of the flow.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * List of Destination connectors of the flow.
-     * 
-     */
+        /**
+         * @return List of Destination connectors of the flow.
+         * 
+         */
     private final @Nullable List<FlowDestinationFlowConfig> destinationFlowConfigList;
-    /**
-     * ARN identifier of the flow.
-     * 
-     */
+        /**
+         * @return ARN identifier of the flow.
+         * 
+         */
     private final @Nullable String flowArn;
-    /**
-     * Configurations of Source connector of the flow.
-     * 
-     */
+        /**
+         * @return Configurations of Source connector of the flow.
+         * 
+         */
     private final @Nullable FlowSourceFlowConfig sourceFlowConfig;
-    /**
-     * List of Tags.
-     * 
-     */
+        /**
+         * @return List of Tags.
+         * 
+         */
     private final @Nullable List<FlowTag> tags;
-    /**
-     * List of tasks for the flow.
-     * 
-     */
+        /**
+         * @return List of tasks for the flow.
+         * 
+         */
     private final @Nullable List<FlowTask> tasks;
-    /**
-     * Trigger settings of the flow.
-     * 
-     */
+        /**
+         * @return Trigger settings of the flow.
+         * 
+         */
     private final @Nullable FlowTriggerConfig triggerConfig;
 
     @CustomType.Constructor
@@ -72,51 +72,51 @@ public final class GetFlowResult {
     }
 
     /**
-     * Description of the flow.
+     * @return Description of the flow.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * List of Destination connectors of the flow.
+     * @return List of Destination connectors of the flow.
      * 
-    */
+     */
     public List<FlowDestinationFlowConfig> destinationFlowConfigList() {
         return this.destinationFlowConfigList == null ? List.of() : this.destinationFlowConfigList;
     }
     /**
-     * ARN identifier of the flow.
+     * @return ARN identifier of the flow.
      * 
-    */
+     */
     public Optional<String> flowArn() {
         return Optional.ofNullable(this.flowArn);
     }
     /**
-     * Configurations of Source connector of the flow.
+     * @return Configurations of Source connector of the flow.
      * 
-    */
+     */
     public Optional<FlowSourceFlowConfig> sourceFlowConfig() {
         return Optional.ofNullable(this.sourceFlowConfig);
     }
     /**
-     * List of Tags.
+     * @return List of Tags.
      * 
-    */
+     */
     public List<FlowTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * List of tasks for the flow.
+     * @return List of tasks for the flow.
      * 
-    */
+     */
     public List<FlowTask> tasks() {
         return this.tasks == null ? List.of() : this.tasks;
     }
     /**
-     * Trigger settings of the flow.
+     * @return Trigger settings of the flow.
      * 
-    */
+     */
     public Optional<FlowTriggerConfig> triggerConfig() {
         return Optional.ofNullable(this.triggerConfig);
     }

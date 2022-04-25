@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LoggingConfigurationCondition {
-    /**
-     * A single action condition.
-     * 
-     */
+        /**
+         * @return A single action condition.
+         * 
+         */
     private final @Nullable LoggingConfigurationConditionActionConditionProperties actionCondition;
-    /**
-     * A single label name condition.
-     * 
-     */
+        /**
+         * @return A single label name condition.
+         * 
+         */
     private final @Nullable LoggingConfigurationConditionLabelNameConditionProperties labelNameCondition;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class LoggingConfigurationCondition {
     }
 
     /**
-     * A single action condition.
+     * @return A single action condition.
      * 
-    */
+     */
     public Optional<LoggingConfigurationConditionActionConditionProperties> actionCondition() {
         return Optional.ofNullable(this.actionCondition);
     }
     /**
-     * A single label name condition.
+     * @return A single label name condition.
      * 
-    */
+     */
     public Optional<LoggingConfigurationConditionLabelNameConditionProperties> labelNameCondition() {
         return Optional.ofNullable(this.labelNameCondition);
     }

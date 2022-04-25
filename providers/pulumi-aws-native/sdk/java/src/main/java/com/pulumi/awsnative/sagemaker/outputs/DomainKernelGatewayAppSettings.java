@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DomainKernelGatewayAppSettings {
-    /**
-     * A list of custom SageMaker images that are configured to run as a KernelGateway app.
-     * 
-     */
+        /**
+         * @return A list of custom SageMaker images that are configured to run as a KernelGateway app.
+         * 
+         */
     private final @Nullable List<DomainCustomImage> customImages;
-    /**
-     * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image used by the KernelGateway app.
-     * 
-     */
+        /**
+         * @return The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image used by the KernelGateway app.
+         * 
+         */
     private final @Nullable DomainResourceSpec defaultResourceSpec;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class DomainKernelGatewayAppSettings {
     }
 
     /**
-     * A list of custom SageMaker images that are configured to run as a KernelGateway app.
+     * @return A list of custom SageMaker images that are configured to run as a KernelGateway app.
      * 
-    */
+     */
     public List<DomainCustomImage> customImages() {
         return this.customImages == null ? List.of() : this.customImages;
     }
     /**
-     * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image used by the KernelGateway app.
+     * @return The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image used by the KernelGateway app.
      * 
-    */
+     */
     public Optional<DomainResourceSpec> defaultResourceSpec() {
         return Optional.ofNullable(this.defaultResourceSpec);
     }

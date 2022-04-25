@@ -57,6 +57,10 @@ public final class RuleGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rules")
     private @Nullable Output<List<RuleGroupRuleArgs>> rules;
 
+    /**
+     * @return Collection of Rules.
+     * 
+     */
     public Optional<Output<List<RuleGroupRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -149,15 +153,33 @@ public final class RuleGroupArgs extends com.pulumi.resources.ResourceArgs {
             return name(Output.of(name));
         }
 
+        /**
+         * @param rules Collection of Rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<RuleGroupRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules Collection of Rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<RuleGroupRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules Collection of Rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(RuleGroupRuleArgs... rules) {
             return rules(List.of(rules));
         }

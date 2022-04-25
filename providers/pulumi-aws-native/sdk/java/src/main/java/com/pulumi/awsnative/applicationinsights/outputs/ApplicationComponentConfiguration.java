@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApplicationComponentConfiguration {
-    /**
-     * The configuration settings
-     * 
-     */
+        /**
+         * @return The configuration settings
+         * 
+         */
     private final @Nullable ApplicationConfigurationDetails configurationDetails;
-    /**
-     * Sub component configurations of the component.
-     * 
-     */
+        /**
+         * @return Sub component configurations of the component.
+         * 
+         */
     private final @Nullable List<ApplicationSubComponentTypeConfiguration> subComponentTypeConfigurations;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class ApplicationComponentConfiguration {
     }
 
     /**
-     * The configuration settings
+     * @return The configuration settings
      * 
-    */
+     */
     public Optional<ApplicationConfigurationDetails> configurationDetails() {
         return Optional.ofNullable(this.configurationDetails);
     }
     /**
-     * Sub component configurations of the component.
+     * @return Sub component configurations of the component.
      * 
-    */
+     */
     public List<ApplicationSubComponentTypeConfiguration> subComponentTypeConfigurations() {
         return this.subComponentTypeConfigurations == null ? List.of() : this.subComponentTypeConfigurations;
     }

@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class StudioComponentComputeFarmConfiguration {
-    /**
-     * &lt;p&gt;The name of an Active Directory user that is used on ComputeFarm worker instances.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;The name of an Active Directory user that is used on ComputeFarm worker instances.&lt;/p&gt;
+         * 
+         */
     private final @Nullable String activeDirectoryUser;
-    /**
-     * &lt;p&gt;The endpoint of the ComputeFarm that is accessed by the studio component resource.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;The endpoint of the ComputeFarm that is accessed by the studio component resource.&lt;/p&gt;
+         * 
+         */
     private final @Nullable String endpoint;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class StudioComponentComputeFarmConfiguration {
     }
 
     /**
-     * &lt;p&gt;The name of an Active Directory user that is used on ComputeFarm worker instances.&lt;/p&gt;
+     * @return &lt;p&gt;The name of an Active Directory user that is used on ComputeFarm worker instances.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> activeDirectoryUser() {
         return Optional.ofNullable(this.activeDirectoryUser);
     }
     /**
-     * &lt;p&gt;The endpoint of the ComputeFarm that is accessed by the studio component resource.&lt;/p&gt;
+     * @return &lt;p&gt;The endpoint of the ComputeFarm that is accessed by the studio component resource.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }

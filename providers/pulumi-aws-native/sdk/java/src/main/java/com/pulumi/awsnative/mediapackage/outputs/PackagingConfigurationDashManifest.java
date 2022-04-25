@@ -15,21 +15,21 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PackagingConfigurationDashManifest {
-    /**
-     * Determines the position of some tags in the Media Presentation Description (MPD). When set to FULL, elements like SegmentTemplate and ContentProtection are included in each Representation. When set to COMPACT, duplicate elements are combined and presented at the AdaptationSet level.
-     * 
-     */
+        /**
+         * @return Determines the position of some tags in the Media Presentation Description (MPD). When set to FULL, elements like SegmentTemplate and ContentProtection are included in each Representation. When set to COMPACT, duplicate elements are combined and presented at the AdaptationSet level.
+         * 
+         */
     private final @Nullable PackagingConfigurationDashManifestManifestLayout manifestLayout;
     private final @Nullable String manifestName;
-    /**
-     * Minimum duration (in seconds) that a player will buffer media before starting the presentation.
-     * 
-     */
+        /**
+         * @return Minimum duration (in seconds) that a player will buffer media before starting the presentation.
+         * 
+         */
     private final @Nullable Integer minBufferTimeSeconds;
-    /**
-     * The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to &#34;HBBTV_1_5&#34;, HbbTV 1.5 compliant output is enabled.
-     * 
-     */
+        /**
+         * @return The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to &#34;HBBTV_1_5&#34;, HbbTV 1.5 compliant output is enabled.
+         * 
+         */
     private final @Nullable PackagingConfigurationDashManifestProfile profile;
     private final @Nullable PackagingConfigurationStreamSelection streamSelection;
 
@@ -48,9 +48,9 @@ public final class PackagingConfigurationDashManifest {
     }
 
     /**
-     * Determines the position of some tags in the Media Presentation Description (MPD). When set to FULL, elements like SegmentTemplate and ContentProtection are included in each Representation. When set to COMPACT, duplicate elements are combined and presented at the AdaptationSet level.
+     * @return Determines the position of some tags in the Media Presentation Description (MPD). When set to FULL, elements like SegmentTemplate and ContentProtection are included in each Representation. When set to COMPACT, duplicate elements are combined and presented at the AdaptationSet level.
      * 
-    */
+     */
     public Optional<PackagingConfigurationDashManifestManifestLayout> manifestLayout() {
         return Optional.ofNullable(this.manifestLayout);
     }
@@ -58,16 +58,16 @@ public final class PackagingConfigurationDashManifest {
         return Optional.ofNullable(this.manifestName);
     }
     /**
-     * Minimum duration (in seconds) that a player will buffer media before starting the presentation.
+     * @return Minimum duration (in seconds) that a player will buffer media before starting the presentation.
      * 
-    */
+     */
     public Optional<Integer> minBufferTimeSeconds() {
         return Optional.ofNullable(this.minBufferTimeSeconds);
     }
     /**
-     * The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to &#34;HBBTV_1_5&#34;, HbbTV 1.5 compliant output is enabled.
+     * @return The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to &#34;HBBTV_1_5&#34;, HbbTV 1.5 compliant output is enabled.
      * 
-    */
+     */
     public Optional<PackagingConfigurationDashManifestProfile> profile() {
         return Optional.ofNullable(this.profile);
     }

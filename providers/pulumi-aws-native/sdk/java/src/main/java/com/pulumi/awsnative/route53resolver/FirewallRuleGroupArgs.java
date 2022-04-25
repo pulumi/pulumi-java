@@ -25,6 +25,10 @@ public final class FirewallRuleGroupArgs extends com.pulumi.resources.ResourceAr
     @Import(name="firewallRules")
     private @Nullable Output<List<FirewallRuleGroupFirewallRuleArgs>> firewallRules;
 
+    /**
+     * @return FirewallRules
+     * 
+     */
     public Optional<Output<List<FirewallRuleGroupFirewallRuleArgs>>> firewallRules() {
         return Optional.ofNullable(this.firewallRules);
     }
@@ -36,6 +40,10 @@ public final class FirewallRuleGroupArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return FirewallRuleGroupName
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -47,6 +55,10 @@ public final class FirewallRuleGroupArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
     private @Nullable Output<List<FirewallRuleGroupTagArgs>> tags;
 
+    /**
+     * @return Tags
+     * 
+     */
     public Optional<Output<List<FirewallRuleGroupTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -77,37 +89,85 @@ public final class FirewallRuleGroupArgs extends com.pulumi.resources.ResourceAr
             $ = new FirewallRuleGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param firewallRules FirewallRules
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRules(@Nullable Output<List<FirewallRuleGroupFirewallRuleArgs>> firewallRules) {
             $.firewallRules = firewallRules;
             return this;
         }
 
+        /**
+         * @param firewallRules FirewallRules
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRules(List<FirewallRuleGroupFirewallRuleArgs> firewallRules) {
             return firewallRules(Output.of(firewallRules));
         }
 
+        /**
+         * @param firewallRules FirewallRules
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRules(FirewallRuleGroupFirewallRuleArgs... firewallRules) {
             return firewallRules(List.of(firewallRules));
         }
 
+        /**
+         * @param name FirewallRuleGroupName
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name FirewallRuleGroupName
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags Tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<FirewallRuleGroupTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<FirewallRuleGroupTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(FirewallRuleGroupTagArgs... tags) {
             return tags(List.of(tags));
         }

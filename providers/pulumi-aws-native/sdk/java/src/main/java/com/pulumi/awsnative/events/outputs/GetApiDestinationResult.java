@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetApiDestinationResult {
-    /**
-     * The arn of the api destination.
-     * 
-     */
+        /**
+         * @return The arn of the api destination.
+         * 
+         */
     private final @Nullable String arn;
-    /**
-     * The arn of the connection.
-     * 
-     */
+        /**
+         * @return The arn of the connection.
+         * 
+         */
     private final @Nullable String connectionArn;
     private final @Nullable String description;
     private final @Nullable ApiDestinationHttpMethod httpMethod;
-    /**
-     * Url endpoint to invoke.
-     * 
-     */
+        /**
+         * @return Url endpoint to invoke.
+         * 
+         */
     private final @Nullable String invocationEndpoint;
     private final @Nullable Integer invocationRateLimitPerSecond;
 
@@ -49,16 +49,16 @@ public final class GetApiDestinationResult {
     }
 
     /**
-     * The arn of the api destination.
+     * @return The arn of the api destination.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The arn of the connection.
+     * @return The arn of the connection.
      * 
-    */
+     */
     public Optional<String> connectionArn() {
         return Optional.ofNullable(this.connectionArn);
     }
@@ -69,9 +69,9 @@ public final class GetApiDestinationResult {
         return Optional.ofNullable(this.httpMethod);
     }
     /**
-     * Url endpoint to invoke.
+     * @return Url endpoint to invoke.
      * 
-    */
+     */
     public Optional<String> invocationEndpoint() {
         return Optional.ofNullable(this.invocationEndpoint);
     }

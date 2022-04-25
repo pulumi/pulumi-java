@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDataIntegrationResult {
-    /**
-     * The Amazon Resource Name (ARN) of the data integration.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the data integration.
+         * 
+         */
     private final @Nullable String dataIntegrationArn;
-    /**
-     * The data integration description.
-     * 
-     */
+        /**
+         * @return The data integration description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The unique identifer of the data integration.
-     * 
-     */
+        /**
+         * @return The unique identifer of the data integration.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The name of the data integration.
-     * 
-     */
+        /**
+         * @return The name of the data integration.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The tags (keys and values) associated with the data integration.
-     * 
-     */
+        /**
+         * @return The tags (keys and values) associated with the data integration.
+         * 
+         */
     private final @Nullable List<DataIntegrationTag> tags;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class GetDataIntegrationResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the data integration.
+     * @return The Amazon Resource Name (ARN) of the data integration.
      * 
-    */
+     */
     public Optional<String> dataIntegrationArn() {
         return Optional.ofNullable(this.dataIntegrationArn);
     }
     /**
-     * The data integration description.
+     * @return The data integration description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The unique identifer of the data integration.
+     * @return The unique identifer of the data integration.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The name of the data integration.
+     * @return The name of the data integration.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The tags (keys and values) associated with the data integration.
+     * @return The tags (keys and values) associated with the data integration.
      * 
-    */
+     */
     public List<DataIntegrationTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

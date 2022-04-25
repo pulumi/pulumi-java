@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDistributionConfigurationResult {
-    /**
-     * The Amazon Resource Name (ARN) of the distribution configuration.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the distribution configuration.
+         * 
+         */
     private final @Nullable String arn;
-    /**
-     * The description of the distribution configuration.
-     * 
-     */
+        /**
+         * @return The description of the distribution configuration.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The distributions of the distribution configuration.
-     * 
-     */
+        /**
+         * @return The distributions of the distribution configuration.
+         * 
+         */
     private final @Nullable List<DistributionConfigurationDistribution> distributions;
-    /**
-     * The tags associated with the component.
-     * 
-     */
+        /**
+         * @return The tags associated with the component.
+         * 
+         */
     private final @Nullable Object tags;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class GetDistributionConfigurationResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the distribution configuration.
+     * @return The Amazon Resource Name (ARN) of the distribution configuration.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The description of the distribution configuration.
+     * @return The description of the distribution configuration.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The distributions of the distribution configuration.
+     * @return The distributions of the distribution configuration.
      * 
-    */
+     */
     public List<DistributionConfigurationDistribution> distributions() {
         return this.distributions == null ? List.of() : this.distributions;
     }
     /**
-     * The tags associated with the component.
+     * @return The tags associated with the component.
      * 
-    */
+     */
     public Optional<Object> tags() {
         return Optional.ofNullable(this.tags);
     }

@@ -14,56 +14,56 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetEnvironmentResult {
-    /**
-     * AWS account ID associated with the Environment
-     * 
-     */
+        /**
+         * @return AWS account ID associated with the Environment
+         * 
+         */
     private final @Nullable String awsAccountId;
-    /**
-     * ID for FinSpace created account used to store Environment artifacts
-     * 
-     */
+        /**
+         * @return ID for FinSpace created account used to store Environment artifacts
+         * 
+         */
     private final @Nullable String dedicatedServiceAccountId;
-    /**
-     * Description of the Environment
-     * 
-     */
+        /**
+         * @return Description of the Environment
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * ARN of the Environment
-     * 
-     */
+        /**
+         * @return ARN of the Environment
+         * 
+         */
     private final @Nullable String environmentArn;
-    /**
-     * Unique identifier for representing FinSpace Environment
-     * 
-     */
+        /**
+         * @return Unique identifier for representing FinSpace Environment
+         * 
+         */
     private final @Nullable String environmentId;
-    /**
-     * URL used to login to the Environment
-     * 
-     */
+        /**
+         * @return URL used to login to the Environment
+         * 
+         */
     private final @Nullable String environmentUrl;
-    /**
-     * Federation mode used with the Environment
-     * 
-     */
+        /**
+         * @return Federation mode used with the Environment
+         * 
+         */
     private final @Nullable EnvironmentFederationMode federationMode;
     private final @Nullable EnvironmentFederationParameters federationParameters;
-    /**
-     * Name of the Environment
-     * 
-     */
+        /**
+         * @return Name of the Environment
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * SageMaker Studio Domain URL associated with the Environment
-     * 
-     */
+        /**
+         * @return SageMaker Studio Domain URL associated with the Environment
+         * 
+         */
     private final @Nullable String sageMakerStudioDomainUrl;
-    /**
-     * State of the Environment
-     * 
-     */
+        /**
+         * @return State of the Environment
+         * 
+         */
     private final @Nullable EnvironmentStatus status;
 
     @CustomType.Constructor
@@ -93,51 +93,51 @@ public final class GetEnvironmentResult {
     }
 
     /**
-     * AWS account ID associated with the Environment
+     * @return AWS account ID associated with the Environment
      * 
-    */
+     */
     public Optional<String> awsAccountId() {
         return Optional.ofNullable(this.awsAccountId);
     }
     /**
-     * ID for FinSpace created account used to store Environment artifacts
+     * @return ID for FinSpace created account used to store Environment artifacts
      * 
-    */
+     */
     public Optional<String> dedicatedServiceAccountId() {
         return Optional.ofNullable(this.dedicatedServiceAccountId);
     }
     /**
-     * Description of the Environment
+     * @return Description of the Environment
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * ARN of the Environment
+     * @return ARN of the Environment
      * 
-    */
+     */
     public Optional<String> environmentArn() {
         return Optional.ofNullable(this.environmentArn);
     }
     /**
-     * Unique identifier for representing FinSpace Environment
+     * @return Unique identifier for representing FinSpace Environment
      * 
-    */
+     */
     public Optional<String> environmentId() {
         return Optional.ofNullable(this.environmentId);
     }
     /**
-     * URL used to login to the Environment
+     * @return URL used to login to the Environment
      * 
-    */
+     */
     public Optional<String> environmentUrl() {
         return Optional.ofNullable(this.environmentUrl);
     }
     /**
-     * Federation mode used with the Environment
+     * @return Federation mode used with the Environment
      * 
-    */
+     */
     public Optional<EnvironmentFederationMode> federationMode() {
         return Optional.ofNullable(this.federationMode);
     }
@@ -145,23 +145,23 @@ public final class GetEnvironmentResult {
         return Optional.ofNullable(this.federationParameters);
     }
     /**
-     * Name of the Environment
+     * @return Name of the Environment
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * SageMaker Studio Domain URL associated with the Environment
+     * @return SageMaker Studio Domain URL associated with the Environment
      * 
-    */
+     */
     public Optional<String> sageMakerStudioDomainUrl() {
         return Optional.ofNullable(this.sageMakerStudioDomainUrl);
     }
     /**
-     * State of the Environment
+     * @return State of the Environment
      * 
-    */
+     */
     public Optional<EnvironmentStatus> status() {
         return Optional.ofNullable(this.status);
     }

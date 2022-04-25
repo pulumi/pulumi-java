@@ -24,6 +24,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationDescription")
     private @Nullable Output<String> applicationDescription;
 
+    /**
+     * @return Application Description, should be between 1 and 2048 characters.
+     * 
+     */
     public Optional<Output<String>> applicationDescription() {
         return Optional.ofNullable(this.applicationDescription);
     }
@@ -35,6 +39,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationName")
     private @Nullable Output<String> applicationName;
 
+    /**
+     * @return Application Name, should be between 1 and 256 characters.
+     * 
+     */
     public Optional<Output<String>> applicationName() {
         return Optional.ofNullable(this.applicationName);
     }
@@ -46,6 +54,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return The ARN of the role that the web application assumes when it interacts with AWS IoT Core. For more info on configuring this attribute, see https://docs.aws.amazon.com/iot/latest/apireference/API_iotfleethub_CreateApplication.html#API_iotfleethub_CreateApplication_RequestSyntax
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -57,6 +69,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<ApplicationTagArgs>> tags;
 
+    /**
+     * @return A list of key-value pairs that contain metadata for the application.
+     * 
+     */
     public Optional<Output<List<ApplicationTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -88,42 +104,96 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ApplicationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationDescription Application Description, should be between 1 and 2048 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationDescription(@Nullable Output<String> applicationDescription) {
             $.applicationDescription = applicationDescription;
             return this;
         }
 
+        /**
+         * @param applicationDescription Application Description, should be between 1 and 2048 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationDescription(String applicationDescription) {
             return applicationDescription(Output.of(applicationDescription));
         }
 
+        /**
+         * @param applicationName Application Name, should be between 1 and 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationName(@Nullable Output<String> applicationName) {
             $.applicationName = applicationName;
             return this;
         }
 
+        /**
+         * @param applicationName Application Name, should be between 1 and 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationName(String applicationName) {
             return applicationName(Output.of(applicationName));
         }
 
+        /**
+         * @param roleArn The ARN of the role that the web application assumes when it interacts with AWS IoT Core. For more info on configuring this attribute, see https://docs.aws.amazon.com/iot/latest/apireference/API_iotfleethub_CreateApplication.html#API_iotfleethub_CreateApplication_RequestSyntax
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn The ARN of the role that the web application assumes when it interacts with AWS IoT Core. For more info on configuring this attribute, see https://docs.aws.amazon.com/iot/latest/apireference/API_iotfleethub_CreateApplication.html#API_iotfleethub_CreateApplication_RequestSyntax
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<ApplicationTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<ApplicationTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(ApplicationTagArgs... tags) {
             return tags(List.of(tags));
         }

@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetReadinessCheckResult {
-    /**
-     * The Amazon Resource Name (ARN) of the readiness check.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the readiness check.
+         * 
+         */
     private final @Nullable String readinessCheckArn;
-    /**
-     * The name of the resource set to check.
-     * 
-     */
+        /**
+         * @return The name of the resource set to check.
+         * 
+         */
     private final @Nullable String resourceSetName;
-    /**
-     * A collection of tags associated with a resource.
-     * 
-     */
+        /**
+         * @return A collection of tags associated with a resource.
+         * 
+         */
     private final @Nullable List<ReadinessCheckTag> tags;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class GetReadinessCheckResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the readiness check.
+     * @return The Amazon Resource Name (ARN) of the readiness check.
      * 
-    */
+     */
     public Optional<String> readinessCheckArn() {
         return Optional.ofNullable(this.readinessCheckArn);
     }
     /**
-     * The name of the resource set to check.
+     * @return The name of the resource set to check.
      * 
-    */
+     */
     public Optional<String> resourceSetName() {
         return Optional.ofNullable(this.resourceSetName);
     }
     /**
-     * A collection of tags associated with a resource.
+     * @return A collection of tags associated with a resource.
      * 
-    */
+     */
     public List<ReadinessCheckTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

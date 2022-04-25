@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ContactTargetInfo {
-    /**
-     * The Amazon Resource Name (ARN) of the contact.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the contact.
+         * 
+         */
     private final String contactId;
-    /**
-     * A Boolean value determining if the contact&#39;s acknowledgement stops the progress of stages in the plan.
-     * 
-     */
+        /**
+         * @return A Boolean value determining if the contact&#39;s acknowledgement stops the progress of stages in the plan.
+         * 
+         */
     private final Boolean isEssential;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class ContactTargetInfo {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the contact.
+     * @return The Amazon Resource Name (ARN) of the contact.
      * 
-    */
+     */
     public String contactId() {
         return this.contactId;
     }
     /**
-     * A Boolean value determining if the contact&#39;s acknowledgement stops the progress of stages in the plan.
+     * @return A Boolean value determining if the contact&#39;s acknowledgement stops the progress of stages in the plan.
      * 
-    */
+     */
     public Boolean isEssential() {
         return this.isEssential;
     }

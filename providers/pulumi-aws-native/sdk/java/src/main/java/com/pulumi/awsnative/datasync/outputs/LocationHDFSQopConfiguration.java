@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LocationHDFSQopConfiguration {
-    /**
-     * Configuration for Data Transfer Protection.
-     * 
-     */
+        /**
+         * @return Configuration for Data Transfer Protection.
+         * 
+         */
     private final @Nullable LocationHDFSQopConfigurationDataTransferProtection dataTransferProtection;
-    /**
-     * Configuration for RPC Protection.
-     * 
-     */
+        /**
+         * @return Configuration for RPC Protection.
+         * 
+         */
     private final @Nullable LocationHDFSQopConfigurationRpcProtection rpcProtection;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class LocationHDFSQopConfiguration {
     }
 
     /**
-     * Configuration for Data Transfer Protection.
+     * @return Configuration for Data Transfer Protection.
      * 
-    */
+     */
     public Optional<LocationHDFSQopConfigurationDataTransferProtection> dataTransferProtection() {
         return Optional.ofNullable(this.dataTransferProtection);
     }
     /**
-     * Configuration for RPC Protection.
+     * @return Configuration for RPC Protection.
      * 
-    */
+     */
     public Optional<LocationHDFSQopConfigurationRpcProtection> rpcProtection() {
         return Optional.ofNullable(this.rpcProtection);
     }

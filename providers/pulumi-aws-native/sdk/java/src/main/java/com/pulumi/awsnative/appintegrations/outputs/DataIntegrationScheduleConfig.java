@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class DataIntegrationScheduleConfig {
-    /**
-     * The start date for objects to import in the first flow run. Epoch or ISO timestamp format is supported.
-     * 
-     */
+        /**
+         * @return The start date for objects to import in the first flow run. Epoch or ISO timestamp format is supported.
+         * 
+         */
     private final String firstExecutionFrom;
-    /**
-     * The name of the object to pull from the data source.
-     * 
-     */
+        /**
+         * @return The name of the object to pull from the data source.
+         * 
+         */
     private final String object;
-    /**
-     * How often the data should be pulled from data source.
-     * 
-     */
+        /**
+         * @return How often the data should be pulled from data source.
+         * 
+         */
     private final String scheduleExpression;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class DataIntegrationScheduleConfig {
     }
 
     /**
-     * The start date for objects to import in the first flow run. Epoch or ISO timestamp format is supported.
+     * @return The start date for objects to import in the first flow run. Epoch or ISO timestamp format is supported.
      * 
-    */
+     */
     public String firstExecutionFrom() {
         return this.firstExecutionFrom;
     }
     /**
-     * The name of the object to pull from the data source.
+     * @return The name of the object to pull from the data source.
      * 
-    */
+     */
     public String object() {
         return this.object;
     }
     /**
-     * How often the data should be pulled from data source.
+     * @return How often the data should be pulled from data source.
      * 
-    */
+     */
     public String scheduleExpression() {
         return this.scheduleExpression;
     }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class DeploymentTag {
-    /**
-     * The key name of the tag
-     * 
-     */
+        /**
+         * @return The key name of the tag
+         * 
+         */
     private final String key;
-    /**
-     * The value for the tag
-     * 
-     */
+        /**
+         * @return The value for the tag
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class DeploymentTag {
     }
 
     /**
-     * The key name of the tag
+     * @return The key name of the tag
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * The value for the tag
+     * @return The value for the tag
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

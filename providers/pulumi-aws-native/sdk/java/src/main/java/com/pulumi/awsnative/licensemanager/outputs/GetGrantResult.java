@@ -11,31 +11,31 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetGrantResult {
-    /**
-     * Arn of the grant.
-     * 
-     */
+        /**
+         * @return Arn of the grant.
+         * 
+         */
     private final @Nullable String grantArn;
-    /**
-     * Name for the created Grant.
-     * 
-     */
+        /**
+         * @return Name for the created Grant.
+         * 
+         */
     private final @Nullable String grantName;
-    /**
-     * Home region for the created grant.
-     * 
-     */
+        /**
+         * @return Home region for the created grant.
+         * 
+         */
     private final @Nullable String homeRegion;
-    /**
-     * License Arn for the grant.
-     * 
-     */
+        /**
+         * @return License Arn for the grant.
+         * 
+         */
     private final @Nullable String licenseArn;
     private final @Nullable String status;
-    /**
-     * The version of the grant.
-     * 
-     */
+        /**
+         * @return The version of the grant.
+         * 
+         */
     private final @Nullable String version;
 
     @CustomType.Constructor
@@ -55,30 +55,30 @@ public final class GetGrantResult {
     }
 
     /**
-     * Arn of the grant.
+     * @return Arn of the grant.
      * 
-    */
+     */
     public Optional<String> grantArn() {
         return Optional.ofNullable(this.grantArn);
     }
     /**
-     * Name for the created Grant.
+     * @return Name for the created Grant.
      * 
-    */
+     */
     public Optional<String> grantName() {
         return Optional.ofNullable(this.grantName);
     }
     /**
-     * Home region for the created grant.
+     * @return Home region for the created grant.
      * 
-    */
+     */
     public Optional<String> homeRegion() {
         return Optional.ofNullable(this.homeRegion);
     }
     /**
-     * License Arn for the grant.
+     * @return License Arn for the grant.
      * 
-    */
+     */
     public Optional<String> licenseArn() {
         return Optional.ofNullable(this.licenseArn);
     }
@@ -86,9 +86,9 @@ public final class GetGrantResult {
         return Optional.ofNullable(this.status);
     }
     /**
-     * The version of the grant.
+     * @return The version of the grant.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

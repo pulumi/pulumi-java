@@ -12,27 +12,27 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetCostCategoryResult {
-    /**
-     * Cost category ARN
-     * 
-     */
+        /**
+         * @return Cost category ARN
+         * 
+         */
     private final @Nullable String arn;
-    /**
-     * The default value for the cost category
-     * 
-     */
+        /**
+         * @return The default value for the cost category
+         * 
+         */
     private final @Nullable String defaultValue;
     private final @Nullable String effectiveStart;
     private final @Nullable CostCategoryRuleVersion ruleVersion;
-    /**
-     * JSON array format of Expression in Billing and Cost Management API
-     * 
-     */
+        /**
+         * @return JSON array format of Expression in Billing and Cost Management API
+         * 
+         */
     private final @Nullable String rules;
-    /**
-     * Json array format of CostCategorySplitChargeRule in Billing and Cost Management API
-     * 
-     */
+        /**
+         * @return Json array format of CostCategorySplitChargeRule in Billing and Cost Management API
+         * 
+         */
     private final @Nullable String splitChargeRules;
 
     @CustomType.Constructor
@@ -52,16 +52,16 @@ public final class GetCostCategoryResult {
     }
 
     /**
-     * Cost category ARN
+     * @return Cost category ARN
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The default value for the cost category
+     * @return The default value for the cost category
      * 
-    */
+     */
     public Optional<String> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
@@ -72,16 +72,16 @@ public final class GetCostCategoryResult {
         return Optional.ofNullable(this.ruleVersion);
     }
     /**
-     * JSON array format of Expression in Billing and Cost Management API
+     * @return JSON array format of Expression in Billing and Cost Management API
      * 
-    */
+     */
     public Optional<String> rules() {
         return Optional.ofNullable(this.rules);
     }
     /**
-     * Json array format of CostCategorySplitChargeRule in Billing and Cost Management API
+     * @return Json array format of CostCategorySplitChargeRule in Billing and Cost Management API
      * 
-    */
+     */
     public Optional<String> splitChargeRules() {
         return Optional.ofNullable(this.splitChargeRules);
     }

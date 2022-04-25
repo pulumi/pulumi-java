@@ -28,6 +28,10 @@ public final class InstanceAddOnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addOnType", required=true)
     private Output<String> addOnType;
 
+    /**
+     * @return The add-on type
+     * 
+     */
     public Output<String> addOnType() {
         return this.addOnType;
     }
@@ -46,6 +50,10 @@ public final class InstanceAddOnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<InstanceAddOnStatus> status;
 
+    /**
+     * @return Status of the Addon
+     * 
+     */
     public Optional<Output<InstanceAddOnStatus>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -76,11 +84,23 @@ public final class InstanceAddOnArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InstanceAddOnArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addOnType The add-on type
+         * 
+         * @return builder
+         * 
+         */
         public Builder addOnType(Output<String> addOnType) {
             $.addOnType = addOnType;
             return this;
         }
 
+        /**
+         * @param addOnType The add-on type
+         * 
+         * @return builder
+         * 
+         */
         public Builder addOnType(String addOnType) {
             return addOnType(Output.of(addOnType));
         }
@@ -94,11 +114,23 @@ public final class InstanceAddOnArgs extends com.pulumi.resources.ResourceArgs {
             return autoSnapshotAddOnRequest(Output.of(autoSnapshotAddOnRequest));
         }
 
+        /**
+         * @param status Status of the Addon
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<InstanceAddOnStatus> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Status of the Addon
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(InstanceAddOnStatus status) {
             return status(Output.of(status));
         }

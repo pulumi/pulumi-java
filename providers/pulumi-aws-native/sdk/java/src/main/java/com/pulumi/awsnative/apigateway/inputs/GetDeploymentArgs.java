@@ -19,6 +19,10 @@ public final class GetDeploymentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="deploymentId", required=true)
     private String deploymentId;
 
+    /**
+     * @return Primary Id for this resource
+     * 
+     */
     public String deploymentId() {
         return this.deploymentId;
     }
@@ -30,6 +34,10 @@ public final class GetDeploymentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="restApiId", required=true)
     private String restApiId;
 
+    /**
+     * @return The ID of the RestApi resource to deploy.
+     * 
+     */
     public String restApiId() {
         return this.restApiId;
     }
@@ -59,11 +67,23 @@ public final class GetDeploymentArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deploymentId Primary Id for this resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentId(String deploymentId) {
             $.deploymentId = deploymentId;
             return this;
         }
 
+        /**
+         * @param restApiId The ID of the RestApi resource to deploy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(String restApiId) {
             $.restApiId = restApiId;
             return this;

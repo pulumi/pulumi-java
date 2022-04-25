@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class DetectorModelTag {
-    /**
-     * Key of the Tag.
-     * 
-     */
+        /**
+         * @return Key of the Tag.
+         * 
+         */
     private final String key;
-    /**
-     * Value of the Tag.
-     * 
-     */
+        /**
+         * @return Value of the Tag.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class DetectorModelTag {
     }
 
     /**
-     * Key of the Tag.
+     * @return Key of the Tag.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Value of the Tag.
+     * @return Value of the Tag.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

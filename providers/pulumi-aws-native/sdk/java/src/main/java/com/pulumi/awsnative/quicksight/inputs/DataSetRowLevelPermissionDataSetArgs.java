@@ -28,6 +28,10 @@ public final class DataSetRowLevelPermissionDataSetArgs extends com.pulumi.resou
     @Import(name="arn", required=true)
     private Output<String> arn;
 
+    /**
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the permission dataset.&lt;/p&gt;
+     * 
+     */
     public Output<String> arn() {
         return this.arn;
     }
@@ -46,6 +50,10 @@ public final class DataSetRowLevelPermissionDataSetArgs extends com.pulumi.resou
     @Import(name="namespace")
     private @Nullable Output<String> namespace;
 
+    /**
+     * @return &lt;p&gt;The namespace associated with the row-level permissions dataset.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> namespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -84,11 +92,23 @@ public final class DataSetRowLevelPermissionDataSetArgs extends com.pulumi.resou
             $ = new DataSetRowLevelPermissionDataSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn &lt;p&gt;The Amazon Resource Name (ARN) of the permission dataset.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn &lt;p&gt;The Amazon Resource Name (ARN) of the permission dataset.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
@@ -102,11 +122,23 @@ public final class DataSetRowLevelPermissionDataSetArgs extends com.pulumi.resou
             return formatVersion(Output.of(formatVersion));
         }
 
+        /**
+         * @param namespace &lt;p&gt;The namespace associated with the row-level permissions dataset.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(@Nullable Output<String> namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param namespace &lt;p&gt;The namespace associated with the row-level permissions dataset.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             return namespace(Output.of(namespace));
         }

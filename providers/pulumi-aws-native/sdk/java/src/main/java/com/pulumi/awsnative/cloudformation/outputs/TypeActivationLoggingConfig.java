@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TypeActivationLoggingConfig {
-    /**
-     * The Amazon CloudWatch log group to which CloudFormation sends error logging information when invoking the type&#39;s handlers.
-     * 
-     */
+        /**
+         * @return The Amazon CloudWatch log group to which CloudFormation sends error logging information when invoking the type&#39;s handlers.
+         * 
+         */
     private final @Nullable String logGroupName;
-    /**
-     * The ARN of the role that CloudFormation should assume when sending log entries to CloudWatch logs.
-     * 
-     */
+        /**
+         * @return The ARN of the role that CloudFormation should assume when sending log entries to CloudWatch logs.
+         * 
+         */
     private final @Nullable String logRoleArn;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class TypeActivationLoggingConfig {
     }
 
     /**
-     * The Amazon CloudWatch log group to which CloudFormation sends error logging information when invoking the type&#39;s handlers.
+     * @return The Amazon CloudWatch log group to which CloudFormation sends error logging information when invoking the type&#39;s handlers.
      * 
-    */
+     */
     public Optional<String> logGroupName() {
         return Optional.ofNullable(this.logGroupName);
     }
     /**
-     * The ARN of the role that CloudFormation should assume when sending log entries to CloudWatch logs.
+     * @return The ARN of the role that CloudFormation should assume when sending log entries to CloudWatch logs.
      * 
-    */
+     */
     public Optional<String> logRoleArn() {
         return Optional.ofNullable(this.logRoleArn);
     }

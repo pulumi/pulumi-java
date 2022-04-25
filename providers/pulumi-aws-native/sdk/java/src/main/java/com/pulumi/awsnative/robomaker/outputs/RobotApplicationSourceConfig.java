@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class RobotApplicationSourceConfig {
-    /**
-     * The architecture of robot application.
-     * 
-     */
+        /**
+         * @return The architecture of robot application.
+         * 
+         */
     private final RobotApplicationSourceConfigArchitecture architecture;
-    /**
-     * The Arn of the S3Bucket that stores the robot application source.
-     * 
-     */
+        /**
+         * @return The Arn of the S3Bucket that stores the robot application source.
+         * 
+         */
     private final String s3Bucket;
-    /**
-     * The s3 key of robot application source.
-     * 
-     */
+        /**
+         * @return The s3 key of robot application source.
+         * 
+         */
     private final String s3Key;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class RobotApplicationSourceConfig {
     }
 
     /**
-     * The architecture of robot application.
+     * @return The architecture of robot application.
      * 
-    */
+     */
     public RobotApplicationSourceConfigArchitecture architecture() {
         return this.architecture;
     }
     /**
-     * The Arn of the S3Bucket that stores the robot application source.
+     * @return The Arn of the S3Bucket that stores the robot application source.
      * 
-    */
+     */
     public String s3Bucket() {
         return this.s3Bucket;
     }
     /**
-     * The s3 key of robot application source.
+     * @return The s3 key of robot application source.
      * 
-    */
+     */
     public String s3Key() {
         return this.s3Key;
     }

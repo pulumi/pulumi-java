@@ -27,6 +27,10 @@ public final class ImagePipelineScheduleArgs extends com.pulumi.resources.Resour
     @Import(name="pipelineExecutionStartCondition")
     private @Nullable Output<ImagePipelineSchedulePipelineExecutionStartCondition> pipelineExecutionStartCondition;
 
+    /**
+     * @return The condition configures when the pipeline should trigger a new image build.
+     * 
+     */
     public Optional<Output<ImagePipelineSchedulePipelineExecutionStartCondition>> pipelineExecutionStartCondition() {
         return Optional.ofNullable(this.pipelineExecutionStartCondition);
     }
@@ -38,6 +42,10 @@ public final class ImagePipelineScheduleArgs extends com.pulumi.resources.Resour
     @Import(name="scheduleExpression")
     private @Nullable Output<String> scheduleExpression;
 
+    /**
+     * @return The expression determines how often EC2 Image Builder evaluates your pipelineExecutionStartCondition.
+     * 
+     */
     public Optional<Output<String>> scheduleExpression() {
         return Optional.ofNullable(this.scheduleExpression);
     }
@@ -67,20 +75,44 @@ public final class ImagePipelineScheduleArgs extends com.pulumi.resources.Resour
             $ = new ImagePipelineScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pipelineExecutionStartCondition The condition configures when the pipeline should trigger a new image build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineExecutionStartCondition(@Nullable Output<ImagePipelineSchedulePipelineExecutionStartCondition> pipelineExecutionStartCondition) {
             $.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
             return this;
         }
 
+        /**
+         * @param pipelineExecutionStartCondition The condition configures when the pipeline should trigger a new image build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineExecutionStartCondition(ImagePipelineSchedulePipelineExecutionStartCondition pipelineExecutionStartCondition) {
             return pipelineExecutionStartCondition(Output.of(pipelineExecutionStartCondition));
         }
 
+        /**
+         * @param scheduleExpression The expression determines how often EC2 Image Builder evaluates your pipelineExecutionStartCondition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleExpression(@Nullable Output<String> scheduleExpression) {
             $.scheduleExpression = scheduleExpression;
             return this;
         }
 
+        /**
+         * @param scheduleExpression The expression determines how often EC2 Image Builder evaluates your pipelineExecutionStartCondition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleExpression(String scheduleExpression) {
             return scheduleExpression(Output.of(scheduleExpression));
         }

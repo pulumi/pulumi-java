@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ConnectorVpc {
-    /**
-     * The AWS security groups to associate with the elastic network interfaces in order to specify what the connector has access to.
-     * 
-     */
+        /**
+         * @return The AWS security groups to associate with the elastic network interfaces in order to specify what the connector has access to.
+         * 
+         */
     private final List<String> securityGroups;
-    /**
-     * The list of subnets to connect to in the virtual private cloud (VPC). AWS creates elastic network interfaces inside these subnets.
-     * 
-     */
+        /**
+         * @return The list of subnets to connect to in the virtual private cloud (VPC). AWS creates elastic network interfaces inside these subnets.
+         * 
+         */
     private final List<String> subnets;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class ConnectorVpc {
     }
 
     /**
-     * The AWS security groups to associate with the elastic network interfaces in order to specify what the connector has access to.
+     * @return The AWS security groups to associate with the elastic network interfaces in order to specify what the connector has access to.
      * 
-    */
+     */
     public List<String> securityGroups() {
         return this.securityGroups;
     }
     /**
-     * The list of subnets to connect to in the virtual private cloud (VPC). AWS creates elastic network interfaces inside these subnets.
+     * @return The list of subnets to connect to in the virtual private cloud (VPC). AWS creates elastic network interfaces inside these subnets.
      * 
-    */
+     */
     public List<String> subnets() {
         return this.subnets;
     }

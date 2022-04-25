@@ -13,16 +13,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ServiceImageConfiguration {
-    /**
-     * Port
-     * 
-     */
+        /**
+         * @return Port
+         * 
+         */
     private final @Nullable String port;
     private final @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables;
-    /**
-     * Start Command
-     * 
-     */
+        /**
+         * @return Start Command
+         * 
+         */
     private final @Nullable String startCommand;
 
     @CustomType.Constructor
@@ -36,9 +36,9 @@ public final class ServiceImageConfiguration {
     }
 
     /**
-     * Port
+     * @return Port
      * 
-    */
+     */
     public Optional<String> port() {
         return Optional.ofNullable(this.port);
     }
@@ -46,9 +46,9 @@ public final class ServiceImageConfiguration {
         return this.runtimeEnvironmentVariables == null ? List.of() : this.runtimeEnvironmentVariables;
     }
     /**
-     * Start Command
+     * @return Start Command
      * 
-    */
+     */
     public Optional<String> startCommand() {
         return Optional.ofNullable(this.startCommand);
     }

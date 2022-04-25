@@ -16,10 +16,10 @@ public final class ServiceCatalogProvisioningDetailsProperties {
     private final @Nullable String pathId;
     private final String productId;
     private final @Nullable String provisioningArtifactId;
-    /**
-     * Parameters specified by the administrator that are required for provisioning the product.
-     * 
-     */
+        /**
+         * @return Parameters specified by the administrator that are required for provisioning the product.
+         * 
+         */
     private final @Nullable List<ProjectProvisioningParameter> provisioningParameters;
 
     @CustomType.Constructor
@@ -44,9 +44,9 @@ public final class ServiceCatalogProvisioningDetailsProperties {
         return Optional.ofNullable(this.provisioningArtifactId);
     }
     /**
-     * Parameters specified by the administrator that are required for provisioning the product.
+     * @return Parameters specified by the administrator that are required for provisioning the product.
      * 
-    */
+     */
     public List<ProjectProvisioningParameter> provisioningParameters() {
         return this.provisioningParameters == null ? List.of() : this.provisioningParameters;
     }

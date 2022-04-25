@@ -28,6 +28,10 @@ public final class BotResponseSpecificationArgs extends com.pulumi.resources.Res
     @Import(name="allowInterrupt")
     private @Nullable Output<Boolean> allowInterrupt;
 
+    /**
+     * @return Indicates whether the user can interrupt a speech prompt from the bot.
+     * 
+     */
     public Optional<Output<Boolean>> allowInterrupt() {
         return Optional.ofNullable(this.allowInterrupt);
     }
@@ -64,11 +68,23 @@ public final class BotResponseSpecificationArgs extends com.pulumi.resources.Res
             $ = new BotResponseSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowInterrupt Indicates whether the user can interrupt a speech prompt from the bot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowInterrupt(@Nullable Output<Boolean> allowInterrupt) {
             $.allowInterrupt = allowInterrupt;
             return this;
         }
 
+        /**
+         * @param allowInterrupt Indicates whether the user can interrupt a speech prompt from the bot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowInterrupt(Boolean allowInterrupt) {
             return allowInterrupt(Output.of(allowInterrupt));
         }

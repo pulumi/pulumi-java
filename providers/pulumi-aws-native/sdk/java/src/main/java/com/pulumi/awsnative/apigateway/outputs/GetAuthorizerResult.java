@@ -13,51 +13,51 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAuthorizerResult {
-    /**
-     * Optional customer-defined field, used in OpenAPI imports and exports without functional impact.
-     * 
-     */
+        /**
+         * @return Optional customer-defined field, used in OpenAPI imports and exports without functional impact.
+         * 
+         */
     private final @Nullable String authType;
-    /**
-     * Specifies the required credentials as an IAM role for API Gateway to invoke the authorizer.
-     * 
-     */
+        /**
+         * @return Specifies the required credentials as an IAM role for API Gateway to invoke the authorizer.
+         * 
+         */
     private final @Nullable String authorizerCredentials;
     private final @Nullable String authorizerId;
-    /**
-     * The TTL in seconds of cached authorizer results.
-     * 
-     */
+        /**
+         * @return The TTL in seconds of cached authorizer results.
+         * 
+         */
     private final @Nullable Integer authorizerResultTtlInSeconds;
-    /**
-     * Specifies the authorizer&#39;s Uniform Resource Identifier (URI).
-     * 
-     */
+        /**
+         * @return Specifies the authorizer&#39;s Uniform Resource Identifier (URI).
+         * 
+         */
     private final @Nullable String authorizerUri;
-    /**
-     * The identity source for which authorization is requested.
-     * 
-     */
+        /**
+         * @return The identity source for which authorization is requested.
+         * 
+         */
     private final @Nullable String identitySource;
-    /**
-     * A validation expression for the incoming identity token.
-     * 
-     */
+        /**
+         * @return A validation expression for the incoming identity token.
+         * 
+         */
     private final @Nullable String identityValidationExpression;
-    /**
-     * The name of the authorizer.
-     * 
-     */
+        /**
+         * @return The name of the authorizer.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * A list of the Amazon Cognito user pool ARNs for the COGNITO_USER_POOLS authorizer.
-     * 
-     */
+        /**
+         * @return A list of the Amazon Cognito user pool ARNs for the COGNITO_USER_POOLS authorizer.
+         * 
+         */
     private final @Nullable List<String> providerARNs;
-    /**
-     * The authorizer type.
-     * 
-     */
+        /**
+         * @return The authorizer type.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -85,16 +85,16 @@ public final class GetAuthorizerResult {
     }
 
     /**
-     * Optional customer-defined field, used in OpenAPI imports and exports without functional impact.
+     * @return Optional customer-defined field, used in OpenAPI imports and exports without functional impact.
      * 
-    */
+     */
     public Optional<String> authType() {
         return Optional.ofNullable(this.authType);
     }
     /**
-     * Specifies the required credentials as an IAM role for API Gateway to invoke the authorizer.
+     * @return Specifies the required credentials as an IAM role for API Gateway to invoke the authorizer.
      * 
-    */
+     */
     public Optional<String> authorizerCredentials() {
         return Optional.ofNullable(this.authorizerCredentials);
     }
@@ -102,51 +102,51 @@ public final class GetAuthorizerResult {
         return Optional.ofNullable(this.authorizerId);
     }
     /**
-     * The TTL in seconds of cached authorizer results.
+     * @return The TTL in seconds of cached authorizer results.
      * 
-    */
+     */
     public Optional<Integer> authorizerResultTtlInSeconds() {
         return Optional.ofNullable(this.authorizerResultTtlInSeconds);
     }
     /**
-     * Specifies the authorizer&#39;s Uniform Resource Identifier (URI).
+     * @return Specifies the authorizer&#39;s Uniform Resource Identifier (URI).
      * 
-    */
+     */
     public Optional<String> authorizerUri() {
         return Optional.ofNullable(this.authorizerUri);
     }
     /**
-     * The identity source for which authorization is requested.
+     * @return The identity source for which authorization is requested.
      * 
-    */
+     */
     public Optional<String> identitySource() {
         return Optional.ofNullable(this.identitySource);
     }
     /**
-     * A validation expression for the incoming identity token.
+     * @return A validation expression for the incoming identity token.
      * 
-    */
+     */
     public Optional<String> identityValidationExpression() {
         return Optional.ofNullable(this.identityValidationExpression);
     }
     /**
-     * The name of the authorizer.
+     * @return The name of the authorizer.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * A list of the Amazon Cognito user pool ARNs for the COGNITO_USER_POOLS authorizer.
+     * @return A list of the Amazon Cognito user pool ARNs for the COGNITO_USER_POOLS authorizer.
      * 
-    */
+     */
     public List<String> providerARNs() {
         return this.providerARNs == null ? List.of() : this.providerARNs;
     }
     /**
-     * The authorizer type.
+     * @return The authorizer type.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

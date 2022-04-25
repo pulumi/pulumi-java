@@ -26,6 +26,10 @@ public final class GetFaqArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="indexId", required=true)
     private String indexId;
 
+    /**
+     * @return Index ID
+     * 
+     */
     public String indexId() {
         return this.indexId;
     }
@@ -60,6 +64,12 @@ public final class GetFaqArgs extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param indexId Index ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexId(String indexId) {
             $.indexId = indexId;
             return this;

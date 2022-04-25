@@ -19,6 +19,10 @@ public final class GetUserGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="userGroupId", required=true)
     private String userGroupId;
 
+    /**
+     * @return The ID of the user group.
+     * 
+     */
     public String userGroupId() {
         return this.userGroupId;
     }
@@ -47,6 +51,12 @@ public final class GetUserGroupArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetUserGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param userGroupId The ID of the user group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userGroupId(String userGroupId) {
             $.userGroupId = userGroupId;
             return this;

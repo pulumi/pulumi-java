@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AccessPointPublicAccessBlockConfiguration {
-    /**
-     * Specifies whether Amazon S3 should block public access control lists (ACLs) to this object lambda access point. Setting this element to TRUE causes the following behavior:
-     * - PUT Bucket acl and PUT Object acl calls fail if the specified ACL is public.
-     *  - PUT Object calls fail if the request includes a public ACL.
-     *    . - PUT Bucket calls fail if the request includes a public ACL.
-     *    Enabling this setting doesn&#39;t affect existing policies or ACLs.
-     * 
-     */
+        /**
+         * @return Specifies whether Amazon S3 should block public access control lists (ACLs) to this object lambda access point. Setting this element to TRUE causes the following behavior:
+         * - PUT Bucket acl and PUT Object acl calls fail if the specified ACL is public.
+         *  - PUT Object calls fail if the request includes a public ACL.
+         *    . - PUT Bucket calls fail if the request includes a public ACL.
+         *    Enabling this setting doesn&#39;t affect existing policies or ACLs.
+         * 
+         */
     private final @Nullable Boolean blockPublicAcls;
-    /**
-     * Specifies whether Amazon S3 should block public bucket policies for buckets in this account. Setting this element to TRUE causes Amazon S3 to reject calls to PUT Bucket policy if the specified bucket policy allows public access. Enabling this setting doesn&#39;t affect existing bucket policies.
-     * 
-     */
+        /**
+         * @return Specifies whether Amazon S3 should block public bucket policies for buckets in this account. Setting this element to TRUE causes Amazon S3 to reject calls to PUT Bucket policy if the specified bucket policy allows public access. Enabling this setting doesn&#39;t affect existing bucket policies.
+         * 
+         */
     private final @Nullable Boolean blockPublicPolicy;
-    /**
-     * Specifies whether Amazon S3 should ignore public ACLs for buckets in this account. Setting this element to TRUE causes Amazon S3 to ignore all public ACLs on buckets in this account and any objects that they contain. Enabling this setting doesn&#39;t affect the persistence of any existing ACLs and doesn&#39;t prevent new public ACLs from being set.
-     * 
-     */
+        /**
+         * @return Specifies whether Amazon S3 should ignore public ACLs for buckets in this account. Setting this element to TRUE causes Amazon S3 to ignore all public ACLs on buckets in this account and any objects that they contain. Enabling this setting doesn&#39;t affect the persistence of any existing ACLs and doesn&#39;t prevent new public ACLs from being set.
+         * 
+         */
     private final @Nullable Boolean ignorePublicAcls;
-    /**
-     * Specifies whether Amazon S3 should restrict public bucket policies for this bucket. Setting this element to TRUE restricts access to this bucket to only AWS services and authorized users within this account if the bucket has a public policy.
-     * Enabling this setting doesn&#39;t affect previously stored bucket policies, except that public and cross-account access within any public bucket policy, including non-public delegation to specific accounts, is blocked.
-     * 
-     */
+        /**
+         * @return Specifies whether Amazon S3 should restrict public bucket policies for this bucket. Setting this element to TRUE restricts access to this bucket to only AWS services and authorized users within this account if the bucket has a public policy.
+         * Enabling this setting doesn&#39;t affect previously stored bucket policies, except that public and cross-account access within any public bucket policy, including non-public delegation to specific accounts, is blocked.
+         * 
+         */
     private final @Nullable Boolean restrictPublicBuckets;
 
     @CustomType.Constructor
@@ -50,35 +50,35 @@ public final class AccessPointPublicAccessBlockConfiguration {
     }
 
     /**
-     * Specifies whether Amazon S3 should block public access control lists (ACLs) to this object lambda access point. Setting this element to TRUE causes the following behavior:
+     * @return Specifies whether Amazon S3 should block public access control lists (ACLs) to this object lambda access point. Setting this element to TRUE causes the following behavior:
      * - PUT Bucket acl and PUT Object acl calls fail if the specified ACL is public.
      *  - PUT Object calls fail if the request includes a public ACL.
      *    . - PUT Bucket calls fail if the request includes a public ACL.
      *    Enabling this setting doesn&#39;t affect existing policies or ACLs.
      * 
-    */
+     */
     public Optional<Boolean> blockPublicAcls() {
         return Optional.ofNullable(this.blockPublicAcls);
     }
     /**
-     * Specifies whether Amazon S3 should block public bucket policies for buckets in this account. Setting this element to TRUE causes Amazon S3 to reject calls to PUT Bucket policy if the specified bucket policy allows public access. Enabling this setting doesn&#39;t affect existing bucket policies.
+     * @return Specifies whether Amazon S3 should block public bucket policies for buckets in this account. Setting this element to TRUE causes Amazon S3 to reject calls to PUT Bucket policy if the specified bucket policy allows public access. Enabling this setting doesn&#39;t affect existing bucket policies.
      * 
-    */
+     */
     public Optional<Boolean> blockPublicPolicy() {
         return Optional.ofNullable(this.blockPublicPolicy);
     }
     /**
-     * Specifies whether Amazon S3 should ignore public ACLs for buckets in this account. Setting this element to TRUE causes Amazon S3 to ignore all public ACLs on buckets in this account and any objects that they contain. Enabling this setting doesn&#39;t affect the persistence of any existing ACLs and doesn&#39;t prevent new public ACLs from being set.
+     * @return Specifies whether Amazon S3 should ignore public ACLs for buckets in this account. Setting this element to TRUE causes Amazon S3 to ignore all public ACLs on buckets in this account and any objects that they contain. Enabling this setting doesn&#39;t affect the persistence of any existing ACLs and doesn&#39;t prevent new public ACLs from being set.
      * 
-    */
+     */
     public Optional<Boolean> ignorePublicAcls() {
         return Optional.ofNullable(this.ignorePublicAcls);
     }
     /**
-     * Specifies whether Amazon S3 should restrict public bucket policies for this bucket. Setting this element to TRUE restricts access to this bucket to only AWS services and authorized users within this account if the bucket has a public policy.
+     * @return Specifies whether Amazon S3 should restrict public bucket policies for this bucket. Setting this element to TRUE restricts access to this bucket to only AWS services and authorized users within this account if the bucket has a public policy.
      * Enabling this setting doesn&#39;t affect previously stored bucket policies, except that public and cross-account access within any public bucket policy, including non-public delegation to specific accounts, is blocked.
      * 
-    */
+     */
     public Optional<Boolean> restrictPublicBuckets() {
         return Optional.ofNullable(this.restrictPublicBuckets);
     }

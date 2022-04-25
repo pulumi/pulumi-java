@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class MitigationActionPublishFindingToSnsParams {
-    /**
-     * The ARN of the topic to which you want to publish the findings.
-     * 
-     */
+        /**
+         * @return The ARN of the topic to which you want to publish the findings.
+         * 
+         */
     private final String topicArn;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class MitigationActionPublishFindingToSnsParams {
     }
 
     /**
-     * The ARN of the topic to which you want to publish the findings.
+     * @return The ARN of the topic to which you want to publish the findings.
      * 
-    */
+     */
     public String topicArn() {
         return this.topicArn;
     }

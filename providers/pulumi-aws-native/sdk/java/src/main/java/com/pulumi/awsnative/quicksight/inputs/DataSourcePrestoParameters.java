@@ -24,6 +24,10 @@ public final class DataSourcePrestoParameters extends com.pulumi.resources.Invok
     @Import(name="catalog", required=true)
     private String catalog;
 
+    /**
+     * @return &lt;p&gt;Catalog.&lt;/p&gt;
+     * 
+     */
     public String catalog() {
         return this.catalog;
     }
@@ -35,6 +39,10 @@ public final class DataSourcePrestoParameters extends com.pulumi.resources.Invok
     @Import(name="host", required=true)
     private String host;
 
+    /**
+     * @return &lt;p&gt;Host.&lt;/p&gt;
+     * 
+     */
     public String host() {
         return this.host;
     }
@@ -46,6 +54,10 @@ public final class DataSourcePrestoParameters extends com.pulumi.resources.Invok
     @Import(name="port", required=true)
     private Double port;
 
+    /**
+     * @return &lt;p&gt;Port.&lt;/p&gt;
+     * 
+     */
     public Double port() {
         return this.port;
     }
@@ -76,16 +88,34 @@ public final class DataSourcePrestoParameters extends com.pulumi.resources.Invok
             $ = new DataSourcePrestoParameters(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param catalog &lt;p&gt;Catalog.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalog(String catalog) {
             $.catalog = catalog;
             return this;
         }
 
+        /**
+         * @param host &lt;p&gt;Host.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param port &lt;p&gt;Port.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Double port) {
             $.port = port;
             return this;

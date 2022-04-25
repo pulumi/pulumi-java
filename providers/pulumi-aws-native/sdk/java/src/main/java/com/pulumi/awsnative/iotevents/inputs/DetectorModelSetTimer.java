@@ -26,6 +26,10 @@ public final class DetectorModelSetTimer extends com.pulumi.resources.InvokeArgs
     @Import(name="durationExpression")
     private @Nullable String durationExpression;
 
+    /**
+     * @return The duration of the timer, in seconds. You can use a string expression that includes numbers, variables (`$variable.&lt;variable-name&gt;`), and input values (`$input.&lt;input-name&gt;.&lt;path-to-datum&gt;`) as the duration. The range of the duration is `1-31622400` seconds. To ensure accuracy, the minimum duration is `60` seconds. The evaluated result of the duration is rounded down to the nearest whole number.
+     * 
+     */
     public Optional<String> durationExpression() {
         return Optional.ofNullable(this.durationExpression);
     }
@@ -37,6 +41,10 @@ public final class DetectorModelSetTimer extends com.pulumi.resources.InvokeArgs
     @Import(name="seconds")
     private @Nullable Integer seconds;
 
+    /**
+     * @return The number of seconds until the timer expires. The minimum value is `60` seconds to ensure accuracy. The maximum value is `31622400` seconds.
+     * 
+     */
     public Optional<Integer> seconds() {
         return Optional.ofNullable(this.seconds);
     }
@@ -48,6 +56,10 @@ public final class DetectorModelSetTimer extends com.pulumi.resources.InvokeArgs
     @Import(name="timerName", required=true)
     private String timerName;
 
+    /**
+     * @return The name of the timer.
+     * 
+     */
     public String timerName() {
         return this.timerName;
     }
@@ -78,16 +90,34 @@ public final class DetectorModelSetTimer extends com.pulumi.resources.InvokeArgs
             $ = new DetectorModelSetTimer(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param durationExpression The duration of the timer, in seconds. You can use a string expression that includes numbers, variables (`$variable.&lt;variable-name&gt;`), and input values (`$input.&lt;input-name&gt;.&lt;path-to-datum&gt;`) as the duration. The range of the duration is `1-31622400` seconds. To ensure accuracy, the minimum duration is `60` seconds. The evaluated result of the duration is rounded down to the nearest whole number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder durationExpression(@Nullable String durationExpression) {
             $.durationExpression = durationExpression;
             return this;
         }
 
+        /**
+         * @param seconds The number of seconds until the timer expires. The minimum value is `60` seconds to ensure accuracy. The maximum value is `31622400` seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder seconds(@Nullable Integer seconds) {
             $.seconds = seconds;
             return this;
         }
 
+        /**
+         * @param timerName The name of the timer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timerName(String timerName) {
             $.timerName = timerName;
             return this;

@@ -14,30 +14,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ResponsePlanIncidentTemplate {
-    /**
-     * The deduplication string.
-     * 
-     */
+        /**
+         * @return The deduplication string.
+         * 
+         */
     private final @Nullable String dedupeString;
-    /**
-     * The impact value.
-     * 
-     */
+        /**
+         * @return The impact value.
+         * 
+         */
     private final Integer impact;
-    /**
-     * The list of notification targets.
-     * 
-     */
+        /**
+         * @return The list of notification targets.
+         * 
+         */
     private final @Nullable List<ResponsePlanNotificationTargetItem> notificationTargets;
-    /**
-     * The summary string.
-     * 
-     */
+        /**
+         * @return The summary string.
+         * 
+         */
     private final @Nullable String summary;
-    /**
-     * The title string.
-     * 
-     */
+        /**
+         * @return The title string.
+         * 
+         */
     private final String title;
 
     @CustomType.Constructor
@@ -55,37 +55,37 @@ public final class ResponsePlanIncidentTemplate {
     }
 
     /**
-     * The deduplication string.
+     * @return The deduplication string.
      * 
-    */
+     */
     public Optional<String> dedupeString() {
         return Optional.ofNullable(this.dedupeString);
     }
     /**
-     * The impact value.
+     * @return The impact value.
      * 
-    */
+     */
     public Integer impact() {
         return this.impact;
     }
     /**
-     * The list of notification targets.
+     * @return The list of notification targets.
      * 
-    */
+     */
     public List<ResponsePlanNotificationTargetItem> notificationTargets() {
         return this.notificationTargets == null ? List.of() : this.notificationTargets;
     }
     /**
-     * The summary string.
+     * @return The summary string.
      * 
-    */
+     */
     public Optional<String> summary() {
         return Optional.ofNullable(this.summary);
     }
     /**
-     * The title string.
+     * @return The title string.
      * 
-    */
+     */
     public String title() {
         return this.title;
     }

@@ -19,10 +19,10 @@ import javax.annotation.Nullable;
 public final class GetCloudFormationProvisionedProductResult {
     private final @Nullable CloudFormationProvisionedProductAcceptLanguage acceptLanguage;
     private final @Nullable String cloudformationStackArn;
-    /**
-     * List of key-value pair outputs.
-     * 
-     */
+        /**
+         * @return List of key-value pair outputs.
+         * 
+         */
     private final @Nullable Object outputs;
     private final @Nullable String pathId;
     private final @Nullable String pathName;
@@ -75,9 +75,9 @@ public final class GetCloudFormationProvisionedProductResult {
         return Optional.ofNullable(this.cloudformationStackArn);
     }
     /**
-     * List of key-value pair outputs.
+     * @return List of key-value pair outputs.
      * 
-    */
+     */
     public Optional<Object> outputs() {
         return Optional.ofNullable(this.outputs);
     }

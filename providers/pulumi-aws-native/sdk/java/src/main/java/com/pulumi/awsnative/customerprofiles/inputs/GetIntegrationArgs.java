@@ -19,6 +19,10 @@ public final class GetIntegrationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="domainName", required=true)
     private String domainName;
 
+    /**
+     * @return The unique name of the domain.
+     * 
+     */
     public String domainName() {
         return this.domainName;
     }
@@ -30,6 +34,10 @@ public final class GetIntegrationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return The URI of the S3 bucket or any other type of data source.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -59,11 +67,23 @@ public final class GetIntegrationArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetIntegrationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainName The unique name of the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param uri The URI of the S3 bucket or any other type of data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

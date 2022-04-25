@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ConnectorCustomPlugin {
-    /**
-     * The Amazon Resource Name (ARN) of the custom plugin to use.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the custom plugin to use.
+         * 
+         */
     private final String customPluginArn;
-    /**
-     * The revision of the custom plugin to use.
-     * 
-     */
+        /**
+         * @return The revision of the custom plugin to use.
+         * 
+         */
     private final Integer revision;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class ConnectorCustomPlugin {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the custom plugin to use.
+     * @return The Amazon Resource Name (ARN) of the custom plugin to use.
      * 
-    */
+     */
     public String customPluginArn() {
         return this.customPluginArn;
     }
     /**
-     * The revision of the custom plugin to use.
+     * @return The revision of the custom plugin to use.
      * 
-    */
+     */
     public Integer revision() {
         return this.revision;
     }

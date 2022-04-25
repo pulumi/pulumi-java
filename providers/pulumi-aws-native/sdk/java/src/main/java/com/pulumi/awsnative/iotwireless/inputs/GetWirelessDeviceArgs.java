@@ -19,6 +19,10 @@ public final class GetWirelessDeviceArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Wireless device Id. Returned after successful create.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +51,12 @@ public final class GetWirelessDeviceArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetWirelessDeviceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Wireless device Id. Returned after successful create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class PolicyStatusProperties {
-    /**
-     * Specifies whether the policy is public or not.
-     * 
-     */
+        /**
+         * @return Specifies whether the policy is public or not.
+         * 
+         */
     private final MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic isPublic;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class PolicyStatusProperties {
     }
 
     /**
-     * Specifies whether the policy is public or not.
+     * @return Specifies whether the policy is public or not.
      * 
-    */
+     */
     public MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic isPublic() {
         return this.isPublic;
     }

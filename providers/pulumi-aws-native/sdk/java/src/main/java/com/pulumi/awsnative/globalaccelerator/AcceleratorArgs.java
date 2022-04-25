@@ -26,6 +26,10 @@ public final class AcceleratorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Indicates whether an accelerator is enabled. The value is true or false.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -37,6 +41,10 @@ public final class AcceleratorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAddressType")
     private @Nullable Output<AcceleratorIpAddressType> ipAddressType;
 
+    /**
+     * @return IP Address type.
+     * 
+     */
     public Optional<Output<AcceleratorIpAddressType>> ipAddressType() {
         return Optional.ofNullable(this.ipAddressType);
     }
@@ -48,6 +56,10 @@ public final class AcceleratorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAddresses")
     private @Nullable Output<List<String>> ipAddresses;
 
+    /**
+     * @return The IP addresses from BYOIP Prefix pool.
+     * 
+     */
     public Optional<Output<List<String>>> ipAddresses() {
         return Optional.ofNullable(this.ipAddresses);
     }
@@ -59,6 +71,10 @@ public final class AcceleratorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of accelerator.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -98,42 +114,96 @@ public final class AcceleratorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AcceleratorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Indicates whether an accelerator is enabled. The value is true or false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Indicates whether an accelerator is enabled. The value is true or false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param ipAddressType IP Address type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddressType(@Nullable Output<AcceleratorIpAddressType> ipAddressType) {
             $.ipAddressType = ipAddressType;
             return this;
         }
 
+        /**
+         * @param ipAddressType IP Address type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddressType(AcceleratorIpAddressType ipAddressType) {
             return ipAddressType(Output.of(ipAddressType));
         }
 
+        /**
+         * @param ipAddresses The IP addresses from BYOIP Prefix pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
             $.ipAddresses = ipAddresses;
             return this;
         }
 
+        /**
+         * @param ipAddresses The IP addresses from BYOIP Prefix pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(List<String> ipAddresses) {
             return ipAddresses(Output.of(ipAddresses));
         }
 
+        /**
+         * @param ipAddresses The IP addresses from BYOIP Prefix pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }
 
+        /**
+         * @param name Name of accelerator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of accelerator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

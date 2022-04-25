@@ -10,16 +10,16 @@ import java.util.Objects;
 
 @CustomType
 public final class VirtualClusterContainerProvider {
-    /**
-     * The ID of the container cluster
-     * 
-     */
+        /**
+         * @return The ID of the container cluster
+         * 
+         */
     private final String id;
     private final VirtualClusterContainerInfo info;
-    /**
-     * The type of the container provider
-     * 
-     */
+        /**
+         * @return The type of the container provider
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -33,9 +33,9 @@ public final class VirtualClusterContainerProvider {
     }
 
     /**
-     * The ID of the container cluster
+     * @return The ID of the container cluster
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -43,9 +43,9 @@ public final class VirtualClusterContainerProvider {
         return this.info;
     }
     /**
-     * The type of the container provider
+     * @return The type of the container provider
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

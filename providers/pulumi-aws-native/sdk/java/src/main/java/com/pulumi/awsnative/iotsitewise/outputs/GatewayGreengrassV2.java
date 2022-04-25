@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GatewayGreengrassV2 {
-    /**
-     * The name of the CoreDevice in GreenGrass V2.
-     * 
-     */
+        /**
+         * @return The name of the CoreDevice in GreenGrass V2.
+         * 
+         */
     private final String coreDeviceThingName;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GatewayGreengrassV2 {
     }
 
     /**
-     * The name of the CoreDevice in GreenGrass V2.
+     * @return The name of the CoreDevice in GreenGrass V2.
      * 
-    */
+     */
     public String coreDeviceThingName() {
         return this.coreDeviceThingName;
     }

@@ -16,27 +16,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetMissionProfileResult {
     private final @Nullable String arn;
-    /**
-     * Post-pass time needed after the contact.
-     * 
-     */
+        /**
+         * @return Post-pass time needed after the contact.
+         * 
+         */
     private final @Nullable Integer contactPostPassDurationSeconds;
-    /**
-     * Pre-pass time needed before the contact.
-     * 
-     */
+        /**
+         * @return Pre-pass time needed before the contact.
+         * 
+         */
     private final @Nullable Integer contactPrePassDurationSeconds;
     private final @Nullable List<MissionProfileDataflowEdge> dataflowEdges;
     private final @Nullable String id;
-    /**
-     * Visibilities with shorter duration than the specified minimum viable contact duration will be ignored when searching for available contacts.
-     * 
-     */
+        /**
+         * @return Visibilities with shorter duration than the specified minimum viable contact duration will be ignored when searching for available contacts.
+         * 
+         */
     private final @Nullable Integer minimumViableContactDurationSeconds;
-    /**
-     * A name used to identify a mission profile.
-     * 
-     */
+        /**
+         * @return A name used to identify a mission profile.
+         * 
+         */
     private final @Nullable String name;
     private final @Nullable String region;
     private final @Nullable List<MissionProfileTag> tags;
@@ -70,16 +70,16 @@ public final class GetMissionProfileResult {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Post-pass time needed after the contact.
+     * @return Post-pass time needed after the contact.
      * 
-    */
+     */
     public Optional<Integer> contactPostPassDurationSeconds() {
         return Optional.ofNullable(this.contactPostPassDurationSeconds);
     }
     /**
-     * Pre-pass time needed before the contact.
+     * @return Pre-pass time needed before the contact.
      * 
-    */
+     */
     public Optional<Integer> contactPrePassDurationSeconds() {
         return Optional.ofNullable(this.contactPrePassDurationSeconds);
     }
@@ -90,16 +90,16 @@ public final class GetMissionProfileResult {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Visibilities with shorter duration than the specified minimum viable contact duration will be ignored when searching for available contacts.
+     * @return Visibilities with shorter duration than the specified minimum viable contact duration will be ignored when searching for available contacts.
      * 
-    */
+     */
     public Optional<Integer> minimumViableContactDurationSeconds() {
         return Optional.ofNullable(this.minimumViableContactDurationSeconds);
     }
     /**
-     * A name used to identify a mission profile.
+     * @return A name used to identify a mission profile.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

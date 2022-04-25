@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class AssetHierarchy {
-    /**
-     * The ID of the child asset to be associated.
-     * 
-     */
+        /**
+         * @return The ID of the child asset to be associated.
+         * 
+         */
     private final String childAssetId;
-    /**
-     * The LogicalID of a hierarchy in the parent asset&#39;s model.
-     * 
-     */
+        /**
+         * @return The LogicalID of a hierarchy in the parent asset&#39;s model.
+         * 
+         */
     private final String logicalId;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class AssetHierarchy {
     }
 
     /**
-     * The ID of the child asset to be associated.
+     * @return The ID of the child asset to be associated.
      * 
-    */
+     */
     public String childAssetId() {
         return this.childAssetId;
     }
     /**
-     * The LogicalID of a hierarchy in the parent asset&#39;s model.
+     * @return The LogicalID of a hierarchy in the parent asset&#39;s model.
      * 
-    */
+     */
     public String logicalId() {
         return this.logicalId;
     }

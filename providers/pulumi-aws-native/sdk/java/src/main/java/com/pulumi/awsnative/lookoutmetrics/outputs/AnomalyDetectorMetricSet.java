@@ -17,36 +17,36 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AnomalyDetectorMetricSet {
-    /**
-     * Dimensions for this MetricSet.
-     * 
-     */
+        /**
+         * @return Dimensions for this MetricSet.
+         * 
+         */
     private final @Nullable List<String> dimensionList;
-    /**
-     * Metrics captured by this MetricSet.
-     * 
-     */
+        /**
+         * @return Metrics captured by this MetricSet.
+         * 
+         */
     private final List<AnomalyDetectorMetric> metricList;
-    /**
-     * A description for the MetricSet.
-     * 
-     */
+        /**
+         * @return A description for the MetricSet.
+         * 
+         */
     private final @Nullable String metricSetDescription;
-    /**
-     * A frequency period to aggregate the data
-     * 
-     */
+        /**
+         * @return A frequency period to aggregate the data
+         * 
+         */
     private final @Nullable AnomalyDetectorMetricSetMetricSetFrequency metricSetFrequency;
-    /**
-     * The name of the MetricSet.
-     * 
-     */
+        /**
+         * @return The name of the MetricSet.
+         * 
+         */
     private final String metricSetName;
     private final AnomalyDetectorMetricSource metricSource;
-    /**
-     * Offset, in seconds, between the frequency interval and the time at which the metrics are available.
-     * 
-     */
+        /**
+         * @return Offset, in seconds, between the frequency interval and the time at which the metrics are available.
+         * 
+         */
     private final @Nullable Integer offset;
     private final @Nullable AnomalyDetectorTimestampColumn timestampColumn;
     private final @Nullable String timezone;
@@ -74,37 +74,37 @@ public final class AnomalyDetectorMetricSet {
     }
 
     /**
-     * Dimensions for this MetricSet.
+     * @return Dimensions for this MetricSet.
      * 
-    */
+     */
     public List<String> dimensionList() {
         return this.dimensionList == null ? List.of() : this.dimensionList;
     }
     /**
-     * Metrics captured by this MetricSet.
+     * @return Metrics captured by this MetricSet.
      * 
-    */
+     */
     public List<AnomalyDetectorMetric> metricList() {
         return this.metricList;
     }
     /**
-     * A description for the MetricSet.
+     * @return A description for the MetricSet.
      * 
-    */
+     */
     public Optional<String> metricSetDescription() {
         return Optional.ofNullable(this.metricSetDescription);
     }
     /**
-     * A frequency period to aggregate the data
+     * @return A frequency period to aggregate the data
      * 
-    */
+     */
     public Optional<AnomalyDetectorMetricSetMetricSetFrequency> metricSetFrequency() {
         return Optional.ofNullable(this.metricSetFrequency);
     }
     /**
-     * The name of the MetricSet.
+     * @return The name of the MetricSet.
      * 
-    */
+     */
     public String metricSetName() {
         return this.metricSetName;
     }
@@ -112,9 +112,9 @@ public final class AnomalyDetectorMetricSet {
         return this.metricSource;
     }
     /**
-     * Offset, in seconds, between the frequency interval and the time at which the metrics are available.
+     * @return Offset, in seconds, between the frequency interval and the time at which the metrics are available.
      * 
-    */
+     */
     public Optional<Integer> offset() {
         return Optional.ofNullable(this.offset);
     }

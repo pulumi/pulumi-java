@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TemplateColumnSchema {
-    /**
-     * &lt;p&gt;The data type of the column schema.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;The data type of the column schema.&lt;/p&gt;
+         * 
+         */
     private final @Nullable String dataType;
-    /**
-     * &lt;p&gt;The geographic role of the column schema.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;The geographic role of the column schema.&lt;/p&gt;
+         * 
+         */
     private final @Nullable String geographicRole;
-    /**
-     * &lt;p&gt;The name of the column schema.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;The name of the column schema.&lt;/p&gt;
+         * 
+         */
     private final @Nullable String name;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class TemplateColumnSchema {
     }
 
     /**
-     * &lt;p&gt;The data type of the column schema.&lt;/p&gt;
+     * @return &lt;p&gt;The data type of the column schema.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> dataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
-     * &lt;p&gt;The geographic role of the column schema.&lt;/p&gt;
+     * @return &lt;p&gt;The geographic role of the column schema.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> geographicRole() {
         return Optional.ofNullable(this.geographicRole);
     }
     /**
-     * &lt;p&gt;The name of the column schema.&lt;/p&gt;
+     * @return &lt;p&gt;The name of the column schema.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

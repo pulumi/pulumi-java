@@ -14,35 +14,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDomainResult {
-    /**
-     * The time of this integration got created
-     * 
-     */
+        /**
+         * @return The time of this integration got created
+         * 
+         */
     private final @Nullable String createdAt;
-    /**
-     * The URL of the SQS dead letter queue
-     * 
-     */
+        /**
+         * @return The URL of the SQS dead letter queue
+         * 
+         */
     private final @Nullable String deadLetterQueueUrl;
-    /**
-     * The default encryption key
-     * 
-     */
+        /**
+         * @return The default encryption key
+         * 
+         */
     private final @Nullable String defaultEncryptionKey;
-    /**
-     * The default number of days until the data within the domain expires.
-     * 
-     */
+        /**
+         * @return The default number of days until the data within the domain expires.
+         * 
+         */
     private final @Nullable Integer defaultExpirationDays;
-    /**
-     * The time of this integration got last updated at
-     * 
-     */
+        /**
+         * @return The time of this integration got last updated at
+         * 
+         */
     private final @Nullable String lastUpdatedAt;
-    /**
-     * The tags (keys and values) associated with the domain
-     * 
-     */
+        /**
+         * @return The tags (keys and values) associated with the domain
+         * 
+         */
     private final @Nullable List<DomainTag> tags;
 
     @CustomType.Constructor
@@ -62,44 +62,44 @@ public final class GetDomainResult {
     }
 
     /**
-     * The time of this integration got created
+     * @return The time of this integration got created
      * 
-    */
+     */
     public Optional<String> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
     /**
-     * The URL of the SQS dead letter queue
+     * @return The URL of the SQS dead letter queue
      * 
-    */
+     */
     public Optional<String> deadLetterQueueUrl() {
         return Optional.ofNullable(this.deadLetterQueueUrl);
     }
     /**
-     * The default encryption key
+     * @return The default encryption key
      * 
-    */
+     */
     public Optional<String> defaultEncryptionKey() {
         return Optional.ofNullable(this.defaultEncryptionKey);
     }
     /**
-     * The default number of days until the data within the domain expires.
+     * @return The default number of days until the data within the domain expires.
      * 
-    */
+     */
     public Optional<Integer> defaultExpirationDays() {
         return Optional.ofNullable(this.defaultExpirationDays);
     }
     /**
-     * The time of this integration got last updated at
+     * @return The time of this integration got last updated at
      * 
-    */
+     */
     public Optional<String> lastUpdatedAt() {
         return Optional.ofNullable(this.lastUpdatedAt);
     }
     /**
-     * The tags (keys and values) associated with the domain
+     * @return The tags (keys and values) associated with the domain
      * 
-    */
+     */
     public List<DomainTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

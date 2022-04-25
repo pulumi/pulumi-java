@@ -19,6 +19,10 @@ public final class GetProfilingGroupArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="profilingGroupName", required=true)
     private String profilingGroupName;
 
+    /**
+     * @return The name of the profiling group.
+     * 
+     */
     public String profilingGroupName() {
         return this.profilingGroupName;
     }
@@ -47,6 +51,12 @@ public final class GetProfilingGroupArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetProfilingGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param profilingGroupName The name of the profiling group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profilingGroupName(String profilingGroupName) {
             $.profilingGroupName = profilingGroupName;
             return this;

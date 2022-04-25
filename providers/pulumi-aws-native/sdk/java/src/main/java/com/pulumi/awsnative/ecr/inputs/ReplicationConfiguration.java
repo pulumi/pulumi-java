@@ -24,6 +24,10 @@ public final class ReplicationConfiguration extends com.pulumi.resources.InvokeA
     @Import(name="rules", required=true)
     private List<ReplicationConfigurationReplicationRule> rules;
 
+    /**
+     * @return An array of objects representing the replication rules for a replication configuration. A replication configuration may contain a maximum of 10 rules.
+     * 
+     */
     public List<ReplicationConfigurationReplicationRule> rules() {
         return this.rules;
     }
@@ -52,11 +56,23 @@ public final class ReplicationConfiguration extends com.pulumi.resources.InvokeA
             $ = new ReplicationConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rules An array of objects representing the replication rules for a replication configuration. A replication configuration may contain a maximum of 10 rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<ReplicationConfigurationReplicationRule> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules An array of objects representing the replication rules for a replication configuration. A replication configuration may contain a maximum of 10 rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(ReplicationConfigurationReplicationRule... rules) {
             return rules(List.of(rules));
         }

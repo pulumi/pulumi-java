@@ -26,6 +26,10 @@ public final class DistributionConfigurationTargetContainerRepository extends co
     @Import(name="repositoryName")
     private @Nullable String repositoryName;
 
+    /**
+     * @return The repository name of target container repository.
+     * 
+     */
     public Optional<String> repositoryName() {
         return Optional.ofNullable(this.repositoryName);
     }
@@ -37,6 +41,10 @@ public final class DistributionConfigurationTargetContainerRepository extends co
     @Import(name="service")
     private @Nullable DistributionConfigurationTargetContainerRepositoryService service;
 
+    /**
+     * @return The service of target container repository.
+     * 
+     */
     public Optional<DistributionConfigurationTargetContainerRepositoryService> service() {
         return Optional.ofNullable(this.service);
     }
@@ -66,11 +74,23 @@ public final class DistributionConfigurationTargetContainerRepository extends co
             $ = new DistributionConfigurationTargetContainerRepository(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param repositoryName The repository name of target container repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryName(@Nullable String repositoryName) {
             $.repositoryName = repositoryName;
             return this;
         }
 
+        /**
+         * @param service The service of target container repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable DistributionConfigurationTargetContainerRepositoryService service) {
             $.service = service;
             return this;

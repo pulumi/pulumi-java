@@ -24,6 +24,10 @@ public final class HoursOfOperationConfig extends com.pulumi.resources.InvokeArg
     @Import(name="day", required=true)
     private HoursOfOperationConfigDay day;
 
+    /**
+     * @return The day that the hours of operation applies to.
+     * 
+     */
     public HoursOfOperationConfigDay day() {
         return this.day;
     }
@@ -35,6 +39,10 @@ public final class HoursOfOperationConfig extends com.pulumi.resources.InvokeArg
     @Import(name="endTime", required=true)
     private HoursOfOperationTimeSlice endTime;
 
+    /**
+     * @return The end time that your contact center closes.
+     * 
+     */
     public HoursOfOperationTimeSlice endTime() {
         return this.endTime;
     }
@@ -46,6 +54,10 @@ public final class HoursOfOperationConfig extends com.pulumi.resources.InvokeArg
     @Import(name="startTime", required=true)
     private HoursOfOperationTimeSlice startTime;
 
+    /**
+     * @return The start time that your contact center opens.
+     * 
+     */
     public HoursOfOperationTimeSlice startTime() {
         return this.startTime;
     }
@@ -76,16 +88,34 @@ public final class HoursOfOperationConfig extends com.pulumi.resources.InvokeArg
             $ = new HoursOfOperationConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param day The day that the hours of operation applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(HoursOfOperationConfigDay day) {
             $.day = day;
             return this;
         }
 
+        /**
+         * @param endTime The end time that your contact center closes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(HoursOfOperationTimeSlice endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param startTime The start time that your contact center opens.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(HoursOfOperationTimeSlice startTime) {
             $.startTime = startTime;
             return this;

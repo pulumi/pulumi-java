@@ -23,6 +23,10 @@ public final class DatasetFilesLimit extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxFiles", required=true)
     private Integer maxFiles;
 
+    /**
+     * @return Maximum number of files
+     * 
+     */
     public Integer maxFiles() {
         return this.maxFiles;
     }
@@ -34,6 +38,10 @@ public final class DatasetFilesLimit extends com.pulumi.resources.InvokeArgs {
     @Import(name="order")
     private @Nullable DatasetFilesLimitOrder order;
 
+    /**
+     * @return Order
+     * 
+     */
     public Optional<DatasetFilesLimitOrder> order() {
         return Optional.ofNullable(this.order);
     }
@@ -45,6 +53,10 @@ public final class DatasetFilesLimit extends com.pulumi.resources.InvokeArgs {
     @Import(name="orderedBy")
     private @Nullable DatasetFilesLimitOrderedBy orderedBy;
 
+    /**
+     * @return Ordered by
+     * 
+     */
     public Optional<DatasetFilesLimitOrderedBy> orderedBy() {
         return Optional.ofNullable(this.orderedBy);
     }
@@ -75,16 +87,34 @@ public final class DatasetFilesLimit extends com.pulumi.resources.InvokeArgs {
             $ = new DatasetFilesLimit(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxFiles Maximum number of files
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxFiles(Integer maxFiles) {
             $.maxFiles = maxFiles;
             return this;
         }
 
+        /**
+         * @param order Order
+         * 
+         * @return builder
+         * 
+         */
         public Builder order(@Nullable DatasetFilesLimitOrder order) {
             $.order = order;
             return this;
         }
 
+        /**
+         * @param orderedBy Ordered by
+         * 
+         * @return builder
+         * 
+         */
         public Builder orderedBy(@Nullable DatasetFilesLimitOrderedBy orderedBy) {
             $.orderedBy = orderedBy;
             return this;

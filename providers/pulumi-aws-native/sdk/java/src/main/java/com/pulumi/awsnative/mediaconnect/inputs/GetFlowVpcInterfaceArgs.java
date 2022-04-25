@@ -19,6 +19,10 @@ public final class GetFlowVpcInterfaceArgs extends com.pulumi.resources.InvokeAr
     @Import(name="flowArn", required=true)
     private String flowArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
+     * 
+     */
     public String flowArn() {
         return this.flowArn;
     }
@@ -30,6 +34,10 @@ public final class GetFlowVpcInterfaceArgs extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Immutable and has to be a unique against other VpcInterfaces in this Flow.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -59,11 +67,23 @@ public final class GetFlowVpcInterfaceArgs extends com.pulumi.resources.InvokeAr
             $ = new GetFlowVpcInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param flowArn The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flowArn(String flowArn) {
             $.flowArn = flowArn;
             return this;
         }
 
+        /**
+         * @param name Immutable and has to be a unique against other VpcInterfaces in this Flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

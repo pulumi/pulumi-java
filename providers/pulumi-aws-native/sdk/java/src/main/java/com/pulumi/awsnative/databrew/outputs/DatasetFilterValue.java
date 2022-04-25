@@ -10,10 +10,10 @@ import java.util.Objects;
 @CustomType
 public final class DatasetFilterValue {
     private final String value;
-    /**
-     * Variable name
-     * 
-     */
+        /**
+         * @return Variable name
+         * 
+         */
     private final String valueReference;
 
     @CustomType.Constructor
@@ -28,9 +28,9 @@ public final class DatasetFilterValue {
         return this.value;
     }
     /**
-     * Variable name
+     * @return Variable name
      * 
-    */
+     */
     public String valueReference() {
         return this.valueReference;
     }

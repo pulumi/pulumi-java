@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAliasResult {
-    /**
-     * Unique alias ID
-     * 
-     */
+        /**
+         * @return Unique alias ID
+         * 
+         */
     private final @Nullable String aliasId;
-    /**
-     * A human-readable description of the alias.
-     * 
-     */
+        /**
+         * @return A human-readable description of the alias.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * A descriptive label that is associated with an alias. Alias names do not need to be unique.
-     * 
-     */
+        /**
+         * @return A descriptive label that is associated with an alias. Alias names do not need to be unique.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * A routing configuration that specifies where traffic is directed for this alias, such as to a fleet or to a message.
-     * 
-     */
+        /**
+         * @return A routing configuration that specifies where traffic is directed for this alias, such as to a fleet or to a message.
+         * 
+         */
     private final @Nullable AliasRoutingStrategy routingStrategy;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class GetAliasResult {
     }
 
     /**
-     * Unique alias ID
+     * @return Unique alias ID
      * 
-    */
+     */
     public Optional<String> aliasId() {
         return Optional.ofNullable(this.aliasId);
     }
     /**
-     * A human-readable description of the alias.
+     * @return A human-readable description of the alias.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * A descriptive label that is associated with an alias. Alias names do not need to be unique.
+     * @return A descriptive label that is associated with an alias. Alias names do not need to be unique.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * A routing configuration that specifies where traffic is directed for this alias, such as to a fleet or to a message.
+     * @return A routing configuration that specifies where traffic is directed for this alias, such as to a fleet or to a message.
      * 
-    */
+     */
     public Optional<AliasRoutingStrategy> routingStrategy() {
         return Optional.ofNullable(this.routingStrategy);
     }

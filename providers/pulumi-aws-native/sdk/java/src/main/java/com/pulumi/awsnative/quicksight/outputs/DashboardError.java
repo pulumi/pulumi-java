@@ -12,10 +12,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DashboardError {
-    /**
-     * &lt;p&gt;Message.&lt;/p&gt;
-     * 
-     */
+        /**
+         * @return &lt;p&gt;Message.&lt;/p&gt;
+         * 
+         */
     private final @Nullable String message;
     private final @Nullable DashboardErrorType type;
 
@@ -28,9 +28,9 @@ public final class DashboardError {
     }
 
     /**
-     * &lt;p&gt;Message.&lt;/p&gt;
+     * @return &lt;p&gt;Message.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }

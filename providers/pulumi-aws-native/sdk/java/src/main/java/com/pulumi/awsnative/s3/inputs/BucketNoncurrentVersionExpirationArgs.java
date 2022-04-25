@@ -26,6 +26,10 @@ public final class BucketNoncurrentVersionExpirationArgs extends com.pulumi.reso
     @Import(name="newerNoncurrentVersions")
     private @Nullable Output<Integer> newerNoncurrentVersions;
 
+    /**
+     * @return Specified the number of newer noncurrent and current versions that must exists before performing the associated action
+     * 
+     */
     public Optional<Output<Integer>> newerNoncurrentVersions() {
         return Optional.ofNullable(this.newerNoncurrentVersions);
     }
@@ -37,6 +41,10 @@ public final class BucketNoncurrentVersionExpirationArgs extends com.pulumi.reso
     @Import(name="noncurrentDays", required=true)
     private Output<Integer> noncurrentDays;
 
+    /**
+     * @return Specified the number of days an object is noncurrent before Amazon S3 can perform the associated action
+     * 
+     */
     public Output<Integer> noncurrentDays() {
         return this.noncurrentDays;
     }
@@ -66,20 +74,44 @@ public final class BucketNoncurrentVersionExpirationArgs extends com.pulumi.reso
             $ = new BucketNoncurrentVersionExpirationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param newerNoncurrentVersions Specified the number of newer noncurrent and current versions that must exists before performing the associated action
+         * 
+         * @return builder
+         * 
+         */
         public Builder newerNoncurrentVersions(@Nullable Output<Integer> newerNoncurrentVersions) {
             $.newerNoncurrentVersions = newerNoncurrentVersions;
             return this;
         }
 
+        /**
+         * @param newerNoncurrentVersions Specified the number of newer noncurrent and current versions that must exists before performing the associated action
+         * 
+         * @return builder
+         * 
+         */
         public Builder newerNoncurrentVersions(Integer newerNoncurrentVersions) {
             return newerNoncurrentVersions(Output.of(newerNoncurrentVersions));
         }
 
+        /**
+         * @param noncurrentDays Specified the number of days an object is noncurrent before Amazon S3 can perform the associated action
+         * 
+         * @return builder
+         * 
+         */
         public Builder noncurrentDays(Output<Integer> noncurrentDays) {
             $.noncurrentDays = noncurrentDays;
             return this;
         }
 
+        /**
+         * @param noncurrentDays Specified the number of days an object is noncurrent before Amazon S3 can perform the associated action
+         * 
+         * @return builder
+         * 
+         */
         public Builder noncurrentDays(Integer noncurrentDays) {
             return noncurrentDays(Output.of(noncurrentDays));
         }

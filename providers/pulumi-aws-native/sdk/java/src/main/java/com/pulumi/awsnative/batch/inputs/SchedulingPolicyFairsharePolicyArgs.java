@@ -42,6 +42,10 @@ public final class SchedulingPolicyFairsharePolicyArgs extends com.pulumi.resour
     @Import(name="shareDistribution")
     private @Nullable Output<List<SchedulingPolicyShareAttributesArgs>> shareDistribution;
 
+    /**
+     * @return List of Share Attributes
+     * 
+     */
     public Optional<Output<List<SchedulingPolicyShareAttributesArgs>>> shareDistribution() {
         return Optional.ofNullable(this.shareDistribution);
     }
@@ -90,15 +94,33 @@ public final class SchedulingPolicyFairsharePolicyArgs extends com.pulumi.resour
             return shareDecaySeconds(Output.of(shareDecaySeconds));
         }
 
+        /**
+         * @param shareDistribution List of Share Attributes
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareDistribution(@Nullable Output<List<SchedulingPolicyShareAttributesArgs>> shareDistribution) {
             $.shareDistribution = shareDistribution;
             return this;
         }
 
+        /**
+         * @param shareDistribution List of Share Attributes
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareDistribution(List<SchedulingPolicyShareAttributesArgs> shareDistribution) {
             return shareDistribution(Output.of(shareDistribution));
         }
 
+        /**
+         * @param shareDistribution List of Share Attributes
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareDistribution(SchedulingPolicyShareAttributesArgs... shareDistribution) {
             return shareDistribution(List.of(shareDistribution));
         }

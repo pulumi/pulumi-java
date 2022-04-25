@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class AlertSNSConfiguration {
-    /**
-     * ARN of an IAM role that LookoutMetrics should assume to access the SNS topic.
-     * 
-     */
+        /**
+         * @return ARN of an IAM role that LookoutMetrics should assume to access the SNS topic.
+         * 
+         */
     private final String roleArn;
-    /**
-     * ARN of an SNS topic to send alert notifications to.
-     * 
-     */
+        /**
+         * @return ARN of an SNS topic to send alert notifications to.
+         * 
+         */
     private final String snsTopicArn;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class AlertSNSConfiguration {
     }
 
     /**
-     * ARN of an IAM role that LookoutMetrics should assume to access the SNS topic.
+     * @return ARN of an IAM role that LookoutMetrics should assume to access the SNS topic.
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }
     /**
-     * ARN of an SNS topic to send alert notifications to.
+     * @return ARN of an SNS topic to send alert notifications to.
      * 
-    */
+     */
     public String snsTopicArn() {
         return this.snsTopicArn;
     }

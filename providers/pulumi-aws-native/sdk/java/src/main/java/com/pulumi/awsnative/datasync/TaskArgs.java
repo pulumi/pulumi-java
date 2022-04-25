@@ -27,6 +27,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudWatchLogGroupArn")
     private @Nullable Output<String> cloudWatchLogGroupArn;
 
+    /**
+     * @return The ARN of the Amazon CloudWatch log group that is used to monitor and log events in the task.
+     * 
+     */
     public Optional<Output<String>> cloudWatchLogGroupArn() {
         return Optional.ofNullable(this.cloudWatchLogGroupArn);
     }
@@ -38,6 +42,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationLocationArn", required=true)
     private Output<String> destinationLocationArn;
 
+    /**
+     * @return The ARN of an AWS storage resource&#39;s location.
+     * 
+     */
     public Output<String> destinationLocationArn() {
         return this.destinationLocationArn;
     }
@@ -63,6 +71,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of a task. This value is a text reference that is used to identify the task in the console.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -88,6 +100,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceLocationArn", required=true)
     private Output<String> sourceLocationArn;
 
+    /**
+     * @return The ARN of the source location for the task.
+     * 
+     */
     public Output<String> sourceLocationArn() {
         return this.sourceLocationArn;
     }
@@ -99,6 +115,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<TaskTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<TaskTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -135,20 +155,44 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TaskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudWatchLogGroupArn The ARN of the Amazon CloudWatch log group that is used to monitor and log events in the task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudWatchLogGroupArn(@Nullable Output<String> cloudWatchLogGroupArn) {
             $.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
             return this;
         }
 
+        /**
+         * @param cloudWatchLogGroupArn The ARN of the Amazon CloudWatch log group that is used to monitor and log events in the task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudWatchLogGroupArn(String cloudWatchLogGroupArn) {
             return cloudWatchLogGroupArn(Output.of(cloudWatchLogGroupArn));
         }
 
+        /**
+         * @param destinationLocationArn The ARN of an AWS storage resource&#39;s location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationLocationArn(Output<String> destinationLocationArn) {
             $.destinationLocationArn = destinationLocationArn;
             return this;
         }
 
+        /**
+         * @param destinationLocationArn The ARN of an AWS storage resource&#39;s location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationLocationArn(String destinationLocationArn) {
             return destinationLocationArn(Output.of(destinationLocationArn));
         }
@@ -179,11 +223,23 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
             return includes(List.of(includes));
         }
 
+        /**
+         * @param name The name of a task. This value is a text reference that is used to identify the task in the console.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of a task. This value is a text reference that is used to identify the task in the console.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -206,24 +262,54 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
             return schedule(Output.of(schedule));
         }
 
+        /**
+         * @param sourceLocationArn The ARN of the source location for the task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceLocationArn(Output<String> sourceLocationArn) {
             $.sourceLocationArn = sourceLocationArn;
             return this;
         }
 
+        /**
+         * @param sourceLocationArn The ARN of the source location for the task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceLocationArn(String sourceLocationArn) {
             return sourceLocationArn(Output.of(sourceLocationArn));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<TaskTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<TaskTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(TaskTagArgs... tags) {
             return tags(List.of(tags));
         }

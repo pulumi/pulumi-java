@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ProjectProvisioningParameter {
-    /**
-     * The parameter key.
-     * 
-     */
+        /**
+         * @return The parameter key.
+         * 
+         */
     private final String key;
-    /**
-     * The parameter value.
-     * 
-     */
+        /**
+         * @return The parameter value.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ProjectProvisioningParameter {
     }
 
     /**
-     * The parameter key.
+     * @return The parameter key.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * The parameter value.
+     * @return The parameter value.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

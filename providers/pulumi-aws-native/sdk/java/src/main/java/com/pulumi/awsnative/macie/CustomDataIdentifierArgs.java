@@ -24,6 +24,10 @@ public final class CustomDataIdentifierArgs extends com.pulumi.resources.Resourc
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of custom data identifier.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -35,6 +39,10 @@ public final class CustomDataIdentifierArgs extends com.pulumi.resources.Resourc
     @Import(name="ignoreWords")
     private @Nullable Output<List<String>> ignoreWords;
 
+    /**
+     * @return Words to be ignored.
+     * 
+     */
     public Optional<Output<List<String>>> ignoreWords() {
         return Optional.ofNullable(this.ignoreWords);
     }
@@ -46,6 +54,10 @@ public final class CustomDataIdentifierArgs extends com.pulumi.resources.Resourc
     @Import(name="keywords")
     private @Nullable Output<List<String>> keywords;
 
+    /**
+     * @return Keywords to be matched against.
+     * 
+     */
     public Optional<Output<List<String>>> keywords() {
         return Optional.ofNullable(this.keywords);
     }
@@ -57,6 +69,10 @@ public final class CustomDataIdentifierArgs extends com.pulumi.resources.Resourc
     @Import(name="maximumMatchDistance")
     private @Nullable Output<Integer> maximumMatchDistance;
 
+    /**
+     * @return Maximum match distance.
+     * 
+     */
     public Optional<Output<Integer>> maximumMatchDistance() {
         return Optional.ofNullable(this.maximumMatchDistance);
     }
@@ -68,6 +84,10 @@ public final class CustomDataIdentifierArgs extends com.pulumi.resources.Resourc
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of custom data identifier.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -79,6 +99,10 @@ public final class CustomDataIdentifierArgs extends com.pulumi.resources.Resourc
     @Import(name="regex", required=true)
     private Output<String> regex;
 
+    /**
+     * @return Regular expression for custom data identifier.
+     * 
+     */
     public Output<String> regex() {
         return this.regex;
     }
@@ -112,64 +136,148 @@ public final class CustomDataIdentifierArgs extends com.pulumi.resources.Resourc
             $ = new CustomDataIdentifierArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of custom data identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of custom data identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param ignoreWords Words to be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreWords(@Nullable Output<List<String>> ignoreWords) {
             $.ignoreWords = ignoreWords;
             return this;
         }
 
+        /**
+         * @param ignoreWords Words to be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreWords(List<String> ignoreWords) {
             return ignoreWords(Output.of(ignoreWords));
         }
 
+        /**
+         * @param ignoreWords Words to be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreWords(String... ignoreWords) {
             return ignoreWords(List.of(ignoreWords));
         }
 
+        /**
+         * @param keywords Keywords to be matched against.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keywords(@Nullable Output<List<String>> keywords) {
             $.keywords = keywords;
             return this;
         }
 
+        /**
+         * @param keywords Keywords to be matched against.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keywords(List<String> keywords) {
             return keywords(Output.of(keywords));
         }
 
+        /**
+         * @param keywords Keywords to be matched against.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keywords(String... keywords) {
             return keywords(List.of(keywords));
         }
 
+        /**
+         * @param maximumMatchDistance Maximum match distance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumMatchDistance(@Nullable Output<Integer> maximumMatchDistance) {
             $.maximumMatchDistance = maximumMatchDistance;
             return this;
         }
 
+        /**
+         * @param maximumMatchDistance Maximum match distance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumMatchDistance(Integer maximumMatchDistance) {
             return maximumMatchDistance(Output.of(maximumMatchDistance));
         }
 
+        /**
+         * @param name Name of custom data identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of custom data identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param regex Regular expression for custom data identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(Output<String> regex) {
             $.regex = regex;
             return this;
         }
 
+        /**
+         * @param regex Regular expression for custom data identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(String regex) {
             return regex(Output.of(regex));
         }

@@ -27,6 +27,10 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
     @Import(name="automaticFailoverEnabled")
     private @Nullable Output<Boolean> automaticFailoverEnabled;
 
+    /**
+     * @return AutomaticFailoverEnabled
+     * 
+     */
     public Optional<Output<Boolean>> automaticFailoverEnabled() {
         return Optional.ofNullable(this.automaticFailoverEnabled);
     }
@@ -38,6 +42,10 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
     @Import(name="cacheNodeType")
     private @Nullable Output<String> cacheNodeType;
 
+    /**
+     * @return The cache node type of the Global Datastore
+     * 
+     */
     public Optional<Output<String>> cacheNodeType() {
         return Optional.ofNullable(this.cacheNodeType);
     }
@@ -49,6 +57,10 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
     @Import(name="cacheParameterGroupName")
     private @Nullable Output<String> cacheParameterGroupName;
 
+    /**
+     * @return Cache parameter group name to use for the new engine version. This parameter cannot be modified independently.
+     * 
+     */
     public Optional<Output<String>> cacheParameterGroupName() {
         return Optional.ofNullable(this.cacheParameterGroupName);
     }
@@ -60,6 +72,10 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
     @Import(name="engineVersion")
     private @Nullable Output<String> engineVersion;
 
+    /**
+     * @return The engine version of the Global Datastore.
+     * 
+     */
     public Optional<Output<String>> engineVersion() {
         return Optional.ofNullable(this.engineVersion);
     }
@@ -71,6 +87,10 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
     @Import(name="globalNodeGroupCount")
     private @Nullable Output<Integer> globalNodeGroupCount;
 
+    /**
+     * @return Indicates the number of node groups in the Global Datastore.
+     * 
+     */
     public Optional<Output<Integer>> globalNodeGroupCount() {
         return Optional.ofNullable(this.globalNodeGroupCount);
     }
@@ -82,6 +102,10 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
     @Import(name="globalReplicationGroupDescription")
     private @Nullable Output<String> globalReplicationGroupDescription;
 
+    /**
+     * @return The optional description of the Global Datastore
+     * 
+     */
     public Optional<Output<String>> globalReplicationGroupDescription() {
         return Optional.ofNullable(this.globalReplicationGroupDescription);
     }
@@ -93,6 +117,10 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
     @Import(name="globalReplicationGroupIdSuffix")
     private @Nullable Output<String> globalReplicationGroupIdSuffix;
 
+    /**
+     * @return The suffix name of a Global Datastore. Amazon ElastiCache automatically applies a prefix to the Global Datastore ID when it is created. Each AWS Region has its own prefix.
+     * 
+     */
     public Optional<Output<String>> globalReplicationGroupIdSuffix() {
         return Optional.ofNullable(this.globalReplicationGroupIdSuffix);
     }
@@ -104,6 +132,10 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
     @Import(name="members", required=true)
     private Output<List<GlobalReplicationGroupMemberArgs>> members;
 
+    /**
+     * @return The replication groups that comprise the Global Datastore.
+     * 
+     */
     public Output<List<GlobalReplicationGroupMemberArgs>> members() {
         return this.members;
     }
@@ -115,6 +147,10 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
     @Import(name="regionalConfigurations")
     private @Nullable Output<List<GlobalReplicationGroupRegionalConfigurationArgs>> regionalConfigurations;
 
+    /**
+     * @return Describes the replication group IDs, the AWS regions where they are stored and the shard configuration for each that comprise the Global Datastore
+     * 
+     */
     public Optional<Output<List<GlobalReplicationGroupRegionalConfigurationArgs>>> regionalConfigurations() {
         return Optional.ofNullable(this.regionalConfigurations);
     }
@@ -151,91 +187,211 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
             $ = new GlobalReplicationGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automaticFailoverEnabled AutomaticFailoverEnabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder automaticFailoverEnabled(@Nullable Output<Boolean> automaticFailoverEnabled) {
             $.automaticFailoverEnabled = automaticFailoverEnabled;
             return this;
         }
 
+        /**
+         * @param automaticFailoverEnabled AutomaticFailoverEnabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder automaticFailoverEnabled(Boolean automaticFailoverEnabled) {
             return automaticFailoverEnabled(Output.of(automaticFailoverEnabled));
         }
 
+        /**
+         * @param cacheNodeType The cache node type of the Global Datastore
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheNodeType(@Nullable Output<String> cacheNodeType) {
             $.cacheNodeType = cacheNodeType;
             return this;
         }
 
+        /**
+         * @param cacheNodeType The cache node type of the Global Datastore
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheNodeType(String cacheNodeType) {
             return cacheNodeType(Output.of(cacheNodeType));
         }
 
+        /**
+         * @param cacheParameterGroupName Cache parameter group name to use for the new engine version. This parameter cannot be modified independently.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheParameterGroupName(@Nullable Output<String> cacheParameterGroupName) {
             $.cacheParameterGroupName = cacheParameterGroupName;
             return this;
         }
 
+        /**
+         * @param cacheParameterGroupName Cache parameter group name to use for the new engine version. This parameter cannot be modified independently.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheParameterGroupName(String cacheParameterGroupName) {
             return cacheParameterGroupName(Output.of(cacheParameterGroupName));
         }
 
+        /**
+         * @param engineVersion The engine version of the Global Datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
             $.engineVersion = engineVersion;
             return this;
         }
 
+        /**
+         * @param engineVersion The engine version of the Global Datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineVersion(String engineVersion) {
             return engineVersion(Output.of(engineVersion));
         }
 
+        /**
+         * @param globalNodeGroupCount Indicates the number of node groups in the Global Datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalNodeGroupCount(@Nullable Output<Integer> globalNodeGroupCount) {
             $.globalNodeGroupCount = globalNodeGroupCount;
             return this;
         }
 
+        /**
+         * @param globalNodeGroupCount Indicates the number of node groups in the Global Datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalNodeGroupCount(Integer globalNodeGroupCount) {
             return globalNodeGroupCount(Output.of(globalNodeGroupCount));
         }
 
+        /**
+         * @param globalReplicationGroupDescription The optional description of the Global Datastore
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalReplicationGroupDescription(@Nullable Output<String> globalReplicationGroupDescription) {
             $.globalReplicationGroupDescription = globalReplicationGroupDescription;
             return this;
         }
 
+        /**
+         * @param globalReplicationGroupDescription The optional description of the Global Datastore
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalReplicationGroupDescription(String globalReplicationGroupDescription) {
             return globalReplicationGroupDescription(Output.of(globalReplicationGroupDescription));
         }
 
+        /**
+         * @param globalReplicationGroupIdSuffix The suffix name of a Global Datastore. Amazon ElastiCache automatically applies a prefix to the Global Datastore ID when it is created. Each AWS Region has its own prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalReplicationGroupIdSuffix(@Nullable Output<String> globalReplicationGroupIdSuffix) {
             $.globalReplicationGroupIdSuffix = globalReplicationGroupIdSuffix;
             return this;
         }
 
+        /**
+         * @param globalReplicationGroupIdSuffix The suffix name of a Global Datastore. Amazon ElastiCache automatically applies a prefix to the Global Datastore ID when it is created. Each AWS Region has its own prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalReplicationGroupIdSuffix(String globalReplicationGroupIdSuffix) {
             return globalReplicationGroupIdSuffix(Output.of(globalReplicationGroupIdSuffix));
         }
 
+        /**
+         * @param members The replication groups that comprise the Global Datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder members(Output<List<GlobalReplicationGroupMemberArgs>> members) {
             $.members = members;
             return this;
         }
 
+        /**
+         * @param members The replication groups that comprise the Global Datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder members(List<GlobalReplicationGroupMemberArgs> members) {
             return members(Output.of(members));
         }
 
+        /**
+         * @param members The replication groups that comprise the Global Datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder members(GlobalReplicationGroupMemberArgs... members) {
             return members(List.of(members));
         }
 
+        /**
+         * @param regionalConfigurations Describes the replication group IDs, the AWS regions where they are stored and the shard configuration for each that comprise the Global Datastore
+         * 
+         * @return builder
+         * 
+         */
         public Builder regionalConfigurations(@Nullable Output<List<GlobalReplicationGroupRegionalConfigurationArgs>> regionalConfigurations) {
             $.regionalConfigurations = regionalConfigurations;
             return this;
         }
 
+        /**
+         * @param regionalConfigurations Describes the replication group IDs, the AWS regions where they are stored and the shard configuration for each that comprise the Global Datastore
+         * 
+         * @return builder
+         * 
+         */
         public Builder regionalConfigurations(List<GlobalReplicationGroupRegionalConfigurationArgs> regionalConfigurations) {
             return regionalConfigurations(Output.of(regionalConfigurations));
         }
 
+        /**
+         * @param regionalConfigurations Describes the replication group IDs, the AWS regions where they are stored and the shard configuration for each that comprise the Global Datastore
+         * 
+         * @return builder
+         * 
+         */
         public Builder regionalConfigurations(GlobalReplicationGroupRegionalConfigurationArgs... regionalConfigurations) {
             return regionalConfigurations(List.of(regionalConfigurations));
         }
