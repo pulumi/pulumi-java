@@ -23,6 +23,10 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the configuration.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -34,6 +38,10 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kafkaVersions")
     private @Nullable Output<List<String>> kafkaVersions;
 
+    /**
+     * @return List of Apache Kafka versions which can use this configuration.
+     * 
+     */
     public Optional<Output<List<String>>> kafkaVersions() {
         return Optional.ofNullable(this.kafkaVersions);
     }
@@ -45,6 +53,10 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the configuration.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -56,6 +68,10 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverProperties", required=true)
     private Output<String> serverProperties;
 
+    /**
+     * @return Contents of the server.properties file. Supported properties are documented in the [MSK Developer Guide](https://docs.aws.amazon.com/msk/latest/developerguide/msk-configuration-properties.html).
+     * 
+     */
     public Output<String> serverProperties() {
         return this.serverProperties;
     }
@@ -87,42 +103,96 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of the configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param kafkaVersions List of Apache Kafka versions which can use this configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kafkaVersions(@Nullable Output<List<String>> kafkaVersions) {
             $.kafkaVersions = kafkaVersions;
             return this;
         }
 
+        /**
+         * @param kafkaVersions List of Apache Kafka versions which can use this configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kafkaVersions(List<String> kafkaVersions) {
             return kafkaVersions(Output.of(kafkaVersions));
         }
 
+        /**
+         * @param kafkaVersions List of Apache Kafka versions which can use this configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kafkaVersions(String... kafkaVersions) {
             return kafkaVersions(List.of(kafkaVersions));
         }
 
+        /**
+         * @param name Name of the configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param serverProperties Contents of the server.properties file. Supported properties are documented in the [MSK Developer Guide](https://docs.aws.amazon.com/msk/latest/developerguide/msk-configuration-properties.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverProperties(Output<String> serverProperties) {
             $.serverProperties = serverProperties;
             return this;
         }
 
+        /**
+         * @param serverProperties Contents of the server.properties file. Supported properties are documented in the [MSK Developer Guide](https://docs.aws.amazon.com/msk/latest/developerguide/msk-configuration-properties.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverProperties(String serverProperties) {
             return serverProperties(Output.of(serverProperties));
         }

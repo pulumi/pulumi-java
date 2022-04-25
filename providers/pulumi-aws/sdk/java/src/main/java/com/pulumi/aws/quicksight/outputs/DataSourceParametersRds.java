@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class DataSourceParametersRds {
     /**
-     * The database to which to connect.
+     * @return The database to which to connect.
      * 
      */
     private final String database;
     /**
-     * The instance ID to which to connect.
+     * @return The instance ID to which to connect.
      * 
      */
     private final String instanceId;
@@ -29,16 +29,16 @@ public final class DataSourceParametersRds {
     }
 
     /**
-     * The database to which to connect.
+     * @return The database to which to connect.
      * 
-    */
+     */
     public String database() {
         return this.database;
     }
     /**
-     * The instance ID to which to connect.
+     * @return The instance ID to which to connect.
      * 
-    */
+     */
     public String instanceId() {
         return this.instanceId;
     }

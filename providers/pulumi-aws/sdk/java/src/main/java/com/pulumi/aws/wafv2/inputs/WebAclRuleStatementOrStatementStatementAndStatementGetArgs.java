@@ -21,6 +21,10 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementGetArgs ex
     @Import(name="statements", required=true)
     private Output<List<WebAclRuleStatementOrStatementStatementAndStatementStatementGetArgs>> statements;
 
+    /**
+     * @return The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
+     * 
+     */
     public Output<List<WebAclRuleStatementOrStatementStatementAndStatementStatementGetArgs>> statements() {
         return this.statements;
     }
@@ -49,15 +53,33 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementGetArgs ex
             $ = new WebAclRuleStatementOrStatementStatementAndStatementGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param statements The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(Output<List<WebAclRuleStatementOrStatementStatementAndStatementStatementGetArgs>> statements) {
             $.statements = statements;
             return this;
         }
 
+        /**
+         * @param statements The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(List<WebAclRuleStatementOrStatementStatementAndStatementStatementGetArgs> statements) {
             return statements(Output.of(statements));
         }
 
+        /**
+         * @param statements The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(WebAclRuleStatementOrStatementStatementAndStatementStatementGetArgs... statements) {
             return statements(List.of(statements));
         }

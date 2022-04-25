@@ -27,6 +27,10 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="architecture")
     private @Nullable Output<String> architecture;
 
+    /**
+     * @return Machine architecture for created instances. Defaults to &#34;x86_64&#34;.
+     * 
+     */
     public Optional<Output<String>> architecture() {
         return Optional.ofNullable(this.architecture);
     }
@@ -38,6 +42,10 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the AMI.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -49,6 +57,10 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A longer, human-readable description for the AMI.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -61,6 +73,11 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ebsBlockDevices")
     private @Nullable Output<List<AmiEbsBlockDeviceGetArgs>> ebsBlockDevices;
 
+    /**
+     * @return Nested block describing an EBS block device that should be
+     * attached to created instances. The structure of this block is described below.
+     * 
+     */
     public Optional<Output<List<AmiEbsBlockDeviceGetArgs>>> ebsBlockDevices() {
         return Optional.ofNullable(this.ebsBlockDevices);
     }
@@ -72,6 +89,10 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enaSupport")
     private @Nullable Output<Boolean> enaSupport;
 
+    /**
+     * @return Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> enaSupport() {
         return Optional.ofNullable(this.enaSupport);
     }
@@ -84,6 +105,11 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ephemeralBlockDevices")
     private @Nullable Output<List<AmiEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
 
+    /**
+     * @return Nested block describing an ephemeral block device that
+     * should be attached to created instances. The structure of this block is described below.
+     * 
+     */
     public Optional<Output<List<AmiEphemeralBlockDeviceGetArgs>>> ephemeralBlockDevices() {
         return Optional.ofNullable(this.ephemeralBlockDevices);
     }
@@ -95,6 +121,10 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="hypervisor")
     private @Nullable Output<String> hypervisor;
 
+    /**
+     * @return The hypervisor type of the image.
+     * 
+     */
     public Optional<Output<String>> hypervisor() {
         return Optional.ofNullable(this.hypervisor);
     }
@@ -107,6 +137,11 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageLocation")
     private @Nullable Output<String> imageLocation;
 
+    /**
+     * @return Path to an S3 object containing an image manifest, e.g., created
+     * by the `ec2-upload-bundle` command in the EC2 command line tools.
+     * 
+     */
     public Optional<Output<String>> imageLocation() {
         return Optional.ofNullable(this.imageLocation);
     }
@@ -118,6 +153,10 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageOwnerAlias")
     private @Nullable Output<String> imageOwnerAlias;
 
+    /**
+     * @return The AWS account alias (for example, amazon, self) or the AWS account ID of the AMI owner.
+     * 
+     */
     public Optional<Output<String>> imageOwnerAlias() {
         return Optional.ofNullable(this.imageOwnerAlias);
     }
@@ -129,6 +168,10 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageType")
     private @Nullable Output<String> imageType;
 
+    /**
+     * @return The type of image.
+     * 
+     */
     public Optional<Output<String>> imageType() {
         return Optional.ofNullable(this.imageType);
     }
@@ -141,6 +184,11 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="kernelId")
     private @Nullable Output<String> kernelId;
 
+    /**
+     * @return The id of the kernel image (AKI) that will be used as the paravirtual
+     * kernel in created instances.
+     * 
+     */
     public Optional<Output<String>> kernelId() {
         return Optional.ofNullable(this.kernelId);
     }
@@ -159,6 +207,10 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A region-unique name for the AMI.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -170,6 +222,10 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ownerId")
     private @Nullable Output<String> ownerId;
 
+    /**
+     * @return The AWS account ID of the image owner.
+     * 
+     */
     public Optional<Output<String>> ownerId() {
         return Optional.ofNullable(this.ownerId);
     }
@@ -181,6 +237,10 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="platform")
     private @Nullable Output<String> platform;
 
+    /**
+     * @return This value is set to windows for Windows AMIs; otherwise, it is blank.
+     * 
+     */
     public Optional<Output<String>> platform() {
         return Optional.ofNullable(this.platform);
     }
@@ -192,6 +252,10 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="platformDetails")
     private @Nullable Output<String> platformDetails;
 
+    /**
+     * @return The platform details associated with the billing code of the AMI.
+     * 
+     */
     public Optional<Output<String>> platformDetails() {
         return Optional.ofNullable(this.platformDetails);
     }
@@ -203,6 +267,10 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="public")
     private @Nullable Output<Boolean> public_;
 
+    /**
+     * @return Indicates whether the image has public launch permissions.
+     * 
+     */
     public Optional<Output<Boolean>> public_() {
         return Optional.ofNullable(this.public_);
     }
@@ -215,6 +283,11 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ramdiskId")
     private @Nullable Output<String> ramdiskId;
 
+    /**
+     * @return The id of an initrd image (ARI) that will be used when booting the
+     * created instances.
+     * 
+     */
     public Optional<Output<String>> ramdiskId() {
         return Optional.ofNullable(this.ramdiskId);
     }
@@ -226,6 +299,10 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="rootDeviceName")
     private @Nullable Output<String> rootDeviceName;
 
+    /**
+     * @return The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
+     * 
+     */
     public Optional<Output<String>> rootDeviceName() {
         return Optional.ofNullable(this.rootDeviceName);
     }
@@ -237,6 +314,10 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="rootSnapshotId")
     private @Nullable Output<String> rootSnapshotId;
 
+    /**
+     * @return The Snapshot ID for the root volume (for EBS-backed AMIs)
+     * 
+     */
     public Optional<Output<String>> rootSnapshotId() {
         return Optional.ofNullable(this.rootSnapshotId);
     }
@@ -249,6 +330,11 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sriovNetSupport")
     private @Nullable Output<String> sriovNetSupport;
 
+    /**
+     * @return When set to &#34;simple&#34; (the default), enables enhanced networking
+     * for created instances. No other value is supported at this time.
+     * 
+     */
     public Optional<Output<String>> sriovNetSupport() {
         return Optional.ofNullable(this.sriovNetSupport);
     }
@@ -260,6 +346,10 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -271,6 +361,10 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -282,6 +376,10 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="usageOperation")
     private @Nullable Output<String> usageOperation;
 
+    /**
+     * @return The operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
+     * 
+     */
     public Optional<Output<String>> usageOperation() {
         return Optional.ofNullable(this.usageOperation);
     }
@@ -295,6 +393,12 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualizationType")
     private @Nullable Output<String> virtualizationType;
 
+    /**
+     * @return Keyword to choose what virtualization mode created instances
+     * will use. Can be either &#34;paravirtual&#34; (the default) or &#34;hvm&#34;. The choice of virtualization type
+     * changes the set of further arguments that are required, as described below.
+     * 
+     */
     public Optional<Output<String>> virtualizationType() {
         return Optional.ofNullable(this.virtualizationType);
     }
@@ -347,109 +451,263 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
             $ = new AmiState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param architecture Machine architecture for created instances. Defaults to &#34;x86_64&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder architecture(@Nullable Output<String> architecture) {
             $.architecture = architecture;
             return this;
         }
 
+        /**
+         * @param architecture Machine architecture for created instances. Defaults to &#34;x86_64&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder architecture(String architecture) {
             return architecture(Output.of(architecture));
         }
 
+        /**
+         * @param arn The ARN of the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param description A longer, human-readable description for the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A longer, human-readable description for the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param ebsBlockDevices Nested block describing an EBS block device that should be
+         * attached to created instances. The structure of this block is described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsBlockDevices(@Nullable Output<List<AmiEbsBlockDeviceGetArgs>> ebsBlockDevices) {
             $.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
 
+        /**
+         * @param ebsBlockDevices Nested block describing an EBS block device that should be
+         * attached to created instances. The structure of this block is described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsBlockDevices(List<AmiEbsBlockDeviceGetArgs> ebsBlockDevices) {
             return ebsBlockDevices(Output.of(ebsBlockDevices));
         }
 
+        /**
+         * @param ebsBlockDevices Nested block describing an EBS block device that should be
+         * attached to created instances. The structure of this block is described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsBlockDevices(AmiEbsBlockDeviceGetArgs... ebsBlockDevices) {
             return ebsBlockDevices(List.of(ebsBlockDevices));
         }
 
+        /**
+         * @param enaSupport Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enaSupport(@Nullable Output<Boolean> enaSupport) {
             $.enaSupport = enaSupport;
             return this;
         }
 
+        /**
+         * @param enaSupport Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enaSupport(Boolean enaSupport) {
             return enaSupport(Output.of(enaSupport));
         }
 
+        /**
+         * @param ephemeralBlockDevices Nested block describing an ephemeral block device that
+         * should be attached to created instances. The structure of this block is described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ephemeralBlockDevices(@Nullable Output<List<AmiEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices) {
             $.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
 
+        /**
+         * @param ephemeralBlockDevices Nested block describing an ephemeral block device that
+         * should be attached to created instances. The structure of this block is described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ephemeralBlockDevices(List<AmiEphemeralBlockDeviceGetArgs> ephemeralBlockDevices) {
             return ephemeralBlockDevices(Output.of(ephemeralBlockDevices));
         }
 
+        /**
+         * @param ephemeralBlockDevices Nested block describing an ephemeral block device that
+         * should be attached to created instances. The structure of this block is described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ephemeralBlockDevices(AmiEphemeralBlockDeviceGetArgs... ephemeralBlockDevices) {
             return ephemeralBlockDevices(List.of(ephemeralBlockDevices));
         }
 
+        /**
+         * @param hypervisor The hypervisor type of the image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hypervisor(@Nullable Output<String> hypervisor) {
             $.hypervisor = hypervisor;
             return this;
         }
 
+        /**
+         * @param hypervisor The hypervisor type of the image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hypervisor(String hypervisor) {
             return hypervisor(Output.of(hypervisor));
         }
 
+        /**
+         * @param imageLocation Path to an S3 object containing an image manifest, e.g., created
+         * by the `ec2-upload-bundle` command in the EC2 command line tools.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageLocation(@Nullable Output<String> imageLocation) {
             $.imageLocation = imageLocation;
             return this;
         }
 
+        /**
+         * @param imageLocation Path to an S3 object containing an image manifest, e.g., created
+         * by the `ec2-upload-bundle` command in the EC2 command line tools.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageLocation(String imageLocation) {
             return imageLocation(Output.of(imageLocation));
         }
 
+        /**
+         * @param imageOwnerAlias The AWS account alias (for example, amazon, self) or the AWS account ID of the AMI owner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageOwnerAlias(@Nullable Output<String> imageOwnerAlias) {
             $.imageOwnerAlias = imageOwnerAlias;
             return this;
         }
 
+        /**
+         * @param imageOwnerAlias The AWS account alias (for example, amazon, self) or the AWS account ID of the AMI owner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageOwnerAlias(String imageOwnerAlias) {
             return imageOwnerAlias(Output.of(imageOwnerAlias));
         }
 
+        /**
+         * @param imageType The type of image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageType(@Nullable Output<String> imageType) {
             $.imageType = imageType;
             return this;
         }
 
+        /**
+         * @param imageType The type of image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageType(String imageType) {
             return imageType(Output.of(imageType));
         }
 
+        /**
+         * @param kernelId The id of the kernel image (AKI) that will be used as the paravirtual
+         * kernel in created instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kernelId(@Nullable Output<String> kernelId) {
             $.kernelId = kernelId;
             return this;
         }
 
+        /**
+         * @param kernelId The id of the kernel image (AKI) that will be used as the paravirtual
+         * kernel in created instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kernelId(String kernelId) {
             return kernelId(Output.of(kernelId));
         }
@@ -463,119 +721,283 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
             return manageEbsSnapshots(Output.of(manageEbsSnapshots));
         }
 
+        /**
+         * @param name A region-unique name for the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A region-unique name for the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param ownerId The AWS account ID of the image owner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerId(@Nullable Output<String> ownerId) {
             $.ownerId = ownerId;
             return this;
         }
 
+        /**
+         * @param ownerId The AWS account ID of the image owner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerId(String ownerId) {
             return ownerId(Output.of(ownerId));
         }
 
+        /**
+         * @param platform This value is set to windows for Windows AMIs; otherwise, it is blank.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(@Nullable Output<String> platform) {
             $.platform = platform;
             return this;
         }
 
+        /**
+         * @param platform This value is set to windows for Windows AMIs; otherwise, it is blank.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(String platform) {
             return platform(Output.of(platform));
         }
 
+        /**
+         * @param platformDetails The platform details associated with the billing code of the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platformDetails(@Nullable Output<String> platformDetails) {
             $.platformDetails = platformDetails;
             return this;
         }
 
+        /**
+         * @param platformDetails The platform details associated with the billing code of the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platformDetails(String platformDetails) {
             return platformDetails(Output.of(platformDetails));
         }
 
+        /**
+         * @param public_ Indicates whether the image has public launch permissions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder public_(@Nullable Output<Boolean> public_) {
             $.public_ = public_;
             return this;
         }
 
+        /**
+         * @param public_ Indicates whether the image has public launch permissions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder public_(Boolean public_) {
             return public_(Output.of(public_));
         }
 
+        /**
+         * @param ramdiskId The id of an initrd image (ARI) that will be used when booting the
+         * created instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ramdiskId(@Nullable Output<String> ramdiskId) {
             $.ramdiskId = ramdiskId;
             return this;
         }
 
+        /**
+         * @param ramdiskId The id of an initrd image (ARI) that will be used when booting the
+         * created instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ramdiskId(String ramdiskId) {
             return ramdiskId(Output.of(ramdiskId));
         }
 
+        /**
+         * @param rootDeviceName The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootDeviceName(@Nullable Output<String> rootDeviceName) {
             $.rootDeviceName = rootDeviceName;
             return this;
         }
 
+        /**
+         * @param rootDeviceName The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootDeviceName(String rootDeviceName) {
             return rootDeviceName(Output.of(rootDeviceName));
         }
 
+        /**
+         * @param rootSnapshotId The Snapshot ID for the root volume (for EBS-backed AMIs)
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootSnapshotId(@Nullable Output<String> rootSnapshotId) {
             $.rootSnapshotId = rootSnapshotId;
             return this;
         }
 
+        /**
+         * @param rootSnapshotId The Snapshot ID for the root volume (for EBS-backed AMIs)
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootSnapshotId(String rootSnapshotId) {
             return rootSnapshotId(Output.of(rootSnapshotId));
         }
 
+        /**
+         * @param sriovNetSupport When set to &#34;simple&#34; (the default), enables enhanced networking
+         * for created instances. No other value is supported at this time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sriovNetSupport(@Nullable Output<String> sriovNetSupport) {
             $.sriovNetSupport = sriovNetSupport;
             return this;
         }
 
+        /**
+         * @param sriovNetSupport When set to &#34;simple&#34; (the default), enables enhanced networking
+         * for created instances. No other value is supported at this time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sriovNetSupport(String sriovNetSupport) {
             return sriovNetSupport(Output.of(sriovNetSupport));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param usageOperation The operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usageOperation(@Nullable Output<String> usageOperation) {
             $.usageOperation = usageOperation;
             return this;
         }
 
+        /**
+         * @param usageOperation The operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usageOperation(String usageOperation) {
             return usageOperation(Output.of(usageOperation));
         }
 
+        /**
+         * @param virtualizationType Keyword to choose what virtualization mode created instances
+         * will use. Can be either &#34;paravirtual&#34; (the default) or &#34;hvm&#34;. The choice of virtualization type
+         * changes the set of further arguments that are required, as described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualizationType(@Nullable Output<String> virtualizationType) {
             $.virtualizationType = virtualizationType;
             return this;
         }
 
+        /**
+         * @param virtualizationType Keyword to choose what virtualization mode created instances
+         * will use. Can be either &#34;paravirtual&#34; (the default) or &#34;hvm&#34;. The choice of virtualization type
+         * changes the set of further arguments that are required, as described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualizationType(String virtualizationType) {
             return virtualizationType(Output.of(virtualizationType));
         }

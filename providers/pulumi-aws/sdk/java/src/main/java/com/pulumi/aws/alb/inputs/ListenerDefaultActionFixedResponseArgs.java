@@ -22,6 +22,10 @@ public final class ListenerDefaultActionFixedResponseArgs extends com.pulumi.res
     @Import(name="contentType", required=true)
     private Output<String> contentType;
 
+    /**
+     * @return Content type. Valid values are `text/plain`, `text/css`, `text/html`, `application/javascript` and `application/json`.
+     * 
+     */
     public Output<String> contentType() {
         return this.contentType;
     }
@@ -33,6 +37,10 @@ public final class ListenerDefaultActionFixedResponseArgs extends com.pulumi.res
     @Import(name="messageBody")
     private @Nullable Output<String> messageBody;
 
+    /**
+     * @return Message body.
+     * 
+     */
     public Optional<Output<String>> messageBody() {
         return Optional.ofNullable(this.messageBody);
     }
@@ -44,6 +52,10 @@ public final class ListenerDefaultActionFixedResponseArgs extends com.pulumi.res
     @Import(name="statusCode")
     private @Nullable Output<String> statusCode;
 
+    /**
+     * @return HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
+     * 
+     */
     public Optional<Output<String>> statusCode() {
         return Optional.ofNullable(this.statusCode);
     }
@@ -74,29 +86,65 @@ public final class ListenerDefaultActionFixedResponseArgs extends com.pulumi.res
             $ = new ListenerDefaultActionFixedResponseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentType Content type. Valid values are `text/plain`, `text/css`, `text/html`, `application/javascript` and `application/json`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(Output<String> contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param contentType Content type. Valid values are `text/plain`, `text/css`, `text/html`, `application/javascript` and `application/json`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(String contentType) {
             return contentType(Output.of(contentType));
         }
 
+        /**
+         * @param messageBody Message body.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageBody(@Nullable Output<String> messageBody) {
             $.messageBody = messageBody;
             return this;
         }
 
+        /**
+         * @param messageBody Message body.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageBody(String messageBody) {
             return messageBody(Output.of(messageBody));
         }
 
+        /**
+         * @param statusCode HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCode(@Nullable Output<String> statusCode) {
             $.statusCode = statusCode;
             return this;
         }
 
+        /**
+         * @param statusCode HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCode(String statusCode) {
             return statusCode(Output.of(statusCode));
         }

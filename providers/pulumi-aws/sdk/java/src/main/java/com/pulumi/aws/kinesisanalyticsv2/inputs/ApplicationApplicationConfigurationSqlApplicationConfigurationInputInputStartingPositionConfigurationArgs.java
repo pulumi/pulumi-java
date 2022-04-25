@@ -22,6 +22,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="inputStartingPosition")
     private @Nullable Output<String> inputStartingPosition;
 
+    /**
+     * @return The starting position on the stream. Valid values: `LAST_STOPPED_POINT`, `NOW`, `TRIM_HORIZON`.
+     * 
+     */
     public Optional<Output<String>> inputStartingPosition() {
         return Optional.ofNullable(this.inputStartingPosition);
     }
@@ -50,11 +54,23 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inputStartingPosition The starting position on the stream. Valid values: `LAST_STOPPED_POINT`, `NOW`, `TRIM_HORIZON`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputStartingPosition(@Nullable Output<String> inputStartingPosition) {
             $.inputStartingPosition = inputStartingPosition;
             return this;
         }
 
+        /**
+         * @param inputStartingPosition The starting position on the stream. Valid values: `LAST_STOPPED_POINT`, `NOW`, `TRIM_HORIZON`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputStartingPosition(String inputStartingPosition) {
             return inputStartingPosition(Output.of(inputStartingPosition));
         }

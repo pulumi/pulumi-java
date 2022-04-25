@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OrganizationRoot {
     /**
-     * ARN of the root
+     * @return ARN of the root
      * 
      */
     private final @Nullable String arn;
     /**
-     * Identifier of the root
+     * @return Identifier of the root
      * 
      */
     private final @Nullable String id;
     /**
-     * The name of the policy type
+     * @return The name of the policy type
      * 
      */
     private final @Nullable String name;
     /**
-     * List of policy types enabled for this root. All elements have these attributes:
+     * @return List of policy types enabled for this root. All elements have these attributes:
      * 
      */
     private final @Nullable List<OrganizationRootPolicyType> policyTypes;
@@ -47,30 +47,30 @@ public final class OrganizationRoot {
     }
 
     /**
-     * ARN of the root
+     * @return ARN of the root
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Identifier of the root
+     * @return Identifier of the root
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The name of the policy type
+     * @return The name of the policy type
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * List of policy types enabled for this root. All elements have these attributes:
+     * @return List of policy types enabled for this root. All elements have these attributes:
      * 
-    */
+     */
     public List<OrganizationRootPolicyType> policyTypes() {
         return this.policyTypes == null ? List.of() : this.policyTypes;
     }

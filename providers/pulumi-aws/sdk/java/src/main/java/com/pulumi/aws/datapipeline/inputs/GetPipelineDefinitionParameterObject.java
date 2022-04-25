@@ -28,6 +28,10 @@ public final class GetPipelineDefinitionParameterObject extends com.pulumi.resou
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return ID of the object.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -66,6 +70,12 @@ public final class GetPipelineDefinitionParameterObject extends com.pulumi.resou
             return attributes(List.of(attributes));
         }
 
+        /**
+         * @param id ID of the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

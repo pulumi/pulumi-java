@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MLTransformParametersFindMatchesParameters {
     /**
-     * The value that is selected when tuning your transform for a balance between accuracy and cost.
+     * @return The value that is selected when tuning your transform for a balance between accuracy and cost.
      * 
      */
     private final @Nullable Double accuracyCostTradeOff;
     /**
-     * The value to switch on or off to force the output to match the provided labels from users.
+     * @return The value to switch on or off to force the output to match the provided labels from users.
      * 
      */
     private final @Nullable Boolean enforceProvidedLabels;
     /**
-     * The value selected when tuning your transform for a balance between precision and recall.
+     * @return The value selected when tuning your transform for a balance between precision and recall.
      * 
      */
     private final @Nullable Double precisionRecallTradeOff;
     /**
-     * The name of a column that uniquely identifies rows in the source table.
+     * @return The name of a column that uniquely identifies rows in the source table.
      * 
      */
     private final @Nullable String primaryKeyColumnName;
@@ -47,30 +47,30 @@ public final class MLTransformParametersFindMatchesParameters {
     }
 
     /**
-     * The value that is selected when tuning your transform for a balance between accuracy and cost.
+     * @return The value that is selected when tuning your transform for a balance between accuracy and cost.
      * 
-    */
+     */
     public Optional<Double> accuracyCostTradeOff() {
         return Optional.ofNullable(this.accuracyCostTradeOff);
     }
     /**
-     * The value to switch on or off to force the output to match the provided labels from users.
+     * @return The value to switch on or off to force the output to match the provided labels from users.
      * 
-    */
+     */
     public Optional<Boolean> enforceProvidedLabels() {
         return Optional.ofNullable(this.enforceProvidedLabels);
     }
     /**
-     * The value selected when tuning your transform for a balance between precision and recall.
+     * @return The value selected when tuning your transform for a balance between precision and recall.
      * 
-    */
+     */
     public Optional<Double> precisionRecallTradeOff() {
         return Optional.ofNullable(this.precisionRecallTradeOff);
     }
     /**
-     * The name of a column that uniquely identifies rows in the source table.
+     * @return The name of a column that uniquely identifies rows in the source table.
      * 
-    */
+     */
     public Optional<String> primaryKeyColumnName() {
         return Optional.ofNullable(this.primaryKeyColumnName);
     }

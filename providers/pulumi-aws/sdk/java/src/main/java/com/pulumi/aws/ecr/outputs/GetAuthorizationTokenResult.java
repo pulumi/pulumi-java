@@ -12,33 +12,33 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAuthorizationTokenResult {
     /**
-     * Temporary IAM authentication credentials to access the ECR repository encoded in base64 in the form of `user_name:password`.
+     * @return Temporary IAM authentication credentials to access the ECR repository encoded in base64 in the form of `user_name:password`.
      * 
      */
     private final String authorizationToken;
     /**
-     * The time in UTC RFC3339 format when the authorization token expires.
+     * @return The time in UTC RFC3339 format when the authorization token expires.
      * 
      */
     private final String expiresAt;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * Password decoded from the authorization token.
+     * @return Password decoded from the authorization token.
      * 
      */
     private final String password;
     /**
-     * The registry URL to use in the docker login command.
+     * @return The registry URL to use in the docker login command.
      * 
      */
     private final String proxyEndpoint;
     private final @Nullable String registryId;
     /**
-     * User name decoded from the authorization token.
+     * @return User name decoded from the authorization token.
      * 
      */
     private final String userName;
@@ -62,37 +62,37 @@ public final class GetAuthorizationTokenResult {
     }
 
     /**
-     * Temporary IAM authentication credentials to access the ECR repository encoded in base64 in the form of `user_name:password`.
+     * @return Temporary IAM authentication credentials to access the ECR repository encoded in base64 in the form of `user_name:password`.
      * 
-    */
+     */
     public String authorizationToken() {
         return this.authorizationToken;
     }
     /**
-     * The time in UTC RFC3339 format when the authorization token expires.
+     * @return The time in UTC RFC3339 format when the authorization token expires.
      * 
-    */
+     */
     public String expiresAt() {
         return this.expiresAt;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Password decoded from the authorization token.
+     * @return Password decoded from the authorization token.
      * 
-    */
+     */
     public String password() {
         return this.password;
     }
     /**
-     * The registry URL to use in the docker login command.
+     * @return The registry URL to use in the docker login command.
      * 
-    */
+     */
     public String proxyEndpoint() {
         return this.proxyEndpoint;
     }
@@ -100,9 +100,9 @@ public final class GetAuthorizationTokenResult {
         return Optional.ofNullable(this.registryId);
     }
     /**
-     * User name decoded from the authorization token.
+     * @return User name decoded from the authorization token.
      * 
-    */
+     */
     public String userName() {
         return this.userName;
     }

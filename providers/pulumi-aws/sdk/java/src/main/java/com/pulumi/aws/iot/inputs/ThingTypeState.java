@@ -25,6 +25,10 @@ public final class ThingTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the created AWS IoT Thing Type.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -36,6 +40,10 @@ public final class ThingTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="deprecated")
     private @Nullable Output<Boolean> deprecated;
 
+    /**
+     * @return Whether the thing type is deprecated. If true, no new things could be associated with this type.
+     * 
+     */
     public Optional<Output<Boolean>> deprecated() {
         return Optional.ofNullable(this.deprecated);
     }
@@ -47,6 +55,10 @@ public final class ThingTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the thing type.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -58,6 +70,10 @@ public final class ThingTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<ThingTypePropertiesGetArgs> properties;
 
+    /**
+     * @return , Configuration block that can contain the following properties of the thing type:
+     * 
+     */
     public Optional<Output<ThingTypePropertiesGetArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -69,6 +85,10 @@ public final class ThingTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -80,6 +100,10 @@ public final class ThingTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -113,56 +137,128 @@ public final class ThingTypeState extends com.pulumi.resources.ResourceArgs {
             $ = new ThingTypeState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the created AWS IoT Thing Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the created AWS IoT Thing Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param deprecated Whether the thing type is deprecated. If true, no new things could be associated with this type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deprecated(@Nullable Output<Boolean> deprecated) {
             $.deprecated = deprecated;
             return this;
         }
 
+        /**
+         * @param deprecated Whether the thing type is deprecated. If true, no new things could be associated with this type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deprecated(Boolean deprecated) {
             return deprecated(Output.of(deprecated));
         }
 
+        /**
+         * @param name The name of the thing type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the thing type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param properties , Configuration block that can contain the following properties of the thing type:
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<ThingTypePropertiesGetArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties , Configuration block that can contain the following properties of the thing type:
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(ThingTypePropertiesGetArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param tags Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

@@ -28,6 +28,10 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends com.pulumi.r
     @Import(name="copyTags")
     private @Nullable Output<Boolean> copyTags;
 
+    /**
+     * @return Whether to copy all user-defined tags from the source snapshot to the cross-region snapshot copy.
+     * 
+     */
     public Optional<Output<Boolean>> copyTags() {
         return Optional.ofNullable(this.copyTags);
     }
@@ -39,6 +43,10 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends com.pulumi.r
     @Import(name="createRule", required=true)
     private Output<LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs> createRule;
 
+    /**
+     * @return See the `create_rule` block. Max of 1 per schedule.
+     * 
+     */
     public Output<LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs> createRule() {
         return this.createRule;
     }
@@ -50,6 +58,10 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends com.pulumi.r
     @Import(name="crossRegionCopyRules")
     private @Nullable Output<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs>> crossRegionCopyRules;
 
+    /**
+     * @return See the `cross_region_copy_rule` block. Max of 3 per schedule.
+     * 
+     */
     public Optional<Output<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs>>> crossRegionCopyRules() {
         return Optional.ofNullable(this.crossRegionCopyRules);
     }
@@ -61,6 +73,10 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends com.pulumi.r
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return A name for the schedule.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -72,6 +88,10 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends com.pulumi.r
     @Import(name="retainRule", required=true)
     private Output<LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs> retainRule;
 
+    /**
+     * @return The retention rule that indicates how long snapshot copies are to be retained in the destination Region. See the `retain_rule` block. Max of 1 per schedule.
+     * 
+     */
     public Output<LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs> retainRule() {
         return this.retainRule;
     }
@@ -83,6 +103,10 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends com.pulumi.r
     @Import(name="tagsToAdd")
     private @Nullable Output<Map<String,String>> tagsToAdd;
 
+    /**
+     * @return A map of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsToAdd() {
         return Optional.ofNullable(this.tagsToAdd);
     }
@@ -116,60 +140,138 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends com.pulumi.r
             $ = new LifecyclePolicyPolicyDetailsScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param copyTags Whether to copy all user-defined tags from the source snapshot to the cross-region snapshot copy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyTags(@Nullable Output<Boolean> copyTags) {
             $.copyTags = copyTags;
             return this;
         }
 
+        /**
+         * @param copyTags Whether to copy all user-defined tags from the source snapshot to the cross-region snapshot copy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyTags(Boolean copyTags) {
             return copyTags(Output.of(copyTags));
         }
 
+        /**
+         * @param createRule See the `create_rule` block. Max of 1 per schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createRule(Output<LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs> createRule) {
             $.createRule = createRule;
             return this;
         }
 
+        /**
+         * @param createRule See the `create_rule` block. Max of 1 per schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createRule(LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs createRule) {
             return createRule(Output.of(createRule));
         }
 
+        /**
+         * @param crossRegionCopyRules See the `cross_region_copy_rule` block. Max of 3 per schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crossRegionCopyRules(@Nullable Output<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs>> crossRegionCopyRules) {
             $.crossRegionCopyRules = crossRegionCopyRules;
             return this;
         }
 
+        /**
+         * @param crossRegionCopyRules See the `cross_region_copy_rule` block. Max of 3 per schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crossRegionCopyRules(List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs> crossRegionCopyRules) {
             return crossRegionCopyRules(Output.of(crossRegionCopyRules));
         }
 
+        /**
+         * @param crossRegionCopyRules See the `cross_region_copy_rule` block. Max of 3 per schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crossRegionCopyRules(LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs... crossRegionCopyRules) {
             return crossRegionCopyRules(List.of(crossRegionCopyRules));
         }
 
+        /**
+         * @param name A name for the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A name for the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param retainRule The retention rule that indicates how long snapshot copies are to be retained in the destination Region. See the `retain_rule` block. Max of 1 per schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retainRule(Output<LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs> retainRule) {
             $.retainRule = retainRule;
             return this;
         }
 
+        /**
+         * @param retainRule The retention rule that indicates how long snapshot copies are to be retained in the destination Region. See the `retain_rule` block. Max of 1 per schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retainRule(LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs retainRule) {
             return retainRule(Output.of(retainRule));
         }
 
+        /**
+         * @param tagsToAdd A map of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsToAdd(@Nullable Output<Map<String,String>> tagsToAdd) {
             $.tagsToAdd = tagsToAdd;
             return this;
         }
 
+        /**
+         * @param tagsToAdd A map of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsToAdd(Map<String,String> tagsToAdd) {
             return tagsToAdd(Output.of(tagsToAdd));
         }

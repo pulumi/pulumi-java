@@ -24,6 +24,10 @@ public final class ClusterStepHadoopJarStepGetArgs extends com.pulumi.resources.
     @Import(name="args")
     private @Nullable Output<List<String>> args;
 
+    /**
+     * @return List of command line arguments passed to the JAR file&#39;s main function when executed.
+     * 
+     */
     public Optional<Output<List<String>>> args() {
         return Optional.ofNullable(this.args);
     }
@@ -35,6 +39,10 @@ public final class ClusterStepHadoopJarStepGetArgs extends com.pulumi.resources.
     @Import(name="jar", required=true)
     private Output<String> jar;
 
+    /**
+     * @return Path to a JAR file run during the step.
+     * 
+     */
     public Output<String> jar() {
         return this.jar;
     }
@@ -46,6 +54,10 @@ public final class ClusterStepHadoopJarStepGetArgs extends com.pulumi.resources.
     @Import(name="mainClass")
     private @Nullable Output<String> mainClass;
 
+    /**
+     * @return Name of the main class in the specified Java file. If not specified, the JAR file should specify a Main-Class in its manifest file.
+     * 
+     */
     public Optional<Output<String>> mainClass() {
         return Optional.ofNullable(this.mainClass);
     }
@@ -57,6 +69,10 @@ public final class ClusterStepHadoopJarStepGetArgs extends com.pulumi.resources.
     @Import(name="properties")
     private @Nullable Output<Map<String,String>> properties;
 
+    /**
+     * @return Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.
+     * 
+     */
     public Optional<Output<Map<String,String>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -88,42 +104,96 @@ public final class ClusterStepHadoopJarStepGetArgs extends com.pulumi.resources.
             $ = new ClusterStepHadoopJarStepGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param args List of command line arguments passed to the JAR file&#39;s main function when executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(@Nullable Output<List<String>> args) {
             $.args = args;
             return this;
         }
 
+        /**
+         * @param args List of command line arguments passed to the JAR file&#39;s main function when executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(List<String> args) {
             return args(Output.of(args));
         }
 
+        /**
+         * @param args List of command line arguments passed to the JAR file&#39;s main function when executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(String... args) {
             return args(List.of(args));
         }
 
+        /**
+         * @param jar Path to a JAR file run during the step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jar(Output<String> jar) {
             $.jar = jar;
             return this;
         }
 
+        /**
+         * @param jar Path to a JAR file run during the step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jar(String jar) {
             return jar(Output.of(jar));
         }
 
+        /**
+         * @param mainClass Name of the main class in the specified Java file. If not specified, the JAR file should specify a Main-Class in its manifest file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mainClass(@Nullable Output<String> mainClass) {
             $.mainClass = mainClass;
             return this;
         }
 
+        /**
+         * @param mainClass Name of the main class in the specified Java file. If not specified, the JAR file should specify a Main-Class in its manifest file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mainClass(String mainClass) {
             return mainClass(Output.of(mainClass));
         }
 
+        /**
+         * @param properties Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             return properties(Output.of(properties));
         }

@@ -22,6 +22,10 @@ public final class GetComponentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the component.
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -33,6 +37,10 @@ public final class GetComponentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Key-value map of resource tags for the component.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -62,11 +70,23 @@ public final class GetComponentArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetComponentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags for the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

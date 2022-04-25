@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GetLocalDiskResult {
     /**
-     * The disk identifierE.g., `pci-0000:03:00.0-scsi-0:0:0:0`
+     * @return The disk identifierE.g., `pci-0000:03:00.0-scsi-0:0:0:0`
      * 
      */
     private final String diskId;
@@ -18,7 +18,7 @@ public final class GetLocalDiskResult {
     private final String diskPath;
     private final String gatewayArn;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -38,9 +38,9 @@ public final class GetLocalDiskResult {
     }
 
     /**
-     * The disk identifierE.g., `pci-0000:03:00.0-scsi-0:0:0:0`
+     * @return The disk identifierE.g., `pci-0000:03:00.0-scsi-0:0:0:0`
      * 
-    */
+     */
     public String diskId() {
         return this.diskId;
     }
@@ -54,9 +54,9 @@ public final class GetLocalDiskResult {
         return this.gatewayArn;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

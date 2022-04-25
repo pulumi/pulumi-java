@@ -20,6 +20,10 @@ public final class AmiLaunchPermissionArgs extends com.pulumi.resources.Resource
     @Import(name="accountId", required=true)
     private Output<String> accountId;
 
+    /**
+     * @return An AWS Account ID to add launch permissions.
+     * 
+     */
     public Output<String> accountId() {
         return this.accountId;
     }
@@ -31,6 +35,10 @@ public final class AmiLaunchPermissionArgs extends com.pulumi.resources.Resource
     @Import(name="imageId", required=true)
     private Output<String> imageId;
 
+    /**
+     * @return A region-unique name for the AMI.
+     * 
+     */
     public Output<String> imageId() {
         return this.imageId;
     }
@@ -60,20 +68,44 @@ public final class AmiLaunchPermissionArgs extends com.pulumi.resources.Resource
             $ = new AmiLaunchPermissionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId An AWS Account ID to add launch permissions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(Output<String> accountId) {
             $.accountId = accountId;
             return this;
         }
 
+        /**
+         * @param accountId An AWS Account ID to add launch permissions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(String accountId) {
             return accountId(Output.of(accountId));
         }
 
+        /**
+         * @param imageId A region-unique name for the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageId(Output<String> imageId) {
             $.imageId = imageId;
             return this;
         }
 
+        /**
+         * @param imageId A region-unique name for the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageId(String imageId) {
             return imageId(Output.of(imageId));
         }

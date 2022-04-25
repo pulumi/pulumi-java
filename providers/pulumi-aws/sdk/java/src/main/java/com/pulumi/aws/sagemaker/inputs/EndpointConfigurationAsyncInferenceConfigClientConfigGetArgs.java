@@ -22,6 +22,10 @@ public final class EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs 
     @Import(name="maxConcurrentInvocationsPerInstance")
     private @Nullable Output<Integer> maxConcurrentInvocationsPerInstance;
 
+    /**
+     * @return The maximum number of concurrent requests sent by the SageMaker client to the model container. If no value is provided, Amazon SageMaker will choose an optimal value for you.
+     * 
+     */
     public Optional<Output<Integer>> maxConcurrentInvocationsPerInstance() {
         return Optional.ofNullable(this.maxConcurrentInvocationsPerInstance);
     }
@@ -50,11 +54,23 @@ public final class EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs 
             $ = new EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxConcurrentInvocationsPerInstance The maximum number of concurrent requests sent by the SageMaker client to the model container. If no value is provided, Amazon SageMaker will choose an optimal value for you.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentInvocationsPerInstance(@Nullable Output<Integer> maxConcurrentInvocationsPerInstance) {
             $.maxConcurrentInvocationsPerInstance = maxConcurrentInvocationsPerInstance;
             return this;
         }
 
+        /**
+         * @param maxConcurrentInvocationsPerInstance The maximum number of concurrent requests sent by the SageMaker client to the model container. If no value is provided, Amazon SageMaker will choose an optimal value for you.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentInvocationsPerInstance(Integer maxConcurrentInvocationsPerInstance) {
             return maxConcurrentInvocationsPerInstance(Output.of(maxConcurrentInvocationsPerInstance));
         }

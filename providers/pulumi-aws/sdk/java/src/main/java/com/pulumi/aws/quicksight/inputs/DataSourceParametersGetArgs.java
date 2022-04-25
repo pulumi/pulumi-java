@@ -41,6 +41,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
     @Import(name="amazonElasticsearch")
     private @Nullable Output<DataSourceParametersAmazonElasticsearchGetArgs> amazonElasticsearch;
 
+    /**
+     * @return Parameters for connecting to Amazon Elasticsearch.
+     * 
+     */
     public Optional<Output<DataSourceParametersAmazonElasticsearchGetArgs>> amazonElasticsearch() {
         return Optional.ofNullable(this.amazonElasticsearch);
     }
@@ -52,6 +56,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
     @Import(name="athena")
     private @Nullable Output<DataSourceParametersAthenaGetArgs> athena;
 
+    /**
+     * @return Parameters for connecting to Athena.
+     * 
+     */
     public Optional<Output<DataSourceParametersAthenaGetArgs>> athena() {
         return Optional.ofNullable(this.athena);
     }
@@ -63,6 +71,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
     @Import(name="aurora")
     private @Nullable Output<DataSourceParametersAuroraGetArgs> aurora;
 
+    /**
+     * @return Parameters for connecting to Aurora MySQL.
+     * 
+     */
     public Optional<Output<DataSourceParametersAuroraGetArgs>> aurora() {
         return Optional.ofNullable(this.aurora);
     }
@@ -74,6 +86,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
     @Import(name="auroraPostgresql")
     private @Nullable Output<DataSourceParametersAuroraPostgresqlGetArgs> auroraPostgresql;
 
+    /**
+     * @return Parameters for connecting to Aurora Postgresql.
+     * 
+     */
     public Optional<Output<DataSourceParametersAuroraPostgresqlGetArgs>> auroraPostgresql() {
         return Optional.ofNullable(this.auroraPostgresql);
     }
@@ -85,6 +101,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
     @Import(name="awsIotAnalytics")
     private @Nullable Output<DataSourceParametersAwsIotAnalyticsGetArgs> awsIotAnalytics;
 
+    /**
+     * @return Parameters for connecting to AWS IOT Analytics.
+     * 
+     */
     public Optional<Output<DataSourceParametersAwsIotAnalyticsGetArgs>> awsIotAnalytics() {
         return Optional.ofNullable(this.awsIotAnalytics);
     }
@@ -96,6 +116,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
     @Import(name="jira")
     private @Nullable Output<DataSourceParametersJiraGetArgs> jira;
 
+    /**
+     * @return Parameters for connecting to Jira.
+     * 
+     */
     public Optional<Output<DataSourceParametersJiraGetArgs>> jira() {
         return Optional.ofNullable(this.jira);
     }
@@ -107,6 +131,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
     @Import(name="mariaDb")
     private @Nullable Output<DataSourceParametersMariaDbGetArgs> mariaDb;
 
+    /**
+     * @return Parameters for connecting to MariaDB.
+     * 
+     */
     public Optional<Output<DataSourceParametersMariaDbGetArgs>> mariaDb() {
         return Optional.ofNullable(this.mariaDb);
     }
@@ -118,6 +146,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
     @Import(name="mysql")
     private @Nullable Output<DataSourceParametersMysqlGetArgs> mysql;
 
+    /**
+     * @return Parameters for connecting to MySQL.
+     * 
+     */
     public Optional<Output<DataSourceParametersMysqlGetArgs>> mysql() {
         return Optional.ofNullable(this.mysql);
     }
@@ -129,6 +161,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
     @Import(name="oracle")
     private @Nullable Output<DataSourceParametersOracleGetArgs> oracle;
 
+    /**
+     * @return Parameters for connecting to Oracle.
+     * 
+     */
     public Optional<Output<DataSourceParametersOracleGetArgs>> oracle() {
         return Optional.ofNullable(this.oracle);
     }
@@ -140,6 +176,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
     @Import(name="postgresql")
     private @Nullable Output<DataSourceParametersPostgresqlGetArgs> postgresql;
 
+    /**
+     * @return Parameters for connecting to Postgresql.
+     * 
+     */
     public Optional<Output<DataSourceParametersPostgresqlGetArgs>> postgresql() {
         return Optional.ofNullable(this.postgresql);
     }
@@ -151,6 +191,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
     @Import(name="presto")
     private @Nullable Output<DataSourceParametersPrestoGetArgs> presto;
 
+    /**
+     * @return Parameters for connecting to Presto.
+     * 
+     */
     public Optional<Output<DataSourceParametersPrestoGetArgs>> presto() {
         return Optional.ofNullable(this.presto);
     }
@@ -162,6 +206,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
     @Import(name="rds")
     private @Nullable Output<DataSourceParametersRdsGetArgs> rds;
 
+    /**
+     * @return Parameters for connecting to RDS.
+     * 
+     */
     public Optional<Output<DataSourceParametersRdsGetArgs>> rds() {
         return Optional.ofNullable(this.rds);
     }
@@ -173,6 +221,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
     @Import(name="redshift")
     private @Nullable Output<DataSourceParametersRedshiftGetArgs> redshift;
 
+    /**
+     * @return Parameters for connecting to Redshift.
+     * 
+     */
     public Optional<Output<DataSourceParametersRedshiftGetArgs>> redshift() {
         return Optional.ofNullable(this.redshift);
     }
@@ -184,6 +236,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
     @Import(name="s3")
     private @Nullable Output<DataSourceParametersS3GetArgs> s3;
 
+    /**
+     * @return Parameters for connecting to S3.
+     * 
+     */
     public Optional<Output<DataSourceParametersS3GetArgs>> s3() {
         return Optional.ofNullable(this.s3);
     }
@@ -195,6 +251,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
     @Import(name="serviceNow")
     private @Nullable Output<DataSourceParametersServiceNowGetArgs> serviceNow;
 
+    /**
+     * @return Parameters for connecting to ServiceNow.
+     * 
+     */
     public Optional<Output<DataSourceParametersServiceNowGetArgs>> serviceNow() {
         return Optional.ofNullable(this.serviceNow);
     }
@@ -206,6 +266,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
     @Import(name="snowflake")
     private @Nullable Output<DataSourceParametersSnowflakeGetArgs> snowflake;
 
+    /**
+     * @return Parameters for connecting to Snowflake.
+     * 
+     */
     public Optional<Output<DataSourceParametersSnowflakeGetArgs>> snowflake() {
         return Optional.ofNullable(this.snowflake);
     }
@@ -217,6 +281,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
     @Import(name="spark")
     private @Nullable Output<DataSourceParametersSparkGetArgs> spark;
 
+    /**
+     * @return Parameters for connecting to Spark.
+     * 
+     */
     public Optional<Output<DataSourceParametersSparkGetArgs>> spark() {
         return Optional.ofNullable(this.spark);
     }
@@ -228,6 +296,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
     @Import(name="sqlServer")
     private @Nullable Output<DataSourceParametersSqlServerGetArgs> sqlServer;
 
+    /**
+     * @return Parameters for connecting to SQL Server.
+     * 
+     */
     public Optional<Output<DataSourceParametersSqlServerGetArgs>> sqlServer() {
         return Optional.ofNullable(this.sqlServer);
     }
@@ -239,6 +311,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
     @Import(name="teradata")
     private @Nullable Output<DataSourceParametersTeradataGetArgs> teradata;
 
+    /**
+     * @return Parameters for connecting to Teradata.
+     * 
+     */
     public Optional<Output<DataSourceParametersTeradataGetArgs>> teradata() {
         return Optional.ofNullable(this.teradata);
     }
@@ -250,6 +326,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
     @Import(name="twitter")
     private @Nullable Output<DataSourceParametersTwitterGetArgs> twitter;
 
+    /**
+     * @return Parameters for connecting to Twitter.
+     * 
+     */
     public Optional<Output<DataSourceParametersTwitterGetArgs>> twitter() {
         return Optional.ofNullable(this.twitter);
     }
@@ -297,182 +377,422 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
             $ = new DataSourceParametersGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param amazonElasticsearch Parameters for connecting to Amazon Elasticsearch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amazonElasticsearch(@Nullable Output<DataSourceParametersAmazonElasticsearchGetArgs> amazonElasticsearch) {
             $.amazonElasticsearch = amazonElasticsearch;
             return this;
         }
 
+        /**
+         * @param amazonElasticsearch Parameters for connecting to Amazon Elasticsearch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amazonElasticsearch(DataSourceParametersAmazonElasticsearchGetArgs amazonElasticsearch) {
             return amazonElasticsearch(Output.of(amazonElasticsearch));
         }
 
+        /**
+         * @param athena Parameters for connecting to Athena.
+         * 
+         * @return builder
+         * 
+         */
         public Builder athena(@Nullable Output<DataSourceParametersAthenaGetArgs> athena) {
             $.athena = athena;
             return this;
         }
 
+        /**
+         * @param athena Parameters for connecting to Athena.
+         * 
+         * @return builder
+         * 
+         */
         public Builder athena(DataSourceParametersAthenaGetArgs athena) {
             return athena(Output.of(athena));
         }
 
+        /**
+         * @param aurora Parameters for connecting to Aurora MySQL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aurora(@Nullable Output<DataSourceParametersAuroraGetArgs> aurora) {
             $.aurora = aurora;
             return this;
         }
 
+        /**
+         * @param aurora Parameters for connecting to Aurora MySQL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aurora(DataSourceParametersAuroraGetArgs aurora) {
             return aurora(Output.of(aurora));
         }
 
+        /**
+         * @param auroraPostgresql Parameters for connecting to Aurora Postgresql.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auroraPostgresql(@Nullable Output<DataSourceParametersAuroraPostgresqlGetArgs> auroraPostgresql) {
             $.auroraPostgresql = auroraPostgresql;
             return this;
         }
 
+        /**
+         * @param auroraPostgresql Parameters for connecting to Aurora Postgresql.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auroraPostgresql(DataSourceParametersAuroraPostgresqlGetArgs auroraPostgresql) {
             return auroraPostgresql(Output.of(auroraPostgresql));
         }
 
+        /**
+         * @param awsIotAnalytics Parameters for connecting to AWS IOT Analytics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsIotAnalytics(@Nullable Output<DataSourceParametersAwsIotAnalyticsGetArgs> awsIotAnalytics) {
             $.awsIotAnalytics = awsIotAnalytics;
             return this;
         }
 
+        /**
+         * @param awsIotAnalytics Parameters for connecting to AWS IOT Analytics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsIotAnalytics(DataSourceParametersAwsIotAnalyticsGetArgs awsIotAnalytics) {
             return awsIotAnalytics(Output.of(awsIotAnalytics));
         }
 
+        /**
+         * @param jira Parameters for connecting to Jira.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jira(@Nullable Output<DataSourceParametersJiraGetArgs> jira) {
             $.jira = jira;
             return this;
         }
 
+        /**
+         * @param jira Parameters for connecting to Jira.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jira(DataSourceParametersJiraGetArgs jira) {
             return jira(Output.of(jira));
         }
 
+        /**
+         * @param mariaDb Parameters for connecting to MariaDB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mariaDb(@Nullable Output<DataSourceParametersMariaDbGetArgs> mariaDb) {
             $.mariaDb = mariaDb;
             return this;
         }
 
+        /**
+         * @param mariaDb Parameters for connecting to MariaDB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mariaDb(DataSourceParametersMariaDbGetArgs mariaDb) {
             return mariaDb(Output.of(mariaDb));
         }
 
+        /**
+         * @param mysql Parameters for connecting to MySQL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysql(@Nullable Output<DataSourceParametersMysqlGetArgs> mysql) {
             $.mysql = mysql;
             return this;
         }
 
+        /**
+         * @param mysql Parameters for connecting to MySQL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysql(DataSourceParametersMysqlGetArgs mysql) {
             return mysql(Output.of(mysql));
         }
 
+        /**
+         * @param oracle Parameters for connecting to Oracle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oracle(@Nullable Output<DataSourceParametersOracleGetArgs> oracle) {
             $.oracle = oracle;
             return this;
         }
 
+        /**
+         * @param oracle Parameters for connecting to Oracle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oracle(DataSourceParametersOracleGetArgs oracle) {
             return oracle(Output.of(oracle));
         }
 
+        /**
+         * @param postgresql Parameters for connecting to Postgresql.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postgresql(@Nullable Output<DataSourceParametersPostgresqlGetArgs> postgresql) {
             $.postgresql = postgresql;
             return this;
         }
 
+        /**
+         * @param postgresql Parameters for connecting to Postgresql.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postgresql(DataSourceParametersPostgresqlGetArgs postgresql) {
             return postgresql(Output.of(postgresql));
         }
 
+        /**
+         * @param presto Parameters for connecting to Presto.
+         * 
+         * @return builder
+         * 
+         */
         public Builder presto(@Nullable Output<DataSourceParametersPrestoGetArgs> presto) {
             $.presto = presto;
             return this;
         }
 
+        /**
+         * @param presto Parameters for connecting to Presto.
+         * 
+         * @return builder
+         * 
+         */
         public Builder presto(DataSourceParametersPrestoGetArgs presto) {
             return presto(Output.of(presto));
         }
 
+        /**
+         * @param rds Parameters for connecting to RDS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rds(@Nullable Output<DataSourceParametersRdsGetArgs> rds) {
             $.rds = rds;
             return this;
         }
 
+        /**
+         * @param rds Parameters for connecting to RDS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rds(DataSourceParametersRdsGetArgs rds) {
             return rds(Output.of(rds));
         }
 
+        /**
+         * @param redshift Parameters for connecting to Redshift.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redshift(@Nullable Output<DataSourceParametersRedshiftGetArgs> redshift) {
             $.redshift = redshift;
             return this;
         }
 
+        /**
+         * @param redshift Parameters for connecting to Redshift.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redshift(DataSourceParametersRedshiftGetArgs redshift) {
             return redshift(Output.of(redshift));
         }
 
+        /**
+         * @param s3 Parameters for connecting to S3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3(@Nullable Output<DataSourceParametersS3GetArgs> s3) {
             $.s3 = s3;
             return this;
         }
 
+        /**
+         * @param s3 Parameters for connecting to S3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3(DataSourceParametersS3GetArgs s3) {
             return s3(Output.of(s3));
         }
 
+        /**
+         * @param serviceNow Parameters for connecting to ServiceNow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceNow(@Nullable Output<DataSourceParametersServiceNowGetArgs> serviceNow) {
             $.serviceNow = serviceNow;
             return this;
         }
 
+        /**
+         * @param serviceNow Parameters for connecting to ServiceNow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceNow(DataSourceParametersServiceNowGetArgs serviceNow) {
             return serviceNow(Output.of(serviceNow));
         }
 
+        /**
+         * @param snowflake Parameters for connecting to Snowflake.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snowflake(@Nullable Output<DataSourceParametersSnowflakeGetArgs> snowflake) {
             $.snowflake = snowflake;
             return this;
         }
 
+        /**
+         * @param snowflake Parameters for connecting to Snowflake.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snowflake(DataSourceParametersSnowflakeGetArgs snowflake) {
             return snowflake(Output.of(snowflake));
         }
 
+        /**
+         * @param spark Parameters for connecting to Spark.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spark(@Nullable Output<DataSourceParametersSparkGetArgs> spark) {
             $.spark = spark;
             return this;
         }
 
+        /**
+         * @param spark Parameters for connecting to Spark.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spark(DataSourceParametersSparkGetArgs spark) {
             return spark(Output.of(spark));
         }
 
+        /**
+         * @param sqlServer Parameters for connecting to SQL Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlServer(@Nullable Output<DataSourceParametersSqlServerGetArgs> sqlServer) {
             $.sqlServer = sqlServer;
             return this;
         }
 
+        /**
+         * @param sqlServer Parameters for connecting to SQL Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlServer(DataSourceParametersSqlServerGetArgs sqlServer) {
             return sqlServer(Output.of(sqlServer));
         }
 
+        /**
+         * @param teradata Parameters for connecting to Teradata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder teradata(@Nullable Output<DataSourceParametersTeradataGetArgs> teradata) {
             $.teradata = teradata;
             return this;
         }
 
+        /**
+         * @param teradata Parameters for connecting to Teradata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder teradata(DataSourceParametersTeradataGetArgs teradata) {
             return teradata(Output.of(teradata));
         }
 
+        /**
+         * @param twitter Parameters for connecting to Twitter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder twitter(@Nullable Output<DataSourceParametersTwitterGetArgs> twitter) {
             $.twitter = twitter;
             return this;
         }
 
+        /**
+         * @param twitter Parameters for connecting to Twitter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder twitter(DataSourceParametersTwitterGetArgs twitter) {
             return twitter(Output.of(twitter));
         }

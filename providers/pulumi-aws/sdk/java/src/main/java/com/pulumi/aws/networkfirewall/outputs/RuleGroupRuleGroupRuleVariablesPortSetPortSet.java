@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class RuleGroupRuleGroupRuleVariablesPortSetPortSet {
     /**
-     * Set of port ranges.
+     * @return Set of port ranges.
      * 
      */
     private final List<String> definitions;
@@ -22,9 +22,9 @@ public final class RuleGroupRuleGroupRuleVariablesPortSetPortSet {
     }
 
     /**
-     * Set of port ranges.
+     * @return Set of port ranges.
      * 
-    */
+     */
     public List<String> definitions() {
         return this.definitions;
     }

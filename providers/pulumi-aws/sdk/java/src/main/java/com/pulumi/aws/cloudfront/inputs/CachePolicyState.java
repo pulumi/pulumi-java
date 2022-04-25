@@ -24,6 +24,10 @@ public final class CachePolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="comment")
     private @Nullable Output<String> comment;
 
+    /**
+     * @return A comment to describe the cache policy.
+     * 
+     */
     public Optional<Output<String>> comment() {
         return Optional.ofNullable(this.comment);
     }
@@ -35,6 +39,10 @@ public final class CachePolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultTtl")
     private @Nullable Output<Integer> defaultTtl;
 
+    /**
+     * @return The default amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
+     * 
+     */
     public Optional<Output<Integer>> defaultTtl() {
         return Optional.ofNullable(this.defaultTtl);
     }
@@ -46,6 +54,10 @@ public final class CachePolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return The current version of the cache policy.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -57,6 +69,10 @@ public final class CachePolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxTtl")
     private @Nullable Output<Integer> maxTtl;
 
+    /**
+     * @return The maximum amount of time, in seconds, that objects stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
+     * 
+     */
     public Optional<Output<Integer>> maxTtl() {
         return Optional.ofNullable(this.maxTtl);
     }
@@ -68,6 +84,10 @@ public final class CachePolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="minTtl")
     private @Nullable Output<Integer> minTtl;
 
+    /**
+     * @return The minimum amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
+     * 
+     */
     public Optional<Output<Integer>> minTtl() {
         return Optional.ofNullable(this.minTtl);
     }
@@ -79,6 +99,10 @@ public final class CachePolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A unique name to identify the cache policy.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -90,6 +114,10 @@ public final class CachePolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="parametersInCacheKeyAndForwardedToOrigin")
     private @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs> parametersInCacheKeyAndForwardedToOrigin;
 
+    /**
+     * @return The HTTP headers, cookies, and URL query strings to include in the cache key. See Parameters In Cache Key And Forwarded To Origin for more information.
+     * 
+     */
     public Optional<Output<CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs>> parametersInCacheKeyAndForwardedToOrigin() {
         return Optional.ofNullable(this.parametersInCacheKeyAndForwardedToOrigin);
     }
@@ -124,65 +152,149 @@ public final class CachePolicyState extends com.pulumi.resources.ResourceArgs {
             $ = new CachePolicyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param comment A comment to describe the cache policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder comment(@Nullable Output<String> comment) {
             $.comment = comment;
             return this;
         }
 
+        /**
+         * @param comment A comment to describe the cache policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder comment(String comment) {
             return comment(Output.of(comment));
         }
 
+        /**
+         * @param defaultTtl The default amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultTtl(@Nullable Output<Integer> defaultTtl) {
             $.defaultTtl = defaultTtl;
             return this;
         }
 
+        /**
+         * @param defaultTtl The default amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultTtl(Integer defaultTtl) {
             return defaultTtl(Output.of(defaultTtl));
         }
 
+        /**
+         * @param etag The current version of the cache policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag The current version of the cache policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param maxTtl The maximum amount of time, in seconds, that objects stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxTtl(@Nullable Output<Integer> maxTtl) {
             $.maxTtl = maxTtl;
             return this;
         }
 
+        /**
+         * @param maxTtl The maximum amount of time, in seconds, that objects stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxTtl(Integer maxTtl) {
             return maxTtl(Output.of(maxTtl));
         }
 
+        /**
+         * @param minTtl The minimum amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minTtl(@Nullable Output<Integer> minTtl) {
             $.minTtl = minTtl;
             return this;
         }
 
+        /**
+         * @param minTtl The minimum amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minTtl(Integer minTtl) {
             return minTtl(Output.of(minTtl));
         }
 
+        /**
+         * @param name A unique name to identify the cache policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A unique name to identify the cache policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parametersInCacheKeyAndForwardedToOrigin The HTTP headers, cookies, and URL query strings to include in the cache key. See Parameters In Cache Key And Forwarded To Origin for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parametersInCacheKeyAndForwardedToOrigin(@Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs> parametersInCacheKeyAndForwardedToOrigin) {
             $.parametersInCacheKeyAndForwardedToOrigin = parametersInCacheKeyAndForwardedToOrigin;
             return this;
         }
 
+        /**
+         * @param parametersInCacheKeyAndForwardedToOrigin The HTTP headers, cookies, and URL query strings to include in the cache key. See Parameters In Cache Key And Forwarded To Origin for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parametersInCacheKeyAndForwardedToOrigin(CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs parametersInCacheKeyAndForwardedToOrigin) {
             return parametersInCacheKeyAndForwardedToOrigin(Output.of(parametersInCacheKeyAndForwardedToOrigin));
         }

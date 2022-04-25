@@ -22,6 +22,10 @@ public final class EventBusPolicyState extends com.pulumi.resources.ResourceArgs
     @Import(name="eventBusName")
     private @Nullable Output<String> eventBusName;
 
+    /**
+     * @return The event bus to set the permissions on. If you omit this, the permissions are set on the `default` event bus.
+     * 
+     */
     public Optional<Output<String>> eventBusName() {
         return Optional.ofNullable(this.eventBusName);
     }
@@ -58,11 +62,23 @@ public final class EventBusPolicyState extends com.pulumi.resources.ResourceArgs
             $ = new EventBusPolicyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventBusName The event bus to set the permissions on. If you omit this, the permissions are set on the `default` event bus.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventBusName(@Nullable Output<String> eventBusName) {
             $.eventBusName = eventBusName;
             return this;
         }
 
+        /**
+         * @param eventBusName The event bus to set the permissions on. If you omit this, the permissions are set on the `default` event bus.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventBusName(String eventBusName) {
             return eventBusName(Output.of(eventBusName));
         }

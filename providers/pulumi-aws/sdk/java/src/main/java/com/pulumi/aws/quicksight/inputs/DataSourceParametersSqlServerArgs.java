@@ -21,6 +21,10 @@ public final class DataSourceParametersSqlServerArgs extends com.pulumi.resource
     @Import(name="database", required=true)
     private Output<String> database;
 
+    /**
+     * @return The database to which to connect.
+     * 
+     */
     public Output<String> database() {
         return this.database;
     }
@@ -32,6 +36,10 @@ public final class DataSourceParametersSqlServerArgs extends com.pulumi.resource
     @Import(name="host", required=true)
     private Output<String> host;
 
+    /**
+     * @return The host to which to connect.
+     * 
+     */
     public Output<String> host() {
         return this.host;
     }
@@ -43,6 +51,10 @@ public final class DataSourceParametersSqlServerArgs extends com.pulumi.resource
     @Import(name="port", required=true)
     private Output<Integer> port;
 
+    /**
+     * @return The warehouse to which to connect.
+     * 
+     */
     public Output<Integer> port() {
         return this.port;
     }
@@ -73,29 +85,65 @@ public final class DataSourceParametersSqlServerArgs extends com.pulumi.resource
             $ = new DataSourceParametersSqlServerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param database The database to which to connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(Output<String> database) {
             $.database = database;
             return this;
         }
 
+        /**
+         * @param database The database to which to connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(String database) {
             return database(Output.of(database));
         }
 
+        /**
+         * @param host The host to which to connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(Output<String> host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param host The host to which to connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             return host(Output.of(host));
         }
 
+        /**
+         * @param port The warehouse to which to connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The warehouse to which to connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }

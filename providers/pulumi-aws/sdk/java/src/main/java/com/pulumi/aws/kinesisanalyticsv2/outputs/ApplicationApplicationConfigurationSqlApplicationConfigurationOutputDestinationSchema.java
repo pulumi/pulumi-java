@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchema {
     /**
-     * Specifies the format of the records on the output stream. Valid values: `CSV`, `JSON`.
+     * @return Specifies the format of the records on the output stream. Valid values: `CSV`, `JSON`.
      * 
      */
     private final String recordFormatType;
@@ -21,9 +21,9 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     /**
-     * Specifies the format of the records on the output stream. Valid values: `CSV`, `JSON`.
+     * @return Specifies the format of the records on the output stream. Valid values: `CSV`, `JSON`.
      * 
-    */
+     */
     public String recordFormatType() {
         return this.recordFormatType;
     }

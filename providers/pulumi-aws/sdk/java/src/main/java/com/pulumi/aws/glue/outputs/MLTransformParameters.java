@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class MLTransformParameters {
     /**
-     * The parameters for the find matches algorithm. see Find Matches Parameters.
+     * @return The parameters for the find matches algorithm. see Find Matches Parameters.
      * 
      */
     private final MLTransformParametersFindMatchesParameters findMatchesParameters;
     /**
-     * The type of machine learning transform. For information about the types of machine learning transforms, see [Creating Machine Learning Transforms](http://docs.aws.amazon.com/glue/latest/dg/add-job-machine-learning-transform.html).
+     * @return The type of machine learning transform. For information about the types of machine learning transforms, see [Creating Machine Learning Transforms](http://docs.aws.amazon.com/glue/latest/dg/add-job-machine-learning-transform.html).
      * 
      */
     private final String transformType;
@@ -30,16 +30,16 @@ public final class MLTransformParameters {
     }
 
     /**
-     * The parameters for the find matches algorithm. see Find Matches Parameters.
+     * @return The parameters for the find matches algorithm. see Find Matches Parameters.
      * 
-    */
+     */
     public MLTransformParametersFindMatchesParameters findMatchesParameters() {
         return this.findMatchesParameters;
     }
     /**
-     * The type of machine learning transform. For information about the types of machine learning transforms, see [Creating Machine Learning Transforms](http://docs.aws.amazon.com/glue/latest/dg/add-job-machine-learning-transform.html).
+     * @return The type of machine learning transform. For information about the types of machine learning transforms, see [Creating Machine Learning Transforms](http://docs.aws.amazon.com/glue/latest/dg/add-job-machine-learning-transform.html).
      * 
-    */
+     */
     public String transformType() {
         return this.transformType;
     }

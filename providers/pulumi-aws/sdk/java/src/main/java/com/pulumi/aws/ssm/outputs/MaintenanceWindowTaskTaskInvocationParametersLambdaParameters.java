@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters {
     /**
-     * Pass client-specific information to the Lambda function that you are invoking.
+     * @return Pass client-specific information to the Lambda function that you are invoking.
      * 
      */
     private final @Nullable String clientContext;
     /**
-     * JSON to provide to your Lambda function as input.
+     * @return JSON to provide to your Lambda function as input.
      * 
      */
     private final @Nullable String payload;
     /**
-     * Specify a Lambda function version or alias name.
+     * @return Specify a Lambda function version or alias name.
      * 
      */
     private final @Nullable String qualifier;
@@ -38,23 +38,23 @@ public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters
     }
 
     /**
-     * Pass client-specific information to the Lambda function that you are invoking.
+     * @return Pass client-specific information to the Lambda function that you are invoking.
      * 
-    */
+     */
     public Optional<String> clientContext() {
         return Optional.ofNullable(this.clientContext);
     }
     /**
-     * JSON to provide to your Lambda function as input.
+     * @return JSON to provide to your Lambda function as input.
      * 
-    */
+     */
     public Optional<String> payload() {
         return Optional.ofNullable(this.payload);
     }
     /**
-     * Specify a Lambda function version or alias name.
+     * @return Specify a Lambda function version or alias name.
      * 
-    */
+     */
     public Optional<String> qualifier() {
         return Optional.ofNullable(this.qualifier);
     }

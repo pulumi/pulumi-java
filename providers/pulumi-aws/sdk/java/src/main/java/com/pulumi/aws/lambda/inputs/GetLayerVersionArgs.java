@@ -22,6 +22,10 @@ public final class GetLayerVersionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="compatibleArchitecture")
     private @Nullable String compatibleArchitecture;
 
+    /**
+     * @return Specific architecture the layer version could support. Conflicts with `version`. If specified, the latest available layer version supporting the provided architecture will be used.
+     * 
+     */
     public Optional<String> compatibleArchitecture() {
         return Optional.ofNullable(this.compatibleArchitecture);
     }
@@ -33,6 +37,10 @@ public final class GetLayerVersionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="compatibleRuntime")
     private @Nullable String compatibleRuntime;
 
+    /**
+     * @return Specific runtime the layer version must support. Conflicts with `version`. If specified, the latest available layer version supporting the provided runtime will be used.
+     * 
+     */
     public Optional<String> compatibleRuntime() {
         return Optional.ofNullable(this.compatibleRuntime);
     }
@@ -44,6 +52,10 @@ public final class GetLayerVersionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="layerName", required=true)
     private String layerName;
 
+    /**
+     * @return Name of the lambda layer.
+     * 
+     */
     public String layerName() {
         return this.layerName;
     }
@@ -55,6 +67,10 @@ public final class GetLayerVersionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="version")
     private @Nullable Integer version;
 
+    /**
+     * @return Specific layer version. Conflicts with `compatible_runtime` and `compatible_architecture`. If omitted, the latest available layer version will be used.
+     * 
+     */
     public Optional<Integer> version() {
         return Optional.ofNullable(this.version);
     }
@@ -86,21 +102,45 @@ public final class GetLayerVersionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetLayerVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param compatibleArchitecture Specific architecture the layer version could support. Conflicts with `version`. If specified, the latest available layer version supporting the provided architecture will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compatibleArchitecture(@Nullable String compatibleArchitecture) {
             $.compatibleArchitecture = compatibleArchitecture;
             return this;
         }
 
+        /**
+         * @param compatibleRuntime Specific runtime the layer version must support. Conflicts with `version`. If specified, the latest available layer version supporting the provided runtime will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compatibleRuntime(@Nullable String compatibleRuntime) {
             $.compatibleRuntime = compatibleRuntime;
             return this;
         }
 
+        /**
+         * @param layerName Name of the lambda layer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layerName(String layerName) {
             $.layerName = layerName;
             return this;
         }
 
+        /**
+         * @param version Specific layer version. Conflicts with `compatible_runtime` and `compatible_architecture`. If omitted, the latest available layer version will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Integer version) {
             $.version = version;
             return this;

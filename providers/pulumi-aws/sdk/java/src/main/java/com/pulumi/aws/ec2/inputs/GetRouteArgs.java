@@ -21,6 +21,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="carrierGatewayId")
     private @Nullable String carrierGatewayId;
 
+    /**
+     * @return EC2 Carrier Gateway ID of the Route belonging to the Route Table.
+     * 
+     */
     public Optional<String> carrierGatewayId() {
         return Optional.ofNullable(this.carrierGatewayId);
     }
@@ -32,6 +36,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="destinationCidrBlock")
     private @Nullable String destinationCidrBlock;
 
+    /**
+     * @return CIDR block of the Route belonging to the Route Table.
+     * 
+     */
     public Optional<String> destinationCidrBlock() {
         return Optional.ofNullable(this.destinationCidrBlock);
     }
@@ -43,6 +51,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="destinationIpv6CidrBlock")
     private @Nullable String destinationIpv6CidrBlock;
 
+    /**
+     * @return IPv6 CIDR block of the Route belonging to the Route Table.
+     * 
+     */
     public Optional<String> destinationIpv6CidrBlock() {
         return Optional.ofNullable(this.destinationIpv6CidrBlock);
     }
@@ -54,6 +66,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="destinationPrefixListId")
     private @Nullable String destinationPrefixListId;
 
+    /**
+     * @return The ID of a managed prefix list destination of the Route belonging to the Route Table.
+     * 
+     */
     public Optional<String> destinationPrefixListId() {
         return Optional.ofNullable(this.destinationPrefixListId);
     }
@@ -65,6 +81,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="egressOnlyGatewayId")
     private @Nullable String egressOnlyGatewayId;
 
+    /**
+     * @return Egress Only Gateway ID of the Route belonging to the Route Table.
+     * 
+     */
     public Optional<String> egressOnlyGatewayId() {
         return Optional.ofNullable(this.egressOnlyGatewayId);
     }
@@ -76,6 +96,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="gatewayId")
     private @Nullable String gatewayId;
 
+    /**
+     * @return Gateway ID of the Route belonging to the Route Table.
+     * 
+     */
     public Optional<String> gatewayId() {
         return Optional.ofNullable(this.gatewayId);
     }
@@ -87,6 +111,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="instanceId")
     private @Nullable String instanceId;
 
+    /**
+     * @return Instance ID of the Route belonging to the Route Table.
+     * 
+     */
     public Optional<String> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
@@ -98,6 +126,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="localGatewayId")
     private @Nullable String localGatewayId;
 
+    /**
+     * @return Local Gateway ID of the Route belonging to the Route Table.
+     * 
+     */
     public Optional<String> localGatewayId() {
         return Optional.ofNullable(this.localGatewayId);
     }
@@ -109,6 +141,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="natGatewayId")
     private @Nullable String natGatewayId;
 
+    /**
+     * @return NAT Gateway ID of the Route belonging to the Route Table.
+     * 
+     */
     public Optional<String> natGatewayId() {
         return Optional.ofNullable(this.natGatewayId);
     }
@@ -120,6 +156,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="networkInterfaceId")
     private @Nullable String networkInterfaceId;
 
+    /**
+     * @return Network Interface ID of the Route belonging to the Route Table.
+     * 
+     */
     public Optional<String> networkInterfaceId() {
         return Optional.ofNullable(this.networkInterfaceId);
     }
@@ -131,6 +171,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="routeTableId", required=true)
     private String routeTableId;
 
+    /**
+     * @return The ID of the specific Route Table containing the Route entry.
+     * 
+     */
     public String routeTableId() {
         return this.routeTableId;
     }
@@ -142,6 +186,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="transitGatewayId")
     private @Nullable String transitGatewayId;
 
+    /**
+     * @return EC2 Transit Gateway ID of the Route belonging to the Route Table.
+     * 
+     */
     public Optional<String> transitGatewayId() {
         return Optional.ofNullable(this.transitGatewayId);
     }
@@ -153,6 +201,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="vpcPeeringConnectionId")
     private @Nullable String vpcPeeringConnectionId;
 
+    /**
+     * @return VPC Peering Connection ID of the Route belonging to the Route Table.
+     * 
+     */
     public Optional<String> vpcPeeringConnectionId() {
         return Optional.ofNullable(this.vpcPeeringConnectionId);
     }
@@ -193,66 +245,144 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRouteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param carrierGatewayId EC2 Carrier Gateway ID of the Route belonging to the Route Table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder carrierGatewayId(@Nullable String carrierGatewayId) {
             $.carrierGatewayId = carrierGatewayId;
             return this;
         }
 
+        /**
+         * @param destinationCidrBlock CIDR block of the Route belonging to the Route Table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
             $.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
 
+        /**
+         * @param destinationIpv6CidrBlock IPv6 CIDR block of the Route belonging to the Route Table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationIpv6CidrBlock(@Nullable String destinationIpv6CidrBlock) {
             $.destinationIpv6CidrBlock = destinationIpv6CidrBlock;
             return this;
         }
 
+        /**
+         * @param destinationPrefixListId The ID of a managed prefix list destination of the Route belonging to the Route Table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPrefixListId(@Nullable String destinationPrefixListId) {
             $.destinationPrefixListId = destinationPrefixListId;
             return this;
         }
 
+        /**
+         * @param egressOnlyGatewayId Egress Only Gateway ID of the Route belonging to the Route Table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressOnlyGatewayId(@Nullable String egressOnlyGatewayId) {
             $.egressOnlyGatewayId = egressOnlyGatewayId;
             return this;
         }
 
+        /**
+         * @param gatewayId Gateway ID of the Route belonging to the Route Table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayId(@Nullable String gatewayId) {
             $.gatewayId = gatewayId;
             return this;
         }
 
+        /**
+         * @param instanceId Instance ID of the Route belonging to the Route Table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(@Nullable String instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param localGatewayId Local Gateway ID of the Route belonging to the Route Table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localGatewayId(@Nullable String localGatewayId) {
             $.localGatewayId = localGatewayId;
             return this;
         }
 
+        /**
+         * @param natGatewayId NAT Gateway ID of the Route belonging to the Route Table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natGatewayId(@Nullable String natGatewayId) {
             $.natGatewayId = natGatewayId;
             return this;
         }
 
+        /**
+         * @param networkInterfaceId Network Interface ID of the Route belonging to the Route Table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             $.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
+        /**
+         * @param routeTableId The ID of the specific Route Table containing the Route entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeTableId(String routeTableId) {
             $.routeTableId = routeTableId;
             return this;
         }
 
+        /**
+         * @param transitGatewayId EC2 Transit Gateway ID of the Route belonging to the Route Table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayId(@Nullable String transitGatewayId) {
             $.transitGatewayId = transitGatewayId;
             return this;
         }
 
+        /**
+         * @param vpcPeeringConnectionId VPC Peering Connection ID of the Route belonging to the Route Table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcPeeringConnectionId(@Nullable String vpcPeeringConnectionId) {
             $.vpcPeeringConnectionId = vpcPeeringConnectionId;
             return this;

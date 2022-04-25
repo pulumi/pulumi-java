@@ -22,6 +22,10 @@ public final class BackendEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="appId")
     private @Nullable Output<String> appId;
 
+    /**
+     * @return The unique ID for an Amplify app.
+     * 
+     */
     public Optional<Output<String>> appId() {
         return Optional.ofNullable(this.appId);
     }
@@ -33,6 +37,10 @@ public final class BackendEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -44,6 +52,10 @@ public final class BackendEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="deploymentArtifacts")
     private @Nullable Output<String> deploymentArtifacts;
 
+    /**
+     * @return The name of deployment artifacts.
+     * 
+     */
     public Optional<Output<String>> deploymentArtifacts() {
         return Optional.ofNullable(this.deploymentArtifacts);
     }
@@ -55,6 +67,10 @@ public final class BackendEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="environmentName")
     private @Nullable Output<String> environmentName;
 
+    /**
+     * @return The name for the backend environment.
+     * 
+     */
     public Optional<Output<String>> environmentName() {
         return Optional.ofNullable(this.environmentName);
     }
@@ -66,6 +82,10 @@ public final class BackendEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="stackName")
     private @Nullable Output<String> stackName;
 
+    /**
+     * @return The AWS CloudFormation stack name of a backend environment.
+     * 
+     */
     public Optional<Output<String>> stackName() {
         return Optional.ofNullable(this.stackName);
     }
@@ -98,47 +118,107 @@ public final class BackendEnvironmentState extends com.pulumi.resources.Resource
             $ = new BackendEnvironmentState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appId The unique ID for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appId(@Nullable Output<String> appId) {
             $.appId = appId;
             return this;
         }
 
+        /**
+         * @param appId The unique ID for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appId(String appId) {
             return appId(Output.of(appId));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param deploymentArtifacts The name of deployment artifacts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentArtifacts(@Nullable Output<String> deploymentArtifacts) {
             $.deploymentArtifacts = deploymentArtifacts;
             return this;
         }
 
+        /**
+         * @param deploymentArtifacts The name of deployment artifacts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentArtifacts(String deploymentArtifacts) {
             return deploymentArtifacts(Output.of(deploymentArtifacts));
         }
 
+        /**
+         * @param environmentName The name for the backend environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentName(@Nullable Output<String> environmentName) {
             $.environmentName = environmentName;
             return this;
         }
 
+        /**
+         * @param environmentName The name for the backend environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentName(String environmentName) {
             return environmentName(Output.of(environmentName));
         }
 
+        /**
+         * @param stackName The AWS CloudFormation stack name of a backend environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackName(@Nullable Output<String> stackName) {
             $.stackName = stackName;
             return this;
         }
 
+        /**
+         * @param stackName The AWS CloudFormation stack name of a backend environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackName(String stackName) {
             return stackName(Output.of(stackName));
         }

@@ -21,6 +21,10 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="imageDigest")
     private @Nullable String imageDigest;
 
+    /**
+     * @return The sha256 digest of the image manifest. At least one of `image_digest` or `image_tag` must be specified.
+     * 
+     */
     public Optional<String> imageDigest() {
         return Optional.ofNullable(this.imageDigest);
     }
@@ -32,6 +36,10 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="imageTag")
     private @Nullable String imageTag;
 
+    /**
+     * @return The tag associated with this image. At least one of `image_digest` or `image_tag` must be specified.
+     * 
+     */
     public Optional<String> imageTag() {
         return Optional.ofNullable(this.imageTag);
     }
@@ -43,6 +51,10 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="registryId")
     private @Nullable String registryId;
 
+    /**
+     * @return The ID of the Registry where the repository resides.
+     * 
+     */
     public Optional<String> registryId() {
         return Optional.ofNullable(this.registryId);
     }
@@ -54,6 +66,10 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="repositoryName", required=true)
     private String repositoryName;
 
+    /**
+     * @return The name of the ECR Repository.
+     * 
+     */
     public String repositoryName() {
         return this.repositoryName;
     }
@@ -85,21 +101,45 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetImageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param imageDigest The sha256 digest of the image manifest. At least one of `image_digest` or `image_tag` must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageDigest(@Nullable String imageDigest) {
             $.imageDigest = imageDigest;
             return this;
         }
 
+        /**
+         * @param imageTag The tag associated with this image. At least one of `image_digest` or `image_tag` must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageTag(@Nullable String imageTag) {
             $.imageTag = imageTag;
             return this;
         }
 
+        /**
+         * @param registryId The ID of the Registry where the repository resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryId(@Nullable String registryId) {
             $.registryId = registryId;
             return this;
         }
 
+        /**
+         * @param repositoryName The name of the ECR Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryName(String repositoryName) {
             $.repositoryName = repositoryName;
             return this;

@@ -22,6 +22,10 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The ID of the API Key to look up.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -33,6 +37,10 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return A map of tags for the resource.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -62,11 +70,23 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ID of the API Key to look up.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param tags A map of tags for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

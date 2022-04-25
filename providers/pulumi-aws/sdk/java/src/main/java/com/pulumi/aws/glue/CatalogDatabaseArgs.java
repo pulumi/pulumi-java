@@ -24,6 +24,10 @@ public final class CatalogDatabaseArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="catalogId")
     private @Nullable Output<String> catalogId;
 
+    /**
+     * @return ID of the Data Catalog in which the database resides.
+     * 
+     */
     public Optional<Output<String>> catalogId() {
         return Optional.ofNullable(this.catalogId);
     }
@@ -35,6 +39,10 @@ public final class CatalogDatabaseArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the database.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -46,6 +54,10 @@ public final class CatalogDatabaseArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="locationUri")
     private @Nullable Output<String> locationUri;
 
+    /**
+     * @return Location of the database (for example, an HDFS path).
+     * 
+     */
     public Optional<Output<String>> locationUri() {
         return Optional.ofNullable(this.locationUri);
     }
@@ -57,6 +69,10 @@ public final class CatalogDatabaseArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the database. The acceptable characters are lowercase letters, numbers, and the underscore character.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -68,6 +84,10 @@ public final class CatalogDatabaseArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="parameters")
     private @Nullable Output<Map<String,String>> parameters;
 
+    /**
+     * @return List of key-value pairs that define parameters and properties of the database.
+     * 
+     */
     public Optional<Output<Map<String,String>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -79,6 +99,10 @@ public final class CatalogDatabaseArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="targetDatabase")
     private @Nullable Output<CatalogDatabaseTargetDatabaseArgs> targetDatabase;
 
+    /**
+     * @return Configuration block for a target database for resource linking. See `target_database` below.
+     * 
+     */
     public Optional<Output<CatalogDatabaseTargetDatabaseArgs>> targetDatabase() {
         return Optional.ofNullable(this.targetDatabase);
     }
@@ -112,56 +136,128 @@ public final class CatalogDatabaseArgs extends com.pulumi.resources.ResourceArgs
             $ = new CatalogDatabaseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param catalogId ID of the Data Catalog in which the database resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogId(@Nullable Output<String> catalogId) {
             $.catalogId = catalogId;
             return this;
         }
 
+        /**
+         * @param catalogId ID of the Data Catalog in which the database resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogId(String catalogId) {
             return catalogId(Output.of(catalogId));
         }
 
+        /**
+         * @param description Description of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param locationUri Location of the database (for example, an HDFS path).
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationUri(@Nullable Output<String> locationUri) {
             $.locationUri = locationUri;
             return this;
         }
 
+        /**
+         * @param locationUri Location of the database (for example, an HDFS path).
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationUri(String locationUri) {
             return locationUri(Output.of(locationUri));
         }
 
+        /**
+         * @param name Name of the database. The acceptable characters are lowercase letters, numbers, and the underscore character.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the database. The acceptable characters are lowercase letters, numbers, and the underscore character.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parameters List of key-value pairs that define parameters and properties of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters List of key-value pairs that define parameters and properties of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,String> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param targetDatabase Configuration block for a target database for resource linking. See `target_database` below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetDatabase(@Nullable Output<CatalogDatabaseTargetDatabaseArgs> targetDatabase) {
             $.targetDatabase = targetDatabase;
             return this;
         }
 
+        /**
+         * @param targetDatabase Configuration block for a target database for resource linking. See `target_database` below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetDatabase(CatalogDatabaseTargetDatabaseArgs targetDatabase) {
             return targetDatabase(Output.of(targetDatabase));
         }

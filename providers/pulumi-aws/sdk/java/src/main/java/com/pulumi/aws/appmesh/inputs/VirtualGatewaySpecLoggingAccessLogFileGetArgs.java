@@ -20,6 +20,10 @@ public final class VirtualGatewaySpecLoggingAccessLogFileGetArgs extends com.pul
     @Import(name="path", required=true)
     private Output<String> path;
 
+    /**
+     * @return The file path to write access logs to. You can use `/dev/stdout` to send access logs to standard out. Must be between 1 and 255 characters in length.
+     * 
+     */
     public Output<String> path() {
         return this.path;
     }
@@ -48,11 +52,23 @@ public final class VirtualGatewaySpecLoggingAccessLogFileGetArgs extends com.pul
             $ = new VirtualGatewaySpecLoggingAccessLogFileGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param path The file path to write access logs to. You can use `/dev/stdout` to send access logs to standard out. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The file path to write access logs to. You can use `/dev/stdout` to send access logs to standard out. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }

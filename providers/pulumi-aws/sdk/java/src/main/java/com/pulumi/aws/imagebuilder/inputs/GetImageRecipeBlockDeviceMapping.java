@@ -21,6 +21,10 @@ public final class GetImageRecipeBlockDeviceMapping extends com.pulumi.resources
     @Import(name="deviceName", required=true)
     private String deviceName;
 
+    /**
+     * @return Name of the device. For example, `/dev/sda` or `/dev/xvdb`.
+     * 
+     */
     public String deviceName() {
         return this.deviceName;
     }
@@ -32,6 +36,10 @@ public final class GetImageRecipeBlockDeviceMapping extends com.pulumi.resources
     @Import(name="ebs", required=true)
     private List<GetImageRecipeBlockDeviceMappingEb> ebs;
 
+    /**
+     * @return Single list of object with Elastic Block Storage (EBS) block device mapping settings.
+     * 
+     */
     public List<GetImageRecipeBlockDeviceMappingEb> ebs() {
         return this.ebs;
     }
@@ -43,6 +51,10 @@ public final class GetImageRecipeBlockDeviceMapping extends com.pulumi.resources
     @Import(name="noDevice", required=true)
     private String noDevice;
 
+    /**
+     * @return Whether to remove a mapping from the parent image.
+     * 
+     */
     public String noDevice() {
         return this.noDevice;
     }
@@ -54,6 +66,10 @@ public final class GetImageRecipeBlockDeviceMapping extends com.pulumi.resources
     @Import(name="virtualName", required=true)
     private String virtualName;
 
+    /**
+     * @return Virtual device name. For example, `ephemeral0`. Instance store volumes are numbered starting from 0.
+     * 
+     */
     public String virtualName() {
         return this.virtualName;
     }
@@ -85,25 +101,55 @@ public final class GetImageRecipeBlockDeviceMapping extends com.pulumi.resources
             $ = new GetImageRecipeBlockDeviceMapping(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceName Name of the device. For example, `/dev/sda` or `/dev/xvdb`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param ebs Single list of object with Elastic Block Storage (EBS) block device mapping settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebs(List<GetImageRecipeBlockDeviceMappingEb> ebs) {
             $.ebs = ebs;
             return this;
         }
 
+        /**
+         * @param ebs Single list of object with Elastic Block Storage (EBS) block device mapping settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebs(GetImageRecipeBlockDeviceMappingEb... ebs) {
             return ebs(List.of(ebs));
         }
 
+        /**
+         * @param noDevice Whether to remove a mapping from the parent image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noDevice(String noDevice) {
             $.noDevice = noDevice;
             return this;
         }
 
+        /**
+         * @param virtualName Virtual device name. For example, `ephemeral0`. Instance store volumes are numbered starting from 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualName(String virtualName) {
             $.virtualName = virtualName;
             return this;

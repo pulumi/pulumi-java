@@ -26,6 +26,10 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiId")
     private @Nullable Output<String> apiId;
 
+    /**
+     * @return The API identifier.
+     * 
+     */
     public Optional<Output<String>> apiId() {
         return Optional.ofNullable(this.apiId);
     }
@@ -38,6 +42,11 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizerCredentialsArn")
     private @Nullable Output<String> authorizerCredentialsArn;
 
+    /**
+     * @return The required credentials as an IAM role for API Gateway to invoke the authorizer.
+     * Supported only for `REQUEST` authorizers.
+     * 
+     */
     public Optional<Output<String>> authorizerCredentialsArn() {
         return Optional.ofNullable(this.authorizerCredentialsArn);
     }
@@ -50,6 +59,11 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizerPayloadFormatVersion")
     private @Nullable Output<String> authorizerPayloadFormatVersion;
 
+    /**
+     * @return The format of the payload sent to an HTTP API Lambda authorizer. Required for HTTP API Lambda authorizers.
+     * Valid values: `1.0`, `2.0`.
+     * 
+     */
     public Optional<Output<String>> authorizerPayloadFormatVersion() {
         return Optional.ofNullable(this.authorizerPayloadFormatVersion);
     }
@@ -63,6 +77,12 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizerResultTtlInSeconds")
     private @Nullable Output<Integer> authorizerResultTtlInSeconds;
 
+    /**
+     * @return The time to live (TTL) for cached authorizer results, in seconds. If it equals 0, authorization caching is disabled.
+     * If it is greater than 0, API Gateway caches authorizer responses. The maximum value is 3600, or 1 hour. Defaults to `300`.
+     * Supported only for HTTP API Lambda authorizers.
+     * 
+     */
     public Optional<Output<Integer>> authorizerResultTtlInSeconds() {
         return Optional.ofNullable(this.authorizerResultTtlInSeconds);
     }
@@ -76,6 +96,12 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizerType")
     private @Nullable Output<String> authorizerType;
 
+    /**
+     * @return The authorizer type. Valid values: `JWT`, `REQUEST`.
+     * Specify `REQUEST` for a Lambda function using incoming request parameters.
+     * For HTTP APIs, specify `JWT` to use JSON Web Tokens.
+     * 
+     */
     public Optional<Output<String>> authorizerType() {
         return Optional.ofNullable(this.authorizerType);
     }
@@ -89,6 +115,12 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizerUri")
     private @Nullable Output<String> authorizerUri;
 
+    /**
+     * @return The authorizer&#39;s Uniform Resource Identifier (URI).
+     * For `REQUEST` authorizers this must be a well-formed Lambda function URI, such as the `invoke_arn` attribute of the `aws.lambda.Function` resource.
+     * Supported only for `REQUEST` authorizers. Must be between 1 and 2048 characters in length.
+     * 
+     */
     public Optional<Output<String>> authorizerUri() {
         return Optional.ofNullable(this.authorizerUri);
     }
@@ -101,6 +133,11 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableSimpleResponses")
     private @Nullable Output<Boolean> enableSimpleResponses;
 
+    /**
+     * @return Whether a Lambda authorizer returns a response in a simple format. If enabled, the Lambda authorizer can return a boolean value instead of an IAM policy.
+     * Supported only for HTTP APIs.
+     * 
+     */
     public Optional<Output<Boolean>> enableSimpleResponses() {
         return Optional.ofNullable(this.enableSimpleResponses);
     }
@@ -114,6 +151,12 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="identitySources")
     private @Nullable Output<List<String>> identitySources;
 
+    /**
+     * @return The identity sources for which authorization is requested.
+     * For `REQUEST` authorizers the value is a list of one or more mapping expressions of the specified request parameters.
+     * For `JWT` authorizers the single entry specifies where to extract the JSON Web Token (JWT) from inbound requests.
+     * 
+     */
     public Optional<Output<List<String>>> identitySources() {
         return Optional.ofNullable(this.identitySources);
     }
@@ -126,6 +169,11 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="jwtConfiguration")
     private @Nullable Output<AuthorizerJwtConfigurationGetArgs> jwtConfiguration;
 
+    /**
+     * @return The configuration of a JWT authorizer. Required for the `JWT` authorizer type.
+     * Supported only for HTTP APIs.
+     * 
+     */
     public Optional<Output<AuthorizerJwtConfigurationGetArgs>> jwtConfiguration() {
         return Optional.ofNullable(this.jwtConfiguration);
     }
@@ -137,6 +185,10 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the authorizer. Must be between 1 and 128 characters in length.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -174,96 +226,248 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
             $ = new AuthorizerState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiId The API identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(@Nullable Output<String> apiId) {
             $.apiId = apiId;
             return this;
         }
 
+        /**
+         * @param apiId The API identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(String apiId) {
             return apiId(Output.of(apiId));
         }
 
+        /**
+         * @param authorizerCredentialsArn The required credentials as an IAM role for API Gateway to invoke the authorizer.
+         * Supported only for `REQUEST` authorizers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerCredentialsArn(@Nullable Output<String> authorizerCredentialsArn) {
             $.authorizerCredentialsArn = authorizerCredentialsArn;
             return this;
         }
 
+        /**
+         * @param authorizerCredentialsArn The required credentials as an IAM role for API Gateway to invoke the authorizer.
+         * Supported only for `REQUEST` authorizers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerCredentialsArn(String authorizerCredentialsArn) {
             return authorizerCredentialsArn(Output.of(authorizerCredentialsArn));
         }
 
+        /**
+         * @param authorizerPayloadFormatVersion The format of the payload sent to an HTTP API Lambda authorizer. Required for HTTP API Lambda authorizers.
+         * Valid values: `1.0`, `2.0`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerPayloadFormatVersion(@Nullable Output<String> authorizerPayloadFormatVersion) {
             $.authorizerPayloadFormatVersion = authorizerPayloadFormatVersion;
             return this;
         }
 
+        /**
+         * @param authorizerPayloadFormatVersion The format of the payload sent to an HTTP API Lambda authorizer. Required for HTTP API Lambda authorizers.
+         * Valid values: `1.0`, `2.0`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerPayloadFormatVersion(String authorizerPayloadFormatVersion) {
             return authorizerPayloadFormatVersion(Output.of(authorizerPayloadFormatVersion));
         }
 
+        /**
+         * @param authorizerResultTtlInSeconds The time to live (TTL) for cached authorizer results, in seconds. If it equals 0, authorization caching is disabled.
+         * If it is greater than 0, API Gateway caches authorizer responses. The maximum value is 3600, or 1 hour. Defaults to `300`.
+         * Supported only for HTTP API Lambda authorizers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerResultTtlInSeconds(@Nullable Output<Integer> authorizerResultTtlInSeconds) {
             $.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
             return this;
         }
 
+        /**
+         * @param authorizerResultTtlInSeconds The time to live (TTL) for cached authorizer results, in seconds. If it equals 0, authorization caching is disabled.
+         * If it is greater than 0, API Gateway caches authorizer responses. The maximum value is 3600, or 1 hour. Defaults to `300`.
+         * Supported only for HTTP API Lambda authorizers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerResultTtlInSeconds(Integer authorizerResultTtlInSeconds) {
             return authorizerResultTtlInSeconds(Output.of(authorizerResultTtlInSeconds));
         }
 
+        /**
+         * @param authorizerType The authorizer type. Valid values: `JWT`, `REQUEST`.
+         * Specify `REQUEST` for a Lambda function using incoming request parameters.
+         * For HTTP APIs, specify `JWT` to use JSON Web Tokens.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerType(@Nullable Output<String> authorizerType) {
             $.authorizerType = authorizerType;
             return this;
         }
 
+        /**
+         * @param authorizerType The authorizer type. Valid values: `JWT`, `REQUEST`.
+         * Specify `REQUEST` for a Lambda function using incoming request parameters.
+         * For HTTP APIs, specify `JWT` to use JSON Web Tokens.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerType(String authorizerType) {
             return authorizerType(Output.of(authorizerType));
         }
 
+        /**
+         * @param authorizerUri The authorizer&#39;s Uniform Resource Identifier (URI).
+         * For `REQUEST` authorizers this must be a well-formed Lambda function URI, such as the `invoke_arn` attribute of the `aws.lambda.Function` resource.
+         * Supported only for `REQUEST` authorizers. Must be between 1 and 2048 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerUri(@Nullable Output<String> authorizerUri) {
             $.authorizerUri = authorizerUri;
             return this;
         }
 
+        /**
+         * @param authorizerUri The authorizer&#39;s Uniform Resource Identifier (URI).
+         * For `REQUEST` authorizers this must be a well-formed Lambda function URI, such as the `invoke_arn` attribute of the `aws.lambda.Function` resource.
+         * Supported only for `REQUEST` authorizers. Must be between 1 and 2048 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerUri(String authorizerUri) {
             return authorizerUri(Output.of(authorizerUri));
         }
 
+        /**
+         * @param enableSimpleResponses Whether a Lambda authorizer returns a response in a simple format. If enabled, the Lambda authorizer can return a boolean value instead of an IAM policy.
+         * Supported only for HTTP APIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSimpleResponses(@Nullable Output<Boolean> enableSimpleResponses) {
             $.enableSimpleResponses = enableSimpleResponses;
             return this;
         }
 
+        /**
+         * @param enableSimpleResponses Whether a Lambda authorizer returns a response in a simple format. If enabled, the Lambda authorizer can return a boolean value instead of an IAM policy.
+         * Supported only for HTTP APIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSimpleResponses(Boolean enableSimpleResponses) {
             return enableSimpleResponses(Output.of(enableSimpleResponses));
         }
 
+        /**
+         * @param identitySources The identity sources for which authorization is requested.
+         * For `REQUEST` authorizers the value is a list of one or more mapping expressions of the specified request parameters.
+         * For `JWT` authorizers the single entry specifies where to extract the JSON Web Token (JWT) from inbound requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identitySources(@Nullable Output<List<String>> identitySources) {
             $.identitySources = identitySources;
             return this;
         }
 
+        /**
+         * @param identitySources The identity sources for which authorization is requested.
+         * For `REQUEST` authorizers the value is a list of one or more mapping expressions of the specified request parameters.
+         * For `JWT` authorizers the single entry specifies where to extract the JSON Web Token (JWT) from inbound requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identitySources(List<String> identitySources) {
             return identitySources(Output.of(identitySources));
         }
 
+        /**
+         * @param identitySources The identity sources for which authorization is requested.
+         * For `REQUEST` authorizers the value is a list of one or more mapping expressions of the specified request parameters.
+         * For `JWT` authorizers the single entry specifies where to extract the JSON Web Token (JWT) from inbound requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identitySources(String... identitySources) {
             return identitySources(List.of(identitySources));
         }
 
+        /**
+         * @param jwtConfiguration The configuration of a JWT authorizer. Required for the `JWT` authorizer type.
+         * Supported only for HTTP APIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jwtConfiguration(@Nullable Output<AuthorizerJwtConfigurationGetArgs> jwtConfiguration) {
             $.jwtConfiguration = jwtConfiguration;
             return this;
         }
 
+        /**
+         * @param jwtConfiguration The configuration of a JWT authorizer. Required for the `JWT` authorizer type.
+         * Supported only for HTTP APIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jwtConfiguration(AuthorizerJwtConfigurationGetArgs jwtConfiguration) {
             return jwtConfiguration(Output.of(jwtConfiguration));
         }
 
+        /**
+         * @param name The name of the authorizer. Must be between 1 and 128 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the authorizer. Must be between 1 and 128 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

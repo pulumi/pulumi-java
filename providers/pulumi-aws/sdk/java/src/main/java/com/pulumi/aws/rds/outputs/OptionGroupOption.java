@@ -15,32 +15,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OptionGroupOption {
     /**
-     * A list of DB Security Groups for which the option is enabled.
+     * @return A list of DB Security Groups for which the option is enabled.
      * 
      */
     private final @Nullable List<String> dbSecurityGroupMemberships;
     /**
-     * The Name of the Option (e.g., MEMCACHED).
+     * @return The Name of the Option (e.g., MEMCACHED).
      * 
      */
     private final String optionName;
     /**
-     * A list of option settings to apply.
+     * @return A list of option settings to apply.
      * 
      */
     private final @Nullable List<OptionGroupOptionOptionSetting> optionSettings;
     /**
-     * The Port number when connecting to the Option (e.g., 11211).
+     * @return The Port number when connecting to the Option (e.g., 11211).
      * 
      */
     private final @Nullable Integer port;
     /**
-     * The version of the option (e.g., 13.1.0.0).
+     * @return The version of the option (e.g., 13.1.0.0).
      * 
      */
     private final @Nullable String version;
     /**
-     * A list of VPC Security Groups for which the option is enabled.
+     * @return A list of VPC Security Groups for which the option is enabled.
      * 
      */
     private final @Nullable List<String> vpcSecurityGroupMemberships;
@@ -62,44 +62,44 @@ public final class OptionGroupOption {
     }
 
     /**
-     * A list of DB Security Groups for which the option is enabled.
+     * @return A list of DB Security Groups for which the option is enabled.
      * 
-    */
+     */
     public List<String> dbSecurityGroupMemberships() {
         return this.dbSecurityGroupMemberships == null ? List.of() : this.dbSecurityGroupMemberships;
     }
     /**
-     * The Name of the Option (e.g., MEMCACHED).
+     * @return The Name of the Option (e.g., MEMCACHED).
      * 
-    */
+     */
     public String optionName() {
         return this.optionName;
     }
     /**
-     * A list of option settings to apply.
+     * @return A list of option settings to apply.
      * 
-    */
+     */
     public List<OptionGroupOptionOptionSetting> optionSettings() {
         return this.optionSettings == null ? List.of() : this.optionSettings;
     }
     /**
-     * The Port number when connecting to the Option (e.g., 11211).
+     * @return The Port number when connecting to the Option (e.g., 11211).
      * 
-    */
+     */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * The version of the option (e.g., 13.1.0.0).
+     * @return The version of the option (e.g., 13.1.0.0).
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
     /**
-     * A list of VPC Security Groups for which the option is enabled.
+     * @return A list of VPC Security Groups for which the option is enabled.
      * 
-    */
+     */
     public List<String> vpcSecurityGroupMemberships() {
         return this.vpcSecurityGroupMemberships == null ? List.of() : this.vpcSecurityGroupMemberships;
     }

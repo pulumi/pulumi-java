@@ -21,6 +21,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     @Import(name="statements", required=true)
     private Output<List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementAndStatementStatementGetArgs>> statements;
 
+    /**
+     * @return The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
+     * 
+     */
     public Output<List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementAndStatementStatementGetArgs>> statements() {
         return this.statements;
     }
@@ -49,15 +53,33 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
             $ = new WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementAndStatementGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param statements The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(Output<List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementAndStatementStatementGetArgs>> statements) {
             $.statements = statements;
             return this;
         }
 
+        /**
+         * @param statements The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementAndStatementStatementGetArgs> statements) {
             return statements(Output.of(statements));
         }
 
+        /**
+         * @param statements The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementAndStatementStatementGetArgs... statements) {
             return statements(List.of(statements));
         }

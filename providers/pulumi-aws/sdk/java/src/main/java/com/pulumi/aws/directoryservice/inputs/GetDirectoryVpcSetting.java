@@ -27,6 +27,10 @@ public final class GetDirectoryVpcSetting extends com.pulumi.resources.InvokeArg
     @Import(name="subnetIds", required=true)
     private List<String> subnetIds;
 
+    /**
+     * @return The identifiers of the subnets for the connector servers (2 subnets in 2 different AZs).
+     * 
+     */
     public List<String> subnetIds() {
         return this.subnetIds;
     }
@@ -38,6 +42,10 @@ public final class GetDirectoryVpcSetting extends com.pulumi.resources.InvokeArg
     @Import(name="vpcId", required=true)
     private String vpcId;
 
+    /**
+     * @return The ID of the VPC that the connector is in.
+     * 
+     */
     public String vpcId() {
         return this.vpcId;
     }
@@ -77,15 +85,33 @@ public final class GetDirectoryVpcSetting extends com.pulumi.resources.InvokeArg
             return availabilityZones(List.of(availabilityZones));
         }
 
+        /**
+         * @param subnetIds The identifiers of the subnets for the connector servers (2 subnets in 2 different AZs).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(List<String> subnetIds) {
             $.subnetIds = subnetIds;
             return this;
         }
 
+        /**
+         * @param subnetIds The identifiers of the subnets for the connector servers (2 subnets in 2 different AZs).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
 
+        /**
+         * @param vpcId The ID of the VPC that the connector is in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             $.vpcId = vpcId;
             return this;

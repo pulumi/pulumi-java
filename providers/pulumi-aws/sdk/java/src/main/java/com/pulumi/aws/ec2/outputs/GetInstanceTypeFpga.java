@@ -13,7 +13,7 @@ public final class GetInstanceTypeFpga {
     private final Integer count;
     private final String manufacturer;
     /**
-     * Size of the instance memory, in MiB.
+     * @return Size of the instance memory, in MiB.
      * 
      */
     private final Integer memorySize;
@@ -38,9 +38,9 @@ public final class GetInstanceTypeFpga {
         return this.manufacturer;
     }
     /**
-     * Size of the instance memory, in MiB.
+     * @return Size of the instance memory, in MiB.
      * 
-    */
+     */
     public Integer memorySize() {
         return this.memorySize;
     }

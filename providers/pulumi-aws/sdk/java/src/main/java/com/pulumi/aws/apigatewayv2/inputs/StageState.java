@@ -29,6 +29,11 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessLogSettings")
     private @Nullable Output<StageAccessLogSettingsGetArgs> accessLogSettings;
 
+    /**
+     * @return Settings for logging access in this stage.
+     * Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
+     * 
+     */
     public Optional<Output<StageAccessLogSettingsGetArgs>> accessLogSettings() {
         return Optional.ofNullable(this.accessLogSettings);
     }
@@ -40,6 +45,10 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiId")
     private @Nullable Output<String> apiId;
 
+    /**
+     * @return The API identifier.
+     * 
+     */
     public Optional<Output<String>> apiId() {
         return Optional.ofNullable(this.apiId);
     }
@@ -51,6 +60,10 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the stage.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -62,6 +75,10 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoDeploy")
     private @Nullable Output<Boolean> autoDeploy;
 
+    /**
+     * @return Whether updates to an API automatically trigger a new deployment. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> autoDeploy() {
         return Optional.ofNullable(this.autoDeploy);
     }
@@ -74,6 +91,11 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientCertificateId")
     private @Nullable Output<String> clientCertificateId;
 
+    /**
+     * @return The identifier of a client certificate for the stage. Use the `aws.apigateway.ClientCertificate` resource to configure a client certificate.
+     * Supported only for WebSocket APIs.
+     * 
+     */
     public Optional<Output<String>> clientCertificateId() {
         return Optional.ofNullable(this.clientCertificateId);
     }
@@ -85,6 +107,10 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultRouteSettings")
     private @Nullable Output<StageDefaultRouteSettingsGetArgs> defaultRouteSettings;
 
+    /**
+     * @return The default route settings for the stage.
+     * 
+     */
     public Optional<Output<StageDefaultRouteSettingsGetArgs>> defaultRouteSettings() {
         return Optional.ofNullable(this.defaultRouteSettings);
     }
@@ -96,6 +122,10 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="deploymentId")
     private @Nullable Output<String> deploymentId;
 
+    /**
+     * @return The deployment identifier of the stage. Use the `aws.apigatewayv2.Deployment` resource to configure a deployment.
+     * 
+     */
     public Optional<Output<String>> deploymentId() {
         return Optional.ofNullable(this.deploymentId);
     }
@@ -107,6 +137,10 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description for the stage. Must be less than or equal to 1024 characters in length.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -120,6 +154,12 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="executionArn")
     private @Nullable Output<String> executionArn;
 
+    /**
+     * @return The ARN prefix to be used in an `aws.lambda.Permission` `source_arn` attribute.
+     * For WebSocket APIs this attribute can additionally be used in an `aws.iam.Policy` to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
+     * See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
+     * 
+     */
     public Optional<Output<String>> executionArn() {
         return Optional.ofNullable(this.executionArn);
     }
@@ -132,6 +172,11 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="invokeUrl")
     private @Nullable Output<String> invokeUrl;
 
+    /**
+     * @return The URL to invoke the API pointing to the stage,
+     * e.g., `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/`
+     * 
+     */
     public Optional<Output<String>> invokeUrl() {
         return Optional.ofNullable(this.invokeUrl);
     }
@@ -143,6 +188,10 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the stage. Must be between 1 and 128 characters in length.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -154,6 +203,10 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="routeSettings")
     private @Nullable Output<List<StageRouteSettingGetArgs>> routeSettings;
 
+    /**
+     * @return Route settings for the stage.
+     * 
+     */
     public Optional<Output<List<StageRouteSettingGetArgs>>> routeSettings() {
         return Optional.ofNullable(this.routeSettings);
     }
@@ -165,6 +218,10 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="stageVariables")
     private @Nullable Output<Map<String,String>> stageVariables;
 
+    /**
+     * @return A map that defines the stage variables for the stage.
+     * 
+     */
     public Optional<Output<Map<String,String>>> stageVariables() {
         return Optional.ofNullable(this.stageVariables);
     }
@@ -176,6 +233,10 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the stage. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -187,6 +248,10 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -229,141 +294,337 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
             $ = new StageState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessLogSettings Settings for logging access in this stage.
+         * Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessLogSettings(@Nullable Output<StageAccessLogSettingsGetArgs> accessLogSettings) {
             $.accessLogSettings = accessLogSettings;
             return this;
         }
 
+        /**
+         * @param accessLogSettings Settings for logging access in this stage.
+         * Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessLogSettings(StageAccessLogSettingsGetArgs accessLogSettings) {
             return accessLogSettings(Output.of(accessLogSettings));
         }
 
+        /**
+         * @param apiId The API identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(@Nullable Output<String> apiId) {
             $.apiId = apiId;
             return this;
         }
 
+        /**
+         * @param apiId The API identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(String apiId) {
             return apiId(Output.of(apiId));
         }
 
+        /**
+         * @param arn The ARN of the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param autoDeploy Whether updates to an API automatically trigger a new deployment. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoDeploy(@Nullable Output<Boolean> autoDeploy) {
             $.autoDeploy = autoDeploy;
             return this;
         }
 
+        /**
+         * @param autoDeploy Whether updates to an API automatically trigger a new deployment. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoDeploy(Boolean autoDeploy) {
             return autoDeploy(Output.of(autoDeploy));
         }
 
+        /**
+         * @param clientCertificateId The identifier of a client certificate for the stage. Use the `aws.apigateway.ClientCertificate` resource to configure a client certificate.
+         * Supported only for WebSocket APIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificateId(@Nullable Output<String> clientCertificateId) {
             $.clientCertificateId = clientCertificateId;
             return this;
         }
 
+        /**
+         * @param clientCertificateId The identifier of a client certificate for the stage. Use the `aws.apigateway.ClientCertificate` resource to configure a client certificate.
+         * Supported only for WebSocket APIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificateId(String clientCertificateId) {
             return clientCertificateId(Output.of(clientCertificateId));
         }
 
+        /**
+         * @param defaultRouteSettings The default route settings for the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultRouteSettings(@Nullable Output<StageDefaultRouteSettingsGetArgs> defaultRouteSettings) {
             $.defaultRouteSettings = defaultRouteSettings;
             return this;
         }
 
+        /**
+         * @param defaultRouteSettings The default route settings for the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultRouteSettings(StageDefaultRouteSettingsGetArgs defaultRouteSettings) {
             return defaultRouteSettings(Output.of(defaultRouteSettings));
         }
 
+        /**
+         * @param deploymentId The deployment identifier of the stage. Use the `aws.apigatewayv2.Deployment` resource to configure a deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentId(@Nullable Output<String> deploymentId) {
             $.deploymentId = deploymentId;
             return this;
         }
 
+        /**
+         * @param deploymentId The deployment identifier of the stage. Use the `aws.apigatewayv2.Deployment` resource to configure a deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentId(String deploymentId) {
             return deploymentId(Output.of(deploymentId));
         }
 
+        /**
+         * @param description The description for the stage. Must be less than or equal to 1024 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description for the stage. Must be less than or equal to 1024 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param executionArn The ARN prefix to be used in an `aws.lambda.Permission` `source_arn` attribute.
+         * For WebSocket APIs this attribute can additionally be used in an `aws.iam.Policy` to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
+         * See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionArn(@Nullable Output<String> executionArn) {
             $.executionArn = executionArn;
             return this;
         }
 
+        /**
+         * @param executionArn The ARN prefix to be used in an `aws.lambda.Permission` `source_arn` attribute.
+         * For WebSocket APIs this attribute can additionally be used in an `aws.iam.Policy` to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
+         * See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionArn(String executionArn) {
             return executionArn(Output.of(executionArn));
         }
 
+        /**
+         * @param invokeUrl The URL to invoke the API pointing to the stage,
+         * e.g., `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/`
+         * 
+         * @return builder
+         * 
+         */
         public Builder invokeUrl(@Nullable Output<String> invokeUrl) {
             $.invokeUrl = invokeUrl;
             return this;
         }
 
+        /**
+         * @param invokeUrl The URL to invoke the API pointing to the stage,
+         * e.g., `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/`
+         * 
+         * @return builder
+         * 
+         */
         public Builder invokeUrl(String invokeUrl) {
             return invokeUrl(Output.of(invokeUrl));
         }
 
+        /**
+         * @param name The name of the stage. Must be between 1 and 128 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the stage. Must be between 1 and 128 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param routeSettings Route settings for the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeSettings(@Nullable Output<List<StageRouteSettingGetArgs>> routeSettings) {
             $.routeSettings = routeSettings;
             return this;
         }
 
+        /**
+         * @param routeSettings Route settings for the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeSettings(List<StageRouteSettingGetArgs> routeSettings) {
             return routeSettings(Output.of(routeSettings));
         }
 
+        /**
+         * @param routeSettings Route settings for the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeSettings(StageRouteSettingGetArgs... routeSettings) {
             return routeSettings(List.of(routeSettings));
         }
 
+        /**
+         * @param stageVariables A map that defines the stage variables for the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stageVariables(@Nullable Output<Map<String,String>> stageVariables) {
             $.stageVariables = stageVariables;
             return this;
         }
 
+        /**
+         * @param stageVariables A map that defines the stage variables for the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stageVariables(Map<String,String> stageVariables) {
             return stageVariables(Output.of(stageVariables));
         }
 
+        /**
+         * @param tags A map of tags to assign to the stage. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the stage. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

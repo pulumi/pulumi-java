@@ -22,6 +22,10 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="arn")
     private @Nullable String arn;
 
+    /**
+     * @return The ARN of the IAM policy.
+     * 
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -33,6 +37,10 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the IAM policy.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -44,6 +52,10 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="pathPrefix")
     private @Nullable String pathPrefix;
 
+    /**
+     * @return The prefix of the path to the IAM policy. Defaults to a slash (`/`).
+     * 
+     */
     public Optional<String> pathPrefix() {
         return Optional.ofNullable(this.pathPrefix);
     }
@@ -55,6 +67,10 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Key-value mapping of tags for the IAM Policy.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -86,21 +102,45 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the IAM policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable String arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param name The name of the IAM policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param pathPrefix The prefix of the path to the IAM policy. Defaults to a slash (`/`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathPrefix(@Nullable String pathPrefix) {
             $.pathPrefix = pathPrefix;
             return this;
         }
 
+        /**
+         * @param tags Key-value mapping of tags for the IAM Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

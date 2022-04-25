@@ -14,33 +14,33 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ModelContainer {
     /**
-     * The DNS host name for the container.
+     * @return The DNS host name for the container.
      * 
      */
     private final @Nullable String containerHostname;
     /**
-     * Environment variables for the Docker container.
+     * @return Environment variables for the Docker container.
      * A list of key value pairs.
      * 
      */
     private final @Nullable Map<String,String> environment;
     /**
-     * The registry path where the inference code image is stored in Amazon ECR.
+     * @return The registry path where the inference code image is stored in Amazon ECR.
      * 
      */
     private final String image;
     /**
-     * Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). For more information see [Using a Private Docker Registry for Real-Time Inference Containers](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html). see Image Config.
+     * @return Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). For more information see [Using a Private Docker Registry for Real-Time Inference Containers](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html). see Image Config.
      * 
      */
     private final @Nullable ModelContainerImageConfig imageConfig;
     /**
-     * The container hosts value `SingleModel/MultiModel`. The default value is `SingleModel`.
+     * @return The container hosts value `SingleModel/MultiModel`. The default value is `SingleModel`.
      * 
      */
     private final @Nullable String mode;
     /**
-     * The URL for the S3 location where model artifacts are stored.
+     * @return The URL for the S3 location where model artifacts are stored.
      * 
      */
     private final @Nullable String modelDataUrl;
@@ -62,45 +62,45 @@ public final class ModelContainer {
     }
 
     /**
-     * The DNS host name for the container.
+     * @return The DNS host name for the container.
      * 
-    */
+     */
     public Optional<String> containerHostname() {
         return Optional.ofNullable(this.containerHostname);
     }
     /**
-     * Environment variables for the Docker container.
+     * @return Environment variables for the Docker container.
      * A list of key value pairs.
      * 
-    */
+     */
     public Map<String,String> environment() {
         return this.environment == null ? Map.of() : this.environment;
     }
     /**
-     * The registry path where the inference code image is stored in Amazon ECR.
+     * @return The registry path where the inference code image is stored in Amazon ECR.
      * 
-    */
+     */
     public String image() {
         return this.image;
     }
     /**
-     * Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). For more information see [Using a Private Docker Registry for Real-Time Inference Containers](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html). see Image Config.
+     * @return Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). For more information see [Using a Private Docker Registry for Real-Time Inference Containers](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html). see Image Config.
      * 
-    */
+     */
     public Optional<ModelContainerImageConfig> imageConfig() {
         return Optional.ofNullable(this.imageConfig);
     }
     /**
-     * The container hosts value `SingleModel/MultiModel`. The default value is `SingleModel`.
+     * @return The container hosts value `SingleModel/MultiModel`. The default value is `SingleModel`.
      * 
-    */
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
-     * The URL for the S3 location where model artifacts are stored.
+     * @return The URL for the S3 location where model artifacts are stored.
      * 
-    */
+     */
     public Optional<String> modelDataUrl() {
         return Optional.ofNullable(this.modelDataUrl);
     }

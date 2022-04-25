@@ -25,6 +25,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return ARN of the access point.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -36,6 +40,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="fileSystemArn")
     private @Nullable Output<String> fileSystemArn;
 
+    /**
+     * @return ARN of the file system.
+     * 
+     */
     public Optional<Output<String>> fileSystemArn() {
         return Optional.ofNullable(this.fileSystemArn);
     }
@@ -47,6 +55,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="fileSystemId")
     private @Nullable Output<String> fileSystemId;
 
+    /**
+     * @return ID of the file system for which the access point is intended.
+     * 
+     */
     public Optional<Output<String>> fileSystemId() {
         return Optional.ofNullable(this.fileSystemId);
     }
@@ -65,6 +77,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="posixUser")
     private @Nullable Output<AccessPointPosixUserGetArgs> posixUser;
 
+    /**
+     * @return Operating system user and group applied to all file system requests made using the access point. Detailed below.
+     * 
+     */
     public Optional<Output<AccessPointPosixUserGetArgs>> posixUser() {
         return Optional.ofNullable(this.posixUser);
     }
@@ -76,6 +92,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="rootDirectory")
     private @Nullable Output<AccessPointRootDirectoryGetArgs> rootDirectory;
 
+    /**
+     * @return Directory on the Amazon EFS file system that the access point provides access to. Detailed below.
+     * 
+     */
     public Optional<Output<AccessPointRootDirectoryGetArgs>> rootDirectory() {
         return Optional.ofNullable(this.rootDirectory);
     }
@@ -87,6 +107,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -129,29 +153,65 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
             $ = new AccessPointState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn ARN of the access point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn ARN of the access point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param fileSystemArn ARN of the file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemArn(@Nullable Output<String> fileSystemArn) {
             $.fileSystemArn = fileSystemArn;
             return this;
         }
 
+        /**
+         * @param fileSystemArn ARN of the file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemArn(String fileSystemArn) {
             return fileSystemArn(Output.of(fileSystemArn));
         }
 
+        /**
+         * @param fileSystemId ID of the file system for which the access point is intended.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemId(@Nullable Output<String> fileSystemId) {
             $.fileSystemId = fileSystemId;
             return this;
         }
 
+        /**
+         * @param fileSystemId ID of the file system for which the access point is intended.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemId(String fileSystemId) {
             return fileSystemId(Output.of(fileSystemId));
         }
@@ -165,29 +225,65 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
             return ownerId(Output.of(ownerId));
         }
 
+        /**
+         * @param posixUser Operating system user and group applied to all file system requests made using the access point. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder posixUser(@Nullable Output<AccessPointPosixUserGetArgs> posixUser) {
             $.posixUser = posixUser;
             return this;
         }
 
+        /**
+         * @param posixUser Operating system user and group applied to all file system requests made using the access point. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder posixUser(AccessPointPosixUserGetArgs posixUser) {
             return posixUser(Output.of(posixUser));
         }
 
+        /**
+         * @param rootDirectory Directory on the Amazon EFS file system that the access point provides access to. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootDirectory(@Nullable Output<AccessPointRootDirectoryGetArgs> rootDirectory) {
             $.rootDirectory = rootDirectory;
             return this;
         }
 
+        /**
+         * @param rootDirectory Directory on the Amazon EFS file system that the access point provides access to. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootDirectory(AccessPointRootDirectoryGetArgs rootDirectory) {
             return rootDirectory(Output.of(rootDirectory));
         }
 
+        /**
+         * @param tags Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

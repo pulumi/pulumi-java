@@ -12,24 +12,24 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDocumentResult {
     /**
-     * The ARN of the document.
+     * @return The ARN of the document.
      * 
      */
     private final String arn;
     /**
-     * The contents of the document.
+     * @return The contents of the document.
      * 
      */
     private final String content;
     private final @Nullable String documentFormat;
     /**
-     * The type of the document.
+     * @return The type of the document.
      * 
      */
     private final String documentType;
     private final @Nullable String documentVersion;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -54,16 +54,16 @@ public final class GetDocumentResult {
     }
 
     /**
-     * The ARN of the document.
+     * @return The ARN of the document.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The contents of the document.
+     * @return The contents of the document.
      * 
-    */
+     */
     public String content() {
         return this.content;
     }
@@ -71,9 +71,9 @@ public final class GetDocumentResult {
         return Optional.ofNullable(this.documentFormat);
     }
     /**
-     * The type of the document.
+     * @return The type of the document.
      * 
-    */
+     */
     public String documentType() {
         return this.documentType;
     }
@@ -81,9 +81,9 @@ public final class GetDocumentResult {
         return Optional.ofNullable(this.documentVersion);
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

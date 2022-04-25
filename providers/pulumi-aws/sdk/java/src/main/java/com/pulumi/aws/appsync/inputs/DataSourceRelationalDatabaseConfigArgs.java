@@ -23,6 +23,10 @@ public final class DataSourceRelationalDatabaseConfigArgs extends com.pulumi.res
     @Import(name="httpEndpointConfig")
     private @Nullable Output<DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs> httpEndpointConfig;
 
+    /**
+     * @return The Amazon RDS HTTP endpoint configuration. See HTTP Endpoint Config.
+     * 
+     */
     public Optional<Output<DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs>> httpEndpointConfig() {
         return Optional.ofNullable(this.httpEndpointConfig);
     }
@@ -34,6 +38,10 @@ public final class DataSourceRelationalDatabaseConfigArgs extends com.pulumi.res
     @Import(name="sourceType")
     private @Nullable Output<String> sourceType;
 
+    /**
+     * @return Source type for the relational database. Valid values: `RDS_HTTP_ENDPOINT`.
+     * 
+     */
     public Optional<Output<String>> sourceType() {
         return Optional.ofNullable(this.sourceType);
     }
@@ -63,20 +71,44 @@ public final class DataSourceRelationalDatabaseConfigArgs extends com.pulumi.res
             $ = new DataSourceRelationalDatabaseConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param httpEndpointConfig The Amazon RDS HTTP endpoint configuration. See HTTP Endpoint Config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpEndpointConfig(@Nullable Output<DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs> httpEndpointConfig) {
             $.httpEndpointConfig = httpEndpointConfig;
             return this;
         }
 
+        /**
+         * @param httpEndpointConfig The Amazon RDS HTTP endpoint configuration. See HTTP Endpoint Config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpEndpointConfig(DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs httpEndpointConfig) {
             return httpEndpointConfig(Output.of(httpEndpointConfig));
         }
 
+        /**
+         * @param sourceType Source type for the relational database. Valid values: `RDS_HTTP_ENDPOINT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceType(@Nullable Output<String> sourceType) {
             $.sourceType = sourceType;
             return this;
         }
 
+        /**
+         * @param sourceType Source type for the relational database. Valid values: `RDS_HTTP_ENDPOINT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceType(String sourceType) {
             return sourceType(Output.of(sourceType));
         }

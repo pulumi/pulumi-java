@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestination {
     /**
-     * The account ID that owns the destination bucket.
+     * @return The account ID that owns the destination bucket.
      * 
      */
     private final @Nullable String bucketAccountId;
     /**
-     * The ARN of the destination bucket.
+     * @return The ARN of the destination bucket.
      * 
      */
     private final String bucketArn;
     /**
-     * The output format of exported analytics data. Allowed values: `CSV`. Default value: `CSV`.
+     * @return The output format of exported analytics data. Allowed values: `CSV`. Default value: `CSV`.
      * 
      */
     private final @Nullable String format;
     /**
-     * Object prefix for filtering.
+     * @return Object prefix for filtering.
      * 
      */
     private final @Nullable String prefix;
@@ -45,30 +45,30 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
     }
 
     /**
-     * The account ID that owns the destination bucket.
+     * @return The account ID that owns the destination bucket.
      * 
-    */
+     */
     public Optional<String> bucketAccountId() {
         return Optional.ofNullable(this.bucketAccountId);
     }
     /**
-     * The ARN of the destination bucket.
+     * @return The ARN of the destination bucket.
      * 
-    */
+     */
     public String bucketArn() {
         return this.bucketArn;
     }
     /**
-     * The output format of exported analytics data. Allowed values: `CSV`. Default value: `CSV`.
+     * @return The output format of exported analytics data. Allowed values: `CSV`. Default value: `CSV`.
      * 
-    */
+     */
     public Optional<String> format() {
         return Optional.ofNullable(this.format);
     }
     /**
-     * Object prefix for filtering.
+     * @return Object prefix for filtering.
      * 
-    */
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }

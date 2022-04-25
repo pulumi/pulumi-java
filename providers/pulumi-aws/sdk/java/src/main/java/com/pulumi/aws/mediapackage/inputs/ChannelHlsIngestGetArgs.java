@@ -23,6 +23,10 @@ public final class ChannelHlsIngestGetArgs extends com.pulumi.resources.Resource
     @Import(name="ingestEndpoints")
     private @Nullable Output<List<ChannelHlsIngestIngestEndpointGetArgs>> ingestEndpoints;
 
+    /**
+     * @return A list of the ingest endpoints
+     * 
+     */
     public Optional<Output<List<ChannelHlsIngestIngestEndpointGetArgs>>> ingestEndpoints() {
         return Optional.ofNullable(this.ingestEndpoints);
     }
@@ -51,15 +55,33 @@ public final class ChannelHlsIngestGetArgs extends com.pulumi.resources.Resource
             $ = new ChannelHlsIngestGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ingestEndpoints A list of the ingest endpoints
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingestEndpoints(@Nullable Output<List<ChannelHlsIngestIngestEndpointGetArgs>> ingestEndpoints) {
             $.ingestEndpoints = ingestEndpoints;
             return this;
         }
 
+        /**
+         * @param ingestEndpoints A list of the ingest endpoints
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingestEndpoints(List<ChannelHlsIngestIngestEndpointGetArgs> ingestEndpoints) {
             return ingestEndpoints(Output.of(ingestEndpoints));
         }
 
+        /**
+         * @param ingestEndpoints A list of the ingest endpoints
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingestEndpoints(ChannelHlsIngestIngestEndpointGetArgs... ingestEndpoints) {
             return ingestEndpoints(List.of(ingestEndpoints));
         }

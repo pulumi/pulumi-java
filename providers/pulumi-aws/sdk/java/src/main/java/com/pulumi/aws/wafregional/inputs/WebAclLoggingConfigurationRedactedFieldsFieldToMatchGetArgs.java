@@ -22,6 +22,10 @@ public final class WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs e
     @Import(name="data")
     private @Nullable Output<String> data;
 
+    /**
+     * @return When the value of `type` is `HEADER`, enter the name of the header that you want the WAF to search, for example, `User-Agent` or `Referer`. If the value of `type` is any other value, omit `data`.
+     * 
+     */
     public Optional<Output<String>> data() {
         return Optional.ofNullable(this.data);
     }
@@ -33,6 +37,10 @@ public final class WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs e
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Specifies how you want AWS WAF Regional to respond to requests that match the settings in a rule. Valid values for `action` are `ALLOW`, `BLOCK` or `COUNT`. Valid values for `override_action` are `COUNT` and `NONE`.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -62,20 +70,44 @@ public final class WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs e
             $ = new WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param data When the value of `type` is `HEADER`, enter the name of the header that you want the WAF to search, for example, `User-Agent` or `Referer`. If the value of `type` is any other value, omit `data`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(@Nullable Output<String> data) {
             $.data = data;
             return this;
         }
 
+        /**
+         * @param data When the value of `type` is `HEADER`, enter the name of the header that you want the WAF to search, for example, `User-Agent` or `Referer`. If the value of `type` is any other value, omit `data`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(String data) {
             return data(Output.of(data));
         }
 
+        /**
+         * @param type Specifies how you want AWS WAF Regional to respond to requests that match the settings in a rule. Valid values for `action` are `ALLOW`, `BLOCK` or `COUNT`. Valid values for `override_action` are `COUNT` and `NONE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Specifies how you want AWS WAF Regional to respond to requests that match the settings in a rule. Valid values for `action` are `ALLOW`, `BLOCK` or `COUNT`. Valid values for `override_action` are `COUNT` and `NONE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

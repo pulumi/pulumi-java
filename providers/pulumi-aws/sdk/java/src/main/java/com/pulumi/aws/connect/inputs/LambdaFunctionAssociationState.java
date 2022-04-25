@@ -22,6 +22,10 @@ public final class LambdaFunctionAssociationState extends com.pulumi.resources.R
     @Import(name="functionArn")
     private @Nullable Output<String> functionArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
+     * 
+     */
     public Optional<Output<String>> functionArn() {
         return Optional.ofNullable(this.functionArn);
     }
@@ -33,6 +37,10 @@ public final class LambdaFunctionAssociationState extends com.pulumi.resources.R
     @Import(name="instanceId")
     private @Nullable Output<String> instanceId;
 
+    /**
+     * @return The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance.
+     * 
+     */
     public Optional<Output<String>> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
@@ -62,20 +70,44 @@ public final class LambdaFunctionAssociationState extends com.pulumi.resources.R
             $ = new LambdaFunctionAssociationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param functionArn Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionArn(@Nullable Output<String> functionArn) {
             $.functionArn = functionArn;
             return this;
         }
 
+        /**
+         * @param functionArn Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionArn(String functionArn) {
             return functionArn(Output.of(functionArn));
         }
 
+        /**
+         * @param instanceId The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(@Nullable Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceId The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }

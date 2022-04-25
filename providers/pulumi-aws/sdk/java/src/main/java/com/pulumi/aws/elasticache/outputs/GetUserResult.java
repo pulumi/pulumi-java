@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetUserResult {
     /**
-     * A string for what access a user possesses within the associated ElastiCache replication groups or clusters.
+     * @return A string for what access a user possesses within the associated ElastiCache replication groups or clusters.
      * 
      */
     private final @Nullable String accessString;
     private final @Nullable String engine;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final @Nullable Boolean noPasswordRequired;
     private final @Nullable List<String> passwords;
     /**
-     * The identifier for the user.
+     * @return The identifier for the user.
      * 
      */
     private final String userId;
     /**
-     * The user name of the user.
+     * @return The user name of the user.
      * 
      */
     private final @Nullable String userName;
@@ -56,9 +56,9 @@ public final class GetUserResult {
     }
 
     /**
-     * A string for what access a user possesses within the associated ElastiCache replication groups or clusters.
+     * @return A string for what access a user possesses within the associated ElastiCache replication groups or clusters.
      * 
-    */
+     */
     public Optional<String> accessString() {
         return Optional.ofNullable(this.accessString);
     }
@@ -66,9 +66,9 @@ public final class GetUserResult {
         return Optional.ofNullable(this.engine);
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -79,16 +79,16 @@ public final class GetUserResult {
         return this.passwords == null ? List.of() : this.passwords;
     }
     /**
-     * The identifier for the user.
+     * @return The identifier for the user.
      * 
-    */
+     */
     public String userId() {
         return this.userId;
     }
     /**
-     * The user name of the user.
+     * @return The user name of the user.
      * 
-    */
+     */
     public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }

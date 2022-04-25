@@ -22,6 +22,10 @@ public final class GameSessionQueuePlayerLatencyPolicyGetArgs extends com.pulumi
     @Import(name="maximumIndividualPlayerLatencyMilliseconds", required=true)
     private Output<Integer> maximumIndividualPlayerLatencyMilliseconds;
 
+    /**
+     * @return Maximum latency value that is allowed for any player.
+     * 
+     */
     public Output<Integer> maximumIndividualPlayerLatencyMilliseconds() {
         return this.maximumIndividualPlayerLatencyMilliseconds;
     }
@@ -33,6 +37,10 @@ public final class GameSessionQueuePlayerLatencyPolicyGetArgs extends com.pulumi
     @Import(name="policyDurationSeconds")
     private @Nullable Output<Integer> policyDurationSeconds;
 
+    /**
+     * @return Length of time that the policy is enforced while placing a new game session. Absence of value for this attribute means that the policy is enforced until the queue times out.
+     * 
+     */
     public Optional<Output<Integer>> policyDurationSeconds() {
         return Optional.ofNullable(this.policyDurationSeconds);
     }
@@ -62,20 +70,44 @@ public final class GameSessionQueuePlayerLatencyPolicyGetArgs extends com.pulumi
             $ = new GameSessionQueuePlayerLatencyPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maximumIndividualPlayerLatencyMilliseconds Maximum latency value that is allowed for any player.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumIndividualPlayerLatencyMilliseconds(Output<Integer> maximumIndividualPlayerLatencyMilliseconds) {
             $.maximumIndividualPlayerLatencyMilliseconds = maximumIndividualPlayerLatencyMilliseconds;
             return this;
         }
 
+        /**
+         * @param maximumIndividualPlayerLatencyMilliseconds Maximum latency value that is allowed for any player.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumIndividualPlayerLatencyMilliseconds(Integer maximumIndividualPlayerLatencyMilliseconds) {
             return maximumIndividualPlayerLatencyMilliseconds(Output.of(maximumIndividualPlayerLatencyMilliseconds));
         }
 
+        /**
+         * @param policyDurationSeconds Length of time that the policy is enforced while placing a new game session. Absence of value for this attribute means that the policy is enforced until the queue times out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDurationSeconds(@Nullable Output<Integer> policyDurationSeconds) {
             $.policyDurationSeconds = policyDurationSeconds;
             return this;
         }
 
+        /**
+         * @param policyDurationSeconds Length of time that the policy is enforced while placing a new game session. Absence of value for this attribute means that the policy is enforced until the queue times out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDurationSeconds(Integer policyDurationSeconds) {
             return policyDurationSeconds(Output.of(policyDurationSeconds));
         }

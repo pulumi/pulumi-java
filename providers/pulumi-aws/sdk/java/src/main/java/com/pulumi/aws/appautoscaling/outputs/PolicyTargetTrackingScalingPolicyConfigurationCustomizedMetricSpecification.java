@@ -14,27 +14,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification {
     /**
-     * Configuration block(s) with the dimensions of the metric if the metric was published with dimensions. Detailed below.
+     * @return Configuration block(s) with the dimensions of the metric if the metric was published with dimensions. Detailed below.
      * 
      */
     private final @Nullable List<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension> dimensions;
     /**
-     * The name of the metric.
+     * @return The name of the metric.
      * 
      */
     private final String metricName;
     /**
-     * The namespace of the metric.
+     * @return The namespace of the metric.
      * 
      */
     private final String namespace;
     /**
-     * The statistic of the metric. Valid values: `Average`, `Minimum`, `Maximum`, `SampleCount`, and `Sum`.
+     * @return The statistic of the metric. Valid values: `Average`, `Minimum`, `Maximum`, `SampleCount`, and `Sum`.
      * 
      */
     private final String statistic;
     /**
-     * The unit of the metric.
+     * @return The unit of the metric.
      * 
      */
     private final @Nullable String unit;
@@ -54,37 +54,37 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
     }
 
     /**
-     * Configuration block(s) with the dimensions of the metric if the metric was published with dimensions. Detailed below.
+     * @return Configuration block(s) with the dimensions of the metric if the metric was published with dimensions. Detailed below.
      * 
-    */
+     */
     public List<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension> dimensions() {
         return this.dimensions == null ? List.of() : this.dimensions;
     }
     /**
-     * The name of the metric.
+     * @return The name of the metric.
      * 
-    */
+     */
     public String metricName() {
         return this.metricName;
     }
     /**
-     * The namespace of the metric.
+     * @return The namespace of the metric.
      * 
-    */
+     */
     public String namespace() {
         return this.namespace;
     }
     /**
-     * The statistic of the metric. Valid values: `Average`, `Minimum`, `Maximum`, `SampleCount`, and `Sum`.
+     * @return The statistic of the metric. Valid values: `Average`, `Minimum`, `Maximum`, `SampleCount`, and `Sum`.
      * 
-    */
+     */
     public String statistic() {
         return this.statistic;
     }
     /**
-     * The unit of the metric.
+     * @return The unit of the metric.
      * 
-    */
+     */
     public Optional<String> unit() {
         return Optional.ofNullable(this.unit);
     }

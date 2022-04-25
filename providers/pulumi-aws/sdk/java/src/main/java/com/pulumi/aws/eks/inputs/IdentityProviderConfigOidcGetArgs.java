@@ -23,6 +23,10 @@ public final class IdentityProviderConfigOidcGetArgs extends com.pulumi.resource
     @Import(name="clientId", required=true)
     private Output<String> clientId;
 
+    /**
+     * @return Client ID for the OpenID Connect identity provider.
+     * 
+     */
     public Output<String> clientId() {
         return this.clientId;
     }
@@ -34,6 +38,10 @@ public final class IdentityProviderConfigOidcGetArgs extends com.pulumi.resource
     @Import(name="groupsClaim")
     private @Nullable Output<String> groupsClaim;
 
+    /**
+     * @return The JWT claim that the provider will use to return groups.
+     * 
+     */
     public Optional<Output<String>> groupsClaim() {
         return Optional.ofNullable(this.groupsClaim);
     }
@@ -45,6 +53,10 @@ public final class IdentityProviderConfigOidcGetArgs extends com.pulumi.resource
     @Import(name="groupsPrefix")
     private @Nullable Output<String> groupsPrefix;
 
+    /**
+     * @return A prefix that is prepended to group claims e.g., `oidc:`.
+     * 
+     */
     public Optional<Output<String>> groupsPrefix() {
         return Optional.ofNullable(this.groupsPrefix);
     }
@@ -56,6 +68,10 @@ public final class IdentityProviderConfigOidcGetArgs extends com.pulumi.resource
     @Import(name="identityProviderConfigName", required=true)
     private Output<String> identityProviderConfigName;
 
+    /**
+     * @return The name of the identity provider config.
+     * 
+     */
     public Output<String> identityProviderConfigName() {
         return this.identityProviderConfigName;
     }
@@ -67,6 +83,10 @@ public final class IdentityProviderConfigOidcGetArgs extends com.pulumi.resource
     @Import(name="issuerUrl", required=true)
     private Output<String> issuerUrl;
 
+    /**
+     * @return Issuer URL for the OpenID Connect identity provider.
+     * 
+     */
     public Output<String> issuerUrl() {
         return this.issuerUrl;
     }
@@ -78,6 +98,10 @@ public final class IdentityProviderConfigOidcGetArgs extends com.pulumi.resource
     @Import(name="requiredClaims")
     private @Nullable Output<Map<String,String>> requiredClaims;
 
+    /**
+     * @return The key value pairs that describe required claims in the identity token.
+     * 
+     */
     public Optional<Output<Map<String,String>>> requiredClaims() {
         return Optional.ofNullable(this.requiredClaims);
     }
@@ -89,6 +113,10 @@ public final class IdentityProviderConfigOidcGetArgs extends com.pulumi.resource
     @Import(name="usernameClaim")
     private @Nullable Output<String> usernameClaim;
 
+    /**
+     * @return The JWT claim that the provider will use as the username.
+     * 
+     */
     public Optional<Output<String>> usernameClaim() {
         return Optional.ofNullable(this.usernameClaim);
     }
@@ -100,6 +128,10 @@ public final class IdentityProviderConfigOidcGetArgs extends com.pulumi.resource
     @Import(name="usernamePrefix")
     private @Nullable Output<String> usernamePrefix;
 
+    /**
+     * @return A prefix that is prepended to username claims.
+     * 
+     */
     public Optional<Output<String>> usernamePrefix() {
         return Optional.ofNullable(this.usernamePrefix);
     }
@@ -135,74 +167,170 @@ public final class IdentityProviderConfigOidcGetArgs extends com.pulumi.resource
             $ = new IdentityProviderConfigOidcGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId Client ID for the OpenID Connect identity provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId Client ID for the OpenID Connect identity provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param groupsClaim The JWT claim that the provider will use to return groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupsClaim(@Nullable Output<String> groupsClaim) {
             $.groupsClaim = groupsClaim;
             return this;
         }
 
+        /**
+         * @param groupsClaim The JWT claim that the provider will use to return groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupsClaim(String groupsClaim) {
             return groupsClaim(Output.of(groupsClaim));
         }
 
+        /**
+         * @param groupsPrefix A prefix that is prepended to group claims e.g., `oidc:`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupsPrefix(@Nullable Output<String> groupsPrefix) {
             $.groupsPrefix = groupsPrefix;
             return this;
         }
 
+        /**
+         * @param groupsPrefix A prefix that is prepended to group claims e.g., `oidc:`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupsPrefix(String groupsPrefix) {
             return groupsPrefix(Output.of(groupsPrefix));
         }
 
+        /**
+         * @param identityProviderConfigName The name of the identity provider config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityProviderConfigName(Output<String> identityProviderConfigName) {
             $.identityProviderConfigName = identityProviderConfigName;
             return this;
         }
 
+        /**
+         * @param identityProviderConfigName The name of the identity provider config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityProviderConfigName(String identityProviderConfigName) {
             return identityProviderConfigName(Output.of(identityProviderConfigName));
         }
 
+        /**
+         * @param issuerUrl Issuer URL for the OpenID Connect identity provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuerUrl(Output<String> issuerUrl) {
             $.issuerUrl = issuerUrl;
             return this;
         }
 
+        /**
+         * @param issuerUrl Issuer URL for the OpenID Connect identity provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuerUrl(String issuerUrl) {
             return issuerUrl(Output.of(issuerUrl));
         }
 
+        /**
+         * @param requiredClaims The key value pairs that describe required claims in the identity token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiredClaims(@Nullable Output<Map<String,String>> requiredClaims) {
             $.requiredClaims = requiredClaims;
             return this;
         }
 
+        /**
+         * @param requiredClaims The key value pairs that describe required claims in the identity token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiredClaims(Map<String,String> requiredClaims) {
             return requiredClaims(Output.of(requiredClaims));
         }
 
+        /**
+         * @param usernameClaim The JWT claim that the provider will use as the username.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usernameClaim(@Nullable Output<String> usernameClaim) {
             $.usernameClaim = usernameClaim;
             return this;
         }
 
+        /**
+         * @param usernameClaim The JWT claim that the provider will use as the username.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usernameClaim(String usernameClaim) {
             return usernameClaim(Output.of(usernameClaim));
         }
 
+        /**
+         * @param usernamePrefix A prefix that is prepended to username claims.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usernamePrefix(@Nullable Output<String> usernamePrefix) {
             $.usernamePrefix = usernamePrefix;
             return this;
         }
 
+        /**
+         * @param usernamePrefix A prefix that is prepended to username claims.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usernamePrefix(String usernamePrefix) {
             return usernamePrefix(Output.of(usernamePrefix));
         }

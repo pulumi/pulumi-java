@@ -22,6 +22,10 @@ public final class GetResourcesResourceTagMappingList extends com.pulumi.resourc
     @Import(name="complianceDetails", required=true)
     private List<GetResourcesResourceTagMappingListComplianceDetail> complianceDetails;
 
+    /**
+     * @return List of objects with information that shows whether a resource is compliant with the effective tag policy, including details on any noncompliant tag keys.
+     * 
+     */
     public List<GetResourcesResourceTagMappingListComplianceDetail> complianceDetails() {
         return this.complianceDetails;
     }
@@ -33,6 +37,10 @@ public final class GetResourcesResourceTagMappingList extends com.pulumi.resourc
     @Import(name="resourceArn", required=true)
     private String resourceArn;
 
+    /**
+     * @return ARN of the resource.
+     * 
+     */
     public String resourceArn() {
         return this.resourceArn;
     }
@@ -44,6 +52,10 @@ public final class GetResourcesResourceTagMappingList extends com.pulumi.resourc
     @Import(name="tags", required=true)
     private Map<String,String> tags;
 
+    /**
+     * @return Map of tags assigned to the resource.
+     * 
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
@@ -74,20 +86,44 @@ public final class GetResourcesResourceTagMappingList extends com.pulumi.resourc
             $ = new GetResourcesResourceTagMappingList(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param complianceDetails List of objects with information that shows whether a resource is compliant with the effective tag policy, including details on any noncompliant tag keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder complianceDetails(List<GetResourcesResourceTagMappingListComplianceDetail> complianceDetails) {
             $.complianceDetails = complianceDetails;
             return this;
         }
 
+        /**
+         * @param complianceDetails List of objects with information that shows whether a resource is compliant with the effective tag policy, including details on any noncompliant tag keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder complianceDetails(GetResourcesResourceTagMappingListComplianceDetail... complianceDetails) {
             return complianceDetails(List.of(complianceDetails));
         }
 
+        /**
+         * @param resourceArn ARN of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceArn(String resourceArn) {
             $.resourceArn = resourceArn;
             return this;
         }
 
+        /**
+         * @param tags Map of tags assigned to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             $.tags = tags;
             return this;

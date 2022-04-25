@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ScalingPlanApplicationSource {
     /**
-     * The Amazon Resource Name (ARN) of a AWS CloudFormation stack.
+     * @return The Amazon Resource Name (ARN) of a AWS CloudFormation stack.
      * 
      */
     private final @Nullable String cloudformationStackArn;
     /**
-     * A set of tags.
+     * @return A set of tags.
      * 
      */
     private final @Nullable List<ScalingPlanApplicationSourceTagFilter> tagFilters;
@@ -33,16 +33,16 @@ public final class ScalingPlanApplicationSource {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of a AWS CloudFormation stack.
+     * @return The Amazon Resource Name (ARN) of a AWS CloudFormation stack.
      * 
-    */
+     */
     public Optional<String> cloudformationStackArn() {
         return Optional.ofNullable(this.cloudformationStackArn);
     }
     /**
-     * A set of tags.
+     * @return A set of tags.
      * 
-    */
+     */
     public List<ScalingPlanApplicationSourceTagFilter> tagFilters() {
         return this.tagFilters == null ? List.of() : this.tagFilters;
     }

@@ -25,6 +25,10 @@ public final class AccessState extends com.pulumi.resources.ResourceArgs {
     @Import(name="externalId")
     private @Nullable Output<String> externalId;
 
+    /**
+     * @return The SID of a group in the directory connected to the Transfer Server (e.g., `S-1-1-12-1234567890-123456789-1234567890-1234`)
+     * 
+     */
     public Optional<Output<String>> externalId() {
         return Optional.ofNullable(this.externalId);
     }
@@ -36,6 +40,10 @@ public final class AccessState extends com.pulumi.resources.ResourceArgs {
     @Import(name="homeDirectory")
     private @Nullable Output<String> homeDirectory;
 
+    /**
+     * @return The landing directory (folder) for a user when they log in to the server using their SFTP client.  It should begin with a `/`.  The first item in the path is the name of the home bucket (accessible as `${Transfer:HomeBucket}` in the policy) and the rest is the home directory (accessible as `${Transfer:HomeDirectory}` in the policy). For example, `/example-bucket-1234/username` would set the home bucket to `example-bucket-1234` and the home directory to `username`.
+     * 
+     */
     public Optional<Output<String>> homeDirectory() {
         return Optional.ofNullable(this.homeDirectory);
     }
@@ -47,6 +55,10 @@ public final class AccessState extends com.pulumi.resources.ResourceArgs {
     @Import(name="homeDirectoryMappings")
     private @Nullable Output<List<AccessHomeDirectoryMappingGetArgs>> homeDirectoryMappings;
 
+    /**
+     * @return Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. See Home Directory Mappings below.
+     * 
+     */
     public Optional<Output<List<AccessHomeDirectoryMappingGetArgs>>> homeDirectoryMappings() {
         return Optional.ofNullable(this.homeDirectoryMappings);
     }
@@ -58,6 +70,10 @@ public final class AccessState extends com.pulumi.resources.ResourceArgs {
     @Import(name="homeDirectoryType")
     private @Nullable Output<String> homeDirectoryType;
 
+    /**
+     * @return The type of landing directory (folder) you mapped for your users&#39; home directory. Valid values are `PATH` and `LOGICAL`.
+     * 
+     */
     public Optional<Output<String>> homeDirectoryType() {
         return Optional.ofNullable(this.homeDirectoryType);
     }
@@ -76,6 +92,10 @@ public final class AccessState extends com.pulumi.resources.ResourceArgs {
     @Import(name="posixProfile")
     private @Nullable Output<AccessPosixProfileGetArgs> posixProfile;
 
+    /**
+     * @return Specifies the full POSIX identity, including user ID (Uid), group ID (Gid), and any secondary groups IDs (SecondaryGids), that controls your users&#39; access to your Amazon EFS file systems. See Posix Profile below.
+     * 
+     */
     public Optional<Output<AccessPosixProfileGetArgs>> posixProfile() {
         return Optional.ofNullable(this.posixProfile);
     }
@@ -87,6 +107,10 @@ public final class AccessState extends com.pulumi.resources.ResourceArgs {
     @Import(name="role")
     private @Nullable Output<String> role;
 
+    /**
+     * @return Amazon Resource Name (ARN) of an IAM role that allows the service to controls your user’s access to your Amazon S3 bucket.
+     * 
+     */
     public Optional<Output<String>> role() {
         return Optional.ofNullable(this.role);
     }
@@ -98,6 +122,10 @@ public final class AccessState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverId")
     private @Nullable Output<String> serverId;
 
+    /**
+     * @return The Server ID of the Transfer Server (e.g., `s-12345678`)
+     * 
+     */
     public Optional<Output<String>> serverId() {
         return Optional.ofNullable(this.serverId);
     }
@@ -133,42 +161,96 @@ public final class AccessState extends com.pulumi.resources.ResourceArgs {
             $ = new AccessState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param externalId The SID of a group in the directory connected to the Transfer Server (e.g., `S-1-1-12-1234567890-123456789-1234567890-1234`)
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalId(@Nullable Output<String> externalId) {
             $.externalId = externalId;
             return this;
         }
 
+        /**
+         * @param externalId The SID of a group in the directory connected to the Transfer Server (e.g., `S-1-1-12-1234567890-123456789-1234567890-1234`)
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalId(String externalId) {
             return externalId(Output.of(externalId));
         }
 
+        /**
+         * @param homeDirectory The landing directory (folder) for a user when they log in to the server using their SFTP client.  It should begin with a `/`.  The first item in the path is the name of the home bucket (accessible as `${Transfer:HomeBucket}` in the policy) and the rest is the home directory (accessible as `${Transfer:HomeDirectory}` in the policy). For example, `/example-bucket-1234/username` would set the home bucket to `example-bucket-1234` and the home directory to `username`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder homeDirectory(@Nullable Output<String> homeDirectory) {
             $.homeDirectory = homeDirectory;
             return this;
         }
 
+        /**
+         * @param homeDirectory The landing directory (folder) for a user when they log in to the server using their SFTP client.  It should begin with a `/`.  The first item in the path is the name of the home bucket (accessible as `${Transfer:HomeBucket}` in the policy) and the rest is the home directory (accessible as `${Transfer:HomeDirectory}` in the policy). For example, `/example-bucket-1234/username` would set the home bucket to `example-bucket-1234` and the home directory to `username`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder homeDirectory(String homeDirectory) {
             return homeDirectory(Output.of(homeDirectory));
         }
 
+        /**
+         * @param homeDirectoryMappings Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. See Home Directory Mappings below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder homeDirectoryMappings(@Nullable Output<List<AccessHomeDirectoryMappingGetArgs>> homeDirectoryMappings) {
             $.homeDirectoryMappings = homeDirectoryMappings;
             return this;
         }
 
+        /**
+         * @param homeDirectoryMappings Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. See Home Directory Mappings below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder homeDirectoryMappings(List<AccessHomeDirectoryMappingGetArgs> homeDirectoryMappings) {
             return homeDirectoryMappings(Output.of(homeDirectoryMappings));
         }
 
+        /**
+         * @param homeDirectoryMappings Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. See Home Directory Mappings below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder homeDirectoryMappings(AccessHomeDirectoryMappingGetArgs... homeDirectoryMappings) {
             return homeDirectoryMappings(List.of(homeDirectoryMappings));
         }
 
+        /**
+         * @param homeDirectoryType The type of landing directory (folder) you mapped for your users&#39; home directory. Valid values are `PATH` and `LOGICAL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder homeDirectoryType(@Nullable Output<String> homeDirectoryType) {
             $.homeDirectoryType = homeDirectoryType;
             return this;
         }
 
+        /**
+         * @param homeDirectoryType The type of landing directory (folder) you mapped for your users&#39; home directory. Valid values are `PATH` and `LOGICAL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder homeDirectoryType(String homeDirectoryType) {
             return homeDirectoryType(Output.of(homeDirectoryType));
         }
@@ -182,29 +264,65 @@ public final class AccessState extends com.pulumi.resources.ResourceArgs {
             return policy(Output.of(policy));
         }
 
+        /**
+         * @param posixProfile Specifies the full POSIX identity, including user ID (Uid), group ID (Gid), and any secondary groups IDs (SecondaryGids), that controls your users&#39; access to your Amazon EFS file systems. See Posix Profile below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder posixProfile(@Nullable Output<AccessPosixProfileGetArgs> posixProfile) {
             $.posixProfile = posixProfile;
             return this;
         }
 
+        /**
+         * @param posixProfile Specifies the full POSIX identity, including user ID (Uid), group ID (Gid), and any secondary groups IDs (SecondaryGids), that controls your users&#39; access to your Amazon EFS file systems. See Posix Profile below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder posixProfile(AccessPosixProfileGetArgs posixProfile) {
             return posixProfile(Output.of(posixProfile));
         }
 
+        /**
+         * @param role Amazon Resource Name (ARN) of an IAM role that allows the service to controls your user’s access to your Amazon S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(@Nullable Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role Amazon Resource Name (ARN) of an IAM role that allows the service to controls your user’s access to your Amazon S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }
 
+        /**
+         * @param serverId The Server ID of the Transfer Server (e.g., `s-12345678`)
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverId(@Nullable Output<String> serverId) {
             $.serverId = serverId;
             return this;
         }
 
+        /**
+         * @param serverId The Server ID of the Transfer Server (e.g., `s-12345678`)
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverId(String serverId) {
             return serverId(Output.of(serverId));
         }

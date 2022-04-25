@@ -19,6 +19,10 @@ public final class GetPipelineDefinitionPipelineObjectField extends com.pulumi.r
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return Field identifier.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -30,6 +34,10 @@ public final class GetPipelineDefinitionPipelineObjectField extends com.pulumi.r
     @Import(name="refValue", required=true)
     private String refValue;
 
+    /**
+     * @return Field value, expressed as the identifier of another object
+     * 
+     */
     public String refValue() {
         return this.refValue;
     }
@@ -41,6 +49,10 @@ public final class GetPipelineDefinitionPipelineObjectField extends com.pulumi.r
     @Import(name="stringValue", required=true)
     private String stringValue;
 
+    /**
+     * @return Field value, expressed as a String.
+     * 
+     */
     public String stringValue() {
         return this.stringValue;
     }
@@ -71,16 +83,34 @@ public final class GetPipelineDefinitionPipelineObjectField extends com.pulumi.r
             $ = new GetPipelineDefinitionPipelineObjectField(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key Field identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param refValue Field value, expressed as the identifier of another object
+         * 
+         * @return builder
+         * 
+         */
         public Builder refValue(String refValue) {
             $.refValue = refValue;
             return this;
         }
 
+        /**
+         * @param stringValue Field value, expressed as a String.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stringValue(String stringValue) {
             $.stringValue = stringValue;
             return this;

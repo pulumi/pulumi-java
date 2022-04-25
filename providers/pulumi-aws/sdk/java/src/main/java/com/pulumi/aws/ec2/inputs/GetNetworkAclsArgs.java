@@ -24,6 +24,10 @@ public final class GetNetworkAclsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters")
     private @Nullable List<GetNetworkAclsFilter> filters;
 
+    /**
+     * @return Custom filter block as described below.
+     * 
+     */
     public Optional<List<GetNetworkAclsFilter>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -36,6 +40,11 @@ public final class GetNetworkAclsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return A map of tags, each pair of which must exactly match
+     * a pair on the desired network ACLs.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -47,6 +56,10 @@ public final class GetNetworkAclsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="vpcId")
     private @Nullable String vpcId;
 
+    /**
+     * @return The VPC ID that you want to filter from.
+     * 
+     */
     public Optional<String> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }
@@ -77,20 +90,45 @@ public final class GetNetworkAclsArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetNetworkAclsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filters Custom filter block as described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable List<GetNetworkAclsFilter> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters Custom filter block as described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(GetNetworkAclsFilter... filters) {
             return filters(List.of(filters));
         }
 
+        /**
+         * @param tags A map of tags, each pair of which must exactly match
+         * a pair on the desired network ACLs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param vpcId The VPC ID that you want to filter from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(@Nullable String vpcId) {
             $.vpcId = vpcId;
             return this;

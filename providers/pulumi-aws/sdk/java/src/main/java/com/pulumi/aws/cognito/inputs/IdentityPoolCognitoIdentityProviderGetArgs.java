@@ -23,6 +23,10 @@ public final class IdentityPoolCognitoIdentityProviderGetArgs extends com.pulumi
     @Import(name="clientId")
     private @Nullable Output<String> clientId;
 
+    /**
+     * @return The client ID for the Amazon Cognito Identity User Pool.
+     * 
+     */
     public Optional<Output<String>> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -34,6 +38,10 @@ public final class IdentityPoolCognitoIdentityProviderGetArgs extends com.pulumi
     @Import(name="providerName")
     private @Nullable Output<String> providerName;
 
+    /**
+     * @return The provider name for an Amazon Cognito Identity User Pool.
+     * 
+     */
     public Optional<Output<String>> providerName() {
         return Optional.ofNullable(this.providerName);
     }
@@ -45,6 +53,10 @@ public final class IdentityPoolCognitoIdentityProviderGetArgs extends com.pulumi
     @Import(name="serverSideTokenCheck")
     private @Nullable Output<Boolean> serverSideTokenCheck;
 
+    /**
+     * @return Whether server-side token validation is enabled for the identity provider’s token or not.
+     * 
+     */
     public Optional<Output<Boolean>> serverSideTokenCheck() {
         return Optional.ofNullable(this.serverSideTokenCheck);
     }
@@ -75,29 +87,65 @@ public final class IdentityPoolCognitoIdentityProviderGetArgs extends com.pulumi
             $ = new IdentityPoolCognitoIdentityProviderGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId The client ID for the Amazon Cognito Identity User Pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId The client ID for the Amazon Cognito Identity User Pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param providerName The provider name for an Amazon Cognito Identity User Pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerName(@Nullable Output<String> providerName) {
             $.providerName = providerName;
             return this;
         }
 
+        /**
+         * @param providerName The provider name for an Amazon Cognito Identity User Pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerName(String providerName) {
             return providerName(Output.of(providerName));
         }
 
+        /**
+         * @param serverSideTokenCheck Whether server-side token validation is enabled for the identity provider’s token or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverSideTokenCheck(@Nullable Output<Boolean> serverSideTokenCheck) {
             $.serverSideTokenCheck = serverSideTokenCheck;
             return this;
         }
 
+        /**
+         * @param serverSideTokenCheck Whether server-side token validation is enabled for the identity provider’s token or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverSideTokenCheck(Boolean serverSideTokenCheck) {
             return serverSideTokenCheck(Output.of(serverSideTokenCheck));
         }

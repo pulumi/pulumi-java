@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BucketLifecycleRuleTransition {
     /**
-     * Specifies the date after which you want the corresponding action to take effect.
+     * @return Specifies the date after which you want the corresponding action to take effect.
      * 
      */
     private final @Nullable String date;
     /**
-     * Specifies the number of days after object creation when the specific rule action takes effect.
+     * @return Specifies the number of days after object creation when the specific rule action takes effect.
      * 
      */
     private final @Nullable Integer days;
     /**
-     * Specifies the Amazon S3 [storage class](https://docs.aws.amazon.com/AmazonS3/latest/API/API_Transition.html#AmazonS3-Type-Transition-StorageClass) to which you want the object to transition.
+     * @return Specifies the Amazon S3 [storage class](https://docs.aws.amazon.com/AmazonS3/latest/API/API_Transition.html#AmazonS3-Type-Transition-StorageClass) to which you want the object to transition.
      * 
      */
     private final String storageClass;
@@ -39,23 +39,23 @@ public final class BucketLifecycleRuleTransition {
     }
 
     /**
-     * Specifies the date after which you want the corresponding action to take effect.
+     * @return Specifies the date after which you want the corresponding action to take effect.
      * 
-    */
+     */
     public Optional<String> date() {
         return Optional.ofNullable(this.date);
     }
     /**
-     * Specifies the number of days after object creation when the specific rule action takes effect.
+     * @return Specifies the number of days after object creation when the specific rule action takes effect.
      * 
-    */
+     */
     public Optional<Integer> days() {
         return Optional.ofNullable(this.days);
     }
     /**
-     * Specifies the Amazon S3 [storage class](https://docs.aws.amazon.com/AmazonS3/latest/API/API_Transition.html#AmazonS3-Type-Transition-StorageClass) to which you want the object to transition.
+     * @return Specifies the Amazon S3 [storage class](https://docs.aws.amazon.com/AmazonS3/latest/API/API_Transition.html#AmazonS3-Type-Transition-StorageClass) to which you want the object to transition.
      * 
-    */
+     */
     public String storageClass() {
         return this.storageClass;
     }

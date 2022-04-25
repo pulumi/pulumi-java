@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AppProductionBranch {
     /**
-     * The branch name for the production branch.
+     * @return The branch name for the production branch.
      * 
      */
     private final @Nullable String branchName;
     /**
-     * The last deploy time of the production branch.
+     * @return The last deploy time of the production branch.
      * 
      */
     private final @Nullable String lastDeployTime;
     /**
-     * The status code for a URL rewrite or redirect rule. Valid values: `200`, `301`, `302`, `404`, `404-200`.
+     * @return The status code for a URL rewrite or redirect rule. Valid values: `200`, `301`, `302`, `404`, `404-200`.
      * 
      */
     private final @Nullable String status;
     /**
-     * The thumbnail URL for the production branch.
+     * @return The thumbnail URL for the production branch.
      * 
      */
     private final @Nullable String thumbnailUrl;
@@ -45,30 +45,30 @@ public final class AppProductionBranch {
     }
 
     /**
-     * The branch name for the production branch.
+     * @return The branch name for the production branch.
      * 
-    */
+     */
     public Optional<String> branchName() {
         return Optional.ofNullable(this.branchName);
     }
     /**
-     * The last deploy time of the production branch.
+     * @return The last deploy time of the production branch.
      * 
-    */
+     */
     public Optional<String> lastDeployTime() {
         return Optional.ofNullable(this.lastDeployTime);
     }
     /**
-     * The status code for a URL rewrite or redirect rule. Valid values: `200`, `301`, `302`, `404`, `404-200`.
+     * @return The status code for a URL rewrite or redirect rule. Valid values: `200`, `301`, `302`, `404`, `404-200`.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * The thumbnail URL for the production branch.
+     * @return The thumbnail URL for the production branch.
      * 
-    */
+     */
     public Optional<String> thumbnailUrl() {
         return Optional.ofNullable(this.thumbnailUrl);
     }

@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfiguration {
     /**
-     * The starting position on the stream. Valid values: `LAST_STOPPED_POINT`, `NOW`, `TRIM_HORIZON`.
+     * @return The starting position on the stream. Valid values: `LAST_STOPPED_POINT`, `NOW`, `TRIM_HORIZON`.
      * 
      */
     private final @Nullable String inputStartingPosition;
@@ -23,9 +23,9 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     /**
-     * The starting position on the stream. Valid values: `LAST_STOPPED_POINT`, `NOW`, `TRIM_HORIZON`.
+     * @return The starting position on the stream. Valid values: `LAST_STOPPED_POINT`, `NOW`, `TRIM_HORIZON`.
      * 
-    */
+     */
     public Optional<String> inputStartingPosition() {
         return Optional.ofNullable(this.inputStartingPosition);
     }

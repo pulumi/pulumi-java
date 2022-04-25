@@ -14,49 +14,49 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfiguration {
     /**
-     * The ARN of the S3 bucket
+     * @return The ARN of the S3 bucket
      * 
      */
     private final String bucketArn;
     /**
-     * Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
+     * @return Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
      * 
      */
     private final @Nullable Integer bufferInterval;
     /**
-     * Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
+     * @return Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
      * We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
      * 
      */
     private final @Nullable Integer bufferSize;
     /**
-     * The CloudWatch Logging Options for the delivery stream. More details are given below
+     * @return The CloudWatch Logging Options for the delivery stream. More details are given below
      * 
      */
     private final @Nullable FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions;
     /**
-     * The compression format. If no value is specified, the default is `UNCOMPRESSED`. Other supported values are `GZIP`, `ZIP`, `Snappy`, &amp; `HADOOP_SNAPPY`.
+     * @return The compression format. If no value is specified, the default is `UNCOMPRESSED`. Other supported values are `GZIP`, `ZIP`, `Snappy`, &amp; `HADOOP_SNAPPY`.
      * 
      */
     private final @Nullable String compressionFormat;
     /**
-     * Prefix added to failed records before writing them to S3. Not currently supported for `redshift` destination. This prefix appears immediately following the bucket name. For information about how to specify this prefix, see [Custom Prefixes for Amazon S3 Objects](https://docs.aws.amazon.com/firehose/latest/dev/s3-prefixes.html).
+     * @return Prefix added to failed records before writing them to S3. Not currently supported for `redshift` destination. This prefix appears immediately following the bucket name. For information about how to specify this prefix, see [Custom Prefixes for Amazon S3 Objects](https://docs.aws.amazon.com/firehose/latest/dev/s3-prefixes.html).
      * 
      */
     private final @Nullable String errorOutputPrefix;
     /**
-     * Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will
+     * @return Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will
      * be used.
      * 
      */
     private final @Nullable String kmsKeyArn;
     /**
-     * The &#34;YYYY/MM/DD/HH&#34; time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
+     * @return The &#34;YYYY/MM/DD/HH&#34; time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
      * 
      */
     private final @Nullable String prefix;
     /**
-     * The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren&#39;t allowed.
+     * @return The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren&#39;t allowed.
      * 
      */
     private final String roleArn;
@@ -84,67 +84,67 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
     }
 
     /**
-     * The ARN of the S3 bucket
+     * @return The ARN of the S3 bucket
      * 
-    */
+     */
     public String bucketArn() {
         return this.bucketArn;
     }
     /**
-     * Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
+     * @return Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
      * 
-    */
+     */
     public Optional<Integer> bufferInterval() {
         return Optional.ofNullable(this.bufferInterval);
     }
     /**
-     * Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
+     * @return Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
      * We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
      * 
-    */
+     */
     public Optional<Integer> bufferSize() {
         return Optional.ofNullable(this.bufferSize);
     }
     /**
-     * The CloudWatch Logging Options for the delivery stream. More details are given below
+     * @return The CloudWatch Logging Options for the delivery stream. More details are given below
      * 
-    */
+     */
     public Optional<FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptions> cloudwatchLoggingOptions() {
         return Optional.ofNullable(this.cloudwatchLoggingOptions);
     }
     /**
-     * The compression format. If no value is specified, the default is `UNCOMPRESSED`. Other supported values are `GZIP`, `ZIP`, `Snappy`, &amp; `HADOOP_SNAPPY`.
+     * @return The compression format. If no value is specified, the default is `UNCOMPRESSED`. Other supported values are `GZIP`, `ZIP`, `Snappy`, &amp; `HADOOP_SNAPPY`.
      * 
-    */
+     */
     public Optional<String> compressionFormat() {
         return Optional.ofNullable(this.compressionFormat);
     }
     /**
-     * Prefix added to failed records before writing them to S3. Not currently supported for `redshift` destination. This prefix appears immediately following the bucket name. For information about how to specify this prefix, see [Custom Prefixes for Amazon S3 Objects](https://docs.aws.amazon.com/firehose/latest/dev/s3-prefixes.html).
+     * @return Prefix added to failed records before writing them to S3. Not currently supported for `redshift` destination. This prefix appears immediately following the bucket name. For information about how to specify this prefix, see [Custom Prefixes for Amazon S3 Objects](https://docs.aws.amazon.com/firehose/latest/dev/s3-prefixes.html).
      * 
-    */
+     */
     public Optional<String> errorOutputPrefix() {
         return Optional.ofNullable(this.errorOutputPrefix);
     }
     /**
-     * Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will
+     * @return Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will
      * be used.
      * 
-    */
+     */
     public Optional<String> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
     /**
-     * The &#34;YYYY/MM/DD/HH&#34; time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
+     * @return The &#34;YYYY/MM/DD/HH&#34; time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
      * 
-    */
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
-     * The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren&#39;t allowed.
+     * @return The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren&#39;t allowed.
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }

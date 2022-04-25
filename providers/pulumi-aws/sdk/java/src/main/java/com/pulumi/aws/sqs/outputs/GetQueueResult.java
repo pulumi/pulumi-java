@@ -11,23 +11,23 @@ import java.util.Objects;
 @CustomType
 public final class GetQueueResult {
     /**
-     * The Amazon Resource Name (ARN) of the queue.
+     * @return The Amazon Resource Name (ARN) of the queue.
      * 
      */
     private final String arn;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final String name;
     /**
-     * A map of tags for the resource.
+     * @return A map of tags for the resource.
      * 
      */
     private final Map<String,String> tags;
     /**
-     * The URL of the queue.
+     * @return The URL of the queue.
      * 
      */
     private final String url;
@@ -47,16 +47,16 @@ public final class GetQueueResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the queue.
+     * @return The Amazon Resource Name (ARN) of the queue.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -64,16 +64,16 @@ public final class GetQueueResult {
         return this.name;
     }
     /**
-     * A map of tags for the resource.
+     * @return A map of tags for the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
     /**
-     * The URL of the queue.
+     * @return The URL of the queue.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

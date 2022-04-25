@@ -13,37 +13,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VirtualGatewaySpecListenerHealthCheck {
     /**
-     * The number of consecutive successful health checks that must occur before declaring listener healthy.
+     * @return The number of consecutive successful health checks that must occur before declaring listener healthy.
      * 
      */
     private final Integer healthyThreshold;
     /**
-     * The time period in milliseconds between each health check execution.
+     * @return The time period in milliseconds between each health check execution.
      * 
      */
     private final Integer intervalMillis;
     /**
-     * The destination path for the health check request. This is only required if the specified protocol is `http` or `http2`.
+     * @return The destination path for the health check request. This is only required if the specified protocol is `http` or `http2`.
      * 
      */
     private final @Nullable String path;
     /**
-     * The destination port for the health check request. This port must match the port defined in the `port_mapping` for the listener.
+     * @return The destination port for the health check request. This port must match the port defined in the `port_mapping` for the listener.
      * 
      */
     private final @Nullable Integer port;
     /**
-     * The protocol for the health check request. Valid values are `http`, `http2`, and `grpc`.
+     * @return The protocol for the health check request. Valid values are `http`, `http2`, and `grpc`.
      * 
      */
     private final String protocol;
     /**
-     * The amount of time to wait when receiving a response from the health check, in milliseconds.
+     * @return The amount of time to wait when receiving a response from the health check, in milliseconds.
      * 
      */
     private final Integer timeoutMillis;
     /**
-     * The number of consecutive failed health checks that must occur before declaring a virtual gateway unhealthy.
+     * @return The number of consecutive failed health checks that must occur before declaring a virtual gateway unhealthy.
      * 
      */
     private final Integer unhealthyThreshold;
@@ -67,51 +67,51 @@ public final class VirtualGatewaySpecListenerHealthCheck {
     }
 
     /**
-     * The number of consecutive successful health checks that must occur before declaring listener healthy.
+     * @return The number of consecutive successful health checks that must occur before declaring listener healthy.
      * 
-    */
+     */
     public Integer healthyThreshold() {
         return this.healthyThreshold;
     }
     /**
-     * The time period in milliseconds between each health check execution.
+     * @return The time period in milliseconds between each health check execution.
      * 
-    */
+     */
     public Integer intervalMillis() {
         return this.intervalMillis;
     }
     /**
-     * The destination path for the health check request. This is only required if the specified protocol is `http` or `http2`.
+     * @return The destination path for the health check request. This is only required if the specified protocol is `http` or `http2`.
      * 
-    */
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
-     * The destination port for the health check request. This port must match the port defined in the `port_mapping` for the listener.
+     * @return The destination port for the health check request. This port must match the port defined in the `port_mapping` for the listener.
      * 
-    */
+     */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * The protocol for the health check request. Valid values are `http`, `http2`, and `grpc`.
+     * @return The protocol for the health check request. Valid values are `http`, `http2`, and `grpc`.
      * 
-    */
+     */
     public String protocol() {
         return this.protocol;
     }
     /**
-     * The amount of time to wait when receiving a response from the health check, in milliseconds.
+     * @return The amount of time to wait when receiving a response from the health check, in milliseconds.
      * 
-    */
+     */
     public Integer timeoutMillis() {
         return this.timeoutMillis;
     }
     /**
-     * The number of consecutive failed health checks that must occur before declaring a virtual gateway unhealthy.
+     * @return The number of consecutive failed health checks that must occur before declaring a virtual gateway unhealthy.
      * 
-    */
+     */
     public Integer unhealthyThreshold() {
         return this.unhealthyThreshold;
     }

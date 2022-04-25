@@ -24,6 +24,10 @@ public final class CodeSigningConfigState extends com.pulumi.resources.ResourceA
     @Import(name="allowedPublishers")
     private @Nullable Output<CodeSigningConfigAllowedPublishersGetArgs> allowedPublishers;
 
+    /**
+     * @return A configuration block of allowed publishers as signing profiles for this code signing configuration. Detailed below.
+     * 
+     */
     public Optional<Output<CodeSigningConfigAllowedPublishersGetArgs>> allowedPublishers() {
         return Optional.ofNullable(this.allowedPublishers);
     }
@@ -35,6 +39,10 @@ public final class CodeSigningConfigState extends com.pulumi.resources.ResourceA
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the code signing configuration.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -46,6 +54,10 @@ public final class CodeSigningConfigState extends com.pulumi.resources.ResourceA
     @Import(name="configId")
     private @Nullable Output<String> configId;
 
+    /**
+     * @return Unique identifier for the code signing configuration.
+     * 
+     */
     public Optional<Output<String>> configId() {
         return Optional.ofNullable(this.configId);
     }
@@ -57,6 +69,10 @@ public final class CodeSigningConfigState extends com.pulumi.resources.ResourceA
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Descriptive name for this code signing configuration.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -68,6 +84,10 @@ public final class CodeSigningConfigState extends com.pulumi.resources.ResourceA
     @Import(name="lastModified")
     private @Nullable Output<String> lastModified;
 
+    /**
+     * @return The date and time that the code signing configuration was last modified.
+     * 
+     */
     public Optional<Output<String>> lastModified() {
         return Optional.ofNullable(this.lastModified);
     }
@@ -79,6 +99,10 @@ public final class CodeSigningConfigState extends com.pulumi.resources.ResourceA
     @Import(name="policies")
     private @Nullable Output<CodeSigningConfigPoliciesGetArgs> policies;
 
+    /**
+     * @return A configuration block of code signing policies that define the actions to take if the validation checks fail. Detailed below.
+     * 
+     */
     public Optional<Output<CodeSigningConfigPoliciesGetArgs>> policies() {
         return Optional.ofNullable(this.policies);
     }
@@ -112,56 +136,128 @@ public final class CodeSigningConfigState extends com.pulumi.resources.ResourceA
             $ = new CodeSigningConfigState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedPublishers A configuration block of allowed publishers as signing profiles for this code signing configuration. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedPublishers(@Nullable Output<CodeSigningConfigAllowedPublishersGetArgs> allowedPublishers) {
             $.allowedPublishers = allowedPublishers;
             return this;
         }
 
+        /**
+         * @param allowedPublishers A configuration block of allowed publishers as signing profiles for this code signing configuration. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedPublishers(CodeSigningConfigAllowedPublishersGetArgs allowedPublishers) {
             return allowedPublishers(Output.of(allowedPublishers));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the code signing configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the code signing configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param configId Unique identifier for the code signing configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configId(@Nullable Output<String> configId) {
             $.configId = configId;
             return this;
         }
 
+        /**
+         * @param configId Unique identifier for the code signing configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configId(String configId) {
             return configId(Output.of(configId));
         }
 
+        /**
+         * @param description Descriptive name for this code signing configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Descriptive name for this code signing configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param lastModified The date and time that the code signing configuration was last modified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModified(@Nullable Output<String> lastModified) {
             $.lastModified = lastModified;
             return this;
         }
 
+        /**
+         * @param lastModified The date and time that the code signing configuration was last modified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModified(String lastModified) {
             return lastModified(Output.of(lastModified));
         }
 
+        /**
+         * @param policies A configuration block of code signing policies that define the actions to take if the validation checks fail. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policies(@Nullable Output<CodeSigningConfigPoliciesGetArgs> policies) {
             $.policies = policies;
             return this;
         }
 
+        /**
+         * @param policies A configuration block of code signing policies that define the actions to take if the validation checks fail. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policies(CodeSigningConfigPoliciesGetArgs policies) {
             return policies(Output.of(policies));
         }

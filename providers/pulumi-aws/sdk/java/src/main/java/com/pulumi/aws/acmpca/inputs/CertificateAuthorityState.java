@@ -27,6 +27,10 @@ public final class CertificateAuthorityState extends com.pulumi.resources.Resour
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the certificate authority.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -38,6 +42,10 @@ public final class CertificateAuthorityState extends com.pulumi.resources.Resour
     @Import(name="certificate")
     private @Nullable Output<String> certificate;
 
+    /**
+     * @return Base64-encoded certificate authority (CA) certificate. Only available after the certificate authority certificate has been imported.
+     * 
+     */
     public Optional<Output<String>> certificate() {
         return Optional.ofNullable(this.certificate);
     }
@@ -49,6 +57,10 @@ public final class CertificateAuthorityState extends com.pulumi.resources.Resour
     @Import(name="certificateAuthorityConfiguration")
     private @Nullable Output<CertificateAuthorityCertificateAuthorityConfigurationGetArgs> certificateAuthorityConfiguration;
 
+    /**
+     * @return Nested argument containing algorithms and certificate subject information. Defined below.
+     * 
+     */
     public Optional<Output<CertificateAuthorityCertificateAuthorityConfigurationGetArgs>> certificateAuthorityConfiguration() {
         return Optional.ofNullable(this.certificateAuthorityConfiguration);
     }
@@ -60,6 +72,10 @@ public final class CertificateAuthorityState extends com.pulumi.resources.Resour
     @Import(name="certificateChain")
     private @Nullable Output<String> certificateChain;
 
+    /**
+     * @return Base64-encoded certificate chain that includes any intermediate certificates and chains up to root on-premises certificate that you used to sign your private CA certificate. The chain does not include your private CA certificate. Only available after the certificate authority certificate has been imported.
+     * 
+     */
     public Optional<Output<String>> certificateChain() {
         return Optional.ofNullable(this.certificateChain);
     }
@@ -71,6 +87,10 @@ public final class CertificateAuthorityState extends com.pulumi.resources.Resour
     @Import(name="certificateSigningRequest")
     private @Nullable Output<String> certificateSigningRequest;
 
+    /**
+     * @return The base64 PEM-encoded certificate signing request (CSR) for your private CA certificate.
+     * 
+     */
     public Optional<Output<String>> certificateSigningRequest() {
         return Optional.ofNullable(this.certificateSigningRequest);
     }
@@ -82,6 +102,10 @@ public final class CertificateAuthorityState extends com.pulumi.resources.Resour
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -93,6 +117,10 @@ public final class CertificateAuthorityState extends com.pulumi.resources.Resour
     @Import(name="notAfter")
     private @Nullable Output<String> notAfter;
 
+    /**
+     * @return Date and time after which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
+     * 
+     */
     public Optional<Output<String>> notAfter() {
         return Optional.ofNullable(this.notAfter);
     }
@@ -104,6 +132,10 @@ public final class CertificateAuthorityState extends com.pulumi.resources.Resour
     @Import(name="notBefore")
     private @Nullable Output<String> notBefore;
 
+    /**
+     * @return Date and time before which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
+     * 
+     */
     public Optional<Output<String>> notBefore() {
         return Optional.ofNullable(this.notBefore);
     }
@@ -115,6 +147,10 @@ public final class CertificateAuthorityState extends com.pulumi.resources.Resour
     @Import(name="permanentDeletionTimeInDays")
     private @Nullable Output<Integer> permanentDeletionTimeInDays;
 
+    /**
+     * @return The number of days to make a CA restorable after it has been deleted, must be between 7 to 30 days, with default to 30 days.
+     * 
+     */
     public Optional<Output<Integer>> permanentDeletionTimeInDays() {
         return Optional.ofNullable(this.permanentDeletionTimeInDays);
     }
@@ -126,6 +162,10 @@ public final class CertificateAuthorityState extends com.pulumi.resources.Resour
     @Import(name="revocationConfiguration")
     private @Nullable Output<CertificateAuthorityRevocationConfigurationGetArgs> revocationConfiguration;
 
+    /**
+     * @return Nested argument containing revocation configuration. Defined below.
+     * 
+     */
     public Optional<Output<CertificateAuthorityRevocationConfigurationGetArgs>> revocationConfiguration() {
         return Optional.ofNullable(this.revocationConfiguration);
     }
@@ -137,6 +177,10 @@ public final class CertificateAuthorityState extends com.pulumi.resources.Resour
     @Import(name="serial")
     private @Nullable Output<String> serial;
 
+    /**
+     * @return Serial number of the certificate authority. Only available after the certificate authority certificate has been imported.
+     * 
+     */
     public Optional<Output<String>> serial() {
         return Optional.ofNullable(this.serial);
     }
@@ -148,6 +192,10 @@ public final class CertificateAuthorityState extends com.pulumi.resources.Resour
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return Status of the certificate authority.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -159,6 +207,10 @@ public final class CertificateAuthorityState extends com.pulumi.resources.Resour
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Specifies a key-value map of user-defined tags that are attached to the certificate authority. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -170,6 +222,10 @@ public final class CertificateAuthorityState extends com.pulumi.resources.Resour
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -181,6 +237,10 @@ public final class CertificateAuthorityState extends com.pulumi.resources.Resour
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The type of the certificate authority. Defaults to `SUBORDINATE`. Valid values: `ROOT` and `SUBORDINATE`.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -223,137 +283,317 @@ public final class CertificateAuthorityState extends com.pulumi.resources.Resour
             $ = new CertificateAuthorityState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the certificate authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the certificate authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param certificate Base64-encoded certificate authority (CA) certificate. Only available after the certificate authority certificate has been imported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(@Nullable Output<String> certificate) {
             $.certificate = certificate;
             return this;
         }
 
+        /**
+         * @param certificate Base64-encoded certificate authority (CA) certificate. Only available after the certificate authority certificate has been imported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(String certificate) {
             return certificate(Output.of(certificate));
         }
 
+        /**
+         * @param certificateAuthorityConfiguration Nested argument containing algorithms and certificate subject information. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthorityConfiguration(@Nullable Output<CertificateAuthorityCertificateAuthorityConfigurationGetArgs> certificateAuthorityConfiguration) {
             $.certificateAuthorityConfiguration = certificateAuthorityConfiguration;
             return this;
         }
 
+        /**
+         * @param certificateAuthorityConfiguration Nested argument containing algorithms and certificate subject information. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthorityConfiguration(CertificateAuthorityCertificateAuthorityConfigurationGetArgs certificateAuthorityConfiguration) {
             return certificateAuthorityConfiguration(Output.of(certificateAuthorityConfiguration));
         }
 
+        /**
+         * @param certificateChain Base64-encoded certificate chain that includes any intermediate certificates and chains up to root on-premises certificate that you used to sign your private CA certificate. The chain does not include your private CA certificate. Only available after the certificate authority certificate has been imported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateChain(@Nullable Output<String> certificateChain) {
             $.certificateChain = certificateChain;
             return this;
         }
 
+        /**
+         * @param certificateChain Base64-encoded certificate chain that includes any intermediate certificates and chains up to root on-premises certificate that you used to sign your private CA certificate. The chain does not include your private CA certificate. Only available after the certificate authority certificate has been imported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateChain(String certificateChain) {
             return certificateChain(Output.of(certificateChain));
         }
 
+        /**
+         * @param certificateSigningRequest The base64 PEM-encoded certificate signing request (CSR) for your private CA certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateSigningRequest(@Nullable Output<String> certificateSigningRequest) {
             $.certificateSigningRequest = certificateSigningRequest;
             return this;
         }
 
+        /**
+         * @param certificateSigningRequest The base64 PEM-encoded certificate signing request (CSR) for your private CA certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateSigningRequest(String certificateSigningRequest) {
             return certificateSigningRequest(Output.of(certificateSigningRequest));
         }
 
+        /**
+         * @param enabled Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param notAfter Date and time after which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notAfter(@Nullable Output<String> notAfter) {
             $.notAfter = notAfter;
             return this;
         }
 
+        /**
+         * @param notAfter Date and time after which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notAfter(String notAfter) {
             return notAfter(Output.of(notAfter));
         }
 
+        /**
+         * @param notBefore Date and time before which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notBefore(@Nullable Output<String> notBefore) {
             $.notBefore = notBefore;
             return this;
         }
 
+        /**
+         * @param notBefore Date and time before which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notBefore(String notBefore) {
             return notBefore(Output.of(notBefore));
         }
 
+        /**
+         * @param permanentDeletionTimeInDays The number of days to make a CA restorable after it has been deleted, must be between 7 to 30 days, with default to 30 days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permanentDeletionTimeInDays(@Nullable Output<Integer> permanentDeletionTimeInDays) {
             $.permanentDeletionTimeInDays = permanentDeletionTimeInDays;
             return this;
         }
 
+        /**
+         * @param permanentDeletionTimeInDays The number of days to make a CA restorable after it has been deleted, must be between 7 to 30 days, with default to 30 days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permanentDeletionTimeInDays(Integer permanentDeletionTimeInDays) {
             return permanentDeletionTimeInDays(Output.of(permanentDeletionTimeInDays));
         }
 
+        /**
+         * @param revocationConfiguration Nested argument containing revocation configuration. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revocationConfiguration(@Nullable Output<CertificateAuthorityRevocationConfigurationGetArgs> revocationConfiguration) {
             $.revocationConfiguration = revocationConfiguration;
             return this;
         }
 
+        /**
+         * @param revocationConfiguration Nested argument containing revocation configuration. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revocationConfiguration(CertificateAuthorityRevocationConfigurationGetArgs revocationConfiguration) {
             return revocationConfiguration(Output.of(revocationConfiguration));
         }
 
+        /**
+         * @param serial Serial number of the certificate authority. Only available after the certificate authority certificate has been imported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serial(@Nullable Output<String> serial) {
             $.serial = serial;
             return this;
         }
 
+        /**
+         * @param serial Serial number of the certificate authority. Only available after the certificate authority certificate has been imported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serial(String serial) {
             return serial(Output.of(serial));
         }
 
+        /**
+         * @param status Status of the certificate authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Status of the certificate authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param tags Specifies a key-value map of user-defined tags that are attached to the certificate authority. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Specifies a key-value map of user-defined tags that are attached to the certificate authority. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param type The type of the certificate authority. Defaults to `SUBORDINATE`. Valid values: `ROOT` and `SUBORDINATE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the certificate authority. Defaults to `SUBORDINATE`. Valid values: `ROOT` and `SUBORDINATE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

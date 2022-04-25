@@ -19,6 +19,10 @@ public final class GetMeshSpecEgressFilter extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The egress filter type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -47,6 +51,12 @@ public final class GetMeshSpecEgressFilter extends com.pulumi.resources.InvokeAr
             $ = new GetMeshSpecEgressFilter(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The egress filter type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

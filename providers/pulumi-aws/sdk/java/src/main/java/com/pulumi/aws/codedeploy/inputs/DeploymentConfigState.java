@@ -24,6 +24,10 @@ public final class DeploymentConfigState extends com.pulumi.resources.ResourceAr
     @Import(name="computePlatform")
     private @Nullable Output<String> computePlatform;
 
+    /**
+     * @return The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
+     * 
+     */
     public Optional<Output<String>> computePlatform() {
         return Optional.ofNullable(this.computePlatform);
     }
@@ -35,6 +39,10 @@ public final class DeploymentConfigState extends com.pulumi.resources.ResourceAr
     @Import(name="deploymentConfigId")
     private @Nullable Output<String> deploymentConfigId;
 
+    /**
+     * @return The AWS Assigned deployment config id
+     * 
+     */
     public Optional<Output<String>> deploymentConfigId() {
         return Optional.ofNullable(this.deploymentConfigId);
     }
@@ -46,6 +54,10 @@ public final class DeploymentConfigState extends com.pulumi.resources.ResourceAr
     @Import(name="deploymentConfigName")
     private @Nullable Output<String> deploymentConfigName;
 
+    /**
+     * @return The name of the deployment config.
+     * 
+     */
     public Optional<Output<String>> deploymentConfigName() {
         return Optional.ofNullable(this.deploymentConfigName);
     }
@@ -57,6 +69,10 @@ public final class DeploymentConfigState extends com.pulumi.resources.ResourceAr
     @Import(name="minimumHealthyHosts")
     private @Nullable Output<DeploymentConfigMinimumHealthyHostsGetArgs> minimumHealthyHosts;
 
+    /**
+     * @return A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
+     * 
+     */
     public Optional<Output<DeploymentConfigMinimumHealthyHostsGetArgs>> minimumHealthyHosts() {
         return Optional.ofNullable(this.minimumHealthyHosts);
     }
@@ -68,6 +84,10 @@ public final class DeploymentConfigState extends com.pulumi.resources.ResourceAr
     @Import(name="trafficRoutingConfig")
     private @Nullable Output<DeploymentConfigTrafficRoutingConfigGetArgs> trafficRoutingConfig;
 
+    /**
+     * @return A traffic_routing_config block. Traffic Routing Config is documented below.
+     * 
+     */
     public Optional<Output<DeploymentConfigTrafficRoutingConfigGetArgs>> trafficRoutingConfig() {
         return Optional.ofNullable(this.trafficRoutingConfig);
     }
@@ -100,47 +120,107 @@ public final class DeploymentConfigState extends com.pulumi.resources.ResourceAr
             $ = new DeploymentConfigState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param computePlatform The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computePlatform(@Nullable Output<String> computePlatform) {
             $.computePlatform = computePlatform;
             return this;
         }
 
+        /**
+         * @param computePlatform The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computePlatform(String computePlatform) {
             return computePlatform(Output.of(computePlatform));
         }
 
+        /**
+         * @param deploymentConfigId The AWS Assigned deployment config id
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentConfigId(@Nullable Output<String> deploymentConfigId) {
             $.deploymentConfigId = deploymentConfigId;
             return this;
         }
 
+        /**
+         * @param deploymentConfigId The AWS Assigned deployment config id
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentConfigId(String deploymentConfigId) {
             return deploymentConfigId(Output.of(deploymentConfigId));
         }
 
+        /**
+         * @param deploymentConfigName The name of the deployment config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentConfigName(@Nullable Output<String> deploymentConfigName) {
             $.deploymentConfigName = deploymentConfigName;
             return this;
         }
 
+        /**
+         * @param deploymentConfigName The name of the deployment config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentConfigName(String deploymentConfigName) {
             return deploymentConfigName(Output.of(deploymentConfigName));
         }
 
+        /**
+         * @param minimumHealthyHosts A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumHealthyHosts(@Nullable Output<DeploymentConfigMinimumHealthyHostsGetArgs> minimumHealthyHosts) {
             $.minimumHealthyHosts = minimumHealthyHosts;
             return this;
         }
 
+        /**
+         * @param minimumHealthyHosts A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumHealthyHosts(DeploymentConfigMinimumHealthyHostsGetArgs minimumHealthyHosts) {
             return minimumHealthyHosts(Output.of(minimumHealthyHosts));
         }
 
+        /**
+         * @param trafficRoutingConfig A traffic_routing_config block. Traffic Routing Config is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficRoutingConfig(@Nullable Output<DeploymentConfigTrafficRoutingConfigGetArgs> trafficRoutingConfig) {
             $.trafficRoutingConfig = trafficRoutingConfig;
             return this;
         }
 
+        /**
+         * @param trafficRoutingConfig A traffic_routing_config block. Traffic Routing Config is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficRoutingConfig(DeploymentConfigTrafficRoutingConfigGetArgs trafficRoutingConfig) {
             return trafficRoutingConfig(Output.of(trafficRoutingConfig));
         }

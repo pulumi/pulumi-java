@@ -26,6 +26,10 @@ public final class PlacementGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the placement group.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -39,6 +43,12 @@ public final class PlacementGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="partitionCount")
     private @Nullable Output<Integer> partitionCount;
 
+    /**
+     * @return The number of partitions to create in the
+     * placement group.  Can only be specified when the `strategy` is set to
+     * `&#34;partition&#34;`.  Valid values are 1 - 7 (default is `2`).
+     * 
+     */
     public Optional<Output<Integer>> partitionCount() {
         return Optional.ofNullable(this.partitionCount);
     }
@@ -50,6 +60,10 @@ public final class PlacementGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="strategy", required=true)
     private Output<Either<String,PlacementStrategy>> strategy;
 
+    /**
+     * @return The placement strategy. Can be `&#34;cluster&#34;`, `&#34;partition&#34;` or `&#34;spread&#34;`.
+     * 
+     */
     public Output<Either<String,PlacementStrategy>> strategy() {
         return this.strategy;
     }
@@ -61,6 +75,10 @@ public final class PlacementGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -92,46 +110,110 @@ public final class PlacementGroupArgs extends com.pulumi.resources.ResourceArgs 
             $ = new PlacementGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the placement group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the placement group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param partitionCount The number of partitions to create in the
+         * placement group.  Can only be specified when the `strategy` is set to
+         * `&#34;partition&#34;`.  Valid values are 1 - 7 (default is `2`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionCount(@Nullable Output<Integer> partitionCount) {
             $.partitionCount = partitionCount;
             return this;
         }
 
+        /**
+         * @param partitionCount The number of partitions to create in the
+         * placement group.  Can only be specified when the `strategy` is set to
+         * `&#34;partition&#34;`.  Valid values are 1 - 7 (default is `2`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionCount(Integer partitionCount) {
             return partitionCount(Output.of(partitionCount));
         }
 
+        /**
+         * @param strategy The placement strategy. Can be `&#34;cluster&#34;`, `&#34;partition&#34;` or `&#34;spread&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strategy(Output<Either<String,PlacementStrategy>> strategy) {
             $.strategy = strategy;
             return this;
         }
 
+        /**
+         * @param strategy The placement strategy. Can be `&#34;cluster&#34;`, `&#34;partition&#34;` or `&#34;spread&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strategy(Either<String,PlacementStrategy> strategy) {
             return strategy(Output.of(strategy));
         }
 
+        /**
+         * @param strategy The placement strategy. Can be `&#34;cluster&#34;`, `&#34;partition&#34;` or `&#34;spread&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strategy(String strategy) {
             return strategy(Either.ofLeft(strategy));
         }
 
+        /**
+         * @param strategy The placement strategy. Can be `&#34;cluster&#34;`, `&#34;partition&#34;` or `&#34;spread&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strategy(PlacementStrategy strategy) {
             return strategy(Either.ofRight(strategy));
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

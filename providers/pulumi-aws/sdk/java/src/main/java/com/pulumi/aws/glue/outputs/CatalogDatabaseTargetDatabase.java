@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class CatalogDatabaseTargetDatabase {
     /**
-     * ID of the Data Catalog in which the database resides.
+     * @return ID of the Data Catalog in which the database resides.
      * 
      */
     private final String catalogId;
     /**
-     * Name of the catalog database.
+     * @return Name of the catalog database.
      * 
      */
     private final String databaseName;
@@ -29,16 +29,16 @@ public final class CatalogDatabaseTargetDatabase {
     }
 
     /**
-     * ID of the Data Catalog in which the database resides.
+     * @return ID of the Data Catalog in which the database resides.
      * 
-    */
+     */
     public String catalogId() {
         return this.catalogId;
     }
     /**
-     * Name of the catalog database.
+     * @return Name of the catalog database.
      * 
-    */
+     */
     public String databaseName() {
         return this.databaseName;
     }

@@ -23,6 +23,10 @@ public final class VaultLockConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="backupVaultName", required=true)
     private Output<String> backupVaultName;
 
+    /**
+     * @return Name of the backup vault to add a lock configuration for.
+     * 
+     */
     public Output<String> backupVaultName() {
         return this.backupVaultName;
     }
@@ -34,6 +38,10 @@ public final class VaultLockConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="changeableForDays")
     private @Nullable Output<Integer> changeableForDays;
 
+    /**
+     * @return The number of days before the lock date.
+     * 
+     */
     public Optional<Output<Integer>> changeableForDays() {
         return Optional.ofNullable(this.changeableForDays);
     }
@@ -45,6 +53,10 @@ public final class VaultLockConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="maxRetentionDays")
     private @Nullable Output<Integer> maxRetentionDays;
 
+    /**
+     * @return The maximum retention period that the vault retains its recovery points.
+     * 
+     */
     public Optional<Output<Integer>> maxRetentionDays() {
         return Optional.ofNullable(this.maxRetentionDays);
     }
@@ -56,6 +68,10 @@ public final class VaultLockConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="minRetentionDays")
     private @Nullable Output<Integer> minRetentionDays;
 
+    /**
+     * @return The minimum retention period that the vault retains its recovery points.
+     * 
+     */
     public Optional<Output<Integer>> minRetentionDays() {
         return Optional.ofNullable(this.minRetentionDays);
     }
@@ -87,38 +103,86 @@ public final class VaultLockConfigurationArgs extends com.pulumi.resources.Resou
             $ = new VaultLockConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupVaultName Name of the backup vault to add a lock configuration for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupVaultName(Output<String> backupVaultName) {
             $.backupVaultName = backupVaultName;
             return this;
         }
 
+        /**
+         * @param backupVaultName Name of the backup vault to add a lock configuration for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupVaultName(String backupVaultName) {
             return backupVaultName(Output.of(backupVaultName));
         }
 
+        /**
+         * @param changeableForDays The number of days before the lock date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder changeableForDays(@Nullable Output<Integer> changeableForDays) {
             $.changeableForDays = changeableForDays;
             return this;
         }
 
+        /**
+         * @param changeableForDays The number of days before the lock date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder changeableForDays(Integer changeableForDays) {
             return changeableForDays(Output.of(changeableForDays));
         }
 
+        /**
+         * @param maxRetentionDays The maximum retention period that the vault retains its recovery points.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRetentionDays(@Nullable Output<Integer> maxRetentionDays) {
             $.maxRetentionDays = maxRetentionDays;
             return this;
         }
 
+        /**
+         * @param maxRetentionDays The maximum retention period that the vault retains its recovery points.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRetentionDays(Integer maxRetentionDays) {
             return maxRetentionDays(Output.of(maxRetentionDays));
         }
 
+        /**
+         * @param minRetentionDays The minimum retention period that the vault retains its recovery points.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minRetentionDays(@Nullable Output<Integer> minRetentionDays) {
             $.minRetentionDays = minRetentionDays;
             return this;
         }
 
+        /**
+         * @param minRetentionDays The minimum retention period that the vault retains its recovery points.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minRetentionDays(Integer minRetentionDays) {
             return minRetentionDays(Output.of(minRetentionDays));
         }

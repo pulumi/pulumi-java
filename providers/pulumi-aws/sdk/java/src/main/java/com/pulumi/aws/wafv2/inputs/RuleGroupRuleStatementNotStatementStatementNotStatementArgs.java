@@ -21,6 +21,10 @@ public final class RuleGroupRuleStatementNotStatementStatementNotStatementArgs e
     @Import(name="statements", required=true)
     private Output<List<RuleGroupRuleStatementNotStatementStatementNotStatementStatementArgs>> statements;
 
+    /**
+     * @return The statement to negate. You can use any statement that can be nested. See Statement above for details.
+     * 
+     */
     public Output<List<RuleGroupRuleStatementNotStatementStatementNotStatementStatementArgs>> statements() {
         return this.statements;
     }
@@ -49,15 +53,33 @@ public final class RuleGroupRuleStatementNotStatementStatementNotStatementArgs e
             $ = new RuleGroupRuleStatementNotStatementStatementNotStatementArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param statements The statement to negate. You can use any statement that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(Output<List<RuleGroupRuleStatementNotStatementStatementNotStatementStatementArgs>> statements) {
             $.statements = statements;
             return this;
         }
 
+        /**
+         * @param statements The statement to negate. You can use any statement that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(List<RuleGroupRuleStatementNotStatementStatementNotStatementStatementArgs> statements) {
             return statements(Output.of(statements));
         }
 
+        /**
+         * @param statements The statement to negate. You can use any statement that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(RuleGroupRuleStatementNotStatementStatementNotStatementStatementArgs... statements) {
             return statements(List.of(statements));
         }

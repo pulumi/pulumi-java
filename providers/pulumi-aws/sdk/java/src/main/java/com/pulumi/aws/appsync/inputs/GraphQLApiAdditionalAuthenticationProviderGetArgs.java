@@ -25,6 +25,10 @@ public final class GraphQLApiAdditionalAuthenticationProviderGetArgs extends com
     @Import(name="authenticationType", required=true)
     private Output<String> authenticationType;
 
+    /**
+     * @return The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USER_POOLS`, `OPENID_CONNECT`, `AWS_LAMBDA`
+     * 
+     */
     public Output<String> authenticationType() {
         return this.authenticationType;
     }
@@ -36,6 +40,10 @@ public final class GraphQLApiAdditionalAuthenticationProviderGetArgs extends com
     @Import(name="lambdaAuthorizerConfig")
     private @Nullable Output<GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigGetArgs> lambdaAuthorizerConfig;
 
+    /**
+     * @return Nested argument containing Lambda authorizer configuration. Defined below.
+     * 
+     */
     public Optional<Output<GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigGetArgs>> lambdaAuthorizerConfig() {
         return Optional.ofNullable(this.lambdaAuthorizerConfig);
     }
@@ -47,6 +55,10 @@ public final class GraphQLApiAdditionalAuthenticationProviderGetArgs extends com
     @Import(name="openidConnectConfig")
     private @Nullable Output<GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigGetArgs> openidConnectConfig;
 
+    /**
+     * @return Nested argument containing OpenID Connect configuration. Defined below.
+     * 
+     */
     public Optional<Output<GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigGetArgs>> openidConnectConfig() {
         return Optional.ofNullable(this.openidConnectConfig);
     }
@@ -58,6 +70,10 @@ public final class GraphQLApiAdditionalAuthenticationProviderGetArgs extends com
     @Import(name="userPoolConfig")
     private @Nullable Output<GraphQLApiAdditionalAuthenticationProviderUserPoolConfigGetArgs> userPoolConfig;
 
+    /**
+     * @return The Amazon Cognito User Pool configuration. Defined below.
+     * 
+     */
     public Optional<Output<GraphQLApiAdditionalAuthenticationProviderUserPoolConfigGetArgs>> userPoolConfig() {
         return Optional.ofNullable(this.userPoolConfig);
     }
@@ -89,38 +105,86 @@ public final class GraphQLApiAdditionalAuthenticationProviderGetArgs extends com
             $ = new GraphQLApiAdditionalAuthenticationProviderGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationType The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USER_POOLS`, `OPENID_CONNECT`, `AWS_LAMBDA`
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(Output<String> authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param authenticationType The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USER_POOLS`, `OPENID_CONNECT`, `AWS_LAMBDA`
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(String authenticationType) {
             return authenticationType(Output.of(authenticationType));
         }
 
+        /**
+         * @param lambdaAuthorizerConfig Nested argument containing Lambda authorizer configuration. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lambdaAuthorizerConfig(@Nullable Output<GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigGetArgs> lambdaAuthorizerConfig) {
             $.lambdaAuthorizerConfig = lambdaAuthorizerConfig;
             return this;
         }
 
+        /**
+         * @param lambdaAuthorizerConfig Nested argument containing Lambda authorizer configuration. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lambdaAuthorizerConfig(GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigGetArgs lambdaAuthorizerConfig) {
             return lambdaAuthorizerConfig(Output.of(lambdaAuthorizerConfig));
         }
 
+        /**
+         * @param openidConnectConfig Nested argument containing OpenID Connect configuration. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openidConnectConfig(@Nullable Output<GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigGetArgs> openidConnectConfig) {
             $.openidConnectConfig = openidConnectConfig;
             return this;
         }
 
+        /**
+         * @param openidConnectConfig Nested argument containing OpenID Connect configuration. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openidConnectConfig(GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigGetArgs openidConnectConfig) {
             return openidConnectConfig(Output.of(openidConnectConfig));
         }
 
+        /**
+         * @param userPoolConfig The Amazon Cognito User Pool configuration. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userPoolConfig(@Nullable Output<GraphQLApiAdditionalAuthenticationProviderUserPoolConfigGetArgs> userPoolConfig) {
             $.userPoolConfig = userPoolConfig;
             return this;
         }
 
+        /**
+         * @param userPoolConfig The Amazon Cognito User Pool configuration. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userPoolConfig(GraphQLApiAdditionalAuthenticationProviderUserPoolConfigGetArgs userPoolConfig) {
             return userPoolConfig(Output.of(userPoolConfig));
         }

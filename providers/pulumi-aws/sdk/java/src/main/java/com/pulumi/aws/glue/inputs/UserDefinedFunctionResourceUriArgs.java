@@ -20,6 +20,10 @@ public final class UserDefinedFunctionResourceUriArgs extends com.pulumi.resourc
     @Import(name="resourceType", required=true)
     private Output<String> resourceType;
 
+    /**
+     * @return The type of the resource. can be one of `JAR`, `FILE`, and `ARCHIVE`.
+     * 
+     */
     public Output<String> resourceType() {
         return this.resourceType;
     }
@@ -31,6 +35,10 @@ public final class UserDefinedFunctionResourceUriArgs extends com.pulumi.resourc
     @Import(name="uri", required=true)
     private Output<String> uri;
 
+    /**
+     * @return The URI for accessing the resource.
+     * 
+     */
     public Output<String> uri() {
         return this.uri;
     }
@@ -60,20 +68,44 @@ public final class UserDefinedFunctionResourceUriArgs extends com.pulumi.resourc
             $ = new UserDefinedFunctionResourceUriArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceType The type of the resource. can be one of `JAR`, `FILE`, and `ARCHIVE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType The type of the resource. can be one of `JAR`, `FILE`, and `ARCHIVE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Output.of(resourceType));
         }
 
+        /**
+         * @param uri The URI for accessing the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri The URI for accessing the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

@@ -22,6 +22,12 @@ public final class IntentFulfillmentActivityCodeHookArgs extends com.pulumi.reso
     @Import(name="messageVersion", required=true)
     private Output<String> messageVersion;
 
+    /**
+     * @return The version of the request-response that you want Amazon Lex to use
+     * to invoke your Lambda function. For more information, see
+     * [Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html). Must be less than or equal to 5 characters in length.
+     * 
+     */
     public Output<String> messageVersion() {
         return this.messageVersion;
     }
@@ -33,6 +39,10 @@ public final class IntentFulfillmentActivityCodeHookArgs extends com.pulumi.reso
     @Import(name="uri", required=true)
     private Output<String> uri;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the Lambda function.
+     * 
+     */
     public Output<String> uri() {
         return this.uri;
     }
@@ -62,20 +72,48 @@ public final class IntentFulfillmentActivityCodeHookArgs extends com.pulumi.reso
             $ = new IntentFulfillmentActivityCodeHookArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param messageVersion The version of the request-response that you want Amazon Lex to use
+         * to invoke your Lambda function. For more information, see
+         * [Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html). Must be less than or equal to 5 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageVersion(Output<String> messageVersion) {
             $.messageVersion = messageVersion;
             return this;
         }
 
+        /**
+         * @param messageVersion The version of the request-response that you want Amazon Lex to use
+         * to invoke your Lambda function. For more information, see
+         * [Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html). Must be less than or equal to 5 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageVersion(String messageVersion) {
             return messageVersion(Output.of(messageVersion));
         }
 
+        /**
+         * @param uri The Amazon Resource Name (ARN) of the Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri The Amazon Resource Name (ARN) of the Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

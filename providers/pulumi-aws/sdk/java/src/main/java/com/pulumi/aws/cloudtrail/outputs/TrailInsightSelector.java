@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class TrailInsightSelector {
     /**
-     * Type of insights to log on a trail. The valid value is `ApiCallRateInsight`.
+     * @return Type of insights to log on a trail. The valid value is `ApiCallRateInsight`.
      * 
      */
     private final String insightType;
@@ -21,9 +21,9 @@ public final class TrailInsightSelector {
     }
 
     /**
-     * Type of insights to log on a trail. The valid value is `ApiCallRateInsight`.
+     * @return Type of insights to log on a trail. The valid value is `ApiCallRateInsight`.
      * 
-    */
+     */
     public String insightType() {
         return this.insightType;
     }

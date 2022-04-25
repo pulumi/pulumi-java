@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EndpointConfigurationAsyncInferenceConfig {
     /**
-     * Configures the behavior of the client used by Amazon SageMaker to interact with the model container during asynchronous inference.
+     * @return Configures the behavior of the client used by Amazon SageMaker to interact with the model container during asynchronous inference.
      * 
      */
     private final @Nullable EndpointConfigurationAsyncInferenceConfigClientConfig clientConfig;
     /**
-     * Specifies the configuration for asynchronous inference invocation outputs.
+     * @return Specifies the configuration for asynchronous inference invocation outputs.
      * 
      */
     private final EndpointConfigurationAsyncInferenceConfigOutputConfig outputConfig;
@@ -32,16 +32,16 @@ public final class EndpointConfigurationAsyncInferenceConfig {
     }
 
     /**
-     * Configures the behavior of the client used by Amazon SageMaker to interact with the model container during asynchronous inference.
+     * @return Configures the behavior of the client used by Amazon SageMaker to interact with the model container during asynchronous inference.
      * 
-    */
+     */
     public Optional<EndpointConfigurationAsyncInferenceConfigClientConfig> clientConfig() {
         return Optional.ofNullable(this.clientConfig);
     }
     /**
-     * Specifies the configuration for asynchronous inference invocation outputs.
+     * @return Specifies the configuration for asynchronous inference invocation outputs.
      * 
-    */
+     */
     public EndpointConfigurationAsyncInferenceConfigOutputConfig outputConfig() {
         return this.outputConfig;
     }

@@ -23,6 +23,10 @@ public final class CiphertextState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ciphertextBlob")
     private @Nullable Output<String> ciphertextBlob;
 
+    /**
+     * @return Base64 encoded ciphertext
+     * 
+     */
     public Optional<Output<String>> ciphertextBlob() {
         return Optional.ofNullable(this.ciphertextBlob);
     }
@@ -34,6 +38,10 @@ public final class CiphertextState extends com.pulumi.resources.ResourceArgs {
     @Import(name="context")
     private @Nullable Output<Map<String,String>> context;
 
+    /**
+     * @return An optional mapping that makes up the encryption context.
+     * 
+     */
     public Optional<Output<Map<String,String>>> context() {
         return Optional.ofNullable(this.context);
     }
@@ -45,6 +53,10 @@ public final class CiphertextState extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyId")
     private @Nullable Output<String> keyId;
 
+    /**
+     * @return Globally unique key ID for the customer master key.
+     * 
+     */
     public Optional<Output<String>> keyId() {
         return Optional.ofNullable(this.keyId);
     }
@@ -56,6 +68,10 @@ public final class CiphertextState extends com.pulumi.resources.ResourceArgs {
     @Import(name="plaintext")
     private @Nullable Output<String> plaintext;
 
+    /**
+     * @return Data to be encrypted. Note that this may show up in logs, and it will be stored in the state file.
+     * 
+     */
     public Optional<Output<String>> plaintext() {
         return Optional.ofNullable(this.plaintext);
     }
@@ -87,38 +103,86 @@ public final class CiphertextState extends com.pulumi.resources.ResourceArgs {
             $ = new CiphertextState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ciphertextBlob Base64 encoded ciphertext
+         * 
+         * @return builder
+         * 
+         */
         public Builder ciphertextBlob(@Nullable Output<String> ciphertextBlob) {
             $.ciphertextBlob = ciphertextBlob;
             return this;
         }
 
+        /**
+         * @param ciphertextBlob Base64 encoded ciphertext
+         * 
+         * @return builder
+         * 
+         */
         public Builder ciphertextBlob(String ciphertextBlob) {
             return ciphertextBlob(Output.of(ciphertextBlob));
         }
 
+        /**
+         * @param context An optional mapping that makes up the encryption context.
+         * 
+         * @return builder
+         * 
+         */
         public Builder context(@Nullable Output<Map<String,String>> context) {
             $.context = context;
             return this;
         }
 
+        /**
+         * @param context An optional mapping that makes up the encryption context.
+         * 
+         * @return builder
+         * 
+         */
         public Builder context(Map<String,String> context) {
             return context(Output.of(context));
         }
 
+        /**
+         * @param keyId Globally unique key ID for the customer master key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(@Nullable Output<String> keyId) {
             $.keyId = keyId;
             return this;
         }
 
+        /**
+         * @param keyId Globally unique key ID for the customer master key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(String keyId) {
             return keyId(Output.of(keyId));
         }
 
+        /**
+         * @param plaintext Data to be encrypted. Note that this may show up in logs, and it will be stored in the state file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder plaintext(@Nullable Output<String> plaintext) {
             $.plaintext = plaintext;
             return this;
         }
 
+        /**
+         * @param plaintext Data to be encrypted. Note that this may show up in logs, and it will be stored in the state file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder plaintext(String plaintext) {
             return plaintext(Output.of(plaintext));
         }

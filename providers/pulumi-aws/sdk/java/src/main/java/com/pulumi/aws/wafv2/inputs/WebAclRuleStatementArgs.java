@@ -35,6 +35,10 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
     @Import(name="andStatement")
     private @Nullable Output<WebAclRuleStatementAndStatementArgs> andStatement;
 
+    /**
+     * @return A logical rule statement used to combine other rule statements with AND logic. See AND Statement below for details.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementAndStatementArgs>> andStatement() {
         return Optional.ofNullable(this.andStatement);
     }
@@ -46,6 +50,10 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
     @Import(name="byteMatchStatement")
     private @Nullable Output<WebAclRuleStatementByteMatchStatementArgs> byteMatchStatement;
 
+    /**
+     * @return A rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementByteMatchStatementArgs>> byteMatchStatement() {
         return Optional.ofNullable(this.byteMatchStatement);
     }
@@ -57,6 +65,10 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
     @Import(name="geoMatchStatement")
     private @Nullable Output<WebAclRuleStatementGeoMatchStatementArgs> geoMatchStatement;
 
+    /**
+     * @return A rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementGeoMatchStatementArgs>> geoMatchStatement() {
         return Optional.ofNullable(this.geoMatchStatement);
     }
@@ -68,6 +80,10 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
     @Import(name="ipSetReferenceStatement")
     private @Nullable Output<WebAclRuleStatementIpSetReferenceStatementArgs> ipSetReferenceStatement;
 
+    /**
+     * @return A rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementIpSetReferenceStatementArgs>> ipSetReferenceStatement() {
         return Optional.ofNullable(this.ipSetReferenceStatement);
     }
@@ -79,6 +95,10 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
     @Import(name="labelMatchStatement")
     private @Nullable Output<WebAclRuleStatementLabelMatchStatementArgs> labelMatchStatement;
 
+    /**
+     * @return A rule statement that defines a string match search against labels that have been added to the web request by rules that have already run in the web ACL. See Label Match Statement below for details.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementLabelMatchStatementArgs>> labelMatchStatement() {
         return Optional.ofNullable(this.labelMatchStatement);
     }
@@ -90,6 +110,10 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
     @Import(name="managedRuleGroupStatement")
     private @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementArgs> managedRuleGroupStatement;
 
+    /**
+     * @return A rule statement used to run the rules that are defined in a managed rule group.  This statement can not be nested. See Managed Rule Group Statement below for details.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementManagedRuleGroupStatementArgs>> managedRuleGroupStatement() {
         return Optional.ofNullable(this.managedRuleGroupStatement);
     }
@@ -101,6 +125,10 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
     @Import(name="notStatement")
     private @Nullable Output<WebAclRuleStatementNotStatementArgs> notStatement;
 
+    /**
+     * @return A logical rule statement used to negate the results of another rule statement. See NOT Statement below for details.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementNotStatementArgs>> notStatement() {
         return Optional.ofNullable(this.notStatement);
     }
@@ -112,6 +140,10 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
     @Import(name="orStatement")
     private @Nullable Output<WebAclRuleStatementOrStatementArgs> orStatement;
 
+    /**
+     * @return A logical rule statement used to combine other rule statements with OR logic. See OR Statement below for details.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementOrStatementArgs>> orStatement() {
         return Optional.ofNullable(this.orStatement);
     }
@@ -123,6 +155,10 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
     @Import(name="rateBasedStatement")
     private @Nullable Output<WebAclRuleStatementRateBasedStatementArgs> rateBasedStatement;
 
+    /**
+     * @return A rate-based rule tracks the rate of requests for each originating `IP address`, and triggers the rule action when the rate exceeds a limit that you specify on the number of requests in any `5-minute` time span. This statement can not be nested. See Rate Based Statement below for details.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementRateBasedStatementArgs>> rateBasedStatement() {
         return Optional.ofNullable(this.rateBasedStatement);
     }
@@ -134,6 +170,10 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
     @Import(name="regexPatternSetReferenceStatement")
     private @Nullable Output<WebAclRuleStatementRegexPatternSetReferenceStatementArgs> regexPatternSetReferenceStatement;
 
+    /**
+     * @return A rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementRegexPatternSetReferenceStatementArgs>> regexPatternSetReferenceStatement() {
         return Optional.ofNullable(this.regexPatternSetReferenceStatement);
     }
@@ -145,6 +185,10 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
     @Import(name="ruleGroupReferenceStatement")
     private @Nullable Output<WebAclRuleStatementRuleGroupReferenceStatementArgs> ruleGroupReferenceStatement;
 
+    /**
+     * @return A rule statement used to run the rules that are defined in an WAFv2 Rule Group. See Rule Group Reference Statement below for details.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementRuleGroupReferenceStatementArgs>> ruleGroupReferenceStatement() {
         return Optional.ofNullable(this.ruleGroupReferenceStatement);
     }
@@ -156,6 +200,10 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
     @Import(name="sizeConstraintStatement")
     private @Nullable Output<WebAclRuleStatementSizeConstraintStatementArgs> sizeConstraintStatement;
 
+    /**
+     * @return A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (&gt;) or less than (&lt;). See Size Constraint Statement below for more details.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementSizeConstraintStatementArgs>> sizeConstraintStatement() {
         return Optional.ofNullable(this.sizeConstraintStatement);
     }
@@ -167,6 +215,10 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
     @Import(name="sqliMatchStatement")
     private @Nullable Output<WebAclRuleStatementSqliMatchStatementArgs> sqliMatchStatement;
 
+    /**
+     * @return An SQL injection match condition identifies the part of web requests, such as the URI or the query string, that you want AWS WAF to inspect. See SQL Injection Match Statement below for details.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementSqliMatchStatementArgs>> sqliMatchStatement() {
         return Optional.ofNullable(this.sqliMatchStatement);
     }
@@ -178,6 +230,10 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
     @Import(name="xssMatchStatement")
     private @Nullable Output<WebAclRuleStatementXssMatchStatementArgs> xssMatchStatement;
 
+    /**
+     * @return A rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementXssMatchStatementArgs>> xssMatchStatement() {
         return Optional.ofNullable(this.xssMatchStatement);
     }
@@ -219,128 +275,296 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
             $ = new WebAclRuleStatementArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param andStatement A logical rule statement used to combine other rule statements with AND logic. See AND Statement below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder andStatement(@Nullable Output<WebAclRuleStatementAndStatementArgs> andStatement) {
             $.andStatement = andStatement;
             return this;
         }
 
+        /**
+         * @param andStatement A logical rule statement used to combine other rule statements with AND logic. See AND Statement below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder andStatement(WebAclRuleStatementAndStatementArgs andStatement) {
             return andStatement(Output.of(andStatement));
         }
 
+        /**
+         * @param byteMatchStatement A rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder byteMatchStatement(@Nullable Output<WebAclRuleStatementByteMatchStatementArgs> byteMatchStatement) {
             $.byteMatchStatement = byteMatchStatement;
             return this;
         }
 
+        /**
+         * @param byteMatchStatement A rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder byteMatchStatement(WebAclRuleStatementByteMatchStatementArgs byteMatchStatement) {
             return byteMatchStatement(Output.of(byteMatchStatement));
         }
 
+        /**
+         * @param geoMatchStatement A rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder geoMatchStatement(@Nullable Output<WebAclRuleStatementGeoMatchStatementArgs> geoMatchStatement) {
             $.geoMatchStatement = geoMatchStatement;
             return this;
         }
 
+        /**
+         * @param geoMatchStatement A rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder geoMatchStatement(WebAclRuleStatementGeoMatchStatementArgs geoMatchStatement) {
             return geoMatchStatement(Output.of(geoMatchStatement));
         }
 
+        /**
+         * @param ipSetReferenceStatement A rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipSetReferenceStatement(@Nullable Output<WebAclRuleStatementIpSetReferenceStatementArgs> ipSetReferenceStatement) {
             $.ipSetReferenceStatement = ipSetReferenceStatement;
             return this;
         }
 
+        /**
+         * @param ipSetReferenceStatement A rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipSetReferenceStatement(WebAclRuleStatementIpSetReferenceStatementArgs ipSetReferenceStatement) {
             return ipSetReferenceStatement(Output.of(ipSetReferenceStatement));
         }
 
+        /**
+         * @param labelMatchStatement A rule statement that defines a string match search against labels that have been added to the web request by rules that have already run in the web ACL. See Label Match Statement below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelMatchStatement(@Nullable Output<WebAclRuleStatementLabelMatchStatementArgs> labelMatchStatement) {
             $.labelMatchStatement = labelMatchStatement;
             return this;
         }
 
+        /**
+         * @param labelMatchStatement A rule statement that defines a string match search against labels that have been added to the web request by rules that have already run in the web ACL. See Label Match Statement below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelMatchStatement(WebAclRuleStatementLabelMatchStatementArgs labelMatchStatement) {
             return labelMatchStatement(Output.of(labelMatchStatement));
         }
 
+        /**
+         * @param managedRuleGroupStatement A rule statement used to run the rules that are defined in a managed rule group.  This statement can not be nested. See Managed Rule Group Statement below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedRuleGroupStatement(@Nullable Output<WebAclRuleStatementManagedRuleGroupStatementArgs> managedRuleGroupStatement) {
             $.managedRuleGroupStatement = managedRuleGroupStatement;
             return this;
         }
 
+        /**
+         * @param managedRuleGroupStatement A rule statement used to run the rules that are defined in a managed rule group.  This statement can not be nested. See Managed Rule Group Statement below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedRuleGroupStatement(WebAclRuleStatementManagedRuleGroupStatementArgs managedRuleGroupStatement) {
             return managedRuleGroupStatement(Output.of(managedRuleGroupStatement));
         }
 
+        /**
+         * @param notStatement A logical rule statement used to negate the results of another rule statement. See NOT Statement below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notStatement(@Nullable Output<WebAclRuleStatementNotStatementArgs> notStatement) {
             $.notStatement = notStatement;
             return this;
         }
 
+        /**
+         * @param notStatement A logical rule statement used to negate the results of another rule statement. See NOT Statement below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notStatement(WebAclRuleStatementNotStatementArgs notStatement) {
             return notStatement(Output.of(notStatement));
         }
 
+        /**
+         * @param orStatement A logical rule statement used to combine other rule statements with OR logic. See OR Statement below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orStatement(@Nullable Output<WebAclRuleStatementOrStatementArgs> orStatement) {
             $.orStatement = orStatement;
             return this;
         }
 
+        /**
+         * @param orStatement A logical rule statement used to combine other rule statements with OR logic. See OR Statement below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orStatement(WebAclRuleStatementOrStatementArgs orStatement) {
             return orStatement(Output.of(orStatement));
         }
 
+        /**
+         * @param rateBasedStatement A rate-based rule tracks the rate of requests for each originating `IP address`, and triggers the rule action when the rate exceeds a limit that you specify on the number of requests in any `5-minute` time span. This statement can not be nested. See Rate Based Statement below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rateBasedStatement(@Nullable Output<WebAclRuleStatementRateBasedStatementArgs> rateBasedStatement) {
             $.rateBasedStatement = rateBasedStatement;
             return this;
         }
 
+        /**
+         * @param rateBasedStatement A rate-based rule tracks the rate of requests for each originating `IP address`, and triggers the rule action when the rate exceeds a limit that you specify on the number of requests in any `5-minute` time span. This statement can not be nested. See Rate Based Statement below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rateBasedStatement(WebAclRuleStatementRateBasedStatementArgs rateBasedStatement) {
             return rateBasedStatement(Output.of(rateBasedStatement));
         }
 
+        /**
+         * @param regexPatternSetReferenceStatement A rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regexPatternSetReferenceStatement(@Nullable Output<WebAclRuleStatementRegexPatternSetReferenceStatementArgs> regexPatternSetReferenceStatement) {
             $.regexPatternSetReferenceStatement = regexPatternSetReferenceStatement;
             return this;
         }
 
+        /**
+         * @param regexPatternSetReferenceStatement A rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regexPatternSetReferenceStatement(WebAclRuleStatementRegexPatternSetReferenceStatementArgs regexPatternSetReferenceStatement) {
             return regexPatternSetReferenceStatement(Output.of(regexPatternSetReferenceStatement));
         }
 
+        /**
+         * @param ruleGroupReferenceStatement A rule statement used to run the rules that are defined in an WAFv2 Rule Group. See Rule Group Reference Statement below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleGroupReferenceStatement(@Nullable Output<WebAclRuleStatementRuleGroupReferenceStatementArgs> ruleGroupReferenceStatement) {
             $.ruleGroupReferenceStatement = ruleGroupReferenceStatement;
             return this;
         }
 
+        /**
+         * @param ruleGroupReferenceStatement A rule statement used to run the rules that are defined in an WAFv2 Rule Group. See Rule Group Reference Statement below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleGroupReferenceStatement(WebAclRuleStatementRuleGroupReferenceStatementArgs ruleGroupReferenceStatement) {
             return ruleGroupReferenceStatement(Output.of(ruleGroupReferenceStatement));
         }
 
+        /**
+         * @param sizeConstraintStatement A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (&gt;) or less than (&lt;). See Size Constraint Statement below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeConstraintStatement(@Nullable Output<WebAclRuleStatementSizeConstraintStatementArgs> sizeConstraintStatement) {
             $.sizeConstraintStatement = sizeConstraintStatement;
             return this;
         }
 
+        /**
+         * @param sizeConstraintStatement A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (&gt;) or less than (&lt;). See Size Constraint Statement below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeConstraintStatement(WebAclRuleStatementSizeConstraintStatementArgs sizeConstraintStatement) {
             return sizeConstraintStatement(Output.of(sizeConstraintStatement));
         }
 
+        /**
+         * @param sqliMatchStatement An SQL injection match condition identifies the part of web requests, such as the URI or the query string, that you want AWS WAF to inspect. See SQL Injection Match Statement below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqliMatchStatement(@Nullable Output<WebAclRuleStatementSqliMatchStatementArgs> sqliMatchStatement) {
             $.sqliMatchStatement = sqliMatchStatement;
             return this;
         }
 
+        /**
+         * @param sqliMatchStatement An SQL injection match condition identifies the part of web requests, such as the URI or the query string, that you want AWS WAF to inspect. See SQL Injection Match Statement below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqliMatchStatement(WebAclRuleStatementSqliMatchStatementArgs sqliMatchStatement) {
             return sqliMatchStatement(Output.of(sqliMatchStatement));
         }
 
+        /**
+         * @param xssMatchStatement A rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xssMatchStatement(@Nullable Output<WebAclRuleStatementXssMatchStatementArgs> xssMatchStatement) {
             $.xssMatchStatement = xssMatchStatement;
             return this;
         }
 
+        /**
+         * @param xssMatchStatement A rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xssMatchStatement(WebAclRuleStatementXssMatchStatementArgs xssMatchStatement) {
             return xssMatchStatement(Output.of(xssMatchStatement));
         }

@@ -24,6 +24,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="catalogData")
     private @Nullable Output<RepositoryCatalogDataArgs> catalogData;
 
+    /**
+     * @return Catalog data configuration for the repository. See below for schema.
+     * 
+     */
     public Optional<Output<RepositoryCatalogDataArgs>> catalogData() {
         return Optional.ofNullable(this.catalogData);
     }
@@ -42,6 +46,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="repositoryName", required=true)
     private Output<String> repositoryName;
 
+    /**
+     * @return Name of the repository.
+     * 
+     */
     public Output<String> repositoryName() {
         return this.repositoryName;
     }
@@ -72,11 +80,23 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RepositoryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param catalogData Catalog data configuration for the repository. See below for schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogData(@Nullable Output<RepositoryCatalogDataArgs> catalogData) {
             $.catalogData = catalogData;
             return this;
         }
 
+        /**
+         * @param catalogData Catalog data configuration for the repository. See below for schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogData(RepositoryCatalogDataArgs catalogData) {
             return catalogData(Output.of(catalogData));
         }
@@ -90,11 +110,23 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
             return forceDestroy(Output.of(forceDestroy));
         }
 
+        /**
+         * @param repositoryName Name of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryName(Output<String> repositoryName) {
             $.repositoryName = repositoryName;
             return this;
         }
 
+        /**
+         * @param repositoryName Name of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryName(String repositoryName) {
             return repositoryName(Output.of(repositoryName));
         }

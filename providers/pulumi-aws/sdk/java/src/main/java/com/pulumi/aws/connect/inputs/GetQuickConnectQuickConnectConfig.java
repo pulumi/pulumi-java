@@ -23,6 +23,10 @@ public final class GetQuickConnectQuickConnectConfig extends com.pulumi.resource
     @Import(name="phoneConfigs", required=true)
     private List<GetQuickConnectQuickConnectConfigPhoneConfig> phoneConfigs;
 
+    /**
+     * @return Specifies the phone configuration of the Quick Connect. This is returned only if `quick_connect_type` is `PHONE_NUMBER`. The `phone_config` block is documented below.
+     * 
+     */
     public List<GetQuickConnectQuickConnectConfigPhoneConfig> phoneConfigs() {
         return this.phoneConfigs;
     }
@@ -34,6 +38,10 @@ public final class GetQuickConnectQuickConnectConfig extends com.pulumi.resource
     @Import(name="queueConfigs", required=true)
     private List<GetQuickConnectQuickConnectConfigQueueConfig> queueConfigs;
 
+    /**
+     * @return Specifies the queue configuration of the Quick Connect. This is returned only if `quick_connect_type` is `QUEUE`. The `queue_config` block is documented below.
+     * 
+     */
     public List<GetQuickConnectQuickConnectConfigQueueConfig> queueConfigs() {
         return this.queueConfigs;
     }
@@ -45,6 +53,10 @@ public final class GetQuickConnectQuickConnectConfig extends com.pulumi.resource
     @Import(name="quickConnectType", required=true)
     private String quickConnectType;
 
+    /**
+     * @return Specifies the configuration type of the Quick Connect. Valid values are `PHONE_NUMBER`, `QUEUE`, `USER`.
+     * 
+     */
     public String quickConnectType() {
         return this.quickConnectType;
     }
@@ -56,6 +68,10 @@ public final class GetQuickConnectQuickConnectConfig extends com.pulumi.resource
     @Import(name="userConfigs", required=true)
     private List<GetQuickConnectQuickConnectConfigUserConfig> userConfigs;
 
+    /**
+     * @return Specifies the user configuration of the Quick Connect. This is returned only if `quick_connect_type` is `USER`. The `user_config` block is documented below.
+     * 
+     */
     public List<GetQuickConnectQuickConnectConfigUserConfig> userConfigs() {
         return this.userConfigs;
     }
@@ -87,34 +103,76 @@ public final class GetQuickConnectQuickConnectConfig extends com.pulumi.resource
             $ = new GetQuickConnectQuickConnectConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param phoneConfigs Specifies the phone configuration of the Quick Connect. This is returned only if `quick_connect_type` is `PHONE_NUMBER`. The `phone_config` block is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneConfigs(List<GetQuickConnectQuickConnectConfigPhoneConfig> phoneConfigs) {
             $.phoneConfigs = phoneConfigs;
             return this;
         }
 
+        /**
+         * @param phoneConfigs Specifies the phone configuration of the Quick Connect. This is returned only if `quick_connect_type` is `PHONE_NUMBER`. The `phone_config` block is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneConfigs(GetQuickConnectQuickConnectConfigPhoneConfig... phoneConfigs) {
             return phoneConfigs(List.of(phoneConfigs));
         }
 
+        /**
+         * @param queueConfigs Specifies the queue configuration of the Quick Connect. This is returned only if `quick_connect_type` is `QUEUE`. The `queue_config` block is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueConfigs(List<GetQuickConnectQuickConnectConfigQueueConfig> queueConfigs) {
             $.queueConfigs = queueConfigs;
             return this;
         }
 
+        /**
+         * @param queueConfigs Specifies the queue configuration of the Quick Connect. This is returned only if `quick_connect_type` is `QUEUE`. The `queue_config` block is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueConfigs(GetQuickConnectQuickConnectConfigQueueConfig... queueConfigs) {
             return queueConfigs(List.of(queueConfigs));
         }
 
+        /**
+         * @param quickConnectType Specifies the configuration type of the Quick Connect. Valid values are `PHONE_NUMBER`, `QUEUE`, `USER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quickConnectType(String quickConnectType) {
             $.quickConnectType = quickConnectType;
             return this;
         }
 
+        /**
+         * @param userConfigs Specifies the user configuration of the Quick Connect. This is returned only if `quick_connect_type` is `USER`. The `user_config` block is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userConfigs(List<GetQuickConnectQuickConnectConfigUserConfig> userConfigs) {
             $.userConfigs = userConfigs;
             return this;
         }
 
+        /**
+         * @param userConfigs Specifies the user configuration of the Quick Connect. This is returned only if `quick_connect_type` is `USER`. The `user_config` block is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userConfigs(GetQuickConnectQuickConnectConfigUserConfig... userConfigs) {
             return userConfigs(List.of(userConfigs));
         }

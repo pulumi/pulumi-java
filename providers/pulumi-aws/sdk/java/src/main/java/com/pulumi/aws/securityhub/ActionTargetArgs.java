@@ -22,6 +22,10 @@ public final class ActionTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description", required=true)
     private Output<String> description;
 
+    /**
+     * @return The name of the custom action target.
+     * 
+     */
     public Output<String> description() {
         return this.description;
     }
@@ -33,6 +37,10 @@ public final class ActionTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identifier", required=true)
     private Output<String> identifier;
 
+    /**
+     * @return The ID for the custom action target.
+     * 
+     */
     public Output<String> identifier() {
         return this.identifier;
     }
@@ -44,6 +52,10 @@ public final class ActionTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The description for the custom action target.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -74,29 +86,65 @@ public final class ActionTargetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ActionTargetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The name of the custom action target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The name of the custom action target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param identifier The ID for the custom action target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identifier(Output<String> identifier) {
             $.identifier = identifier;
             return this;
         }
 
+        /**
+         * @param identifier The ID for the custom action target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identifier(String identifier) {
             return identifier(Output.of(identifier));
         }
 
+        /**
+         * @param name The description for the custom action target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The description for the custom action target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

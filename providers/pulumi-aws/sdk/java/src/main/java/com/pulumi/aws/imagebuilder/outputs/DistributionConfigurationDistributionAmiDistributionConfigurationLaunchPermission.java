@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission {
     /**
-     * Set of EC2 launch permission user groups to assign. Use `all` to distribute a public AMI.
+     * @return Set of EC2 launch permission user groups to assign. Use `all` to distribute a public AMI.
      * 
      */
     private final @Nullable List<String> userGroups;
     /**
-     * Set of AWS Account identifiers to assign.
+     * @return Set of AWS Account identifiers to assign.
      * 
      */
     private final @Nullable List<String> userIds;
@@ -31,16 +31,16 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     }
 
     /**
-     * Set of EC2 launch permission user groups to assign. Use `all` to distribute a public AMI.
+     * @return Set of EC2 launch permission user groups to assign. Use `all` to distribute a public AMI.
      * 
-    */
+     */
     public List<String> userGroups() {
         return this.userGroups == null ? List.of() : this.userGroups;
     }
     /**
-     * Set of AWS Account identifiers to assign.
+     * @return Set of AWS Account identifiers to assign.
      * 
-    */
+     */
     public List<String> userIds() {
         return this.userIds == null ? List.of() : this.userIds;
     }

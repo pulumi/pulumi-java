@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GetVpcPeeringConnectionCidrBlockSet {
     /**
-     * The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
+     * @return The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
      * 
      */
     private final String cidrBlock;
@@ -21,9 +21,9 @@ public final class GetVpcPeeringConnectionCidrBlockSet {
     }
 
     /**
-     * The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
+     * @return The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
      * 
-    */
+     */
     public String cidrBlock() {
         return this.cidrBlock;
     }

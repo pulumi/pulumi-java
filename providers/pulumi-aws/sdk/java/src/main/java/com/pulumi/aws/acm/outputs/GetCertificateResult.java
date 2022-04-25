@@ -15,26 +15,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetCertificateResult {
     /**
-     * Amazon Resource Name (ARN) of the found certificate, suitable for referencing in other resources that support ACM certificates.
+     * @return Amazon Resource Name (ARN) of the found certificate, suitable for referencing in other resources that support ACM certificates.
      * 
      */
     private final String arn;
     private final String domain;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final @Nullable List<String> keyTypes;
     private final @Nullable Boolean mostRecent;
     /**
-     * Status of the found certificate.
+     * @return Status of the found certificate.
      * 
      */
     private final String status;
     private final @Nullable List<String> statuses;
     /**
-     * A mapping of tags for the resource.
+     * @return A mapping of tags for the resource.
      * 
      */
     private final Map<String,String> tags;
@@ -63,9 +63,9 @@ public final class GetCertificateResult {
     }
 
     /**
-     * Amazon Resource Name (ARN) of the found certificate, suitable for referencing in other resources that support ACM certificates.
+     * @return Amazon Resource Name (ARN) of the found certificate, suitable for referencing in other resources that support ACM certificates.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
@@ -73,9 +73,9 @@ public final class GetCertificateResult {
         return this.domain;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -86,9 +86,9 @@ public final class GetCertificateResult {
         return Optional.ofNullable(this.mostRecent);
     }
     /**
-     * Status of the found certificate.
+     * @return Status of the found certificate.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
@@ -96,9 +96,9 @@ public final class GetCertificateResult {
         return this.statuses == null ? List.of() : this.statuses;
     }
     /**
-     * A mapping of tags for the resource.
+     * @return A mapping of tags for the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }

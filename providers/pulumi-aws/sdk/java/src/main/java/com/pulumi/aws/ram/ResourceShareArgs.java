@@ -24,6 +24,10 @@ public final class ResourceShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowExternalPrincipals")
     private @Nullable Output<Boolean> allowExternalPrincipals;
 
+    /**
+     * @return Indicates whether principals outside your organization can be associated with a resource share.
+     * 
+     */
     public Optional<Output<Boolean>> allowExternalPrincipals() {
         return Optional.ofNullable(this.allowExternalPrincipals);
     }
@@ -35,6 +39,10 @@ public final class ResourceShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource share.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -46,6 +54,10 @@ public final class ResourceShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource share. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -76,29 +88,65 @@ public final class ResourceShareArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ResourceShareArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowExternalPrincipals Indicates whether principals outside your organization can be associated with a resource share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowExternalPrincipals(@Nullable Output<Boolean> allowExternalPrincipals) {
             $.allowExternalPrincipals = allowExternalPrincipals;
             return this;
         }
 
+        /**
+         * @param allowExternalPrincipals Indicates whether principals outside your organization can be associated with a resource share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowExternalPrincipals(Boolean allowExternalPrincipals) {
             return allowExternalPrincipals(Output.of(allowExternalPrincipals));
         }
 
+        /**
+         * @param name The name of the resource share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource share. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource share. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

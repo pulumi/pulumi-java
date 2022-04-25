@@ -25,6 +25,10 @@ public final class OriginRequestPolicyState extends com.pulumi.resources.Resourc
     @Import(name="comment")
     private @Nullable Output<String> comment;
 
+    /**
+     * @return Comment to describe the origin request policy.
+     * 
+     */
     public Optional<Output<String>> comment() {
         return Optional.ofNullable(this.comment);
     }
@@ -36,6 +40,10 @@ public final class OriginRequestPolicyState extends com.pulumi.resources.Resourc
     @Import(name="cookiesConfig")
     private @Nullable Output<OriginRequestPolicyCookiesConfigGetArgs> cookiesConfig;
 
+    /**
+     * @return Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
+     * 
+     */
     public Optional<Output<OriginRequestPolicyCookiesConfigGetArgs>> cookiesConfig() {
         return Optional.ofNullable(this.cookiesConfig);
     }
@@ -47,6 +55,10 @@ public final class OriginRequestPolicyState extends com.pulumi.resources.Resourc
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return The current version of the origin request policy.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -58,6 +70,10 @@ public final class OriginRequestPolicyState extends com.pulumi.resources.Resourc
     @Import(name="headersConfig")
     private @Nullable Output<OriginRequestPolicyHeadersConfigGetArgs> headersConfig;
 
+    /**
+     * @return Object that determines whether any HTTP headers (and if so, which headers) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
+     * 
+     */
     public Optional<Output<OriginRequestPolicyHeadersConfigGetArgs>> headersConfig() {
         return Optional.ofNullable(this.headersConfig);
     }
@@ -69,6 +85,10 @@ public final class OriginRequestPolicyState extends com.pulumi.resources.Resourc
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Unique name to identify the origin request policy.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -80,6 +100,10 @@ public final class OriginRequestPolicyState extends com.pulumi.resources.Resourc
     @Import(name="queryStringsConfig")
     private @Nullable Output<OriginRequestPolicyQueryStringsConfigGetArgs> queryStringsConfig;
 
+    /**
+     * @return Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query String Config for more information.
+     * 
+     */
     public Optional<Output<OriginRequestPolicyQueryStringsConfigGetArgs>> queryStringsConfig() {
         return Optional.ofNullable(this.queryStringsConfig);
     }
@@ -113,56 +137,128 @@ public final class OriginRequestPolicyState extends com.pulumi.resources.Resourc
             $ = new OriginRequestPolicyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param comment Comment to describe the origin request policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder comment(@Nullable Output<String> comment) {
             $.comment = comment;
             return this;
         }
 
+        /**
+         * @param comment Comment to describe the origin request policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder comment(String comment) {
             return comment(Output.of(comment));
         }
 
+        /**
+         * @param cookiesConfig Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cookiesConfig(@Nullable Output<OriginRequestPolicyCookiesConfigGetArgs> cookiesConfig) {
             $.cookiesConfig = cookiesConfig;
             return this;
         }
 
+        /**
+         * @param cookiesConfig Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cookiesConfig(OriginRequestPolicyCookiesConfigGetArgs cookiesConfig) {
             return cookiesConfig(Output.of(cookiesConfig));
         }
 
+        /**
+         * @param etag The current version of the origin request policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag The current version of the origin request policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param headersConfig Object that determines whether any HTTP headers (and if so, which headers) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headersConfig(@Nullable Output<OriginRequestPolicyHeadersConfigGetArgs> headersConfig) {
             $.headersConfig = headersConfig;
             return this;
         }
 
+        /**
+         * @param headersConfig Object that determines whether any HTTP headers (and if so, which headers) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headersConfig(OriginRequestPolicyHeadersConfigGetArgs headersConfig) {
             return headersConfig(Output.of(headersConfig));
         }
 
+        /**
+         * @param name Unique name to identify the origin request policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Unique name to identify the origin request policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param queryStringsConfig Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query String Config for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStringsConfig(@Nullable Output<OriginRequestPolicyQueryStringsConfigGetArgs> queryStringsConfig) {
             $.queryStringsConfig = queryStringsConfig;
             return this;
         }
 
+        /**
+         * @param queryStringsConfig Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query String Config for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStringsConfig(OriginRequestPolicyQueryStringsConfigGetArgs queryStringsConfig) {
             return queryStringsConfig(Output.of(queryStringsConfig));
         }

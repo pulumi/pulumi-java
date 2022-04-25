@@ -23,6 +23,10 @@ public final class TableLocalSecondaryIndexArgs extends com.pulumi.resources.Res
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the index
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -36,6 +40,12 @@ public final class TableLocalSecondaryIndexArgs extends com.pulumi.resources.Res
     @Import(name="nonKeyAttributes")
     private @Nullable Output<List<String>> nonKeyAttributes;
 
+    /**
+     * @return Only required with `INCLUDE` as a
+     * projection type; a list of attributes to project into the index. These
+     * do not need to be defined as attributes on the table.
+     * 
+     */
     public Optional<Output<List<String>>> nonKeyAttributes() {
         return Optional.ofNullable(this.nonKeyAttributes);
     }
@@ -51,6 +61,14 @@ public final class TableLocalSecondaryIndexArgs extends com.pulumi.resources.Res
     @Import(name="projectionType", required=true)
     private Output<String> projectionType;
 
+    /**
+     * @return One of `ALL`, `INCLUDE` or `KEYS_ONLY`
+     * where `ALL` projects every attribute into the index, `KEYS_ONLY`
+     * projects just the hash and range key into the index, and `INCLUDE`
+     * projects only the keys specified in the _non_key_attributes_
+     * parameter.
+     * 
+     */
     public Output<String> projectionType() {
         return this.projectionType;
     }
@@ -62,6 +80,10 @@ public final class TableLocalSecondaryIndexArgs extends com.pulumi.resources.Res
     @Import(name="rangeKey", required=true)
     private Output<String> rangeKey;
 
+    /**
+     * @return The name of the range key; must be defined
+     * 
+     */
     public Output<String> rangeKey() {
         return this.rangeKey;
     }
@@ -93,42 +115,110 @@ public final class TableLocalSecondaryIndexArgs extends com.pulumi.resources.Res
             $ = new TableLocalSecondaryIndexArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the index
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the index
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param nonKeyAttributes Only required with `INCLUDE` as a
+         * projection type; a list of attributes to project into the index. These
+         * do not need to be defined as attributes on the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonKeyAttributes(@Nullable Output<List<String>> nonKeyAttributes) {
             $.nonKeyAttributes = nonKeyAttributes;
             return this;
         }
 
+        /**
+         * @param nonKeyAttributes Only required with `INCLUDE` as a
+         * projection type; a list of attributes to project into the index. These
+         * do not need to be defined as attributes on the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonKeyAttributes(List<String> nonKeyAttributes) {
             return nonKeyAttributes(Output.of(nonKeyAttributes));
         }
 
+        /**
+         * @param nonKeyAttributes Only required with `INCLUDE` as a
+         * projection type; a list of attributes to project into the index. These
+         * do not need to be defined as attributes on the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonKeyAttributes(String... nonKeyAttributes) {
             return nonKeyAttributes(List.of(nonKeyAttributes));
         }
 
+        /**
+         * @param projectionType One of `ALL`, `INCLUDE` or `KEYS_ONLY`
+         * where `ALL` projects every attribute into the index, `KEYS_ONLY`
+         * projects just the hash and range key into the index, and `INCLUDE`
+         * projects only the keys specified in the _non_key_attributes_
+         * parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectionType(Output<String> projectionType) {
             $.projectionType = projectionType;
             return this;
         }
 
+        /**
+         * @param projectionType One of `ALL`, `INCLUDE` or `KEYS_ONLY`
+         * where `ALL` projects every attribute into the index, `KEYS_ONLY`
+         * projects just the hash and range key into the index, and `INCLUDE`
+         * projects only the keys specified in the _non_key_attributes_
+         * parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectionType(String projectionType) {
             return projectionType(Output.of(projectionType));
         }
 
+        /**
+         * @param rangeKey The name of the range key; must be defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeKey(Output<String> rangeKey) {
             $.rangeKey = rangeKey;
             return this;
         }
 
+        /**
+         * @param rangeKey The name of the range key; must be defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeKey(String rangeKey) {
             return rangeKey(Output.of(rangeKey));
         }

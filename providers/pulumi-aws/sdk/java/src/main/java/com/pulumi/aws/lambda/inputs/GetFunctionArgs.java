@@ -22,6 +22,10 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="functionName", required=true)
     private String functionName;
 
+    /**
+     * @return Name of the lambda function.
+     * 
+     */
     public String functionName() {
         return this.functionName;
     }
@@ -33,6 +37,10 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="qualifier")
     private @Nullable String qualifier;
 
+    /**
+     * @return Alias name or version number of the lambda functionE.g., `$LATEST`, `my-alias`, or `1`
+     * 
+     */
     public Optional<String> qualifier() {
         return Optional.ofNullable(this.qualifier);
     }
@@ -70,11 +78,23 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFunctionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param functionName Name of the lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionName(String functionName) {
             $.functionName = functionName;
             return this;
         }
 
+        /**
+         * @param qualifier Alias name or version number of the lambda functionE.g., `$LATEST`, `my-alias`, or `1`
+         * 
+         * @return builder
+         * 
+         */
         public Builder qualifier(@Nullable String qualifier) {
             $.qualifier = qualifier;
             return this;

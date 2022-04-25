@@ -23,6 +23,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiId", required=true)
     private Output<String> apiId;
 
+    /**
+     * @return The API identifier.
+     * 
+     */
     public Output<String> apiId() {
         return this.apiId;
     }
@@ -34,6 +38,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description for the deployment resource. Must be less than or equal to 1024 characters in length.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -45,6 +53,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="triggers")
     private @Nullable Output<Map<String,String>> triggers;
 
+    /**
+     * @return A map of arbitrary keys and values that, when changed, will trigger a redeployment.
+     * 
+     */
     public Optional<Output<Map<String,String>>> triggers() {
         return Optional.ofNullable(this.triggers);
     }
@@ -75,29 +87,65 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DeploymentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiId The API identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(Output<String> apiId) {
             $.apiId = apiId;
             return this;
         }
 
+        /**
+         * @param apiId The API identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(String apiId) {
             return apiId(Output.of(apiId));
         }
 
+        /**
+         * @param description The description for the deployment resource. Must be less than or equal to 1024 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description for the deployment resource. Must be less than or equal to 1024 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param triggers A map of arbitrary keys and values that, when changed, will trigger a redeployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggers(@Nullable Output<Map<String,String>> triggers) {
             $.triggers = triggers;
             return this;
         }
 
+        /**
+         * @param triggers A map of arbitrary keys and values that, when changed, will trigger a redeployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggers(Map<String,String> triggers) {
             return triggers(Output.of(triggers));
         }

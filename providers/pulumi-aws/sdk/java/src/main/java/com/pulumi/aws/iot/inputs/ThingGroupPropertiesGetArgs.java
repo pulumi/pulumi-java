@@ -23,6 +23,10 @@ public final class ThingGroupPropertiesGetArgs extends com.pulumi.resources.Reso
     @Import(name="attributePayload")
     private @Nullable Output<ThingGroupPropertiesAttributePayloadGetArgs> attributePayload;
 
+    /**
+     * @return The Thing Group attributes. Defined below.
+     * 
+     */
     public Optional<Output<ThingGroupPropertiesAttributePayloadGetArgs>> attributePayload() {
         return Optional.ofNullable(this.attributePayload);
     }
@@ -34,6 +38,10 @@ public final class ThingGroupPropertiesGetArgs extends com.pulumi.resources.Reso
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the Thing Group.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -63,20 +71,44 @@ public final class ThingGroupPropertiesGetArgs extends com.pulumi.resources.Reso
             $ = new ThingGroupPropertiesGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attributePayload The Thing Group attributes. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributePayload(@Nullable Output<ThingGroupPropertiesAttributePayloadGetArgs> attributePayload) {
             $.attributePayload = attributePayload;
             return this;
         }
 
+        /**
+         * @param attributePayload The Thing Group attributes. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributePayload(ThingGroupPropertiesAttributePayloadGetArgs attributePayload) {
             return attributePayload(Output.of(attributePayload));
         }
 
+        /**
+         * @param description A description of the Thing Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the Thing Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }

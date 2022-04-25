@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DataSourceHttpConfigAuthorizationConfigAwsIamConfig {
     /**
-     * The signing Amazon Web Services Region for IAM authorization.
+     * @return The signing Amazon Web Services Region for IAM authorization.
      * 
      */
     private final @Nullable String signingRegion;
     /**
-     * The signing service name for IAM authorization.
+     * @return The signing service name for IAM authorization.
      * 
      */
     private final @Nullable String signingServiceName;
@@ -31,16 +31,16 @@ public final class DataSourceHttpConfigAuthorizationConfigAwsIamConfig {
     }
 
     /**
-     * The signing Amazon Web Services Region for IAM authorization.
+     * @return The signing Amazon Web Services Region for IAM authorization.
      * 
-    */
+     */
     public Optional<String> signingRegion() {
         return Optional.ofNullable(this.signingRegion);
     }
     /**
-     * The signing service name for IAM authorization.
+     * @return The signing service name for IAM authorization.
      * 
-    */
+     */
     public Optional<String> signingServiceName() {
         return Optional.ofNullable(this.signingServiceName);
     }

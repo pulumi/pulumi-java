@@ -25,6 +25,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementGetArgs extends c
     @Import(name="excludedRules")
     private @Nullable Output<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleGetArgs>> excludedRules;
 
+    /**
+     * @return The `rules` whose actions are set to `COUNT` by the web ACL, regardless of the action that is set on the rule. See Excluded Rule below for details.
+     * 
+     */
     public Optional<Output<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleGetArgs>>> excludedRules() {
         return Optional.ofNullable(this.excludedRules);
     }
@@ -36,6 +40,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementGetArgs extends c
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the managed rule group.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -47,6 +55,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementGetArgs extends c
     @Import(name="scopeDownStatement")
     private @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGetArgs> scopeDownStatement;
 
+    /**
+     * @return Narrows the scope of the statement to matching web requests. This can be any nestable statement, and you can nest statements at any level below this scope-down statement. See Statement above for details.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGetArgs>> scopeDownStatement() {
         return Optional.ofNullable(this.scopeDownStatement);
     }
@@ -58,6 +70,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementGetArgs extends c
     @Import(name="vendorName", required=true)
     private Output<String> vendorName;
 
+    /**
+     * @return The name of the managed rule group vendor.
+     * 
+     */
     public Output<String> vendorName() {
         return this.vendorName;
     }
@@ -89,42 +105,96 @@ public final class WebAclRuleStatementManagedRuleGroupStatementGetArgs extends c
             $ = new WebAclRuleStatementManagedRuleGroupStatementGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param excludedRules The `rules` whose actions are set to `COUNT` by the web ACL, regardless of the action that is set on the rule. See Excluded Rule below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedRules(@Nullable Output<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleGetArgs>> excludedRules) {
             $.excludedRules = excludedRules;
             return this;
         }
 
+        /**
+         * @param excludedRules The `rules` whose actions are set to `COUNT` by the web ACL, regardless of the action that is set on the rule. See Excluded Rule below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedRules(List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleGetArgs> excludedRules) {
             return excludedRules(Output.of(excludedRules));
         }
 
+        /**
+         * @param excludedRules The `rules` whose actions are set to `COUNT` by the web ACL, regardless of the action that is set on the rule. See Excluded Rule below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedRules(WebAclRuleStatementManagedRuleGroupStatementExcludedRuleGetArgs... excludedRules) {
             return excludedRules(List.of(excludedRules));
         }
 
+        /**
+         * @param name The name of the managed rule group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the managed rule group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param scopeDownStatement Narrows the scope of the statement to matching web requests. This can be any nestable statement, and you can nest statements at any level below this scope-down statement. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeDownStatement(@Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGetArgs> scopeDownStatement) {
             $.scopeDownStatement = scopeDownStatement;
             return this;
         }
 
+        /**
+         * @param scopeDownStatement Narrows the scope of the statement to matching web requests. This can be any nestable statement, and you can nest statements at any level below this scope-down statement. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeDownStatement(WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGetArgs scopeDownStatement) {
             return scopeDownStatement(Output.of(scopeDownStatement));
         }
 
+        /**
+         * @param vendorName The name of the managed rule group vendor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vendorName(Output<String> vendorName) {
             $.vendorName = vendorName;
             return this;
         }
 
+        /**
+         * @param vendorName The name of the managed rule group vendor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vendorName(String vendorName) {
             return vendorName(Output.of(vendorName));
         }

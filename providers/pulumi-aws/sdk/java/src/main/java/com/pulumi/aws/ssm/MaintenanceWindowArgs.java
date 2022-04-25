@@ -25,6 +25,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="allowUnassociatedTargets")
     private @Nullable Output<Boolean> allowUnassociatedTargets;
 
+    /**
+     * @return Whether targets must be registered with the Maintenance Window before tasks can be defined for those targets.
+     * 
+     */
     public Optional<Output<Boolean>> allowUnassociatedTargets() {
         return Optional.ofNullable(this.allowUnassociatedTargets);
     }
@@ -36,6 +40,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="cutoff", required=true)
     private Output<Integer> cutoff;
 
+    /**
+     * @return The number of hours before the end of the Maintenance Window that Systems Manager stops scheduling new tasks for execution.
+     * 
+     */
     public Output<Integer> cutoff() {
         return this.cutoff;
     }
@@ -47,6 +55,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description for the maintenance window.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -58,6 +70,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="duration", required=true)
     private Output<Integer> duration;
 
+    /**
+     * @return The duration of the Maintenance Window in hours.
+     * 
+     */
     public Output<Integer> duration() {
         return this.duration;
     }
@@ -69,6 +85,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Whether the maintenance window is enabled. Default: `true`.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -80,6 +100,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="endDate")
     private @Nullable Output<String> endDate;
 
+    /**
+     * @return Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-time-format.html) when to no longer run the maintenance window.
+     * 
+     */
     public Optional<Output<String>> endDate() {
         return Optional.ofNullable(this.endDate);
     }
@@ -91,6 +115,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the maintenance window.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -102,6 +130,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="schedule", required=true)
     private Output<String> schedule;
 
+    /**
+     * @return The schedule of the Maintenance Window in the form of a [cron](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-cron.html) or rate expression.
+     * 
+     */
     public Output<String> schedule() {
         return this.schedule;
     }
@@ -113,6 +145,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="scheduleOffset")
     private @Nullable Output<Integer> scheduleOffset;
 
+    /**
+     * @return The number of days to wait after the date and time specified by a CRON expression before running the maintenance window.
+     * 
+     */
     public Optional<Output<Integer>> scheduleOffset() {
         return Optional.ofNullable(this.scheduleOffset);
     }
@@ -124,6 +160,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="scheduleTimezone")
     private @Nullable Output<String> scheduleTimezone;
 
+    /**
+     * @return Timezone for schedule in [Internet Assigned Numbers Authority (IANA) Time Zone Database format](https://www.iana.org/time-zones). For example: `America/Los_Angeles`, `etc/UTC`, or `Asia/Seoul`.
+     * 
+     */
     public Optional<Output<String>> scheduleTimezone() {
         return Optional.ofNullable(this.scheduleTimezone);
     }
@@ -135,6 +175,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="startDate")
     private @Nullable Output<String> startDate;
 
+    /**
+     * @return Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-time-format.html) when to begin the maintenance window.
+     * 
+     */
     public Optional<Output<String>> startDate() {
         return Optional.ofNullable(this.startDate);
     }
@@ -146,6 +190,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -185,110 +233,254 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
             $ = new MaintenanceWindowArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowUnassociatedTargets Whether targets must be registered with the Maintenance Window before tasks can be defined for those targets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowUnassociatedTargets(@Nullable Output<Boolean> allowUnassociatedTargets) {
             $.allowUnassociatedTargets = allowUnassociatedTargets;
             return this;
         }
 
+        /**
+         * @param allowUnassociatedTargets Whether targets must be registered with the Maintenance Window before tasks can be defined for those targets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowUnassociatedTargets(Boolean allowUnassociatedTargets) {
             return allowUnassociatedTargets(Output.of(allowUnassociatedTargets));
         }
 
+        /**
+         * @param cutoff The number of hours before the end of the Maintenance Window that Systems Manager stops scheduling new tasks for execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cutoff(Output<Integer> cutoff) {
             $.cutoff = cutoff;
             return this;
         }
 
+        /**
+         * @param cutoff The number of hours before the end of the Maintenance Window that Systems Manager stops scheduling new tasks for execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cutoff(Integer cutoff) {
             return cutoff(Output.of(cutoff));
         }
 
+        /**
+         * @param description A description for the maintenance window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description for the maintenance window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param duration The duration of the Maintenance Window in hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(Output<Integer> duration) {
             $.duration = duration;
             return this;
         }
 
+        /**
+         * @param duration The duration of the Maintenance Window in hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(Integer duration) {
             return duration(Output.of(duration));
         }
 
+        /**
+         * @param enabled Whether the maintenance window is enabled. Default: `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether the maintenance window is enabled. Default: `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param endDate Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-time-format.html) when to no longer run the maintenance window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endDate(@Nullable Output<String> endDate) {
             $.endDate = endDate;
             return this;
         }
 
+        /**
+         * @param endDate Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-time-format.html) when to no longer run the maintenance window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endDate(String endDate) {
             return endDate(Output.of(endDate));
         }
 
+        /**
+         * @param name The name of the maintenance window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the maintenance window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param schedule The schedule of the Maintenance Window in the form of a [cron](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-cron.html) or rate expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(Output<String> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule The schedule of the Maintenance Window in the form of a [cron](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-cron.html) or rate expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(String schedule) {
             return schedule(Output.of(schedule));
         }
 
+        /**
+         * @param scheduleOffset The number of days to wait after the date and time specified by a CRON expression before running the maintenance window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleOffset(@Nullable Output<Integer> scheduleOffset) {
             $.scheduleOffset = scheduleOffset;
             return this;
         }
 
+        /**
+         * @param scheduleOffset The number of days to wait after the date and time specified by a CRON expression before running the maintenance window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleOffset(Integer scheduleOffset) {
             return scheduleOffset(Output.of(scheduleOffset));
         }
 
+        /**
+         * @param scheduleTimezone Timezone for schedule in [Internet Assigned Numbers Authority (IANA) Time Zone Database format](https://www.iana.org/time-zones). For example: `America/Los_Angeles`, `etc/UTC`, or `Asia/Seoul`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleTimezone(@Nullable Output<String> scheduleTimezone) {
             $.scheduleTimezone = scheduleTimezone;
             return this;
         }
 
+        /**
+         * @param scheduleTimezone Timezone for schedule in [Internet Assigned Numbers Authority (IANA) Time Zone Database format](https://www.iana.org/time-zones). For example: `America/Los_Angeles`, `etc/UTC`, or `Asia/Seoul`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleTimezone(String scheduleTimezone) {
             return scheduleTimezone(Output.of(scheduleTimezone));
         }
 
+        /**
+         * @param startDate Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-time-format.html) when to begin the maintenance window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startDate(@Nullable Output<String> startDate) {
             $.startDate = startDate;
             return this;
         }
 
+        /**
+         * @param startDate Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-time-format.html) when to begin the maintenance window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startDate(String startDate) {
             return startDate(Output.of(startDate));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

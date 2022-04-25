@@ -10,27 +10,27 @@ import java.util.Objects;
 @CustomType
 public final class GetEventConnectionResult {
     /**
-     * The ARN (Amazon Resource Name) for the connection.
+     * @return The ARN (Amazon Resource Name) for the connection.
      * 
      */
     private final String arn;
     /**
-     * The type of authorization to use to connect. One of `API_KEY`,`BASIC`,`OAUTH_CLIENT_CREDENTIALS`.
+     * @return The type of authorization to use to connect. One of `API_KEY`,`BASIC`,`OAUTH_CLIENT_CREDENTIALS`.
      * 
      */
     private final String authorizationType;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The name of the connection.
+     * @return The name of the connection.
      * 
      */
     private final String name;
     /**
-     * The ARN (Amazon Resource Name) for the secret created from the authorization parameters specified for the connection.
+     * @return The ARN (Amazon Resource Name) for the secret created from the authorization parameters specified for the connection.
      * 
      */
     private final String secretArn;
@@ -50,37 +50,37 @@ public final class GetEventConnectionResult {
     }
 
     /**
-     * The ARN (Amazon Resource Name) for the connection.
+     * @return The ARN (Amazon Resource Name) for the connection.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The type of authorization to use to connect. One of `API_KEY`,`BASIC`,`OAUTH_CLIENT_CREDENTIALS`.
+     * @return The type of authorization to use to connect. One of `API_KEY`,`BASIC`,`OAUTH_CLIENT_CREDENTIALS`.
      * 
-    */
+     */
     public String authorizationType() {
         return this.authorizationType;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the connection.
+     * @return The name of the connection.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The ARN (Amazon Resource Name) for the secret created from the authorization parameters specified for the connection.
+     * @return The ARN (Amazon Resource Name) for the secret created from the authorization parameters specified for the connection.
      * 
-    */
+     */
     public String secretArn() {
         return this.secretArn;
     }

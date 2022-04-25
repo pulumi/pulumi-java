@@ -22,6 +22,11 @@ public final class IntegrationResponseParameterGetArgs extends com.pulumi.resour
     @Import(name="mappings", required=true)
     private Output<Map<String,String>> mappings;
 
+    /**
+     * @return A key-value map. The key of ths map identifies the location of the request parameter to change, and how to change it. The corresponding value specifies the new data for the parameter.
+     * See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html) for details.
+     * 
+     */
     public Output<Map<String,String>> mappings() {
         return this.mappings;
     }
@@ -33,6 +38,10 @@ public final class IntegrationResponseParameterGetArgs extends com.pulumi.resour
     @Import(name="statusCode", required=true)
     private Output<String> statusCode;
 
+    /**
+     * @return The HTTP status code in the range 200-599.
+     * 
+     */
     public Output<String> statusCode() {
         return this.statusCode;
     }
@@ -62,20 +71,46 @@ public final class IntegrationResponseParameterGetArgs extends com.pulumi.resour
             $ = new IntegrationResponseParameterGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mappings A key-value map. The key of ths map identifies the location of the request parameter to change, and how to change it. The corresponding value specifies the new data for the parameter.
+         * See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html) for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mappings(Output<Map<String,String>> mappings) {
             $.mappings = mappings;
             return this;
         }
 
+        /**
+         * @param mappings A key-value map. The key of ths map identifies the location of the request parameter to change, and how to change it. The corresponding value specifies the new data for the parameter.
+         * See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html) for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mappings(Map<String,String> mappings) {
             return mappings(Output.of(mappings));
         }
 
+        /**
+         * @param statusCode The HTTP status code in the range 200-599.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCode(Output<String> statusCode) {
             $.statusCode = statusCode;
             return this;
         }
 
+        /**
+         * @param statusCode The HTTP status code in the range 200-599.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCode(String statusCode) {
             return statusCode(Output.of(statusCode));
         }

@@ -23,6 +23,10 @@ public final class ResolverRuleTargetIpArgs extends com.pulumi.resources.Resourc
     @Import(name="ip", required=true)
     private Output<String> ip;
 
+    /**
+     * @return One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.
+     * 
+     */
     public Output<String> ip() {
         return this.ip;
     }
@@ -34,6 +38,10 @@ public final class ResolverRuleTargetIpArgs extends com.pulumi.resources.Resourc
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return The port at `ip` that you want to forward DNS queries to. Default value is `53`
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -63,20 +71,44 @@ public final class ResolverRuleTargetIpArgs extends com.pulumi.resources.Resourc
             $ = new ResolverRuleTargetIpArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ip One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(Output<String> ip) {
             $.ip = ip;
             return this;
         }
 
+        /**
+         * @param ip One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(String ip) {
             return ip(Output.of(ip));
         }
 
+        /**
+         * @param port The port at `ip` that you want to forward DNS queries to. Default value is `53`
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The port at `ip` that you want to forward DNS queries to. Default value is `53`
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }

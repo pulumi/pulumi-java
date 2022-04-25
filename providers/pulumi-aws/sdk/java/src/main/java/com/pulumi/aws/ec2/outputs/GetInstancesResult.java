@@ -15,24 +15,24 @@ import javax.annotation.Nullable;
 public final class GetInstancesResult {
     private final @Nullable List<GetInstancesFilter> filters;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * IDs of instances found through the filter
+     * @return IDs of instances found through the filter
      * 
      */
     private final List<String> ids;
     private final @Nullable List<String> instanceStateNames;
     private final Map<String,String> instanceTags;
     /**
-     * Private IP addresses of instances found through the filter
+     * @return Private IP addresses of instances found through the filter
      * 
      */
     private final List<String> privateIps;
     /**
-     * Public IP addresses of instances found through the filter
+     * @return Public IP addresses of instances found through the filter
      * 
      */
     private final List<String> publicIps;
@@ -59,16 +59,16 @@ public final class GetInstancesResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * IDs of instances found through the filter
+     * @return IDs of instances found through the filter
      * 
-    */
+     */
     public List<String> ids() {
         return this.ids;
     }
@@ -79,16 +79,16 @@ public final class GetInstancesResult {
         return this.instanceTags;
     }
     /**
-     * Private IP addresses of instances found through the filter
+     * @return Private IP addresses of instances found through the filter
      * 
-    */
+     */
     public List<String> privateIps() {
         return this.privateIps;
     }
     /**
-     * Public IP addresses of instances found through the filter
+     * @return Public IP addresses of instances found through the filter
      * 
-    */
+     */
     public List<String> publicIps() {
         return this.publicIps;
     }

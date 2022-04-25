@@ -23,6 +23,10 @@ public final class ConditionalForwaderState extends com.pulumi.resources.Resourc
     @Import(name="directoryId")
     private @Nullable Output<String> directoryId;
 
+    /**
+     * @return The id of directory.
+     * 
+     */
     public Optional<Output<String>> directoryId() {
         return Optional.ofNullable(this.directoryId);
     }
@@ -34,6 +38,10 @@ public final class ConditionalForwaderState extends com.pulumi.resources.Resourc
     @Import(name="dnsIps")
     private @Nullable Output<List<String>> dnsIps;
 
+    /**
+     * @return A list of forwarder IP addresses.
+     * 
+     */
     public Optional<Output<List<String>>> dnsIps() {
         return Optional.ofNullable(this.dnsIps);
     }
@@ -45,6 +53,10 @@ public final class ConditionalForwaderState extends com.pulumi.resources.Resourc
     @Import(name="remoteDomainName")
     private @Nullable Output<String> remoteDomainName;
 
+    /**
+     * @return The fully qualified domain name of the remote domain for which forwarders will be used.
+     * 
+     */
     public Optional<Output<String>> remoteDomainName() {
         return Optional.ofNullable(this.remoteDomainName);
     }
@@ -75,33 +87,75 @@ public final class ConditionalForwaderState extends com.pulumi.resources.Resourc
             $ = new ConditionalForwaderState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param directoryId The id of directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoryId(@Nullable Output<String> directoryId) {
             $.directoryId = directoryId;
             return this;
         }
 
+        /**
+         * @param directoryId The id of directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoryId(String directoryId) {
             return directoryId(Output.of(directoryId));
         }
 
+        /**
+         * @param dnsIps A list of forwarder IP addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsIps(@Nullable Output<List<String>> dnsIps) {
             $.dnsIps = dnsIps;
             return this;
         }
 
+        /**
+         * @param dnsIps A list of forwarder IP addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsIps(List<String> dnsIps) {
             return dnsIps(Output.of(dnsIps));
         }
 
+        /**
+         * @param dnsIps A list of forwarder IP addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsIps(String... dnsIps) {
             return dnsIps(List.of(dnsIps));
         }
 
+        /**
+         * @param remoteDomainName The fully qualified domain name of the remote domain for which forwarders will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteDomainName(@Nullable Output<String> remoteDomainName) {
             $.remoteDomainName = remoteDomainName;
             return this;
         }
 
+        /**
+         * @param remoteDomainName The fully qualified domain name of the remote domain for which forwarders will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteDomainName(String remoteDomainName) {
             return remoteDomainName(Output.of(remoteDomainName));
         }

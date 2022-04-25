@@ -11,33 +11,33 @@ import java.util.Objects;
 @CustomType
 public final class GetApplicationResult {
     /**
-     * The ARN of the application.
+     * @return The ARN of the application.
      * 
      */
     private final String applicationId;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The name of the application.
+     * @return The name of the application.
      * 
      */
     private final String name;
     /**
-     * A list of capabilities describing the permissions needed to deploy the application.
+     * @return A list of capabilities describing the permissions needed to deploy the application.
      * 
      */
     private final List<String> requiredCapabilities;
     private final String semanticVersion;
     /**
-     * A URL pointing to the source code of the application version.
+     * @return A URL pointing to the source code of the application version.
      * 
      */
     private final String sourceCodeUrl;
     /**
-     * A URL pointing to the Cloud Formation template for the application version.
+     * @return A URL pointing to the Cloud Formation template for the application version.
      * 
      */
     private final String templateUrl;
@@ -61,30 +61,30 @@ public final class GetApplicationResult {
     }
 
     /**
-     * The ARN of the application.
+     * @return The ARN of the application.
      * 
-    */
+     */
     public String applicationId() {
         return this.applicationId;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the application.
+     * @return The name of the application.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A list of capabilities describing the permissions needed to deploy the application.
+     * @return A list of capabilities describing the permissions needed to deploy the application.
      * 
-    */
+     */
     public List<String> requiredCapabilities() {
         return this.requiredCapabilities;
     }
@@ -92,16 +92,16 @@ public final class GetApplicationResult {
         return this.semanticVersion;
     }
     /**
-     * A URL pointing to the source code of the application version.
+     * @return A URL pointing to the source code of the application version.
      * 
-    */
+     */
     public String sourceCodeUrl() {
         return this.sourceCodeUrl;
     }
     /**
-     * A URL pointing to the Cloud Formation template for the application version.
+     * @return A URL pointing to the Cloud Formation template for the application version.
      * 
-    */
+     */
     public String templateUrl() {
         return this.templateUrl;
     }

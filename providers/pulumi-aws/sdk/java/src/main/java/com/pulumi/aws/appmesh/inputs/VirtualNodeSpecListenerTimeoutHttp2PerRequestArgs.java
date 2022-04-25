@@ -21,6 +21,10 @@ public final class VirtualNodeSpecListenerTimeoutHttp2PerRequestArgs extends com
     @Import(name="unit", required=true)
     private Output<String> unit;
 
+    /**
+     * @return The unit of time. Valid values: `ms`, `s`.
+     * 
+     */
     public Output<String> unit() {
         return this.unit;
     }
@@ -32,6 +36,10 @@ public final class VirtualNodeSpecListenerTimeoutHttp2PerRequestArgs extends com
     @Import(name="value", required=true)
     private Output<Integer> value;
 
+    /**
+     * @return The number of time units. Minimum value of `0`.
+     * 
+     */
     public Output<Integer> value() {
         return this.value;
     }
@@ -61,20 +69,44 @@ public final class VirtualNodeSpecListenerTimeoutHttp2PerRequestArgs extends com
             $ = new VirtualNodeSpecListenerTimeoutHttp2PerRequestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param unit The unit of time. Valid values: `ms`, `s`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unit(Output<String> unit) {
             $.unit = unit;
             return this;
         }
 
+        /**
+         * @param unit The unit of time. Valid values: `ms`, `s`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unit(String unit) {
             return unit(Output.of(unit));
         }
 
+        /**
+         * @param value The number of time units. Minimum value of `0`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<Integer> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The number of time units. Minimum value of `0`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Integer value) {
             return value(Output.of(value));
         }

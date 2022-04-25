@@ -21,6 +21,10 @@ public final class WebAclRuleStatementNotStatementStatementAndStatementStatement
     @Import(name="statements", required=true)
     private Output<List<WebAclRuleStatementNotStatementStatementAndStatementStatementNotStatementStatementGetArgs>> statements;
 
+    /**
+     * @return The statement to negate. You can use any statement that can be nested. See Statement above for details.
+     * 
+     */
     public Output<List<WebAclRuleStatementNotStatementStatementAndStatementStatementNotStatementStatementGetArgs>> statements() {
         return this.statements;
     }
@@ -49,15 +53,33 @@ public final class WebAclRuleStatementNotStatementStatementAndStatementStatement
             $ = new WebAclRuleStatementNotStatementStatementAndStatementStatementNotStatementGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param statements The statement to negate. You can use any statement that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(Output<List<WebAclRuleStatementNotStatementStatementAndStatementStatementNotStatementStatementGetArgs>> statements) {
             $.statements = statements;
             return this;
         }
 
+        /**
+         * @param statements The statement to negate. You can use any statement that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(List<WebAclRuleStatementNotStatementStatementAndStatementStatementNotStatementStatementGetArgs> statements) {
             return statements(Output.of(statements));
         }
 
+        /**
+         * @param statements The statement to negate. You can use any statement that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(WebAclRuleStatementNotStatementStatementAndStatementStatementNotStatementStatementGetArgs... statements) {
             return statements(List.of(statements));
         }

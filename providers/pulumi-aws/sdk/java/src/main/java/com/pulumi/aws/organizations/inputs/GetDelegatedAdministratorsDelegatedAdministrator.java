@@ -19,6 +19,10 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends com.
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the delegated administrator&#39;s account.
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -30,6 +34,10 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends com.
     @Import(name="delegationEnabledDate", required=true)
     private String delegationEnabledDate;
 
+    /**
+     * @return The date when the account was made a delegated administrator.
+     * 
+     */
     public String delegationEnabledDate() {
         return this.delegationEnabledDate;
     }
@@ -41,6 +49,10 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends com.
     @Import(name="email", required=true)
     private String email;
 
+    /**
+     * @return The email address that is associated with the delegated administrator&#39;s AWS account.
+     * 
+     */
     public String email() {
         return this.email;
     }
@@ -52,6 +64,10 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends com.
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The unique identifier (ID) of the delegated administrator&#39;s account.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -63,6 +79,10 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends com.
     @Import(name="joinedMethod", required=true)
     private String joinedMethod;
 
+    /**
+     * @return The method by which the delegated administrator&#39;s account joined the organization.
+     * 
+     */
     public String joinedMethod() {
         return this.joinedMethod;
     }
@@ -74,6 +94,10 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends com.
     @Import(name="joinedTimestamp", required=true)
     private String joinedTimestamp;
 
+    /**
+     * @return The date when the delegated administrator&#39;s account became a part of the organization.
+     * 
+     */
     public String joinedTimestamp() {
         return this.joinedTimestamp;
     }
@@ -85,6 +109,10 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends com.
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The friendly name of the delegated administrator&#39;s account.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -96,6 +124,10 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends com.
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The status of the delegated administrator&#39;s account in the organization.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -131,41 +163,89 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends com.
             $ = new GetDelegatedAdministratorsDelegatedAdministrator(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the delegated administrator&#39;s account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param delegationEnabledDate The date when the account was made a delegated administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delegationEnabledDate(String delegationEnabledDate) {
             $.delegationEnabledDate = delegationEnabledDate;
             return this;
         }
 
+        /**
+         * @param email The email address that is associated with the delegated administrator&#39;s AWS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param id The unique identifier (ID) of the delegated administrator&#39;s account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param joinedMethod The method by which the delegated administrator&#39;s account joined the organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder joinedMethod(String joinedMethod) {
             $.joinedMethod = joinedMethod;
             return this;
         }
 
+        /**
+         * @param joinedTimestamp The date when the delegated administrator&#39;s account became a part of the organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder joinedTimestamp(String joinedTimestamp) {
             $.joinedTimestamp = joinedTimestamp;
             return this;
         }
 
+        /**
+         * @param name The friendly name of the delegated administrator&#39;s account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param status The status of the delegated administrator&#39;s account in the organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

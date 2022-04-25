@@ -23,6 +23,10 @@ public final class EndpointDeploymentConfigAutoRollbackConfigurationGetArgs exte
     @Import(name="alarms")
     private @Nullable Output<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmGetArgs>> alarms;
 
+    /**
+     * @return List of CloudWatch alarms in your account that are configured to monitor metrics on an endpoint. If any alarms are tripped during a deployment, SageMaker rolls back the deployment. See Alarms.
+     * 
+     */
     public Optional<Output<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmGetArgs>>> alarms() {
         return Optional.ofNullable(this.alarms);
     }
@@ -51,15 +55,33 @@ public final class EndpointDeploymentConfigAutoRollbackConfigurationGetArgs exte
             $ = new EndpointDeploymentConfigAutoRollbackConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alarms List of CloudWatch alarms in your account that are configured to monitor metrics on an endpoint. If any alarms are tripped during a deployment, SageMaker rolls back the deployment. See Alarms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarms(@Nullable Output<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmGetArgs>> alarms) {
             $.alarms = alarms;
             return this;
         }
 
+        /**
+         * @param alarms List of CloudWatch alarms in your account that are configured to monitor metrics on an endpoint. If any alarms are tripped during a deployment, SageMaker rolls back the deployment. See Alarms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarms(List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmGetArgs> alarms) {
             return alarms(Output.of(alarms));
         }
 
+        /**
+         * @param alarms List of CloudWatch alarms in your account that are configured to monitor metrics on an endpoint. If any alarms are tripped during a deployment, SageMaker rolls back the deployment. See Alarms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarms(EndpointDeploymentConfigAutoRollbackConfigurationAlarmGetArgs... alarms) {
             return alarms(List.of(alarms));
         }

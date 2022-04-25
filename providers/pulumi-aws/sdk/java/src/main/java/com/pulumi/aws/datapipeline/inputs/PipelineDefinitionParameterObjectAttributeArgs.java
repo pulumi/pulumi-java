@@ -20,6 +20,10 @@ public final class PipelineDefinitionParameterObjectAttributeArgs extends com.pu
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return Field identifier.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -31,6 +35,10 @@ public final class PipelineDefinitionParameterObjectAttributeArgs extends com.pu
     @Import(name="stringValue", required=true)
     private Output<String> stringValue;
 
+    /**
+     * @return Field value, expressed as a String.
+     * 
+     */
     public Output<String> stringValue() {
         return this.stringValue;
     }
@@ -60,20 +68,44 @@ public final class PipelineDefinitionParameterObjectAttributeArgs extends com.pu
             $ = new PipelineDefinitionParameterObjectAttributeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key Field identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key Field identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param stringValue Field value, expressed as a String.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stringValue(Output<String> stringValue) {
             $.stringValue = stringValue;
             return this;
         }
 
+        /**
+         * @param stringValue Field value, expressed as a String.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stringValue(String stringValue) {
             return stringValue(Output.of(stringValue));
         }

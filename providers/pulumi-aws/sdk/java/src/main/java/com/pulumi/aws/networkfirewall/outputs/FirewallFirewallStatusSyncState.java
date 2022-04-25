@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FirewallFirewallStatusSyncState {
     /**
-     * Nested list describing the attachment status of the firewall&#39;s association with a single VPC subnet.
+     * @return Nested list describing the attachment status of the firewall&#39;s association with a single VPC subnet.
      * 
      */
     private final @Nullable List<FirewallFirewallStatusSyncStateAttachment> attachments;
     /**
-     * The Availability Zone where the subnet is configured.
+     * @return The Availability Zone where the subnet is configured.
      * 
      */
     private final @Nullable String availabilityZone;
@@ -33,16 +33,16 @@ public final class FirewallFirewallStatusSyncState {
     }
 
     /**
-     * Nested list describing the attachment status of the firewall&#39;s association with a single VPC subnet.
+     * @return Nested list describing the attachment status of the firewall&#39;s association with a single VPC subnet.
      * 
-    */
+     */
     public List<FirewallFirewallStatusSyncStateAttachment> attachments() {
         return this.attachments == null ? List.of() : this.attachments;
     }
     /**
-     * The Availability Zone where the subnet is configured.
+     * @return The Availability Zone where the subnet is configured.
      * 
-    */
+     */
     public Optional<String> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }

@@ -20,6 +20,10 @@ public final class LaunchTemplateElasticInferenceAcceleratorGetArgs extends com.
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Accelerator type.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -48,11 +52,23 @@ public final class LaunchTemplateElasticInferenceAcceleratorGetArgs extends com.
             $ = new LaunchTemplateElasticInferenceAcceleratorGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Accelerator type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Accelerator type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

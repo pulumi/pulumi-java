@@ -31,6 +31,10 @@ public final class ThingGroupMetadataArgs extends com.pulumi.resources.ResourceA
     @Import(name="parentGroupName")
     private @Nullable Output<String> parentGroupName;
 
+    /**
+     * @return The name of the parent Thing Group.
+     * 
+     */
     public Optional<Output<String>> parentGroupName() {
         return Optional.ofNullable(this.parentGroupName);
     }
@@ -77,11 +81,23 @@ public final class ThingGroupMetadataArgs extends com.pulumi.resources.ResourceA
             return creationDate(Output.of(creationDate));
         }
 
+        /**
+         * @param parentGroupName The name of the parent Thing Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentGroupName(@Nullable Output<String> parentGroupName) {
             $.parentGroupName = parentGroupName;
             return this;
         }
 
+        /**
+         * @param parentGroupName The name of the parent Thing Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentGroupName(String parentGroupName) {
             return parentGroupName(Output.of(parentGroupName));
         }

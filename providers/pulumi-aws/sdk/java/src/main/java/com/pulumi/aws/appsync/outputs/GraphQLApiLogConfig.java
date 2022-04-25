@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GraphQLApiLogConfig {
     /**
-     * Amazon Resource Name of the service role that AWS AppSync will assume to publish to Amazon CloudWatch logs in your account.
+     * @return Amazon Resource Name of the service role that AWS AppSync will assume to publish to Amazon CloudWatch logs in your account.
      * 
      */
     private final String cloudwatchLogsRoleArn;
     /**
-     * Set to TRUE to exclude sections that contain information such as headers, context, and evaluated mapping templates, regardless of logging  level. Valid values: `true`, `false`. Default value: `false`
+     * @return Set to TRUE to exclude sections that contain information such as headers, context, and evaluated mapping templates, regardless of logging  level. Valid values: `true`, `false`. Default value: `false`
      * 
      */
     private final @Nullable Boolean excludeVerboseContent;
     /**
-     * Field logging level. Valid values: `ALL`, `ERROR`, `NONE`.
+     * @return Field logging level. Valid values: `ALL`, `ERROR`, `NONE`.
      * 
      */
     private final String fieldLogLevel;
@@ -39,23 +39,23 @@ public final class GraphQLApiLogConfig {
     }
 
     /**
-     * Amazon Resource Name of the service role that AWS AppSync will assume to publish to Amazon CloudWatch logs in your account.
+     * @return Amazon Resource Name of the service role that AWS AppSync will assume to publish to Amazon CloudWatch logs in your account.
      * 
-    */
+     */
     public String cloudwatchLogsRoleArn() {
         return this.cloudwatchLogsRoleArn;
     }
     /**
-     * Set to TRUE to exclude sections that contain information such as headers, context, and evaluated mapping templates, regardless of logging  level. Valid values: `true`, `false`. Default value: `false`
+     * @return Set to TRUE to exclude sections that contain information such as headers, context, and evaluated mapping templates, regardless of logging  level. Valid values: `true`, `false`. Default value: `false`
      * 
-    */
+     */
     public Optional<Boolean> excludeVerboseContent() {
         return Optional.ofNullable(this.excludeVerboseContent);
     }
     /**
-     * Field logging level. Valid values: `ALL`, `ERROR`, `NONE`.
+     * @return Field logging level. Valid values: `ALL`, `ERROR`, `NONE`.
      * 
-    */
+     */
     public String fieldLogLevel() {
         return this.fieldLogLevel;
     }

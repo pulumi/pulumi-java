@@ -14,32 +14,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetPermissionsTableWithColumns {
     /**
-     * Identifier for the Data Catalog. By default, it is the account ID of the caller.
+     * @return Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
      */
     private final String catalogId;
     /**
-     * Set of column names for the table. At least one of `column_names` or `excluded_column_names` is required.
+     * @return Set of column names for the table. At least one of `column_names` or `excluded_column_names` is required.
      * 
      */
     private final @Nullable List<String> columnNames;
     /**
-     * Name of the database for the table with columns resource. Unique to the Data Catalog.
+     * @return Name of the database for the table with columns resource. Unique to the Data Catalog.
      * 
      */
     private final String databaseName;
     /**
-     * Set of column names for the table to exclude. At least one of `column_names` or `excluded_column_names` is required.
+     * @return Set of column names for the table to exclude. At least one of `column_names` or `excluded_column_names` is required.
      * 
      */
     private final @Nullable List<String> excludedColumnNames;
     /**
-     * Name of the table resource.
+     * @return Name of the table resource.
      * 
      */
     private final String name;
     /**
-     * Whether to use a wildcard representing every table under a database. At least one of `name` or `wildcard` is required. Defaults to `false`.
+     * @return Whether to use a wildcard representing every table under a database. At least one of `name` or `wildcard` is required. Defaults to `false`.
      * 
      */
     private final @Nullable Boolean wildcard;
@@ -61,44 +61,44 @@ public final class GetPermissionsTableWithColumns {
     }
 
     /**
-     * Identifier for the Data Catalog. By default, it is the account ID of the caller.
+     * @return Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
-    */
+     */
     public String catalogId() {
         return this.catalogId;
     }
     /**
-     * Set of column names for the table. At least one of `column_names` or `excluded_column_names` is required.
+     * @return Set of column names for the table. At least one of `column_names` or `excluded_column_names` is required.
      * 
-    */
+     */
     public List<String> columnNames() {
         return this.columnNames == null ? List.of() : this.columnNames;
     }
     /**
-     * Name of the database for the table with columns resource. Unique to the Data Catalog.
+     * @return Name of the database for the table with columns resource. Unique to the Data Catalog.
      * 
-    */
+     */
     public String databaseName() {
         return this.databaseName;
     }
     /**
-     * Set of column names for the table to exclude. At least one of `column_names` or `excluded_column_names` is required.
+     * @return Set of column names for the table to exclude. At least one of `column_names` or `excluded_column_names` is required.
      * 
-    */
+     */
     public List<String> excludedColumnNames() {
         return this.excludedColumnNames == null ? List.of() : this.excludedColumnNames;
     }
     /**
-     * Name of the table resource.
+     * @return Name of the table resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Whether to use a wildcard representing every table under a database. At least one of `name` or `wildcard` is required. Defaults to `false`.
+     * @return Whether to use a wildcard representing every table under a database. At least one of `name` or `wildcard` is required. Defaults to `false`.
      * 
-    */
+     */
     public Optional<Boolean> wildcard() {
         return Optional.ofNullable(this.wildcard);
     }

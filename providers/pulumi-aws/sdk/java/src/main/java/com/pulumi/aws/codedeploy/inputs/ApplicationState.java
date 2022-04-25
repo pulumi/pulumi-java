@@ -24,6 +24,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationId")
     private @Nullable Output<String> applicationId;
 
+    /**
+     * @return The application ID.
+     * 
+     */
     public Optional<Output<String>> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
@@ -35,6 +39,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the CodeDeploy application.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -46,6 +54,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="computePlatform")
     private @Nullable Output<String> computePlatform;
 
+    /**
+     * @return The compute platform can either be `ECS`, `Lambda`, or `Server`. Default is `Server`.
+     * 
+     */
     public Optional<Output<String>> computePlatform() {
         return Optional.ofNullable(this.computePlatform);
     }
@@ -57,6 +69,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="githubAccountName")
     private @Nullable Output<String> githubAccountName;
 
+    /**
+     * @return The name for a connection to a GitHub account.
+     * 
+     */
     public Optional<Output<String>> githubAccountName() {
         return Optional.ofNullable(this.githubAccountName);
     }
@@ -68,6 +84,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="linkedToGithub")
     private @Nullable Output<Boolean> linkedToGithub;
 
+    /**
+     * @return Whether the user has authenticated with GitHub for the specified application.
+     * 
+     */
     public Optional<Output<Boolean>> linkedToGithub() {
         return Optional.ofNullable(this.linkedToGithub);
     }
@@ -79,6 +99,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the application.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -90,6 +114,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -101,6 +129,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -136,74 +168,170 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
             $ = new ApplicationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationId The application ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(@Nullable Output<String> applicationId) {
             $.applicationId = applicationId;
             return this;
         }
 
+        /**
+         * @param applicationId The application ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(String applicationId) {
             return applicationId(Output.of(applicationId));
         }
 
+        /**
+         * @param arn The ARN of the CodeDeploy application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the CodeDeploy application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param computePlatform The compute platform can either be `ECS`, `Lambda`, or `Server`. Default is `Server`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computePlatform(@Nullable Output<String> computePlatform) {
             $.computePlatform = computePlatform;
             return this;
         }
 
+        /**
+         * @param computePlatform The compute platform can either be `ECS`, `Lambda`, or `Server`. Default is `Server`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computePlatform(String computePlatform) {
             return computePlatform(Output.of(computePlatform));
         }
 
+        /**
+         * @param githubAccountName The name for a connection to a GitHub account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder githubAccountName(@Nullable Output<String> githubAccountName) {
             $.githubAccountName = githubAccountName;
             return this;
         }
 
+        /**
+         * @param githubAccountName The name for a connection to a GitHub account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder githubAccountName(String githubAccountName) {
             return githubAccountName(Output.of(githubAccountName));
         }
 
+        /**
+         * @param linkedToGithub Whether the user has authenticated with GitHub for the specified application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedToGithub(@Nullable Output<Boolean> linkedToGithub) {
             $.linkedToGithub = linkedToGithub;
             return this;
         }
 
+        /**
+         * @param linkedToGithub Whether the user has authenticated with GitHub for the specified application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedToGithub(Boolean linkedToGithub) {
             return linkedToGithub(Output.of(linkedToGithub));
         }
 
+        /**
+         * @param name The name of the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

@@ -23,6 +23,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authenticationType", required=true)
     private Output<String> authenticationType;
 
+    /**
+     * @return Authentication type for the user. You must specify USERPOOL. Valid values: `API`, `SAML`, `USERPOOL`
+     * 
+     */
     public Output<String> authenticationType() {
         return this.authenticationType;
     }
@@ -34,6 +38,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Specifies whether the user in the user pool is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -45,6 +53,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="firstName")
     private @Nullable Output<String> firstName;
 
+    /**
+     * @return First name, or given name, of the user.
+     * 
+     */
     public Optional<Output<String>> firstName() {
         return Optional.ofNullable(this.firstName);
     }
@@ -56,6 +68,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastName")
     private @Nullable Output<String> lastName;
 
+    /**
+     * @return Last name, or surname, of the user.
+     * 
+     */
     public Optional<Output<String>> lastName() {
         return Optional.ofNullable(this.lastName);
     }
@@ -67,6 +83,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sendEmailNotification")
     private @Nullable Output<Boolean> sendEmailNotification;
 
+    /**
+     * @return Send an email notification.
+     * 
+     */
     public Optional<Output<Boolean>> sendEmailNotification() {
         return Optional.ofNullable(this.sendEmailNotification);
     }
@@ -78,6 +98,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userName", required=true)
     private Output<String> userName;
 
+    /**
+     * @return Email address of the user.
+     * 
+     */
     public Output<String> userName() {
         return this.userName;
     }
@@ -111,56 +135,128 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
             $ = new UserArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationType Authentication type for the user. You must specify USERPOOL. Valid values: `API`, `SAML`, `USERPOOL`
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(Output<String> authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param authenticationType Authentication type for the user. You must specify USERPOOL. Valid values: `API`, `SAML`, `USERPOOL`
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(String authenticationType) {
             return authenticationType(Output.of(authenticationType));
         }
 
+        /**
+         * @param enabled Specifies whether the user in the user pool is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Specifies whether the user in the user pool is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param firstName First name, or given name, of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstName(@Nullable Output<String> firstName) {
             $.firstName = firstName;
             return this;
         }
 
+        /**
+         * @param firstName First name, or given name, of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstName(String firstName) {
             return firstName(Output.of(firstName));
         }
 
+        /**
+         * @param lastName Last name, or surname, of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastName(@Nullable Output<String> lastName) {
             $.lastName = lastName;
             return this;
         }
 
+        /**
+         * @param lastName Last name, or surname, of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastName(String lastName) {
             return lastName(Output.of(lastName));
         }
 
+        /**
+         * @param sendEmailNotification Send an email notification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendEmailNotification(@Nullable Output<Boolean> sendEmailNotification) {
             $.sendEmailNotification = sendEmailNotification;
             return this;
         }
 
+        /**
+         * @param sendEmailNotification Send an email notification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendEmailNotification(Boolean sendEmailNotification) {
             return sendEmailNotification(Output.of(sendEmailNotification));
         }
 
+        /**
+         * @param userName Email address of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(Output<String> userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userName Email address of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             return userName(Output.of(userName));
         }

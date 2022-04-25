@@ -24,6 +24,10 @@ public final class ResolverCachingConfigArgs extends com.pulumi.resources.Resour
     @Import(name="cachingKeys")
     private @Nullable Output<List<String>> cachingKeys;
 
+    /**
+     * @return The list of caching key.
+     * 
+     */
     public Optional<Output<List<String>>> cachingKeys() {
         return Optional.ofNullable(this.cachingKeys);
     }
@@ -35,6 +39,10 @@ public final class ResolverCachingConfigArgs extends com.pulumi.resources.Resour
     @Import(name="ttl")
     private @Nullable Output<Integer> ttl;
 
+    /**
+     * @return The TTL in seconds.
+     * 
+     */
     public Optional<Output<Integer>> ttl() {
         return Optional.ofNullable(this.ttl);
     }
@@ -64,24 +72,54 @@ public final class ResolverCachingConfigArgs extends com.pulumi.resources.Resour
             $ = new ResolverCachingConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cachingKeys The list of caching key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cachingKeys(@Nullable Output<List<String>> cachingKeys) {
             $.cachingKeys = cachingKeys;
             return this;
         }
 
+        /**
+         * @param cachingKeys The list of caching key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cachingKeys(List<String> cachingKeys) {
             return cachingKeys(Output.of(cachingKeys));
         }
 
+        /**
+         * @param cachingKeys The list of caching key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cachingKeys(String... cachingKeys) {
             return cachingKeys(List.of(cachingKeys));
         }
 
+        /**
+         * @param ttl The TTL in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(@Nullable Output<Integer> ttl) {
             $.ttl = ttl;
             return this;
         }
 
+        /**
+         * @param ttl The TTL in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(Integer ttl) {
             return ttl(Output.of(ttl));
         }

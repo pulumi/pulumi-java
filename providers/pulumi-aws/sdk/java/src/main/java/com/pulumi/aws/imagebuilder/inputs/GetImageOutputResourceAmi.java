@@ -19,6 +19,10 @@ public final class GetImageOutputResourceAmi extends com.pulumi.resources.Invoke
     @Import(name="accountId", required=true)
     private String accountId;
 
+    /**
+     * @return Account identifier of the AMI.
+     * 
+     */
     public String accountId() {
         return this.accountId;
     }
@@ -30,6 +34,10 @@ public final class GetImageOutputResourceAmi extends com.pulumi.resources.Invoke
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Description of the AMI.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -41,6 +49,10 @@ public final class GetImageOutputResourceAmi extends com.pulumi.resources.Invoke
     @Import(name="image", required=true)
     private String image;
 
+    /**
+     * @return Identifier of the AMI.
+     * 
+     */
     public String image() {
         return this.image;
     }
@@ -52,6 +64,10 @@ public final class GetImageOutputResourceAmi extends com.pulumi.resources.Invoke
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the AMI.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -63,6 +79,10 @@ public final class GetImageOutputResourceAmi extends com.pulumi.resources.Invoke
     @Import(name="region", required=true)
     private String region;
 
+    /**
+     * @return Region of the AMI.
+     * 
+     */
     public String region() {
         return this.region;
     }
@@ -95,26 +115,56 @@ public final class GetImageOutputResourceAmi extends com.pulumi.resources.Invoke
             $ = new GetImageOutputResourceAmi(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId Account identifier of the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(String accountId) {
             $.accountId = accountId;
             return this;
         }
 
+        /**
+         * @param description Description of the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param image Identifier of the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(String image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param name Name of the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param region Region of the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             $.region = region;
             return this;

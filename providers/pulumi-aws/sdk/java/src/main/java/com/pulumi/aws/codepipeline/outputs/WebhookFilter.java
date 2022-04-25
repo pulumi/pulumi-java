@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class WebhookFilter {
     /**
-     * The [JSON path](https://github.com/json-path/JsonPath) to filter on.
+     * @return The [JSON path](https://github.com/json-path/JsonPath) to filter on.
      * 
      */
     private final String jsonPath;
     /**
-     * The value to match on (e.g., `refs/heads/{Branch}`). See [AWS docs](https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_WebhookFilterRule.html) for details.
+     * @return The value to match on (e.g., `refs/heads/{Branch}`). See [AWS docs](https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_WebhookFilterRule.html) for details.
      * 
      */
     private final String matchEquals;
@@ -29,16 +29,16 @@ public final class WebhookFilter {
     }
 
     /**
-     * The [JSON path](https://github.com/json-path/JsonPath) to filter on.
+     * @return The [JSON path](https://github.com/json-path/JsonPath) to filter on.
      * 
-    */
+     */
     public String jsonPath() {
         return this.jsonPath;
     }
     /**
-     * The value to match on (e.g., `refs/heads/{Branch}`). See [AWS docs](https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_WebhookFilterRule.html) for details.
+     * @return The value to match on (e.g., `refs/heads/{Branch}`). See [AWS docs](https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_WebhookFilterRule.html) for details.
      * 
-    */
+     */
     public String matchEquals() {
         return this.matchEquals;
     }

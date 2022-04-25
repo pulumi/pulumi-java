@@ -24,6 +24,10 @@ public final class RouteTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -35,6 +39,10 @@ public final class RouteTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultAssociationRouteTable")
     private @Nullable Output<Boolean> defaultAssociationRouteTable;
 
+    /**
+     * @return Boolean whether this is the default association route table for the EC2 Transit Gateway.
+     * 
+     */
     public Optional<Output<Boolean>> defaultAssociationRouteTable() {
         return Optional.ofNullable(this.defaultAssociationRouteTable);
     }
@@ -46,6 +54,10 @@ public final class RouteTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultPropagationRouteTable")
     private @Nullable Output<Boolean> defaultPropagationRouteTable;
 
+    /**
+     * @return Boolean whether this is the default propagation route table for the EC2 Transit Gateway.
+     * 
+     */
     public Optional<Output<Boolean>> defaultPropagationRouteTable() {
         return Optional.ofNullable(this.defaultPropagationRouteTable);
     }
@@ -57,6 +69,10 @@ public final class RouteTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value tags for the EC2 Transit Gateway Route Table. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -68,6 +84,10 @@ public final class RouteTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -79,6 +99,10 @@ public final class RouteTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="transitGatewayId")
     private @Nullable Output<String> transitGatewayId;
 
+    /**
+     * @return Identifier of EC2 Transit Gateway.
+     * 
+     */
     public Optional<Output<String>> transitGatewayId() {
         return Optional.ofNullable(this.transitGatewayId);
     }
@@ -112,56 +136,128 @@ public final class RouteTableState extends com.pulumi.resources.ResourceArgs {
             $ = new RouteTableState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param defaultAssociationRouteTable Boolean whether this is the default association route table for the EC2 Transit Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAssociationRouteTable(@Nullable Output<Boolean> defaultAssociationRouteTable) {
             $.defaultAssociationRouteTable = defaultAssociationRouteTable;
             return this;
         }
 
+        /**
+         * @param defaultAssociationRouteTable Boolean whether this is the default association route table for the EC2 Transit Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAssociationRouteTable(Boolean defaultAssociationRouteTable) {
             return defaultAssociationRouteTable(Output.of(defaultAssociationRouteTable));
         }
 
+        /**
+         * @param defaultPropagationRouteTable Boolean whether this is the default propagation route table for the EC2 Transit Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultPropagationRouteTable(@Nullable Output<Boolean> defaultPropagationRouteTable) {
             $.defaultPropagationRouteTable = defaultPropagationRouteTable;
             return this;
         }
 
+        /**
+         * @param defaultPropagationRouteTable Boolean whether this is the default propagation route table for the EC2 Transit Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultPropagationRouteTable(Boolean defaultPropagationRouteTable) {
             return defaultPropagationRouteTable(Output.of(defaultPropagationRouteTable));
         }
 
+        /**
+         * @param tags Key-value tags for the EC2 Transit Gateway Route Table. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value tags for the EC2 Transit Gateway Route Table. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param transitGatewayId Identifier of EC2 Transit Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayId(@Nullable Output<String> transitGatewayId) {
             $.transitGatewayId = transitGatewayId;
             return this;
         }
 
+        /**
+         * @param transitGatewayId Identifier of EC2 Transit Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayId(String transitGatewayId) {
             return transitGatewayId(Output.of(transitGatewayId));
         }

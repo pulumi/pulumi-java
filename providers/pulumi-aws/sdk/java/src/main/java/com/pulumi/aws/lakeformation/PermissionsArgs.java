@@ -28,6 +28,10 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="catalogId")
     private @Nullable Output<String> catalogId;
 
+    /**
+     * @return Identifier for the Data Catalog. By default, it is the account ID of the caller.
+     * 
+     */
     public Optional<Output<String>> catalogId() {
         return Optional.ofNullable(this.catalogId);
     }
@@ -39,6 +43,10 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="catalogResource")
     private @Nullable Output<Boolean> catalogResource;
 
+    /**
+     * @return Whether the permissions are to be granted for the Data Catalog. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> catalogResource() {
         return Optional.ofNullable(this.catalogResource);
     }
@@ -50,6 +58,10 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataLocation")
     private @Nullable Output<PermissionsDataLocationArgs> dataLocation;
 
+    /**
+     * @return Configuration block for a data location resource. Detailed below.
+     * 
+     */
     public Optional<Output<PermissionsDataLocationArgs>> dataLocation() {
         return Optional.ofNullable(this.dataLocation);
     }
@@ -61,6 +73,10 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="database")
     private @Nullable Output<PermissionsDatabaseArgs> database;
 
+    /**
+     * @return Configuration block for a database resource. Detailed below.
+     * 
+     */
     public Optional<Output<PermissionsDatabaseArgs>> database() {
         return Optional.ofNullable(this.database);
     }
@@ -72,6 +88,10 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="permissions", required=true)
     private Output<List<String>> permissions;
 
+    /**
+     * @return List of permissions granted to the principal. Valid values may include `ALL`, `ALTER`, `CREATE_DATABASE`, `CREATE_TABLE`, `DATA_LOCATION_ACCESS`, `DELETE`, `DESCRIBE`, `DROP`, `INSERT`, and `SELECT`. For details on each permission, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
+     * 
+     */
     public Output<List<String>> permissions() {
         return this.permissions;
     }
@@ -83,6 +103,10 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="permissionsWithGrantOptions")
     private @Nullable Output<List<String>> permissionsWithGrantOptions;
 
+    /**
+     * @return Subset of `permissions` which the principal can pass.
+     * 
+     */
     public Optional<Output<List<String>>> permissionsWithGrantOptions() {
         return Optional.ofNullable(this.permissionsWithGrantOptions);
     }
@@ -94,6 +118,10 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="principal", required=true)
     private Output<String> principal;
 
+    /**
+     * @return Principal to be granted the permissions on the resource. Supported principals include `IAM_ALLOWED_PRINCIPALS` (see Default Behavior and `IAMAllowedPrincipals` above), IAM roles, users, groups, SAML groups and users, QuickSight groups, OUs, and organizations as well as AWS account IDs for cross-account permissions. For more information, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
+     * 
+     */
     public Output<String> principal() {
         return this.principal;
     }
@@ -105,6 +133,10 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="table")
     private @Nullable Output<PermissionsTableArgs> table;
 
+    /**
+     * @return Configuration block for a table resource. Detailed below.
+     * 
+     */
     public Optional<Output<PermissionsTableArgs>> table() {
         return Optional.ofNullable(this.table);
     }
@@ -116,6 +148,10 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tableWithColumns")
     private @Nullable Output<PermissionsTableWithColumnsArgs> tableWithColumns;
 
+    /**
+     * @return Configuration block for a table with columns resource. Detailed below.
+     * 
+     */
     public Optional<Output<PermissionsTableWithColumnsArgs>> tableWithColumns() {
         return Optional.ofNullable(this.tableWithColumns);
     }
@@ -152,91 +188,211 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PermissionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param catalogId Identifier for the Data Catalog. By default, it is the account ID of the caller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogId(@Nullable Output<String> catalogId) {
             $.catalogId = catalogId;
             return this;
         }
 
+        /**
+         * @param catalogId Identifier for the Data Catalog. By default, it is the account ID of the caller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogId(String catalogId) {
             return catalogId(Output.of(catalogId));
         }
 
+        /**
+         * @param catalogResource Whether the permissions are to be granted for the Data Catalog. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogResource(@Nullable Output<Boolean> catalogResource) {
             $.catalogResource = catalogResource;
             return this;
         }
 
+        /**
+         * @param catalogResource Whether the permissions are to be granted for the Data Catalog. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogResource(Boolean catalogResource) {
             return catalogResource(Output.of(catalogResource));
         }
 
+        /**
+         * @param dataLocation Configuration block for a data location resource. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataLocation(@Nullable Output<PermissionsDataLocationArgs> dataLocation) {
             $.dataLocation = dataLocation;
             return this;
         }
 
+        /**
+         * @param dataLocation Configuration block for a data location resource. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataLocation(PermissionsDataLocationArgs dataLocation) {
             return dataLocation(Output.of(dataLocation));
         }
 
+        /**
+         * @param database Configuration block for a database resource. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(@Nullable Output<PermissionsDatabaseArgs> database) {
             $.database = database;
             return this;
         }
 
+        /**
+         * @param database Configuration block for a database resource. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(PermissionsDatabaseArgs database) {
             return database(Output.of(database));
         }
 
+        /**
+         * @param permissions List of permissions granted to the principal. Valid values may include `ALL`, `ALTER`, `CREATE_DATABASE`, `CREATE_TABLE`, `DATA_LOCATION_ACCESS`, `DELETE`, `DESCRIBE`, `DROP`, `INSERT`, and `SELECT`. For details on each permission, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(Output<List<String>> permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param permissions List of permissions granted to the principal. Valid values may include `ALL`, `ALTER`, `CREATE_DATABASE`, `CREATE_TABLE`, `DATA_LOCATION_ACCESS`, `DELETE`, `DESCRIBE`, `DROP`, `INSERT`, and `SELECT`. For details on each permission, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(List<String> permissions) {
             return permissions(Output.of(permissions));
         }
 
+        /**
+         * @param permissions List of permissions granted to the principal. Valid values may include `ALL`, `ALTER`, `CREATE_DATABASE`, `CREATE_TABLE`, `DATA_LOCATION_ACCESS`, `DELETE`, `DESCRIBE`, `DROP`, `INSERT`, and `SELECT`. For details on each permission, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(String... permissions) {
             return permissions(List.of(permissions));
         }
 
+        /**
+         * @param permissionsWithGrantOptions Subset of `permissions` which the principal can pass.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissionsWithGrantOptions(@Nullable Output<List<String>> permissionsWithGrantOptions) {
             $.permissionsWithGrantOptions = permissionsWithGrantOptions;
             return this;
         }
 
+        /**
+         * @param permissionsWithGrantOptions Subset of `permissions` which the principal can pass.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissionsWithGrantOptions(List<String> permissionsWithGrantOptions) {
             return permissionsWithGrantOptions(Output.of(permissionsWithGrantOptions));
         }
 
+        /**
+         * @param permissionsWithGrantOptions Subset of `permissions` which the principal can pass.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissionsWithGrantOptions(String... permissionsWithGrantOptions) {
             return permissionsWithGrantOptions(List.of(permissionsWithGrantOptions));
         }
 
+        /**
+         * @param principal Principal to be granted the permissions on the resource. Supported principals include `IAM_ALLOWED_PRINCIPALS` (see Default Behavior and `IAMAllowedPrincipals` above), IAM roles, users, groups, SAML groups and users, QuickSight groups, OUs, and organizations as well as AWS account IDs for cross-account permissions. For more information, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder principal(Output<String> principal) {
             $.principal = principal;
             return this;
         }
 
+        /**
+         * @param principal Principal to be granted the permissions on the resource. Supported principals include `IAM_ALLOWED_PRINCIPALS` (see Default Behavior and `IAMAllowedPrincipals` above), IAM roles, users, groups, SAML groups and users, QuickSight groups, OUs, and organizations as well as AWS account IDs for cross-account permissions. For more information, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder principal(String principal) {
             return principal(Output.of(principal));
         }
 
+        /**
+         * @param table Configuration block for a table resource. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(@Nullable Output<PermissionsTableArgs> table) {
             $.table = table;
             return this;
         }
 
+        /**
+         * @param table Configuration block for a table resource. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(PermissionsTableArgs table) {
             return table(Output.of(table));
         }
 
+        /**
+         * @param tableWithColumns Configuration block for a table with columns resource. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableWithColumns(@Nullable Output<PermissionsTableWithColumnsArgs> tableWithColumns) {
             $.tableWithColumns = tableWithColumns;
             return this;
         }
 
+        /**
+         * @param tableWithColumns Configuration block for a table with columns resource. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableWithColumns(PermissionsTableWithColumnsArgs tableWithColumns) {
             return tableWithColumns(Output.of(tableWithColumns));
         }

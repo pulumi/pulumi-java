@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GetGroupFilter {
     /**
-     * The attribute path that is used to specify which attribute name to search. Currently, `DisplayName` is the only valid attribute path.
+     * @return The attribute path that is used to specify which attribute name to search. Currently, `DisplayName` is the only valid attribute path.
      * 
      */
     private final String attributePath;
     /**
-     * The value for an attribute.
+     * @return The value for an attribute.
      * 
      */
     private final String attributeValue;
@@ -29,16 +29,16 @@ public final class GetGroupFilter {
     }
 
     /**
-     * The attribute path that is used to specify which attribute name to search. Currently, `DisplayName` is the only valid attribute path.
+     * @return The attribute path that is used to specify which attribute name to search. Currently, `DisplayName` is the only valid attribute path.
      * 
-    */
+     */
     public String attributePath() {
         return this.attributePath;
     }
     /**
-     * The value for an attribute.
+     * @return The value for an attribute.
      * 
-    */
+     */
     public String attributeValue() {
         return this.attributeValue;
     }

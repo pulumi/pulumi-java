@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GetVirtualServiceSpec {
     /**
-     * The App Mesh object that is acting as the provider for a virtual service.
+     * @return The App Mesh object that is acting as the provider for a virtual service.
      * 
      */
     private final List<GetVirtualServiceSpecProvider> providers;
@@ -22,9 +22,9 @@ public final class GetVirtualServiceSpec {
     }
 
     /**
-     * The App Mesh object that is acting as the provider for a virtual service.
+     * @return The App Mesh object that is acting as the provider for a virtual service.
      * 
-    */
+     */
     public List<GetVirtualServiceSpecProvider> providers() {
         return this.providers;
     }

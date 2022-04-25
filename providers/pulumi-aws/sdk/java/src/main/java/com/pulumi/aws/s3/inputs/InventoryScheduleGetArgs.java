@@ -20,6 +20,10 @@ public final class InventoryScheduleGetArgs extends com.pulumi.resources.Resourc
     @Import(name="frequency", required=true)
     private Output<String> frequency;
 
+    /**
+     * @return Specifies how frequently inventory results are produced. Valid values: `Daily`, `Weekly`.
+     * 
+     */
     public Output<String> frequency() {
         return this.frequency;
     }
@@ -48,11 +52,23 @@ public final class InventoryScheduleGetArgs extends com.pulumi.resources.Resourc
             $ = new InventoryScheduleGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param frequency Specifies how frequently inventory results are produced. Valid values: `Daily`, `Weekly`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequency(Output<String> frequency) {
             $.frequency = frequency;
             return this;
         }
 
+        /**
+         * @param frequency Specifies how frequently inventory results are produced. Valid values: `Daily`, `Weekly`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequency(String frequency) {
             return frequency(Output.of(frequency));
         }

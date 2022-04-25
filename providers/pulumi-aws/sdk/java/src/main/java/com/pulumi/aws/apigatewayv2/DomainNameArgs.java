@@ -25,6 +25,10 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName", required=true)
     private Output<String> domainName;
 
+    /**
+     * @return The domain name. Must be between 1 and 512 characters in length.
+     * 
+     */
     public Output<String> domainName() {
         return this.domainName;
     }
@@ -36,6 +40,10 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainNameConfiguration", required=true)
     private Output<DomainNameDomainNameConfigurationArgs> domainNameConfiguration;
 
+    /**
+     * @return The domain name configuration.
+     * 
+     */
     public Output<DomainNameDomainNameConfigurationArgs> domainNameConfiguration() {
         return this.domainNameConfiguration;
     }
@@ -47,6 +55,10 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mutualTlsAuthentication")
     private @Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication;
 
+    /**
+     * @return The mutual TLS authentication configuration for the domain name.
+     * 
+     */
     public Optional<Output<DomainNameMutualTlsAuthenticationArgs>> mutualTlsAuthentication() {
         return Optional.ofNullable(this.mutualTlsAuthentication);
     }
@@ -58,6 +70,10 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the domain name. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -89,38 +105,86 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DomainNameArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainName The domain name. Must be between 1 and 512 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName The domain name. Must be between 1 and 512 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param domainNameConfiguration The domain name configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainNameConfiguration(Output<DomainNameDomainNameConfigurationArgs> domainNameConfiguration) {
             $.domainNameConfiguration = domainNameConfiguration;
             return this;
         }
 
+        /**
+         * @param domainNameConfiguration The domain name configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainNameConfiguration(DomainNameDomainNameConfigurationArgs domainNameConfiguration) {
             return domainNameConfiguration(Output.of(domainNameConfiguration));
         }
 
+        /**
+         * @param mutualTlsAuthentication The mutual TLS authentication configuration for the domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mutualTlsAuthentication(@Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication) {
             $.mutualTlsAuthentication = mutualTlsAuthentication;
             return this;
         }
 
+        /**
+         * @param mutualTlsAuthentication The mutual TLS authentication configuration for the domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mutualTlsAuthentication(DomainNameMutualTlsAuthenticationArgs mutualTlsAuthentication) {
             return mutualTlsAuthentication(Output.of(mutualTlsAuthentication));
         }
 
+        /**
+         * @param tags A map of tags to assign to the domain name. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the domain name. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

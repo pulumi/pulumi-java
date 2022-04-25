@@ -10,27 +10,27 @@ import java.util.Objects;
 @CustomType
 public final class GetDirectorySelfServicePermission {
     /**
-     * Whether WorkSpaces directory users can change the compute type (bundle) for their workspace.
+     * @return Whether WorkSpaces directory users can change the compute type (bundle) for their workspace.
      * 
      */
     private final Boolean changeComputeType;
     /**
-     * Whether WorkSpaces directory users can increase the volume size of the drives on their workspace.
+     * @return Whether WorkSpaces directory users can increase the volume size of the drives on their workspace.
      * 
      */
     private final Boolean increaseVolumeSize;
     /**
-     * Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state.
+     * @return Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state.
      * 
      */
     private final Boolean rebuildWorkspace;
     /**
-     * Whether WorkSpaces directory users can restart their workspace.
+     * @return Whether WorkSpaces directory users can restart their workspace.
      * 
      */
     private final Boolean restartWorkspace;
     /**
-     * Whether WorkSpaces directory users can switch the running mode of their workspace.
+     * @return Whether WorkSpaces directory users can switch the running mode of their workspace.
      * 
      */
     private final Boolean switchRunningMode;
@@ -50,37 +50,37 @@ public final class GetDirectorySelfServicePermission {
     }
 
     /**
-     * Whether WorkSpaces directory users can change the compute type (bundle) for their workspace.
+     * @return Whether WorkSpaces directory users can change the compute type (bundle) for their workspace.
      * 
-    */
+     */
     public Boolean changeComputeType() {
         return this.changeComputeType;
     }
     /**
-     * Whether WorkSpaces directory users can increase the volume size of the drives on their workspace.
+     * @return Whether WorkSpaces directory users can increase the volume size of the drives on their workspace.
      * 
-    */
+     */
     public Boolean increaseVolumeSize() {
         return this.increaseVolumeSize;
     }
     /**
-     * Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state.
+     * @return Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state.
      * 
-    */
+     */
     public Boolean rebuildWorkspace() {
         return this.rebuildWorkspace;
     }
     /**
-     * Whether WorkSpaces directory users can restart their workspace.
+     * @return Whether WorkSpaces directory users can restart their workspace.
      * 
-    */
+     */
     public Boolean restartWorkspace() {
         return this.restartWorkspace;
     }
     /**
-     * Whether WorkSpaces directory users can switch the running mode of their workspace.
+     * @return Whether WorkSpaces directory users can switch the running mode of their workspace.
      * 
-    */
+     */
     public Boolean switchRunningMode() {
         return this.switchRunningMode;
     }

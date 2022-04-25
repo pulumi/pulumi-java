@@ -23,6 +23,10 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateGe
     @Import(name="file")
     private @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFileGetArgs> file;
 
+    /**
+     * @return A local file certificate.
+     * 
+     */
     public Optional<Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFileGetArgs>> file() {
         return Optional.ofNullable(this.file);
     }
@@ -34,6 +38,10 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateGe
     @Import(name="sds")
     private @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsGetArgs> sds;
 
+    /**
+     * @return A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+     * 
+     */
     public Optional<Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsGetArgs>> sds() {
         return Optional.ofNullable(this.sds);
     }
@@ -63,20 +71,44 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateGe
             $ = new VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param file A local file certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(@Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFileGetArgs> file) {
             $.file = file;
             return this;
         }
 
+        /**
+         * @param file A local file certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFileGetArgs file) {
             return file(Output.of(file));
         }
 
+        /**
+         * @param sds A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sds(@Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsGetArgs> sds) {
             $.sds = sds;
             return this;
         }
 
+        /**
+         * @param sds A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sds(VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsGetArgs sds) {
             return sds(Output.of(sds));
         }

@@ -20,6 +20,10 @@ public final class VirtualServiceSpecProviderVirtualRouterGetArgs extends com.pu
     @Import(name="virtualRouterName", required=true)
     private Output<String> virtualRouterName;
 
+    /**
+     * @return The name of the virtual router that is acting as a service provider. Must be between 1 and 255 characters in length.
+     * 
+     */
     public Output<String> virtualRouterName() {
         return this.virtualRouterName;
     }
@@ -48,11 +52,23 @@ public final class VirtualServiceSpecProviderVirtualRouterGetArgs extends com.pu
             $ = new VirtualServiceSpecProviderVirtualRouterGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param virtualRouterName The name of the virtual router that is acting as a service provider. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualRouterName(Output<String> virtualRouterName) {
             $.virtualRouterName = virtualRouterName;
             return this;
         }
 
+        /**
+         * @param virtualRouterName The name of the virtual router that is acting as a service provider. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualRouterName(String virtualRouterName) {
             return virtualRouterName(Output.of(virtualRouterName));
         }

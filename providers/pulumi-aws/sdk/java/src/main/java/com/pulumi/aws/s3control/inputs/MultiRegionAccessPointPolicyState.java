@@ -30,6 +30,10 @@ public final class MultiRegionAccessPointPolicyState extends com.pulumi.resource
     @Import(name="details")
     private @Nullable Output<MultiRegionAccessPointPolicyDetailsGetArgs> details;
 
+    /**
+     * @return A configuration block containing details about the policy for the Multi-Region Access Point. See Details Configuration Block below for more details
+     * 
+     */
     public Optional<Output<MultiRegionAccessPointPolicyDetailsGetArgs>> details() {
         return Optional.ofNullable(this.details);
     }
@@ -41,6 +45,10 @@ public final class MultiRegionAccessPointPolicyState extends com.pulumi.resource
     @Import(name="established")
     private @Nullable Output<String> established;
 
+    /**
+     * @return The last established policy for the Multi-Region Access Point.
+     * 
+     */
     public Optional<Output<String>> established() {
         return Optional.ofNullable(this.established);
     }
@@ -52,6 +60,10 @@ public final class MultiRegionAccessPointPolicyState extends com.pulumi.resource
     @Import(name="proposed")
     private @Nullable Output<String> proposed;
 
+    /**
+     * @return The proposed policy for the Multi-Region Access Point.
+     * 
+     */
     public Optional<Output<String>> proposed() {
         return Optional.ofNullable(this.proposed);
     }
@@ -92,29 +104,65 @@ public final class MultiRegionAccessPointPolicyState extends com.pulumi.resource
             return accountId(Output.of(accountId));
         }
 
+        /**
+         * @param details A configuration block containing details about the policy for the Multi-Region Access Point. See Details Configuration Block below for more details
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(@Nullable Output<MultiRegionAccessPointPolicyDetailsGetArgs> details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param details A configuration block containing details about the policy for the Multi-Region Access Point. See Details Configuration Block below for more details
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(MultiRegionAccessPointPolicyDetailsGetArgs details) {
             return details(Output.of(details));
         }
 
+        /**
+         * @param established The last established policy for the Multi-Region Access Point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder established(@Nullable Output<String> established) {
             $.established = established;
             return this;
         }
 
+        /**
+         * @param established The last established policy for the Multi-Region Access Point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder established(String established) {
             return established(Output.of(established));
         }
 
+        /**
+         * @param proposed The proposed policy for the Multi-Region Access Point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proposed(@Nullable Output<String> proposed) {
             $.proposed = proposed;
             return this;
         }
 
+        /**
+         * @param proposed The proposed policy for the Multi-Region Access Point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proposed(String proposed) {
             return proposed(Output.of(proposed));
         }

@@ -14,57 +14,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListenerDefaultActionAuthenticateOidc {
     /**
-     * Query parameters to include in the redirect request to the authorization endpoint. Max: 10.
+     * @return Query parameters to include in the redirect request to the authorization endpoint. Max: 10.
      * 
      */
     private final @Nullable Map<String,String> authenticationRequestExtraParams;
     /**
-     * Authorization endpoint of the IdP.
+     * @return Authorization endpoint of the IdP.
      * 
      */
     private final String authorizationEndpoint;
     /**
-     * OAuth 2.0 client identifier.
+     * @return OAuth 2.0 client identifier.
      * 
      */
     private final String clientId;
     /**
-     * OAuth 2.0 client secret.
+     * @return OAuth 2.0 client secret.
      * 
      */
     private final String clientSecret;
     /**
-     * OIDC issuer identifier of the IdP.
+     * @return OIDC issuer identifier of the IdP.
      * 
      */
     private final String issuer;
     /**
-     * Behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
+     * @return Behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
      * 
      */
     private final @Nullable String onUnauthenticatedRequest;
     /**
-     * Set of user claims to be requested from the IdP.
+     * @return Set of user claims to be requested from the IdP.
      * 
      */
     private final @Nullable String scope;
     /**
-     * Name of the cookie used to maintain session information.
+     * @return Name of the cookie used to maintain session information.
      * 
      */
     private final @Nullable String sessionCookieName;
     /**
-     * Maximum duration of the authentication session, in seconds.
+     * @return Maximum duration of the authentication session, in seconds.
      * 
      */
     private final @Nullable Integer sessionTimeout;
     /**
-     * Token endpoint of the IdP.
+     * @return Token endpoint of the IdP.
      * 
      */
     private final String tokenEndpoint;
     /**
-     * User info endpoint of the IdP.
+     * @return User info endpoint of the IdP.
      * 
      */
     private final String userInfoEndpoint;
@@ -96,79 +96,79 @@ public final class ListenerDefaultActionAuthenticateOidc {
     }
 
     /**
-     * Query parameters to include in the redirect request to the authorization endpoint. Max: 10.
+     * @return Query parameters to include in the redirect request to the authorization endpoint. Max: 10.
      * 
-    */
+     */
     public Map<String,String> authenticationRequestExtraParams() {
         return this.authenticationRequestExtraParams == null ? Map.of() : this.authenticationRequestExtraParams;
     }
     /**
-     * Authorization endpoint of the IdP.
+     * @return Authorization endpoint of the IdP.
      * 
-    */
+     */
     public String authorizationEndpoint() {
         return this.authorizationEndpoint;
     }
     /**
-     * OAuth 2.0 client identifier.
+     * @return OAuth 2.0 client identifier.
      * 
-    */
+     */
     public String clientId() {
         return this.clientId;
     }
     /**
-     * OAuth 2.0 client secret.
+     * @return OAuth 2.0 client secret.
      * 
-    */
+     */
     public String clientSecret() {
         return this.clientSecret;
     }
     /**
-     * OIDC issuer identifier of the IdP.
+     * @return OIDC issuer identifier of the IdP.
      * 
-    */
+     */
     public String issuer() {
         return this.issuer;
     }
     /**
-     * Behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
+     * @return Behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
      * 
-    */
+     */
     public Optional<String> onUnauthenticatedRequest() {
         return Optional.ofNullable(this.onUnauthenticatedRequest);
     }
     /**
-     * Set of user claims to be requested from the IdP.
+     * @return Set of user claims to be requested from the IdP.
      * 
-    */
+     */
     public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }
     /**
-     * Name of the cookie used to maintain session information.
+     * @return Name of the cookie used to maintain session information.
      * 
-    */
+     */
     public Optional<String> sessionCookieName() {
         return Optional.ofNullable(this.sessionCookieName);
     }
     /**
-     * Maximum duration of the authentication session, in seconds.
+     * @return Maximum duration of the authentication session, in seconds.
      * 
-    */
+     */
     public Optional<Integer> sessionTimeout() {
         return Optional.ofNullable(this.sessionTimeout);
     }
     /**
-     * Token endpoint of the IdP.
+     * @return Token endpoint of the IdP.
      * 
-    */
+     */
     public String tokenEndpoint() {
         return this.tokenEndpoint;
     }
     /**
-     * User info endpoint of the IdP.
+     * @return User info endpoint of the IdP.
      * 
-    */
+     */
     public String userInfoEndpoint() {
         return this.userInfoEndpoint;
     }

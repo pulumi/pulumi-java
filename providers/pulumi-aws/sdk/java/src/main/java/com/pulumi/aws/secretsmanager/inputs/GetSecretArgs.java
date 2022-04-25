@@ -21,6 +21,10 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="arn")
     private @Nullable String arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the secret to retrieve.
+     * 
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -32,6 +36,10 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the secret to retrieve.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -61,11 +69,23 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSecretArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the secret to retrieve.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable String arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param name The name of the secret to retrieve.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

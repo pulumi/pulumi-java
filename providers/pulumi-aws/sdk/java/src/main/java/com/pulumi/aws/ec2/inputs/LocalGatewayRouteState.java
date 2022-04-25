@@ -22,6 +22,10 @@ public final class LocalGatewayRouteState extends com.pulumi.resources.ResourceA
     @Import(name="destinationCidrBlock")
     private @Nullable Output<String> destinationCidrBlock;
 
+    /**
+     * @return IPv4 CIDR range used for destination matches. Routing decisions are based on the most specific match.
+     * 
+     */
     public Optional<Output<String>> destinationCidrBlock() {
         return Optional.ofNullable(this.destinationCidrBlock);
     }
@@ -33,6 +37,10 @@ public final class LocalGatewayRouteState extends com.pulumi.resources.ResourceA
     @Import(name="localGatewayRouteTableId")
     private @Nullable Output<String> localGatewayRouteTableId;
 
+    /**
+     * @return Identifier of EC2 Local Gateway Route Table.
+     * 
+     */
     public Optional<Output<String>> localGatewayRouteTableId() {
         return Optional.ofNullable(this.localGatewayRouteTableId);
     }
@@ -44,6 +52,10 @@ public final class LocalGatewayRouteState extends com.pulumi.resources.ResourceA
     @Import(name="localGatewayVirtualInterfaceGroupId")
     private @Nullable Output<String> localGatewayVirtualInterfaceGroupId;
 
+    /**
+     * @return Identifier of EC2 Local Gateway Virtual Interface Group.
+     * 
+     */
     public Optional<Output<String>> localGatewayVirtualInterfaceGroupId() {
         return Optional.ofNullable(this.localGatewayVirtualInterfaceGroupId);
     }
@@ -74,29 +86,65 @@ public final class LocalGatewayRouteState extends com.pulumi.resources.ResourceA
             $ = new LocalGatewayRouteState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationCidrBlock IPv4 CIDR range used for destination matches. Routing decisions are based on the most specific match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationCidrBlock(@Nullable Output<String> destinationCidrBlock) {
             $.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
 
+        /**
+         * @param destinationCidrBlock IPv4 CIDR range used for destination matches. Routing decisions are based on the most specific match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             return destinationCidrBlock(Output.of(destinationCidrBlock));
         }
 
+        /**
+         * @param localGatewayRouteTableId Identifier of EC2 Local Gateway Route Table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localGatewayRouteTableId(@Nullable Output<String> localGatewayRouteTableId) {
             $.localGatewayRouteTableId = localGatewayRouteTableId;
             return this;
         }
 
+        /**
+         * @param localGatewayRouteTableId Identifier of EC2 Local Gateway Route Table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localGatewayRouteTableId(String localGatewayRouteTableId) {
             return localGatewayRouteTableId(Output.of(localGatewayRouteTableId));
         }
 
+        /**
+         * @param localGatewayVirtualInterfaceGroupId Identifier of EC2 Local Gateway Virtual Interface Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localGatewayVirtualInterfaceGroupId(@Nullable Output<String> localGatewayVirtualInterfaceGroupId) {
             $.localGatewayVirtualInterfaceGroupId = localGatewayVirtualInterfaceGroupId;
             return this;
         }
 
+        /**
+         * @param localGatewayVirtualInterfaceGroupId Identifier of EC2 Local Gateway Virtual Interface Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localGatewayVirtualInterfaceGroupId(String localGatewayVirtualInterfaceGroupId) {
             return localGatewayVirtualInterfaceGroupId(Output.of(localGatewayVirtualInterfaceGroupId));
         }

@@ -22,6 +22,10 @@ public final class ResourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the resource, an S3 path.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -33,6 +37,10 @@ public final class ResourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastModified")
     private @Nullable Output<String> lastModified;
 
+    /**
+     * @return (Optional) The date and time the resource was last modified in [RFC 3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
+     * 
+     */
     public Optional<Output<String>> lastModified() {
         return Optional.ofNullable(this.lastModified);
     }
@@ -44,6 +52,10 @@ public final class ResourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
     private @Nullable Output<String> roleArn;
 
+    /**
+     * @return Role that has read/write access to the resource. If not provided, the Lake Formation service-linked role must exist and is used.
+     * 
+     */
     public Optional<Output<String>> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
@@ -74,29 +86,65 @@ public final class ResourceState extends com.pulumi.resources.ResourceArgs {
             $ = new ResourceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the resource, an S3 path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the resource, an S3 path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param lastModified (Optional) The date and time the resource was last modified in [RFC 3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModified(@Nullable Output<String> lastModified) {
             $.lastModified = lastModified;
             return this;
         }
 
+        /**
+         * @param lastModified (Optional) The date and time the resource was last modified in [RFC 3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModified(String lastModified) {
             return lastModified(Output.of(lastModified));
         }
 
+        /**
+         * @param roleArn Role that has read/write access to the resource. If not provided, the Lake Formation service-linked role must exist and is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(@Nullable Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn Role that has read/write access to the resource. If not provided, the Lake Formation service-linked role must exist and is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }

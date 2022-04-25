@@ -22,6 +22,10 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetri
     @Import(name="predefinedMetricType", required=true)
     private Output<String> predefinedMetricType;
 
+    /**
+     * @return The metric type.
+     * 
+     */
     public Output<String> predefinedMetricType() {
         return this.predefinedMetricType;
     }
@@ -33,6 +37,10 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetri
     @Import(name="resourceLabel")
     private @Nullable Output<String> resourceLabel;
 
+    /**
+     * @return Reserved for future use. Must be less than or equal to 1023 characters in length.
+     * 
+     */
     public Optional<Output<String>> resourceLabel() {
         return Optional.ofNullable(this.resourceLabel);
     }
@@ -62,20 +70,44 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetri
             $ = new PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param predefinedMetricType The metric type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedMetricType(Output<String> predefinedMetricType) {
             $.predefinedMetricType = predefinedMetricType;
             return this;
         }
 
+        /**
+         * @param predefinedMetricType The metric type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedMetricType(String predefinedMetricType) {
             return predefinedMetricType(Output.of(predefinedMetricType));
         }
 
+        /**
+         * @param resourceLabel Reserved for future use. Must be less than or equal to 1023 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLabel(@Nullable Output<String> resourceLabel) {
             $.resourceLabel = resourceLabel;
             return this;
         }
 
+        /**
+         * @param resourceLabel Reserved for future use. Must be less than or equal to 1023 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLabel(String resourceLabel) {
             return resourceLabel(Output.of(resourceLabel));
         }

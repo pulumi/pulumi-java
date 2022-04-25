@@ -20,6 +20,10 @@ public final class GetDomainEncryptionAtRest extends com.pulumi.resources.Invoke
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whether node to node encryption is enabled.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -31,6 +35,10 @@ public final class GetDomainEncryptionAtRest extends com.pulumi.resources.Invoke
     @Import(name="kmsKeyId", required=true)
     private String kmsKeyId;
 
+    /**
+     * @return The KMS key id used to encrypt data at rest.
+     * 
+     */
     public String kmsKeyId() {
         return this.kmsKeyId;
     }
@@ -60,11 +68,23 @@ public final class GetDomainEncryptionAtRest extends com.pulumi.resources.Invoke
             $ = new GetDomainEncryptionAtRest(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether node to node encryption is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param kmsKeyId The KMS key id used to encrypt data at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(String kmsKeyId) {
             $.kmsKeyId = kmsKeyId;
             return this;

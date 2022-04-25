@@ -19,6 +19,10 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the resource, an S3 path.
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -47,6 +51,12 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the resource, an S3 path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;

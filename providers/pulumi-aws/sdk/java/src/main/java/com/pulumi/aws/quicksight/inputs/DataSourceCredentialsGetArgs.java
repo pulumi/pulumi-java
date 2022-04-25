@@ -24,6 +24,11 @@ public final class DataSourceCredentialsGetArgs extends com.pulumi.resources.Res
     @Import(name="copySourceArn")
     private @Nullable Output<String> copySourceArn;
 
+    /**
+     * @return - The Amazon Resource Name (ARN) of a data source that has the credential pair that you want to use.
+     * When the value is not null, the `credential_pair` from the data source in the ARN is used.
+     * 
+     */
     public Optional<Output<String>> copySourceArn() {
         return Optional.ofNullable(this.copySourceArn);
     }
@@ -35,6 +40,10 @@ public final class DataSourceCredentialsGetArgs extends com.pulumi.resources.Res
     @Import(name="credentialPair")
     private @Nullable Output<DataSourceCredentialsCredentialPairGetArgs> credentialPair;
 
+    /**
+     * @return - Credential pair. See Credential Pair below for more details.
+     * 
+     */
     public Optional<Output<DataSourceCredentialsCredentialPairGetArgs>> credentialPair() {
         return Optional.ofNullable(this.credentialPair);
     }
@@ -64,20 +73,46 @@ public final class DataSourceCredentialsGetArgs extends com.pulumi.resources.Res
             $ = new DataSourceCredentialsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param copySourceArn - The Amazon Resource Name (ARN) of a data source that has the credential pair that you want to use.
+         * When the value is not null, the `credential_pair` from the data source in the ARN is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copySourceArn(@Nullable Output<String> copySourceArn) {
             $.copySourceArn = copySourceArn;
             return this;
         }
 
+        /**
+         * @param copySourceArn - The Amazon Resource Name (ARN) of a data source that has the credential pair that you want to use.
+         * When the value is not null, the `credential_pair` from the data source in the ARN is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copySourceArn(String copySourceArn) {
             return copySourceArn(Output.of(copySourceArn));
         }
 
+        /**
+         * @param credentialPair - Credential pair. See Credential Pair below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentialPair(@Nullable Output<DataSourceCredentialsCredentialPairGetArgs> credentialPair) {
             $.credentialPair = credentialPair;
             return this;
         }
 
+        /**
+         * @param credentialPair - Credential pair. See Credential Pair below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentialPair(DataSourceCredentialsCredentialPairGetArgs credentialPair) {
             return credentialPair(Output.of(credentialPair));
         }

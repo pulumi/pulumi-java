@@ -10,47 +10,47 @@ import java.util.Objects;
 @CustomType
 public final class GetBotAliasResult {
     /**
-     * The ARN of the bot alias.
+     * @return The ARN of the bot alias.
      * 
      */
     private final String arn;
     /**
-     * The name of the bot.
+     * @return The name of the bot.
      * 
      */
     private final String botName;
     /**
-     * The version of the bot that the alias points to.
+     * @return The version of the bot that the alias points to.
      * 
      */
     private final String botVersion;
     /**
-     * Checksum of the bot alias.
+     * @return Checksum of the bot alias.
      * 
      */
     private final String checksum;
     /**
-     * The date that the bot alias was created.
+     * @return The date that the bot alias was created.
      * 
      */
     private final String createdDate;
     /**
-     * A description of the alias.
+     * @return A description of the alias.
      * 
      */
     private final String description;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The date that the bot alias was updated. When you create a resource, the creation date and the last updated date are the same.
+     * @return The date that the bot alias was updated. When you create a resource, the creation date and the last updated date are the same.
      * 
      */
     private final String lastUpdatedDate;
     /**
-     * The name of the alias. The name is not case sensitive.
+     * @return The name of the alias. The name is not case sensitive.
      * 
      */
     private final String name;
@@ -78,65 +78,65 @@ public final class GetBotAliasResult {
     }
 
     /**
-     * The ARN of the bot alias.
+     * @return The ARN of the bot alias.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The name of the bot.
+     * @return The name of the bot.
      * 
-    */
+     */
     public String botName() {
         return this.botName;
     }
     /**
-     * The version of the bot that the alias points to.
+     * @return The version of the bot that the alias points to.
      * 
-    */
+     */
     public String botVersion() {
         return this.botVersion;
     }
     /**
-     * Checksum of the bot alias.
+     * @return Checksum of the bot alias.
      * 
-    */
+     */
     public String checksum() {
         return this.checksum;
     }
     /**
-     * The date that the bot alias was created.
+     * @return The date that the bot alias was created.
      * 
-    */
+     */
     public String createdDate() {
         return this.createdDate;
     }
     /**
-     * A description of the alias.
+     * @return A description of the alias.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The date that the bot alias was updated. When you create a resource, the creation date and the last updated date are the same.
+     * @return The date that the bot alias was updated. When you create a resource, the creation date and the last updated date are the same.
      * 
-    */
+     */
     public String lastUpdatedDate() {
         return this.lastUpdatedDate;
     }
     /**
-     * The name of the alias. The name is not case sensitive.
+     * @return The name of the alias. The name is not case sensitive.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

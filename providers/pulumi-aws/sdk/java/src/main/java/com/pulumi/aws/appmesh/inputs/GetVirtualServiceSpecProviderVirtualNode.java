@@ -19,6 +19,10 @@ public final class GetVirtualServiceSpecProviderVirtualNode extends com.pulumi.r
     @Import(name="virtualNodeName", required=true)
     private String virtualNodeName;
 
+    /**
+     * @return The name of the virtual node that is acting as a service provider.
+     * 
+     */
     public String virtualNodeName() {
         return this.virtualNodeName;
     }
@@ -47,6 +51,12 @@ public final class GetVirtualServiceSpecProviderVirtualNode extends com.pulumi.r
             $ = new GetVirtualServiceSpecProviderVirtualNode(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param virtualNodeName The name of the virtual node that is acting as a service provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNodeName(String virtualNodeName) {
             $.virtualNodeName = virtualNodeName;
             return this;

@@ -12,22 +12,22 @@ import java.util.Objects;
 @CustomType
 public final class GetImageRecipeBlockDeviceMapping {
     /**
-     * Name of the device. For example, `/dev/sda` or `/dev/xvdb`.
+     * @return Name of the device. For example, `/dev/sda` or `/dev/xvdb`.
      * 
      */
     private final String deviceName;
     /**
-     * Single list of object with Elastic Block Storage (EBS) block device mapping settings.
+     * @return Single list of object with Elastic Block Storage (EBS) block device mapping settings.
      * 
      */
     private final List<GetImageRecipeBlockDeviceMappingEb> ebs;
     /**
-     * Whether to remove a mapping from the parent image.
+     * @return Whether to remove a mapping from the parent image.
      * 
      */
     private final String noDevice;
     /**
-     * Virtual device name. For example, `ephemeral0`. Instance store volumes are numbered starting from 0.
+     * @return Virtual device name. For example, `ephemeral0`. Instance store volumes are numbered starting from 0.
      * 
      */
     private final String virtualName;
@@ -45,30 +45,30 @@ public final class GetImageRecipeBlockDeviceMapping {
     }
 
     /**
-     * Name of the device. For example, `/dev/sda` or `/dev/xvdb`.
+     * @return Name of the device. For example, `/dev/sda` or `/dev/xvdb`.
      * 
-    */
+     */
     public String deviceName() {
         return this.deviceName;
     }
     /**
-     * Single list of object with Elastic Block Storage (EBS) block device mapping settings.
+     * @return Single list of object with Elastic Block Storage (EBS) block device mapping settings.
      * 
-    */
+     */
     public List<GetImageRecipeBlockDeviceMappingEb> ebs() {
         return this.ebs;
     }
     /**
-     * Whether to remove a mapping from the parent image.
+     * @return Whether to remove a mapping from the parent image.
      * 
-    */
+     */
     public String noDevice() {
         return this.noDevice;
     }
     /**
-     * Virtual device name. For example, `ephemeral0`. Instance store volumes are numbered starting from 0.
+     * @return Virtual device name. For example, `ephemeral0`. Instance store volumes are numbered starting from 0.
      * 
-    */
+     */
     public String virtualName() {
         return this.virtualName;
     }

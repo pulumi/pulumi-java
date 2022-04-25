@@ -22,6 +22,10 @@ public final class WorkteamNotificationConfigurationGetArgs extends com.pulumi.r
     @Import(name="notificationTopicArn")
     private @Nullable Output<String> notificationTopicArn;
 
+    /**
+     * @return The ARN for the SNS topic to which notifications should be published.
+     * 
+     */
     public Optional<Output<String>> notificationTopicArn() {
         return Optional.ofNullable(this.notificationTopicArn);
     }
@@ -50,11 +54,23 @@ public final class WorkteamNotificationConfigurationGetArgs extends com.pulumi.r
             $ = new WorkteamNotificationConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param notificationTopicArn The ARN for the SNS topic to which notifications should be published.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationTopicArn(@Nullable Output<String> notificationTopicArn) {
             $.notificationTopicArn = notificationTopicArn;
             return this;
         }
 
+        /**
+         * @param notificationTopicArn The ARN for the SNS topic to which notifications should be published.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationTopicArn(String notificationTopicArn) {
             return notificationTopicArn(Output.of(notificationTopicArn));
         }

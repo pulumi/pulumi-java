@@ -20,6 +20,10 @@ public final class MemberAccountAssociationArgs extends com.pulumi.resources.Res
     @Import(name="memberAccountId", required=true)
     private Output<String> memberAccountId;
 
+    /**
+     * @return The ID of the AWS account that you want to associate with Amazon Macie as a member account.
+     * 
+     */
     public Output<String> memberAccountId() {
         return this.memberAccountId;
     }
@@ -48,11 +52,23 @@ public final class MemberAccountAssociationArgs extends com.pulumi.resources.Res
             $ = new MemberAccountAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param memberAccountId The ID of the AWS account that you want to associate with Amazon Macie as a member account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberAccountId(Output<String> memberAccountId) {
             $.memberAccountId = memberAccountId;
             return this;
         }
 
+        /**
+         * @param memberAccountId The ID of the AWS account that you want to associate with Amazon Macie as a member account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberAccountId(String memberAccountId) {
             return memberAccountId(Output.of(memberAccountId));
         }

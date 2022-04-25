@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TableServerSideEncryption {
     /**
-     * Indicates whether ttl is enabled (true) or disabled (false).
+     * @return Indicates whether ttl is enabled (true) or disabled (false).
      * 
      */
     private final Boolean enabled;
     /**
-     * The ARN of the CMK that should be used for the AWS KMS encryption.
+     * @return The ARN of the CMK that should be used for the AWS KMS encryption.
      * This attribute should only be specified if the key is different from the default DynamoDB CMK, `alias/aws/dynamodb`.
      * 
      */
@@ -33,17 +33,17 @@ public final class TableServerSideEncryption {
     }
 
     /**
-     * Indicates whether ttl is enabled (true) or disabled (false).
+     * @return Indicates whether ttl is enabled (true) or disabled (false).
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * The ARN of the CMK that should be used for the AWS KMS encryption.
+     * @return The ARN of the CMK that should be used for the AWS KMS encryption.
      * This attribute should only be specified if the key is different from the default DynamoDB CMK, `alias/aws/dynamodb`.
      * 
-    */
+     */
     public Optional<String> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }

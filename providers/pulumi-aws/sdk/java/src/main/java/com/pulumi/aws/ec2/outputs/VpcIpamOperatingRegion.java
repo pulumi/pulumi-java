@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class VpcIpamOperatingRegion {
     /**
-     * The name of the Region you want to add to the IPAM.
+     * @return The name of the Region you want to add to the IPAM.
      * 
      */
     private final String regionName;
@@ -21,9 +21,9 @@ public final class VpcIpamOperatingRegion {
     }
 
     /**
-     * The name of the Region you want to add to the IPAM.
+     * @return The name of the Region you want to add to the IPAM.
      * 
-    */
+     */
     public String regionName() {
         return this.regionName;
     }

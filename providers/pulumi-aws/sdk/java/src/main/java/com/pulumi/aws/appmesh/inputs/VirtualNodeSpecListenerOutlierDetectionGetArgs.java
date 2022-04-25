@@ -22,6 +22,10 @@ public final class VirtualNodeSpecListenerOutlierDetectionGetArgs extends com.pu
     @Import(name="baseEjectionDuration", required=true)
     private Output<VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationGetArgs> baseEjectionDuration;
 
+    /**
+     * @return The base amount of time for which a host is ejected.
+     * 
+     */
     public Output<VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationGetArgs> baseEjectionDuration() {
         return this.baseEjectionDuration;
     }
@@ -33,6 +37,10 @@ public final class VirtualNodeSpecListenerOutlierDetectionGetArgs extends com.pu
     @Import(name="interval", required=true)
     private Output<VirtualNodeSpecListenerOutlierDetectionIntervalGetArgs> interval;
 
+    /**
+     * @return The time interval between ejection sweep analysis.
+     * 
+     */
     public Output<VirtualNodeSpecListenerOutlierDetectionIntervalGetArgs> interval() {
         return this.interval;
     }
@@ -45,6 +53,11 @@ public final class VirtualNodeSpecListenerOutlierDetectionGetArgs extends com.pu
     @Import(name="maxEjectionPercent", required=true)
     private Output<Integer> maxEjectionPercent;
 
+    /**
+     * @return Maximum percentage of hosts in load balancing pool for upstream service that can be ejected. Will eject at least one host regardless of the value.
+     * Minimum value of `0`. Maximum value of `100`.
+     * 
+     */
     public Output<Integer> maxEjectionPercent() {
         return this.maxEjectionPercent;
     }
@@ -56,6 +69,10 @@ public final class VirtualNodeSpecListenerOutlierDetectionGetArgs extends com.pu
     @Import(name="maxServerErrors", required=true)
     private Output<Integer> maxServerErrors;
 
+    /**
+     * @return Number of consecutive `5xx` errors required for ejection. Minimum value of `1`.
+     * 
+     */
     public Output<Integer> maxServerErrors() {
         return this.maxServerErrors;
     }
@@ -87,38 +104,88 @@ public final class VirtualNodeSpecListenerOutlierDetectionGetArgs extends com.pu
             $ = new VirtualNodeSpecListenerOutlierDetectionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baseEjectionDuration The base amount of time for which a host is ejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseEjectionDuration(Output<VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationGetArgs> baseEjectionDuration) {
             $.baseEjectionDuration = baseEjectionDuration;
             return this;
         }
 
+        /**
+         * @param baseEjectionDuration The base amount of time for which a host is ejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseEjectionDuration(VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationGetArgs baseEjectionDuration) {
             return baseEjectionDuration(Output.of(baseEjectionDuration));
         }
 
+        /**
+         * @param interval The time interval between ejection sweep analysis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(Output<VirtualNodeSpecListenerOutlierDetectionIntervalGetArgs> interval) {
             $.interval = interval;
             return this;
         }
 
+        /**
+         * @param interval The time interval between ejection sweep analysis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(VirtualNodeSpecListenerOutlierDetectionIntervalGetArgs interval) {
             return interval(Output.of(interval));
         }
 
+        /**
+         * @param maxEjectionPercent Maximum percentage of hosts in load balancing pool for upstream service that can be ejected. Will eject at least one host regardless of the value.
+         * Minimum value of `0`. Maximum value of `100`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxEjectionPercent(Output<Integer> maxEjectionPercent) {
             $.maxEjectionPercent = maxEjectionPercent;
             return this;
         }
 
+        /**
+         * @param maxEjectionPercent Maximum percentage of hosts in load balancing pool for upstream service that can be ejected. Will eject at least one host regardless of the value.
+         * Minimum value of `0`. Maximum value of `100`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxEjectionPercent(Integer maxEjectionPercent) {
             return maxEjectionPercent(Output.of(maxEjectionPercent));
         }
 
+        /**
+         * @param maxServerErrors Number of consecutive `5xx` errors required for ejection. Minimum value of `1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxServerErrors(Output<Integer> maxServerErrors) {
             $.maxServerErrors = maxServerErrors;
             return this;
         }
 
+        /**
+         * @param maxServerErrors Number of consecutive `5xx` errors required for ejection. Minimum value of `1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxServerErrors(Integer maxServerErrors) {
             return maxServerErrors(Output.of(maxServerErrors));
         }

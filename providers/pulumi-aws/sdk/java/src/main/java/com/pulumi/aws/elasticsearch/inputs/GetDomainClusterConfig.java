@@ -25,6 +25,10 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
     @Import(name="dedicatedMasterCount", required=true)
     private Integer dedicatedMasterCount;
 
+    /**
+     * @return Number of dedicated master nodes in the cluster.
+     * 
+     */
     public Integer dedicatedMasterCount() {
         return this.dedicatedMasterCount;
     }
@@ -36,6 +40,10 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
     @Import(name="dedicatedMasterEnabled", required=true)
     private Boolean dedicatedMasterEnabled;
 
+    /**
+     * @return Indicates whether dedicated master nodes are enabled for the cluster.
+     * 
+     */
     public Boolean dedicatedMasterEnabled() {
         return this.dedicatedMasterEnabled;
     }
@@ -47,6 +55,10 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
     @Import(name="dedicatedMasterType", required=true)
     private String dedicatedMasterType;
 
+    /**
+     * @return Instance type of the dedicated master nodes in the cluster.
+     * 
+     */
     public String dedicatedMasterType() {
         return this.dedicatedMasterType;
     }
@@ -58,6 +70,10 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
     @Import(name="instanceCount", required=true)
     private Integer instanceCount;
 
+    /**
+     * @return Number of instances in the cluster.
+     * 
+     */
     public Integer instanceCount() {
         return this.instanceCount;
     }
@@ -69,6 +85,10 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Instance type of data nodes in the cluster.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -80,6 +100,10 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
     @Import(name="warmCount", required=true)
     private Integer warmCount;
 
+    /**
+     * @return The number of warm nodes in the cluster.
+     * 
+     */
     public Integer warmCount() {
         return this.warmCount;
     }
@@ -91,6 +115,10 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
     @Import(name="warmEnabled")
     private @Nullable Boolean warmEnabled;
 
+    /**
+     * @return Indicates warm storage is enabled.
+     * 
+     */
     public Optional<Boolean> warmEnabled() {
         return Optional.ofNullable(this.warmEnabled);
     }
@@ -102,6 +130,10 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
     @Import(name="warmType", required=true)
     private String warmType;
 
+    /**
+     * @return The instance type for the Elasticsearch cluster&#39;s warm nodes.
+     * 
+     */
     public String warmType() {
         return this.warmType;
     }
@@ -113,6 +145,10 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
     @Import(name="zoneAwarenessConfigs", required=true)
     private List<GetDomainClusterConfigZoneAwarenessConfig> zoneAwarenessConfigs;
 
+    /**
+     * @return Configuration block containing zone awareness settings.
+     * 
+     */
     public List<GetDomainClusterConfigZoneAwarenessConfig> zoneAwarenessConfigs() {
         return this.zoneAwarenessConfigs;
     }
@@ -124,6 +160,10 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
     @Import(name="zoneAwarenessEnabled", required=true)
     private Boolean zoneAwarenessEnabled;
 
+    /**
+     * @return Indicates whether zone awareness is enabled.
+     * 
+     */
     public Boolean zoneAwarenessEnabled() {
         return this.zoneAwarenessEnabled;
     }
@@ -161,55 +201,121 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
             $ = new GetDomainClusterConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dedicatedMasterCount Number of dedicated master nodes in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dedicatedMasterCount(Integer dedicatedMasterCount) {
             $.dedicatedMasterCount = dedicatedMasterCount;
             return this;
         }
 
+        /**
+         * @param dedicatedMasterEnabled Indicates whether dedicated master nodes are enabled for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dedicatedMasterEnabled(Boolean dedicatedMasterEnabled) {
             $.dedicatedMasterEnabled = dedicatedMasterEnabled;
             return this;
         }
 
+        /**
+         * @param dedicatedMasterType Instance type of the dedicated master nodes in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dedicatedMasterType(String dedicatedMasterType) {
             $.dedicatedMasterType = dedicatedMasterType;
             return this;
         }
 
+        /**
+         * @param instanceCount Number of instances in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceCount(Integer instanceCount) {
             $.instanceCount = instanceCount;
             return this;
         }
 
+        /**
+         * @param instanceType Instance type of data nodes in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param warmCount The number of warm nodes in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder warmCount(Integer warmCount) {
             $.warmCount = warmCount;
             return this;
         }
 
+        /**
+         * @param warmEnabled Indicates warm storage is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder warmEnabled(@Nullable Boolean warmEnabled) {
             $.warmEnabled = warmEnabled;
             return this;
         }
 
+        /**
+         * @param warmType The instance type for the Elasticsearch cluster&#39;s warm nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder warmType(String warmType) {
             $.warmType = warmType;
             return this;
         }
 
+        /**
+         * @param zoneAwarenessConfigs Configuration block containing zone awareness settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneAwarenessConfigs(List<GetDomainClusterConfigZoneAwarenessConfig> zoneAwarenessConfigs) {
             $.zoneAwarenessConfigs = zoneAwarenessConfigs;
             return this;
         }
 
+        /**
+         * @param zoneAwarenessConfigs Configuration block containing zone awareness settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneAwarenessConfigs(GetDomainClusterConfigZoneAwarenessConfig... zoneAwarenessConfigs) {
             return zoneAwarenessConfigs(List.of(zoneAwarenessConfigs));
         }
 
+        /**
+         * @param zoneAwarenessEnabled Indicates whether zone awareness is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneAwarenessEnabled(Boolean zoneAwarenessEnabled) {
             $.zoneAwarenessEnabled = zoneAwarenessEnabled;
             return this;

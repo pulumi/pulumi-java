@@ -19,6 +19,10 @@ public final class GetUserPoolClientArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="clientId", required=true)
     private String clientId;
 
+    /**
+     * @return Client Id of the user pool.
+     * 
+     */
     public String clientId() {
         return this.clientId;
     }
@@ -30,6 +34,10 @@ public final class GetUserPoolClientArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="userPoolId", required=true)
     private String userPoolId;
 
+    /**
+     * @return User pool the client belongs to.
+     * 
+     */
     public String userPoolId() {
         return this.userPoolId;
     }
@@ -59,11 +67,23 @@ public final class GetUserPoolClientArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetUserPoolClientArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId Client Id of the user pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param userPoolId User pool the client belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userPoolId(String userPoolId) {
             $.userPoolId = userPoolId;
             return this;

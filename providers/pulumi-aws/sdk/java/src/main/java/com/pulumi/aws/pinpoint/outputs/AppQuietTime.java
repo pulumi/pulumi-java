@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AppQuietTime {
     /**
-     * The default end time for quiet time in ISO 8601 format. Required if `start` is set
+     * @return The default end time for quiet time in ISO 8601 format. Required if `start` is set
      * 
      */
     private final @Nullable String end;
     /**
-     * The default start time for quiet time in ISO 8601 format. Required if `end` is set
+     * @return The default start time for quiet time in ISO 8601 format. Required if `end` is set
      * 
      */
     private final @Nullable String start;
@@ -31,16 +31,16 @@ public final class AppQuietTime {
     }
 
     /**
-     * The default end time for quiet time in ISO 8601 format. Required if `start` is set
+     * @return The default end time for quiet time in ISO 8601 format. Required if `start` is set
      * 
-    */
+     */
     public Optional<String> end() {
         return Optional.ofNullable(this.end);
     }
     /**
-     * The default start time for quiet time in ISO 8601 format. Required if `end` is set
+     * @return The default start time for quiet time in ISO 8601 format. Required if `end` is set
      * 
-    */
+     */
     public Optional<String> start() {
         return Optional.ofNullable(this.start);
     }

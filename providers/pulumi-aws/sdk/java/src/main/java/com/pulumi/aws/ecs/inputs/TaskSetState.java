@@ -30,6 +30,10 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) that identifies the task set.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -41,6 +45,10 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacityProviderStrategies")
     private @Nullable Output<List<TaskSetCapacityProviderStrategyGetArgs>> capacityProviderStrategies;
 
+    /**
+     * @return The capacity provider strategy to use for the service. Can be one or more.  Defined below.
+     * 
+     */
     public Optional<Output<List<TaskSetCapacityProviderStrategyGetArgs>>> capacityProviderStrategies() {
         return Optional.ofNullable(this.capacityProviderStrategies);
     }
@@ -52,6 +60,10 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="cluster")
     private @Nullable Output<String> cluster;
 
+    /**
+     * @return The short name or ARN of the cluster that hosts the service to create the task set in.
+     * 
+     */
     public Optional<Output<String>> cluster() {
         return Optional.ofNullable(this.cluster);
     }
@@ -63,6 +75,10 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="externalId")
     private @Nullable Output<String> externalId;
 
+    /**
+     * @return The external ID associated with the task set.
+     * 
+     */
     public Optional<Output<String>> externalId() {
         return Optional.ofNullable(this.externalId);
     }
@@ -81,6 +97,10 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="launchType")
     private @Nullable Output<String> launchType;
 
+    /**
+     * @return The launch type on which to run your service. The valid values are `EC2`, `FARGATE`, and `EXTERNAL`. Defaults to `EC2`.
+     * 
+     */
     public Optional<Output<String>> launchType() {
         return Optional.ofNullable(this.launchType);
     }
@@ -92,6 +112,10 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancers")
     private @Nullable Output<List<TaskSetLoadBalancerGetArgs>> loadBalancers;
 
+    /**
+     * @return Details on load balancers that are used with a task set. Detailed below.
+     * 
+     */
     public Optional<Output<List<TaskSetLoadBalancerGetArgs>>> loadBalancers() {
         return Optional.ofNullable(this.loadBalancers);
     }
@@ -103,6 +127,10 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkConfiguration")
     private @Nullable Output<TaskSetNetworkConfigurationGetArgs> networkConfiguration;
 
+    /**
+     * @return The network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes. Detailed below.
+     * 
+     */
     public Optional<Output<TaskSetNetworkConfigurationGetArgs>> networkConfiguration() {
         return Optional.ofNullable(this.networkConfiguration);
     }
@@ -114,6 +142,10 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="platformVersion")
     private @Nullable Output<String> platformVersion;
 
+    /**
+     * @return The platform version on which to run your service. Only applicable for `launch_type` set to `FARGATE`. Defaults to `LATEST`. More information about Fargate platform versions can be found in the [AWS ECS User Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
+     * 
+     */
     public Optional<Output<String>> platformVersion() {
         return Optional.ofNullable(this.platformVersion);
     }
@@ -125,6 +157,10 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="scale")
     private @Nullable Output<TaskSetScaleGetArgs> scale;
 
+    /**
+     * @return A floating-point percentage of the desired number of tasks to place and keep running in the task set. Detailed below.
+     * 
+     */
     public Optional<Output<TaskSetScaleGetArgs>> scale() {
         return Optional.ofNullable(this.scale);
     }
@@ -136,6 +172,10 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="service")
     private @Nullable Output<String> service;
 
+    /**
+     * @return The short name or ARN of the ECS service.
+     * 
+     */
     public Optional<Output<String>> service() {
         return Optional.ofNullable(this.service);
     }
@@ -147,6 +187,10 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceRegistries")
     private @Nullable Output<TaskSetServiceRegistriesGetArgs> serviceRegistries;
 
+    /**
+     * @return The service discovery registries for the service. The maximum number of `service_registries` blocks is `1`. Detailed below.
+     * 
+     */
     public Optional<Output<TaskSetServiceRegistriesGetArgs>> serviceRegistries() {
         return Optional.ofNullable(this.serviceRegistries);
     }
@@ -158,6 +202,10 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="stabilityStatus")
     private @Nullable Output<String> stabilityStatus;
 
+    /**
+     * @return The stability status. This indicates whether the task set has reached a steady state.
+     * 
+     */
     public Optional<Output<String>> stabilityStatus() {
         return Optional.ofNullable(this.stabilityStatus);
     }
@@ -169,6 +217,10 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return The status of the task set.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -180,6 +232,10 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the file system. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level. If you have set `copy_tags_to_backups` to true, and you specify one or more tags, no existing file system tags are copied from the file system to the backup.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -191,6 +247,10 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -202,6 +262,10 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="taskDefinition")
     private @Nullable Output<String> taskDefinition;
 
+    /**
+     * @return The family and revision (`family:revision`) or full ARN of the task definition that you want to run in your service.
+     * 
+     */
     public Optional<Output<String>> taskDefinition() {
         return Optional.ofNullable(this.taskDefinition);
     }
@@ -213,6 +277,10 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="taskSetId")
     private @Nullable Output<String> taskSetId;
 
+    /**
+     * @return The ID of the task set.
+     * 
+     */
     public Optional<Output<String>> taskSetId() {
         return Optional.ofNullable(this.taskSetId);
     }
@@ -231,6 +299,10 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="waitUntilStableTimeout")
     private @Nullable Output<String> waitUntilStableTimeout;
 
+    /**
+     * @return Wait timeout for task set to reach `STEADY_STATE`. Valid time units include `ns`, `us` (or `µs`), `ms`, `s`, `m`, and `h`. Default `10m`.
+     * 
+     */
     public Optional<Output<String>> waitUntilStableTimeout() {
         return Optional.ofNullable(this.waitUntilStableTimeout);
     }
@@ -278,42 +350,96 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
             $ = new TaskSetState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) that identifies the task set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) that identifies the task set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param capacityProviderStrategies The capacity provider strategy to use for the service. Can be one or more.  Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityProviderStrategies(@Nullable Output<List<TaskSetCapacityProviderStrategyGetArgs>> capacityProviderStrategies) {
             $.capacityProviderStrategies = capacityProviderStrategies;
             return this;
         }
 
+        /**
+         * @param capacityProviderStrategies The capacity provider strategy to use for the service. Can be one or more.  Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityProviderStrategies(List<TaskSetCapacityProviderStrategyGetArgs> capacityProviderStrategies) {
             return capacityProviderStrategies(Output.of(capacityProviderStrategies));
         }
 
+        /**
+         * @param capacityProviderStrategies The capacity provider strategy to use for the service. Can be one or more.  Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityProviderStrategies(TaskSetCapacityProviderStrategyGetArgs... capacityProviderStrategies) {
             return capacityProviderStrategies(List.of(capacityProviderStrategies));
         }
 
+        /**
+         * @param cluster The short name or ARN of the cluster that hosts the service to create the task set in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(@Nullable Output<String> cluster) {
             $.cluster = cluster;
             return this;
         }
 
+        /**
+         * @param cluster The short name or ARN of the cluster that hosts the service to create the task set in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(String cluster) {
             return cluster(Output.of(cluster));
         }
 
+        /**
+         * @param externalId The external ID associated with the task set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalId(@Nullable Output<String> externalId) {
             $.externalId = externalId;
             return this;
         }
 
+        /**
+         * @param externalId The external ID associated with the task set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalId(String externalId) {
             return externalId(Output.of(externalId));
         }
@@ -327,123 +453,285 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
             return forceDelete(Output.of(forceDelete));
         }
 
+        /**
+         * @param launchType The launch type on which to run your service. The valid values are `EC2`, `FARGATE`, and `EXTERNAL`. Defaults to `EC2`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchType(@Nullable Output<String> launchType) {
             $.launchType = launchType;
             return this;
         }
 
+        /**
+         * @param launchType The launch type on which to run your service. The valid values are `EC2`, `FARGATE`, and `EXTERNAL`. Defaults to `EC2`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchType(String launchType) {
             return launchType(Output.of(launchType));
         }
 
+        /**
+         * @param loadBalancers Details on load balancers that are used with a task set. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancers(@Nullable Output<List<TaskSetLoadBalancerGetArgs>> loadBalancers) {
             $.loadBalancers = loadBalancers;
             return this;
         }
 
+        /**
+         * @param loadBalancers Details on load balancers that are used with a task set. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancers(List<TaskSetLoadBalancerGetArgs> loadBalancers) {
             return loadBalancers(Output.of(loadBalancers));
         }
 
+        /**
+         * @param loadBalancers Details on load balancers that are used with a task set. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancers(TaskSetLoadBalancerGetArgs... loadBalancers) {
             return loadBalancers(List.of(loadBalancers));
         }
 
+        /**
+         * @param networkConfiguration The network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfiguration(@Nullable Output<TaskSetNetworkConfigurationGetArgs> networkConfiguration) {
             $.networkConfiguration = networkConfiguration;
             return this;
         }
 
+        /**
+         * @param networkConfiguration The network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfiguration(TaskSetNetworkConfigurationGetArgs networkConfiguration) {
             return networkConfiguration(Output.of(networkConfiguration));
         }
 
+        /**
+         * @param platformVersion The platform version on which to run your service. Only applicable for `launch_type` set to `FARGATE`. Defaults to `LATEST`. More information about Fargate platform versions can be found in the [AWS ECS User Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder platformVersion(@Nullable Output<String> platformVersion) {
             $.platformVersion = platformVersion;
             return this;
         }
 
+        /**
+         * @param platformVersion The platform version on which to run your service. Only applicable for `launch_type` set to `FARGATE`. Defaults to `LATEST`. More information about Fargate platform versions can be found in the [AWS ECS User Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder platformVersion(String platformVersion) {
             return platformVersion(Output.of(platformVersion));
         }
 
+        /**
+         * @param scale A floating-point percentage of the desired number of tasks to place and keep running in the task set. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scale(@Nullable Output<TaskSetScaleGetArgs> scale) {
             $.scale = scale;
             return this;
         }
 
+        /**
+         * @param scale A floating-point percentage of the desired number of tasks to place and keep running in the task set. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scale(TaskSetScaleGetArgs scale) {
             return scale(Output.of(scale));
         }
 
+        /**
+         * @param service The short name or ARN of the ECS service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service The short name or ARN of the ECS service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }
 
+        /**
+         * @param serviceRegistries The service discovery registries for the service. The maximum number of `service_registries` blocks is `1`. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRegistries(@Nullable Output<TaskSetServiceRegistriesGetArgs> serviceRegistries) {
             $.serviceRegistries = serviceRegistries;
             return this;
         }
 
+        /**
+         * @param serviceRegistries The service discovery registries for the service. The maximum number of `service_registries` blocks is `1`. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRegistries(TaskSetServiceRegistriesGetArgs serviceRegistries) {
             return serviceRegistries(Output.of(serviceRegistries));
         }
 
+        /**
+         * @param stabilityStatus The stability status. This indicates whether the task set has reached a steady state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stabilityStatus(@Nullable Output<String> stabilityStatus) {
             $.stabilityStatus = stabilityStatus;
             return this;
         }
 
+        /**
+         * @param stabilityStatus The stability status. This indicates whether the task set has reached a steady state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stabilityStatus(String stabilityStatus) {
             return stabilityStatus(Output.of(stabilityStatus));
         }
 
+        /**
+         * @param status The status of the task set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The status of the task set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param tags A map of tags to assign to the file system. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level. If you have set `copy_tags_to_backups` to true, and you specify one or more tags, no existing file system tags are copied from the file system to the backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the file system. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level. If you have set `copy_tags_to_backups` to true, and you specify one or more tags, no existing file system tags are copied from the file system to the backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param taskDefinition The family and revision (`family:revision`) or full ARN of the task definition that you want to run in your service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskDefinition(@Nullable Output<String> taskDefinition) {
             $.taskDefinition = taskDefinition;
             return this;
         }
 
+        /**
+         * @param taskDefinition The family and revision (`family:revision`) or full ARN of the task definition that you want to run in your service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskDefinition(String taskDefinition) {
             return taskDefinition(Output.of(taskDefinition));
         }
 
+        /**
+         * @param taskSetId The ID of the task set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskSetId(@Nullable Output<String> taskSetId) {
             $.taskSetId = taskSetId;
             return this;
         }
 
+        /**
+         * @param taskSetId The ID of the task set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskSetId(String taskSetId) {
             return taskSetId(Output.of(taskSetId));
         }
@@ -457,11 +745,23 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
             return waitUntilStable(Output.of(waitUntilStable));
         }
 
+        /**
+         * @param waitUntilStableTimeout Wait timeout for task set to reach `STEADY_STATE`. Valid time units include `ns`, `us` (or `µs`), `ms`, `s`, `m`, and `h`. Default `10m`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitUntilStableTimeout(@Nullable Output<String> waitUntilStableTimeout) {
             $.waitUntilStableTimeout = waitUntilStableTimeout;
             return this;
         }
 
+        /**
+         * @param waitUntilStableTimeout Wait timeout for task set to reach `STEADY_STATE`. Valid time units include `ns`, `us` (or `µs`), `ms`, `s`, `m`, and `h`. Default `10m`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitUntilStableTimeout(String waitUntilStableTimeout) {
             return waitUntilStableTimeout(Output.of(waitUntilStableTimeout));
         }

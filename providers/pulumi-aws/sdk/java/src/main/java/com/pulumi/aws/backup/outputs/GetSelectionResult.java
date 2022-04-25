@@ -11,23 +11,23 @@ import java.util.Objects;
 @CustomType
 public final class GetSelectionResult {
     /**
-     * The ARN of the IAM role that AWS Backup uses to authenticate when restoring and backing up the target resource. See the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#managed-policies) for additional information about using AWS managed policies or creating custom policies attached to the IAM role.
+     * @return The ARN of the IAM role that AWS Backup uses to authenticate when restoring and backing up the target resource. See the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#managed-policies) for additional information about using AWS managed policies or creating custom policies attached to the IAM role.
      * 
      */
     private final String iamRoleArn;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The display name of a resource selection document.
+     * @return The display name of a resource selection document.
      * 
      */
     private final String name;
     private final String planId;
     /**
-     * An array of strings that either contain Amazon Resource Names (ARNs) or match patterns of resources to assign to a backup plan..
+     * @return An array of strings that either contain Amazon Resource Names (ARNs) or match patterns of resources to assign to a backup plan..
      * 
      */
     private final List<String> resources;
@@ -50,23 +50,23 @@ public final class GetSelectionResult {
     }
 
     /**
-     * The ARN of the IAM role that AWS Backup uses to authenticate when restoring and backing up the target resource. See the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#managed-policies) for additional information about using AWS managed policies or creating custom policies attached to the IAM role.
+     * @return The ARN of the IAM role that AWS Backup uses to authenticate when restoring and backing up the target resource. See the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#managed-policies) for additional information about using AWS managed policies or creating custom policies attached to the IAM role.
      * 
-    */
+     */
     public String iamRoleArn() {
         return this.iamRoleArn;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The display name of a resource selection document.
+     * @return The display name of a resource selection document.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
@@ -74,9 +74,9 @@ public final class GetSelectionResult {
         return this.planId;
     }
     /**
-     * An array of strings that either contain Amazon Resource Names (ARNs) or match patterns of resources to assign to a backup plan..
+     * @return An array of strings that either contain Amazon Resource Names (ARNs) or match patterns of resources to assign to a backup plan..
      * 
-    */
+     */
     public List<String> resources() {
         return this.resources;
     }

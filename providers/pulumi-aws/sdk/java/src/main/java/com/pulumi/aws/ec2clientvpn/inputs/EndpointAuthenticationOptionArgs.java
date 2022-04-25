@@ -22,6 +22,10 @@ public final class EndpointAuthenticationOptionArgs extends com.pulumi.resources
     @Import(name="activeDirectoryId")
     private @Nullable Output<String> activeDirectoryId;
 
+    /**
+     * @return The ID of the Active Directory to be used for authentication if type is `directory-service-authentication`.
+     * 
+     */
     public Optional<Output<String>> activeDirectoryId() {
         return Optional.ofNullable(this.activeDirectoryId);
     }
@@ -33,6 +37,10 @@ public final class EndpointAuthenticationOptionArgs extends com.pulumi.resources
     @Import(name="rootCertificateChainArn")
     private @Nullable Output<String> rootCertificateChainArn;
 
+    /**
+     * @return The ARN of the client certificate. The certificate must be signed by a certificate authority (CA) and it must be provisioned in AWS Certificate Manager (ACM). Only necessary when type is set to `certificate-authentication`.
+     * 
+     */
     public Optional<Output<String>> rootCertificateChainArn() {
         return Optional.ofNullable(this.rootCertificateChainArn);
     }
@@ -44,6 +52,10 @@ public final class EndpointAuthenticationOptionArgs extends com.pulumi.resources
     @Import(name="samlProviderArn")
     private @Nullable Output<String> samlProviderArn;
 
+    /**
+     * @return The ARN of the IAM SAML identity provider if type is `federated-authentication`.
+     * 
+     */
     public Optional<Output<String>> samlProviderArn() {
         return Optional.ofNullable(this.samlProviderArn);
     }
@@ -55,6 +67,10 @@ public final class EndpointAuthenticationOptionArgs extends com.pulumi.resources
     @Import(name="selfServiceSamlProviderArn")
     private @Nullable Output<String> selfServiceSamlProviderArn;
 
+    /**
+     * @return The ARN of the IAM SAML identity provider for the self service portal if type is `federated-authentication`.
+     * 
+     */
     public Optional<Output<String>> selfServiceSamlProviderArn() {
         return Optional.ofNullable(this.selfServiceSamlProviderArn);
     }
@@ -66,6 +82,10 @@ public final class EndpointAuthenticationOptionArgs extends com.pulumi.resources
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of client authentication to be used. Specify `certificate-authentication` to use certificate-based authentication, `directory-service-authentication` to use Active Directory authentication, or `federated-authentication` to use Federated Authentication via SAML 2.0.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -98,47 +118,107 @@ public final class EndpointAuthenticationOptionArgs extends com.pulumi.resources
             $ = new EndpointAuthenticationOptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activeDirectoryId The ID of the Active Directory to be used for authentication if type is `directory-service-authentication`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeDirectoryId(@Nullable Output<String> activeDirectoryId) {
             $.activeDirectoryId = activeDirectoryId;
             return this;
         }
 
+        /**
+         * @param activeDirectoryId The ID of the Active Directory to be used for authentication if type is `directory-service-authentication`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeDirectoryId(String activeDirectoryId) {
             return activeDirectoryId(Output.of(activeDirectoryId));
         }
 
+        /**
+         * @param rootCertificateChainArn The ARN of the client certificate. The certificate must be signed by a certificate authority (CA) and it must be provisioned in AWS Certificate Manager (ACM). Only necessary when type is set to `certificate-authentication`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootCertificateChainArn(@Nullable Output<String> rootCertificateChainArn) {
             $.rootCertificateChainArn = rootCertificateChainArn;
             return this;
         }
 
+        /**
+         * @param rootCertificateChainArn The ARN of the client certificate. The certificate must be signed by a certificate authority (CA) and it must be provisioned in AWS Certificate Manager (ACM). Only necessary when type is set to `certificate-authentication`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootCertificateChainArn(String rootCertificateChainArn) {
             return rootCertificateChainArn(Output.of(rootCertificateChainArn));
         }
 
+        /**
+         * @param samlProviderArn The ARN of the IAM SAML identity provider if type is `federated-authentication`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samlProviderArn(@Nullable Output<String> samlProviderArn) {
             $.samlProviderArn = samlProviderArn;
             return this;
         }
 
+        /**
+         * @param samlProviderArn The ARN of the IAM SAML identity provider if type is `federated-authentication`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samlProviderArn(String samlProviderArn) {
             return samlProviderArn(Output.of(samlProviderArn));
         }
 
+        /**
+         * @param selfServiceSamlProviderArn The ARN of the IAM SAML identity provider for the self service portal if type is `federated-authentication`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfServiceSamlProviderArn(@Nullable Output<String> selfServiceSamlProviderArn) {
             $.selfServiceSamlProviderArn = selfServiceSamlProviderArn;
             return this;
         }
 
+        /**
+         * @param selfServiceSamlProviderArn The ARN of the IAM SAML identity provider for the self service portal if type is `federated-authentication`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfServiceSamlProviderArn(String selfServiceSamlProviderArn) {
             return selfServiceSamlProviderArn(Output.of(selfServiceSamlProviderArn));
         }
 
+        /**
+         * @param type The type of client authentication to be used. Specify `certificate-authentication` to use certificate-based authentication, `directory-service-authentication` to use Active Directory authentication, or `federated-authentication` to use Federated Authentication via SAML 2.0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of client authentication to be used. Specify `certificate-authentication` to use certificate-based authentication, `directory-service-authentication` to use Active Directory authentication, or `federated-authentication` to use Federated Authentication via SAML 2.0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

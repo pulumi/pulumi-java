@@ -24,6 +24,10 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the authorizer.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -35,6 +39,10 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizerFunctionArn")
     private @Nullable Output<String> authorizerFunctionArn;
 
+    /**
+     * @return The ARN of the authorizer&#39;s Lambda function.
+     * 
+     */
     public Optional<Output<String>> authorizerFunctionArn() {
         return Optional.ofNullable(this.authorizerFunctionArn);
     }
@@ -46,6 +54,10 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the authorizer.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -57,6 +69,10 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="signingDisabled")
     private @Nullable Output<Boolean> signingDisabled;
 
+    /**
+     * @return Specifies whether AWS IoT validates the token signature in an authorization request. Default: `false`.
+     * 
+     */
     public Optional<Output<Boolean>> signingDisabled() {
         return Optional.ofNullable(this.signingDisabled);
     }
@@ -68,6 +84,10 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return The status of Authorizer request at creation. Valid values: `ACTIVE`, `INACTIVE`. Default: `ACTIVE`.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -79,6 +99,10 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tokenKeyName")
     private @Nullable Output<String> tokenKeyName;
 
+    /**
+     * @return The name of the token key used to extract the token from the HTTP headers. This value is required if signing is enabled in your authorizer.
+     * 
+     */
     public Optional<Output<String>> tokenKeyName() {
         return Optional.ofNullable(this.tokenKeyName);
     }
@@ -90,6 +114,10 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tokenSigningPublicKeys")
     private @Nullable Output<Map<String,String>> tokenSigningPublicKeys;
 
+    /**
+     * @return The public keys used to verify the digital signature returned by your custom authentication service. This value is required if signing is enabled in your authorizer.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tokenSigningPublicKeys() {
         return Optional.ofNullable(this.tokenSigningPublicKeys);
     }
@@ -124,65 +152,149 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
             $ = new AuthorizerState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the authorizer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the authorizer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param authorizerFunctionArn The ARN of the authorizer&#39;s Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerFunctionArn(@Nullable Output<String> authorizerFunctionArn) {
             $.authorizerFunctionArn = authorizerFunctionArn;
             return this;
         }
 
+        /**
+         * @param authorizerFunctionArn The ARN of the authorizer&#39;s Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerFunctionArn(String authorizerFunctionArn) {
             return authorizerFunctionArn(Output.of(authorizerFunctionArn));
         }
 
+        /**
+         * @param name The name of the authorizer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the authorizer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param signingDisabled Specifies whether AWS IoT validates the token signature in an authorization request. Default: `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingDisabled(@Nullable Output<Boolean> signingDisabled) {
             $.signingDisabled = signingDisabled;
             return this;
         }
 
+        /**
+         * @param signingDisabled Specifies whether AWS IoT validates the token signature in an authorization request. Default: `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingDisabled(Boolean signingDisabled) {
             return signingDisabled(Output.of(signingDisabled));
         }
 
+        /**
+         * @param status The status of Authorizer request at creation. Valid values: `ACTIVE`, `INACTIVE`. Default: `ACTIVE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The status of Authorizer request at creation. Valid values: `ACTIVE`, `INACTIVE`. Default: `ACTIVE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param tokenKeyName The name of the token key used to extract the token from the HTTP headers. This value is required if signing is enabled in your authorizer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenKeyName(@Nullable Output<String> tokenKeyName) {
             $.tokenKeyName = tokenKeyName;
             return this;
         }
 
+        /**
+         * @param tokenKeyName The name of the token key used to extract the token from the HTTP headers. This value is required if signing is enabled in your authorizer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenKeyName(String tokenKeyName) {
             return tokenKeyName(Output.of(tokenKeyName));
         }
 
+        /**
+         * @param tokenSigningPublicKeys The public keys used to verify the digital signature returned by your custom authentication service. This value is required if signing is enabled in your authorizer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenSigningPublicKeys(@Nullable Output<Map<String,String>> tokenSigningPublicKeys) {
             $.tokenSigningPublicKeys = tokenSigningPublicKeys;
             return this;
         }
 
+        /**
+         * @param tokenSigningPublicKeys The public keys used to verify the digital signature returned by your custom authentication service. This value is required if signing is enabled in your authorizer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenSigningPublicKeys(Map<String,String> tokenSigningPublicKeys) {
             return tokenSigningPublicKeys(Output.of(tokenSigningPublicKeys));
         }

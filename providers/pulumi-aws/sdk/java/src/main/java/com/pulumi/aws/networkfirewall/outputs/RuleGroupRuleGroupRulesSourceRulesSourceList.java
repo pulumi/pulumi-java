@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class RuleGroupRuleGroupRulesSourceRulesSourceList {
     /**
-     * String value to specify whether domains in the target list are allowed or denied access. Valid values: `ALLOWLIST`, `DENYLIST`.
+     * @return String value to specify whether domains in the target list are allowed or denied access. Valid values: `ALLOWLIST`, `DENYLIST`.
      * 
      */
     private final String generatedRulesType;
     /**
-     * Set of types of domain specifications that are provided in the `targets` argument. Valid values: `HTTP_HOST`, `TLS_SNI`.
+     * @return Set of types of domain specifications that are provided in the `targets` argument. Valid values: `HTTP_HOST`, `TLS_SNI`.
      * 
      */
     private final List<String> targetTypes;
     /**
-     * Set of domains that you want to inspect for in your traffic flows.
+     * @return Set of domains that you want to inspect for in your traffic flows.
      * 
      */
     private final List<String> targets;
@@ -37,23 +37,23 @@ public final class RuleGroupRuleGroupRulesSourceRulesSourceList {
     }
 
     /**
-     * String value to specify whether domains in the target list are allowed or denied access. Valid values: `ALLOWLIST`, `DENYLIST`.
+     * @return String value to specify whether domains in the target list are allowed or denied access. Valid values: `ALLOWLIST`, `DENYLIST`.
      * 
-    */
+     */
     public String generatedRulesType() {
         return this.generatedRulesType;
     }
     /**
-     * Set of types of domain specifications that are provided in the `targets` argument. Valid values: `HTTP_HOST`, `TLS_SNI`.
+     * @return Set of types of domain specifications that are provided in the `targets` argument. Valid values: `HTTP_HOST`, `TLS_SNI`.
      * 
-    */
+     */
     public List<String> targetTypes() {
         return this.targetTypes;
     }
     /**
-     * Set of domains that you want to inspect for in your traffic flows.
+     * @return Set of domains that you want to inspect for in your traffic flows.
      * 
-    */
+     */
     public List<String> targets() {
         return this.targets;
     }

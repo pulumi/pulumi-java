@@ -33,6 +33,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="attachmentsSources")
     private @Nullable Output<List<DocumentAttachmentsSourceGetArgs>> attachmentsSources;
 
+    /**
+     * @return One or more configuration blocks describing attachments sources to a version of a document. Defined below.
+     * 
+     */
     public Optional<Output<List<DocumentAttachmentsSourceGetArgs>>> attachmentsSources() {
         return Optional.ofNullable(this.attachmentsSources);
     }
@@ -44,6 +48,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="content")
     private @Nullable Output<String> content;
 
+    /**
+     * @return The JSON or YAML content of the document.
+     * 
+     */
     public Optional<Output<String>> content() {
         return Optional.ofNullable(this.content);
     }
@@ -55,6 +63,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdDate")
     private @Nullable Output<String> createdDate;
 
+    /**
+     * @return The date the document was created.
+     * 
+     */
     public Optional<Output<String>> createdDate() {
         return Optional.ofNullable(this.createdDate);
     }
@@ -66,6 +78,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultVersion")
     private @Nullable Output<String> defaultVersion;
 
+    /**
+     * @return The default version of the document.
+     * 
+     */
     public Optional<Output<String>> defaultVersion() {
         return Optional.ofNullable(this.defaultVersion);
     }
@@ -77,6 +93,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the document.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -88,6 +108,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="documentFormat")
     private @Nullable Output<String> documentFormat;
 
+    /**
+     * @return The format of the document. Valid document types include: `JSON` and `YAML`
+     * 
+     */
     public Optional<Output<String>> documentFormat() {
         return Optional.ofNullable(this.documentFormat);
     }
@@ -99,6 +123,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="documentType")
     private @Nullable Output<String> documentType;
 
+    /**
+     * @return The type of the document. Valid document types include: `Automation`, `Command`, `Package`, `Policy`, and `Session`
+     * 
+     */
     public Optional<Output<String>> documentType() {
         return Optional.ofNullable(this.documentType);
     }
@@ -110,6 +138,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="documentVersion")
     private @Nullable Output<String> documentVersion;
 
+    /**
+     * @return The document version.
+     * 
+     */
     public Optional<Output<String>> documentVersion() {
         return Optional.ofNullable(this.documentVersion);
     }
@@ -121,6 +153,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="hash")
     private @Nullable Output<String> hash;
 
+    /**
+     * @return The sha1 or sha256 of the document content
+     * 
+     */
     public Optional<Output<String>> hash() {
         return Optional.ofNullable(this.hash);
     }
@@ -132,6 +168,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="hashType")
     private @Nullable Output<String> hashType;
 
+    /**
+     * @return &#34;Sha1&#34; &#34;Sha256&#34;. The hashing algorithm used when hashing the content.
+     * 
+     */
     public Optional<Output<String>> hashType() {
         return Optional.ofNullable(this.hashType);
     }
@@ -143,6 +183,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="latestVersion")
     private @Nullable Output<String> latestVersion;
 
+    /**
+     * @return The latest version of the document.
+     * 
+     */
     public Optional<Output<String>> latestVersion() {
         return Optional.ofNullable(this.latestVersion);
     }
@@ -154,6 +198,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the document.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -165,6 +213,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="owner")
     private @Nullable Output<String> owner;
 
+    /**
+     * @return The AWS user account of the person who created the document.
+     * 
+     */
     public Optional<Output<String>> owner() {
         return Optional.ofNullable(this.owner);
     }
@@ -176,6 +228,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
     private @Nullable Output<List<DocumentParameterGetArgs>> parameters;
 
+    /**
+     * @return The parameters that are available to this document.
+     * 
+     */
     public Optional<Output<List<DocumentParameterGetArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -187,6 +243,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="permissions")
     private @Nullable Output<Map<String,String>> permissions;
 
+    /**
+     * @return Additional Permissions to attach to the document. See Permissions below for details.
+     * 
+     */
     public Optional<Output<Map<String,String>>> permissions() {
         return Optional.ofNullable(this.permissions);
     }
@@ -198,6 +258,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="platformTypes")
     private @Nullable Output<List<String>> platformTypes;
 
+    /**
+     * @return A list of OS platforms compatible with this SSM document, either &#34;Windows&#34; or &#34;Linux&#34;.
+     * 
+     */
     public Optional<Output<List<String>>> platformTypes() {
         return Optional.ofNullable(this.platformTypes);
     }
@@ -209,6 +273,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="schemaVersion")
     private @Nullable Output<String> schemaVersion;
 
+    /**
+     * @return The schema version of the document.
+     * 
+     */
     public Optional<Output<String>> schemaVersion() {
         return Optional.ofNullable(this.schemaVersion);
     }
@@ -220,6 +288,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return &#34;Creating&#34;, &#34;Active&#34; or &#34;Deleting&#34;. The current status of the document.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -231,6 +303,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -242,6 +318,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -253,6 +333,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetType")
     private @Nullable Output<String> targetType;
 
+    /**
+     * @return The target type which defines the kinds of resources the document can run on. For example, /AWS::EC2::Instance. For a list of valid resource types, see AWS Resource Types Reference (http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
+     * 
+     */
     public Optional<Output<String>> targetType() {
         return Optional.ofNullable(this.targetType);
     }
@@ -264,6 +348,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="versionName")
     private @Nullable Output<String> versionName;
 
+    /**
+     * @return A field specifying the version of the artifact you are creating with the document. For example, &#34;Release 12, Update 6&#34;. This value is unique across all versions of a document and cannot be changed for an existing document version.
+     * 
+     */
     public Optional<Output<String>> versionName() {
         return Optional.ofNullable(this.versionName);
     }
@@ -323,212 +411,494 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param attachmentsSources One or more configuration blocks describing attachments sources to a version of a document. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachmentsSources(@Nullable Output<List<DocumentAttachmentsSourceGetArgs>> attachmentsSources) {
             $.attachmentsSources = attachmentsSources;
             return this;
         }
 
+        /**
+         * @param attachmentsSources One or more configuration blocks describing attachments sources to a version of a document. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachmentsSources(List<DocumentAttachmentsSourceGetArgs> attachmentsSources) {
             return attachmentsSources(Output.of(attachmentsSources));
         }
 
+        /**
+         * @param attachmentsSources One or more configuration blocks describing attachments sources to a version of a document. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachmentsSources(DocumentAttachmentsSourceGetArgs... attachmentsSources) {
             return attachmentsSources(List.of(attachmentsSources));
         }
 
+        /**
+         * @param content The JSON or YAML content of the document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content The JSON or YAML content of the document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param createdDate The date the document was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdDate(@Nullable Output<String> createdDate) {
             $.createdDate = createdDate;
             return this;
         }
 
+        /**
+         * @param createdDate The date the document was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdDate(String createdDate) {
             return createdDate(Output.of(createdDate));
         }
 
+        /**
+         * @param defaultVersion The default version of the document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultVersion(@Nullable Output<String> defaultVersion) {
             $.defaultVersion = defaultVersion;
             return this;
         }
 
+        /**
+         * @param defaultVersion The default version of the document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultVersion(String defaultVersion) {
             return defaultVersion(Output.of(defaultVersion));
         }
 
+        /**
+         * @param description The description of the document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param documentFormat The format of the document. Valid document types include: `JSON` and `YAML`
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentFormat(@Nullable Output<String> documentFormat) {
             $.documentFormat = documentFormat;
             return this;
         }
 
+        /**
+         * @param documentFormat The format of the document. Valid document types include: `JSON` and `YAML`
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentFormat(String documentFormat) {
             return documentFormat(Output.of(documentFormat));
         }
 
+        /**
+         * @param documentType The type of the document. Valid document types include: `Automation`, `Command`, `Package`, `Policy`, and `Session`
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentType(@Nullable Output<String> documentType) {
             $.documentType = documentType;
             return this;
         }
 
+        /**
+         * @param documentType The type of the document. Valid document types include: `Automation`, `Command`, `Package`, `Policy`, and `Session`
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentType(String documentType) {
             return documentType(Output.of(documentType));
         }
 
+        /**
+         * @param documentVersion The document version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentVersion(@Nullable Output<String> documentVersion) {
             $.documentVersion = documentVersion;
             return this;
         }
 
+        /**
+         * @param documentVersion The document version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentVersion(String documentVersion) {
             return documentVersion(Output.of(documentVersion));
         }
 
+        /**
+         * @param hash The sha1 or sha256 of the document content
+         * 
+         * @return builder
+         * 
+         */
         public Builder hash(@Nullable Output<String> hash) {
             $.hash = hash;
             return this;
         }
 
+        /**
+         * @param hash The sha1 or sha256 of the document content
+         * 
+         * @return builder
+         * 
+         */
         public Builder hash(String hash) {
             return hash(Output.of(hash));
         }
 
+        /**
+         * @param hashType &#34;Sha1&#34; &#34;Sha256&#34;. The hashing algorithm used when hashing the content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hashType(@Nullable Output<String> hashType) {
             $.hashType = hashType;
             return this;
         }
 
+        /**
+         * @param hashType &#34;Sha1&#34; &#34;Sha256&#34;. The hashing algorithm used when hashing the content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hashType(String hashType) {
             return hashType(Output.of(hashType));
         }
 
+        /**
+         * @param latestVersion The latest version of the document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latestVersion(@Nullable Output<String> latestVersion) {
             $.latestVersion = latestVersion;
             return this;
         }
 
+        /**
+         * @param latestVersion The latest version of the document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latestVersion(String latestVersion) {
             return latestVersion(Output.of(latestVersion));
         }
 
+        /**
+         * @param name The name of the document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param owner The AWS user account of the person who created the document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(@Nullable Output<String> owner) {
             $.owner = owner;
             return this;
         }
 
+        /**
+         * @param owner The AWS user account of the person who created the document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(String owner) {
             return owner(Output.of(owner));
         }
 
+        /**
+         * @param parameters The parameters that are available to this document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<List<DocumentParameterGetArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The parameters that are available to this document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<DocumentParameterGetArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param parameters The parameters that are available to this document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(DocumentParameterGetArgs... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param permissions Additional Permissions to attach to the document. See Permissions below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(@Nullable Output<Map<String,String>> permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param permissions Additional Permissions to attach to the document. See Permissions below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(Map<String,String> permissions) {
             return permissions(Output.of(permissions));
         }
 
+        /**
+         * @param platformTypes A list of OS platforms compatible with this SSM document, either &#34;Windows&#34; or &#34;Linux&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platformTypes(@Nullable Output<List<String>> platformTypes) {
             $.platformTypes = platformTypes;
             return this;
         }
 
+        /**
+         * @param platformTypes A list of OS platforms compatible with this SSM document, either &#34;Windows&#34; or &#34;Linux&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platformTypes(List<String> platformTypes) {
             return platformTypes(Output.of(platformTypes));
         }
 
+        /**
+         * @param platformTypes A list of OS platforms compatible with this SSM document, either &#34;Windows&#34; or &#34;Linux&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platformTypes(String... platformTypes) {
             return platformTypes(List.of(platformTypes));
         }
 
+        /**
+         * @param schemaVersion The schema version of the document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaVersion(@Nullable Output<String> schemaVersion) {
             $.schemaVersion = schemaVersion;
             return this;
         }
 
+        /**
+         * @param schemaVersion The schema version of the document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaVersion(String schemaVersion) {
             return schemaVersion(Output.of(schemaVersion));
         }
 
+        /**
+         * @param status &#34;Creating&#34;, &#34;Active&#34; or &#34;Deleting&#34;. The current status of the document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status &#34;Creating&#34;, &#34;Active&#34; or &#34;Deleting&#34;. The current status of the document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param tags A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param targetType The target type which defines the kinds of resources the document can run on. For example, /AWS::EC2::Instance. For a list of valid resource types, see AWS Resource Types Reference (http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetType(@Nullable Output<String> targetType) {
             $.targetType = targetType;
             return this;
         }
 
+        /**
+         * @param targetType The target type which defines the kinds of resources the document can run on. For example, /AWS::EC2::Instance. For a list of valid resource types, see AWS Resource Types Reference (http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetType(String targetType) {
             return targetType(Output.of(targetType));
         }
 
+        /**
+         * @param versionName A field specifying the version of the artifact you are creating with the document. For example, &#34;Release 12, Update 6&#34;. This value is unique across all versions of a document and cannot be changed for an existing document version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionName(@Nullable Output<String> versionName) {
             $.versionName = versionName;
             return this;
         }
 
+        /**
+         * @param versionName A field specifying the version of the artifact you are creating with the document. For example, &#34;Release 12, Update 6&#34;. This value is unique across all versions of a document and cannot be changed for an existing document version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionName(String versionName) {
             return versionName(Output.of(versionName));
         }

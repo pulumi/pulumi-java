@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class FlowDefinitionHumanLoopRequestSource {
     /**
-     * Specifies whether Amazon Rekognition or Amazon Textract are used as the integration source. Valid values are: `AWS/Rekognition/DetectModerationLabels/Image/V3` and `AWS/Textract/AnalyzeDocument/Forms/V1`.
+     * @return Specifies whether Amazon Rekognition or Amazon Textract are used as the integration source. Valid values are: `AWS/Rekognition/DetectModerationLabels/Image/V3` and `AWS/Textract/AnalyzeDocument/Forms/V1`.
      * 
      */
     private final String awsManagedHumanLoopRequestSource;
@@ -21,9 +21,9 @@ public final class FlowDefinitionHumanLoopRequestSource {
     }
 
     /**
-     * Specifies whether Amazon Rekognition or Amazon Textract are used as the integration source. Valid values are: `AWS/Rekognition/DetectModerationLabels/Image/V3` and `AWS/Textract/AnalyzeDocument/Forms/V1`.
+     * @return Specifies whether Amazon Rekognition or Amazon Textract are used as the integration source. Valid values are: `AWS/Rekognition/DetectModerationLabels/Image/V3` and `AWS/Textract/AnalyzeDocument/Forms/V1`.
      * 
-    */
+     */
     public String awsManagedHumanLoopRequestSource() {
         return this.awsManagedHumanLoopRequestSource;
     }

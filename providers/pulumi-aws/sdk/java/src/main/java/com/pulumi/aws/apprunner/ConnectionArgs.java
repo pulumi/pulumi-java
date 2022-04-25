@@ -23,6 +23,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectionName", required=true)
     private Output<String> connectionName;
 
+    /**
+     * @return Name of the connection.
+     * 
+     */
     public Output<String> connectionName() {
         return this.connectionName;
     }
@@ -34,6 +38,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="providerType", required=true)
     private Output<String> providerType;
 
+    /**
+     * @return The source repository provider. Valid values: `GITHUB`.
+     * 
+     */
     public Output<String> providerType() {
         return this.providerType;
     }
@@ -45,6 +53,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -75,29 +87,65 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionName Name of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionName(Output<String> connectionName) {
             $.connectionName = connectionName;
             return this;
         }
 
+        /**
+         * @param connectionName Name of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionName(String connectionName) {
             return connectionName(Output.of(connectionName));
         }
 
+        /**
+         * @param providerType The source repository provider. Valid values: `GITHUB`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerType(Output<String> providerType) {
             $.providerType = providerType;
             return this;
         }
 
+        /**
+         * @param providerType The source repository provider. Valid values: `GITHUB`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerType(String providerType) {
             return providerType(Output.of(providerType));
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

@@ -21,6 +21,10 @@ public final class LocationHdfsNameNodeGetArgs extends com.pulumi.resources.Reso
     @Import(name="hostname", required=true)
     private Output<String> hostname;
 
+    /**
+     * @return The hostname of the NameNode in the HDFS cluster. This value is the IP address or Domain Name Service (DNS) name of the NameNode. An agent that&#39;s installed on-premises uses this hostname to communicate with the NameNode in the network.
+     * 
+     */
     public Output<String> hostname() {
         return this.hostname;
     }
@@ -32,6 +36,10 @@ public final class LocationHdfsNameNodeGetArgs extends com.pulumi.resources.Reso
     @Import(name="port", required=true)
     private Output<Integer> port;
 
+    /**
+     * @return The port that the NameNode uses to listen to client requests.
+     * 
+     */
     public Output<Integer> port() {
         return this.port;
     }
@@ -61,20 +69,44 @@ public final class LocationHdfsNameNodeGetArgs extends com.pulumi.resources.Reso
             $ = new LocationHdfsNameNodeGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostname The hostname of the NameNode in the HDFS cluster. This value is the IP address or Domain Name Service (DNS) name of the NameNode. An agent that&#39;s installed on-premises uses this hostname to communicate with the NameNode in the network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(Output<String> hostname) {
             $.hostname = hostname;
             return this;
         }
 
+        /**
+         * @param hostname The hostname of the NameNode in the HDFS cluster. This value is the IP address or Domain Name Service (DNS) name of the NameNode. An agent that&#39;s installed on-premises uses this hostname to communicate with the NameNode in the network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(String hostname) {
             return hostname(Output.of(hostname));
         }
 
+        /**
+         * @param port The port that the NameNode uses to listen to client requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The port that the NameNode uses to listen to client requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }

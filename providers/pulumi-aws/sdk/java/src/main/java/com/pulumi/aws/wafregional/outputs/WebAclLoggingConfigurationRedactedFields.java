@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class WebAclLoggingConfigurationRedactedFields {
     /**
-     * Set of configuration blocks for fields to redact. Detailed below.
+     * @return Set of configuration blocks for fields to redact. Detailed below.
      * 
      */
     private final List<WebAclLoggingConfigurationRedactedFieldsFieldToMatch> fieldToMatches;
@@ -22,9 +22,9 @@ public final class WebAclLoggingConfigurationRedactedFields {
     }
 
     /**
-     * Set of configuration blocks for fields to redact. Detailed below.
+     * @return Set of configuration blocks for fields to redact. Detailed below.
      * 
-    */
+     */
     public List<WebAclLoggingConfigurationRedactedFieldsFieldToMatch> fieldToMatches() {
         return this.fieldToMatches;
     }

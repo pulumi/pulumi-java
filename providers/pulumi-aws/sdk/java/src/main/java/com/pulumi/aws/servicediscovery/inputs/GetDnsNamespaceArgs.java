@@ -19,6 +19,10 @@ public final class GetDnsNamespaceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the namespace.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -30,6 +34,10 @@ public final class GetDnsNamespaceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the namespace. Allowed values are `DNS_PUBLIC` or `DNS_PRIVATE`.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -59,11 +67,23 @@ public final class GetDnsNamespaceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDnsNamespaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type The type of the namespace. Allowed values are `DNS_PUBLIC` or `DNS_PRIVATE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

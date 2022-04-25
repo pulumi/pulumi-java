@@ -22,6 +22,10 @@ public final class GetInfrastructureConfigurationsArgs extends com.pulumi.resour
     @Import(name="filters")
     private @Nullable List<GetInfrastructureConfigurationsFilter> filters;
 
+    /**
+     * @return Configuration block(s) for filtering. Detailed below.
+     * 
+     */
     public Optional<List<GetInfrastructureConfigurationsFilter>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -50,11 +54,23 @@ public final class GetInfrastructureConfigurationsArgs extends com.pulumi.resour
             $ = new GetInfrastructureConfigurationsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filters Configuration block(s) for filtering. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable List<GetInfrastructureConfigurationsFilter> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters Configuration block(s) for filtering. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(GetInfrastructureConfigurationsFilter... filters) {
             return filters(List.of(filters));
         }

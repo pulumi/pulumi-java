@@ -22,6 +22,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Unique name describing the cluster.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -50,11 +54,23 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Unique name describing the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Unique name describing the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

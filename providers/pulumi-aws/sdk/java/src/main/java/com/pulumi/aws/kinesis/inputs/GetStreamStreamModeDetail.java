@@ -19,6 +19,10 @@ public final class GetStreamStreamModeDetail extends com.pulumi.resources.Invoke
     @Import(name="streamMode", required=true)
     private String streamMode;
 
+    /**
+     * @return The capacity mode of the stream. Either `ON_DEMAND` or `PROVISIONED`.
+     * 
+     */
     public String streamMode() {
         return this.streamMode;
     }
@@ -47,6 +51,12 @@ public final class GetStreamStreamModeDetail extends com.pulumi.resources.Invoke
             $ = new GetStreamStreamModeDetail(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param streamMode The capacity mode of the stream. Either `ON_DEMAND` or `PROVISIONED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamMode(String streamMode) {
             $.streamMode = streamMode;
             return this;

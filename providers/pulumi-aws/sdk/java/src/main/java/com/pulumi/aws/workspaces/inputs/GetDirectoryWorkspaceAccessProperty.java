@@ -19,6 +19,10 @@ public final class GetDirectoryWorkspaceAccessProperty extends com.pulumi.resour
     @Import(name="deviceTypeAndroid", required=true)
     private String deviceTypeAndroid;
 
+    /**
+     * @return (Optional) Indicates whether users can use Android devices to access their WorkSpaces.
+     * 
+     */
     public String deviceTypeAndroid() {
         return this.deviceTypeAndroid;
     }
@@ -30,6 +34,10 @@ public final class GetDirectoryWorkspaceAccessProperty extends com.pulumi.resour
     @Import(name="deviceTypeChromeos", required=true)
     private String deviceTypeChromeos;
 
+    /**
+     * @return (Optional) Indicates whether users can use Chromebooks to access their WorkSpaces.
+     * 
+     */
     public String deviceTypeChromeos() {
         return this.deviceTypeChromeos;
     }
@@ -41,6 +49,10 @@ public final class GetDirectoryWorkspaceAccessProperty extends com.pulumi.resour
     @Import(name="deviceTypeIos", required=true)
     private String deviceTypeIos;
 
+    /**
+     * @return (Optional) Indicates whether users can use iOS devices to access their WorkSpaces.
+     * 
+     */
     public String deviceTypeIos() {
         return this.deviceTypeIos;
     }
@@ -52,6 +64,10 @@ public final class GetDirectoryWorkspaceAccessProperty extends com.pulumi.resour
     @Import(name="deviceTypeLinux", required=true)
     private String deviceTypeLinux;
 
+    /**
+     * @return (Optional) Indicates whether users can use Linux clients to access their WorkSpaces.
+     * 
+     */
     public String deviceTypeLinux() {
         return this.deviceTypeLinux;
     }
@@ -63,6 +79,10 @@ public final class GetDirectoryWorkspaceAccessProperty extends com.pulumi.resour
     @Import(name="deviceTypeOsx", required=true)
     private String deviceTypeOsx;
 
+    /**
+     * @return (Optional) Indicates whether users can use macOS clients to access their WorkSpaces.
+     * 
+     */
     public String deviceTypeOsx() {
         return this.deviceTypeOsx;
     }
@@ -74,6 +94,10 @@ public final class GetDirectoryWorkspaceAccessProperty extends com.pulumi.resour
     @Import(name="deviceTypeWeb", required=true)
     private String deviceTypeWeb;
 
+    /**
+     * @return (Optional) Indicates whether users can access their WorkSpaces through a web browser.
+     * 
+     */
     public String deviceTypeWeb() {
         return this.deviceTypeWeb;
     }
@@ -85,6 +109,10 @@ public final class GetDirectoryWorkspaceAccessProperty extends com.pulumi.resour
     @Import(name="deviceTypeWindows", required=true)
     private String deviceTypeWindows;
 
+    /**
+     * @return (Optional) Indicates whether users can use Windows clients to access their WorkSpaces.
+     * 
+     */
     public String deviceTypeWindows() {
         return this.deviceTypeWindows;
     }
@@ -96,6 +124,10 @@ public final class GetDirectoryWorkspaceAccessProperty extends com.pulumi.resour
     @Import(name="deviceTypeZeroclient", required=true)
     private String deviceTypeZeroclient;
 
+    /**
+     * @return (Optional) Indicates whether users can use zero client devices to access their WorkSpaces.
+     * 
+     */
     public String deviceTypeZeroclient() {
         return this.deviceTypeZeroclient;
     }
@@ -131,41 +163,89 @@ public final class GetDirectoryWorkspaceAccessProperty extends com.pulumi.resour
             $ = new GetDirectoryWorkspaceAccessProperty(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceTypeAndroid (Optional) Indicates whether users can use Android devices to access their WorkSpaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceTypeAndroid(String deviceTypeAndroid) {
             $.deviceTypeAndroid = deviceTypeAndroid;
             return this;
         }
 
+        /**
+         * @param deviceTypeChromeos (Optional) Indicates whether users can use Chromebooks to access their WorkSpaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceTypeChromeos(String deviceTypeChromeos) {
             $.deviceTypeChromeos = deviceTypeChromeos;
             return this;
         }
 
+        /**
+         * @param deviceTypeIos (Optional) Indicates whether users can use iOS devices to access their WorkSpaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceTypeIos(String deviceTypeIos) {
             $.deviceTypeIos = deviceTypeIos;
             return this;
         }
 
+        /**
+         * @param deviceTypeLinux (Optional) Indicates whether users can use Linux clients to access their WorkSpaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceTypeLinux(String deviceTypeLinux) {
             $.deviceTypeLinux = deviceTypeLinux;
             return this;
         }
 
+        /**
+         * @param deviceTypeOsx (Optional) Indicates whether users can use macOS clients to access their WorkSpaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceTypeOsx(String deviceTypeOsx) {
             $.deviceTypeOsx = deviceTypeOsx;
             return this;
         }
 
+        /**
+         * @param deviceTypeWeb (Optional) Indicates whether users can access their WorkSpaces through a web browser.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceTypeWeb(String deviceTypeWeb) {
             $.deviceTypeWeb = deviceTypeWeb;
             return this;
         }
 
+        /**
+         * @param deviceTypeWindows (Optional) Indicates whether users can use Windows clients to access their WorkSpaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceTypeWindows(String deviceTypeWindows) {
             $.deviceTypeWindows = deviceTypeWindows;
             return this;
         }
 
+        /**
+         * @param deviceTypeZeroclient (Optional) Indicates whether users can use zero client devices to access their WorkSpaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceTypeZeroclient(String deviceTypeZeroclient) {
             $.deviceTypeZeroclient = deviceTypeZeroclient;
             return this;

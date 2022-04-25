@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OrganizationalUnitAccount {
     /**
-     * ARN of the organizational unit
+     * @return ARN of the organizational unit
      * 
      */
     private final @Nullable String arn;
     /**
-     * Email of the account
+     * @return Email of the account
      * 
      */
     private final @Nullable String email;
     /**
-     * Identifier of the organization unit
+     * @return Identifier of the organization unit
      * 
      */
     private final @Nullable String id;
     /**
-     * The name for the organizational unit
+     * @return The name for the organizational unit
      * 
      */
     private final @Nullable String name;
@@ -45,30 +45,30 @@ public final class OrganizationalUnitAccount {
     }
 
     /**
-     * ARN of the organizational unit
+     * @return ARN of the organizational unit
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Email of the account
+     * @return Email of the account
      * 
-    */
+     */
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
     /**
-     * Identifier of the organization unit
+     * @return Identifier of the organization unit
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The name for the organizational unit
+     * @return The name for the organizational unit
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

@@ -24,6 +24,10 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
     @Import(name="allRegions")
     private @Nullable Output<Boolean> allRegions;
 
+    /**
+     * @return If true, aggregate existing AWS Config regions and future regions.
+     * 
+     */
     public Optional<Output<Boolean>> allRegions() {
         return Optional.ofNullable(this.allRegions);
     }
@@ -35,6 +39,10 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
     @Import(name="regions")
     private @Nullable Output<List<String>> regions;
 
+    /**
+     * @return List of source regions being aggregated.
+     * 
+     */
     public Optional<Output<List<String>>> regions() {
         return Optional.ofNullable(this.regions);
     }
@@ -46,6 +54,10 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return ARN of the IAM role used to retrieve AWS Organization details associated with the aggregator account.
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -76,33 +88,75 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
             $ = new ConfigurationAggregatorOrganizationAggregationSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allRegions If true, aggregate existing AWS Config regions and future regions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allRegions(@Nullable Output<Boolean> allRegions) {
             $.allRegions = allRegions;
             return this;
         }
 
+        /**
+         * @param allRegions If true, aggregate existing AWS Config regions and future regions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allRegions(Boolean allRegions) {
             return allRegions(Output.of(allRegions));
         }
 
+        /**
+         * @param regions List of source regions being aggregated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regions(@Nullable Output<List<String>> regions) {
             $.regions = regions;
             return this;
         }
 
+        /**
+         * @param regions List of source regions being aggregated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regions(List<String> regions) {
             return regions(Output.of(regions));
         }
 
+        /**
+         * @param regions List of source regions being aggregated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regions(String... regions) {
             return regions(List.of(regions));
         }
 
+        /**
+         * @param roleArn ARN of the IAM role used to retrieve AWS Organization details associated with the aggregator account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn ARN of the IAM role used to retrieve AWS Organization details associated with the aggregator account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }

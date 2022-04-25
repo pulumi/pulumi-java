@@ -25,6 +25,10 @@ public final class EventSubscriptionState extends com.pulumi.resources.ResourceA
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the DMS Event Subscription.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -36,6 +40,10 @@ public final class EventSubscriptionState extends com.pulumi.resources.ResourceA
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Whether the event subscription should be enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -47,6 +55,10 @@ public final class EventSubscriptionState extends com.pulumi.resources.ResourceA
     @Import(name="eventCategories")
     private @Nullable Output<List<String>> eventCategories;
 
+    /**
+     * @return List of event categories to listen for, see `DescribeEventCategories` for a canonical list.
+     * 
+     */
     public Optional<Output<List<String>>> eventCategories() {
         return Optional.ofNullable(this.eventCategories);
     }
@@ -58,6 +70,10 @@ public final class EventSubscriptionState extends com.pulumi.resources.ResourceA
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of event subscription.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -69,6 +85,10 @@ public final class EventSubscriptionState extends com.pulumi.resources.ResourceA
     @Import(name="snsTopicArn")
     private @Nullable Output<String> snsTopicArn;
 
+    /**
+     * @return SNS topic arn to send events on.
+     * 
+     */
     public Optional<Output<String>> snsTopicArn() {
         return Optional.ofNullable(this.snsTopicArn);
     }
@@ -80,6 +100,10 @@ public final class EventSubscriptionState extends com.pulumi.resources.ResourceA
     @Import(name="sourceIds")
     private @Nullable Output<List<String>> sourceIds;
 
+    /**
+     * @return Ids of sources to listen to.
+     * 
+     */
     public Optional<Output<List<String>>> sourceIds() {
         return Optional.ofNullable(this.sourceIds);
     }
@@ -91,6 +115,10 @@ public final class EventSubscriptionState extends com.pulumi.resources.ResourceA
     @Import(name="sourceType")
     private @Nullable Output<String> sourceType;
 
+    /**
+     * @return Type of source for events. Valid values: `replication-instance` or `replication-task`
+     * 
+     */
     public Optional<Output<String>> sourceType() {
         return Optional.ofNullable(this.sourceType);
     }
@@ -102,6 +130,10 @@ public final class EventSubscriptionState extends com.pulumi.resources.ResourceA
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Map of resource tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -113,6 +145,10 @@ public final class EventSubscriptionState extends com.pulumi.resources.ResourceA
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -149,91 +185,211 @@ public final class EventSubscriptionState extends com.pulumi.resources.ResourceA
             $ = new EventSubscriptionState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the DMS Event Subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the DMS Event Subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param enabled Whether the event subscription should be enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether the event subscription should be enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param eventCategories List of event categories to listen for, see `DescribeEventCategories` for a canonical list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventCategories(@Nullable Output<List<String>> eventCategories) {
             $.eventCategories = eventCategories;
             return this;
         }
 
+        /**
+         * @param eventCategories List of event categories to listen for, see `DescribeEventCategories` for a canonical list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventCategories(List<String> eventCategories) {
             return eventCategories(Output.of(eventCategories));
         }
 
+        /**
+         * @param eventCategories List of event categories to listen for, see `DescribeEventCategories` for a canonical list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventCategories(String... eventCategories) {
             return eventCategories(List.of(eventCategories));
         }
 
+        /**
+         * @param name Name of event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param snsTopicArn SNS topic arn to send events on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snsTopicArn(@Nullable Output<String> snsTopicArn) {
             $.snsTopicArn = snsTopicArn;
             return this;
         }
 
+        /**
+         * @param snsTopicArn SNS topic arn to send events on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snsTopicArn(String snsTopicArn) {
             return snsTopicArn(Output.of(snsTopicArn));
         }
 
+        /**
+         * @param sourceIds Ids of sources to listen to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIds(@Nullable Output<List<String>> sourceIds) {
             $.sourceIds = sourceIds;
             return this;
         }
 
+        /**
+         * @param sourceIds Ids of sources to listen to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIds(List<String> sourceIds) {
             return sourceIds(Output.of(sourceIds));
         }
 
+        /**
+         * @param sourceIds Ids of sources to listen to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIds(String... sourceIds) {
             return sourceIds(List.of(sourceIds));
         }
 
+        /**
+         * @param sourceType Type of source for events. Valid values: `replication-instance` or `replication-task`
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceType(@Nullable Output<String> sourceType) {
             $.sourceType = sourceType;
             return this;
         }
 
+        /**
+         * @param sourceType Type of source for events. Valid values: `replication-instance` or `replication-task`
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceType(String sourceType) {
             return sourceType(Output.of(sourceType));
         }
 
+        /**
+         * @param tags Map of resource tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Map of resource tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

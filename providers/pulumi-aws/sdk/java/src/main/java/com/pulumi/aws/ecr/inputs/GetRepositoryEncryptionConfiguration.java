@@ -19,6 +19,10 @@ public final class GetRepositoryEncryptionConfiguration extends com.pulumi.resou
     @Import(name="encryptionType", required=true)
     private String encryptionType;
 
+    /**
+     * @return The encryption type to use for the repository, either `AES256` or `KMS`.
+     * 
+     */
     public String encryptionType() {
         return this.encryptionType;
     }
@@ -30,6 +34,10 @@ public final class GetRepositoryEncryptionConfiguration extends com.pulumi.resou
     @Import(name="kmsKey", required=true)
     private String kmsKey;
 
+    /**
+     * @return If `encryption_type` is `KMS`, the ARN of the KMS key used.
+     * 
+     */
     public String kmsKey() {
         return this.kmsKey;
     }
@@ -59,11 +67,23 @@ public final class GetRepositoryEncryptionConfiguration extends com.pulumi.resou
             $ = new GetRepositoryEncryptionConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionType The encryption type to use for the repository, either `AES256` or `KMS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionType(String encryptionType) {
             $.encryptionType = encryptionType;
             return this;
         }
 
+        /**
+         * @param kmsKey If `encryption_type` is `KMS`, the ARN of the KMS key used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKey(String kmsKey) {
             $.kmsKey = kmsKey;
             return this;

@@ -23,6 +23,10 @@ public final class BucketMetricState extends com.pulumi.resources.ResourceArgs {
     @Import(name="bucket")
     private @Nullable Output<String> bucket;
 
+    /**
+     * @return The name of the bucket to put metric configuration.
+     * 
+     */
     public Optional<Output<String>> bucket() {
         return Optional.ofNullable(this.bucket);
     }
@@ -34,6 +38,10 @@ public final class BucketMetricState extends com.pulumi.resources.ResourceArgs {
     @Import(name="filter")
     private @Nullable Output<BucketMetricFilterGetArgs> filter;
 
+    /**
+     * @return [Object filtering](http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html#metrics-configurations-filter) that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
+     * 
+     */
     public Optional<Output<BucketMetricFilterGetArgs>> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -45,6 +53,10 @@ public final class BucketMetricState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Unique identifier of the metrics configuration for the bucket.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -75,29 +87,65 @@ public final class BucketMetricState extends com.pulumi.resources.ResourceArgs {
             $ = new BucketMetricState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket The name of the bucket to put metric configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(@Nullable Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket The name of the bucket to put metric configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param filter [Object filtering](http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html#metrics-configurations-filter) that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<BucketMetricFilterGetArgs> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter [Object filtering](http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html#metrics-configurations-filter) that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(BucketMetricFilterGetArgs filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param name Unique identifier of the metrics configuration for the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Unique identifier of the metrics configuration for the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

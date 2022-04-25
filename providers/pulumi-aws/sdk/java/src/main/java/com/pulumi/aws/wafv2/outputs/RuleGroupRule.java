@@ -17,32 +17,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RuleGroupRule {
     /**
-     * The action that AWS WAF should take on a web request when it matches the rule&#39;s statement. Settings at the `aws.wafv2.WebAcl` level can override the rule action setting. See Action below for details.
+     * @return The action that AWS WAF should take on a web request when it matches the rule&#39;s statement. Settings at the `aws.wafv2.WebAcl` level can override the rule action setting. See Action below for details.
      * 
      */
     private final RuleGroupRuleAction action;
     /**
-     * A friendly name of the rule.
+     * @return A friendly name of the rule.
      * 
      */
     private final String name;
     /**
-     * If you define more than one Rule in a WebACL, AWS WAF evaluates each request against the `rules` in order based on the value of `priority`. AWS WAF processes rules with lower priority first.
+     * @return If you define more than one Rule in a WebACL, AWS WAF evaluates each request against the `rules` in order based on the value of `priority`. AWS WAF processes rules with lower priority first.
      * 
      */
     private final Integer priority;
     /**
-     * Labels to apply to web requests that match the rule match statement. See Rule Label below for details.
+     * @return Labels to apply to web requests that match the rule match statement. See Rule Label below for details.
      * 
      */
     private final @Nullable List<RuleGroupRuleRuleLabel> ruleLabels;
     /**
-     * The AWS WAF processing statement for the rule, for example `byte_match_statement` or `geo_match_statement`. See Statement below for details.
+     * @return The AWS WAF processing statement for the rule, for example `byte_match_statement` or `geo_match_statement`. See Statement below for details.
      * 
      */
     private final RuleGroupRuleStatement statement;
     /**
-     * Defines and enables Amazon CloudWatch metrics and web request sample collection. See Visibility Configuration below for details.
+     * @return Defines and enables Amazon CloudWatch metrics and web request sample collection. See Visibility Configuration below for details.
      * 
      */
     private final RuleGroupRuleVisibilityConfig visibilityConfig;
@@ -64,44 +64,44 @@ public final class RuleGroupRule {
     }
 
     /**
-     * The action that AWS WAF should take on a web request when it matches the rule&#39;s statement. Settings at the `aws.wafv2.WebAcl` level can override the rule action setting. See Action below for details.
+     * @return The action that AWS WAF should take on a web request when it matches the rule&#39;s statement. Settings at the `aws.wafv2.WebAcl` level can override the rule action setting. See Action below for details.
      * 
-    */
+     */
     public RuleGroupRuleAction action() {
         return this.action;
     }
     /**
-     * A friendly name of the rule.
+     * @return A friendly name of the rule.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * If you define more than one Rule in a WebACL, AWS WAF evaluates each request against the `rules` in order based on the value of `priority`. AWS WAF processes rules with lower priority first.
+     * @return If you define more than one Rule in a WebACL, AWS WAF evaluates each request against the `rules` in order based on the value of `priority`. AWS WAF processes rules with lower priority first.
      * 
-    */
+     */
     public Integer priority() {
         return this.priority;
     }
     /**
-     * Labels to apply to web requests that match the rule match statement. See Rule Label below for details.
+     * @return Labels to apply to web requests that match the rule match statement. See Rule Label below for details.
      * 
-    */
+     */
     public List<RuleGroupRuleRuleLabel> ruleLabels() {
         return this.ruleLabels == null ? List.of() : this.ruleLabels;
     }
     /**
-     * The AWS WAF processing statement for the rule, for example `byte_match_statement` or `geo_match_statement`. See Statement below for details.
+     * @return The AWS WAF processing statement for the rule, for example `byte_match_statement` or `geo_match_statement`. See Statement below for details.
      * 
-    */
+     */
     public RuleGroupRuleStatement statement() {
         return this.statement;
     }
     /**
-     * Defines and enables Amazon CloudWatch metrics and web request sample collection. See Visibility Configuration below for details.
+     * @return Defines and enables Amazon CloudWatch metrics and web request sample collection. See Visibility Configuration below for details.
      * 
-    */
+     */
     public RuleGroupRuleVisibilityConfig visibilityConfig() {
         return this.visibilityConfig;
     }

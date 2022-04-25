@@ -20,6 +20,10 @@ public final class PatchGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="baselineId", required=true)
     private Output<String> baselineId;
 
+    /**
+     * @return The ID of the patch baseline to register the patch group with.
+     * 
+     */
     public Output<String> baselineId() {
         return this.baselineId;
     }
@@ -31,6 +35,10 @@ public final class PatchGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="patchGroup", required=true)
     private Output<String> patchGroup;
 
+    /**
+     * @return The name of the patch group that should be registered with the patch baseline.
+     * 
+     */
     public Output<String> patchGroup() {
         return this.patchGroup;
     }
@@ -60,20 +68,44 @@ public final class PatchGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PatchGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baselineId The ID of the patch baseline to register the patch group with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baselineId(Output<String> baselineId) {
             $.baselineId = baselineId;
             return this;
         }
 
+        /**
+         * @param baselineId The ID of the patch baseline to register the patch group with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baselineId(String baselineId) {
             return baselineId(Output.of(baselineId));
         }
 
+        /**
+         * @param patchGroup The name of the patch group that should be registered with the patch baseline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchGroup(Output<String> patchGroup) {
             $.patchGroup = patchGroup;
             return this;
         }
 
+        /**
+         * @param patchGroup The name of the patch group that should be registered with the patch baseline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchGroup(String patchGroup) {
             return patchGroup(Output.of(patchGroup));
         }

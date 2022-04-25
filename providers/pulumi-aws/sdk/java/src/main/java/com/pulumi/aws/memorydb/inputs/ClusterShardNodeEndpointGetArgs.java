@@ -23,6 +23,10 @@ public final class ClusterShardNodeEndpointGetArgs extends com.pulumi.resources.
     @Import(name="address")
     private @Nullable Output<String> address;
 
+    /**
+     * @return DNS hostname of the node.
+     * 
+     */
     public Optional<Output<String>> address() {
         return Optional.ofNullable(this.address);
     }
@@ -34,6 +38,10 @@ public final class ClusterShardNodeEndpointGetArgs extends com.pulumi.resources.
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return The port number on which each of the nodes accepts connections. Defaults to `6379`.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -63,20 +71,44 @@ public final class ClusterShardNodeEndpointGetArgs extends com.pulumi.resources.
             $ = new ClusterShardNodeEndpointGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param address DNS hostname of the node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(@Nullable Output<String> address) {
             $.address = address;
             return this;
         }
 
+        /**
+         * @param address DNS hostname of the node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(String address) {
             return address(Output.of(address));
         }
 
+        /**
+         * @param port The port number on which each of the nodes accepts connections. Defaults to `6379`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The port number on which each of the nodes accepts connections. Defaults to `6379`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }

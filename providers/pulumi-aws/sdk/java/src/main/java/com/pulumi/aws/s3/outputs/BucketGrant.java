@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BucketGrant {
     /**
-     * Canonical user id to grant for. Used only when `type` is `CanonicalUser`.
+     * @return Canonical user id to grant for. Used only when `type` is `CanonicalUser`.
      * 
      */
     private final @Nullable String id;
     /**
-     * List of permissions to apply for grantee. Valid values are `READ`, `WRITE`, `READ_ACP`, `WRITE_ACP`, `FULL_CONTROL`.
+     * @return List of permissions to apply for grantee. Valid values are `READ`, `WRITE`, `READ_ACP`, `WRITE_ACP`, `FULL_CONTROL`.
      * 
      */
     private final List<String> permissions;
     /**
-     * - Type of grantee to apply for. Valid values are `CanonicalUser` and `Group`. `AmazonCustomerByEmail` is not supported.
+     * @return - Type of grantee to apply for. Valid values are `CanonicalUser` and `Group`. `AmazonCustomerByEmail` is not supported.
      * 
      */
     private final String type;
     /**
-     * Uri address to grant for. Used only when `type` is `Group`.
+     * @return Uri address to grant for. Used only when `type` is `Group`.
      * 
      */
     private final @Nullable String uri;
@@ -46,30 +46,30 @@ public final class BucketGrant {
     }
 
     /**
-     * Canonical user id to grant for. Used only when `type` is `CanonicalUser`.
+     * @return Canonical user id to grant for. Used only when `type` is `CanonicalUser`.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * List of permissions to apply for grantee. Valid values are `READ`, `WRITE`, `READ_ACP`, `WRITE_ACP`, `FULL_CONTROL`.
+     * @return List of permissions to apply for grantee. Valid values are `READ`, `WRITE`, `READ_ACP`, `WRITE_ACP`, `FULL_CONTROL`.
      * 
-    */
+     */
     public List<String> permissions() {
         return this.permissions;
     }
     /**
-     * - Type of grantee to apply for. Valid values are `CanonicalUser` and `Group`. `AmazonCustomerByEmail` is not supported.
+     * @return - Type of grantee to apply for. Valid values are `CanonicalUser` and `Group`. `AmazonCustomerByEmail` is not supported.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Uri address to grant for. Used only when `type` is `Group`.
+     * @return Uri address to grant for. Used only when `type` is `Group`.
      * 
-    */
+     */
     public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }

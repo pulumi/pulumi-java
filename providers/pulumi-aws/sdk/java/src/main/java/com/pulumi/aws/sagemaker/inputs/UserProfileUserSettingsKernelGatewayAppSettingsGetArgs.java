@@ -25,6 +25,10 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsGetArgs extend
     @Import(name="customImages")
     private @Nullable Output<List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs>> customImages;
 
+    /**
+     * @return A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.
+     * 
+     */
     public Optional<Output<List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs>>> customImages() {
         return Optional.ofNullable(this.customImages);
     }
@@ -36,6 +40,10 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsGetArgs extend
     @Import(name="defaultResourceSpec", required=true)
     private Output<UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec;
 
+    /**
+     * @return The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
+     * 
+     */
     public Output<UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec() {
         return this.defaultResourceSpec;
     }
@@ -47,6 +55,10 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsGetArgs extend
     @Import(name="lifecycleConfigArns")
     private @Nullable Output<List<String>> lifecycleConfigArns;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the Lifecycle Configurations.
+     * 
+     */
     public Optional<Output<List<String>>> lifecycleConfigArns() {
         return Optional.ofNullable(this.lifecycleConfigArns);
     }
@@ -77,37 +89,85 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsGetArgs extend
             $ = new UserProfileUserSettingsKernelGatewayAppSettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customImages A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customImages(@Nullable Output<List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs>> customImages) {
             $.customImages = customImages;
             return this;
         }
 
+        /**
+         * @param customImages A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customImages(List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs> customImages) {
             return customImages(Output.of(customImages));
         }
 
+        /**
+         * @param customImages A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customImages(UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs... customImages) {
             return customImages(List.of(customImages));
         }
 
+        /**
+         * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultResourceSpec(Output<UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec) {
             $.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
 
+        /**
+         * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultResourceSpec(UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs defaultResourceSpec) {
             return defaultResourceSpec(Output.of(defaultResourceSpec));
         }
 
+        /**
+         * @param lifecycleConfigArns The Amazon Resource Name (ARN) of the Lifecycle Configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifecycleConfigArns(@Nullable Output<List<String>> lifecycleConfigArns) {
             $.lifecycleConfigArns = lifecycleConfigArns;
             return this;
         }
 
+        /**
+         * @param lifecycleConfigArns The Amazon Resource Name (ARN) of the Lifecycle Configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifecycleConfigArns(List<String> lifecycleConfigArns) {
             return lifecycleConfigArns(Output.of(lifecycleConfigArns));
         }
 
+        /**
+         * @param lifecycleConfigArns The Amazon Resource Name (ARN) of the Lifecycle Configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifecycleConfigArns(String... lifecycleConfigArns) {
             return lifecycleConfigArns(List.of(lifecycleConfigArns));
         }

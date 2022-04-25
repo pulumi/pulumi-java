@@ -20,6 +20,10 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionActionC
     @Import(name="action", required=true)
     private Output<String> action;
 
+    /**
+     * @return The action setting that a log record must contain in order to meet the condition. Valid values: `ALLOW`, `BLOCK`, `COUNT`.
+     * 
+     */
     public Output<String> action() {
         return this.action;
     }
@@ -48,11 +52,23 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionActionC
             $ = new WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action setting that a log record must contain in order to meet the condition. Valid values: `ALLOW`, `BLOCK`, `COUNT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Output<String> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action The action setting that a log record must contain in order to meet the condition. Valid values: `ALLOW`, `BLOCK`, `COUNT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             return action(Output.of(action));
         }

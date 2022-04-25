@@ -19,6 +19,10 @@ public final class GetBundleUserStorage extends com.pulumi.resources.InvokeArgs 
     @Import(name="capacity", required=true)
     private String capacity;
 
+    /**
+     * @return The size of the user storage.
+     * 
+     */
     public String capacity() {
         return this.capacity;
     }
@@ -47,6 +51,12 @@ public final class GetBundleUserStorage extends com.pulumi.resources.InvokeArgs 
             $ = new GetBundleUserStorage(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The size of the user storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(String capacity) {
             $.capacity = capacity;
             return this;

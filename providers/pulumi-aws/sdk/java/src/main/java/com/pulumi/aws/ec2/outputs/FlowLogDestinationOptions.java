@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FlowLogDestinationOptions {
     /**
-     * The format for the flow log. Default value: `plain-text`. Valid values: `plain-text`, `parquet`.
+     * @return The format for the flow log. Default value: `plain-text`. Valid values: `plain-text`, `parquet`.
      * 
      */
     private final @Nullable String fileFormat;
     /**
-     * Indicates whether to use Hive-compatible prefixes for flow logs stored in Amazon S3. Default value: `false`.
+     * @return Indicates whether to use Hive-compatible prefixes for flow logs stored in Amazon S3. Default value: `false`.
      * 
      */
     private final @Nullable Boolean hiveCompatiblePartitions;
     /**
-     * Indicates whether to partition the flow log per hour. This reduces the cost and response time for queries. Default value: `false`.
+     * @return Indicates whether to partition the flow log per hour. This reduces the cost and response time for queries. Default value: `false`.
      * 
      */
     private final @Nullable Boolean perHourPartition;
@@ -39,23 +39,23 @@ public final class FlowLogDestinationOptions {
     }
 
     /**
-     * The format for the flow log. Default value: `plain-text`. Valid values: `plain-text`, `parquet`.
+     * @return The format for the flow log. Default value: `plain-text`. Valid values: `plain-text`, `parquet`.
      * 
-    */
+     */
     public Optional<String> fileFormat() {
         return Optional.ofNullable(this.fileFormat);
     }
     /**
-     * Indicates whether to use Hive-compatible prefixes for flow logs stored in Amazon S3. Default value: `false`.
+     * @return Indicates whether to use Hive-compatible prefixes for flow logs stored in Amazon S3. Default value: `false`.
      * 
-    */
+     */
     public Optional<Boolean> hiveCompatiblePartitions() {
         return Optional.ofNullable(this.hiveCompatiblePartitions);
     }
     /**
-     * Indicates whether to partition the flow log per hour. This reduces the cost and response time for queries. Default value: `false`.
+     * @return Indicates whether to partition the flow log per hour. This reduces the cost and response time for queries. Default value: `false`.
      * 
-    */
+     */
     public Optional<Boolean> perHourPartition() {
         return Optional.ofNullable(this.perHourPartition);
     }

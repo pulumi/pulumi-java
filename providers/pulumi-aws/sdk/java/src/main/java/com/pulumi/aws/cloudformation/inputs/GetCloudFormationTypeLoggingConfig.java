@@ -19,6 +19,10 @@ public final class GetCloudFormationTypeLoggingConfig extends com.pulumi.resourc
     @Import(name="logGroupName", required=true)
     private String logGroupName;
 
+    /**
+     * @return Name of the CloudWatch Log Group where CloudFormation sends error logging information when invoking the type&#39;s handlers.
+     * 
+     */
     public String logGroupName() {
         return this.logGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetCloudFormationTypeLoggingConfig extends com.pulumi.resourc
     @Import(name="logRoleArn", required=true)
     private String logRoleArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the IAM Role CloudFormation assumes when sending error logging information to CloudWatch Logs.
+     * 
+     */
     public String logRoleArn() {
         return this.logRoleArn;
     }
@@ -59,11 +67,23 @@ public final class GetCloudFormationTypeLoggingConfig extends com.pulumi.resourc
             $ = new GetCloudFormationTypeLoggingConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logGroupName Name of the CloudWatch Log Group where CloudFormation sends error logging information when invoking the type&#39;s handlers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logGroupName(String logGroupName) {
             $.logGroupName = logGroupName;
             return this;
         }
 
+        /**
+         * @param logRoleArn Amazon Resource Name (ARN) of the IAM Role CloudFormation assumes when sending error logging information to CloudWatch Logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logRoleArn(String logRoleArn) {
             $.logRoleArn = logRoleArn;
             return this;

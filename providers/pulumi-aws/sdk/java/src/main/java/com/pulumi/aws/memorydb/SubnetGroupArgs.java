@@ -38,6 +38,10 @@ public final class SubnetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
     private @Nullable Output<String> namePrefix;
 
+    /**
+     * @return Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+     * 
+     */
     public Optional<Output<String>> namePrefix() {
         return Optional.ofNullable(this.namePrefix);
     }
@@ -49,6 +53,10 @@ public final class SubnetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds", required=true)
     private Output<List<String>> subnetIds;
 
+    /**
+     * @return Set of VPC Subnet ID-s for the subnet group. At least one subnet must be provided.
+     * 
+     */
     public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
@@ -60,6 +68,10 @@ public final class SubnetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -71,6 +83,10 @@ public final class SubnetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -122,42 +138,96 @@ public final class SubnetGroupArgs extends com.pulumi.resources.ResourceArgs {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namePrefix Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             $.namePrefix = namePrefix;
             return this;
         }
 
+        /**
+         * @param namePrefix Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(String namePrefix) {
             return namePrefix(Output.of(namePrefix));
         }
 
+        /**
+         * @param subnetIds Set of VPC Subnet ID-s for the subnet group. At least one subnet must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(Output<List<String>> subnetIds) {
             $.subnetIds = subnetIds;
             return this;
         }
 
+        /**
+         * @param subnetIds Set of VPC Subnet ID-s for the subnet group. At least one subnet must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(List<String> subnetIds) {
             return subnetIds(Output.of(subnetIds));
         }
 
+        /**
+         * @param subnetIds Set of VPC Subnet ID-s for the subnet group. At least one subnet must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AliasRoutingStrategy {
     /**
-     * ID of the Gamelift Fleet to point the alias to.
+     * @return ID of the Gamelift Fleet to point the alias to.
      * 
      */
     private final @Nullable String fleetId;
     /**
-     * Message text to be used with the `TERMINAL` routing strategy.
+     * @return Message text to be used with the `TERMINAL` routing strategy.
      * 
      */
     private final @Nullable String message;
     /**
-     * Type of routing strategyE.g., `SIMPLE` or `TERMINAL`
+     * @return Type of routing strategyE.g., `SIMPLE` or `TERMINAL`
      * 
      */
     private final String type;
@@ -38,23 +38,23 @@ public final class AliasRoutingStrategy {
     }
 
     /**
-     * ID of the Gamelift Fleet to point the alias to.
+     * @return ID of the Gamelift Fleet to point the alias to.
      * 
-    */
+     */
     public Optional<String> fleetId() {
         return Optional.ofNullable(this.fleetId);
     }
     /**
-     * Message text to be used with the `TERMINAL` routing strategy.
+     * @return Message text to be used with the `TERMINAL` routing strategy.
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * Type of routing strategyE.g., `SIMPLE` or `TERMINAL`
+     * @return Type of routing strategyE.g., `SIMPLE` or `TERMINAL`
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

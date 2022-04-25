@@ -22,6 +22,10 @@ public final class WebAclRuleActionCountGetArgs extends com.pulumi.resources.Res
     @Import(name="customRequestHandling")
     private @Nullable Output<WebAclRuleActionCountCustomRequestHandlingGetArgs> customRequestHandling;
 
+    /**
+     * @return Defines custom handling for the web request. See Custom Request Handling below for details.
+     * 
+     */
     public Optional<Output<WebAclRuleActionCountCustomRequestHandlingGetArgs>> customRequestHandling() {
         return Optional.ofNullable(this.customRequestHandling);
     }
@@ -50,11 +54,23 @@ public final class WebAclRuleActionCountGetArgs extends com.pulumi.resources.Res
             $ = new WebAclRuleActionCountGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customRequestHandling Defines custom handling for the web request. See Custom Request Handling below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRequestHandling(@Nullable Output<WebAclRuleActionCountCustomRequestHandlingGetArgs> customRequestHandling) {
             $.customRequestHandling = customRequestHandling;
             return this;
         }
 
+        /**
+         * @param customRequestHandling Defines custom handling for the web request. See Custom Request Handling below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRequestHandling(WebAclRuleActionCountCustomRequestHandlingGetArgs customRequestHandling) {
             return customRequestHandling(Output.of(customRequestHandling));
         }

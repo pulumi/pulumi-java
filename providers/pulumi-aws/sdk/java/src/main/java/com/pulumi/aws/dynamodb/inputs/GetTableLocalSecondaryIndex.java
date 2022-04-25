@@ -20,6 +20,10 @@ public final class GetTableLocalSecondaryIndex extends com.pulumi.resources.Invo
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the DynamoDB table.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -72,6 +76,12 @@ public final class GetTableLocalSecondaryIndex extends com.pulumi.resources.Invo
             $ = new GetTableLocalSecondaryIndex(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the DynamoDB table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

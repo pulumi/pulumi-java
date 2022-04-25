@@ -12,27 +12,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DataSourceRelationalDatabaseConfigHttpEndpointConfig {
     /**
-     * AWS secret store ARN for database credentials.
+     * @return AWS secret store ARN for database credentials.
      * 
      */
     private final String awsSecretStoreArn;
     /**
-     * Logical database name.
+     * @return Logical database name.
      * 
      */
     private final @Nullable String databaseName;
     /**
-     * Amazon RDS cluster identifier.
+     * @return Amazon RDS cluster identifier.
      * 
      */
     private final String dbClusterIdentifier;
     /**
-     * AWS Region for RDS HTTP endpoint. Defaults to current region.
+     * @return AWS Region for RDS HTTP endpoint. Defaults to current region.
      * 
      */
     private final @Nullable String region;
     /**
-     * Logical schema name.
+     * @return Logical schema name.
      * 
      */
     private final @Nullable String schema;
@@ -52,37 +52,37 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfig {
     }
 
     /**
-     * AWS secret store ARN for database credentials.
+     * @return AWS secret store ARN for database credentials.
      * 
-    */
+     */
     public String awsSecretStoreArn() {
         return this.awsSecretStoreArn;
     }
     /**
-     * Logical database name.
+     * @return Logical database name.
      * 
-    */
+     */
     public Optional<String> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
     /**
-     * Amazon RDS cluster identifier.
+     * @return Amazon RDS cluster identifier.
      * 
-    */
+     */
     public String dbClusterIdentifier() {
         return this.dbClusterIdentifier;
     }
     /**
-     * AWS Region for RDS HTTP endpoint. Defaults to current region.
+     * @return AWS Region for RDS HTTP endpoint. Defaults to current region.
      * 
-    */
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
     /**
-     * Logical schema name.
+     * @return Logical schema name.
      * 
-    */
+     */
     public Optional<String> schema() {
         return Optional.ofNullable(this.schema);
     }

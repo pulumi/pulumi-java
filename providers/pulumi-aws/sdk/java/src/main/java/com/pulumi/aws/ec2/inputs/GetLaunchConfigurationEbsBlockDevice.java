@@ -21,6 +21,10 @@ public final class GetLaunchConfigurationEbsBlockDevice extends com.pulumi.resou
     @Import(name="deleteOnTermination", required=true)
     private Boolean deleteOnTermination;
 
+    /**
+     * @return Whether the EBS Volume will be deleted on instance termination.
+     * 
+     */
     public Boolean deleteOnTermination() {
         return this.deleteOnTermination;
     }
@@ -32,6 +36,10 @@ public final class GetLaunchConfigurationEbsBlockDevice extends com.pulumi.resou
     @Import(name="deviceName", required=true)
     private String deviceName;
 
+    /**
+     * @return The Name of the device.
+     * 
+     */
     public String deviceName() {
         return this.deviceName;
     }
@@ -43,6 +51,10 @@ public final class GetLaunchConfigurationEbsBlockDevice extends com.pulumi.resou
     @Import(name="encrypted", required=true)
     private Boolean encrypted;
 
+    /**
+     * @return Whether the volume is Encrypted.
+     * 
+     */
     public Boolean encrypted() {
         return this.encrypted;
     }
@@ -54,6 +66,10 @@ public final class GetLaunchConfigurationEbsBlockDevice extends com.pulumi.resou
     @Import(name="iops", required=true)
     private Integer iops;
 
+    /**
+     * @return The provisioned IOPs of the volume.
+     * 
+     */
     public Integer iops() {
         return this.iops;
     }
@@ -65,6 +81,10 @@ public final class GetLaunchConfigurationEbsBlockDevice extends com.pulumi.resou
     @Import(name="noDevice", required=true)
     private Boolean noDevice;
 
+    /**
+     * @return Whether the device in the block device mapping of the AMI is suppressed.
+     * 
+     */
     public Boolean noDevice() {
         return this.noDevice;
     }
@@ -76,6 +96,10 @@ public final class GetLaunchConfigurationEbsBlockDevice extends com.pulumi.resou
     @Import(name="snapshotId", required=true)
     private String snapshotId;
 
+    /**
+     * @return The Snapshot ID of the mount.
+     * 
+     */
     public String snapshotId() {
         return this.snapshotId;
     }
@@ -87,6 +111,10 @@ public final class GetLaunchConfigurationEbsBlockDevice extends com.pulumi.resou
     @Import(name="throughput", required=true)
     private Boolean throughput;
 
+    /**
+     * @return The Throughput of the volume.
+     * 
+     */
     public Boolean throughput() {
         return this.throughput;
     }
@@ -98,6 +126,10 @@ public final class GetLaunchConfigurationEbsBlockDevice extends com.pulumi.resou
     @Import(name="volumeSize", required=true)
     private Integer volumeSize;
 
+    /**
+     * @return The Size of the volume.
+     * 
+     */
     public Integer volumeSize() {
         return this.volumeSize;
     }
@@ -109,6 +141,10 @@ public final class GetLaunchConfigurationEbsBlockDevice extends com.pulumi.resou
     @Import(name="volumeType", required=true)
     private String volumeType;
 
+    /**
+     * @return The Type of the volume.
+     * 
+     */
     public String volumeType() {
         return this.volumeType;
     }
@@ -145,46 +181,100 @@ public final class GetLaunchConfigurationEbsBlockDevice extends com.pulumi.resou
             $ = new GetLaunchConfigurationEbsBlockDevice(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deleteOnTermination Whether the EBS Volume will be deleted on instance termination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteOnTermination(Boolean deleteOnTermination) {
             $.deleteOnTermination = deleteOnTermination;
             return this;
         }
 
+        /**
+         * @param deviceName The Name of the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param encrypted Whether the volume is Encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encrypted(Boolean encrypted) {
             $.encrypted = encrypted;
             return this;
         }
 
+        /**
+         * @param iops The provisioned IOPs of the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iops(Integer iops) {
             $.iops = iops;
             return this;
         }
 
+        /**
+         * @param noDevice Whether the device in the block device mapping of the AMI is suppressed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noDevice(Boolean noDevice) {
             $.noDevice = noDevice;
             return this;
         }
 
+        /**
+         * @param snapshotId The Snapshot ID of the mount.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotId(String snapshotId) {
             $.snapshotId = snapshotId;
             return this;
         }
 
+        /**
+         * @param throughput The Throughput of the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throughput(Boolean throughput) {
             $.throughput = throughput;
             return this;
         }
 
+        /**
+         * @param volumeSize The Size of the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeSize(Integer volumeSize) {
             $.volumeSize = volumeSize;
             return this;
         }
 
+        /**
+         * @param volumeType The Type of the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeType(String volumeType) {
             $.volumeType = volumeType;
             return this;

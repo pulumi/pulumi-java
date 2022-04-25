@@ -31,6 +31,10 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
     @Import(name="localGatewayId")
     private @Nullable String localGatewayId;
 
+    /**
+     * @return The id of the specific local gateway route table to retrieve.
+     * 
+     */
     public Optional<String> localGatewayId() {
         return Optional.ofNullable(this.localGatewayId);
     }
@@ -42,6 +46,10 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
     @Import(name="localGatewayRouteTableId")
     private @Nullable String localGatewayRouteTableId;
 
+    /**
+     * @return Local Gateway Route Table Id assigned to desired local gateway route table
+     * 
+     */
     public Optional<String> localGatewayRouteTableId() {
         return Optional.ofNullable(this.localGatewayRouteTableId);
     }
@@ -53,6 +61,10 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
     @Import(name="outpostArn")
     private @Nullable String outpostArn;
 
+    /**
+     * @return The arn of the Outpost the local gateway route table is associated with.
+     * 
+     */
     public Optional<String> outpostArn() {
         return Optional.ofNullable(this.outpostArn);
     }
@@ -64,6 +76,10 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return The state of the local gateway route table.
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -76,6 +92,11 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return A mapping of tags, each pair of which must exactly match
+     * a pair on the desired local gateway route table.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -118,26 +139,57 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
             return filters(List.of(filters));
         }
 
+        /**
+         * @param localGatewayId The id of the specific local gateway route table to retrieve.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localGatewayId(@Nullable String localGatewayId) {
             $.localGatewayId = localGatewayId;
             return this;
         }
 
+        /**
+         * @param localGatewayRouteTableId Local Gateway Route Table Id assigned to desired local gateway route table
+         * 
+         * @return builder
+         * 
+         */
         public Builder localGatewayRouteTableId(@Nullable String localGatewayRouteTableId) {
             $.localGatewayRouteTableId = localGatewayRouteTableId;
             return this;
         }
 
+        /**
+         * @param outpostArn The arn of the Outpost the local gateway route table is associated with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outpostArn(@Nullable String outpostArn) {
             $.outpostArn = outpostArn;
             return this;
         }
 
+        /**
+         * @param state The state of the local gateway route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param tags A mapping of tags, each pair of which must exactly match
+         * a pair on the desired local gateway route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

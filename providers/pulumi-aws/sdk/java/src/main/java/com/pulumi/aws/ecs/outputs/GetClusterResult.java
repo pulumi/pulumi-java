@@ -13,38 +13,38 @@ import java.util.Objects;
 @CustomType
 public final class GetClusterResult {
     /**
-     * The ARN of the ECS Cluster
+     * @return The ARN of the ECS Cluster
      * 
      */
     private final String arn;
     private final String clusterName;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The number of pending tasks for the ECS Cluster
+     * @return The number of pending tasks for the ECS Cluster
      * 
      */
     private final Integer pendingTasksCount;
     /**
-     * The number of registered container instances for the ECS Cluster
+     * @return The number of registered container instances for the ECS Cluster
      * 
      */
     private final Integer registeredContainerInstancesCount;
     /**
-     * The number of running tasks for the ECS Cluster
+     * @return The number of running tasks for the ECS Cluster
      * 
      */
     private final Integer runningTasksCount;
     /**
-     * The settings associated with the ECS Cluster.
+     * @return The settings associated with the ECS Cluster.
      * 
      */
     private final List<GetClusterSetting> settings;
     /**
-     * The status of the ECS Cluster
+     * @return The status of the ECS Cluster
      * 
      */
     private final String status;
@@ -70,9 +70,9 @@ public final class GetClusterResult {
     }
 
     /**
-     * The ARN of the ECS Cluster
+     * @return The ARN of the ECS Cluster
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
@@ -80,44 +80,44 @@ public final class GetClusterResult {
         return this.clusterName;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The number of pending tasks for the ECS Cluster
+     * @return The number of pending tasks for the ECS Cluster
      * 
-    */
+     */
     public Integer pendingTasksCount() {
         return this.pendingTasksCount;
     }
     /**
-     * The number of registered container instances for the ECS Cluster
+     * @return The number of registered container instances for the ECS Cluster
      * 
-    */
+     */
     public Integer registeredContainerInstancesCount() {
         return this.registeredContainerInstancesCount;
     }
     /**
-     * The number of running tasks for the ECS Cluster
+     * @return The number of running tasks for the ECS Cluster
      * 
-    */
+     */
     public Integer runningTasksCount() {
         return this.runningTasksCount;
     }
     /**
-     * The settings associated with the ECS Cluster.
+     * @return The settings associated with the ECS Cluster.
      * 
-    */
+     */
     public List<GetClusterSetting> settings() {
         return this.settings;
     }
     /**
-     * The status of the ECS Cluster
+     * @return The status of the ECS Cluster
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

@@ -22,6 +22,10 @@ public final class TrafficMirrorFilterRuleSourcePortRangeGetArgs extends com.pul
     @Import(name="fromPort")
     private @Nullable Output<Integer> fromPort;
 
+    /**
+     * @return Starting port of the range
+     * 
+     */
     public Optional<Output<Integer>> fromPort() {
         return Optional.ofNullable(this.fromPort);
     }
@@ -33,6 +37,10 @@ public final class TrafficMirrorFilterRuleSourcePortRangeGetArgs extends com.pul
     @Import(name="toPort")
     private @Nullable Output<Integer> toPort;
 
+    /**
+     * @return Ending port of the range
+     * 
+     */
     public Optional<Output<Integer>> toPort() {
         return Optional.ofNullable(this.toPort);
     }
@@ -62,20 +70,44 @@ public final class TrafficMirrorFilterRuleSourcePortRangeGetArgs extends com.pul
             $ = new TrafficMirrorFilterRuleSourcePortRangeGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fromPort Starting port of the range
+         * 
+         * @return builder
+         * 
+         */
         public Builder fromPort(@Nullable Output<Integer> fromPort) {
             $.fromPort = fromPort;
             return this;
         }
 
+        /**
+         * @param fromPort Starting port of the range
+         * 
+         * @return builder
+         * 
+         */
         public Builder fromPort(Integer fromPort) {
             return fromPort(Output.of(fromPort));
         }
 
+        /**
+         * @param toPort Ending port of the range
+         * 
+         * @return builder
+         * 
+         */
         public Builder toPort(@Nullable Output<Integer> toPort) {
             $.toPort = toPort;
             return this;
         }
 
+        /**
+         * @param toPort Ending port of the range
+         * 
+         * @return builder
+         * 
+         */
         public Builder toPort(Integer toPort) {
             return toPort(Output.of(toPort));
         }

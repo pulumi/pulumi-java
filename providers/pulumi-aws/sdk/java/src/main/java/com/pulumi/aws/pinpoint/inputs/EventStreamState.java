@@ -22,6 +22,10 @@ public final class EventStreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationId")
     private @Nullable Output<String> applicationId;
 
+    /**
+     * @return The application ID.
+     * 
+     */
     public Optional<Output<String>> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
@@ -33,6 +37,10 @@ public final class EventStreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationStreamArn")
     private @Nullable Output<String> destinationStreamArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the Amazon Kinesis stream or Firehose delivery stream to which you want to publish events.
+     * 
+     */
     public Optional<Output<String>> destinationStreamArn() {
         return Optional.ofNullable(this.destinationStreamArn);
     }
@@ -44,6 +52,10 @@ public final class EventStreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
     private @Nullable Output<String> roleArn;
 
+    /**
+     * @return The IAM role that authorizes Amazon Pinpoint to publish events to the stream in your account.
+     * 
+     */
     public Optional<Output<String>> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
@@ -74,29 +86,65 @@ public final class EventStreamState extends com.pulumi.resources.ResourceArgs {
             $ = new EventStreamState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationId The application ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(@Nullable Output<String> applicationId) {
             $.applicationId = applicationId;
             return this;
         }
 
+        /**
+         * @param applicationId The application ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(String applicationId) {
             return applicationId(Output.of(applicationId));
         }
 
+        /**
+         * @param destinationStreamArn The Amazon Resource Name (ARN) of the Amazon Kinesis stream or Firehose delivery stream to which you want to publish events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationStreamArn(@Nullable Output<String> destinationStreamArn) {
             $.destinationStreamArn = destinationStreamArn;
             return this;
         }
 
+        /**
+         * @param destinationStreamArn The Amazon Resource Name (ARN) of the Amazon Kinesis stream or Firehose delivery stream to which you want to publish events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationStreamArn(String destinationStreamArn) {
             return destinationStreamArn(Output.of(destinationStreamArn));
         }
 
+        /**
+         * @param roleArn The IAM role that authorizes Amazon Pinpoint to publish events to the stream in your account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(@Nullable Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn The IAM role that authorizes Amazon Pinpoint to publish events to the stream in your account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }

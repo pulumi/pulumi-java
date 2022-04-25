@@ -19,6 +19,10 @@ public final class GetLaunchTemplateEnclaveOption extends com.pulumi.resources.I
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whether Nitro Enclaves are enabled.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -47,6 +51,12 @@ public final class GetLaunchTemplateEnclaveOption extends com.pulumi.resources.I
             $ = new GetLaunchTemplateEnclaveOption(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether Nitro Enclaves are enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

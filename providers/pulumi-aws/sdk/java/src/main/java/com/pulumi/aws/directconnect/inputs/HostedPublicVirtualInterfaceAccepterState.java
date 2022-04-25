@@ -23,6 +23,10 @@ public final class HostedPublicVirtualInterfaceAccepterState extends com.pulumi.
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the virtual interface.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -34,6 +38,10 @@ public final class HostedPublicVirtualInterfaceAccepterState extends com.pulumi.
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -45,6 +53,10 @@ public final class HostedPublicVirtualInterfaceAccepterState extends com.pulumi.
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -56,6 +68,10 @@ public final class HostedPublicVirtualInterfaceAccepterState extends com.pulumi.
     @Import(name="virtualInterfaceId")
     private @Nullable Output<String> virtualInterfaceId;
 
+    /**
+     * @return The ID of the Direct Connect virtual interface to accept.
+     * 
+     */
     public Optional<Output<String>> virtualInterfaceId() {
         return Optional.ofNullable(this.virtualInterfaceId);
     }
@@ -87,38 +103,86 @@ public final class HostedPublicVirtualInterfaceAccepterState extends com.pulumi.
             $ = new HostedPublicVirtualInterfaceAccepterState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the virtual interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the virtual interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param virtualInterfaceId The ID of the Direct Connect virtual interface to accept.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualInterfaceId(@Nullable Output<String> virtualInterfaceId) {
             $.virtualInterfaceId = virtualInterfaceId;
             return this;
         }
 
+        /**
+         * @param virtualInterfaceId The ID of the Direct Connect virtual interface to accept.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualInterfaceId(String virtualInterfaceId) {
             return virtualInterfaceId(Output.of(virtualInterfaceId));
         }

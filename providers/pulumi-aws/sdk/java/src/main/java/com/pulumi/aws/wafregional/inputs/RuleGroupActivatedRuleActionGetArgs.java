@@ -20,6 +20,10 @@ public final class RuleGroupActivatedRuleActionGetArgs extends com.pulumi.resour
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The rule type, either `REGULAR`, `RATE_BASED`, or `GROUP`. Defaults to `REGULAR`.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -48,11 +52,23 @@ public final class RuleGroupActivatedRuleActionGetArgs extends com.pulumi.resour
             $ = new RuleGroupActivatedRuleActionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The rule type, either `REGULAR`, `RATE_BASED`, or `GROUP`. Defaults to `REGULAR`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The rule type, either `REGULAR`, `RATE_BASED`, or `GROUP`. Defaults to `REGULAR`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

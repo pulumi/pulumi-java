@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class PipelineDefinitionParameterValue {
     /**
-     * ID of the parameter value.
+     * @return ID of the parameter value.
      * 
      */
     private final String id;
     /**
-     * Field value, expressed as a String.
+     * @return Field value, expressed as a String.
      * 
      */
     private final String stringValue;
@@ -29,16 +29,16 @@ public final class PipelineDefinitionParameterValue {
     }
 
     /**
-     * ID of the parameter value.
+     * @return ID of the parameter value.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Field value, expressed as a String.
+     * @return Field value, expressed as a String.
      * 
-    */
+     */
     public String stringValue() {
         return this.stringValue;
     }

@@ -27,6 +27,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="applyImmediately")
     private @Nullable Output<Boolean> applyImmediately;
 
+    /**
+     * @return Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> applyImmediately() {
         return Optional.ofNullable(this.applyImmediately);
     }
@@ -38,6 +42,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="atRestEncryptionEnabled")
     private @Nullable Output<Boolean> atRestEncryptionEnabled;
 
+    /**
+     * @return Whether to enable encryption at rest.
+     * 
+     */
     public Optional<Output<Boolean>> atRestEncryptionEnabled() {
         return Optional.ofNullable(this.atRestEncryptionEnabled);
     }
@@ -49,6 +57,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="authToken")
     private @Nullable Output<String> authToken;
 
+    /**
+     * @return Password used to access a password protected server. Can be specified only if `transit_encryption_enabled = true`.
+     * 
+     */
     public Optional<Output<String>> authToken() {
         return Optional.ofNullable(this.authToken);
     }
@@ -60,6 +72,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="autoMinorVersionUpgrade")
     private @Nullable Output<Boolean> autoMinorVersionUpgrade;
 
+    /**
+     * @return Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. This parameter is currently not supported by the AWS API. Defaults to `true`.
+     * 
+     */
     public Optional<Output<Boolean>> autoMinorVersionUpgrade() {
         return Optional.ofNullable(this.autoMinorVersionUpgrade);
     }
@@ -71,6 +87,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="automaticFailoverEnabled")
     private @Nullable Output<Boolean> automaticFailoverEnabled;
 
+    /**
+     * @return Specifies whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails. If enabled, `number_cache_clusters` must be greater than 1. Must be enabled for Redis (cluster mode enabled) replication groups. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> automaticFailoverEnabled() {
         return Optional.ofNullable(this.automaticFailoverEnabled);
     }
@@ -82,6 +102,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="availabilityZones")
     private @Nullable Output<List<String>> availabilityZones;
 
+    /**
+     * @return List of EC2 availability zones in which the replication group&#39;s cache clusters will be created. The order of the availability zones in the list is not important.
+     * 
+     */
     public Optional<Output<List<String>>> availabilityZones() {
         return Optional.ofNullable(this.availabilityZones);
     }
@@ -93,6 +117,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="clusterMode")
     private @Nullable Output<ReplicationGroupClusterModeArgs> clusterMode;
 
+    /**
+     * @return Create a native Redis cluster. `automatic_failover_enabled` must be set to true. Cluster Mode documented below. Only 1 `cluster_mode` block is allowed. Note that configuring this block does not enable cluster mode, i.e., data sharding, this requires using a parameter group that has the parameter `cluster-enabled` set to true.
+     * 
+     */
     public Optional<Output<ReplicationGroupClusterModeArgs>> clusterMode() {
         return Optional.ofNullable(this.clusterMode);
     }
@@ -104,6 +132,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="dataTieringEnabled")
     private @Nullable Output<Boolean> dataTieringEnabled;
 
+    /**
+     * @return Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This parameter must be set to `true` when using r6gd nodes.
+     * 
+     */
     public Optional<Output<Boolean>> dataTieringEnabled() {
         return Optional.ofNullable(this.dataTieringEnabled);
     }
@@ -115,6 +147,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="engine")
     private @Nullable Output<String> engine;
 
+    /**
+     * @return Name of the cache engine to be used for the clusters in this replication group. The only valid value is `redis`.
+     * 
+     */
     public Optional<Output<String>> engine() {
         return Optional.ofNullable(this.engine);
     }
@@ -126,6 +162,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="engineVersion")
     private @Nullable Output<String> engineVersion;
 
+    /**
+     * @return Version number of the cache engine to be used for the cache clusters in this replication group. If the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+     * 
+     */
     public Optional<Output<String>> engineVersion() {
         return Optional.ofNullable(this.engineVersion);
     }
@@ -137,6 +177,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="finalSnapshotIdentifier")
     private @Nullable Output<String> finalSnapshotIdentifier;
 
+    /**
+     * @return The name of your final node group (shard) snapshot. ElastiCache creates the snapshot from the primary node in the cluster. If omitted, no final snapshot will be made.
+     * 
+     */
     public Optional<Output<String>> finalSnapshotIdentifier() {
         return Optional.ofNullable(this.finalSnapshotIdentifier);
     }
@@ -148,6 +192,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="globalReplicationGroupId")
     private @Nullable Output<String> globalReplicationGroupId;
 
+    /**
+     * @return The ID of the global replication group to which this replication group should belong. If this parameter is specified, the replication group is added to the specified global replication group as a secondary replication group; otherwise, the replication group is not part of any global replication group. If `global_replication_group_id` is set, the `num_node_groups` parameter of the `cluster_mode` block cannot be set.
+     * 
+     */
     public Optional<Output<String>> globalReplicationGroupId() {
         return Optional.ofNullable(this.globalReplicationGroupId);
     }
@@ -159,6 +207,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="kmsKeyId")
     private @Nullable Output<String> kmsKeyId;
 
+    /**
+     * @return The ARN of the key that you wish to use if encrypting at rest. If not supplied, uses service managed encryption. Can be specified only if `at_rest_encryption_enabled = true`.
+     * 
+     */
     public Optional<Output<String>> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
@@ -170,6 +222,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="maintenanceWindow")
     private @Nullable Output<String> maintenanceWindow;
 
+    /**
+     * @return Specifies the weekly time range for when maintenance on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
+     * 
+     */
     public Optional<Output<String>> maintenanceWindow() {
         return Optional.ofNullable(this.maintenanceWindow);
     }
@@ -181,6 +237,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="multiAzEnabled")
     private @Nullable Output<Boolean> multiAzEnabled;
 
+    /**
+     * @return Specifies whether to enable Multi-AZ Support for the replication group. If `true`, `automatic_failover_enabled` must also be enabled. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> multiAzEnabled() {
         return Optional.ofNullable(this.multiAzEnabled);
     }
@@ -192,6 +252,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="nodeType")
     private @Nullable Output<String> nodeType;
 
+    /**
+     * @return Instance class to be used. See AWS documentation for information on [supported node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html). Required unless `global_replication_group_id` is set. Cannot be set if `global_replication_group_id` is set.
+     * 
+     */
     public Optional<Output<String>> nodeType() {
         return Optional.ofNullable(this.nodeType);
     }
@@ -203,6 +267,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="notificationTopicArn")
     private @Nullable Output<String> notificationTopicArn;
 
+    /**
+     * @return ARN of an SNS topic to send ElastiCache notifications to. Example: `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
+     * 
+     */
     public Optional<Output<String>> notificationTopicArn() {
         return Optional.ofNullable(this.notificationTopicArn);
     }
@@ -214,6 +282,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="numberCacheClusters")
     private @Nullable Output<Integer> numberCacheClusters;
 
+    /**
+     * @return Number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications. One of `number_cache_clusters` or `cluster_mode` is required.
+     * 
+     */
     public Optional<Output<Integer>> numberCacheClusters() {
         return Optional.ofNullable(this.numberCacheClusters);
     }
@@ -225,6 +297,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="parameterGroupName")
     private @Nullable Output<String> parameterGroupName;
 
+    /**
+     * @return Name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used. To enable &#34;cluster mode&#34;, i.e., data sharding, use a parameter group that has the parameter `cluster-enabled` set to true.
+     * 
+     */
     public Optional<Output<String>> parameterGroupName() {
         return Optional.ofNullable(this.parameterGroupName);
     }
@@ -236,6 +312,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return Port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -247,6 +327,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="replicationGroupDescription", required=true)
     private Output<String> replicationGroupDescription;
 
+    /**
+     * @return User-created description for the replication group.
+     * 
+     */
     public Output<String> replicationGroupDescription() {
         return this.replicationGroupDescription;
     }
@@ -258,6 +342,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="replicationGroupId")
     private @Nullable Output<String> replicationGroupId;
 
+    /**
+     * @return Replication group identifier. This parameter is stored as a lowercase string.
+     * 
+     */
     public Optional<Output<String>> replicationGroupId() {
         return Optional.ofNullable(this.replicationGroupId);
     }
@@ -269,6 +357,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="securityGroupIds")
     private @Nullable Output<List<String>> securityGroupIds;
 
+    /**
+     * @return One or more Amazon VPC security groups associated with this replication group. Use this parameter only when you are creating a replication group in an Amazon Virtual Private Cloud
+     * 
+     */
     public Optional<Output<List<String>>> securityGroupIds() {
         return Optional.ofNullable(this.securityGroupIds);
     }
@@ -280,6 +372,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="securityGroupNames")
     private @Nullable Output<List<String>> securityGroupNames;
 
+    /**
+     * @return List of cache security group names to associate with this replication group.
+     * 
+     */
     public Optional<Output<List<String>>> securityGroupNames() {
         return Optional.ofNullable(this.securityGroupNames);
     }
@@ -291,6 +387,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="snapshotArns")
     private @Nullable Output<List<String>> snapshotArns;
 
+    /**
+     * @return List of ARNs that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
+     * 
+     */
     public Optional<Output<List<String>>> snapshotArns() {
         return Optional.ofNullable(this.snapshotArns);
     }
@@ -302,6 +402,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="snapshotName")
     private @Nullable Output<String> snapshotName;
 
+    /**
+     * @return Name of a snapshot from which to restore data into the new node group. Changing the `snapshot_name` forces a new resource.
+     * 
+     */
     public Optional<Output<String>> snapshotName() {
         return Optional.ofNullable(this.snapshotName);
     }
@@ -313,6 +417,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="snapshotRetentionLimit")
     private @Nullable Output<Integer> snapshotRetentionLimit;
 
+    /**
+     * @return Number of days for which ElastiCache will retain automatic cache cluster snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days before being deleted. If the value of `snapshot_retention_limit` is set to zero (0), backups are turned off. Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
+     * 
+     */
     public Optional<Output<Integer>> snapshotRetentionLimit() {
         return Optional.ofNullable(this.snapshotRetentionLimit);
     }
@@ -324,6 +432,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="snapshotWindow")
     private @Nullable Output<String> snapshotWindow;
 
+    /**
+     * @return Daily time range (in UTC) during which ElastiCache will begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
+     * 
+     */
     public Optional<Output<String>> snapshotWindow() {
         return Optional.ofNullable(this.snapshotWindow);
     }
@@ -335,6 +447,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="subnetGroupName")
     private @Nullable Output<String> subnetGroupName;
 
+    /**
+     * @return Name of the cache subnet group to be used for the replication group.
+     * 
+     */
     public Optional<Output<String>> subnetGroupName() {
         return Optional.ofNullable(this.subnetGroupName);
     }
@@ -353,6 +469,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="transitEncryptionEnabled")
     private @Nullable Output<Boolean> transitEncryptionEnabled;
 
+    /**
+     * @return Whether to enable encryption in transit.
+     * 
+     */
     public Optional<Output<Boolean>> transitEncryptionEnabled() {
         return Optional.ofNullable(this.transitEncryptionEnabled);
     }
@@ -364,6 +484,10 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="userGroupIds")
     private @Nullable Output<List<String>> userGroupIds;
 
+    /**
+     * @return User Group ID to associate with the replication group. Only a maximum of one (1) user group ID is valid. **NOTE:** This argument _is_ a set because the AWS specification allows for multiple IDs. However, in practice, AWS only allows a maximum size of one.
+     * 
+     */
     public Optional<Output<List<String>>> userGroupIds() {
         return Optional.ofNullable(this.userGroupIds);
     }
@@ -423,279 +547,651 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
             $ = new ReplicationGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applyImmediately Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyImmediately(@Nullable Output<Boolean> applyImmediately) {
             $.applyImmediately = applyImmediately;
             return this;
         }
 
+        /**
+         * @param applyImmediately Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyImmediately(Boolean applyImmediately) {
             return applyImmediately(Output.of(applyImmediately));
         }
 
+        /**
+         * @param atRestEncryptionEnabled Whether to enable encryption at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder atRestEncryptionEnabled(@Nullable Output<Boolean> atRestEncryptionEnabled) {
             $.atRestEncryptionEnabled = atRestEncryptionEnabled;
             return this;
         }
 
+        /**
+         * @param atRestEncryptionEnabled Whether to enable encryption at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder atRestEncryptionEnabled(Boolean atRestEncryptionEnabled) {
             return atRestEncryptionEnabled(Output.of(atRestEncryptionEnabled));
         }
 
+        /**
+         * @param authToken Password used to access a password protected server. Can be specified only if `transit_encryption_enabled = true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authToken(@Nullable Output<String> authToken) {
             $.authToken = authToken;
             return this;
         }
 
+        /**
+         * @param authToken Password used to access a password protected server. Can be specified only if `transit_encryption_enabled = true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authToken(String authToken) {
             return authToken(Output.of(authToken));
         }
 
+        /**
+         * @param autoMinorVersionUpgrade Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. This parameter is currently not supported by the AWS API. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoMinorVersionUpgrade(@Nullable Output<Boolean> autoMinorVersionUpgrade) {
             $.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
             return this;
         }
 
+        /**
+         * @param autoMinorVersionUpgrade Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. This parameter is currently not supported by the AWS API. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
             return autoMinorVersionUpgrade(Output.of(autoMinorVersionUpgrade));
         }
 
+        /**
+         * @param automaticFailoverEnabled Specifies whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails. If enabled, `number_cache_clusters` must be greater than 1. Must be enabled for Redis (cluster mode enabled) replication groups. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automaticFailoverEnabled(@Nullable Output<Boolean> automaticFailoverEnabled) {
             $.automaticFailoverEnabled = automaticFailoverEnabled;
             return this;
         }
 
+        /**
+         * @param automaticFailoverEnabled Specifies whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails. If enabled, `number_cache_clusters` must be greater than 1. Must be enabled for Redis (cluster mode enabled) replication groups. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automaticFailoverEnabled(Boolean automaticFailoverEnabled) {
             return automaticFailoverEnabled(Output.of(automaticFailoverEnabled));
         }
 
+        /**
+         * @param availabilityZones List of EC2 availability zones in which the replication group&#39;s cache clusters will be created. The order of the availability zones in the list is not important.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
             $.availabilityZones = availabilityZones;
             return this;
         }
 
+        /**
+         * @param availabilityZones List of EC2 availability zones in which the replication group&#39;s cache clusters will be created. The order of the availability zones in the list is not important.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZones(List<String> availabilityZones) {
             return availabilityZones(Output.of(availabilityZones));
         }
 
+        /**
+         * @param availabilityZones List of EC2 availability zones in which the replication group&#39;s cache clusters will be created. The order of the availability zones in the list is not important.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZones(String... availabilityZones) {
             return availabilityZones(List.of(availabilityZones));
         }
 
+        /**
+         * @param clusterMode Create a native Redis cluster. `automatic_failover_enabled` must be set to true. Cluster Mode documented below. Only 1 `cluster_mode` block is allowed. Note that configuring this block does not enable cluster mode, i.e., data sharding, this requires using a parameter group that has the parameter `cluster-enabled` set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterMode(@Nullable Output<ReplicationGroupClusterModeArgs> clusterMode) {
             $.clusterMode = clusterMode;
             return this;
         }
 
+        /**
+         * @param clusterMode Create a native Redis cluster. `automatic_failover_enabled` must be set to true. Cluster Mode documented below. Only 1 `cluster_mode` block is allowed. Note that configuring this block does not enable cluster mode, i.e., data sharding, this requires using a parameter group that has the parameter `cluster-enabled` set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterMode(ReplicationGroupClusterModeArgs clusterMode) {
             return clusterMode(Output.of(clusterMode));
         }
 
+        /**
+         * @param dataTieringEnabled Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This parameter must be set to `true` when using r6gd nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTieringEnabled(@Nullable Output<Boolean> dataTieringEnabled) {
             $.dataTieringEnabled = dataTieringEnabled;
             return this;
         }
 
+        /**
+         * @param dataTieringEnabled Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This parameter must be set to `true` when using r6gd nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTieringEnabled(Boolean dataTieringEnabled) {
             return dataTieringEnabled(Output.of(dataTieringEnabled));
         }
 
+        /**
+         * @param engine Name of the cache engine to be used for the clusters in this replication group. The only valid value is `redis`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engine(@Nullable Output<String> engine) {
             $.engine = engine;
             return this;
         }
 
+        /**
+         * @param engine Name of the cache engine to be used for the clusters in this replication group. The only valid value is `redis`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engine(String engine) {
             return engine(Output.of(engine));
         }
 
+        /**
+         * @param engineVersion Version number of the cache engine to be used for the cache clusters in this replication group. If the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
             $.engineVersion = engineVersion;
             return this;
         }
 
+        /**
+         * @param engineVersion Version number of the cache engine to be used for the cache clusters in this replication group. If the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineVersion(String engineVersion) {
             return engineVersion(Output.of(engineVersion));
         }
 
+        /**
+         * @param finalSnapshotIdentifier The name of your final node group (shard) snapshot. ElastiCache creates the snapshot from the primary node in the cluster. If omitted, no final snapshot will be made.
+         * 
+         * @return builder
+         * 
+         */
         public Builder finalSnapshotIdentifier(@Nullable Output<String> finalSnapshotIdentifier) {
             $.finalSnapshotIdentifier = finalSnapshotIdentifier;
             return this;
         }
 
+        /**
+         * @param finalSnapshotIdentifier The name of your final node group (shard) snapshot. ElastiCache creates the snapshot from the primary node in the cluster. If omitted, no final snapshot will be made.
+         * 
+         * @return builder
+         * 
+         */
         public Builder finalSnapshotIdentifier(String finalSnapshotIdentifier) {
             return finalSnapshotIdentifier(Output.of(finalSnapshotIdentifier));
         }
 
+        /**
+         * @param globalReplicationGroupId The ID of the global replication group to which this replication group should belong. If this parameter is specified, the replication group is added to the specified global replication group as a secondary replication group; otherwise, the replication group is not part of any global replication group. If `global_replication_group_id` is set, the `num_node_groups` parameter of the `cluster_mode` block cannot be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalReplicationGroupId(@Nullable Output<String> globalReplicationGroupId) {
             $.globalReplicationGroupId = globalReplicationGroupId;
             return this;
         }
 
+        /**
+         * @param globalReplicationGroupId The ID of the global replication group to which this replication group should belong. If this parameter is specified, the replication group is added to the specified global replication group as a secondary replication group; otherwise, the replication group is not part of any global replication group. If `global_replication_group_id` is set, the `num_node_groups` parameter of the `cluster_mode` block cannot be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalReplicationGroupId(String globalReplicationGroupId) {
             return globalReplicationGroupId(Output.of(globalReplicationGroupId));
         }
 
+        /**
+         * @param kmsKeyId The ARN of the key that you wish to use if encrypting at rest. If not supplied, uses service managed encryption. Can be specified only if `at_rest_encryption_enabled = true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             $.kmsKeyId = kmsKeyId;
             return this;
         }
 
+        /**
+         * @param kmsKeyId The ARN of the key that you wish to use if encrypting at rest. If not supplied, uses service managed encryption. Can be specified only if `at_rest_encryption_enabled = true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(String kmsKeyId) {
             return kmsKeyId(Output.of(kmsKeyId));
         }
 
+        /**
+         * @param maintenanceWindow Specifies the weekly time range for when maintenance on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindow(@Nullable Output<String> maintenanceWindow) {
             $.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
+        /**
+         * @param maintenanceWindow Specifies the weekly time range for when maintenance on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindow(String maintenanceWindow) {
             return maintenanceWindow(Output.of(maintenanceWindow));
         }
 
+        /**
+         * @param multiAzEnabled Specifies whether to enable Multi-AZ Support for the replication group. If `true`, `automatic_failover_enabled` must also be enabled. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiAzEnabled(@Nullable Output<Boolean> multiAzEnabled) {
             $.multiAzEnabled = multiAzEnabled;
             return this;
         }
 
+        /**
+         * @param multiAzEnabled Specifies whether to enable Multi-AZ Support for the replication group. If `true`, `automatic_failover_enabled` must also be enabled. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiAzEnabled(Boolean multiAzEnabled) {
             return multiAzEnabled(Output.of(multiAzEnabled));
         }
 
+        /**
+         * @param nodeType Instance class to be used. See AWS documentation for information on [supported node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html). Required unless `global_replication_group_id` is set. Cannot be set if `global_replication_group_id` is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeType(@Nullable Output<String> nodeType) {
             $.nodeType = nodeType;
             return this;
         }
 
+        /**
+         * @param nodeType Instance class to be used. See AWS documentation for information on [supported node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html). Required unless `global_replication_group_id` is set. Cannot be set if `global_replication_group_id` is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeType(String nodeType) {
             return nodeType(Output.of(nodeType));
         }
 
+        /**
+         * @param notificationTopicArn ARN of an SNS topic to send ElastiCache notifications to. Example: `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationTopicArn(@Nullable Output<String> notificationTopicArn) {
             $.notificationTopicArn = notificationTopicArn;
             return this;
         }
 
+        /**
+         * @param notificationTopicArn ARN of an SNS topic to send ElastiCache notifications to. Example: `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationTopicArn(String notificationTopicArn) {
             return notificationTopicArn(Output.of(notificationTopicArn));
         }
 
+        /**
+         * @param numberCacheClusters Number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications. One of `number_cache_clusters` or `cluster_mode` is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberCacheClusters(@Nullable Output<Integer> numberCacheClusters) {
             $.numberCacheClusters = numberCacheClusters;
             return this;
         }
 
+        /**
+         * @param numberCacheClusters Number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications. One of `number_cache_clusters` or `cluster_mode` is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberCacheClusters(Integer numberCacheClusters) {
             return numberCacheClusters(Output.of(numberCacheClusters));
         }
 
+        /**
+         * @param parameterGroupName Name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used. To enable &#34;cluster mode&#34;, i.e., data sharding, use a parameter group that has the parameter `cluster-enabled` set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterGroupName(@Nullable Output<String> parameterGroupName) {
             $.parameterGroupName = parameterGroupName;
             return this;
         }
 
+        /**
+         * @param parameterGroupName Name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used. To enable &#34;cluster mode&#34;, i.e., data sharding, use a parameter group that has the parameter `cluster-enabled` set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterGroupName(String parameterGroupName) {
             return parameterGroupName(Output.of(parameterGroupName));
         }
 
+        /**
+         * @param port Port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port Port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param replicationGroupDescription User-created description for the replication group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationGroupDescription(Output<String> replicationGroupDescription) {
             $.replicationGroupDescription = replicationGroupDescription;
             return this;
         }
 
+        /**
+         * @param replicationGroupDescription User-created description for the replication group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationGroupDescription(String replicationGroupDescription) {
             return replicationGroupDescription(Output.of(replicationGroupDescription));
         }
 
+        /**
+         * @param replicationGroupId Replication group identifier. This parameter is stored as a lowercase string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationGroupId(@Nullable Output<String> replicationGroupId) {
             $.replicationGroupId = replicationGroupId;
             return this;
         }
 
+        /**
+         * @param replicationGroupId Replication group identifier. This parameter is stored as a lowercase string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationGroupId(String replicationGroupId) {
             return replicationGroupId(Output.of(replicationGroupId));
         }
 
+        /**
+         * @param securityGroupIds One or more Amazon VPC security groups associated with this replication group. Use this parameter only when you are creating a replication group in an Amazon Virtual Private Cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             $.securityGroupIds = securityGroupIds;
             return this;
         }
 
+        /**
+         * @param securityGroupIds One or more Amazon VPC security groups associated with this replication group. Use this parameter only when you are creating a replication group in an Amazon Virtual Private Cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(List<String> securityGroupIds) {
             return securityGroupIds(Output.of(securityGroupIds));
         }
 
+        /**
+         * @param securityGroupIds One or more Amazon VPC security groups associated with this replication group. Use this parameter only when you are creating a replication group in an Amazon Virtual Private Cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
 
+        /**
+         * @param securityGroupNames List of cache security group names to associate with this replication group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupNames(@Nullable Output<List<String>> securityGroupNames) {
             $.securityGroupNames = securityGroupNames;
             return this;
         }
 
+        /**
+         * @param securityGroupNames List of cache security group names to associate with this replication group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupNames(List<String> securityGroupNames) {
             return securityGroupNames(Output.of(securityGroupNames));
         }
 
+        /**
+         * @param securityGroupNames List of cache security group names to associate with this replication group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupNames(String... securityGroupNames) {
             return securityGroupNames(List.of(securityGroupNames));
         }
 
+        /**
+         * @param snapshotArns List of ARNs that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotArns(@Nullable Output<List<String>> snapshotArns) {
             $.snapshotArns = snapshotArns;
             return this;
         }
 
+        /**
+         * @param snapshotArns List of ARNs that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotArns(List<String> snapshotArns) {
             return snapshotArns(Output.of(snapshotArns));
         }
 
+        /**
+         * @param snapshotArns List of ARNs that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotArns(String... snapshotArns) {
             return snapshotArns(List.of(snapshotArns));
         }
 
+        /**
+         * @param snapshotName Name of a snapshot from which to restore data into the new node group. Changing the `snapshot_name` forces a new resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotName(@Nullable Output<String> snapshotName) {
             $.snapshotName = snapshotName;
             return this;
         }
 
+        /**
+         * @param snapshotName Name of a snapshot from which to restore data into the new node group. Changing the `snapshot_name` forces a new resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotName(String snapshotName) {
             return snapshotName(Output.of(snapshotName));
         }
 
+        /**
+         * @param snapshotRetentionLimit Number of days for which ElastiCache will retain automatic cache cluster snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days before being deleted. If the value of `snapshot_retention_limit` is set to zero (0), backups are turned off. Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotRetentionLimit(@Nullable Output<Integer> snapshotRetentionLimit) {
             $.snapshotRetentionLimit = snapshotRetentionLimit;
             return this;
         }
 
+        /**
+         * @param snapshotRetentionLimit Number of days for which ElastiCache will retain automatic cache cluster snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days before being deleted. If the value of `snapshot_retention_limit` is set to zero (0), backups are turned off. Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotRetentionLimit(Integer snapshotRetentionLimit) {
             return snapshotRetentionLimit(Output.of(snapshotRetentionLimit));
         }
 
+        /**
+         * @param snapshotWindow Daily time range (in UTC) during which ElastiCache will begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotWindow(@Nullable Output<String> snapshotWindow) {
             $.snapshotWindow = snapshotWindow;
             return this;
         }
 
+        /**
+         * @param snapshotWindow Daily time range (in UTC) during which ElastiCache will begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotWindow(String snapshotWindow) {
             return snapshotWindow(Output.of(snapshotWindow));
         }
 
+        /**
+         * @param subnetGroupName Name of the cache subnet group to be used for the replication group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetGroupName(@Nullable Output<String> subnetGroupName) {
             $.subnetGroupName = subnetGroupName;
             return this;
         }
 
+        /**
+         * @param subnetGroupName Name of the cache subnet group to be used for the replication group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetGroupName(String subnetGroupName) {
             return subnetGroupName(Output.of(subnetGroupName));
         }
@@ -709,24 +1205,54 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param transitEncryptionEnabled Whether to enable encryption in transit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitEncryptionEnabled(@Nullable Output<Boolean> transitEncryptionEnabled) {
             $.transitEncryptionEnabled = transitEncryptionEnabled;
             return this;
         }
 
+        /**
+         * @param transitEncryptionEnabled Whether to enable encryption in transit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitEncryptionEnabled(Boolean transitEncryptionEnabled) {
             return transitEncryptionEnabled(Output.of(transitEncryptionEnabled));
         }
 
+        /**
+         * @param userGroupIds User Group ID to associate with the replication group. Only a maximum of one (1) user group ID is valid. **NOTE:** This argument _is_ a set because the AWS specification allows for multiple IDs. However, in practice, AWS only allows a maximum size of one.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userGroupIds(@Nullable Output<List<String>> userGroupIds) {
             $.userGroupIds = userGroupIds;
             return this;
         }
 
+        /**
+         * @param userGroupIds User Group ID to associate with the replication group. Only a maximum of one (1) user group ID is valid. **NOTE:** This argument _is_ a set because the AWS specification allows for multiple IDs. However, in practice, AWS only allows a maximum size of one.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userGroupIds(List<String> userGroupIds) {
             return userGroupIds(Output.of(userGroupIds));
         }
 
+        /**
+         * @param userGroupIds User Group ID to associate with the replication group. Only a maximum of one (1) user group ID is valid. **NOTE:** This argument _is_ a set because the AWS specification allows for multiple IDs. However, in practice, AWS only allows a maximum size of one.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userGroupIds(String... userGroupIds) {
             return userGroupIds(List.of(userGroupIds));
         }

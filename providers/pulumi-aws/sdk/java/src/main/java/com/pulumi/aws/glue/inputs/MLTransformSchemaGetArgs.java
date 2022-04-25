@@ -22,6 +22,10 @@ public final class MLTransformSchemaGetArgs extends com.pulumi.resources.Resourc
     @Import(name="dataType")
     private @Nullable Output<String> dataType;
 
+    /**
+     * @return The type of data in the column.
+     * 
+     */
     public Optional<Output<String>> dataType() {
         return Optional.ofNullable(this.dataType);
     }
@@ -33,6 +37,10 @@ public final class MLTransformSchemaGetArgs extends com.pulumi.resources.Resourc
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name you assign to this ML Transform. It must be unique in your account.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -62,20 +70,44 @@ public final class MLTransformSchemaGetArgs extends com.pulumi.resources.Resourc
             $ = new MLTransformSchemaGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataType The type of data in the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(@Nullable Output<String> dataType) {
             $.dataType = dataType;
             return this;
         }
 
+        /**
+         * @param dataType The type of data in the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(String dataType) {
             return dataType(Output.of(dataType));
         }
 
+        /**
+         * @param name The name you assign to this ML Transform. It must be unique in your account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name you assign to this ML Transform. It must be unique in your account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

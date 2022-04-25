@@ -22,6 +22,10 @@ public final class ClassifierGrokClassifierGetArgs extends com.pulumi.resources.
     @Import(name="classification", required=true)
     private Output<String> classification;
 
+    /**
+     * @return An identifier of the data format that the classifier matches.
+     * 
+     */
     public Output<String> classification() {
         return this.classification;
     }
@@ -33,6 +37,10 @@ public final class ClassifierGrokClassifierGetArgs extends com.pulumi.resources.
     @Import(name="customPatterns")
     private @Nullable Output<String> customPatterns;
 
+    /**
+     * @return Custom grok patterns used by this classifier.
+     * 
+     */
     public Optional<Output<String>> customPatterns() {
         return Optional.ofNullable(this.customPatterns);
     }
@@ -44,6 +52,10 @@ public final class ClassifierGrokClassifierGetArgs extends com.pulumi.resources.
     @Import(name="grokPattern", required=true)
     private Output<String> grokPattern;
 
+    /**
+     * @return The grok pattern used by this classifier.
+     * 
+     */
     public Output<String> grokPattern() {
         return this.grokPattern;
     }
@@ -74,29 +86,65 @@ public final class ClassifierGrokClassifierGetArgs extends com.pulumi.resources.
             $ = new ClassifierGrokClassifierGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param classification An identifier of the data format that the classifier matches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder classification(Output<String> classification) {
             $.classification = classification;
             return this;
         }
 
+        /**
+         * @param classification An identifier of the data format that the classifier matches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder classification(String classification) {
             return classification(Output.of(classification));
         }
 
+        /**
+         * @param customPatterns Custom grok patterns used by this classifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customPatterns(@Nullable Output<String> customPatterns) {
             $.customPatterns = customPatterns;
             return this;
         }
 
+        /**
+         * @param customPatterns Custom grok patterns used by this classifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customPatterns(String customPatterns) {
             return customPatterns(Output.of(customPatterns));
         }
 
+        /**
+         * @param grokPattern The grok pattern used by this classifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grokPattern(Output<String> grokPattern) {
             $.grokPattern = grokPattern;
             return this;
         }
 
+        /**
+         * @param grokPattern The grok pattern used by this classifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grokPattern(String grokPattern) {
             return grokPattern(Output.of(grokPattern));
         }

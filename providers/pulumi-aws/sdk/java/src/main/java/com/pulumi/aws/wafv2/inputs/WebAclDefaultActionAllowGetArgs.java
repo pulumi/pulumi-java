@@ -22,6 +22,10 @@ public final class WebAclDefaultActionAllowGetArgs extends com.pulumi.resources.
     @Import(name="customRequestHandling")
     private @Nullable Output<WebAclDefaultActionAllowCustomRequestHandlingGetArgs> customRequestHandling;
 
+    /**
+     * @return Defines custom handling for the web request. See Custom Request Handling below for details.
+     * 
+     */
     public Optional<Output<WebAclDefaultActionAllowCustomRequestHandlingGetArgs>> customRequestHandling() {
         return Optional.ofNullable(this.customRequestHandling);
     }
@@ -50,11 +54,23 @@ public final class WebAclDefaultActionAllowGetArgs extends com.pulumi.resources.
             $ = new WebAclDefaultActionAllowGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customRequestHandling Defines custom handling for the web request. See Custom Request Handling below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRequestHandling(@Nullable Output<WebAclDefaultActionAllowCustomRequestHandlingGetArgs> customRequestHandling) {
             $.customRequestHandling = customRequestHandling;
             return this;
         }
 
+        /**
+         * @param customRequestHandling Defines custom handling for the web request. See Custom Request Handling below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRequestHandling(WebAclDefaultActionAllowCustomRequestHandlingGetArgs customRequestHandling) {
             return customRequestHandling(Output.of(customRequestHandling));
         }

@@ -23,6 +23,10 @@ public final class GraphQLApiLogConfigGetArgs extends com.pulumi.resources.Resou
     @Import(name="cloudwatchLogsRoleArn", required=true)
     private Output<String> cloudwatchLogsRoleArn;
 
+    /**
+     * @return Amazon Resource Name of the service role that AWS AppSync will assume to publish to Amazon CloudWatch logs in your account.
+     * 
+     */
     public Output<String> cloudwatchLogsRoleArn() {
         return this.cloudwatchLogsRoleArn;
     }
@@ -34,6 +38,10 @@ public final class GraphQLApiLogConfigGetArgs extends com.pulumi.resources.Resou
     @Import(name="excludeVerboseContent")
     private @Nullable Output<Boolean> excludeVerboseContent;
 
+    /**
+     * @return Set to TRUE to exclude sections that contain information such as headers, context, and evaluated mapping templates, regardless of logging  level. Valid values: `true`, `false`. Default value: `false`
+     * 
+     */
     public Optional<Output<Boolean>> excludeVerboseContent() {
         return Optional.ofNullable(this.excludeVerboseContent);
     }
@@ -45,6 +53,10 @@ public final class GraphQLApiLogConfigGetArgs extends com.pulumi.resources.Resou
     @Import(name="fieldLogLevel", required=true)
     private Output<String> fieldLogLevel;
 
+    /**
+     * @return Field logging level. Valid values: `ALL`, `ERROR`, `NONE`.
+     * 
+     */
     public Output<String> fieldLogLevel() {
         return this.fieldLogLevel;
     }
@@ -75,29 +87,65 @@ public final class GraphQLApiLogConfigGetArgs extends com.pulumi.resources.Resou
             $ = new GraphQLApiLogConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudwatchLogsRoleArn Amazon Resource Name of the service role that AWS AppSync will assume to publish to Amazon CloudWatch logs in your account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudwatchLogsRoleArn(Output<String> cloudwatchLogsRoleArn) {
             $.cloudwatchLogsRoleArn = cloudwatchLogsRoleArn;
             return this;
         }
 
+        /**
+         * @param cloudwatchLogsRoleArn Amazon Resource Name of the service role that AWS AppSync will assume to publish to Amazon CloudWatch logs in your account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudwatchLogsRoleArn(String cloudwatchLogsRoleArn) {
             return cloudwatchLogsRoleArn(Output.of(cloudwatchLogsRoleArn));
         }
 
+        /**
+         * @param excludeVerboseContent Set to TRUE to exclude sections that contain information such as headers, context, and evaluated mapping templates, regardless of logging  level. Valid values: `true`, `false`. Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeVerboseContent(@Nullable Output<Boolean> excludeVerboseContent) {
             $.excludeVerboseContent = excludeVerboseContent;
             return this;
         }
 
+        /**
+         * @param excludeVerboseContent Set to TRUE to exclude sections that contain information such as headers, context, and evaluated mapping templates, regardless of logging  level. Valid values: `true`, `false`. Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeVerboseContent(Boolean excludeVerboseContent) {
             return excludeVerboseContent(Output.of(excludeVerboseContent));
         }
 
+        /**
+         * @param fieldLogLevel Field logging level. Valid values: `ALL`, `ERROR`, `NONE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldLogLevel(Output<String> fieldLogLevel) {
             $.fieldLogLevel = fieldLogLevel;
             return this;
         }
 
+        /**
+         * @param fieldLogLevel Field logging level. Valid values: `ALL`, `ERROR`, `NONE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldLogLevel(String fieldLogLevel) {
             return fieldLogLevel(Output.of(fieldLogLevel));
         }

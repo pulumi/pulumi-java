@@ -20,6 +20,10 @@ public final class SelectionConditionStringLikeArgs extends com.pulumi.resources
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return The key in a key-value pair.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -31,6 +35,10 @@ public final class SelectionConditionStringLikeArgs extends com.pulumi.resources
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return The value in a key-value pair.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -60,20 +68,44 @@ public final class SelectionConditionStringLikeArgs extends com.pulumi.resources
             $ = new SelectionConditionStringLikeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The key in a key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The key in a key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param value The value in a key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value in a key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

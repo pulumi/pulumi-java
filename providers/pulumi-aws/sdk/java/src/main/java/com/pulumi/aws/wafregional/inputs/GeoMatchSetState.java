@@ -24,6 +24,10 @@ public final class GeoMatchSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="geoMatchConstraints")
     private @Nullable Output<List<GeoMatchSetGeoMatchConstraintGetArgs>> geoMatchConstraints;
 
+    /**
+     * @return The Geo Match Constraint objects which contain the country that you want AWS WAF to search for.
+     * 
+     */
     public Optional<Output<List<GeoMatchSetGeoMatchConstraintGetArgs>>> geoMatchConstraints() {
         return Optional.ofNullable(this.geoMatchConstraints);
     }
@@ -35,6 +39,10 @@ public final class GeoMatchSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name or description of the Geo Match Set.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -64,24 +72,54 @@ public final class GeoMatchSetState extends com.pulumi.resources.ResourceArgs {
             $ = new GeoMatchSetState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param geoMatchConstraints The Geo Match Constraint objects which contain the country that you want AWS WAF to search for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder geoMatchConstraints(@Nullable Output<List<GeoMatchSetGeoMatchConstraintGetArgs>> geoMatchConstraints) {
             $.geoMatchConstraints = geoMatchConstraints;
             return this;
         }
 
+        /**
+         * @param geoMatchConstraints The Geo Match Constraint objects which contain the country that you want AWS WAF to search for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder geoMatchConstraints(List<GeoMatchSetGeoMatchConstraintGetArgs> geoMatchConstraints) {
             return geoMatchConstraints(Output.of(geoMatchConstraints));
         }
 
+        /**
+         * @param geoMatchConstraints The Geo Match Constraint objects which contain the country that you want AWS WAF to search for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder geoMatchConstraints(GeoMatchSetGeoMatchConstraintGetArgs... geoMatchConstraints) {
             return geoMatchConstraints(List.of(geoMatchConstraints));
         }
 
+        /**
+         * @param name The name or description of the Geo Match Set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name or description of the Geo Match Set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

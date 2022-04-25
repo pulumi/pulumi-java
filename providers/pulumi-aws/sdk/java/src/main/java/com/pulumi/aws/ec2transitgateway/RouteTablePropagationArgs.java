@@ -20,6 +20,10 @@ public final class RouteTablePropagationArgs extends com.pulumi.resources.Resour
     @Import(name="transitGatewayAttachmentId", required=true)
     private Output<String> transitGatewayAttachmentId;
 
+    /**
+     * @return Identifier of EC2 Transit Gateway Attachment.
+     * 
+     */
     public Output<String> transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
@@ -31,6 +35,10 @@ public final class RouteTablePropagationArgs extends com.pulumi.resources.Resour
     @Import(name="transitGatewayRouteTableId", required=true)
     private Output<String> transitGatewayRouteTableId;
 
+    /**
+     * @return Identifier of EC2 Transit Gateway Route Table.
+     * 
+     */
     public Output<String> transitGatewayRouteTableId() {
         return this.transitGatewayRouteTableId;
     }
@@ -60,20 +68,44 @@ public final class RouteTablePropagationArgs extends com.pulumi.resources.Resour
             $ = new RouteTablePropagationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param transitGatewayAttachmentId Identifier of EC2 Transit Gateway Attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayAttachmentId(Output<String> transitGatewayAttachmentId) {
             $.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }
 
+        /**
+         * @param transitGatewayAttachmentId Identifier of EC2 Transit Gateway Attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayAttachmentId(String transitGatewayAttachmentId) {
             return transitGatewayAttachmentId(Output.of(transitGatewayAttachmentId));
         }
 
+        /**
+         * @param transitGatewayRouteTableId Identifier of EC2 Transit Gateway Route Table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayRouteTableId(Output<String> transitGatewayRouteTableId) {
             $.transitGatewayRouteTableId = transitGatewayRouteTableId;
             return this;
         }
 
+        /**
+         * @param transitGatewayRouteTableId Identifier of EC2 Transit Gateway Route Table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayRouteTableId(String transitGatewayRouteTableId) {
             return transitGatewayRouteTableId(Output.of(transitGatewayRouteTableId));
         }

@@ -24,6 +24,10 @@ public final class ScalingPlanApplicationSourceGetArgs extends com.pulumi.resour
     @Import(name="cloudformationStackArn")
     private @Nullable Output<String> cloudformationStackArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of a AWS CloudFormation stack.
+     * 
+     */
     public Optional<Output<String>> cloudformationStackArn() {
         return Optional.ofNullable(this.cloudformationStackArn);
     }
@@ -35,6 +39,10 @@ public final class ScalingPlanApplicationSourceGetArgs extends com.pulumi.resour
     @Import(name="tagFilters")
     private @Nullable Output<List<ScalingPlanApplicationSourceTagFilterGetArgs>> tagFilters;
 
+    /**
+     * @return A set of tags.
+     * 
+     */
     public Optional<Output<List<ScalingPlanApplicationSourceTagFilterGetArgs>>> tagFilters() {
         return Optional.ofNullable(this.tagFilters);
     }
@@ -64,24 +72,54 @@ public final class ScalingPlanApplicationSourceGetArgs extends com.pulumi.resour
             $ = new ScalingPlanApplicationSourceGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudformationStackArn The Amazon Resource Name (ARN) of a AWS CloudFormation stack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudformationStackArn(@Nullable Output<String> cloudformationStackArn) {
             $.cloudformationStackArn = cloudformationStackArn;
             return this;
         }
 
+        /**
+         * @param cloudformationStackArn The Amazon Resource Name (ARN) of a AWS CloudFormation stack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudformationStackArn(String cloudformationStackArn) {
             return cloudformationStackArn(Output.of(cloudformationStackArn));
         }
 
+        /**
+         * @param tagFilters A set of tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagFilters(@Nullable Output<List<ScalingPlanApplicationSourceTagFilterGetArgs>> tagFilters) {
             $.tagFilters = tagFilters;
             return this;
         }
 
+        /**
+         * @param tagFilters A set of tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagFilters(List<ScalingPlanApplicationSourceTagFilterGetArgs> tagFilters) {
             return tagFilters(Output.of(tagFilters));
         }
 
+        /**
+         * @param tagFilters A set of tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagFilters(ScalingPlanApplicationSourceTagFilterGetArgs... tagFilters) {
             return tagFilters(List.of(tagFilters));
         }

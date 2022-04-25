@@ -20,6 +20,10 @@ public final class GetAccessPointRootDirectoryCreationInfo extends com.pulumi.re
     @Import(name="ownerGid", required=true)
     private Integer ownerGid;
 
+    /**
+     * @return POSIX owner group ID
+     * 
+     */
     public Integer ownerGid() {
         return this.ownerGid;
     }
@@ -31,6 +35,10 @@ public final class GetAccessPointRootDirectoryCreationInfo extends com.pulumi.re
     @Import(name="ownerUid", required=true)
     private Integer ownerUid;
 
+    /**
+     * @return POSIX owner user ID
+     * 
+     */
     public Integer ownerUid() {
         return this.ownerUid;
     }
@@ -42,6 +50,10 @@ public final class GetAccessPointRootDirectoryCreationInfo extends com.pulumi.re
     @Import(name="permissions", required=true)
     private String permissions;
 
+    /**
+     * @return POSIX permissions mode
+     * 
+     */
     public String permissions() {
         return this.permissions;
     }
@@ -72,16 +84,34 @@ public final class GetAccessPointRootDirectoryCreationInfo extends com.pulumi.re
             $ = new GetAccessPointRootDirectoryCreationInfo(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ownerGid POSIX owner group ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerGid(Integer ownerGid) {
             $.ownerGid = ownerGid;
             return this;
         }
 
+        /**
+         * @param ownerUid POSIX owner user ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerUid(Integer ownerUid) {
             $.ownerUid = ownerUid;
             return this;
         }
 
+        /**
+         * @param permissions POSIX permissions mode
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(String permissions) {
             $.permissions = permissions;
             return this;

@@ -22,6 +22,10 @@ public final class FlowDefinitionHumanLoopActivationConfigGetArgs extends com.pu
     @Import(name="humanLoopActivationConditionsConfig")
     private @Nullable Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs> humanLoopActivationConditionsConfig;
 
+    /**
+     * @return defines under what conditions SageMaker creates a human loop. See Human Loop Activation Conditions Config details below.
+     * 
+     */
     public Optional<Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs>> humanLoopActivationConditionsConfig() {
         return Optional.ofNullable(this.humanLoopActivationConditionsConfig);
     }
@@ -50,11 +54,23 @@ public final class FlowDefinitionHumanLoopActivationConfigGetArgs extends com.pu
             $ = new FlowDefinitionHumanLoopActivationConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param humanLoopActivationConditionsConfig defines under what conditions SageMaker creates a human loop. See Human Loop Activation Conditions Config details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder humanLoopActivationConditionsConfig(@Nullable Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs> humanLoopActivationConditionsConfig) {
             $.humanLoopActivationConditionsConfig = humanLoopActivationConditionsConfig;
             return this;
         }
 
+        /**
+         * @param humanLoopActivationConditionsConfig defines under what conditions SageMaker creates a human loop. See Human Loop Activation Conditions Config details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder humanLoopActivationConditionsConfig(FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs humanLoopActivationConditionsConfig) {
             return humanLoopActivationConditionsConfig(Output.of(humanLoopActivationConditionsConfig));
         }

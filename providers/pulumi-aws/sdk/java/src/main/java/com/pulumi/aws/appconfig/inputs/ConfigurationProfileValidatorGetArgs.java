@@ -22,6 +22,10 @@ public final class ConfigurationProfileValidatorGetArgs extends com.pulumi.resou
     @Import(name="content")
     private @Nullable Output<String> content;
 
+    /**
+     * @return Either the JSON Schema content or the Amazon Resource Name (ARN) of an AWS Lambda function.
+     * 
+     */
     public Optional<Output<String>> content() {
         return Optional.ofNullable(this.content);
     }
@@ -33,6 +37,10 @@ public final class ConfigurationProfileValidatorGetArgs extends com.pulumi.resou
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of validator. Valid values: `JSON_SCHEMA` and `LAMBDA`.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -62,20 +70,44 @@ public final class ConfigurationProfileValidatorGetArgs extends com.pulumi.resou
             $ = new ConfigurationProfileValidatorGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content Either the JSON Schema content or the Amazon Resource Name (ARN) of an AWS Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content Either the JSON Schema content or the Amazon Resource Name (ARN) of an AWS Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param type The type of validator. Valid values: `JSON_SCHEMA` and `LAMBDA`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of validator. Valid values: `JSON_SCHEMA` and `LAMBDA`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

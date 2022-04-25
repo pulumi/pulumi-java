@@ -11,38 +11,38 @@ import java.util.Objects;
 @CustomType
 public final class GetTaskDefinitionResult {
     /**
-     * The ARN of the task definition
+     * @return The ARN of the task definition
      * 
      */
     private final String arn;
     /**
-     * The family of this task definition
+     * @return The family of this task definition
      * 
      */
     private final String family;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The Docker networking mode to use for the containers in this task.
+     * @return The Docker networking mode to use for the containers in this task.
      * 
      */
     private final String networkMode;
     /**
-     * The revision of this task definition
+     * @return The revision of this task definition
      * 
      */
     private final Integer revision;
     /**
-     * The status of this task definition
+     * @return The status of this task definition
      * 
      */
     private final String status;
     private final String taskDefinition;
     /**
-     * The ARN of the IAM role that containers in this task can assume
+     * @return The ARN of the IAM role that containers in this task can assume
      * 
      */
     private final String taskRoleArn;
@@ -68,44 +68,44 @@ public final class GetTaskDefinitionResult {
     }
 
     /**
-     * The ARN of the task definition
+     * @return The ARN of the task definition
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The family of this task definition
+     * @return The family of this task definition
      * 
-    */
+     */
     public String family() {
         return this.family;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The Docker networking mode to use for the containers in this task.
+     * @return The Docker networking mode to use for the containers in this task.
      * 
-    */
+     */
     public String networkMode() {
         return this.networkMode;
     }
     /**
-     * The revision of this task definition
+     * @return The revision of this task definition
      * 
-    */
+     */
     public Integer revision() {
         return this.revision;
     }
     /**
-     * The status of this task definition
+     * @return The status of this task definition
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
@@ -113,9 +113,9 @@ public final class GetTaskDefinitionResult {
         return this.taskDefinition;
     }
     /**
-     * The ARN of the IAM role that containers in this task can assume
+     * @return The ARN of the IAM role that containers in this task can assume
      * 
-    */
+     */
     public String taskRoleArn() {
         return this.taskRoleArn;
     }

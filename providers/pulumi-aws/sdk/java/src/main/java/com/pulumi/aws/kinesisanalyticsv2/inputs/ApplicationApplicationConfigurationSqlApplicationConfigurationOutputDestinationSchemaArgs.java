@@ -20,6 +20,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="recordFormatType", required=true)
     private Output<String> recordFormatType;
 
+    /**
+     * @return Specifies the format of the records on the output stream. Valid values: `CSV`, `JSON`.
+     * 
+     */
     public Output<String> recordFormatType() {
         return this.recordFormatType;
     }
@@ -48,11 +52,23 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param recordFormatType Specifies the format of the records on the output stream. Valid values: `CSV`, `JSON`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordFormatType(Output<String> recordFormatType) {
             $.recordFormatType = recordFormatType;
             return this;
         }
 
+        /**
+         * @param recordFormatType Specifies the format of the records on the output stream. Valid values: `CSV`, `JSON`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordFormatType(String recordFormatType) {
             return recordFormatType(Output.of(recordFormatType));
         }

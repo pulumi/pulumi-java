@@ -12,27 +12,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OrganizationAccount {
     /**
-     * ARN of the root
+     * @return ARN of the root
      * 
      */
     private final @Nullable String arn;
     /**
-     * Email of the account
+     * @return Email of the account
      * 
      */
     private final @Nullable String email;
     /**
-     * Identifier of the root
+     * @return Identifier of the root
      * 
      */
     private final @Nullable String id;
     /**
-     * The name of the policy type
+     * @return The name of the policy type
      * 
      */
     private final @Nullable String name;
     /**
-     * The status of the policy type as it relates to the associated root
+     * @return The status of the policy type as it relates to the associated root
      * 
      */
     private final @Nullable String status;
@@ -52,37 +52,37 @@ public final class OrganizationAccount {
     }
 
     /**
-     * ARN of the root
+     * @return ARN of the root
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Email of the account
+     * @return Email of the account
      * 
-    */
+     */
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
     /**
-     * Identifier of the root
+     * @return Identifier of the root
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The name of the policy type
+     * @return The name of the policy type
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The status of the policy type as it relates to the associated root
+     * @return The status of the policy type as it relates to the associated root
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }

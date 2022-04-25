@@ -22,6 +22,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alias")
     private @Nullable Output<String> alias;
 
+    /**
+     * @return The alias of the prometheus workspace. See more [in AWS Docs](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-create-workspace.html).
+     * 
+     */
     public Optional<Output<String>> alias() {
         return Optional.ofNullable(this.alias);
     }
@@ -50,11 +54,23 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WorkspaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alias The alias of the prometheus workspace. See more [in AWS Docs](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-create-workspace.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(@Nullable Output<String> alias) {
             $.alias = alias;
             return this;
         }
 
+        /**
+         * @param alias The alias of the prometheus workspace. See more [in AWS Docs](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-create-workspace.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(String alias) {
             return alias(Output.of(alias));
         }

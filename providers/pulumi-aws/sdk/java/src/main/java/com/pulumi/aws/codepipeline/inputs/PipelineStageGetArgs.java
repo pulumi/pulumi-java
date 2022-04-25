@@ -22,6 +22,10 @@ public final class PipelineStageGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="actions", required=true)
     private Output<List<PipelineStageActionGetArgs>> actions;
 
+    /**
+     * @return The action(s) to include in the stage. Defined as an `action` block below
+     * 
+     */
     public Output<List<PipelineStageActionGetArgs>> actions() {
         return this.actions;
     }
@@ -33,6 +37,10 @@ public final class PipelineStageGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the stage.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -62,24 +70,54 @@ public final class PipelineStageGetArgs extends com.pulumi.resources.ResourceArg
             $ = new PipelineStageGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions The action(s) to include in the stage. Defined as an `action` block below
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(Output<List<PipelineStageActionGetArgs>> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions The action(s) to include in the stage. Defined as an `action` block below
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(List<PipelineStageActionGetArgs> actions) {
             return actions(Output.of(actions));
         }
 
+        /**
+         * @param actions The action(s) to include in the stage. Defined as an `action` block below
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(PipelineStageActionGetArgs... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param name The name of the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

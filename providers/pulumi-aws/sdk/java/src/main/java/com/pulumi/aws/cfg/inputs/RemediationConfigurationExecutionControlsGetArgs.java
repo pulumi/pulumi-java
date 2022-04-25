@@ -22,6 +22,10 @@ public final class RemediationConfigurationExecutionControlsGetArgs extends com.
     @Import(name="ssmControls")
     private @Nullable Output<RemediationConfigurationExecutionControlsSsmControlsGetArgs> ssmControls;
 
+    /**
+     * @return Configuration block for SSM controls. See below.
+     * 
+     */
     public Optional<Output<RemediationConfigurationExecutionControlsSsmControlsGetArgs>> ssmControls() {
         return Optional.ofNullable(this.ssmControls);
     }
@@ -50,11 +54,23 @@ public final class RemediationConfigurationExecutionControlsGetArgs extends com.
             $ = new RemediationConfigurationExecutionControlsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ssmControls Configuration block for SSM controls. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssmControls(@Nullable Output<RemediationConfigurationExecutionControlsSsmControlsGetArgs> ssmControls) {
             $.ssmControls = ssmControls;
             return this;
         }
 
+        /**
+         * @param ssmControls Configuration block for SSM controls. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssmControls(RemediationConfigurationExecutionControlsSsmControlsGetArgs ssmControls) {
             return ssmControls(Output.of(ssmControls));
         }

@@ -29,6 +29,10 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="abortStatement")
     private @Nullable Output<BotAbortStatementGetArgs> abortStatement;
 
+    /**
+     * @return The message that Amazon Lex uses to abort a conversation. Attributes are documented under statement.
+     * 
+     */
     public Optional<Output<BotAbortStatementGetArgs>> abortStatement() {
         return Optional.ofNullable(this.abortStatement);
     }
@@ -48,6 +52,11 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="checksum")
     private @Nullable Output<String> checksum;
 
+    /**
+     * @return Checksum identifying the version of the bot that was created. The checksum is not
+     * included as an argument because the resource will add it automatically when updating the bot.
+     * 
+     */
     public Optional<Output<String>> checksum() {
         return Optional.ofNullable(this.checksum);
     }
@@ -59,6 +68,10 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="childDirected")
     private @Nullable Output<Boolean> childDirected;
 
+    /**
+     * @return By specifying true, you confirm that your use of Amazon Lex is related to a website, program, or other application that is directed or targeted, in whole or in part, to children under age 13 and subject to COPPA. For more information see the [Amazon Lex FAQ](https://aws.amazon.com/lex/faqs#data-security) and the [Amazon Lex PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-childDirected).
+     * 
+     */
     public Optional<Output<Boolean>> childDirected() {
         return Optional.ofNullable(this.childDirected);
     }
@@ -70,6 +83,10 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="clarificationPrompt")
     private @Nullable Output<BotClarificationPromptGetArgs> clarificationPrompt;
 
+    /**
+     * @return The message that Amazon Lex uses when it doesn&#39;t understand the user&#39;s request. Attributes are documented under prompt.
+     * 
+     */
     public Optional<Output<BotClarificationPromptGetArgs>> clarificationPrompt() {
         return Optional.ofNullable(this.clarificationPrompt);
     }
@@ -81,6 +98,10 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="createVersion")
     private @Nullable Output<Boolean> createVersion;
 
+    /**
+     * @return Determines if a new bot version is created when the initial resource is created and on each update. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> createVersion() {
         return Optional.ofNullable(this.createVersion);
     }
@@ -92,6 +113,10 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdDate")
     private @Nullable Output<String> createdDate;
 
+    /**
+     * @return The date when the bot version was created.
+     * 
+     */
     public Optional<Output<String>> createdDate() {
         return Optional.ofNullable(this.createdDate);
     }
@@ -103,6 +128,10 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the bot. Must be less than or equal to 200 characters in length.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -114,6 +143,10 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="detectSentiment")
     private @Nullable Output<Boolean> detectSentiment;
 
+    /**
+     * @return When set to true user utterances are sent to Amazon Comprehend for sentiment analysis. If you don&#39;t specify detectSentiment, the default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> detectSentiment() {
         return Optional.ofNullable(this.detectSentiment);
     }
@@ -125,6 +158,10 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableModelImprovements")
     private @Nullable Output<Boolean> enableModelImprovements;
 
+    /**
+     * @return Set to `true` to enable access to natural language understanding improvements. When you set the `enable_model_improvements` parameter to true you can use the `nlu_intent_confidence_threshold` parameter to configure confidence scores. For more information, see [Confidence Scores](https://docs.aws.amazon.com/lex/latest/dg/confidence-scores.html). You can only set the `enable_model_improvements` parameter in certain Regions. If you set the parameter to true, your bot has access to accuracy improvements. For more information see the [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-enableModelImprovements).
+     * 
+     */
     public Optional<Output<Boolean>> enableModelImprovements() {
         return Optional.ofNullable(this.enableModelImprovements);
     }
@@ -136,6 +173,10 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="failureReason")
     private @Nullable Output<String> failureReason;
 
+    /**
+     * @return If status is FAILED, Amazon Lex provides the reason that it failed to build the bot.
+     * 
+     */
     public Optional<Output<String>> failureReason() {
         return Optional.ofNullable(this.failureReason);
     }
@@ -147,6 +188,10 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="idleSessionTtlInSeconds")
     private @Nullable Output<Integer> idleSessionTtlInSeconds;
 
+    /**
+     * @return The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is `300`. Must be a number between 60 and 86400 (inclusive).
+     * 
+     */
     public Optional<Output<Integer>> idleSessionTtlInSeconds() {
         return Optional.ofNullable(this.idleSessionTtlInSeconds);
     }
@@ -158,6 +203,10 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="intents")
     private @Nullable Output<List<BotIntentGetArgs>> intents;
 
+    /**
+     * @return A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent. Can have up to 100 Intent objects.
+     * 
+     */
     public Optional<Output<List<BotIntentGetArgs>>> intents() {
         return Optional.ofNullable(this.intents);
     }
@@ -169,6 +218,10 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastUpdatedDate")
     private @Nullable Output<String> lastUpdatedDate;
 
+    /**
+     * @return The date when the $LATEST version of this bot was updated.
+     * 
+     */
     public Optional<Output<String>> lastUpdatedDate() {
         return Optional.ofNullable(this.lastUpdatedDate);
     }
@@ -180,6 +233,10 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="locale")
     private @Nullable Output<String> locale;
 
+    /**
+     * @return Specifies the target locale for the bot. Any intent used in the bot must be compatible with the locale of the bot. For available locales, see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-locale). Default is `en-US`.
+     * 
+     */
     public Optional<Output<String>> locale() {
         return Optional.ofNullable(this.locale);
     }
@@ -191,6 +248,10 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the bot that you want to create, case sensitive. Must be between 2 and 50 characters in length.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -202,6 +263,10 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="nluIntentConfidenceThreshold")
     private @Nullable Output<Double> nluIntentConfidenceThreshold;
 
+    /**
+     * @return Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. For more information see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-nluIntentConfidenceThreshold) This value requires `enable_model_improvements` to be set to `true` and the default is `0`. Must be a float between 0 and 1.
+     * 
+     */
     public Optional<Output<Double>> nluIntentConfidenceThreshold() {
         return Optional.ofNullable(this.nluIntentConfidenceThreshold);
     }
@@ -213,6 +278,10 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="processBehavior")
     private @Nullable Output<String> processBehavior;
 
+    /**
+     * @return If you set the `process_behavior` element to `BUILD`, Amazon Lex builds the bot so that it can be run. If you set the element to `SAVE` Amazon Lex saves the bot, but doesn&#39;t build it. Default is `SAVE`.
+     * 
+     */
     public Optional<Output<String>> processBehavior() {
         return Optional.ofNullable(this.processBehavior);
     }
@@ -227,6 +296,13 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return When you send a request to create or update a bot, Amazon Lex sets the status response
+     * element to BUILDING. After Amazon Lex builds the bot, it sets status to READY. If Amazon Lex can&#39;t
+     * build the bot, it sets status to FAILED. Amazon Lex returns the reason for the failure in the
+     * failure_reason response element.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -238,6 +314,10 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return The version of the bot.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -249,6 +329,10 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="voiceId")
     private @Nullable Output<String> voiceId;
 
+    /**
+     * @return The Amazon Polly voice ID that you want Amazon Lex to use for voice interactions with the user. The locale configured for the voice must match the locale of the bot. For more information, see [Available Voices](http://docs.aws.amazon.com/polly/latest/dg/voicelist.html) in the Amazon Polly Developer Guide.
+     * 
+     */
     public Optional<Output<String>> voiceId() {
         return Optional.ofNullable(this.voiceId);
     }
@@ -297,11 +381,23 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
             $ = new BotState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param abortStatement The message that Amazon Lex uses to abort a conversation. Attributes are documented under statement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder abortStatement(@Nullable Output<BotAbortStatementGetArgs> abortStatement) {
             $.abortStatement = abortStatement;
             return this;
         }
 
+        /**
+         * @param abortStatement The message that Amazon Lex uses to abort a conversation. Attributes are documented under statement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder abortStatement(BotAbortStatementGetArgs abortStatement) {
             return abortStatement(Output.of(abortStatement));
         }
@@ -315,177 +411,419 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param checksum Checksum identifying the version of the bot that was created. The checksum is not
+         * included as an argument because the resource will add it automatically when updating the bot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checksum(@Nullable Output<String> checksum) {
             $.checksum = checksum;
             return this;
         }
 
+        /**
+         * @param checksum Checksum identifying the version of the bot that was created. The checksum is not
+         * included as an argument because the resource will add it automatically when updating the bot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checksum(String checksum) {
             return checksum(Output.of(checksum));
         }
 
+        /**
+         * @param childDirected By specifying true, you confirm that your use of Amazon Lex is related to a website, program, or other application that is directed or targeted, in whole or in part, to children under age 13 and subject to COPPA. For more information see the [Amazon Lex FAQ](https://aws.amazon.com/lex/faqs#data-security) and the [Amazon Lex PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-childDirected).
+         * 
+         * @return builder
+         * 
+         */
         public Builder childDirected(@Nullable Output<Boolean> childDirected) {
             $.childDirected = childDirected;
             return this;
         }
 
+        /**
+         * @param childDirected By specifying true, you confirm that your use of Amazon Lex is related to a website, program, or other application that is directed or targeted, in whole or in part, to children under age 13 and subject to COPPA. For more information see the [Amazon Lex FAQ](https://aws.amazon.com/lex/faqs#data-security) and the [Amazon Lex PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-childDirected).
+         * 
+         * @return builder
+         * 
+         */
         public Builder childDirected(Boolean childDirected) {
             return childDirected(Output.of(childDirected));
         }
 
+        /**
+         * @param clarificationPrompt The message that Amazon Lex uses when it doesn&#39;t understand the user&#39;s request. Attributes are documented under prompt.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clarificationPrompt(@Nullable Output<BotClarificationPromptGetArgs> clarificationPrompt) {
             $.clarificationPrompt = clarificationPrompt;
             return this;
         }
 
+        /**
+         * @param clarificationPrompt The message that Amazon Lex uses when it doesn&#39;t understand the user&#39;s request. Attributes are documented under prompt.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clarificationPrompt(BotClarificationPromptGetArgs clarificationPrompt) {
             return clarificationPrompt(Output.of(clarificationPrompt));
         }
 
+        /**
+         * @param createVersion Determines if a new bot version is created when the initial resource is created and on each update. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createVersion(@Nullable Output<Boolean> createVersion) {
             $.createVersion = createVersion;
             return this;
         }
 
+        /**
+         * @param createVersion Determines if a new bot version is created when the initial resource is created and on each update. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createVersion(Boolean createVersion) {
             return createVersion(Output.of(createVersion));
         }
 
+        /**
+         * @param createdDate The date when the bot version was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdDate(@Nullable Output<String> createdDate) {
             $.createdDate = createdDate;
             return this;
         }
 
+        /**
+         * @param createdDate The date when the bot version was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdDate(String createdDate) {
             return createdDate(Output.of(createdDate));
         }
 
+        /**
+         * @param description A description of the bot. Must be less than or equal to 200 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the bot. Must be less than or equal to 200 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param detectSentiment When set to true user utterances are sent to Amazon Comprehend for sentiment analysis. If you don&#39;t specify detectSentiment, the default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detectSentiment(@Nullable Output<Boolean> detectSentiment) {
             $.detectSentiment = detectSentiment;
             return this;
         }
 
+        /**
+         * @param detectSentiment When set to true user utterances are sent to Amazon Comprehend for sentiment analysis. If you don&#39;t specify detectSentiment, the default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detectSentiment(Boolean detectSentiment) {
             return detectSentiment(Output.of(detectSentiment));
         }
 
+        /**
+         * @param enableModelImprovements Set to `true` to enable access to natural language understanding improvements. When you set the `enable_model_improvements` parameter to true you can use the `nlu_intent_confidence_threshold` parameter to configure confidence scores. For more information, see [Confidence Scores](https://docs.aws.amazon.com/lex/latest/dg/confidence-scores.html). You can only set the `enable_model_improvements` parameter in certain Regions. If you set the parameter to true, your bot has access to accuracy improvements. For more information see the [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-enableModelImprovements).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableModelImprovements(@Nullable Output<Boolean> enableModelImprovements) {
             $.enableModelImprovements = enableModelImprovements;
             return this;
         }
 
+        /**
+         * @param enableModelImprovements Set to `true` to enable access to natural language understanding improvements. When you set the `enable_model_improvements` parameter to true you can use the `nlu_intent_confidence_threshold` parameter to configure confidence scores. For more information, see [Confidence Scores](https://docs.aws.amazon.com/lex/latest/dg/confidence-scores.html). You can only set the `enable_model_improvements` parameter in certain Regions. If you set the parameter to true, your bot has access to accuracy improvements. For more information see the [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-enableModelImprovements).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableModelImprovements(Boolean enableModelImprovements) {
             return enableModelImprovements(Output.of(enableModelImprovements));
         }
 
+        /**
+         * @param failureReason If status is FAILED, Amazon Lex provides the reason that it failed to build the bot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureReason(@Nullable Output<String> failureReason) {
             $.failureReason = failureReason;
             return this;
         }
 
+        /**
+         * @param failureReason If status is FAILED, Amazon Lex provides the reason that it failed to build the bot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureReason(String failureReason) {
             return failureReason(Output.of(failureReason));
         }
 
+        /**
+         * @param idleSessionTtlInSeconds The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is `300`. Must be a number between 60 and 86400 (inclusive).
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleSessionTtlInSeconds(@Nullable Output<Integer> idleSessionTtlInSeconds) {
             $.idleSessionTtlInSeconds = idleSessionTtlInSeconds;
             return this;
         }
 
+        /**
+         * @param idleSessionTtlInSeconds The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is `300`. Must be a number between 60 and 86400 (inclusive).
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleSessionTtlInSeconds(Integer idleSessionTtlInSeconds) {
             return idleSessionTtlInSeconds(Output.of(idleSessionTtlInSeconds));
         }
 
+        /**
+         * @param intents A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent. Can have up to 100 Intent objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intents(@Nullable Output<List<BotIntentGetArgs>> intents) {
             $.intents = intents;
             return this;
         }
 
+        /**
+         * @param intents A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent. Can have up to 100 Intent objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intents(List<BotIntentGetArgs> intents) {
             return intents(Output.of(intents));
         }
 
+        /**
+         * @param intents A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent. Can have up to 100 Intent objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intents(BotIntentGetArgs... intents) {
             return intents(List.of(intents));
         }
 
+        /**
+         * @param lastUpdatedDate The date when the $LATEST version of this bot was updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedDate(@Nullable Output<String> lastUpdatedDate) {
             $.lastUpdatedDate = lastUpdatedDate;
             return this;
         }
 
+        /**
+         * @param lastUpdatedDate The date when the $LATEST version of this bot was updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedDate(String lastUpdatedDate) {
             return lastUpdatedDate(Output.of(lastUpdatedDate));
         }
 
+        /**
+         * @param locale Specifies the target locale for the bot. Any intent used in the bot must be compatible with the locale of the bot. For available locales, see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-locale). Default is `en-US`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locale(@Nullable Output<String> locale) {
             $.locale = locale;
             return this;
         }
 
+        /**
+         * @param locale Specifies the target locale for the bot. Any intent used in the bot must be compatible with the locale of the bot. For available locales, see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-locale). Default is `en-US`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locale(String locale) {
             return locale(Output.of(locale));
         }
 
+        /**
+         * @param name The name of the bot that you want to create, case sensitive. Must be between 2 and 50 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the bot that you want to create, case sensitive. Must be between 2 and 50 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param nluIntentConfidenceThreshold Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. For more information see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-nluIntentConfidenceThreshold) This value requires `enable_model_improvements` to be set to `true` and the default is `0`. Must be a float between 0 and 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nluIntentConfidenceThreshold(@Nullable Output<Double> nluIntentConfidenceThreshold) {
             $.nluIntentConfidenceThreshold = nluIntentConfidenceThreshold;
             return this;
         }
 
+        /**
+         * @param nluIntentConfidenceThreshold Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. For more information see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-nluIntentConfidenceThreshold) This value requires `enable_model_improvements` to be set to `true` and the default is `0`. Must be a float between 0 and 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nluIntentConfidenceThreshold(Double nluIntentConfidenceThreshold) {
             return nluIntentConfidenceThreshold(Output.of(nluIntentConfidenceThreshold));
         }
 
+        /**
+         * @param processBehavior If you set the `process_behavior` element to `BUILD`, Amazon Lex builds the bot so that it can be run. If you set the element to `SAVE` Amazon Lex saves the bot, but doesn&#39;t build it. Default is `SAVE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processBehavior(@Nullable Output<String> processBehavior) {
             $.processBehavior = processBehavior;
             return this;
         }
 
+        /**
+         * @param processBehavior If you set the `process_behavior` element to `BUILD`, Amazon Lex builds the bot so that it can be run. If you set the element to `SAVE` Amazon Lex saves the bot, but doesn&#39;t build it. Default is `SAVE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processBehavior(String processBehavior) {
             return processBehavior(Output.of(processBehavior));
         }
 
+        /**
+         * @param status When you send a request to create or update a bot, Amazon Lex sets the status response
+         * element to BUILDING. After Amazon Lex builds the bot, it sets status to READY. If Amazon Lex can&#39;t
+         * build the bot, it sets status to FAILED. Amazon Lex returns the reason for the failure in the
+         * failure_reason response element.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status When you send a request to create or update a bot, Amazon Lex sets the status response
+         * element to BUILDING. After Amazon Lex builds the bot, it sets status to READY. If Amazon Lex can&#39;t
+         * build the bot, it sets status to FAILED. Amazon Lex returns the reason for the failure in the
+         * failure_reason response element.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param version The version of the bot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The version of the bot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }
 
+        /**
+         * @param voiceId The Amazon Polly voice ID that you want Amazon Lex to use for voice interactions with the user. The locale configured for the voice must match the locale of the bot. For more information, see [Available Voices](http://docs.aws.amazon.com/polly/latest/dg/voicelist.html) in the Amazon Polly Developer Guide.
+         * 
+         * @return builder
+         * 
+         */
         public Builder voiceId(@Nullable Output<String> voiceId) {
             $.voiceId = voiceId;
             return this;
         }
 
+        /**
+         * @param voiceId The Amazon Polly voice ID that you want Amazon Lex to use for voice interactions with the user. The locale configured for the voice must match the locale of the bot. For more information, see [Available Voices](http://docs.aws.amazon.com/polly/latest/dg/voicelist.html) in the Amazon Polly Developer Guide.
+         * 
+         * @return builder
+         * 
+         */
         public Builder voiceId(String voiceId) {
             return voiceId(Output.of(voiceId));
         }

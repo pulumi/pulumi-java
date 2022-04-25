@@ -22,6 +22,10 @@ public final class GetJobQueueArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the job queue.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -33,6 +37,10 @@ public final class GetJobQueueArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Key-value map of resource tags
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -62,11 +70,23 @@ public final class GetJobQueueArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetJobQueueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the job queue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

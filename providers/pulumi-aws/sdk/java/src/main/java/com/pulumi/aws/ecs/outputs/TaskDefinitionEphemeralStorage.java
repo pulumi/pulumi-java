@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class TaskDefinitionEphemeralStorage {
     /**
-     * The total amount, in GiB, of ephemeral storage to set for the task. The minimum supported value is `21` GiB and the maximum supported value is `200` GiB.
+     * @return The total amount, in GiB, of ephemeral storage to set for the task. The minimum supported value is `21` GiB and the maximum supported value is `200` GiB.
      * 
      */
     private final Integer sizeInGib;
@@ -21,9 +21,9 @@ public final class TaskDefinitionEphemeralStorage {
     }
 
     /**
-     * The total amount, in GiB, of ephemeral storage to set for the task. The minimum supported value is `21` GiB and the maximum supported value is `200` GiB.
+     * @return The total amount, in GiB, of ephemeral storage to set for the task. The minimum supported value is `21` GiB and the maximum supported value is `200` GiB.
      * 
-    */
+     */
     public Integer sizeInGib() {
         return this.sizeInGib;
     }

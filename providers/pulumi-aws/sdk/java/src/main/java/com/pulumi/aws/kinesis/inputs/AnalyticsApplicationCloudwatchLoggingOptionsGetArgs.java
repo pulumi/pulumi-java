@@ -22,6 +22,10 @@ public final class AnalyticsApplicationCloudwatchLoggingOptionsGetArgs extends c
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return The ARN of the Kinesis Analytics Application.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -33,6 +37,10 @@ public final class AnalyticsApplicationCloudwatchLoggingOptionsGetArgs extends c
     @Import(name="logStreamArn", required=true)
     private Output<String> logStreamArn;
 
+    /**
+     * @return The ARN of the CloudWatch Log Stream.
+     * 
+     */
     public Output<String> logStreamArn() {
         return this.logStreamArn;
     }
@@ -44,6 +52,10 @@ public final class AnalyticsApplicationCloudwatchLoggingOptionsGetArgs extends c
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return The ARN of the IAM Role used to send application messages.
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -74,29 +86,65 @@ public final class AnalyticsApplicationCloudwatchLoggingOptionsGetArgs extends c
             $ = new AnalyticsApplicationCloudwatchLoggingOptionsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ARN of the Kinesis Analytics Application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The ARN of the Kinesis Analytics Application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param logStreamArn The ARN of the CloudWatch Log Stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logStreamArn(Output<String> logStreamArn) {
             $.logStreamArn = logStreamArn;
             return this;
         }
 
+        /**
+         * @param logStreamArn The ARN of the CloudWatch Log Stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logStreamArn(String logStreamArn) {
             return logStreamArn(Output.of(logStreamArn));
         }
 
+        /**
+         * @param roleArn The ARN of the IAM Role used to send application messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn The ARN of the IAM Role used to send application messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }

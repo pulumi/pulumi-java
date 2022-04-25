@@ -20,6 +20,10 @@ public final class VirtualGatewaySpecListenerTlsValidationSubjectAlternativeName
     @Import(name="match", required=true)
     private Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchGetArgs> match;
 
+    /**
+     * @return The criteria for determining a SAN&#39;s match.
+     * 
+     */
     public Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchGetArgs> match() {
         return this.match;
     }
@@ -48,11 +52,23 @@ public final class VirtualGatewaySpecListenerTlsValidationSubjectAlternativeName
             $ = new VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param match The criteria for determining a SAN&#39;s match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchGetArgs> match) {
             $.match = match;
             return this;
         }
 
+        /**
+         * @param match The criteria for determining a SAN&#39;s match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchGetArgs match) {
             return match(Output.of(match));
         }

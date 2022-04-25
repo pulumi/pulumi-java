@@ -22,6 +22,10 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Certificate identifier. For example, `rds-ca-2019`.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -33,6 +37,10 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="latestValidTill")
     private @Nullable Boolean latestValidTill;
 
+    /**
+     * @return When enabled, returns the certificate with the latest `ValidTill`.
+     * 
+     */
     public Optional<Boolean> latestValidTill() {
         return Optional.ofNullable(this.latestValidTill);
     }
@@ -62,11 +70,23 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Certificate identifier. For example, `rds-ca-2019`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param latestValidTill When enabled, returns the certificate with the latest `ValidTill`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latestValidTill(@Nullable Boolean latestValidTill) {
             $.latestValidTill = latestValidTill;
             return this;

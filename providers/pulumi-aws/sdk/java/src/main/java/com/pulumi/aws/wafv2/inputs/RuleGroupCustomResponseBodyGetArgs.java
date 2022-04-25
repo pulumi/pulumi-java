@@ -20,6 +20,10 @@ public final class RuleGroupCustomResponseBodyGetArgs extends com.pulumi.resourc
     @Import(name="content", required=true)
     private Output<String> content;
 
+    /**
+     * @return The payload of the custom response.
+     * 
+     */
     public Output<String> content() {
         return this.content;
     }
@@ -31,6 +35,10 @@ public final class RuleGroupCustomResponseBodyGetArgs extends com.pulumi.resourc
     @Import(name="contentType", required=true)
     private Output<String> contentType;
 
+    /**
+     * @return The type of content in the payload that you are defining in the `content` argument. Valid values are `TEXT_PLAIN`, `TEXT_HTML`, or `APPLICATION_JSON`.
+     * 
+     */
     public Output<String> contentType() {
         return this.contentType;
     }
@@ -42,6 +50,10 @@ public final class RuleGroupCustomResponseBodyGetArgs extends com.pulumi.resourc
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return A unique key identifying the custom response body. This is referenced by the `custom_response_body_key` argument in the Custom Response block.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -72,29 +84,65 @@ public final class RuleGroupCustomResponseBodyGetArgs extends com.pulumi.resourc
             $ = new RuleGroupCustomResponseBodyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The payload of the custom response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content The payload of the custom response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param contentType The type of content in the payload that you are defining in the `content` argument. Valid values are `TEXT_PLAIN`, `TEXT_HTML`, or `APPLICATION_JSON`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(Output<String> contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param contentType The type of content in the payload that you are defining in the `content` argument. Valid values are `TEXT_PLAIN`, `TEXT_HTML`, or `APPLICATION_JSON`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(String contentType) {
             return contentType(Output.of(contentType));
         }
 
+        /**
+         * @param key A unique key identifying the custom response body. This is referenced by the `custom_response_body_key` argument in the Custom Response block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key A unique key identifying the custom response body. This is referenced by the `custom_response_body_key` argument in the Custom Response block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }

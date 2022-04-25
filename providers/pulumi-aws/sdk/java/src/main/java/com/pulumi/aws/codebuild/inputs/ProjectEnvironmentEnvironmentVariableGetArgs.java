@@ -22,6 +22,10 @@ public final class ProjectEnvironmentEnvironmentVariableGetArgs extends com.pulu
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -33,6 +37,10 @@ public final class ProjectEnvironmentEnvironmentVariableGetArgs extends com.pulu
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -44,6 +52,10 @@ public final class ProjectEnvironmentEnvironmentVariableGetArgs extends com.pulu
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return Environment variable&#39;s value.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -74,29 +86,65 @@ public final class ProjectEnvironmentEnvironmentVariableGetArgs extends com.pulu
             $ = new ProjectEnvironmentEnvironmentVariableGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param type Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param value Environment variable&#39;s value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Environment variable&#39;s value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

@@ -23,6 +23,10 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesGetArgs extend
     @Import(name="ands")
     private @Nullable Output<List<ClassificationJobS3JobDefinitionScopingIncludesAndGetArgs>> ands;
 
+    /**
+     * @return An array of conditions, one for each condition that determines which objects to include or exclude from the job. (documented below)
+     * 
+     */
     public Optional<Output<List<ClassificationJobS3JobDefinitionScopingIncludesAndGetArgs>>> ands() {
         return Optional.ofNullable(this.ands);
     }
@@ -51,15 +55,33 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesGetArgs extend
             $ = new ClassificationJobS3JobDefinitionScopingIncludesGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ands An array of conditions, one for each condition that determines which objects to include or exclude from the job. (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder ands(@Nullable Output<List<ClassificationJobS3JobDefinitionScopingIncludesAndGetArgs>> ands) {
             $.ands = ands;
             return this;
         }
 
+        /**
+         * @param ands An array of conditions, one for each condition that determines which objects to include or exclude from the job. (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder ands(List<ClassificationJobS3JobDefinitionScopingIncludesAndGetArgs> ands) {
             return ands(Output.of(ands));
         }
 
+        /**
+         * @param ands An array of conditions, one for each condition that determines which objects to include or exclude from the job. (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder ands(ClassificationJobS3JobDefinitionScopingIncludesAndGetArgs... ands) {
             return ands(List.of(ands));
         }

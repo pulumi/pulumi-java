@@ -22,6 +22,10 @@ public final class RoutingControlState extends com.pulumi.resources.ResourceArgs
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return ARN of the routing control.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -33,6 +37,10 @@ public final class RoutingControlState extends com.pulumi.resources.ResourceArgs
     @Import(name="clusterArn")
     private @Nullable Output<String> clusterArn;
 
+    /**
+     * @return ARN of the cluster in which this routing control will reside.
+     * 
+     */
     public Optional<Output<String>> clusterArn() {
         return Optional.ofNullable(this.clusterArn);
     }
@@ -44,6 +52,10 @@ public final class RoutingControlState extends com.pulumi.resources.ResourceArgs
     @Import(name="controlPanelArn")
     private @Nullable Output<String> controlPanelArn;
 
+    /**
+     * @return ARN of the control panel in which this routing control will reside.
+     * 
+     */
     public Optional<Output<String>> controlPanelArn() {
         return Optional.ofNullable(this.controlPanelArn);
     }
@@ -55,6 +67,10 @@ public final class RoutingControlState extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name describing the routing control.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -66,6 +82,10 @@ public final class RoutingControlState extends com.pulumi.resources.ResourceArgs
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return Status of routing control. `PENDING` when it is being created/updated, `PENDING_DELETION` when it is being deleted, and `DEPLOYED` otherwise.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -98,47 +118,107 @@ public final class RoutingControlState extends com.pulumi.resources.ResourceArgs
             $ = new RoutingControlState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn ARN of the routing control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn ARN of the routing control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param clusterArn ARN of the cluster in which this routing control will reside.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterArn(@Nullable Output<String> clusterArn) {
             $.clusterArn = clusterArn;
             return this;
         }
 
+        /**
+         * @param clusterArn ARN of the cluster in which this routing control will reside.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterArn(String clusterArn) {
             return clusterArn(Output.of(clusterArn));
         }
 
+        /**
+         * @param controlPanelArn ARN of the control panel in which this routing control will reside.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlPanelArn(@Nullable Output<String> controlPanelArn) {
             $.controlPanelArn = controlPanelArn;
             return this;
         }
 
+        /**
+         * @param controlPanelArn ARN of the control panel in which this routing control will reside.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlPanelArn(String controlPanelArn) {
             return controlPanelArn(Output.of(controlPanelArn));
         }
 
+        /**
+         * @param name The name describing the routing control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name describing the routing control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param status Status of routing control. `PENDING` when it is being created/updated, `PENDING_DELETION` when it is being deleted, and `DEPLOYED` otherwise.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Status of routing control. `PENDING` when it is being created/updated, `PENDING_DELETION` when it is being deleted, and `DEPLOYED` otherwise.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }

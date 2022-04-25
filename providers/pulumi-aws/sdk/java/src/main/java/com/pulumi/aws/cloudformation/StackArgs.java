@@ -27,6 +27,11 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capabilities")
     private @Nullable Output<List<String>> capabilities;
 
+    /**
+     * @return A list of capabilities.
+     * Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, or `CAPABILITY_AUTO_EXPAND`
+     * 
+     */
     public Optional<Output<List<String>>> capabilities() {
         return Optional.ofNullable(this.capabilities);
     }
@@ -39,6 +44,11 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disableRollback")
     private @Nullable Output<Boolean> disableRollback;
 
+    /**
+     * @return Set to true to disable rollback of the stack if stack creation failed.
+     * Conflicts with `on_failure`.
+     * 
+     */
     public Optional<Output<Boolean>> disableRollback() {
         return Optional.ofNullable(this.disableRollback);
     }
@@ -50,6 +60,10 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iamRoleArn")
     private @Nullable Output<String> iamRoleArn;
 
+    /**
+     * @return The ARN of an IAM role that AWS CloudFormation assumes to create the stack. If you don&#39;t specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
+     * 
+     */
     public Optional<Output<String>> iamRoleArn() {
         return Optional.ofNullable(this.iamRoleArn);
     }
@@ -61,6 +75,10 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Stack name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -72,6 +90,10 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notificationArns")
     private @Nullable Output<List<String>> notificationArns;
 
+    /**
+     * @return A list of SNS topic ARNs to publish stack related events.
+     * 
+     */
     public Optional<Output<List<String>>> notificationArns() {
         return Optional.ofNullable(this.notificationArns);
     }
@@ -84,6 +106,11 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="onFailure")
     private @Nullable Output<String> onFailure;
 
+    /**
+     * @return Action to be taken if stack creation fails. This must be
+     * one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`.
+     * 
+     */
     public Optional<Output<String>> onFailure() {
         return Optional.ofNullable(this.onFailure);
     }
@@ -95,6 +122,10 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
     private @Nullable Output<Map<String,String>> parameters;
 
+    /**
+     * @return A map of Parameter structures that specify input parameters for the stack.
+     * 
+     */
     public Optional<Output<Map<String,String>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -107,6 +138,11 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policyBody")
     private @Nullable Output<String> policyBody;
 
+    /**
+     * @return Structure containing the stack policy body.
+     * Conflicts w/ `policy_url`.
+     * 
+     */
     public Optional<Output<String>> policyBody() {
         return Optional.ofNullable(this.policyBody);
     }
@@ -119,6 +155,11 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policyUrl")
     private @Nullable Output<String> policyUrl;
 
+    /**
+     * @return Location of a file containing the stack policy.
+     * Conflicts w/ `policy_body`.
+     * 
+     */
     public Optional<Output<String>> policyUrl() {
         return Optional.ofNullable(this.policyUrl);
     }
@@ -130,6 +171,10 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Map of resource tags to associate with this stack. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -141,6 +186,10 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="templateBody")
     private @Nullable Output<String> templateBody;
 
+    /**
+     * @return Structure containing the template body (max size: 51,200 bytes).
+     * 
+     */
     public Optional<Output<String>> templateBody() {
         return Optional.ofNullable(this.templateBody);
     }
@@ -152,6 +201,10 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="templateUrl")
     private @Nullable Output<String> templateUrl;
 
+    /**
+     * @return Location of a file containing the template body (max size: 460,800 bytes).
+     * 
+     */
     public Optional<Output<String>> templateUrl() {
         return Optional.ofNullable(this.templateUrl);
     }
@@ -163,6 +216,10 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeoutInMinutes")
     private @Nullable Output<Integer> timeoutInMinutes;
 
+    /**
+     * @return The amount of time that can pass before the stack status becomes `CREATE_FAILED`.
+     * 
+     */
     public Optional<Output<Integer>> timeoutInMinutes() {
         return Optional.ofNullable(this.timeoutInMinutes);
     }
@@ -203,127 +260,306 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
             $ = new StackArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capabilities A list of capabilities.
+         * Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, or `CAPABILITY_AUTO_EXPAND`
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(@Nullable Output<List<String>> capabilities) {
             $.capabilities = capabilities;
             return this;
         }
 
+        /**
+         * @param capabilities A list of capabilities.
+         * Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, or `CAPABILITY_AUTO_EXPAND`
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(List<String> capabilities) {
             return capabilities(Output.of(capabilities));
         }
 
+        /**
+         * @param capabilities A list of capabilities.
+         * Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, or `CAPABILITY_AUTO_EXPAND`
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(String... capabilities) {
             return capabilities(List.of(capabilities));
         }
 
+        /**
+         * @param disableRollback Set to true to disable rollback of the stack if stack creation failed.
+         * Conflicts with `on_failure`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableRollback(@Nullable Output<Boolean> disableRollback) {
             $.disableRollback = disableRollback;
             return this;
         }
 
+        /**
+         * @param disableRollback Set to true to disable rollback of the stack if stack creation failed.
+         * Conflicts with `on_failure`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableRollback(Boolean disableRollback) {
             return disableRollback(Output.of(disableRollback));
         }
 
+        /**
+         * @param iamRoleArn The ARN of an IAM role that AWS CloudFormation assumes to create the stack. If you don&#39;t specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamRoleArn(@Nullable Output<String> iamRoleArn) {
             $.iamRoleArn = iamRoleArn;
             return this;
         }
 
+        /**
+         * @param iamRoleArn The ARN of an IAM role that AWS CloudFormation assumes to create the stack. If you don&#39;t specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamRoleArn(String iamRoleArn) {
             return iamRoleArn(Output.of(iamRoleArn));
         }
 
+        /**
+         * @param name Stack name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Stack name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param notificationArns A list of SNS topic ARNs to publish stack related events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationArns(@Nullable Output<List<String>> notificationArns) {
             $.notificationArns = notificationArns;
             return this;
         }
 
+        /**
+         * @param notificationArns A list of SNS topic ARNs to publish stack related events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationArns(List<String> notificationArns) {
             return notificationArns(Output.of(notificationArns));
         }
 
+        /**
+         * @param notificationArns A list of SNS topic ARNs to publish stack related events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationArns(String... notificationArns) {
             return notificationArns(List.of(notificationArns));
         }
 
+        /**
+         * @param onFailure Action to be taken if stack creation fails. This must be
+         * one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onFailure(@Nullable Output<String> onFailure) {
             $.onFailure = onFailure;
             return this;
         }
 
+        /**
+         * @param onFailure Action to be taken if stack creation fails. This must be
+         * one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onFailure(String onFailure) {
             return onFailure(Output.of(onFailure));
         }
 
+        /**
+         * @param parameters A map of Parameter structures that specify input parameters for the stack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters A map of Parameter structures that specify input parameters for the stack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,String> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param policyBody Structure containing the stack policy body.
+         * Conflicts w/ `policy_url`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyBody(@Nullable Output<String> policyBody) {
             $.policyBody = policyBody;
             return this;
         }
 
+        /**
+         * @param policyBody Structure containing the stack policy body.
+         * Conflicts w/ `policy_url`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyBody(String policyBody) {
             return policyBody(Output.of(policyBody));
         }
 
+        /**
+         * @param policyUrl Location of a file containing the stack policy.
+         * Conflicts w/ `policy_body`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyUrl(@Nullable Output<String> policyUrl) {
             $.policyUrl = policyUrl;
             return this;
         }
 
+        /**
+         * @param policyUrl Location of a file containing the stack policy.
+         * Conflicts w/ `policy_body`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyUrl(String policyUrl) {
             return policyUrl(Output.of(policyUrl));
         }
 
+        /**
+         * @param tags Map of resource tags to associate with this stack. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Map of resource tags to associate with this stack. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param templateBody Structure containing the template body (max size: 51,200 bytes).
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateBody(@Nullable Output<String> templateBody) {
             $.templateBody = templateBody;
             return this;
         }
 
+        /**
+         * @param templateBody Structure containing the template body (max size: 51,200 bytes).
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateBody(String templateBody) {
             return templateBody(Output.of(templateBody));
         }
 
+        /**
+         * @param templateUrl Location of a file containing the template body (max size: 460,800 bytes).
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateUrl(@Nullable Output<String> templateUrl) {
             $.templateUrl = templateUrl;
             return this;
         }
 
+        /**
+         * @param templateUrl Location of a file containing the template body (max size: 460,800 bytes).
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateUrl(String templateUrl) {
             return templateUrl(Output.of(templateUrl));
         }
 
+        /**
+         * @param timeoutInMinutes The amount of time that can pass before the stack status becomes `CREATE_FAILED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutInMinutes(@Nullable Output<Integer> timeoutInMinutes) {
             $.timeoutInMinutes = timeoutInMinutes;
             return this;
         }
 
+        /**
+         * @param timeoutInMinutes The amount of time that can pass before the stack status becomes `CREATE_FAILED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutInMinutes(Integer timeoutInMinutes) {
             return timeoutInMinutes(Output.of(timeoutInMinutes));
         }

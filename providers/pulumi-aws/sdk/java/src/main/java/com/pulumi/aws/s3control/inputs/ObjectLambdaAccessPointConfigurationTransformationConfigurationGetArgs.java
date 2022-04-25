@@ -22,6 +22,10 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
     @Import(name="actions", required=true)
     private Output<List<String>> actions;
 
+    /**
+     * @return The actions of an Object Lambda Access Point configuration. Valid values: `GetObject`.
+     * 
+     */
     public Output<List<String>> actions() {
         return this.actions;
     }
@@ -33,6 +37,10 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
     @Import(name="contentTransformation", required=true)
     private Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs> contentTransformation;
 
+    /**
+     * @return The content transformation of an Object Lambda Access Point configuration. See Content Transformation below for more details.
+     * 
+     */
     public Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs> contentTransformation() {
         return this.contentTransformation;
     }
@@ -62,24 +70,54 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
             $ = new ObjectLambdaAccessPointConfigurationTransformationConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions The actions of an Object Lambda Access Point configuration. Valid values: `GetObject`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(Output<List<String>> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions The actions of an Object Lambda Access Point configuration. Valid values: `GetObject`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(List<String> actions) {
             return actions(Output.of(actions));
         }
 
+        /**
+         * @param actions The actions of an Object Lambda Access Point configuration. Valid values: `GetObject`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(String... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param contentTransformation The content transformation of an Object Lambda Access Point configuration. See Content Transformation below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentTransformation(Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs> contentTransformation) {
             $.contentTransformation = contentTransformation;
             return this;
         }
 
+        /**
+         * @param contentTransformation The content transformation of an Object Lambda Access Point configuration. See Content Transformation below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentTransformation(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs contentTransformation) {
             return contentTransformation(Output.of(contentTransformation));
         }

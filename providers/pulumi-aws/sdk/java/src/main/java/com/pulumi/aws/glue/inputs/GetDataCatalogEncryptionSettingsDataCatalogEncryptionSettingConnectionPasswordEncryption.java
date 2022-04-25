@@ -20,6 +20,10 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingC
     @Import(name="awsKmsKeyId", required=true)
     private String awsKmsKeyId;
 
+    /**
+     * @return A KMS key ARN that is used to encrypt the connection password.
+     * 
+     */
     public String awsKmsKeyId() {
         return this.awsKmsKeyId;
     }
@@ -31,6 +35,10 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingC
     @Import(name="returnConnectionPasswordEncrypted", required=true)
     private Boolean returnConnectionPasswordEncrypted;
 
+    /**
+     * @return When set to `true`, passwords remain encrypted in the responses of GetConnection and GetConnections. This encryption takes effect independently of the catalog encryption.
+     * 
+     */
     public Boolean returnConnectionPasswordEncrypted() {
         return this.returnConnectionPasswordEncrypted;
     }
@@ -60,11 +68,23 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingC
             $ = new GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param awsKmsKeyId A KMS key ARN that is used to encrypt the connection password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsKmsKeyId(String awsKmsKeyId) {
             $.awsKmsKeyId = awsKmsKeyId;
             return this;
         }
 
+        /**
+         * @param returnConnectionPasswordEncrypted When set to `true`, passwords remain encrypted in the responses of GetConnection and GetConnections. This encryption takes effect independently of the catalog encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder returnConnectionPasswordEncrypted(Boolean returnConnectionPasswordEncrypted) {
             $.returnConnectionPasswordEncrypted = returnConnectionPasswordEncrypted;
             return this;

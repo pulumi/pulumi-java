@@ -22,6 +22,10 @@ public final class LogDestinationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A name for the log destination
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -33,6 +37,10 @@ public final class LogDestinationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return The ARN of an IAM role that grants Amazon CloudWatch Logs permissions to put data into the target
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -44,6 +52,10 @@ public final class LogDestinationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="targetArn", required=true)
     private Output<String> targetArn;
 
+    /**
+     * @return The ARN of the target Amazon Kinesis stream resource for the destination
+     * 
+     */
     public Output<String> targetArn() {
         return this.targetArn;
     }
@@ -74,29 +86,65 @@ public final class LogDestinationArgs extends com.pulumi.resources.ResourceArgs 
             $ = new LogDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name A name for the log destination
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A name for the log destination
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param roleArn The ARN of an IAM role that grants Amazon CloudWatch Logs permissions to put data into the target
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn The ARN of an IAM role that grants Amazon CloudWatch Logs permissions to put data into the target
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param targetArn The ARN of the target Amazon Kinesis stream resource for the destination
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetArn(Output<String> targetArn) {
             $.targetArn = targetArn;
             return this;
         }
 
+        /**
+         * @param targetArn The ARN of the target Amazon Kinesis stream resource for the destination
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetArn(String targetArn) {
             return targetArn(Output.of(targetArn));
         }

@@ -20,6 +20,10 @@ public final class StackUserSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="action", required=true)
     private Output<String> action;
 
+    /**
+     * @return Action that is enabled or disabled. Valid values are: `CLIPBOARD_COPY_FROM_LOCAL_DEVICE`,  `CLIPBOARD_COPY_TO_LOCAL_DEVICE`, `FILE_UPLOAD`, `FILE_DOWNLOAD`, `PRINTING_TO_LOCAL_DEVICE`, `DOMAIN_PASSWORD_SIGNIN`, `DOMAIN_SMART_CARD_SIGNIN`.
+     * 
+     */
     public Output<String> action() {
         return this.action;
     }
@@ -31,6 +35,10 @@ public final class StackUserSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="permission", required=true)
     private Output<String> permission;
 
+    /**
+     * @return Indicates whether the action is enabled or disabled. Valid values are: `ENABLED`, `DISABLED`.
+     * 
+     */
     public Output<String> permission() {
         return this.permission;
     }
@@ -60,20 +68,44 @@ public final class StackUserSettingArgs extends com.pulumi.resources.ResourceArg
             $ = new StackUserSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Action that is enabled or disabled. Valid values are: `CLIPBOARD_COPY_FROM_LOCAL_DEVICE`,  `CLIPBOARD_COPY_TO_LOCAL_DEVICE`, `FILE_UPLOAD`, `FILE_DOWNLOAD`, `PRINTING_TO_LOCAL_DEVICE`, `DOMAIN_PASSWORD_SIGNIN`, `DOMAIN_SMART_CARD_SIGNIN`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Output<String> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action Action that is enabled or disabled. Valid values are: `CLIPBOARD_COPY_FROM_LOCAL_DEVICE`,  `CLIPBOARD_COPY_TO_LOCAL_DEVICE`, `FILE_UPLOAD`, `FILE_DOWNLOAD`, `PRINTING_TO_LOCAL_DEVICE`, `DOMAIN_PASSWORD_SIGNIN`, `DOMAIN_SMART_CARD_SIGNIN`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param permission Indicates whether the action is enabled or disabled. Valid values are: `ENABLED`, `DISABLED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permission(Output<String> permission) {
             $.permission = permission;
             return this;
         }
 
+        /**
+         * @param permission Indicates whether the action is enabled or disabled. Valid values are: `ENABLED`, `DISABLED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permission(String permission) {
             return permission(Output.of(permission));
         }

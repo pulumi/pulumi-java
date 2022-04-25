@@ -24,6 +24,10 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementO
     @Import(name="fieldToMatch")
     private @Nullable Output<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchGetArgs> fieldToMatch;
 
+    /**
+     * @return The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchGetArgs>> fieldToMatch() {
         return Optional.ofNullable(this.fieldToMatch);
     }
@@ -35,6 +39,10 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementO
     @Import(name="textTransformations", required=true)
     private Output<List<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementXssMatchStatementTextTransformationGetArgs>> textTransformations;
 
+    /**
+     * @return Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
+     * 
+     */
     public Output<List<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementXssMatchStatementTextTransformationGetArgs>> textTransformations() {
         return this.textTransformations;
     }
@@ -64,24 +72,54 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementO
             $ = new WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementXssMatchStatementGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fieldToMatch The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldToMatch(@Nullable Output<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchGetArgs> fieldToMatch) {
             $.fieldToMatch = fieldToMatch;
             return this;
         }
 
+        /**
+         * @param fieldToMatch The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldToMatch(WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchGetArgs fieldToMatch) {
             return fieldToMatch(Output.of(fieldToMatch));
         }
 
+        /**
+         * @param textTransformations Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textTransformations(Output<List<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementXssMatchStatementTextTransformationGetArgs>> textTransformations) {
             $.textTransformations = textTransformations;
             return this;
         }
 
+        /**
+         * @param textTransformations Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textTransformations(List<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementXssMatchStatementTextTransformationGetArgs> textTransformations) {
             return textTransformations(Output.of(textTransformations));
         }
 
+        /**
+         * @param textTransformations Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textTransformations(WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementXssMatchStatementTextTransformationGetArgs... textTransformations) {
             return textTransformations(List.of(textTransformations));
         }

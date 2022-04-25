@@ -25,6 +25,10 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the config rule
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -36,6 +40,10 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the rule
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputParameters")
     private @Nullable Output<String> inputParameters;
 
+    /**
+     * @return A string in JSON format that is passed to the AWS Config rule Lambda function.
+     * 
+     */
     public Optional<Output<String>> inputParameters() {
         return Optional.ofNullable(this.inputParameters);
     }
@@ -58,6 +70,10 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="maximumExecutionFrequency")
     private @Nullable Output<String> maximumExecutionFrequency;
 
+    /**
+     * @return The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
+     * 
+     */
     public Optional<Output<String>> maximumExecutionFrequency() {
         return Optional.ofNullable(this.maximumExecutionFrequency);
     }
@@ -69,6 +85,10 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the rule
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -80,6 +100,10 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleId")
     private @Nullable Output<String> ruleId;
 
+    /**
+     * @return The ID of the config rule
+     * 
+     */
     public Optional<Output<String>> ruleId() {
         return Optional.ofNullable(this.ruleId);
     }
@@ -91,6 +115,10 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope")
     private @Nullable Output<RuleScopeGetArgs> scope;
 
+    /**
+     * @return Scope defines which resources can trigger an evaluation for the rule as documented below.
+     * 
+     */
     public Optional<Output<RuleScopeGetArgs>> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -102,6 +130,10 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="source")
     private @Nullable Output<RuleSourceGetArgs> source;
 
+    /**
+     * @return Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources as documented below.
+     * 
+     */
     public Optional<Output<RuleSourceGetArgs>> source() {
         return Optional.ofNullable(this.source);
     }
@@ -113,6 +145,10 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -124,6 +160,10 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -161,92 +201,212 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
             $ = new RuleState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the config rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the config rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param description Description of the rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param inputParameters A string in JSON format that is passed to the AWS Config rule Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputParameters(@Nullable Output<String> inputParameters) {
             $.inputParameters = inputParameters;
             return this;
         }
 
+        /**
+         * @param inputParameters A string in JSON format that is passed to the AWS Config rule Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputParameters(String inputParameters) {
             return inputParameters(Output.of(inputParameters));
         }
 
+        /**
+         * @param maximumExecutionFrequency The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumExecutionFrequency(@Nullable Output<String> maximumExecutionFrequency) {
             $.maximumExecutionFrequency = maximumExecutionFrequency;
             return this;
         }
 
+        /**
+         * @param maximumExecutionFrequency The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumExecutionFrequency(String maximumExecutionFrequency) {
             return maximumExecutionFrequency(Output.of(maximumExecutionFrequency));
         }
 
+        /**
+         * @param name The name of the rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param ruleId The ID of the config rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleId(@Nullable Output<String> ruleId) {
             $.ruleId = ruleId;
             return this;
         }
 
+        /**
+         * @param ruleId The ID of the config rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleId(String ruleId) {
             return ruleId(Output.of(ruleId));
         }
 
+        /**
+         * @param scope Scope defines which resources can trigger an evaluation for the rule as documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable Output<RuleScopeGetArgs> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope Scope defines which resources can trigger an evaluation for the rule as documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(RuleScopeGetArgs scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param source Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources as documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable Output<RuleSourceGetArgs> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources as documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(RuleSourceGetArgs source) {
             return source(Output.of(source));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
