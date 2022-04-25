@@ -24,6 +24,10 @@ public final class RegistryImageState extends com.pulumi.resources.ResourceArgs 
     @Import(name="build")
     private @Nullable Output<RegistryImageBuildGetArgs> build;
 
+    /**
+     * @return Definition for building the image
+     * 
+     */
     public Optional<Output<RegistryImageBuildGetArgs>> build() {
         return Optional.ofNullable(this.build);
     }
@@ -35,6 +39,10 @@ public final class RegistryImageState extends com.pulumi.resources.ResourceArgs 
     @Import(name="insecureSkipVerify")
     private @Nullable Output<Boolean> insecureSkipVerify;
 
+    /**
+     * @return If `true`, the verification of TLS certificates of the server/registry is disabled. Defaults to `false`
+     * 
+     */
     public Optional<Output<Boolean>> insecureSkipVerify() {
         return Optional.ofNullable(this.insecureSkipVerify);
     }
@@ -47,6 +55,11 @@ public final class RegistryImageState extends com.pulumi.resources.ResourceArgs 
     @Import(name="keepRemotely")
     private @Nullable Output<Boolean> keepRemotely;
 
+    /**
+     * @return If true, then the Docker image won&#39;t be deleted on destroy operation. If this is false, it will delete the image from
+     * the docker registry on destroy operation. Defaults to `false`
+     * 
+     */
     public Optional<Output<Boolean>> keepRemotely() {
         return Optional.ofNullable(this.keepRemotely);
     }
@@ -58,6 +71,10 @@ public final class RegistryImageState extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the Docker image.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -69,6 +86,10 @@ public final class RegistryImageState extends com.pulumi.resources.ResourceArgs 
     @Import(name="sha256Digest")
     private @Nullable Output<String> sha256Digest;
 
+    /**
+     * @return The sha256 digest of the image.
+     * 
+     */
     public Optional<Output<String>> sha256Digest() {
         return Optional.ofNullable(this.sha256Digest);
     }
@@ -101,47 +122,109 @@ public final class RegistryImageState extends com.pulumi.resources.ResourceArgs 
             $ = new RegistryImageState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param build Definition for building the image
+         * 
+         * @return builder
+         * 
+         */
         public Builder build(@Nullable Output<RegistryImageBuildGetArgs> build) {
             $.build = build;
             return this;
         }
 
+        /**
+         * @param build Definition for building the image
+         * 
+         * @return builder
+         * 
+         */
         public Builder build(RegistryImageBuildGetArgs build) {
             return build(Output.of(build));
         }
 
+        /**
+         * @param insecureSkipVerify If `true`, the verification of TLS certificates of the server/registry is disabled. Defaults to `false`
+         * 
+         * @return builder
+         * 
+         */
         public Builder insecureSkipVerify(@Nullable Output<Boolean> insecureSkipVerify) {
             $.insecureSkipVerify = insecureSkipVerify;
             return this;
         }
 
+        /**
+         * @param insecureSkipVerify If `true`, the verification of TLS certificates of the server/registry is disabled. Defaults to `false`
+         * 
+         * @return builder
+         * 
+         */
         public Builder insecureSkipVerify(Boolean insecureSkipVerify) {
             return insecureSkipVerify(Output.of(insecureSkipVerify));
         }
 
+        /**
+         * @param keepRemotely If true, then the Docker image won&#39;t be deleted on destroy operation. If this is false, it will delete the image from
+         * the docker registry on destroy operation. Defaults to `false`
+         * 
+         * @return builder
+         * 
+         */
         public Builder keepRemotely(@Nullable Output<Boolean> keepRemotely) {
             $.keepRemotely = keepRemotely;
             return this;
         }
 
+        /**
+         * @param keepRemotely If true, then the Docker image won&#39;t be deleted on destroy operation. If this is false, it will delete the image from
+         * the docker registry on destroy operation. Defaults to `false`
+         * 
+         * @return builder
+         * 
+         */
         public Builder keepRemotely(Boolean keepRemotely) {
             return keepRemotely(Output.of(keepRemotely));
         }
 
+        /**
+         * @param name The name of the Docker image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the Docker image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param sha256Digest The sha256 digest of the image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sha256Digest(@Nullable Output<String> sha256Digest) {
             $.sha256Digest = sha256Digest;
             return this;
         }
 
+        /**
+         * @param sha256Digest The sha256 digest of the image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sha256Digest(String sha256Digest) {
             return sha256Digest(Output.of(sha256Digest));
         }
