@@ -35,6 +35,7 @@ Pulumi.*.yaml
 .mypy_cache
 
 # for goreleaser
+/dist
 **/*.exe
 goreleaser
 pulumi-resource-pulumi-nodejs
